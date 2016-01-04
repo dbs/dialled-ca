@@ -1,0 +1,148 @@
+#!/usr/bin/env python
+
+# Copyright (C) 2016 Dan Scott <dscott@laurentian.ca>
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+"""
+Grab JSON data from http://cwrc.ca/rsc-src/ to seed our list of libraries and archives
+
+Data comes in the following format:
+{"items": [
+    {
+        "label": "Alberton Public Library",
+        "institutionType": "Library",
+        "group": "Libraries",
+        "libraryType": "Public",
+        "subGroup": "Public libraries",
+        "community": "Alberton",
+        "provCode": "PE",
+        "province": "Prince Edward Island",
+        "population": null,
+        "startDate": "n/a",
+        "url": "http://www.library.pe.ca/libraries",
+        "latitude": "46.8128",
+        "longitude": "-64.0653",
+        "latLng": "46.812804,-64.065297",
+        "sort": "1"
+    },
+"""
+
+import json
+import logging
+import requests
+import socket
+
+# Workaround bad SSL implementations per http://askubuntu.com/a/488277
+import ssl
+ssl.PROTOCOL_SSLv23 = ssl.PROTOCOL_TLSv1
+
+def gather_cwrc_data(jsonfile):
+    "Gather CRWC data on >4700 LAMs for local processing"
+    provinces = ('ab', 'bc', 'mb', 'nb', 'nl', 'ns', 'nt', 'nu', 'on', 'pe', 'qc', 'sk', 'yt')
+
+    # The raw set of province data
+    pdata = []
+    for x in provinces:
+        url = "http://cwrc.ca/rsc-src/datasets/%s.json" % (x)
+        pjson = requests.get(url)
+
+        if pjson.status_code < 400:
+            # Get the data in UTF8 format
+            libs = pjson.json()
+            pdata += libs['items']
+        else:
+            logging.error("Couldn't get %s: %s" % (url, pjson.status_code))
+
+    outf = open(jsonfile, 'w')
+    outf.write(json.dumps(pdata, indent=4))
+
+def check_lib_urls(data):
+    "Test URLs to see if they still resolve"
+
+    tested = []
+    headers = {'User-Agent': "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0"}
+    res = {"good": 1, "bad": 1}
+    cnt = 0
+    session = requests.Session()
+    for lib in data:
+        cnt += 1
+
+        if not lib['url']:
+            url_problem("No URL", lib, res)
+            continue
+
+        u = lib['url'].strip().strip('\u200e').strip('\u200f')
+        if u != lib['url']:
+            logging.warning("%d\t%s\t[%s]\tURL has spaces or RTL/LTR Unicode" % (cnt, lib['label'], lib['url']))
+            
+        if u in tested:
+            logging.warning("%d\t%s\t%s\tSkipping duplicate" % (cnt, lib['label'], u))
+            continue
+
+        tested.append(u)
+
+        if u[0:4] != 'http':
+            url_problem("Not an HTTP URL", lib, res)
+            continue
+            
+        logging.info("%d\t%s\t%s\tChecking..." % (cnt, lib['label'], u))
+        try:
+            response = session.get(u, headers=headers, timeout=10)
+            code = response.status_code
+            if code >= 400:
+                url_problem(code, lib, res)
+            elif u != response.url:
+                logging.info("Redirect: %s\t%s" % (u, response.url))
+                res['good'] += 1
+            else:
+                res['good'] += 1
+        except socket.timeout:
+            url_problem("timeout", lib, res)
+        except (Exception) as error:
+            url_problem(error.__class__.__name__, lib, res)
+    return res
+
+def url_problem(problem, lib, r):
+    "Abstract the many potential URL problems"
+    logging.error("%s\t%s\t%s" % (lib['label'], lib['url'], problem))
+    r['bad'] += 1
+
+def main():
+    "Main function"
+    jsonfile = 'all_libraries.json'
+    logfile = 'crawl.log'
+    logformat = '%(asctime)s %(levelname)s:%(message)s'
+
+    logging.basicConfig(format=logformat, filename=logfile, level=logging.INFO, datefmt='%Y:%m:%d %H:%M:%S')
+    # requests module is very chatty
+    logging.getLogger("requests").setLevel(logging.WARNING)
+    logging.info('Starting')
+
+    try:
+        jsonp = open(jsonfile, 'r')
+    except FileNotFoundError:
+        print("First run: getting JSON data.")
+        gather_cwrc_data(jsonfile)
+        jsonp = open(jsonfile, 'r')
+
+    with jsonp:
+        libdata = json.loads(jsonp.read())
+        r = check_lib_urls(libdata)
+        logging.info("Good: %s\nBad: %s" % (r['good'], r['bad']))
+    logging.info('Finished')
+
+if __name__ == '__main__':
+    main()
+
