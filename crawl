@@ -41,6 +41,7 @@ Data comes in the following format:
 
 import json
 import logging
+import os
 import requests
 import socket
 
@@ -86,7 +87,7 @@ def check_lib_urls(data):
         u = lib['url'].strip().strip('\u200e').strip('\u200f')
         if u != lib['url']:
             logging.warning("%d\t%s\t[%s]\tURL has spaces or RTL/LTR Unicode" % (cnt, lib['label'], lib['url']))
-            
+
         if u in tested:
             logging.warning("%d\t%s\t%s\tSkipping duplicate" % (cnt, lib['label'], u))
             continue
@@ -96,7 +97,7 @@ def check_lib_urls(data):
         if u[0:4] != 'http':
             url_problem("Not an HTTP URL", lib, res)
             continue
-            
+
         logging.info("%d\t%s\t%s\tChecking..." % (cnt, lib['label'], u))
         try:
             response = session.get(u, headers=headers, timeout=10)
@@ -105,14 +106,31 @@ def check_lib_urls(data):
                 url_problem(code, lib, res)
             elif u != response.url:
                 logging.info("Redirect: %s\t%s" % (u, response.url))
-                res['good'] += 1
-            else:
-                res['good'] += 1
+
+            save_html(u, response.text)
+            res['good'] += 1
         except socket.timeout:
             url_problem("timeout", lib, res)
         except (Exception) as error:
             url_problem(error.__class__.__name__, lib, res)
     return res
+
+def save_html(u, text):
+    "Save the contents of the URL to disk"
+    try:
+        os.stat('html')
+    except:
+        os.mkdir('html')
+
+    trans = str.maketrans({"/": "_", "\\": "_", ".": "_"})
+    fname = u.split('://')[1].split('#')[0].strip('/').translate(trans)
+
+    try:
+        fh = open(os.path.join('html', fname), "w")
+        with fh:
+            fh.write(text)
+    except (Exception) as error:
+        logging.error("Couldn't save HTML file named %s: %s" % (fname, error))
 
 def url_problem(problem, lib, r):
     "Abstract the many potential URL problems"
