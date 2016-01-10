@@ -45,6 +45,7 @@ import os
 import rdflib
 import requests
 import socket
+import urllib
 from rdflib.namespace import DC, DCTERMS, FOAF, OWL, XMLNS
 
 # Workaround bad SSL implementations per http://askubuntu.com/a/488277
@@ -221,6 +222,7 @@ def parse_lib_url(lib):
         fname = os.path.join('html', _url_to_filename(rawurl))
         if not os.stat(fname):
             return
+        logging.info("%d\t%s\t%s\tParsing..." % (cnt, lib['label'], lib['url']))
         g = rdflib.Graph()
         # format='html' invokes both RDFa and Microdata parsers
         r = g.parse(open(fname, 'r'), format='html', location=rawurl)
@@ -235,6 +237,8 @@ def parse_lib_url(lib):
         with out:
             out.write(str(g.serialize(format='n3').decode('utf-8')))
 
+    except (urllib.error.HTTPError) as inst:
+        logging.error("%s %s %s" % (inst.code, inst.msg, inst.filename))
     except (Exception) as inst:
         logging.error("%s" % (inst))
 
