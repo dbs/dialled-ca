@@ -153,7 +153,7 @@ def save_html(u, text):
 
 def _url_to_filename(u):
     "Convert a URL to a writable filename"
-    trans = str.maketrans({" ": "_", ":": "_", "/": "_", "\\": "_", ".": "_"})
+    trans = str.maketrans({"+": "_", " ": "_", ":": "_", "/": "_", "\\": "_", ".": "_"})
     return u.split('?')[0].translate(trans)
 
 def url_problem(problem, lib, r):
