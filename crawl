@@ -225,8 +225,10 @@ def parse_lib_url(lib, cnt):
             return
         logging.info("%d\t%s\t%s\tParsing..." % (cnt, lib['label'], lib['url']))
         g = rdflib.Graph()
+
+        fp = open(fname, 'r')
         # format='html' invokes both RDFa and Microdata parsers
-        r = g.parse(open(fname, 'r'), format='html', location=rawurl)
+        r = g.parse(file=fp, format='html', location=rawurl)
         bind_namespaces(g)
 
         # Add sameAs assertions for redirected URLs
