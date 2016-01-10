@@ -42,8 +42,10 @@ Data comes in the following format:
 import json
 import logging
 import os
+import rdflib
 import requests
 import socket
+from rdflib.namespace import DC, DCTERMS, FOAF, XMLNS
 
 # Workaround bad SSL implementations per http://askubuntu.com/a/488277
 import ssl
@@ -69,7 +71,7 @@ def gather_cwrc_data(jsonfile):
     outf = open(jsonfile, 'w')
     outf.write(json.dumps(pdata, indent=4))
 
-def check_lib_urls(data):
+def check_lib_urls(data, maxlinks=None):
     "Test URLs to see if they still resolve"
 
     tested = []
@@ -80,13 +82,14 @@ def check_lib_urls(data):
     for lib in data:
         cnt += 1
 
+        if maxlinks and cnt > maxlinks:
+            continue
+
         if not lib['url']:
             url_problem("No URL", lib, res)
             continue
 
-        u = lib['url'].strip().strip('\u200e').strip('\u200f')
-        if u != lib['url']:
-            logging.warning("%d\t%s\t[%s]\tURL has spaces or RTL/LTR Unicode" % (cnt, lib['label'], lib['url']))
+        u = clean_url(lib)
 
         if u in tested:
             logging.warning("%d\t%s\t%s\tSkipping duplicate" % (cnt, lib['label'], u))
@@ -113,7 +116,17 @@ def check_lib_urls(data):
             url_problem("timeout", lib, res)
         except (Exception) as error:
             url_problem(error.__class__.__name__, lib, res)
+
     return res
+
+def clean_url(lib):
+    "Remove spaces and unicode from the URL"
+
+    u = lib['url'].strip().strip('\u200e').strip('\u200f')
+    if u != lib['url']:
+        logging.warning("%d\t%s\t[%s]\tURL has spaces or RTL/LTR Unicode" % (cnt, lib['label'], lib['url']))
+
+    return u
 
 def save_html(u, text):
     "Save the contents of the URL to disk"
@@ -122,8 +135,7 @@ def save_html(u, text):
     except:
         os.mkdir('html')
 
-    trans = str.maketrans({"/": "_", "\\": "_", ".": "_"})
-    fname = u.split('://')[1].split('#')[0].strip('/').translate(trans)
+    fname = _url_to_filename(u)
 
     try:
         fh = open(os.path.join('html', fname), "w")
@@ -132,12 +144,94 @@ def save_html(u, text):
     except (Exception) as error:
         logging.error("Couldn't save HTML file named %s: %s" % (fname, error))
 
+def _url_to_filename(u):
+    "Convert a URL to a writable filename"
+    trans = str.maketrans({"/": "_", "\\": "_", ".": "_"})
+    return u.split('?')[0].translate(trans)
+
 def url_problem(problem, lib, r):
     "Abstract the many potential URL problems"
     logging.error("%s\t%s\t%s" % (lib['label'], lib['url'], problem))
     r['bad'] += 1
 
-def main():
+def correct_base(g, fbase, u):
+    "Swap the file system base for the URL base"
+
+    g2 = rdflib.Graph()
+    for s, p, o in g:
+        path = 'file://'
+        if s.startswith(path):
+            abspath = urllib.parse.urljoin(path, os.getcwd())
+            if s.startswith(abspath):
+                path = abspath
+            s = rdflib.URIRef(urllib.parse.urljoin(u, s[len(path):]))
+        g2.add((s, p, o))
+    return g2
+
+def parse_lib_urls(data, maxlinks=None):
+    "Extract RDF from RDFa in returned HTML"
+    
+    cnt = 0
+    for lib in data:
+        cnt += 1
+        if maxlinks and maxlinks > cnt:
+            continue
+
+        if not lib['url']:
+            continue
+
+        parse_lib_url(lib)
+
+def bind_namespaces(graph):
+    "Bind common namespaces"
+
+    ogp = rdflib.Namespace('http://ogp.me/ns#')
+    purlrss = rdflib.Namespace('http://purl.org/rss/1.0/modules/content/')
+    rdfa = rdflib.Namespace('http://www.w3.org/ns/rdfa#')
+    schema = rdflib.Namespace('http://schema.org/')
+    sioc = rdflib.Namespace('http://rdfs.org/sioc/ns#')
+    xhtml = rdflib.Namespace('http://www.w3.org/1999/xhtml/vocab#')
+    mdata = rdflib.Namespace('http://www.w3.org/ns/md#')
+
+    graph.bind('dc', DC)
+    graph.bind('dcterms', DCTERMS)
+    graph.bind('md', mdata)
+    graph.bind('ogp', ogp)
+    graph.bind('rdfa', rdfa)
+    graph.bind('schema', schema)
+    graph.bind('sioc', sioc)
+    graph.bind('xhtml', xhtml)
+    graph.bind('foaf', FOAF)
+    graph.bind('xmlns', XMLNS)
+    graph.bind('purlrss', purlrss)
+
+def parse_lib_url(lib):
+    "Parse and write the graph for a single URL"
+    purlrss = rdflib.Namespace('http://purl.org/rss/1.0/modules/content/')
+    try:
+        rawurl = clean_url(lib)
+        fname = os.path.join('html', _url_to_filename(rawurl))
+        if not os.stat(fname):
+            return
+        g = rdflib.Graph()
+        r = g.parse(open(fname, 'r'), format='html', publicID=rawurl)
+        bind_namespaces(g)
+        #g = correct_base(g, fname, lib['url'])
+        #bind_namespaces(g)
+        #g.remove((None, None, FOAF['Document']))
+        #g.remove((None, None, purlrss['encoded']))
+        #g.remove((purlrss['encoded'], None, None))
+        #g.remove((None, purlrss['encoded'], None))
+
+        out = open("%s.n3" % (fname), "w")
+        with out:
+            out.write(str(g.serialize(format='n3').decode('utf-8')))
+
+    except (Exception) as inst:
+        logging.error("%s" % (inst))
+
+
+def main(maxlinks=None):
     "Main function"
     jsonfile = 'all_libraries.json'
     logfile = 'crawl.log'
@@ -146,6 +240,7 @@ def main():
     logging.basicConfig(format=logformat, filename=logfile, level=logging.INFO, datefmt='%Y:%m:%d %H:%M:%S')
     # requests module is very chatty
     logging.getLogger("requests").setLevel(logging.WARNING)
+    logging.getLogger("rdflib").setLevel(logging.WARNING)
     logging.info('Starting')
 
     try:
@@ -157,10 +252,20 @@ def main():
 
     with jsonp:
         libdata = json.loads(jsonp.read())
-        r = check_lib_urls(libdata)
+        r = check_lib_urls(libdata, maxlinks)
         logging.info("Good: %s\nBad: %s" % (r['good'], r['bad']))
+        parse_lib_urls(libdata, maxlinks)
     logging.info('Finished')
 
 if __name__ == '__main__':
-    main()
+    lib = [{
+            'url': 'http://library.laurentian.ca/content/library',
+            'label': 'Laurentian University'
+        },{
+            'url': 'http://www.yukonminers.ca/',
+            'label': 'Yukon Miners'
+        }
+    ]
+    #parse_lib_urls(lib)
+    main(maxlinks=None)
 
