@@ -45,7 +45,7 @@ import os
 import rdflib
 import requests
 import socket
-from rdflib.namespace import DC, DCTERMS, FOAF, XMLNS
+from rdflib.namespace import DC, DCTERMS, FOAF, OWL, XMLNS
 
 # Workaround bad SSL implementations per http://askubuntu.com/a/488277
 import ssl
@@ -146,7 +146,7 @@ def save_html(u, text):
 
 def _url_to_filename(u):
     "Convert a URL to a writable filename"
-    trans = str.maketrans({"/": "_", "\\": "_", ".": "_"})
+    trans = str.maketrans({" ": "_", ":": "_", "/": "_", "\\": "_", ".": "_"})
     return u.split('?')[0].translate(trans)
 
 def url_problem(problem, lib, r):
@@ -202,6 +202,7 @@ def bind_namespaces(graph):
     graph.bind('sioc', sioc)
     graph.bind('xhtml', xhtml)
     graph.bind('foaf', FOAF)
+    graph.bind('owl', OWL)
     graph.bind('xmlns', XMLNS)
     graph.bind('purlrss', purlrss)
 
@@ -214,14 +215,14 @@ def parse_lib_url(lib):
         if not os.stat(fname):
             return
         g = rdflib.Graph()
+        # format='html' invokes both RDFa and Microdata parsers
         r = g.parse(open(fname, 'r'), format='html', location=rawurl)
         bind_namespaces(g)
-        #g = correct_base(g, fname, lib['url'])
-        #bind_namespaces(g)
-        #g.remove((None, None, FOAF['Document']))
-        #g.remove((None, None, purlrss['encoded']))
-        #g.remove((purlrss['encoded'], None, None))
-        #g.remove((None, purlrss['encoded'], None))
+
+        # Add sameAs assertions for redirected URLs
+        if 'urlPrevious' in lib:
+            g.add((lib['url'], owl['sameAs'], lib['urlPrevious']))
+            g.add((lib['url'], schema['sameAs'], lib['urlPrevious']))
 
         out = open("%s.n3" % (fname), "w")
         with out:
