@@ -90,7 +90,7 @@ def check_lib_urls(data, maxlinks=None, overwrite=False):
             url_problem("No URL", lib, res)
             continue
 
-        u = clean_url(lib)
+        u = clean_url(lib, cnt)
 
         if u in tested:
             logging.warning("%d\t%s\t%s\tSkipping duplicate" % (cnt, lib['label'], u))
@@ -105,7 +105,8 @@ def check_lib_urls(data, maxlinks=None, overwrite=False):
         logging.info("%d\t%s\t%s\tChecking..." % (cnt, lib['label'], u))
         try:
             if overwrite is False and os.stat(os.path.join('html', _url_to_filename(u))):
-                logging.info("%d\t%s\t%s\tAlready exists, skipping!" % (cnt, lib['label'], u))
+                logging.debug("%d\t%s\t%s\tExists, skipping!" % (cnt, lib['label'], u))
+                res['good'] += 1
                 continue
         except:
             logging.info("%d\t%s\t%s\tGetting..." % (cnt, lib['label'], u))
@@ -127,7 +128,7 @@ def check_lib_urls(data, maxlinks=None, overwrite=False):
 
     return res
 
-def clean_url(lib):
+def clean_url(lib, cnt=0):
     "Remove spaces and unicode from the URL"
 
     u = lib['url'].strip().strip('\u200e').strip('\u200f')
@@ -188,7 +189,7 @@ def parse_lib_urls(data, maxlinks=None):
         if not lib['url']:
             continue
 
-        parse_lib_url(lib)
+        parse_lib_url(lib, cnt)
 
 def bind_namespaces(graph):
     "Bind common namespaces"
@@ -214,7 +215,7 @@ def bind_namespaces(graph):
     graph.bind('xmlns', XMLNS)
     graph.bind('purlrss', purlrss)
 
-def parse_lib_url(lib):
+def parse_lib_url(lib, cnt):
     "Parse and write the graph for a single URL"
     purlrss = rdflib.Namespace('http://purl.org/rss/1.0/modules/content/')
     try:
