@@ -214,7 +214,7 @@ def parse_lib_url(lib):
         if not os.stat(fname):
             return
         g = rdflib.Graph()
-        r = g.parse(open(fname, 'r'), format='html', publicID=rawurl)
+        r = g.parse(open(fname, 'r'), format='html', location=rawurl)
         bind_namespaces(g)
         #g = correct_base(g, fname, lib['url'])
         #bind_namespaces(g)
