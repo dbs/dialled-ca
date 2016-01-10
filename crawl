@@ -71,7 +71,7 @@ def gather_cwrc_data(jsonfile):
     outf = open(jsonfile, 'w')
     json.dump(pdata, outf, indent=4, sort_keys=True)
 
-def check_lib_urls(data, maxlinks=None):
+def check_lib_urls(data, maxlinks=None, overwrite=False):
     "Test URLs to see if they still resolve"
 
     tested = []
@@ -102,6 +102,13 @@ def check_lib_urls(data, maxlinks=None):
             continue
 
         logging.info("%d\t%s\t%s\tChecking..." % (cnt, lib['label'], u))
+        try:
+            if overwrite is False and os.stat(os.path.join('html', _url_to_filename(u))):
+                logging.info("%d\t%s\t%s\tAlready exists, skipping!" % (cnt, lib['label'], u))
+                continue
+        except:
+            logging.info("%d\t%s\t%s\tGetting..." % (cnt, lib['label'], u))
+
         try:
             response = session.get(u, headers=headers, timeout=10)
             code = response.status_code
