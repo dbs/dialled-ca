@@ -69,7 +69,7 @@ def gather_cwrc_data(jsonfile):
             logging.error("Couldn't get %s: %s" % (url, pjson.status_code))
 
     outf = open(jsonfile, 'w')
-    outf.write(json.dumps(pdata, indent=4))
+    json.dump(pdata, outf, indent=4, sort_keys=True)
 
 def check_lib_urls(data, maxlinks=None):
     "Test URLs to see if they still resolve"
@@ -229,7 +229,6 @@ def parse_lib_url(lib):
 
     except (Exception) as inst:
         logging.error("%s" % (inst))
-
 
 def main(maxlinks=None):
     "Main function"
