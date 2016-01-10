@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+"""
+Update all_libraries.json with tracking for original URLs
+"""
+
+import json
+
+redirects = []
+try:
+    jsonf = open('all_libraries.json', 'r')
+    with jsonf:
+        libj = json.loads(jsonf.read())
+except(Exception) as inst:
+    print(inst)
+
+try:
+    logf = open('crawl.log', 'r')
+    with logf:
+        for line in logf:
+           if 'INFO:Redirect: ' in line:
+                (oldu, newu) = line[line.find(': ')+1:].strip().split('\t')
+                if '?utm_source' in newu:
+                    newu = newu[0:newu.find('?utm_source')]
+                print("Old: %s, New: %s" % (oldu, newu))
+                redirects.append((oldu, newu))
+except(Exception) as inst:
+    print(inst)
+
+newlibj = []
+for lib in libj:
+    for oldu, newu in redirects:
+        if lib['url'] == oldu:
+            lib['url'] = newu
+            lib['urlPrevious'] = (oldu)
+    if lib['url']:
+        lib['url'] = lib['url'].strip().strip('\u200e').strip('\u200f')
+    newlibj.append(lib)
+
+try:
+    newjsonf = open('new_libraries.json', 'w')
+    with newjsonf:
+        json.dump(newlibj, newjsonf, indent=4, sort_keys=True)
+except(Exception) as inst:
+    print(inst)
