@@ -39,6 +39,7 @@ Data comes in the following format:
     },
 """
 
+import html5lib
 import json
 import logging
 import os
@@ -179,7 +180,7 @@ def correct_base(g, fbase, u):
 
 def parse_lib_urls(data, maxlinks=None):
     "Extract RDF from RDFa in returned HTML"
-    
+
     cnt = 0
     for lib in data:
         cnt += 1
@@ -217,7 +218,10 @@ def bind_namespaces(graph):
 
 def parse_lib_url(lib, cnt):
     "Parse and write the graph for a single URL"
-    purlrss = rdflib.Namespace('http://purl.org/rss/1.0/modules/content/')
+
+    # For html5lib / xml.etree XPathery
+    ns = { 'xhtml': 'http://www.w3.org/1999/xhtml' }
+
     try:
         rawurl = clean_url(lib)
         fname = os.path.join('html', _url_to_filename(rawurl))
@@ -226,10 +230,16 @@ def parse_lib_url(lib, cnt):
         logging.info("%d\t%s\t%s\tParsing..." % (cnt, lib['label'], lib['url']))
         g = rdflib.Graph()
 
-        fp = open(fname, 'r')
-        # format='html' invokes both RDFa and Microdata parsers
-        r = g.parse(file=fp, format='html', location=rawurl)
-        bind_namespaces(g)
+        with open(fname, 'r') as fp:
+            raw_data = fp.read()
+            # format='html' invokes both RDFa and Microdata parsers
+            r = g.parse(data=raw_data, format='html', location=rawurl)
+            bind_namespaces(g)
+
+            # parse JSON+LD islands
+            tree = html5lib.parse(raw_data)
+            for script in tree.findall('.//xhtml:script[@type="application/ld+json"]', ns):
+                g.parse(data=script.text, format='json-ld', location=rawurl)
 
         # Add sameAs assertions for redirected URLs
         if 'urlPrevious' in lib:
@@ -278,8 +288,17 @@ if __name__ == '__main__':
         },{
             'url': 'http://www.yukonminers.ca/',
             'label': 'Yukon Miners'
+        },{
+            'url': 'http://www.chauvinmunicipallibrary.ab.ca/',
+            'label': 'Chauvin'
+        },{
+            'url': 'http://www.revelstokemuseum.ca/',
+            'label': 'Revelstoke Museum'
+        },{
+            'url': 'http://www.redwaterlibrary.ab.ca/',
+            'label': 'Redwater Library'
         }
     ]
-    #parse_lib_urls(lib)
+    # parse_lib_urls(lib)
     main(maxlinks=None)
 
