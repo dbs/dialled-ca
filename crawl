@@ -47,6 +47,7 @@ import rdflib
 import requests
 import socket
 import urllib
+import urllib.parse
 from rdflib.namespace import DC, DCTERMS, FOAF, OWL, XMLNS
 
 # Workaround bad SSL implementations per http://askubuntu.com/a/488277
@@ -156,8 +157,7 @@ def save_html(u, text):
 
 def _url_to_filename(u):
     "Convert a URL to a writable filename"
-    trans = str.maketrans({"~": "_", "+": "_", " ": "_", ":": "_", "/": "_", "\\": "_", ".": "_"})
-    return u.split('?')[0].translate(trans)
+    return urllib.parse.quote(u, safe='')
 
 def url_problem(problem, lib, r):
     "Abstract the many potential URL problems"
@@ -224,18 +224,20 @@ def parse_lib_url(lib, cnt):
 
     try:
         rawurl = clean_url(lib)
-        fname = os.path.join('html', _url_to_filename(rawurl))
-        if not os.stat(fname):
+        fname = _url_to_filename(rawurl)
+        fpath = os.path.join('html', fname)
+        if not os.stat(fpath):
             return
         logging.info("%d\t%s\t%s\tParsing..." % (cnt, lib['label'], lib['url']))
         g = rdflib.Graph()
 
-        with open(fname, 'r') as fp:
-            raw_data = fp.read()
+        with open(fpath, 'r') as fp:
             # format='html' invokes both RDFa and Microdata parsers
-            r = g.parse(data=raw_data, format='html', location=rawurl)
+            r = g.parse(file=fp, format='html', location=rawurl)
             bind_namespaces(g)
 
+        with open(fpath, 'r') as fp:
+            raw_data = fp.read()
             # parse JSON+LD islands
             tree = html5lib.parse(raw_data)
             for script in tree.findall('.//xhtml:script[@type="application/ld+json"]', ns):
@@ -246,8 +248,13 @@ def parse_lib_url(lib, cnt):
             g.add((lib['url'], OWL['sameAs'], lib['urlPrevious']))
             g.add((lib['url'], schema['sameAs'], lib['urlPrevious']))
 
-        out = open("%s.n3" % (fname), "w")
-        with out:
+        n3 = os.path.join('n3', _url_to_filename(rawurl))
+        try:
+            os.stat(n3)
+        except:
+            os.makedirs(n3)
+
+        with open(os.path.join(n3, "%s.n3" % (fname)), "w") as out:
             out.write(str(g.serialize(format='n3').decode('utf-8')))
 
     except (urllib.error.HTTPError) as inst:
