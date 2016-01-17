@@ -233,7 +233,7 @@ def parse_lib_url(lib, cnt):
 
         with open(fpath, 'r') as fp:
             # format='html' invokes both RDFa and Microdata parsers
-            r = g.parse(file=fp, format='html', location=rawurl)
+            r = g.parse(file=fp, format='html', publicID=rdflib.URIRef(rawurl))
             bind_namespaces(g)
 
         with open(fpath, 'r') as fp:
