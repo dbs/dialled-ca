@@ -221,6 +221,7 @@ def parse_lib_url(lib, cnt):
 
     # For html5lib / xml.etree XPathery
     ns = { 'xhtml': 'http://www.w3.org/1999/xhtml' }
+    schema = rdflib.Namespace('http://schema.org/')
 
     try:
         rawurl = clean_url(lib)
@@ -245,8 +246,8 @@ def parse_lib_url(lib, cnt):
 
         # Add sameAs assertions for redirected URLs
         if 'urlPrevious' in lib:
-            g.add((lib['url'], OWL['sameAs'], lib['urlPrevious']))
-            g.add((lib['url'], schema['sameAs'], lib['urlPrevious']))
+            g.add((rdflib.URIRef(lib['url']), OWL.sameAs, rdflib.URIRef(lib['urlPrevious'])))
+            g.add((rdflib.URIRef(lib['url']), schema.sameAs, rdflib.URIRef(lib['urlPrevious'])))
 
         n3 = os.path.join('n3', _url_to_filename(rawurl))
         try:
@@ -290,7 +291,8 @@ def main(maxlinks=None):
 
 if __name__ == '__main__':
     lib = [{
-            'url': 'http://library.laurentian.ca/content/library',
+            'url': 'http://laurentian.ca/library',
+            'urlPrevious': 'http://laurentian.ca/content/library',
             'label': 'Laurentian University'
         },{
             'url': 'http://www.yukonminers.ca/',
