@@ -114,7 +114,7 @@ def check_lib_urls(data, maxlinks=None, overwrite=False):
             logging.info("%d\t%s\t%s\tGetting..." % (cnt, lib['label'], u))
 
         try:
-            response = session.get(u, headers=headers, timeout=10)
+            response = session.get(u, headers=headers, timeout=30)
             code = response.status_code
             if code >= 400:
                 url_problem(code, lib, res)
