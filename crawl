@@ -221,7 +221,6 @@ def parse_lib_url(lib, cnt):
 
     # For html5lib / xml.etree XPathery
     ns = { 'xhtml': 'http://www.w3.org/1999/xhtml' }
-    schema = rdflib.Namespace('http://schema.org/')
 
     try:
         rawurl = clean_url(lib)
@@ -242,12 +241,7 @@ def parse_lib_url(lib, cnt):
             # parse JSON+LD islands
             tree = html5lib.parse(raw_data)
             for script in tree.findall('.//xhtml:script[@type="application/ld+json"]', ns):
-                g.parse(data=script.text, format='json-ld', location=rawurl)
-
-        # Add sameAs assertions for redirected URLs
-        if 'urlPrevious' in lib:
-            g.add((rdflib.URIRef(lib['url']), OWL.sameAs, rdflib.URIRef(lib['urlPrevious'])))
-            g.add((rdflib.URIRef(lib['url']), schema.sameAs, rdflib.URIRef(lib['urlPrevious'])))
+                g.parse(data=script.text, format='json-ld', publicID=rdflib.URIRef(rawurl))
 
         n3 = os.path.join('n3', _url_to_filename(rawurl))
         try:
