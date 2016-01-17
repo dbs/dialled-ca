@@ -256,14 +256,14 @@ def parse_lib_url(lib, cnt):
             for script in tree.findall('.//xhtml:script[@type="application/ld+json"]', ns):
                 g.parse(data=script.text, format='json-ld', publicID=rdflib.URIRef(rawurl))
 
-        nt = os.path.join('nt', _url_to_filename(rawurl))
+        ttl = os.path.join('ttl', _url_to_filename(rawurl))
         try:
-            os.stat(nt)
+            os.stat(ttl)
         except:
-            os.makedirs(nt)
+            os.makedirs(ttl)
 
-        with open(os.path.join(nt, "triples.nt"), "w") as out:
-            out.write(str(g.serialize(format='nt').decode('utf-8')))
+        with open(os.path.join(ttl, "triples.ttl"), "w") as out:
+            out.write(str(g.serialize(format='turtle').decode('utf-8')))
 
     except (urllib.error.HTTPError) as inst:
         logging.error("%s %s %s" % (inst.code, inst.msg, inst.filename))
