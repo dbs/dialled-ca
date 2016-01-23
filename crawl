@@ -177,17 +177,15 @@ def url_problem(problem, lib, r):
     logging.error("%s\t%s\t%s" % (lib['label'], lib['url'], problem))
     r['bad'] += 1
 
-def correct_base(g, fbase, u):
+def correct_base(g, fpath, u):
     "Swap the file system base for the URL base"
 
     g2 = rdflib.Graph()
+    bind_namespaces(g2)
     for s, p, o in g:
         path = 'file://'
         if s.startswith(path):
-            abspath = urllib.parse.urljoin(path, os.getcwd())
-            if s.startswith(abspath):
-                path = abspath
-            s = rdflib.URIRef(urllib.parse.urljoin(u, s[len(path):]))
+            s = rdflib.URIRef(urllib.parse.urljoin(u, s[len(os.path.join(path, fpath)):]))
         g2.add((s, p, o))
     return g2
 
@@ -248,6 +246,7 @@ def parse_lib_url(lib, cnt):
             # format='html' invokes both RDFa and Microdata parsers
             r = g.parse(file=fp, format='html', publicID=rdflib.URIRef(rawurl))
             bind_namespaces(g)
+            g = correct_base(g, fpath, rdflib.URIRef(rawurl))
 
         with open(fpath, 'r') as fp:
             raw_data = fp.read()
