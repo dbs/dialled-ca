@@ -153,6 +153,14 @@ class LibraryGraph:
                 graph.remove((sub, pred, obj))
                 graph.add((sub, pred, uri_obj))
 
+    def remove_xhtml_roles(self, graph):
+        "XHTML roles clutter up the graph; remove them"
+
+        xhtml = rdflib.Namespace('http://www.w3.org/1999/xhtml/vocab#')
+        for sub, pred, obj in graph:
+            if pred == xhtml.role:
+                graph.remove((sub, pred, obj))
+
     def extract_lod_all(self, maxlinks=None):
         "Extract RDF from RDFa in returned HTML"
 
@@ -225,6 +233,7 @@ class LibraryGraph:
                 for script in tree.findall('.//xhtml:script[@type="application/ld+json"]', ns):
                     g.parse(data=script.text, format='json-ld', publicID=rdflib.URIRef(rawurl))
 
+            self.remove_xhtml_roles(g)
             g = self.stupid_hacks(g, rawurl)
 
             self.graph += g
