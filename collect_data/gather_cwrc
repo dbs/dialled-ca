@@ -1,0 +1,71 @@
+#!/usr/bin/env python
+"""
+Grab JSON data from http://cwrc.ca/rsc-src/ to seed our list of libraries and archives
+
+The Collaborative Writing Resource Centre put together a dataset describing
+over 4,700 libraries, archives, and museums as part of the Royal Society of
+Canada's Expert Panel on The Status and Future of Canada's Libraries and
+Archives, published June 2014. This is an excellent starting point for trying
+to create an up-to-date, maintainable dataset with more granularity.
+
+Merge data from provincial public library data sources (updated URLs, more granular addresses):
+ * BC: https://catalogue.data.gov.bc.ca/dataset/3d2318d4-8f5d-4208-88f5-995420d7c58f/resource/b6a28bfb-580b-4662-9f00-f7189d52fbe6/download/bcpubliclibrarysystemslocationsandbranchdata.csv
+ * Alberta (mailing addresses): http://www.municipalaffairs.alberta.ca/documents/libraries/library_mail_address_lst_jan16.xls
+ * Alberta (URLs): http://www.municipalaffairs.alberta.ca/documents/libraries/directory_final_web_reduced.pdf
+ * Saskatchewan: http://www.libraries.gov.sk.ca/Rex9/public.cfm
+ * Manitoba: https://mb.countingopinions.com/memberlist_details.php (ugh)
+ * Ontario: https://www.ontario.ca/data/ontario-public-library-statistics
+ * Quebec: http://donnees.gouv.qc.ca (currently down)
+ * New Brunswick: http://www1.gnb.ca/0003/pages/en/alpha-e.asp
+ * Nova Scotia: http://library.novascotia.ca/map
+ * PEI: http://www.library.pe.ca/libraries
+ * Newfoundland: http://www.nlpl.ca/home/locations.html
+
+Data comes in the following format:
+{"items": [
+    {
+        "label": "Alberton Public Library",
+        "institutionType": "Library",
+        "group": "Libraries",
+        "libraryType": "Public",
+        "subGroup": "Public libraries",
+        "community": "Alberton",
+        "provCode": "PE",
+        "province": "Prince Edward Island",
+        "population": null,
+        "startDate": "n/a",
+        "url": "http://www.library.pe.ca/libraries",
+        "latitude": "46.8128",
+        "longitude": "-64.0653",
+        "latLng": "46.812804,-64.065297",
+        "sort": "1"
+    },
+"""
+
+import json
+import logging
+import requests
+import sys
+
+def gather_cwrc_data(jsonfile):
+    "Gather CRWC data on >4700 LAMs for local processing"
+    provinces = ('ab', 'bc', 'mb', 'nb', 'nl', 'ns', 'nt', 'nu', 'on', 'pe', 'qc', 'sk', 'yt')
+
+    # The raw set of province data
+    pdata = []
+    for x in provinces:
+        url = "http://cwrc.ca/rsc-src/datasets/%s.json" % (x)
+        pjson = requests.get(url)
+
+        if pjson.status_code < 400:
+            # Get the data in UTF8 format
+            libs = pjson.json()
+            pdata += libs['items']
+        else:
+            logging.error("Couldn't get %s: %s" % (url, pjson.status_code))
+
+    outf = open(jsonfile, 'w')
+    json.dump(pdata, outf, indent=4, sort_keys=True)
+
+if __name__ == '__main__':
+    gather_cwrc_data('all_libraries.json')

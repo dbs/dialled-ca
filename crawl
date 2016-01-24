@@ -16,40 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-Grab JSON data from http://cwrc.ca/rsc-src/ to seed our list of libraries and archives
-
-Merge data from provincial public library data sources (updated URLs, more granular addresses):
- * BC: https://catalogue.data.gov.bc.ca/dataset/3d2318d4-8f5d-4208-88f5-995420d7c58f/resource/b6a28bfb-580b-4662-9f00-f7189d52fbe6/download/bcpubliclibrarysystemslocationsandbranchdata.csv
- * Alberta (mailing addresses): http://www.municipalaffairs.alberta.ca/documents/libraries/library_mail_address_lst_jan16.xls
- * Alberta (URLs): http://www.municipalaffairs.alberta.ca/documents/libraries/directory_final_web_reduced.pdf
- * Saskatchewan: http://www.libraries.gov.sk.ca/Rex9/public.cfm
- * Manitoba: https://mb.countingopinions.com/memberlist_details.php (ugh)
- * Ontario: https://www.ontario.ca/data/ontario-public-library-statistics
- * Quebec: http://donnees.gouv.qc.ca (currently down)
- * New Brunswick: http://www1.gnb.ca/0003/pages/en/alpha-e.asp
- * Nova Scotia: http://library.novascotia.ca/map
- * PEI: http://www.library.pe.ca/libraries
- * Newfoundland: http://www.nlpl.ca/home/locations.html
-
-Data comes in the following format:
-{"items": [
-    {
-        "label": "Alberton Public Library",
-        "institutionType": "Library",
-        "group": "Libraries",
-        "libraryType": "Public",
-        "subGroup": "Public libraries",
-        "community": "Alberton",
-        "provCode": "PE",
-        "province": "Prince Edward Island",
-        "population": null,
-        "startDate": "n/a",
-        "url": "http://www.library.pe.ca/libraries",
-        "latitude": "46.8128",
-        "longitude": "-64.0653",
-        "latLng": "46.812804,-64.065297",
-        "sort": "1"
-    },
 """
 
 import html5lib
@@ -59,89 +25,247 @@ import os
 import rdflib
 import requests
 import socket
+import sys
+import traceback
 import urllib
 import urllib.parse
-from rdflib.namespace import DC, DCTERMS, FOAF, OWL, XMLNS
+from rdflib.namespace import DC, DCTERMS, FOAF, OWL, RDF, XMLNS
 
 # Workaround bad SSL implementations per http://askubuntu.com/a/488277
 import ssl
 ssl.PROTOCOL_SSLv23 = ssl.PROTOCOL_TLSv1
 
-def gather_cwrc_data(jsonfile):
-    "Gather CRWC data on >4700 LAMs for local processing"
-    provinces = ('ab', 'bc', 'mb', 'nb', 'nl', 'ns', 'nt', 'nu', 'on', 'pe', 'qc', 'sk', 'yt')
+class LibraryGraph:
+    "A graph of all libraries of interest"
 
-    # The raw set of province data
-    pdata = []
-    for x in provinces:
-        url = "http://cwrc.ca/rsc-src/datasets/%s.json" % (x)
-        pjson = requests.get(url)
+    def __init__(self, log_file):
+        self.graph = rdflib.ConjunctiveGraph()
+        self.log_file = log_file
+        self.bind_namespaces(self.graph)
 
-        if pjson.status_code < 400:
-            # Get the data in UTF8 format
-            libs = pjson.json()
-            pdata += libs['items']
+        logformat = '%(asctime)s %(levelname)s:%(message)s'
+
+        if self.log_file:
+            logging.basicConfig(format=logformat, filename=self.log_file, level=logging.INFO, datefmt='%Y:%m:%d %H:%M:%S')
         else:
-            logging.error("Couldn't get %s: %s" % (url, pjson.status_code))
+            logging.basicConfig(format=logformat, stream=sys.stdout, level=logging.INFO, datefmt='%Y:%m:%d %H:%M:%S')
 
-    outf = open(jsonfile, 'w')
-    json.dump(pdata, outf, indent=4, sort_keys=True)
+        # requests module is very chatty
+        logging.getLogger("requests").setLevel(logging.WARNING)
+        logging.getLogger("rdflib").setLevel(logging.WARNING)
 
-def check_lib_urls(data, maxlinks=None, overwrite=False):
-    "Test URLs to see if they still resolve"
-
-    tested = []
-    headers = {'User-Agent': "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0"}
-    res = {"good": 1, "bad": 1}
-    cnt = 0
-    session = requests.Session()
-    for lib in data:
-        cnt += 1
-
-        if maxlinks and cnt > maxlinks:
-            continue
-
-        if not lib['url']:
-            url_problem("No URL", lib, res)
-            continue
-
-        u = clean_url(lib, cnt)
-
-        if u in tested:
-            logging.warning("%d\t%s\t%s\tSkipping duplicate" % (cnt, lib['label'], u))
-            continue
-
-        tested.append(u)
-
-        if u[0:4] != 'http':
-            url_problem("Not an HTTP URL", lib, res)
-            continue
-
-        logging.info("%d\t%s\t%s\tChecking..." % (cnt, lib['label'], u))
+    def load_json(self, json_file):
         try:
-            if overwrite is False and os.stat(os.path.join('html', _url_to_filename(u))):
-                logging.debug("%d\t%s\t%s\tExists, skipping!" % (cnt, lib['label'], u))
-                res['good'] += 1
+            jsonp = open(json_file, 'r')
+        except FileNotFoundError:
+            e = "JSON file %s not found: harvest the CWRC data first" % (json_file)
+            logging.error(e)
+            sys.exit(e)
+
+        with jsonp:
+            self.set_library_data(json.loads(jsonp.read()))
+
+    def set_library_data(self, libraries):
+        self.libraries = libraries
+            
+    def gather_library_html(self, maxlinks=None, overwrite=False):
+        """
+        Downloads the HTML for each listed library
+
+        This enables us to parse the HTML locally for RDFa, microdata, and
+        JSON-LD without hammering the live site. We log redirects and
+        errors encountered when accessing the URL so that we can investigate
+        later.
+        """
+
+        tested = []
+        headers = {'User-Agent': "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0"}
+        res = {"good": 1, "bad": 1}
+        cnt = 0
+        session = requests.Session()
+        for lib in self.libraries:
+            cnt += 1
+
+            if maxlinks and cnt > maxlinks:
                 continue
-        except:
-            logging.info("%d\t%s\t%s\tGetting..." % (cnt, lib['label'], u))
+
+            if not lib['url']:
+                url_problem("No URL", lib, res)
+                continue
+
+            u = clean_url(lib, cnt)
+
+            if u in tested:
+                logging.warning("%d\t%s\t%s\tSkipping duplicate" % (cnt, lib['label'], u))
+                continue
+
+            tested.append(u)
+
+            if u[0:4] != 'http':
+                url_problem("Not an HTTP URL", lib, res)
+                continue
+
+            logging.info("%d\t%s\t%s\tChecking..." % (cnt, lib['label'], u))
+            try:
+                if overwrite is False and os.stat(os.path.join('html', _url_to_filename(u))):
+                    logging.debug("%d\t%s\t%s\tExists, skipping!" % (cnt, lib['label'], u))
+                    res['good'] += 1
+                    continue
+            except:
+                logging.info("%d\t%s\t%s\tGetting..." % (cnt, lib['label'], u))
+
+            try:
+                response = session.get(u, headers=headers, timeout=30)
+                code = response.status_code
+                if code >= 400:
+                    # Log so we can investigate the problem
+                    url_problem(code, lib, res)
+                elif u != response.url:
+                    # Logged so we can add a urlPrevious entry to the JSON
+                    logging.info("Redirect: %s\t%s" % (u, response.url))
+
+                save_html(u, response.text)
+                res['good'] += 1
+            except socket.timeout:
+                url_problem("timeout", lib, res)
+            except (Exception) as error:
+                url_problem(error.__class__.__name__, lib, res)
+
+        return res
+
+    def correct_base(self, graph, file_path, uri):
+        """
+        Swap the file system base for the URL base
+
+        pyMicrodata appears to ignore the publicId parse() parameter and
+        uses the filesystem source instead, which makes for pretty horrible
+        graph identifiers.
+        """
+
+        for sub, pred, obj in graph:
+            file_prefix = 'file://'
+            if sub.startswith(file_prefix):
+                uri_sub = rdflib.URIRef(urllib.parse.urljoin(uri, sub[len(os.path.join(file_prefix, file_path)):]))
+                graph.remove((sub, pred, obj))
+                graph.add((uri_sub, pred, obj))
+            if obj.startswith(file_prefix):
+                uri_obj = rdflib.URIRef(urllib.parse.urljoin(uri, urllib.parse.unquote(obj)[len(os.path.join(file_prefix, 'html')):]))
+                graph.remove((sub, pred, obj))
+                graph.add((sub, pred, uri_obj))
+
+    def extract_lod_all(self, maxlinks=None):
+        "Extract RDF from RDFa in returned HTML"
+
+        cnt = 0
+        for lib in self.libraries:
+            cnt += 1
+            if maxlinks and maxlinks > cnt:
+                continue
+
+            if not lib['url']:
+                continue
+
+            self.extract_lod(lib, cnt)
+
+    def serialize(self, rdf_format='turtle'):
+        "Return the graph in serialized form"
+
+        return str(self.graph.serialize(format=rdf_format).decode('utf-8'))
+
+    def bind_namespaces(self, graph):
+        "Bind common namespaces"
+
+        ogp = rdflib.Namespace('http://ogp.me/ns#')
+        purlrss = rdflib.Namespace('http://purl.org/rss/1.0/modules/content/')
+        rdfa = rdflib.Namespace('http://www.w3.org/ns/rdfa#')
+        schema = rdflib.Namespace('http://schema.org/')
+        sioc = rdflib.Namespace('http://rdfs.org/sioc/ns#')
+        xhtml = rdflib.Namespace('http://www.w3.org/1999/xhtml/vocab#')
+        mdata = rdflib.Namespace('http://www.w3.org/ns/md#')
+
+        graph.bind('dc', DC)
+        graph.bind('dcterms', DCTERMS)
+        graph.bind('md', mdata)
+        graph.bind('ogp', ogp)
+        graph.bind('rdfa', rdfa)
+        graph.bind('schema', schema)
+        graph.bind('sioc', sioc)
+        graph.bind('xhtml', xhtml)
+        graph.bind('foaf', FOAF)
+        graph.bind('owl', OWL)
+        graph.bind('rdf', RDF)
+        graph.bind('xmlns', XMLNS)
+        graph.bind('purlrss', purlrss)
+
+    def extract_lod(self, lib, cnt):
+        "Parse and write the graph for a single URL"
+
+        # For html5lib / xml.etree XPathery
+        ns = { 'xhtml': 'http://www.w3.org/1999/xhtml' }
 
         try:
-            response = session.get(u, headers=headers, timeout=30)
-            code = response.status_code
-            if code >= 400:
-                url_problem(code, lib, res)
-            elif u != response.url:
-                logging.info("Redirect: %s\t%s" % (u, response.url))
+            rawurl = clean_url(lib)
+            g = rdflib.Graph(identifier=rdflib.URIRef(rawurl))
+            fname = _url_to_filename(rawurl)
+            fpath = os.path.join('html', fname)
+            if not os.stat(fpath):
+                return
+            logging.info("%d\t%s\t%s\tParsing..." % (cnt, lib['label'], lib['url']))
 
-            save_html(u, response.text)
-            res['good'] += 1
-        except socket.timeout:
-            url_problem("timeout", lib, res)
-        except (Exception) as error:
-            url_problem(error.__class__.__name__, lib, res)
+            with open(fpath, 'r') as fp:
+                # format='html' invokes both RDFa and Microdata parsers
+                r = g.parse(file=fp, format='html', publicID=rdflib.URIRef(rawurl))
+                self.bind_namespaces(g)
+                self.correct_base(g, fpath, rdflib.URIRef(rawurl))
 
-    return res
+            with open(fpath, 'r') as fp:
+                raw_data = fp.read()
+                # parse JSON+LD islands
+                tree = html5lib.parse(raw_data)
+                for script in tree.findall('.//xhtml:script[@type="application/ld+json"]', ns):
+                    g.parse(data=script.text, format='json-ld', publicID=rdflib.URIRef(rawurl))
+
+            g = self.stupid_hacks(g, rawurl)
+
+            self.graph += g
+
+            ttl = os.path.join('ttl', _url_to_filename(rawurl))
+            try:
+                os.stat(ttl)
+            except:
+                os.makedirs(ttl)
+
+            with open(os.path.join(ttl, "triples.ttl"), "w") as out:
+                out.write(str(g.serialize(format='turtle').decode('utf-8')))
+
+        except (urllib.error.HTTPError) as inst:
+            logging.error("%s %s %s" % (inst.code, inst.msg, inst.filename))
+        except (Exception) as inst:
+            logging.exception("Problem extracting data from URL %s" %(rawurl))
+
+    def stupid_hacks(self, graph, url):
+        """
+        Manifest the graph as turtle so we can use string-based hacks
+
+        This is an awful way to fix these problems, but in some cases
+        they have been introduced by the parsers (and outstanding bugs
+        are waiting to be fixed), and in most cases I can't think of a
+        clean way to manipulate the graph directly.
+        """
+        turtle = str(graph.serialize(format='turtle').decode('utf-8'))
+        # Stupid hack to avoid blank nodes
+        turtle = turtle.replace("\n\n[]", "\n\n<%s>" % (url))
+        # Stupid hacks to avoid mdata empty nodes
+        turtle = turtle.replace("\n\n<%s> md:item () ." % (url), "")
+        turtle = turtle.replace("\n    md:item () ;", "\n")
+        turtle = turtle.replace(";\n    md:item () .", ".")
+        turtle = turtle.replace(" md:item () ;\n    ", " ")
+        # Stupid hack to consolidate schema.org namespaces
+        turtle = turtle.replace("www.schema.org", "schema.org")
+
+        g = rdflib.Graph()
+        g.parse(data=turtle, format='turtle', publicID=rdflib.URIRef(url))
+        return g
 
 def clean_url(lib, cnt=0):
     "Remove spaces and unicode from the URL"
@@ -177,143 +301,43 @@ def url_problem(problem, lib, r):
     logging.error("%s\t%s\t%s" % (lib['label'], lib['url'], problem))
     r['bad'] += 1
 
-def correct_base(g, fpath, u):
-    "Swap the file system base for the URL base"
-
-    g2 = rdflib.Graph()
-    bind_namespaces(g2)
-    for s, p, o in g:
-        path = 'file://'
-        if s.startswith(path):
-            s = rdflib.URIRef(urllib.parse.urljoin(u, s[len(os.path.join(path, fpath)):]))
-        g2.add((s, p, o))
-    return g2
-
-def parse_lib_urls(data, maxlinks=None):
-    "Extract RDF from RDFa in returned HTML"
-
-    cnt = 0
-    for lib in data:
-        cnt += 1
-        if maxlinks and maxlinks > cnt:
-            continue
-
-        if not lib['url']:
-            continue
-
-        parse_lib_url(lib, cnt)
-
-def bind_namespaces(graph):
-    "Bind common namespaces"
-
-    ogp = rdflib.Namespace('http://ogp.me/ns#')
-    purlrss = rdflib.Namespace('http://purl.org/rss/1.0/modules/content/')
-    rdfa = rdflib.Namespace('http://www.w3.org/ns/rdfa#')
-    schema = rdflib.Namespace('http://schema.org/')
-    sioc = rdflib.Namespace('http://rdfs.org/sioc/ns#')
-    xhtml = rdflib.Namespace('http://www.w3.org/1999/xhtml/vocab#')
-    mdata = rdflib.Namespace('http://www.w3.org/ns/md#')
-
-    graph.bind('dc', DC)
-    graph.bind('dcterms', DCTERMS)
-    graph.bind('md', mdata)
-    graph.bind('ogp', ogp)
-    graph.bind('rdfa', rdfa)
-    graph.bind('schema', schema)
-    graph.bind('sioc', sioc)
-    graph.bind('xhtml', xhtml)
-    graph.bind('foaf', FOAF)
-    graph.bind('owl', OWL)
-    graph.bind('xmlns', XMLNS)
-    graph.bind('purlrss', purlrss)
-
-def parse_lib_url(lib, cnt):
-    "Parse and write the graph for a single URL"
-
-    # For html5lib / xml.etree XPathery
-    ns = { 'xhtml': 'http://www.w3.org/1999/xhtml' }
-
-    try:
-        rawurl = clean_url(lib)
-        fname = _url_to_filename(rawurl)
-        fpath = os.path.join('html', fname)
-        if not os.stat(fpath):
-            return
-        logging.info("%d\t%s\t%s\tParsing..." % (cnt, lib['label'], lib['url']))
-        g = rdflib.Graph()
-
-        with open(fpath, 'r') as fp:
-            # format='html' invokes both RDFa and Microdata parsers
-            r = g.parse(file=fp, format='html', publicID=rdflib.URIRef(rawurl))
-            bind_namespaces(g)
-            g = correct_base(g, fpath, rdflib.URIRef(rawurl))
-
-        with open(fpath, 'r') as fp:
-            raw_data = fp.read()
-            # parse JSON+LD islands
-            tree = html5lib.parse(raw_data)
-            for script in tree.findall('.//xhtml:script[@type="application/ld+json"]', ns):
-                g.parse(data=script.text, format='json-ld', publicID=rdflib.URIRef(rawurl))
-
-        ttl = os.path.join('ttl', _url_to_filename(rawurl))
-        try:
-            os.stat(ttl)
-        except:
-            os.makedirs(ttl)
-
-        with open(os.path.join(ttl, "triples.ttl"), "w") as out:
-            out.write(str(g.serialize(format='turtle').decode('utf-8')))
-
-    except (urllib.error.HTTPError) as inst:
-        logging.error("%s %s %s" % (inst.code, inst.msg, inst.filename))
-    except (Exception) as inst:
-        logging.error("%s" % (inst))
-
-def main(maxlinks=None):
-    "Main function"
-    jsonfile = 'all_libraries.json'
-    logfile = 'crawl.log'
-    logformat = '%(asctime)s %(levelname)s:%(message)s'
-
-    logging.basicConfig(format=logformat, filename=logfile, level=logging.INFO, datefmt='%Y:%m:%d %H:%M:%S')
-    # requests module is very chatty
-    logging.getLogger("requests").setLevel(logging.WARNING)
-    logging.getLogger("rdflib").setLevel(logging.WARNING)
-    logging.info('Starting')
-
-    try:
-        jsonp = open(jsonfile, 'r')
-    except FileNotFoundError:
-        print("First run: getting JSON data.")
-        gather_cwrc_data(jsonfile)
-        jsonp = open(jsonfile, 'r')
-
-    with jsonp:
-        libdata = json.loads(jsonp.read())
-        r = check_lib_urls(libdata, maxlinks)
-        logging.info("Good: %s\nBad: %s" % (r['good'], r['bad']))
-        parse_lib_urls(libdata, maxlinks)
-    logging.info('Finished')
-
 if __name__ == '__main__':
     lib = [{
             'url': 'http://laurentian.ca/library',
             'urlPrevious': 'http://laurentian.ca/content/library',
             'label': 'Laurentian University'
-        },{
-            'url': 'http://www.yukonminers.ca/',
-            'label': 'Yukon Miners'
-        },{
-            'url': 'http://www.chauvinmunicipallibrary.ab.ca/',
-            'label': 'Chauvin'
-        },{
-            'url': 'http://www.revelstokemuseum.ca/',
-            'label': 'Revelstoke Museum'
-        },{
-            'url': 'http://www.redwaterlibrary.ab.ca/',
-            'label': 'Redwater Library'
+#        },{
+#            'url': 'http://www.yukonminers.ca/',
+#            'label': 'Yukon Miners'
+#        },{
+#            'url': 'http://www.chauvinmunicipallibrary.ab.ca/',
+#            'label': 'Chauvin'
+#        },{
+#            'url': 'http://www.revelstokemuseum.ca/',
+#            'label': 'Revelstoke Museum'
+#        },{
+#            'url': 'http://www.redwaterlibrary.ab.ca/',
+#            'label': 'Redwater Library'
+#        },{
+#            'url': 'http://galahadpublic.prl.ab.ca/',
+#            'label': 'Galahad Library'
+#        },{
+#            'url': 'http://www.algoma.com/',
+#            'label': 'Algoma'
+#        },{
+#            'url': 'http://biblio.uottawa.ca/en/morisset-library',
+#            'label': 'U Ottawa Morriset Library'
+#        },{
+#            'url': 'http://bodolibrary.prl.ab.ca/',
+#            'label': 'Bodo - check for file:// URIs'
         }
     ]
-    # parse_lib_urls(lib)
-    main(maxlinks=None)
+
+    libgraph = LibraryGraph('crawl.log')
+    #libgraph.load_json('all_libraries.json')
+    libgraph.set_library_data(lib)
+    logging.info('Starting')
+    libgraph.extract_lod_all()
+    print(libgraph.serialize())
+    logging.info('Finished')
 
