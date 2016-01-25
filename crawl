@@ -67,8 +67,8 @@ class LibraryGraph:
 
     def set_library_data(self, libraries):
         self.libraries = libraries
-            
-    def gather_library_html(self, maxlinks=None, overwrite=False):
+
+    def gather_library_html(self, maxlinks=None, overwrite=False, robots=False):
         """
         Downloads the HTML for each listed library
 
@@ -81,6 +81,7 @@ class LibraryGraph:
         tested = []
         headers = {'User-Agent': "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0"}
         res = {"good": 1, "bad": 1}
+        save_path = 'html'
         cnt = 0
         session = requests.Session()
         for lib in self.libraries:
@@ -93,7 +94,13 @@ class LibraryGraph:
                 url_problem("No URL", lib, res)
                 continue
 
-            u = clean_url(lib, cnt)
+            u = None
+            if robots:
+                save_path = 'robots'
+                parts = urllib.parse.urlparse(lib['url'])
+                u = "%s://%s/robots.txt" % (parts.scheme, parts.netloc)
+            else:
+                u = clean_url(lib, cnt)
 
             if u in tested:
                 logging.warning("%d\t%s\t%s\tSkipping duplicate" % (cnt, lib['label'], u))
@@ -107,7 +114,7 @@ class LibraryGraph:
 
             logging.info("%d\t%s\t%s\tChecking..." % (cnt, lib['label'], u))
             try:
-                if overwrite is False and os.stat(os.path.join('html', _url_to_filename(u))):
+                if overwrite is False and os.stat(os.path.join(save_path, _url_to_filename(u))):
                     logging.debug("%d\t%s\t%s\tExists, skipping!" % (cnt, lib['label'], u))
                     res['good'] += 1
                     continue
@@ -124,7 +131,7 @@ class LibraryGraph:
                     # Logged so we can add a urlPrevious entry to the JSON
                     logging.info("Redirect: %s\t%s" % (u, response.url))
 
-                save_html(u, response.text)
+                save_html(u, response.text, save_path)
                 res['good'] += 1
             except socket.timeout:
                 url_problem("timeout", lib, res)
@@ -285,17 +292,17 @@ def clean_url(lib, cnt=0):
 
     return u
 
-def save_html(u, text):
+def save_html(u, text, save_path):
     "Save the contents of the URL to disk"
     try:
-        os.stat('html')
+        os.stat(save_path)
     except:
-        os.mkdir('html')
+        os.mkdir(save_path)
 
     fname = _url_to_filename(u)
 
     try:
-        fh = open(os.path.join('html', fname), "w")
+        fh = open(os.path.join(save_path, fname), "w")
         with fh:
             fh.write(text)
     except (Exception) as error:
