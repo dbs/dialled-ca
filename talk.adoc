@@ -1,0 +1,124 @@
+dialled.ca
+
+Inspired by Collaborative Writing Resource Centre's map of Canadian libraries,
+archives, and museums: 4,798 institutions with locations and URLs
+
+Meshed perfectly with my drive to connect library resources with Canadians by
+exposing structured data in the web pages describing those resources
+
+Every resource (expressed as a bibliographic description) linked to their instances
+Every instance linked to the offering library
+Every library, its URL!
+
+Whereas I was working from the bottom up, the problem I eventually ran into was
+a lack of description of libraries in a linked open data form
+
+There is the OCLC WorldCat Registry - but it is uneven (only two branches of
+Toronto Public Library), frequently out of date or inaccurate, and has a
+non-commercial license
+
+There is the Library and Archives Canada directory - but it holds only one
+entry for Toronto Public Library (well, there are 8 or so, but they are all
+superceded by the single TPL entry)
+
+So CWRC's work was fantastic to see -- but it was a snapshot in time dating
+back to mid-June. And we know everything suffers linkrot on the web.
+
+And it was not granular; while the CWRC data provided lat/long coordinates,
+those were based entirely at the city level, as were the addresses. If you want
+to see what branch is closest to you on the CWRC map, you can't. 
+
+But the CWRC data does include URLs... precious, precious URLs. Meaning that
+we could crawl the URLs and find out what they told us.
+
+And CWRC very generously made the JSON files that include all of the data that
+they pulled together available; they're linked right from their web page, one
+file per province.
+
+So I starting writing some Python scripts. One just downloads and assembles
+the CWRC JSON files. The current main script runs through the JSON, finds each
+URL, and tries to download the HTML at the other end. Then it tries to parse
+any structured data out of the HTML. That script leans heavily on Python
+libraries like Requests, html5lib, and RDFLib, so it's only a few hundred lines
+long.
+
+That linkrot? Only 3,141 pages could be retrieved, and of those, 661 of the
+URLs redirected. And many of the branches were represented by a single URL
+for the entire system.
+
+191 pages have microdata (itemscope / itemtype / itemprop)
+197 pages have RDFa (typeof / property)
+112 pages contain JSON-LD (<script type="application/ld+json>)
+
+287 pages include schema.org
+
+3 pages -- one of which is an archives -- use the schema:Library type.
+None use schema:Museum or the emerging schema:Archives.
+47 use schema:LocalBusiness
+15 use schema:Organization
+44 use schema:Event
+
+Current status:
+Very rough.
+
+Needs URLs (for example, disambiguated 13 PEI libs through a scraping script &
+manual updates) -- and some redirects now point to the overall organization
+instead of the library-specific page. Ah web redesigns... what do you mean,
+persistent URIs
+
+Needs libraries to embed useful RDFa, JSON-LD, or microdata in their pages
+
+Needs to pull the address information, geocode it, and integrate more accurate
+lat/long coordinates.
+
+Prior work:
+Adrian Pohl at hbz — Hochschulbibliothekszentrum des Landes NRW launched
+http://beta.lobid.org/organisations way back in 2010; one of the benefits of
+a centralized ILL service is that he had access to relatively complete data
+for each of the participating libraries. But he and his team have put
+together an impressive set of linked data.
+
+So what can you do? You can correct or improve the URLs that are listed. If you
+work for a consortium--say, something like the Southern Ontario Library Service,
+or CARL, or the Ontario Library Association--maybe you could point at whatever
+page you undoubtedly already have that lists all of the libraries and provides
+their up-to-date URLs; that would be a great help.
+
+You can add linked data to your library homepage. I have some templates that
+might help you with RDFa: a static HTML one, and a Drupal template that offers
+user-friendly widgets for configuring opening hours and contact information.
+
+And I wrote an article that leads you through the process of enriching your
+library homepage with linked data, including location, hours, and contact
+information, all the way through marking up events.
+
+This can include each page in your catalogue, if you've gone to
+the trouble of embedding linked data in those (or your institutional
+repository, or digital archives or exhibits). Oh hey, I've written up
+self-guided tutorials on how to mark those up, too! And (sneak peek), I'm
+going to be leading a hands-on workshop on May 12 at LODLAM TO.
+http://lodlamto.ca y'all.
+
+And if you really want to go down the rabbithole, you can integrate a
+sitemap--decades-old technology for describing the relevant pages of your
+website. 
+
+And once you've created the sitemap, you can advertise it in the robots.txt
+file for your site. sitemaps and robots.txt aren't just for commercial search
+engines! Sitemaps and robots.txt files are described in my article too.
+
+Maybe you want to play with the data that I've collected so far? Sure thing,
+I've made it available as a single Turtle file, ready to be loaded into your
+favourite triple store and SPARQL-queried into giving you the answers you're
+looking for.
+
+Still lots of noise: statements like "<foo> a foaf:Image" and "<foo> xhtml:icon
+</bar>" are not particularly useful.
+
+Need to follow sameAs declarations to pull in more relevant data; for example,
+the Laurentian home page does not directly include operating hours or branch
+relationships, but uses sameAs to point to the Evergreen-generated library
+page that does include and embed this information.
+
+Having a snazzy web front end, instead of a static HTML site with a TTL dump,
+would be nice too.
