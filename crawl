@@ -68,6 +68,12 @@ class LibraryGraph:
     def set_library_data(self, libraries):
         self.libraries = libraries
 
+    def to_tsv(self):
+        "Generate TSV representation of JSON"
+        for x in self.libraries:
+            if x['url']:
+                print("%s\t%s\t%s\t%s\t%s" % (x['url'], x['label'], x['community'], x['provCode'], x['subGroup']))
+
     def gather_library_html(self, maxlinks=None, overwrite=False, robots=False):
         """
         Downloads the HTML for each listed library
@@ -319,9 +325,22 @@ def url_problem(problem, lib, r):
 
 if __name__ == '__main__':
     lib = [{
-            'url': 'http://laurentian.ca/library',
-            'urlPrevious': 'http://laurentian.ca/content/library',
-            'label': 'Laurentian University'
+            "community": "Sudbury",
+            "group": "Libraries",
+            "institutionType": "Library",
+            "label": "Laurentian University",
+            "latLng": "46.5011111,-80.9775",
+            "latitude": "46.5011111",
+            "libraryType": "Academic",
+            "longitude": "-80.9775",
+            "population": None,
+            "provCode": "ON",
+            "province": "Ontario",
+            "sort": "707",
+            "startDate": "1960",
+            "subGroup": "Academic libraries",
+            "url": "http://laurentian.ca/library",
+            "urlPrevious": "http://library.laurentian.ca/content/library"
 #        },{
 #            'url': 'http://www.yukonminers.ca/',
 #            'label': 'Yukon Miners'
