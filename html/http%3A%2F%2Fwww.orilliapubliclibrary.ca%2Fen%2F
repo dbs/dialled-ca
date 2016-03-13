@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	
+<meta name="description" content="Orillia Public Library is committed to fostering an informed and literate rural community. We offer special programs for children, tweens, teens, families and adults." />
+<meta name="keywords" content="Orillia Public Library, Orillia Library, getting a library card, searching the Orillia Public Library catalogue, Orillia Public Library catalog, library services for seniors, bulk library loans, copying and printing at Orillia Library, family literacy materials, free computer, Internet and WIFI access at the library, getting an Orillia Public Library card, home library service, meeting rooms, reading corners, renewing materials, requesting materials, research your family history, housebound patrons, reserving materials at Orillia Public Library, Service Ontario, library programs for kids, tween library programs, teen library programs, adult library programs, family literacy programs, book club in a bag, ebooks, Reading Families, Teen Survivors, storytelling, volunteering at Orillia Public Library, babysitting course, book clubs, Childrenâs Book Week, Book Worm, Chik Chat, March Break Reading Program, Summer Reading Club, book sales, family literacy day, food for fines, movie nights at Orillia Public Library, Ontario Public Library Week, Computer Training at Orillia Public Library online research tools at Orillia Public Library, careers at Orillia Public Library, late fines at Orillia Public Library" />	
+
+<link href="/styles/base.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/structure.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/sitecontent.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/icreate.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/navigation.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+<link href="/styles/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" language="javascript" src="/scripts/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="/scripts/jquery-migrate-1.2.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="/scripts/jquery-ui.1.10.2.min.js"></script>
+<script language="javascript" type="text/javascript">jQuery.noConflict();</script>
+<script type="text/javascript" language="javascript" src="/scripts/jquery.cookies.js"></script>
+<script type="text/javascript" src="/scripts/textSize.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/jquery.hoverIntent.min.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/superfish.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/quicklinks-dropdown.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/scripts/general.js"></script>
+<script type="text/javascript" language="javascript" src="/en/email/scripts/email.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/uaTracking.js"></script>
+<script type="text/javascript" language="javascript" src="/__utm.js"></script>
+
+<!--[if lt IE 8]><script type="text/javascript">jQuery(function(jQuery) { jQuery('body').addClass('ie7'); });</script><![endif]-->
+
+
+<script language="javascript" type="text/javascript">
+	
+    jQuery(function () {
+        // Drop-down lists
+        var isIe7 = jQuery('body').hasClass('ie7');
+        jQuery('#nav').superfish({ cssArrows: false, speed: (isIe7 ? 0 : 'normal'), speedOut: (isIe7 ? 0 : 'fast') });
+
+    });
+
+	function getCorpHome() {
+	    return "http://www.orilliapubliclibrary.ca/";
+	}
+	
+	function getMainNavDropdownColumnCount() {
+	    return "11";// from web.config
+	}
+</script>
+
+<script type="text/javascript" src="https://icreate4.esolutionsgroup.ca/230002_iCreatePhotoGalleryV2/includes/jquery.gallery.js"></script>
+<script type="text/javascript"> jQuery(function () {jQuery(".eSolutionsGroupPhotoGalleryV2PlaceholderDiv").each(function () { var method = jQuery(this).attr("method"); var id = jQuery(this).attr("id"); if (id != '') { jQuery(this).load(id, function () { return method; })} else { jQuery(this).html(''); }}) });</script>  
+<link rel="alternate" type="application/rss+xml" title="News" href="http://www.orilliapubliclibrary.ca/en/News-rss-channel.xml" />
+     <title>Home - Orillia Library</title>
+    
+
+<link href="/en/iCalendar/styles/icalendar.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" language="javascript" src="/scripts/date.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/jquery.timers-1.1.2.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/jquery-auto-scroll.js"></script>
+<script type="text/javascript" language="javascript">
+	jQuery(function() {
+
+	    jQuery.ajax({
+	        url: '/en/Newsmodule/topFive.aspx',
+	        cache: false,
+	        success: function(html){
+	            jQuery("#newslistContainer").find("div:first").empty().append(jQuery(html).find('#topFiveNewslist').html());
+
+                jQuery("#newslistContainer").auto_scroll( {
+                    height: '150px',
+                    width: '180px',
+                    delay: '1000'
+                });
+	        }
+	    });
+
+	});
+</script><link href="/en/EmergencyBanner/styles/EmergencyBanner.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+	jQuery(function() {
+
+		if (document.location.href.toLowerCase().indexOf('/edit_') == -1) {
+
+			if (jQuery.cookie('seenBanner') != 1) {
+			
+				jQuery.ajax({
+					type: "GET",
+					url: "/en/EmergencyBanner/services/GetEmergencyBanner.ashx?lang=en",
+					dataType: "xml",
+					success: parseMessage,
+					cache: false
+				});
+
+				jQuery.cookie('seenBanner', 1);
+
+			}
+
+		}
+
+		function parseMessage(xml) {
+
+			jQuery(xml).find('emergencymessage').each(function() {
+
+				emergencyMessage = jQuery(this).find("message").text();
+
+				if (emergencyMessage != "hidemessage") {
+
+					jQuery('#EmergencyBannerTitle').html(jQuery(this).find("title").text());
+					jQuery('#EmergencyBannerText').html(emergencyMessage);
+					jQuery('#EmergencyBanner').addClass(jQuery(this).find("cssclass").text());
+					jQuery('#EmergencyBannerShadow').css('height', jQuery('#EmergencyBanner').css('height'));
+
+					jQuery('#EmergencyBanner').show();
+					jQuery('#EmergencyBannerShadow').height(jQuery('#EmergencyBanner').height()).show();
+
+				}
+
+			});
+
+		}
+
+	});
+
+	function HideEmergencyBanner() {
+	
+		jQuery('#EmergencyBannerShadow').fadeOut(250, function() {
+			jQuery('#EmergencyBanner').fadeOut(500);
+		});
+		
+	}
+
+</script>
+<!--<link href="/en/polling/styles/polling.css" rel="stylesheet" type="text/css" />
+-->
+<script language="javascript" type="text/javascript">
+
+	jQuery(document).ready(function() {
+
+		jQuery.ajax({
+			type: "GET",
+			url: "/en/polling/GetCurrentPoll.aspx?corpId=hPlUsX0AKJDw3Ig7FbbvSpZxAeQuAleQuAl&langid=1",
+			dataType: "html",
+			success: parseMessage,
+			error: errorOccurred,
+			cache: false
+		});
+
+		function parseMessage(html) {
+    		jQuery('#currentPoll').html(html);
+		}
+
+		function errorOccurred(xhr, ajaxOptions, thrownError) {
+
+		}
+
+	});
+
+	// Validation logic on polling module.  If no radio buttons are selected displays message.
+	function ValidatePoll() {
+
+		if (jQuery('#currentPoll :radio:checked').length == 0)
+			jQuery('.pollValidationMessage').html('Please select one of the options.').fadeIn(500);
+
+		else
+			jQuery('#frmPoll').submit();
+
+	}	
+
+</script>
+<link type="text/css" href="/styles/jquery.rotatingbanners.css?version=v3" rel="stylesheet" media="screen" />
+<script language="javascript" type="text/javascript" src="/scripts/jquery.rotatingbanners.js?version=v3"></script>
+<script language="javascript" type="text/javascript">
+    jQuery(function() {
+        jQuery("#rotatingBanners").rotating_banners({
+            transitionType: "fade",
+            enablePause: true,
+            enableSort: true
+        });
+    });
+</script>
+
+
+<meta property="dcterms.issued" content="2016-03-09T17:03:41-0500" />
+<meta property="og:title" content="Home" />
+<meta property="og:url" content="http://www.orilliapubliclibrary.ca/en/index.asp" />
+<meta property="og:description" content="Orillia Public Library is committed to fostering an informed and literate rural community. We offer special programs for children, tweens, teens, families and adults." />
+<script type="text/javascript">
+/*ICREATE*/try {if (top == parent && parent.loadStyles) {parent.location = location;}var _icrt_keyPressed_ = -1;function _icrt_alertkey(e) {if(!e) {if(window.event) {e = window.event;} else {return;}}var keyCode;if(typeof(e.keyCode) == 'number') {keyCode = e.keyCode;} else if(typeof(e.which) == 'number') {keyCode = e.which;} else if(typeof(e.charCode) == 'number') {keyCode = e.charCode;} else {return;}if (keyCode == 17) {var now = new Date();if (_icrt_keyPressed_ >= 0) {var diff = now.getTime() - _icrt_keyPressed_;if (diff > 0 && diff < 500) {top.location.href = 'https://icreate4.esolutionsgroup.ca/icreate/publishing/editor/issue.do?method=editContent&id=2403&lang=en';}}_icrt_keyPressed_ = now.getTime();}}if(document.captureEvents && Event.KEYUP) {document.captureEvents(Event.KEYUP);}if (document.onkeyup) {var oldFunc = document.onkeyup;document.onkeyup = function(e) {_icrt_alertkey_(e);oldFunc(e);};} else {document.onkeyup = _icrt_alertkey;}}catch(exp){}/*ICREATE*/
+</script>
+</head>
+
+<body>
+	<div id="EmergencyBanner">
+	<div id="EmergencyBannerTitle"></div>
+	<div id="EmergencyBannerText"></div>
+	<div id="EmergencyBannerClose">
+		<a href="#" onclick="javascript: HideEmergencyBanner();">Close</a>
+	</div>
+</div>
+<div id="EmergencyBannerShadow"></div>
+
+<div id="uber">			
+    <div id="skipContentWrapper">			
+    <a id="skipContentLink" title="Skip Navigation and go to Content" href="#maincontent">Skip to content</a>			
+</div>
+    <div id="homepageBannerContainer">
+
+	    <div id="rotatingBanners" class="bannerContainer">
+		    <div class="bannerFadeLeft"></div>
+		    <div class="bannerFadeRight"></div>
+		    <div class="banner">
+                <div class="bannerImage">
+                     
+                <p><a title="Open new window to view http://www.orilliapubliclibrary.ca/en/programs/adultprograms.asp" href="http://www.orilliapubliclibrary.ca/en/programs/adultprograms.asp"><img title="Edible Book Festival" alt="Go to Edible Book Festival program information" src="/en/resources/edible_book3.jpg" /></a></p></div>
+            </div><div class="banner">
+                <div class="bannerImage">
+                     
+                <p><a href="http://www.orilliapubliclibrary.ca/en/childrentweensteens/specialprogramsevents_teens.asp"><img title="Fandom Games Lock In" alt="Go to Fandom Games Lock In program information" src="/en/resources/fandom20162.jpg" /></a></p></div>
+            </div><div class="banner default">
+                <div class="bannerImage">
+                     
+                <p><a href="http://www.orilliapubliclibrary.ca/en/childrentweensteens/specialprogramsevents.asp"><img title="Easter Egg Decorating Contest" alt="Go to Easter Egg Decorating Contest information" src="/en/resources/easter_egg2.jpg" /></a></p></div>
+            </div><div class="banner">
+                <div class="bannerImage">
+                     
+                <p><a href="http://www.orilliapubliclibrary.ca/en/programs/adultprograms.asp"><img title="Early Dementia Coffee Hour" alt="Go to Early Dementia Coffee Hour program information" src="/en/resources/early_dementia2.jpg" /></a></p></div>
+            </div><div class="banner">
+                <div class="bannerImage">
+                     
+                <p><a title="View our Special Programs &amp;amp; Events page" href="/en/childrentweensteens/specialprogramsevents.asp"><img title="March Break 2016" alt="March Break 2016" src="/en/childrentweensteens/resources/march_break_2016_copy.jpg" /></a></p></div>
+            </div>
+
+
+        </div>
+        
+       <div id="rotatingBannersEdit" class="bannerContainer bannerContainerEdit">
+            <div class="bannerFadeLeft"></div>
+		    <div class="bannerFadeLeft"></div>
+            <div class="bannerEdit">
+                <div class="bannerImage">
+                     Editable...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="headerContainer">
+		<div id="header">
+			<div id="search">
+	<!--<form method="get" action="javascript:void(0)" onSubmit="window.location='http://199.243.252.237:8080/?config=pac#section=search&amp;term='+this.term.value;"> -->
+<form method="get" action="javascript:void(0)" onSubmit="window.open('http://76.66.226.12:8080/?config=pac#section=search&amp;term='+this.term.value)"> 
+    <div align="center">
+        <label for="searchField" style="display: none;">Search</label>
+        <input class="searchText" name="term" onfocus="Search_Enter(this);" onblur="Search_Leave(this);" id="searchField" type="text" title="Search" value="Find Books, Movies, Music..." />
+    </div> 
+    <input name="submit" type="image" src="/images/structure/spacer.gif" alt="Go!" title="Go!" class="gobutton" />
+    <input type="submit" value="submit" style="display:none" />
+</form>
+ 
+
+</div>
+			
+<div id="topNav">
+	<a title="Top Menu::Homepage" href="/en/index.asp">Home</a><span class="horizNavSeparator"></span><a title="My Account" href="http://76.66.226.12:8080/?config=pac#section=MyAccount" target="_blank">My Account</a><span class="horizNavSeparator"></span><a title="Top Links::Contact Us" href="/en/aboutus/ContactUs.asp">Contact Us</a><span class="horizNavSeparator"></span><a title="Link to City of Orillia homepage" href="http://www.orillia.ca/">City of Orillia</a><span class="horizNavSeparator"></span>
+<!--<a href="#" onclick="javascript: switchLanguage();" title="Fran&ccedil;ais">Fran&ccedil;ais</a>-->
+</div>
+		    
+<div id="logoGlow">
+	<div id="logo">
+		<a title="Home" href="/en/index.asp"><img alt="City of Orillia logo" src="/en/images/structure/orillia.png" /></a>
+		</div>
+</div>
+			
+<div id="mainNav">
+	<ul id="nav"><li id="navTab01"><a title="ABOUT US" href="/en/aboutus.asp" class="mainNavItem">About Us</a><div class="dropDownContainer treenode sf-mega"><div class="dropDownBackground"><div class="dropDownTop"><ul class="dropdown"><li><a title="ABOUT US::Hours &amp; Location" href="/en/aboutus/ContactUs.asp" class="">Hours &amp; Location</a></li><li><a title="ABOUT US::Using the Library" href="/en/aboutus/howtousethelibrary.asp?_mid_=3176" class="">Using the Library</a></li><li><a title="ABOUT US::Services" href="/en/aboutus/services.asp" class="">Services</a></li><li><a title="ABOUT US::Board &amp; Management" href="/en/aboutus/boardmanagement.asp" class="">Board &amp; Management</a></li><li><a title="ABOUT US::Support Your Library" href="/en/aboutus/supportyourlibrary.asp" class="">Support Your Library</a></li><li><a title="ABOUT US::Employment &amp; Volunteer Opportunities" href="/en/aboutus/employmentvolunteeropportunities.asp" class="">Employment &amp; Volunteer Opportunities</a></li><li><a title="ABOUT US::Accessibility" href="/en/aboutus/accessibility.asp?_mid_=3160" class="">Accessibility</a></li><li><a title="ABOUT US::Publications" href="/en/aboutus/Publications.asp" class="">Publications</a></li><li><a title="ABOUT US::Your New Library" href="http://neworillialibrary.com/?_mid_=3189" class="" target="_blank">Your New Library</a></li><li><a title="Photo Galleries" href="/en/aboutus/photogallery.asp" class="">Photo Galleries</a></li></ul><div class="clear"></div></div></div></div></li><li id="navTab02"><a title="eResources" href="/en/eresources.asp" class="mainNavItem">eResources</a><div class="dropDownContainer treenode sf-mega"><div class="dropDownBackground"><div class="dropDownTop"><ul class="dropdown"><li><a title="eRESOURCES::Online Research Tools" href="/en/eresources/onlineresearchtools.asp" class="">Online Research Tools</a></li><li><a title="eRESOURCES::eBooks &amp; eAudiobooks" href="/en/eresources/ebookseaudiobooks.asp" class="">eBooks &amp; eAudiobooks</a></li><li><a title="eMagazines" href="/en/eresources/eMagazines.asp" class="">eMagazines</a></li><li><a title="eMusic" href="http://www.orilliapubliclibrary.ca/en/eresources/eMusic.asp" class="">eMusic</a></li><li><a title="eRESOURCES::Library eNewsletter" href="http://enews.orilliapubliclibrary.ca/en/eNews/signup.aspx?site=library" class="">eNewsletter</a></li><li><a title="eRESOURCES::Local History" href="/en/eresources/localhistory.asp" class="">Local History</a></li><li><a title="eRESOURCES::Search Catalogue" href="/en/searchcatalogue.asp" class="">Search Catalogue</a></li><li><a title="eRESOURCES::Community Links" href="/en/eresources/communitylinks.asp" class="">Community Links</a></li><li><a title="View our Service Ontario page" href="/en/eresources/serviceontario.asp" class="">Service Ontario</a></li></ul><div class="clear"></div></div></div></div></li><li id="navTab03"><a title="View our Need to Read page" href="/en/adults/Need-to-Read.asp" class="mainNavItem">Need to Read</a><div class="dropDownContainer treenode sf-mega"><div class="dropDownBackground"><div class="dropDownTop"><ul class="dropdown"><li><a title="View our Need to Read page" href="/en/adults/Need-to-Read.asp?_mid_=29409" class="">Need to Read</a></li><li><a title="View our New on the Shelf page" href="/en/whatshot/newontheshelf.asp" class="">New on the Shelf</a></li><li><a title="View our Adult Programs page" href="/en/programs/adultprograms.asp?_mid_=29413" class="">Programs</a></li><li><a title="View our Book Clubs page" href="/en/programs/bookclubs.asp?_mid_=29414" class="">Book Clubs</a></li><li><a title="View our Genealogy &amp;amp; Local History page" href="/en/aboutus/genealogylocalhistory.asp?_mid_=29411" class="">Genealogy &amp; Local History</a></li></ul><div class="clear"></div></div></div></div></li><li id="navTab04" class="lastNavItem"><a title="Children, Tweens &amp; Teens" href="/en/childrentweensteens.asp" class="mainNavItem">Children Tweens and Teens</a><div class="dropDownContainer treenode sf-mega"><div class="dropDownBackground"><div class="dropDownTop"><ul class="dropdown"><li><a title="CHILDREN TWEENS &amp; TEENS::Childrens Service's" href="/en/childrentweensteens/childrensservices.asp" class="">Children's Services</a></li><li><a title="CHILDREN TWEENS &amp; TEENS::Tweens" href="/en/childrentweensteens/tweens.asp" class="">Tweens</a></li><li><a title="View our Teens page" href="/en/childrentweensteens/teens.asp" class="">Teens</a></li></ul><div class="clear"></div></div></div></div></li><li id="navTab05" class="lastNavItem"><a title="Programs" href="/en/programs.asp" class="mainNavItem">Programs</a><div class="dropDownContainer treenode sf-mega"><div class="dropDownBackground"><div class="dropDownTop"><ul class="dropdown"><li><a title="PROGRAMS::Adult Programs" href="/en/programs/adultprograms.asp" class="">Adult Programs</a></li><li><a title="PROGRAMS::Children's Programs" href="/en/childrentweensteens/earlylearningprograms.asp" class="">Children's Programs</a></li><li><a title="PROGRAMS::Tween Programs" href="/en/childrentweensteens/programs.asp" class="">Tween Programs</a></li><li><a title="PROGRAMS::Teen Programs" href="/en/childrentweensteens/monthlyprograms.asp" class="">Teen Programs</a></li><li><a title="Programs::Calendar of Events" href="http://icalendar.esolutionsgroup.ca/Module.aspx?PMID=708a6ed3-d4fb-4aac-91d3-e5f7d600dd07" class="">Calendar of Events</a></li></ul><div class="clear"></div></div></div></div></li></ul>
+</div>
+		</div>
+		<div id="mainNavWrapper"> </div>
+	
+	</div>
+	
+		<div id="mainWrapper">	
+		
+		<div id="main">
+			<div id="maincontent" tabindex="-1">
+			<div id="printArea">
+			
+				<div id="homeButtons">
+					 <ul><li><a title="Home::Search Catalogue" href="/en/searchcatalogue.asp" class="homeButtonLink01 searchCatalogue">Search Catalogue</a></li><li><a title="Home::Book a Computer" href="/en/aboutus/computerswifi.asp" class="homeButtonLink02 bookComputer">Book a Computer</a></li><li><a title="Home::Hours and Location" href="/en/aboutus/ContactUs.asp" class="homeButtonLink03 hoursLocation">Hours and Location</a></li><li><a title="Home::Your New Library" href="http://neworillialibrary.com/" class="homeButtonLink04 newLibrary" target="_blank">Your New Library</a></li></ul>
+				</div>
+				
+				<div id="contentLeft">
+				    <div id="actions" class="topnav">
+					    <form id="frmMailTo" action="">
+	<div>
+	    <input type="hidden" id="hdnContent" name="hdnContent" />
+		<input type="hidden" id="hdnPage" name="hdnPage" />
+	    <div class="textSizeWrapper"><a href="javascript: setDefaultFontSize();" class="textSize" title="Reset Text"> <span>Text Size</span> </a><a href="javascript: increaseFontSize();" class="textSize textIcon" title="Increase Text"> <img src="/images/actions/icon_plus.png" alt="Plus" width="15" height="14" /> </a><a href="javascript: decreaseFontSize();" class="textSize textIcon" title="Decrease Text"> <img src="/images/actions/icon_minus.png" alt="Minus" width="15" height="14" /> </a> </div>
+	</div>
+	<input type="submit" value="submit button" style="display:none" />
+</form>
+				    </div>
+				    <div id="newslistHomepage">
+					    <div class="newslistHeader">
+	<h1>News Releases</h1>
+</div>
+	
+<!-- extra div is for scrolling -->
+<div id="newslistContainer" class="newslistBody">
+	<div id="newslist">
+        <p>JavaScript Disabled.</p>
+        <p>Please enable JavaScript to view this content.</p>
+	</div>
+</div>
+				    </div>
+				</div>
+				
+				<div id="contentMiddle">
+				   <!-- replace with calendar code-->
+				    <h1>Calendar of Events</h1>
+								
+					<div id="calendarContainer">			<div id="calendar"></div></div><script type="text/javascript" language="javascript" src="http://icalendar.esolutionsgroup.ca/includes/javascript/library/prototype.js"></script><script type="text/javascript" language="javascript" src="http://icalendar.esolutionsgroup.ca//Module.aspx?PMID=5f2b901a-8eab-4a98-a2ec-59bc664abc35"></script>
+			
+				</div>
+				
+				<div id="contentRight">
+				    <!--replace with polling module code-->
+				   	<div id="quickLinks">
+					
+						<div class="quickLinksHeader">
+							<h1>Online Poll</h1>
+						</div>
+						
+						<div class="quickLinksBody poll">
+                        	    <!-- POLL MODULE -->
+					        <div id="currentPoll"> </div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		    </div>
+
+		</div>
+		</div>
+		<div class="clear"></div>
+		
+		<div id="footer">
+	    <div id="donate">
+        	 
+<a title="Click here to Donate" href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d7855" target="_blank" alt="alt"><img title="Donate Image" alt="Donate Today" src="/en/inc/resources/donate-button.png" /></a>
+
+
+
+		</div>
+		
+	<div id="socialLinks">
+		<ul><li>Follow us:</li><li><a title="Social::Facebook" href="http://www.facebook.com/OrilliaPublicLibrary" class="" target="_blank"><img alt="Social::Facebook" class="hide" src="/images/structure/facebook.gif" /></a></li><li><a title="Social::Twitter" href="http://twitter.com/#!/orillialibrary" class="" target="_blank"><img alt="Social::Twitter" class="hide" src="/images/structure/twitter.png" /></a></li><li><a title="Link to BrowseAloud infromation page" href="/en/BrowseAloud.asp" class="last"><img alt="Link to BrowseAloud infromation page" class="hide" src="/images/structure/browsealoud.png" /></a></li></ul>
+	</div>			
+	<div id="footerNav">	    
+
+
+
+
+
+
+
+
+
+
+
+&copy; 2011 City of Orillia<span class="horizNavSeparator">|</span>
+<a title="Footer::Privacy" href="/en/privacy.asp">Privacy</a><span class="horizNavSeparator">|</span><a title="Sitemap" href="/en/sitemap.asp">Sitemap</a><span class="horizNavSeparator">|</span><a title="Footer::W3C Compliance" href="/en/aboutus/accessibility.asp">Accessibility</a><span class="horizNavSeparator">|</span><a title="Footer::Hours and Location" href="/en/aboutus/ContactUs.asp">Hours and Location</a>    </div>    <div id="footerText">
+        
+
+
+
+
+
+
+
+
+
+
+
+36 Mississaga Street West, Orillia, Ontario L3V 3A6  <span class="horizNavSeparator">|</span>Tel:(705) 325-2338<span class="horizNavSeparator">|</span>Email: <a href="mailto:info@orilliapubliclibrary.ca">info@orilliapubliclibrary.ca</a>
+
+    </div>    </div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29373189-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+		
+		<div class="clear"></div>
+		
+</div>
+</body>
+</html>

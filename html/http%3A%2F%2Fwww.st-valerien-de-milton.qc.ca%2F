@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MunicipalitÃ© de St-ValÃ©rien-de-Milton - QuÃ©bec, Canada</title>
+
+<script type="text/javascript">
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["header_images/1.jpg", "", ""] 
+fadeimages[1]=["header_images/2.jpg", "", ""] 
+fadeimages[2]=["header_images/3.jpg", "", ""] 
+fadeimages[3]=["header_images/4.jpg", "", ""] 
+fadeimages[4]=["header_images/5.jpg", "", ""] 
+fadeimages[5]=["header_images/6.jpg", "", ""] 
+fadeimages[6]=["header_images/7.jpg", "", ""] 
+fadeimages[7]=["header_images/8.jpg", "", ""] 
+fadeimages[8]=["header_images/9.jpg", "", ""] 
+fadeimages[9]=["header_images/10.jpg", "", ""] 
+
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+
+
+
+
+
+<style type="text/css">
+<!--
+body {
+	background-color: #9e9e9e;
+}
+-->
+</style>
+<link href="index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script> function imagewindow() {
+					XLphoto = window.open('POP/pop.map.html','XLphoto9HP','resizable=yes,width=800,height=678');
+				
+				}
+				</script> 
+
+
+</head>
+
+<body link="#ffffff" vlink="#ffffff" alink="#ffffff" topmargin="0" marginwidth="0" marginheight="0" onload="MM_preloadImages('images/municipalite-st-valerien-over_05.jpg','images/municipalite-st-valerien-over_07.jpg','images/municipalite-st-valerien-over_08.jpg','images/municipalite-st-valerien-over_09.jpg','images/municipalite-st-valerien-over_11.jpg')">
+<div class="parent-container">
+	<a href="http://www.seao.ca/Reports/rapport_Adjudication.aspx" target="_blank" class="seao-tab"><span style="font-size:1.6em;font-weight:bold;">SEAO</span><br />SystÃ¨me<br />Ã©lectronique<br />d'appel d'offres</a>
+<div class="global-container">
+<a href="agenda.php" class="btn-agenda">Consultez l'agenda de St-ValÃ©rien-de-Milton</a>
+<table width="940" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="20" rowspan="8" background="images/municipalite-st-valerien_01.jpg">&nbsp;</td>
+    <td><img src="images/municipalite-st-valerien_02.jpg" alt="MunicipalitÃ© de Saint-ValÃ©rien-de-Milton" width="900" height="98" /></td>
+    <td width="20" rowspan="8" background="images/municipalite-st-valerien_03.jpg">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><table width="900" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><a href="conseil-municipal.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/municipalite-st-valerien-over_05.jpg',1)"><img src="images/municipalite-st-valerien_05.jpg" alt="conseil municipal et administration" name="Image2" width="299" height="28" border="0" id="Image2" /></a></td>
+        <td><img src="images/municipalite-st-valerien_06.jpg" width="306" height="28" /></td>
+        <td><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/municipalite-st-valerien-over_07.jpg',1)"><img src="images/municipalite-st-valerien_07.jpg" alt="accueil" name="Image4" width="71" height="28" border="0" id="Image4" /></a></td>
+        <td><a href="site-map.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/municipalite-st-valerien-over_08.jpg',1)"><img src="images/municipalite-st-valerien_08.jpg" alt="site-map" name="Image5" width="105" height="28" border="0" id="Image5" /></a></td>
+        <td><a href="contact.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/municipalite-st-valerien-over_09.jpg',1)"><img src="images/municipalite-st-valerien_09.jpg" alt="contact" name="Image6" width="119" height="28" border="0" id="Image6" /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="900" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><a href="services-citoyens-securite.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/municipalite-st-valerien-over_11.jpg',1)"><img src="images/municipalite-st-valerien_11.jpg" alt="services aux citoyens" name="Image7" width="299" height="28" border="0" id="Image7" /></a></td>
+        <td><img src="images/municipalite-st-valerien_12.jpg" width="601" height="28" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="images/municipalite-st-valerien-over_13.jpg" width="900" height="9" /></td>
+  </tr>
+  <tr>
+    <td><table width="900" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="290" valign="top" bgcolor="#a40b01"><img src="images/municipalite-st-valerien-over_14.jpg" alt="Hotel de ville" width="290" height="56" /><br />
+          <table width="290" border="0" cellspacing="0" cellpadding="0">
+            
+            
+            
+            <tr>
+              <td width="40">&nbsp;</td>
+              <td class="contenttxt"><p><strong><br />
+                CoordonnÃ©es</strong><br />
+                <br />
+                TÃ©l: 450-549-2463<br />
+                Fax: 450-549-2993<br />
+                960,  Chemin de Milton<br />
+                Saint-ValÃ©rien-de-Milton<br />
+                Qc, JOH 2B0<br />
+                    <br />
+                </p>                </td>
+            </tr>
+            
+            <tr>
+              <td>&nbsp;</td>
+              <td><p class="contenttxt">                <strong>Heures dâouverture:</strong><br />
+                <br />
+                  Lundi au Jeudi<br />
+                  8h30 Ã  12h
+                  et 12h30 Ã  16h<br />
+              </p></td>
+            </tr>
+          </table></td>
+        <td width="9" bgcolor="#FFFFFF">&nbsp;</td>
+        <td>
+		
+		<script type="text/javascript">
+		new fadeshow(fadeimages, 601, 300, 0, 4000, 1, "R")
+		</script>
+        
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="images/municipalite-st-valerien_18.jpg" width="900" height="9" /></td>
+  </tr>
+  <tr>
+    <td><table width="900" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="290" valign="top" bgcolor="#FFFFFF"><table width="290" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td bgcolor="#335971"><img src="images/mrc-rive-rud_19.jpg" alt="Documents" width="155" height="56" /><a href="http://www.adobe.com/fr/products/acrobat/readstep2.html" target="_blank"><img src="images/mrc-rive-rud_20.jpg" alt="TÃ©lÃ©charger Adobe Acrobat Reader" width="135" height="56" border="0" /></a></td>
+            </tr>
+            <tr>
+              <td bgcolor="#335971"><table width="290" border="0" cellspacing="0" cellpadding="0" class="contenttxt">
+                <tr>
+                  <td width="40">&nbsp;</td>
+                  <td width="125"><br />
+                      <a href="documents.php#avispubliques">Avis publics</a><br />
+                      <br /></td>
+                  <td width="125"><br />
+                      <a href="documents.php#reglements">R&egrave;glements</a><br />
+                      <br /></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><a href="documents.php#journalmunicipal">Journal municipal</a><br />
+                      <br /></td>
+                  <td><a href="documents.php#nouvelleenbref">Nouvelles en bref</a><br />
+                      <br /></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td valign="top"><a href="documents.php#procesverbaux">ProcÃ¨s-verbaux et ordres du jour</a></td>
+                  <td><a href="documents.php#repertoireentreprises">RÃ©pertoire des entreprises et organismes<br />
+                        <br />
+                  </a></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td valign="top"><a href="documents.php#communiques">CommuniquÃ©s</a></td>
+                  <td><a href="PDF/armoiries_explication.pdf" target="_blank">Signification des armoiries</a></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td bgcolor="#335971">&nbsp;</td>
+            </tr>
+          </table>
+		  
+		  		
+		<div align="center">
+			<a href="upload/map/CARTE FINALE ST-VALERIEN.pdf" target="_blank"><img src="upload/map/Carte village.JPG" alt="Carte de Saint-ValÃ©rien-de-Milton" border="0" /></a><br />
+			<a href="upload/map/CARTE FINALE ST-VALERIEN.pdf" target="_blank" class="main">cliquez-ici pour agrandir la carte</a>
+			<br /><br />
+		</div>
+		
+				            		  
+		  </td>
+        <td width="12" bgcolor="#FFFFFF">&nbsp;</td>
+        <td width="589" bgcolor="#FFFFFF" valign="top">
+		<!-- #################################################################################################################################### -->
+		
+          
+         <table border="0" cellspacing="0" cellpadding="0" width="589">
+    <caption></caption>
+    <tbody>
+        <tr>
+            <td class="maintitle" colspan="2">
+            <h1 class="maintitle">Bienvenue!</h1>
+            <hr />
+            </td>
+        </tr>
+        <tr>
+            <td class="main" valign="top">
+            <p style="text-align: justify"><br />
+            Je suis tr&egrave;s heureuse de vous accueillir via notre site Internet. Les communications par voie &eacute;lectronique ont cr&eacute;&eacute; une ouverture sur le monde et nous permettent d'acc&eacute;der rapidement &agrave; une foule d'informations.</p>
+            <p style="text-align: justify">Ce moyen de diffusion vous permet de d&eacute;couvrir ce qui contribue &agrave; notre fiert&eacute; d'&ecirc;tre citoyens et citoyennes de Saint-Val&eacute;rien-de-Milton. Des renseigne-ments au sujet des services offerts tant du c&ocirc;t&eacute; municipal que du c&ocirc;t&eacute; communautaire ainsi que les activit&eacute;s sociales vous sont pr&eacute;sent&eacute;s.</p>
+            <p style="text-align: justify">Je vous invite &agrave; consulter la politique de la famille que vous trouverez en cliquant sur le lien suivant<span>&nbsp;: <u><a class="footerlink" target="_blank" href="http://www.mrcmaskoutains.qc.ca/client/uploads/1335/1021624015151511.pdf">Politique de la Famille</a></u></span> plus pr&eacute;cis&eacute;ment pages 58-59. Elle d&eacute;montre notre volont&eacute; d'&ecirc;tre au service des familles, de leur assurer une qualit&eacute; de vie agr&eacute;able et un bon environnement social.</p>
+            <p>Bonne navigation!</p>
+            <p><strong>Raymonde Plamondon</strong><br />
+            Maire Saint -Val&eacute;rien-de-Milton</p>
+            </td>
+            <td width="162">
+            <div align="center"><br />
+            <img alt="Raymonde Plamondon / Mairesse" width="148" height="222" src="/userfiles/image/Raymonde%20Plamondon%20MRC.jpg" /><br />
+            <br />
+            <br />
+            <img alt="Armoiries St-Val&eacute;rien-de-Milton" width="162" height="171" src="/userfiles/image/armoiries-st-valerien.jpg" /></div>
+            </td>
+        </tr>
+    </tbody>
+</table>		 
+		 
+		 <div style="margin-top:10px;"><div class="news-tab-index"><div class="float-img-left"><img src="upload/nouvelles/img_1362664511590.jpg" width="104" height="78" /></div><div class="float-text-right"><h2 class="news-title">Offres d'emploi</h2><p class="news-text">Plusieurs offres d'emploi de disponibles:
+- Coordonnateur/Coordonnatrice du camp de jour
+- Animateur(s)/ Animatrice(s) du camp de jour
+- Responsable du dek hockey
+- Arbitres et Marqueurs dek hockey</p><a href="nouvelles.php#nouv39" class="link-nouv-index">Lire cette nouvelle</a></div><div class="clear"></div></div><div class="news-tab-index"><div class="float-img-left"><img src="upload/nouvelles/logo.jpg" width="53.074935400517" height="79" /></div><div class="float-text-right"><h2 class="news-title">Suivez-nous sur la page Facebook des loisirs de Saint-Val&eacute;rien-de-Milton!</h2><p class="news-text">Les loisirs de Saint-ValÃ©rien-de-Milton ont une page Facebook!
+Vous dÃ©sirez Ãªtre au courant des activitÃ©s qui ont lieu Ã  Saint-ValÃ©rien, suivez-nous sur Facebook!
+
+</p><a href="nouvelles.php#nouv34" class="link-nouv-index">Lire cette nouvelle</a></div><div class="clear"></div></div><div class="news-tab-index"><div class="float-img-left"><img src="images/defaut.jpg" /></div><div class="float-text-right"><h2 class="news-title">R&ocirc;le en ligne</h2><p class="news-text">Il est maintenant possible de consulter le rÃ´le d'Ã©valuation en ligne...</p><a href="nouvelles.php#nouv33" class="link-nouv-index">Lire cette nouvelle</a></div><div class="clear"></div></div><a href="nouvelles.php" class="link-nouv-index">Consulter toutes les nouvelles</a></div>		
+		
+		<!-- #################################################################################################################################### -->
+		</td>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="images/municipalite-st-valerien_25.jpg" width="900" height="12" /></td>
+  </tr>
+  <tr>
+    <td background="images/municipalite-st-valerien_01.jpg">&nbsp;</td>
+    <td bgcolor="#999999" class="contenttxt"><div align="center"><br />
+        <a href="#">Accueil</a> - <a href="conseil-municipal.php">Conseil municipal et administration gÃ©nÃ©rale</a> - <a href="services-citoyens-securite.php">Services aux citoyens</a> - <a href="site-map.php">Plan du site</a> - <a href="contact.php">Nous contacter</a><br />
+    Tous droits rÃ©servÃ©s 2008. CrÃ©ation<a href="http://commparlimage.com" target="_blank"> Communication Par Lâimage</a>.</div></td>
+    <td background="images/municipalite-st-valerien_03.jpg">&nbsp;</td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

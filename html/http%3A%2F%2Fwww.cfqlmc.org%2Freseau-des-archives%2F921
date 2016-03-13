@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-fr" lang="fr-fr" >
+	<head>
+    	<meta name="google-site-verification" content="vq4XfFX2-Qx_9Hs0IPJpCqY5ojJs_wLVM8UJ0LWHzJg" />
+		  <base href="http://www.cfqlmc.org/reseau-des-archives/921" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="cfqlmc, CFQLMC, commission, france, France, Québec, québec, lieux, mémoire, patrimoine, Amérique du Nord, Louisiane, Atlantique, Acadie, Saint-Laurent, Ohio, Ouest canadien, Mid-Ouest américain, Pierre de Rigaud de Vaudreuil, Californie, histoire, manuscrits, cartes, plans" />
+  <meta name="title" content="Musée de la civilisation Service des collections, des archives historiques et de la bibliothèque" />
+  <meta name="description" content="La Commission franco-québécoise sur les lieux de mémoire communs propose une approche originale des thèmes de l'histoire et du patrimoine." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Musée de la civilisation Service des collections, des archives historiques et de la bibliothèque</title>
+  <link rel="stylesheet" href="/templates/cfqlmc/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/cfqlmc/css/texte.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/cfqlmc/css/texte_normal.css" type="text/css" />
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+  <script type="text/javascript" src="/templates/cfqlmc/js/swfobject.js"></script>
+  <script type="text/javascript" src="/templates/cfqlmc/js/swap.js"></script>
+  <script type="text/javascript">
+
+			function etat_out(lelien,nivo){
+				if(nivo==1){
+					nivo1_out(lelien);
+				}else if(nivo==2){
+					nivo2_out(lelien);
+				}else if(nivo==3){
+					nivo3_out(lelien);
+				}
+			}
+		
+			function etat_on(lelien,nivo){
+				if(nivo==1){
+					nivo1_on(lelien);
+				}else if(nivo==2){
+					nivo2_on(lelien);
+				}else if(nivo==3){
+					nivo3_on(lelien);
+				}
+			}
+		
+			function etat_clic(lemenu,lelien){			
+		
+				var menu_autre_actif	= document.getElementById('menu_autre_actif').innerHTML;
+				var id_current			= document.getElementById('id_current').innerHTML;
+				var nivo1_old			= document.getElementById('id_menu1').innerHTML;
+				var nivo2_old			= document.getElementById('id_menu2').innerHTML;
+				
+				
+				//si on utilise le menu mootools
+				if(menu_autre_actif==0){
+					
+					//si on est sur le niveau 2 et que l'on est toujours dans le niveau ouvert
+					if(nivo2_old!='' && id_current==1){
+
+						nivo3_zero();	//on remet le niveau 3 a zero
+					}
+					nivo2_zero(nivo2_old);	//on remet le niveau 2 a zero
+					
+					//si c'est le premier niveau qui est demandé
+					if(lemenu=='moduletable_menu'){
+						nivo1_zero(nivo1_old);	//on remet le niveau 1 a zero
+						nivo1_action(lelien);	//on active le niveau 1 choisi
+					
+					//si c'est le 2eme niveau
+					}else{
+						
+						nivo2_action(lelien);	//on active le niveau 2 choisi
+					}
+					//on remet la var a zero car elle détermine si on a deja touché ou non au menu mootools
+					document.getElementById('id_current').innerHTML=0;	
+					
+				//si on utilise pas le menu mootools
+				}else if(menu_autre_actif==1){
+					
+					if(nivo2_old!=''){
+						nivo2_zero(nivo2_old);	//on remet le niveau 2 a zero
+					}
+					
+					//si c'est le premier niveau qui est demandé
+					if(lemenu=='moduletable_menu'){
+						if(nivo1_old!=''){
+							nivo1_zero(nivo1_old);	//on remet le niveau 1 a zero
+						}
+						nivo1_action(lelien);	//on active le niveau 1 choisi
+					
+					//si c'est le 2eme niveau
+					}else{
+						
+						nivo2_action(lelien);	//on active le niveau 2 choisi
+					}
+				}
+				
+			}
+		
+				function nivo1_on(lelien){
+								
+					if (document.getElementById('id_menu1').innerHTML!=lelien){
+								
+					document.getElementById(lelien).style.backgroundColor='#99c6ff';
+					document.getElementById(lelien).style.color='#ffffff';
+					}else{
+					document.getElementById(lelien).style.backgroundColor='#99c6ff';
+					document.getElementById(lelien).style.color='#ffffff';
+					}
+				}
+								
+				function nivo1_out(lelien){
+								
+					if (document.getElementById('id_menu1').innerHTML!=lelien){
+								
+					document.getElementById(lelien).style.color='#3d62a9';
+					document.getElementById(lelien).style.backgroundColor='#fff';
+					}
+				}
+								
+				function nivo1_zero(lelien){
+							
+					document.getElementById(lelien).style.color='#3d62a9';
+					document.getElementById(lelien).style.backgroundImage='none';
+					document.getElementById(lelien).style.backgroundColor='#fff';
+				}
+								
+				function nivo1_action(lelien){
+							
+					document.getElementById(lelien).style.backgroundColor='#99c6ff';
+					document.getElementById(lelien).style.color='#ffffff';
+					document.getElementById(lelien).style.backgroundImage='url(templates/cfqlmc/images/arrow_w_bas.gif)';
+					document.getElementById(lelien).style.backgroundRepeat='no-repeat';
+					document.getElementById('id_menu1').innerHTML=lelien;
+					document.getElementById('id_menu2').innerHTML='';
+					document.getElementById('id_menu3').innerHTML='';
+				}
+								
+				function nivo2_on(lelien){
+								
+					if (document.getElementById('id_menu2').innerHTML!=lelien){
+								
+					document.getElementById(lelien).style.textDecoration='underline';
+					}
+				}
+								
+				function nivo2_out(lelien){
+								
+					if (document.getElementById('id_menu2').innerHTML!=lelien){
+								
+					document.getElementById(lelien).style.textDecoration='none';
+					}
+				}
+								
+				function nivo2_zero(id_old){
+							
+									if(id_old==''){
+										var id_current=document.getElementById('id_current').innerHTML;
+										if(id_current==1){
+											id_old=check_current();
+										}
+									}else{
+										id_old=document.getElementById(id_old);
+									}
+									
+									if(id_old!=''){
+								
+					id_old.style.backgroundColor='#e6edff';
+					id_old.style.color='#3d62a9';
+					id_old.style.backgroundImage='url(templates/cfqlmc/images/arrow.gif)';
+									}
+								
+				}
+								
+				function nivo2_action(lelien){
+							
+					document.getElementById('id_menu2').innerHTML=lelien;
+					document.getElementById('id_menu3').innerHTML='';
+				}
+								
+				function nivo3_on(lelien){
+								
+					if (document.getElementById('id_menu3').innerHTML!=lelien){
+								
+					}
+				}
+								
+				function nivo3_out(lelien){
+								
+					if (document.getElementById('id_menu3').innerHTML!=lelien){
+								
+					}
+				}
+								
+				function nivo3_zero(sous_current){
+							sous_current=check_current();
+				}
+								
+			function check_current(){
+				var current = document.getElementById('current');
+				var sous_current = current.getElementsByTagName("a");
+				return sous_current[0];
+			}
+		window.addEvent('domready', function(){
+
+	var comitesSlide = new Fx.Slide('menu_comites');
+
+	$('lien_comites').addEvent('click', function(e){
+	e = new Event(e);
+		document.getElementById('menu_comites').style.display='block';
+	lacommissionSlide.slideOut();
+		bottindesmembresSlide.slideOut();
+		bulletinmemoiresvivesSlide.slideOut();
+		comitesSlide.toggle();
+		e.stop();
+	});
+
+	var lacommissionSlide = new Fx.Slide('menu_la-commission');
+
+	$('lien_la-commission').addEvent('click', function(e){
+	e = new Event(e);
+		document.getElementById('menu_la-commission').style.display='block';
+	comitesSlide.slideOut();
+		bottindesmembresSlide.slideOut();
+		bulletinmemoiresvivesSlide.slideOut();
+		lacommissionSlide.toggle();
+		e.stop();
+	});
+
+	var bottindesmembresSlide = new Fx.Slide('menu_bottin-des-membres');
+
+	$('lien_bottin-des-membres').addEvent('click', function(e){
+	e = new Event(e);
+		document.getElementById('menu_bottin-des-membres').style.display='block';
+	lacommissionSlide.slideOut();
+		comitesSlide.slideOut();
+		bulletinmemoiresvivesSlide.slideOut();
+		bottindesmembresSlide.toggle();
+		e.stop();
+	});
+
+	var bulletinmemoiresvivesSlide = new Fx.Slide('menu_bulletin-memoires-vives');
+
+	$('lien_bulletin-memoires-vives').addEvent('click', function(e){
+	e = new Event(e);
+		document.getElementById('menu_bulletin-memoires-vives').style.display='block';
+	lacommissionSlide.slideOut();
+		comitesSlide.slideOut();
+		bottindesmembresSlide.slideOut();
+		bulletinmemoiresvivesSlide.toggle();
+		e.stop();
+	});
+	lacommissionSlide.hide();
+	comitesSlide.hide();
+	bottindesmembresSlide.hide();
+	bulletinmemoiresvivesSlide.hide();
+	});
+	function affiche_flash(){
+	   var so = new SWFObject("http://www.cfqlmc.org/images/stories/swf/banner/banniere2.swf", "banniere", "790", "120", "8", "#eef5fb");
+		so.addParam("wmode", "transparent");
+		so.addParam("FlashVars","lien=bbbbcreditsaaaasef=1");
+	   so.write("banniere_content");
+	 }
+	
+  </script>
+
+				<!--[if IE]>
+			<link href="/templates/cfqlmc/css/template_ie.css" rel="stylesheet" type="text/css" />
+			<link href="/templates/cfqlmc/css/texte_normal_ie.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<!--[if IE 6]>
+			<link href="/templates/cfqlmc/css/template_ie6.css" rel="stylesheet" type="text/css" />
+					<![endif]-->
+	</head>
+	
+	<body onload="affiche_flash();">
+		<a name="haut" id="haut"></a>
+				<div id="top">
+		
+			<div id="banner_wrapper">
+				<div id="banner_content">
+					<div id="banniere_content"></div>
+<div class="contact_fiche_ombre" style="width:790px;"><div class="contact_ombre_g"></div><div class="contact_ombre_repeat" style="width:736px;"></div><div class="contact_ombre_d"></div></div>
+
+
+
+
+				</div>
+			</div>
+		</div>
+				
+		<div id="menu_top">
+			
+			<div id="menu_top_wrapper">
+									<span id="date_jour">
+						
+
+Le vendredi 11 mars 2016					
+					</span>
+								
+				<form action="index.php" method="post">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Recherche" type="text" size="26" value="" />&nbsp;<input type="image" src="http://www.cfqlmc.org/templates/cfqlmc/images/loupe.gif" id="loupe" name="loupe" onmouseover="MM_swapImage('loupe','','http://www.cfqlmc.org/templates/cfqlmc/images/loupe_over.gif',1)" onmouseout="MM_swapImgRestore()" value="Recherche" alt="Recherche" />	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</form>
+				
+									<span id="taille_texte">
+						
+
+Taille du texte : 
+<a href="http://www.cfqlmc.org/reseau-des-archives/921?css=0" class="texte_petit">A</a> | 
+<a href="http://www.cfqlmc.org/reseau-des-archives/921?css=1" class="texte_moyen texte_on">A</a> | 
+<a href="http://www.cfqlmc.org/reseau-des-archives/921?css=2" class="texte_grand">A</a>
+					</span>
+								<div id="menu_top_vague"></div>
+				<div id="menu_top_util_wrapper">
+				
+											<div class="menu_left_footer_util"><div class="menu_top_util_left"></div><div class="menu_top_util_center"><a href="/nous-joindre" class="mainlevel" >Nous joindre</a></div><div class="menu_top_util_right"></div></div><div class="menu_left_footer_util"><div class="menu_top_util_left"></div><div class="menu_top_util_center"><a href="/plan-de-site" class="mainlevel" >Plan de site</a></div><div class="menu_top_util_right"></div></div><div class="menu_left_footer_util"><div class="menu_top_util_left"></div><div class="menu_top_util_center"><a href="/cartes-virtuelles" class="mainlevel" >Cartes virtuelles</a></div><div class="menu_top_util_right"></div></div>
+									</div>
+				<div id="menu_top_perso"></div>
+				
+			</div>
+		
+		</div>
+		
+		<!-- FIN MENU TOP -->
+		<div id="wrapper">
+			<div id="menu_left">
+				<div id="menu_left_wrapper">
+					<div id="menu_left_shadow_right_top"></div>
+					<a href="/" id="logo"></a>
+											
+<ul id="moduletable_menu">
+	
+	
+<li>
+		<a href="/quoi-de-neuf-" onmouseover="etat_on('lien_quoi-de-neuf-',1);" onmouseout="etat_out('lien_quoi-de-neuf-',1);"><span>Quoi de neuf ?</span></a>
+	</li>
+<li>
+		<a href="/bienvenue" onmouseover="etat_on('lien_bienvenue',1);" onmouseout="etat_out('lien_bienvenue',1);"><span>Bienvenue</span></a>
+	</li>
+<li>
+		<a href="/lieux-de-memoire" onmouseover="etat_on('lien_lieux-de-memoire',1);" onmouseout="etat_out('lien_lieux-de-memoire',1);"><span>Lieux de mémoire</span></a>
+	</li>
+<li>
+		<a href="#" id="lien_la-commission" onmousedown="etat_clic('moduletable_menu','lien_la-commission');" onmouseover="etat_on('lien_la-commission',1);" onmouseout="etat_out('lien_la-commission',1);"><span>La Commission</span></a>
+	<ul id="menu_la-commission">
+	<li>
+		<a href="/la-commission/mission" id="lien_mission" onmouseover="(etat_on('lien_mission',2));" onmouseout="etat_out('lien_mission',2);">Mission</a>
+	</li>
+	
+	<li>
+		<a href="/la-commission/historique" id="lien_historique" onmouseover="(etat_on('lien_historique',2));" onmouseout="etat_out('lien_historique',2);">Historique</a>
+	</li>
+	
+	<li>
+		<a href="/la-commission/fonctionnement" id="lien_fonctionnement" onmouseover="(etat_on('lien_fonctionnement',2));" onmouseout="etat_out('lien_fonctionnement',2);">Fonctionnement</a>
+	</li>
+	
+	<li>
+		<a href="/la-commission/composition" id="lien_composition" onmouseover="(etat_on('lien_composition',2));" onmouseout="etat_out('lien_composition',2);">Composition</a>
+	</li>
+	
+	<li>
+		<a href="/la-commission/logos" id="lien_logos" onmouseover="(etat_on('lien_logos',2));" onmouseout="etat_out('lien_logos',2);">Logos</a>
+	</li>
+	</ul>
+	</li>
+<li>
+		<a href="#" id="lien_comites" onmousedown="etat_clic('moduletable_menu','lien_comites');" onmouseover="etat_on('lien_comites',1);" onmouseout="etat_out('lien_comites',1);"><span>Comités</span></a>
+	<ul id="menu_comites">
+	<li>
+		<a href="/comites/quebec" id="lien_quebec" onmouseover="(etat_on('lien_quebec',2));" onmouseout="etat_out('lien_quebec',2);">Québec</a>
+	</li>
+	
+	<li>
+		<a href="/comites/france" id="lien_france2" onmouseover="(etat_on('lien_france2',2));" onmouseout="etat_out('lien_france2',2);">France</a>
+	</li>
+	</ul>
+	</li>
+<li>
+		<a href="#" id="lien_bottin-des-membres" onmousedown="etat_clic('moduletable_menu','lien_bottin-des-membres');" onmouseover="etat_on('lien_bottin-des-membres',1);" onmouseout="etat_out('lien_bottin-des-membres',1);"><span>Bottin des membres</span></a>
+	<ul id="menu_bottin-des-membres">
+	<li>
+		<a href="/bottin-des-membres/quebec" id="lien_quebec2" onmouseover="(etat_on('lien_quebec2',2));" onmouseout="etat_out('lien_quebec2',2);">Québec</a>
+	</li>
+	
+	<li>
+		<a href="/bottin-des-membres/france" id="lien_france" onmouseover="(etat_on('lien_france',2));" onmouseout="etat_out('lien_france',2);">France</a>
+	</li>
+	</ul>
+	</li>
+<li>
+		<a href="/commemoration" onmouseover="etat_on('lien_commemoration',1);" onmouseout="etat_out('lien_commemoration',1);"><span>Commémoration</span></a>
+	</li>
+<li id="current" class="parent active">
+		<a href="/reseau-des-archives" id="lien_reseau-des-archives" onmouseover="etat_on('lien_reseau-des-archives',1);" onmouseout="etat_out('lien_reseau-des-archives',1);"><span>Réseau des Archives</span></a>
+	</li>
+<li>
+		<a href="/repertoire-de-personnes-ressources" onmouseover="etat_on('lien_repertoire-de-personnes-ressources',1);" onmouseout="etat_out('lien_repertoire-de-personnes-ressources',1);"><span>Répertoire de personnes-ressources</span></a>
+	</li>
+<li>
+		<a href="#" id="lien_bulletin-memoires-vives" onmousedown="etat_clic('moduletable_menu','lien_bulletin-memoires-vives');" onmouseover="etat_on('lien_bulletin-memoires-vives',1);" onmouseout="etat_out('lien_bulletin-memoires-vives',1);"><span>Bulletin Mémoires <i>vives</i></span></a>
+	<ul id="menu_bulletin-memoires-vives">
+	<li>
+		<a href="/bulletin-memoires-vives/derniere-parution" id="lien_derniere-parution" onmouseover="(etat_on('lien_derniere-parution',2));" onmouseout="etat_out('lien_derniere-parution',2);">Dernière parution</a>
+	</li>
+	
+	<li>
+		<a href="/bulletin-memoires-vives/bulletins-anterieurs" id="lien_bulletins-anterieurs" onmouseover="(etat_on('lien_bulletins-anterieurs',2));" onmouseout="etat_out('lien_bulletins-anterieurs',2);">Bulletins antérieurs</a>
+	</li>
+	
+	<li>
+		<a href="/bulletin-memoires-vives/abonnez-vous" id="lien_abonnez-vous" onmouseover="(etat_on('lien_abonnez-vous',2));" onmouseout="etat_out('lien_abonnez-vous',2);">Abonnez-vous</a>
+	</li>
+	</ul>
+	</li>
+<li>
+		<a href="/documents-et-publications" onmouseover="etat_on('lien_documents-et-publications',1);" onmouseout="etat_out('lien_documents-et-publications',1);"><span>Documents et publications</span></a>
+	</li>
+<li>
+		<a href="/sites-dinteret" onmouseover="etat_on('lien_sites-dinteret',1);" onmouseout="etat_out('lien_sites-dinteret',1);"><span>Sites d’intérêt</span></a>
+	</li>
+<li>
+		<a href="/archives" onmouseover="etat_on('lien_archives',1);" onmouseout="etat_out('lien_archives',1);"><span>Archives</span></a>
+	</li>
+</ul>
+
+<div style="display:none;">
+	<div id="id_menu1">lien_reseau-des-archives</div>
+	<br />
+	<div id="id_menu2"></div>
+	<br />
+	<div id="id_menu3"></div>
+	<div id="id_current">1</div>
+	<div id="menu_autre_actif">
+		0	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="menu_left_footer_util"><div class="menu_top_util_left"></div><div class="menu_top_util_center"><a href="/referer-ce-site-a-un-ami" class="mainlevel" >Référer ce site a un ami</a></div><div class="menu_top_util_right"></div></div>
+										
+					<div id="menu_left_shadow_left_bottom"></div>
+					<div id="menu_left_shadow_right_bottom"></div>
+				</div>
+			</div>
+			
+			
+			<div id="content">
+			
+								
+											<div id="poucet">
+							<span class="breadcrumbs pathway">
+
+<a href="http://www.cfqlmc.org/" class="pathway">Accueil</a> <img src="/templates/cfqlmc/images/arrow.png" alt=""  /> Réseau des Archives</span>
+						</div>
+										
+										
+								
+															
+						<!-- ok --><div id="page">
+
+			<h1 class="componentheading">
+			Réseau des Archives		</h1>
+	<p class="buttonheading">
+			<a href="/reseau-des-archives/1-cfqlmc/921-musee-de-la-civilisation-service-des-collections-des-archives-historiques-et-de-la-bibliotheque?tmpl=component&amp;print=1&amp;page=" title="Imprimer" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;"><img src="/images/M_images/printButton.png" alt="Imprimer"  /></a><a href="/component/mailto/?tmpl=component&amp;link=aHR0cDovL3d3dy5jZnFsbWMub3JnL3Jlc2VhdS1kZXMtYXJjaGl2ZXMvOTIxLW11c2VlLWRlLWxhLWNpdmlsaXNhdGlvbi1zZXJ2aWNlLWRlcy1jb2xsZWN0aW9ucy1kZXMtYXJjaGl2ZXMtaGlzdG9yaXF1ZXMtZXQtZGUtbGEtYmlibGlvdGhlcXVlJm9wdGlvbj1jb21fY29udGVudA%3D%3D" title="Envoyer à un ami" onclick="window.open(this.href,'win2','width=400,height=400,menubar=yes,resizable=yes'); return false;"><img src="/images/M_images/emailButton.png" alt="Envoyer à un ami"  /></a></p>
+<div class="clr"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Réseau Archives des francophonies nord-américaines</h1><p><br /></p><h2><b>Musée de la civilisation<br />Service des collections, des archives historiques et de la bibliothèque</b><br /></h2><p>9, rue de la Vieille-Université <br />C.P. 460 Haute-Ville Québec (Québec)<br />G1R 4R7</p><p><br />Par téléphone : 1-418-528-6963<br />Par courriel : <a href="mailto:
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy61919 = 'j&#117;l&#105;&#101;tt&#101;.d&#101;lr&#105;&#101;&#117;' + '&#64;';
+ addy61919 = addy61919 + 'mcq' + '&#46;' + '&#111;rg';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy61919 + '\'>' );
+ document.write( addy61919 );
+ document.write( '<\/a>' );
+ //-->\n </script><script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script>Cette adresse email est protégée contre les robots des spammeurs, vous devez activer Javascript pour la voir.
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script>" mce_href="mailto:
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy13300 = 'j&#117;l&#105;&#101;tt&#101;.d&#101;lr&#105;&#101;&#117;' + '&#64;';
+ addy13300 = addy13300 + 'mcq' + '&#46;' + '&#111;rg';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy13300 + '\'>' );
+ document.write( addy13300 );
+ document.write( '<\/a>' );
+ //-->\n </script><script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script>Cette adresse email est protégée contre les robots des spammeurs, vous devez activer Javascript pour la voir.
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script>">
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy82034 = 'j&#117;l&#105;&#101;tt&#101;.d&#101;lr&#105;&#101;&#117;' + '&#64;';
+ addy82034 = addy82034 + 'mcq' + '&#46;' + '&#111;rg';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy82034 + '\'>' );
+ document.write( addy82034 );
+ document.write( '<\/a>' );
+ //-->\n </script><script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script>Cette adresse email est protégée contre les robots des spammeurs, vous devez activer Javascript pour la voir.
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script></a> <br /></p><p><br />Personne ressource : Juliette Delrieu, archiviste M.A.<br />CFQLMC – communautés et autorités religieuses – Grand Montréal – régime français<br /></p><p>&nbsp;</p><h3><b>Bref historique de l'organisme</b></h3><p>Le Musée de la civilisation, musée national, est créé en 1988. Comme musée de société, ses collections sont constituées initialement par les collections du Séminaire de Québec [beaux-arts, mobilier, collections scientifiques dédiées à l'enseignement (minéralogie, zoologie, objets scientifiques), objets religieux]. Ses collections d'ethnologie et d'art des peuples amérindiens sont également prestigieuses. Sa mission est la conservation et la mise en valeur de la culture de la civilisation québécoise et euro-québécoise. Depuis 1995, le Séminaire de Québec a confié au Musée, la gestion de son Musée du Séminaire (devenu Musée de l'Amérique française), de ses collections, de ses fonds d'archives (655 m.l. de documents d'archives) et du fonds ancien de sa bibliothèque (180.000 ouvrages). Le Fonds d'archives du Séminaire de Québec (1623-1800) a été inscrit au registre de l'UNESCO, Mémoire du Monde, en 2007. Il diffuse en ligne plus de 21.000 pages de documents d'archives.<br /></p><p>&nbsp;</p><p><b>Présentation générale des fonds et collections se rapportant aux rubriques suivantes :</b></p><p>&nbsp;</p><b>Nouvelle-France</b><ul><li>FONDS DU SÉMINAIRE DE QUÉBEC : SME (1626-1994)</li></ul><p>Le Séminaire de Québec est fondé en 1663 dans le but de former les prêtres et d'évangéliser les Amérindiens du diocèse de Québec, qui couvrait alors l'ensemble de l'Amérique du Nord. Ce fonds, de loin le plus important, témoigne de la migration, de l'implantation, de la continuité et du rayonnement de la culture française et de la spiritualité catholique en Amérique du Nord, dont le Canada et les États-Unis, ainsi que de leur interaction avec les cultures autochtones et avec les autres cultures d'origine européenne.</p><p><br /><a href="http://www.mcq.org/fr/complexe/craf_fonds/craf_fonds.php?idEv=w532&amp;contenu=tm" mce_href="http://www.mcq.org/fr/complexe/craf_fonds/craf_fonds.php?idEv=w532&amp;contenu=tm">L'état général du fonds est en ligne.</a> </p><p>&nbsp;</p><b>Le Fonds du Séminaire de Québec conserve parallèlement des fonds privés :</b><br /><ul><li>LE FONDS VIGER-VERREAU (P32) 1612-1901 :</li></ul><p>Le fonds porte sur l'histoire canadienne depuis 1612 jusqu'à la fin du XIX<sup>e</sup> siècle. Il illustre l'intérêt de Jacques Viger et d'Hospice-Anthelme Verreau pour la collection et la transcription de documents d'archives. De plus, les documents fournissent d'importantes informations sur l'enseignement. Le fonds fournit également des informations sur la vie personnelle de ces deux hommes, entre autres par l'intermédiaire de leur correspondance respective.</p><p><br />Le fonds comprend les documents personnels de Jacques Viger (maire de Montréal et historien) dont « Ma Saberdache » (rouge), qui contient des transcriptions de documents historiques avec des notes de celui-ci ainsi que « Ma Saberdache » (bleue), qui contient la transcription de sa correspondance. Le fonds contient aussi des comptes, des journaux de voyage et un album contenant des aquarelles et dessins originaux, un journal intime, des notes de recherche, des opuscules, des photographies ainsi que des plans imprimés. Il comprend également les documents personnels d'Hospice-Anthelme Verreau, entre autre sa correspondance, des notes historiques, un journal de voyage en Europe, des notes de cours, les albums Verreau qui contiennent des originaux de correspondances, dont celle de Remy de Courcelles, gouverneur de Trois-Rivières (1665). Le Fonds Viger-Verreau contient également l'album Thomas-Aubert de Gaspé.</p><p><br /></p><ul><li>FONDS GEORGES-BARTHÉLEMI FARIBAULT : 1626-1860</li><li>FONDS THAÏS LACOSTE-FRÉMONT : 1841-1987</li><li>AUTRES FONDS PRIVÉS : 1693-1990</li><li>DOCUMENTS PHOTOGRAPHIQUES : (50 000)</li><li>DOCUMENTS CARTOGRAPHIQUES ET ARCHITECTURAUX : (9 200)</li><li>COLLECTION D'ŒUVRES SUR P APIER : 1500-1993</li><li>COLLECTION PHILATÉLIQUE : 1840-1995</li><li>COLLECTION NUMISMATIQUE : 300 ANS AV. J.-C. -1995</li></ul><br /><p>Le Musée de la civilisation conserve également des archives de personnalités québécoises du XX<sup>e</sup> siècle, comme le couturier Jean-Claude Poitras, mais également un fonds de musique et de partitions musicales importantes, comme le 1er opéra-bouffe de Joseph Quesnel créé et joué au Québec : Colas et Colinette (1789), les partitions de Henri Frémart, Artus-aux-Cousteaux et Valentin de Bournonville, imprimées chez Ballard (1639-ca 1646) et considérées comme les uniques exemplaires existant au monde à ce jour, le Fonds de partition musicale de Lavigne (XX<sup>e</sup> siècle) etc.</p><p><br />Le fonds rattaché à la mission d'enseignement est également très important depuis la création du Séminaire et contient près de 1500 manuscrits relatifs à l'enseignement, auxquels sont aussi rattachés les livres du fonds ancien de la bibliothèque (180.000 ouvrages).<br /><br /><b>Canada français hors Québec</b><br />Dans le fonds du Séminaire de Québec, la série sur les Missions (SME 12.1) contient de nombreux documents d'archives sur les missions hors Québec.</p><p>&nbsp;</p><ul><li>FONDS VIGER-VERREAU 1612-1901 :</li></ul><p>Le fonds porte sur l'histoire canadienne depuis 1612 jusqu'à la fin du XIX<sup>e</sup> siècle. Il est constitué d'une collection et de transcriptions de documents d'archives, dont bon nombre de documents fournissent d'importantes informations sur l'occupation française de la vallée de l'Ohio, sur la vie militaire, entre autres.</p><p><br />Fonds Viger-Verreau : transcription du journal de Georges Washington.<br />Fonds du Séminaire : Le journal de Louis Riel, père du Manitoba, de 1875 à 1878. Fonds Thaïs Lacoste- Frémont.</p><p><br /><b>Franco-américains</b></p><p>&nbsp;</p><ul><li>FONDS DU SÉMINAIRE - <a href="http://www.mcq.org/fr/complexe/craf_fonds/craf_fonds.php?idEv=w394" mce_href="http://www.mcq.org/fr/complexe/craf_fonds/craf_fonds.php?idEv=w394">SME 12.1 Série Missions 1678-1857</a>; surtout 1684- 1789 </li></ul><p><br /><a href="http://maf.mcq.org/anq/repertoire.html?url=http://www.mcq.org/fr/complexe/craf_f onds/craf_fonds.php?idEv=w394" mce_href="http://maf.mcq.org/anq/repertoire.html?url=http://www.mcq.org/fr/complexe/craf_f onds/craf_fonds.php?idEv=w394">Répertoire des documents en ligne</a> </p><p><br />Publication : Noël Baillargeon : <a href="http://podcastmcq.org/fr/documents/complexe/craf/missions_seminaire.pdf" mce_href="http://podcastmcq.org/fr/documents/complexe/craf/missions_seminaire.pdf"><i>Missions du Séminaire de Québec dans la vallée du Mississippi</i>,</a>(fichier PDF)<br /></p><p><br /></p><ul><li>FONDS VIGER-VERREAU (P32). Exemples de documents significatifs :</li></ul><p>• Papiers Contrecœur : Journal de Washington dans son expédition de l'Ohio.<br />P32/004/378;<br />• extrait du journal du colonel Washington, concernant son expédition de [l'Oyo] [l'Ohio]. P32/048/022;<br />• Copie de la lettre du général Washington au comte de Grasse. P32/065/011;<br />• Journal anonyme d'un voyageur de Détroit à la rivière Ohio. P32/017/001;<br />• Virginie. Lettre du Gouverneur de la Virginie à Jacques Legardeur de Saint-Pierre lui demandant de se retirer des terres sur la Rivière Ohio dans l'Ouest de la colonie de la Virginie, car elles appartiennent en propre à la couronne de Grande-Bretagne. P32/005/058;<br />• Ordre de marche des Anglais à la rivière Doyo, Ohio. P38.1.2/056/018A;<br />• Mgr l'évêque du diocèse de Vincennes, Indiana, États-Unis, à Antoine Parant,<br />supérieur du Séminaire de Québec, au sujet de Odd Fellows. SME 2.1/Y/020;<br />• Document se rapportant au Rév. Stephen Williams, fils de John, premier pasteur de<br />Longmeadow, Mass., États-Unis. 23 juin 1719. TSME284;<br />• Lettre d'Horatio Gates et Jonathan Jones au Conseil exécutif du Bas Canada<br />déclarant qu'ils préfèrent quitter la province que de prêter serment d'allégeance et porter des armes contre les États-Unis. 12 décembre 1812 P32/022/114;<br />• Lettre de M. Dupont, agent de colonisation de l'Immigration Branch, Departement of the Interior, Canada, adressée au député. Cette lettre est pour lui donner l'état de la situation des compatriotes qui partent travailler aux États-Unis, dans d'autres parties de la province de Québec, au Nord Ouest et au Canada en général, en raison du manque de travail. 23 mars 1910. 104.2.1 TEMP.;<br />• Papiers Danville : extrait de la nouvelle carte des États-Unis des haut et bas Canada, de la Nouvelle-Écosse, du Nouveau-Brunswick et de Terre-Neuve, par Buce. 1840. P32/056/A.006;<br />• Avis officiel pour la distribution de lots de terres de la couronne, aux officiers et miliciens de la dernière guerre avec les États-Unis. 25 août 1837. P32/085/316;<br />• Papiers Benedict Arnold (invasion américaine) : lettre du major Meigs au général Benedict Arnold concernant divers sujets: retrait de l'armée américaine à l'Île-aux- Noix ou Ticonderoga; mort de quelques soldats à Québec; demande d'échange de prisonniers; Washington envoie de l'argent aux officiers et soldats à Québec.</p><p><br />S'ajoutent aux archives concernant les relations franco-américaines, de nombreux journaux américains anciens en français et en anglais, conservés dans le fonds ancien de la bibliothèque du Séminaire.</p><p><br /><b>Hyperliens existants</b> (par exemple : site de l'organisme, du RDAQ, de Archives Canada) :<br />1. <a href="http://www.mcq.org/fr/complexe/craf.html" mce_href="http://www.mcq.org/fr/complexe/craf.html">Centre de références de l'Amérique française</a></p><p>2. <a href="http://www.mcq.org/blogue/2010/03/acceder-a-un-des-tresors-de- l%e2%80%99humanite-et-plus-si-affinites/" mce_href="http://www.mcq.org/blogue/2010/03/acceder-a-un-des-tresors-de- l%e2%80%99humanite-et-plus-si-affinites/">Blogue 1</a> : et <a href="http://www.mcq.org/blogue/category/nos-archives/" mce_href="http://www.mcq.org/blogue/category/nos-archives/">blogue 2</a><br />3. <a href="http://www.mcq.org/index_fr.html" mce_href="http://www.mcq.org/index_fr.html">Musée de la civilisation</a></p><p>4. <a href="http://www.facebook.com/museedelacivilisation" mce_href="http://www.facebook.com/museedelacivilisation">Musée de la civilisation #Facebook</a></p><p>&nbsp;</p><p><b>Pièces significatives :</b><br />Figure 1 SME 11/ 2 Lettres patentes du Roi pour l'établissement du Séminaire de Québec avril 1663<br />Figure 2 : 29.6 Recueil de partitions musicales (H. Frémart, A.aux-Cousteaux, V. de Bournonville, 1639-ca 1646)<br />Figure 3 : MS 64 Cahier qui contient le petit catéchisme pour être appris aux jeunes enfants micmacques par Maillard, Pierre ap. 1750<br />Figure 4 : Plan de la Seigneurie et Etablissemens de la Mission des Tamarois (Illinois) 1735, par Mercier, J.P., ptre , (L-43)<br />Instruments de <a href="http://www.mcq.org/fr/complexe/craf_fonds/craf_fonds.php?idEv=w532&amp;contenu=tm" mce_href="http://www.mcq.org/fr/complexe/craf_fonds/craf_fonds.php?idEv=w532&amp;contenu=tm">recherche en ligne pour le fonds du Séminaire</a>, ses fonds associés et ses fonds privés </p><p><br />La majorité d'entre eux comportent un inventaire analytique, sur papier.<br />Certains autres, d'une importance majeure ne sont pas encore accessibles à la consultation, selon la législation en vigueur (P30-Fonds Mgr Parent).<br /></p>
+	<div class="clear" style="margin-top:10px;"></div>
+	<h6><a href="/reseau-des-archives/921#haut" id="haut_page">Haut de page</a></h6>
+	<div class="clear" style="margin-bottom:10px;"></div>
+</div>
+
+
+
+									<div class="clear"></div>
+							</div>
+			
+			<div id="shadow_right_bas"></div>
+			<div class="clear"></div>
+		</div>
+		
+		<div id="footer">
+			<div id="footer_wrapper">
+				<div id="legal">
+				&copy; Commission franco-québécoise sur les lieux de mémoire communs | 2016				</div>
+				<div class="clear"></div>
+				<div id="footer_bas">
+					
+											<div id="mis_a_jour">
+							
+Dernière mise à jour : le mercredi 6 janvier 2016
+						</div>
+										
+					
+											<div id="menu_bas">
+							<ul id="mainlevel"><li><a href="/equipe-web" class="mainlevel" >Équipe web</a><span class="mainlevel"> | </span><a href="/credits" class="mainlevel" >Crédits</a></li></ul><a href="http://www.facebook.com/sharer.php?u=http://www.cfqlmc.org/templates/cfqlmc/images/logo.jpg&amp;t=Commission%20Franco-Qu%C3%A9b%C3%A9coise%20sur%20les%20Lieux%20de%20M%C3%A9moires%20Communs" class="" mce_href="http://www.facebook.com/sharer.php?u=http://www.cfqlmc.org/templates/cfqlmc/images/logo.jpg&amp;t=Commission%20Franco-Qu%C3%A9b%C3%A9coise%20sur%20les%20Lieux%20de%20M%C3%A9moires%20Communs" title="fb_share" id="partage_facebook" name="fb_share" type="button">Partager</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" mce_src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+						</div>
+									</div>
+			</div>
+		</div>
+        <script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			try {
+				var pageTracker = _gat._getTracker("UA-15918413-1");
+				pageTracker._trackPageview();
+			} catch(err) {}</script>
+	</body>
+</html>

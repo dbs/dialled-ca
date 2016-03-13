@@ -1,0 +1,774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<title>Vaughan Public Libraries - Libraries</title>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=10" >
+	<meta name="keywords" content="vaughan, public, library, ontario, canada" />
+	<meta name="description" content="Vaughan Public Libraries website" />
+	<meta name="description" content="Enrich Inspire Transform - Vaughan Public Libraries offer welcoming destinations that educate, excite and empower our community. " />
+
+	<link rel="shortcut icon" href="http://www.vaughanpl.info/favicon.ico" type="image/x-icon" />
+
+<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="/css/fullcalendar.css" />	<link rel="stylesheet" type="text/css" href="/css/default.css" />	<link rel="stylesheet" type="text/css" href="/css/zebra_datepicker.css" />	<link rel="stylesheet" href="/css/jquery-ui.css" type="text/css" media="screen" />
+	<!--
+	<link rel="stylesheet" href="/css/jquery.twitter.css">
+	<link rel="stylesheet" href="/css/jquery.tweet.css">
+	-->
+	<!--[if IE]>
+	<style type="text/css">
+		/* HTML elements */
+		html {
+		  filter: expression(document.execCommand("BackgroundImageCache", false, true));
+		}
+
+		/* Hides from IE5-mac \*/
+		* html .details {height: 1%;}
+		/* End hide from IE5-mac */
+
+
+		/* Hides from IE5-mac \*/
+		* html .entry {height: 1%;}
+		/* End hide from IE5-mac */
+	</style>
+	<![endif]-->
+
+<!-- scripts -->
+<!-- for calendar -->
+	<script type="text/javascript" src="/js/jquery-1.3.2.js"></script>	<script type="text/javascript" src="/js/fullcalendar.min.js"></script>
+
+
+<!-- for slideshow -->
+	<script type="text/javascript" src="/js/slideMenus.js"></script>
+	<script type="text/javascript" src="/js/jquery/jquery-1.5.2.min.js"></script><script type="text/javascript" src="/js/jquery.animate-colors-min.js"></script><script type="text/javascript" src="/js/jquery.easing.1.3.js"></script><script type="text/javascript" src="/js/jquery.skitter.min.js"></script><link rel="stylesheet" type="text/css" href="/css/skitter.styles.css" />
+	<script  type="text/javascript" >AC_FL_RunContent = 0;</script>
+	<script src="/js/AC_RunActiveContent.js" type="text/javascript" ></script>
+
+<!-- for calendar select -->
+	<script type="text/javascript" src="/js/zebra_datepicker.js"></script>
+<!-- google analysis -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-26049711-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+<!-- for search box on banner-->
+
+	<script type="text/javascript">
+	    jQuery(function() {
+	      jQuery.support.placeholder = false;
+	      test = document.createElement('input');
+	      if('placeholder' in test) jQuery.support.placeholder = true;
+	    });
+	    // This adds placeholder support to browsers that wouldn't otherwise support it.
+	    $(function() {
+	      if(!$.support.placeholder) {
+	       var active = document.activeElement;
+	       $(':text').focus(function () {
+		 if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+		  $(this).val('').removeClass('hasPlaceholder');
+		 }
+	       }).blur(function () {
+		 if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+		  $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+		 }
+	       });
+	       $(':text').blur();
+	       $(active).focus();
+	       $('form:eq(0)').submit(function () {
+		 $(':text.hasPlaceholder').val('');
+	       });
+	      }
+	    });
+	</script>
+	 <style type='text/css'>
+	    .hasPlaceholder {
+	      color: #777;
+	    }
+	    </style>
+
+<!-- for tabs -->
+			
+<script type="text/javascript" src="/js/ui/ui.core.js"></script>
+<script type="text/javascript" src="/js/ui/ui.tabs.js"></script>
+
+<script type="text/javascript">
+   $(function() {
+       $("#tabs").tabs();
+   });
+</script>
+
+<script language="javascript" type="text/javascript">
+	
+</script>
+
+<script type="text/javascript">
+<!--
+function goto_URL(){
+	window.location.href = document.getElementById('how_do_i').value;;
+}
+//-->
+
+</script>
+
+<script type="text/javascript">
+	function toggleMin(id){
+		var style = document.getElementById(id).style;
+		style.display = (style.display=="block") ? "none":"block";
+	}
+	
+	function externalLinks() {
+		 if (!document.getElementsByTagName) return;
+		 var anchors = document.getElementsByTagName("a");
+		 for (var i=0; i < (anchors.length); i++) {
+		   var anchor = anchors[i];
+		   if (anchor.getAttribute("href") &&
+			   anchor.getAttribute("rel") == "external")
+			 anchor.target = "_blank";
+		 }
+	}
+
+	function confirmMobile(isMobile) {
+		
+		var ref = document.referrer;
+		
+		var isMobile = {
+		    Android: function() {
+		        return navigator.userAgent.match(/Android/i);
+		    },
+		    BlackBerry: function() {
+		        return navigator.userAgent.match(/BlackBerry/i);
+		    },
+		    iOS: function() {
+		        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		    },
+		    Opera: function() {
+		        return navigator.userAgent.match(/Opera Mini/i);
+		    },
+		    Windows: function() {
+		        return navigator.userAgent.match(/IEMobile/i);
+		    },
+		    any: function() {
+		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		    }
+		};
+		
+		if (isMobile.any() && (document.URL == 'http://www.vaughanpl.info/' || document.URL == 'http://www.vaughanpl.info/index.php') && ref.indexOf("vaughanpl.info/") == -1) {
+						
+				window.location = "http://www.vaughanpl.info/mobile.html";	
+						
+			
+		}
+	}
+
+	function doInvitation(){
+		var title = document.getElementsByTagName("title")[0].innerHTML;
+		if(title == "Vaughan Public Libraries - Home") {
+			window.open('/surveyInvitation.html','VaughanPublicLibraries','height=380,width=600, scrollbars=1, resizable=1');
+		}
+	}
+
+	function do_on_load() {
+		try {onLoad();}
+		catch (ex) {}
+		externalLinks();		
+		confirmMobile('');
+
+
+	}
+
+	window.onload = do_on_load;
+</script>
+
+
+
+</head>
+
+<body>
+
+
+
+	<!-- div class="section_end"></div -->
+
+	<table class="page_frame_table" cellpadding="0" cellspacing="0">
+		<tr class="page_frame_main_row">
+			<td class="page_frame_nav_bar">
+				<div id="skipnav"><a href="#skip">Skip to content</a></div>
+
+
+				<!-- Site menu bar start -->
+
+				<a href="http://www.vaughanpl.info" id="home" title="VPL Home"><span class="graphic_link_caption">Vaughan Public Libraries</span></a>
+
+				<div id="nav_bar">
+					<div id='menu_main'><div id="menu_option_materials" class="site_menu_main_item" onmouseover="showMenu('materials');" onmouseout="hideMenu('materials');" onblur="hideMenu('materials');" onfocus="showMenu('materials');" ><a href="http://www.vaughanpl.info/materials" >Books &amp; Resources</a></div>
+<div id="menu_option_services" class="site_menu_main_item" onmouseover="showMenu('services');" onmouseout="hideMenu('services');" onblur="hideMenu('services');" onfocus="showMenu('services');" ><a href="http://www.vaughanpl.info/services" >Using the Library</a></div>
+<div id="menu_option_news_and_events" class="site_menu_main_item" onmouseover="showMenu('news_and_events');" onmouseout="hideMenu('news_and_events');" onblur="hideMenu('news_and_events');" onfocus="showMenu('news_and_events');" ><a href="http://www.vaughanpl.info/news_and_events" >What&#039;s On</a></div>
+<div id="menu_option_account" class="site_menu_main_item" onmouseover="showMenu('account');" onmouseout="hideMenu('account');" onblur="hideMenu('account');" onfocus="showMenu('account');" ><a href="https://catalogue.vaughanpl.info/catalogue/auth/login" >My Account</a></div>
+<div id="menu_option_about" class="site_menu_main_item" onmouseover="showMenu('about');" onmouseout="hideMenu('about');" onblur="hideMenu('about');" onfocus="showMenu('about');" ><a href="http://www.vaughanpl.info/about" >About VPL</a></div>
+<div id="menu_option_contact" class="site_menu_main_item" onmouseover="showMenu('contact');" onmouseout="hideMenu('contact');" onblur="hideMenu('contact');" onfocus="showMenu('contact');" ><a href="http://www.vaughanpl.info/contact" >Contact</a></div>
+<div id='site_menu_main_bottom'></div></div>
+<div id="menu_container_news_and_events" class="site_menu_container site_menu_level_2">
+<div id="menu_news_and_events" class="site_menu" onmouseover="showMenu('news_and_events');" onmouseout="hideMenu('news_and_events');" onblur="hideMenu('news_and_events');" onfocus="showMenu('news_and_events');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/programs" >Programs &amp; Events</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/news_and_events/publications_media" >Publications &amp; Media Room</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/newsletters/subscribe" >eNewsletter</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_services" class="site_menu_container site_menu_level_2">
+<div id="menu_services" class="site_menu" onmouseover="showMenu('services');" onmouseout="hideMenu('services');" onblur="hideMenu('services');" onfocus="showMenu('services');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/services/membership" >Membership</a></div>
+<div id="menu_option_borrowing" class="site_menu_item" onmouseover="showMenu('borrowing');" onmouseout="hideMenu('borrowing');" onblur="hideMenu('borrowing');" onfocus="showMenu('borrowing');" ><a href="http://www.vaughanpl.info/services/borrowing" >Borrowing Materials ...</a></div>
+<div id="menu_option_library_services" class="site_menu_item" onmouseover="showMenu('library_services');" onmouseout="hideMenu('library_services');" onblur="hideMenu('library_services');" onfocus="showMenu('library_services');" ><a href="http://www.vaughanpl.info/library_services" >Library Services</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/library_notification_requests" >Library Notification</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/services/maker_kit" >Maker Kits</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_borrowing" class="site_menu_container site_menu_level_3">
+<div id="menu_borrowing" class="site_menu" onmouseover="showMenu('borrowing');showMenu('services');" onmouseout="hideMenu('borrowing');hideMenu('services');" onblur="hideMenu('borrowing');hideMenu('services');" onfocus="showMenu('borrowing');showMenu('services');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/services/loan_periods" >Loan Periods</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/services/renew" >Renewing Your Loans</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/services/placing_holds" >Placing Holds</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/services/loan_charges" >Charges for Overdue, Damaged or Lost Items</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_library_services" class="site_menu_container site_menu_level_3">
+<div id="menu_library_services" class="site_menu" onmouseover="showMenu('library_services');showMenu('services');" onmouseout="hideMenu('library_services');hideMenu('services');" onblur="hideMenu('library_services');hideMenu('services');" onfocus="showMenu('library_services');showMenu('services');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/library_services#computer" >Public Computers</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/library_services#room" >Book a Room</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/library_services#proctor" >Exam Proctoring</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/library_services#club" >Book Clubs</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/library_services#homebound" >Homebound Services</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/library_services#cela" >CELA Serivices</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_materials" class="site_menu_container site_menu_level_2">
+<div id="menu_materials" class="site_menu" onmouseover="showMenu('materials');" onmouseout="hideMenu('materials');" onblur="hideMenu('materials');" onfocus="showMenu('materials');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="https://catalogue.vaughanpl.info" >Library Catalogue</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/materials/downloads_digital" >Downloads &amp; Digital</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/databases" >Articles &amp; Research</a></div>
+<div id="menu_option_materials_recommended" class="site_menu_item" onmouseover="showMenu('materials_recommended');" onmouseout="hideMenu('materials_recommended');" onblur="hideMenu('materials_recommended');" onfocus="showMenu('materials_recommended');" ><a href="http://www.vaughanpl.info/materials/recommended" >We Recommend ...</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/sixtyfiveplus" >65+</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/newcomers" >Newcomers</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/business" >Business Information</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/career" >Career &amp; Employment</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/health" >Health &amp; Wellness</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/government_community" >Government &amp; Community</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/local_studies" >Local Studies</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/poetry_map_entry" >Vaughan Poetry Map Submission</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_materials_recommended" class="site_menu_container site_menu_level_3">
+<div id="menu_materials_recommended" class="site_menu" onmouseover="showMenu('materials_recommended');showMenu('materials');" onmouseout="hideMenu('materials_recommended');hideMenu('materials');" onblur="hideMenu('materials_recommended');hideMenu('materials');" onfocus="showMenu('materials_recommended');showMenu('materials');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/leisure/" >For Your Leisure</a></div>
+<div class='site_menu_item'><a href="/new_arrivals" >New Arrivals</a></div>
+<div class='site_menu_item'><a href="/just_returned" >Just Returned</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/awards" >Award Winners</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/bestsellers" >Bestseller Lists</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/next_reads" >Your Next 5 Reads</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/materials/next_reads" >NextReads Newsletters</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_account" class="site_menu_container site_menu_level_2">
+<div id="menu_account" class="site_menu" onmouseover="showMenu('account');" onmouseout="hideMenu('account');" onblur="hideMenu('account');" onfocus="showMenu('account');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="https://catalogue.vaughanpl.info/catalogue/auth/login" >Login to Library Account</a></div>
+<div class='site_menu_item'><a href="http://ebooks.vaughanpl.info/en/BANGAuthenticate.dll?Action=AuthCheck&URL=MyAccount.htm" >Login to eBooks Account</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_about" class="site_menu_container site_menu_level_2">
+<div id="menu_about" class="site_menu" onmouseover="showMenu('about');" onmouseout="hideMenu('about');" onblur="hideMenu('about');" onfocus="showMenu('about');" >
+<div class="opening"></div>
+<div class="details">
+<div id="menu_option_about_libraries" class="site_menu_item" onmouseover="showMenu('about_libraries');" onmouseout="hideMenu('about_libraries');" onblur="hideMenu('about_libraries');" onfocus="showMenu('about_libraries');" ><a href="http://www.vaughanpl.info/libraries" >Locations and Hours ...</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/about/board" >Vaughan Public Library Board</a></div>
+<div class='site_menu_item'><a href="/jobs" >Employment Opportunities</a></div>
+<div class='site_menu_item'><a href="/volunteers" >Volunteer Opportunities</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/about/strategic_plan" >Strategic Plan &amp; Annual Reports</a></div>
+<div id="menu_option_policies" class="site_menu_item" onmouseover="showMenu('policies');" onmouseout="hideMenu('policies');" onblur="hideMenu('policies');" onfocus="showMenu('policies');" ><a href="http://www.vaughanpl.info/about/policies" >Policies ...</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/about/accessibility" >Accessibility Information</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_policies" class="site_menu_container site_menu_level_3">
+<div id="menu_policies" class="site_menu" onmouseover="showMenu('policies');showMenu('about');" onmouseout="hideMenu('policies');hideMenu('about');" onblur="hideMenu('policies');hideMenu('about');" onfocus="showMenu('policies');showMenu('about');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="/files/services/AccessibilityPolicy.pdf" >Accessibility Policy</a></div>
+<div class='site_menu_item'><a href="/files/services/BoardBylaw.pdf" >Board By-Law</a></div>
+<div class='site_menu_item'><a href="/about/collection_development_policy" >Collection Development Policy</a></div>
+<div class='site_menu_item'><a href="/files/services/CopyrightPolicy.pdf" >Copyright Policy</a></div>
+<div class='site_menu_item'><a href="/about/internet_policy" >Internet Policy</a></div>
+<div class='site_menu_item'><a href="/files/services/OperationalPolicy.pdf" >Operational Policy</a></div>
+<div class='site_menu_item'><a href="/about/website_privacy" >Privacy Statement</a></div>
+<div class='site_menu_item'><a href="/files/services/CodeOfConduct.pdf" >Code of Conduct</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_about_libraries" class="site_menu_container site_menu_level_3">
+<div id="menu_about_libraries" class="site_menu" onmouseover="showMenu('about_libraries');showMenu('about');" onmouseout="hideMenu('about_libraries');hideMenu('about');" onblur="hideMenu('about_libraries');hideMenu('about');" onfocus="showMenu('about_libraries');showMenu('about');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/view/1" >Ansley Grove Library</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/view/2" >Bathurst Clark Resource Library</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/view/3" >Dufferin Clark Library</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/view/5" >Kleinburg Library</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/view/6" >Maple Library</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/view/7" >Pierre Berton Resource Library</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/view/10" >Pleasant Ridge Library</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/view/8" >Woodbridge Library</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries/map" >Map of Vaughan Public Libraries</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_contact" class="site_menu_container site_menu_level_2">
+<div id="menu_contact" class="site_menu" onmouseover="showMenu('contact');" onmouseout="hideMenu('contact');" onblur="hideMenu('contact');" onfocus="showMenu('contact');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/email_librarian" >Email Librarian</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/libraries" >Contact Local Branch</a></div>
+<div id="menu_option_suggestions" class="site_menu_item" onmouseover="showMenu('suggestions');" onmouseout="hideMenu('suggestions');" onblur="hideMenu('suggestions');" onfocus="showMenu('suggestions');" ><a href="http://www.vaughanpl.info/contact/suggestions" >Feedback and Suggestions ...</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/files/accessibility.pdf" >Accessibility Customer Feedback Form</a></div>
+</div><div class='closing'></div></div></div>
+<div id="menu_container_suggestions" class="site_menu_container site_menu_level_3">
+<div id="menu_suggestions" class="site_menu" onmouseover="showMenu('suggestions');showMenu('contact');" onmouseout="hideMenu('suggestions');hideMenu('contact');" onblur="hideMenu('suggestions');hideMenu('contact');" onfocus="showMenu('suggestions');showMenu('contact');" >
+<div class="opening"></div>
+<div class="details">
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/email_librarian/add/purchase" >Suggest an Item for Purchase</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/contact/administration" >Contact VPL Administration</a></div>
+</div><div class='closing'></div></div></div>
+
+					<div id="site_subsites">
+
+					<div class="section">
+
+							<div class="box_skitter box_skitter_small info_slide">
+							
+							<script  type="text/javascript">
+								$(document).ready(function(){
+									$('.box_skitter_large').skitter({numbers: true, navigation: false, label: false, preview: 1, hideTools: true, interval: 5000, show_randomly: false, numbers_align: "center", animateNumberOver: {backgroundColor:"#999", color:"#fff"}, animateNumberActive: {backgroundColor:"#004499", color:"#fff"}});
+									
+									$('.box_skitter_small').skitter({numbers: false, navigation: true, label: false, preview: 1, hideTools: true, auto_play: false, interval: 30000, show_randomly: true, });	
+									
+							
+								});
+							</script>
+							<ul>
+							<li><a href="https://www.hoopladigital.com" target="_blank"><img src="/img/slides/hoopla_btn.png" class="fade" alt="hoopla button" /></a></li>
+							<li><a href="http://eproducts.vaughanpl.info:81/login/zinio"><img src="/img/slides/zinio_btn.png" class="fade" alt="zinio button" /></a></li>
+							<li><a href="http://ebooks.vaughanpl.info/"><img src="/img/slides/overdrive_btn.png" class="fade" alt="OverDrive" /></a></li>
+							<li><a href="http://eproducts.vaughanpl.info:81/login/one_click"><img src="/img/slides/oneclick_btn.png" class="fade" alt="OneClickdigital" /></a></li>
+							<li><a href="http://eproducts.vaughanpl.info:81/login/universal_class"><img src="/img/slides/uc_btn.png" class="fade" alt="universal class button"/></a></li>
+							<li><a href="http://eproducts.vaughanpl.info:81/login/transparent"><img src="/img/slides/tlo_btn.png" class="fade" alt="Transparent Language" /></a></li>
+							<li><a href="http://eproducts.vaughanpl.info:81/login/indieflix"><img src="/img/slides/indieflex_btn.png" class="fade" alt="Indieflix" /></a></li>
+							<li><a href="https://ebook.3m.com/library/vaughanpl/"><img src="/img/slides/3m_btn.png" class="fade" alt="3M Library" /></a></li>
+							</ul>
+							</div>
+						    
+						</div><br/>
+						
+						<div class="section">
+							<a id="link_teen_vortex" href="http://www.vaughanpl.info/vortex" title="Teen vortex"><span class="graphic_link_caption">Teen Vortex</span></a>
+						</div>
+						<div class="section">
+							<a id="link_kid_zone" href="http://www.vaughanpl.info/kidzone" title="KidZone"><span class="graphic_link_caption">KidZone</span></a>
+						</div>
+						<div class="section">
+							<a id="link_leisure" href="http://www.vaughanpl.info/leisure/" title="For Your Leisure Blog"><span class="graphic_link_caption">For Your Leisure Blog</span></a>
+						</div>
+						
+						<div class="section">
+							<a id="link_webprint" href="https://webprint.vaughanpl.info/WebPrint" title="web print" rel="external"><span class="graphic_link_caption">Web Print</span></a>
+						</div>
+						<div class="section">
+							<a id="link_building" href="http://www.vaughanpl.info/building" title="Building Blog"><span class="graphic_link_caption">Building Blog</span></a>
+						</div>
+				
+
+						<div id="nav_bar_spacer"></div>
+
+					</div>
+						
+
+					<div id="nav_bar_bottom"></div>
+				</div>
+				<!-- Site menu bar end -->
+			</td>
+			<td class="page_frame_content_bar">
+				<!-- Content area start -->
+
+				<div id="overhead_area">
+					<div class="opening"></div>
+					<div class="details"></div>
+					<div class="closing"><img src="http://www.vaughanpl.info/img/enrich.png" alt="Enrich Inspire Transform" id="vpl_vision_img" /></div>
+				</div>
+
+			<div id="banner">
+
+ 			 <form method="get" action="https://catalogue.vaughanpl.info/catalogue/search/query">
+				<fieldset><legend>search catalogue</legend>
+
+				      <label for="search_query" id="search_label">Find books, movies, music...</label>
+				      <input type="text" id="search_query" class="search_input_box" name="term_1" size="42" value="" placeholder="Search Catalogue" />
+				      <input id="submit_btn" value="Search" title="Search Bar" type="submit"  />
+			</fieldset>
+				  </form>
+
+			</div>
+
+
+				
+
+				<div id="bread_crumb_area">
+					<div class="opening"></div>
+					<div class="details"><a href="/" >Home</a>&nbsp;&gt;&nbsp;<a href="/about" >About Vaughan Public Libraries</a></div>
+					<div class="closing"><a id="skip_target" name="skip">-</a></div>
+				</div>
+
+
+					
+
+
+
+
+<div id="page_header">
+	<div class="opening"></div>
+	<div class="details">
+		<h1>Locations and Hours</h1>
+	</div>
+	<div class="closing"></div>
+</div>
+
+
+
+<div id="page_content">
+	<div class="opening"></div>
+	<div class="details">
+	
+		<div class="intro">
+		<p><a href="/libraries/map">Map of library locations</a></p>
+		</div>
+
+		 
+
+			
+			<div class="list_with_summary">
+				
+				<div class="name">
+					<a href="/libraries/view/1" >Ansley Grove Library</a>				</div>
+				<div class="summary">
+											350 Ansley Grove Road<br />
+						Woodbridge, Ontario L4L 5C9<br />
+																Telephone: (905) 653-READ (7323)<br />
+																Fax: (905) 856-6151<br />
+										<a href="/libraries/view/1" >more ...</a>				</div>
+			</div>
+			
+		
+		 
+
+			
+			<div class="list_with_summary">
+				
+				<div class="name">
+					<a href="/libraries/view/2" >Bathurst Clark Resource Library</a>				</div>
+				<div class="summary">
+											900 Clark Avenue West<br />
+						Vaughan, Ontario L4J 8C1<br />
+																Telephone: (905) 653-READ (7323)<br />
+																Fax: (905) 709-1099<br />
+										<a href="/libraries/view/2" >more ...</a>				</div>
+			</div>
+			
+		
+		 
+
+			
+			<div class="list_with_summary">
+				
+				<div class="name">
+					<a href="/libraries/view/3" >Dufferin Clark Library</a>				</div>
+				<div class="summary">
+											1441 Clark Avenue West<br />
+						Vaughan, Ontario L4J 7R4<br />
+																Telephone: (905) 653-READ (7323)<br />
+																Fax: (905) 660-7202<br />
+										<a href="/libraries/view/3" >more ...</a>				</div>
+			</div>
+			
+		
+		 
+
+			
+			<div class="list_with_summary">
+				
+				<div class="name">
+					<a href="/libraries/view/5" >Kleinburg Library</a>				</div>
+				<div class="summary">
+											10341 Islington Avenue North<br />
+						Kleinburg, Ontario L0J 1C0<br />
+																Telephone: (905) 653-READ (7323)<br />
+																Fax: (905) 893-2736<br />
+										<a href="/libraries/view/5" >more ...</a>				</div>
+			</div>
+			
+		
+		 
+
+			
+			<div class="list_with_summary">
+				
+				<div class="name">
+					<a href="/libraries/view/6" >Maple Library</a>				</div>
+				<div class="summary">
+											10190 Keele Street<br />
+						Maple, Ontario L6A 1G3<br />
+																Telephone: (905) 653-READ (7323)<br />
+																Fax: (905) 832-4971<br />
+										<a href="/libraries/view/6" >more ...</a>				</div>
+			</div>
+			
+		
+		 
+
+			
+			<div class="list_with_summary">
+				
+				<div class="name">
+					<a href="/libraries/view/7" >Pierre Berton Resource Library</a>				</div>
+				<div class="summary">
+											4921 Rutherford Road<br />
+						Woodbridge, Ontario L4L 1A6<br />
+																Telephone: (905) 653-READ (7323)<br />
+																Fax: (905) 856-5902<br />
+										<a href="/libraries/view/7" >more ...</a>				</div>
+			</div>
+			
+		
+		 
+
+			
+			<div class="list_with_summary">
+				
+				<div class="name">
+					<a href="/libraries/view/10" >Pleasant Ridge Library</a>				</div>
+				<div class="summary">
+											300 Pleasant Ridge Avenue<br />
+						Thornhill, Ontario L4J 9B3<br />
+																Telephone: (905)653-READ(7323)<br />
+																Fax: (905) 709-1099<br />
+										<a href="/libraries/view/10" >more ...</a>				</div>
+			</div>
+			
+		
+		 
+
+			
+			<div class="list_with_summary">
+				
+				<div class="name">
+					<a href="/libraries/view/8" >Woodbridge Library</a>				</div>
+				<div class="summary">
+											150 Woodbridge Avenue<br />
+						Woodbridge, Ontario L4L 2S7<br />
+																Telephone: (905) 653-READ (7323)<br />
+																Fax: (905) 851-2322<br />
+										<a href="/libraries/view/8" >more ...</a>				</div>
+			</div>
+			
+		
+		
+
+		
+		
+
+		
+	</div>
+	<div class="closing"></div>
+	
+	
+	
+	
+</div>
+
+
+
+				
+				<!-- Content area end -->
+				<div class="min_width"></div>
+			</td>
+			<td class="page_frame_side_bar">
+				<!-- Side bar area start -->
+
+
+				<div id="search_bar_area">
+					<div class="opening">
+
+					</div>
+					<div class="details">
+
+					<a href="http://translate.google.com/translate?sl=en&tl=fr&amp;u=http%3A%2F%2Fwww.vaughanpl.info" rel="external" id="link_translate" title="Translate this site"><img src="/img/translate_google.png" id="translate_img" alt="Translate this Site" /></a>
+					<form action="javascript:goto_URL();">
+					<fieldset><legend>How do I</legend>
+<label for="how_do_i"><span style="display: none !important;">How Do I</span></label><select class="search_bar_input_search" id="how_do_i" name="howDoI" title="How Do I" >
+							<option value="/index.php">How do I ...</option>
+								<option value="http://catalogue.vaughanpl.info/catalogue/">Access the catalogue</option>
+								<option value="http://catalogue.vaughanpl.info/catalogue/auth/login">Login to my library record</option>
+								<option value="http://www.vaughanpl.info/contact">Contact VPL</option>
+								<option value="http://www.vaughanpl.info/databases">Find an article</option>
+
+								<option value="http://www.vaughanpl.info/materials">Find items</option>
+								<option value="http://www.vaughanpl.info/services/placing_holds">Place a request</option>
+								<option value="http://www.vaughanpl.info/services/placing_holds">Suspend a hold</option>
+								<option value="http://www.vaughanpl.info/about/faqs#q11">Place multiple requests</option>
+								<option value="http://www.vaughanpl.info/services/renew">Renew my loan</option>
+								<option value="http://catalogue.vaughanpl.info/catalogue/auth/login">View my record</option>
+
+								<option value="http://www.vaughanpl.info/services/membership">Learn about library cards</option>
+								<option value="http://www.vaughanpl.info/services/loan_periods">Learn about loan periods</option>
+							<option value="http://www.vaughanpl.info/services/loan_charges">Learn about fines</option>
+						</select>
+						<input type="submit" value="Go" id="how_do_button" />
+						</fieldset>
+
+						</form>
+
+
+					</div>
+					<div class="closing"></div>
+				</div>
+
+				<div id="shortcut_area_2">
+					<div class="opening"></div>
+					<div class="details">
+
+
+
+
+					</div>
+					<div class="closing"></div>
+				</div>
+
+
+				<div id="side_bar_header">
+					<div class="opening">
+					</div>
+					<div class="details">
+<!--div style="display: inline;"><a href="http://m.vaughanpl.info"><img class="mobile_link" src="/img/mobile.png" title="Mobile Version" alt="Mobile Version"></a></div -->
+													<form method="post" action="#" class="accessibility_form">
+								<div>
+								<input type="hidden" name="font_size" value="large" />
+								<input type="submit" class="accessibility_link" value="Large Font"/>
+								</div>
+							</form>
+						
+
+
+
+					<a href="http://m.vaughanpl.info" class="accessibility_link">Mobile Version</a>
+
+					</div>
+
+					<div class="closing"></div>
+				</div>
+
+				<div id="side_bar_content">
+					<div class="opening"></div>
+					<div class="details">
+						<div class="social_media">
+
+						<a href="http://www.vaughanpl.info/newsletters/subscribe"><img alt="eNewsletter icon" src="/img/enewsletter.jpg" /><span class="hidden_for_graphic">Subscribe to VPL's eNewsletter</span></a>&nbsp;<a href="http://www.vaughanpl.info/blogs"><img alt="Blog icon" src="/img/blog.gif" /><span class="hidden_for_graphic">Read Blogs by Librarians</span></a>&nbsp;<a href="https://www.facebook.com/vaughanpl" target="_blank"><img alt="Facebook icon" src="/img/facebook.png" /><span class="hidden_for_graphic">VPL on Facebook</span></a>&nbsp;<a href="http://www.twitter.com/vaughanpl" target="_blank"><img alt="Twitter icon" src="/img/twitter.png" /><span class="hidden_for_graphic">Follow VPL on Twitter</span></a>&nbsp;<a href="http://www.youtube.com/user/VaughanPL" target="_blank"><img alt="YouTube icon" src="/img/youtube.png" /><span class="hidden_for_graphic">Follow VPL on YouTube</span></a>&nbsp;<a href="http://pinterest.com/vaughanpl/" target="_blank"><img alt="Pinterest icon" src="/img/big-p-button.gif" /><span class="hidden_for_graphic">Follow us on Pinterest</span></a>
+
+
+						</div>
+						<div class="social_media">
+
+
+<IFRAME src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fvaughanpl&amp;send=false&amp; layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" TITLE="FACEBOOK" scrolling="no" frameborder="0" style="border:none; width:100px; height:21px; display: inline; padding: 0px;  margin: 0px" allowTransparency="true"></IFRAME>
+						</div>
+
+
+
+
+																												<div class="excerpt">
+
+	<b>VPL's Vision Statement:</b><br/>Enrich&nbsp;&nbsp;&nbsp;Inspire&nbsp;&nbsp;&nbsp;Transform<b><br/><br/>VPL's Mission:</b><br/>Vaughan Public Libraries offer welcoming destinations that educate, excite and empower our community.	<div class="section_end">&nbsp;</div>
+</div>
+
+<br />
+<br />
+													
+					</div>
+
+					<div class="closing"></div>
+				</div>
+
+				<!-- Side bar area end -->
+			</td>
+		</tr>
+
+		<tr class="page_frame_bottom_row">
+			<td class="page_frame_nav_bar">
+				<div id="nav_bar_bottom_right"></div>
+			</td>
+			<td class="page_frame_content_bar">
+				<div id="content_area_bottom">
+					<div class="opening"></div>
+					<div class="details"><center>
+					<a class="shortcut_footer" href="http://www.vaughanpl.info/services/website_map">Site Map</a>  |
+					<a class="shortcut_footer" href="http://www.vaughanpl.info/services/website_search">Site Search</a>  |
+					<a class="shortcut_footer" href="http://www.vaughanpl.info/about/faqs">FAQs</a> |
+					<a class="shortcut_footer" href="http://www.vaughanpl.info/about/website_privacy">Privacy</a>  |
+					<a class="shortcut_footer" href="http://www.vaughanpl.info/contact">Contact</a> |
+					<a class="shortcut_footer" href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d11680" rel="external">Donate to VPL</a>
+			&copy; Vaughan Public Libraries 2016					</center>
+
+					</div>
+					<div class="closing"></div>
+				</div>
+			</td>
+			<td class="page_frame_side_bar">
+				<div id="side_bar_bottom">
+					<div class="opening"></div>
+					<div class="details"></div>
+					<div class="closing"></div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<div id="shortcut_area">
+		<div class="details">
+			<a class="shortcut_bold" href="http://www.vaughanpl.info/libraries">Locations & Hours</a>  |
+			<a class="shortcut_bold" href="https://catalogue.vaughanpl.info/catalogue/auth/login">Check My Record/Renew</a>  |
+			<a class="shortcut_bold" href="http://www.vaughanpl.info/materials/downloads_digital">Downloads & Digital</a>
+
+			<div class="min_width_shortcuts"></div>
+		</div>
+	</div>
+
+
+
+<!-- BEGIN Invitation Positioning  -->
+<script  type="text/javascript">
+var lpPosY = 100;
+</script>
+<!-- END Invitation Positioning  -->
+
+</body>
+</html>

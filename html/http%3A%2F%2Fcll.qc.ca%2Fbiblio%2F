@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bibliothèque du Cégep de Lévis-Lauzon | </title>
+<link rel="stylesheet" href="http://cll.qc.ca/biblio/wp-content/themes/magazine-basic/style.css" type="text/css" media="screen" />
+<style type="text/css">
+body { width: 1024px; }
+#mainwrapper { width: 1004px; }
+#sidebar { width: 180px; }
+#sidebar .side-widget { width: 160px; }
+#secondsidebar { width: 180px; }
+#secondsidebar .side-widget { width: 160px; }
+#leftcontent, #twocol, #threecol, #threecol2, .commentlist { width: 576px; }
+#leftcontent img, .wp-caption { max-width: 576px; }
+#leftcontent .wp-caption img, #leftcontent .gallery-thumb img { max-width: 564px; }
+<!-- fix for IE & Safari -->
+.threepost embed { width: 167.04px !important; }
+.twopost embed { width: 264.96px !important; }
+<!-- end fix for Safari -->
+</style>
+	<link rel="pingback" href="http://cll.qc.ca/biblio/xmlrpc.php" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="http://cll.qc.ca/biblio/wp-content/themes/magazine-basic/iestyles.css" />
+<![endif]-->
+<script type="text/javascript">
+//<![CDATA[
+var BrowserDetect = {
+init: function () {
+this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+this.version = this.searchVersion(navigator.userAgent)|| this.searchVersion(navigator.appVersion)|| "an unknown version";
+this.OS = this.searchString(this.dataOS) || "an unknown OS";
+},
+searchString: function (data) {
+for (var i=0;i<data.length;i++)	{
+        var dataString = data[i].string;
+        var dataProp = data[i].prop;
+        this.versionSearchString = data[i].versionSearch || data[i].identity;
+        if (dataString) {if (dataString.indexOf(data[i].subString) != -1)
+                return data[i].identity;}
+        else if (dataProp){return data[i].identity;}
+}
+},
+searchVersion: function (dataString) {
+var index = dataString.indexOf(this.versionSearchString);
+if (index == -1) return;
+return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+},
+dataBrowser: [
+        {string: navigator.userAgent,subString: "Chrome",identity: "Chrome"},
+        {string: navigator.userAgent,subString: "OmniWeb",versionSearch: "OmniWeb/",identity: "OmniWeb"},
+        {string: navigator.vendor,subString: "Apple",identity: "Safari",versionSearch: "Version"},
+        {prop: window.opera,identity: "Opera"},
+        {string: navigator.vendor,subString: "iCab",identity: "iCab"},
+        {string: navigator.vendor,subString: "KDE",identity: "Konqueror"},
+        {string: navigator.userAgent,subString: "Firefox",identity: "Firefox"},
+        {string: navigator.vendor,subString: "Camino",identity: "Camino"},
+        {string: navigator.userAgent,subString: "Netscape",identity: "Netscape"},
+        {string: navigator.userAgent,subString: "MSIE",identity: "Explorer",versionSearch: "MSIE"},
+        {string: navigator.userAgent,subString: "Gecko",identity: "Mozilla",versionSearch: "rv"},
+        {string: navigator.userAgent,subString: "Mozilla",identity: "Netscape",versionSearch: "Mozilla"}],
+dataOS:[{string: navigator.platform,subString: "Win",identity: "Windows"},
+        {string: navigator.platform,subString: "Mac",identity: "Mac"},
+        {string: navigator.userAgent,subString: "iPhone",identity: "iPhone/iPod"},
+        {string: navigator.platform,subString: "Linux",identity: "Linux"}]
+};
+BrowserDetect.init();
+
+function bookMark(theurl, thetitle, browser){
+    switch(browser){
+        case "Firefox":
+            window.sidebar.addPanel(thetitle, theurl,"");
+            break;
+        case "Explorer":
+            window.external.AddFavorite( theurl, thetitle);
+            break;
+        case "Chrome":
+        case "Safari":
+        case "Opera":
+        case "Netscape":
+            switch(BrowserDetect.OS){
+            case "Windows":
+            case "Linux":
+            alert('press ctrl+D to bookmark this page');
+            break;
+            case "Mac":
+                alert('press cmd+D to bookmark this page');
+            break;
+            }
+            break;
+    }
+}
+//]]>
+</script>
+                        <style type="text/css" media="screen" >
+                                .socialwrap li.icon_text a img, .socialwrap li.iconOnly a img, .followwrap li.icon_text a img, .followwrap li.iconOnly a img{border-width:0 !important;background-color:none;}#follow.right {width:24px;position:fixed; right:0; top:100px;padding:10px 0;font-family:impact,charcoal,arial, helvetica,sans-serif;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius:5px;-moz-border-radius-bottomleft:5px;-webkit-border-bottom-left-radius:5px;}#follow.right ul {padding:0; margin:0; list-style-type:none !important;font-size:24px;color:black;}
+#follow.right ul li {padding-bottom:10px;list-style-type:none !important;padding-left:4px;padding-right:4px}
+#follow img{border:none;}#follow.right ul li.ajouter {margin:0 4px;}
+#follow.right ul li.ajouter img {border-width:0;display:block;overflow:hidden; background:transparent url(http://cll.qc.ca/biblio/wp-content/plugins/share-and-follow/images/impact/ajouter-right.png) no-repeat -0px 0px;height:89px;width:22px;}
+#follow.right ul li a {display:block;}
+#follow.right ul li.ajouter span, #follow ul li a span {display:none}.share {margin:0 3px 3px 0;}
+.phat span {display:inline;}
+ul.row li {float:left;list-style-type:none;}
+li.iconOnly a span.head {display:none}
+#follow.left ul.size16 li.follow{margin:0px auto !important}
+li.icon_text a {padding-left:0;margin-right:3px}
+li.text_only a {background-image:none !important;padding-left:0;}
+li.text_only a img {display:none;}
+li.icon_text a span{background-image:none !important;padding-left:0 !important; }
+li.iconOnly a span.head {display:none}
+ul.socialwrap li {margin:0 3px 3px 0 !important;}
+ul.socialwrap li a {text-decoration:none;}ul.row li {float:left;line-height:auto !important;}
+ul.row li a img {padding:0}.size16 li a,.size24 li a,.size32 li a, .size48 li a, .size60 li a {display:block}ul.socialwrap {list-style-type:none !important;margin:0; padding:0;text-indent:0 !important;}
+ul.socialwrap li {list-style-type:none !important;background-image:none;padding:0;list-style-image:none !important;}
+ul.followwrap {list-style-type:none !important;margin:0; padding:0}
+ul.followwrap li {margin-right:3px;margin-bottom:3px;list-style-type:none !important;}
+#follow.right ul.followwrap li, #follow.left ul.followwrap li {margin-right:0px;margin-bottom:0px;}
+.shareinpost {clear:both;padding-top:0px}.shareinpost ul.socialwrap {list-style-type:none !important;margin:0 !important; padding:0 !important}
+.shareinpost ul.socialwrap li {padding-left:0 !important;background-image:none !important;margin-left:0 !important;list-style-type:none !important;text-indent:0 !important}
+.socialwrap li.icon_text a img, .socialwrap li.iconOnly a img{border-width:0}ul.followrap li {list-style-type:none;list-style-image:none !important;}
+div.clean {clear:left;}
+div.display_none {display:none;}
+                        </style>
+                                                <style type="text/css" media="print" >
+                                body {background: white;font-size: 12pt;color:black;}
+ * {background-image:none;}
+ #wrapper, #content {width: auto;margin: 0 5%;padding: 0;border: 0;float: none !important;color: black;background: transparent none;}
+ a { text-decoration : underline; color : #0000ff; }
+#menu, #navigation, #navi, .menu {display:none}
+                        </style>
+                        <link rel="image_src" href="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/02/favicon.ico" /> 
+<link rel="alternate" type="application/rss+xml" title="Bibliothèque du Cégep de Lévis-Lauzon &raquo; Flux" href="http://cll.qc.ca/biblio/index.php/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bibliothèque du Cégep de Lévis-Lauzon &raquo; Flux des commentaires" href="http://cll.qc.ca/biblio/index.php/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cll.qc.ca\/biblio\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.7"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='portfolio_slideshow-css'  href='http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/css/portfolio-slideshow.min.css?ver=1.5.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='pinterest-pin-it-button-plugin-styles-css'  href='http://cll.qc.ca/biblio/wp-content/plugins/pinterest-pin-it-button/css/public.css?ver=2.1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://cll.qc.ca/biblio/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='slb_core-css'  href='http://cll.qc.ca/biblio/wp-content/plugins/simple-lightbox/client/css/app.css?ver=2.4.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://cll.qc.ca/biblio/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://cll.qc.ca/biblio/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://cll.qc.ca/biblio/wp-content/plugins/scroll-to-top/js/stt.js?ver=1.0'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cll.qc.ca/biblio/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cll.qc.ca/biblio/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.2.7" />
+
+<!-- Portfolio Slideshow-->
+<noscript><link rel="stylesheet" type="text/css" href="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/css/portfolio-slideshow-noscript.css?ver=1.5.1" /></noscript><script type="text/javascript">/* <![CDATA[ */var psTimeout = new Array();  var psAutoplay = new Array();  var psFluid = new Array(); var psTrans = new Array(); var psSpeed = new Array(); var psLoop = new Array();/* ]]> */</script>
+<!--//Portfolio Slideshow-->
+	
+		<!-- by Scrollto Top -->
+		
+ 		<script type="text/javascript">
+ 			//<![CDATA[
+  			jQuery(document).ready(function(){
+    			jQuery("body").append("<div id=\"scroll_to_top\"><a href=\"#top\">Remonter</a></div>");
+    			jQuery("#scroll_to_top a").css({	'display' : 'none', 'z-index' : '9', 'position' : 'fixed', 'top' : '100%', 'width' : '110px', 'margin-top' : '-30px', 'right' : '50%', 'margin-left' : '-50px', 'height' : '20px', 'padding' : '3px 5px', 'font-size' : '14px', 'text-align' : 'center', 'padding' : '3px', 'color' : '#FFFFFF', 'background-color' : '#222222', '-moz-border-radius' : '5px', '-khtml-border-radius' : '5px', '-webkit-border-radius' : '5px', 'opacity' : '.8', 'text-decoration' : 'none'});	
+    			jQuery('#scroll_to_top a').click(function(){
+					jQuery('html, body').animate({scrollTop:0}, 'slow');
+				});
+
+    		});
+  			
+			//]]>
+
+  		</script>
+		<!-- /by Scrollto Top and History Back -->	
+		
+		
+<!-- Typekit JS code -->
+<script type="text/javascript" src="//use.typekit.net/tzv2vjs.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<!-- Typekit JS code end -->
+<!-- Vipers Video Quicktags v6.5.2 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto 10px 0; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "http://cll.qc.ca/biblio/wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-21569200-1', 'auto');
+  ga('send', 'pageview');
+
+</script><link rel="icon" type="image/x-icon" href="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/06/favicon.ico" />
+<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/02/favicon.ico" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="/anytime.css" />
+<script type="text/javascript" src="/jquery.js"></script>
+<script type="text/javascript" src="/anytime.js"></script>
+ </head>
+
+   <body class="home blog">
+<!-- begin header -->
+<div id="header">
+<ul id="bookmark">
+<li><a href="http://www.clevislauzon.qc.ca/biblio"><img height="25" width="30" src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/03/Home.png" alt="Retour page d'accueil" /></a></li>
+            <li><a href="http://www.pinterest.com/poluxbiblio/" title="Voir nos tableaux sur Pinterest" target=blank><img height="25" width="25" src="http://cll.qc.ca/biblio/wp-content/uploads/2015/01/pinterest-icon-64_black.png" alt="Pintetest" /></a></li>
+            <li><a href="https://www.facebook.com/group.php?gid=107568799263796&ref=ts#!/group.php?gid=107568799263796&v=wall" title="Suivez-nous sur Facebook" target=blank><img height="25" width="25" src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/03/Facebook.png" alt="Facebook" /></a></li>
+            <li><a href="http://twitter.com/#!/Biblio_CLL" title="Suivez-nous sur Twitter" target=blank><img height="25" width="25" src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/03/Twitter.png" alt="Twitter" /></a></li>
+	<li><a href="http://www.cll.qc.ca/biblio/?feed=rss2" title="S'abonner au fil rss" target=blank><img height="25" widtg="25" src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/03/RSS.png" alt="Fil Rss" /></a></li>
+	<li><a href="http://www.clevislauzon.qc.ca/biblio/?page_id=40"  title="Contactez l'équipe"><img height="25" width="30" src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/03/Contact.png" alt="Contact" /></a></li>
+        <li><a href="http://cll.qc.ca"  title="Site du Cégep de Lévis-Lauzon" target=blank><img height="25" width="30" src="http://cll.qc.ca/biblio/wp-content/uploads/2013/05/logo-rondPetit.png" alt="Cegep" /></a></li>
+                        </ul>
+
+
+
+            		    	    	<a href="http://cll.qc.ca/biblio/" class="headerimage"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/06/ban1.png" alt="Bibliothèque du Cégep de Lévis-Lauzon" class="aligncenter" /></a>
+        <div id="description" class="aligncenter">
+            </div>     
+    <div class="main-navigation"><ul id="menu-menu-horizontal-noir" class="sf-menu"><li id="menu-item-305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-305"><a href="#">Informations générales</a>
+<ul class="sub-menu">
+	<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/horaires/">horaires</a></li>
+	<li id="menu-item-5286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5286"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/contact/">contacter l&rsquo;équipe</a></li>
+	<li id="menu-item-5938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5938"><a href="http://cll.qc.ca/biblio/index.php/faire-une-suggestion-dachat/">faire une suggestion d&rsquo;achat</a></li>
+	<li id="menu-item-10362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10362"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/reglement-et-modalites/">règlement et modalités de prêts</a></li>
+	<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/peb/">prêt entre bibliothèques</a></li>
+	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/audiovideo/">service audiovisuel</a></li>
+	<li id="menu-item-10406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10406"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/service-daide-a-la-recherche/">service d&rsquo;aide à la recherche</a></li>
+	<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/salles/">réservation de locaux</a></li>
+	<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/plan_bib/">plans de la bibliothèque</a></li>
+	<li id="menu-item-296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/collection/">la bibliothèque en chiffres</a></li>
+	<li id="menu-item-1263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1263"><a href="http://cll.qc.ca/biblio/index.php/informations-generales/credits/">crédits</a></li>
+</ul>
+</li>
+<li id="menu-item-288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-288"><a href="#">Je cherche</a>
+<ul class="sub-menu">
+	<li id="menu-item-1727" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1727"><a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-main.pl">catalogue  (Firefox recommandé)</a></li>
+	<li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a href="http://cll.qc.ca/biblio/index.php/informations-generales-koha/reserve/">réserve de cours</a></li>
+	<li id="menu-item-302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302"><a href="http://cll.qc.ca/biblio/index.php/informations-generales-koha/revue/">articles de revues ou de journaux</a></li>
+	<li id="menu-item-11747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11747"><a href="http://cll.qc.ca/biblio/index.php/informations-generales-koha/depots-numeriques-institutionnels/">dépôts numériques institutionnels</a></li>
+	<li id="menu-item-286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-286"><a href="http://cll.qc.ca/biblio/index.php/informations-generales-koha/encyclopedie_dictionnaires/">encyclopédies et dictionnaires</a></li>
+	<li id="menu-item-7549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7549"><a href="http://cll.qc.ca/biblio/index.php/informations-generales-koha/images_films/">images et films</a></li>
+	<li id="menu-item-844" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-844"><a href="http://cll.qc.ca/biblio/index.php/informations-generales-koha/livres_numeriques/">publications numériques</a></li>
+	<li id="menu-item-848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="http://cll.qc.ca/biblio/index.php/informations-generales-koha/publications_gouvernementales/">publications gouvernementales</a></li>
+	<li id="menu-item-7560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7560"><a href="http://cll.qc.ca/biblio/index.php/informations-generales-koha/statistiques/">statistiques</a></li>
+</ul>
+</li>
+<li id="menu-item-1749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1749"><a href="http://www.cll.qc.ca/biblio/sp/subjects/">Ressources par discipline</a></li>
+<li id="menu-item-1162" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1162"><a href="http://www.cll.qc.ca/biblio/sp/subjects/faq.php?page=all">Questions/Réponses</a></li>
+<li id="menu-item-12905" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12905"><a href="#">Guides et tutoriels</a>
+<ul class="sub-menu">
+	<li id="menu-item-287" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-287"><a href="http://cll.qc.ca/biblio/index.php/formation-documentaire/dossier-usager/">consulter mon dossier d&rsquo;usager</a></li>
+	<li id="menu-item-12906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12906"><a title="Préciser mon sujet et choisir le bon type de document" href="http://cll.qc.ca/biblio/index.php/formation-documentaire/preparer-sa-recherche/">préparer sa recherche</a></li>
+	<li id="menu-item-12907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12907"><a title="choisir le bon outil de recherche" href="http://cll.qc.ca/biblio/index.php/formation-documentaire/trouver-linformation/">trouver l&rsquo;information</a></li>
+	<li id="menu-item-12908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12908"><a title="Pertinence des sources" href="http://cll.qc.ca/biblio/index.php/formation-documentaire/evaluer-linformation/">évaluer l&rsquo;information</a></li>
+	<li id="menu-item-12909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12909"><a title="outil bibliographique, Zotero" href="http://cll.qc.ca/biblio/index.php/formation-documentaire/citer-ses-sources-et-rediger-sa-bibliographie/">citer ses sources et rédiger sa bibliographie</a></li>
+	<li id="menu-item-13547" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13547"><a title="pagination, tables, liens, signets." href="http://boiteaoutils.uqar.ca/word.php">Word (pagination et autres)</a></li>
+	<li id="menu-item-12912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12912"><a href="http://cll.qc.ca/biblio/index.php/formation-documentaire/fraude-scolaire/">fraude scolaire</a></li>
+</ul>
+</li>
+</ul></div>
+</div>
+<!-- end header -->
+ 
+
+<div id="mainwrapper">
+ 
+<!-- begin sidebar -->
+    <div id="sidebar">
+		<div class="side-widget"><h2>Liens rapides</h2>			<div class="textwidget"><p><font size="2">Une question?<br />
+<font size="2">Envoyez un<a style="text-decoration: none" href="mailto:biblioaide@cll.qc.ca?subject=Demande%20d'information"> courriel</a></p>
+<p><a title="Catalogue" href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-main.pl" target="_blank">Catalogue</a><br />
+<a title="Listes des nouveautés" href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-shelves.pl" target="_blank">Listes des nouveautés</a><br />
+<a title="Guide de présentation d'un travail écrit" href="http://cll.qc.ca/admin/wp-content/uploads/2015/05/Guide_de_presentation1.pdf" target="_blank">Guide de présentation d'un travail écrit</a><br />
+<a title="Formulaire audiovisuel" href="http://cll.qc.ca/wp/audiovisuel/" target="_blank">Formulaire audiovisuel</a></p>
+</div>
+		</div><div class="side-widget"><h2>Nouveautés </h2>			<div class="textwidget"><script type="text/javascript">/* <![CDATA[ */ psTimeout[0]=13;psAutoplay[0]=timeout=3000;psTrans[0]='scrollHorz';psLoop[0]=true;psSpeed[0]=1500;/* ]]> */</script>
+		<div id="slideshow-wrapper0" class="slideshow-wrapper clearfix showloader"><div id="portfolio-slideshow0" class="portfolio-slideshow">
+	<div class="slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145494" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Explicit-instruction.jpg" src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Explicit-instruction.jpg" height="160" width="122" alt="Explicit instruction" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Explicit-instruction.jpg" height="160" width="122" alt="Explicit instruction" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145500" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Teacher-proof.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="102" alt="Teacher proof" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Teacher-proof.jpg" height="160" width="102" alt="Teacher proof" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145495" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Teach-your-child-to-read-in-100-easy-lessons.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="123" alt="Teach your child to read in 100 easy lessons" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Teach-your-child-to-read-in-100-easy-lessons.jpg" height="160" width="123" alt="Teach your child to read in 100 easy lessons" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145361" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Avant-Doc.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="106" alt="Avant-Doc" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Avant-Doc.jpg" height="160" width="106" alt="Avant-Doc" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145351" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/La-septième-fonction-du-langage.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="109" alt="La septième fonction du langage" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/La-septième-fonction-du-langage.jpg" height="160" width="109" alt="La septième fonction du langage" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=77861" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/W3.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="109" alt="W3" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/W3.jpg" height="160" width="109" alt="W3" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145402" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Boussole.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="95" alt="Boussole" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Boussole.jpg" height="160" width="95" alt="Boussole" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145340" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/The-Rosie-project.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="106" alt="The Rosie project" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/The-Rosie-project.jpg" height="160" width="106" alt="The Rosie project" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145456" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Treize-verbes-pour-vivre.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="101" alt="Treize verbes pour vivre" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Treize-verbes-pour-vivre.jpg" height="160" width="101" alt="Treize verbes pour vivre" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145477" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Les-maisons.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="109" alt="Les maisons" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Les-maisons.jpg" height="160" width="109" alt="Les maisons" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145427" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Un-homme-sil-vous-plaît.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="102" alt="Un homme s'il vous plaît" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Un-homme-sil-vous-plaît.jpg" height="160" width="102" alt="Un homme s'il vous plaît" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145521" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Ce-qui-se-passe-à-Cuba-reste-à-Cuba.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="103" alt="Ce qui se passe à Cuba reste à Cuba" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Ce-qui-se-passe-à-Cuba-reste-à-Cuba.jpg" height="160" width="103" alt="Ce qui se passe à Cuba reste à Cuba" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145487" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Lannée-la-plus-longue.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="100" alt="L'année la plus longue" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Lannée-la-plus-longue.jpg" height="160" width="100" alt="L'année la plus longue" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145131" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Léthique-à-table.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="108" alt="L'éthique à table" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Léthique-à-table.jpg" height="160" width="108" alt="L'éthique à table" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145438" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Lessentiel-de-Chartier.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="120" alt="L'essentiel de Chartier" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Lessentiel-de-Chartier.jpg" height="160" width="120" alt="L'essentiel de Chartier" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145437" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Guérir-sa-vie.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="106" alt="Guérir sa vie" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Guérir-sa-vie.jpg" height="160" width="106" alt="Guérir sa vie" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145381" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Les-états-limites.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="116" alt="Les états limites" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Les-états-limites.jpg" height="160" width="116" alt="Les états limites" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145373" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Les-fous-dans-la-cité.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="107" alt="Les fous dans la cité" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Les-fous-dans-la-cité.jpg" height="160" width="107" alt="Les fous dans la cité" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145378" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Les-faces-cachées-de-lʹintervention-en-situation-de-crise.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="128" alt="Les faces cachées de lʹintervention en situation de crise" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Les-faces-cachées-de-lʹintervention-en-situation-de-crise.jpg" height="160" width="128" alt="Les faces cachées de lʹintervention en situation de crise" /></noscript></a></div>
+			<div class="not-first slideshow-next slideshow-content">
+			<a href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-detail.pl?biblionumber=145538" target="_blank"><img class="psp-active" data-img="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Le-corps-retrouvé-par-leutonie.jpg" src="http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/img/tiny.png" height="160" width="101" alt="Le corps retrouvé par l'eutonie" /><noscript><img src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/Le-corps-retrouvé-par-leutonie.jpg" height="160" width="101" alt="Le corps retrouvé par l'eutonie" /></noscript></a></div>
+			</div><!--#portfolio-slideshow--><div id="slideshow-nav0" class="slideshow-nav"><a class="pause" style="display:none" href="javascript:void(0);">Pause</a><a class="play" href="javascript:void(0);">Play</a><a class="restart" style="display:none" href="javascript: void(0);">Play</a><a class="slideshow-prev" href="javascript: void(0);">Prev</a><span class="sep">|</span><a class="slideshow-next" href="javascript: void(0);">Next</a><span class="slideshow-info0 slideshow-info"></span></div><!-- .slideshow-nav-->
+	</div><!--#slideshow-wrapper-->
+Cliquer sur l'image</div>
+		</div><div class="side-widget"><form method="get" id="searchform" action="http://cll.qc.ca/biblio/">
+<div>
+<input type="text" class="search_input" value="rechercher sur le site" name="s" id="s" onfocus="if (this.value == 'rechercher sur le site') {this.value = '';}" onblur="if (this.value == '') {this.value = 'rechercher sur le site';}" />
+<input type="hidden" id="searchsubmit" />
+</div>
+</form></div><div class="side-widget">			<div class="textwidget"><a title="Ressources pédagogiques" href="http://cll.qc.ca/biblio/index.php/category/ressources-pedagogiques/" target="_blank">Ressources pédagogiques</a></div>
+		</div><div class="side-widget"><h2>Twitter Biblio_CLL</h2>			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/Biblio_CLL" data-widget-id="396288628382371840">Tweets de @Biblio_CLL</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</div><div class="side-widget"><h2>Mots clés</h2><div class="tagcloud"><a href='http://cll.qc.ca/biblio/index.php/tag/acces-a-distance/' class='tag-link-68' title='1 sujet' style='font-size: 8pt;'>accès à distance</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/audiovisuel/' class='tag-link-36' title='4 sujets' style='font-size: 14.021505376344pt;'>audiovisuel</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/bases-de-donnees/' class='tag-link-28' title='10 sujets' style='font-size: 19.139784946237pt;'>bases de données</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/bibliotheque/' class='tag-link-16' title='6 sujets' style='font-size: 16.279569892473pt;'>bibliothèque</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/bibliotheque-numerique-canadienne/' class='tag-link-72' title='1 sujet' style='font-size: 8pt;'>bibliothèque numérique canadienne</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/calendrier-de-lavent/' class='tag-link-30' title='2 sujets' style='font-size: 10.709677419355pt;'>calendrier de l'avent</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/charlie-hebdo/' class='tag-link-73' title='1 sujet' style='font-size: 8pt;'>Charlie Hebdo</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/charte-des-valeurs/' class='tag-link-53' title='1 sujet' style='font-size: 8pt;'>charte des valeurs</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/cinemania/' class='tag-link-10' title='7 sujets' style='font-size: 17.032258064516pt;'>cinémania</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/conferences/' class='tag-link-71' title='2 sujets' style='font-size: 10.709677419355pt;'>conférences</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/cours/' class='tag-link-37' title='1 sujet' style='font-size: 8pt;'>cours</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/curio/' class='tag-link-60' title='1 sujet' style='font-size: 8pt;'>curio</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/cve/' class='tag-link-62' title='1 sujet' style='font-size: 8pt;'>cve</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/deslibris/' class='tag-link-65' title='2 sujets' style='font-size: 10.709677419355pt;'>DesLibris</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/dvd-documentaires/' class='tag-link-69' title='1 sujet' style='font-size: 8pt;'>DVD Documentaires</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/erudit/' class='tag-link-64' title='1 sujet' style='font-size: 8pt;'>Erudit</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/expositions/' class='tag-link-41' title='14 sujets' style='font-size: 21.247311827957pt;'>expositions</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/facebook/' class='tag-link-45' title='1 sujet' style='font-size: 8pt;'>facebook</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/formation/' class='tag-link-38' title='1 sujet' style='font-size: 8pt;'>formation</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/formation_documentaire/' class='tag-link-42' title='2 sujets' style='font-size: 10.709677419355pt;'>formation_documentaire</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/journee-de-la-femme/' class='tag-link-63' title='1 sujet' style='font-size: 8pt;'>Journée de la femme</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/lecho-des-revues/' class='tag-link-29' title='16 sujets' style='font-size: 22pt;'>l'écho des revues</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/liberte-de-presse/' class='tag-link-74' title='1 sujet' style='font-size: 8pt;'>Liberté de presse</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/livres-audio/' class='tag-link-51' title='1 sujet' style='font-size: 8pt;'>livres audio</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/livres-numeriques/' class='tag-link-54' title='3 sujets' style='font-size: 12.516129032258pt;'>livres numériques</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/mobile/' class='tag-link-40' title='2 sujets' style='font-size: 10.709677419355pt;'>mobile</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/nouveautes/' class='tag-link-24' title='6 sujets' style='font-size: 16.279569892473pt;'>nouveautés</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/oscars/' class='tag-link-47' title='1 sujet' style='font-size: 8pt;'>Oscars</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/personnes-ressources/' class='tag-link-33' title='1 sujet' style='font-size: 8pt;'>personnes ressources</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/philosophie/' class='tag-link-70' title='1 sujet' style='font-size: 8pt;'>philosophie</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/printemps-des-revues/' class='tag-link-76' title='2 sujets' style='font-size: 10.709677419355pt;'>printemps des revues</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/professeur/' class='tag-link-34' title='1 sujet' style='font-size: 8pt;'>professeur</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/professeur_stagiaire/' class='tag-link-43' title='1 sujet' style='font-size: 8pt;'>professeur_stagiaire</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/proquest/' class='tag-link-66' title='1 sujet' style='font-size: 8pt;'>ProQuest</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/pret/' class='tag-link-58' title='1 sujet' style='font-size: 8pt;'>prêt</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/radio-canada/' class='tag-link-61' title='1 sujet' style='font-size: 8pt;'>radio-canada</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/revues/' class='tag-link-55' title='1 sujet' style='font-size: 8pt;'>revues</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/revues-numeriques/' class='tag-link-67' title='2 sujets' style='font-size: 10.709677419355pt;'>revues numériques</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/romans/' class='tag-link-57' title='1 sujet' style='font-size: 8pt;'>romans</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/semaine-des-sciences-humaines/' class='tag-link-48' title='1 sujet' style='font-size: 8pt;'>semaine des sciences humaines</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/services/' class='tag-link-35' title='2 sujets' style='font-size: 10.709677419355pt;'>services</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/twitter/' class='tag-link-44' title='1 sujet' style='font-size: 8pt;'>twitter</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/universalis/' class='tag-link-56' title='1 sujet' style='font-size: 8pt;'>Universalis</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/usito/' class='tag-link-59' title='1 sujet' style='font-size: 8pt;'>usito</a>
+<a href='http://cll.qc.ca/biblio/index.php/tag/evenement/' class='tag-link-31' title='11 sujets' style='font-size: 19.741935483871pt;'>événements</a></div>
+</div>    </div>
+<!-- end sidebar -->	<div id="leftcontent">
+<div><marquee style='color:#000;font:Arial;' scrollamount='2' scrolldelay='5' direction='left' onmouseover='this.stop()' onmouseout='this.start()'><a target='_self' href='http://cll.qc.ca/biblio/index.php/toute-lequipe-vous-souhaite-une-belle-rentree/'>ANTIDOTE, disponible sur tous les ordinateurs de la bibliothèque | Une question? biblioaide@cll.qc.ca.</a></marquee></div>  
+	
+		<div id="post-13580" class="post-13580 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-expositions tag-printemps-des-revues tag-revues-culturelles tag-suggestions-de-lecture">
+						<h2><a href="http://cll.qc.ca/biblio/index.php/cest-le-printemps-des-revues/" title="Lien permanent de C&rsquo;est le printemps des revues!" rel="bookmark">C&rsquo;est le printemps des revues!</a></h2>
+				<div class="meta"><div class="date">9 mars 2016</div>Par <a href="http://cll.qc.ca/biblio/index.php/author/dubes/" title="Articles par Sylvie Dubé" rel="author">Sylvie Dubé</a><a href="http://cll.qc.ca/biblio/index.php/cest-le-printemps-des-revues/#respond" class="comments-link" ></a></div><div class="entry"><a href="http://cll.qc.ca/biblio/index.php/cest-le-printemps-des-revues/"><img width="103" height="95" src="http://cll.qc.ca/biblio/wp-content/uploads/2016/03/Printemps1Carre-103x95.jpg" class="alignleft wp-post-image" alt="Printemps1Carre" /></a><p class="excerpt">Produit par la SODEP (Société de développement des périodiques culturels québécois), la bibliothèque participe à un évènement annuel LE PRINTEMPS DES REVUES. Il s&rsquo;agit d&rsquo;une exposition de revues culturelles québécoises afin de sensibiliser le public à l&rsquo;importance d&rsquo;une presse québécoise de qualité, indépendante et diversifiée. Pour l&rsquo;occasion, nous avons...</p><p><a href="http://cll.qc.ca/biblio/index.php/cest-le-printemps-des-revues/" class="more-link">Lire la suite &raquo;</a></p></div>	</div><!-- #post-## -->
+
+   	       
+	<div id="twocol">	<div id="post-13554" class="twopost twopost1 post-13554 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-expositions tag-journee-de-la-femme">
+						<h2><a href="http://cll.qc.ca/biblio/index.php/8-mars-journee-internationale-de-la-femme/" title="Lien permanent de 8 mars, Journée internationale de la femme" rel="bookmark">8 mars, Journée internationale de la femme</a></h2>
+				<div class="meta"><div class="date">4 mars 2016</div>Par <a href="http://cll.qc.ca/biblio/index.php/author/dubes/" title="Articles par Sylvie Dubé" rel="author">Sylvie Dubé</a><a href="http://cll.qc.ca/biblio/index.php/8-mars-journee-internationale-de-la-femme/#respond" class="comments-link" ></a></div><div class="entry"><a href="http://cll.qc.ca/biblio/index.php/8-mars-journee-internationale-de-la-femme/"><img width="103" height="58" src="http://cll.qc.ca/biblio/wp-content/uploads/2016/03/timeline-womens-footprint-in-history-montage-fr-103x58.gif" class="alignleft wp-post-image" alt="timeline-womens-footprint-in-history-montage-fr" /></a><p class="excerpt">À chaque année, l&rsquo;Organisation des Nations Unies (ONU) définit  une thématique différente pour la Journée internationale de la femme. Pour 2016, le thème choisi est «Planète 50-50 d&rsquo;ici 2030 : Franchissons le pas pour l&rsquo;égalité des sexes». Visionnez la CHRONOLOGIE INTERACTIVE : l&rsquo;empreinte des femmes dans l&rsquo;histoire. Voici l&rsquo;occasion...</p><p><a href="http://cll.qc.ca/biblio/index.php/8-mars-journee-internationale-de-la-femme/" class="more-link">Lire la suite &raquo;</a></p></div>	</div><!-- #post-## -->
+
+   	       
+		<div id="post-13509" class="twopost twopost2 post-13509 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-expositions tag-mois-de-lhistoire-des-noirs">
+						<h2><a href="http://cll.qc.ca/biblio/index.php/leve-toi-et-brille-mois-de-lhistoire-des-noirs/" title="Lien permanent de LÈVE-TOI ET BRILLE! Mois de l&rsquo;histoire des noirs" rel="bookmark">LÈVE-TOI ET BRILLE! Mois de l&rsquo;histoire des noirs</a></h2>
+				<div class="meta"><div class="date">10 février 2016</div>Par <a href="http://cll.qc.ca/biblio/index.php/author/dubes/" title="Articles par Sylvie Dubé" rel="author">Sylvie Dubé</a><a href="http://cll.qc.ca/biblio/index.php/leve-toi-et-brille-mois-de-lhistoire-des-noirs/#respond" class="comments-link" ></a></div><div class="entry"><a href="http://cll.qc.ca/biblio/index.php/leve-toi-et-brille-mois-de-lhistoire-des-noirs/"><img width="103" height="54" src="http://cll.qc.ca/biblio/wp-content/uploads/2016/02/histoiredesNoirs-103x54.png" class="alignleft wp-post-image" alt="histoiredesNoirs" /></a><p class="excerpt">[Né aux États-Unis en 1875 et décédé en 1950, Dr Carter G. Woodson fut l’instigateur de la Semaine des Noirs en février 1926 (la Negro History Week). Le mois de février fut choisi parce qu’il correspondait au mois d’anniversaire de naissance de deux grands abolitionnistes de l’esclavage, Frederick Douglas...</p><p><a href="http://cll.qc.ca/biblio/index.php/leve-toi-et-brille-mois-de-lhistoire-des-noirs/" class="more-link">Lire la suite &raquo;</a></p></div>	</div><!-- #post-## -->
+
+   	       
+		<div id="post-13438" class="twopost twopost3 post-13438 post type-post status-publish format-standard has-post-thumbnail hentry category-blog">
+						<h2><a href="http://cll.qc.ca/biblio/index.php/meilleurs-voeux-a-tous/" title="Lien permanent de Meilleurs vœux à tous!" rel="bookmark">Meilleurs vœux à tous!</a></h2>
+				<div class="meta"><div class="date">18 décembre 2015</div>Par <a href="http://cll.qc.ca/biblio/index.php/author/dubes/" title="Articles par Sylvie Dubé" rel="author">Sylvie Dubé</a><a href="http://cll.qc.ca/biblio/index.php/meilleurs-voeux-a-tous/#respond" class="comments-link" ></a></div><div class="entry"><a href="http://cll.qc.ca/biblio/index.php/meilleurs-voeux-a-tous/"><img width="103" height="55" src="http://cll.qc.ca/biblio/wp-content/uploads/2015/12/patineurs-103x55.png" class="alignleft wp-post-image" alt="Voeux des patineurs!" /></a><p class="excerpt">&nbsp;</p><p><a href="http://cll.qc.ca/biblio/index.php/meilleurs-voeux-a-tous/" class="more-link">Lire la suite &raquo;</a></p></div>	</div><!-- #post-## -->
+
+   	       
+		<div id="post-13401" class="twopost twopost4 post-13401 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-expositions">
+						<h2><a href="http://cll.qc.ca/biblio/index.php/expo-climat-et-suggestions-de-lectures/" title="Lien permanent de Expo | climat et suggestions de lectures&#8230;" rel="bookmark">Expo | climat et suggestions de lectures&#8230;</a></h2>
+				<div class="meta"><div class="date">2 décembre 2015</div>Par <a href="http://cll.qc.ca/biblio/index.php/author/dubes/" title="Articles par Sylvie Dubé" rel="author">Sylvie Dubé</a><a href="http://cll.qc.ca/biblio/index.php/expo-climat-et-suggestions-de-lectures/#respond" class="comments-link" ></a></div><div class="entry"><a href="http://cll.qc.ca/biblio/index.php/expo-climat-et-suggestions-de-lectures/"><img width="103" height="110" src="http://cll.qc.ca/biblio/wp-content/uploads/2015/12/expobiblio1-103x110.jpg" class="alignleft wp-post-image" alt="expobiblio1" /></a><p class="excerpt">On vous propose deux expositions de documents en lien avec la Conférence sur le climat &#8230; &nbsp; &nbsp; &nbsp; &#8230; et des suggestions pour préparer vos lectures pour le congé qui s&rsquo;en vient! À lire aussi sur le site de L&rsquo;Actualité &nbsp; Passez faire un tour à la bibliothèque!</p><p><a href="http://cll.qc.ca/biblio/index.php/expo-climat-et-suggestions-de-lectures/" class="more-link">Lire la suite &raquo;</a></p></div>	</div><!-- #post-## -->
+
+   	       
+
+
+
+
+</div><div class="pagination">
+<span class="pages">Page 1 de 14</span><span class="current">1</span><a href="http://cll.qc.ca/biblio/index.php/page/2/" class="page" title="2">2</a><a href="http://cll.qc.ca/biblio/index.php/page/3/" class="page" title="3">3</a><a href="http://cll.qc.ca/biblio/index.php/page/4/" class="page" title="4">4</a><a href="http://cll.qc.ca/biblio/index.php/page/5/" class="page" title="5">5</a><span class="extend">...</span><a href="http://cll.qc.ca/biblio/index.php/page/14/" class="last" title="Last Page">14</a><a href="http://cll.qc.ca/biblio/index.php/page/2/" >&raquo;</a></div>
+
+	</div>
+    <!-- begin second sidebar -->
+    <div id="secondsidebar">
+		<div class="side-widget">			<div class="textwidget"><p><font size="2">Rechercher dans le catalogue </font><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/03/koha_trans-e1301054283532.png"/></p>
+<form name="searchform" method="get" action="https://levis.koha.ccsr.qc.ca//cgi-bin/koha/opac-search.pl" id="searchform">
+<input id="transl1" name="q" type="text">
+<p>
+<select name="idx" id="masthead_search"><option value="">Mots-clés</option><option value="ti">Titre</option><option value="au">Auteur</option><option value="su">Sujet</option><option value="nb">ISBN</option><option value="se">Collection</option><option value="callnum">Cote</option></select><br />
+<input value="Rechercher" id="searchsubmit" type="submit">
+</p>
+</form>
+<p><a title="Me connecter à mon compte" href="https://levis.koha.ccsr.qc.ca/cgi-bin/koha/opac-user.pl" target="_blank">Me connecter à mon compte</a></p>
+</div>
+		</div><div class="side-widget"><h2>Bases de données</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://demarque-levis.proxy.ccsr.qc.ca/Access/connExt.php?idRelPC=606619" title="Le Petit Robert intégral : langue française et noms propres." target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/07/btn_robert.jpg"  alt="12Petit Robert intégral"  title="Le Petit Robert intégral : langue française et noms propres." /></a></li>
+<li><a href="http://multidictionnaire-levis.proxy.ccsr.qc.ca/accesmulti/" title="Ouvrage de référence qui offre la description la plus fidèle et la plus juste du bon usage d’ici" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/07/multidictionnaire-e1435870871664.png"  alt="13Multidictionnaire"  title="Ouvrage de référence qui offre la description la plus fidèle et la plus juste du bon usage d’ici" /></a></li>
+<li><a href="http://demarque-levis.proxy.ccsr.qc.ca/Access/connExt.php?idRelPC=537682" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/06/robertcollins.png"  alt="1Grand Robert &amp; Collins"  /></a></li>
+<li><a href="http://universalis-levis.proxy.ccsr.qc.ca/index.php?tag64=LzA2MTNDR1NGLzRkZDNkOWFlYzQ4Y2M=" title="Encyclopédie Universalis" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2012/04/universalisNouveau.png"  alt="22Universalis"  title="Encyclopédie Universalis" /></a></li>
+<li><a href="http://britannica-levis.proxy.ccsr.qc.ca/" title=" Britannica anglais" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/09/BritannicaAcademic.png"  alt="2Britannica anglais"  title=" Britannica anglais" /></a></li>
+<li><a href="http://britannica-spanish-levis.proxy.ccsr.qc.ca/" title="Britannica espagnol" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/09/BritannicaSpanish.png"  alt="2Britannica Espagnol"  title="Britannica espagnol" /></a></li>
+<li><a href="http://cairn-levis.proxy.ccsr.qc.ca/" title="Revues et livres numériques en sciences humaines et sociales. Utilisez la recherche avancée." target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/10/CairnInfo-e1318535775796.png"  alt="3Cairn"  title="Revues et livres numériques en sciences humaines et sociales. Utilisez la recherche avancée." /></a></li>
+<li><a href="http://ebsco-levis.proxy.ccsr.qc.ca/" title="Livres numériques en français et en anglais" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/10/eBooks_petit.png"  alt="3eBooks"  title="Livres numériques en français et en anglais" /></a></li>
+<li><a href="http://deslibris-levis.proxy.ccsr.qc.ca/" title="Bibliothèque numérique canadienne française : livres numériques " target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/07/DesLibris-e1436293829854.png"  alt="3EDesLibris Bibliothèque numérique canadienne française"  title="Bibliothèque numérique canadienne française : livres numériques " /></a></li>
+<li><a href="http://erudit-levis.proxy.ccsr.qc.ca/" title="Érudit" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/01/erudit_nouveau.gif"  alt="41Érudit"  title="Érudit" /></a></li>
+<li><a href="http://eureka-levis.proxy.ccsr.qc.ca/access/ip/default.aspx?un=levifra" title="Articles de journaux en français, anglais, espagnol et allemand" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/01/eureka.png"  alt="42Eureka.cc"  title="Articles de journaux en français, anglais, espagnol et allemand" /></a></li>
+<li><a href="http://repere-levis.proxy.ccsr.qc.ca/" title="Articles de revues en français" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/02/repere.gif"  alt="42Repère"  title="Articles de revues en français" /></a></li>
+<li><a href="http://ebsco-levis.proxy.ccsr.qc.ca/" title="Academic Search Premier (Ebsco) Articles de revues et journaux en anglais" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/01/ASP_button_150x75-e1420576971161.gif"  alt="43ASP"  title="Academic Search Premier (Ebsco) Articles de revues et journaux en anglais" /></a></li>
+<li><a href="http://proquest-levis.proxy.ccsr.qc.ca/?accountid=167362" title="Articles scientifiques en sciences et technologies. Cliquez sur le lien « Publications » pour consulter la liste des revues disponibles." target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2014/07/proquest_logo-e1404919058777.jpg"  alt="44ProQuest Journals"  title="Articles scientifiques en sciences et technologies. Cliquez sur le lien « Publications » pour consulter la liste des revues disponibles." /></a></li>
+<li><a href="http://histoirealacarte-levis.proxy.ccsr.qc.ca/kiosque/index_ip_fr.php" title="Cartes animées" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/01/histoire_carte.jpg"  alt="50Histoire à la carte"  title="Cartes animées" /></a></li>
+<li><a href="http://artstor-levis.proxy.ccsr.qc.ca" title="ARTstor Bibliothèque numérique" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/01/artstor_logo_color-e1420574853605.jpg"  alt="51ARTstor"  title="ARTstor Bibliothèque numérique" /></a></li>
+<li><a href="http://grics-levis.proxy.ccsr.qc.ca/" title="Collection de vidéos éducatives (Grics)" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2012/02/Logo_CVE_web-e1330024124673.png"  alt="52Collection de vidéos éducatives (Grics)"  title="Collection de vidéos éducatives (Grics)" /></a></li>
+<li><a href="http://curio-levis.proxy.ccsr.qc.ca/" title="Accédez à la diffusion en continu du meilleur contenu éducatif de Radio-Canada et de CBC. Documentaires télévisuels et radiophoniques, des reportages, des documents d’archives, des séquences génériques, etc. Plus de 5 000 émissions et ressources." target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2014/01/curio-e1389046409343.png"  alt="53CURIO Radio-Canada"  title="Accédez à la diffusion en continu du meilleur contenu éducatif de Radio-Canada et de CBC. Documentaires télévisuels et radiophoniques, des reportages, des documents d’archives, des séquences génériques, etc. Plus de 5 000 émissions et ressources." /></a></li>
+<li><a href="http://archives.radio-canada.ca/" title="Archives de Radio-Canada|CBC" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2012/08/20_Archives_Coul1-e1346083845930.jpg"  alt="54Radio-Canada Archives"  title="Archives de Radio-Canada|CBC" /></a></li>
+<li><a href="http://demarque-levis.proxy.ccsr.qc.ca/Access/connExt.php?idRelPC=496541" title="Animations interactives pour l&rsquo;apprentissage des sciences" target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/06/edumedia-e1308315944396.png"  alt="55EduMédia"  title="Animations interactives pour l&rsquo;apprentissage des sciences" /></a></li>
+<li><a href="https://onf-levis.proxy.ccsr.qc.ca/" title="Office national du film et ONF|Campus. Abonnez-vous à CAMPUS et accédez à un espace de visionnage en ligne conçu spécialement pour le personnel enseignant. Plus de 600 productions éducatives et 2300 films sont offerts exclusivement dans CAMPUS." target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2014/01/onf-e1389047064804.jpg"  alt="5ONF"  title="Office national du film et ONF|Campus. Abonnez-vous à CAMPUS et accédez à un espace de visionnage en ligne conçu spécialement pour le personnel enseignant. Plus de 600 productions éducatives et 2300 films sont offerts exclusivement dans CAMPUS." /></a></li>
+<li><a href="http://craaq-levis.proxy.ccsr.qc.ca/referenceseconomiques/directconnect.aspx" title="Le Centre de référence en agriculture et agroalimentaire du Québec" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2014/03/Craaq2-e1395933638623.jpg"  alt="63RéférencesEco"  title="Le Centre de référence en agriculture et agroalimentaire du Québec" /></a></li>
+<li><a href="https://msi.expertise-sante.com/fr" title="Méthodes de Soins Informatisées | Consultez l&rsquo;aide à la recherche pour obtenir les codes d&rsquo;accès" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/11/methodes_soins_logo-e1446493639135.gif"  alt="64Méthode de soins informatisées"  title="Méthodes de Soins Informatisées | Consultez l&rsquo;aide à la recherche pour obtenir les codes d&rsquo;accès" /></a></li>
+<li><a href="http://ecps-levis.proxy.ccsr.qc.ca/?userid=0131816&#038;password=PB-0131816&#038;product=ecpsf&#038;language=fr" title="Compendium des produits pharmaceutiques et médicaments " target="_blank"><img src="http://www.clevislauzon.qc.ca/biblio/wp-content/uploads/2011/03/ecps.png"  alt="6ECPS"  title="Compendium des produits pharmaceutiques et médicaments " /></a></li>
+<li><a href="http://hbcp-levis.proxy.ccsr.qc.ca/" title="Handbook of Chemistry and Physics" target="_blank"><img src="http://cll.qc.ca/biblio/wp-content/uploads/2015/11/handbookChemistryPhysics1-e1446493025669.jpg"  alt="6HandBook"  title="Handbook of Chemistry and Physics" /></a></li>
+
+	</ul>
+</div>
+    </div>
+<!-- end second sidebar --></div>
+<!-- begin footer -->
+<div id="footer">
+    Copyright &copy; 2016 <a href="http://cll.qc.ca/biblio">Bibliothèque du Cégep de Lévis-Lauzon</a>. Tous droits réservés.<br />
+    <a href="http://www.clevislauzon.qc.ca/biblio/index.php/informations-generales/credits/"><span class="red">Crédits</span></a>.<br />
+    </div>
+<script type='text/javascript'>/* <![CDATA[ */ var portfolioSlideshowOptions = {  psHash:0, psLoader:true, psFluid:false };/* ]]> */</script><!-- Powered by WPtouch: 3.8.1 --><script type='text/javascript' src='http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/js/jquery.cycle.all.min.js?ver=2.99'></script>
+<script type='text/javascript' src='http://cll.qc.ca/biblio/wp-content/plugins/portfolio-slideshow/js/portfolio-slideshow.min.js?ver=1.5.1'></script>
+<script type='text/javascript' src='//assets.pinterest.com/js/pinit.js'></script>
+<script type='text/javascript' src='http://cll.qc.ca/biblio/wp-content/themes/magazine-basic/js/effects.js?ver=4.2.7'></script>
+<script type='text/javascript' src='http://cll.qc.ca/biblio/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/cll.qc.ca\/biblio\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Envoi en cours ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cll.qc.ca/biblio/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.2.1'></script>
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+<!-- Magazine Basic theme designed by Themes by bavotasan.com - http://themes.bavotasan.com -->
+</body>
+</html>

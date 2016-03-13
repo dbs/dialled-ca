@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server" >
+    	<title>St. Charles Public Library</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="css/site1.css"/>
+		<link rel="stylesheet" href="css/galleriffic-2.css" type="text/css" />   
+
+		<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+        <script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+		<script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+		<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+        
+<script>
+$(document).ready(function(){
+	$('#sizer').jfontsizer({
+		applyTo: '#content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+});
+			
+			
+function loadContent(id, page) 
+{
+	$("#content").load(id);
+}
+
+activateMenu = function(nav) {
+
+/* currentStyle restricts the Javascript to IE only */
+}
+window.onload= function(){
+    /* pass the function the id of the top level UL */
+
+    /* remove one, when only using one menu */
+    activateMenu("nav"); 
+	if (document.all && document.getElementById(nav).currentStyle) {  
+        var navroot = document.getElementById(nav);
+        
+        /* Get all the list items within the menu */
+
+        var lis=navroot.getElementsByTagName("LI");  
+        for (i=0; i<lis.length; i++) {
+        
+           /* If the LI has another menu level */
+            if(lis[i].lastChild.tagName=="UL"){
+            
+                /* assign the function to the LI */
+             	lis[i].onmouseover=function() {	
+                
+                   /* display the inner menu */
+                   this.lastChild.style.display="block";
+                }
+                lis[i].onmouseout=function() {   
+                   this.lastChild.style.display="none";
+                }
+            }
+        }
+    }
+
+}
+
+
+</script>
+
+
+</head>
+
+<body onload="javascript:loadContent('slider.asp');">
+    
+ <div id="wrapper">
+
+<div id="sizer"></div>
+<div style="position:absolute; top:-15px; right:0px">
+ 
+        
+        <a id="fr_link" href="index.asp?lang=FR" target="_self"> <p>Français</p></a>
+        
+		
+        </div>
+	<div id="header" style="background-image:url(img/headEN.png)"></div>
+    
+     
+    <div id="menu">
+            <ul id="nav" >     
+                     <li><a href="index.asp">Home</a></li>
+                     <li><a href="#">Find an Item</a>
+                     <ul>
+   	                     <li><a href="javascript:loadContent('content.asp?var=catalogue');">Catalogue</a></li>
+   	                     <li><a href="javascript:loadContent('e-resource.html');">E-resources</a></li> 
+   	                     <li><a href="javascript:loadContent('content.asp?var=ill');">ILL</a></li>                                                  
+                       <li><a href="javascript:loadContent('content.asp?var=links');">Links</a></li>
+   	                                         
+					 </ul>                         
+                     </li>
+                     <li><a href="#">Programs and Services</a>
+                     <ul>
+   	                     <li><a href="javascript:loadContent('content.asp?var=bookclub');">Book Club</a></li>
+   	                     <li><a href="javascript:loadContent('content.asp?var=services');">Services</a></li>                         
+					 </ul>                        
+                     </li>
+                     <li><a href="javascript:loadContent('content.asp?var=about');">About the library</a>
+                     <ul>
+   	                     <li><a href="javascript:loadContent('content.asp?var=hours');">Hours and Location</a></li>
+   	                     <li><a href="javascript:loadContent('content.asp?var=loans');">Loan Regulations</a></li>
+                                                 
+   	                     <li><a href="javascript:loadContent('content.asp?var=board');">Library Board</a></li>
+   	                     <li><a href="javascript:loadContent('content.asp?var=staff');">Library Staff</a></li>                                                  
+   	                     <li><a href="javascript:loadContent('content.asp?var=volunteer');">Volunteer</a></li>                         
+   	                     <li><a href="javascript:loadContent('gallery.asp');">Photo Galleries</a></li>
+                         <li><a href="javascript:loadContent('content.asp?var=contact');">Contact us</a></li>                                                                                                     
+					 </ul>   
+                     </li>
+                         <li><a href="#">Community</a>
+                     <ul>
+   	                    <li><a href="javascript:loadContent('content.asp?var=info');">Municipal Info</a></li>                                                  
+					 </ul>    
+                     </li>                                          
+           </ul>
+    </div>
+    
+
+    <div id="content"></div>
+    <div id="footer"><img src="img/foot2.png" /></div>
+</div>	
+
+<script type="text/javascript"> 
+ activateMenu("nav"); 
+ activateMenu("vertnav"); 
+</script>
+	
+
+</body>
+</html>

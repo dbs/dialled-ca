@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+    <link href="https://js.esolutionsgroup.ca/js/libs/jquery-ui/1.10.4/resources/themes/base/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/styles/base.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/styles/sitecontent.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/styles/errorpage.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery-ui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src='/scripts/general.js'></script>
+    
+    <!--[if lt IE 9]>
+        <script src="https://js.esolutionsgroup.ca/js/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://js.esolutionsgroup.ca/js/libs/respond/1.3.0/respond.min.js"></script>
+        <script type="text/javascript" src="/scripts/searchPlaceholderCompatibility.js"></script>    
+    <![endif]-->
+    
+    <script type="text/javascript">
+    var esol_ico_width = 0;
+
+    try {
+        esol_ico_width = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+    } catch (err) { }
+
+    var iCreateObject =
+    {
+        isSiteInICreateMode: "False".toLowerCase() == "true",
+        lang: "en",
+        isIe8: false,
+        corpHome: "http://www.inuvik.ca/",
+        corpRoot: "",
+        gaTrackingCode: 'UA-16199788-1',
+        isSiteInLocalDevelopment: 'False'.toLowerCase() == "true",
+        calendarUrl: 'http://calendar.inuvik.ca/',
+        isSiteInPreviewMode: 'False'.toLowerCase() == "true",
+        newsFeeds: {},
+        isMobile: esol_ico_width <= 767
+    }
+
+    var myStringArray = "Committee Updates|5f8d0f53-5659-4a12-b43f-6394e6e449c2,Community Notices|8a8bb9b8-1c93-42ca-855d-cdf21b2ca111,Economic Development News|2e0af823-cb8f-4777-be6c-3df2264bd202,Media Releases|fc2efbd9-e86d-40ea-9f9b-c1a151f8a24d,Public Notices|8a93c006-25dc-4805-a2ad-98eb4f49700e,Public Sessions|816f893d-217e-4b0a-bcf3-e5ce1287c117,Recreation Alerts|2c09a023-fa83-42f4-bc2a-1355ad771d6b,Recreation News|f6c24c65-2412-4f54-a4b7-f12215d55d1b,Road Trail and Sidewalk Closures|efc817c9-aead-44a4-b06e-32718fdf2e2b,Safety Alerts|be80ccba-ba6a-4476-becc-56a09fa7e132,Service Disruptions|42e249ca-1307-4030-a072-0621445a5f96,Transit Alerts|23a8946a-8a54-43bf-9c1c-722d60f042d9,Water Alerts|285578fe-e447-460b-8327-010813290246".split(',');
+    for(var i = 0; i < myStringArray.length; i++)
+    {
+        var mySubstring = myStringArray[i].split('|');
+        iCreateObject.newsFeeds[mySubstring[0]] = mySubstring[1];
+    }
+
+    try {
+        if (document.location.href.toLowerCase().indexOf('https://') == 0) {
+            iCreateObject.corpHome = 'https://' + iCreateObject.corpHome.substring(7);
+        }
+    } catch (err) { }
+
+    if (iCreateObject.isSiteInLocalDevelopment)
+        console.log(iCreateObject);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    iCreateObject.gaTrackingCode = 'UA-16199788-1';
+
+    var _gaq = _gaq || []; var pluginUrl = "//www.google-analytics.com/plugins/ga/inpage_linkid.js"; _gaq.push(["_require", "inpage_linkid", pluginUrl]); _gaq.push(["_setAccount", iCreateObject.gaTrackingCode]); _gaq.push(["_trackPageview"]); (function () { var e = document.createElement("script"); e.type = "text/javascript"; e.async = true; e.src = ("https:" == document.location.protocol ? "https://" : "http://") + "stats.g.doubleclick.net/dc.js"; var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(e, t) })(); if (typeof jQuery != "undefined") { jQuery(document).ready(function (e) { var t = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i; var n = ""; if (jQuery("base").attr("href") != undefined) n = jQuery("base").attr("href"); jQuery("a").each(function () { var e = jQuery(this).attr("href"); var r = jQuery(this).attr("href"); if (e) { e = e.toLowerCase() } if (e && e.match(/^https?\:/i) && !e.match(document.domain)) { jQuery(this).click(function () { var t = e.replace(/^https?\:\/\//i, ""); _gaq.push(["_trackEvent", "External", "Click", t]); if (jQuery(this).attr("target") != undefined && jQuery(this).attr("target").toLowerCase() != "_blank") { setTimeout(function () { location.href = r }, 200); return false } }) } else if (e && e.match(/^mailto\:/i)) { jQuery(this).click(function () { var t = e.replace(/^mailto\:/i, ""); _gaq.push(["_trackEvent", "Email", "Click", t]) }) } else if (e && e.match(t)) { jQuery(this).click(function () { var t = /[.]/.exec(e) ? /[^.]+$/.exec(e) : undefined; var r = e; _gaq.push(["_trackEvent", "Download", "Click-" + t, r]); if (jQuery(this).attr("target") != undefined && jQuery(this).attr("target").toLowerCase() != "_blank") { setTimeout(function () { location.href = n + e }, 200); return false } }) } }) }) }
+</script>
+
+
+
+	<!-- Favicon -->
+	<link rel="SHORTCUT ICON" href="/favicon.ico" />
+    
+        <title>Page Not Found - Inuvik</title>
+    
+</head>
+
+<body>
+    <div id="uber" class="errorpage">
+        
+            <div id="logo">
+                <a href='/en/index.asp' title="Click to go to the home page">
+                    <img src='/en/images/structure/logo.png' alt="Template Logo" /> <!--TODO: CONTENT: Change Template to your client-->
+                </a>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Template Title</h1>
+<p>The page you requested is not available.<br /> This is most likely because we've launched our <a title="Click to go to the home page" href="/en/index.asp">new website</a>.<br /> Please try the search box below to find the information you are looking for, or go to our <a title="Click to go to the home page" href="/en/index.asp">home page</a>.</p>
+
+
+            <div class="searchContainer">
+                 
+
+    <div class="search">
+        <form id="FormSearch" method="post" onsubmit="return GotoSearch('/en/Modules/search/index.aspx',this);">
+            <input class="searchText searchField" id="searchFieldBox" aria-label="What are you looking for?" name="txt_search" type="text" placeholder="What are you looking for?">
+            <input name="submit" type="image" src="/images/structure/spacer.gif" alt="Go!" title="Go!" class="gobutton" /><!--TODO: LANGC: Get Translations for alt/title FEATURE: Make Dynamic-->
+        </form>
+        <noscript><a href="/en/Modules/search/index.aspx" class="gobutton noscript" title="Go to Search page">Go!</a></noscript><!--TODO: LANGC: Get Translations for alt/title FEATURE: Make Dynamic-->
+    </div>
+
+<script type="text/javascript">
+
+$(function () {
+
+    //Google Suggested Search 
+    $("#FormSearch .searchField").autocomplete({
+        source: "/"+ iCreateObject.lang +"/Modules/search/services/GSA_Autocomplete.ashx",
+		minLength: 2,
+		loading: "loading",
+		autofill: false,
+		open: function (event, ui) {
+		    $(".ui-autocomplete").css("z-index", 9999);
+		}
+	});
+
+});
+</script>
+
+            </div>
+        
+    </div>
+
+</body>
+</html>

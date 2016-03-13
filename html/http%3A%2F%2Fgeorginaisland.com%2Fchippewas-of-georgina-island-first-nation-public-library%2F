@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+<!--iPhone and iPad Web App Startup Images -->
+ 
+<!-- Do NOT use width=device width because it will letterbox viewport. -->
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+<!-- iPhone 3 and 4 Non-Retina -->
+<link rel="apple-touch-startup-image" media="(device-width: 320px)" href="/apple-touch-startup-image-320x460.png">
+<!-- iPhone 4 Retina -->
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x920.png">
+<!-- iPhone 5 Retina -->
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x1096.png">
+ 
+<!-- iPad Non-Retina Portrait -->
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait)" href="/apple-touch-startup-image-768x1004.png">
+<!-- iPad Non-Retina Landscape -->
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: landscape)" href="/apple-touch-startup-image-748x1024.png">
+<!-- iPad Retina Portrait -->
+<link rel="apple-touch-startup-image" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1536x2008.png">
+<!-- iPad Retina Landscape -->
+<link rel="apple-touch-startup-image" media="(device-width: 1536px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-2048x1496.png">
+
+  
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="http://georginaisland.com/wp-content/themes/41023/images/favicon.ico">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<!-- <link href="http://georginaisland.com/wp-content/themes/41023/style.css" rel="stylesheet" type="text/css" media="all"> -->
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text:600' rel='stylesheet' type='text/css'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400italic' rel='stylesheet' type='text/css'>
+
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+ <!--[if lte IE 8]>
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+ <![endif]-->
+
+<!-- END: STYLESHEET -->
+<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+<!-- <script src="https://raw.github.com/gist/2197042/2b90c41b39b7d5b3a851d8f256de2ebd3fe1fb74/leaflet-google.js"></script> -->
+<script src="http://georginaisland.com/wp-content/themes/41023/js/leaflet-google.js"></script>
+
+
+<link rel="stylesheet" href="http://georginaisland.com/wp-content/themes/41023/css/add2home.css">
+<script type="text/javascript">
+var addToHomeConfig = {
+  returningVisitor: false,
+  animationIn: 'bubble',
+  animationOut: 'drop',
+  lifespan:10000,
+  expire:2,
+  touchIcon:true,
+  message:'To install this web app on your device tap `%icon` then \'Add to Home Screen.\''
+};
+</script>
+<script type="application/javascript" src="http://georginaisland.com/wp-content/themes/41023/js/add2home.js"></script>  
+<title>Chippewas of Georgina Island First Nation Public Library | Georgina Island</title>
+
+
+  <!--  Mobile Viewport Fix
+  j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+  device-width : Occupy full width of the screen in its current orientation
+  initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+  maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+  -->  
+<script>
+var map;
+function initialize() {
+
+  //var myLatlng = new google.maps.LatLng(44.36681,-79.31631);
+    //var myLatlng = new google.maps.LatLng(44.36681,-79.31631);
+  var myLatlng = new google.maps.LatLng(44.375, -79.293);
+
+  var mapOptions = {
+    zoom: 13,
+    center: myLatlng,
+    draggable: true,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title:"Drag me",
+    draggable: true
+  });    
+    
+  google.maps.event.addListener(marker, 'dragend', function(evt){
+    document.getElementById('wp_geo_longitude').value = evt.latLng.lng().toFixed(3);
+    document.getElementById('wp_geo_latitude').value = evt.latLng.lat().toFixed(3);
+    document.getElementById('current').innerHTML = '<p>Marker dropped: Current Lat: ' + evt.latLng.lat().toFixed(3) + ' Current Lng: ' + evt.latLng.lng().toFixed(3) + '</p>';
+  });
+
+  google.maps.event.addListener(marker, 'dragstart', function(evt){
+    document.getElementById('current').innerHTML = '<p>Currently dragging marker...</p>';
+  });
+}
+
+function onClickFunc(markername){
+  //console.log("Markername " + markername);    
+}
+</script>
+
+
+<!-- All in One SEO Pack 2.2.7.6.2 by Michael Torbert of Semper Fi Web Design[3787,3874] -->
+<meta name="description"  content="Welcome to Chippewas of Georgina Island First Nation Public Library" />
+
+<link rel="canonical" href="http://georginaisland.com/chippewas-of-georgina-island-first-nation-public-library/" />
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-46249181-1', 'auto');
+			
+			ga('send', 'pageview');
+			</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="Georgina Island &raquo; Feed" href="http://georginaisland.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Georgina Island &raquo; Comments Feed" href="http://georginaisland.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Georgina Island &raquo; Chippewas of Georgina Island First Nation Public Library Comments Feed" href="http://georginaisland.com/chippewas-of-georgina-island-first-nation-public-library/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/georginaisland.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.2"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wpgeo-css'  href='http://georginaisland.com/wp-content/plugins/wp-geo/css/wp-geo.css?ver=3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='css-jslider-css'  href='//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='georginaisland-style-css'  href='http://georginaisland.com/wp-content/themes/41023/style.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='add2home-style-css'  href='http://georginaisland.com/wp-content/themes/41023/style.css/css/add2home.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='js-bxslider-style-css'  href='http://georginaisland.com/wp-content/themes/41023/js/bxslider/jquery.bxslider.css?ver=4.4.2' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-46249181-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='http://georginaisland.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBl0Bso8FaZbsb0p-TGGZb5YpkO-IIxXyY&sensor=false&ver=4.4.2'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-content/themes/41023/js/mobile-menu.js?ver=20131231'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-content/themes/41023/js/modernizr.js?ver=20140214'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-content/themes/41023/js/fixplaceholder.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/georginaisland.com\/wp-admin\/admin-ajax.php","template_directory_uri":"http:\/\/georginaisland.com\/wp-content\/themes\/georginaisland","pageLanguage":"en","uploadify_swf":"uploadify.swf","no_more_stories_text":"No more stories available","load_more_stories_text":"Load more stories"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://georginaisland.com/wp-content/themes/41023/js/global.js?ver=4.4.2'></script>
+<link rel='https://api.w.org/' href='http://georginaisland.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://georginaisland.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://georginaisland.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.2" />
+<link rel='shortlink' href='http://georginaisland.com/?p=532' />
+<link rel="alternate" type="application/json+oembed" href="http://georginaisland.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fgeorginaisland.com%2Fchippewas-of-georgina-island-first-nation-public-library%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://georginaisland.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fgeorginaisland.com%2Fchippewas-of-georgina-island-first-nation-public-library%2F&#038;format=xml" />
+<script type="text/javascript" src="http://georginaisland.com/wp-content/plugins/audio-player/assets/audio-player.js?ver=2.0.4.6"></script>
+<script type="text/javascript">AudioPlayer.setup("http://georginaisland.com/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.6", {width:"290",animation:"yes",encode:"yes",initialvolume:"60",remaining:"no",noinfo:"no",buffer:"5",checkpolicy:"no",rtl:"no",bg:"E5E5E5",text:"333333",leftbg:"CCCCCC",lefticon:"333333",volslider:"666666",voltrack:"FFFFFF",rightbg:"B4B4B4",rightbghover:"999999",righticon:"333333",righticonhover:"FFFFFF",track:"FFFFFF",loader:"009900",border:"CCCCCC",tracker:"DDDDDD",skip:"666666",pagebg:"FFFFFF",transparentpagebg:"yes"});</script>
+
+			<script type="text/javascript">
+			//<![CDATA[
+
+			// WP Geo default settings
+			var wpgeo_w = '100%';
+			var wpgeo_h = '300px';
+			var wpgeo_type = 'G_NORMAL_MAP';
+			var wpgeo_zoom = 5;
+			var wpgeo_controls = 'GLargeMapControl3D';
+			var wpgeo_controltypes = 'G_NORMAL_MAP,G_SATELLITE_MAP,G_HYBRID_MAP,G_PHYSICAL_MAP';
+			var wpgeo_scale = 'N';
+			var wpgeo_overview = 'N';
+
+			//]]>
+			</script>
+			</head>
+<body class="page page-id-532 page-template-default desktop gecko group-blog">
+<div class="dark-bg"></div>
+<!-- Header starts Here -->
+<div class="header ">
+  <header>
+      <a href="http://georginaisland.com"> <img src="http://georginaisland.com/wp-content/themes/41023/images/LOGO.jpg" alt=""></a>
+    </header>
+  
+  <div class="header-menu">
+      
+    <div class="nav">
+      <nav>
+        <div class="navmenu"><ul id="mainnav" class="menu"><li id="menu-item-89" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89"><a href="/"><span>Home</span></a></li>
+<li id="menu-item-338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-338"><a href="/stories/"><span>Storytelling</span></a></li>
+<li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514"><a href="http://georginaisland.com/community-services/"><span>Community Services</span></a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="http://georginaisland.com/events/"><span>News &#038; Events</span></a></li>
+<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="http://georginaisland.com/member/"><span>Member</span></a></li>
+<li id="menu-item-515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-515"><a href="http://georginaisland.com/tourism/"><span>Tourism</span></a></li>
+</ul></div>      </nav>  
+      <div class="clear">&nbsp;</div>  
+    </div>
+    <div class="navright">
+      <ul>
+        <li><a href="http://georginaisland.com/contact-us/">Contact Us</a></li>
+      </ul>
+       <div class="clear">&nbsp;</div>
+    </div>
+       
+  </div>
+  <div class="clear">&nbsp;</div>
+  
+</div>
+  
+  
+<div class="row-offcanvas row-offcanvas-right clearfix">
+  
+    <div id="mobile-logo" class="img-responsive">
+      <a href="http://georginaisland.com"><img src="http://georginaisland.com/wp-content/themes/41023/images/logo-white.png" class="img-responsive"/> Chippewas <b>of</b> Georgina Island </a>
+    </div>  
+    <div class="tbl menu">  
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="sidebar-offcanvas" role="navigation">
+  
+    <ul>
+    <li><a href="http://georginaisland.com" title="Home">Home</a></li>
+    <li><a href="http://georginaisland.com/stories/" title="Stories">Stories</a></li>
+    <li><a href="/photograph" title="Photos">Photos</a></li>
+    <li><a href="/artifact" title="Artifacts">Artifacts</a></li>
+	
+  
+    <li><a href="/community-services/" title="Community Services">Community Services</a></li>
+    <li><a href="/events" title="News & Events">News & Events</a></li>
+    <li><a href="http://georginaisland.com/member/" title="Member">Member</a></li>
+    <li><a href="http://georginaisland.com/tourism/" title="Tourism">Tourism</a></li>
+  
+  </ul>
+  
+    
+  
+      
+</div><!-- .sidebar-offcanvas --><!-- Header End Here --><!-- banner start Here -->
+
+
+  <div class="hdr-bg bg-page"></div>
+<!-- banner-bottom-strip start Here -->
+<div class="banner-bottom-strip">
+	<div class="banner-bottom-strip-txt">
+    	<h1>Chippewas of Georgina Island First Nation Public Library</h1>
+        <div class="bredcrum cf">
+        	         </div>
+        <div id='mobile-menu-switch'></div>        <div class="clear"></div>
+    </div>
+</div>
+<!-- banner-bottom-strip End Here -->
+
+<!---container start Here -->
+		<div class="container">
+            <div class="genric-divider">
+              <div class="genric-inner-left">
+                <p>Welcome to Chippewas of Georgina Island First Nation Public Library</p>
+              </div>
+              <div class="genric-inner-right">
+    						<div class="sidebar-nav">
+                    						</div>
+                        
+						  <h1>Our Stories</h1>
+  <ul class="featured-stories">
+      <li class="tctc_sys_writing">
+      <a href="http://georginaisland.com/writing/history-of-georgina-island/" title="History of Georgina Island"><img width="221" height="149" src="http://georginaisland.com/wp-content/uploads/2013/05/Thumb-History-of-Georgina-Island-by-Susan-Hoeg-1900s-221x149.jpg" class="attachment-home-story-thumb size-home-story-thumb wp-post-image" alt="Thumb History of Georgina Island by Susan Hoeg 1900s" />      <div class="overlay"></div></a>
+    </li>
+      <li class="tctc_sys_writing">
+      <a href="http://georginaisland.com/writing/surviving-the-trip-across-lake-simcoe/" title="Surviving the Trip across Lake Simcoe"><img width="221" height="149" src="http://georginaisland.com/wp-content/uploads/2013/05/Sandra-and-Buzzy-Big-Canoe-Wedding-221x149.jpg" class="attachment-home-story-thumb size-home-story-thumb wp-post-image" alt="Sandra-and-Buzzy-Big-Canoe-Wedding" />      <div class="overlay"></div></a>
+    </li>
+      <li class="tctc_sys_video">
+      <a href="http://georginaisland.com/video/our-visitor/" title="Our Visitor"><img width="221" height="149" src="http://georginaisland.com/wp-content/uploads/2013/05/Elaine-and-Casey-221x149.jpg" class="attachment-home-story-thumb size-home-story-thumb wp-post-image" alt="Elaine and Casey" />      <div class="overlay"></div></a>
+    </li>
+    </ul>
+                        </div>
+            </div>
+					
+                <div class="clear"></div>
+        </div>
+<!---container End Here -->
+
+
+    	<!-- footer starts -->
+
+
+<div class="footer-bg">
+  <div class="footer">
+  
+	<div class="left-footer">			<div class="textwidget"><h1> Chippewas <b>of </b> &nbsp;Georgina Island </h1>
+      <div class="lates-news-divder"></div>
+      <ul>
+        <li><b>Georgina Island Administration Office &ndash;&nbsp; </b>R.R.#2 Box N-13  Sutton West, Ontario L0E 1R0</li>
+        <li>Phone (705) 437-1337</li>
+        <li>Fax (705) 437-4597</li>
+      </ul> </div>
+		</div>   
+    <div class="right-footer"> <a href="#"><img src="http://georginaisland.com/wp-content/themes/41023/images/footer-logo.png" alt=""/></a> </div>
+	<div class="mobile left-footer">			<div class="textwidget"><div id="footer-mobile">
+<h1> Chippewas <b>of </b> &nbsp;Georgina Island </h1>
+      <div class="lates-news-divder"></div>
+      <ul>
+        <li><b>Georgina Island Administration Office</b></li>
+        <li>R.R.#2 Box N-13  Sutton West</li>
+        <li>Ontario L0E 1R0</li>
+        <li>Phone (705) 437-1337</li>
+        <li>Fax (705) 437-4597</li>
+      </ul> 
+</div></div>
+		</div>    <div class="clear"></div>
+  </div>
+</div>
+<div class="footer-bg-strip"></div>
+<!-- footer ends -->
+
+		
+  <script>
+  
+	  
+	  
+  if( document.getElementById('map-canvas') ){
+    google.maps.event.addDomListener(window, 'load', initialize);
+  }//end gmaps
+  
+  if( document.getElementById('related-stories-map') ){
+    var map = L.map('related-stories-map');//.setView([44.37503619247249, -79.2912483215328], 14);
+  
+  	L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+  		maxZoom: 13,
+  		//zoom: 10,
+  	}).addTo(map);
+  	
+    var LeafIcon = L.Icon.extend({
+      options: {
+        iconSize:     [40, 40],
+        iconAnchor:   [20, 20],
+        popupAnchor:  [0, -20]
+      }
+    });
+    
+  //begin markers
+    var icon3 = new LeafIcon({iconUrl: 'http://georginaisland.com/wp-content/uploads/2014/08/Group-shot-kids-and-Auntie-Barb-40x40.jpg'})
+
+var marker3 = L.marker([44.3703221873, -79.3107748032],{icon: icon3}).addTo(map).bindPopup('<a href="http://georginaisland.com/video/life-on-the-island-by-barbara-mcdonald/">Life on the Island by Barbara McDonald</a>').openPopup();
+marker3.on('click', onClickFunc('3'));
+
+var icon4 = new LeafIcon({iconUrl: 'http://georginaisland.com/wp-content/uploads/2014/08/Group-shot-kids-and-Auntie-Barb-40x40.jpg'})
+
+var marker4 = L.marker([44.3702748157, -79.3106978091],{icon: icon4}).addTo(map).bindPopup('<a href="http://georginaisland.com/video/language-is-culture-by-barb-mcdonald/">Language is Culture by Barb McDonald</a>').openPopup();
+marker4.on('click', onClickFunc('4'));
+
+var icon5 = new LeafIcon({iconUrl: 'http://georginaisland.com/wp-content/uploads/2014/08/Pit-40x40.jpg'})
+
+var marker5 = L.marker([44.3925262603, -79.3030071259],{icon: icon5}).addTo(map).bindPopup('<a href="http://georginaisland.com/video/coyote-mentoring-program-on-georgina-island/">Coyote Mentoring Program on Georgina Island</a>').openPopup();
+marker5.on('click', onClickFunc('5'));
+
+var icon6 = new LeafIcon({iconUrl: 'http://georginaisland.com/wp-content/uploads/2014/08/Sarah-40x40.png'})
+
+var marker6 = L.marker([44.3711031, -79.2958491],{icon: icon6}).addTo(map).bindPopup('<a href="http://georginaisland.com/video/pow-wow-dancing-demonstration-by-sarah-big-canoe/">Pow Wow Dancing Demonstration by Sarah Big Canoe</a>').openPopup();
+marker6.on('click', onClickFunc('6'));
+
+var icon8 = new LeafIcon({iconUrl: 'http://georginaisland.com/wp-content/uploads/2014/08/Ojibew-Language-Dictionary-40x40.jpg'})
+
+var marker8 = L.marker([44.3729130139, -79.3127792033],{icon: icon8}).addTo(map).bindPopup('<a href="http://georginaisland.com/video/dont-forget-your-roots/">Dont\' Forget Your Roots</a>').openPopup();
+marker8.on('click', onClickFunc('8'));
+
+var icon9 = new LeafIcon({iconUrl: 'http://georginaisland.com/wp-content/uploads/2013/12/img537c-40x40.jpg'})
+
+var marker9 = L.marker([44.371, -79.311],{icon: icon9}).addTo(map).bindPopup('<a href="http://georginaisland.com/photos/the-schoolchildren-of-georgina-island-1948/">The schoolchildren of Georgina Island, 1948</a>').openPopup();
+marker9.on('click', onClickFunc('9'));
+
+var icon10 = new LeafIcon({iconUrl: 'http://georginaisland.com/wp-content/uploads/2014/01/Harris-Charles-family-1949-40x40.jpg'})
+
+var marker10 = L.marker([44.37, -79.311],{icon: icon10}).addTo(map).bindPopup('<a href="http://georginaisland.com/photos/the-harris-charles-family/">The Harris Charles family</a>').openPopup();
+marker10.on('click', onClickFunc('10'));
+
+    
+    map.setView([44.37503619247249, -79.2912483215328], 14);
+  //end markers
+  } //end leaflet
+  
+    
+  jQuery(window).on('resize',function() {
+  /*
+	  if( $('.container.variable-sizes.isotope').length > 0 ){
+	  
+		if ($(window).width() < 1024) {
+			var windowwidth = $(document).width();
+			imagewidth = ((windowwidth * 0.9) - 10) / 2;
+			$('.container.variable-sizes.isotope .related-stories-img').width(imagewidth);
+			$('.container.variable-sizes.isotope .related-stories-img').height(imagewidth);
+			//var imagewidth = $('.container.variable-sizes.isotope').find( ".related-stories-img" ).width();
+						
+			$('.container.variable-sizes.isotope').width((imagewidth * 2) + 10);
+		}
+		else{
+			$('.container.variable-sizes.isotope').css("width", "");
+			
+		}
+	  }
+	*/
+	
+	  if (jQuery(window).height() > 768){
+		jQuery('body.home.handheld.mobile .row-offcanvas').css('min-height', jQuery(window).height() + "px");
+	  }
+	  else{
+		jQuery('body.home.handheld.mobile .row-offcanvas').css('min-height', "");
+	  }
+		
+  });
+  
+	
+  jQuery(document).ready(function() {
+		var subpage_menu = jQuery(".genric-inner-right").html();		
+		if(subpage_menu){		
+			subpage_menu = "<div id='mobile-subpage-menu'>" + subpage_menu + "</div>";		
+			jQuery( ".banner-bottom-strip" ).after( subpage_menu );	
+		}
+    jQuery(window).trigger('resize');
+		
+  });
+	
+
+	if (!Modernizr.borderradius) {
+		
+	}
+	
+	var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+//alert(navigator.userAgent);
+  </script>
+
+
+
+
+
+
+	
+
+	
+	</div><!-- .row-offcanvas -->
+	
+        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'georginaisland';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://georginaisland.com/wp-includes/js/comment-reply.min.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-content/themes/41023/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-content/themes/41023/js/bxslider/jquery.bxslider.min.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://georginaisland.com/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+
+
+	
+</body></html>

@@ -1,0 +1,419 @@
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <!-- PageID 7 - published by Open Text Web Solutions 10.1 - 10.1.2.287 - 33676 -->
+    <title>
+      Royal Tyrrell Museum
+    </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" /><!-- Meta Elements -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="resource-type" content="document" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="revisit-after" content="15" />
+    <meta name="classification" content="Internet Services" />
+    <meta name="robots" content="ALL" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="copyright" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="http://www.tyrrellmuseum.com/images/favicon.ico" />
+    <meta http-equiv="reply-to" content="" /><!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" /><!--[if IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/css/fix-ie6.css" />
+<![endif]-->
+    <!--[if IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="/css/fix-ie7.css" />
+<![endif]-->
+    <!-- Javascript -->
+
+    <script type="text/javascript" src="/jquery-1.6.2.min.js">
+</script>
+    <script type="text/javascript" src="/scripts/jquery-ui-1.6.custom.min.js">
+</script>
+    <script type="text/javascript" src="/scripts/menu-swap.js">
+</script>
+    <script type="text/javascript" src="/scripts/swfobject.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+
+    $(document).ready (
+    function(){
+    // Hide sub-nav if no children
+    if ($("ul#subNavItems li").size() == 0) {
+        $("div#subNav").css('display', 'none');
+    }
+
+    // Remove end border from Utility nav
+    $("ul#utilityNav li:last-child").addClass("last");
+
+    var firstAnc = $(".subContentItems li a.plus:first");
+    showInfoItem(firstAnc, null);
+
+    $(".subContentItems li a.plus, .subContentItems li a.minus").click (
+    function() {
+       
+       var selectedAnc = $(this);
+       var openAnc = $(".subContentItems li a.minus");
+       if(selectedAnc.attr('class')=='plus') {
+               if(openAnc) {
+            hideInfoItem(openAnc , null);
+           }
+            showInfoItem(selectedAnc, 400);
+        }
+       
+       else {
+               hideInfoItem(selectedAnc, 400);
+       }
+       
+       }
+    );
+
+    }
+    );
+    function showInfoItem(anc, speed) {
+    anc.removeClass("plus").addClass("minus");
+    anc.next().slideToggle(speed);
+    }
+    function hideInfoItem(anc, speed) {
+    anc.removeClass("minus").addClass("plus");
+    anc.next().slideToggle(speed);
+    }
+
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="/css/home.css" media="screen" /><!-- flexslider -->
+    <link rel="stylesheet" type="text/css" href="/flexslider.css" media="screen" /><!-- flexslider custom -->
+    <link rel="stylesheet" type="text/css" href="/slider.css" media="screen" />
+    <meta name="viewport" content="width=1024" />
+  </head>
+  <body id="home">
+    <!-- Begin wrapper -->
+    <div id="wrapper">
+      <!--googleoff: all--><!-- Begin outer branding / header  -->
+      <div id="brandingOuterHome">
+        <!-- Begin header -->
+        <div id="brandingHome">
+          <!-- Begin innner header -->
+          <div id="brandingInner" class="clearfix">
+            <!-- Begin utilities -->
+            <div id="utilities">
+              <!-- Begin utility nav -->
+              <ul id="utilityNav" class="clearfix">
+                <li>
+                  <a href="/index.htm" title="Royal Tyrrell Museum">Home</a>
+                </li>
+                <li>
+                  <a href="/about_us.htm">About Us</a>
+                </li>
+                <li>
+                  <a href="/news.htm">News</a>
+                </li>
+                <li>
+                  <a href="/contact_us.htm">Contact Us</a>
+                </li>
+              </ul><!-- End utility nav -->
+              <form action="/site_search_proxy.aspx" method="get" accept-charset="UTF-8">
+                <ul id="searchField">
+                  <li>
+                    <label for="q"><span>Search</span></label><input type="text" name="q" id="q" onclick="if (this.value == 'Search our site') value='';" value="Search our site" class="searchField" title="Enter search query here" />
+                  </li>
+                  <li>
+                    <input type="image" src="/images/btn-search.gif" name="search" value="Search" class="searchBtn" title="Search" onclick="if (document.getElementById('q').value == 'Search our site') document.getElementById('q').value='';" />
+                  </li>
+                </ul><!--<input type="hidden" name="client" value="rtm_frontend" />
+                    <input type="hidden" name="output" value="xml_no_dtd" />
+                    <input type="hidden" name="proxystylesheet" value="rtm_frontend" />-->
+                <input type="hidden" name="filter" value="0" />
+              </form>
+            </div><!-- End utilities -->
+            <a id="logo" href="/index.htm" name="logo"><img src="/images/logo.png" width="168" height="51" alt="Royal Tyrrell Museum" title="Royal Tyrrell Museum" /></a> <!-- Begin main navigation -->
+            <ul id="mainNav" class="clearfix">
+              <li>
+                <a href="/visit.htm">Visit</a>
+              </li>
+              <li>
+                <a href="/programs.htm">Programs</a>
+              </li>
+              <li>
+                <a href="/exhibits.htm">Exhibits</a>
+              </li>
+              <li>
+                <a href="/research.htm">Research</a>
+              </li>
+              <li>
+                <a href="http://www.tyrrellmuseumshop.com/shop/shoppingcart/products.php" title="Go to the Royal Tyrrell Museum Gift Shop!">SHOP</a>
+              </li>
+            </ul><!-- End main navigation -->
+            <div class="clear"></div>
+          </div><!-- End inner header -->
+        </div><!-- End branding / header -->
+      </div><!-- End outer branding / header --><!--googleon: all-->
+      <!--    <div id="homePageFlashContent">-->
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <table width="100%">
+              <tr>
+                <td class="slide_text" style=" background: #e6ddcc url('/images/Speaker-Series-Web-Slider2.png') no-repeat center;">
+                  <div class="description">
+                    <h2>
+                      <a target="_blank" href="/news/speaker_series.htm">Speaker Series 2016</a>
+                    </h2>
+                    <p>
+                      Thursday at 11:00 a.m. January 21 - April 28
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <table width="100%">
+              <tr>
+                <td class="slide_text" style=" background: #e6ddcc url('/images/Slider_easter.png') no-repeat center;">
+                  <div class="description">
+                    <h2>
+                      <a target="_blank" href="/news/Easter_Programs.htm">Easter Programs</a>
+                    </h2>
+                    <p>
+                      Special programs will be offered all weekend!
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <table width="100%">
+              <tr>
+                <td class="slide_text" style=" background: #e6ddcc url('/images/slider_FossilCasting.jpg') no-repeat center;">
+                  <div class="description">
+                    <h2>
+                      <a href="/programs/school_programs.htm">School Programs</a>
+                    </h2>
+                    <p>
+                      Curriculum-based, interactive programs for grades K - 12.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <table width="100%">
+              <tr>
+                <td class="slide_text" style=" background: #e6ddcc url('/images/slider_img_4a.jpg') no-repeat center;">
+                  <div class="description">
+                    <h2>
+                      <a href="/exhibits/current_exhibits.htm">Renowned Exhibits</a>
+                    </h2>
+                    <p>
+                      Experience the spectacular diversity of life on Earth, from the tiniest grains of pollen to the mightiest dinosaurs.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <table width="100%">
+              <tr>
+                <td class="slide_text" style=" background: #e6ddcc url('/images/slider_img_5a.jpg') no-repeat center;">
+                  <div class="description">
+                    <h2>
+                      <a href="/about/our_cooperating_society.htm">Become a Member</a>
+                    </h2>
+                    <p>
+                      Become a Museum member and enjoy unlimited admission and discounts to the gift shop and cafeteria
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </li>
+        </ul>
+      </div><script type="text/javascript" src="/jquery.flexslider.js">
+</script> <script type="text/javascript">
+//<![CDATA[
+      $(window).load(function() {
+      if($.browser.msie && $.browser.version == "8.0") {
+        $('.flexslider').flexslider({     animation: "slide", directionNav: false}); 
+      }
+      else {
+        $('.flexslider').flexslider({     animation: "slide" });
+      }
+      });  
+      //]]>
+      </script> <!--    </div>-->
+       <!-- Begin inner wrapper -->
+      <div id="wrapperInner">
+        <!-- Begin inner wrapper bg -->
+        <div id="wrapperInnerBg"></div><!-- End inner wrapper bg -->
+        <!--googleoff: all--><!-- Begin Master page btns -->
+        <div id="masterPageBtns" class="clearfix">
+          <ul class="clearfix">
+            <li>
+              <a class="visit" href="/visit/directions.htm" style="background: url('/images/visitButton.png') 0 0 no-repeat;"><span>Get<br />
+              Directions</span></a>
+            </li>
+            <li>
+              <a class="programs" href="/news/Easter_Programs.htm" style="background: url('/images/programsButton.png') 0 0 no-repeat;"><span>Easter<br />
+              Programs</span></a>
+            </li>
+            <li>
+              <a class="exhibits" href="/exhibits/fossils_in_focus.htm" style="background: url('/images/exhibitButton.png') 0 0 no-repeat;"><span>Fossils In&nbsp;<br />
+              Focus</span></a>
+            </li>
+            <li>
+              <a class="research" href="/speaker_series.htm" style="background: url('/images/researchButton.png') 0 0 no-repeat;"><span>Speaker<br />
+              Series</span></a>
+            </li>
+          </ul>
+        </div><!-- End master page btns --><!--googleon: all-->
+      </div><!-- End inner wrapper -->
+      <!--googleoff: all--><!-- Begin footer -->
+      <div id="footer">
+        <br />
+        <a href="http://alberta.ca/index.cfm" title="Cooperating Society"><img class="footerLogo" src="/images/AlbertaLogoWeb.png" width="113" height="80" alt="Royal Tyrrell Museum" title="Royal Tyrrell Museum" border="0" /></a>
+        <ul class="clearfix">
+          <li>
+            <h5>
+              Visiting Info
+            </h5>
+            <ul>
+              <li>
+                <a href="/visit.htm">Hours &amp; Admission</a>
+              </li>
+              <li>
+                <a href="/visit/directions.htm">Directions</a>
+              </li>
+              <li>
+                <a href="/visit/plan_your_day.htm">Plan Your Day</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h5>
+              Activities and Events
+            </h5>
+            <ul>
+              <li>
+                <a href="/programs/school_programs.htm">School Programs</a>
+              </li>
+              <li>
+                <a href="/programs/public_programs.htm">Public Programs</a>
+              </li>
+              <li>
+                <a href="/programs/encana_badlands_science_camp.htm">Science Camp</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h5>
+              What's Happening
+            </h5>
+            <ul>
+              <li>
+                <a href="/news/media_centre.htm">Media Centre</a>
+              </li>
+              <li>
+                <a href="/news/events.htm">Events</a>
+              </li>
+              <li>
+                <a href="/news/online_communities.htm">Online Communities</a>
+              </li>
+              <li>
+                <a href="/about/current_positions.htm">Jobs</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h5>
+              Supporting the Museum
+            </h5>
+            <ul>
+              <li>
+                <a href="http://www.tyrrellmuseumshop.com/shop/shoppingcart/products.php" target="_blank">Shop</a>
+              </li>
+              <li>
+                <a href="/about/our_cooperating_society.htm" target="_blank">Cooperating Society</a>
+              </li>
+              <li>
+                <a href="/about/our_cooperating_society.htm">Membership</a>
+              </li>
+              <li>
+                <a href="/about/our_cooperating_society.htm">Donate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="last">
+            <h5>
+              About This Site
+            </h5>
+            <ul>
+              <li>
+                <a href="/site_map.htm">Sitemap</a>
+              </li>
+              <li>
+                <a href="/contact_us.htm">Comments</a>
+              </li>
+              <li>
+                <a href="http://alberta.ca/copyright.cfm" target="_blank">Notices</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="siteInfo">
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a href="http://facebook.com/tyrrellmuseum" target="_blank"><img class="facebookLogo" src="/images/facebookLogo2.png" alt="Facebook" title="Facebook" width="30" height="30" border="0" /></a>
+          </li>
+          <li class="social-list__item">
+            <a href="http://twitter.com/royaltyrrell" target="_blank"><img class="twitterLogo" src="/images/twitterLogo2.png" alt="twitter" title="Twitter" width="30" height="30" border="0" /></a>
+          </li>
+          <li class="social-list__item">
+            <a href="http://instagram.com/royaltyrrell" target="_blank"><img class="instagramLogo" src="/images/InstagramLogo2.png" alt="instagram" title="Instagram" width="30" height="30" border="0" /></a>
+          </li>
+          <li class="social-list__item">
+            <a href="http://royaltyrrellmuseum.wordpress.com" target="_blank"><img class="blogLogo" src="/images/BlogLogo2.png" alt="blog" title="Blog" width="30" height="30" border="0" /></a>
+          </li>
+          <li class="social-list__item">
+            <a href="http://pinterest.com/royaltyrrell" target="_blank"><img class="pinterestLogo" src="/images/pinterestLogo2.png" alt="Pinterest" title="Pinterest" width="30" height="30" border="0" /></a>
+          </li><!--<li class="social-list__item">
+<a href="http://flickr.com/photos/tyrrellmuseum" target="_blank"> <img class="flickrLogo" 
+src="/images/flickrLogo.png" alt="Flickr" title="Flickr" width="30" height="30" border="0"/></a>
+</li>-->
+          <li class="social-list__item">
+            <a href="http://youtube.com/user/RoyalTyrrellMuseum" target="_blank"><img class="flickrLogo" src="/images/youtubelogo2.png" alt="Youtube" title="Youtube" width="30" height="30" border="0" /></a>
+          </li>
+        </ul>
+        <p>
+          <a href="http://alberta.ca/index.cfm" target="_blank">Government-at-a-Glance</a> | <a href="http://alberta.ca/contact.cfm" target="_blank">Contact Government</a> | <a href="http://alberta.ca/privacystatement.cfm" target="_blank">Privacy Statement</a>
+        </p>
+        <p>
+          The user agrees to the terms and conditions set out in the Copyright and Disclaimer statement.
+        </p>
+        <p>
+          Â©2010 Government of Alberta and Â©2010 Royal Tyrrell Museum | Last Review/Update - April 09, 2015
+        </p>
+      </div><!-- End footer --><!--googleon: all-->
+    </div><!-- End wrapper -->
+    <script type="text/javascript">
+//<![CDATA[
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-43668004-1', 'tyrrellmuseum.com');
+    ga('send', 'pageview');
+    //]]>
+    </script>
+  </body>
+</html>

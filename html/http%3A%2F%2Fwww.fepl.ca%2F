@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://www.fepl.ca/favicon.ico" />
+
+    <title>Fort Erie Public Library</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+ <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/time.js"></script>
+  </head>
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Subscribe to the @FEPL Newsletter</h4>
+      </div>
+      <div class="modal-body">
+       <iframe class="iframe-newsletter" frameborder="0" src="http://www.libraryaware.com/1653/Subscribers/Subscribe?embeddable=true"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<body data-spy="scroll" data-target="#affix-nav">
+
+
+
+<!--header-->
+<div class="visible-md visible-lg visible-sm ">
+   <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="pull-right">
+          <a class="btn btn-top" href="http://forterie.niagaraevergreen.ca/eg/opac/myopac/main"><i class="fa fa-user"> </i> Sign In</a>
+        </div>
+      </div> 
+    </div>
+  </div> 
+</div>
+<!-- Header -->
+<div class="header-container visible-md visible-lg visible-sm ">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <a href="index"><img class="visible-md visible-lg visible-sm" src="images/fepl_logo.png"></a>
+      </div>
+     
+        <!-- ##### Header Search Box #####    -->
+        
+      <div class="col-md-5 visible-md visible-lg visible-sm search">
+        <div class="row">
+            <div class="col-md-12 visible-md visible-lg visible-sm">
+              <form class="form-inline" role="form" name="fesearch"  action="http://forterie.niagaraevergreen.ca/opac/en-CA/skin/forterie/xml/rresult.xml" method="get">
+                <div class="input-group">
+                  <input type="hidden" name="searchOrg" value="FORTERIE">
+                  <input type="hidden" id="rt" name="rt" value="keyword" />
+                  <input type="hidden" id="tp" name="tp" value="keyword" />
+                  <input type="hidden" id="l" name="l" value="108" />
+                  <input type="hidden" id="d" name="d" value="1" />
+                  <input type="hidden" id="f" name="f" value="" />
+                  <input type="hidden" id="ol" name="ol" value="108" />
+                  <input type="text" class="form-control" id="searchField" name="t" placeholder="Search books, movies and more...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-colour" type="submit"> Search</button>
+                  </span>
+                </div>
+              </form>      
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 visible-md visible-lg visible-sm">
+              <a class="pull-right small" href="http://forterie.niagaraevergreen.ca/eg/opac/advanced">Advanced Search</a>
+            </div>
+          </div>
+        </div> <!-- ##### Header Search Box  End #####    -->
+      </div>
+    </div>
+  </div>
+
+
+<!-- ########### Top Nav Bar Condensed ############### 
+<div id="affix-nav">
+  
+      <div data-spy="affix" data-offset-top="10" data-offset-bottom="0" class="navbar navbar-default navbar-static-top" role="navigation">
+
+    <div class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+       <a class="navbar-brand visible-xs" href="/">
+        <img class="small-nav" src="/images/logo_nav.png" />
+      <span class="nav-logo-text">FORT ERIE PUBLIC LIBRARY</span>
+    </a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+          <li class="active"><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Books & More<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.fepl.ca/books">Books</a></li>
+              <li><a href="http://www.fepl.ca/movies">Movies</a></li>
+              <li><a href="http://www.fepl.ca/music">Music</a></li>
+              <li><a href="http://www.fepl.ca/games">Video Games</a></li>
+              <li><a href="http://www.fepl.ca/games">Magazines</a></li>
+              <li><a href="http://www.fepl.ca/games">Digital Content</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs & Events  <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.fepl.ca/events_adults">For Adults</a></li>
+              <li><a href="http://www.fepl.ca/events_teens">For Teens</a></li>
+              <li><a href="http://www.fepl.ca/events_kids">For Kids</a></li>
+              <li><a href="http://www.fepl.ca/events">All Events</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Digital Content <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.fepl.ca/ebooks2">eBooks</a></li>
+              <li><a href="http://www.fepl.ca/eaudio">eAudiobooks</a></li>
+              <li><a href="http://www.fepl.ca/emusic">eMusic</a></li>
+              <li><a href="http://www.fepl.ca/emagazines">eMagazines</a></li>
+              <li><a href="http://www.fepl.ca/eresources">Research</a></li>
+              <li><a href="http://www.fepl.ca/apps">Apps & Mobility</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.fepl.ca/ebooks2">eBooks</a></li>
+              <li><a href="http://www.fepl.ca/eaudio">eAudiobooks</a></li>
+              <li><a href="http://www.fepl.ca/emusic">eMusic</a></li>
+              <li><a href="http://www.fepl.ca/emagazines">eMagazines</a></li>
+              <li><a href="http://www.fepl.ca/eresources">Research</a></li>
+              <li><a href="http://www.fepl.ca/apps">Apps & Mobility</a></li>
+            </ul>
+          </li>
+        </ul>
+ 
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!-- ########### Top Nav Bar ############### -->
+        <div id="affix-nav">
+  
+      <div data-spy="affix" data-offset-top="130" data-offset-bottom="0" class="navbar navbar-default navbar-static-top" role="navigation">
+
+    <div class="container">
+           <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+       <a class="navbar-brand visible-xs" href="/">
+        <img class="small-nav" src="images/logo_nav.png" />
+      <span class="nav-logo-text">FORT ERIE PUBLIC LIBRARY</span>
+    </a>
+      </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" data-toggle="dropdown">Books & More <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="books">Books</a></li>
+                    <li><a href="movies">Movies</a></li>
+                    <li><a href="music">Music</a></li>
+                    <li><a href="games">Video Games</a></li>
+                    <li><a href="eresources">Genealogy Resources</a></li>
+                    <li><a href="http://forterie.niagaraevergreen.ca/">Search</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="events_adults">For Adults</a></li>
+                    <li><a href="events_teens">For Teens</a></li>
+                    <li><a href="events_kids">For Kids</a></li>
+                    <li><a href="events">All Events</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Downloads <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="ebooks">Books & Audiobooks</a></li>
+                    <li><a href="emovies">Movies</a></li>
+                    <li><a href="emagazines">Magazines</a></li>
+                    <li><a href="emusic">Music</a></li>
+                    <li><a href="http://infotrac.galegroup.com/itweb/ko_pl_fepl?db=CHLL">Chilton Online</a></li>
+                    <li><a href="http://libraries.mangolanguages.com/fort-erie/start">Mango Languages</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kids <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="kids_books">Books & Reading</a></li>
+                    <li><a href="kids_media">Movies & Music</a></li>
+                    <li><a href="kids_events_page">Programs & Events</a></li>
+                    <li><a href="kids_homeworkhelp">After School Program</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teens <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="teens_books">Books & Reading</a></li>
+                    <li><a href="teens_media">Movies & Music</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Catalogue <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    <li><a href="http://forterie.niagaraevergreen.ca/eg/opac/home?locg=108">Search the Catalogue</a></li>
+                    <li><a href="http://forterie.niagaraevergreen.ca/eg/opac/advanced?locg=108">Advanced Search</a></li>
+                    <li><a href="https://forterie.niagaraevergreen.ca/eg/opac/myopac/main?redirect_to=%2Feg%2Fopac%2Fmyopac%2Fmain%3Flocg%3D108">Sign In</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="roomrentals">Meeting Rooms</a></li>
+                    <li><a href="computers">Computers & Wifi</a></li>
+                    <li><a href="illo">Interlibrary Loan</a></li>
+                    <li><a href="requests">Purchase Request</a></li>
+                    <li><a href="techhelp">Tech Help</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="branches">Branches &amp; Hours</a></li>
+                    <li><a href="using">Using the Library</a></li>
+                    <li><a href="libraryboard">Library Board</a></li>
+                    <li><a href="friends">Friends of FEPL</a></li>
+                    <li><a href="accessibility">Accessibility</a></li>
+                    <li><a href="jobs">Jobs</a></li>
+                  </ul>
+                  
+                </li>
+              </ul>
+              <!--<button type="button" class="btn btn-default navbar-btn"> <span class="glyphicon glyphicon-user"></span> Sign In</button>-->
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+
+      <a class="back-to-top" href="#"><i class="fa fa-chevron-up"></i> Back to Top</a>
+<section class="bg-white">
+      <div class="container">
+
+        <div class="col-md-12 hours">
+        <p class="bold inline">Today's Hours:</p><p class="inline">&nbsp;&nbsp;&nbsp;<script>greet();</script>&nbsp;&nbsp;&nbsp;
+         <a href="branches#hours"><i class="fa fa-clock-o"></i> All Hours</a>
+        </p>
+        </div>
+      </div>
+	<!-- Branch hours and social -->
+
+<div class="container padded-slider">
+    <div class="row">
+      <div class="col-md-12">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        
+        <div class="item active">
+          <a href="https://www.google.com/calendar/event?eid=MmJycHNsbDN2cm51MmhidmhkYjVyOGZjN2cga2Z1bjR1cDZudHA1dmZxNWxrZ25uNGRrMG9AZw&ctz=America/Toronto">
+          <img src="images/slider_stpatrick.jpg"></a> 
+        </div><!-- End Item -->
+        <div class="item">
+          <a href="kids_events_page">
+          <img src="images/slider_marchbreak.jpg"></a> 
+        </div><!-- End Item -->
+        <div class="item">
+          <a href="https://www.hoopladigital.com/browse/movie#featured">
+          <img src="images/slider_hoopla.jpg"></a> 
+        </div><!-- End Item -->
+        <div class="item">
+          <a href="https://forterie.niagaraevergreen.ca/eg/opac/results?bookbag=44905;page=0;locg=108;depth=0">
+          <img src="images/slider_canadareads2016.png"></a> 
+        </div><!-- End Item -->
+      </div><!-- End Carousel Inner -->
+
+
+        <ul class="cnav nav-pills nav-justified carousel-bottom-border">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">St. Patrick's<br/><small>Celebration</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="1"><a href="#">March Break Fun<br/><small>@FEPL</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="2"><a href="#">Hoopla<br/><small>Streaming Movies</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="3"><a href="#">Canada Reads<br/><small>2016</small></a></li>
+
+        </ul>
+
+
+    </div>
+  </div><!-- End Carousel -->
+
+  </div>
+      </div>
+    </div>
+</div>
+</section>
+
+
+<section class="events">
+  <div class="container padded">
+    <div class="row">
+      <div class="col-sm-12 padded">
+          <h1 class="text-center"> Upcoming Events</h1>
+
+        </div>
+      </div>
+      
+        <div class="row padded-top">
+            <div class="col-sm-2 event-date">
+                <div class="event-date-month">
+                    Mar                </div>
+                <div class="event-date-day">
+                    11                </div>
+                <div class="event-date-time">
+                    10:00 AM                </div>
+            </div>
+    <div class="col-sm-10 event-main">
+       <h3> <a href="https://www.google.com/calendar/event?eid=YnNtaTJnZHBmMG85ajV0Z2FmbzliazBiOTggZm9ydGVyaWVwbEBt&ctz=America/Toronto">
+ 
+        Tax Clinic        </a></h3>
+        <p class="small">
+        Each year, dedicated volunteers trained by Canada Revenue give of their time to complete tax returns for people (seniors, students, newcomers and others) whose tax situation is simple and whose income is low.  You must make an appointment, and bring all necessary documents (a list is available when you register).  There is no charge for this important service.</p>
+    </div>
+
+</div>
+ 
+        <div class="row padded-top">
+            <div class="col-sm-2 event-date">
+                <div class="event-date-month">
+                    Mar                </div>
+                <div class="event-date-day">
+                    11                </div>
+                <div class="event-date-time">
+                    3:30 PM                </div>
+            </div>
+    <div class="col-sm-10 event-main">
+       <h3> <a href="https://www.google.com/calendar/event?eid=cWtpajQyYjhpMms5MGRpanJxa2VlanB0czhfMjAxNjAzMTFUMjAzMDAwWiBmb3J0ZXJpZXBsQG0&ctz=America/Toronto">
+ 
+        Homework Help        </a></h3>
+        <p class="small">
+        A free after-school program where tutors work with students in grades K - 8, helping with homework, study skills, and building confidence. Offered at Centennial and Crystal Ridge branches. To register or volunteer contact Justine Burnside at jburnside@fepl.ca or 905-871-2546 x 311.</p>
+    </div>
+
+</div>
+ 
+        <div class="row padded-top">
+            <div class="col-sm-2 event-date">
+                <div class="event-date-month">
+                    Mar                </div>
+                <div class="event-date-day">
+                    12                </div>
+                <div class="event-date-time">
+                    2:30 PM                </div>
+            </div>
+    <div class="col-sm-10 event-main">
+       <h3> <a href="https://www.google.com/calendar/event?eid=Ym9pZ2lxaHFjNGJibXBlb2w2aHRqMmtoMm8gZm9ydGVyaWVwbEBt&ctz=America/Toronto">
+ 
+        Film: Alvin and the Chipmunks: Road Trip        </a></h3>
+        <p class="small">
+        Through a series of misunderstandings, Alvin, Simon and Theodore come to believe that Dave is going to propose to his new girlfriend in New York City... and dump them. They have three days to get to him and stop the proposal, saving themselves not only from losing Dave but possibly from gaining a terrible stepbrother.
+
+Cast	Matthew Gray Gubler, Jason Lee, Justin Long, Jesse McCartney, Tony Hale
+
+Comedy; Adventure; Children; Musical; Fantasy; Animated - 86 minutes</p>
+    </div>
+
+</div>
+   
+  
+  
+<div class="text-center padded-top">
+  <a class="btn btn-colour" href="events">See Full Calendar <i class="fa fa-chevron-right"></i></a>
+</div>
+</div>
+</section>
+
+<section class="bg-white">
+<div class="container padded box-iconed">
+
+      <div class="row">
+      <div class="col-sm-12 padded">
+          <h1 class="padded-top">What's New</h1>
+          </br>
+        </div>
+      </div>
+  <div class="row">
+      
+            <!-- Carousel
+            ================================================== -->            
+            <div id="myCarousel1" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-1">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/327146" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/327146" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/315009" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/315009" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/270796" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/270796" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/285593" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/285593" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/333245" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/333245" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-1">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/334524" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/334524" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/328718" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/328718" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/317992" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/317992" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/320457" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/320457" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/335390" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/335390" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-1">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/335447" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/335447" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/320282" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/320282" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/334547" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/334547" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/327805" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/327805" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="http://forterie.niagaraevergreen.ca/eg/opac/record/294146" class="thumbnail">
+                                <img class="img-responsive" src="http://forterie.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/294146" alt="Image" class="img-responsive">
+                              </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel1" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                <a class="right carousel-control" href="#myCarousel1" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel1" data-slide-to="1"></li>
+                    <li data-target="#myCarousel1" data-slide-to="2"></li>
+                </ol>                
+            </div><!-- End Carousel --> 
+       
+    </div>
+</div>
+   
+
+  
+          
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+
+      <p>
+        <ul class="list-inline">
+          <li>New Items:</li>
+          <li><a href="http://forterie.niagaraevergreen.ca/eg/opac/results?bool=and&qtype=keyword&contains=contains&query=*&bool=and&qtype=title&contains=contains&query=&bool=and&qtype=author&contains=contains&query=&fi%3Aitem_type=a&fi%3Aitem_lang=eng&fi%3Aaudience=e&fi%3Aaudience=g&fi%3Alit_form=1&locg=108&pubdate=after&date1=2013&date2=&sort=pubdate.descending&_adv=1">Adult Fiction</a></li>
+          <li><a href="http://forterie.niagaraevergreen.ca/eg/opac/results?query=site%28FORTERIE%29+sort%28create_date%29+%23descending++audience%28e%2Cg%29+lit_form%280%29+&fi%3Aitem_type=">Adult Non Fiction</a></li>
+          <li><a href="http://forterie.niagaraevergreen.ca/eg/opac/results?bool=and&qtype=keyword&contains=contains&query=*&bool=and&qtype=title&contains=contains&query=&bool=and&qtype=author&contains=contains&query=&fi%3Aitem_type=a&fi%3Aitem_type=g&fi%3Aitem_lang=eng&fi%3Aaudience=d&fi%3Aaudience=j&fi%3Aaudience=c&fi%3Aaudience=a&fi%3Aaudience=b&fi%3Alit_form=1&locg=108&pubdate=after&date1=2013&date2=&sort=pubdate.descending&_adv=1">Children / YP</a></li>
+          <li><a href="http://forterie.niagaraevergreen.ca/eg/opac/results?bool=and&qtype=keyword&contains=contains&query=*&bool=and&qtype=title&contains=contains&query=&bool=and&qtype=author&contains=contains&query=&fi%3Aitem_type=g&fi%3Aitem_lang=eng&fi%3Aaudience=e&locg=108&pubdate=after&date1=2013&date2=&sort=pubdate.descending&_adv=1">Movies</a></li>
+          <li><a href="http://forterie.niagaraevergreen.ca/eg/opac/results?bool=and&qtype=title&contains=contains&query=360&bool=or&qtype=title&contains=contains&query=wii&bool=or&qtype=title&contains=contains&query=ps3&fi%3Aaudience=&locg=108&pubdate=after&date1=2013&date2=&sort=pubdate.descending&_adv=1">Video Games</a></li>           
+        </ul>
+</p>
+      </div>
+</div>
+</div>
+
+
+</section> 
+
+
+<section class="bg-lightblue">
+  <div class="container box-iconed">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="white">Stream & Download</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 white">
+        <h2>eBooks</h2>
+        <p>Access over 45000 digital books for your tablet, phone, ereader or computer. Also includes audiobooks.</p>
+        <a class="btn btn-white" href="/ebooks">Download eBooks <i class="fa fa-chevron-right"></i></a>
+      </div>
+      <div class="col-sm-3 white">
+        <h2>Music</h2>
+        <p>Download over 8 million songs from Sony Music's catalog of legendary artists. New releases every tuesday.</p>
+        <a class="btn btn-white" href="/emusic">Download Music <i class="fa fa-chevron-right"></i></a>
+      </div>
+      <div class="col-sm-3 white">
+        <h2>Magazines</h2>
+        <p>Enjoy over 100 monthly titles for your tablet, <br/>phone or computer. Available the same day <br/>as the newstand.</p>
+        <a class="btn btn-white" href="emagazines">Download Magazines <i class="fa fa-chevron-right"></i></a>
+      </div>
+      <div class="col-sm-3 white"> 
+        <h2>Movies</h2>
+        <p>Enjoy over 1000 streaming movies on your tablet, phone or computer. Includes classic movies and new releases.</p>
+        <a class="btn btn-white" href="emovies">Download Movies <i class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="bg-lightergray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="subpage-header">
+          <h3><i class="fa fa-twitter"></i> Latest Tweet</h3>
+        </div>
+        <div class="tweets">
+            <a class="twitter-timeline" href="https://twitter.com/fepl" data-widget-id="357926297084776448" data-chrome="noheader nofooter noborders transparent" data-tweet-limit="1" height="100px"></a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="subpage-header">
+          <h3><i class="fa fa-check-circle"></i> What's New</h3>
+        </div>
+        <ul class="list-unstyled ">
+          <li><a href="emovies">Hoopla Streaming Movies</a></li>
+          <li><a href="https://www.rbdigital.com/forterieon/zinio">Zinio Digital Magazines</a></li>            
+          <li><a href="https://forterie.freegalmusic.com">Freegal Music Downloads</a></li>
+          <li><a href="http://downloadcentre.library.on.ca">Overdrive eBook Downloads</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="subpage-header">
+          <h3><i class="fa fa-file-text-o"></i> FEPL Newsletter</h3>
+        </div>
+<!-- Begin MailChimp Signup Form -->
+        <p>Sign up and be the first to know about the latest hot books and events happening at the library!</p>
+        <br/>
+                        <!-- Button trigger modal -->
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+  Subscribe !
+</button>
+        
+       <!-- <div id="mc_embed_signup">
+          <form action="http://library.us4.list-manage1.com/subscribe/post?u=f563f8aa63f97f0d1772130f8&amp;id=a21de9c879" method="post" 
+          id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" role="form" target="_blank">
+            <div class="input-group newsletter-form">
+              <input type="email" value="" name="EMAIL" class="form-control email" id="mce-EMAIL" placeholder="email address" required />
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Submit</button>
+              </span>
+            </div>
+          </form>-->
+        </div>
+      </div>
+    </div>
+  </div> 
+</section> 
+
+
+
+
+ <!-- ########### Footer ############### -->
+
+<div id="footer" class="bg-blue">
+    <section class="bg-blue">
+    <div class="container padded-top">
+        <div class="row padded-top">
+             <div class="col-md-3 white footer-list">
+                <h6>CONTACT US</h6>
+                <p>
+                <br>
+                <a href="mailto:info@fepl.ca">info@fepl.ca</a>
+            </br>
+        </br>
+                Centennial Branch
+                <br/>
+                P: 905-871-2546
+            </br>
+            <br>
+                Crystal Ridge Branch
+                <br/>
+                P: 905-871-2546
+            </br>
+            <br>
+                Stevensville Branch
+                <br/>
+                P: 905-871-2546
+            </br></br>
+                
+            </p>
+                
+            </div>
+
+            <div class="col-md-3 white footer-list">
+                <h6>ABOUT US</h6>
+                <br/>
+                
+                
+
+            <ul>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="branches">Branches &amp; Hours</a></li>
+                    <li><a href="libraryboard">Library Board</a></li>
+                    <li><a href="friends">Friends of FEPL</a></li>
+                    <li><a href="accessibility">Accessibility</a></li>
+                    <li><a href="jobs">Jobs</a></li>
+            </ul>
+                
+            </div>
+            <div class="col-md-3 white footer-list">
+                <h6>USING THE LIBRARY</h6>
+                <br/>
+                 <ul>
+                    <li><a href="using#card">Getting a Card</a></li>
+                    <li><a href="using#loans">Loans & Renewals</a></li>
+                    <li><a href="using#fines">Fine Policy</a></li>
+                </ul>
+                
+            </div>
+            <div class="col-md-3 white footer-list">
+                <h6>CONNECT WITH US</h6>
+                <p>
+                <br>
+                
+                
+                <h3 class="inline"><i class="fa fa-facebook-official"></i></h3> <a href="http://www.facebook.com//pages/Fort-Erie-Public-Library/135750286529152"> &nbsp;Facebook</a></br></br>
+                <h3 class="inline"><i class="fa fa-twitter"></i></h3> <a href="http://twitter.com/fepl"> &nbsp;Twitter</a></br></br>
+                <!--<h3 class="inline"><i class="fa fa-tumblr"></i></h3> <a href="http://twitter.com/fepl"> &nbsp;Tumblr</a>-->
+
+            </p>
+                
+            </div>
+            </div>
+            
+        </div>
+
+</section>
+<section class="footer-anchor">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 ">
+                <img src="images/logo_footer.png"/>
+            </div>
+            <div class="col-md-5 small padded-top subfooter-list"><br/>
+                <!--<a href="about">ABOUT THE LIBRARY</a> &nbsp| &nbsp<a href="privacy">PRIVACY POLICY</a> &nbsp|&nbsp <a href="sitemap">SITE MAP</a>
+                <br/><br/>-->
+                
+            </div>
+            <div class="col-md-5 small padded-top"><br/>
+                <p class="inline gray">© 2016 Fort Erie Public Library, All Rights Reserved.</p>
+                <br/><br/>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</div>
+	 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/infinite_carousel.js"></script>
+    <script>
+  $('#myCarousel').carousel({
+    interval:   4000
+  });
+  
+  var clickEvent = false;
+  $('#myCarousel').on('click', '.cnav a', function() {
+      clickEvent = true;
+      $('.cnav li').removeClass('active');
+      $(this).parent().addClass('active');    
+  }).on('slid.bs.carousel', function(e) {
+    if(!clickEvent) {
+      var count = $('.cnav').children().length -1;
+      var current = $('.cnav li.active');
+      current.removeClass('active').next().addClass('active');
+      var id = parseInt(current.data('slide-to'));
+      if(count == id) {
+        $('.cnav li').first().addClass('active');  
+      }
+    }
+    clickEvent = false;
+  });
+</script>
+<script>
+jQuery(document).ready(function() {
+    var offset = 250;
+    var duration = 300;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
+<script>
+  $('#myCarousel1').carousel({
+    interval:   4000
+  });
+</script>
+  </body>
+</html>

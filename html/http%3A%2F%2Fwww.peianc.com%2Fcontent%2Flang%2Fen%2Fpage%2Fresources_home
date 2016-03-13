@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" dir="ltr">
+<head>
+<base href="http://www.peianc.com/" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Resource Library - PEI Association for Newcomers to Canada</title>
+<link rel="shortcut icon" href="http://www.peianc.com/favicon.ico" />
+<link rel="apple-touch-icon" href="http://www.peianc.com/favicon.ico" />
+<link rel="stylesheet" href="http://www.peianc.com/css/main.css?v=20151125" type="text/css" />
+<link rel="stylesheet" href="http://www.peianc.com/css/forms.css?v=20120411" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.peianc.com/css/jquery.superfish.css?v=060511" media="screen" />
+<link rel="stylesheet" href="http://www.peianc.com/css/guide.css?v=20120523" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.peianc.com/css/jCal.med.css?v=140211" />
+<link rel="stylesheet" type="text/css" href="http://www.peianc.com/css/jquery.lightbox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://www.peianc.com/css/bjqs.css" media="screen" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+<style type="text/css" media="all">  
+@import "css/ie_general.css";  
+</style>
+<![endif]-->
+<!--[if lt IE 7]>
+<style type="text/css" media="all">  
+@import "css/ie_6.css";  
+</style>
+<![endif]-->
+<!--[if gte IE 7]>
+<style type="text/css" media="all">  
+@import "css/ie_7.css";  
+</style> 
+<![endif]-->
+<link rel="stylesheet" href="http://www.peianc.com/css/jquery.tabs.css?v=260509" type="text/css" media="print, projection, screen" />
+<!--[if lte IE 7]>
+<style type="text/css" media="projection, screen">
+@import "css/jquery.tabs-ie.css" ;
+</style>
+<![endif]-->
+<link rel="stylesheet" href="http://www.peianc.com/css/style_en.css?v=20140401" type="text/css" />
+<script type="text/javascript" src="http://www.peianc.com/js/jquery.js?v=1.8.0"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/helperPlugins.js"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/jquery.tabs.js?v=070612"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/main.js?r=230709a"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/captcha.js"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/glibforms.js"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/forms.js?v=20140401"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/jquery.superfish.js"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/jquery.jCal.js?v=140211"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/jquery.tooltip.js"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/jquery.lightbox.js"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/flowplayer-3.2.4.min.js"></script>
+<script type="text/javascript" src="http://www.peianc.com/js/bjqs-1.3.min.js"></script>
+<link href="http://www.peianc.com/js/video-js/video-js.css" rel="stylesheet">
+<script src="http://www.peianc.com/js/video-js/video.js"></script>
+<script type="text/javascript">
+	<!--
+	$(function() { $('#container-islinfo').tabs(); });
+	$(function() { $('#container-staff').tabs(); });
+	$(function() { $('#blocknews').tabs(); });
+	$(function() { $('#container-boarddocuments').tabs(); });
+	baseHref='http://www.peianc.com/';
+	useModalDialogs = false ;
+	$(document).ready(function(){
+		
+		
+	$(window).scroll(function(event) {
+		$('#langnavigation').css('top', Math.max(0, $('#langnavigation').position().top - $(window).scrollTop()) )
+	});		
+		
+		
+		
+		
+		$('#clientlogin1 input[name=clientnumber]').keypress(function (e) {
+			if ( (e.which ? e.which : e.keyCode) == 13){
+				eval($('#clientlogin1 fieldset.submit a.button').attr('href'));
+				return false;
+			}
+		});
+		
+		$('#clientlogin4 input[name=password]').keypress(function (e) {
+			if ( (e.which ? e.which : e.keyCode) == 13){
+				eval($('#clientlogin4 fieldset.submit a.button').attr('href'));
+				return false;
+			}
+		});
+		
+		$("form#dcform input[name='interest[]']").click (function(){
+			var selected_interests = new Array ();
+			$.each($("form#dcform input[name='interest[]']:checked") , function (k,v){
+				selected_interests[selected_interests.length] = $(v).val().replace (/ /g  , "" ).toLowerCase()
+			})
+			$.each($("form#dcform div.formframe") , function (k,v){
+				if ($(v).attr('id')   ) {
+					if ($.inArray( $(v).attr('id').replace ("dcform-" , "")  , selected_interests ) >  -1 ) {
+						$(v).show();			
+					}else{
+						$(v).hide();			
+					}
+				}
+			})			
+		})
+		
+		
+		
+		/*var min_content_height = 400
+		if ( $("#content").height() < min_content_height ) 	{
+			$("#content").height(min_content_height)
+			$("#content").css ('overflow','hidden')
+		}*/
+		// menu
+	         $("ul.sf-menu").superfish({
+	         	pathClass: 'current',
+	         	animation:   {opacity:'show',height:'show'},
+	         	pathLevels: 0
+	         });
+	
+		var eventDays = new Array () ;
+		var eventTips = new Array ();
+		var currentEventDates = new Array () ;
+		$('#calOne').jCal({
+			day:			new Date(),
+			days:			1,
+			showMonths:		2,
+			monthSelect:	false,
+			drawBack:		function () {
+					return false;
+				},
+			dCheck:			function (day) {
+					if ($.inArray( [(day.getMonth() + 1), day.getDate(), day.getFullYear()].join('/'), eventDays) != -1){
+						return 'day' ;
+					}else{
+						return 'invday';
+					}
+				},
+			callback:		function (day, days) {
+					$('#calOneDays').val( days );
+					var dCursor = new Date( day.getTime() );
+					for (var di=0; di < days; di++) {
+						var currDay = $(this._target).find('[id*=d_' + ( dCursor.getMonth() + 1 ) + '_' + dCursor.getDate() + '_' + dCursor.getFullYear() + ']');
+						if (currDay.length){
+							window.location =baseHref + 'content/lang/'+$("html").attr("lang")+'/page/front_events/eventdate/'+ daypad(dCursor.getMonth()+1)  + daypad(dCursor.getDate())+ dCursor.getFullYear();
+						}
+						dCursor.setDate( dCursor.getDate() + 1 );
+					}
+					return false;
+				},
+			drawBack: function(){
+				$.each(eventTips, function(k,v){
+					$("#c2d_"+v[0]).attr('title',decodeURIComponent((v[1] + '').replace(/\+/g, '%20')) ).tooltip()
+				})
+				$.each(currentEventDates, function(k,v){
+					$("#c2d_"+v).addClass('eventday')
+				})
+			}
+		});
+	
+	
+		// video / audio player
+		$.each($(".flplayer-video"),function(index,elem){
+			flowplayer($(elem).attr('id'),baseHref + 'js/flowplayer-3.2.5.swf',{
+				clip : {
+					autoPlay: true
+				}
+			})
+		})
+		$.each($(".flplayer-audio"),function(index,elem){
+			var url  = $("#" +$(elem).attr('id') + " img:first").attr('src');
+			flowplayer($(elem).attr('id'),baseHref + 'js/flowplayer-3.2.5.swf',{
+				plugins: {
+					controls: {
+						autoHide: false,
+						fullscreen: false
+					}
+				},
+				clip : {
+					coverImage: $("#" +$(elem).attr('id') + " img:first").attr('src'),
+					autoPlay: true
+				}
+			})
+		})
+
+		$('#dc-logos').bjqs({
+			height : 150,
+			width : 280,
+			responsive : true,
+			animtype : 'slide', // accepts 'fade' or 'slide'
+			animduration : 450, // how fast the animation are
+			animspeed : 4000, // the delay between each slide
+			showcontrols : false, // show next and prev controls
+			showmarkers : false // Show individual slide markers
+		});
+
+	});
+	
+	$(function() {
+		$('.imagegallery').click(function(){
+			$.each($(this).attr('class').split(' '),function(k,v){
+				var m = v.match(/^galleryid_(\d+)$/) ;
+				if (m){
+					dynLightBox(m[1]);
+				}
+			})
+			return false ;
+		})
+	});
+		
+	// call like this <a href="" class="imagegallery galleryid_1">_</a>
+	function dynLightBox(gallery){
+		$.getJSON(baseHref +  'content/page/gallery/gallery/'+gallery,function(data){
+			var imageStr = '' ;
+			$.each(data, function(k, image) {
+				imageStr += '<a href="' + image['src'] + '" title="' + image['caption'] + '"><img src="'+image['src']+'" /></a>'
+			});
+			if (imageStr){
+				var lb = $(imageStr);
+				lb.lightBox();
+				lb.filter('a:first').click();
+			}
+		})
+
+	}
+		
+	function daypad (str){
+		return (!isNaN(str) && str.toString().length==1)?"0"+str:str;
+	}
+
+	document.createElement('video');document.createElement('audio');
+	videojs.options.flash.swf = "http://www.peianc.com/js/video-js/video-js.swf"
+
+	//-->
+	</script>
+</head>
+<body>
+<div id="wrapper">
+	<ul id="langnavigation">
+			<li><a href="javascript:switchLang('en','%2Fcontent%2Flang%2Fen%2Fpage%2Fresources_home')" class="englishtab current"> </a></li>
+			<li><a href="javascript:switchLang('fr','%2Fcontent%2Flang%2Fen%2Fpage%2Fresources_home')" class="frenchtab "> </a></li>
+			<li><a href="javascript:switchLang('es','%2Fcontent%2Flang%2Fen%2Fpage%2Fresources_home')" class="spanishtab "> </a></li>
+			<li style="direction:rtl"><a href="javascript:switchLang('ar','%2Fcontent%2Flang%2Fen%2Fpage%2Fresources_home')" class="arabictab "> </a></li>
+			<li style="direction:rtl"><a href="javascript:switchLang('fa','%2Fcontent%2Flang%2Fen%2Fpage%2Fresources_home')" class="persiantab "> </a></li>
+			<li><a href="javascript:switchLang('zh','%2Fcontent%2Flang%2Fen%2Fpage%2Fresources_home')" class="chinesetab "> </a></li>
+			<li><a href="javascript:switchLang('ko','%2Fcontent%2Flang%2Fen%2Fpage%2Fresources_home')" class="koreantab "> </a></li>
+	</ul>
+	
+		<div id="header">
+		<div id="header_decor">
+			<ul id="mini_navigation">
+				<li><a href="content/lang/en/page/about_home">About PEI ANC</a></li>
+				<li><a href="content/lang/en/page/resources_home">Resource Library</a></li>
+				<li><a href="content/lang/en/page/front_contact">Contact PEI ANC</a></li>				
+			</ul>
+			
+		</div>
+		<div id="logo"><a href="content/lang/en/page/front_home"></a></div>
+		<h1>PEI Association for Newcomers to Canada</h1>	
+	</div>
+	<div id="top_navigation_container">
+		<ul class="sf-menu" id="top_navigation">
+			<li class="first "><a class="" href="content/lang/en/page/settlement_home/"><strong>SETTLEMENT &amp; INTEGRATION</strong></a><ul style="display: none; visibility: hidden;"><li><a  href="content/lang/en/page/settlement_intake" >Intake and Referral Services</a></li><li><a  href="content/lang/en/page/settlement_isap" >Newcomer Settlement Services</a></li><li><a  href="content/lang/en/page/settlement_rap" >Resettlement Assistance Program for Refugees</a></li><li><a  href="content/lang/en/page/settlement_lifeskills/" >Canadian Life Skills Program</a></li></ul></li><li class=""><a class="" href="content/lang/en/page/employment_home/"><strong>EMPLOYMENT PROGRAMS</strong></a><ul style="display: none; visibility: hidden;"><li><a  href="content/lang/en/page/employment_neas" >Employment Assistance Service for Newcomers</a></li><li><a  href="content/lang/en/page/employment_workshops/" >Employment Workshops Registration</a></li><li><a  href="content/lang/en/page/employment_ease" >Services for Employers</a></li><li><a  href="content/lang/en/page/employment_iehp" >Internationally Educated Health Professionals</a></li><li><a  href="content/lang/en/page/employment_leadershiptraining/" >Community Leadership Training</a></li></ul></li><li class=""><a class="" href="content/lang/en/page/youth_home/"><strong>IMMIGRANT YOUTH</strong></a><ul style="display: none; visibility: hidden;"><li><a  href="content/lang/en/page/youth_isl" >Immigrant Student Services</a></li><li><a  href="content/lang/en/page/guide_parents_schools/" >Information for Parents and Students</a></li><li><a  href="content/lang/en/page/youth_schools" >Information for Schools and Teachers</a></li></ul></li><li class=""><a class="" href="content/lang/en/page/language_home/"><strong>LANGUAGE SERVICES</strong></a><ul style="display: none; visibility: hidden;"><li><a  href="content/lang/en/page/language_clba" >Canadian Language Benchmarks Placement Test</a></li><li><a  href="content/lang/en/page/language_linc" >English Language Training for Newcomers</a></li><li><a  href="content/lang/en/page/language_interpreting" >Interpretation and Translation Services</a></li><li><a  href="content/lang/en/page/language_interpreters" >Become an Interpreter / Translator</a></li><li><a  href="content/lang/en/page/language_tutoring/" >EAL Tutoring Program</a></li><li><a  href="content/lang/en/page/language_librarytours/" >Confederation Centre Library Tours</a></li></ul></li><li class="last "><a class="" href="content/lang/en/page/community_home/"><strong>COMMUNITY OUTREACH</strong></a><ul style="display: none; visibility: hidden;"><li><a  href="content/lang/en/page/community_connections/" >Community Connections Program (CCP)</a></li><li><a  href="content/lang/en/page/community_mep" >Multicultural Education Program</a></li><li><a  href="content/lang/en/page/community_affiliations" >Community Affiliations</a></li><li><a  href="content/lang/en/page/community_inclusion/" >Community Inclusion Program</a></li><li><a  href="content/lang/en/page/community_hostholiday/" >Holiday Host Volunteer Program</a></li><li><a  href="content/lang/en/page/community_whg/" >Immigrant Women&#039;s Support Group</a></li><li><a  href="content/lang/en/page/community_ethnogroups/" >Ethno-Cultural Organizations in PEI</a></li><li><a  href="http://www.araisa.ca"  target="_blank" >ARAISA</a></li><li><a  href="content/lang/en/page/community_diversecity/" >DiverseCity 2015</a></li></ul></li>
+		</ul>
+		<a href="content/lang/en/page/volunteers_home" class="getinvolved">Get Involved</a>
+		<a href="content/lang/en/page/front_home" class="home"> </a>
+	</div>
+	<div id="main" class="">
+		<div id="rightcolumn">
+			<div class="rightbox">
+<h2>Reference Pages</h2>
+<dl> 	 	<dt>General Information</dt> 	 	<dd>
+<ul class="rb_smallnav">
+    <li><a href="content/lang/en/page/resources_home">Resources Home</a></li>
+    <li><a href="content/lang/en/page/resources_ancreports">PEI ANC Annual Reports</a></li>
+</ul>
+</dd> <dt>Legal Information</dt> <dd>
+<ul class="rb_smallnav">
+    <li><a style="display: block;" href="content/lang/en/page/resources_law">Canadian Law - An Introduction for Newcomers<br />
+    to Canada</a></li>
+    <li><a href="content/lang/en/page/resources_victimservices">Victim Services Information</a></li>
+</ul>
+</dd><dt>Settlement Information</dt> <dd>
+<ul class="rb_smallnav">
+    <li><a href="content/lang/en/page/resources_drivershandbook" style="display: block;">PEI Driver's Handbook</a></li>
+    <li><a href="content/lang/en/page/resources_cellphoneban">Ban on Handheld Cell Phones for Drivers</a></li>
+</ul>
+</dd> <dt>Employment Information</dt> <dd>
+<ul class="rb_smallnav">
+    <li><a href="content/lang/en/page/resources_iehpmicrocredit">Microcredit Model in Atlantic Canada</a></li>
+</ul>
+</dd> <dt>Multilingual Notices</dt> <dd>
+<ul class="rb_smallnav">
+    <li><a href="content/lang/en/page/resources_officesigns">Printable office signs</a></li>
+    <li><a href="content/lang/en/page/resources_schoolclosures">School closures due to winter storm</a></li>
+</ul>
+</dd></dl></div>
+<div class="rightbox">
+<h2>Interested Islanders</h2>
+<ul class="rb_bignav nomargin">
+    <li><a href="content/lang/en/page/volunteers_home">Volunteers</a></li>
+    <li><a href="content/lang/en/page/language_tutoring">English Tutors</a></li>
+    <li><a href="content/lang/en/page/employment_ease">Employers</a></li>
+    <li><a href="content/lang/en/page/youth_isl">Schools and Teachers</a></li>
+    <!--<li><a href="#">Service Providers</a></li>-->
+    <li><a href="content/lang/en/page/settlement_refugeesponsors">Refugee Sponsors</a></li>
+    <li><a href="content/lang/en/page/resources_home">Researchers</a></li>
+</ul>
+</div>
+<div class="rl-rightblock">
+	<p><br>
+	<a href="content/lang/en/page/front_disclaimer" class="link">Website Disclaimer</a>
+	</p><br>
+</div>	
+		</div>
+		<div id="content" dir="ltr" class="">
+			<h2>Resource Library</h2>
+<p>Please use the navigation to the right to browse our online resources.</p>
+<br />
+<!--<a href="content/lang/en/page/library_home" class="bluebutton-medium special">Go to Library</a>-->
+		</div>
+		<div class="breaker"> </div>
+	</div>
+	<div id="footer">
+	<a href="http://www.peianc.com/content/lang/en/page/front_home">PEI Association for Newcomers to Canada</a>
+	<a href="http://www.peianc.com/content/lang/fr/page/front_home">Association pour nouveaux arrivants au Canada de l'&Icirc;-P-&Eacute;</a>
+	<a href="http://www.peianc.com/content/lang/es/page/front_home">Asociaci&oacute;n de PEI para reci&eacute;n llegados a Canad&aacute;</a><br />
+	<span style="direction:rtl;" dir="rtl"><a href="http://www.peianc.com/content/lang/ar/page/front_home">رايطة برنس إدوارد آيلاند للوافدين الجدد إلى كندا</a></span>
+	<span style="direction:rtl; font-family:Tahoma,'DejaVu Sans',sans-serif;" dir="rtl"><a href="http://www.peianc.com/content/lang/fa/page/front_home">انجمن حمایت از تازه واردین به کانادا در جزیره پرنس ادوارد</a></span>
+	<a href="http://www.peianc.com/content/lang/zh/page/front_home">爱德华王子岛加拿大新移民协会</a>
+	<a href="http://www.peianc.com/content/lang/ko/page/front_home">캐나다 신규이민자지원 PEI 협회</a>		
+	<br />
+		&copy; 2008 - 2016 PEI Association for Newcomers to Canada. All rights reserved. Developed by <a href="http://www.goldnet.ca">GoldNET Smart Technologies</a>.<br /><br /><br />
+		Website development, translation and maintenance made possible by:<br />
+		<a href="http://www.gov.pe.ca" title="Government of Prince Edward Island, Canada" target="_blank"><img src="images/peilogo.jpg" width="148" height="138" border="0" alt="Government of Prince Edward Island, Canada" /></a>
+	</div>
+	<div id="livehelp">
+			<script language="JavaScript" type="text/javascript" src="http://bozo.peianc.com:9090/webchat/jivelive.jsp"></script>
+			<script language="JavaScript" type="text/javascript">showChatButton('frontdesk@workgroup.bozo.peianc.com');</script>
+	</div>
+</div>
+</body>
+</html>

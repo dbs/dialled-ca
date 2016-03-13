@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Front page | SHIRP</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/www.shirp.ca/files/pre_shirp_ca_favicon.ico?8" type="image/x-icon" />
+
+
+<link type="text/css" rel="stylesheet" media="all" href="/modules/aggregator/aggregator.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/modules/cck/theme/content-module.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/modules/date/date.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/modules/solrSFX/solrSFX.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/modules/subject_pgs/subject_pgs.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/modules/views/css/views.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/themes/pre_shirp_ca/html-elements.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/themes/zen/zen/tabs.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/themes/zen/zen/messages.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/themes/zen/zen/block-editing.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/themes/zen/zen/wireframes.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/themes/pre_shirp_ca/layout.css?U" />
+<!-- removed pre_shirp_ca.css -->
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/themes/pre_shirp_ca/pre_shirp_ca-fresh.css?U" />
+<link type="text/css" rel="stylesheet" media="print" href="/sites/www.shirp.ca/themes/pre_shirp_ca/print.css?U" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/www.shirp.ca/themes/zen/zen/ie.css?U" />
+<![endif]-->
+
+<!-- EMP 2012 Jan 26 Getting the Google font EMAP wants: -->
+   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+<!-- EMP 2012 Jan 26 (1 link): (...trying to host it locally. FAILED) -->
+<!--   
+  <link href='/fonts/Oswald/Oswald.css' rel='stylesheet' type='text/css' />
+-->
+
+<!-- EMP 2012 Feb 20 Try to switch style sheets based on screen size (ripped off from somewhere): -->
+  <link id="size-stylesheet" rel='stylesheet' type='text/css' href='/sites/www.shirp.ca/themes/pre_shirp_ca/pre_shirp_ca.css?6' />
+	
+<!-- EMP 2012 Feb 29 Change method to https to avoid https page conflict:  -->
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+  <script type='text/javascript'>
+    // This would be better with a page-global var to track the last size.
+    var prevWidth = 9999;
+    function adjustStyle(width) {
+      width = parseInt(width);
+      if ((width < 701) && (prevWidth >= 701)) {
+        $("#size-stylesheet").attr("href", "/sites/www.shirp.ca/themes/pre_shirp_ca/pre_shirp_ca_narrow.css?8");
+        // Hack here: adjust the main page blocks for the smallest screen size:
+        // re-order the div id="left-top" name="hcNews" to go at the end of the 1-col style
+        $(".front #left-main [name='hcNews']").appendTo($(".front #right-main"))
+      } 
+      else if ((width >= 701) && (width < 900) && ((prevWidth < 701) || (900 <= prevWidth))) {
+        $("#size-stylesheet").attr("href", "/sites/www.shirp.ca/themes/pre_shirp_ca/pre_shirp_ca_medium.css?7");
+        // Hack here: adjust the main page blocks for the smallest screen size:
+        // re-order the div id="left-top" name="hcNews" to go at the end of the 1-col style
+        $(".front #left-main [name='hcNews']").appendTo($(".front #right-main"))
+      } 
+      else if ((width >= 900) && ((prevWidth < 900) || (9999 <= prevWidth))) {
+        $("#size-stylesheet").attr("href", "/sites/www.shirp.ca/themes/pre_shirp_ca/pre_shirp_ca.css?6"); 
+        // Hack here: adjust the main page blocks for the smallest screen size:
+        // re-order the div id="left-top" name="hcNews" to go at the end of the 1st col in 2-col style
+        $(".front #right-main [name='hcNews']").appendTo($(".front #left-main"))
+      }
+      prevWidth = width;
+    }
+
+    $(function() {
+      adjustStyle($(this).width());
+      $(window).resize(function() {
+        adjustStyle($(this).width());
+      });
+    });
+
+    $(document).ready(function() {
+      adjustStyle($(window).width()); // maybe document instead of window?
+    });
+  </script>
+<!-- -->
+
+  
+</head>
+<body class="front not-logged-in node-type-page one-sidebar sidebar-left">
+
+
+  <div id="page"><div id="page-inner">
+
+    <div id="main"><div id="main-inner" class="clear-block">
+<div class="new-header">
+<!-- <img src="/sites/www.shirp.ca/themes/pre_shirp_ca/images/darker-120x1024w-bold.jpg"/> -->
+
+<!-- EMP 2012 Feb 12 Add 2 sub divs so the logo and stock image can be added -->
+    <div class="left-header">
+<!--       <p class="byline">Saskatchewan Health Information Resource Program - A Program of the University Library</p> -->
+    </div>
+    <div class="right-header"></div>
+
+</div>
+
+<!-- <div class="header-pad">hi</div> -->
+<!--
+<div class="clearing"></div>
+-->
+  <div class="crumb-bar">
+
+</div>
+  
+              <div id="sidebar-left">
+<div id="sidebar-left-inner" class="region region-left">
+        <div id="block-menu-primary-links" class="block block-menu region-odd odd region-count-1 count-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <ul class="menu"><li class="expanded first active-trail"><a href="/" title="the main SHIRP page" class="active">HOME</a><ul class="menu"><li class="leaf first last"><a href="/" title="Main user login" class="active">Login</a></li>
+</ul></li>
+<li class="leaf"><a href="/aboutshirp" title="About SHIRP">ABOUT SHIRP</a></li>
+<li class="leaf"><a href="/HANDOUTS/TUTORIALS" title="Instruction: Videos/Apps/Printable">APPS &amp; VIDEOS</a></li>
+<li class="leaf"><a href="/subject/255" title="CONTACT US">CONTACT US</a></li>
+<li class="leaf"><a href="/Starting%20Points" title="Suggestions for where to start your research">STARTING POINTS</a></li>
+<li class="collapsed"><a href="/Find%20an%20Article" title="Find articles &amp; journals">FIND AN ARTICLE</a></li>
+<li class="leaf"><a href="/solrSFX/books" title="">LOOK FOR A BOOK</a></li>
+<li class="leaf"><a href="/solrSFX/videos" title="">LOOK FOR A PROCEDURAL VIDEO</a></li>
+<li class="leaf"><a href="/Links" title="Links">FREE RESOURCES &amp; LINKS</a></li>
+<li class="leaf"><a href="https://www.shirp.ca/FAQ" title="Frequently Asked Questions">FREQUENTLY ASKED QUESTIONS</a></li>
+<li class="leaf last"><a href="/node/266" title="Site Map">SITE MAP</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+<div id="block-user-0" class="block block-user region-even even region-count-2 count-2"><div class="block-inner">
+
+      <h2 class="title">User login</h2>
+  
+  <div class="content">
+    <form action="/node/169?destination=node%2F169"  accept-charset="UTF-8" method="post" id="user-login-form">
+<div><div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required" />
+</div>
+<div class="form-item" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass"  maxlength="60"  size="15"  class="form-text required" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Log in"  class="form-submit" />
+<div class="item-list"><ul><li class="first"><a href="/user/register" title="Create a new user account.">Create new account</a></li>
+<li><a href="/user/password" title="Request new password via e-mail.">Forgot your password?</a></li>
+<li class="last"><a href="https://www.shirp.ca/webfm_send/312" title="Watch the account creation video" target="_blank">How to create a SHIRP account (video)</a></li>
+</ul></div><input type="hidden" name="form_build_id" id="form-2f1a6aa4d113c5b3e79960983ab25021" value="form-2f1a6aa4d113c5b3e79960983ab25021"  />
+<input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />
+
+</div></form>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+        </div></div> <!-- /#sidebar-left-inner, /#sidebar-left -->
+      <!--
+      -->
+
+      <div id="content"><div id="content-inner">
+
+
+        
+                
+
+        <div id="content-area">
+          <div id="node-169" class="node node-type-page"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+    <div id="left-main">
+<div id="left-top" name="findArticle">
+<h1 class="block-heading">Resource Links</h1>
+<div class="block-content">
+<h2><a class="head-link" target="_self" href="/Databases" title="Databases">Complete List of Databases/Point of Care Tools</a></h2>
+<p class="front-block">If you want to find articles about a topic, use one of our journal databases to search for your topic.</p>
+<h2><a class="head-link" target="_self" href="/solrSFX/journal_article" title="Journal search">Complete List of Journal Titles</a></h2>
+<p class="front-block">If you already know which journal your article is in, or you want to see what journals we subscribe to, check our journal list.</p>
+<h2><a class="head-link" target="_self" href="/solrSFX/citation_linker" title="Citation linker">Do you know the citation information for your article?</a></h2>
+<p class="front-block">If you have the citation information for an article you can search for it using our citation linker. Note that not all journals support article level linking.</p>
+<h2><a class="head-link" target="_self" href="/Request an Article" title="Request an Article">Request an Article</a></h2>
+<p class="front-block">If we don't have a subscription to the journal that you need to access a specific article, use our Request an article form to place a request for the article.</p>
+</div>
+</div>
+
+<div id="left-top" name="findArticle">
+<h1 class="block-heading">Health Canada News</h1>
+<div class="block-content">
+</div>
+</div>
+
+
+</div>
+<div id="right-main">
+<div id="left-top" name="findBook">
+<h1 class="block-heading">Look for a Book</h1>
+<div class="block-content">
+<p>We currently have four searchable book collections as well as a number of stand alone book titles.  Check them out in our <a class="head-link" target="_self" href="https://www.shirp.ca/solrSFX/books" title="Books">list of books</a>.</p>
+</div>
+</div>
+<div id="left-top" name="shirpNews">
+<h1 class="block-heading">SHIRP News</h1>
+<div class="block-content">
+<div class="view view-whatsnew view-id-whatsnew view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/node/593">RxFiles+ App - offsite users</a></span>
+  </div>
+  
+  <div class="views-field-body">
+                <div class="field-content"><p>RxFiles+ app is not currently available to install from offsite (using your...</div>
+  </div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/node/592">Rehabilitation Reference Center - update</a></span>
+  </div>
+  
+  <div class="views-field-body">
+                <div class="field-content"><p>If you are accessing Rehabilitation Reference Center from SHIRP, and are...</div>
+  </div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/node/591">RxFiles app - Update for SHIRP users</a></span>
+  </div>
+  
+  <div class="views-field-body">
+                <div class="field-content"><p>We are advised by RxFiles that those logging into SHIRP from home or private...</div>
+  </div>
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/node/590">New app available for RxFiles+PLUS</a></span>
+  </div>
+  
+  <div class="views-field-body">
+                <div class="field-content"><p>Our friends at RxFiles have developed a new version of its RxFiles app (...</div>
+  </div>
+  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/node/589">SHIRP Annual Report 2014-2015</a></span>
+  </div>
+  
+  <div class="views-field-body">
+                <div class="field-content"><p>The SHIRP Annual Report for 2014-2015 is now available on the About SHIRP...</div>
+  </div>
+  </div>
+    </div>
+  
+      <div class="item-list"><ul class="pager"><li class="pager-previous first">&nbsp;</li>
+<li class="pager-current">1 of 38</li>
+<li class="pager-next last"><a href="/node/169?page=1" class="active">››</a></li>
+</ul></div>  
+  
+  
+  
+  
+</div> </div>
+</div>
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+        </div>
+
+        
+        
+      </div></div> <!-- /#content-inner, /#content -->
+
+
+
+
+    </div></div> <!-- /#main-inner, /#main -->
+
+          <div id="footer"><div id="footer-inner" class="region region-footer">
+
+                  <div id="footer-message">SHIRP 2014</div>
+        
+        
+      </div></div> <!-- /#footer-inner, /#footer -->
+    
+  </div></div> <!-- /#page-inner, /#page -->
+
+  
+  
+</body>
+</html>

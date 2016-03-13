@@ -1,0 +1,1297 @@
+
+
+
+
+
+
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+<!--conestoga scripts and constants -->
+
+
+
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
+    <meta name="description" content="Conestoga College is a leading Canadian Institute of Technology and Advanced Learning" />
+    <meta name="keywords" content="Conestoga College Institute of Technology and Advanced Learning" />
+    <meta name="viewport" content="width=device-width, user-scalable = yes">
+    <title>Library Resource Centre | Conestoga College</title>
+	
+	<!--styles-->
+    <link rel="stylesheet" media="screen" href="/CssManager.css?groups=main,mobile,blogs" />
+    <link rel="stylesheet" media="print" href="https://assets2.conestogac.on.ca/styles/corporate/global/print/1.1.0.css" />
+	
+    
+<!--rss-->
+      <link rel="alternate" type="application/rss+xml" title="Conestoga College News" href="http://blogs1.conestogac.on.ca/news/index.xml" />
+      <link rel="alternate" type="application/rss+xml" title="Conestoga College Events" href="http://blogs1.conestogac.on.ca/events/index.xml"  />
+    
+<!--[if lt IE 9]>
+	<script src="https://assets2.conestogac.on.ca/scripts/IE9/2.1.0.js"></script>
+	<![endif]-->
+	
+<!--jquery core-->
+<script src="https://assets2.conestogac.on.ca/scripts/jQuery/1.9.1.js"></script>
+
+<!--custom scripts etc. possibly extra stylesheets too -->
+		<script src="https://assets2.conestogac.on.ca/scripts/JSON/2.0.0.js"></script>
+<script src="https://assets2.conestogac.on.ca/scripts/RequestHelper/1.2.1.js"></script>
+<script src="https://assets2.conestogac.on.ca/scripts/requestService/1.4.0.js"></script>
+<script src="https://assets2.conestogac.on.ca/scripts/Validator/1.0.2.js"></script>
+
+<script src="https://assets2.conestogac.on.ca/scripts/pickadate/3.5.3/picker.js"></script>
+<script src="https://assets2.conestogac.on.ca/scripts/pickadate/3.5.3/picker.date.js"></script>
+<script src="https://assets2.conestogac.on.ca/scripts/pickadate/3.5.3/picker.time.js"></script>
+
+
+<link rel="stylesheet" href="https://assets2.conestogac.on.ca/styles/pickadate/3.5.3/default.css">
+<link rel="stylesheet" href="https://assets2.conestogac.on.ca/styles/pickadate/3.5.3/default.date.css">
+<link rel="stylesheet" href="https://assets2.conestogac.on.ca/styles/pickadate/3.5.3/default.time.css">
+
+<link rel="stylesheet" href="https://assets2.conestogac.on.ca/styles/corporate/lrc/tabber.1.1.css" TYPE="text/css" MEDIA="screen">
+<style type="text/css">
+.rightcol h3{
+   font-size:1.1em; line-height:1.6em !important;
+   padding: 0 !important;
+   margin: 5px 0 0 !important;
+   }
+.space_saver{
+   padding-top: 0 !important;
+   margin-top: 0 !important;
+}
+
+.button
+{
+  display: block;
+  width: 206px;
+  height: 81px;
+
+  border:1px solid #d8d8d6;
+  padding:1px;
+  margin:4px;
+
+}
+
+.AskOnPadding{
+  padding-left: 30px;
+  width: 100px;
+}
+
+
+.button span
+{
+  position: absolute;
+  top: -999em;
+}
+.blockbutton{
+   height:18px; /* top padding in the base style */
+   width:190px; /*8px left and right padding from the base style */
+   font-size:11px;
+}
+#annualReview {
+   background: url(/lrc/images/buttons/annual_review_button.jpg) no-repeat 2px 24px;
+}
+#briefcase {
+   background: url(/lrc/images/buttons/briefcase_button.jpg)  no-repeat 2px 24px;
+}
+#debriefing {
+   background: url(/lrc/images/buttons/debriefing_button.jpg) no-repeat 2px 24px;
+}
+#ece_link {
+   background: url(/lrc/images/buttons/ece_link_button.jpg)   no-repeat 2px 24px;
+}
+#eng_edge {
+   background: url(/lrc/images/buttons/eng_edge_button.jpg)   no-repeat 2px 24px;
+}
+#infusion {
+   background: url(/lrc/images/buttons/infusion_button.jpg)   no-repeat 2px 24px;
+}
+#it {
+   background: url(/lrc/images/buttons/it_button.jpg)   no-repeat 2px 24px;
+}
+#library_planning {
+   background: url(/lrc/images/buttons/library_planning_button.jpg) no-repeat 2px 24px;
+}
+#trades {
+   background: url(/lrc/images/buttons/trades_button.jpg)  no-repeat 2px 24px;
+}
+#annualReview:hover, #briefcase:hover, #debriefing:hover,
+#ece_link:hover, #eng_edge:hover, #infusion:hover, #it:hover,
+#library_planning:hover, #trades:hover {
+   background-position: 2px -59px;
+}
+
+            fieldset.radioGroup {
+                margin-bottom: 1px;
+                padding: 0;
+                border: 0;
+                background-color: #F0F0F0;
+            }
+
+            fieldset.radioGroup legend {
+                font-family: 'OpenSansRegular', Arial, Helvetica, sans-serif;
+                background-color: #F0F0F0;
+                text-align: right;
+                vertical-align: text-top;
+                line-height: 19px;
+                padding: 10px 10px 10px 6px;
+                width: 28%;
+                margin: 0;
+                float: left;
+                height: auto;
+                color: black !important;
+            }
+
+          .hiddenLabel {
+                display: inline-block;
+                width: 1px;
+                height: 1px;
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  figure img {
+    display: block;
+    height: auto;
+    margin: 0px;
+    text-align: left;
+  }
+  .photo {
+    float: left;
+    min-height: 1px;
+    background-color: transparent;
+    margin-right: 2%;
+  }
+
+  .bio {
+    float: left;
+    width: 69%;
+    min-height: 1px;
+  }
+
+  .photo-bio {
+    margin-bottom: 3%;
+  }
+  
+  ul.cc-sidenavigation li ul.deep li{padding-left:20px;}
+
+ .visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+</style>
+
+		
+<!--folderheader!-->
+
+
+
+<!--google tracking-->
+<!--updating to newer version of google analytics nov 17, 2015 TF-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-734715-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+   
+
+   
+
+   
+
+   
+
+<nav class="sr-only skiplinks">
+	<ul>
+		<li><a href="#maincontent">Skip to main content</a></li>
+		<li><a href="#skip-navigation">Skip to navigation</a></li>
+		<li><a href="#searchblock">Skip to search</a></li>
+		<li><a href="#fatfooter">Skip to contact information</a></li>
+	</ul>
+</nav>
+<header>
+<div class="innerwrapper">
+    <h1 id="logoblock">
+        <a href="/index.jsp">
+        <img src="https://assets.conestogac.on.ca/assets/images/conestoga-logo.jpg" alt="Conestoga College Logo - Home Page" title="Link to home"/>
+        </a>
+    </h1>
+    <div id="searchblock">
+				<form name="gs" method="get" action="/search">
+                  <label class="hidden" id="sitesearchlabel" for="sitesearch">Site Search</label>
+                  <input id="sitesearch" type="text"  class="searchbox" name="query" maxlength="256" value="Search" onFocus="this.value=''" />
+                  <input type="submit" value="Search" class="searchbutton"/>
+                </form>
+    <ul id="toplinks">
+    <li><a href="/about/contact/directorysearch.jsp">Directory</a> </li>
+    <li><span class="spacer-doubleslash"></span> <a href="/about/emails.jsp">Email</a></li>
+    <li><span class="spacer-doubleslash"></span> <a href="https://studentportal.conestogac.on.ca/StudentPortal/Default.aspx">Student Portal</a></li>
+    </ul>
+    </div><!--end searchblock-->     
+    </div>
+</header>
+	<nav id="skip-navigation">     <div class="innerwrapper">   
+	<h2 class="sr-only">Navigation</h2>
+ 	<ul id="topnav">
+        <li id="firstitem"><a href="#">About Conestoga</a>
+        <div class="dropdown_3column">
+            <div class="col_1">
+                <h3>Corporate Information</h3>
+                <ul>
+                  <li><a href="/about/welcome.jsp">President&rsquo;s Welcome</a></li>
+                  <li><a href="/about/profilestats.jsp">College Profile &amp; Stats</a></li> 
+                  <li><a href="/accessibility-at-conestoga/">Accessibility at Conestoga</a></li>
+                  <li><a href="/research/">Applied Research</a></li>
+                  <li><a href="/about/administration.jsp">College Administration</a></li>
+                  <li><a href="http://blogs1.conestogac.on.ca/events/index.php">College Events</a></li>
+                  <li><a href="http://blogs1.conestogac.on.ca/news/index.php">News</a></li> 
+                  <li><a href="/about/reports/">College Reports</a></li>
+                  <li><a href="/giving/">Giving to Conestoga</a></li>
+                  <li><a href="/about/governance.jsp">Governance</a></li>
+                  <li><a href="/new-canadians/">New to Canada</a></li>
+                  <li><a href="/policies/">Policies &amp; Procedures</a></li>
+                  <li><a href="/quality-matters/">Quality Matters</a></li>
+                  <li><a href="/polytechnic/">Polytechnic Advantage</a></li>
+                  <li><a href="/purchasing-services/">Tenders &amp; Proposals</a><br />
+                  </li>
+                </ul>
+                </div>
+                <div class="col_1">
+                <h3>Campus Info &amp; Maps</h3>
+                <ul>
+                  <li><a href="/campuses/doon/">Doon  (Kitchener) Campus</a></li>
+                  <li><a href="/campuses/cambridge/">Cambridge (Fountain St.) Campus</a></li>
+                  <li><a href="/campuses/guelph/">Guelph  Campus</a></li>
+                  <li><a href="/campuses/waterloo/">Waterloo  Campus</a></li>
+                  <li><a href="/campuses/brantford">Brantford</a></li>
+                  <li><a href="/campuses/downtown/">Cambridge  Downtown (Main St.)</a></li>
+                  <li><a href="/campuses/ingersoll/">Ingersoll  Skills Training Centre</a></li>
+                  <li><a href="/campuses/stratford/">Stratford</a><br />
+                  </li>
+                </ul>
+                <h3>Careers at Conestoga</h3>
+                <ul>
+                  <li><a href="https://employment.conestogac.on.ca/">Employment Opportunities</a></li>
+ 		  <li><a  href="/employment/">Recruitment &amp; Hiring</a></li>
+                </ul>
+              </div>
+	<div class="col_1">                
+                <h3>Campus Facilities</h3>
+                <ul>
+                  <li><a href="/athletics/">Athletics</a></li>
+                  <li><a href="/about/facilities/bloom.jsp">bloom.</a></li>
+                  <li><a href="/bookstore/">Bookstore</a></li>
+                  <li><a href="/about/facilities/childcarecentre.jsp">Childcare Centres</a></li>
+                  <li style="height:34px;"><a href="/about/facilities/conference.jsp">Conference Services<br />&amp; Accommodations</a></li>
+                  <li><a href="/facilities-management/">Facilities Management</a></li>
+                  <li><a href="/lrc/">Library (LRC)</a></li>
+                  <li><a href="/residence/">Residence</a></li>
+                  <li><a href="/woodworking/">Woodworking</a></li>
+                </ul>
+                <h3>Contact Us</h3>
+                <ul>
+                  <li><a href="/about/contact/">Campuses &amp; Departments</a></li>       
+                  <li><a href="/about/contact/directorysearch.jsp">College  Directory</a></li>
+                  <li><a href="/socialmedia/index.jsp">Social Media Directory</a></li>
+                  <li><a href="/about/contact/askme.jsp">Ask Me - Ask a Question</a></li>
+                  <li><a href="/about/contact/webfeedback.jsp">Website Feedback</a></li>
+                  <li><a href="/accessibility-at-conestoga/survey.jsp">Accessibility Feedback</a></li>
+                  <li><a href="/about/contact/customerfeedback.jsp">Customer Service Feedback</a></li>
+                  <li><a href="/visit-us/">Visit Us</a></li>
+                </ul>
+            </div>
+          
+               
+            
+		</div>		
+        </li><!-- about-->
+        <li id="seconditem"><a href="#">Programs &amp; Courses</a>
+        <div class="dropdown_3column">
+        <div class="col_1">
+          <h3>Full-time</h3>
+          <ul>
+            <li><a href="/fulltime/">Full-time Programs</a></li>
+            <li><a href="/fulltime/acceleratedprograms.jsp">Accelerated Programs</a></li>
+            <li><a href="/fulltime/programsearchresults.jsp?SearchKeyword=co-op">Co-op Programs</a></li>
+            <li><a href="/degrees/">Degree Programs</a></li>
+            <li><a href="/graduate-certificates/">Graduate Certificate Programs</a></li>
+            <li><a href="/international/programs/program-list.jsp">International Students</a></li>
+            <li><a href="/academics/open/">Open Programs</a></li>
+            <li><a href="/caa/careercentre/fundedprograms.jsp">Second Career</a></li>
+            <li><a href="/trades/">Trades &amp; Apprenticeship</a></li>
+          </ul>
+          <h3>Educational Pathways</h3>
+          <ul>
+            <li><a href="/caa/upgrading/">Academic Upgrading</a></li>
+            <li><a href="/credit-transfer/">Credit Transfer</a></li>
+          </ul>
+          </div>
+        <div class="col_1">          
+          <h3>Part-time</h3>
+          <ul>
+            <li><a href="/continuing-education/programs/">Part-time Programs</a></li>
+            <li><a href="/caa/upgrading/">Academic Upgrading</a></li>
+            <li><a href="/continuing-education/">Continuing Education</a></li>
+            <li><a href="/distance-learning/">Distance Learning</a></li>
+            <li><a href="/trades/">Trades  &amp; Apprenticeship</a></li>
+          </ul>
+          <h3>Academic/Employer Services</h3>
+          <ul>
+            <li><a href="/caa/careercentre/">Conestoga Career Centre</a></li>
+            <li><a href="/c4e/">Centre for Entrepreneurship (C4E)</a></li>
+            <li><a href="/corporate-training/">Corporate Training</a></li>
+	    <li><a href="/employers/">Employers</a></li>
+            <li><a href="http://www.ieltscanada.ca/">IELTS</a></li>
+            <li><a href="/testing-services/">Testing &amp; Assessments</a></li>
+          </ul>
+          </div>
+        <div class="col_1">          
+          <h3>Schools</h3>
+          <ul>
+            <li><a href="/business/">Business &amp; Hospitality</a></li>
+            <li><a href="/caa/">Career &amp; Academic Access</a></li>
+            <li><a href="/engineering/">Engineering &amp; IT</a></li>
+            <li style="height:34px;"><a href="/health/">Health &amp; Life Sciences and<br />
+              Community Services</a></li>
+            <li><a href="/language/">Language &amp; Communications Studies</a></li>
+            <li><a href="/liberal/">Liberal Studies</a></li>
+            <li><a href="/media/">Media &amp; Design</a></li>
+            
+            <li><a href="/trades/">Trades &amp; Apprenticeship</a></li>
+          </ul>
+          </div>
+        </div>
+        </li><!-- programs-->
+        
+        <li id="thirditem"><a href="#">Admissions</a>
+        <div class="dropdown_3column">
+        <div class="col_1">
+          <h3>Applying to Conestoga</h3>
+          <ul>
+            <li><a href="/admissions/howtoapply.jsp">How to Apply</a></li>
+            <li><a href="/admissions/admission/appcycledate.jsp">Important Application Dates</a></li>
+            <li><a href="/admissions/admission/admisreq_acadstrength.jsp">Admission Information</a></li>
+            <li><a href="/international/">International Students</a></li>
+            <li><a href="/testing-services/">Testing &amp; Assessments</a></li>
+
+          </ul>
+          <h3>Accepted...Now What?</h3>
+          <ul>
+            <li><a href="/admissions/admission/admisreq_acadstrength.jsp#confirm">Confirm your Acceptance </a></li>
+            <li><a href="/admissions/tuitionfee/payment.jsp">How to Pay your Fees</a></li>
+            <li><a href="/credit-transfer/">Credit Transfer</a></li>
+            <li><a href="/admissions/records/academicdates.jsp">Academic Dates</a></li>
+            <li><a href="/admissions/tuitionfee/tuitionfee.jsp#verification">Verification Letter</a></li>
+            <li><a href="/visit-us/">Campus Tours</a></li>
+            <li><a href="/student-housing/">Student Housing</a></li>
+            <li><a href="/orientation/">Orientation</a></li>
+            <li><a href="/admissions/studentguide.jsp">Student Guide</a></li>
+            <li><a href="/new-students/checklist.jsp">New Student Checklist</a></li>
+          </ul>
+          </div>
+        <div class="col_1">          
+          <h3>Fees &amp; Payment</h3>
+          <ul>
+            <li><a href="/admissions/tuitionfee/tuitionfee.jsp">Tuition &amp; Fees</a></li>
+            <li><a href="/continuing-education/financialinfo.jsp">Continuing Education Fees</a></li>
+            <li><a href="/admissions/tuitionfee/payment.jsp">Paying your Fees</a></li>
+            <li><a href="/admissions/tuitionfee/refunds.jsp">Refunds &amp; Withdrawals</a></li>
+          </ul>
+          <h3>Student Financial Services</h3>
+          <ul>
+            <li><a href="/financial-services/">Student Financial Services Home</a></li>
+            <li><a href="/financial-services/osap.jsp">OSAP</a></li>
+            <li><a href="/financial-services/awards/">Awards, Bursary &amp; Scholarships</a><br />
+            </li>
+          </ul>
+          <h3>Registration</h3>
+          <ul>
+          	<li><a href="/admissions/records/academicdates.jsp">Academic Dates</a></li>
+            <li><a href="/continuing-education/how2reg.jsp">Continuing Education Registration</a></li>
+            <li><a href="/admissions/forms/">Student Forms</a></li>
+            <li><a href="/admissions/records/registration.jsp">Registration Information</a></li>
+            <li><a href="/admissions/records/achievement.jsp">Achievement</a></li>
+            <li><a href="/admissions/rightsresponse/">Rights &amp; Responsibilities</a></li>
+            <li><a href="/admissions/records/t2202afaq.jsp">Income Tax Information</a></li>
+          </ul>
+          </div>
+          <div class="col_1">
+          <h3>Convocation</h3>
+          <ul>
+            <li><a href="/convocation/">Upcoming Ceremonies</a></li>
+          </ul>
+          <h3>Contact Us</h3>
+          <ul>
+            <li><a href="/admissions/">Admissions</a></li>
+            <li><a href="/continuing-education/">Continuing Education</a></li>
+            <li><a href="/admissions/records/">Student Records</a></li>
+            <li><a href="/financial-services/">Financial Services &amp; Awards</a></li>
+            <li><a href="/credit-transfer/contact.jsp">Credit Transfer</a></li>
+            <li><a href="/about/contact/askme.jsp">Ask Me a Question</a></li>
+          </ul>
+          </div>
+        </div>
+        </li><!-- admissions-->
+        <li id="fourthitem"><a href="#">Campus Life</a>
+         <div class="dropdown_3column">
+         <div class="col_1">
+           <h3>Athletics</h3>
+           <ul>
+             <li><a href="/athletics/">Athletics Home Page</a></li>
+             <li><a href="/athletics/regforms.jsp">Registration Procedures / Forms</a></li>
+             <li><a href="/athletics/sports/varsity/">Varsity</a></li>
+             <li><a href="/athletics/sports/intramurals/">Intramurals</a></li>
+             <li><a href="/athletics/sports/extramurals/">Extramurals</a></li>
+             <li><a href="/athletics/offerings/">Rec Centre Offerings</a></li>
+             <li><a href="/athletics/membership/">Membership</a></li>
+             <li><a href="/athletics/facilities/fitness.jsp">Facilities</a></li>
+             <li><a href="/athletics/rental/">Rental Information</a></li>
+           </ul>
+           </div>
+           <div class="col_1">
+           <h3>Student Life</h3>
+           <ul>
+             <li><a href="/student-life/">Student Life Home Page</a></li>
+             <li><a href="/orientation/">Orientation</a></li>
+             <li><a href="/ccr/">Co-Curricular Record (CCR)</a></li>   
+             <li><a href="/student-life/oncampus/">Volunteer on Campus</a></li>
+             <li><a href="/respect/">Respect at Conestoga</a></li>
+             <li><a href="/leadership/">Connect Leadership Workshops</a></li>
+             <li><a href="/about/facilities/foodservices.jsp">Food Services</a></li>
+             <li><a href="/student-services/csi.jsp#shuttle">CSI - Shuttle Service</a></li>
+             <li><a href="/student-services/csi.jsp">CSI – Student Association</a></li>
+           </ul>
+           </div>
+         <div class="col_1">           
+           <h3>Residence  &amp; Housing</h3>
+           <ul>
+             <li><a href="/residence/">Residence</a></li>
+             <li><a href="/student-housing/offcampus.jsp">Off-campus Housing</a></li>
+           </ul>
+           <h3>Campus Safety</h3>
+           <ul>
+             <li><a href="/security-services/">Security Services</a></li>
+	     <li><a href="/occupational-safety/">Occupational Safety</a></li>
+             <li><a href="/security-services/walksafe.jsp">Walksafe</a></li>
+           </ul>
+         </div>
+	</div>
+        </li>
+        <li id="fifthitem"><a href="#">Student Services</a>
+        <div class="dropdown_3column">
+        <div class="col_1">
+          <h3>Student Support</h3>
+          <ul>
+            <li><a href="/aboriginal-services/">Aboriginal Services</a></li>
+            <li><a href="/accessibility-services/">Accessibility Services</a></li>
+            <li><a href="/c4e/">Centre for Entrepreneurship (C4E)</a></li>
+            <li><a href="/about/facilities/childcarecentre.jsp">Child Care Centre</a></li>
+            <li><a href="/career-services/">Co-op &amp; Career Services</a></li>
+            <li><a href="/counselling-services/">Counselling Services</a></li>
+            <li><a href="/first-generation/">First Generation</a></li>
+            <li><a href="/health-services/">Health Services</a></li>
+            <li><a href="/international/">International Student Services</a></li>
+            <li><a href="/career-services/students.jsp">Jobs on Campus</a></li>
+            <li><a href="/orientation/">Orientation</a></li>
+          </ul>
+          </div>
+          <div class="col_1">
+          <h3>Academics &amp; Learning</h3>
+          <ul>
+            <li><a href="/bookstore/">Bookstore</a></li>
+            <li><a href="https://conestogaonline.ca/Login.aspx">eConestoga</a></li>
+            <li><a href="/learning-commons/">Learning Commons</a></li>
+            <li><a href="/lrc/">Library (LRC)</a></li>
+          </ul>
+          <h3>Campus Services</h3>
+          <ul>
+            <li><a href="/student-services/csi.jsp#shuttle">Campus Shuttle (CSI)</a></li>
+            <li><a href="/current-students/lockers.jsp">Locker Selection</a></li>
+	    <li><a href="/onecard/">ONE Card</a></li>            
+	    <li><a href="/about/facilities/printingsvc.jsp">Printing Services</a></li>
+            <li><a href="/parking-services/alternatives.jsp">Public Transit</a></li>
+            <li><a href="/parking-services/">Parking Services</a></li>
+          </ul>
+          </div>
+          <div class="col_1">
+          <h3>Computer Services</h3>
+          <ul>
+            <li><a href="https://myconestoga.ca/web/it-service-desk/labs">Computer Lab Info (login required)</a></li>
+            <li><a href="https://myconestoga.ca/web/it-service-desk">IT Service Desk</a></li>
+            <li><a href="/about/emails.jsp">Email Login</a></li>
+            <li><a href="https://studentportal.conestogac.on.ca/StudentPortal/Default.aspx">Student Portal</a></li>
+          </ul>
+          <h3>Graduating Students</h3>
+          <ul>
+            <li><a href="/convocation/">Convocation</a></li>
+            <li><a href="/admissions/records/achievement.jsp#transcript">Request a Transcript</a></li>
+            <li><a href="/career-services/">Career Services</a></li>
+            <li><a href="/continuing-education/">Continuing Education</a></li>
+            <li><a href="/credit-transfer/">Credit Transfer</a></li>
+            <li><a href="/alumni/">Alumni Services</a></li>
+          </ul>
+          </div>
+        </div>
+        </li><!-- studentservices-->
+        
+        <li class="menu_right"><a href="#">Continuing Education</a>
+        <div class="dropdown_2column align_right">
+            <div class="col_1">
+               <h3>Continuing Education (CE)</h3>
+               <ul>
+                  <li><a href="/continuing-education/">CE Home Page</a></li>
+                  <li><a href="/continuing-education/survey.jsp">Provincial Survey Results</a></li>
+                  <li><a href="/continuing-education/policies.jsp">Forms &amp; Policies</a></li>
+                </ul>
+                <h3>Programs &amp; Courses (Part-time)</h3>
+                <ul>
+                  <li><a href="/continuing-education/">Search all Part-time Studies (CE)</a></li>
+                  <li><a href="/distance-learning/">Distance Learning</a></li>
+                </ul>
+            </div>
+            <div class="col_1">
+                <h3>Registration</h3>
+                <ul>
+                  <li><a href="/continuing-education/how2reg.jsp">How to Register</a></li>
+                  <li><a href="/continuing-education/financialinfo.jsp">Fees &amp; Information</a></li>
+                  <li><a href="/continuing-education/academicinfo.jsp">Academic Information</a></li>
+                </ul>
+                <h3>Contact CE</h3>
+                <ul>
+                  <li><a href="/continuing-education/programcontacts.jsp">Program Contacts</a></li>
+                  <li><a href="/continuing-education/contact.jsp">Contact &amp; Locations</a></li>
+                </ul>
+                </div>
+            </div>
+        </li><!-- coned-->
+        
+       
+        
+      </ul>
+      </div><!--fnish inner wrapper-->
+</nav>
+        <div class="pagebanner innerwrapper">
+        <img id="banner" src="https://assets2.conestogac.on.ca/images/corporate/global/banners-top/lrc.jpg" alt="lrc" title="lrc"/>
+        </div>
+
+        <div id="content-panel" class="innerwrapper">
+ <!-- this would be where we start the content area -->
+
+
+<div id="stickySide" class="leftcol"> 
+	<nav id="sidemenu"><h1>Library (LRC)</h1>
+<ul class="cc-sidenavigation">
+
+<li><a href="/lrc/index.jsp">Welcome</a>
+	<ul>
+		<li><a href="http://exploreguides.conestogac.on.ca/library_quality_survey" target="_blank">Library Quality Survey</a></li>
+		<li><a href="/lrc/publications.jsp">LRC Publications</a></li>														
+		<li><a href="/lrc/librarypolicies.jsp">Library Policies</a></li>											
+	</ul>
+
+	</li>
+	
+	<li><a href="/lrc/resources/">Resources</a>
+	<ul>
+		<li><a href="http://conestoga.ocls.ca/">Library Catalogue</a></li>
+        <li><a href="/lrc/resources/ebook.jsp">E-Books</a></li>
+		<li><a href="http://exploreguides.conestogac.on.ca/az.php">Articles in Databases</a></li>
+		<li><a href="http://ra.ocls.ca/ra/login.aspx?inst=conestoga&amp;url=https://atoz.ebsco.com/Titles/11973" target="_blank">Journals by Title</a></li>
+        <li><a href="http://exploreguides.conestogac.on.ca/fiction" target="_blank">Popular Fiction and Films</a></li>
+        <li><a href="//exploreguides.conestogac.on.ca/archives">Archives</a></li>
+	</ul>
+	</li>
+	
+	<li><a href="http://exploreguides.conestogac.on.ca/" target="_blank">Research Help</a></li>
+	
+	<li><a href="/lrc/borrowing/borrowing.jsp">Borrowing</a>
+	<ul>
+		<li><a href="/lrc/borrowing/itemrenewal.jsp">Renewals</a></li>
+		<li><a href="/lrc/borrowing/interlibloan.jsp">Document Delivery</a></li>
+		<li><a href="/lrc/borrowing/satellitecampuses.jsp">Satellite Campuses</a></li>
+		<li><a href="/lrc/borrowing/distancelearning.jsp">Distance Learning</a></li>
+	</ul>
+	</li>
+	
+	<li><a href="/lrc/services/">Library Services</a>
+	<ul>		
+		<li><a href="/lrc/services/copyright.jsp">Copyright</a></li>
+        <li><a href="/lrc/services/meetingroom.jsp">Meeting Rooms</a></li>
+        <li><a href="http://exploreguides.conestogac.on.ca/accessibility" target="_blank">Library Accessibility</a></li>
+	</ul>
+	</li>	
+	
+	<li><a href="/lrc/media/">Media Services</a>
+	<ul>
+		<li><a href="http://exploreguides.conestogac.on.ca/media" target="_blank">Media Resources</a></li>
+        <li><a href="/lrc/media/accessiblemedia.jsp">Accessible Media</a></li>
+		<li><a href="/lrc/media/mediarequestform.jsp">Media Request Form</a></li>
+										
+	</ul>
+	</li>	
+	
+	<li>
+		<a href="/lrc/faculty/">For Faculty</a>
+	    <ul>
+	    	<li><a href="/lrc/faculty/instructional-support.jsp">Instructional Support</a>
+            <ul class="deep">
+              <li><a href="/lrc/faculty/workshops.jsp">Workshops</a></li>
+              <li><a href="/lrc/faculty/guides-and-tutorials.jsp">Guides and Tutorials</a></li>
+              <li><a href="/lrc/faculty/assignments.jsp">Assignments</a></li>
+              <li><a href="/lrc/faculty/program-development.jsp">Program Development</a></li>
+            </ul>
+            </li>
+			<li><a href="/lrc/faculty/econestoga-resource.jsp">E-Resources for eConestoga</a></li>
+			<li><a href="/lrc/faculty/researchservice.jsp">Research Service</a></li>
+			<li><a href="/lrc/faculty/reserves.jsp">Reserves</a></li>
+			<li><a href="/lrc/faculty/recommendresource.jsp">Recommend a Resource</a></li>
+	    </ul>
+    </li>
+   
+	<li><a href="/lrc/alumni.jsp">For Alumni</a></li>
+    
+    <li>
+    	<a href="/lrc/contact/">Contact Us</a>
+	    <ul>
+		    <li><a href="/lrc/contact/hours.jsp">Hours</a></li>
+		    <li><a href="/lrc/contact/staff.jsp">Staff Directory</a></li>
+		    <li><a href="/lrc/contact/suggestionbox.jsp">Suggestion Box</a></li>
+		    <li><a href="/lrc/contact/askon.jsp">askON</a></li>
+	    </ul>
+    </li>
+</ul>
+</nav>
+     
+</div>
+<div id="maincontent" class="maincol">
+    
+<h1>Library Resource Centre</h1>
+<p>The Library advances and enriches student learning, contributes to teaching excellence and supports research success at Conestoga.</p>
+
+<p style="margin-bottom: 1.67em;"><strong>
+Not on Campus?</strong> Your <a href="/lrc/pinnumbers.jsp">PIN</a> for online access is the last 4 digits of your student/staff number.</p>
+<div class="tabber">
+    <div class="tabbertab">
+		<h2>Discover</h2>
+		<!--
+		==========================================================================================
+							START: EDS Search Box Functionality
+		==========================================================================================
+		-->
+		<!--BEGIN: Javascript to handle elements related to form processing ================== -->
+		<script type="text/javascript">
+		//<![CDATA[
+		function fixURL(myForm){
+			var url = "http://search.ebscohost.com/login.aspx?";
+			$(myForm).find("input,select").each(function(){
+				url += "&"+$(this).attr("name")+"="+$(this).val();
+			});
+			url = url.replace(/\&/,'');
+			window.open("http://ra.ocls.ca/ra/login.aspx?inst=conestoga&amp;url="+url,"_blank");
+			return false;
+		}
+		//]]>
+		</script>
+		<script type="text/javascript">
+	   //<![CDATA[
+	   function fixURLJournal(myForm){
+		   var url = "http://atoz.ebsco.com/titles/searchresults/11973?";
+		   $(myForm).find("input,select").each(function(){
+				   url += "&"+$(this).attr("name")+"="+$(this).val();
+		   });
+		   url = url.replace(/\&/,'');
+		   console.log("http://ra.ocls.ca/ra/login.aspx?inst=conestoga&amp;url="+url);
+		   window.open("http://ra.ocls.ca/ra/login.aspx?inst=conestoga&amp;url="+url,"_blank");
+		   return false;
+	   }
+	   //]]>
+	   </script>
+
+		<!-- BEGIN: General Custom Search Box =============================== -->
+        <!-- Inputs for EDS URL structure -->
+		<!--http://ra.ocls.ca/ra/login.aspx?inst=conestoga&url=-->
+		<form action="http://search.ebscohost.com/login.aspx" method="get" target="_blank" onsubmit="ebscoPreProcess(this); return fixURL(this);">
+			<!-- Dropdown menu to prepend the selected value below to the user's search term -->
+			<input name="direct" value="true" type="hidden">
+			<input name="scope" value="site" type="hidden">
+			<input name="site" value="eds-live" type="hidden">
+			<!-- Authentication and Profile Values -->
+			<input name="authtype" value="ip,uid" type="hidden">
+			<input name="custid" value="conest" type="hidden">
+			<input name="groupid" value="main" type="hidden">
+			<input name="profile" value="eds" type="hidden">
+			<!-- Limiter: Full Text -->
+			<input name="cli0" value="FT" type="hidden">
+			<input name="clv0" value="N" type="hidden">
+			<!-- Limiter: Scholarly/Peer-Reviewed -->
+			<input name="cli1" value="RV" type="hidden">
+			<input name="clv1" value="N" type="hidden">
+			<!-- Limiter: Catalog Only -->
+			<input name="cli2" value="FC" type="hidden">
+			<input name="clv2" value="N" type="hidden">
+			<!-- search box and submit button -->
+			<input name="bquery" value="" type="hidden">
+			<p>
+				<label for="discovery_input">Articles, Books, E-books, and More</label>
+				<input name="uquery" id="discovery_input" style="width: 330px" type="text">
+				<input value="Search" type="submit">
+			</p>
+			<!-- Limiter: Full text check box set the above value to Y -->
+			
+            <input name="fulltext_checkbox" id="fulltext_checkbox_all" onclick="limittoFullText(this.form)" type="checkbox">Full-Text (online)
+            <label for="fulltext_checkbox_all" style="display:block; width:0; height:0; overflow:hidden">Full-Text (online)</label>
+			<input type="hidden" name="search_prefix" value="" />
+			<!-- Limiter: Scholarly/Peer-Reviewed check box set the above value to Y -->
+            <a href="http://ra.ocls.ca/ra/login.aspx?inst=conestoga&amp;url=http://search.ebscohost.com/login.aspx?authtype=ip,uid&amp;group=main&amp;profile=eds" target="_blank" style="float:right"><strong>Advanced Search</strong></a>
+        </form>
+    </div>
+	<div class="tabbertab">
+		<h2>Catalogue</h2>
+		<div id="tab2">
+			<form action="http://search.ebscohost.com/login.aspx" method="get" target="_blank" onsubmit="ebscoPreProcess(this); limittoCatalog(this); return fixURL(this);">
+				<input name="direct" value="true" type="hidden">
+				<input name="scope" value="site" type="hidden">
+				<!-- target an EDS profile -->
+				<input name="site" value="eds-live" type="hidden">
+				<input name="profile" value="eds_cat" type="hidden">
+				<!-- Auth type -->
+				<input name="authtype" value="ip,uid" type="hidden">
+				<input name="custid" value="conest" type="hidden">
+				<input name="groupid" value="main" type="hidden">
+			  <!-- Limiter: Full Text -->
+				<input name="cli0" value="FT" type="hidden">
+				<input name="clv0" value="N" type="hidden">
+				<!-- Limiter: Scholarly/Peer-Reviewed -->
+				<input name="cli1" value="RV" type="hidden">
+				<input name="clv1" value="N" type="hidden">
+				<!-- Limiter: Catalog Only -->
+				<input name="cli2" value="FC" type="hidden">
+				<input name="clv2" value="N" type="hidden">
+				<!-- search box and submit button -->
+				<input name="bquery" value="" type="hidden">
+				<p>
+					<label for="catalogue_input">Books, E-Books, DVDs, Streamed Video</label>
+					<input name="uquery" id="catalogue_input" style="width: 238px" type="text">
+					<label for="search_prefix" style="display:block; width:0; height:0; overflow:hidden">Keyword</label>
+                    <select size="1" name="search_prefix" id="search_prefix" style="width: 100px">
+						<option selected="selected" value="">Keyword</option>
+						<option value="TI ">Title</option>
+						<option value="AU ">Author</option>
+					</select>
+					<input value="Search" type="submit">
+				</p>
+                <label for="catalog_only_checkbox" style="display:block; width:0; height:0; overflow:hidden">Catalogue only</label>
+				<input type="checkbox" style="display: none" name="catalog_only_checkbox" id="catalog_only_checkbox" />
+			</form>
+		</div>
+	</div>
+	<div class="tabbertab">
+		<h2>Databases</h2>
+		<div id="tab5">
+        <p>Select individual databases to search for articles, e-books, statistics, standards, and more.</p>
+			<p><strong>Databases By Subject:</strong>
+			<label for="databaseResearch" style="display:block; width:0; height:0; overflow:hidden">Databases By Subject:</label>
+            <select id="databaseResearch" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+				<option value="">Choose a Subject...</option> 
+				<option value="http://exploreguides.conestogac.on.ca/generaldbs">General Research</option>
+				<option value="http://exploreguides.conestogac.on.ca/abeiddbs">Architecture, Built Environment &amp; Interior Design</option> 
+            	<option value="http://exploreguides.conestogac.on.ca/aviation">Aviation</option>
+				<option value="http://exploreguides.conestogac.on.ca/busdbs">Business &amp; Hospitality</option>
+				<option value="http://exploreguides.conestogac.on.ca/careerguide">Career Development</option>
+				<option value="http://exploreguides.conestogac.on.ca/edudbs">Early Childhood &amp; Adult Education</option>
+				<option value="http://exploreguides.conestogac.on.ca/engineeringdbs">Engineering</option>
+            	<option value="http://exploreguides.conestogac.on.ca/engdbs">English Language Studies</option>
+            	<option value="http://exploreguides.conestogac.on.ca/firefightingdbs">Firefighting</option>
+            	<option value="http://exploreguides.conestogac.on.ca/design">Graphic Design</option>
+				<option value="http://exploreguides.conestogac.on.ca/healthdbs">Health</option>
+            	<option value="http://exploreguides.conestogac.on.ca/healthinfodbs">Health Information Science</option>
+            	<option value="http://exploreguides.conestogac.on.ca/healthtechdbs">Health Technology</option>
+				<option value="http://exploreguides.conestogac.on.ca/computingdbs">Information Technology &amp; Computing</option>
+				<option value="http://exploreguides.conestogac.on.ca/lawdbs">Law, Criminal Justice, Paralegals &amp; Policing</option>
+				<option value="http://exploreguides.conestogac.on.ca/mediacommdbs">Media &amp; Communications</option> 
+            	<option value="http://exploreguides.conestogac.on.ca/nursingdbs">Nursing</option>    
+				<option value="http://exploreguides.conestogac.on.ca/psychosocdbs">Psychology &amp; Social Services</option> 
+            	<option value="http://exploreguides.conestogac.on.ca/recreation">Recreation &amp; Leisure</option>
+				<option value="http://exploreguides.conestogac.on.ca/tradesdbs">Trades &amp; Woodworking</option>
+			</select>
+			</p>
+			<p style="padding-bottom: 0px; margin-bottom: 0px;"><a href="http://exploreguides.conestogac.on.ca/az.php">Alphabetical List</a> of all databases. <br/><strong>Databases by Name:</strong></p>
+            <div style="text-align: center;">
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=a">A</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=b">B</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=c">C</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=d">D</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=e">E</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=f">F</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=g">G</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=h">H</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=i">I</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=j">J</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=k">K</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=l">L</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=m">M</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=n">N</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=o">O</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=p">P</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=q">Q</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=r">R</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=s">S</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=t">T</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=u">U</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=v">V</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=w">W</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=x">X</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=y">Y</a>&nbsp;
+				<a href="http://exploreguides.conestogac.on.ca/az.php?a=z">Z</a>&nbsp;
+			</div><br/>
+		</div>
+	</div>
+    <div class="tabbertab">
+		<h2>Journals</h2>
+		<div id="tab4">
+		<form action="http://ra.ocls.ca/ra/login.aspx?inst=conestoga&amp;url=http://atoz.ebsco.com/Titles/11973" method="get" target="_blank" onsubmit="return fixURLJournal(this);" accept-charset="ISO-8859-1" style="font-family:Tahoma; font-size:13px">
+            <p>Search for magazines, newspapers and journals by title. 
+            <br />Example: <i>Harvard Business Review.</i></p>
+			<input type="hidden" name="GetResourcesBy" value="TitleNameSearch">
+
+<label for="Find" class="visuallyhidden">Search Term</label>
+<input type="text" name="Find" size="45" value="" placeholder="Journal Title" id="Find" />
+<input id="searchButton" value="Search" type="submit"/><br/>
+<label for="Contains" style="font-size: 12px" class="visuallyhidden">Contains</label>
+Contains<input type="radio" name="SearchType" id="Contains" value="Contains">
+<label for="Begins" style="font-size: 12px" class="visuallyhidden">Begins With</label>
+Begins with<input type="radio" name="SearchType" id="Begins" value="BeginsWith" CHECKED>
+<label for="Exact" style="font-size: 12px" class="visuallyhidden">Exact Match</label>
+Exact Match<input type="radio" name="SearchType" id="Exact" value="ExactMatch">
+
+</form>
+<br/>
+		</div>
+	</div>
+</div>
+<br/>
+<div class="titlebarfull"><h2>What's New @ the LRC</h2></div>
+	<div id="success-stories">
+    <ul class="RssFeed"><li><a href="http://blogs1.conestogac.on.ca/lrc/2016/03/comm_cafe_doon_march_15-17_22-.php"><div class="inline-link-title">COMM Cafe (Doon: March 15-17 & 22-24)</div><div class="intro-text">Working on your COMM1085 research project? Join us at COMM Cafe. Library staff, writing consultants...</div></a></li><li><a href="http://blogs1.conestogac.on.ca/lrc/2016/02/celebrating_cultural_diversity_6.php"><div class="inline-link-title">Celebrating Cultural Diversity (Feb. 29 - Mar. 4 - Doon)</div><div class="intro-text">Join the Library and the Conestoga community as we celebrate Cultural Diversity Week. Activities in...</div></a></li></ul>	
+    </div>
+</div><!--endmaincol-->
+
+<div class="rightcol">
+    <h2>Library Quick Links</h2>
+		
+			<ul>
+				<li><a href= "http://www.conestogac.on.ca/lrc/contact/hours.jsp">Library Hours</a></li>
+				<li><a href= "http://www.conestogac.on.ca/lrc/pinnumbers.jsp">Get Your PIN</a></li>
+				<li><a href="http://conestogac.libcal.com/rooms.php?i=11397">Room Bookings</a></li>
+				<li><a href= "http://conestoga.ocls.ca/uhtbin/cgisirsi/x/DOON/0/1/488/X">Renew Materials</a></li>
+				<li><a href= "http://exploreguides.conestogac.on.ca/cite">Citing and Referencing</a></li>
+				<li><a href= "http://exploreguides.conestogac.on.ca/accessibility">Accessibility</a></li>
+			</ul>
+				<figure>
+				<a href="http://www.conestogac.on.ca/lrc/contact/askon.jsp"><img class="AskOnPadding" src="https://assets2.conestogac.on.ca/images/corporate/lrc/askon.jpg" alt="Ask On online research help logo"></a> 
+				</figure>
+
+  <div class="social-media">
+	  <h2>Follow the Library</h2>
+    <ul class="navlist"> 
+      <li><a href="https://twitter.com/ConestogaLib" target="_blank"><img src="https://assets2.conestogac.on.ca/images/corporate/global/social/svg/twitter.svg" height="36" width="36" alt="Twitter"></a></li>
+      <li><a href="//www.youtube.com/user/conestogalrc" target="_blank"><img src="https://assets2.conestogac.on.ca/images/corporate/global/social/svg/youtube.svg" height="36" width="36" alt="YouTube"></a></li>
+    </ul>
+  </div>
+		
+<script>
+	tabberAutomatic({});
+</script>
+</div><!--rightcol-->
+</div><!--end of innercontent/wrapper stuff-->
+
+	
+<footer>
+	<div id="fatfooter">
+    	  <div class="innerwrapper">
+   <div class="widecolumn">
+   <h2>Conestoga</h2>
+   <p>299 Doon Valley Drive<br/>Kitchener, Ontario N2G 4M4, Canada<br/>
+   Phone: 519-748-5220<br/>
+   TTY: 1-866-463-4484<br/>
+   Documents are available in an <a href="http://www.conestogac.on.ca/accessibility-at-conestoga/">alternate format</a>
+   </p> 
+   
+   <ul id="chicklets">
+        <li><a href="https://myconestoga.ca" target="_blank"><img width="35" height="35" src="https://assets2.conestogac.on.ca/images/corporate/global/social/mc_large.png" alt="myConestoga Portal" /></a></li>
+        <li><a href="https://www.facebook.com/ConestogaCollege" target="_blank"><img width="35" height="35"  src="https://assets2.conestogac.on.ca/images/corporate/global/social/fb_large.png" alt="Facebook" /></a></li>
+        <li><a href="http://www.twitter.com/ConestogaC" target="_blank"><img width="35" height="35"  src="https://assets2.conestogac.on.ca/images/corporate/global/social/tw_large.png" alt="Twitter" /></a></li>
+        <li><a href="//www.youtube.com/user/conestogapolytechnic" target="_blank"><img width="35" height="35"  src="https://assets2.conestogac.on.ca/images/corporate/global/social/yt_large.png" alt="You tube" /></a></li>
+        <li><a href="http://www.linkedin.com/company/conestoga-college-institute-of-technology-and-advanced-learning" target="_blank"><img width="35" height="35"   src="https://assets2.conestogac.on.ca/images/corporate/global/social/in_large.png" alt="Linked In" /></a></li>      
+        <li><a href="http://www.conestogac.on.ca/about/contact/askme.jsp"><img width="35" height="35"  src="https://assets2.conestogac.on.ca/images/corporate/global/social/ask_large.png" alt="Ask Me" /></a></li>   
+        
+        </ul>
+   </div>
+   <div class="column">
+   <h2>Quick Links for:</h2>
+     
+       <ul>
+<li><a href="/future-students/">Future Students &amp; Parents</a></li>
+<li><a href="/current-students/">Current Students</a></li>
+<li><a href="/international/">International Students</a></li>
+<li><a href="/new-canadians/">New to Canada</a></li>
+<li><a href="/faculty-staff/">Conestoga Employees</a></li>
+<li><a href="/giving/">Giving to Conestoga</a></li>
+<li><a href="/alumni/">Alumni</a></li>
+<li><a href="/employers/">Employers</a></li>
+<li><a href="/employment/">Careers at Conestoga</a></li>
+<li><a href="/caa/careercentre/secondcareer.jsp">Second Career</a></li>
+</ul>
+
+       
+   </div>
+   <div class="column">
+   <h2>Learn More</h2>
+   <ul>
+   <li>   <a href="http://www.conestogac.on.ca/campuses/">Campus Locations</a>
+   <li><a href="http://www.conestogac.on.ca/visit-us/">Visit Us</a></li>
+   <li><a href="http://www.conestogac.on.ca/financial-services/">Student Financial Services</a></li>
+   <li><a href="http://www.conestogac.on.ca/admissions/howtoapply.jsp">How to Apply</a></li>
+   <li><a href="http://www.conestogac.on.ca/admissions/records/academicdates.jsp">Important Dates</a></li>
+   <li><a href="http://www.conestogac.on.ca/parking-services/">Parking</a></li>
+   <li><a href="http://www.conestogac.on.ca/fulltime/">Programs &amp; Courses</a></li>
+   <li><a href="http://www.conestogac.on.ca/residence/">Residence Life &amp; Housing</a></li>
+   <li><a href="http://www.conestogac.on.ca/accessibility-at-conestoga/">Accessibility at Conestoga</a></li>
+   <li><a href="http://blogs1.conestogac.on.ca/announcement/2012/02/emergency_closure_information.php">Emergency Closure Information</a></li>
+   <li><a href="http://www.conestogac.on.ca/accessibility-at-conestoga/serviceupdates.jsp">College Service Updates</a></li>   
+   </ul>
+   </div>
+          	
+   </div>
+
+    </div>
+    <div id="subfooter">
+<div class="innerwrapper">
+	<p>Please submit your <a href="/about/contact/feedback.jsp">feedback</a>.  &copy;Conestoga College. All rights reserved. <a href="/terms/">Terms &amp; Conditions of Use</a></p>
+</div>
+
+	</div>
+</footer>
+
+<a id="button-backtotop" class="button-backtotop" href="#">Back To Top</a>
+
+<!--script block -->
+<script type="text/javascript">
+var Sidemenu = {
+	IsStickyMenu: false,
+	Stickied: true,
+	IsHighlightScroll: false,
+	Mobile: false,
+	Sections: {},
+	Init: function(){
+		if($("#stickySide").length > 0){
+			Sidemenu.IsStickyMenu = true;
+		}
+		
+		if($("#program-details").length > 0){
+			Sidemenu.IsHighlightScroll = true;
+			
+			$('.section').each(function(){
+				Sidemenu.Sections[this.id] = $(this).offset().top;
+			});
+			
+			$('.nav_scrollto').each(function(){
+				var scrollto = "#"+$(this).attr('href').split("#")[1];
+				if($(scrollto).length > 0){
+					$(this).click(function(){
+						var scrolltoposition = $(scrollto).offset().top;
+						$('html, body').animate({scrollTop:scrolltoposition}, 'slow');
+						window.location.hash = scrollto;
+						return false;
+					});
+				}
+			});
+		}
+		
+		var current = $("#sidemenu").find("a").filter(function(){return this.href.toLowerCase() == location.href.toLowerCase();});
+		if (current.length){
+			var test = location.href.toLowerCase();
+			if (test.indexOf("conestogac.on.ca/index.jsp") < 0){
+				current.parents("ul,li").add(current.next()).show();
+				current.addClass("currentpage");
+			} 
+		}
+		
+		$(window).trigger('scroll');
+	},
+	StickyScroll: function(e){
+		if(Sidemenu.Mobile){
+			return;
+		}
+	
+		var whereAmI = $(window).scrollTop();
+		var buffer = 15;
+		var topCorner = $("#content-panel").position();
+		var lcCorner = $("#stickySide").position();
+		var mainHeight = $('#maincontent').height();
+
+		var ccheight = $("#content-panel").height();
+		var absoluteBottom = ccheight + topCorner.top; //this gives the absolute bottom corner
+
+		var lcheight = $("#stickySide").height();
+		var lcBottom = whereAmI + lcheight;
+		var tooFar =  absoluteBottom - (lcBottom+buffer) ;
+
+		//must deal with the case where the left hand column exceedst he hiehgt of the middle column of content (/admissions/admission.jsp)
+		if(mainHeight > lcheight){
+		  if (((whereAmI > topCorner.top) && (tooFar > 0))){// && (limit < ccheight)) {
+			  if(!Sidemenu.Stickied){
+				$("#stickySide").addClass("sticky");
+				$("#stickySide").css("top", 0);
+				$("#maincontent").addClass("keepLeftMargin");
+				Sidemenu.Stickied = true;
+			  }
+		  } else if (tooFar < 0){
+			  $("#stickySide").css("top", tooFar);
+			  Sidemenu.Stickied = false;
+		  } else {//if (whereAmI < topCorner.top){//snap back to where we should be
+			  if(Sidemenu.Stickied){
+				  $("#stickySide").removeClass("sticky");  
+				  $("#stickySide").css("top", 0);
+				  $("#maincontent").removeClass("keepLeftMargin");
+				  Sidemenu.Stickied = false;
+			  }
+				
+		  }
+		}
+	},
+	CheckColumns: function(){
+		if(Sidemenu.Mobile){
+			return;
+		}
+	
+		var mainHeight = $('#maincontent').height();
+		var lcheight = $("#stickySide").height();
+		if(mainHeight <= lcheight){
+			$("#stickySide").removeClass("sticky");
+			$("#stickySide").css("top", 0);		  
+			$("#maincontent").removeClass("keepLeftMargin");
+			Sidemenu.Stickied = false;
+		}
+	},
+	HighlightScroll: function(e){
+		if(Sidemenu.Mobile){
+			return;
+		}
+		//check sections in reverse so that the section closest to the top of the page is highlighted
+		$($('.section').get().reverse()).each(function(){
+			var sect = $(this).get(0);
+			var rect = sect.getBoundingClientRect();
+			var pos = rect.top; //distance from top of viewport
+
+			if ((pos >= 0) && (pos < 150))
+			{
+                $("#sidemenu").find("a").removeClass('currentpage');
+                $('#nav_' + this.id).addClass('currentpage');
+			}
+		});	
+	}
+}
+
+var BackToTop = {
+	IsShown: false,
+	Init: function(){
+		$("#button-backtotop").click(function(){
+			$('html, body').animate({scrollTop:0}, 'slow');
+			return false;
+		});
+	},
+	Scroll: function(e){
+		var fromTop = $(window).scrollTop();
+		if(fromTop >= 400){
+			if(!BackToTop.IsShown){
+				$("#button-backtotop").show();
+				BackToTop.IsShown = true;
+			}
+		} else {
+			if(BackToTop.IsShown){
+				$("#button-backtotop").hide();
+				BackToTop.IsShown = false;
+			}
+		}
+	}
+}
+
+var MobileTopMenu = {
+	Activate: function(){
+		$("#topnav").find('li').click(function(){
+			$(this).find('div').toggle();
+		}).find('div').hide();
+	},
+	Deactivate: function(){
+		$("#topnav").find('li').unbind("click").find('div').show();
+	}
+}
+
+var WindowResize = {
+	State: 0, //0 = full, 1 = mobile\
+	Init: function(){
+		WindowResize.State = 0;
+		$(window).trigger('resizeEnd');
+		$(window).trigger('orientationchange');
+	},
+	Handle: function(){
+		var width = $(window).width();
+		if(width >= 960){
+			if(WindowResize.State != 0){
+				WindowResize.State = 0;
+				MobileTopMenu.Deactivate();
+				Sidemenu.Mobile = false;
+				if(typeof Slider != 'undefined'){
+					Slider.Start();
+				}
+			}
+		} else if(width < 960){
+			if(WindowResize.State != 1){
+				WindowResize.State = 1;
+				MobileTopMenu.Activate();
+				Sidemenu.Mobile = true;
+				if(typeof Slider != 'undefined'){
+					Slider.Stop();
+				}
+			}
+		}
+	},
+	GestureStart: function(){
+		if(/iPad/.test(navigator.userAgent)){
+			if((window.orientation == "90" || window.orientation == "-90")){
+				$('meta[name="viewport"]').attr("content", "width=1024, minimum-scale=0.25, maximum-scale=1.6");
+			} else {
+				$('meta[name="viewport"]').attr("content", "width=768, minimum-scale=0.25, maximum-scale=1.6");
+			}
+		}
+	},
+	OrientationChange: function(){
+		if(/iPad/.test(navigator.userAgent)){
+			if((window.orientation == "90" || window.orientation == "-90")){
+				$('meta[name="viewport"]').attr("content", "width=1024, minimum-scale=1.0, maximum-scale=1.0");
+			} else {
+				$('meta[name="viewport"]').attr("content", "width=768, minimum-scale=1.0, maximum-scale=1.0");
+			}
+		} else if($(window).width() < 450){
+			$('meta[name="viewport"]').attr("content", "width=450, user-scalable = yes");
+		} else {
+			$('meta[name="viewport"]').attr("content", "width=device-width, user-scalable = yes");
+		}
+	}
+}
+
+$(window).scroll(function(e){
+	if(Sidemenu.IsStickyMenu){
+		Sidemenu.StickyScroll(e);
+	}
+	
+	if(Sidemenu.IsHighlightScroll){
+		Sidemenu.HighlightScroll(e);
+	}
+	
+	BackToTop.Scroll(e);
+});
+
+$(window).resize(function() {
+	if(this.resizeTO){
+		clearTimeout(this.resizeTO);
+	}
+	this.resizeTO = setTimeout(function() {
+		$(this).trigger('resizeEnd');
+	}, 500);
+});
+
+$(window).bind('resizeEnd', function() {
+    WindowResize.Handle();
+});
+
+$(window).bind('orientationchange', function(){
+	WindowResize.OrientationChange();
+});
+
+$(window).bind('gesturestart', function(){
+	WindowResize.GestureStart();
+});
+
+
+
+$(function(){
+	BackToTop.Init();
+	Sidemenu.Init();
+	WindowResize.Init();
+});
+</script>
+
+
+<!-- end script block-->
+    	<script type="text/javascript" src="https://assets.conestogac.on.ca/assets/scripts/lrc/tabber.js"></script>
+	<script type="text/javascript">
+
+    /* Optional: Temporarily hide the "tabber" class so it does not "flash"
+       on the page as plain HTML. After tabber runs, the class is changed
+       to "tabberlive" and it will appear. */
+
+    document.write('<style type="text\/css">.tabber{display:none;}<\/style>');
+    //<![CDATA[
+    function limittoFullText(myForm) {
+        if (myForm.fulltext_checkbox.checked) myForm.clv0.value = "Y";
+        else myForm.clv0.value = "N";
+    }
+    function limittoScholarly(myForm) {
+        if(myForm.scholarly_checkbox.checked) myForm.clv1.value = "Y";
+        else myForm.clv1.value = "N";
+    }
+    function limittoCatalog(myForm) {
+        if(myForm.catalog_only_checkbox.checked) myForm.clv2.value = "Y";
+        else myForm.clv2.value = "N";
+    }
+    function limittoIR(myForm) {
+        if(myForm.IR_only_checkbox.checked) myForm.clv3.value = "Y";
+        else myForm.clv3.value = "N";
+    }
+    function ebscoPreProcess(myForm) {
+        myForm.bquery.value = myForm.search_prefix.value + myForm.uquery.value;
+    }
+    function limittoArticles(myForm) {
+        myForm.bquery.value += ' AND ZT Article';
+    }
+    function limittoBooks(myForm) {
+        myForm.bquery.value += ' AND PT Book';
+    }
+    //]]>
+    </script>
+    <script src="https://assets.conestogac.on.ca/assets/scripts/lrc/jquery.infieldlabel.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){ $("label[for='discovery_input'],label[for='catalogue_input'],label[for='SS_CFocusTag']").inFieldLabels(); });
+    </script>
+
+	
+</body>
+</html>
+
+

@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+<title>Grey Bruce Health Services - Patient and Visitor Information</title>
+<meta name="description" content="Grey Bruce Health Services, headquartered in Owen Sound,  is a 6 site community hospital corporation providing comprehensive health care to north Bruce and North Grey counties, Ontario, Canada"/>
+		
+<meta name="keywords" content="General Practitioner,  NP, Pathology, Pathologist, EENT, Otolaryngology, Otolaryngologist, Obstetrics, Anesthesia, Hospitalist, Hospitalists, Anesthesiology, Obstetrician, Intensivist, Critical Care, Paediatrics, Radiology, Grey Bruce, Gray, Radiology, Psychiatry,  Anesthesiologist, Anesthesia, Anaesthesia , South Western Ontario"/>
+
+<meta name="author" content="www.dragonflydesigns.ca" />
+
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="print" href="print.css" />
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+var popUpWin=0;
+function win1()
+{
+  if(popUpWin)
+  {
+    if(!popUpWin.closed) popUpWin.close();
+  }
+  popUpWin = open("donate_fdn.php", 'popUpWin1', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width=565,height=900,left=0,top=0,screenX=200,screenY=100');
+}
+
+function win2()
+{
+  if(popUpWin)
+  {
+    if(!popUpWin.closed) popUpWin.close();
+  }
+  popUpWin = open("https://secure.have1.com/hospitalcampaign/donate.php", 'popUpWin2', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width=560,height=650,left=0,top=0,screenX=200,screenY=100');
+}
+</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="expand.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(function() {
+    // --- Using the default options:
+    $("h2.expand").toggler();
+    // --- Other options:
+    //$("h2.expand").toggler({method: "toggle", speed: 0});
+    //$("h2.expand").toggler({method: "toggle"});
+    //$("h2.expand").toggler({speed: "fast"});
+    //$("h2.expand").toggler({method: "fadeToggle"});
+    //$("h2.expand").toggler({method: "slideFadeToggle"});    
+    $("#content").expandAll({trigger: "h2.expand", ref: "div.demo", localLinks: "p.top a"});
+});
+//--><!]]>
+</script>
+<!--<![endif]-->
+<script type="text/javascript">
+var min=10;
+var max=18;
+function increaseFontSize() {
+   var p = document.getElementsByTagName("p")
+      for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s =14;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+   var l = document.getElementsByTagName("li")
+      for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s2 = parseInt(l[i].style.fontSize.replace("px",""));
+      } else {
+         var s2 =14;
+      }
+      if(s2!=max) {
+         s2 += 1;
+      }
+      l[i].style.fontSize = s2+"px"
+   }
+    var a = document.getElementsByTagName("a")
+      for(i=0;i<a.length;i++) {
+      if(a[i].style.fontSize) {
+         var s3 = parseInt(a[i].style.fontSize.replace("px",""));
+      } else {
+         var s3 =14;
+      }
+      if(s3!=max) {
+         s3 += 1;
+      }
+      a[i].style.fontSize = s3+"px"
+   }
+   
+}
+function decreaseFontSize() {
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s =14;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = s+"px"
+   } 
+    var l = document.getElementsByTagName('li');
+   for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s2 = parseInt(l[i].style.fontSize.replace("px",""));
+      } else {
+         var s2 =14;
+      }
+      if(s2!=min) {
+         s2 -= 1;
+      }
+      l[i].style.fontSize = s2+"px"
+   }
+     var a = document.getElementsByTagName('a');
+   for(i=0;i<a.length;i++) {
+      if(a[i].style.fontSize) {
+         var s3 = parseInt(a[i].style.fontSize.replace("px",""));
+      } else {
+         var s3 =14;
+      }
+      if(s3!=min) {
+         s3 -= 1;
+      }
+      a[i].style.fontSize = s3+"px"
+   } 
+}
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34912225-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+  input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+    border-color: #D9D9D9;
+  }
+  input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    border-color: #2F5BB7;
+    background-color: #357AE8;
+    background-image: none;
+     }</style>
+</head>
+<body onload="MM_preloadImages('images/icon_home_ovr.gif','images/icon_programs_ovr.gif','images/icon_how_ovr.gif','images/icon_jobs_ovr.gif','images/icon_donate_ovr.gif','images/icon_feedback_ovr.gif','images/icon_news_ovr.gif','images/icon_patients_over2.gif','images/icon_report_over2.gif','images/nav_hosp_ovr.gif','images/nav_getinv_ovr.gif','images/nav_phys_ovr.gif','images/icon_access_ovr.gif','images/nav_news_ovr.gif','images/nav_about_ovr.gif','images/nav_contact_ovr.gif')" >
+
+<a class="skiplink" href="#startcontent">Skip over navigation</a>
+
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" class="donotprint">
+  <tr>
+    <td><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+       <td width="65%" rowspan="2" bgcolor="#FFFFFF"><a href="index.php" title="Home"><img src="images/logo.gif" width="173" height="83" border="0" alt="Grey Bruce Health Services Logo" /></a></td> 
+       <td align="center" valign="top"  bgcolor="#FFFFFF"><table width="85%" border="0" align="right" cellpadding="0" cellspacing="0">
+         <tr>
+        <td width="90%" align="right" class="bkgrnd_tan">&nbsp;</td>
+                <td width="5%" align="right" class="bkgrnd_tan"><a href="javascript:decreaseFontSize();" title="Decrease Font Size" accesskey="+"><img src="images/text_dec.gif" alt="Decrease text size" width="35" height="22" border="0" id="minustext"/></a></td>
+                <td width="5%" align="right" class="bkgrnd_tan"><a href="javascript:increaseFontSize();" title="Increase Font Size" accesskey="-">  <img src="images/text_inc.gif" alt="Increase text size" width="35" height="22" border="0" id="plustext" /></a></td>
+                <td>&nbsp;&nbsp;</td>
+           <td><a href="https://twitter.com/greybrucehealth"><img src="images/icon_twitter_sm.gif" alt="Follow us on Twitter!" width="22" height="22" border="0" /></a></td>
+          
+           <td>   <a href="http://feeds.feedburner.com/GBHS" title="Subscribe to receive GBHS News Releases" rel="alternate" type="application/rss+xml"><img src="images/icon_rss_sm.gif" alt="Subscribe!" width="22" height="22" border="0" id="rss" /></a></td>
+            <td>   <a href="http://feedburner.google.com/fb/a/mailverify?uri=GBHS&amp;loc=en_US"><img src="images/email_icon.gif" alt="Subscribe to GBHS News via email!" title="Subscribe to receive GBHS News Releases to your email" width="22" height="22" border="0" id="rssemail" /></a></td>
+           <td><a href="login.php?pgid=14"><img src="images/icon_log.gif" alt="Login!" width="22" height="22" border="0" /></a></td>
+         </tr>
+       </table>
+        </td>
+        </tr>
+      <tr>
+        <td align="center" valign="top"  bgcolor="#FFFFFF"><div id="cse-search-form" style="width: 100%;">Loading</div>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : 'en', style : google.loader.themes.V2_DEFAULT});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '000816214627652336780:yhqai_ff0q8', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.enableSearchboxOnly("https://www.gbhs.on.ca/searchresults.php");
+    customSearchControl.draw('cse-search-form', options);
+  }, true);
+</script>
+
+</td>
+      </tr>
+     
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0" >
+      <tr>
+        <td valign="bottom"><img src="images/nav_phys_ph1.gif" width="173" height="47" border="0" alt="Welcome to Grey Bruce Health Services" /></td>
+         <td valign="bottom"> <img src="images/nav_phys_ph2.gif" alt="Grey Bruce Health Services" width="91" height="47" border="0" /></td>
+        <td valign="bottom"><img src="images/nav_phys_ph3.gif" alt="Grey Bruce Health Services" width="80" height="47" border="0" /></td>
+      <td valign="bottom"><a href="about.php?pgid=2" title="About GBHS" accesskey="2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('about','','images/nav_about_ovr.gif',1)"><img src="images/nav_about.gif" alt="About" name="about" width="83" height="47" border="0" id="about" /></a></td>
+        <td valign="bottom"><a href="contact.php?pgid=8" title="Contact GBHS" accesskey="3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('contact','','images/nav_contact_ovr.gif',1)"><img src="images/nav_contact.gif" alt="Contact" name="contact" width="100" height="47" border="0" id="contact" /></a></td>
+        <td valign="bottom"><a href="physicians.php?pgid=75" title="Physicians" accesskey="4" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('physicians','','images/nav_phys_ovr.gif',1)"><img src="images/nav_phys.gif" alt="Physicians" name="physicians" width="90" height="47" border="0" id="physicians" /></a></td>
+        <td valign="bottom"><a href="hospitals.php?pgid=9" title="Our Six Hospitals" accesskey="5" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('hospitals','','images/nav_hosp_ovr.gif',1)"><img src="images/nav_hosp.gif" alt="Our Six Hospitals" name="hospitals" width="95" height="47" border="0" id="hospitals" /></a></td>
+        <td valign="bottom"><a href="getinvolved.php?pgid=10" title="Get Involved" accesskey="6" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('getinvolved','','images/nav_getinv_ovr.gif',1)"><img src="images/nav_getinv.gif" alt="Get Involved!" name="getinvolved" width="100" height="47" border="0" id="getinvolved" /></a></td>
+       
+        <td valign="bottom"><a href="news.php?pgid=12" title="News and Events" accesskey="7" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('newsevents','','images/nav_news_ovr.gif',1)"><img src="images/nav_news.gif" alt="News and Events" name="newsevents" width="88" height="47" border="0" id="newsevents" /></a></td>
+        
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="900" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top" bgcolor="#00539F">
+		<img src="images/site_title_phys.gif" width="790" height="82" alt="Welcome to Grey Bruce Health Services" /></td>
+        <td valign="top" bgcolor="#00539F"><a href="index.php" title="Home" accesskey="1" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('home','','images/icon_home_ovr.gif',1)"><img src="images/icon_home.gif" alt="Home" name="home" width="110" height="82" border="0" id="home" /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<a name="startcontent" id="startcontent"></a><table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+   <td width="21%" height="525" valign="top" bgcolor="#FFFFFF" class="nav"><br />
+         <img src="images/spacer.gif" height="1" width="160" alt="" /><table width="88%" border="0" align="center" cellpadding="7" cellspacing="0" class="donotprint"><tr> <td align="left" valign="middle" class="navborder"><div class="firstnav"><a href="patients.php?pgid=11">Patients and Visitors</a></div></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=152">About Your Hospital Stay</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=102">Banking</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=47">Contacting patients</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=50">Discharge</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=121">Fact sheets on Infectious Diseases</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=91">Food Services</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=133">Gift Shops</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=52">Health Resources</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=139">Health Sciences Library</a></td><td align="left" valign="middle" class="navborder"><img src="images/nav_image.gif" width="15" height="15" alt="" /></td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=43">Parking and Transportation</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=51">Patient Rights</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=49">Places to stay for visitors</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=44">Registration / Make an appointment</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=48">TV, Phones, Cell Phones, Laptops & Wi-Fi Access</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="patients.php?pgid=46">What to bring to the hospital</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="programs.php?pgid=114">Pharmacy</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr><tr><td align="left" valign="middle" class="navborder"><a href="privacy.php?pgid=21">Your Privacy</a></td><td align="left" valign="middle" class="navborder">&nbsp;</td></tr></table><br/><img src="images/spacer.gif" width="171" height="1" alt="" /></td>
+        <td width="58%" height="525" valign="top" bgcolor="#FFFFFF" class="greyleftborder"><br />
+         <table width="92%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><h1>Health Sciences Library</h1>
+<p>The Grey Bruce Health Services Library is located on the ground floor of the Owen Sound Hospital, across from Tim Horton&rsquo;s.&nbsp;&nbsp;</p>
+<p>It is open to hospital visitors and patients offering:</p>
+<ul>
+<li>health information</li>
+<li>free access to computers and internet</li>
+<li>a quiet place to read the newspaper</li>
+<li>fiction books for $1.00</li>
+</ul>
+<p>A library technician is available to help you on Monday, Tuesday and Thursday from 8am to 4pm.&nbsp;&nbsp;</p>
+<p>If you would like more information please contact:</p>
+<p><strong>Christine Fenton-Stone,&nbsp;Library Technician<br /></strong>Phone: 519-376-2121 Ext. 2043<br />Email: <a href="mailto:library@gbhs.on.ca">library@gbhs.on.ca</a></p><br /><br/><div class="int"><h2>You may also be interested in:</h2><p><a href="../patients.php?pgid=52">Health Resources</a>|<a href="../programs.php?pgid=15">Programs &amp; Services</a></p></div></td></tr></table></td>
+        <td width="21%" height="525" align="center" valign="top" class="greybg"><br />
+    <br /><table width="150" border="0" cellspacing="0" cellpadding="0" class="org"><tr>
+              <td><img src="random_photosrt/rt_image21.jpg" height="150" width="150" alt="GBHS" /></td>
+            </tr></table><table width="150" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="center" class="contentrt"></td>
+          </tr>
+          </table></td>
+    
+    <td width="110" rowspan="3" valign="top" bgcolor="#FFFFFF">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="donotprint">
+  <tr>
+    <td valign="top"><a href="patients.php?pgid=11" title="Patients and Visitors" accesskey="a" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('programs21','','images/icon_patients_over2.gif',1)"><img src="images/icon_patients2.gif" alt="Patients and Visitors" name="programs21" width="110" height="79" border="0" id="programs21" /></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="programs.php?pgid=15" title="Programs and Services" accesskey="b" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('programs','','images/icon_programs_ovr.gif',1)"><img src="images/icon_programs.gif" alt="Programs and Services" name="programs" width="110" height="79" border="0" id="programs" /></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="howdoi.php?pgid=16" title="How Do I?" accesskey="c" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('how','','images/icon_how_ovr.gif',1)"><img src="images/icon_how.gif" alt="How Do I?" name="how" width="110" height="81" border="0" id="how" /></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="careers.php?pgid=17" title="Careers" accesskey="d" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('jobs','','images/icon_jobs_ovr.gif',1)"><img src="images/icon_jobs.gif" alt="Jobs" name="jobs" width="110" height="83" border="0" id="jobs" /></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="donate.php?pgid=18" title="Donate" accesskey="e" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('donate','','images/icon_donate_ovr.gif',1)"><img src="images/icon_donate.gif" alt="Donate" name="donate" width="110" height="80" border="0" id="donate" /></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="reporting.php?pgid=13" title="Public Reporting" accesskey="f" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('programs31','','images/icon_report_over2.gif',1)"><img src="images/icon_report2.gif" alt="Public Reporting" name="programs31" width="110" height="79" border="0" id="programs31" /></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="feedback.php?pgid=19" title="Feedback" accesskey="g" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('feedback','','images/icon_feedback_ovr.gif',1)"><img src="images/icon_feedback.gif" alt="Feedback" name="feedback" width="110" height="81" border="0" id="feedback" /></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="access.php?pgid=20" title="Accessibility" accesskey="h" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('access','','images/icon_access_ovr.gif',1)"><img src="images/icon_access.gif" alt="Accessibility" name="access" width="110" height="81" border="0" id="access" /></a></td>
+  </tr>
+</table>
+</td>
+  </tr>
+   
+</table>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" class="donotprint">
+  <tr>
+    <td width="75%" bgcolor="#EEEFEF" class="footer"><p ><a href="privacy.php?pgid=21">Privacy Statement</a> | <a href="links_disclaimer.php?pgid=90">Links Disclaimer</a> | <a href="sitemap.php?pgid=22">Site Map</a> | &copy;
+      2016       Grey Bruce Health Services<br />
+           </p></td>
+    <td align="right" valign="bottom" bgcolor="#EEEFEF"><img src="images/qualitycare.gif" width="283" height="34" alt="Quality Health Care Right Here!" /></td>
+  </tr>
+</table>
+</body>
+</html>

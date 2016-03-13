@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Seneca College's academic library located in Toronto, Ontario, Canada.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to Seneca Libraries Online!</title>
+<!-- stylesheets -->
+<link href="_css/global.css" rel=" stylesheet" type="text/css" title="Seneca Libraries Stylesheet"> 
+<link href="_css/media-queries.css" rel="stylesheet" type="text/css">
+<!-- fonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<!-- jQuery -->
+<script type="text/javascript" src="_js/jquery-2.0.0.min.js"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- random search image background--> 
+<script type="text/javascript">
+window.onload = function () {
+    var header = document.getElementById('search');
+	var pictures = new Array('_site_graphics/seasonal/bg1.png','_site_graphics/seasonal/bg2.png','_site_graphics/seasonal/bg3.png','_site_graphics/seasonal/bg4.png','_site_graphics/seasonal/bg5.png','_site_graphics/seasonal/bg6.png','_site_graphics/seasonal/bg7.png'	);
+    var numPics = pictures.length;
+    if (document.images) {
+        var chosenPic = Math.floor((Math.random() * numPics));
+        header.style.background = 'url(' + pictures[chosenPic] + ')';
+    }
+	<!-- autofocuses page to summon searchbox-->
+	var summonbox = document.getElementsByName('q');
+	summonbox [0].focus();
+}
+</script>
+
+</head>
+
+<body>
+<!-- BEGIN wrapper -->
+<div id="wrapperhome">
+
+	<!-- BEGIN home header -->
+	<header id="home">
+		<!-- BEGIN welcome -->
+		<div id="welcome">Welcome to<br />
+			<img src="_site_graphics/logo1home.png" width="210" height="55" alt="Seneca Libraries logo - first half">
+			<img src="_site_graphics/logo2home.png" width="216" height="55" alt="Seneca Libraries logo - second half">
+		</div>
+		<!-- END welcome -->
+		<!-- BEGIN askus -->
+		<div id="askus"><a href="http://students.libanswers.com"><img class="nb" src="_site_graphics/askus_medium.png" width="70" height="70" alt="Ask Us logo"></a></div>
+		<!-- END askus -->
+	</header>
+    <!-- END home header -->
+
+    <div class="clear"> </div>
+
+	<!-- BEGIN search -->
+	<div id="search">
+	  <div id="searchbox">
+        What would you like to find today? <span class="help"> <a href="help.html">Search Help</a><!-- - <a href="http://seneca.preview.summon.serialssolutions.com">Try the beta release.</a>--></span><br />
+        <span class="tip"><strong>Search Tip:</strong> Type <span style="font-family:'Courier New', Courier, monospace; font-weight: bold;">mla</span> or <span style="font-family:'Courier New', Courier, monospace; font-weight: bold;">apa</span> to quickly get to our citation style guides.<!-- You can find a database by name (e.g., "astm" or "quicklaw"). Type "journal" then select the Journal Title Finder to search for a specific title.   Find a database by name (e.g., "astm" or "quicklaw").  Type "sandbox" to access the new Sandbox site!--></span>
+        <form action="http://seneca.summon.serialssolutions.com/" method="get" onSubmit="window.location = this.action + '?q=' + encodeURIComponent(this.q.value); return false;">
+        <!--  jquery code added above to make this work in IE -->
+        <input class="summon-search-field" name="q" id="q" size="40" type="text">
+        <input type="submit" value="Go" class="summon-search-submit button-website">
+</form>
+        
+        <!--<script type="text/javascript" id="s22c95b50b2e10131f7931cc1de70d4bc" src="http://seneca.summon.serialssolutions.com/widgets/box.js"></script><script type="text/javascript">new SummonCustomSearchBox({"id":"#s22c95b50b2e10131f7931cc1de70d4bc","params":{},"colors":{},"searchbutton_text":"Go", "boxwidth_text":"350","suggest":"true","popup":false})</script>-->
+           	<a href="http://seneca.summon.serialssolutions.com/advanced">Advanced Search</a> | <a href="site_map.html">Site Index</a>
+        </div>
+	</div>
+    <!-- END search -->
+
+	<!--<div class="clear"></div> -->
+   
+    <!-- BEGIN quicklinks -->
+	<div id="quicklinks">
+    	<div class="qlink"><a href="About_the_Library/hours.html">Hours</a></div>
+        <div class="qlink"><a href="http://libcat.senecac.on.ca/vwebv/login">My Library Account</a></div>
+        <div class="qlink"><a href="https://apps.senecacollege.ca/roombooking/">Group Study Spaces</a></div><!-- https://www.senecac.on.ca/roombooking/ -->
+        <div class="qlink"><a href="http://seneca.libguides.com">Subject Guides</a></div>
+        <div class="qlink"><a href="http://seneca.libguides.com/databases">Databases</a></div>
+        <div class="qlink"><a href="http://library.senecacollege.ca/Media_Services/">Media</a></div>
+        <div class="qlink"><a href="Research_Help/Citing_Sources/index.html">Citing Sources</a></div>
+		<div class="qlink"><a href="http://seneca.libguides.com/academichonesty">Academic Honesty</a></div>
+        <div class="faculty"><a href="http://seneca.libanswers.com">For Faculty</a></div>
+        <div class="wlink"><a href="http://senecasandbox.wordpress.com">Sandbox</a></div>
+    
+    <!-- END quicklinks -->
+ 
+     <!-- <div class="clear"> </div> -->
+
+    <div class="clear"> </div>
+    
+    <!-- BEGIN footer -->
+	<footer id="all">&copy; 2015 Seneca Libraries. All Rights Reserved. <a href="About_the_Library/contact_us.html">Contact us</a> or visit us on <a href="http://www.facebook.com/pages/Seneca-Libraries/8685735629"><img src="_site_graphics/fb_icon.gif" alt="Facebook" title="Visit us on Facebook" style="border:0;width:16px;height:16px;"></a> <a href="http://www.twitter.com/senecalibraries"><img src="_site_graphics/twitter_icon.gif" alt="Twitter" title="Follow us on Twitter" style="border:0;width:16px;height:16px;"></a> <a href="http://www.youtube.com/senecalibraries"><img src="_site_graphics/youtube_icon.gif" alt="YouTube" title="Visit our YouTube channel" style="border:0;width:16px;height:16px;"></a> <a href="http://pinterest.com/senecalibraries/"><img src="_site_graphics/pinterest_icon.png" alt="Pinterest" title="Visit us on Pinterest" style="border:0;width:16px;height:16px;"></a>
+<a href="http:////plus.google.com/100376828287233106782?prsrc=3"
+   rel="publisher" target="_top" style="text-decoration:none;">
+<img src="_site_graphics/gplus_icon.png" alt="Google+" title="Visit us on Google+" style="border:0;width:16px;height:16px;"/></a>.<br />
+<!-- keep this for the Fall 2013 semester --></footer>
+    <!-- END footer -->
+
+    <!-- BEGIN promo -->
+	<div id="promobox">
+    <!-- END PROMO -->
+</div>
+<!-- END WRAPPER -->
+<!-- NEW UNIVERSAL Analytics Script BEGIN -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1201414-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- UNIVERSAL Analytics Script END -->
+</body>
+</html>

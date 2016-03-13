@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+       		
+
+
+<title>Bibliothèque de Pointe-Claire</title>
+
+<link href="/home/css/base.css" rel="stylesheet" type="text/css" />
+<LINK REL="SHORTCUT ICON" HREF="/images/MondoIn_logo.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="cache-control" content="no-cache">
+<link type="text/csss" rel="stylesheet" href="/css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+<script type="text/javascript" src="/js/jquery-1.6.2.min.js">
+</script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.custom.min.js">
+</script>
+<script type="text/javascript">
+  var zonesPageApi = {
+    userStatus: null,
+    setUserStatus: function (status){
+      zonesPageApi.userStatus= status;
+    }
+  };
+  jQuery(function($){
+   
+    $("#container-1").tabs();
+    if(zonesPageApi.userStatus !=null){
+      var link = document.getElementById("compte");
+      link.style.display = (zonesPageApi.userStatus.loggedIn)
+        ?"inline":"none";
+    }
+    //fix for menu 
+     var menuWidth = $(".menu").width();
+    var totalWidth = 0;
+    $(".menu>ul>li").each(function(){totalWidth+=$(this).width();});
+    if(totalWidth > menuWidth){
+   $(".menu>ul>li>a").css({"font-size":"10px"})
+      }
+  });
+  
+  //fixing layout for IE9
+  if(navigator.appVersion.indexOf("MSIE 9.")>0){
+    var menu = document.getElementsByClassName("menu");
+    if(menu.length > 0){
+      menu[0].setAttribute("class","menu ie9-menu");
+    }
+  }
+  
+</script>
+<script type="text/javascript" src="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_JSONP?callback=zonesPageApi.setUserStatus&Method=GetUserStatus"></script>
+
+
+<!-- Matthew (MondoIn) script added 14/12/2012 -->
+<!-- replace attr <a href> if visitor not logged to login page -->
+<!-- class = "onlyLoggedUrl" -->
+<script type="text/javascript">
+jQuery(function($){
+  var ifUserLogged = zonesPageApi.userStatus['loggedIn'];
+  if(ifUserLogged == false) {
+    $("a.onlyLoggedUrl").each(function(){
+      var newUrl = 'http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=MyZone&Lang=FRE';
+      $(this).attr('href', newUrl);
+      $(this).attr('target', '');
+
+    });
+  };
+});
+</script>
+
+
+
+<script type="text/javascript">
+  
+  window.onscroll = function (e){           
+    
+    if(window.pageYOffset > 250){
+      document.getElementById("topPage").style.display = 'block';
+    }else{
+      document.getElementById("topPage").style.display = 'none';
+    }
+    
+  }
+</script>
+
+   </head>
+
+  
+<body>
+  
+  <a id="topPageA" href="#"><div id="topPage">↑</div></a>
+  
+ <div id="centralisation">
+
+   
+    
+    <div id="barreTop">
+      <div id="langueChoix">
+        <a href="?com.dotmarketing.htmlpage.language=1" style="color:#303030;">English</a>   
+      </div>
+    <div id="compte" style="display:none">
+         <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=EndSession">DÉCONNEXION</a>
+      </div>
+
+      
+    </div>
+  
+    <div id="header">  
+       <img src="/images/Pointe-Claire940x118TAKE2FRE.jpg" alt="Banniere">
+    </div>
+  
+  
+    
+    <div id="body">
+      
+      <!-- <div>
+                    
+            </div>   -->
+      
+      <div>
+               
+        <div class="menu">
+        
+                    
+                       		<ul>
+  <li>
+    <a href="/home/index.dot">ACCUEIL</a>
+  </li>
+  <li>
+    <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=QuickSearch&Lang=FRE" target="_top">
+    CATALOGUE</a>
+    <ul>
+      <li>
+        <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=QuickSearch&Lang=FRE"
+        target="_top">Recherche simple</a>
+      </li>
+      <li>
+        <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=AdvancedSearch&Lang=FRE"
+        target="_top">Recherche avanc&#233;e</a>
+      </li>
+      <li>
+        <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=AlphabeticSearch&Lang=FRE"
+        target="_top">Recherche alphab&#233;tique</a>
+      </li>
+      <li>
+        <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=MetaSearchLibraries&Lang=FRE"
+        target="_top">Recherche catalogues externes</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/home/about_us/general-information.dot" target="_top">
+    LA BIBLIOTH&#200;QUE</a>
+    <ul>
+      <li>
+        <a href="/home/about_us/general-information.dot"
+        target="_top">Informations g&#233;n&#233;rales</a>
+      </li>
+      <li>
+        <a href="/home/about_us/mission.dot" target="_top">
+        Mission</a>
+      </li>
+      <li>
+        <a href="/home/about_us/history.dot" target="_top">
+        Histoire</a>
+      </li>
+      <li>
+        <a href="/home/about_us/membership.dot" target="_top">
+        Abonnement</a>
+      </li>
+      <li>
+        <a href="/home/about_us/loans-reservations-renewals.dot"
+        target="_top">Pr&#234;ts, r&#233;servations et
+        renouvellements</a>
+      </li>
+      <li>
+        <a href="/home/about_us/friends_of_the_library.dot"
+        target="_top">Amis de la Biblioth&#232;que</a>
+      </li>
+      <li>
+        <a href="/home/about_us/donations.dot" target="_top">
+        Dons</a>
+      </li>
+      <li>
+        <a href="/home/about_us/library-contacts.dot"
+        target="_top">Pour nous joindre</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/home/librarie_services/whats-new.dot" target="_top">
+    SERVICES AUX ABONN&#201;S</a>
+    <ul>
+      <li>
+        <a href="/home/librarie_services/whats-new.dot"
+        target="_top">Quoi de neuf @ la biblioth&#232;que?</a>
+      </li>
+              <a href="/home/librarie_services/calendar.dot"
+        target="_top">Calendrier</a>
+        <li>
+        <a href="/home/librarie_services/programs-for-adults.dot"
+        target="_top">Programmes et activit&#233;s pour adultes</a>
+      </li>
+      <li>
+        <a href="/home/librarie_services/reference/in-house.dot"
+        target="_top">R&#233;f&#233;rence</a>
+      </li>
+      <li>
+        <a href="/home/librarie_services/library-collection.dot"
+        target="_top">Collection de la biblioth&#232;que</a>
+      </li>
+      <li>
+        <a href="/home/librarie_services/download.dot"
+        target="_top">M&#233;dias num&#233;riques</a>
+      </li>
+      <li>
+        <a href="/home/librarie_services/databases.dot"
+        target="_top">Bases de donn&#233;es en ligne</a>
+      </li>
+      <li>
+        <a href="/home/librarie_services/internet_openoffice_workstations/workstation.dot"
+        target="_top">Internet et postes OpenOffice</a>
+      </li>
+      <li>
+        <a href="/home/librarie_services/local-history-photo-archives.dot"
+        target="_top">Histoire locale et archives
+        photographiques</a>
+      </li>
+      <li>
+        <a href="/home/librarie_services/special-services.dot"
+        target="_top">Services sp&#233;ciaux</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=KidsZone&Lang=FRE" target="_blank">
+    ZONE ENFANT</a>
+    <ul>
+      <li>
+        <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=KidsZone&Lang=FRE"
+        target="_blank">Catalogue Enfant</a>
+      </li>
+      <li>
+        <a href="/home/kidzone/children-librarian.dot"
+        target="_top">Biblioth&#233;caire pour enfants</a>
+      </li>
+      <li>
+        <a href="/home/kidzone/programs-for-children.dot"
+        target="_top">Programmes et activit&#233;s</a>
+      </li>
+      <li>
+        <a href="/home/kidzone/childrens-info.dot" target="_top">
+        Info Jeunes</a>
+      </li>
+      <li>
+        <a href="/home/kidzone/online-data-children.dot"
+        target="_top">Bases de donn&#233;es en ligne</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/home/teenzone/teen-info.dot" target="_top">ZONE
+    ADO</a>
+    <ul>
+      <li>
+        <a href="/home/teenzone/teen-librarian.dot" target="_top">
+        Biblioth&#233;caire pour ados</a>
+      </li>
+      <li>
+        <a href="/home/teenzone/programs-for-teens.dot"
+        target="_top">Programmes et activit&#233;s</a>
+      </li>
+      <li>
+        <a href="http://bppcados.wordpress.com/" target="_blank">
+        Blogue</a>
+      </li>
+      <li>
+        <a href="/home/teenzone/teen-info.dot" target="_top">Info
+        Jeunes</a>
+      </li>
+      <li>
+        <a href="/home/teenzone/new-books-teens.dot" target="_top">
+        Nouveaut&#233;s</a>
+      </li>
+      <li>
+        <a href="/home/teenzone/reading-suggestions.dot"
+        target="_top">Suggestions de lecture de Radha</a>
+      </li>
+      <li>
+        <a href="/home/teenzone/online-data-teens.dot"
+        target="_top">Bases de donn&#233;es en ligne</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/home/we_recommand/new-arrivals.dot" target="_top">
+    &#192; D&#201;COUVRIR</a>
+    <ul>
+      <li>
+        <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=CatTree1&Lang=FRE" target="_top">
+        Nouveaut&#233;s des 30 derniers jours</a>
+      </li>
+      <li>
+        <a href="/home/we_recommand/new-arrivals.dot"
+        target="_top">Listes des nouveaut&#233;s</a>
+      </li>
+      <li>
+        <a href="/home/we_recommand/reading-suggestions.dot"
+        target="_top">Suggestions de lecture</a>
+      </li>
+      <li>
+        <a href="/home/we_recommand/stewart-hall.dot" target="_top">Stewart Hall</a>
+      </li>
+      <li>        
+        <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=CatTree2&Lang=FRE" target="_top">
+        Liens d'int&#233;r&#234;ts</a>
+      </li>
+      <li>
+        <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=CatTree3&Lang=FRE" target="_top">Ressources virtuelles</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=MyZone&Lang=FRE">MON DOSSIER</a>
+    <ul>
+      <li><a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=MyZone&Lang=FRE" target="_top">Acc&#232s</a></li> 
+      <li><a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=SearchHistory&Lang=FRE" target="_top">Historique de recherche</a></li>
+      <li><a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=ViewNotepad&Lang=FRE" target="_top">Panier</a></li>    </ul>
+  </li>
+</ul>
+                       
+        </div>  
+
+        
+      </div>
+
+      
+      <div id="contenu" style="position:relative;top:40px;">
+           		
+
+
+	
+		   
+			         				          
+	
+
+
+
+	
+		   
+			         				          
+	
+
+
+
+	
+		   
+			         				         		
+
+
+
+
+
+
+   		       
+	
+
+
+<div id="boiteContenu" style="position:relative;left:60px;padding-bottom:50px;">
+
+<p><span style="font-family: helvetica; color: #003366; font-size: large;"><span style="font-size: x-large;"></span></span>&nbsp;</p>
+<p><span style="font-family: helvetica; color: #003366; font-size: large;"><span style="font-size: x-large;">CULTURE&nbsp;&nbsp;&nbsp;&nbsp; LECTURE&nbsp;&nbsp;&nbsp;&nbsp; APPRENTISSAGE&nbsp;</span></span>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;<img title="LegoF" alt="LegoF" src="/dotAsset/41b1db77-08c3-47e6-b462-9d32ec5060f5.jpg" width="709" height="157" /></p>
+<table style="width: 720px;" cellspacing="2" cellpadding="2" border="0" sizset="0" sizcache="5">
+<tbody sizset="0" sizcache="5">
+<tr>
+<td>
+<p><strong><span style="font-size: medium; font-family: helvetica; color: #003366;"></span></strong>&nbsp;</p>
+<p><strong><span style="font-family: helvetica; color: #003366;"><span style="font-size: large;">SERVICES EN LIGNE</span></span></strong></p>
+<p><strong><span style="font-family: helvetica; color: #003366;"><span style="font-size: large;"></span></span></strong>&nbsp;</p>
+<p><strong><span style="font-size: medium; font-family: helvetica; color: #003366;"></span></strong>&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: small; font-family: helvetica;"><a href="http://biblio.pointe-claire.ca/home/librarie_services/download.dot" target="_blank"><img title="Livres num&eacute;riques" alt="Pretnumerique" src="http://biblio.ville.pointe-claire.qc.ca/dotAsset/412c8ec6-7813-4948-9534-445a6af33c2d.jpg" width="139" height="27" /></a></span></p>
+<p style="text-align: left;"><span style="font-size: small; font-family: helvetica;"></span>&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: small; font-family: helvetica;"><a title="FILMS et MUSIQUE" href="https://www.hoopladigital.com/library" target="_blank"><img title="Films et musique num&eacute;riques" alt="Hoopla" src="http://biblio.pointe-claire.ca/dotAsset/7aaa0760-6a74-4391-a9dc-5ba339c368d5.png" width="92" height="52" /></a></span></p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><a href="http://emedia.lib.overdrive.com/" target="_blank"><img title="OverDrive" alt="OverDrive" src="http://biblio.ville.pointe-claire.qc.ca/dotAsset/0dd14a2c-b68a-408c-88f4-2443025bb9d7.png" width="102" height="31" /></a></p>
+<p style="text-align: left;">&nbsp;</p>
+<p><span style="font-size: small; font-family: helvetica;"><a href="http://biblio.pointe-claire.ca/home/librarie_services/download.dot" target="_blank"><img title="Revues num&eacute;riques" style="float: left;" alt="Zinio" src="http://biblio.ville.pointe-claire.qc.ca/dotAsset/1dcba47f-5ace-4aea-9f1b-f242a6d164bd.png" width="95" height="37" /></a></span></p>
+<p style="text-align: center;"><span style="font-size: small; font-family: helvetica;"></span>&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: left;"><strong><span style="font-size: medium; font-family: helvetica; color: #003366;"><span style="font-size: small;">&nbsp;</span></span><span style="font-size: medium;"><span style="font-family: helvetica;"></span><span style="font-family: helvetica;"></span><span style="font-family: helvetica;"></span><span style="font-family: helvetica;"></span><span style="font-family: helvetica;"></span></span></strong><span style="font-size: medium; font-family: helvetica; color: #003366;"><a href="http://biblio.pointe-claire.ca/home/librarie_services/databases.dot" target="_blank"><span style="color: #003366;"><span style="font-size: medium;">Ressources num&eacute;riques</span></span></a>&nbsp;</span></p>
+<p style="text-align: left;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;&nbsp;&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+<p><a title="Calendrier" href="http://biblio.pointe-claire.ca/home/librarie_services/calendar.dot" target="_blank"><img title="Calendrier" style="margin-left: auto; display: block; margin-right: auto;" alt="Calendrier" src="http://biblio.ville.pointe-claire.qc.ca/dotAsset/63b1a338-1228-4eef-becd-8c115c9d5093.jpg" width="225" height="86" /></a></p>
+<p style="text-align: left; padding-left: 30px;">&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"><a href="http://biblio.pointe-claire.ca/home/librarie_services/programs-for-adults.dot" target="_blank"><span style="font-size: medium; color: #003366;">Programmation pour adultes</span></a></span></p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span><span style="color: #003366;"><span style="font-size: medium; font-family: helvetica;"><a href="http://biblio.pointe-claire.ca/home/teenzone/programs-for-teens.dot" target="_blank"><span style="color: #003366;"><span style="font-size: medium;">Programmation pour ados</span></span></a></span></span></p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span><span style="color: #003366;"><span style="font-size: medium; font-family: helvetica;"><a href="http://biblio.pointe-claire.ca/home/kidzone/programs-for-children.dot" target="_blank"><span style="color: #003366;"><span style="font-size: medium;">Programmation pour enfants</span></span></a></span><span style="font-size: medium; font-family: helvetica;"></span></span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;<strong><span style="font-size: medium; font-family: helvetica;"><a title="Stewart Hall" href="http://biblio.pointe-claire.ca/home/we_recommand/stewart-hall.dot" target="_blank"><span style="font-size: medium;"><span style="color: #003366;"><span style="font-size: medium;">Programmation Stewart Hall</span></span></span></a></span></strong></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="text-align: right;">
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<p>&nbsp;<span style="color: #003366;"><strong><span style="font-size: medium; font-family: helvetica;"><a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=Search&amp;Style=Portal3&amp;q=%20(%20IsNovelty%3D1%20)%20" target="_blank"><span style="font-size: medium; color: #003366;">NOUVEAUT&Eacute;S</span></a></span></strong></span></p>
+<p><span style="color: #003366;"><strong><span style="font-size: medium; font-family: helvetica;"></span></strong>&nbsp;</span></p>
+<p><span style="font-size: medium; font-family: helvetica; color: #003366;"><a href="http://biblio.pointe-claire.ca/home/we_recommand/reading-suggestions.dot" target="_blank"><span style="font-size: medium; color: #003366;">Suggestions de lecture</span></a></span></p>
+<p><span style="color: #003366;"><span style="font-size: medium; font-family: helvetica;"></span>&nbsp;</span></p>
+<p><span style="font-size: medium; font-family: helvetica; color: #003366;"><a href="http://biblio.pointe-claire.ca/home/we_recommand/new-arrivals.dot" target="_blank"><span style="font-size: medium; color: #003366;">Listes des nouveaut&eacute;s</span></a></span></p>
+<span style="font-size: medium; font-family: helvetica; color: #003366;"></span>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><br />&nbsp;&nbsp;<a href="http://biblio.pointe-claire.ca/home/librarie_services/whats-new.dot" target="_blank"><img alt="Quoi de neuf" src="http://biblio.ville.pointe-claire.qc.ca/dotAsset/e4d0276f-4df0-436d-bf3d-b3579ee44d24.jpg" width="172" height="126" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: medium; font-family: helvetica; color: #a1875e;"><span style="font-family: helvetica;"><strong><span style="font-size: small;"><span style="font-size: medium;"><a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=QuickSearch&amp;Lang=FRE" target="_blank"><span style="font-size: medium; color: #a1875e;">RECHERCHE RAPIDE</span></a></span></span></strong></span></span>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-size: large;"><strong><span style="font-family: helvetica; color: #003366;"><span style="font-size: large;"></span></span></strong></span>&nbsp;<span style="font-size: large;"><span style="font-family: helvetica; color: #003366;"><span style="font-size: large;">Blogues</span></span></span></p>
+<p><span style="font-size: large;"><span style="font-family: helvetica; color: #003366;"><span style="font-size: large;"></span></span></span>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;<span style="font-size: medium; font-family: helvetica; color: #003366;">&nbsp; <a href="http://bppcados.wordpress.com/" target="_blank"><span style="color: #003366;"><span style="font-size: medium;">Ados</span></span></a></span></p>
+<p><span style="color: #003366;">&nbsp;</span></p>
+<p><span style="font-size: medium; font-family: helvetica;"><span style="color: #003366;">&nbsp; <a href="http://pcplblogue.wordpress.com/%20" target="_blank"><span style="color: #003366;"><span style="font-size: medium;">Adultes</span></span></a></span></span></p>
+<p><span style="font-size: medium; font-family: helvetica;"></span>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="color: #003366;"><strong><span style="font-size: medium; font-family: helvetica;"><a href="http://www.pointe-claire.ca/" target="_blank"><span style="font-size: medium; color: #003366;">Ville de Pointe-Claire</span></a></span></strong></span></p>
+<p>&nbsp;</p>
+<p><a href="https://twitter.com/pointe_claire" target="_blank"><img title="Twitter" alt="Tweet" src="http://biblio.ville.pointe-claire.qc.ca/dotAsset/9fb622b9-a7d3-4e49-a5de-f4db714eff95.png" width="28" height="28" /></a>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://vimeo.com/pointeclaire" target="_blank"><img title="Vimeo PC" alt="Vimeo" src="http://biblio.ville.pointe-claire.qc.ca/dotAsset/b418d6dc-1a18-49af-bf2d-57430853b364.png" width="25" height="28" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><a href="http://eepurl.com/XTrvX" target="_blank"><img title="Courant Culturel" style="margin-left: auto; display: block; margin-right: auto;" alt="Courant Culturel" src="http://biblio.ville.pointe-claire.qc.ca/dotAsset/784e73b7-9629-479d-8c57-e5c534c593e8.jpg" width="172" height="51" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="font-family: helvetica; color: #003366;"></span>&nbsp;<span style="font-family: helvetica; color: #003366;"><a href="http://www.pointe-claire.ca/centre-culturel-stewart-hall/le-centre-culturel.html" target="_blank"><span style="font-size: small; color: #003366;"><span style="font-size: medium;">Centre Culturel Stewart Hall</span></span></a></span></p>
+<p style="text-align: center;"><span style="font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium; font-family: helvetica; color: #003366;"><a href="http://www.pointe-claire.ca/galerie-d-art-stewart-hall.html" target="_blank"><span style="font-size: medium; color: #003366;">Galerie d'art Stewart Hall</span></a></span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;&nbsp;&nbsp;<span style="font-family: helvetica;"><a href="http://biblio.pointe-claire.ca/home/about_us/friends_of_the_library.dot" target="_blank"><span style="color: #003366;"><span style="font-size: small;"><span style="font-size: medium; font-family: helvetica;"><em><span style="font-size: medium;">Les Amis de la Biblioth&egrave;que</span></em></span></span></span></a></span></p>
+<p>&nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p style="text-align: right;"><span style="font-size: medium; font-family: helvetica; color: #003366;"><a href="http://biblio.pointe-claire.ca/home/about_us/general-information.dot" target="_blank"><span style="font-size: medium; color: #003366;">Localisations et horaires</span></a></span></p>
+<p style="text-align: right;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: right;"><span style="color: #003366;"><a href="https://maps.google.ca/maps?q=100+Douglas-Shand+Avenue,+Pointe-Claire,+QC&amp;hl=en&amp;ie=UTF8&amp;ll=45.450497,-73.816152&amp;spn=0.008159,0.01929&amp;sll=45.438636,-73.809408&amp;sspn=0.130568,0.308647&amp;oq=100+Douglas+Shand&amp;hnear=100+Avenue+Douglas-Shand,+Pointe-Claire,+Qu%C3%A9bec+H9R+4V1&amp;t=m&amp;z=16&amp;iwloc=A" target="_blank"><img alt="Google map" src="http://biblio.pointe-claire.ca/dotAsset/1e614bcb-2beb-4695-aeac-eb3f932bbbfe.jpg" width="33" height="28" /></a>&nbsp;</span></p>
+<p style="text-align: right;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: right;"><span style="font-size: medium; font-family: helvetica; color: #003366;"><a href="http://biblio.pointe-claire.ca/home/about_us/library-contacts.dot?language_id=5" target="_blank"><span style="font-size: medium; color: #003366;">Pour nous joindre</span></a></span></p>
+<p style="text-align: right;"><span style="color: #003366;"><span style="font-size: medium; font-family: helvetica;"></span>&nbsp;</span></p>
+<p style="text-align: right;"><span style="color: #003366;"><span style="font-size: medium; font-family: helvetica;"></span><span style="font-size: medium; font-family: helvetica;"><a href="http://biblio.pointe-claire.ca/home/about_us/donations.dot" target="_blank"><span style="font-size: medium; color: #003366;">Dons</span></a></span></span><span style="font-size: medium; font-family: helvetica; color: #003366;"></span></p>
+<p style="text-align: right;"><span style="font-size: medium; font-family: helvetica; color: #003366;"></span>&nbsp;</p>
+<p style="text-align: right;">&nbsp;</p>
+<p style="text-align: right;"><span style="font-size: medium; font-family: helvetica; color: #003366;"><a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=feedback&amp;Lang=FRE&amp;Style=Portal3" target="_blank"><span style="font-size: medium; color: #003366;">Posez une question</span></a></span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="color: #003366;"><strong><span style="font-family: helvetica; font-size: medium;"></span></strong></span>&nbsp;&nbsp;</p>
+
+</div>
+
+
+
+    
+
+
+<br/><br/>
+
+<div style="text-align:center; font-size:11px;position:relative;left:50px;">
+  
+  <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=feedback&Lang=FRE&Style=Portal3" style="color:#17395e; font-size:12px;">Des questions? Demandez à une bibliothécaire</a>
+  <br/><br/>
+  <a href="http://matane2.ville.pointe-claire.qc.ca/alswww2.dll/APS_ZONES?fn=RSSFeedHome&Lang=FRE">Flux RSS</a> -
+  <a href="/home/contact-us.dot">Pour nous joindre</a> -
+  <a href=http://www.pointe-claire.ca/fr>Ville de Pointe-Claire</a>
+  <br/><br/>
+  <div style="color:#7B8E9F">
+            ©2015 Bibliothèque publique de Pointe-Claire
+  </div>  
+</div>
+<br/><br/><br/><br/>
+
+         </div>
+
+    </div> <!-- fin div body -->
+    
+  </div> <!-- fin centralisation -->
+
+</body>
+  
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="google-site-verification" content="cwJiNo23ypjFgGJ46Yxgb1buArVhWYoWwyC8DHGd180" />
+
+<link rel="shortcut icon" href="images/favicon_M.ico">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>McGarry Public Library</title>
+
+<script type="text/javascript">
+/***********************************************
+* IFrame SSI script II- Â© Dynamic Drive DHTML code library (http://www.dynamicdrive.com)
+* Visit DynamicDrive.com for hundreds of original DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+//Input the IDs of the IFRAMES you wish to dynamically resize to match its content height:
+//Separate each ID with a comma. Examples: ["myframe1", "myframe2"] or ["myframe"] or [] for none:
+var iframeids=["mcgarryFrame"]
+
+//Should script hide iframe from browsers that don't support this script (non IE5+/NS6+ browsers. Recommended):
+var iframehide="yes"
+
+var getFFVersion=navigator.userAgent.substring(navigator.userAgent.indexOf("Firefox")).split("/")[1]
+var FFextraHeight=parseFloat(getFFVersion)>=0.1? 16 : 0 //extra height in px to add to iframe in FireFox 1.0+ browsers
+
+function resizeCaller() {
+var dyniframe=new Array()
+for (i=0; i<iframeids.length; i++){
+if (document.getElementById)
+resizeIframe(iframeids[i])
+//reveal iframe for lower end browsers? (see var above):
+if ((document.all || document.getElementById) && iframehide=="no"){
+var tempobj=document.all? document.all[iframeids[i]] : document.getElementById(iframeids[i])
+tempobj.style.display="block"
+}
+}
+}
+
+function resizeIframe(frameid){
+var currentfr=document.getElementById(frameid)
+if (currentfr && !window.opera){
+currentfr.style.display="block"
+
+if (currentfr.addEventListener)
+currentfr.addEventListener("load", readjustIframe, false)
+else if (currentfr.attachEvent){
+currentfr.detachEvent("onload", readjustIframe) // Bug fix line
+currentfr.attachEvent("onload", readjustIframe)
+}
+}
+}
+
+function readjustIframe(loadevt) {
+var crossevt=(window.event)? event : loadevt
+var iframeroot=(crossevt.currentTarget)? crossevt.currentTarget : crossevt.srcElement
+if (iframeroot)
+resizeIframe(iframeroot.id);
+}
+
+function loadintoIframe(iframeid, url){
+if (document.getElementById)
+document.getElementById(iframeid).src=url
+}
+
+if (window.addEventListener)
+window.addEventListener("load", resizeCaller, false)
+else if (window.attachEvent)
+window.attachEvent("onload", resizeCaller)
+else
+window.onload=resizeCaller
+
+
+
+</script>
+
+
+<link href="CSS/layout.css" rel="stylesheet" type="text/css" />
+<link href="CSS/menu1.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body background="images/bodybg.png"  style="background-repeat:repeat-x" >
+
+<div id="shadow">
+<div id="wrapper" style="position:relative">    
+<div id="headerImg" style="position:absolute; top:1px; left:0px"></div>  
+ <!--<div id="scroller" style="position:absolute; top:160px ; left:300px"><p><strong>SCROLLER</strong></p>
+        <iframe id="FrameScroller" src="http://www.olsn.ca/proofs/mcgarry/scroller/scroller.htm" name="FrameScroller" width="100%" height="auto"  allowtransparency="true" scrolling="no" marginwidth="0" marginheight="0" 		  frameborder="0" vspace="0" hspace="0" style="overflow:hidden; width:100%; display:none">        </iframe> 
+  </div>  -->
+   
+    
+<!--div style="position:absolute; top:77px; left:685px"><p><strong> LOGO</strong></p> </div> -->
+   
+    
+   
+   
+<div id="right" style="position:absolute; top:203px; left:201px">
+<div style="position:absolute; top:-10px; left:515px">
+ 
+        
+    
+        <a href="index.asp" target="_self"><p> English</p></a>
+		
+		
+        </div>  
+        
+  <iframe id="mcgarryFrame" src="home.asp" name="mcgarryFrame" width="100%" allowtransparency="true" scrolling="no" height="100%" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" style="overflow:hidden;  display:none"></iframe>
+  </div> 
+   
+ <!-- <div id="headerbottom" style="position:absolute; top:177px; left:303px">  <p><strong>EMPTY</strong></p></div> -->
+  <!--<div id="title" style="position:absolute; top:5px; left:30px"></div> -->
+          
+  <div style="position:absolute; top:203px; left:0px; width:365px; z-index:1">
+       	
+    	<iframe marginheight="0" marginwidth="0" name="wxButtonFrame" id="wxButtonFrame" height="20" src="http://btn.weather.ca/weatherbuttons/template4.php?placeCode=CAON0716&category0=Cities&containerWidth=367&btnNo=&backgroundColor=blue&multipleCity=0&citySearch=1&celsiusF=C" align="top" frameborder="0" width="306" scrolling="no"></iframe>
+  </div>  
+  
+  
+
+<div id="left" style="position:absolute; top:203px; left: -1px">
+
+        <div id="menu1" style="position:absolute; top:5px; left:-10px">
+		
+			<li><a href="home.asp?lang=FR" title="Ã propos de nous" target="mcgarryFrame">Ã propos de nous</a></li>
+			<li><a href="hours.asp?lang=FR" title="Heures d'ouverture" target="mcgarryFrame">Heures d'ouverture</a></li>
+        	 <li><a href="staff.asp?lang=FR" title="personnel" target="mcgarryFrame">Personnel</a></li>
+             <li><a href="board.asp?lang=FR" title="ComitÃ© de bibliothÃ¨que" target="mcgarryFrame">ComitÃ© de bibliothÃ¨que</a></li>
+		     <li><a href="trustees.asp?lang=FR" title="Trustees" target="mcgarryFrame">Fiduciaires</a></li>
+        	<li><a href="services.asp?lang=FR" title="Services offerts" target="mcgarryFrame">Services offerts</a></li>
+            <li><a href="new_books.asp?lang=FR" title="Nouveaux livres" target="mcgarryFrame">Nouveaux livres</a></li>
+            <li><a href="loans.asp?lang=FR" title="Loans" target="mcgarryFrame">RÃ¨gles de prÃªts</a></li>
+           <!--  <li><a href="catalogue.asp?lang=FR" title="Catalogue" target="mcgarryFrame">L'aide du catalogue</a></li> -->
+     <li><a href="join.asp?lang=FR" title="Joignez" target="mcgarryFrame">Joignez</a></li>
+      <li><a href="http://www.olsn.ca/e-resource/search.asp?library=mcgarry" title="Databases" target="blank">Bases de donnÃ©es</a></li>
+            <li><a href="scripts/small/small/index.html" title="Galerie" target="mcgarryFrame">Galerie</a></li>
+		  <li><a href="links.asp?lang=FR" title="liens" target="mcgarryFrame" >Liens</a></li>
+			<li><a href="contact.asp?lang=FR" title="contact" target="mcgarryFrame">Contact</a></li>
+            <li><a href="http://www.google.com/cse/home?cx=001375046197251257808%3A_kvtl68q__8" title="recherche" target="_blank">Recherche</a></li>
+      </div>
+
+</div>
+
+
+</div>
+     
+ </div>
+</div>
+</div>
+    
+
+
+</body>
+</html>

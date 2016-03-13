@@ -1,0 +1,632 @@
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37228300-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+ 
+<html>
+<head>
+
+	<title>Municipalit&eacute; de Saint-Julien</title>
+ 	<META NAME="description" lang="fr" CONTENT="Municipalit&eacute; de Saint-Julien">
+ 	<META NAME="keywords" lang="fr" CONTENT="municipalite, frontenac, appalache, appalaches, chaudiere, saint, julien, quebec, canada">
+ 	<META NAME="revisit-after" CONTENT="14 days">
+ 	<META NAME="robots" CONTENT="index,follow">
+
+
+
+		<style type="text/css">
+		#csstopmenu, #csstopmenu ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		}
+		#csstopmenu li{
+		float: left;
+		position: relative;
+		}
+		#csstopmenu a{
+		text-decoration: none;
+		}
+		.mainitems{
+		border: 0px solid  #232323;
+		border-left-width: 0px;
+		font:12px verdana;
+		padding:5px 0px;
+		background-color: #232323;
+		width: 163;
+		}
+		.headerlinks a{
+		margin: auto 2px;
+		color: #f6f6e7;
+		}
+		.submenus{
+		display: none;
+		width: 162;
+		position: absolute;
+		top: 2.1em;
+		left: 0;
+		background-color: #27a22d;
+		border: 1px solid #27a22d;
+		}
+		.submenus li{
+		width: 100%;
+		padding:0px 0px;
+		font:12px verdana;
+		}
+		.submenus li a{
+		display: block;
+		width: 100%;
+		padding:3px 0px;
+		color: #ffffff;
+		text-indent: 1px;
+		}
+		html>body .submenus li a{ /* non IE browsers */
+		width: auto;
+		}
+		.submenus li a:hover{
+		background-color: #ffffff;
+		color: #4b2690;
+		}
+		#csstopmenu li>ul {/* non IE browsers */
+		top: auto;
+		left: auto;
+		}
+		#csstopmenu li:hover ul, li.over ul {
+		display: block;
+		filter:alpha(opacity=95);
+		-moz-opacity:95%;
+		}
+		html>body #clearmenu{ /* non IE browsers */
+		height: 3px;
+		}
+		</style>
+		<script type="text/javascript">
+		startMenu = function() {
+		if (document.all&&document.getElementById) {
+		cssmenu = document.getElementById("csstopmenu");
+		for (i=0; i<cssmenu.childNodes.length; i++) {
+		node = cssmenu.childNodes[i];
+		if (node.nodeName=="LI") {
+		node.onmouseover=function() {
+		this.className+=" over";
+		}
+		node.onmouseout=function(){
+		this.className=this.className.replace(" over", "")
+		}
+		}
+		}
+		}
+		}
+		if (window.attachEvent)
+		window.attachEvent("onload", startMenu)
+		else
+		window.onload=startMenu;
+	</script>
+
+<script type="text/javascript" src="administration/ew.js"></script>
+
+<script type="text/javascript">
+
+function changement1()
+{
+
+	document.recherche.numeroMat.value = ""
+}
+
+function changement2()
+{
+	document.recherche.numeroMat.value = ""
+}
+function changement3()
+{
+	document.recherche.rue.value = ""
+	document.recherche.numeroCivique.value = ""
+}
+</script>
+<script language="JavaScript">
+<!-- start Javascript
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    return false
+		 }
+
+		 if (str.indexOf(" ")!=-1){
+		    return false
+		 }
+
+ 		 return true
+	}
+
+
+function  validation1() {
+
+	if (document.formulaire.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.formulaire.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	var emailID=document.formulaire.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+return true;
+}
+
+function  validation2() {
+
+	if (document.courriel.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	if (document.courriel.commentaire.value =="")
+	{
+		alert("Vous devez inscrire votre commentaire.")
+		return false;
+	}
+
+	var emailID=document.courriel.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+
+
+return true;
+}
+function  validation3() {
+
+	if (document.courriel.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.adresse.value =="")
+	{
+		alert("Vous devez inscrire votre adresse.")
+		return false;
+	}
+
+	if (document.courriel.telephone.value =="")
+	{
+		alert("Vous devez inscrire votre telephone.")
+		return false;
+	}
+
+	if (document.courriel.bruler.value =="")
+	{
+		alert("Vous devez inscrire le type de matériaux à brûler.")
+		return false;
+	}
+
+	if (document.courriel.dateFeu.value =="")
+	{
+		alert("Vous devez inscrire la date du feu.")
+		return false;
+	}
+
+	if (document.courriel.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	var emailID=document.courriel.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+
+return true;
+}
+
+function  validation4() {
+
+
+
+	if (document.courriel.AemailFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	var emailID=document.courriel.AemailFrancais
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+	if (document.courriel.AmatriculeFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre numéro de matricule.")
+		return false;
+	}
+
+
+
+
+
+	if (document.courriel.AlocalisationFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre numéro de certificat de localisation.")
+		return false;
+	}
+
+
+
+
+if (document.courriel.AdateDemandeFrancais && !EW_hasValue(document.courriel.AdateDemandeFrancais, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.AdateDemandeFrancais, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+
+	if (document.courriel.AnomFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.AadresseFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre adresse.")
+		return false;
+	}
+
+	if (document.courriel.AcodePostalFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre code postal.")
+		return false;
+	}
+	if (document.courriel.AtelResFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre numero de téléphone.")
+		return false;
+	}
+
+	if (document.courriel.Anom2Francais.value =="")
+	{
+		alert("Vous devez inscrire le nom de votre entrepreneur. ")
+		return false;
+	}
+
+	if (document.courriel.Aadresse2Francais.value =="")
+	{
+		alert("Vous devez inscrire l'adresse de votre entrepreneur.")
+		return false;
+	}
+
+	if (document.courriel.AcodePosta2lFrancais.value =="")
+	{
+		alert("Vous devez inscrire le code postal de votre entrepreneur.")
+		return false;
+	}
+	if (document.courriel.AtelRes2Francais.value =="")
+	{
+		alert("Vous devez inscrire le numero de téléphone de votre entrepreneur.")
+		return false;
+	}
+
+	if (document.courriel.AtypeUsageFrancais.value =="")
+	{
+		alert("Vous devez inscrire le type d'usage.")
+		return false;
+	}
+
+
+
+
+if (document.courriel.ADatePrevueDebut && !EW_hasValue(document.courriel.ADatePrevueDebut, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.ADatePrevueDebut, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+if (document.courriel.ADatePrevueFin && !EW_hasValue(document.courriel.ADatePrevueFin, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.ADatePrevueFin, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+	if (document.courriel.ACout.value =="")
+	{
+		alert("Vous devez inscrire le coût approximatif des travaux.")
+		return false;
+	}
+
+
+return true;
+}
+
+// end JavaScript -->
+</script>
+
+<script src="affiche1.js" type="text/javascript"></script>
+<script type="text/javascript" src="administration/popcalendar.js"></script>
+
+<script type="text/javascript" src="jquery-1.2.6.pack.js"></script>
+
+
+
+<style type="text/css">
+#simplegallery1 {
+border: 0px solid white;
+visibility: hidden;
+}
+#simplegallery1 .gallerydesctext {
+padding: 20px 15px;
+font-family: Verdana;
+font-size: 20px;
+
+}
+</style>
+<script type="text/javascript" src="simplegallery.js">
+
+</script>
+<script type="text/javascript">
+var mygallery=new simpleGallery({
+wrapperid: "simplegallery1", //ID of main gallery container,
+dimensions: [979, 315], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+imagearray: [
+["img/anim1.jpg", "", "", ""],
+["img/anim2.jpg", "", "", ""],
+["img/anim3.jpg", "", "", ""],
+["img/anim4.jpg", "", "", ""],
+["img/anim5.jpg", "", "", ""],
+["img/anim6.jpg", "", "", ""],
+["img/anim7.jpg", "", "", ""],
+["img/anim8.jpg", "", "", ""],
+["img/anim9.jpg", "", "", ""],
+["img/anim10.jpg", "", "", ""],
+["img/anim11.jpg", "", "", ""],
+["img/anim12.jpg", "", "", ""],
+["img/anim13.jpg", "", "", ""],
+["img/anim14.jpg", "", "", ""],
+["img/anim15.jpg", "", "", ""],
+["img/anim16.jpg", "", "", ""],
+["img/anim17.jpg", "", "", ""]
+
+],
+autoplay: [true, 4000, 50], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+persist: false, //remember last viewed slide and recall within same session?
+fadeduration: 2000, //transition duration (milliseconds)
+oninit:function(){ //event that fires when gallery has initialized/ ready to run
+//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
+},
+onslide:function(curslide, i){ //event that fires after each slide is shown
+//Keyword "this": references current gallery instance
+//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+}
+})
+</script>
+
+
+</head>
+	<body   background='administration/ConfigurationSite_ImageBg_bv.asp?noId=1' text='1e2202' link='1e2202' alink='1e2202' vlink='1e2202' topmargin='0'  ><table height='275' cellspacing=0 cellpadding=0 align='center' > <tr><td valign='middle' align='center' width='978' colspan='10' height='46' ><marquee direction='left'  scrollamount='3' scrolldelay='0' onmouseover='javascript:this.scrollAmount=0' onmouseout='javascript:this.scrollAmount=3' style="font-weight: bold; color:ffffff ; font-family: verdana;font-size: 13; "><div valign=middle  style="font-weight: normal; color:ffffff ; font-family: verdana;font-size: 13; "><p><p><font color="#ffffff" size="4">***ATTENTION : Toutes les photographies de ce site sont sous &quot;copyright&quot; et ne peuvent &ecirc;tre reproduites sans entente avec le photographe***</font></p></p></div></marquee></td></tr><tr><td colspan='2'  valign='bottom'><img src=img/logo1.png border='0'><img src=img/logo2.png border='0'></td></tr><tr><td colspan='2'><img src='img/blanc979.jpg'><td></tr><tr><td bgcolor=white colspan='2' height='315'  valign='bottom'>
+	<div  id="simplegallery1"></div>
+
+	</td></tr><tr><td colspan='2'><img src='img/blanc9791.jpg'><td></tr><tr><td colspan='2' bgcolor="232323">
+<ul id="csstopmenu">
+
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">LA MUNICIPALIT&Eacute;</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=6"><span>Mot du maire</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=9"><span>Organisation municipale</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=7"><span>Proc&egrave;s-verbaux</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=28"><span>Finance et taxation</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=30"><span>R&egrave;glements municipaux</span></a></li>
+ 			
+		      <li><a href="http://st-julien.ca/indexFr.asp?numero=100"><span>Recyclage et d&eacute;chets</span></a></li>
+			
+ 		      <li><a href="indexFr.asp?numero=70"><span>Code d&rsquo;&eacute;thique</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=32"><span>Contrats municipaux</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">SERVICES EN LIGNE</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=174"><span>Avis public</span></a></li>
+			
+ 		      <li><a href="indexFr.asp?numero=99"><span>Permis de feu domiciliaire</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=98"><span>Permis de construction</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=93"><span>Le St-Julien vous parle</span></a></li>
+ 			
+		      <li><a href="http://www.cibgm.ca/role/municipalite.php?id=31035" target='_blank'><span>R&ocirc;le en ligne</span></a></li>
+			
+ 		      <li><a href="indexFr.asp?numero=100"><span>Calendrier municipal</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">NOS SERVICES</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=31"><span>CACI</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=68"><span>Cercle de fermi&egrave;res de Saint-Julien</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=88"><span>Biblioth&egrave;que</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=45"><span>Location de salles</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">FESTIVAL DES FOINS</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=71"><span>Pour nous rejoindre</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=8"><span>Programmation</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=72"><span>Forfaits</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=73"><span>Acc&egrave;s routier</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=74"><span>Albums photos du Festival</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=75"><span>Les partenaires</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">NOTRE MILIEU DE VIE</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=173"><span>Albums photos de chez nous</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=67"><span>Communiqu&eacute;s-Nouvelles</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=91"><span>Le Carrefour de St-Julien</span></a></li>
+ 			
+		      <li><a href="http://www.genealogiequebec.info/stjulien/fleur.html" target='_blank'><span>Embl&egrave;me floral</span></a></li>
+			
+ 		      <li><a href="indexFr.asp?numero=89"><span>H&eacute;bergement</span></a></li>
+ 			
+		      <li><a href="http://www.genealogiequebec.info/stjulien/" target='_blank'><span>Histoire</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">NOUS JOINDRE</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=5"><span>Coordonn&eacute;es</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=35"><span>Carte d&rsquo;acc&egrave;s</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=29"><span>Horaires et services</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+</ul>
+</td></tr><tr><td colspan='1' valign='top' bgcolor='ffffff'><table  width='180'  border='0' align='center' cellspacing='0' cellpadding='0' ><tr><td valign='top'><img src='administration/Menu_Photo_bv.asp?noId=88' border='0' width='180'></td></tr><tr><td align=center>
+<script type="text/javascript" src="http://www.sopfeu.qc.ca/widget/javascript/widget_min.js"></script><div data-sopfeu-client="Saint-Julien" data-sopfeu-lng="fr_CA" data-sopfeu-media="23" id="sopfeu-widget-container"></div>
+
+
+
+
+	</td></tr><tr><td valign='top' ><table  width='180' border='0' align='center' cellspacing='0' cellpadding='0' ><tr><td bgcolor="ffffff" onmouseover="this.style.background='#27a22d'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 12; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='index.asp';">&nbsp;ACCUEIL&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#27a22d'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 12; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=41';">&nbsp;COMMENTAIRES&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#27a22d'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 12; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=18';">&nbsp;COMMERCES & SERVICES&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#27a22d'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 12; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=16';">&nbsp;ORGANISMES LOCAUX&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#27a22d'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 12; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=3';">&nbsp;LIENS UTILES&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#27a22d'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 12; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=22';">&nbsp;PLAN DU SITE&nbsp;</td></tr></table></td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td valign='top'>&nbsp;</td></tr><tr><td height='12' bgcolor='ffffff'></td></tr><tr><td align='center' bgcolor='ffffff'><marquee direction='up' width=178 height='266' scrollamount='2' scrolldelay='0' onmouseover='javascript:this.scrollAmount=0' onmouseout='javascript:this.scrollAmount=2' style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; "><div align='center' style="font-weight: bold; color:30195C ; font-family: verdana;font-size: 18; "><p>Construction de r&eacute;sidences</p></div><div align='center' style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; "><p><p style="margin: 0cm 0cm 0pt;">Article 59&nbsp;de la Loi sur la protection du territoire et des activit&eacute;s agricoles relatives aux demandes &agrave; port&eacute;e collective</p>
+<p style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt;"><a href="../doc/373059___dec.pdf" target="_blank">La d&eacute;cision de la CPTAQ</a></p>
+<p style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt;"><a href="../doc/18-RCI%20138%20- Annexe C - ID St-Julien - pages 129 &agrave; 135.pdf" target="_blank">Les cartes des &icirc;lots d&eacute;structur&eacute;s</a></p>
+<p style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt;"><a href="../doc/373059P2___dec.pdf" target="_blank">Les secteurs</a></p></p></div><div align='center'><p>&nbsp;</p></div><div align='center' style="font-weight: bold; color:30195C ; font-family: verdana;font-size: 18; "><p>Permis de feu domiciliaire</p></div><div align='center' style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; "><p><p>Il est obligatoire de d&eacute;tenir une autorisation de la municipalit&eacute; pour proc&eacute;der au br&ucirc;lage des branchages, des arbres, des arbustes etc. C&rsquo;est simple, il suffit de r&eacute;diger le formulaire <a href="../indexFr.asp?numero=99"><strong>Permis de feu domiciliaire</strong></a> ou t&eacute;l&eacute;phoner au 418-423-4295</p></p></div><div align='center'><p>&nbsp;</p></div></marquee></td></tr><tr><td  height='1' bgcolor='000000'></td></tr></table></td><td valign='top'  width='798' height='500'  bgcolor='ffffff'><table  width='798' height='100%' cellspacing='0' cellpadding='0' 	 align='center'><tr><td valign='top'  height='300'><table width='100%' cellspacing='0' cellpadding='0' align='left'><tr><td width='10' valign='top'></td><td valign='top' height='100%'><table width='100%' cellspacing='0' cellpadding='0' ><tr><td align='right'><a href='javascript:window.history.go(-1)'><img src='administration/ConfigurationSite_imagePrecedent_bv.asp?noId=1' alt='Page pr&eacute;c&eacute;dente' border='0'></a></td></tr><tr><td valign='middle' height='60' style="color:30195C ; font-family: verdana; font-size:15;"><b>Biblioth&egrave;que </b></td></tr><tr><td valign='top' height='20' style="font-weight: normal; color:1e2202 ; font-family: verdana; font-size:12; "><p>&nbsp;</p>
+<p align="justify"><strong>Biblioth&egrave;que municipale de Saint-Julien<br /></strong><a href="mailto:bibliotheque@st-julien.ca">bibliotheque@st-julien.ca</a></p>
+<p><span style="text-decoration: underline;"><span style="color: #003366;"><strong>Archives<a href="../doc/BibliothequeNouvelle2010.pdf"><span style="color: #003366; text-decoration: underline;"><br /></span></a></strong></span></span></p>
+<p><strong><span style="color: #0000cc;">Le service informatis&eacute; de pr&ecirc;t de livres &eacute;lectroniques est en service.<br /></span></strong></p>
+<p><strong>Heures d&rsquo;ouverture<br /></strong>Jeudi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;19h00 &agrave; 21h00<br />Dimanche&nbsp;&nbsp;10h00 &agrave; 12h00</p>
+<p><strong>Localisation</strong><br />La biblioth&egrave;que municipale de St-Julien, nomm&eacute;e "Biblioth&egrave;que des Z"Hauteurs", est situ&eacute;e au sous-sol du centre communautaire</p>
+<p>794 Chemin de Saint-Julien<br />Saint-Julien (Qc)<br />G0N 1B0</p>
+<p>T&eacute;l : (418) 423-7474<br />Fax : (418) 423-7474<br />Courriel :&nbsp;&nbsp;&nbsp; <a href="mailto:bibliotheque@st-julien.ca">bibliotheque@st-julien.ca</a></p>
+<p><strong>Responsable</strong> <br />Michel Tremblay</p>
+<p><strong>Au sujet de la biblioth&egrave;que<br /></strong>D&eacute;m&eacute;nag&eacute;e et modernis&eacute;e en 2008, elle r&eacute;pond mieux aux besoins de ses 86 abonn&eacute;s en offrant le service d&rsquo;internet haute vitesse, le service PEB, et un grand choix de livres et de revues dans sa colleciton locale..&nbsp;</p>
+<p>La biblioth&egrave;que municipale est membre du r&eacute;seau Biblio de la Capitale-Nationale et de la Chaudi&egrave;re-Appalaches. Site internet :</p>
+<p><a href="http://www.reseaubiblioduquebec.qc.ca/saint-julien" target="_blank">www.mabibliotheque.ca/saint-julien</a></p>
+<p><strong>Historique de la biblioth&egrave;que</strong></p>
+<p><a href="http://www.genealogiequebec.info/stjulien/biblio.html" target="_blank">http://www.genealogiequebec.info/stjulien/biblio.html</a></p>
+<p>&nbsp;</p></td></tr><tr><td align='left'>&nbsp;</td></tr></table></td><td width='10' valign='top'></td>
+<script>
+
+function lightup(imageobject, opacity){
+if (navigator.appName.indexOf("Netscape")!=-1&&parseInt(navigator.appVersion)>=5)
+imageobject.style.MozOpacity=opacity/100
+else if (navigator.appName.indexOf("Microsoft")!=-1&&parseInt(navigator.appVersion)>=4)
+imageobject.filters.alpha.opacity=opacity
+}
+
+</script>
+<td align='center' width='100' valign='top'><table cellspacing='1' align='center' cellpadding='0' width='100' ><tr><td width='100' align='center'><a href='http://st-julien.ca/indexFr.asp?numero=38' False ><img src='administration/MenuImage_Photo_bv.asp?noId=17' width='100' alt='Bottin des ressources'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='center'><a href='indexFr.asp?numero=173' False ><img src='administration/MenuImage_Photo_bv.asp?noId=12' width='100' alt='Bonne visite dans notre album photos.'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='center'><a href='indexFr.asp?numero=174' False ><img src='administration/MenuImage_Photo_bv.asp?noId=9' width='100' alt='Avis public'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='center'><a href='indexFr.asp?numero=150' False ><img src='administration/MenuImage_Photo_bv.asp?noId=4' width='100' alt='Pour tout connaître des événements'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr></table></td></tr></table></td></tr></table></td></table></td></tr></table></td></tr></table></body></html>

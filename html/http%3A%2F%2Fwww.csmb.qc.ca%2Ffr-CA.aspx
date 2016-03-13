@@ -1,0 +1,948 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Commission scolaire Marguerite-Bourgeoys, Montréal
+    </title>
+    <meta name="Description" content="Située à Montréal, la CSMB est la 2e plus importante commission scolaire au Québec. Elle gère 92 écoles et établissements scolaires.">
+    <meta name="Keywords" content="écoles de Montréal, commission scolaire, inscription a l'école, Montréal, Marguerite-Bourgeoys, CSMB">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="CODE_LANGUAGE" content="C#" />
+    <meta name="vs_defaultClientScript" content="JavaScript" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="/js/selectivizr-min.js"></script>
+    <link rel="stylesheet" href="/css/ergonet/all.css?v20150210" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/ergonet/functionnal.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/ergonet/print.css" type="text/css" media="print" />
+    <link href="/css/ergonet/styleBanner.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]><link href="/css/ergonet/styleBannerIe7.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <link href="/css/ergonet/LastMinute.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ergonet/lt8.css" /><![endif]-->
+    <script type="text/javascript" src="/js/CustomJavascript.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        var $j = jQuery.noConflict();
+    </script>
+    <script type="text/javascript" src="/js/bannerRotator.js"></script>
+
+</head>
+<body id="pageHome">
+    <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PT9QGF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PT9QGF');</script><!-- End Google Tag Manager -->
+    
+    <form method="post" action="fr-CA.aspx" id="mainform">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzQ2NjQwMzg5DxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWAgILD2QWCgIJD2QWAmYPZBYCZg9kFgICAQ8PFgIeBFRleHQFCVJlY2hlcmNoZWRkAgsPZBYCZg9kFgQCAQ8WAh4LXyFJdGVtQ291bnQCAxYGZg9kFgQCAw8WAh8CAgQWCGYPZBYCAgEPDxYCHgtOYXZpZ2F0ZVVybAUbL2ZyLUNBL2NzbWIvY291cC1kb2VpbC5hc3B4ZGQCAQ9kFgICAQ8PFgIfAwUhL2ZyLUNBL2NzbWIvcGxhbi1zdHJhdGVnaXF1ZS5hc3B4ZGQCAg9kFgICAQ8PFgIfAwUfL2ZyLUNBL2NzbWIvcmFwcG9ydC1hbm51ZWwuYXNweGRkAgMPZBYCAgEPDxYCHwMFHS9mci1DQS9jc21iL29yZ2FuaWdyYW1tZS5hc3B4ZGQCBQ8WAh8CAgUWCmYPZBYCAgEPDxYCHwMFGy9mci1DQS9jc21iL1BvbGl0aXF1ZXMuYXNweGRkAgEPZBYCAgEPDxYCHwMFIS9mci1DQS9jc21iL3Byb3RlY3RldXItZWxldmUuYXNweGRkAgIPZBYCAgEPDxYCHwMFKy9mci1DQS9jc21iL2NvbWl0ZS1wYXJlbnRzLWltcGxpY2F0aW9uLmFzcHhkZAIDD2QWAgIBDw8WAh8DBSEvZnItQ0EvY3NtYi9wcm9qZXQtcmVjaGVyY2hlLmFzcHhkZAIED2QWAgIBDw8WAh8DBR0vZnItQ0EvY3NtYi9pbmZvLXRyYXZhdXguYXNweGRkAgEPZBYEAgMPFgIfAgIDFgZmD2QWAgIBDw8WAh8DBSEvZnItQ0EvZW5zZWlnbmVtZW50L3ByaW1haXJlLmFzcHhkZAIBD2QWAgIBDw8WAh8DBSMvZnItQ0EvZW5zZWlnbmVtZW50L3NlY29uZGFpcmUuYXNweGRkAgIPZBYCAgEPDxYCHwMFLC9mci1DQS9lbnNlaWduZW1lbnQvZWNvbGVzLXNwZWNpYWxpc2Vlcy5hc3B4ZGQCBQ8WAh8CAgMWBmYPZBYCAgEPDxYCHwMFMi9mci1DQS9lbnNlaWduZW1lbnQvZm9ybWF0aW9uLXByb2Zlc3Npb25uZWxsZS5hc3B4ZGQCAQ9kFgICAQ8PFgIfAwUuL2ZyLUNBL2Vuc2VpZ25lbWVudC9lZHVjYXRpb24tZGVzLWFkdWx0ZXMuYXNweGRkAgIPZBYCAgEPDxYCHwMFLS9mci1DQS9lbnNlaWduZW1lbnQvc2VydmljZXMtZW50cmVwcmlzZXMuYXNweGRkAgIPZBYEAgMPFgIfAgIEFghmD2QWAgIBDw8WAh8DBS0vZnItQ0EvY29tbWlzc2FpcmVzL2NvbnNlaWwtY29tbWlzc2FpcmVzLmFzcHhkZAIBD2QWAgIBDw8WAh8DBSovZnItQ0EvY29tbWlzc2FpcmVzL2Jsb2d1ZS1wcmVzaWRlbnRlLmFzcHhkZAICD2QWAgIBDw8WAh8DBTgvZnItQ0EvY29tbWlzc2FpcmVzL2NhbGVuZHJpZXItc2VhbmNlLW9yZHJlLWR1LWpvdXIuYXNweGRkAgMPZBYCAgEPDxYCHwMFKi9mci1DQS9jb21taXNzYWlyZXMvcGVyaW9kZS1xdWVzdGlvbnMuYXNweGRkAgUPFgIfAgIFFgpmD2QWAgIBDw8WAh8DBTsvZnItQ0EvY29tbWlzc2FpcmVzL3Byb2Nlcy12ZXJiYXV4L2RlY2lzaW9ucy0yMDE1LTIwMTYuYXNweGRkAgEPZBYCAgEPDxYCHwMFKy9mci1DQS9jb21taXNzYWlyZXMvZGVjaXNpb25zLXJlY2VudGVzLmFzcHhkZAICD2QWAgIBDw8WAh8DBS8vZnItQ0EvY29tbWlzc2FpcmVzL2NvbnN1bHRhdGlvbnMtZW4tY291cnMuYXNweGRkAgMPZBYCAgEPDxYCHwMFKC9mci1DQS9jb21taXNzYWlyZXMvY29taXRlLWV4ZWN1dGlmLmFzcHhkZAIED2QWAgIBDw8WAh8DBSgvZnItQ0EvY29tbWlzc2FpcmVzL2NvbWl0ZXMtdHJhdmFpbC5hc3B4ZGQCAw8PFgIfAwUjL2ZyLUNBL3JlY2hlcmNoZS1ldGFibGlzc2VtZW50LmFzcHhkFgJmDw8WAh8BBRgmRWFjdXRlO0NPTEVTIEVUIENFTlRSRVNkZAIPD2QWBGYPZBYCZg9kFgQCAQ9kFgJmD2QWAmYPZBYEAgEPDxYCHwEFIsOAIGxhIHJlY2hlcmNoZSBkJ3VuZSBpbmZvcm1hdGlvbj9kZAIDDxYCHwICBWQCBQ9kFgJmD2QWAmYPZBYCAgMPZBYCAgEPZBYCZg9kFgYCCQ8QDxYGHg1EYXRhVGV4dEZpZWxkBQRUZXh0Hg5EYXRhVmFsdWVGaWVsZAUFVmFsdWUeC18hRGF0YUJvdW5kZ2QQFRIWVmlsbGUgLyBBcnJvbmRpc3NlbWVudAxCYWllLUQnVXJmw6kMQmVhY29uc2ZpZWxkD0PDtHRlLVNhaW50LUx1YxNEb2xsYXJkLWRlcyBPcm1lYXV4BkRvcnZhbAhLaXJrbGFuZAdMYWNoaW5lB0xhU2FsbGUhTCfDjmxlLUJpemFyZCAvIFNhaW50ZS1HZW5ldmnDqHZlCk1vbnQtUm95YWwJT3V0cmVtb250FVBpZXJyZWZvbmRzIC8gUm94Ym9ybw1Qb2ludGUtQ2xhaXJlDVNhaW50LUxhdXJlbnQXU2FpbnRlLUFubmUtZGUtQmVsbGV2dWUKU2VubmV2aWxsZQZWZXJkdW4VEhZUb3VzTGVzQXJyb25kaXNzZW1lbnRzCEJhaWVVcmZlDEJlYWNvbnNmaWVsZAlDb3RlU3RMdWMORG9sbGFyZE9ybWVhdXgGRG9ydmFsCEtpcmtsYW5kB0xhY2hpbmUHTGFzYWxsZRFJbGVCaXphcmRTdEdlbmV2ZQlNb250Um95YWwJT3V0cmVtb250ElBpZXJyZWZvbmRzUm94Ym9ybwxQb2ludGVDbGFpcmUMU2FpbnRMYXVyZW50ElNhaW50ZUFubmVCZWxsZXZ1ZQpTZW5uZXZpbGxlBlZlcmR1bhQrAxJnZ2dnZ2dnZ2dnZ2dnZ2dnZ2cWAWZkAg0PEA8WBh8EBQRUZXh0HwUFBVZhbHVlHwZnZBAVBhBUb3VzIGxlcyBuaXZlYXV4D8OJY29sZSBwcmltYWlyZRHDiWNvbGUgc2Vjb25kYWlyZSNDZW50cmUgZGUgZm9ybWF0aW9uIHByb2Zlc3Npb25uZWxsZR9DZW50cmUgZCfDqWR1Y2F0aW9uIGRlcyBhZHVsdGVzFMOJY29sZSBzcMOpY2lhbGlzw6llFQYOVG91c0xlc05pdmVhdXgNRWNvbGVQcmltYWlyZQ9FY29sZVNlY29uZGFpcmUYRm9ybWF0aW9uUHJvZmVzc2lvbm5lbGxlFkNlbnRyZUVkdWNhdGlvbkFkdWx0ZXMNRWNvbGVTcGVjaWFsZRQrAwZnZ2dnZ2cWAWZkAhEPEA8WBh8EBQRUZXh0HwUFBVZhbHVlHwZnZBAVFRNUb3VzIGxlcyBwcm9ncmFtbWVzIENsYXNzZXMgZCdhY2N1ZWlsIC0gcHLDqXNjb2xhaXJlHENsYXNzZXMgZCdhY2N1ZWlsIC0gcHJpbWFpcmUeQ2xhc3NlcyBkJ2FjY3VlaWwgLSBzZWNvbmRhaXJlEEFuZ2xhaXMgaW50ZW5zaWZdQ2hlbWluZW1lbnQgcG91ciDDqWzDqHZlIGhhbmRpY2Fww6kgb3UgZW4gZGlmZmljdWx0w6kgZCdhZGFwdGF0aW9uIG91IGQnYXBwcmVudGlzc2FnZSAoRUhEQUEpEkZvcm1hdGlvbiBlbnJpY2hpZRJNYXRlcm5lbGxlIC0gNCBhbnMrUHJvZ3JhbW1lIGQnw6lkdWNhdGlvbiBpbnRlcm5hdGlvbmFsZSAoUEVJKR9DYXJyb3NzZXJpZSAoUHJvZ3JhbW1lIERFUy9ERVApKFNvdXRpZW4gaW5mb3JtYXRpcXVlIChQcm9ncmFtbWUgREVTL0RFUCkIU2NpZW5jZXM1VGVjaG5vbG9naWVzIGRlIGzigJlpbmZvcm1hdGlvbiBldCBkZXMgY29tbXVuaWNhdGlvbnMOQXJ0IGRyYW1hdGlxdWUHTXVzaXF1ZQdMYW5ndWVzBlNwb3J0czJQcsOpcGFyYXRpb24gw6AgbGEgZm9ybWF0aW9uIHByb2Zlc3Npb25uZWxsZSAoUEZQKTFQYXJjb3VycyBkZSBmb3JtYXRpb24gYXjDqWUgc3VyIGzigJllbXBsb2kgKFBGQUUpFlByb2dyYW1tZSBtw6hyZS1lbmZhbnQ9Q2hlbWluZW1lbnQgYWRhcHTDqSBwb3VyIGxhIGTDqWZpY2llbmNlIGludGVsbGVjdHVlbGxlIChDQURJKRUVEVRvdXNMZXNQcm9ncmFtbWVzAjEzAjE0AjE1AjE3Ajk5ATECMTYBMgIyMAIxOQEzATQBNQE2ATcBOAE5AjEwAjExAjEyFCsDFWdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAgEPZBYCZg9kFgQCAQ9kFgJmD2QWAmYPZBYCAgMPFgIfAgICFgQCAQ9kFgQCAQ8PFgIfAwVHaHR0cDovL3d3dy5jc21iLnFjLmNhLz9zY19pdGVtaWQ9ezZCOEM3MTcyLTE3RkYtNEEzOC1BQkI1LUI3MUE3MTNGMkE1OX1kZAIFDw8WAh8DBUdodHRwOi8vd3d3LmNzbWIucWMuY2EvP3NjX2l0ZW1pZD17NkI4QzcxNzItMTdGRi00QTM4LUFCQjUtQjcxQTcxM0YyQTU5fWRkAgIPZBYEAgEPDxYCHwMFR2h0dHA6Ly93d3cuY3NtYi5xYy5jYS8/c2NfaXRlbWlkPXsxQjhBQTY1Ny00ODZFLTREQTktOEY4Mi1BMkM2QzQ3M0YwRkR9ZGQCBQ8PFgIfAwVHaHR0cDovL3d3dy5jc21iLnFjLmNhLz9zY19pdGVtaWQ9ezFCOEFBNjU3LTQ4NkUtNERBOS04RjgyLUEyQzZDNDczRjBGRH1kZAIDD2QWAmYPZBYCZg9kFgICAw8WAh8CAgMWBgIBD2QWAgIFDw8WAh8DBTIvZnItQ0EvbWVkaWFzL2V2ZW5lbWVudHMvMjAxNS0yMDE2L2NjLTUtYXZyaWwuYXNweGRkAgIPZBYCAgUPDxYCHwMFMC9mci1DQS9tZWRpYXMvZXZlbmVtZW50cy8yMDE1LTIwMTYvY2MtMy1tYWkuYXNweGRkAgMPZBYCAgUPDxYCHwMFMS9mci1DQS9tZWRpYXMvZXZlbmVtZW50cy8yMDE1LTIwMTYvY2MtNy1qdWluLmFzcHhkZAIRD2QWAmYPZBYCZg9kFgYCAQ9kFgJmD2QWAmYPZBYCAgMPFgIfAgIDFgZmD2QWAgIDDw8WAh8DBTkvZnItQ0EvbWVkaWFzL2NvbW11bmlxdWVzLzIwMTUtMjAxNi9kZXMtZGVwLWNvaWZmdXJlLmFzcHhkZAIBD2QWAgIDDw8WAh8DBTAvZnItQ0EvbWVkaWFzL2NvbW11bmlxdWVzLzIwMTUtMjAxNi9hc3AtY25jLmFzcHhkZAICD2QWAgIDDw8WAh8DBS4vZnItQ0EvbWVkaWFzL2NvbW11bmlxdWVzLzIwMTUtMjAxNi9ibGl0ei5hc3B4ZGQCAw9kFgJmD2QWAmYPZBYCAgMPFgIfAgIDFgZmD2QWAgIDDw8WAh8DBUcvZnItQ0EvY29tbWlzc2FpcmVzL2RlY2lzaW9ucy1yZWNlbnRlcy8yMDE0LTIwMTUvZ3V5LWRydW0tYWRvcHRpb24uYXNweGRkAgEPZBYCAgMPDxYCHwMFTS9mci1DQS9jb21taXNzYWlyZXMvZGVjaXNpb25zLXJlY2VudGVzLzIwMTQtMjAxNS9ub21pbi1jb25zdHJ1Y3QtbGFjaGluZS5hc3B4ZGQCAg9kFgICAw8PFgIfAwVEL2ZyLUNBL2NvbW1pc3NhaXJlcy9kZWNpc2lvbnMtcmVjZW50ZXMvMjAxNC0yMDE1L25vbWluYXRpb24tcGRlLmFzcHhkZAIFD2QWAmYPZBYCZg9kFgICAw8WAh8CAgMWBmYPZBYCAgMPDxYCHwMFJy9mci1DQS9jYXJyaWVyZXMvb2ZmcmVzLWVtcGxvaS90ZXMuYXNweGRkAgEPZBYCAgMPDxYCHwMFNi9mci1DQS9jYXJyaWVyZXMvb2ZmcmVzLWVtcGxvaS9zZWNyZXRhcmlhdC1iYW5xdWUuYXNweGRkAgIPZBYCAgMPDxYCHwMFPi9mci1DQS9jYXJyaWVyZXMvb2ZmcmVzLWVtcGxvaS9iYW5xdWUtdGVjaG5pY2llbi1iYXRpbWVudC5hc3B4ZGQCFQ9kFgJmD2QWAgIJDxYCHwICA2Rk98AVR6GY94FE1ITThlWQ7TVMaFs14a0a6A0lf9LO10Y=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['mainform'];
+if (!theForm) {
+    theForm = document.mainform;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=yzuDS1wD5z6c987uN_uTw5bHK5XktUBf80O3-_anVbN0-Iuc_T1DhIMzwxPOgdeJ8tim0-tOOmjLwQXBzqcZ5WhsJXnUil_ASqdyoACtsBw1&amp;t=635586505120000000" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"fr-CA","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":" ","CurrencySymbol":"$","NaNSymbol":"Non Numérique","CurrencyNegativePattern":15,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infini","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":" ","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"+Infini","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":" ","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135578800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"-","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"d MMMM yyyy HH:mm:ss","LongDatePattern":"d MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d MMMM","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"yyyy-MM-dd","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM, yyyy","AbbreviatedDayNames":["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],"ShortestDayNames":["di","lu","ma","me","je","ve","sa"],"DayNames":["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],"AbbreviatedMonthNames":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""],"MonthNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""],"IsReadOnly":true,"NativeCalendarName":"calendrier grégorien","AbbreviatedMonthGenitiveNames":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""],"MonthGenitiveNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""]},"eras":[1,"ap. J.-C.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=qK_mTQV-3AtC1LvohKMdVZDl-HWk7tE2lHtF-rYHLF2XdyvsH03u0XLgy-y3FXlhDVlcbg2xIRP2e5FHq8y5mHTjIciX7Q0kqb3ggCRnpY6mtWnnAxcaq9j-ZztDhwFFXVjkdpLFyIx6D-Je-6gD0Xt6eofjSc8qCWZwHJ6G9yzsEmpQhiGjY_Ji_r-OTHxK0&amp;t=7b689585" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('Échec du chargement de l\u0027infrastructure ASP.NET Ajax côté client.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=2M4VHEPZoJxwAVn3pDtd6T6HxmcgGdh4-I2O3tKYpbb5AJXf5HQUpQz2Y9mfCBLHvLA954XtyWwrpgV3GWwWbEQhRDPwnEhbbibbWACfUjKjw0F7EG2zjNHkkELNmTnCUTqJLenK5YivVLC9dfomxbgJQCUc2kiBSc_FlGcKZtNbQNYvdNM4PJdjMUy3SwHE0&amp;t=7b689585" type="text/javascript"></script>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('GeneralScriptManager', 'mainform', ['tphmain_0$phrightcolumn_0$UpdatePanel','phmain_0_phrightcolumn_0_UpdatePanel'], [], [], 90, '');
+//]]>
+</script>
+
+        <div id="wrapper">
+            <div id="header">
+                <div class="header-box" id="headerbox">
+                    <h1 class="logo"><a href="/fr-CA.aspx"><img src="/~/media/Upload/csmblogo.ashx?h=79&amp;la=fr-CA&amp;w=374" class="print-logo" alt="" width="374" height="79" /></a></h1>
+                    <div class="header-bar">
+                        <ul class="options">
+	<li><a href="/fr-CA/nous-joindre.aspx">Nous joindre</a></li><li><a href="/fr-CA/carrieres.aspx">Carrières</a></li><li><a href="/fr-CA/employes.aspx">Employés</a></li><li><a href="/fr-CA/medias.aspx">Médias</a></li>
+</ul>
+                        <div class="clearfix"></div>
+                        
+ <div ID="SocialMedia">        
+        <p><strong>Suivez-nous sur :</strong> <a href="https://www.facebook.com/csmbourgeoys" target="_blank"><img alt="" style="height: 28px; width: 28px; margin-top: 0px;" src="/~/media/Images/autres/Icones/facebook-icone/1400023812_f-facebook_256.ashx?la=fr-CA&amp;h=28&amp;w=28" /></a>
+<a href="https://twitter.com/csmbourgeoys" target="_blank"><img alt="" style="height: 28px; width: 28px;" src="/~/media/Images/autres/Icones/twitter-logo/1400023793_f-twitter_256.ashx?la=fr-CA&amp;h=28&amp;w=28" /></a>
+<a href="http://www.linkedin.com/company/commission-scolaire-marguerite-bourgeoys" target="_blank"><img alt="" style="height: 28px; width: 28px;" src="/~/media/Images/autres/Logotypes/linkedin-logo/1400023804_f-linkedin_256.ashx?la=fr-CA&amp;h=28&amp;w=28" /></a>
+<a href="https://www.youtube.com/user/CSMBvideo" target="_blank"><img alt="" src="/~/media/Images/autres/Icones/1399945153_Flurry_YouTube_Alt2.ashx?la=fr-CA&amp;h=28&amp;w=28" style="height: 28px; width: 28px;" /></a>
+<a href="https://www.flickr.com/photos/csmbourgeoys/" target="_blank"><img alt="" src="/~/media/Images/autres/Icones/1399945347_flickr.ashx?la=fr-CA&amp;h=28&amp;w=28" style="height: 28px; width: 28px;" /></a></p>
+ </div>
+
+                        <div id="ctl03_SearchPanel" class="search-form" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl03_btnSearch&#39;)">
+	
+    <fieldset>
+	    <script type="text/javascript">
+		    // <![CDATA[
+		    function doClear(inputField) {
+			    if (inputField.value == inputField.defaultValue) {
+				    inputField.value = "";
+				    inputField.style.color = "black";
+			    }
+		    }
+		    // ]]>
+	    </script>
+
+	    <span class="text"><input name="ctl03$txtCriteria" type="text" value="Recherche" id="ctl03_txtCriteria" class="search" onFocus="doClear(this)" /></span>
+	    
+	    <input type="submit" name="ctl03$btnSearch" value="" id="ctl03_btnSearch" class="submit" />
+	</fieldset>
+
+</div>
+
+                    </div>
+                </div>
+
+                
+                
+
+
+    <ul class="nav">
+       
+        <li>                               
+            <a href="#"> CSMB </a>        
+                <div class="container-3">
+
+                  <div class="col2">
+                      <ul>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_0_MenuLinks_0" href="/fr-CA/csmb/coup-doeil.aspx">En un coup d&#39;oeil</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_0_MenuLinks_1" href="/fr-CA/csmb/plan-strategique.aspx">Plan strat&#233;gique</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_0_MenuLinks_2" href="/fr-CA/csmb/rapport-annuel.aspx">Rapport annuel</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_0_MenuLinks_3" href="/fr-CA/csmb/organigramme.aspx">Organigramme</a>
+                             </li>
+                        
+                     </ul>
+                      <ul>
+                           
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_0_MenuLinks_0" href="/fr-CA/csmb/Politiques.aspx">Politiques et m&#233;moires</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_0_MenuLinks_1" href="/fr-CA/csmb/protecteur-eleve.aspx">Traitement des plaintes et Protecteur de l’&#233;l&#232;ve</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_0_MenuLinks_2" href="/fr-CA/csmb/comite-parents-implication.aspx">Comit&#233;s de parents et implication</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_0_MenuLinks_3" href="/fr-CA/csmb/projet-recherche.aspx">Projet de recherche</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_0_MenuLinks_4" href="/fr-CA/csmb/info-travaux.aspx">Info-travaux</a>
+                             </li>
+                        
+                      </ul>
+                </div>
+                <div style="display:inline-block; background:#ccc; width:1px; position: absolute;height: 80%;"></div>
+                <div class="col1">
+               <h3 style="text-transform: none;">Les grands enjeux &agrave; la CSMB</h3>
+<ul>
+    <li><a href="/fr-CA/csmb/enjeux/perseverance-scolaire.aspx">Pers&eacute;v&eacute;rance scolaire</a></li>
+    <li><a href="/fr-CA/csmb/enjeux/veef.aspx" target="_blank">Vivre ensemble en fran&ccedil;ais</a></li>
+    <li><a href="/fr-CA/csmb/enjeux/dev-durable.aspx">D&eacute;veloppement durable</a></li>
+    <li><a href="/fr-CA/csmb/enjeux/ecec.aspx">Entrepreneuriat &eacute;ducatif</a></li>
+    <li><a href="/fr-CA/csmb/enjeux/intimidation.aspx">Pr&eacute;vention de l'intimidation</a></li>
+    <li><a href="/fr-CA/csmb/enjeux/sante-bien-etre.aspx">Sant&eacute; et bien-&ecirc;tre</a></li>
+</ul>
+                </div>
+            </div>
+        </li>
+            
+        <li>                               
+            <a href="#"> Niveau d&#39;enseignement </a>        
+                <div class="container-3">
+
+                  <div class="col2">
+                      <ul>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_1_MenuLinks_0" href="/fr-CA/enseignement/primaire.aspx">Primaire</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_1_MenuLinks_1" href="/fr-CA/enseignement/secondaire.aspx">Secondaire</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_1_MenuLinks_2" href="/fr-CA/enseignement/ecoles-specialisees.aspx">&#201;coles sp&#233;cialis&#233;es et EHDAA</a>
+                             </li>
+                        
+                     </ul>
+                      <ul>
+                           
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_1_MenuLinks_0" href="/fr-CA/enseignement/formation-professionnelle.aspx">Formation professionnelle</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_1_MenuLinks_1" href="/fr-CA/enseignement/education-des-adultes.aspx">&#201;ducation des adultes</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_1_MenuLinks_2" href="/fr-CA/enseignement/services-entreprises.aspx">Services aux entreprises</a>
+                             </li>
+                        
+                      </ul>
+                </div>
+                <div style="display:inline-block; background:#ccc; width:1px; position: absolute;height: 80%;"></div>
+                <div class="col1">
+               <h3 style="text-align: left;">&Agrave; la recherche d'une information</h3>
+<ul>
+    <li style="text-align: left;"><a href="/fr-CA/recherche-etablissement.aspx">Liste des &eacute;coles</a></li>
+    <li style="text-align: left;"><a href="/fr-CA/enseignement/tous-niveaux/calendrier-scolaire-general.aspx">Calendrier scolaire</a></li>
+    <li style="text-align: left;"><a href="/fr-CA/enseignement/tous-niveaux/admission-inscription.aspx">Admission et inscription</a></li>
+    <li style="text-align: left;"><a href="/fr-CA/enseignement/tous-niveaux/urgence-fermeture.aspx">Urgence fermeture</a></li>
+    <li style="text-align: left;"><a href="/fr-CA/enseignement/primaire/transport-scolaire.aspx">Transport scolaire</a></li>
+    <li style="text-align: left;"><a href="/fr-CA/enseignement/tous-niveaux/bulletin-releve-notes.aspx">Bulletin et relev&eacute; de notes</a></li>
+</ul>
+<div style="text-align: left;"><br />
+</div>
+<div style="text-align: left;"><img src="/~/media/Images/autres/Icones/EtabSecondaireMap.ashx?la=fr-CA&amp;h=25&amp;w=28" alt="&Eacute;coles secondaires de la CSMB | Montr&eacute;al" style="height: 25px; width: 28px;" />
+<a href="/fr-CA/recherche-etablissement.aspx">Rechercher les &eacute;coles et les centres</a></div>
+                </div>
+            </div>
+        </li>
+            
+        <li>                               
+            <a href="#"> Conseil des commissaires </a>        
+                <div class="container-3">
+
+                  <div class="col2">
+                      <ul>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_2_MenuLinks_0" href="/fr-CA/commissaires/conseil-commissaires.aspx">Conseil des commissaires</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_2_MenuLinks_1" href="/fr-CA/commissaires/blogue-presidente.aspx">Blogue de la pr&#233;sidente</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_2_MenuLinks_2" href="/fr-CA/commissaires/calendrier-seance-ordre-du-jour.aspx">Calendrier des s&#233;ances et ordres du jour</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksLeft_2_MenuLinks_3" href="/fr-CA/commissaires/periode-questions.aspx">P&#233;riode de questions</a>
+                             </li>
+                        
+                     </ul>
+                      <ul>
+                           
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_2_MenuLinks_0" href="/fr-CA/commissaires/proces-verbaux/decisions-2015-2016.aspx">Proc&#232;s-verbaux</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_2_MenuLinks_1" href="/fr-CA/commissaires/decisions-recentes.aspx">En direct du Conseil</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_2_MenuLinks_2" href="/fr-CA/commissaires/consultations-en-cours.aspx">Consultations en cours</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_2_MenuLinks_3" href="/fr-CA/commissaires/comite-executif.aspx">Comit&#233; ex&#233;cutif</a>
+                             </li>
+                        
+                             <li>
+                                 <a id="ctl04_rptMenuItems_rptMenuLinksRight_2_MenuLinks_4" href="/fr-CA/commissaires/comites-travail.aspx">Comit&#233;s de travail</a>
+                             </li>
+                        
+                      </ul>
+                </div>
+                <div style="display:inline-block; background:#ccc; width:1px; position: absolute;height: 80%;"></div>
+                <div class="col1">
+               <div style="text-align: center;"><img alt="" height="225" width="300" src="/~/media/Images/commissaires/assermentation-dlv.ashx?h=225&amp;la=fr-CA&amp;w=300" /></div>
+                </div>
+            </div>
+        </li>
+            
+         <li>
+             <a id="ctl04_DirectLinkMenuItem" class="DirectLink" href="/fr-CA/recherche-etablissement.aspx"><span id="ctl04_lblDirectLink">&Eacute;COLES ET CENTRES</span></a>
+        </li>
+    </ul>
+     
+
+            </div>
+            <!-- gallery -->
+            <div id="bannerRotator" class="gallery"><script type="text/javascript">
+          var $ban = jQuery.noConflict();
+          var pauseTime = "10000";
+          var scrollTime = "";
+          $ban(document).ready(function() {
+          bannerRotator('#bannerRotator', scrollTime, pauseTime);
+          });
+        </script><ul><li class="imageRotator"><img src="/~/media/Images/medias/photo-communique/2015-2016/desdep-coiffure.ashx?h=307&amp;la=fr-CA&amp;w=955" alt="" width="955" height="307" /><div class="gallery-box"><div class="t"></div><div class="c"><h2>2 dipl&#244;mes, 2 ans &#189;</h2><p>Un nouveau diplôme mène à l’obtention simultanée d’un diplôme d’études secondaires (DES) et d’un diplôme d’études professionnelles (DEP) en coiffure en deux ans et demi.<br/></p><a href="/fr-CA/medias/communiques/2015-2016/des-dep-coiffure.aspx" class="more">En savoir plus</a></div><div class="b"></div></div></li><li class="imageRotator"><img src="/~/media/Images/bannieres/2015-2016/comm-asp.ashx?h=307&amp;la=fr-CA&amp;w=955" alt="" width="955" height="307" /><div class="gallery-box"><div class="t"></div><div class="c"><h2>Devenir une &#233;toile de l&#39;usinage</h2><p>L'ASP Usinage sur machines-outils à commande numérique permet d’accéder, en quatre mois, à la haute performance en usinage.<br/></p><a href="/fr-CA/medias/communiques/2015-2016/asp-cnc.aspx" class="more">En savoir plus</a></div><div class="b"></div></div></li><li class="imageRotator"><img src="/~/media/Images/bannieres/2015-2016/bourses-cje.ashx?h=307&amp;la=fr-CA&amp;w=955" alt="" width="955" height="307" /><div class="gallery-box"><div class="t"></div><div class="c"><h2>12 boursiers</h2><p>Des élèves persévérants reçoivent des bourses.</p><a href="/fr-CA/medias/activites/2015-2016/csmb-perseverance.aspx" class="more">En savoir plus</a></div><div class="b"></div></div></li><li class="imageRotator"><img src="/~/media/Images/medias/photo-communique/2015-2016/bann-crc1.ashx?h=307&amp;la=fr-CA&amp;w=955" alt="" width="955" height="307" /><div class="gallery-box"><div class="t"></div><div class="c"><h2>Contribuer &#224; son milieu</h2><p>Les employés de la CSMB remettent près de 50 000 $ à Centraide et à la Croix-Rouge<br/></p><a href="/fr-CA/medias/communiques/2015-2016/campagne-ccr.aspx" class="more">En savoir plus</a></div><div class="b"></div></div></li><li class="imageRotator"><img src="/~/media/Images/bannieres/2014-2015/fablab-955x307.ashx?h=307&amp;la=fr-CA&amp;w=955" alt="" width="955" height="307" /><div class="gallery-box"><div class="t"></div><div class="c"><h2>R&#234;ver, r&#233;aliser, partager </h2><p>La CSMB lance le Fab Lab CSMB, un laboratoire d'outils ultramodernes déployé dans cinq écoles, une première au Canada. <br/></p><a href="/fr-CA/medias/communiques/2014-2015/fab-lab.aspx" class="more">En savoir plus</a></div><div class="b"></div></div></li><li class="imageRotator"><img src="/~/media/Images/bannieres/2014-2015/eleves3-955x307.ashx?h=307&amp;la=fr-CA&amp;w=955" alt="" width="955" height="307" /><div class="gallery-box"><div class="t"></div><div class="c"><h2>Priorit&#233; aux &#233;l&#232;ves</h2><p>La CSMB dépose son budget 2015-2016 qui limite les coupes dans les écoles malgré les compressions budgétaires.<br/></p><a href="/fr-CA/medias/communiques/2014-2015/budget-15-16.aspx" class="more">En savoir plus</a></div><div class="b"></div></div></li><li class="imageRotator"><img src="/~/media/Images/bannieres/2014-2015/taux2.ashx?h=307&amp;la=fr-CA&amp;w=955" alt="" width="955" height="307" /><div class="gallery-box"><div class="t"></div><div class="c"><h2>Premiers de classe</h2><p>Les élèves de la CSMB obtiennent le plus haut taux de réussite aux épreuves ministérielles du secteur public sur l’île de Montréal.</p><a href="/fr-CA/medias/communiques/2014-2015/exam-ministere.aspx" class="more">En savoir plus</a></div><div class="b"></div></div></li></ul><div class="switcherWrapper"><div class="switcherLeft"></div><div id="bannerNav" class="switcherRepeater"></div><div class="switcherRight"></div></div></div>
+
+            <!-- main part -->
+            <div id="main">
+                
+<div id="three-columns" class="row">    
+    <div class="PhLeftColumn">
+	    
+<div class="LinkListWrapper">
+    <div class="heading">
+        <div class="HeadingHolderLinkList">
+            <h2><span><span id="phmain_0_phleftcolumn_0_lblAlaRecherche">À la recherche d'une information?</span></span></h2>
+        </div>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/fr-CA/recherche-etablissement.aspx">
+            Liste des &#233;coles et centres
+            </a>
+        </li>
+                
+        <li>
+            <a href="/fr-CA/enseignement/tous-niveaux/calendrier-scolaire-general.aspx">
+            Calendriers scolaires
+            </a>
+        </li>
+                
+        <li>
+            <a href="/fr-CA/enseignement/tous-niveaux/admission-inscription.aspx">
+            Admission et inscription
+            </a>
+        </li>
+                
+        <li>
+            <a href="/fr-CA/enseignement/tous-niveaux/urgence-fermeture.aspx">
+            Urgence fermeture
+            </a>
+        </li>
+                
+        <li>
+            <a href="/fr-CA/carrieres/offres-emploi.aspx">
+            Offres d&#39;emploi
+            </a>
+        </li>
+                
+    </ul>
+</div>
+    </div>
+    <div class="PhCenterColumn">		
+	    
+<div class="ZonePromo">    
+    <h2>&#192; la une</h2>       
+    <a href="/fr-CA/enseignement/education-des-adultes.aspx">
+        <img src="/~/media/Images/promo/2015-2016/btn-fga.ashx?h=206&amp;la=fr-CA&amp;w=268" alt="" width="268" height="206" />            
+    </a>
+                     
+</div>	
+    </div>
+    <div class="PhRightColumn">
+	    
+<div class="form filtre_etablissements SearchBoxForm">
+    <h2>Trouvez votre établissement</h2>
+    <span style="COLOR: #ff0000; FONT-SIZE: 8pt"><span id="phmain_0_phrightcolumn_0_lblFilterMessage"></span></span>
+    <div id="phmain_0_phrightcolumn_0_Panel" class="filter" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;phmain_0_phrightcolumn_0_btnFilter&#39;)">
+	
+        <div id="phmain_0_phrightcolumn_0_UpdatePanel">
+		           
+                <label for="phmain_0_phrightcolumn_0_txtCodePostal" id="phmain_0_phrightcolumn_0_Label1">Par code postal :</label>
+                <input name="phmain_0$phrightcolumn_0$txtCodePostal" type="text" id="phmain_0_phrightcolumn_0_txtCodePostal" style="width:75px;" />  
+                 
+           <div id="phmain_0_phrightcolumn_0_updateProgress" style="display:none;">
+			
+                    <div style="position: fixed; text-align: center; height: 100%; width: 100%; top: 0; right: 0; left: 0; z-index: 9999999; background-color: #000000; opacity: 0.7;">
+                        <img id="phmain_0_phrightcolumn_0_imgUpdateProgress" title="Loading ..." src="" alt="Loading ..." style="height:25px;width:25px;padding: 10px;position:fixed;top:45%;left:45%;" />
+                    </div>
+                
+		</div>                       
+                <label for="phmain_0_phrightcolumn_0_ddlArrondissements" id="phmain_0_phrightcolumn_0_Label2">Par ville / arrondissement :</label>
+                <select name="phmain_0$phrightcolumn_0$ddlArrondissements" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;phmain_0$phrightcolumn_0$ddlArrondissements\&#39;,\&#39;\&#39;)&#39;, 0)" id="phmain_0_phrightcolumn_0_ddlArrondissements" style="width:260px;">
+			<option selected="selected" value="TousLesArrondissements">Ville / Arrondissement</option>
+			<option value="BaieUrfe">Baie-D&#39;Urf&#233;</option>
+			<option value="Beaconsfield">Beaconsfield</option>
+			<option value="CoteStLuc">C&#244;te-Saint-Luc</option>
+			<option value="DollardOrmeaux">Dollard-des Ormeaux</option>
+			<option value="Dorval">Dorval</option>
+			<option value="Kirkland">Kirkland</option>
+			<option value="Lachine">Lachine</option>
+			<option value="Lasalle">LaSalle</option>
+			<option value="IleBizardStGeneve">L&#39;&#206;le-Bizard / Sainte-Genevi&#232;ve</option>
+			<option value="MontRoyal">Mont-Royal</option>
+			<option value="Outremont">Outremont</option>
+			<option value="PierrefondsRoxboro">Pierrefonds / Roxboro</option>
+			<option value="PointeClaire">Pointe-Claire</option>
+			<option value="SaintLaurent">Saint-Laurent</option>
+			<option value="SainteAnneBellevue">Sainte-Anne-de-Bellevue</option>
+			<option value="Senneville">Senneville</option>
+			<option value="Verdun">Verdun</option>
+
+		</select>
+                <label for="phmain_0_phrightcolumn_0_ddlNiveauxEcoles" id="phmain_0_phrightcolumn_0_Label3">Par niveau d'enseignement :</label>
+                <select name="phmain_0$phrightcolumn_0$ddlNiveauxEcoles" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;phmain_0$phrightcolumn_0$ddlNiveauxEcoles\&#39;,\&#39;\&#39;)&#39;, 0)" id="phmain_0_phrightcolumn_0_ddlNiveauxEcoles" style="width:260px;">
+			<option selected="selected" value="TousLesNiveaux">Tous les niveaux</option>
+			<option value="EcolePrimaire">&#201;cole primaire</option>
+			<option value="EcoleSecondaire">&#201;cole secondaire</option>
+			<option value="FormationProfessionnelle">Centre de formation professionnelle</option>
+			<option value="CentreEducationAdultes">Centre d&#39;&#233;ducation des adultes</option>
+			<option value="EcoleSpeciale">&#201;cole sp&#233;cialis&#233;e</option>
+
+		</select>
+                <label for="phmain_0_phrightcolumn_0_ddlProgrammesEcoles" id="phmain_0_phrightcolumn_0_Label4">Par programme :</label>
+                <select name="phmain_0$phrightcolumn_0$ddlProgrammesEcoles" id="phmain_0_phrightcolumn_0_ddlProgrammesEcoles" style="width:260px;">
+			<option selected="selected" value="TousLesProgrammes">Tous les programmes</option>
+			<option value="13">Classes d&#39;accueil - pr&#233;scolaire</option>
+			<option value="14">Classes d&#39;accueil - primaire</option>
+			<option value="15">Classes d&#39;accueil - secondaire</option>
+			<option value="17">Anglais intensif</option>
+			<option value="99">Cheminement pour &#233;l&#232;ve handicap&#233; ou en difficult&#233; d&#39;adaptation ou d&#39;apprentissage (EHDAA)</option>
+			<option value="1">Formation enrichie</option>
+			<option value="16">Maternelle - 4 ans</option>
+			<option value="2">Programme d&#39;&#233;ducation internationale (PEI)</option>
+			<option value="20">Carrosserie (Programme DES/DEP)</option>
+			<option value="19">Soutien informatique (Programme DES/DEP)</option>
+			<option value="3">Sciences</option>
+			<option value="4">Technologies de l’information et des communications</option>
+			<option value="5">Art dramatique</option>
+			<option value="6">Musique</option>
+			<option value="7">Langues</option>
+			<option value="8">Sports</option>
+			<option value="9">Pr&#233;paration &#224; la formation professionnelle (PFP)</option>
+			<option value="10">Parcours de formation ax&#233;e sur l’emploi (PFAE)</option>
+			<option value="11">Programme m&#232;re-enfant</option>
+			<option value="12">Cheminement adapt&#233; pour la d&#233;ficience intellectuelle (CADI)</option>
+
+		</select>
+                
+                 <span id="phmain_0_phrightcolumn_0_lblMessageRechercheProgramme"></span>
+                <a id="phmain_0_phrightcolumn_0_lnkRechercheProgramme" style="COLOR: blue; font-weight: bold; FONT-SIZE: 9pt"></a>
+
+                <div class="buttons btn_filter_etablissement">
+                    <input type="submit" name="phmain_0$phrightcolumn_0$btnFilter" value="Filtrer" id="phmain_0_phrightcolumn_0_btnFilter" />
+                </div>
+            
+	</div>
+    
+</div>
+</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="PhRightSidebarLeft">
+	    
+<div class="heading">
+    <div class="HeadingHolderLastestActivitiesBox">
+        <h2><span>
+                Nouvelles des &#233;tablissements
+          </span></h2>
+    </div>
+</div>
+<div class="SectionLastestActivitiesBox">
+    
+        
+            <div class="column">
+                <div class="image">
+                    <a id="phmain_1_phrightsidebarleft_0_rptActivities_ImageLink_0" href="http://www.csmb.qc.ca/?sc_itemid={6B8C7172-17FF-4A38-ABB5-B71A713F2A59}"><img src="/~/media/Images/bons-coups/2015-2016/Écrire-ça-libère-2015.ashx?h=219&amp;la=fr-CA&amp;w=292" alt="" width="292" height="219" /></a>
+                </div>
+                <div class="SectionEventsDescript">
+                    <p class="SectionEventsIntroAccueil">
+                        1er mars 2016 | Saint-Laurent
+                    </p>
+                    <a id="phmain_1_phrightsidebarleft_0_rptActivities_DetailsLink_0" href="http://www.csmb.qc.ca/?sc_itemid={6B8C7172-17FF-4A38-ABB5-B71A713F2A59}">
+                        <p class="SectionEventsIntroAccueil2">
+                            Écrire, ça libère!
+                        </p>
+                        <p class="SectionEventsIntroAccueil3">
+                            Les élèves de l’École St-Laurent se mobilisent pour les droits humains. 
+                        </p>    
+                        <p class="knowMoreListeMedia">
+                            <img src="/images/KnowMoreIcon.png" /></p>                  
+                    </a>
+                </div>
+                
+            </div>
+        
+            <div class="column">
+                <div class="image">
+                    <a id="phmain_1_phrightsidebarleft_0_rptActivities_ImageLink_1" href="http://www.csmb.qc.ca/?sc_itemid={1B8AA657-486E-4DA9-8F82-A2C6C473F0FD}"><img src="/~/media/Images/bons-coups/2015-2016/dv-3r.ashx?h=219&amp;la=fr-CA&amp;w=292" alt="" width="292" height="219" /></a>
+                </div>
+                <div class="SectionEventsDescript">
+                    <p class="SectionEventsIntroAccueil">
+                        11 f&#233;vrier 2016 |  Dalb&#233;-Viau
+                    </p>
+                    <a id="phmain_1_phrightsidebarleft_0_rptActivities_DetailsLink_1" href="http://www.csmb.qc.ca/?sc_itemid={1B8AA657-486E-4DA9-8F82-A2C6C473F0FD}">
+                        <p class="SectionEventsIntroAccueil2">
+                            Les 3R, c’est du sérieux
+                        </p>
+                        <p class="SectionEventsIntroAccueil3">
+                            Les élèves mettent sur pied un projet de recyclage. 
+                        </p>    
+                        <p class="knowMoreListeMedia">
+                            <img src="/images/KnowMoreIcon.png" /></p>                  
+                    </a>
+                </div>
+                
+            </div>
+        
+        
+    <a class="btnAccueil" href="/fr-CA/medias/activites.aspx"> 
+        Voir toutes les activit&#233;s
+        <img src="/images/SeeAllIcon.png"/>
+    </a>
+</div>
+
+
+
+    </div>
+    <div class="PhRightSidebarRight">		
+	    
+<div class="EventsToComeWrapper">
+    <div class="heading">
+        <div class="HeadingHolderEventsToCome">
+            <h2><span>
+                &#201;v&#233;nements &#224; venir
+            </span></h2>
+        </div>
+    </div>
+    
+            <div class="SectionEventsToComeBox">
+        
+            <div class="EventsItemWrapper">
+                <div class="SectionEventsDescript">
+
+                    <p class="SectionEventsIntroAccueil">                        
+                         5 avril 2016
+                        
+                    </p>
+
+                    <a id="phmain_1_phrightsidebarright_0_rptEventsToCome_DetailsLink_0" href="/fr-CA/medias/evenements/2015-2016/cc-5-avril.aspx">
+                                <p class="SectionEventsIntroAccueil2">
+                                   S&eacute;ance du Conseil des commissaires
+                                </p>
+                                <p class="SectionEventsIntroAccueil3">
+                                     
+                                </p>
+                        <p class="knowMoreListeMedia">
+                                <img src="/images/KnowMoreIcon.png" /></p> 
+                    </a>
+                </div>
+            </div>
+        
+            <div class="EventsItemWrapper">
+                <div class="SectionEventsDescript">
+
+                    <p class="SectionEventsIntroAccueil">                        
+                         3 mai 2016
+                        
+                    </p>
+
+                    <a id="phmain_1_phrightsidebarright_0_rptEventsToCome_DetailsLink_1" href="/fr-CA/medias/evenements/2015-2016/cc-3-mai.aspx">
+                                <p class="SectionEventsIntroAccueil2">
+                                   S&eacute;ance du Conseil des commissaires
+                                </p>
+                                <p class="SectionEventsIntroAccueil3">
+                                     
+                                </p>
+                        <p class="knowMoreListeMedia">
+                                <img src="/images/KnowMoreIcon.png" /></p> 
+                    </a>
+                </div>
+            </div>
+        
+            <div class="EventsItemWrapper">
+                <div class="SectionEventsDescript">
+
+                    <p class="SectionEventsIntroAccueil">                        
+                         7 juin 2016
+                        
+                    </p>
+
+                    <a id="phmain_1_phrightsidebarright_0_rptEventsToCome_DetailsLink_2" href="/fr-CA/medias/evenements/2015-2016/cc-7-juin.aspx">
+                                <p class="SectionEventsIntroAccueil2">
+                                   S&eacute;ance du Conseil des commissaires
+                                </p>
+                                <p class="SectionEventsIntroAccueil3">
+                                     
+                                </p>
+                        <p class="knowMoreListeMedia">
+                                <img src="/images/KnowMoreIcon.png" /></p> 
+                    </a>
+                </div>
+            </div>
+        
+            </div>
+        
+    <a class="btnAccueil" href="/fr-CA/medias/evenements.aspx"> 
+        Voir tous les &#233;v&#233;nements
+        <img src="/images/SeeAllIcon.png"/>
+    </a>
+    
+</div>
+	
+    </div>  
+    <div class="Clearer"></div>  
+</div><div id="GB_lastMinuteNewsWrapperBackground" style="display:none;filter: alpha(opacity=60);"></div><div id="GB_lastMinuteNewsWrapper" style="display:none;"><div class="bgWrapperPopupUrgence"><div class="bgInnerPopupUrgence"><div class="GB_btnCloseDM" onmouseover=""><a href="#" onClick="var lyr = document.getElementById('GB_lastMinuteNewsWrapperBackground');lyr.style.display='none';var lyr2 = document.getElementById('GB_lastMinuteNewsWrapper');lyr2.style.display='none';document.getElementById('pageHome').style.overflow='';"></a></div></div></div></div>
+            </div>
+            
+
+<div id="sufix-three-columns" class="row">    
+    <div class="PhSufixLeftColumn">
+	    
+<div class="PressBoxWrapper">
+    <div class="heading">
+        <div class="HeadingHolderPressBox">
+            <h2><span>
+                Sur le fil de presse
+            </span></h2>
+        </div>
+    </div>
+    <ul>
+        
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        16 f&#233;vrier 2016
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixleftcolumn_0_rptPressBox_DetailsLink_0" class="SeeMoreLinksSufix" href="/fr-CA/medias/communiques/2015-2016/des-dep-coiffure.aspx">
+                        <p class="SectionEventsIntroAccueil2">
+                            Programme DES-DEP : Diplôme et passion
+                        </p>
+                        <p class="SectionEventsIntroAccueil3">
+                                                        
+                        </p>
+                    </a>
+                </li>
+            
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        12 f&#233;vrier 2016
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixleftcolumn_0_rptPressBox_DetailsLink_1" class="SeeMoreLinksSufix" href="/fr-CA/medias/communiques/2015-2016/asp-cnc.aspx">
+                        <p class="SectionEventsIntroAccueil2">
+                            Quatre mois pour devenir le meilleur en usinage
+                        </p>
+                        <p class="SectionEventsIntroAccueil3">
+                                                        
+                        </p>
+                    </a>
+                </li>
+            
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        20 janvier 2016
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixleftcolumn_0_rptPressBox_DetailsLink_2" class="SeeMoreLinksSufix" href="/fr-CA/medias/communiques/2015-2016/blitz.aspx">
+                        <p class="SectionEventsIntroAccueil2">
+                            Trois bonnes raisons pour tout de suite s’inscrire à l’école
+                        </p>
+                        <p class="SectionEventsIntroAccueil3">
+                                                        
+                        </p>
+                    </a>
+                </li>
+            
+    </ul>
+   <a class="btnAccueil" href="/fr-CA/medias/communiques.aspx"> 
+        Voir toutes les nouvelles
+       <img src="/images/SeeAllIcon.png"/>
+    </a>
+</div>
+
+    </div>
+    <div class="PhSufixCenterColumn">		
+	    
+<div class="DirectorateBoxWrapper">
+    <div class="heading">
+        <div class="HeadingHolderDirectorateBox">
+            <h2><span>
+                En direct du Conseil
+            </span></h2>
+        </div>
+    </div>
+    <ul>
+        
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        Mars 2016
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixcentercolumn_0_rptDirectorateBox_DetailsLink_0" class="SeeMoreLinksSufix" href="/fr-CA/commissaires/decisions-recentes/2014-2015/guy-drum-adoption.aspx">
+                        <p class="SectionEventsIntroAccueil2">
+                            &Eacute;cole &agrave; vocation particuli&egrave;re &ndash; Demande d&rsquo;approbation au Ministre de l'&Eacute;ducation et de l'Enseignement sup&eacute;rieur en vertu de l&rsquo;article 240 de la LIP &ndash; &Eacute;cole Guy-Drummond &ndash; Adoption
+                        </p>
+                        <p class="SectionEventsIntroAccueil3">
+                                                        
+                        </p>
+
+                    </a>
+
+                </li>
+            
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        Mars 2016
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixcentercolumn_0_rptDirectorateBox_DetailsLink_1" class="SeeMoreLinksSufix" href="/fr-CA/commissaires/decisions-recentes/2014-2015/nomin-construct-lachine.aspx">
+                        <p class="SectionEventsIntroAccueil2">
+                            Centre de formation professionnelle de Lachine, &eacute;difice Dalb&eacute;-Viau &ndash; Projet de r&eacute;am&eacute;nagement et d&rsquo;agrandissement &ndash; Octroi du contrat de construction
+                        </p>
+                        <p class="SectionEventsIntroAccueil3">
+                                                        
+                        </p>
+
+                    </a>
+
+                </li>
+            
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        Janvier 2016
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixcentercolumn_0_rptDirectorateBox_DetailsLink_2" class="SeeMoreLinksSufix" href="/fr-CA/commissaires/decisions-recentes/2014-2015/nomination-pde.aspx">
+                        <p class="SectionEventsIntroAccueil2">
+                            Protecteur de l'élève - Nomination
+                        </p>
+                        <p class="SectionEventsIntroAccueil3">
+                                                        
+                        </p>
+
+                    </a>
+
+                </li>
+            
+    </ul>
+   <a class="btnAccueil" href="/fr-CA/commissaires/decisions-recentes.aspx"> 
+        Voir toutes les d&#233;cisions
+       <img src="/images/SeeAllIcon.png"/>
+    </a>
+</div>
+	
+    </div>
+    <div class="PhSufixRightColumn">
+	    
+<div class="PressBoxWrapper">
+    <div class="heading">
+        <div class="HeadingHolderPressBox">
+            <h2><span>
+                Offres d&#39;emploi
+            </span></h2>
+        </div>
+    </div>
+    <ul>
+        
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        Banque de candidature
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixrightcolumn_0_rptCareerBox_DetailsLink_0" class="SeeMoreLinksSufix" href="/fr-CA/carrieres/offres-emploi/tes.aspx">
+                <p class="SectionEventsIntroAccueil2">
+                    Technicien(ne) en éducation spécialisée
+                </p>
+                     
+                <p class="SectionEventsIntroAccueil3">                    
+                                         
+                </p>   
+                                  
+                    </a>
+                </li>
+            
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        Banque de candidature
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixrightcolumn_0_rptCareerBox_DetailsLink_1" class="SeeMoreLinksSufix" href="/fr-CA/carrieres/offres-emploi/secretariat-banque.aspx">
+                <p class="SectionEventsIntroAccueil2">
+                    Secrétariat - Remplacement - Banque de candidature
+                </p>
+                     
+                <p class="SectionEventsIntroAccueil3">                    
+                                         
+                </p>   
+                                  
+                    </a>
+                </li>
+            
+                <li>
+                    <p class="SectionEventsIntroAccueil">
+                        Banque de candidature
+                    </p>
+                    <a id="phsufixthreecolumn_0_phsufixrightcolumn_0_rptCareerBox_DetailsLink_2" class="SeeMoreLinksSufix" href="/fr-CA/carrieres/offres-emploi/banque-technicien-batiment.aspx">
+                <p class="SectionEventsIntroAccueil2">
+                    Technicien en b&acirc;timent
+                </p>
+                     
+                <p class="SectionEventsIntroAccueil3">                    
+                                         
+                </p>   
+                                  
+                    </a>
+                </li>
+            
+
+    </ul>
+    <a class="btnAccueil" href="/fr-CA/carrieres/offres-emploi.aspx">
+        Voir toutes les offres d’emploi 
+        <img src="/images/SeeAllIcon.png" />
+    </a>
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+        <!-- This is the old footer rendering, updated by Absolunet Mai 2014
+        <div id="footer"><ul class="bottomLinks"><li><a href="/fr-CA/termes-conditions.aspx" class="bottomPageLink">Termes et conditions</a></li><li><a href="/fr-CA/plan-du-site.aspx" class="bottomPageLink">Plan du site</a></li><li><a href="/fr-CA/nous-joindre.aspx" class="bottomPageLink">Nous joindre</a></li></ul><div class="copyrights"><p>Copyright &#169; 2010 Commission scolaire Marguerite-Bourgeoys. Tous droits r&#233;serv&#233;s.</p></div><div class="addthis_toolbox addthis_default_style addThisFooter"><a class="addthis_button_facebook" title="Facebook"></a><a class="addthis_button_twitter" title="Twitter"></a><a class="addthis_button_linkedin" title="Linkedin"></a><a class="addthis_button_google_plusone" id="googleplusbutton" title="Google Plus"></a><a class="addthis_button_email" title="Courriel"></a><a class="addthis_button_compact"></a></div><script type="text/javascript">
+        var addthis_config = {"data_track_clickback":false,ui_language:"fr"};
+        var addthis_exclude = 'print';
+        document.getElementById("googleplusbutton").setAttribute("g:plusone:count", "false");
+      </script><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e205f20540466a5"></script></div>-->
+        
+<div class="footer-wrapper">
+    <div id="footer-first">
+        <div ID="footer-left-column">            
+            <h3>Liens rapides</h3>
+<ul>
+    <li><a href="/fr-CA/recherche-etablissement.aspx">Liste des &eacute;coles</a></li>
+    <li><a href="/fr-CA/enseignement/tous-niveaux/calendrier-scolaire-general.aspx">Calendriers scolaires</a></li>
+    <li><a href="/fr-CA/enseignement/tous-niveaux/admission-inscription.aspx">Admission et inscription</a></li>
+    <li><a href="/fr-CA/enseignement/formation-professionnelle/programme-des-dep.aspx">Programmes DES / DEP</a></li>
+    <li><a href="/fr-CA/enseignement/formation-professionnelle.aspx">Formation professionnelle</a></li>
+</ul>
+        </div>
+        <div ID="footer-center-column">
+            <h3>Chercheurs d'emplois</h3>
+<ul>
+    <li><a href="/fr-CA/carrieres/offres-emploi.aspx">Consulter les offres d'emplois&nbsp;</a></li>
+    <li><a href="/fr-CA/carrieres/candidature.aspx">Postuler en ligne</a></li>
+</ul>
+<h3>Employ&eacute;s de la CSMB</h3>
+<ul>
+    <li><a href="/fr-CA/employes/portails.aspx">Acc&eacute;der aux portails</a></li>
+    <li><a href="/fr-CA/employes/liste-priorite-rappel.aspx">Listes de priorit&eacute; et de rappel</a> </li>
+</ul>
+        </div>
+        <div ID="footer-right-column">        
+        <table>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">&nbsp;<img style="height: 20px; width: 20px;" src="/~/media/Images/autres/Icones/EtabSecondaireMap.ashx?la=fr-CA&amp;h=25&amp;w=28" alt="&Eacute;coles secondaires de la CSMB | Montr&eacute;al" /><br />
+            </td>
+            <td><a href="/fr-CA/recherche-etablissement.aspx">Rechercher les &eacute;coles et les centres</a> <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">&nbsp;<img alt="" style="height: 20px; width: 20px;" src="/~/media/mail.ashx?la=fr-CA&amp;h=28&amp;w=28" /><br />
+            </td>
+            <td><a href="/fr-CA/nous-joindre.aspx">&nbsp;Nous joindre</a><br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p> </p>
+<table>
+    <tbody>
+        <tr>
+            <td colspan="5">
+            <h3>Suivez-nous sur :</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;<a href="https://www.facebook.com/csmbourgeoys" target="_blank"><img alt="" style="height: 28px; width: 28px; margin-top: 0px;" src="/~/media/Images/autres/Icones/facebook-icone/1400023812_f-facebook_256.ashx?la=fr-CA&amp;h=28&amp;w=28" /></a></td>
+            <td><a href="https://twitter.com/csmbourgeoys" target="_blank"><img alt="" style="height: 28px; width: 28px;" src="/~/media/Images/autres/Icones/twitter-logo/1400023793_f-twitter_256.ashx?la=fr-CA&amp;h=28&amp;w=28" /></a><br />
+            </td>
+            <td><a href="http://www.linkedin.com/company/commission-scolaire-marguerite-bourgeoys" target="_blank"><img alt="" style="height: 28px; width: 28px;" src="/~/media/Images/autres/Logotypes/linkedin-logo/1400023804_f-linkedin_256.ashx?la=fr-CA&amp;h=28&amp;w=28" /></a></td>
+            <td><a href="https://www.youtube.com/user/CSMBvideo" target="_blank"><img alt="" src="/~/media/Images/autres/Icones/1399945153_Flurry_YouTube_Alt2.ashx?la=fr-CA&amp;h=28&amp;w=28" style="height: 28px; width: 28px;" /></a></td>
+            <td><a href="https://www.flickr.com/photos/csmbourgeoys/" target="_blank"><img alt="" src="/~/media/Images/autres/Icones/1399945347_flickr.ashx?la=fr-CA&amp;h=28&amp;w=28" style="height: 28px; width: 28px;" /></a></td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+    </div>
+    <div id="footer-second">        
+        <div class="copyright">
+            Copyright &#169; 2010 Commission scolaire Marguerite-Bourgeoys. Tous droits r&#233;serv&#233;s.
+        </div>
+        
+                <ul class="bottomLinks">
+            
+                <li>
+                    <a href="/fr-CA/termes-conditions.aspx">
+                        Termes et conditions
+                    </a>                    
+                </li>
+            
+                <li>
+                    <a href="/fr-CA/plan-du-site.aspx">
+                        Plan du site
+                    </a>                    
+                </li>
+            
+                <li>
+                    <a href="/fr-CA/nous-joindre.aspx">
+                        Nous joindre
+                    </a>                    
+                </li>
+            
+                </ul>
+                   
+    </div>       
+</div>
+
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A63BAD6A" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdADSP/t5pVi0+WFxouV1pUgD+JiLK4iCT/4eHyU/kwq37v+6NjZ/k1gV6JrevqNTCS+38yCms1EJnfh7iIA8sB+RMQfqv+pCxqfyHPUMvhSoGJ70dThzS5clStb12cc5SyxCLTS417+XdjMYEQKV8qy8ubR4qxQGlzh+3VAUb6P5oo61n6040MyvsILRAoxaek+LE8oy2MxTuIO3aVmMcAHdhEFDTUxH2sAdFBaUza6v9TDB9EAnISXv5vLgs2F0UmX8EMS3sRLeaaW5iEoz9gSq1KDUwbeUVTXr5Mx+j6Vc9fXBuw/8ToVG6Skuno+nQ6f9pd4y6ffbE4rpTpLqExPaIzp+uBNaI+NK9s+Y0SMV+tLxpT/hJcN/ITIbYGK/+ceWJEAGlenvH/VMGa2OGf6EQgvsntcs0nsGBHIyPZKVYfWjL5ABxBUZgCZRLh37JEvoZ5kyeFYybfeMZ1hTUMzAIfFqmhoU/dsvtjtzT9pNIf/xy+iRiZQIQVvPojR4V5af6G8zBua9aKwgrnGrIGURAwCStuMBgXbasZLJn/1gOcdedAfTV6FDpn5bgyHixscD6KT/QHPzXXB4nO5mQintPWDVJXdTSD72CI2fNb2LzTmHDzlZKnFBSSaoY5EFNDZ7vjqmh1QbglSut4zsIjk2fZF95kwLX5hgOCxhfVAT0C8Y+WUfcWkvAJaMjG+lGnKOPcQWCNx1AbC7Px9Gdr8BIQBWpsWg3P0QqLBtqPwsS9E9VHQtWKCYxFb6VwlqDwIv3SS5o59xXVLmnXbvrlwYzj5aUR9eKgSmmhK+w7VsQrCv4ZzK+MHa5bGyEuXb0hAPsK4pxGtL/v4+e8n5tSznWZ7+B0NeNa+4v+aRItGWwcK4xrrzfapywDqUxpiREeFG9N6tz8MgWjeowvSWp0bQ65ImP84qSBzns4FrphjeyG0s0PKxU+CiCbrpRjoex0tHdXXz1131bDtWWZdgHH8OHYeKggeEc7podzhLmTAONDVGE/QnmzXcY6/sbRXR6oD/Z2+An3Mn4kOfO5ntPec9UjQkgu+KcTPA5lXBKvbPJl17xKUmmp1GKzKmEQP4E7KhbQ8OjcUkBIQXnHxEExpvOomVikEbabuDZ5RL5FAV6iuu/i5jYVqWoo+R7ijpxCQ0=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("phmain_0_phrightcolumn_0_updateProgress"));
+});
+//]]>
+</script>
+</form>
+    
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!--
+INSTRUCTIONS
+
+1.To crop images use this code:    
+  		 <div class="focal-point left-5 down-3">
+ 				<div><img src="img/header.png" alt="logo"></div>
+           </div>
+2. Add cushycms class to areas you want clients to edit and add editor account to cushyCMS for client. 
+3. Change the OPLD library ID in the variable
+4. JASI libraries: change the enterprise search string library name and enable the new book scroller.
+
+-->  
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+<title>Armstrong Public Library</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type="text/javascript" src="js/fancydropdown.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'http://www.google.com/calendar/feeds/ami4h2ao0g8brkj6d80v8acd94@group.calendar.google.com/public/full',
+                  maxresults: 1
+		        });
+		    });
+		
+		
+</script>
+
+<!-- facebook script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	    $("#eventlist").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true
+
+    });
+
+		//Load main content
+		$(".topContent").load("home.asp");
+		
+		$(".events").load("calendar.html");
+		
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+
+
+    
+});
+//Enterprise Search
+function search_cat()
+{
+search = document.getElementById('search').value
+document.location.href = 'https://olsn.ent.sirsidynix.net/client/armstrong/search/results?qu='+ search +'&te=ILS';	 //IMPORTANT - change the library
+}
+</script>
+<script type="text/javascript">
+   google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+
+
+     
+    <body>
+    
+    <section class="hide" id="sizer"></section>
+    <section class="hide" id="button-bar">
+    <!-- <a href="https://www.facebook.com/"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/facebook.png" alt="facebook"></a>
+     <a href="https://www.twitter.com/"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/twitter.png" alt="twitter"></a> -->
+    
+	
+    <!--Email automatically pulled as long as it's in OPLD-->
+    <a href="mailto:earltonlibrary@ntl.sympatico.ca?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a>      
+    </section>
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+               <img src="img/full.png" class="full" alt="Full Public Library Logo">
+               <img src="img/landscape.png" class="tablet" alt="Landscape Public Library Logo">
+               <img src="img/portrait.png" class="mobile" alt="portrait Public Library Logo">
+               
+            
+            
+                  
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>
+                               
+                <li><a href="?id=home.asp&label=Home" alt="home">Home</a></li>
+                <li><a href="?id=about.asp&label=About_the_library" alt="About the Library">About</a></li>
+                
+                <li><a href="?id=resources.asp&label=resources" alt="eResources" target="_blank">eResources</a></li>
+                
+                <li><a href="#">Services</a>
+                <ul>
+                        <li><a href="?id=services.asp&label=services" alt="Our Services">Our Services</a></li>
+                        <li><a href="?id=join.asp&label=join" alt="Join the Library">Join the Library</a></li>
+						<li><a href="?id=loan_regulations.asp&label=loan_regulations" alt="Loan Regulations">Loan Regulations</a></li>
+                </ul>
+                </li>
+                              
+                <li><a href="?id=links.asp&label=links" alt="Links">Links</a></li>
+                
+                <li><a href="https://olsn.ent.sirsidynix.net/client/armstrong/?" alt="Catalogue" target="_blank">Catalogue</a></li>
+                 
+            </ul>
+         </nav>    
+        <!-- end of NAV -->
+        
+  
+        
+     
+          <section class="hoursContent">
+              <article><span class="tdhourstxt">Today's hours:&nbsp; </span>   
+                <ul id="hours-slider">
+                       
+                        
+                        <li>
+                        <!-- alter's display name as "Markstay-Warren" is not a branch name -->
+						 9:00-12:00</li>
+                        
+                        <!-- end alter -->
+                    
+                             
+                        </ul> 
+                            
+                            
+              </article>
+         </section>
+        
+    </header>
+        <!-- End of HEADER -->
+        
+        
+      
+        
+    <!-- MAIN CONTENT. This is used only for the articles. -->
+ <section class="searchContent">
+        
+                <span class="hide">I would like to </span>
+                <input type="text"  title="find material at your library search button" name="search" class="search" id="search" placeholder=" search our online catalog"/>
+                  <input type="submit" value="Search" alt="search" src="img/search-button.png"  onClick="search_cat()" />
+               
+                
+           
+         </section>
+         
+   		
+       <section class="full"> 
+         <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>  
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="topSidebar">
+                <article>
+                           <h2>Hours & Locations</h2>
+                        <ul>  
+                            
+
+                            <h3>Armstrong Township Public Library</h3>
+                          		35 10th Street<br>
+                                Earlton,&nbsp;ON<br>
+                                P0J 1E0<br>
+                                <a href="tel:(705) 563-2717">(705) 563-2717</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 9:00-12:00<br>
+1:00,5:00<BR>
+Tues/mar 9:00-4:00<BR>
+Thurs/jeu 9:00-12:00
+<br>1:00-4:00,6:00-8:00<BR>
+Fri/ven 9:00-12:00<br>1:00-4:00<BR>
+</details>
+                               
+                      </ul>  
+          </article>
+    </aside>
+     
+    
+            
+    <aside class="middleSidebar">
+        <article class="cushycms">
+        
+    	    <header>
+            <h2>Events</h2>
+            </header>
+            
+            <ul>
+              <li>
+                add  content
+              </li>
+            </ul>
+        </article>  
+             <!--  <article class="cushycms">
+              <h2>Facebook Feed</h2>      
+            <content>
+             put your Facebook feed in here
+            </content> 
+               </article> --> 
+               
+               
+               
+                
+    </aside>   
+    
+   
+   
+    </section>
+    
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Home</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Locations</summary>
+                        <ul>  
+                            
+                            <h3>Armstrong Township </h3>
+                          		35 10th Street<br>
+                                Earlton,&nbsp;ON<br>
+                                P0J 1E0<br>
+                                <a href="tel:(705) 563-2717">(705) 563-2717</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 9:00-12:00<br>
+1:00,5:00<BR>
+Tues/mar 9:00-4:00<BR>
+Thurs/jeu 9:00-12:00
+<br>1:00-4:00,6:00-8:00<BR>
+Fri/ven 9:00-12:00<br>1:00-4:00<BR>
+</details>
+                               
+                      </ul>  </details>
+         
+    </div>
+     
+    
+            
+    <!-- <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+    </div> -->  
+     
+        
+
+    
+    </section> 
+    
+    
+    <!-- end of SIDEBARS -->
+    
+    
+    
+        
+     <!-- Enterprise New Books Scroller placeholder 
+      <footer class="mainBookScroller">
+        <p>Enterprise Book Scroller container</p>
+      </footer>   --> 
+        
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Armstrong Township Public Library&nbsp;2016<br>
+        This website meets WCAG 2.0 (Level AA) Compliance</p> 
+    </footer>
+    
+<!-- end of FOOTER -->   
+
+</body>
+
+</html>

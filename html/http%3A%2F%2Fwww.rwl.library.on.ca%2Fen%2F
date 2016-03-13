@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+		    <script>
+
+var ipAddress = '47.54.35.19';
+
+if (ipAddress == '216.16.234.1' || ipAddress == '96.45.201.58') {
+var mobify_bundle = "http://127.0.0.1:8080/mobify.js";
+} else {
+var mobify_bundle = "/en/Mobify/bld/mobify.js";
+} 
+
+(function(window, document, mjs) {
+
+window.Mobify = {points: [+new Date], tagVersion: [1, 0]};
+
+var isMobile = /ip(hone|od)|android(?!.*?firefox)|blackberry.*applewebkit|bb1\d.*mobile/i.test(navigator.userAgent);
+var optedOut = /mobify-path=($|;)/.test(document.cookie);
+
+
+if (!isMobile || optedOut) {
+    return;
+}
+
+document.write('<plaintext style="display:none">');
+
+setTimeout(function() {
+    var mobifyjs = document.createElement('script');
+    var script = document.getElementsByTagName('script')[0];
+
+    mobifyjs.src = mjs;
+    script.parentNode.insertBefore(mobifyjs, script);
+});
+
+
+})(this, document, mobify_bundle);
+</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Waterloo Region Library is committed to developing broad-based collections and ensuring access to information and services to meet the needs of the rural community in the Region of Waterloo.  Our vision is to foster an informed and literate rural community. Region of Waterloo Library has 10 branches in 4 townships which financially support it: North Dumfries, Wellesley, Wilmot and Woolwich. We have branches in Ayr, Baden, Bloomingdale, Elmira, Linwood, New Dundee, New Hamburg, St. Clements, St. Jacobs, and Wellesley. We offer special programs for children, tweens, teens, families and adults. We have special services for seniors and can also provide bulk loans to special groups and home library service.  Visit our website to view our programs calendar, and to learn more about getting a library card, borrowing materials, renewing and requesting library materials, and searching our catalogue." />
+
+<link href="/styles/base.css?version=v3" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/structure.css?version=v3" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/sitecontent.css?version=v3" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/icreate.css?version=v3" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/navigation.css?version=v3" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/jquery.autocomplete.css?version=v3" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/print.css?version=v3" rel="stylesheet" type="text/css" media="print" />
+<link href="/styles/jquery-atoz-scroll.css?version=v3" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/smoothness/jquery-ui-1.10.3.custom.css?version=v3" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript" language="javascript" src="/includes/javascript/jquery-1.9.1.min.js?version=v3"></script>
+<script language="javascript" type="text/javascript" src="/includes/javascript/jquery-migrate-1.2.1.min.js?version=v3"></script>
+<script language="javascript" type="text/javascript" src="/includes/javascript/jquery-ui.1.10.2.min.js?version=v3"></script>
+<script language="javascript" type="text/javascript">jQuery.noConflict();</script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/jquery.cookies.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/superfish.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/general.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/quicklinks-dropdown.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/jquery.autocomplete.min.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/en/email/email.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/mailto.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/textSize.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/supersleight.plugin.js?version=v3"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/feedback-form/structure/2.2.4/feedbackStructure.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/__utm.js"></script>
+
+<!--[if lt IE 9]><script type="text/javascript">jQuery(function(jQuery) { jQuery('body').addClass('ie8'); });</script><![endif]-->
+
+<script language="javascript" type="text/javascript">
+
+    jQuery(document).ready(function () {
+
+        // Drop-down lists
+        var isIe8 = jQuery('body').hasClass('ie8');
+        jQuery('#nav').superfish({ cssArrows: false, speed: (isIe8 ? 0 : 'normal'), speedOut: (isIe8 ? 0 : 'fast') });
+
+        // png fix
+        jQuery('#navGradient').supersleight({ shim: '/images/structure/spacer.gif' });
+        jQuery('#bannerGradient').supersleight({ shim: '/images/structure/spacer.gif' });
+        jQuery('#bottombannerCurve').supersleight({ shim: '/images/structure/spacer.gif' });
+        jQuery('.homepageBannerText').supersleight({ shim: '/images/structure/spacer.gif' });
+
+        		jQuery("body").feedbackForm({
+        		    useDefaultIfNoIdIsSet: true,
+        		    baseUrl: "http://icreate3.esolutionsgroup.ca/feedback/api/1.0/",
+        		    getUrl: "client/230672_ROW_Library/default-form/en",
+        		    jsServerUrl: "https://js.esolutionsgroup.ca/js/libs/feedback-form/",
+        		    previewMode: false,
+        		    showButton: true,
+        		    pageTitle: jQuery(document).find("title").text().replace(" - ROW Library", "").trim(),
+        		    buttonText: "",
+        		    feedbackFormId: jQuery("#FeedbackFormId") === undefined ? "" : jQuery("#FeedbackFormId").val(),
+        		    loadingText: "Please wait while this form loads...",
+        		    emailLength: 255,
+        		    suggestionLength: 255,
+        		    closeText: "Or cancel",
+        		    sendText: "Send Feedback",
+        		    closeThankYouText: "Close",
+        		    thankYouModalTitle: "Thank you for your feedback!",
+        		    language: 'en'
+        		});
+
+
+        // register click events for the SEARCH input
+        jQuery("input.searchOption").click(function () { switchvalue(); });
+
+        jQuery("input#searchField").bind('keyup', function (event) {
+            if (event.keyCode == 13) {
+                performsearch();
+                return false;
+            }
+            //event.preventDefault(); 
+        });
+
+        jQuery("#submitbtn").click(function () {
+            performsearch();
+            return false;
+        });
+        
+        var performsearch = function () {
+            var form = jQuery("form#FormSearch");
+            if (getRadioInputValue() == 'website') {
+                form.attr("action", '/en/search/index.aspx');
+                form.attr("method", "POST");
+                form.attr("target", "");
+                jQuery('#searchField').attr('name', 'txt_search')
+            }
+            else {
+                // search = catalogue
+                form.attr("method", "GET");
+                //                form.attr("action", "http://www.regionofwaterloo.canlib.ca/uhtbin/cgisirsi/x/0/0/5");
+                form.attr("action", "https://olco.ent.sirsidynix.net/client/en_US/rwl/search/results");
+                form.attr("target", "_blank");
+                //jQuery('#searchField').attr('name','searchdata1')
+                jQuery('#searchField').attr('name', 'qu')
+            }
+            form.submit();
+        }
+
+        var switchvalue = function () {
+
+            if (getRadioInputValue() == "website") {
+                document.getElementById('searchField').value = 'Search';
+            }
+            else {
+                //catalogue
+                document.getElementById('searchField').value = 'Search Book';
+            }
+        }
+
+    });
+
+	function getCorpHome() {
+	    var corpHome = "http://www.rwl.library.on.ca/";
+	    try {
+	        if (document.location.href.toLowerCase().indexOf('https://') == 0) {
+	            corpHome = 'https://' + corpHome.substring(7);
+	        }
+	    } catch (err) { }
+	    return corpHome;
+	}
+</script>
+<link rel="alternate" type="application/rss+xml" title="News" href="http://www.rwl.library.on.ca/en/News-rss-channel.xml" />
+            <title>Index</title>
+		    <link href="/styles/icalendar.css?version=v3" rel="stylesheet" type="text/css" />
+<link type="text/css" href="/styles/jquery.rotatingbanners.css?version=v3" rel="stylesheet" media="screen" />
+<script type="text/javascript" language="javascript" src="/includes/javascript/date.js?version=v3"></script>
+<script type="text/javascript" language="javascript" src="/includes/javascript/jquery.rotatingbanners.js?version=v3"></script>
+
+	
+<script language="javascript" type="text/javascript">
+
+    jQuery(document).ready(function () {
+
+	    jQuery("#rotatingBanners").rotating_banners({
+	        enableTimer: true,
+	        transitionType: "fade",
+	        enablePause: true
+	    });
+	    // remove <p> from bannerImage
+	    jQuery(".bannerImage > p").contents().unwrap();		
+		
+		// News
+        jQuery.ajax({
+            url: '/en/newslist/feature.aspx?max=3&corpId=v5lA5HwzRvBGCEgPhNcvmEbLOQeQuAleQuAl',
+            cache: false,
+            async: false,
+            success: function(html) {
+                jQuery("#contentLeft").empty();
+                jQuery("#contentLeft").append(jQuery(html).find('#libraryNews').html());
+
+            }
+        });
+		
+	});	
+
+</script><link href="/en/EmergencyBanner/EmergencyBanner.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" type="text/javascript">
+
+	jQuery(document).ready(function() {
+
+		if (document.location.href.toLowerCase().indexOf('/edit_') == -1) {
+
+			if (jQuery.cookie('seenBanner') != 1) {
+			
+				jQuery.ajax({
+					type: "GET",
+					url: "/en/EmergencyBanner/EmergencyBannerService.aspx?lang=en",
+					dataType: "xml",
+					success: parseMessage,
+					cache: false
+				});
+
+				jQuery.cookie('seenBanner', 1);
+
+			}
+
+		}
+
+		function parseMessage(xml) {
+
+			jQuery(xml).find('emergencymessage').each(function() {
+
+				emergencyMessage = jQuery(this).find("message").text();
+
+				if (emergencyMessage != "hidemessage") {
+
+					jQuery('#EmergencyBannerTitle').html(jQuery(this).find("title").text());
+					jQuery('#EmergencyBannerText').html(emergencyMessage);
+					jQuery('#EmergencyBanner').addClass(jQuery(this).find("cssclass").text());
+					jQuery('#EmergencyBannerShadow').css('height', jQuery('#EmergencyBanner').css('height'));
+
+					jQuery('#EmergencyBanner').show();
+					jQuery('#EmergencyBannerShadow').height(jQuery('#EmergencyBanner').height()).show();
+
+				}
+
+			});
+
+		}
+
+	});
+
+	function HideEmergencyBanner() {
+	
+		jQuery('#EmergencyBannerShadow').fadeOut(250, function() {
+			jQuery('#EmergencyBanner').fadeOut(500);
+		});
+		
+	}
+
+</script>
+	
+    
+<meta property="dcterms.issued" content="2016-03-04T15:22:32-0500" />
+<meta property="og:title" content="Index" />
+<meta property="og:url" content="http://www.rwl.library.on.ca/en/Index.asp" />
+<meta property="og:description" content="Region of Waterloo Library is committed to developing broad-based collections and ensuring access to information and services to meet the needs of our rural communities.  Our vision is to foster an informed and literate rural community." />
+<script type="text/javascript">
+/*ICREATE*/try {if (top == parent && parent.loadStyles) {parent.location = location;}var _icrt_keyPressed_ = -1;function _icrt_alertkey(e) {if(!e) {if(window.event) {e = window.event;} else {return;}}var keyCode;if(typeof(e.keyCode) == 'number') {keyCode = e.keyCode;} else if(typeof(e.which) == 'number') {keyCode = e.which;} else if(typeof(e.charCode) == 'number') {keyCode = e.charCode;} else {return;}if (keyCode == 17) {var now = new Date();if (_icrt_keyPressed_ >= 0) {var diff = now.getTime() - _icrt_keyPressed_;if (diff > 0 && diff < 500) {top.location.href = 'https://icreate3.esolutionsgroup.ca/icreate/publishing/editor/issue.do?method=editContent&id=38679&lang=en';}}_icrt_keyPressed_ = now.getTime();}}if(document.captureEvents && Event.KEYUP) {document.captureEvents(Event.KEYUP);}if (document.onkeyup) {var oldFunc = document.onkeyup;document.onkeyup = function(e) {_icrt_alertkey_(e);oldFunc(e);};} else {document.onkeyup = _icrt_alertkey;}}catch(exp){}/*ICREATE*/
+</script>
+</head>
+    <body>
+        <!--googleoff: all-->
+        <div id="EmergencyBanner">
+
+	<div id="EmergencyBannerTitle"></div>
+	
+	<div id="EmergencyBannerText"></div>
+	
+	<div id="EmergencyBannerClose">
+		<a href="#" onclick="javascript: HideEmergencyBanner();">Close</a>
+	</div>
+	
+</div>
+
+<div id="EmergencyBannerShadow"></div>
+        <input type="hidden" name="FeedbackFormId" id="FeedbackFormId" value=" " />
+
+        <div id="uber" class="homepage">
+	        <div id="header">
+		        <h1>Index</h1>   
+	            <a href="/en/aToZservices/aToZservices.asp" title="Click here to view the A to Z service list" id="servicesContainer">
+    <span id="services">Services List A-Z</span>
+</a>	
+		        <div id="search">
+		            <form id="FormSearch" method="get" action="https://olco.ent.sirsidynix.net/client/en_US/rwl/search/results">
+	<label for="searchField" style="display:none;">Search</label>
+	<input class="searchText" onfocus="Search_Enter(this);" onblur="Search_Leave(this);" name="qu" id="searchField" type="text" value="Search Book" />
+	<input name="button" id="submitbtn" type="image" src="/images/structure/spacer.gif" alt="Go!" title="Go!" class="gobutton" />
+	<input type="radio" id="radio1" name="search" class="searchOption" value="website" /> <span class="searchOptionText">Website<br /></span>
+	<label for="radio1" style="display:none;">Website</label>
+	<input type="radio" id="radio2" name="search" class="searchOption" value="catalogue" checked="checked" /> <span class="searchOptionText">Catalogue<br /></span>
+	<label for="radio2" style="display:none;">Catalogue</label>
+	<!--<input type="hidden" name="te" id="te" value="" />-->
+	
+</form>
+		        </div>		
+		        <div id="topNav">            
+		            <a title="Link to Homepage" href="/en/index.asp">Home</a><span class="horizNavSeparator">|</span><a title="" href="http://olco.canlib.ca/client/rwl/search/patronlogin/http:$002f$002folco.canlib.ca$002fclient$002frwl$002fsearch$002faccount$003f?&amp;_mid_=28566">Log in</a><span class="horizNavSeparator">|</span><a title="Log into My Account in the library catalogue." href=" https://olco.ent.sirsidynix.net/client/rwl/search/patronlogin/http:$002f$002folco.ent.sirsidynix.net$002fclient$002frwl$002fsearch$002faccount$003f">My Account</a><span class="horizNavSeparator">|</span><a title="" href="http://rwl.library.on.ca/en/ourcollections/requestitems.asp">Request an Item</a><span class="horizNavSeparator">|</span><a title="Link to Contact Us from Top Navigation" href="/en/aboutus/contactus.asp">Contact Us</a>
+                </div>
+		        <div id="logo">
+                   <a href="/en/index.asp" title="Click to go back Home"><img src="/en/images/structure/logo.jpg" alt="Region of Waterloo Library" width="280" height="98" /></a>
+		        </div>
+	        </div>
+	
+	        <div id="mainNav">
+                <ul id="nav"><li id="navTab01"><a title="Link to About Us page" href="/en/aboutus/About-Us.asp" class="mainNavItem">About Us</a><ul class="dropdown"><li><a title="View our Artist in Residence page" href="/en/aboutus/air.asp" class="">Artist in Residence</a></li><li><a title="" href="/en/aboutus/getalibrarycard.asp?_mid_=29447" class="dropdownItemHasFlyout">Borrowing Information</a><ul class="flyout"><li><a title="" href="/en/aboutus/getalibrarycard.asp" class="">Get a Library Card</a></li><li><a title="" href="/en/aboutus/loanperiods.asp" class="">Loan Periods</a></li><li><a title="" href="/en/aboutus/overduesfines.asp" class="">Overdues/Fines</a></li><li class="last"><a title="" href="/en/aboutus/borrowingfromotherlibraries.asp" class="">Borrowing from other Libraries</a></li></ul></li><li><a title="Link to Branches" href="/en/aboutus/Region-of-Waterloo-Library-System.asp" class="dropdownItemHasFlyout">Branch Details</a><ul class="flyout"><li><a title="A webpage that shows all of the locations of the Region of Waterloo Library on one map." href="/en/aboutus/Region-of-Waterloo-Library-System.asp?_mid_=21613" class="">Branch Locations</a></li><li><a title="Link to Ayr" href="/en/aboutus/ayrbl.asp" class="">Ayr Branch</a></li><li><a title="Link to Baden" href="/en/aboutus/badenbl.asp" class="">Baden Branch</a></li><li><a title="Link to Bloomingdale" href="/en/aboutus/bloombl.asp" class="">Bloomingdale Branch</a></li><li><a title="Link to Elmira" href="/en/aboutus/elmirabl.asp" class="">Elmira Branch</a></li><li><a title="Link to Headquarters" href="/en/aboutus/Library-Headquarters.asp" class="">Library Headquarters</a></li><li><a title="Link to Linwood" href="/en/aboutus/linwoodbl.asp" class="">Linwood Branch</a></li><li><a title="Link to New Dundee" href="/en/aboutus/newdundeebl.asp" class="">New Dundee Branch</a></li><li><a title="Link to New Hamburg" href="/en/aboutus/newhamburgbl.asp" class="">New Hamburg Branch</a></li><li><a title="Link to St. Clements" href="/en/aboutus/stclementsbl.asp" class="">St Clements Branch</a></li><li><a title="Link to St. Jacobs" href="/en/aboutus/stjacobsbl.asp" class="">St Jacobs Branch</a></li><li class="last"><a title="Link to Wellesley" href="/en/aboutus/wellesleybl.asp" class="">Wellesley Branch</a></li></ul></li><li><a title="Link to Contact Us from About the Library" href="/en/aboutus/contactus.asp" class="">Contact Us</a></li><li><a title="" href="/en/aboutus/branchhoursoct2013.asp?_mid_=30133" class="">Hours </a></li><li><a title="Link to Careers from About the Library from About the Library" href="/en/aboutus/Library-Careers.asp" class="">Library Careers</a></li><li><a title="Link to Library Policies from About the Library from About the Library" href="/en/aboutus/Mission-and-Vision.asp?_mid_=20094" class="dropdownItemHasFlyout">Library Policies</a><ul class="flyout"><li><a title="Mission and Vision" href="/en/aboutus/Mission-and-Vision.asp" class="">Mission and Vision</a></li><li><a title="" href="/en/aboutus/Bulletin-Board.asp" class="">Bulletin Board Policy</a></li><li><a title="donations" href="/en/aboutus/donationspolicy.asp" class="">Donations</a></li><li><a title="Internet Access Policy" href="/en/aboutus/Internet-Access-Policy.asp" class="">Internet Access Policy</a></li><li><a title="" href="/en/aboutus/Material-s-Selection-Policy.asp" class="">Materials Selection Policy</a></li><li><a title="" href="/en/aboutus/Safe-Use-Code.asp" class="">Safe Use Code</a></li><li class="last"><a title="" href="/en/aboutus/Unattended-Children.asp" class="">Unattended Children</a></li></ul></li><li><a title="Learn more about the Region of Waterloo Library Service Plan. " href="/en/aboutus/Library-Service-Plan.asp" class="">RWL Service Plan 2013-2015</a></li><li><a title="View our Book Deposits page" href="/en/aboutus/Book-Deposits.asp?_mid_=20077" class="dropdownItemHasFlyout">Services</a><ul class="flyout"><li><a title="Services Link to Bulk Loans to Special Groups" href="/en/aboutus/Book-Deposits.asp" class="">Book Deposits</a></li><li><a title="Services Link to Copying &amp; Printing" href="/en/aboutus/Copying-and-Printing.asp" class="">Copying &amp; Printing</a></li><li><a title="Services Link to Free Computer, Internet &amp; WiFi Access" href="/en/aboutus/Free-Computer--Internet--and-Wi-Fi.asp" class="">Free Computer, Internet &amp; Wi-Fi</a></li><li><a title="Services Link to Home Library Service" href="/en/aboutus/Home-Library-Service.asp" class="">Home Library Service</a></li><li><a title="Services Link to Meeting Rooms" href="/en/aboutus/meetingrooms.asp" class="">Meeting Rooms</a></li><li><a title="Services Link to Microfilm_fiche" href="/en/aboutus/Microfilm-and-Microfiche.asp" class="">Microfilm &amp; Microfiche</a></li><li class="last"><a title="" href="/en/aboutus/serviceontario.asp" class="">ServiceOntario</a></li></ul></li><li class="last"><a title="Link to Volunteer from About the Library from About the Library" href="/en/aboutus/Volunteers.asp" class="">Volunteer</a></li></ul></li><li id="navTab02"><a title="View our Our Collections page" href="/en/ourcollections/Our-Collections.asp" class="mainNavItem">Our Collections</a><ul class="dropdown"><li><a title="" href="/en/ourcollections/Adult-Literacy.asp" class="">Adult Literacy</a></li><li><a title="View our Audiobooks and eAudiobooks page" href="/en/ourcollections/Audiobooks---eAudiobooks.asp" class="">Audiobooks &amp; eAudiobooks</a></li><li><a title="Link to Book Club in a Bag from Books and More" href="/en/ourcollections/Book-Club-in-a-Bag.asp?_mid_=20112" class="dropdownItemHasFlyout">Book Club Sets</a><ul class="flyout"><li><a title="View our Book Club in a Bag page" href="/en/ourcollections/Book-Club-in-a-Bag.asp" class="">Book Club in a Bag</a></li><li class="last"><a title="View our Book Club Packs 4 Kids page" href="/en/ourcollections/Book-Club-Packs-4-Kids.asp" class="">Book Club Packs 4 Kids</a></li></ul></li><li><a title="View our Downloads page" href="/en/ourcollections/Downloads.asp" class="dropdownItemHasFlyout">Downloads</a><ul class="flyout"><li><a title="" href="http://www.downloadlibrary.ca" class="" target="_blank">eAudiobooks (downloadLibrary)</a></li><li><a title="Open new window to view http://www.downloadlibrary.ca" href="http://www.downloadlibrary.ca?_mid_=32661" class="" target="_blank">eBooks (downloadLibrary)</a></li><li><a title="Open new window to view http://rwl.freegalmusic.com/homes/index" href="http://rwl.freegalmusic.com/homes/index" class="" target="_blank">Music (Freegal)</a></li><li class="last"><a title="Open new window to view https://www.rbdigital.com/regionofwaterlooon/service/zinio/landing?_mid_=29446" href="https://www.rbdigital.com/regionofwaterlooon/service/zinio/landing?_mid_=29446" class="" target="_blank">Magazines (Zinio)</a></li></ul></li><li><a title="" href="/en/explore/dvdcentral.asp?_mid_=29032" class="">DVD Central</a></li><li><a title="View our eBooks page" href="/en/ourcollections/eBooks.asp" class="">eBooks</a></li><li><a title="" href="/en/ourcollections/Express-Collections.asp" class="">Express Collections</a></li><li><a title="View our Read with Me Kits page" href="/en/ourcollections/Read-with-Me-Kits.asp?_mid_=20113" class="dropdownItemHasFlyout">Family Literacy</a><ul class="flyout"><li><a title="View our Read with Me Kits page" href="/en/ourcollections/Read-with-Me-Kits.asp" class="">Read with Me Kits</a></li><li><a title="" href="/en/aboutus/readingcorners.asp" class="">Reading Corners</a></li><li class="last"><a title="Link to Storytelling Kits" href="/en/ourcollections/storytellingkits.asp" class="">Storytelling Kits</a></li></ul></li><li><a title="" href="/en/research/governmentpublications.asp" class="">Government Publications</a></li><li><a title="View our Green Resources page" href="/en/ourcollections/Green-Resources.asp" class="">Green Resources</a></li><li><a title="Open new window to view http://rwlibrary.ca/en/research/localhistory.asp?_mid_=29483" href="http://rwlibrary.ca/en/research/localhistory.asp?_mid_=29483" class="">Local History</a></li><li><a title="Learn about the pedometer kits at the Region of Waterloo Library." href="/en/ourcollections/Pedometer-Kits.asp" class="">Pedometer Kits</a></li><li><a title="" href="/en/ourcollections/requestitems.asp" class="">Request an Item</a></li><li class="last"><a title="" href="/en/research/smallbusinessmaterials.asp" class="">Small Business</a></li></ul></li><li id="navTab03"><a title="Link to Research page" href="/en/research/research1.asp" class="mainNavItem">Research</a><ul class="dropdown"><li><a title="" href="/en/research/onlineresearchtoolsatoz.asp" class="">All Online Research Tools</a></li><li><a title="View our Homework Help page" href="/en/research/homeworkhelp.asp?_mid_=32704" class="">Homework Help</a></li><li><a title="" href="/en/research/novelist.asp?_mid_=29480" class="">NoveList</a></li><li><a title="" href="/en/research/welcomenewcomers.asp" class="">Welcome Newcomers</a></li><li class="last"><a title="" href="http://rbdigital.com/regionofwaterlooon/zinio?_mid_=29485" class="">Zinio</a></li></ul></li><li id="navTab04"><a title="Link to Kids, Tweens &amp; Teens page" href="/en/kidsTweensTeens/kidstweensandteens.asp" class="mainNavItem">Kids, Tweens and Teens</a><ul class="dropdown lastMainNavDropdown"><li><a title="Link to Kids" href="/en/kidsTweensTeens/kids.asp?_mid_=20146" class="dropdownItemHasFlyout" target="_blank">Kids</a><ul class="flyout"><li><a title="Homepage for the Kids subsection of the Region of Waterloo Library." href="/en/kidsTweensTeens/kids.asp" class="">Kids at the Library</a></li><li><a title="Link to Programs (Birth - 2)" href="/en/kidsTweensTeens/kidsprograms.asp" class="">Kids' Programs</a></li><li><a title="Link to Kids Events" href="http://rwlibrary.evanced.info/signup/eventcalendar.aspx?df=calendar&amp;ag=1,2,3" class="">Events Calendar</a></li><li><a title="Link to Literacy Games" href="/en/kidstweensteens/literacygames.asp" class="">Games</a></li><li><a title="Link to Homework Help" href="/en/kidsTweensTeens/homeworkhelp.asp" class="">Homework Help</a></li><li><a title="Link to Tumblebooks" href="/en/kidstweensteens/tumblebooks.asp" class="">Tumblebooks</a></li><li class="last"><a title="Check out the Sesame Street eBooks resource available at the Region of Waterloo Library" href="http://ebooks.sesamestreet.org/librarycard/login?_mid_=30434" class="">Sesame Street eBooks</a></li></ul></li><li><a title="Link to Tweens" href="/en/kidsTweensTeens/tweensatthelibrary.asp" class="dropdownItemHasFlyout">Tweens</a><ul class="flyout"><li><a title="The homepage of the Tweens subsection of the Region of Waterloo Library" href="/en/kidsTweensTeens/tweensatthelibrary.asp?_mid_=21616" class="">Tweens at the Library</a></li><li><a title="Link to Programs for Tweens" href="/en/kidsTweensTeens/programsfortweens.asp?_mid_=20181" class="">Programs</a></li><li><a title="Find out when great tween events are happening at the library." href="http://rwlibrary.evanced.info/signup/eventcalendar.aspx?df=calendar&amp;ag=3&amp;_mid_=22764" class="">Events Calendar</a></li><li><a title="Link to Homework Help for Tweens" href="/en/kidsTweensTeens/homeworkhelpfortweens.asp?_mid_=20178" class="">Homework Help</a></li><li class="last"><a title="Link to Web Safety for Tweens" href="/en/kidsTweensTeens/websafetyfortweens.asp?_mid_=20180" class="">Web Safety</a></li></ul></li><li><a title="Link to Teens" href="/en/kidsTweensTeens/teenhome.asp" class="dropdownItemHasFlyout">Teens</a><ul class="flyout"><li><a title="The homepage for the Teens subsection of the Region of Waterloo Library Homepage." href="/en/kidsTweensTeens/teenhome.asp?_mid_=21617" class="">Teens at the Library</a></li><li><a title="Link to Teen Health &amp; Wellness" href="/en/kidsTweensTeens/lifeevents.asp" class="">Life Events</a></li><li><a title="Link to Teen Events" href="http://rwlibrary.evanced.info/signup/eventcalendar.aspx?df=calendar&amp;ag=4&amp;_mid_=20194" class="">Things to Do</a></li><li><a title="Link to Teens Homework Help" href="/en/research/onlineresearchtoolsatoz.asp?_mid_=20196" class="">Homework Help</a></li><li class="last"><a title="Link to Finding a Job" href="/en/kidsTweensTeens/workvolunteer.asp?_mid_=20193" class="">Work/Volunteer</a></li></ul></li><li><a title="Link to Parent Resources" href="/en/ourcollections/familyliteracymaterials.asp" class="dropdownItemHasFlyout">Parent Resources</a><ul class="flyout"><li><a title="Link to Family Literacy Materials" href="/en/ourcollections/Family-Literacy-Materials.asp" class="">Family Literacy Materials</a></li><li><a title="" href="/en/kidsTweensTeens/familyliteracytips.asp" class="">Family Literacy Tips</a></li><li><a title="Link to Family Programs" href="/en/kidsTweensTeens/familyprograms.asp" class="">Family Programs</a></li><li><a title="Link to Homeschooling" href="/en/kidsTweensTeens/homeschooledfamilies.asp?_mid_=20204" class="">Home Schooled Families</a></li><li class="last"><a title="Link to Web Safety" href="/en/kidsTweensTeens/websafety.asp?_mid_=20205" class="">Web Safety </a></li></ul></li><li class="last"><a title="" href="/en/kidsTweensTeens/classvisits.asp" class="dropdownItemHasFlyout">Educators</a><ul class="flyout"><li><a title="" href="/en/kidsTweensTeens/classvisits.asp?_mid_=27445" class="">Class Visits</a></li><li><a title="" href="/en/kidsTweensTeens/homeschooledfamilies.asp" class="">Home Schooled Families</a></li><li class="last"><a title="" href="/en/kidsTweensTeens/websafety.asp" class="">Web Safety </a></li></ul></li></ul></li><li id="navTab05"><a title="Link to Programs &amp; Events page" href="/en/programsevents/programsevents.asp" class="mainNavItem">Programs &amp; Events</a><ul class="dropdown lastMainNavDropdown"><li><a title="Link to Calendar" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx" class="">All Branch Events Calendar</a></li><li><a title="" href="/en/programsEvents/rwlibraryevents.asp?_mid_=29163" class="dropdownItemHasFlyout">Annual/Special Events</a><ul class="flyout"><li><a title="" href="/en/programsEvents/rwlibraryevents.asp?_mid_=29164" class="">RWL Events</a></li><li><a title="" href="/en/programsEvents/forestofreading.asp?_mid_=29165" class="">Forest of Reading</a></li><li><a title="" href="/en/programsEvents/letsread1.asp" class="">Let's Read</a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/eventcalendar.aspx?df=list&amp;amp;ds=2015/03/17&amp;amp;de=2015/03/21" href="http://rwlibrary.evanced.info/signup/eventcalendar.aspx?df=list&amp;ds=2016/03/15&amp;de=2016/03/18" class="" target="_blank">March Break Events</a></li><li><a title="" href="/en/programsEvents/oboc.asp?_mid_=29168" class="">One Book, One Community</a></li><li class="last"><a title="Go to the Region of Waterloo Library Summer Reading Club page." href="/en/programsEvents/src.asp" class="">TD Summer Reading Club</a></li></ul></li><li><a title="View our Branch Calendars page" href="/en/programsEvents/Branch-Calendars.asp" class="dropdownItemHasFlyout">Branch Calendars</a><ul class="flyout"><li><a title="See a calendar of Ayr Branch's Children programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1000" class="">Ayr Branch </a></li><li><a title="See a calendar of Baden Branch's children's programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1001" class="">Baden Branch</a></li><li><a title="See a calendar of Bloomingdale Branch's children's programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1002" class="">Bloomingdale Branch</a></li><li><a title="See a calendar of Elmira Branch's children's programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1004" class="">Elmira Branch</a></li><li><a title="See a calendar of Linwood Branch's children's programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1005" class="">Linwood Branch</a></li><li><a title="See a calendar of New Dundee Branch's children's programs" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1006" class="">New Dundee Branch</a></li><li><a title="See a calendar of New Hamburg Branch's children's programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1007" class="">New Hamburg Branch</a></li><li><a title="See a calendar of St. Clements Branch programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1008" class="">St. Clements Branch</a></li><li><a title="See a calendar of St. Jacobs Branch children's programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1009" class="">St. Jacobs Branch</a></li><li class="last"><a title="See a calendar of Wellesley Branch children's programs." href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=calendar&amp;ds=2016/04/01&amp;lib=1010" class="">Wellesley Branch</a></li></ul></li><li><a title="Link to Family Programs from Programs and Events" href="/en/kidsTweensTeens/familyprograms.asp?_mid_=20233" class="">Family Programs</a></li><li><a title="Learn how to registrer for programs at RWL." href="/en/programsEvents/Program-Registration.asp" class="">Program Registration</a></li><li><a title="" href="/en/programsEvents/Technology-Training.asp" class="dropdownItemHasFlyout">Technology Training/Calendar</a><ul class="flyout"><li><a title="View our Technology Training page" href="/en/programsEvents/Technology-Training.asp?_mid_=33256" class="">About Technology Training</a></li><li class="last"><a title="View our Technology Training Calendar" href="http://rwlibrary.evanced.info/signup/eventcalendar.aspx?df=calendar&amp;et=23" class="">Technology Training Calendar</a></li></ul></li><li class="last"><a title="View our Upcoming Events Lists page" href="/en/programsEvents/Upcoming-Events-Lists.asp" class="dropdownItemHasFlyout">Upcoming Events Lists</a><ul class="flyout"><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1000" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1000" class="">Ayr Branch</a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1001" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1001" class="">Baden Branch </a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1002" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/01/01&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1002" class="">Bloomingdale Branch</a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1004" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1004" class="">Elmira Branch</a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1005" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1005" class="">Linwood Branch</a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1006" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1006" class="">New Dundee Branch</a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1007" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1007" class="">New Hamburg Branch</a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1008" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1008" class="">St. Clements Branch</a></li><li><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1009" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1009" class="">St. Jacobs Branch</a></li><li class="last"><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;amp;ds=2015/07/01&amp;amp;de=2015/08/31&amp;amp;lib=1010" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx?df=list&amp;ds=2016/04/01&amp;de=2016/05/31&amp;lib=1010" class="">Wellesley Branch</a></li></ul></li></ul></li><li id="navTab06"><a title="Link to Explore page" href="/en/explore/explore.asp" class="mainNavItem">Explore</a><ul class="dropdown lastMainNavDropdown"><li><a title="Link to Hot News" href="/en/newslist/index.aspx?_mid_=20253" class="">News</a></li><li><a title="Link to New on the Shelf" href="/en/explore/newontheshelf2.asp" class="">New on the Shelf</a></li><li><a title="Link to Hot Best Sellers" href="/en/explore/bestsellers2.asp" class="">Bestsellers</a></li><li><a title="Link to Coming Soon news" href="/en/explore/comingsoon1.asp" class="">Coming Soon</a></li><li><a title="" href="/en/explore/digitalhelpdesk.asp" class="">Digital Help Desk</a></li><li><a title="" href="/en/explore/dvdcentral.asp" class="">DVD Central</a></li><li><a title="" href="/en/explore/Newsletters.asp" class="dropdownItemHasFlyout">Newsletters</a><ul class="flyout"><li><a title="" href="/en/explore/Newsletters.asp?_mid_=30955" class="">NextReads Newsletters</a></li><li class="last"><a title="Open new window to view http://row.enews.esolutionsgroup.ca/" href="http://row.enews.esolutionsgroup.ca/?_mid_=30956" class="">RWL Newsletters</a></li></ul></li><li><a title="" href="/en/research/novelist.asp" class="">NoveList</a></li><li class="last"><a title="View our RWL Online Bookclub page" href="/en/explore/RWL-Online-Bookclub.asp" class="">RWL Online Book Club</a></li></ul></li></ul>
+            </div>
+    
+	        <div id="main">
+		        <div id="navGradient">&nbsp;</div>
+		        <div id="bannerGradient">&nbsp;</div>
+
+		        <div id="homepageBannerContainer">
+                    <!--googleon: all-->
+	                <div id="rotatingBannersEdit" class="bannerContainer bannerContainerEdit">
+                        <div class="bannerEdit">
+                            <div class="bannerImage">
+                                 
+                            </div>
+                            <div class="bannerText">
+								<div class="bannerTextContent">
+									 
+								</div>
+							</div>  
+                        </div>
+                    </div>
+            
+                    <div id="rotatingBanners" class="bannerContainer">                   
+                        <div class="banner">
+                            <div class="bannerImage">
+                                
+                            <p><a title="Open new window to view http://rwlibrary.evanced.info/signup/eventcalendar.aspx?df=calendar&amp;amp;et=23" href="http://rwlibrary.evanced.info/signup/eventcalendar.aspx?df=calendar&amp;et=23"><img src="/en/resourcesGeneral/mousehand-techtraining.jpg" alt="A person's hand using a wireless mouse." /></a></p></div>
+                            <div class="bannerText">
+        <div class="bannerTextContent">
+         
+        <h2>Technology Training&nbsp;</h2>
+<p>Registration begins on March 8 for 1:1 Computer training and technology workshops.</p></div>
+       </div>  
+                        </div><div class="banner default">
+                            <div class="bannerImage">
+                                
+                            <p><a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx"><img src="/en/resourcesGeneral/foxspringprograms.jpg" alt="A fox standing in a hilly, wooded area with mountains in the background." /></a></p></div>
+                            <div class="bannerText">
+        <div class="bannerTextContent">
+         
+        <h2>Spring Programs</h2>
+<p>Program registration begins on March 8 for spring programs beginning in April.&nbsp;</p></div>
+       </div>  
+                        </div><div class="banner">
+                            <div class="bannerImage">
+                                
+                            <a href="http://olco.canlib.ca/client/en_US/rwl/search/results?qu=Electric+cooking%2C+Slow."><img src="/en/inc/resources/crockpot.jpg" alt="A soup in a slowcooker sitting on a bed of mixed greens and vegetables." /></a></div>
+                            <div class="bannerText">
+        <div class="bannerTextContent">
+         
+        <h2>Make a savoury meal...</h2>
+<p>Our great selection of slow cooker books will turn you into a culinary delight!</p></div>
+       </div>  
+                        </div><div class="banner">
+                            <div class="bannerImage">
+                                
+                            <a title="Open new window to view http://www.wrwelcomesrefugees.ca" href="http://www.wrwelcomesrefugees.ca" target="_blank"><img src="/en/resourcesGeneral/Syria-rotator.jpg" alt="A map with Syria pinpointed on it " /></a></div>
+                            <div class="bannerText">
+        <div class="bannerTextContent">
+         
+        <h3>Waterloo Region Welcomes Refugees.&nbsp;<br />Find out how you can help.</h3></div>
+       </div>  
+                        </div><div class="banner">
+                            <div class="bannerImage">
+                                
+                            <a title="Open new window to view http://www.rwl.library.on.ca/en/newslist/index.aspx?corpId=v5lA5HwzRvBGCEgPhNcvmEbLOQeQuAleQuAl&amp;amp;newsId=d40J5MCfVm06KfRHiGgZYgeQuAleQuAl" href="http://www.rwl.library.on.ca/en/newslist/index.aspx?corpId=v5lA5HwzRvBGCEgPhNcvmEbLOQeQuAleQuAl&amp;newsId=d40J5MCfVm06KfRHiGgZYgeQuAleQuAl"> <img src="/en/inc/badenclosed.jpg" alt="A picture of a construction barrier. " /></a></div>
+                            <div class="bannerText">
+        <div class="bannerTextContent">
+         
+        
+         
+        <h2><strong>Update your catalogue link!</strong></h2>
+<p><strong>The link to our catalogue is changing on Tuesday, Feb. 16.</strong></p></div>
+       </div>  
+                        </div>	
+                    </div> 
+                    <!--googleoff: all-->       
+	            </div>
+                <div id="rightButtons">
+                    <a title="Homepage Link to Get a Library Card" href="http://rwl.library.on.ca/en/aboutus/getalibrarycard.asp"><div class="rButtonContainer"><div class="rButtonInner"><div class="rButton">Get a Library Card</div></div></div><div class="rPhoto"><img height="37" width="101" alt="Homepage Link to Get a Library Card" src="/en/resourcesGeneral/photo_1.jpg" /></div></a><a title="Homepage Link to Search Catalogue" href="https://olco.ent.sirsidynix.net/client/en_US/rwl/" target="_blank"><div class="rButtonContainer"><div class="rButtonInner"><div class="rButton">Search Catalogue</div></div></div><div class="rPhoto"><img height="37" width="101" alt="Homepage Link to Search Catalogue" src="/en/resourcesGeneral/catalogue.jpg" /></div></a><a title="Homepage Link to Hours of Operation" href="/en/aboutus/branchhoursoct2013.asp"><div class="rButtonContainer"><div class="rButtonInner"><div class="rButton">Branch Hours</div></div></div><div class="rPhoto"><img height="37" width="101" alt="Homepage Link to Hours of Operation" src="/en/resourcesGeneral/photo_3.jpg" /></div></a><a title="Homepage Link to eBooks" href="http://www.downloadlibrary.ca" target="_blank"><div class="rButtonContainer"><div class="rButtonInner"><div class="rButton">downloadLibrary</div></div></div><div class="rPhoto"><img height="37" width="101" alt="Homepage Link to eBooks" src="/en/resourcesGeneral/downloadlibrary.jpg" /></div></a><a title="Homepage link to Your Comments" href="http://rbdigital.com/regionofwaterlooon/zinio" target="_blank"><div class="rButtonContainer"><div class="rButtonInner"><div class="rButton">Zinio</div></div></div><div class="rPhoto"><img height="37" width="101" alt="Homepage link to Your Comments" src="/en/resourcesGeneral/zinio.jpg" /></div></a>
+                </div>
+            
+		        <div class="clear"></div>
+		
+		        <div id="bottombannerCurve"></div>
+		        <div id="printArea">
+			        <div id="contentLeft">
+                        <!-- News Module -->
+                        <h2>News</h2>
+<ul>
+    <li>
+        <p>JavaScript Disabled. </p>
+        <p>Please enable JavaScript to view this content.</p>
+    </li>
+</ul>
+                    </div>
+                    <!--googleon: all-->
+			        <div id="contentMiddle">
+	  	                 <p class="Center">&nbsp;<a title="Open new window to view http://rwlibrary.evanced.info/signup/EventCalendar.aspx" href="http://rwlibrary.evanced.info/signup/EventCalendar.aspx"><img src="/en/programsEvents/resources/onlineregistrationbutton.jpg" alt="A button that links to the Events Calendar and Online Registration." /></a></p>
+<p><a title="Open new window to view http://row.enews.esolutionsgroup.ca/" href="http://row.enews.esolutionsgroup.ca/"><img class="Center" src="/en/programsEvents/resources/enewsletterbutton.jpg" alt="A button that links to the library's enewsletters." /></a></p>    
+                    </div>
+                    <!--googleoff: all--> 
+                    <div id="contentRight">
+                        <h1>New on the Shelf</h1>
+<ul><li><a title="Find the newest adult fiction available at the Region of Waterloo Library" href="http://olco.ent.sirsidynix.net/client/rwl">New Adult Fiction</a></li><li><a title="Find the newest adult non-fiction at the Region of Waterloo Library" href="https://olco.ent.sirsidynix.net/client/en_US/rwl/?rm=NEW+NON-FICTION0|||1|||0|||true">New Adult Non-Fiction</a></li><li><a title="Find the newest DVDs available at the Region of Waterloo Library." href="https://olco.ent.sirsidynix.net/client/en_US/rwl/?rm=ALL+NEW+DVDS0|||1|||0|||true">New DVDs</a></li><li><a title="Find new ebooks that are available from the Region of Waterloo Library." href="https://olco.ent.sirsidynix.net/client/en_US/rwl/?rm=NEW+MYSTERIES0|||1|||0|||true">New Mysteries</a></li><li><a title="Link to the new romances available from the Region of Waterloo Library." href="https://olco.ent.sirsidynix.net/client/en_US/rwl/?rm=NEW+ROMANCES0|||1|||0|||true">New Romances</a></li><li><a title="Link to the newest inspirational fiction available at the Region of Waterloo Library." href="/en/explore/newontheshelf2.asp">Click for more 'New' lists...</a></li></ul>
+                    </div>
+			
+		        </div>
+	        </div>
+	        <div class="clear"></div>
+	
+	        <div id="footer">    <div id="row">
+   	    
+
+
+
+
+
+
+
+
+
+
+
+<a title="Region of Waterloo" href="http://www.regionofwaterloo.ca/" target="_blank"><img title="Click to go to Region of Waterloo website" alt="Region of Waterloo" src="/en/inc/resources/row.jpg" /></a>
+    </div>    <div id="footerText">	    
+
+
+
+
+
+
+
+
+
+
+
+&copy; 2014 Region of Waterloo&nbsp;  
+    </div>    <div id="footerNav">	    <span class="footerHorizNavSeparator">|</span><a title="Privacy" href="/en/privacy.asp">Privacy</a><span class="footerHorizNavSeparator">|</span><a title="Sitemap" href="/en/sitemap.asp">Sitemap</a><span class="footerHorizNavSeparator">|</span><a title="Accessibility" href="/en/accessibility.asp">Accessibility</a>	    </div>    		    <div id="social">
+               <div id="socialtwo">	        <a title="Facebook" href="http://www.facebook.com/RegionofWaterlooLibrary"><img height="19" width="22" alt="Facebook" src="/en/resourcesGeneral/icon_facebook.gif" /></a><a title="Twitter" href="https://twitter.com/rwlibrary" target="_blank"><img height="19" width="22" alt="Twitter" src="/en/resourcesGeneral/icon_twitter.gif" /></a><a title="Google Plus" href="https://plus.google.com/b/105331294754834966549/105331294754834966549/posts"><img height="19" width="22" alt="Google Plus" src="/en/resourcesGeneral/icon_googleplus.png" /></a><a title="RWL eNewsletters" href="http://row.enews.esolutionsgroup.ca/"><img height="19" width="22" alt="RWL eNewsletters" src="/en/resourcesGeneral/icon_enews.png" /></a><a title="Pinterest" href="http://pinterest.com/rwlibrary/"><img height="19" width="22" alt="Pinterest" src="/en/resourcesGeneral/icon_pinterest.png" /></a><a title="eMail" href="/en/aboutus/yourcomments.asp"><img height="19" width="22" alt="eMail" src="/en/resourcesGeneral/icon_email.gif" /></a><a title="Goodreads" href="https://www.goodreads.com/group/show/117329-region-of-waterloo-library"><img height="19" width="22" alt="Goodreads" src="/en/resourcesGeneral/icon_goodreads.png" /></a>	        </div>
+         <div id="socialone">Join the Conversation:</div>
+    </div></div><div id="esol"> <a href="http://www.esolutionsgroup.ca" title="Designed by eSolutionsGroup" target="_blank">Designed by eSolutionsGroup</a> </div>
+
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//us2.siteimprove.com/js/siteanalyze_562946.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+</script>
+
+	
+        </div>
+        <!--googleoff: all-->       
+    </body>
+</html>

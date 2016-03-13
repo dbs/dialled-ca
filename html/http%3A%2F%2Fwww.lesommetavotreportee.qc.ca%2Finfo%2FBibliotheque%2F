@@ -1,0 +1,355 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<base href="http://www.lesommetavotreportee.qc.ca/" />
+<title>CSSS</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="css-js/csss-ry.css" rel="stylesheet" type="text/css" />
+<link href="css-js/drop-menu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/wslib/js/jquery.colorbox/colorbox.css" type="text/css" media="screen" />
+<script src="/wslib/js/jquery.js" type="text/javascript"></script>
+<script src="/wslib/js/jquery.colorbox.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".popup").colorbox({fixedWidth:"40%", fixedHeight:550, iframe:true});
+});
+</script>
+</head>
+
+<body>
+
+<a name="top" id="top"></a>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="400" height="75"><img src="images/en-tete-01.gif" alt="Centre de sant&eacute; et de services sociaux Richelieu-Yamaska" width="365" height="47" /></td>
+    <td height="76" align="right"><img src="files/banniere_en_tete.jpg" width="500" height="76" /></td>
+  </tr>
+  <tr>
+    <td height="38" colspan="2" background="images/en-tete-02.gif"><div class="menu-quebec" id="menu-quebec">
+      <table border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="435"><a href="http://www.santemonteregie.qc.ca/richelieu-yamaska/index.fr.html" target="_blank">Mont&eacute;r&eacute;gie</a></td>
+            <td width="200" align="right"><a href="http://www.gouv.qc.ca" target="_blank">Portail Qu&eacute;bec</a></td>
+            <td width="10">&nbsp;</td>
+            <td><a href="http://www.santemonteregie.qc.ca/richelieu-yamaska/index.fr.html" target="_blank">Sant&eacute; Mont&eacute;r&eacute;gie</a></td>
+            <td width="15">&nbsp;</td>
+          </tr>
+          </table>
+    </div></td>
+  </tr>
+</table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="menu-01"><table width="950" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="73" colspan="3" align="right" valign="top" class="menu-02"><div class="menu-page" id="menu-page"><div class="b-accueil"><a href="/">Accueil</a></div><a name="clf"></a><a name="menuf"></a><div id="menu" class="menu"><script type="text/javascript">
+//<![CDATA[
+
+	var debug = false;
+	var menu_timeout;
+	function menu_over( event , mouse_over_el , show_menu_id ) {
+		var event, show_menu_id, mouse_over_el, pos, container;
+		// clear hide menu, prevent flick
+		window.clearTimeout(menu_timeout);
+		// get position of current el
+		pos = menu_get_pos( mouse_over_el );
+		// add height of element to pub menu just below the current element
+		pos[1] = pos[1]+mouse_over_el.offsetHeight;
+		// show mouseover el
+		menu_debug( 'hover : '+mouse_over_el.tagName);
+		menu_debug( 'mouse_over_el is at pos :'+ pos[0]+','+pos[1] );
+		// get menu container
+		container = menu_get_container();
+		// set menu pos
+		container.style.left = pos[0]+'px';
+		container.style.top = pos[1]+'px';
+		// develop menu
+		menu_show( show_menu_id );
+		menu_debug('container is this: '+container.innerHTML);
+	}
+
+	function menu_out( event , mouse_over_el , hide_menu_id ) {
+		var event, hide_menu_id, mouse_over_el;
+		menu_timeout = window.setTimeout( "menu_hide()" , 250 );
+	}
+	
+	function submenu_over( event , mouse_over_el , show_menu_id ) {
+		var event, mouse_over_el, show_menu_id;
+		// clear hide menu, prevent flick
+		window.clearTimeout(menu_timeout);
+		// show menu
+		if( show_menu_id ) {
+			// get menu container
+			container = menu_get_container();
+			// develop menu
+			menu_show( show_menu_id , mouse_over_el );
+			menu_debug('container is this: '+container.innerHTML);
+		} else {
+			var col = mouse_over_el.parentNode;
+			menu_cleanup_container( col );
+		}
+	}
+	
+	function submenu_out( event , mouse_over_el , show_menu_id ) {
+		var event, hide_menu_id, mouse_over_el;
+		menu_timeout = window.setTimeout( "menu_hide()" , 500 );
+	}
+
+	function menu_show( id , mouse_over_el ) {
+		var id, html, e, mouse_over_el;
+		// built menu items
+		html = '';
+		var i=0;
+		for( e in menu_items[id] ) {
+			var cssid = i==0 ? 'first' : '';
+			var link = menu_items[id][e][1];
+			// check if item has child items
+			if( menu_items[id][e][2] ) {
+				var child_menu = menu_items[id][e][2];
+				// with submenu
+				html += '<div id="'+cssid+'" class="item" onmouseover="submenu_over(event,this,\''+child_menu+'\')" onmouseout="submenu_out(event,this,\'submenu_'+child_menu+'\')"><a href="'+link+'">'+menu_items[id][e][0]+'</a></div>';
+			} else {
+				// no submenu
+				html += '<div id="'+cssid+'" class="item" onmouseover="submenu_over(event,this)" onmouseout="submenu_out(event,this)"><a href="'+link+'">'+menu_items[id][e][0]+'</a></div>';
+			}
+			i++;
+		}
+		// insert in container, in next col
+		var col = menu_insert_in_container( html , mouse_over_el );
+		col.id = 'menu_container_'+id;
+	}
+	
+	function menu_hide( id ) {
+		var id;
+		menu_delete_container();
+	}
+
+	function menu_get_container() {
+		var el;
+		if( ! document.getElementById('menu_container') ) {
+			el = menu_create_container();
+		}
+		el = document.getElementById('menu_container');
+		return el;
+	}
+	
+	function menu_create_container() {
+		var id, el;
+		el = document.createElement('div');
+		el.style.display = 'block';
+		el.style.position = 'absolute';
+		el.id = 'menu_container';
+		el.className = 'popup_menu';
+		el.innerHTML = "<table><tbody><tr><td class=\"popup_menu_col\"></td><td class=\"popup_menu_col\"></td><td class=\"popup_menu_col\"></td><td class=\"popup_menu_col\"></td><td class=\"popup_menu_col\"></td><td class=\"popup_menu_col\"></td><td class=\"popup_menu_col\"></td><td class=\"popup_menu_col\"></td></tr></tbody></table>";
+		document.body.appendChild(el);
+		return el;
+	}
+	
+	function menu_delete_container() {
+		if( document.getElementById('menu_container') ) {
+			el = document.getElementById('menu_container');
+			el.parentNode.removeChild(el);
+			menu_debug('Delete container');
+		}
+	}
+	
+	function menu_insert_in_container( html , mouse_over_el ) {
+		var html, el, col, i, row, mouse_over_el, next_col;
+		var height = 0;
+		// get menu container
+		el = menu_get_container();
+		// get cols row
+		row = el.childNodes[0].childNodes[0].childNodes[0];
+		// select at wich col we start
+		// start at first col, il no element passed
+		if( ! mouse_over_el ) {
+			// use the first col
+			col = row.childNodes[0];
+		} else {
+			// get next column
+			col = mouse_over_el.parentNode.nextSibling;
+			// get top position of first element, that is the sum of heights of all elements
+			// over the mouse_over_el
+			var hel = mouse_over_el;
+			while( hel.previousSibling ) {
+				hel = hel.previousSibling;
+				height += hel.offsetHeight;
+			}
+			if( height ) menu_debug( 'add padding of '+height );
+		}
+		// insert html in the col
+		col.innerHTML = html;
+		col.style.paddingTop = height+'px';
+		// empty other cols
+		menu_cleanup_container( col );
+		return col;
+	}
+	
+	function menu_cleanup_container( after_col ) {
+		var el, col, i, after_col;
+		var start_clean = false;
+		// get menu container
+		el = menu_get_container();
+		// get cols row
+		row = el.childNodes[0].childNodes[0].childNodes[0];
+		// check each col
+		for( i=0; i<row.childNodes.length; i++ ) {
+			col = row.childNodes[i];
+			if( start_clean ) {
+				col.innerHTML = '';
+				col.id = '';
+				menu_debug( 'next_col isset empty' );
+			}
+			if( col == after_col ) {
+				start_clean = true;
+			}
+		}
+	}
+	
+	function menu_get_pos( el ) {
+		var el;
+		// get pos of input el
+		var curleft = 0;
+		var curtop = 0;
+		if (el.offsetParent) {
+			while (el.offsetParent) {
+				curleft += el.offsetLeft;
+				curtop += el.offsetTop;
+				el = el.offsetParent;
+			}
+		} else if (el.x) {
+			curleft += el.x;
+			curtop += el.y;
+		}
+
+		return [curleft,curtop];
+	}
+	
+	function menu_get_child_items( id ) {
+		var id;
+		for( e in menu_items ) {
+			if( menu_items[e][0] == id ) {
+				return e;
+				menu_debug( 'found child items: ' + id );
+			}
+		}
+		return false;
+	}
+
+	function menu_debug( txt ) {
+		var txt, el;
+		if( ! debug ) return null;
+		if( ! document.getElementById('menu_debug') ) {
+			el = document.createElement("div");
+			el.id = 'menu_debug';
+			el.style.width = '100%';
+			el.style.position = 'absolute';
+			el.style.bottom = '0px';
+			el.style.left = '0px';
+			el.style.height = '100px';
+			el.style.overflow = 'auto';
+			document.body.appendChild(el);
+		}
+		el = document.getElementById('menu_debug');
+		txt = txt.replace(/</g,'&lt;');
+		txt = txt.replace(/>/g,'&gt;');
+		el.innerHTML = el.innerHTML+'<HR />'+txt;
+		el.scrollTop = el.scrollHeight;
+	}
+
+//]]>
+</script><table><tr><td id="first" class="item"  onmouseover="menu_over(event,this,'submenu_2')" onmouseout="menu_out(event,this,'submenu_2')"><a href="info/Medecins/" onclick="return false;" target="">Médecins</a></td><td> <img src="images/spacer-menu.gif" alt="" width="8" height="17" align="absmiddle" /> </td><td id="" class="item"  ><a href="info/Notre_CSSS/" onclick="" target="">Notre CSSS</a></td><td> <img src="images/spacer-menu.gif" alt="" width="8" height="17" align="absmiddle" /> </td><td id="last" class="item"  ><a href="specialites.php" onclick="" target="">Spécialités</a></td><td> <img src="images/spacer-menu.gif" alt="" width="8" height="17" align="absmiddle" /> </td><td id="selected" class="item"  onmouseover="menu_over(event,this,'submenu_3')" onmouseout="menu_out(event,this,'submenu_3')"><a href="info/Bibliotheque/" onclick="return false;" target="">Bibliothèque</a></td><td> <img src="images/spacer-menu.gif" alt="" width="8" height="17" align="absmiddle" /> </td><td id="" class="item"  ><a href="info/Recrutement/" onclick="" target="">Recrutement</a></td></tr></table><script type="text/javascript">
+//<![CDATA[
+	if( ! menu_items ) var menu_items = new Array();
+	menu_items['submenu_2'] = [
+		[ 'Formation médicale' , '/formation/' , false ] , 
+		[ 'CMDP' , 'info/CMDP/' , false ] , 
+		[ 'Pharmacie' , 'info/Pharmacie/' , false ] , 
+		[ 'Unité de médecine familiale' , 'info/Unite_de_medecine_familiale/' , false ] , 
+		[ 'Calendrier de formation' , 'info/Calendrier_de_formation/' , false ] , 
+		[ 'Soutien à la pratique' , '/info/85/' , false ] , 
+	];
+	menu_items['submenu_3'] = [
+		[ 'Qui sommes-nous?' , 'info/Qui_sommes_nous/' , false ] , 
+		[ 'Services offerts' , 'info/Services_offerts/' , false ] , 
+		[ 'Catalogue bibliothèque' , 'info/Catalogue_bibliotheque/' , false ] , 
+		[ 'Recherche en ligne' , 'info/Recherche_en_ligne/' , false ] , 
+		[ 'Revues électroniques' , 'info/Revues_electroniques/' , false ] , 
+		[ 'Volumes électroniques' , 'info/Volumes_electroniques/' , false ] , 
+		[ 'Demande d\'achat' , 'info/Demande_d_achat/' , false ] , 
+		[ 'Nous contacter' , 'info/Nous_contacter/' , false ] , 
+	];
+//]]>
+</script></div></div>
+          </td>
+        </tr>
+      <tr>
+        <td width="210" align="center" valign="top"><img src="/files/mission_biblio.jpg" width="210" height="340" /><img src="images/slogan-page.gif" alt="Le sommet &agrave; votre port&eacute;e" width="210" height="105" />
+          <p></p></td>
+        <td width="556" valign="top"><div class="zone-texte">
+<a name="cf"></a><a name="contentf"></a><div id="content" class="content"><ul style="float: left; margin: 15px; list-style: none;"><li style="border: 1px solid #000000; padding: 10px; background: #ffffff;"><a href="info/Qui_sommes_nous/">Qui sommes-nous?</a></li><li style="border: 1px solid #000000; padding: 10px; background: #ffffff;"><a href="info/Services_offerts/">Services offerts</a></li><li style="border: 1px solid #000000; padding: 10px; background: #ffffff;"><a href="info/Catalogue_bibliotheque/">Catalogue bibliothèque</a></li><li style="border: 1px solid #000000; padding: 10px; background: #ffffff;"><a href="info/Recherche_en_ligne/">Recherche en ligne</a></li><li style="border: 1px solid #000000; padding: 10px; background: #ffffff;"><a href="info/Revues_electroniques/">Revues électroniques</a></li><li style="border: 1px solid #000000; padding: 10px; background: #ffffff;"><a href="info/Volumes_electroniques/">Volumes électroniques</a></li><li style="border: 1px solid #000000; padding: 10px; background: #ffffff;"><a href="info/Demande_d_achat/">Demande d'achat</a></li><li style="border: 1px solid #000000; padding: 10px; background: #ffffff;"><a href="info/Nous_contacter/">Nous contacter</a></li></ul><h1>Biblioth&egrave;que Rom&eacute;o-Germain</h1>
+<h2>Qui sommes-nous?</h2>
+<ul>
+    <li><a href="info/Qui_sommes_nous/#mission">Mission</a></li>
+    <li><a href="info/Qui_sommes_nous/#histo">Historique</a></li>
+</ul>
+<p><a name="mission"></a><span style="color: rgb(0,102,153)"><strong>Mission</strong></span></p>
+<p>La biblioth&egrave;que a pour mission d'offrir &agrave; sa client&egrave;le des ressources documentaires, des outils de recherche efficaces et un personnel qualifi&eacute; afin de soutenir les d&eacute;marches cliniques, la formation professionnelle continue, la recherche et l'enseignement au CISSS Mont&eacute;r&eacute;gie-Est /&nbsp;RLS&nbsp;Richelieu-Yamaska.</p>
+<p><a name="histo"></a><span style="color: rgb(0,102,153)"><strong>Historique</strong></span></p>
+<table border="1" cellspacing="1" cellpadding="1" align="center" style="width: 363px; height: 323px">
+    <tbody>
+        <tr>
+            <td style="text-align: center"><strong>Biblioth&egrave;que Rom&eacute;o-Germain</strong></td>
+        </tr>
+        <tr>
+            <td style="text-align: center"><font size="1" face="Verdana">Qui &eacute;tait le docteur Rom&eacute;o Germain?<br />
+            Cliquez sur la photo </font></td>
+        </tr>
+        <tr>
+            <td bordercolor="#010000" style="text-align: center"><a href="files/Qui_etait_le_docteur_Romeo_Germain.pdf"><img alt="" width="200" height="228" src="files/photo_dr_germain.jpg" /><br />
+            </a></td>
+        </tr>
+    </tbody>
+</table>
+<p style="text-align: right"><a href="info/Qui_sommes_nous/#top">Haut de page</a></p>
+<p>&nbsp;</p></div>        </div></td>
+        <td width="184" valign="top">
+			<div class="section-droite">
+				<a class="popup" href="popup.php?go=search"><img src="images/b-moteurs-de-recheche.gif" alt="Moteurs de recherche" width="184" height="62" border="0" /></a>
+				<a class="popup" href="popup.php?go=ref"><img src="images/b-references-medicales.gif" alt="R&eacute;f&eacute;rences m&eacute;dicales" width="184" height="62" border="0" /></a>
+<!-- 				<a class="popup" href="popup.php?go=spec"><img src="images/b-specialites.gif" alt="Sp&eacute;cialit&eacute;s" width="184" height="64" border="0" /></a> -->
+				<a class="" href="/liens_utiles.php"><img src="images/b-liens-utiles.gif" alt="Liens utiles" width="184" height="64" border="0" /></a>
+			</div>
+          <a href="info.php?b[c]=3" ><img src="files/Espace_savoir2_3.jpg" style="border: none; width: 184px; height: 138px;" /></a>          <a href="info.php?b[c]=2" ><img src="files/ordonnance.jpg" style="border: none; width: 184px; height: 138px;" /></a>          <a href="info.php?b[c]=1" ><img src="files/repertoire_2.jpg" style="border: none; width: 184px; height: 138px;" /></a>		  </td>
+      </tr>
+    </table>      </td>
+  </tr>
+</table>
+
+
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="txt-petit">
+  <tr>
+    <td height="60" align="center" valign="top"><strong>Cente de sant&eacute; et de services sociaux Richelieu-Yamaska</strong><br />
+2750, boulevard Laframboise &bull; Saint-Hyacinthe (Qu&eacute;bec) &bull; J2S 4Y8 &bull; T&eacute;l. : 450 771-3333 &bull;&nbsp;T&eacute;l&eacute;c. : 450 771-3748 &bull; <a href="mailto:info@llesommetavotreportee.qc.ca">info@lesommetavotreportee.qc.ca</a></td>
+  </tr>
+</table>
+
+<div id="zoom_moteurs" style="display: none;"></div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9281527-1");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+</body>
+</html>

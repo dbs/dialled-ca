@@ -1,0 +1,361 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Niagara-on-the-Lake Public Library</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+
+<link rel="stylesheet" type="text/css" href="css/eventListWidget.css">
+
+
+<!--^^^^^^^^^^^-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/slippry.min.js"></script>
+<link rel="stylesheet" href="css/slippry.css" />
+<!--^^^^^^^^^^^-->
+
+<!--****************************favicon*****************************************-->
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<!--****************************favicon*****************************************-->
+<!-- <link rel="stylesheet" href="fonts/MyFontsWebfontsKit.css"> -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+
+<!-- Basic stylesheet -->
+<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+ 
+ <!-- Default Theme -->
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+<!-- Include js plugin -->
+<script src="owl-carousel/owl.carousel.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47130511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+	$(function() {
+		var pull 		= $('#pull');
+			menu 		= $('nav ul');
+			menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+		});
+	
+		$(window).resize(function(){
+			var w = $(window).width();
+			if(w > 320 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			}
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		$(".owl-carousel").owlCarousel({
+			items : 6, //10 items above 1000px browser width
+			itemsDesktop : [1000,5], //5 items between 1000px and 901px
+			itemsDesktopSmall : [900,4], // betweem 900px and 601px
+			itemsTablet: [600,3], //2 items between 600 and 0
+			itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+		});
+			  // Custom Navigation Events
+		$(".next").click(function(){
+			owl.trigger('owl.next');
+		  });
+		$(".prev").click(function(){
+			owl.trigger('owl.prev');
+		 });
+	});
+</script>
+</head>
+<body>
+<!-- start header -->
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html">
+				<img src="images/logos/M2.png" alt="Library Logo"/>
+				<div class="clear"> </div>
+			 </a>
+		</div>
+		<div class="headerRight">
+		<div class="text">
+			<p>
+				<script type="text/javascript" src="js/greet.js"></script>
+				<script> greet(); </script>
+				<br/><a href="hours.html">See All Hours</a>
+			</p>
+		</div>
+		<div class="h_search">
+			<form name="notlSearch" action="http://notl.niagaraevergreen.ca/eg/opac/results?fi%3Asearch_format=&query=" + txtSearch method="get">
+				<input type="text" name="query" value="" placeholder="search catalogue...">
+				<input type="submit" value="">
+			</form>
+		</div>	
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+</div>
+
+<div class="header_btm">
+	<div class="wrap">
+		<div class="h_search_mobile">
+			<form name="notlSearch" action="http://notl.niagaraevergreen.ca/eg/opac/results?fi%3Asearch_format=&query="+txtSearch method="get">
+				<input type="text" name="query" value="" placeholder="search catalogue...">
+				<input type="submit" value="">
+			</form>
+		</div>
+		<a href="https://notl.niagaraevergreen.ca/eg/opac/login?redirect_to=%2Feg%2Fopac%2Fmyopac%2Fmain%3Flocg%3D106"><div class="myAccountMobile">
+			<p>
+				Log in to My Account
+			</p>
+		</div></a>
+		<div class="daily_hours_mobile">
+			<p>
+				<script type="text/javascript" src="js/greet.js"></script>
+				<script> greet(); </script>
+				<br/><a href="hours.html">See All Hours</a>
+			</p>
+		</div>
+	
+		<nav class="clearfix">
+				<ul class="clearfix">
+					<li class="has-child" aria-haspopup="true"><a href="readingRoom.html">Books</a>
+						<ul>
+							<li><a href="readingRoom.html">Reading Room</a></li>
+							<li><a href="php/purchaseRequest.php">Request a Purchase</a></li>
+							<li><a href="http://notl.niagaraevergreen.ca/eg/opac/home">Browse Catalogue</a></li>
+							<li><a href="bestSellers.html">Best Sellers</a></li>
+						</ul>
+					</li>
+					<li class="has-child" aria-haspopup="true"><a href="children.html">Children</a>
+						<ul>
+							<li><a href="children.html">Home</a></li>
+							<li><a href="eventsKids.html">Programs</a></li>
+							<li><a href="babiesAndBooks.html">Babies & Books</a></li>
+							<li><a href="preschoolStoryTime.html">Preschool Story Time</a></li><li><a href="familyStoryTime.html">Family Story Time</a></li>
+							<li><a href="bedtimeBooks.html">Bedtime Books</a></li>
+							<li><a href="eResourcesChildren.html">eResources</a></li>
+						</ul>
+					</li>
+					<li class="has-child" aria-haspopup="true"><a href="teen.html">Teen</a>
+						<ul>
+							<li><a href="teen.html">Home</a></li>
+							<li><a href="eventsTeens.html">Programs</a></li>
+							<li><a href="eResourcesTeen.html">eResources</a></li>
+							<li><a href="apps.html">Apps</a></li>
+						</ul>
+					</li>
+					<li class="has-child" aria-haspopup="true"><a href="adultNews.html">Adults</a>
+						<ul>
+							<li><a href="adultNews.html">News</a></li>
+							<li><a href="eventsAdult.html">Programs</a></li>
+							<li><a href="eResources.html">eResources</a></li>
+							<li><a href="wineAndWords.html">Wine & Words</a></li>
+							<li><a href="beerAndBooks.html">Beer & Books</a></li>
+							<li><a href="infohealth.html">InfoHealth</a></li>
+						</ul>
+					</li>
+					<li class="has-child" aria-haspopup="true"><a href="">Services</a>
+						<ul>	
+							<li><a href="localHistory.html">Local History</a></li>
+							<li><a href="http://notlpubliclibrary.evanced.info/spaces">Book a Room</a></li>
+							<li><a href="copyPrintScan.html">Copy, Print & Scan</a></li>
+							<li><a href="illo.html">Interlibrary Loans</a></li>
+							<li><a href="homebound.html">Homebound Deliveries</a></li>
+							<li><a href="smartLocker.html">St. Davids Smart Locker</a></li>
+						</ul>
+					</li>
+					<li class="has-child" aria-haspopup="true"><a href="https://www.canadahelps.org/en/charities/niagara-on-the-lake-public-library/">Support Us</a>
+						<ul>
+							<li><a href="https://www.canadahelps.org/en/charities/niagara-on-the-lake-public-library/">Donate</a></li>
+							<li><a href="volunteer.html">Volunteer</a></li>
+							<li><a href="donors.html">Past Donors</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+		</nav>
+		
+		<div class="myAccount">
+			<p>
+				<a href="https://notl.niagaraevergreen.ca/eg/opac/login?redirect_to=%2Feg%2Fopac%2Fmyopac%2Fmain%3Flocg%3D106">Log in to My Account</a>
+			</p>
+		</div>
+		
+		<div class="clear"> </div>
+	</div>
+</div>
+<!--End Header -->
+	<div class="clearfix"></div>
+	<section>
+		<div class="mainSlider">
+			<div id="jquery-demo">
+				<ul class="sy-list">	
+					<li class="sy-slides-wrap">
+						<a target="blank" href="pdf/remind.pdf"><img src="images/banners/BeerBooksBanner4.png"  alt="beerAndBooks.html"></a>
+					</li>
+					<li class="sy-slides-wrap">
+						<a target="blank" href="pdf/remind.pdf"><img src="images/banners/catherineGildinerWebsiteBanner.png"  alt="wineAndWords.html"></a>
+					</li>
+					<li class="sy-slides-wrap">
+						<a target="blank" href="pdf/remind.pdf"><img src="images/banners/remindBanner.png"  alt="Remind.com"></a>
+					</li>
+					<li class="sy-slides-wrap">
+						<a target="blank" href="images/misc/interiorRefresh.jpg"><img src="images/banners/renovatingBanner.png" alt="Library Renovation"></a>
+					</li>
+					<li class="sy-slides-wrap">
+						<a href="eResourcesAnnouncement.html"><img src="images/banners/eBookAnnouncementBanner.png"  alt="eBook Announcement"></a>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		<div class="rightColumn">
+			<a href="teen.html"><img src="images/misc/children.png" alt="Teens"></a>
+			<a href="teen.html"><img src="images/misc/teen.png" alt="Teens"></a>
+			<a href="adultNews.html"><img src="images/misc/adult.png" alt="Adult"></a>
+		</div>
+	</section>
+	<div class="itemSliderContainer">
+		<section>
+		<article class="itemSlider">
+			<a href="readingRoom.html"><h4 style="padding-bottom: 5px;">New & Notable</h4>
+			<div class="owl-carousel">
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336814?query=Cometh%20the%20Hours%20%E2%80%93%20Jeffrey%20Archer"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336814"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336815?query=No%20Shred%20of%20Evidence%20%E2%80%93%20Charles%20Todd;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336815"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336816?query=Unreasonable%20Doubt%20%E2%80%93%20Vicki%20Delany;qtype=keyword;locg=106"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336816"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/330326?query=The%20Story%20of%20the%20Lost%20Child%20%E2%80%93%20Elena%20Ferrante;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/330326"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/337314?query=Carry%20Me%20%E2%80%93%20Peter%20Behrens;qtype=keyword;locg=106"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/337314"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/337312?query=The%20Cellar%20%E2%80%93%20Minette%20Walters;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/337312"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/337313?query=Death%20of%20a%20Nurse%20%E2%80%93%20M.%20C.%20Beaton;qtype=keyword;locg=106"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/337313"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/337311?query=A%20Girl%E2%80%99s%20Guide%20to%20Moving%20On%20%E2%80%93%20Debbie%20Macomber;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/337311"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/333469?query=Dear%20Mr.%20You%20%E2%80%93%20Mary-Louise%20Parker;qtype=keyword;locg=106"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/333469"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336817?query=The%20Witches%20Salem%2C%201692%20%E2%80%93%20Stacy%20Schiff;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336817"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336090?query=City%20of%20Thorns%C2%80%C2%93%20Ben%20Rawlence;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336090"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336818?query=Canada%20365%20Every%20Day%20Tells%20a%20Story%20;qtype=keyword;locg=106"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336818"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336864?query=Bone%20Deep%20Broth%20%E2%80%93%20Lya%20Mojica;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336864"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336865?query=Souping%20%E2%80%93%20Alison%20Velazquez;qtype=keyword;locg=106"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336865"></img></a></div>							
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/335077?query=Suffragette;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/335077"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/337321?query=Doctor%20Who%3A%20The%20Husbands%20of%20River%20Song;qtype=keyword;locg=106"><img class="book" src="http://ecx.images-amazon.com/images/I/81KiR-IxQrL._SY445_.jpg"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/337168?query=Fargo%20Season;qtype=keyword;locg=106;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/337168"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336121?query=Doctor%20Who%20Series%20nine.%20Part%20one;qtype=title;locg=106;detail_record_view=1;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336121"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336657?query=The%20Leftovers%20Season;qtype=title;locg=106;detail_record_view=1;detail_record_view=1"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336657"></img></a></div>
+				<div><a href="http://notl.niagaraevergreen.ca/eg/opac/record/336804?query=The%20Trials%20of%20Jimmy%20Rose;qtype=title;locg=106"><img class="book" src="http://notl.niagaraevergreen.ca/opac/extras/ac/jacket/large/r/336804"></img></a></div>
+
+			</div>
+			<a href="http://notl.niagaraevergreen.ca/eg/opac/home"><p>Browse Catalogue</p></a>
+		</article>
+		</section>
+	</div>
+	<div class="clearfix"></div>
+	<div class="wrap">
+		<div class="eventsColumn">
+			<a href="http://notlpubliclibrary.evanced.info/signup/EventCalendar.aspx"><h4> Upcoming Events </h4> <h5> View Full Calendar</h5></a>
+				<div id="eventsinfo" class="eventsinfo"></div>
+				<script type="text/javascript" src="http://notlpubliclibrary.evanced.info/signup/eventsxml.aspx?dm=html&nd=5"></script>
+		</div>
+		<div class="eresourceColumn">
+			<a href="eResources.html"><h4> eResources </h4>
+			<a href="http://ebook.3m.com/library/NOTLPL/Featured"><img src="images/logos/3m.png"></a>
+			<a href="http://notlpublibon.oneclickdigital.com/"><img src="images/logos/oneClickDigital.jpg"></a>
+			<a href="https://www.rbdigital.com/canada50on/service/zinio/"><img src="images/logos/zinio.png"></a>
+			<a href="http://libraries.mangolanguages.com/niagara-on-the-lake/start"><img src="images/logos/mango.jpg"></a>
+			<a href="https://www.rbdigital.com/notlpublibon/service/indieflix"><img src="images/logos/instantFlix.jpg"></a>
+			<a href="http://www.ancestrylibrary.com/"><img src="images/logos/ancestry.jpg"></a>
+			<a href="https://www.glassdoor.ca/index.htm?&countryRedirect=true"><img src="images/logos/glassDoor.png"></a>
+			<a href="http://vitacollections.ca/notlheritage/search"><img src="images/logos/heritagePortal.jpg"></a>
+		</div>
+		<div class="twitter" style="margin-bottom: 2%;">
+			<a href="https://twitter.com/NOTL_Library"><h4>News</h4></a>
+			<a class="twitter-timeline" href="https://twitter.com/NOTL_Library" data-widget-id="677151093692882944">Tweets by @NOTL_Library</a>
+			<a href="https://www.remind.com/apps"><h4 style="margin-top: 7%;">Reminders</h4></a>
+			<div style="margin-top: 5%; border:1px solid rgba(0, 0, 255, .1)"><script src="https://widgets.remind.com/iframe.js?token=40858eb09d3201336b1f0242ac110098"></script></div>
+		</div>
+	</div>
+	<div class="cleafix"></div>
+<!-- start footer -->
+<div class="footer">
+<div class="wrap">
+<div class="footer-left">
+	<div class="soc_detail">
+		<h3>Social Media</h3>
+		<p>Find us on Social Media with Facebook, Twitter, and Good Reads! If you want to stay connected, click on the icons below to get updates on all of our events and promotions!</p>
+	</div>
+	<div class="soc_icons soc_icons1">
+			<ul>
+				<li><a class="icon1" href="https://www.facebook.com/Niagara-on-the-Lake-Public-Library-914535198626148/timeline/"> </a> </li>
+				<li><a class="icon2" href="https://twitter.com/NOTL_Library"> </a></li>
+				<li><a class="icon3" href="http://www.goodreads.com/user/show/14710816-niagara-on-the-lake-public-library"> </a></li>
+				<li><a class="icon4" href="https://www.pinterest.com/notlpl/"> </a></li>
+				<li><a class="icon5" href="https://instagram.com/notllibrary/"> </a></li>
+			</ul>
+			<div class="clear"> </div>	
+	</div>
+	<div class="comments1">
+		<p><a href="about.html">About Us |</a><a href="history.html"> Our History |</a><a href="libraryBoard.html"> Library Board |</a><a href="membership.html"> Become a Member |</a><a href="employment.html"> Employment |</a>
+			<a href="termsOfService.html"> Terms of Service |</a><a href="libraryPolicies.html"> Library Policies |</a><a href="contact.html"> Contact Us |</a><a href="php/suggestions.php"> Suggestions/Comments</a></p>
+	</div>
+</div>
+<div class="footer-right">
+	<h3>Contact Us</h3>
+	<div class="comments1">
+		<p>Niagara-on-the-Lake Public Library is located at:<br/>
+		10 Anderson Lane<br/>
+		Niagara-on-the-Lake, ON L0S 1J0<br/>
+		tel: (905)468-2023<br/>
+		fax: (905)468-3334</p>
+	</div>
+</div>
+
+<div class="clear"> </div>	
+</div>
+</div>
+<!-- end footer -->
+
+<!--slider-->
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<script src="js/scripts-f0e4e0c2.js" type="text/javascript"></script>
+
+<script>
+  jQuery('#jquery-demo').slippry({
+    // general elements & wrapper
+    slippryWrapper: '<div class="sy-box jquery-demo" />', // wrapper to wrap everything, including pager
+    // options
+    adaptiveHeight: false, // height of the sliders adapts to current slide
+    useCSS: false, // true, false -> fallback to js if no browser support
+    autoHover: false,
+    transition: 'fade',
+	pause: 6000,
+	captions: false,
+	pager: false,
+	controls: false,
+	autoDelay: 500
+  });
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</body>
+</html>

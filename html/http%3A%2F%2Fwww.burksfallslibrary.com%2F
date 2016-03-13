@@ -1,0 +1,405 @@
+<!--
+INSTRUCTIONS
+
+1.To crop images use this code:    
+  		 <div class="focal-point left-5 down-3">
+ 				<div><img src="img/header.png" alt="logo"></div>
+           </div>
+2. Add cushycms class to areas you want clients to edit and add editor account to cushyCMS for client. 
+3. Change the OPLD library ID in the variable
+4. JASI libraries: change the enterprise search string library name and enable the new book scroller.
+
+-->  
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+<!--[if lt IE 10]>
+<h1>You are using an outdated version of Internet Explorer. Please upgrade your browser.</h1>
+ <script> if (confirm('Your version of Internet Explorer is outdated and needs to be upgraded. Would you like to upgrade now? If not, this website will not display properly.')){
+    window.location.href='http://windows.microsoft.com/en-us/internet-explorer/ie-10-worldwide-languages';
+    }</script>
+<![endif]-->
+<title>Burk's Falls, Armour and Ryerson Falls Public Library</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+
+
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type="text/javascript" src="js/fancydropdown.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'http://www.google.com/calendar/feeds/ami4h2ao0g8brkj6d80v8acd94@group.calendar.google.com/public/full',
+                  maxresults: 1
+		        });
+		    });
+		
+		
+</script>
+
+
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	    $("#eventlist").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true
+
+    });
+
+		//Load main content
+		$(".topContent").load("home.asp");
+		
+		$(".events").load("calendar.html");
+		
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+
+
+    
+});
+//Enterprise Search
+function search_cat()
+{
+search = document.getElementById('search').value
+document.location.href = 'https://olsn.ent.sirsidynix.net/client/burksfalls/search/results?qu='+ search +'&te=ILS';	 //IMPORTANT - change the library
+}
+</script>
+<script type="text/javascript">
+   google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+
+     
+    <body>
+    
+    <section class="hide" id="sizer"></section>
+    <section class="hide" id="button-bar">
+                <a href="https://twitter.com/BurksFallsLibra"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/twitter.png" alt="twitter"></a> 
+                
+               
+
+    <a href="https://www.facebook.com/burksfallslibrary"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/facebook.png" alt="facebook"></a>
+                
+           
+                
+    <!--IMPORTANT - change the email address to the libary's your -->
+    <a href="mailto:burksfallslibrary@gmail.com?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a>  
+    </section>
+    
+
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+
+               <img src="img/full.png" class="full" alt="Full Public Library Logo">
+               <img src="img/landscape.png" class="tablet" alt="Landscape Public Library Logo">
+               <img src="img/portrait.png" class="mobile" alt="portrait Public Library Logo">
+            
+            
+                  
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>
+                               
+                <li><a href="?id=home.asp&label=Home" alt="home">Home</a></li>
+                <li><a href="#" alt="Library">Library</a>
+                <ul>
+                	<li><a href="?id=Board_Staff.asp&label=Board_Staff" alt="Board_Staff">Board and Staff Members</a></li>
+                	<li><a href="?id=PS.asp&label=PS" alt="PS">Policies and Services</a></li>
+                	<li><a href="?id=about.asp&label=About" alt="about">About the library</a></li>
+                	<li><a href="?id=community.asp&label=community" alt="community">Community</a></li>
+                 	<li><a href="?id=lib_events.asp&label=lib_events" alt="library events">Library Events</a></li> 
+                    <li><a href="?id=links.asp&label=links" alt="links">Links</a></li>
+                    <li><a href="?id=gallery.asp&label=gallery" alt="gallery">Picture Gallery</a></li>
+                </ul>
+               <!-- <li><a href="http://www.olsn.ca/e-resource/search.asp?library=BURKSFALLS" alt="electronic resources">Resources</a></li>-->
+                	<li><a href="https://www.google.com/calendar/embed?src=librarycalendar85%40gmail.com&ctz=America/Toronto" alt="Calendar">Calendar</a></li>
+ 
+               	<li><a href="https://olsn.ent.sirsidynix.net/client/en_US/burksfalls" alt="search" target="_blank">Catalogue</a></li>
+               
+            </ul>
+         </nav>  
+        <!-- end of NAV -->
+        
+  
+        
+     
+          <section class="hoursContent">
+              <article><span class="tdhourstxt">Today's hours:&nbsp; </span>   
+                <ul id="hours-slider">
+                       
+                        
+                        <li>Burk's Falls<br> Armour & Ryerson Union   10:00-5:00</li>
+                    
+                             
+                        </ul> 
+                            
+                            
+              </article>
+         </section>
+        
+    </header>
+        <!-- End of HEADER -->
+        
+        
+      
+        
+    <!-- MAIN CONTENT. This is used only for the articles. -->
+          <section class="searchContent">
+          
+                <article><span class="hide">Search</span>
+                  <input type="text"  title="find material at your library search button" name="search" class="search" id="search" placeholder=" find materials @ your library"/>
+                  <input type="image" title="find material at your library search button" class="search" alt="find material at your library search button" src="img/search button.png" onClick="search_cat()" />
+               
+                </article>  
+              
+         </section>
+         
+   		
+       <section class="full"> 
+    <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>  
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="topSidebar">
+                <article>
+                           <h2>Hours & Locations</h2>
+                            <p>email : <a href="mailto:burksfallslibrary@gmail.com">burksfallslibrary@gmail.com</a></p>
+                        <ul>  
+                            
+                            <h3>Burk's Falls<br> Armour & Ryerson Union </h3>
+                          		39 Copeland Street<br>
+                                Burk's Falls,&nbsp;ON<br>
+                          P0A 1C0<br>
+                                Tel: <a href="tel:(705) 382-3327">(705) 382-3327</a><br>
+                             	Fax: (705) 382-3327<br>
+                            
+                            <details><summary>Hours</summary><br>
+							Mon/lun closed/fermÃ©<BR>
+Tues/mar 10:00-8:00<BR>
+Wed/mer 10:00-3:00<BR>
+Thurs/jeu 10:00-8:00<BR>
+Fri/ven 10:00-5:00<BR>
+Sat/sam 10:00-3:00<BR>
+Sun/dim closed/fermÃ©
+							</details>
+
+                               
+                      </ul>  
+          </article>
+    </aside>
+     
+    
+            
+       <aside class="bottomSidebar">
+		<div>
+        <a href="http://downloadcentre.library.on.ca" target="_blank"><img src="img/overdrive ebooks.png" alt="Overdrive ownload audiobooks"></a>
+
+<br><br>
+
+       
+        <a href="https://www.ontario.ca/serviceontario" target="_blank"><img src="img/Service Ontario.jpg"  alt="Service Ontario"></a>
+
+<br><br>
+
+        <a href="http://www.ancestrylibrary.com/" target="_blank"><img src="img/Ancestry.jpg"  alt="Ancestry"></a>
+        
+<br><br>
+<!--<a href="http://www.foodshare.net/blog" target="_blank"><img src="img/Food-Share-logo-Full-300x90.jpg" alt="Food Share" border="0"></a><br><br>-->
+
+<a href="img/Bookmyne/BOOKMYNE.pdf" target="_blank"><img src="img/Bookmyne/BookMyne.PNG" alt="Bookmyne" border="0"></a><br><br>
+ 
+</div>
+        </aside>
+        </article> 
+    
+
+     
+
+   <!--<aside class="bottomSidebar">
+
+ 	<!--<article>
+            <!--<h2>Social Feed</h2>-->
+
+               
+ 
+                
+              
+                
+        </article>
+ 
+
+  </section>
+       </section>
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Home</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Locations</summary>
+                         <p>email : <a href="mailto:burksfallslibrary@gmail.com">burksfallslibrary@gmail.com</a></p>
+ 
+                        <ul>  
+                            
+                            <h3>Burk's Falls<br> Armour & Ryerson Union </h3>
+                          		39 Copeland Street<br>
+                                Burk's Falls,&nbsp;ON<br>
+                                P0A 1C0<br>
+                                <a href="tel:(705) 382-3327">(705) 382-3327</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun closed/fermÃ©<BR>
+Tues/mar 10:00-8:00<BR>
+Wed/mer 10:00-3:00<BR>
+Thurs/jeu 10:00-8:00<BR>
+Fri/ven 10:00-5:00<BR>
+Sat/sam 10:00-3:00<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  
+
+     
+    
+ <!--           
+ <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+   
+-->
+         <!--<article>
+            <h2>Face Book</h2>
+                <p> 
+                
+          
+                <hr>
+                
+               <div class="fb-like-box" data-href="https://www.facebook.com/burksfallslibrary" data-width="95%" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
+
+                
+                </p>
+                
+        </article>  -->
+</div>
+
+    
+    </section> 
+    
+
+
+  
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Burk's Falls<br> Armour & Ryerson Union Public Library&nbsp;2016<br>
+        This website meets WCAG 2.0 (Level AA) Compliance <br />
+        Developed by Ontario Library Service North
+         </p>
+
+    </footer>
+    
+<!-- end of FOOTER -->   
+
+</body>
+
+</html>

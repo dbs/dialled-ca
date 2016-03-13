@@ -1,0 +1,673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <title> ccjc.ca</title>  
+  <link rel="stylesheet" href="http://ccjc.ca/wp-content/themes/NeueGrafik/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="http://ccjc.ca/wp-content/themes/NeueGrafik/media-queries.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://ccjc.ca/wp-content/themes/NeueGrafik/all-ie-only.css" media="screen" />
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Cabin:r,b,i,bi|Oswald:r,b,i,bi' type='text/css' media='all' />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+<script type="text/javascript" src="http://ccjc.ca/wp-content/themes/NeueGrafik/startstop.js"> </script>
+<script type="text/javascript" src="http://ccjc.ca/wp-content/themes/NeueGrafik/easyslider.js"> </script>
+<script type="text/javascript" src="http://ccjc.ca/wp-content/themes/NeueGrafik/mouse.js"> </script>
+<script type="text/javascript">
+			$(function() {
+				// the element we want to apply the jScrollPane
+				var $el					= $('#jp-container').jScrollPane({
+					verticalGutter 	: -16
+				}),
+				// the extension functions and options 	
+					extensionPlugin 	= {
+						extPluginOpts	: {
+							// speed for the fadeOut animation
+							mouseLeaveFadeSpeed	: 500,
+							// scrollbar fades out after hovertimeout_t milliseconds
+							hovertimeout_t		: 1000,
+							// if set to false, the scrollbar will be shown on mouseenter and hidden on mouseleave
+							// if set to true, the same will happen, but the scrollbar will be also hidden on mouseenter after "hovertimeout_t" ms
+							// also, it will be shown when we start to scroll and hidden when stopping
+							useTimeout			: true,
+							// the extension only applies for devices with width > deviceWidth
+							deviceWidth			: 980
+						},
+						hovertimeout	: null, // timeout to hide the scrollbar
+						isScrollbarHover: false,// true if the mouse is over the scrollbar
+						elementtimeout	: null,	// avoids showing the scrollbar when moving from inside the element to outside, passing over the scrollbar
+						isScrolling		: false,// true if scrolling
+						addHoverFunc	: function() {
+							// run only if the window has a width bigger than deviceWidth
+							if( $(window).width() <= this.extPluginOpts.deviceWidth ) return false;
+							var instance		= this;
+							// functions to show / hide the scrollbar
+							$.fn.jspmouseenter 	= $.fn.show;
+							$.fn.jspmouseleave 	= $.fn.show;  //fadeOut
+							// hide the jScrollPane vertical bar
+							var $vBar			= this.getContentPane().siblings('.jspVerticalBar').hide();
+							/*
+							 * mouseenter / mouseleave events on the main element
+							 * also scrollstart / scrollstop - @James Padolsey : http://james.padolsey.com/javascript/special-scroll-events-for-jquery/
+							 */
+							$el.bind('mouseenter.jsp',function() {
+								// show the scrollbar
+								$vBar.stop( true, true ).jspmouseenter();
+								if( !instance.extPluginOpts.useTimeout ) return false;
+								// hide the scrollbar after hovertimeout_t ms
+								clearTimeout( instance.hovertimeout );
+								instance.hovertimeout 	= setTimeout(function() {
+									// if scrolling at the moment don't hide it
+									if( !instance.isScrolling )
+										$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+								}, instance.extPluginOpts.hovertimeout_t );
+							}).bind('mouseleave.jsp',function() {
+								// hide the scrollbar
+								if( !instance.extPluginOpts.useTimeout )
+									$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+								else {
+								clearTimeout( instance.elementtimeout );
+								if( !instance.isScrolling )
+										$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+								}
+							});
+							if( this.extPluginOpts.useTimeout ) {
+								$el.bind('scrollstart.jsp', function() {
+									// when scrolling show the scrollbar
+								clearTimeout( instance.hovertimeout );
+								instance.isScrolling	= true;
+								$vBar.stop( true, true ).jspmouseenter();
+							}).bind('scrollstop.jsp', function() {
+									// when stop scrolling hide the scrollbar (if not hovering it at the moment)
+								clearTimeout( instance.hovertimeout );
+								instance.isScrolling	= false;
+								instance.hovertimeout 	= setTimeout(function() {
+									if( !instance.isScrollbarHover )
+											$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+									}, instance.extPluginOpts.hovertimeout_t );
+							});
+								// wrap the scrollbar
+								// we need this to be able to add the mouseenter / mouseleave events to the scrollbar
+							var $vBarWrapper	= $('<div/>').css({
+								position	: 'absolute',
+								left		: $vBar.css('left'),
+								top			: $vBar.css('top'),
+								right		: $vBar.css('right'),
+								bottom		: $vBar.css('bottom'),
+								width		: $vBar.width(),
+								height		: $vBar.height()
+							}).bind('mouseenter.jsp',function() {
+								clearTimeout( instance.hovertimeout );
+								clearTimeout( instance.elementtimeout );
+								instance.isScrollbarHover	= true;
+									// show the scrollbar after 100 ms.
+									// avoids showing the scrollbar when moving from inside the element to outside, passing over the scrollbar								
+								instance.elementtimeout	= setTimeout(function() {
+									$vBar.stop( true, true ).jspmouseenter();
+								}, 100 );	
+							}).bind('mouseleave.jsp',function() {
+									// hide the scrollbar after hovertimeout_t
+								clearTimeout( instance.hovertimeout );
+								instance.isScrollbarHover	= false;
+								instance.hovertimeout = setTimeout(function() {
+										// if scrolling at the moment don't hide it
+									if( !instance.isScrolling )
+											$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+									}, instance.extPluginOpts.hovertimeout_t );
+							});
+							$vBar.wrap( $vBarWrapper );
+						}
+						}
+					},
+					// the jScrollPane instance
+					jspapi 			= $el.data('jsp');
+				// extend the jScollPane plugin	
+				$.extend( true, jspapi, extensionPlugin );
+				jspapi.addHoverFunc();
+			});
+		</script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+		$('li.headlink').hover(
+			function() { $('ul', this).css('display', 'block'); },
+			function() { $('ul', this).css('display', 'none'); });
+	});
+</script>
+<script type="text/javascript"> 
+$(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+});
+</script>
+<script type="text/javascript" charset="utf-8" src="http://s6.scribdassets.com/javascripts/doc_widget/v1.0.js"> </script>
+  <style type='text/css'>Default CSS Comment</style>		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/ccjc.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.2"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='srp-layout-stylesheet-css'  href='http://ccjc.ca/wp-content/plugins/special-recent-posts/css/layout.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css'  href='http://ccjc.ca/wp-content/plugins/contact-form-builder/css/jquery-ui-1.10.3.custom.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact_form_maker_frontend-css'  href='http://ccjc.ca/wp-content/plugins/contact-form-builder/css/contact_form_maker_frontend.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cff-css'  href='http://ccjc.ca/wp-content/plugins/custom-facebook-feed/css/cff-style.css?ver=2.3.10' type='text/css' media='all' />
+<link rel='stylesheet' id='cff-font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css?ver=4.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyphoto_style-css'  href='http://ccjc.ca/wp-content/plugins/easy-portfolio/css/prettyPhoto.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ep_portfolio_style-css'  href='http://ccjc.ca/wp-content/plugins/easy-portfolio/css/portfolio-style.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='smpl_shortcodes-css'  href='http://ccjc.ca/wp-content/plugins/smpl-shortcodes/assets/css/smpl-shortcodes.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='slb_core-css'  href='http://ccjc.ca/wp-content/plugins/simple-lightbox/client/css/app.css?ver=2.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='simpleecommcart-css-css'  href='http://ccjc.ca/wp-content/plugins/simple-e-commerce-shopping-cart/simpleecommcart.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='http://ccjc.ca/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.11' type='text/css' media='all' />
+<script type='text/javascript' src='http://ccjc.ca/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='https://maps.google.com/maps/api/js?sensor=false&#038;ver=4.4.2'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/plugins/contact-form-builder/js/if_gmap_front_end.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/plugins/contact-form-builder/js/cfm_main_front_end.js?ver=1.0.32'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/plugins/easy-portfolio/js/jquery.prettyPhoto.js?ver=1.0'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/plugins/easy-portfolio/js/jquery.quicksand.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/plugins/easy-portfolio/js/jquery.easing.1.3.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/plugins/smpl-shortcodes/assets/js/smpl-shortcodes.js?ver=1'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/plugins/simple-e-commerce-shopping-cart/js/simpleecommcart-library.js?ver=1.0.0'></script>
+<link rel='https://api.w.org/' href='http://ccjc.ca/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ccjc.ca/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ccjc.ca/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.2" />
+<link rel="canonical" href="http://ccjc.ca/" />
+<link rel='shortlink' href='http://ccjc.ca/' />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}wpa2a.done=true;}wpa2a.targets=[];}};a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:wpa2a.script_onready});
+a2a_config.show_title=1;
+a2a_config.color_main = "5B6C36";a2a_config.color_border = "1C2B06";a2a_config.color_link_text = "333333";a2a_config.color_link_text_hover = "ffffff";a2a_config.color_arrow_hover = "fff";
+//--></script>
+<meta name="SimpleEcommCartVersion" content="Professional 1.0.0" />
+</head>
+<!-- DO NOT EDIT BEFORE HERE -->
+ <body class="home page page-id-2 page-template page-template-main page-template-main-php"> 
+<img alt="full screen background image" src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/bg.jpg" id="full-screen-background-image" /> 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="main_container">
+<div id="header">
+	<h1 id="header-logo">THE CHURCH COUNCIL ON JUSTICE AN CORRECTIONS</h1>
+	<h2 id="header-text">The Church Council on Justice and Corrections
+serves as a shining light for restorative approaches to justice and corrections</h2>
+<div class="clear"></div>
+</div>
+<div id="mainmenu">
+<div id="access-head">
+
+<a href="http://ccjc.ca" id="n-home"><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/homeicon.png" class="homeicon" width="20" alt="" /></a>
+
+<div class="menu-header-menu-container"><ul id="menu-header-menu" class="menu"><li id="menu-item-4090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4090"><a href="http://ccjc.ca/about/about-ccjc/">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-4001" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4001"><a href="http://ccjc.ca/about/who-we-are/">Staff and Board Members</a></li>
+	<li id="menu-item-3914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3914"><a href="http://ccjc.ca/about/member-denominations/">Member Denominations</a></li>
+	<li id="menu-item-4000" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4000"><a href="http://ccjc.ca/about/history/">History</a></li>
+	<li id="menu-item-3913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3913"><a href="http://ccjc.ca/about/affiliates/">Affiliates</a></li>
+	<li id="menu-item-6100" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6100"><a href="http://ccjc.ca/category/ccjc-news/">CCJC News and Events</a></li>
+</ul>
+</li>
+<li id="menu-item-4113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4113"><a href="#">Justice &#038; Corrections</a>
+<ul class="sub-menu">
+	<li id="menu-item-4034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4034"><a href="http://ccjc.ca/research/restorative-justice/">Restorative Justice</a></li>
+	<li id="menu-item-6128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6128"><a href="http://ccjc.ca/justice-corrections/crime-prevention/">Crime Prevention</a></li>
+	<li id="menu-item-6125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6125"><a href="http://ccjc.ca/public-policy/">Public Policy</a></li>
+</ul>
+</li>
+<li id="menu-item-4114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4114"><a href="#">Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-3926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3926"><a href="http://ccjc.ca/restorative-justice-week/">Restorative Justice Week</a></li>
+	<li id="menu-item-3927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3927"><a href="http://ccjc.ca/victims-week/"><!--:en-->Victims&#8217; Week<!--:--></a></li>
+	<li id="menu-item-3924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3924"><a href="http://ccjc.ca/annual-general-meeting/">Annual General Meeting</a></li>
+</ul>
+</li>
+<li id="menu-item-4115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4115"><a href="#">Publications &#038; Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6147"><a href="http://ccjc.ca/publications/">Publications</a></li>
+	<li id="menu-item-6143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6143"><a href="http://ccjc.ca/resources-3-2/">Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-6159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6159"><a href="http://ccjc.ca/projects/">Projects</a>
+<ul class="sub-menu">
+	<li id="menu-item-6152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6152"><a href="http://ccjc.ca/current-projects/">Current Projects</a></li>
+	<li id="menu-item-6155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6155"><a href="http://ccjc.ca/past-projects/">Past Projects</a></li>
+</ul>
+</li>
+</ul></div>
+
+
+</div>
+
+
+<!--
+<ul id="smaller-nav" class="dropdown dropdown-horizontal">
+
+
+
+<li id="n-cosa"><a href="http://ccjc.ca/cosa/">National CoSA Project</a></li>
+
+	
+
+<li id="n-contact"><a href="http://ccjc.ca/contact-us/" id="contact_link" class="top_link"> Contact Us</a></li>
+
+
+
+
+
+
+
+</ul>
+-->
+<br class="clear"></div><div id="content">
+<!-- SECONDARY NAVIGATION -->
+
+
+
+<div class="top-contain">
+
+
+
+<div id="slider">
+
+
+
+
+		<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="http://ccjc.ca/wp-content/plugins/wp-yasslideshow/js/AC_RunActiveContent.js" language="javascript"></script>
+
+		<script language="javascript"> 
+	if (AC_FL_RunContent == 0) {
+		alert("This page requires AC_RunActiveContent.js.");
+	} else {
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',
+			'width', '700',
+			'height', '300',
+			'src', 'http://ccjc.ca/wp-content/plugins/wp-yasslideshow/js/wp_yassslideshow',
+			'quality', 'high',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'align', 'middle',
+			'play', 'true',
+			'loop', 'true',
+			'scale', 'showall',
+			'wmode', 'opaque',
+			'devicefont', 'false',
+			'id', 'xmlswf_vmyass',
+			'bgcolor', '1c2b06',
+			'name', 'xmlswf_vmyass',
+			'menu', 'true',
+			'allowFullScreen', 'true',
+			'allowScriptAccess','sameDomain',
+			'movie', 'http://ccjc.ca/wp-content/plugins/wp-yasslideshow/js/wp_YASS',
+			'salign', '',
+			'flashVars','dataFile=http://ccjc.ca/wp-content/plugins/wp-yasslideshow/xml/yass_all.xml'
+			); //end AC code
+	}
+</script>
+
+
+
+
+
+
+
+<div id="icons">
+
+
+
+<a href="http://www.facebook.com/pages/The-Church-Council-on-Justice-and-Corrections/180318678672186?v=wall"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/facebook.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+
+
+
+<a href="https://twitter.com/CCJCCanada"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/twitter.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+
+
+
+<a href="http://www.linkedin.com/company/the-church-council-on-justice-and-corrections"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/linkedin.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+
+
+
+<a href="http://www.youtube.com/channel/UCbL3WH8MfWbUp-31s9gPjoQ?feature=mhee"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/youtube.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+
+
+
+<a href="http://www.ccjc.ca/feed"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/feed.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<div id="help-banner">
+
+
+<div id="more-icons">
+
+
+
+<a href="http://ccjc.ca/volunteer-online/"><img title="Volunteer With CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteerdown.png';" 
+
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteer.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteer.png" alt="CCJC Ottawa Restorative Justice Volunteer" class="" width="80"  />
+
+</a>
+
+
+
+<a href="http://www.canadahelps.org/CharityProfilePage.aspx?charityID=s16303" target="_blank"><img title="Donate to CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donatedown.png';" 
+
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donate.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donate.png" alt="CCJC Ottawa Restorative Justice Donate" class="" width="80"  />
+
+</a>
+
+
+
+
+
+
+
+
+
+<a href="http://ccjc.ca/stay-informed/"><img title="Stay Up to date with CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informeddown.png';" 
+
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informed.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informed.png" alt="CCJC Ottawa Restorative Justice Informed" class="" width="80"   />
+
+</a>
+
+
+<a href="http://ccjc.ca/become-a-member/"><img title="Become a Member of CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/memberdown.png';" 
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/member.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/member.png" alt="CCJC Ottawa Restorative Justice Informed" class="how-help" width="102"   />
+</a>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+ 
+
+</div><div class="single_content">
+<div class="contain-left">
+<h2 class="section-top">CCJC News &amp; Events</a></h2>
+<div class="holder-small">
+<div class="section-small">
+<!-- BEGIN Special Recent Posts FREE Edition v2.0.4 --><div class="srp-widget-container"><div id="srp-singlepost-1" class="srp-widget-singlepost"><div class="srp-post-content-container"><div class="srp-thumbnail-box"><a class="srp-post-thumbnail-link" href="http://ccjc.ca/christmas-message-2015/" title="Christmas Message 2015"><img src="http://ccjc.ca/wp-content/plugins/special-recent-posts/cache/srpthumb-p6938-100x100-no.jpg" class="srp-post-thumbnail" alt="Christmas Message 2015" /></a></div><div class="srp-content-box"><h4 class="srp-post-title"><a class="srp-post-title-link" href="http://ccjc.ca/christmas-message-2015/" title="Christmas Message 2015">Christmas Message 2015</a></h4><p class="srp-post-date">December 22nd, 2015</p><div class="srp-post-content">&nbsp;
+A warm Christmas Greeting from all of us at The Church Council on Justice and Corrections!
+<a class="srp-post-stringbreak-link" href="http://ccjc.ca/christmas-message-2015/" title="Christmas Message 2015">[...]</a></div></div></div></div><div id="srp-singlepost-2" class="srp-widget-singlepost"><div class="srp-post-content-container"><div class="srp-thumbnail-box"><a class="srp-post-thumbnail-link" href="http://ccjc.ca/friday-restorative-justice-week-2015-infographic-series/" title="Friday: Restorative Justice Week 2015 Infographic Series"><img src="http://ccjc.ca/wp-content/plugins/special-recent-posts/cache/srpthumb-p6611-100x100-no.jpg" class="srp-post-thumbnail" alt="Friday: Restorative Justice Week 2015 Infographic Series" /></a></div><div class="srp-content-box"><h4 class="srp-post-title"><a class="srp-post-title-link" href="http://ccjc.ca/friday-restorative-justice-week-2015-infographic-series/" title="Friday: Restorative Justice Week 2015 Infographic Series">Friday: Restorative Justice Week 2015 Infographic Series</a></h4><p class="srp-post-date">November 20th, 2015</p><div class="srp-post-content">
+
+A five-part restorative justice infographic series
+The CCJC re-imagines justice:
+For Restorati<a class="srp-post-stringbreak-link" href="http://ccjc.ca/friday-restorative-justice-week-2015-infographic-series/" title="Friday: Restorative Justice Week 2015 Infographic Series">[...]</a></div></div></div></div><div id="srp-singlepost-3" class="srp-widget-singlepost"><div class="srp-post-content-container"><div class="srp-thumbnail-box"><a class="srp-post-thumbnail-link" href="http://ccjc.ca/thursday-restorative-justice-week-2015-infographic-series/" title="Thursday: Restorative Justice Week 2015 Infographic Series"><img src="http://ccjc.ca/wp-content/plugins/special-recent-posts/cache/srpthumb-p6609-100x100-no.jpg" class="srp-post-thumbnail" alt="Thursday: Restorative Justice Week 2015 Infographic Series" /></a></div><div class="srp-content-box"><h4 class="srp-post-title"><a class="srp-post-title-link" href="http://ccjc.ca/thursday-restorative-justice-week-2015-infographic-series/" title="Thursday: Restorative Justice Week 2015 Infographic Series">Thursday: Restorative Justice Week 2015 Infographic Series</a></h4><p class="srp-post-date">November 19th, 2015</p><div class="srp-post-content">
+A five-part restorative justice infographic series.
+The CCJC re-imagines justice:
+For Restorativ<a class="srp-post-stringbreak-link" href="http://ccjc.ca/thursday-restorative-justice-week-2015-infographic-series/" title="Thursday: Restorative Justice Week 2015 Infographic Series">[...]</a></div></div></div></div><div id="srp-singlepost-4" class="srp-widget-singlepost"><div class="srp-post-content-container"><div class="srp-thumbnail-box"><a class="srp-post-thumbnail-link" href="http://ccjc.ca/wednesday-restorative-justice-week-2015-infographic-series/" title="Wednesday: Restorative Justice Week 2015 Infographic Series"><img src="http://ccjc.ca/wp-content/plugins/special-recent-posts/cache/srpthumb-p6607-100x100-no.jpg" class="srp-post-thumbnail" alt="Wednesday: Restorative Justice Week 2015 Infographic Series" /></a></div><div class="srp-content-box"><h4 class="srp-post-title"><a class="srp-post-title-link" href="http://ccjc.ca/wednesday-restorative-justice-week-2015-infographic-series/" title="Wednesday: Restorative Justice Week 2015 Infographic Series">Wednesday: Restorative Justice Week 2015 Infographic Series</a></h4><p class="srp-post-date">November 18th, 2015</p><div class="srp-post-content">
+
+A five-part restorative justice infographic series.
+The CCJC re-imagines justice:
+For Restorat<a class="srp-post-stringbreak-link" href="http://ccjc.ca/wednesday-restorative-justice-week-2015-infographic-series/" title="Wednesday: Restorative Justice Week 2015 Infographic Series">[...]</a></div></div></div></div></div><!-- END Special Recent Posts FREE Edition v2.0.4 --></div>
+<a class="section-link" href="http://ccjc.ca/category/ccjc-news/">View All CCJC News &amp; Events »</a>
+</div>
+</div>
+
+<div class="contain-right">
+<h2 class="section-top">Social Media Feed</a></h2>
+<div class="holder-small">
+<div class="section-small">
+<h3>Facebook</h3>
+<div class="cff-wrapper"><div id="cff" data-char="" class="cff-fixed-height " style="height:250px; "><div class="cff-item cff-link-item author-the-church-council-on-justice-and-corrections" id="cff_180318678672186_987149831322396" style="border-bottom: 1px solid #ddd; "><div class="cff-author"><a href="https://facebook.com/180318678672186" target="_blank" rel="nofollow" title="The Church Council on Justice and Corrections on Facebook" ><div class="cff-author-text"><p class="cff-page-name cff-author-date">The Church Council on Justice and Corrections</p><p class="cff-date" > 3 days ago </p></div><div class="cff-author-img"><img src="https://graph.facebook.com/180318678672186/picture?type=square" title="The Church Council on Justice and Corrections" alt="The Church Council on Justice and Corrections" width=40 height=40></div></a></div><p class="cff-post-text" ><span class="cff-text" data-color="">March 10th:  Join us at this FREE Ottawa event and learn more about Victim Impact Education and the benefits to Public Safety.<br/><br/><a href="http://crcvc.ca/our-events/">crcvc.ca/our-events/</a> </span><span class="cff-expand">... <a href="#" style="color: #"><span class="cff-more">See More</span><span class="cff-less">See Less</span></a></span></p><div class="cff-shared-link" ><div class="cff-text-link cff-no-image"><p class="cff-link-title" ><a href="http://crcvc.ca/our-events/" target="_blank" rel="nofollow" style="color:#;">Our Events</a></p><p class="cff-link-caption" style="color:#;">crcvc.ca</p><p class="cff-post-desc" style="font-size:12px; "><span>Victim Impact Education and Offender Re-Entry: A Benefit to Public Safety? Save the Date! March 10, 2016 Join us for a FREE Discussion Forum - Where: Ottawa Police Association Lounge (141 Catherine Street, 2nd floor) Time: 9:30am to 12noon Crime has a harmful impact not only on individu </span></p></div></div></div><div class="cff-likebox cff-bottom" ><script src="https://connect.facebook.net/en_US/all.js#xfbml=1"></script><div class="fb-page" data-href="https://www.facebook.com/180318678672186" data-width="300" data-hide-cover="true" data-show-facepile="false" data-small-header="false" data-hide-cta="false" data-show-posts="false" data-adapt-container-width="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/180318678672186"><a href="https://www.facebook.com/180318678672186">View on Facebook</a></blockquote></div></div><div id="fb-root"></div></div></div><div class="cff-clear"></div></div></div>
+<a class="section-link" href="https://www.facebook.com/pages/The-Church-Council-on-Justice-and-Corrections/180318678672186?ref=br_tf" target="_blank">View Facebook »</a>
+
+<div class="section-small">
+<h3>Twitter</h3>
+<a class="twitter-timeline" href="https://twitter.com/CCJCCanada" data-widget-id="511898521155293184">Tweets by @CCJCCanada</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+<a class="section-link" href="https://twitter.com/CCJCCanada" target="_blank">View Twitter »</a>
+
+
+</div>
+
+</div>
+<br class="clear" />
+
+<div id="more-icons">
+<a href="http://ccjc.ca/volunteer-online/"><img title="Volunteer With CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteerdown.png';" 
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteer.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteer.png" alt="CCJC Ottawa Restorative Justice Volunteer" class="" width="80"  />
+</a>
+<a href="http://www.canadahelps.org/CharityProfilePage.aspx?charityID=s16303" target="_blank"><img title="Donate to CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donatedown.png';" 
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donate.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donate.png" alt="CCJC Ottawa Restorative Justice Donate" class="" width="80"  />
+</a>
+<a href="http://ccjc.ca/stay-informed/"><img title="Stay Up to date with CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informeddown.png';" 
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informed.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informed.png" alt="CCJC Ottawa Restorative Justice Informed" class="" width="80"   />
+</a>
+</div>
+<br class="clear">
+<div class="addtoany_share_save_container addtoany_content_bottom">
+<div class="a2a_kit addtoany_list a2a_target" id="wpa2a_1"><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share" style="background:url(http://ccjc.ca/wp-content/plugins/add-to-any/share_16_16.png) no-repeat scroll 4px 0px;padding:0 0 0 25px;display:inline-block;height:16px;vertical-align:middle"><span>Share/Bookmark</span></a><br />
+<script type="text/javascript"><!--
+wpa2a.script_load();
+//--></script>
+</div>
+</div>
+</div></div>
+<div id="right_content">
+<h2 class="section-top">How You Can Help</h2>
+<div class="social-bar" id="how-you-help">
+<div class="insides">
+<a href="http://ccjc.ca/volunteer-online/"><img title="Volunteer With CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteerdown.png';" 
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteer.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/volunteer.png" alt="CCJC Ottawa Restorative Justice Volunteer" class="how-help" width="102"  />
+</a>
+<a href="http://www.canadahelps.org/CharityProfilePage.aspx?charityID=s16303" target="_blank"><img title="Donate to CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donatedown.png';" 
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donate.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/donate.png" alt="CCJC Ottawa Restorative Justice Donate" class="how-help" width="102"  />
+</a>
+<a href="http://ccjc.ca/stay-informed/"><img title="Stay Up to date with CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informeddown.png';" 
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informed.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/informed.png" alt="CCJC Ottawa Restorative Justice Informed" class="how-help" width="102"   />
+</a>
+<a href="http://ccjc.ca/become-a-member/"><img title="Become a Member of CCJC Ottawa" onmouseover="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/memberdown.png';" 
+onmouseout="this.src='http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/member.png';" src="http://www.ccjc.ca/wp-content/themes/NeueGrafik/images/member.png" alt="CCJC Ottawa Restorative Justice Informed" class="how-help" width="102"   />
+</a>
+
+<a href="http://ccjc.ca/contact-us/" class="button-link">Contact Us</a>
+</div>
+  </div>
+ <h2 class="section-top">Latest Posts</h2>
+<div class="social-bar">
+<div class="insides">
+<ul>		<li id="recent-posts-2" class="widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://ccjc.ca/christmas-message-2015/">Christmas Message 2015</a>
+						</li>
+					<li>
+				<a href="http://ccjc.ca/friday-restorative-justice-week-2015-infographic-series/">Friday: Restorative Justice Week 2015 Infographic Series</a>
+						</li>
+					<li>
+				<a href="http://ccjc.ca/thursday-restorative-justice-week-2015-infographic-series/">Thursday: Restorative Justice Week 2015 Infographic Series</a>
+						</li>
+				</ul>
+		</li>		</ul>
+</div>
+  </div>
+
+  </div><!--//right_content--> <br class="clear" />   
+<div id="footer">
+
+<div id="footer-all">
+<div class="footer-area left" id="footer-pad">
+
+</div>
+<h3>Sitemap</h3>
+<li id="nav_menu-4" class="widget widget_nav_menu"><div class="menu-header-menu-container"><ul id="menu-header-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4090"><a href="http://ccjc.ca/about/about-ccjc/">About Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4001"><a href="http://ccjc.ca/about/who-we-are/">Staff and Board Members</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3914"><a href="http://ccjc.ca/about/member-denominations/">Member Denominations</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4000"><a href="http://ccjc.ca/about/history/">History</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3913"><a href="http://ccjc.ca/about/affiliates/">Affiliates</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6100"><a href="http://ccjc.ca/category/ccjc-news/">CCJC News and Events</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4113"><a href="#">Justice &#038; Corrections</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4034"><a href="http://ccjc.ca/research/restorative-justice/">Restorative Justice</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6128"><a href="http://ccjc.ca/justice-corrections/crime-prevention/">Crime Prevention</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6125"><a href="http://ccjc.ca/public-policy/">Public Policy</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4114"><a href="#">Events</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3926"><a href="http://ccjc.ca/restorative-justice-week/">Restorative Justice Week</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3927"><a href="http://ccjc.ca/victims-week/"><!--:en-->Victims&#8217; Week<!--:--></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3924"><a href="http://ccjc.ca/annual-general-meeting/">Annual General Meeting</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4115"><a href="#">Publications &#038; Resources</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6147"><a href="http://ccjc.ca/publications/">Publications</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6143"><a href="http://ccjc.ca/resources-3-2/">Resources</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6159"><a href="http://ccjc.ca/projects/">Projects</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6152"><a href="http://ccjc.ca/current-projects/">Current Projects</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6155"><a href="http://ccjc.ca/past-projects/">Past Projects</a></li>
+</ul>
+</li>
+</ul></div></li><br class="clear" />
+<div id="footer-icons">
+<h3>Get In Touch</h3>
+<a href="http://www.facebook.com/pages/The-Church-Council-on-Justice-and-Corrections/180318678672186?v=wall"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/facebook.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+<a href="https://twitter.com/CCJCCanada"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/twitter.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+<a href="http://www.linkedin.com/company/the-church-council-on-justice-and-corrections"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/linkedin.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+<a href="http://www.youtube.com/channel/UCbL3WH8MfWbUp-31s9gPjoQ?feature=mhee"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/youtube.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+<a href="http://www.ccjc.ca/feed"  target="_blank" class=""><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/feed.png" alt="CCJC Ottawa Restorative Justice" /> </a>
+</div>
+</div>
+<div class="footer-area right" id="denom">
+  <ul>
+<li><h5 class="main-nav-head">Founding Denominations</h5></li>
+<li><a href="http://www.anglican.ca/index.htm" target="_blank">The Anglican Church of Canada</a></li>
+<li> <a href="http://www.baptist.ca/" target="_blank">Baptist Convention of Ontario and Quebec</a></li>
+<li><a href="http://www.crcna.org/pages/index.cfm" target="_blank"> Christian Reformed Churches of North America</a></li>
+<li> <a href="http://www.disciplesofchrist.ca/" target="_blank">Disciples of Christ in Canada</a></li>
+<li> <a href="http://www.elcic.ca/" target="_blank">Evangelical Lutheran Church in Canada</a></li>
+</ul>
+     <ul>
+<li> <a href="http://mcc.org/canada/" target="_blank"> Mennonite Central Committee Canada</a></li>
+<li> <a href="http://www.presbyterian.ca/" target="_blank"> The Presbyterian Church in Canada</a></li>
+<li> <a href="http://www.quaker.ca/" target="_blank"> The Religious Society of Friends (Quakers)</a></li>
+<li> <a href="http://www.cccb.ca/" target="_blank"> Canadian Conference of Catholic Bishops</a></li>
+<li> <a href="http://www.united-church.ca/" target="_blank">The United Church of Canada</a></li>
+</ul>
+<div id="affiliates">
+<ul>
+<li><h5 class="main-nav-head">Our Affiliates</h5></li>
+</ul>
+<img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/cosaedit.jpg" class="affcosa" alt="COSA Restorative Justice" title="COSA" width="100" />
+<a href="http://www.naacj.org/"><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/naacj.png" class="affnaacj" alt="NAACJ" title="NAACJ" width="122" /></a>
+<a href="http://www.collaborativejustice.ca/"><img src="http://ccjc.ca/wp-content/themes/NeueGrafik/images/cjp.png" class="affcjp" alt="AFFCJP" title="AFFCJP" width="122" /></a>
+<br class="clear" />
+</div>
+</div>
+<br class="clear" />
+<div id="footer-links">
+<p>Copyright &copy; 2016 CCJC All Rights Reserved.  </p>
+</div>
+  </div><!--//footer-->
+</div>
+
+<script type="text/javascript"><!--
+wpa2a.targets=[
+{title:"Main",url:"http://ccjc.ca/"}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<!-- Custom Facebook Feed JS -->
+<script type="text/javascript">
+var cfflinkhashtags = "true";
+</script>
+<script type='text/javascript' src='http://ccjc.ca/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-includes/js/jquery/ui/effect-shake.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/plugins/custom-facebook-feed/js/cff-scripts.js?ver=2.3.10'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-content/themes/NeueGrafik/js/script.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://ccjc.ca/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+</body>
+</html>

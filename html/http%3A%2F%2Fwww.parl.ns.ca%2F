@@ -1,0 +1,795 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title>Welcome to Pictou-Antigonish Regional Library</title>
+		<meta name="description" content="The public library system serving Antigonish and Pictou Counties. Access books, eBooks, services, programs, digital collections and more. Free membership.">
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+		
+		<!-- Custom CSS -->
+		<link href="css/styles.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        		<!-- Include Modernizr in the head, before any other Javascript -->
+     	<script src="../js/modernizr-2.6.2.min.js"></script>  
+		<script src="../js/respond.js"></script>    
+        <!--  Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          // PARL tracker
+          ga('create', 'UA-8955617-18', 'auto');
+          ga('send', 'pageview');
+        
+          // NSPL tracker
+          ga('create', 'UA-58893615-4', 'auto', {'name': 'nspl_tracker'});
+          ga('nspl_tracker.send', 'pageview');
+        </script>
+        <!--End Google Analytics-->	   
+</head>
+<body id="home">
+<!-- begin row 1 -->
+<div class="container" id="main">
+	<!--begin header -->
+<!-- row 1 -->
+	<!--begin header -->
+<header class="row">
+    	<div class="col-sm-5">
+        <h1>Pictou-Antigonish Regional Library</h1> 
+        <a href="../index.php"><img src="../images/logo.jpg" class="img-responsive" alt="PARL logo". click for home./></a>
+        </div>
+        <div id="top" class="col-sm-7 hidden-xs">
+        <div class="row">
+       		<ul>
+            <li><a href="../forms/register.php" class="btn btn-primary btn-small" target"_blank"><span class="glyphicon glyphicon-thumbs-up"></span> Get a Library Card</a></li>
+            <li><a href="https://parl.catalogue.library.ns.ca/MyResearch/UserLogin" class="btn btn-primary btn-small" target"_blank"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+           	<li><a href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d8239" class="btn btn-primary btn-small" target"_blank"><span class="glyphicon glyphicon-star"></span> Donate</a></li>
+                    <li><a href="../contact.php" class="btn btn-primary btn-small" target"_blank"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+                    </ul>  
+                    </div>  
+  <div class="row" id="CatSearch">
+     <form method="get" action="https://parl.catalogue.library.ns.ca/Search/Results" name="searchForm">
+       <input id="searchForm_lookfor" type="text" name="lookfor" placeholder="books, movies &amp; more" value="" />
+        <select id="searchForm_type" name="type">
+            <option value="AllFields">All Fields</option>
+            <option value="Title">Title</option>
+            <option value="Author">Author</option>
+            <option value="Subject">Subject</option>
+            <option value="Series">Series</option>
+        </select>
+       <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>Find</button>
+       <a href="https://parl.catalogue.library.ns.ca/Search/Advanced" class="btn btn-adv">Advanced</a>
+        <input type="hidden" name="limit" value="40" /><input type="hidden" name=sort" value="relevance" />
+      </form></div>     	
+        </div>
+</header><!--end header --> </div><!--end row 1 -->
+<!--start  navigation -->
+	<div class="row">
+     <nav class="navbar navbar-default navbar-inverse" role="navigation">
+     <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+		<a class="navbar-brand hidden-lg hidden-md" href="/">Menu</a>
+           
+          </div>
+          <div class="collapse navbar-collapse" id="collapse">
+              <ul class="nav navbar-nav">
+                  <li><a href="../index.php">Home</a></li> 
+                  	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Locations <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+                    <li><a href="../locations/index.php">All Locations</a></li>
+					  <li><a href="../locations/antigonish.php">Antigonish</a></li>
+						<li><a href="../locations/booksbymail.php">Books by Mail</a></li>						
+						<li><a href="../locations/newglasgow.php">New Glasgow</a></li> 
+                       <li><a href="../locations/pictou.php">Pictou</a></li>
+                         <li><a href="../locations/riverjohn.php">River John</a></li>
+						<li><a href="../locations/stellarton.php">Stellarton</a></li>
+                        <li><a href="../locations/trenton.php">Trenton</a></li>
+                        <li><a href="../locations/westville.php">Westville</a></li>
+                        <li><a href="../locations/pdf/NSLibraryBrochureEn.pdf">Other NS Libraries</a></li>
+                     </ul><!-- end dropdown-menu -->
+				</li>
+                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li><a href="../events/index.php">Upcoming Events</a></li>
+                        <li><a href="../pictou/index.php">Pictou Library Project</a></li>
+						<li><a href="../events/movies.php">Movies @ the Library</a></li>
+		            </ul><!-- end dropdown-menu -->
+               			</li>
+                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://parl.catalogue.library.ns.ca">Books, movies &amp; more</a></li>
+						<li><a href="http://digitalmedia.library.ns.ca">eBooks &amp; Audiobooks </a></li>
+                        <li><a href="https://www.rbdigital.com/novascotialibraries/service/zinio">Zinio digital magazines </a></li>
+						<li><a href="http://find.galegroup.com/menu/commonmenu.do?userGroupName=parl_main">eMagazines &amp; Journals</a></li>
+						<li><a href="http://infotrac.galegroup.com/itweb/parl_main?db=CHLL">Chilton Auto Repair</a></li>
+						<li><a href="../resources/ancestry.php">ancestry.ca</a></li>
+						<li><a href="http://www.tumblebooklibrary.com/autologin.aspx?userid=KAVBiMIpN3H9yDxKOgwy%2fQ%3d%3d">TumbleBooks for Kids</a></li>
+						<li class="divider"></li>						
+						<li class="dropdown-header">Special Collections</li>
+						<li><a href="http://novastory.ca">NovaStory.ca</a></li>
+                        <li><a href="../projects/susan-b.htm">Lobster Fishing on the Susan B</a></li>
+                        <li><a href="../projects/sheenas-garden-ebook.htm">Sheena's Garden</a></li>
+						<li><a href="../projects/norajimmy/index.asp">Our Roots: Nora &amp; Fr. Jimmy</a></li>
+						<li><a href="../projects/nature/index.html">Echoes of Nature</a></li>
+						</ul><!-- end dropdown-menu -->
+				</li>
+                	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Subject Resources <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="../projects/healthroom/index.php">Health &amp; Wellness</a></li>
+						<li><a href="../resources/gardening.php">Gardening</a></li>						
+						<li><a href="../resources/business.php">Business</a></li> 
+                        <li><a href="../resources/historians.php">Family Historians</a></li>
+                        <li><a href="../resources/readers.php">Readers Cafe</a></li>	                        <li><a href="../resources/writers.php">All About Writing</a></li>
+                        <li><a href="../projects/information/index.php">Local Information</a></li>
+                       </ul><!-- end dropdown-menu -->
+				</li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="../services/outreach.php">Community Outreach</a></li>
+						<li><a href="../forms/register.php">Library Cards</a></li>
+                        <li><a href="../services/interlibrary.php">Interlibrary Loan</a></li>
+				        <li><a href="../services/kids.php">Children &amp; Youth</a></li>
+                        <li><a href="../services/adults.php">Adults</a></li>
+						<li><a href="../services/research.php">Reference &amp; Research</a></li>
+						<li><a href="../resources/historians.php">Genealogy</a></li>
+						<li><a href="../services/technology.php">Technology &amp; Training</a></li>
+                        	<li><a href="../services/accessibility.php">Accessibility</a></li>
+						<li><a href="../services/meeting.php">Meeting Rooms</a></li>
+					</ul><!-- end dropdown-menu -->
+              			</li>
+                        
+                      <li><a href="../news/index.php">Latest News</a></li> 
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li><a href="../about/board.php">Library Board</a></li>
+						<li><a href="../about/administration.php">Library Administration</a></li>
+						<li><a href="../about/policies.php">Policies</a></li>
+						<li><a href="../about/headquarters.php">Library Headquarters</a></li>
+						<li><a href="../about/history.php">Library History</a></li>
+						<li><a href="../about/friends.php">Friends of the Library</a></li>
+						<li><a href="../about/employment.php">Employment</a></li>
+						<li><a href="../about/support.php">Support the Library</a></li>
+                    </ul><!-- end dropdown-menu -->
+               	</li>
+              
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <strong class="caret"></strong></a>
+                  <ul class="dropdown-menu">
+						<li><a href="../help/faq.php">FAQ's</a></li>
+						<li><a href="../forms/find.php">Suggest a Purchase</a></li>
+						<li><a href="../help/ask.php">Need Assistance?</a><a href="#"></a></li>
+				  </ul><!-- end dropdown-menu -->
+               </li>
+               
+               </ul>
+           </div>
+         </div>
+      </nav>   
+</div>    
+<!--end navigation --><!--end navigation-->
+<!--begin row 2-->
+<div class="container">
+	<div class="row" id="bigCallout">
+      <!--visible only on small devices-->
+      <div class="col-12">
+         <div class="well well-small visible-xs"><a href="https://parl.catalogue.library.ns.ca" class="btn btn-large btn-block btn-primary"><span class="glyphicon glyphicon-book"></span> Search books, movies &amp; more</a></div><!--end well-small-->
+      <!--visible only on small devices--><div class="well well-sm visible-xs"><a href="http://digitalmedia.library.ns.ca/6B1540AA-D6E8-42D3-839B-87746D7A57BD/10/50/en/Default.htm" class="btn btn-large btn-block btn-success"><span class="glyphicon glyphicon-phone"></span> Search eBooks &amp; audioBooks</a></div><!--end well-small-->
+      <!--visible only on small devices--><div class="well well-sm visible-xs"><a href="https://parl.catalogue.library.ns.ca/MyResearch/UserLogin" class="btn btn-large btn-block btn-warning"><span class="glyphicon glyphicon-ok"></span> Login to Account</a></div><!--end well-small-->
+  	 </div> <!--end col-12 -->                    
+  </div><!-- end bigCallout -->      
+</div><!--end container -->
+<!--end row 2-->
+<div class="container">
+<!--start alert-->
+      <div class="alert alert-info alert-dismissible hidden" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <p><strong>Please note</strong></p>
+        <p>The library will be closed on Monday, February 15 in observance of the Heritage Day holiday. <small>Our book return drop boxes and online services are always open.</small></p>           
+  </div><!--end alert-->
+<!--start row 3-->
+<div class="row">
+ 	<div class="col-md-12">
+ 		<div class="col-md-9 hidden-xs clearfix"  id="bookFeature">
+        <h4>Celebrate National Craft Month</h4>
+           <div class="col-sm-2">
+            <p><a href="https://parl.catalogue.library.ns.ca/Search/Results?lookfor=crafting+a+colorful+home&type=Title&limit=40&sort%22=relevance" target="_blank"><img data-toggle="tooltip" data-original-title="a room-by-room guide" src="assets/books/book1.jpg" alt="Crafting a Colorful Home" class="img-responsive img-thumbnail"/>
+            <button type="button" class="btn btn-default btn-xs">Crafting a<br>Colorful Home</button></a></p>
+           </div>
+           <div class="col-sm-2">
+           <p><a href="https://parl.catalogue.library.ns.ca/Record/1107165" target="_blank"><img data-toggle="tooltip" data-original-title="a project based approach" src="assets/books/book2.jpg" alt="Learn to Weave" class="img-responsive img-thumbnail"/><button type="button" class="btn btn-default btn-xs">Learn to Weave</button></a></p>
+            </div>
+          <div class="col-sm-2">
+           <p><a href="https://parl.catalogue.library.ns.ca/Search/Results?lookfor=handmade+pottery+at+home&type=Title&limit=20&sort=relevance" target="_blank"><img data-toggle="tooltip" data-original-title="simple ceramics to make" src="assets/books/book3.jpg"  alt="Handmade Pottery at Home" class="img-responsive img-thumbnail"/><br><button type="button" class="btn btn-default btn-xs">Handmade Pottery<br>at Home</button></a></p>
+         </div>
+          <div class="col-sm-2">
+           <p><a href="https://parl.catalogue.library.ns.ca/Search/Results?lookfor=restoring+and+refinishing+furniture&type=Title&limit=20&sort=relevance" target="_blank"><img data-toggle="tooltip" data-original-title="an illustrated guide" src="assets/books/book4.jpg" alt="Restoring and reefinishing furniture" class="img-responsive img-thumbnail"/><button type="button" class="btn btn-default btn-xs">Restore &amp; Refinish<br>Furniture</button></a></p>
+          </div>
+         <div class="col-sm-2">
+           <p><a href="https://parl.catalogue.library.ns.ca/Search/Results?lookfor=make+it+mighty+ugly&type=Title&limit=20&sort=relevance" target="_blank"><img data-toggle="tooltip" data-original-title="get creative even when it ain't pretty" src="assets/books/book5.jpg"  alt="Make it Mighty Ugly" class="img-responsive img-thumbnail"/><button type="button" class="btn btn-default btn-xs">Make it<br>Mighty Ugly</button></a></p>
+         </div>
+         <div class="col-sm-2">
+           <p><a href="https://parl.catalogue.library.ns.ca/Search/Results?lookfor=crafting+with+wood+pallets&type=Title&limit=20&sort=relevance" target="_blank"><img data-toggle="tooltip" data-original-title="projects for rustic furniture &amp; more" src="assets/books/book6.jpg"  alt="Ru" class="img-responsive img-thumbnail"/><button type="button" class="btn btn-default btn-xs">Crafting with<br>Wood Pallets</button></a></p>
+          </div>
+    </div><!--end book feature col-9-->        
+<!--begin socials and features-->
+      <div class="col-md-3">
+      <p><a href="http://www.facebook.com/pages/Pictou-Antigonish-Regional-Library/16057718490"><button class="btn btn-facebook" data-toggle="tooltip" data-placement="left" title="PARL"><i class="fa fa-facebook"></i></button></a>
+     <a href="http://www.twitter.com/parlevents"><button class="btn btn-twitter"><i class="fa fa-twitter"></i></button></a>
+      <a href="https://www.youtube.com/channel/UClg351iZrsFC82EAxCU2T4A"><button class="btn btn-youtube"><i class="fa fa-youtube"></i></button></a>
+      <a href="http://www.facebook.com/pages/The-Peoples-Place-Antigonish-Town-and-County-Library/124418494313435"><button class="btn btn-facebook" data-toggle="tooltip" data-placement="right" title="PeoplesPlace"><i class="fa fa-facebook"></i></button></a>
+       </p>   
+          <div> 
+      
+          <a href="needtoread.php"><img src="assets/readcampaign.jpg" class="img-responsive img-rounded" alt="Need to Read Campaign"></a>
+         <strong>Need to Read Campaign</strong><br>A gift to benefit your community<br>
+          <a href="needtoread.php" class="btn btn-primary btn-xs">More info </a>
+      </div>
+    
+    
+       </div><!--end socials and features-->
+       
+</div><!--end col-12-->
+</div><!--end row 3-->
+
+<!--Begin row 4-->
+<!--begin program features-->
+<div class="row clearfix"  id="programFeature">
+	<div class="col-sm-4 col-xs-12">
+    
+     <!--Begin First Feature-->
+      <div class="media">
+         	<div class="media-left">
+            <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/eagle.jpg" alt="Lead Poisoning"></div>
+             <div class="media-body">
+          <h5 class="media-heading">Lead Poisoning in Wildlife</h5>
+       Come learn about this issue &amp; ways to solve this easily preventable problem
+          <button type="button" class="btn btn-xs btn-default"  data-toggle="modal"  data-target="#sixthModal">More Info</button>
+          </div>
+      </div> 
+<!--End First Feature-->
+       
+       <!--Begin Second Feature-->
+          <div class="media">
+          	<div class="media-left">
+         <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/guide.jpg" alt="Recurring Programs"></div>
+          <div class="media-body">
+            <h5 class="media-heading">Library Recurring Programs Guide</h5>
+            Jan. - June 2016<br>
+            <a href="events/pdf/ProgramGuide.pdf" target="_blank"><button type="button" class="btn btn-xs btn-default">More Info</button></a>
+            </div>
+          </div>
+      <!--End Second Feature-->
+      
+     <!--Begin Third Feature-->  
+      <div class="media">
+           <div class="media-left">
+         <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/therapy.jpg" alt="Music Therapy"></div>
+        <div class="media-body">
+          <h5 class="media-heading">Music Therapy Info Session</h5>         
+ Thur. March 24, 6:30pm @ New Glasgow Library<br> 
+ <button type="button" class="btn btn-xs btn-default"  data-toggle="modal"   data-target="#thirdModal">More Info</button>
+      </div>
+    </div> <!--End Third Feature-->
+    </div> <!--End First Feature Column-->
+    
+  <!--Begin Second Feature Column-->
+  <div class="col-sm-4 col-xs-12">   
+  
+           <div class="media">
+           	<div class="media-left">
+            <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/flag.jpg" alt="Your Benefits"></div>
+             <div class="media-body">
+          <h5 class="media-heading">Your Benefits</h5> 
+Learn about the services &amp; benefits available to you from the Gov't of Canada.
+         <button type="button" class="btn btn-xs btn-default" data-toggle="modal"  data-target="#firstModal">More Info</button>
+        </div>
+      </div> 
+     
+       <div class="media">
+       <div class="media-left">
+            <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/mbreak.jpg" alt="March Break"></div>
+         <div class="media-body">
+          <h5 class="media-heading">March Break @ the Library</h5>
+         a wide variety of free programs during March Break <a href="events/marchbreak.php"><button type="button" class="btn btn-xs btn-default">More Info</button></a>
+        </div>
+      </div>
+     
+       <div class="media">
+       <div class="media-left">
+       <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/cafe.jpg" alt="Live Theatre"></div>
+             <div class="media-body">
+               <h5 class="media-heading">Seniors Cafe &amp; Seniors Now</h5>
+               Activities and seminar topics of interest. 'Drop-in as you wish' sessions.
+               <button type="button" class="btn btn-xs btn-default"  data-toggle="modal"   data-target="#fourthModal">More Info</button>
+             </div>
+      </div>
+        
+      
+  </div><!--End Second Feature Column-->
+      
+  <!--Begin Third Feature Column-->
+    <div class="col-sm-4 col-xs-12">
+   
+           <div class="media">
+           <div class="media-left">
+          <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/pictou.jpg" alt="Pictou project"></div>
+          <div class="media-body">
+          <h5 class="media-heading">Pictou Library Project</h5>A vision for your new public library.
+          <a href="pictou/index.php">
+          <button type="button" class="btn btn-xs btn-default">More Info</button></a> 
+          </div>
+      </div>
+      
+      <div class="media">
+      	<div class="media-left">
+              <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/zinio.jpg" alt="Digital Magazines"></div>
+            <div class="media-body">
+          <h5 class="media-heading">Zinio digital magazines</h5>
+           Now available through your library!
+          <br><button type="button" class="btn btn-xs btn-default"  data-toggle="modal"  data-target="#secondModal">More Info</button>
+        </div>
+      </div>
+      
+         <div class="media">
+         	<div class="media-left">
+            <img class="media-object img-thumbnail hidden-xs" src="assets/thumbs/picco.jpg" alt="One Pictou County"></div>
+         <div class="media-body">
+          <h5 class="media-heading">MOU Information</h5>
+    For information about proposed amalgamation <a href="http://onepictoucounty.ca/" target="_blank">
+     <button type="button" class="btn btn-xs btn-default">Go Here</button>
+     </a>           </div>
+      </div>  
+    
+         
+    
+      
+    </div>    <!--End Third Feature Column-->
+ 
+</div><!--End row 4--><!--end program features-->
+
+
+<!--begin row 5 -->
+<div class="row" id="features">
+	<div class="col-md-2 col-sm-6 hidden-xs feature">
+        <div class="panel">
+            <div class="panel-heading">
+          	</div><!--end panel-heading-->
+            <a href="http://digitalmedia.library.ns.ca/6B1540AA-D6E8-42D3-839B-87746D7A57BD/10/50/en/Default.htm"><img src="images/ebooks.jpg" class="img-responsive" alt"overdrive"></a>
+              <a href="http://digitalmedia.library.ns.ca/6B1540AA-D6E8-42D3-839B-87746D7A57BD/10/50/en/Default.htm" target="_blank" class="btn btn-default btn-sm">Find an eBook </a>
+          </div><!--end panel-->
+     </div><!--end feature 1 -->
+     <div class="col-md-2 col-xs-6 feature">
+       	 <div class="panel">
+            <div class="panel-heading">
+           	</div><!--end panel-heading-->
+            <a href="events/index.php"><img src="images/events.jpg" class="img-responsive" alt"upcoming events"></a>
+      		<a href="events/index.php" class="btn btn-default btn-sm">Upcoming Events</a>
+          </div><!--end panel-->
+     </div><!--end feature 2 -->
+     <div class="col-md-2 col-xs-6 feature">
+         <div class="panel">
+            <div class="panel-heading">
+             </div><!--end panel-heading-->
+             <a href="services/technology.php"><img src="images/tech.jpg" class="img-responsive" alt"Technology"></a>
+   			 <a href="services/technology.php" class="btn btn-default btn-sm">Learn More </a>
+       	  </div><!--end panel-->
+     </div><!--end feature 3-->
+         <div class="col-md-2 col-xs-6 feature">
+        	<div class="panel">
+           	  <div class="panel-heading">
+               </div><!--end panel-heading-->
+             <a href="services/kids.php"><img src="images/parlkids.jpg" class="img-responsive" alt"Children &amp; Youth"></a>
+              <a href="services/kids.php"  class="btn btn-default btn-sm">Explore</a>
+            </div><!--end panel-->
+        </div><!--end feature 4 -->
+            <div class="col-md-2 col-xs-6 feature">
+        	<div class="panel">
+           	  <div class="panel-heading">
+               </div><!--end panel-heading-->
+             <a href="http://www.novastory.ca"><img src="assets/novastory-feature.jpg" class="img-responsive" alt"NovaStory"></a>
+              <a href="http://www.novastory.ca" target="_blank" class="btn btn-default btn-sm">Explore NovaStory </a>
+            </div><!--end panel-->
+        </div><!--end feature 4 -->
+            <div class="col-md-2 col-xs-6 feature">
+        	<div class="panel">
+           	  <div class="panel-heading">
+               </div>
+           	  <!--end panel-heading-->
+             <a href="projects/healthroom/index.php"><img src="images/health.jpg" class="img-responsive" alt"Health and Wellness"></a>
+              <a href="projects/healthroom/index.php" class="btn btn-default btn-sm">Learn more</a>
+            </div>
+        	<!--end panel-->
+        </div><!--end feature 4 -->
+      
+          
+</div><!-- end features --><!--end row 5 -->
+
+
+<!--begin row 6 -->
+<div class="row" id="moreCourses">
+      <div class="col-md-3 col-xs-6">
+        <div> <a href="locations/booksbymail.php"><img src="assets/item-bbm.jpg" class="img-responsive" alt="Books by Mail"></a><br>
+        </div><!--end thumbnail -->
+      </div><!--end col-3-->
+      
+      <div class="col-md-3 col-xs-6">
+        <div> <a href="services/interlibrary.php"><img src="assets/item-illo.jpg" class="img-responsive" alt="interlibrary loan"></a><br>
+        </div><!--end thumbnail -->
+      </div><!--end col-3-->
+       <div class="col-md-3 col-xs-6">
+            <div> <a href="resources/readers.php"><img src="assets/item-cafe.jpg" class="img-responsive" alt="Readers Cafe"></a>  <br>        
+            </div><!--end thumbnail -->
+      </div><!--end col-3-->
+      
+       <div class="col-md-3 col-xs-6">
+            <div> <a href="greatwar/index.html"><img src="assets/item-HomeFront.jpg" class="img-responsive" alt="Life on the Home Front"></a>     <br>     
+            </div><!--end thumbnail -->
+      </div><!--end col-3-->
+      
+</div><!--end row 6 -->
+
+
+
+<!--start row 7-->	
+<div class="row" id="newsft">
+    <div class="col-sm-5">
+     <blockquote>
+     <h4>Newsletters</h4>
+<span class="glyphicon glyphicon-pencil"></span>See what's happening at the People's Place  <a href="news/pdf/ANT_Newsletter.pdf" target="_blank"><button type="button" class="btn btn-primary btn-xs">Antigonish Library</button></a>
+   <br><br><span class="glyphicon glyphicon-pencil"></span> See what's happening at the <a href="news/pdf/NG_Newsletter.pdf" target="_blank"><button type="button" class="btn btn-primary btn-xs">New Glasgow Library</button></a>
+   <br><br><span class="glyphicon glyphicon-pencil"></span>See what's happening at the <a href="news/pdf/PIC_Newsletter.pdf" target="_blank"><button type="button" class="btn btn-primary btn-xs">Pictou Library</button></a> 
+     </blockquote>
+   </div><!--end col-6-->
+   <div class="col-sm-4">
+     <blockquote>
+    <br><span class="glyphicon glyphicon-pencil"></span>See what's happening at the <a href="news/pdf/RJ_Newsletter.pdf" target="_blank"><button type="button" class="btn btn-primary btn-xs">River John Library</button></a>
+    <br><br><span class="glyphicon glyphicon-pencil"></span>See what's happening at the <a href="news/pdf/STELL_Newsletter.pdf" target="_blank"><button type="button" class="btn btn-primary btn-xs">Stellarton Library</button></a>
+    <br><br><span class="glyphicon glyphicon-pencil"></span>See what's happening at the <a href="news/pdf/WEST_Newsletter.pdf" target="_blank"><button type="button" class="btn btn-primary btn-xs">Westville Library</button></a>
+    <br><br> <span class="glyphicon glyphicon-pencil"></span> This week at the Library <a href="news/pdf/ATL.pdf" target="_blank"> <button type="button" class="btn btn-primary btn-xs">@ the Library</button></a>
+     </blockquote>
+   </div><!--end col-6-->
+      <div class="col-sm-3">
+        <h4>Featured  Service</h4>
+        <a href="https://www.rbdigital.com/novascotialibraries/service/zinio" target="_blank"><img src="assets/zinio.jpg" alt="Zinio" class="img-responsive"/></a>Full color digital magazines on your desktop, laptop or mobile device <a href="https://www.rbdigital.com/novascotialibraries/service/zinio" class="btn btn-xs btn-primary">Get started! </a>
+    </div><!--end col-6-->
+</div><!--end row 7-->
+
+<!-- begin row 8 -->
+<div class="row">
+    	<div class="col-md-2 col-sm-4 col-xs-6" id="service_thumb">
+         <a href="http://infotrac.galegroup.com/itweb/parl_main?db=CHLL"><img src="images/chilton.jpg" class="img-responsive" alt=""/></a>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6" id="service_thumb"> 
+        <a href="resources/ancestry.php"><img src="images/ancestry.jpg" class="img-responsive" alt=""/></a>
+          </div>
+        <div class="col-md-2 col-sm-4 col-xs-6" id="service_thumb"> 
+        <a href="http://www.tumblebooklibrary.com/autologin.aspx?userid=KAVBiMIpN3H9yDxKOgwy%2fQ%3d%3d"><img src="images/tumblebooks.jpg" class="img-responsive" alt=""/></a>
+         </div>
+        <div class="col-md-2 col-sm-4 col-xs-6" id="service_thumb">
+            <a href="http://www.novastory.ca/novastories/petroglyphs/index.html"><img src="images/petroglyphs.jpg" class="img-responsive" alt="Mi'kmaq Petroglyphs"/></a>
+       	</div>
+        <div class="col-md-2 col-sm-4 col-xs-6" id="service_thumb">
+          <a href="http://www.fightingcrime.ca"><img src="images/aal.jpg" alt="" class="img-responsive" border="0"/></a>
+        </div>
+         <div class="col-md-2 col-sm-4 col-xs-6" id="service_thumb">
+           <a href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d8239" target="_blank"><img src="images/donate.jpg" alt="" class="img-responsive" border="0"/></a>
+         </div>
+</div><!--end row 8 -->
+ </div>
+</div><!--end container -->
+</div> <!-- end main container -->
+<!--Begin bottom-->
+<footer>
+<div class="container">
+   <div class="row">
+        	   <div class="col-sm-3">
+            	<h6>Your Account</h6>
+                <ul class="unstyled">
+                    	<li><a href="https://parl.catalogue.library.ns.ca/MyResearch/UserLogin">Login</a></li>
+                        <li><script src="https://f.formoid.net/8GE.lightbox.js"></script>
+<a href="https://f.formoid.net/8GE" onclick="return formoidbox(this);" target="_blank">Get a Library Card</a>
+                                             <li><a href="https://parl.catalogue.library.ns.ca">Search for a Book</a></li>
+                        <li><a href="http://digitalmedia.library.ns.ca/6B1540AA-D6E8-42D3-839B-87746D7A57BD/10/50/en/Default.htm" target="_blank">Search for an eBook</a></li>
+                        <li><a href="http://find.galegroup.com/menu/commonmenu.do?userGroupName=parl_main" target="_blank">Search online Databases</a></li>
+                      <br>
+                      <li><a href="../about/employment.php">Employment</a></li>
+                      <li><a href="../staff/index.htm">Resources for Staff</a></li>
+                     </ul>                    
+            </div><!--end col-sm-3 -->         
+            <div class="col-sm-3">
+            	<h6> Links</h6>
+                	<ul class="unstyled">
+                    	<li><a href="http://library.novascotia.ca/" target="_blank">Provincial Library</a></li>
+                        <li><a href="http://fightingcrime.ca/" target="_blank">Adopt-a-Library Literacy Program</a></li>
+                        <li><a href="http://cch.novascotia.ca/" target="_blank">CCH</a></li>
+                        <li><a href="http://www.standupforlibraries.ca/" target="_blank">LBANS</a></li>
+                        <li><a href="http://www.nsla.ns.ca/" target="_blank">NSLA</a></li>
+                        <li><a href="http://www.pictoucountyroots.ca/" target="_blank">Pictou County Roots Society</a></li>
+                        <li><a href="../locations/pdf/NSLibraryBrochureEn.pdf" target="_blank">Other NS Libraries (En)</a></li>
+                         <li><a href="../locations/pdf/NSLibraryBrochureFr.pdf" target="_blank">Other NS Libraries (Fr)</a></li>
+                    </ul>                
+            </div><!--end col-sm-3 -->
+            <div class="col-sm-3">
+            <address>
+  <strong>Pictou-Antigonish Regional Library</strong><br>
+  182 Dalhousie St. P.O. Box 276<br>
+  New Glasgow, NS<br>
+  B2H 5E3<br>
+<abbr title="Phone">P:</abbr> (902) 755-6031<br>
+Fax: (902) 755-6775<br>
+Toll free 1-866-779-7761
+            </address>
+
+<address>
+  <strong>Email</strong><br>
+  <a href="mailto:info@parl.ns.ca">info@parl.ns.ca</a><a href="mailto:#"></a>
+</address>
+
+             </div><!--end col-sm-3 -->
+         
+              <div class="col-sm-3">
+            		<h6>Keep in Touch</h6>
+                	<ul class="unstyled">
+                    	<li><a href="../news/pdf/ATL.pdf">At the Library Article</a></li>
+                        <li><a href="../news/index.php">Press Releases</a></li>
+                        <li><a href="../news/index.php">Newsletters</a></li>
+                        <li> <a href="http://www.twitter.com/parlevents" target="_blank">Find us on Twitter</a></li>
+                        <li><a href="http://www.facebook.com/pages/Pictou-Antigonish-Regional-Library/16057718490?sk=wall" target="_blank">Facebook PARL</a></li>
+                        <li><a href="http://www.facebook.com/pages/The-Peoples-Place-Antigonish-Town-and-County-Library/124418494313435" target="_blank">Facebook The PeoplesPlace</a></li>
+                        <li><a href="https://www.youtube.com/channel/UClg351iZrsFC82EAxCU2T4A" target="_blank">Watch our YouTube Channel</a></li>                      
+                    </ul>
+            </div><!--end col-sm-3 -->
+                
+        </div><!--end row --></div><!--end footer container -->
+</footer>
+<!--begin copyright-->
+<div class="row">
+   <div id="copyright" class="col-sm-12">
+       <h6>Copyright &copy; 2016 Pictou-Antigonish Regional Library</h6>
+   </div>
+</div><!--end copyright -->
+<!--End bottom-->
+
+<!---modal windows -->
+
+<!--login modal-->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h4 class="modal-title" id="myModalLabel">Login to Your Account</h4>
+            </div>
+            <div class="modal-body">
+                 <form name="new_session" method="post" action="https://catalogue.library.ns.ca/uhtbin/cgisirsi/?ps=KxILNJ6Y7K/PHQ/0/57/49" target="new_session">
+	
+		<input type="hidden" name="user_id" value="PARLWEB"/>
+		<input type="hidden" name="password" value="POOKA666"/>
+	
+	<input type="hidden" name="new_gateway_db" value=""/>
+</form>
+
+<script type="text/javascript">
+	jQuery(document).ready(function() { validate_and_normalize_librarycard(document.loginform); });
+</script>
+
+			
+				<form name="loginform" method="post" action="https://catalogue.library.ns.ca/uhtbin/cgisirsi/?ps=Nwhr6HVzXx/PHQ/186560139/303">
+			
+
+		<div class="user_name">
+			<label for="user_id">Library Card #:</label>
+			<input class="user_name_input" type="text" name="user_id" id="user_id"  maxlength="20" value=""/>
+		</div>
+	
+	 
+		<div class="password">
+			<label for="password">PIN:</label>
+			<input class="password_input" type="password" name="password" id="password"  maxlength="25" value=""/>
+		</div>  
+	
+	 	<input type="submit" value="Login to My Account" class="login_button"/>
+			</form>
+            <p>For your security, please log out <br />and close your browser window when finished.</p>
+	  
+	<!-- login form-->
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+<!--first modal-->
+<div class="modal fade" id="firstModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Your Benefits: Learn about the services &amp; benefits available to you from the Government of Canada â for Youth, Seniors Newcomers, and families With Craig Graham, Citizen Service Specialist â Service Canada </h4> <ul><li>Tuesday March 22, 3:00 - 4:00 &amp; 6:00 - 7:00pm at the Pictou Library</li><li> Tuesday March 29, 6:15 - 7:15pm at the River John Library</li>
+            </ul>
+                 </div>
+            <div class="modal-body">
+            <p>What is Service Canada?</p><p>Service Canada is an organisation that provides a âone stop shopâ for government programs and services for Citizens whether they are Seniors, Youth, Newcomers to Canada, or from the Aboriginal Community.<br>Service Canada is about serving you better by bringing together information on most Government of Canada programs and services under one umbrella. Service Canada gives you one website to visit, one main phone number to call and a network of Service Canada Offices and Outreach sites where employees are trained to help you find the information you need.<br>This presentation will highlight the many service offerings Service Canada has for you including how to navigate the website â<a href="http://www.canadabenefits.gc.ca/" target="_blank">canadabenefits.gc.ca</a>â.</p><p>All are welcome!</p><p>Please call 902 485-5021 (Pictou Library) or 902 351-2599 (River John Library) for more information or to pre-register.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+<!--second modal-->
+<div class="modal fade" id="secondModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;<span></button>
+            <h4 class="modal-title" id="secondModal">
+Zinio digital magazines available on your desktop, laptop or mobile device.</h4>
+            </div>
+            <div class="modal-body">
+            <h4> About the collection</h4>
+               <p>The digital magazine collection is being shared between 4 library regions (PARL, AVRL, WCRL, ECRL). Each issue has unlimited borrowing and access, meaning multiple people can have the same issue of a magazine checked out at the same time. There are no restrictions, as is the case with Overdrive, as to how many users and can have an item checked out. </p><p>Users will need their library card number to gain access to the Zinio site no matter where they access from, library branches included, however a PIN number will not be required. You are not forced to enter your card number until you try to checkout a magazine or make an account. Once you have accessed the site you will then have to create an account. This is separate from your library account, similar to creating an Adobe or Overdrive ID. </p><p>You will have access to one yearâs worth of back issues. </p><p>The collection can be accessed through a web browser from any device, there is also an app that can be downloaded and used with mobile devices. The app is free and available in most app stores.</p>
+               <p>Need help? Here is <a href="pdf/Ziniostartguide.pdf" target="_blank">a guide to help get you started</a></p>
+<p><a href="https://www.rbdigital.com/novascotialibraries/service/zinio" target="_blank">Get started reading...</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+<!--Third modal-->
+<div class="modal fade" id="thirdModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="thirdModal">Music Therapy Information Session with Heather Cameron  Thursday March 24 6:30pm @ the New Glasgow Library</h4>
+     
+            </div>
+            <div class="modal-body">
+            <p>Music Therapy by definition is "the skillful use of music and musical elements by an accredited music therapist to promote, maintain, and restore mental, physical, emotional, and spiritual health. Music has nonverbal, creative, structural, and emotional qualities. These are used in the therapeutic relationship to facilitate contact, interaction, selfawareness, learning, self-expression, communication, and personal development".</p><p>Heather will be sharing more about this relatively new healthcare profession. There will also be information on how you can use music for relaxation and reducing daily stress. The session will close with an opportunity to participate in a music improvisation. No musical training required!</p>
+ </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+
+<!--Fourth modal-->
+<div class="modal fade" id="fourthModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="fourthModal">Upcoming Seniors Cafe and Seniors Now!</h4>
+            </div>
+            <div class="modal-body">            
+<p><strong>Seniors Cafe</strong> at the <strong>Antigonish Library Wednesday, March 2, 2:00pm - 3:00pm presents 'Highland Storytellers - A reading and commentary' with author Teresa MacIsaac</strong> This month, Teresa MacIssac will be introducing her new book 'Highland Storytellers.' The book follows a family who have immigrated to Nova Scotia from the Highlands of Scotland through four generations. Described as 'creative non-fiction' this book is a highly researched saga of the Highland immigrants of the early 1800s.  Fun, informal sessions. Full access to library services. All are welcome, and light refreshments will be served. For more information or for program suggestions, call (902) 863-4276.</p>
+<p><strong>Seniors Cafe</strong> at the <strong>Westville Library Wednesday, March 2nd, 2:30pm presents âBiopulsar Technologyâ: a marriage of the mind, body and spirit, </strong>with speaker  Cindy Rolston Hemphill, from the White Lotus. This month, Cindy will talk about (and demonstrate) Biopulsar technology with a machine that gives an empirical measurement of the health of peopleâs organs, and shows how peopleâs thoughts and emotions have an impact on their physical health. About the speaker: Cindy Rorison Hemphill is owner of The White Lotus, a local business in downtown New Glasgow. She started the business to share her interest in the magic of whatâs seen and the mysteries of whatâs unseen. All are welcome! Fun, informal sessions. Full access to library services &amp; light refreshments served! For more information please call 902 396-5022.</p>
+<p><strong>Seniors Now</strong> at the <strong>New Glasgow Library Thursday, March 10 at 1:30pm presents âEye to Eyeâ â Things to keep in mind as your eyesight ages,</strong> with Dr. Melanie Reid, Optometrist<br>Join us during World Glaucoma Week as local optometrist Dr. Melanie Reid talks about eyesight, and reasons for vision loss related to aging. She will also chat about things we can do to keep our vision working to the best of itâs capability.<br>About the speaker: Melanie earned her Bachelor of Science with honours and Doctor of
+Optometry degrees from the University of Waterloo in Ontario. During the four-year optometry program, she conducted an external study placement in St. Petersburg, Florida and another in Houston, Texas to study ocular disease. She is a certified therapeutic optometrist and is licensed to treat ocular disease. While she, her husband Nathan and their family reside in New Glasgow, Reid Optometry has locations in Antigonish, New Glasgow and Truro. All are welcome! For more information please call 902 752-8233.</p>
+<p><strong>Seniors Cafe</strong> at the <strong>Pictou Library Monday, March 21st 10:00 - 11:30am presents Easter Decorating</strong>. This month, the morning will be filled with lots of Easter celebrations, including egg decorating and more! Light refreshments are provided. All are welcome! For more information please call 902 485-5021.</p>
+</div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+
+<!--Fifth modal-->
+<div class="modal fade" id="fifthModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="fifthModal">'The Ship Favourite, The Ship Lulan and the history behind the voyages' with guest speaker Clyde MacDonald Wed, November 25, 7pm â 8pm at the New Glasgow Library</h4>
+            </div>
+            <div class="modal-body">
+                <p>Join guest speaker and retired judge, Clyde MacDonald, as he gives a talk about the Ship Favourite and Ship Lulan, and the history behind the voyages. James Carmichael (1788 - 1860) and his brother Captain George McKenzie (1798-1876) were at Fisher's Grant (later known as Pictou Landing) and became joint owners of the Ship Lulan in 1848 at New Glasgow. The speaker will talk about the research and history behind these figures. <br>
+The ship Favourite transported 501 emigrants from Scotland to Pictou in 1803. The ship Lulan transported 167 emigrants from Scotland to Pictou in 1848.<p>For more information please call (902) 752-6737 </p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Sixth modal-->
+<div class="modal fade" id="sixthModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="sixthModal">
+       Lead poisoning in Wildlife &amp; Non-Lead Angling &amp; Hunting with speaker Helene Van Doninck, DVM<p><ul><li>Tuesday March 29 (6:30pm) â Westville Library</li><li>Thursday March 31 (7:00pm) â Antigonish Library</li><li>Thursday April 7 (7:00pm) â Pictou Library</li><li>Thursday April 14 (6:30pm) â River John Library</li></ul></h4>
+            </div>
+            <div class="modal-body">
+               <p>Lead poisoning in wildlife happens where lead based ammunition and fishing tackle are used. People can also unintentionally ingest lead by eating lead harvested game. Come and learn about this issue and ways to solve this easily preventable problem, by voluntarily switching to non-lead ammo and tackle. We'll also talk about the non-lead ammo and tackle exchange program in Nova Scotia.</p><p><strong>About the speaker:</strong> Helene Van Doninck is the volunteer veterinarian and co-founder of the Cobequid Wildlife Rehabilitation Centre in Hilden, NS. She has been providing lead poisoning outreach to hunters, anglers, and the general public since 2011. She has lectured on this topic in Atlantic Canada and the United States and is thrilled that Nova Scotia is a North American leader in this initiative.</p><p>All are welcome!</p> 
+</div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+
+<!--Seventh modal-->
+<div class="modal fade" id="seventhModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h4 class="modal-title" id="seventhModal">At Your Leisure...</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Looking for a way to de-stress? Need something to read over the holidays? Perhaps you could use a little bibliotherapy?</h4> <p>Starting Tuesday, December 1st, check out the new leisure reading collection at the Angus L. Macdonald Library - brought to you in partnership with The People's Place: Antigonish Town and County Library.</p>
+                <p><strong><em>Academic &amp; Public Libraries working together</em></strong></p>
+</div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+
+<!--Eighth modal-->
+<div class="modal fade" id="eighthModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="eighthModal">The Cal Best Project, touring exhibit. The exhibit will be featured February 19-27 at the River John Library. </h4>
+            </div>
+            <div class="modal-body">
+                <p>In honor of African Heritage Month, all are welcome to join us at the library and experience "The Cal Best Project", a touring exhibit on display celebrating a local hero, James Calbert Best (the son of Carrie Best). The exhibit is on display courtesy of the Workers History Museum and the Public Service Alliance of Canada - Atlantic (PSAC).</p>
+                <h4>About the Exhibit:</h4><p>&quot;The Cal Best Project&quot; celebrates the life and legacy of this extraordinary activist with a travelling exhibition that includes a documentary (Simply the Best), multi-panel bilingual educational display, and panel discussion. From his early days as a reporter covering the controversial Viola Desmond case to his tenure as Canadaâs first Black High Commissioner, Bestâs efforts are brought to life through interviews, archival footage, and contemporary news accounts. A special focus on Bestâs commitment to a more inclusive public service examines his efforts as co-founder and president of the Civil Service Association of Canada (the precursor to todayâs Public Service Alliance of Canada) and highlights the debt that thousands of Canadian public servants owe him even today.</p><p>The WHMâs explorations into Cal Bestâs life started small, using parts of a panel discussion with PSAC Founders to look at the life and career of Cal Best. We soon discovered that what we knew was only the tip of the iceberg. As Arthur Carkner, coordinator of the project, recalls, &quot;We learned about his early struggles with racism, his Nova Scotia achievements, about his mother, Carrie Best. Bestâs role in immigration, amateur sport, senior positions in various government departments ending in being Canadaâs first Black High Commissioner (ambassador) gradually came to light, and we continue to learn more.&quot;</p><p>Cal Bestâs story is one we should not forget. By bringing &quot;The Cal Best Project&quot; to audiences across the country, we can ensure that more Canadians learn about this remarkable figure in our shared history.</p><p>For more information, please visit - <a href="http://workershistorymuseum.ca/portfolio/cal-best/" target="_blank">http://workershistorymuseum.ca/portfolio/cal-best/</a>.</p>
+<p>Join us for the film screening 'Simply the Best: Cal Best' as we celebrate African Heritage Month. All are welcome! Thur. February 25, 6:15pm at the River John Library.</p> </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>
+<!-- Javascript -->
+	<!-- First try for the online version of jQuery-->
+    <script src="http://code.jquery.com/jquery-latest.min.js" ></script>	
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/jquery-1.11.1.min.js"><\/script>')</script>
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<!-- Custom JS -->
+	<script src="js/script.js"></script>
+      <!--popup -->
+    <SCRIPT LANGUAGE="JavaScript">
+	function popUp(URL) {
+	day = new Date();
+	id = day.getTime();
+	eval("page" + id + " = window.open(URL, '" + id + "', 					'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=910,height=440,left = 185,top = 200');");
+}// End -->
+</script>
+<!--end javascript-->
+</body>
+</html>
+
+
+

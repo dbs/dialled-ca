@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><head>
+    
+<!-- MOBIFY PHONE -->
+<script type="text/javascript">
+
+    var iCreateObject =
+    {
+        isSiteInICreateMode: "False".toLowerCase() == "true",
+        lang: "en",
+        isIe8: false,
+        corpHome: "http://www.library.quintewest.ca/",
+        corpRoot: "",
+        gaTrackingCode: '',
+        calendarUrl: 'http://calendar.quintewest.ca/Library/',
+        isSiteInLocalDevelopment: 'False'.toLocaleLowerCase() == "true"
+    }
+
+    try {
+        if (document.location.href.toLowerCase().indexOf('https://') == 0) {
+            iCreateObject.corpHome = 'https://' + iCreateObject.corpHome.substring(7);
+        }
+    } catch (err) { }
+
+    if (iCreateObject.isSiteInLocalDevelopment)
+        console.log(iCreateObject);
+
+</script><link rel="icon" type="image/ico" href="/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+<meta name="description" content="Quinte West Public Library" />
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href="/styles/base.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/structure.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/icreate.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/sitecontent.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/navigation.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+<link href="https://js.esolutionsgroup.ca/js/libs/jquery-ui/1.10.4/resources/themes/base/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link href='/en/Modules/Calendar/styles/Calendar.css' rel="stylesheet" type="text/css" media="screen" />
+<link href="https://js.esolutionsgroup.ca/js/libs/media-element/2.13.2/mediaelementplayer.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/styles/slick.css" />
+<link href="/styles/miniCalendar.css" rel="stylesheet" type="text/css" media="print" />
+<link href="/styles/popup_menus.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+<!--[if lt IE 9]>
+    <link href="/styles/ie8.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="https://js.esolutionsgroup.ca/js/libs/html5shiv/3.7.0/html5shiv.js"></script>   
+<![endif]-->
+
+<!-- this is a custom build of modernizr, do not replace without consulting Kevin Gray -->
+<script type="text/javascript" src="/scripts/modernizr.min.js"></script>
+
+<!--[if lt IE 9]>
+    <link href="/styles/ie8.css" rel="stylesheet" type="text/css" media="screen" />
+<![endif]-->
+
+<script type="text/javascript" async="" src="https://stats.g.doubleclick.net/dc.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery-ui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery_cookie/1.4.0/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/hover-intent/1.8.0/jquery.hoverIntent.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery_superfish/1.7.4/superfish.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/media-element/2.13.2/mediaelement-and-player.min.js"></script>
+<script type="text/javascript" src='/en/Modules/Calendar/scripts/jquery.mini-calendar.js'></script><!--New-->
+<script type="text/javascript" src='/scripts/general.js'></script>
+<script type="text/javascript" src='/scripts/quicklinks-dropdown.js'></script>
+<script type="text/javascript" src='/en/Modules/email/scripts/email.js'></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/feedback-form/structure/2.2.8/feedbackStructure.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/slick/1.3.7/slick.min.js"></script>
+<script type="text/javascript" src="/en/Modules/Polling/PollModule.js"></script>
+
+<!--[if lt IE 9]>
+    <script type="text/javascript">$(function($) { $('body').addClass('ie8'); iCreateObject.isIe8 = true; });</script>
+    <script type="text/javascript" src="/scripts/searchPlaceholderCompatibility.js" ></script> 
+<![endif]-->
+
+<link href='/en/Modules/AtoZ/styles/jquery-atoz-scroll.css' rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src='/en/Modules/AtoZ/scripts/jquery-atoz-scroll.js'></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+        //if this page isn't being parsed, show the full atoz
+	    if ("http://www.library.quintewest.ca/".indexOf(window.location.host) != -1)
+	    {
+	        jQuery("#ui-atoz-scroll").atoz_scroll({
+	            width: 720,
+	            height: 250,
+	            padding: 8,
+	            trigger: true,
+	            url: iCreateObject.corpHome + "/en/Modules/AtoZ/index.aspx",
+	            itemPerColumn: 8,
+	            source: "/Proxy.ashx?url=http://atoz.icreate.esolutionsgroup.ca/search/610"
+	        });
+	    }
+	    else
+	    {
+	        $("#footerAtoZScroller").attr("href", iCreateObject.corpHome + "/en/Modules/AtoZ/index.aspx");
+	        $("#quickLink04").unbind()
+	    }
+
+		//$("#servicesContainer .ui-atoz-scroll-container").hide();
+		//$("#servicesContainer").bind("mouseenter", function() { $(this).find(".ui-atoz-scroll-container").show()})
+		//$("#servicesContainer").bind("mouseleave", function() { $(this).find(".ui-atoz-scroll-container").hide()})
+		
+	});
+</script>
+
+<script type="text/javascript"> 
+
+$(window).load(function() {
+    $('#uber').addClass('loaded');
+});
+
+    $(function () {
+    
+        // Drop-down lists
+        
+        $('#nav').superfish({ cssArrows: false, speed: (iCreateObject.isIe8 ? 0 : 'normal'), speedOut: (iCreateObject.isIe8 ? 0 : 'fast') });
+
+        function setSlickTabbing() {
+            jQuery('.slick-track a.learnMore').attr("tabindex", -1);
+            jQuery('.slick-track .slick-active a.learnMore').each(function (index) { $(this).removeAttr('tabindex'); });
+        }
+
+
+        $('.imageScroller').slick({
+            autoplay: false,
+            infinite: true,
+            speed: 500,
+            autoSlideTimer: 9000,
+            dots: false,
+            onAfterChange: setSlickTabbing,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            draggable: false,
+            responsive: [
+                {
+                    breakpoint: 1360,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+            ]
+        });
+
+        jQuery(document).ready(function () {
+            setSlickTabbing();
+        });
+
+
+        if (!iCreateObject.isSiteInICreateMode) {
+            $('video,audio').mediaelementplayer({
+                // if the <video width> is not specified, this is the default
+                defaultVideoWidth: 480,
+                // if the <video height> is not specified, this is the default
+                defaultVideoHeight: 270,
+                // if set, overrides <video width>
+                videoWidth: -1,
+                // if set, overrides <video height>
+                videoHeight: -1,
+                // width of audio player
+                audioWidth: 400,
+                // height of audio player
+                audioHeight: 30,
+                // initial volume when the player starts
+                startVolume: 0.8,
+                // useful for <audio> player loops
+                loop: false,
+                // enables Flash and Silverlight to resize to content size
+                enableAutosize: true,
+                // the order of controls you want on the control bar (and other plugins below)
+                features: ['playpause', 'progress', 'current', 'duration', 'tracks', 'volume', 'fullscreen'],
+                // Hide controls when playing and mouse is not over the video
+                alwaysShowControls: false,
+                // force iPad's native controls
+                iPadUseNativeControls: false,
+                // force iPhone's native controls
+                iPhoneUseNativeControls: false,
+                // force Android's native controls
+                AndroidUseNativeControls: false,
+                // forces the hour marker (##:00:00)
+                alwaysShowHours: false,
+                // show framecount in timecode (##:00:00:00)
+                showTimecodeFrameCount: false,
+                // used when showTimecodeFrameCount is set to true
+                framesPerSecond: 25,
+                // turns keyboard support on and off for this instance
+                enableKeyboard: true,
+                // when this player starts, it will pause other players
+                pauseOtherPlayers: true,
+                // array of keyboard commands
+                keyActions: []
+            });
+        }
+
+        if (!iCreateObject.isSiteInICreateMode) {
+            $("#feedbackLink").feedbackForm({
+                useDefaultIfNoIdIsSet: "True".toLowerCase() == "true",
+                baseUrl: "http://icreate6.esolutionsgroup.ca/feedback/api/1.0/",
+                getUrl: "client/231159_QuinteWestLibrary/default-form/en",
+                jsServerUrl: "https://js.esolutionsgroup.ca/js/libs/feedback-form/",
+                previewMode: false,
+                showButton: true,
+                pageTitle: document.title.replace(" - Quinte West Library", "").trim(),
+                buttonText: "",
+                feedbackFormId: $("#FeedbackFormId") === undefined ? "" : $("#FeedbackFormId").val(),
+                language:'en'
+            });
+        
+            var contentHeight = $("#contentInt").outerHeight();
+            var subnavHeight = $("#subNavContainer") ? $("#subNavContainer").outerHeight() : 0;
+            if (subnavHeight > contentHeight)
+                $("#contentInt").css({ "min-height": $("#subNavContainer").height()});
+
+            $("#printAreaContent table.datatable").addClass("table").wrap("<div class='ic-table-responsive'></div>");
+
+        }
+    });
+
+    function PrintScreen() {
+        if (iCreateObject.isSiteInICreateMode) {
+            showNAMessage();
+        }
+        else {
+            window.print();
+        }
+    }
+    
+</script>
+<script language="javascript" type="text/javascript">
+    jQuery(function () {
+
+        // Split footer Main Nav dropdown into 4 Columns
+        var totalItems = jQuery(this).find('ul#footerMainNav.first').children('li').length;  // total count
+        var itemsPerColumn = parseInt(totalItems / 4);
+        var remain = totalItems % 4; // mod
+        if (remain > 0) {
+            itemsPerColumn += 1;
+        }
+
+        var list = jQuery(this).find("ul#footerMainNav");
+        var current_size = 0;
+        list.children().each(function () {
+            if (++current_size > itemsPerColumn) {
+                var new_list = jQuery("<ul></ul>").insertAfter(list);
+                list = new_list;
+                current_size = 1;
+            }
+            list.append(this);
+        });
+
+        // Split Main Nav dropdown into 4 Columns
+        jQuery('#nav').children('li').each(function () {
+            var totalItems = jQuery(this).find('ul.SplitDropdown').children('li').length;  // total count
+            var itemsPerColumn = parseInt(totalItems / 4);
+            var remain = totalItems % 4; // mod
+            if (remain > 0) {
+                itemsPerColumn += 1;
+            }
+
+            var list = jQuery(this).find("ul.SplitDropdown");
+            var current_size = 0;
+            list.children().each(function () {
+                if (++current_size > itemsPerColumn) {
+                    var new_list = jQuery("<ul class=\"dropdown\"></ul>").insertAfter(list);
+                    list = new_list;
+                    current_size = 1;
+                }
+                list.append(this);
+            });
+        });
+
+    });
+</script>
+
+<script type="text/javascript" src="/scripts/translateitems.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery_gallery/1.2.4/jquery.gallery.min.js"></script>
+<script type="text/javascript"> $(function () {$(".eSolutionsGroupPhotoGalleryV2PlaceholderDiv").each(function () { var method = $(this).attr("method"); var id = $(this).attr("id"); if (id != '') { $(this).load(id, function () { return method; })} else { $(this).html(''); }}) });</script>
+<script type="text/javascript">
+	$( window ).load(function() {
+		var textNodes;
+		var valFirst;
+		var valSecond;
+
+		$(".eSolutionsGroupPhotoGalleryV2PlaceholderDiv .ic-caption").each(function() {
+			textNodes = $(this).contents().filter(function() {
+			    return this.nodeType == Node.TEXT_NODE;
+			});
+
+			valFirst = textNodes[0].nodeValue;
+			if (textNodes[1]){
+				valSecond = textNodes[1].nodeValue;
+				$(this).replaceWith( '<span class="ic-caption">'+valFirst+'<br><span style="font-weight:bold; color:#FDE3A8; font-size:14px; font-style:normal;">'+valSecond+'</span></span>' );
+			} else {
+				$(this).replaceWith( '<span class="ic-caption">'+valFirst+'</span>' );
+			}
+		});
+	});
+</script>  
+
+
+    <title>Index - Quinte West Library</title>
+    
+    
+	<link href="/styles/iosSlider.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/ios_slider/structure/1.3.42/jquery.iosslider.min.js"></script>
+    <script type="text/javascript" src='/scripts/sliderInit.js'></script>
+    <script type="text/javascript">
+    $(function () {
+        if (!iCreateObject.isSiteInICreateMode) {
+
+            $.ajax({
+                url: iCreateObject.corpHome + "/" + iCreateObject.lang + "/Modules/News/services/getTopFiveNews.ashx?limit=" + $("#rotatingBanners .slide").length + "&feedId=0c75dc93-d93f-4b4b-97b7-a2e3d8e163c4", //TODO: NEWS: put in the proper feed id FEATURE: make dynamic
+                async: false,
+                dataType: 'jsonp',
+                crossDomain:true,
+                cache: false,
+                success: function (data) {
+                    $.each(data, function (index, element) {
+                        $("#rotatingBanners .slide:eq(" + index + ")").append("<span class='ic-slider-content ic-slider-news'><div class='ic-slider-content-foreground'>" + element + "</div></span>");//TODO: LANGC: Make Dynamic and get translation
+                    });
+                }
+
+            });
+            
+            return false;
+        }
+    });
+
+  </script>
+
+
+
+<link media="screen" rel="stylesheet" href="/en/Modules/News/styles/EmergencyAlertBanners.css" type="text/css">
+<script type="text/javascript" src="/en/Modules/News/scripts/jquery.EmergencyAlertBanners.js"></script>
+<link href='/en/Modules/Contact/styles/contact-autocomplete.css' rel="stylesheet" media="screen" type="text/css" />
+<link href='/en/Modules/Contact/styles/ContactsExtended.css' rel="stylesheet" media="screen" type="text/css" />
+
+    <script src='/en/Modules/Contact/scripts/contactsV2.js' type="text/javascript"></script>
+    <script src='/en/Modules/Contact/scripts/flyoutContactsV2.js' type="text/javascript"></script>
+	<script src='/en/Modules/Contact/scripts/footerContactsV2.js' type="text/javascript"></script>
+
+
+    
+
+<meta property="dcterms.issued" content="2015-06-22T15:25:07-0400" />
+<meta property="og:title" content="Index" />
+<meta property="og:url" content="http://www.library.quintewest.ca/en/Index.asp" />
+<meta property="og:description" content="Quinte West Public Library" />
+<script type="text/javascript">
+/*ICREATE*/try {if (top == parent && parent.loadStyles) {parent.location = location;}var _icrt_keyPressed_ = -1;function _icrt_alertkey(e) {if(!e) {if(window.event) {e = window.event;} else {return;}}var keyCode;if(typeof(e.keyCode) == 'number') {keyCode = e.keyCode;} else if(typeof(e.which) == 'number') {keyCode = e.which;} else if(typeof(e.charCode) == 'number') {keyCode = e.charCode;} else {return;}if (keyCode == 17) {var now = new Date();if (_icrt_keyPressed_ >= 0) {var diff = now.getTime() - _icrt_keyPressed_;if (diff > 0 && diff < 500) {top.location.href = 'https://icreate6.esolutionsgroup.ca/icreate/publishing/editor/issue.do?method=editContent&id=93273&lang=en';}}_icrt_keyPressed_ = now.getTime();}}if(document.captureEvents && Event.KEYUP) {document.captureEvents(Event.KEYUP);}if (document.onkeyup) {var oldFunc = document.onkeyup;document.onkeyup = function(e) {_icrt_alertkey_(e);oldFunc(e);};} else {document.onkeyup = _icrt_alertkey;}}catch(exp){}/*ICREATE*/
+</script>
+</head>
+
+<body>
+    
+    <!--googleoff: all-->
+    <script type="text/javascript">
+    function HideEmergencyAlertBanners() {
+        if(! jQuery('#EmergencyBannerWrapperOuter').hasClass("hide")){
+            jQuery('#EmergencyBannerWrapperOuter').addClass("hide");
+		}
+        jQuery.cookie('seenAlertBanner', 1);
+    }
+
+    jQuery(function () {
+        if ((document.location.href.toLowerCase().indexOf('/edit_') == -1) && (jQuery.cookie('seenAlertBanner') != 1)) {
+            jQuery.getJSON(iCreateObject.corpHome + iCreateObject.lang + '/Modules/News/services/getAlertBannerFeeds.ashx?feedId=24723ff5-241d-44fb-a099-b27feccf7a77&callback=?',
+	            function (result) {
+	                var results = "";
+	                jQuery.each(result, function (index, element) {
+	                    results += "<div class=\"alertbanner " + element.Categories[0].Code + "\"><div class=\"EmergencyBannerTitle\">" + element.Title + "</div><div class=\"EmergencyBannerText\">" + element.Description + "</div></div>";
+	                });
+	                if (results != "") {
+	                    jQuery("#emergencyAlertBanners").append(results);
+	                    jQuery("#emergencyAlertBanners").children(".alertbanner:first").addClass("default");
+	                    jQuery("#EmergencyBannerWrapperOuter").removeClass("hide");
+	                    jQuery("#emergencyAlertBanners").rotating_EmergencyAlertBanners();
+	                }
+	            }
+	        );
+        }
+
+    });
+		
+</script>
+
+<div id="EmergencyBannerWrapperOuter" class="hide">
+	<div id="EmergencyBanner" style="display: block;">
+        <div id="emergencyAlertBanners" class="bannerContainer">	
+            <div id="EmergencyBannerClose">
+			    <a class="Close" href="#" onclick="javascript: HideEmergencyAlertBanners();">Close</a>
+		    </div> 	                          
+		</div>
+	</div>
+</div><script type="text/javascript">
+    function HideBrowserAlertBanners() {
+        jQuery("#BrowserBannerWrapperOuter").addClass("hide");
+        jQuery.cookie("seenBrowserBanner", 1);
+    }
+</script>
+
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        jQuery(function () {
+            if ((document.location.href.toLowerCase().indexOf("/edit_") == -1) && (jQuery.cookie("seenBrowserBanner") != 1)) {
+                jQuery("#BrowserBannerWrapperOuter").removeClass("hide");
+            }
+        });
+    </script>
+<![endif]-->
+
+
+<div id="BrowserBannerWrapperOuter" class="hide">
+	<div id="BrowserBanner">
+        <div id="browserAlertBanners" class="bannerContainer">	
+            <div id="BrowserBannerClose"> 
+			    <a href="#" onclick="javascript: HideBrowserAlertBanners();">Close</a>
+		    </div> 			                    
+			<div class="alertbanner browserAlert">
+				<div class="BrowserBannerTitle">Browser Compatibility Notification</div>
+				<div class="BrowserBannerText">It appears you are trying to access this site using an outdated browser.  As a result, parts of the site may not function properly for you.  We recommend updating your browser to its most recent version at your earliest convenience.</div>
+		 	</div>
+		</div>
+	</div>
+</div>
+    <input type="hidden" name="FeedbackFormId" id="FeedbackFormId" value="" />
+    <div id="skipContentWrapper">			
+    <a id="skipContentLink" title="Skip Navigation and go to Content" href="#mainContent">Skip to Content</a>			
+</div>
+
+    <div id="uber" class="homepage">
+        <div class="mobileDropDown">
+	<div class="mobileDropDownHeader">
+		<div class="ic-container-fluid">
+			<a class="logoNav"  href="/en/index.asp" title="Home">
+				<img src="/en/images/structure/logo.png" alt="The City of Quinte West Logo" />
+			</a>
+			<a class="closeNav" href="#" title="Close Menu">
+				<img src="/images/structure/iconList.png" alt="Close menu icon" />
+			</a>
+		</div>				
+	</div>
+</div>
+        
+        <div id="uberMain">
+            <div id="ic-gal-slider-home" class="slider-container ic-fade">
+                <header class="cf">
+                      <div class="headerInner cf">
+    <div class="navBgLeft"></div>
+    <div id="logo"> 
+    <a href="/en/index.asp" title="Home"><img src="/en/images/structure/logo.png" alt="Quinte West Library Graphic Logo" /></a> <!--TODO: LANGC: get translations for title and alt FEATURE: Make Dynamic-->
+</div>
+
+<div id="printLogo">
+    <a href="/en/index.asp" title="Home"><img src="/en/images/structure/logo-white.jpg" alt="Quinte West Library Graphic Logo" /></a> <!--TODO: LANGC: get translations for title and alt FEATURE: Make Dynamic-->
+</div>
+
+
+    <div class="navBgRight"></div>
+    <nav class="mobileNav">
+    <!--displayed only for smaller viewports-->
+    <a href="#" class="menuTrigger">
+        <img src="/images/structure/iconList.png" alt="Main menu icon" />
+        <span class="menuTriggerText">Menu</span></a>
+</nav>
+
+    <div class="headerRight cf">
+		<div class="headerRightTop">
+
+	<ul class="sitesNav">
+<li>
+<span>
+<a title="View our Home page" href="http://www.quintewest.ca/en/index.asp" class="sitesNavLink" target="_blank">
+<span>City</span>
+</a>
+</span>
+</li>
+<li>
+<span>
+<a title="Marina" href="http://www.trentportmarina.ca" class="sitesNavLink" target="_blank">
+<span>Marina</span>
+</a>
+</span>
+</li>
+<li>
+<span>
+<a title="Library" href="/en/index.asp" class="sitesNavLink">
+<span>Library</span>
+</a>
+</span>
+</li>
+<li>
+<span>
+<a title="DBIA" href="http://quintewestdbia.icreate6.esolutionsgroup.ca/en/index.asp" class="sitesNavLink" target="_blank">
+<span>DBIA</span>
+</a>
+</span>
+</li>
+</ul>
+
+
+	<ul>
+		<li>
+			<span><a title="Translate" href="http://translate.google.com/translate?hl=&sl=en&tl=fr&u=http://www.library.quintewest.ca/" class="sitesNavLink"><span>Translate</span></a></span>
+		</li>
+		<li>
+			<span><a href="/en/Accessibility.asp" title="Accessibility" class="sitesNavLink"><span>Accessibility</span></a></span>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			<span><a title="Toggle Contrast" href="#" class="sitesNavLink toggleContrast a11y-toggle-grayscale toggle-grayscale" id="is_normal_color"><span>Toggle Contrast</span></a></span>
+		</li>
+	</ul>	
+	
+</div>
+        <div class="headerRightInner">
+			 
+<div class="searchContainer">
+    <div class="search">
+        <form id="FormSearch" method="post" action="javascript:GotoSearch('/en/Modules/search/index.aspx');">
+            <label for="searchField" style="display: none;">What are you looking for?</label>
+            <input class="searchText searchField" name="txt_search" id="searchField" type="text" placeholder="What are you looking for?">
+            <input name="submit" type="image" src="/images/structure/spacer.gif" alt="Go!" title="Go!" class="gobutton" /><!--TODO: LANGC: Get Translations for alt/title FEATURE: Make Dynamic-->
+        </form>
+        <noscript><a href="/en/Modules/search/index.aspx" class="gobutton noscript" title="Go to Search page">Go!</a></noscript><!--TODO: LANGC: Get Translations for alt/title FEATURE: Make Dynamic-->
+    </div>
+</div>
+<script type="text/javascript">
+
+$(function () {
+
+    //Google Suggested Search 
+    $("#FormSearch .searchField").autocomplete({
+        source: "/"+ iCreateObject.lang +"/Modules/search/services/GSA_Autocomplete.ashx",
+		minLength: 2,
+		loading: "loading",
+		autofill: false,
+		open: function (event, ui) {
+		    $(".ui-autocomplete").css("z-index", 9999);
+		}
+	});
+
+});
+</script>
+    <div id="idLikeTo">
+        <a href="#" class="quickLink" title="I'd Like to...">I'd Like to...<span class="idLikeToIcon"></span></a>
+        <div class="quickDropDown likeToDropDown animated fadeIn">
+            <ul><li><a title="Return my book" href="/en/borrowing/circulation-policy.asp#return">Return my book</a></li><li><a title="Sign up for a card" href="/en/borrowing/gettingacard.asp">Sign up for a card</a></li><li><a title="Use the computer" href="/en/about-us/freepublicinternet.asp">Use the computer</a></li><li><a title="View our Room Rentals page" href="/en/about-us/roomrentals.asp?_mid_=95024">Reserve a Meeting Room</a></li><li><a title="View our How to Join page" href="/en/programs/howtojoin.asp?_mid_=95027">Join a Book Club</a></li><li><a title="View our My Account page" href="/en/borrowing/myaccount.asp">Check My Account</a></li><li><a title="View our Inter-Library Loans page" href="/en/borrowing/inter-library-loans.asp?_mid_=95031">Request an Inter-Library Loan</a></li></ul>
+        </div>
+    </div>
+
+        </div>
+        <!--headerRightInner-->
+    </div>
+    <!--headerRow-->
+    <div class="mainNavContainer cf">
+    <div id="mainNav" class="cf">
+        <ul id="nav"><li id="navTab01"><a title="Research" href="/en/research/onlinedatabases.asp" class="mainNavItem">Research</a><div class="dropDownContainer sf-mega"><ul class="dropdown SplitDropdown"><li class="level01"><a title="Online Datebases::Search Catalogue" href="http://199.243.108.30/ipac20/ipac.jsp?profile=qt#focus" target="_blank">Search Catalogue</a></li><li class="level01"><a title="Online Datebases::Overdrive" href="http://downloadcentre.library.on.ca/0DAC1FCB-96D7-4AF4-86A6-CC8F7968294F/10/644/en/default.htm" target="_blank">E-Books - Overdrive</a></li><li class="level01"><a title="Open new window to view http://downloadcentre.library.on.ca/BANGAuthenticate.dll?Action=AuthCheck&amp;amp;ForceLoginFlag=0&amp;amp;URL=Default.htm" href="https://icreate6.esolutionsgroup.ca/231159_QuinteWestLibrary/en/research/New-eBooks-purchased-for-Overdrive.asp" target="_blank">Extra EBooks Purchased for Quinte West Public Library</a></li><li class="level01"><a title="View our hoopla page" href="http://www.library.quintewest.ca/en/research/hoopla.asp" target="_blank">hoopla</a></li><li class="level01"><a title="Online Datebases::Useful Resources" href="/en/research/usefulresources.asp"> Useful  Resources</a></li><li class="level02"><a title="View our Mango Languages page" href="/en/research/Mango-Languages.asp">Mango Languages</a></li><li class="level02"><a title="Useful Resources::Canadian Points of View" href="/en/research/canadianpointsofview.asp"> Canadian Points of  View</a></li><li class="level02"><a title="Useful Resources::Ancestry Library Edition" href="/en/research/ancestrylibraryedition.asp">Ancestry Library Edition</a></li><li class="level02"><a title="Useful Resources::NoveList" href="/en/research/novelist.asp"> NoveList</a></li><li class="level02"><a title="Useful Resources::Overdrive" href="/en/research/Overdrive.asp">E-Books - Overdrive</a></li><li class="level02"><a title="Useful Resources::Chilton Library" href="http://infotrac.galegroup.com/itweb/ko_pl_qwpl?db=CHLL" target="_blank">Chilton Library</a></li><li class="level02"><a title="Useful Resources::eLibrary" href="http://www.proquestk12.com/access/barcodes/canel200003387.html" target="_blank">eLibrary</a></li><li class="level02"><a title="Useful Resources::Quinte West Public Library Digital Collection" href="http://images.ourontario.ca/QuinteWest/search" target="_blank">Quinte West Public Library Digital Collection</a></li><li class="level02"><a title="View our World Book Online page" href="http://www.library.quintewest.ca/en/research/World-Book-Online.asp">World Book Online</a></li></ul><div class="dropDownRight"><a title="Search Catalogue" href="http://199.243.108.30/ipac20/ipac.jsp?profile=qt#focus"><img alt="View our Search Catalogue page" src="/en/resourcesGeneral/menu-images/search_catalogue.jpg" /></a></div></div></li><li id="navTab02"><a title="Borrowing" href="/en/borrowing/Borrowing.asp" class="mainNavItem">Borrowing</a><div class="dropDownContainer sf-mega"><ul class="dropdown SplitDropdown"><li class="level01"><a title="Borrowing::Circulation Policy" href="/en/borrowing/circulation-policy.asp">Circulation Policy</a></li><li class="level01"><a title="Borrowing::Getting a Card" href="/en/borrowing/gettingacard.asp?_mid_=93896">Getting a Card</a></li><li class="level01"><a title="Borrowing::Loan &amp; Renewals" href="/en/borrowing/loan-and-renewals.asp">Loan &amp; Renewals</a></li><li class="level01"><a title="Borrowing::Holds &amp; Requests" href="/en/borrowing/holds-and-requests.asp">Holds &amp; Requests</a></li><li class="level01"><a title="Borrowing::Inter-Library Loans" href="/en/borrowing/inter-library-loans.asp">Inter-Library Loans</a></li><li class="level01"><a title="Borrowing::My Account" href="http://199.243.108.30/ipac20/ipac.jsp?session=V271R6951O650.1704&amp;profile=qt&amp;menu=account&amp;ts=1271869514682&amp;_mid_=93900">My Account</a></li><li class="level02"><a title="My Account::Changing My Pin" href="/en/borrowing/changing-my-pin.asp">Changing My Pin</a></li><li class="level01"><a title="Borrowing::Best Sellers and Solid Sellers" href="/en/borrowing/ourtoppicks.asp">Best Sellers and Solid Sellers</a></li><li class="level02"><a title="Best Sellers and Solid Sellers::Best Sellers - Fiction" href="/en/borrowing/bestsellersfiction.asp">Best Sellers - Fiction</a></li><li class="level02"><a title="Best Sellers and Solid Sellers::Best Sellers - Non-Fiction" href="/en/borrowing/bestsellersnonfiction.asp">Best Sellers - Non-Fiction</a></li><li class="level02"><a title="Best Sellers and Solid Sellers::Solid Sellers - Non-Fiction" href="/en/borrowing/solidsellersnonfiction.asp">Solid Sellers - Non-Fiction</a></li><li class="level02"><a title="Best Sellers and Solid Sellers::Solid Sellers - Fiction" href="/en/borrowing/solidsellersfiction.asp">Solid Sellers - Fiction</a></li><li class="level01"><a title="Borrowing::Ask a Librarian" href="/en/about-us/askalibrarian.asp">Ask a Librarian</a></li><li class="level01"><a title="View our New Staff Picks page" href="/en/borrowing/New-Staff-Picks.asp">New Staff Picks</a></li></ul><div class="dropDownRight"><a title="My Account" href="http://199.243.108.30/ipac20/ipac.jsp?session=V271R6951O650.1704&amp;profile=qt&amp;menu=account&amp;ts=1271869514682&amp;_mid_=93900&amp;_mid_=93783"><img alt="View Your Account" src="/en/resourcesGeneral/menu-images/my_account.jpg" /></a></div></div></li><li id="navTab03"><a title="Programs" href="/en/programs/programs.asp" class="mainNavItem">Programs</a><div class="dropDownContainer sf-mega"><ul class="dropdown SplitDropdown"><li class="level01"><a title="Programs::Book Club" href="/en/programs/bookclub.asp">Book Club</a></li><li class="level02"><a title="Book Club::Reading List" href="/en/programs/readinglist.asp">Reading List</a></li><li class="level02"><a title="Book Club::How to Join" href="/en/programs/howtojoin.asp">How to Join</a></li><li class="level01"><a title="Programs::Adult Programs" href="/en/programs/adultprogram.asp">Adult Programs</a></li><li class="level02"><a title="Adult Programs::Home Delivery" href="/en/programs/homedelivery.asp?_mid_=93989">Home Delivery</a></li><li class="level02"><a title="Adult Programs::Computers for Seniors" href="/en/programs/computersforseniors.asp">Computers for Seniors</a></li><li class="level02"><a title="Adult Programs::Writers' Circle" href="/en/programs/writerscircle.asp">Writers' Circle</a></li><li class="level02"><a title="View our Eclectic Book Club page" href="/en/programs/Eclectic-Book-Club.asp">Eclectic Book Club</a></li><li class="level01"><a title="Programs::Volunteer Program" href="/en/programs/volunteerprogram.asp">Volunteer Program</a></li></ul><div class="dropDownRight"><a title="Volunteer" href="/en/programs/volunteerprogram.asp"><img alt="View our Volunteer Program page" src="/en/resourcesGeneral/menu-images/volunteer.jpg" /></a></div></div></li><li id="navTab04"><a title="Kids &amp; Teens" href="/en/kids-teens/kidsandteens.asp" class="mainNavItem">Kids &amp; Teens</a><div class="dropDownContainer sf-mega"><ul class="dropdown SplitDropdown"><li class="level01"><a title="Kids &amp; Teens::Kids Area" href="/en/kids-teens/kidsarea.asp">Kids Area</a></li><li class="level02"><a title="Kids Area::Whats Happening" href="/en/kids-teens/WhatsHappening.asp">What's Happening</a></li><li class="level02"><a title="Kids Area::Explore" href="/en/kids-teens/FunStuff.asp">Explore</a></li><li class="level02"><a title="Kids Area::Discover" href="http://www.library.quintewest.ca/en/kids-teens/Discover.asp">Discover</a></li><li class="level02"><a title="Open new window to view http://www.library.quintewest.ca/en/kidsandteens/Imagine.asp" href="/en/kids-teens/Imagine.asp">Imagine</a></li><li class="level01"><a title="Teens Area" href="/en/kids-teens/teensarea.asp">Teen's Area</a></li><li class="level02"><a title="View our Teen Programs and Volunteering page" href="/en/kids-teens/Teen-Programs-and-Volunteering.asp">Teen Programs and Volunteering</a></li><li class="level02"><a title="View our Reading and Writing page" href="/en/kids-teens/Reading-and-Writing.asp">Reading and Writing</a></li><li class="level02"><a title="View our Teen Life and School page" href="/en/kids-teens/Teen-Life-and-School.asp">Teen Life and School</a></li><li class="level02"><a title="View our My Amazing Future page" href="/en/kids-teens/My-Amazing-Future.asp">My Amazing Future</a></li><li class="level01"><a title="Kids &amp; Teens::Parents &amp; Teachers" href="/en/kids-teens/parentsandteachers.asp">Parents &amp; Teachers</a></li></ul><div class="dropDownRight"><a title="Kid's Area" href="/en/kids-teens/kidsarea.asp"><img alt="View our Kids Area page" src="/en/resourcesGeneral/menu-images/kids_area.jpg" /></a></div></div></li><li id="navTab05"><a title="About Us" href="/en/about-us/aboutqwpl.asp" class="mainNavItem">About Us</a><div class="dropDownContainer sf-mega"><ul class="dropdown SplitDropdown"><li class="level01"><a title="About Us::About QWPL" href="/en/about-us/aboutqwpl.asp?_mid_=93910"> About QWPL</a></li><li class="level01"><a title="View our Notices &amp; News" href="/en/Modules/News/search.aspx">Notices &amp; News</a></li><li class="level01"><a title="About Us::Branch Locations" href="/en/about-us/branchlocations.asp"> Branch Locations</a></li><li class="level01"><a title="About Us::About Friends of QWPL" href="/en/about-us/friendsofqwpl.asp?_mid_=93912">Friends of QWPL</a></li><li class="level02"><a title="Friends of QWPL::Friends of QWPL Application Form" href="/en/programs/resources/Membership_Application.pdf" target="_blank">Friends of QWPL Application Form</a></li><li class="level01"><a title="About Us::Hours of Operation" href="/en/about-us/hoursofoperation.asp"> Hours of Operation</a></li><li class="level01"><a title="About Us::Mission Statement" href="/en/about-us/missionstatement.asp"> Mission Statement</a></li><li class="level01"><a title="About Us::Library Board" href="/en/about-us/libraryboard.asp"> Library Board</a></li><li class="level01"><a title="About Us::Library Resources" href="/en/about-us/libraryresources.asp">Library Resources</a></li><li class="level02"><a title="Library Resources::Room Rentals" href="/en/about-us/roomrentals.asp">Room Rentals</a></li><li class="level02"><a title="Library Resources::Equipment Rentals" href="/en/about-us/equipmentrentals.asp">Equipment Rentals</a></li><li class="level02"><a title="Library Resources::Historical Photographs" href="/en/about-us/historicalphotographs.asp">Historical Photographs</a></li><li class="level02"><a title="Library Resources::Genealogy" href="/en/about-us/genealogy.asp?_mid_=93980">Genealogy</a></li><li class="level02"><a title="Library Resources::Free Public Internet" href="/en/about-us/freepublicinternet.asp"> Free Public Internet</a></li><li class="level02"><a title="Library Resources::Library Databases" href="/en/about-us/librarydatabases.asp"> Library Databases</a></li><li class="level01"><a title="About Us::Jobs at QWPL" href="/en/about-us/jobsatqwpl.asp"> Jobs at QWPL</a></li><li class="level01"><a title="About Us::Ask a Librarian" href="/en/about-us/askalibrarian.asp?_mid_=93918"> Ask a Librarian</a></li></ul><div class="dropDownRight"><a title="Room Rentals" href="/en/about-us/roomrentals.asp"><img alt="View our Room Rentals page" src="/en/resourcesGeneral/menu-images/room_rentals.jpg" /></a></div></div></li></ul>
+    </div>
+</div>
+</div>
+<!--container-fluid -->
+                    <h1>Quinte West Library</h1>
+                </header>
+
+                <div id="mainContent" tabindex="-1">
+            		<a id="connectLink" href="#" title="Connect" class="connectTabButton">Connect</a><a id="mapLink" href="#" title="Map" class="mapTabButton">Map</a>
+                        <div class="ic-slider">
+                            <div id="rotatingBanners" class="bannerContainer slider rsDefault">
+                                <div class="bannerEdit slide">
+                                        <div title="" class="bannerImage ic-img-0" onclick="" alt="Students learning at the library" data-anchor-title="" data-image-title=""></div>
+                                        <div class="ic-slider-content ic-slider-text">
+                                            <!--googleon: all-->
+                                            <div class="ic-container-fluid">
+                                                <div class="ic-slider-content-foreground">
+                                                    
+                                                <p>Students learning at the library</p></div>
+                                            </div>
+                                            <!--googleoff: all-->
+          </div>
+         </div><div class="bannerEdit slide">
+                                        <div title="" class="bannerImage ic-img-1" onclick="" alt="Library seating area" data-anchor-title="" data-image-title=""></div>
+                                        <div class="ic-slider-content ic-slider-text">
+                                            <!--googleon: all-->
+                                            <div class="ic-container-fluid">
+                                                <div class="ic-slider-content-foreground">
+                                                    
+                                                <p>Quinte West Library</p></div>
+                                            </div>
+                                            <!--googleoff: all-->
+          </div>
+         </div><div class="bannerEdit slide default">
+                                        <div title="" class="bannerImage ic-img-2" onclick="" alt="Reading at the library" data-anchor-title="" data-image-title=""></div>
+                                        <div class="ic-slider-content ic-slider-text">
+                                            <!--googleon: all-->
+                                            <div class="ic-container-fluid">
+                                                <div class="ic-slider-content-foreground">
+                                                    
+                                                <p>Reading at the library</p></div>
+                                            </div>
+                                            <!--googleoff: all-->
+          </div>
+         </div><script type="text/javascript">$(document).ready(function(){$(".ic-img-0").attr("onclick", "").attr("title", "").attr("alt", "Students learning at the library").css({"background-image": "url(http://www.library.quintewest.ca/en/resources/library_banner_1.jpg)".replace("http:",  window.location.protocol) });$(".ic-img-1").attr("onclick", "").attr("title", "").attr("alt", "Library seating area").css({"background-image": "url(http://www.library.quintewest.ca/en/resources/library_banner_2.jpg)".replace("http:",  window.location.protocol) });$(".ic-img-2").attr("onclick", "").attr("title", "").attr("alt", "Reading at the library").css({"background-image": "url(http://www.library.quintewest.ca/en/resources/library_banner_3.jpg)".replace("http:",  window.location.protocol) });});</script>
+                            </div>
+                                
+						</div>
+                            
+					<ul class="ic-slider-dot-pagination">
+					</ul>
+					
+					<div class="tickerContentOuter cf">
+    <div class="ic-container-fluid">
+        <div id="newsPause"><a title="Pause" onclick="javascript:toggleNews(event)" href="#">Pause</a></div>
+        <div class="ticker-content cf" id="newsScrollContainer">
+            
+        </div>
+        <div class="ic-slider-controls visible">
+            <a style="cursor: pointer;" class="prev" href="#">Previous Banner</a>
+            <a class="pause" href="#">Play/Pause Banner</a>
+            <a style="cursor: pointer;" class="next" href="#">Next Banner</a>
+        </div>  
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var pauseNews = false;
+
+    function toggleNews(event) {
+        event.preventDefault();
+
+        pauseNews = !pauseNews;
+
+        if (pauseNews) {
+            $("div#newsPause").addClass("selected");
+            $("div#newsPause a").addClass("paused");
+            $("div#newsPause a").html("Play");  //TODO: LANGC: get french translation and make dynamic
+        }
+        else {
+            $("div#newsPause").removeClass("selected");
+            $("div#newsPause a").removeClass("paused");
+            $("div#newsPause a").html("Pause");
+        }
+    }
+
+    $(function () {
+        if (iCreateObject.isSiteInICreateMode) {
+            $("#newsScrollContainer").empty().html("<ul><li><a>News feed disabled in iCreate.</a></li></ul>");//TODO: LANGC: Make Dynamic and get translation
+        }
+        else {
+            $.fn.rotating_news = function (p) {
+                var p = p || {};
+                var _timerLength = p && (p.timerLength != null) ? p.timerLength : 5000,
+                    _transitionLength = p && (p.transitionLength != null) ? p.transitionLength : 1000;
+
+                var _container = jQuery(this),
+                    _news = _container.children("ul").children("li"),
+                    _index = 0;
+
+                ChangeNews();
+
+                function ChangeNews() {
+                    if (!pauseNews) {
+                        _news.hide();
+                        _news.eq(_index).show();
+                        _index++;
+                        if (_index >= _news.length) {
+                            _index = 0;
+                        }
+                    }
+                    setTimeout(ChangeNews, _timerLength);
+                }
+            };
+            
+            $("#newsScrollContainer").empty().html("<ul><li><a>Loading...</a></li></ul>");//TODO: LANGC: Make Dynamic and get translation
+
+            var NewsScrollFeedString = "";
+
+            $.ajax({
+                url: iCreateObject.corpHome + "/" + iCreateObject.lang + "/Modules/News/services/getTopFiveNews.ashx?limit=5&feedId=0c75dc93-d93f-4b4b-97b7-a2e3d8e163c4&style=scroll",
+                async: false,
+                dataType: 'jsonp',
+                crossDomain: true,
+                cache: false,
+                error: function (xhr, textStatus, thrownError) {
+                    $("#newsScrollContainer").html("<ul><li><a>An error occured</a></li><ul>");//TODO: LANGC: Make Dynamic and get translation
+                },
+                success: function (data) {
+                    $.each(data, function (index, element) {
+                        NewsScrollFeedString += element;
+                    });
+                    $("#newsScrollContainer")
+                        .empty()
+                        .append("<ul>" + NewsScrollFeedString + "</ul>")
+                        .append("<div id=\"newsPause\"><a href='#' onclick=\"javascript:toggleNews(event)\" title=\"Pause\">Pause</a></div>");//TODO: LANGC: Make Dynamic and get translation
+
+                    $("#newsScrollContainer").rotating_news();
+
+                }
+
+            });
+
+            return false;
+        }
+    });
+
+</script><div class="scrollerContainer" >
+
+    <div class="imageScrollerOuter">
+        <div class="imageScroller">
+            <div class="scrollItem"><div class="scrollItemContent"><div class="scrollImage"><img alt="Our Catalogue" src="/en/rotatingimages/homepagescrollimages/sample01.jpg" /></div><div class="scrollText"><div class="scrollTextContent"><h2>Our Catalogue</h2><p>Search Our Catalogue</p><a class="learnMore" href="http://199.243.108.30/ipac20/ipac.jsp?profile=qt#focus" target="_blank">
+                  Learn More...
+                </a></div></div></div></div><div class="scrollItem"><div class="scrollItemContent"><div class="scrollImage"><img alt="Staff Picks" src="/en/rotatingimages/homepagescrollimages/sample02.jpg" /></div><div class="scrollText"><div class="scrollTextContent"><h2>Staff Picks</h2><p>May We Recommend</p><a class="learnMore" href="http://quintewestlibrary.icreate6.esolutionsgroup.ca/en/borrowing/New-Staff-Picks.asp">
+                  Learn More...
+                </a></div></div></div></div><div class="scrollItem"><div class="scrollItemContent"><div class="scrollImage"><img alt="View Library News" src="/en/rotatingimages/homepagescrollimages/sample03.jpg" /></div><div class="scrollText"><div class="scrollTextContent"><h2>View Library News</h2><p>Library News</p><a class="learnMore" href="/en/Modules/News/search.aspx">
+                  Learn More...
+                </a></div></div></div></div>        
+        </div>
+
+        <!--footerSlider-->
+    </div>
+    <!--inner-->
+</div>
+                </div><!-- mainContent -->
+            </div><!-- ic-gal-slider-home -->
+        </div>
+    <!--uberMain -->
+        <footer> 
+            <div id="quickLinksContainer">
+    <div class="ic-container-fluid">
+        <div id="quickLinksAdvanced">
+            <ul>
+                <li id="quickLink01"><a href="#" class="mainQuickLink" title="Events Calendar">CALENDAR &amp; EVENTS</a>
+                    <div class="quickDropDown quickDropDown01">
+                    <div class="popCalendarA">
+                        <div class="myZone">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Events Calendar</h2>
+<p>Quinte West Library hosts a number of events year-round that celebrate&nbsp;our community.</p>
+<ul>
+<li><a title="View all events" href="http://calendar.quintewest.ca/library/Month">All Events</a></li>
+</ul>
+
+
+                        </div>
+                        <div class="myZone">
+                                <div id="calendar-council"><noscript><p>JavaScript disabled <br/>Please enable JavaScript to view this content</p></noscript></div>
+    <script type="text/javascript">
+        $(function () {
+            if (iCreateObject.isSiteInICreateMode) {
+                $("#calendar-council").html("Mini calendar is disabled in iCreate");
+            }
+            else {
+                $("#calendar-council").html("Loading...").mini_calendar({
+                    source: 'http://www.library.quintewest.ca//en/Modules/Calendar/services/GetCalendarsDateWithEvent.ashx?calendar=1D951E0E-3AC6-41B4-99F4-A49F00D5BE40',
+                    url: iCreateObject.calendarUrl,
+                    currentDate: jQuery.getParam("StartDate") ? new Date(jQuery.getParam("StartDate")) : new Date()
+                });
+            }
+        });
+       
+    </script>
+
+                                
+                            </div>
+                        <div class="myZone">
+                            <input id="CalendarIDPlaceholder" type="hidden" value='1D951E0E-3AC6-41B4-99F4-A49F00D5BE40' /><!--TODO: CALENDAR: This is the first Calendar ID in the array.  You may need to Change the 0 to match the CalendarID -->
+
+<!-- TODO: LANGC: Everything on this page needs translations and FEATURE: needs to be made dynamic -->
+
+    <h2>Upcoming Events</h2>
+    <div id="calendarEventsContainer" class="calendarEventList"></div>
+    <a href='http://calendar.quintewest.ca/Library/' title="View All Events" class="moreLink">View More</a>
+    <noscript>JavaScript is disabled. Please enable JavaScript to view this content.</noscript> 
+
+<script type="text/javascript">
+    function parseData(data, divElement) {
+
+        var charLimit = 40;
+        divElement.empty();
+        var html = "";
+
+        $.each(data, function (index, item) {
+            //console.log(item);
+            var id = item.Id;
+            var title = item.Title != null ? item.Title : "",
+                startDate = item.StartDate,
+                description = item.Description != null ? item.Description : "";
+            if (title.length > charLimit) {
+                if (title.indexOf(' ', charLimit) >= 0) {
+                    title = title.substring(0, title.indexOf(' ', charLimit)) + "...";
+                }
+            }
+
+            html += "<div class='calendarItem " + (index == 1 ? "first" : "") + "'><div class='calendarItemDateContainer'><span class='calendarItemMonth'>" + $.datepicker.formatDate('M', $.datepicker.parseDate("mm/dd/yy", startDate.toString())) + "<\/span><span class='calendarItemDate'>" + $.datepicker.formatDate('dd', $.datepicker.parseDate("mm/dd/yy", startDate.toString())) + "<\/span><\/div><div class='calendarItemInfo'><span class='calendarItemTitle'><a href=\"http://calendar.quintewest.ca/Library/Detail/" + id + "\" title=\"View event: " + title.replace(/'/g, "&#39;") + " - " + startDate + "\" > " + title + /*description +*/ "<\/a><\/span><\/div><\/div>";
+
+        })
+
+        divElement.html("<ul>" + html + "</ul>");
+    }
+
+    $(function () {
+        var divElement = $("#calendarEventsContainer");
+        if (iCreateObject.isSiteInICreateMode) {
+            divElement.empty().html("Calendar feed disabled in iCreate.");
+        }
+        else {
+
+            divElement.html("Loading...");
+            var params = $.param(
+            {
+                Calendar: $("#CalendarIDPlaceholder").val(),
+                limit: 4
+            });
+
+
+            $.ajax({
+                url: iCreateObject.corpHome + '/' + iCreateObject.lang + '/Modules/Calendar/services/GetCalendarEvent.ashx?' + params,
+                async: true,
+                dataType: 'jsonp',
+                crossDomain: true,
+                cache: false,
+                error: function (xhr, textStatus, thrownError) {
+                    divElement.html("An error occured");
+                },
+                success: function (data) {
+                    if (data != "")
+                        parseData(data, divElement);
+                    else
+                        divElement.html("No Events");
+                }
+
+            });
+            
+        }
+    }); 
+</script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="quickLink02"><a href="#" class="mainQuickLink" title="News and Public Notices">NOTICES &amp; NEWS</a>
+                    <div class="quickDropDown quickDropDown02">
+                    <div class="popNewsA">
+                        <div class="myZone">
+                                <script type="text/javascript">
+    $(function () {
+        if (iCreateObject.isSiteInICreateMode) {
+            $("#NewsLeftContainer").empty().html("<ul><li><a>News feed disabled in iCreate.</a></li></ul>");//TODO: LANGC: Make Dynamic and get translation
+        }
+        else {
+            $("#NewsLeftContainer").empty().html("Loading...");//TODO: LANGC: Make Dynamic and get translation
+            //  News Feed
+            var NewsFeedString = "";
+            
+            $.ajax({
+                url: iCreateObject.corpHome + "/" + iCreateObject.lang + "/Modules/News/services/getTopFiveNews.ashx?limit=1&style=featuredimage", //TODO: NEWS: put in the proper feed id FEATURE: make dynamic
+                async: false,
+                dataType: 'jsonp',
+                crossDomain:true,
+                cache: false,
+                success: function(data) {
+                    $.each(data, function (index, element) {
+                        NewsFeedString += element;
+                    });
+                    $("#NewsLeftContainer").empty().append(NewsFeedString);
+                }
+
+            });
+            
+            return false;
+        }
+    });
+
+  </script>
+    <div class="newsFeature">
+        <h2>Featured News</h2>
+        <div id="NewsLeftContainer" class="newsList">
+            <noscript>JavaScript is disabled. Please enable JavaScript to view this content.</noscript>
+        </div>
+    </div>
+                            </div>
+                        <div class="myZone">
+                                <script type="text/javascript">
+    $(function () {
+        if (iCreateObject.isSiteInICreateMode) {
+            $("#NewsMiddleContainer").empty().html("<ul><li><a>News feed disabled in iCreate.</a></li></ul>");//TODO: LANGC: Make Dynamic and get translation
+        }
+        else {
+            $("#NewsMiddleContainer").empty().html("Loading...");//TODO: LANGC: Make Dynamic and get translation
+            //  News Feed
+            var NewsFeedString = "";
+            
+            $.ajax({
+                url: iCreateObject.corpHome + "/" + iCreateObject.lang + "/Modules/News/services/getTopFiveNews.ashx?limit=1&style=featureddesc", //TODO: NEWS: put in the proper feed id FEATURE: make dynamic
+                async: false,
+                dataType: 'jsonp',
+                crossDomain:true,
+                cache: false,
+                success: function(data) {
+                    $.each(data, function (index, element) {
+                        NewsFeedString += element;
+                    });
+                    $("#NewsMiddleContainer").empty().append(NewsFeedString);
+                }
+
+            });
+            
+            return false;
+        }
+    });
+
+  </script>
+  <div id="NewsMiddleContainer" class="newsFeaturedList">
+    <noscript>JavaScript is disabled. Please enable JavaScript to view this content.</noscript>
+  </div>
+    
+
+                            </div>
+                        <div class="myZone">
+                                <script type="text/javascript">
+    $(function () {
+        if (iCreateObject.isSiteInICreateMode) {
+            $("#NewsRightContainer").empty().html("<ul><li><a>Media feed disabled in iCreate.</a></li></ul>");//TODO: LANGC: Make Dynamic and get translation
+        }
+        else {
+            $("#NewsRightContainer").empty().html("Loading...");//TODO: LANGC: Make Dynamic and get translation
+            //  News Feed
+            var NewsFeedString = "";
+            
+            $.ajax({
+                url: iCreateObject.corpHome + "/" + iCreateObject.lang + "/Modules/News/services/getTopFiveNews.ashx?limit=3&feedId=0c75dc93-d93f-4b4b-97b7-a2e3d8e163c4", //TODO: NEWS: put in the proper feed id FEATURE: make dynamic
+                async: false,
+                dataType: 'jsonp',
+                crossDomain:true,
+                cache: false,
+                success: function(data) {
+                    $.each(data, function (index, element) {
+                        NewsFeedString += element;
+                    });
+                    $("#NewsRightContainer").empty().append(NewsFeedString);
+                }
+
+            });
+            
+            return false;
+        }
+    });
+
+  </script>
+    <div class="noticeContainer newsHighlight">
+        <div id="NewsRightContainer" class="newsList">
+            <noscript>JavaScript is disabled. Please enable JavaScript to view this content.</noscript>
+        </div>
+        
+        <a title="View More" class="moreLink" href='/en/Modules/News/search.aspx'>View More</a>
+        
+    </div>
+
+                            <a class="button" href="/subscribe">Subscribe</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="quickLink03"><a href="#" class="mainQuickLink" title="Events Calendar">STAFF PICKS</a>
+                    <div class="quickDropDown quickDropDown03">
+                    <div class="popCalendarA">
+                        <div class="myZone">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><a title="View our New Staff Picks page" href="/en/borrowing/New-Staff-Picks.asp"><strong><img class="Left" title="King of Shanghai book cover" src="/en/borrowing/resources/King_of_shanghai.jpg" alt="Book cover for the King of Shanghai" width="141" height="172" /></strong></a><strong>The King of Shanghai <br />By Ian Hamilton<br /></strong><strong><strong>Recommended by Pauline</strong></strong></p>
+<p>The seventh novel in the Ava Lee series finds Ava getting caught up in the election for the chairmanship of the Triad Societies.</p>
+
+
+                        </div>
+                        <div class="myZone">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong><a title="View our New Staff Picks page" href="/en/borrowing/New-Staff-Picks.asp"><img class="Left" title="Full Measure book cover" src="/en/borrowing/resources/Full_Measure.jpg" alt="Book cover for Full Measure" width="137" height="172" /></a>Full Measure<br />by T. Jefferson Parker<br />Recommended by Marilyn</strong></p>
+<p>In his frequently stirring new novel, &quot;Full Measure,&quot; T. Jefferson Parker offers a tribute to those who have served in our most recent wars.</p>
+
+
+                                
+                            </div>
+                        <div class="myZone">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong><a title="View our New Staff Picks page" href="/en/borrowing/New-Staff-Picks.asp"><img class="Left" title="Unwanteds book cover" src="/en/borrowing/resources/Unwanteds.jpg" alt="Book cover for The Unwanteds" width="130" height="172" /></a>Unwanteds<br />By Lisa McMann<br />Recommended by Rachel</strong></p>
+<p>Every year in Quill, thirteen-year-olds are sorted into categories: the strong, intelligent Wanteds go to university, and the artistic Unwanteds are sent to their deaths.</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <script type="text/javascript"> 
+                    function AtoZSpecialNavigation() {
+                        if ($(window).width() <= 991 || (window.location.hostname != iCreateObject.corpHome))
+                            window.location = iCreateObject.corpRoot + "/" + iCreateObject.lang + "/Modules/AtoZ/index.aspx";
+                    }
+
+                </script>                
+                <li id="quickLink04"><a href='#' id="footerAtoZScroller" onclick="AtoZSpecialNavigation();" class="mainQuickLink" title="A to Z Services">A - Z DIRECTORY</a>
+                    <div class="quickDropDown quickDropDown04">
+                        <div class="ic-row">
+                            <div id="ui-atoz-scroll"> 
+    <div> 
+        <div></div>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </li>
+                <li id="quickLink05"><a href="#" class="mainQuickLink" title="Contact Us">CONTACT</a>
+                    <div class="quickDropDown quickDropDown05">
+                    <div class="popDefault">
+
+                            <div class="myZone">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><img src="/en/resources/pic_2.jpg" alt="Cell Phone" /></p>
+<h2>Contact Us</h2>
+<p><a title="Open new window to send an email to Marilyn Baker" href="javascript:emailDialog(90635,'en')&amp;&amp;false">E-mail us</a>,&nbsp; call us at&nbsp;613-394-3381, or visit us at one of our branches.</p>
+
+
+                            </div>
+                            <div class="myZone">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="none"><strong>Frankford Branch</strong><br />22 North Trent Street<br />Frankford, ON <br />K0K 2C0&nbsp;<br /><a title="Map to Frankford Branch Library" href="/en/about-us/resources/MaptoFrankfordBranchLibrary.pdf" target="_blank">View Map<br /></a>Tel.: 613-394-3381&nbsp;x 7572</p>
+<p class="none">&nbsp;</p>
+
+
+                            </div>
+                            <div class="myZone notices">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contactMainContainerFooterPopup">
+  <div class="contactContainerFooterPopup">
+    <div class="contactHeaderFooterPopup">
+      <div class="contactBodyFooterPopup">
+        <div class="contactBodyContactInfoContactModuleV2" id="contactEntry_9818"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--ic-row-->
+        <div class="mobileQuickLinks">
+	<ul><li id="mobileQuickLink01"><a title="Calendar &amp; Events" href="http://calendar.quintewest.ca/Library/Month">Calendar &amp; Events</a></li><li id="mobileQuickLink02"><a title="Notices &amp; News" href="/en/modules/news/search.aspx">Notices &amp; News</a></li><li id="mobileQuickLink03"><a title="Staff Picks" href="/en/borrowing/New-Staff-Picks.asp">Staff Picks</a></li><li id="mobileQuickLink04"><a title="A-Z Directory" href="/en/Modules/AtoZ/index.aspx">A-Z Directory</a></li><li id="mobileQuickLink05"><a title="Contact" href="#">Contact</a></li></ul> 
+</div>
+        
+        <div class="footerLogo"><img src="/en/images/structure/bayofquinte.png" alt="Bay of Quinte" /></div>
+
+</div>
+    <!--container-->
+</div>
+
+<!--quickLinksContainer-->
+
+<script type="text/javascript">
+    $("#quickLinksAdvanced a.mainQuickLink").click(function (event) {
+        if ((window.location.hostname != iCreateObject.corpHome) && ($(this).attr("id") == "footerAtoZScroller")) {
+            document.location = $(this).attr("href");
+        }
+        else {
+            event.preventDefault();
+        } 
+    });
+</script>
+<div class="footerBottom">
+    <div class="ic-container-fluid cf">
+		<div class="footerLeft">
+			<div class="footerText">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&copy; 2015 Quinte West Library  
+
+
+			</div><!--footerText-->
+			<div id="footerNav">
+				<a title="Weather" href="http://www.theweathernetwork.com/weather/canada/ontario/quinte-west?wbRef=www.quintewest.ca&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city" target="_blank">Weather</a><a title="Privacy Policy" href="/en/privacy.asp">Privacy Policy</a><a title="View sitemap" href="/en/sitemap.aspx">Sitemap</a><a title="Feedback" href="#" id="feedbackLink">Feedback</a>
+
+			</div>
+			<div class="footerText">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>|&nbsp; The Library is Closed on Sunday</p>
+
+
+			</div><!--footerText-->			
+		</div>
+		<!--footerLeft-->
+		<div class="footerRight">
+				<div class="esol"> 
+					<a title="Designed by eSolutionsGroup" target="_blank" href="http://www.esolutionsgroup.ca">Designed by eSolutions</a>
+				</div><!--TODO: LANGC: Get Translations for alt/title FEATURE: Make Dynamic-->
+		</div>
+		<!--footerRight-->
+    </div>
+    <!--ic-container fluid-->
+</div>
+<!--footerBottom -->
+
+<script type="text/javascript" src='/scripts/jquery-icrtaccordion-clean.js'></script>
+<script type="text/javascript" src='/scripts/responsiveScripts.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    iCreateObject.gaTrackingCode = 'UA-2190444-5'; 
+
+    var _gaq = _gaq || []; var pluginUrl = "//www.google-analytics.com/plugins/ga/inpage_linkid.js"; _gaq.push(["_require", "inpage_linkid", pluginUrl]); _gaq.push(["_setAccount", iCreateObject.gaTrackingCode]); _gaq.push(["_trackPageview"]); (function () { var e = document.createElement("script"); e.type = "text/javascript"; e.async = true; e.src = ("https:" == document.location.protocol ? "https://" : "http://") + "stats.g.doubleclick.net/dc.js"; var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(e, t) })(); if (typeof jQuery != "undefined") { jQuery(document).ready(function (e) { var t = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i; var n = ""; if (jQuery("base").attr("href") != undefined) n = jQuery("base").attr("href"); jQuery("a").each(function () { var e = jQuery(this).attr("href"); var r = jQuery(this).attr("href"); if (e) { e = e.toLowerCase() } if (e && e.match(/^https?\:/i) && !e.match(document.domain)) { jQuery(this).click(function () { var t = e.replace(/^https?\:\/\//i, ""); _gaq.push(["_trackEvent", "External", "Click", t]); if (jQuery(this).attr("target") != undefined && jQuery(this).attr("target").toLowerCase() != "_blank") { setTimeout(function () { location.href = r }, 200); return false } }) } else if (e && e.match(/^mailto\:/i)) { jQuery(this).click(function () { var t = e.replace(/^mailto\:/i, ""); _gaq.push(["_trackEvent", "Email", "Click", t]) }) } else if (e && e.match(t)) { jQuery(this).click(function () { var t = /[.]/.exec(e) ? /[^.]+$/.exec(e) : undefined; var r = e; _gaq.push(["_trackEvent", "Download", "Click-" + t, r]); if (jQuery(this).attr("target") != undefined && jQuery(this).attr("target").toLowerCase() != "_blank") { setTimeout(function () { location.href = n + e }, 200); return false } }) } }) }) }
+</script>
+
+
+
+        </footer> 
+    
+            <div id="connectSlidePanel" class="slidePanel">
+        <a href="#" class="slidePanel-close" title="Close Panel"></a>
+        <div class="slidePanel-container">
+            
+    <h2>Social Media</h2>
+    <div class="socialLinks">
+<a title="Facebook" href="https://www.facebook.com/QuinteWestPublicLibrary" target="_blank">
+<img alt="Facebook" src="/en//resourcesGeneral/socialicons/icon_facebook.png " />
+</a>
+<a title="Ping Street" href="http://www.quintewest.ca/en/services-for-you/pingstreet.asp" target="_blank">
+<img alt="Ping Street" src="/en//resourcesGeneral/socialicons/icon_ping.png " />
+</a>
+</div>
+
+            <div class="slidePanel-content">
+                
+            </div>
+            <div class="slidePanel-content">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contactMainContainerConnect">
+  <div class="contactContainerConnect">
+    <div class="contactHeaderConnect">
+      <div class="contactBodyConnect">
+        <div class="contactBodyContactInfoContactModuleV2" id="contactEntry_Default"><p><strong>Trenton Main Branch</strong><br />7 Creswell Drive<br />Trenton, ON <br />K8V 6X5<br /><a title="https://www.google.com/maps?ll=44.102213,-77.573211&amp;z=14&amp;t=m&amp;hl=en&amp;gl=US&amp;mapclient=embed&amp;q=7+Creswell+Dr+Quinte+West,+ON+K8V+5R6+Canada" href="http://maps.google.com/maps?f=d&amp;source=s_d&amp;daddr=7 Creswell Drive, Trenton, ON K8V 6X5" target="_blank">View Map</a><br />Tel.: (613) 394-3381<br />Fax: (613) 394-2079</p><br /></div><div class="contactBodyContactInfoContactModuleV2" id="contactEntry_9824"><br /></div><div class="contactBodyContactInfoContactModuleV2" id="contactEntry_9820"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="slidePanel-content">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>eNews Sign Up</h2>
+<ul class="link">
+<li><a title="Sign up for our Notices and News newsletter" href="http://quintewestlibrary.icreate6.esolutionsgroup.ca/subscribe">Notices and News</a></li>
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="mapSlidePanel" class="slidePanel">
+        <a href="#" class="slidePanel-close" title="Close Panel"></a>
+        <div class="slidePanel-container">
+            <div class="slidePanel-content">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>City of Quinte West Public Flex GIS</h2>
+Welcome to the City of Quinte West Public Flex GIS map site. The mapping system runs on ESRI's ArcGIS for Flex.<br /><br />
+<img src="/en/images/structure/Flex-GIS.jpg" alt="" /><br /><br />
+<strong>Features Include:</strong>
+<ul>
+ <li>Arial Photos for 2013, 2008 and 2002</li>
+ <li>Locate addresses, roads, parks, schools, and much more.</li>
+ <li>Embed Google Street View.</li>
+</ul> 
+<a href="#" target="_blank">Click here</a> to download the latest version of Flash.
+<hr />
+Please click on the link below to visit our interactive mapping site.
+<ul class="link">
+ <li><a href="http://quintewestmaps.com/" target="_blank">Visit quintewestmaps.com</a></li>
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        var slider_width_connect = $('#connectSlidePanel').width();//get width automaticly
+        var slider_width_map = $('#mapSlidePanel').width();//get width automaticly
+
+
+
+        $('#connectLink').click(function (event) {
+            event.preventDefault();
+            if ($(this).css("margin-right") == slider_width_connect + "px" && !$(this).is(':animated')) {
+                if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version == 9) {
+                    if ($("#connectSlidePanel").get(0).scrollHeight > $("#connectSlidePanel").innerHeight()) {
+                        $('#connectLink').css('right', '0px');
+                    }
+                }
+                $('#connectSlidePanel,#connectLink').animate({ "margin-right": '-=' + slider_width_connect }, 'slow', 'easeOutQuart');
+                $('#connectLink').removeClass('is-visible');
+                $('#connectSlidePanel').removeClass('is-visible');
+            }
+            else {
+                if (!$(this).is(':animated'))//perevent double click to double margin
+                {
+                    if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version == 9) {
+                        if ($("#connectSlidePanel").get(0).scrollHeight > $("#connectSlidePanel").innerHeight()) {
+                            $('#connectLink').css('right', '-17px');
+                        }
+                    }
+                    $('#connectSlidePanel,#connectLink').animate({ "margin-right": '+=' + slider_width_connect }, 'slow', 'easeInQuart');
+                    $('#connectLink').addClass('is-visible');
+                    $('#connectSlidePanel').addClass('is-visible');
+                }
+            }
+        });
+
+        $('#connectSlidePanel .slidePanel-close').click(function (event) {
+            event.preventDefault();
+            if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version == 9) {
+                if ($("#connectSlidePanel").get(0).scrollHeight > $("#connectSlidePanel").innerHeight()) {
+                    $('#connectLink').css('right', '0px');
+                }
+            }
+            $('#connectSlidePanel,#connectLink').animate({ "margin-right": '-=' + slider_width_connect }, 'slow', 'easeOutQuart');
+            $('#connectLink').removeClass('is-visible');
+            $('#connectSlidePanel').removeClass('is-visible');
+        });
+
+
+        $('#mapLink').click(function (event) {
+            event.preventDefault();
+            if ($(this).css("margin-right") == slider_width_map + "px" && !$(this).is(':animated')) {
+                if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version == 9) {
+                    if ($("#mapSlidePanel").get(0).scrollHeight > $("#mapSlidePanel").innerHeight()) {
+                        $('#mapLink').css('right', '0px');
+                    }
+                }
+                $('#mapSlidePanel,#mapLink').animate({ "margin-right": '-=' + slider_width_map }, 'slow', 'easeOutQuart');
+                $('#mapLink').removeClass('is-visible');
+                $('#mapSlidePanel').removeClass('is-visible');
+            }
+            else {
+                if (!$(this).is(':animated'))//perevent double click to double margin
+                {
+                    if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version == 9) {
+                        if ($("#mapSlidePanel").get(0).scrollHeight > $("#mapSlidePanel").innerHeight()) {
+                            $('#mapLink').css('right', '-17px');
+                        }
+                    }
+                    $('#mapSlidePanel,#mapLink').animate({ "margin-right": '+=' + slider_width_map }, 'slow', 'easeInQuart');
+                    $('#mapLink').addClass('is-visible');
+                    $('#mapSlidePanel').addClass('is-visible');
+                }
+            }
+        });
+
+        $('#mapSlidePanel .slidePanel-close').click(function (event) {
+            event.preventDefault();
+            if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version == 9) {
+                if ($("#mapSlidePanel").get(0).scrollHeight > $("#mapSlidePanel").innerHeight()) {
+                    $('#mapLink').css('right', '0px');
+                }
+            }
+            $('#mapSlidePanel,#mapLink').animate({ "margin-right": '-=' + slider_width_map }, 'slow', 'easeOutQuart');
+            $('#mapLink').removeClass('is-visible');
+            $('#mapSlidePanel').removeClass('is-visible');
+        });
+    });
+
+</script>
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var a11y_stylesheet_path = "\/styles\/a11y-contrast.css";
+    /* ]]> */
+</script>
+<script type="text/javascript" src="/scripts/a11y.js"></script>
+
+
+    </div>
+    <!--uber-->
+    <!--googleon: all-->
+	
+	
+</body>
+</html>

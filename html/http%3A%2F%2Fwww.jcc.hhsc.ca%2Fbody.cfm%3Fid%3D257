@@ -1,0 +1,2478 @@
+
+
+<!-- PAGE ID:257 -->
+
+<!-- 
+Build Date: 10/5/2011 3:52:20 PM
+SiteMaker Release:SM7.2.9
+
+Medseek, Inc.
+2028 Village Lane
+Solvang, CA. 93463
+Phone 1-888 MEDSEEK
+email info@medseek.com
+http://www.medseek.com
+
+(c) 1999-2011 Medseek, Inc. All rights reserved.
+ -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Margaret & Charles Juravinski</title>
+<link href="template.css" rel="stylesheet" type="text/css">
+<link href="default.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="scripts/AC_ActiveX.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38822442-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+
+				
+<script type="text/javascript">
+//<!--
+var ns4 = (document.layers);
+var ie  = (document.all);
+var ie4 = (ie && !document.getElementById);
+var ie5 = (ie && document.getElementById);
+var ns6 = (!ie && document.getElementById);
+
+var aryMoused = new Array();
+var aryLayerMoused = new Array();
+var aryMoImages = new Array();
+var imageList = new Array();
+var runMouseOvers = true;
+var TimerID = null;
+var iLimit = 25;
+var itmp = 0;
+
+var nbTime = 100;
+var nbTimes = 2;
+var nbThisLoc = 325;
+var aryLayerNames = new Array();
+var aryNavBarLayerInfo = new Array();
+var aryNavBarLayers = new Array();
+
+var registeredObjects = new Array();
+var viz = "hide";
+
+function MOImage() {
+	var arg = MOImage.arguments;
+	this.ptrImage = BillzNavBarMM_findObj(arg[0]);
+	this.imageMO = new Image();
+	this.imageMO.src = arg[1];
+	this.HTMLname = arg[0];
+	this.Moused = false;
+	this.OriginalSrc = '';
+	return true;
+}
+
+function BillzImagePreload() {
+	// 0) html image name 1) mo image src 2)image Name for rollover key (rollover may have multiple mos for one html Image) 
+	var arg = BillzImagePreload.arguments;
+	nbImagePreload(arg[0], arg[1], arg[2]);
+}
+
+function nbImagePreload(img_name, mo_img_src, rollover_key_img_name) {
+	var imageKey = (rollover_key_img_name.length > 0) ? rollover_key_img_name : img_name;
+	imageList[imageList.length] = imageKey;
+	if (!(aryMoImages[imageKey])) aryMoImages[imageKey] = new MOImage(img_name, mo_img_src);
+}
+
+function BillzMouseover() {
+	var arg = null;
+	if (runMouseOvers) {		
+		arg = BillzMouseover.arguments; //args 0)ImageName 1)OriginalSrc 2)array index (caller imagename)		
+		nbMouseover(arg[0], arg[1], arg[2]);
+	}
+	return true;
+}
+// args 1) ImageName 2) OriginalSrc 3) array index (caller imagename)
+function nbMouseover(img_name, orig_src, img_key) {
+	var imageKey = null;
+	var o = null;
+	if (runMouseOvers) 
+	{				
+		imageKey = (img_key.length > 0) ? img_key : img_name;
+		if (!(aryMoImages[imageKey].ptrImage)) aryMoImages[imageKey].ptrImage = BillzNavBarMM_findObj(img_name);		
+		if (aryMoImages[imageKey] && (o = aryMoImages[imageKey].ptrImage)) {
+			aryMoImages[imageKey].OriginalSrc = orig_src;
+			aryMoImages[imageKey].Moused = true;
+			o.src = aryMoImages[imageKey].imageMO.src;
+		}
+	}
+	return true;
+}
+
+function navbarMouseover(bar,linkId,row){
+	var ListElement = document.getElementById('Link1_' + bar);
+	var ItemElement = document.getElementById('Link2_' + bar + '_' + linkId);
+	var LinkElement = document.getElementById('Link3_' + bar + '_' + linkId);
+	var theClass = ' hover';	
+	if(ListElement){
+		ListElement.className = ListElement.className + theClass;
+	}
+	if(ItemElement){
+		ItemElement.className = ItemElement.className + theClass;
+	}
+	if(LinkElement){
+		LinkElement.className = LinkElement.className + theClass;
+	}
+}
+function navbarMouseout(bar,linkId,row){
+	var ListElement = document.getElementById('Link1_' + bar + '_' + row);
+	var ItemElement = document.getElementById('Link2_' + bar + '_' + linkId);
+	var LinkElement = document.getElementById('Link3_' + bar + '_' + linkId);
+	var theClass = ' hover';	
+	if(ListElement){
+		ListElement.className = ListElement.className.replace(theClass,"");		
+	}
+	if(ItemElement){
+		ItemElement.className = ItemElement.className.replace(theClass,"");
+	}
+	if(LinkElement){
+		LinkElement.className = LinkElement.className.replace(theClass,"");
+	}
+}
+
+var NavBarTempOnload = null;
+if (window.onload && window.onload != null) NavBarTempOnload = window.onload;
+
+function FullyLoaded() {
+	if (NavBarTempOnload != null) NavBarTempOnload();
+	runMouseOvers = true;
+	return true;
+}
+
+function BillzMouseOutTimer() {
+	return nbMouseOutTimer();
+}
+
+function nbMouseOutTimer() {
+	if (TimerID) clearTimeout(TimerID);
+	TimerID = setTimeout("nbLayerRestore()",5000);
+	return true;
+}
+
+function RestoreAll() {
+	nbMouseoverRestore();
+	nbLayerRestore();
+	return true;
+}
+
+function BillzMouseoverRestore() {
+	return nbMouseoverRestore();
+}
+
+function nbMouseoverRestore() {
+	var i = 0;
+	var o = null;
+	if (runMouseOvers) {
+		for (i = 0; i < imageList.length; i++) {
+			if (aryMoImages[imageList[i]].Moused && (o = aryMoImages[imageList[i]].ptrImage)) {
+				o.src = aryMoImages[imageList[i]].OriginalSrc;
+				aryMoImages[imageList[i]].Moused = false;
+			}
+		}
+	}
+	return true;
+}
+
+function BillzLayerRestore() {
+	return nbLayerRestore();
+}
+
+function nbLayerRestore() {
+	var i = 0;
+	for (i = 0; i < aryLayerNames.length; i++) {
+		if (!aryNavBarLayerInfo[aryLayerNames[i]].isDefault) BillzNavBarRestoreLayers(aryLayerNames[i]);	
+	}
+	return true;
+}
+
+function BillzArrayPushUnique(aryArray, varNewElement) { //only pushes if unique value
+	var pushIt = true;
+	var i = 0;
+	for (i = 0; i < aryArray.length && pushIt; i++) {
+		pushIt = (varNewElement != aryArray[i]);
+	}
+	if (pushIt) BillzArrayPush(aryArray, varNewElement);
+	return pushIt;
+}
+
+function BillzArrayPush(aryArray, varNewElement) { //Implement Array Push 'cause IE cant handle it
+	aryArray[aryArray.length] = varNewElement;
+	return true;
+}
+function BillzArrayPop(aryArray) { //Implement Array Pop 'cause IE cant handle it before 5.5
+	var varItemToPop = null;
+	if (aryArray[aryArray.length - 1]) {
+		varItemToPop = aryArray[aryArray.length - 1];
+		aryArray[aryArray.length] = null;
+	}
+	return varItemToPop;
+}
+
+function getDivRef(id) {
+	var divref;
+	if(ns4) divref = document.layers[id];
+	else if(ie4) divref = document.all[id];
+	else if(ie5 || ns6) divref = document.getElementById(id);	
+	return divref;
+}
+
+//v3.0 name changed to avoid clash with possible other JS in content, this function complements of MM Dreamweaver
+function NavBarSwapRollover(swapimage,defaultimage,imageID) {
+	if(imageID.length > 0 && document.getElementById(imageID))
+	{
+		if(swapimage.length > 0) 
+			document.getElementById(imageID).src = "images/" + swapimage;
+		else
+			document.getElementById(imageID).src = "images/" + defaultimage;		
+	}
+}
+function BillzNavBarMM_findObj(n, d) {
+	var p,i,x;
+	if (ns6) x = document.getElementById(n);
+	else {		
+		if (registeredObjects[n]) return registeredObjects[n];
+		if (!(d)) d = document;
+		try {
+			p = n.indexOf("?");
+		}
+		catch(e) {
+			p = 0;
+		}
+		if (p > 0 && parent.frames.length) {
+			d = parent.frames[n.substring(p+1)].document;
+			n = n.substring(0,p);
+		}
+		if (!(x = d[n]) && d.all) x = d.all[n];	
+		for (i = 0; !x && i < d.forms.length; i++) {
+			x = d.forms[i][n];
+		}
+		for (i=0; !x && d.layers && i < d.layers.length; i++) {
+			if (d.layers[i].id.indexOf("external_") == -1) x = BillzNavBarMM_findObj(n, d.layers[i].document);	
+		}
+		registeredObjects[n] = x;
+	}				
+	return x;
+}
+
+function BillzArrayContains() {
+	var arg = BillzArrayContains.arguments;
+	var foundit = false;
+	var i = 0;
+	for (i = 0; i < arg[0].length && !foundit; i++) {
+		foundit = (arg[1] == arg[0][i]);
+	}
+	return foundit;
+}
+
+function NavBarRegisterLayer() {
+	var arg = NavBarRegisterLayer.arguments;
+	var n = arg[0];
+	var d = arg[1];
+	var mo = false;
+	var o = null;
+	if (arg[2] && arg[2] == 'MOutLayer') mo = true;
+	else mo = false;
+	
+	if (!(BillzArrayContains(aryLayerNames, n))) {
+		if (o = BillzNavBarMM_findObj(n)) {
+			aryNavBarLayers[n] = o;
+			BillzArrayPushUnique(aryLayerNames, n);
+			aryNavBarLayerInfo[n] = new NavBarLayer(n, d, mo);
+		}
+	}
+	return true;
+}
+
+function BillzNavBarMM_showHideLayers() {
+	//v3.0 name changed, this function complements of MM Dreamweaver with customizations by Bill Heller
+	var i = 0;
+	var x = "";
+	var obj = null;
+	var v = null;
+	var p = null;
+	var args = BillzNavBarMM_showHideLayers.arguments;
+	
+	if (args[args.length - 1] != "menu") nbMouseOutTimer();
+	for (i = 0; i < (args.length - 2); i += 3) {
+		if (!aryNavBarLayers[args[i]]) {
+			x = (args[i + 2] == 'show') ? 'hide' : 'show';
+			NavBarRegisterLayer(args[i], x);
+		}
+		if ((obj = aryNavBarLayers[args[i]]) != null) {
+			v = args[i + 2];
+			aryNavBarLayerInfo[args[i]].isDefault = false;
+			if (args[args.length - 1] == "restore") v = (v == 'show') ? 'hide' : 'show';
+			
+			if (obj.style) obj.style.visibility = (v == 'show') ? 'visible' : ((v == 'hide') ? 'hidden' : v);
+			else obj.visibility = v;
+		}
+	}
+	return true;
+}
+
+function BillzNavBarRestoreLayers() {
+	var i = 0;
+	var x = "";
+	var obj = null;
+	var v = null;
+	var p = null;
+	var args = BillzNavBarRestoreLayers.arguments;
+	for (i = 0; i < (args.length); i++) {
+		if (obj = aryNavBarLayers[args[i]]) {
+			v = aryNavBarLayerInfo[args[i]].defaultVisibility;
+			if (obj.style) {
+				obj = obj.style;
+				v = (v == 'show' ) ? 'visible' : ((v == 'hide') ? 'hidden' : v);
+			}
+			obj.visibility = v;
+			if (!aryNavBarLayerInfo[args[i]].MOutLayer) aryNavBarLayerInfo[args[i]].isDefault = true;			
+		}
+	}
+	return true;
+}
+
+function NavBarLayer() {
+	var arg = NavBarLayer.arguments;
+	this.defaultVisibility = arg[1];
+	this.isDefault = true;
+	this.MOutLayer = arg[2];
+	return true;
+}
+
+function BillzNavMove() {
+	return nbNavMove();
+}
+
+function nbNavMove() {
+	var thisl = null;
+	var otherl = null;
+	if (thisl = BillzNavBarMM_findObj("nbScrollLayer")) {
+		if (thisl.style) {
+			thisl = thisl.style;
+			viz = "hidden";
+		} 
+		thisl.top = nbThisLoc -= 3;
+		if (nbThisLoc < -750) {
+			nbThisLoc = 325;
+			nbTimes--;
+		}
+	}
+	if (nbTimes <= 0) {
+		otherl = BillzNavBarMM_findObj("BillzLayer");
+		otherl.visibility = viz;
+	} else {
+		setTimeout("nbNavMove()", nbTime);
+	}	
+	return true;
+}
+
+function NavBar_openadmin() {
+	window.open('admin/','SiteAdmin','height=screen.availheight,width=screen.availwidth,scrollbars=1,toolbar=0,directories=0,status=0,menubar=0,resizable=1');
+	return true;
+}
+
+window.onload = FullyLoaded;
+//-->
+</script>
+						
+<script type="text/javascript">
+//<!--
+function NavBar_setCookie(cookievalue,navVersion,linkID) 
+{	
+	var cookiename = "SLIDINGTABLE_NAVBAR" + navVersion;
+	var cookieVersionname = "SLIDINGTBL_NAVBAR_VERSION";
+	var cookieClear = "SLIDINGTBL_NAVBAR_CLEARCOOKIES";	
+	document.cookie = cookieClear.toUpperCase() + "=false";
+	if(cookievalue.length > 0)
+		document.cookie = cookiename.toUpperCase() + "=" + escape(cookievalue);
+	if(navVersion.length > 0)	
+		document.cookie = cookieVersionname.toUpperCase() + "=" + navVersion;	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);		
+}
+function NavBar_setoLevelIDCookie(cookievalue,linkID,navVersion) 
+{
+	var name = "SLIDINGTBL_NAVBAR_OLEVELID";		
+	if(cookievalue.length > 0)
+		document.cookie = name.toUpperCase() + "=" + escape(cookievalue);	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;		
+}
+function NavBar_setPLinkIDCookie(linkID,navVersion)
+{	
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;
+}
+function NavBar_deleteCookie() 
+{
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";	
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f	
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";	
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";	
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );			
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+		
+		//expire all cookies for every slidingTable_navbar intances.			
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)		
+			document.cookie = cookie_name.toUpperCase() + "=";			 	
+	}	
+}
+		
+//-->
+</script>
+			
+				
+<script type="text/javascript">
+//<!--
+function NavBar_setCookie(cookievalue,navVersion,linkID) 
+{	
+	var cookiename = "SLIDINGTABLE_NAVBAR" + navVersion;
+	var cookieVersionname = "SLIDINGTBL_NAVBAR_VERSION";
+	var cookieClear = "SLIDINGTBL_NAVBAR_CLEARCOOKIES";	
+	document.cookie = cookieClear.toUpperCase() + "=false";
+	if(cookievalue.length > 0)
+		document.cookie = cookiename.toUpperCase() + "=" + escape(cookievalue);
+	if(navVersion.length > 0)	
+		document.cookie = cookieVersionname.toUpperCase() + "=" + navVersion;	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);		
+}
+function NavBar_setoLevelIDCookie(cookievalue,linkID,navVersion) 
+{
+	var name = "SLIDINGTBL_NAVBAR_OLEVELID";		
+	if(cookievalue.length > 0)
+		document.cookie = name.toUpperCase() + "=" + escape(cookievalue);	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;		
+}
+function NavBar_setPLinkIDCookie(linkID,navVersion)
+{	
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;
+}
+function NavBar_deleteCookie() 
+{
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";	
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f	
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";	
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";	
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );			
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+		
+		//expire all cookies for every slidingTable_navbar intances.			
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)		
+			document.cookie = cookie_name.toUpperCase() + "=";			 	
+	}	
+}
+		
+//-->
+</script>
+			
+				
+<script type="text/javascript">
+//<!--
+function NavBar_setCookie(cookievalue,navVersion,linkID) 
+{	
+	var cookiename = "SLIDINGTABLE_NAVBAR" + navVersion;
+	var cookieVersionname = "SLIDINGTBL_NAVBAR_VERSION";
+	var cookieClear = "SLIDINGTBL_NAVBAR_CLEARCOOKIES";	
+	document.cookie = cookieClear.toUpperCase() + "=false";
+	if(cookievalue.length > 0)
+		document.cookie = cookiename.toUpperCase() + "=" + escape(cookievalue);
+	if(navVersion.length > 0)	
+		document.cookie = cookieVersionname.toUpperCase() + "=" + navVersion;	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);		
+}
+function NavBar_setoLevelIDCookie(cookievalue,linkID,navVersion) 
+{
+	var name = "SLIDINGTBL_NAVBAR_OLEVELID";		
+	if(cookievalue.length > 0)
+		document.cookie = name.toUpperCase() + "=" + escape(cookievalue);	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;		
+}
+function NavBar_setPLinkIDCookie(linkID,navVersion)
+{	
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;
+}
+function NavBar_deleteCookie() 
+{
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";	
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f	
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";	
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";	
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );			
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+		
+		//expire all cookies for every slidingTable_navbar intances.			
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)		
+			document.cookie = cookie_name.toUpperCase() + "=";			 	
+	}	
+}
+		
+//-->
+</script>
+			
+<link rel="stylesheet" type="text/css" href="dynamicfiles/smt_hotlink3_bodyDB589A24152A970BCE87FE32CBC52F27.CSS" />
+<script src="dynamicfiles/smt_hotlink3_bodyDA80EB300C653FEA2738DDE30CF4741E.JS" type="text/javascript"></script>
+				
+<script type="text/javascript">
+//<!--
+function NavBar_setCookie(cookievalue,navVersion,linkID) 
+{	
+	var cookiename = "SLIDINGTABLE_NAVBAR" + navVersion;
+	var cookieVersionname = "SLIDINGTBL_NAVBAR_VERSION";
+	var cookieClear = "SLIDINGTBL_NAVBAR_CLEARCOOKIES";	
+	document.cookie = cookieClear.toUpperCase() + "=false";
+	if(cookievalue.length > 0)
+		document.cookie = cookiename.toUpperCase() + "=" + escape(cookievalue);
+	if(navVersion.length > 0)	
+		document.cookie = cookieVersionname.toUpperCase() + "=" + navVersion;	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);		
+}
+function NavBar_setoLevelIDCookie(cookievalue,linkID,navVersion) 
+{
+	var name = "SLIDINGTBL_NAVBAR_OLEVELID";		
+	if(cookievalue.length > 0)
+		document.cookie = name.toUpperCase() + "=" + escape(cookievalue);	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;		
+}
+function NavBar_setPLinkIDCookie(linkID,navVersion)
+{	
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;
+}
+function NavBar_deleteCookie() 
+{
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";	
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f	
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";	
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";	
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );			
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+		
+		//expire all cookies for every slidingTable_navbar intances.			
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)		
+			document.cookie = cookie_name.toUpperCase() + "=";			 	
+	}	
+}
+		
+//-->
+</script>
+			</head>
+
+
+
+<body class="body">
+<table class="collapse maxWidth actionBar">
+	<tr>
+		<td class="collapse">
+			<table class="collapse" align="center">
+				<tr>
+					<td class="collapse container">
+						<table class="collapse maxWidth">
+							<tr>
+								<td class="collapse" id="navigationTopLeft">
+									<table class="collapse">
+										<tr>
+											<td class="collapse">
+</td>
+											<td class="collapse">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+	
+		
+			
+			
+		
+	
+
+
+
+
+
+
+
+	<script type="text/javascript">
+smt_fontsize_defaultbtntext = 'R';
+smt_fontsize_boluseimages = 'true';
+smt_fontsize_default = 0;
+smt_fontsize_expiredays = 0;
+smt_fontsize_increasebtnimgmaxed = 'increase_.gif';
+smt_fontsize_before = '';
+smt_fontsize_decreasebtnimgon = 'decrease_on.gif';
+smt_fontsize_defaultbtnimgon = 'default_on.gif';
+smt_fontsize_decreasebtntext = '-';
+smt_fontsize_defaultbtnimgoff = 'default.gif';
+smt_fontsize_max = 8;
+smt_fontsize_increasebtnimgon = 'increase_on.gif';
+smt_fontsize_after = '<img src=\"images/smt_fontsize/caption.gif\" alt=\"Text Size\" id=\"smt_fontsize_caption\">';
+smt_fontsize_theme = 'images/smt_fontsize';
+smt_fontsize_reset = 'false';
+smt_fontsize_min = -2;
+smt_fontsize_step = 2;
+smt_fontsize_defaultie = 12;
+smt_fontsize_filter = 'content';
+smt_fontsize_increasebtntext = '+';
+smt_fontsize_defaultsafari = 12;
+smt_fontsize_i_busecfhtmlhead = 'false';
+smt_fontsize_decreasebtnimgmaxed = 'decrease_.gif';
+smt_fontsize_cookiename = 'smt_fontsize_relative';
+smt_fontsize_class = 'smt_fontsize';
+smt_fontsize_increasebtnimgoff = 'increase.gif';
+smt_fontsize_decreasebtnimgoff = 'decrease.gif';
+smt_fontsize_direction = 'horizontal';
+</script>
+<script type="text/javascript" src="http://www.hamiltonhealthsciences.ca/sitemaker/smt_fontsize.js"></script>
+
+
+
+
+<table cellpadding="0" cellspacing="0" class="smt_fontsize">
+	<tr>
+	
+		<td class="smt_fontsize decrease">
+			
+				<img class="smt_fontsize" id="smt_fontsize_decrease" src="images/smt_fontsize/decrease.gif" onmouseover="javascript:if(smt_fontsizeGetCookie() > -2){this.src='images/smt_fontsize/decrease_on.gif';}" onmouseout="javascript:if(smt_fontsizeGetCookie() > -2){this.src='images/smt_fontsize/decrease.gif';}else{this.src='images/smt_fontsize/decrease_.gif'};" onclick="javascript:if(smt_fontsizeGetCookie() > -2){smt_fontsizeIncrement('-');smt_fontsizeBtnStatus('increase','increase.gif');smt_fontsizeBtnStatus('default','default.gif');};" alt="Decrease (-)">
+			
+		</td>			
+	
+		<td class="smt_fontsize default">
+			
+				<img class="smt_fontsize" id="smt_fontsize_default" src="images/smt_fontsize/default.gif" onmouseover="javascript:this.src='images/smt_fontsize/default_on.gif';" onmouseout="javascript:this.src='images/smt_fontsize/default.gif';" onclick="javascript:smt_fontsizeIncrement('default');" alt="Restore Default">
+			
+		</td>
+	
+		<td class="smt_fontsize increase">
+			
+				<img class="smt_fontsize" id="smt_fontsize_increase" src="images/smt_fontsize/increase.gif" onmouseover="javascript:if(smt_fontsizeGetCookie() <8){this.src='images/smt_fontsize/increase_on.gif';};" onmouseout="javascript:if(smt_fontsizeGetCookie() <8){this.src='images/smt_fontsize/increase.gif';}else{this.src='images/smt_fontsize/increase_.gif';};" onclick="javascript:if(smt_fontsizeGetCookie() <8){smt_fontsizeIncrement('+');smt_fontsizeBtnStatus('decrease','decrease.gif');smt_fontsizeBtnStatus('default','default.gif');};" alt="Increase (+)">
+			
+		</td>
+	
+	
+		<td class="smt_fontsize after"><img src="images/smt_fontsize/caption.gif" alt="Text Size" id="smt_fontsize_caption"></td>
+	
+	</tr>
+</table>
+</td>
+										</tr>
+									</table>
+								</td>
+								<td class="collapse" id="navigationTopRight" style="text-align:right;padding:0 17px 0 0;">
+									
+			
+<!-- Begin NavBar Bar #2 Content Output... -->
+
+			<table  border="0" cellspacing="0" cellpadding="0" onclick="NavBar_deleteCookie();">
+	<tr class="navigationTopRight">
+		<td class="navigationTopRight" valign="top" align="left" title=""><a href="default.cfm"  onClick="NavBar_setPLinkIDCookie('157','');" class="navigationTopRight"><img src="images/button_home.gif" border="0" alt="Home" id="button_home_2_1" name="button_home_2_1"></a></td>
+		<td class="navigationTopRight" valign="top" align="left" title=""><span class="between"></span></td>
+		<td class="navigationTopRight" valign="top" align="left" title=""><a href="body.cfm?id=139"  onClick="NavBar_setPLinkIDCookie('139','');" class="navigationTopRight"><img src="images/button_ContactUs.gif" border="0" alt="Contact Us" id="button_ContactUs_2_2" name="button_ContactUs_2_2"></a></td>
+		<td class="navigationTopRight" valign="top" align="left" title=""><span class="between"></span></td>
+		<td class="navigationTopRight" valign="top" align="left" title=""><a href="body.cfm?id=44"  onClick="NavBar_setPLinkIDCookie('44','');" class="navigationTopRight"><img src="images/button_DirectionsParking.gif" border="0" alt="Parking / Directions" id="button_DirectionsParking_2_3" name="button_DirectionsParking_2_3"></a></td>
+		<td class="navigationTopRight" valign="top" align="left" title=""><span class="between"></span></td>
+		<td class="navigationTopRight" valign="top" align="left" title=""><a href="body.cfm?id=46"  onClick="NavBar_setPLinkIDCookie('46','');" class="navigationTopRight"><img src="images/button_Video.gif" border="0" alt="Video" id="button_Video_2_4" name="button_Video_2_4"></a></td>
+	</tr>
+</table>		
+				
+			
+<!-- End NavBar Output -->
+		
+
+								</td>
+
+
+<td style="vertical-align:middle;"><a href="http://www.hamiltonhealthsciences.ca/body.cfm?id=3224" STYLE="color: #8c8773; font-size: 10pt; font-face: Verdana; text-decoration: none">Accessibility</a></td>
+
+
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table class="collapse maxWidth headerBar">
+	<tr>
+		<td class="collapse">
+			<table class="collapse" align="center">
+				<tr>
+					<td class="collapse container">
+						<table class="collapse maxWidth">
+							<tr>
+								<td class="collapse maxWidth"><a href="homepage.cfm"><img alt="Hamilton Health Sciences" src="images/logo.jpg" style="border:0;"></a></td>
+								<td class="collapse minWidth">
+
+
+	<script language="javascript" type="text/javascript"> 
+	//<!--	
+	letterCharExp = /([a-z0-9\.%"]|[a-z\.%"])$/i;
+	letterExp = /([a-z0-9])/i;
+	var sm_reEmpty = /^\s*$/;
+	var sm_reLeading = /^(\s+)/i;
+	var sm_reEnding = /(\s+)$/i;	
+	var sm_reInteger = /^\d+$/;
+	var sm_reComma = /(,)/g;	
+	function sm_Trim(s) {
+		var mystr = s;
+		var myArr = sm_reEmpty.exec(mystr);
+		if (myArr != null) {
+			return "";
+		}
+		var myArr = sm_reLeading.exec(mystr);
+		if (myArr != null) {
+			if (RegExp.rightContext) {
+				mystr = RegExp.rightContext;
+			} else {
+				mystr = mystr.substring(RegExp.$1.length, mystr.length);
+			}
+		}
+		myArr = sm_reEnding.exec(mystr);
+		if (myArr != null) {
+			if (RegExp.leftContext) {
+				mystr = RegExp.leftContext;
+			} else {
+				mystr = mystr.substring(0, (mystr.length - RegExp.$1.length));
+			}
+		}
+		return mystr;
+	}
+	function hasValidLetterChar(str) {
+		return letterCharExp.test(str)
+	}	
+	function hasLetter(str){
+		return str.search(letterExp)
+	}	
+	function checkform(form,element,required) {		
+		var strAlertMsg = "";	
+		var strTest = "";
+		var bRequired = required;
+		var bolHasValidChar = false;
+		var strSearchText = form[element].value;	
+		strSearchText = sm_Trim(strSearchText);
+		if(strSearchText.length == 0){
+			if(bRequired){				
+				strAlertMsg += "* " + form[element+"_required"].value + "\n";					
+			}
+		}else{		
+			if(hasLetter(strSearchText) > -1)
+				bolHasValidChar = hasValidLetterChar(strSearchText);
+			if (!bolHasValidChar) { 
+				strAlertMsg += "* " + "Invalid search; your search query contained invalid values." + "\n";				
+				form[element].focus(); 					 
+			} else {							
+				strTest = modify_search(strSearchText); 	
+				strTest = sm_Trim(strTest);					
+				if(!strTest.length) { 					
+					strAlertMsg += "* " + "Invalid search; your search query contained ignored words. \n Try changing some of the words in your search query." + "\n";	
+					form[element].focus(); 					
+				} else {
+					form[element].value = strTest; 							
+				}				
+			}
+		}	
+		if(strAlertMsg.length){
+			alert(strAlertMsg);	
+			return false;		
+		}
+		return true;
+	}		
+	function remove_noise(phrase) { 	
+		//dimensionalizing variables 	 
+		array_phrase = new Array(); 
+		array_pruned = new Array(); 	
+		var noisearray = new Array ("about","after","all","also","am","an","and","another","any","are","as","at","be","$","because","been","before","being","between","both","but","by","came","can","come","could","did","do","each","for","from","get","got","has","had","he","have","her","here","him","himself","his","how","if","in","into","is","it","like","make","many","me","might","more","most","much","must","my","never","now","of","on","only","or","other","our","out","over","said","same","see","should","since","some","still","such","take","than","that","the","their","them","then","there","these","they","this","those","through","to","too","under","up","very","was","way","we","well","were","what","where","which","while","who","with","would","you","your","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"); 	
+		var array_pruned_length = 0; 
+		var counter = 0; 
+		var counter1 = 0; 
+		var counter2 = 0; 	
+		var length = 0; 
+		var noise_array_counter = 0; 
+		var search_phrase = ""; 
+		var phrase1 = ""; 
+		var temp_string = "";
+		var arrSearchPhrases = "";
+		var strSearchPhrases = "";
+		phrase1 = phrase;	
+		
+		//spliting the search phrase into an array 
+		array_pruned = phrase.split(" ");
+		array_pruned_length = array_pruned.length;		
+		for(counter=0;counter < array_pruned_length;counter++) {		
+			noisearrayElement = array_pruned[counter].toLowerCase();	 
+			counter2 = 0;
+			counter1 = 0;		
+			for (counter1=0;counter1 < noisearray.length;counter1++) {						
+				if(noisearrayElement == noisearray[counter1]) {							
+					search_phrase = array_pruned[counter];
+					search_phrase_mid_position = " " + array_pruned[counter] + " ";					
+					search_phrase_first_position = array_pruned[counter] + " ";		
+					search_phrase_last_position = " " + array_pruned[counter];				
+					counter2 = phrase.indexOf(search_phrase,0); 
+					counter3 = phrase.indexOf(search_phrase_mid_position,0);
+					counter4 = phrase.indexOf(search_phrase_first_position,0);
+					counter5 = phrase.indexOf(search_phrase_last_position,0);				
+					if(counter2 >= 0 || counter3 >= 0 || counter4 >= 0 || counter5 >= 0){	
+						if(counter2 >= 0){					
+							temp_string = new RegExp(search_phrase);								
+						}
+						if(counter3 >= 0 || counter5 >= 0){
+							temp_string = new RegExp(search_phrase_last_position);	
+						}
+						if(counter4 >= 0){
+							temp_string = new RegExp(search_phrase_first_position);	
+						}						
+						phrase = phrase.replace(temp_string,"");										
+					}					
+				} 
+			} 
+		}	
+		return phrase;	
+	} 	
+	function modify_search(phrase){						
+		strphrase = phrase.replace(sm_reComma," ");				
+		var modifiedPhrase = "";
+		var strSearchPhrases = "";
+		var strSQOriginalPhrase = "";				
+		var searchPhraseRegExp = /['"][^'"]*['"]/g;
+		searchTest = searchPhraseRegExp.test(strphrase);		
+		if(searchTest){
+			arrSearchPhrases = strphrase.match(searchPhraseRegExp);	
+			var i = 0;
+			for(i=0;i < arrSearchPhrases.length;i++){		
+				array_SearchPhrase = new Array(); 
+				removeQuotes = /['"]/g;	
+				strOriginalPhrase = arrSearchPhrases[i];
+				searchPhraseValue = arrSearchPhrases[i];				
+				searchPhraseValue = searchPhraseValue.replace(removeQuotes,"");					
+				//Split search phrase		
+				array_SearchPhrase = searchPhraseValue.split(" ");		
+				var s = 0;
+				var strModifiedSearchPhrase = "";
+				for(s=0;s < array_SearchPhrase.length;s++){
+					strSearchPhrase = remove_noise(array_SearchPhrase[s]);					
+					if(strSearchPhrase.length > 0){
+						if(strModifiedSearchPhrase.length > 0){
+							strModifiedSearchPhrase += " " + strSearchPhrase;
+						}else{
+							strModifiedSearchPhrase += strSearchPhrase;
+						}
+					}
+				}				
+				RegExpSearchPhrase = new RegExp(strOriginalPhrase);
+				strphrase = strphrase.replace(RegExpSearchPhrase,"");	
+				if(strModifiedSearchPhrase.length){
+					searchPhraseValue = '"' + searchPhraseValue + '"';					
+					strSearchPhrases += " " + searchPhraseValue;											
+				}
+			}
+		}	
+		if(strphrase.length){			
+			strphrase = remove_noise(strphrase);
+			strphrase = sm_Trim(strphrase);
+		}
+		modifiedPhrase = strphrase + strSearchPhrases;
+		return modifiedPhrase;
+	}		
+	//--> 
+	</script>
+
+		
+			
+		    
+            <form action="http://ipgoogle02.hhsc.ca/search" method="GET" id="frmSiteSearchTeaser" name="frmSiteSearchTeaser" onsubmit="return checkform(this,'q',true);" target="_blank">
+			
+            <input type="hidden" name="btnG" value="Search"/>
+			<input type="hidden" name="site" value="juravinski"/>
+			<input type="hidden" name="proxystylesheet" value="default_frontend"/>
+            <input type="hidden" name="client" value="default_frontend"/>
+			
+			<input type="hidden" name="filter" value="p"/>
+			<input type="hidden" name="output" value="xml_no_dtd"/>		
+			
+            <table class="collapse search">
+				<tr class="collapse search">
+					
+						<td class="collapse search text"><img src="images/template/background_searchIcon.gif" alt="Search"></td>
+					
+					<td class="collapse search input"><input type="text" name="q" onclick="this.className='active';" onblur="if(this.value==''){this.className=''};"></td>
+					
+						<td class="collapse search submit"><input type="image" src="images/template/background_searchType.gif"></td>
+					
+				</tr>		
+			</table>
+			</form>
+		
+		
+		
+		
+	 
+</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table class="collapse maxWidth" id="navigationTop">
+	<tr>
+		<td class="collapse">
+			<table class="collapse" align="center">
+				<tr>
+					<td class="collapse container">
+						<table class="collapse">
+							<tr>
+								<td class="collapse maxWidth">
+			
+<!-- Begin NavBar Bar #3 Content Output... -->
+
+			<table  border="0" cellspacing="0" cellpadding="0" onclick="NavBar_deleteCookie();">
+	<tr class="navigationTop">
+		<td class="navigationTop" valign="top" align="left"><span class="before">FOR:</span></td>
+		<td class="navigationTop" valign="top" align="left" title=""><a href="body.cfm?id=22"  onClick="NavBar_setPLinkIDCookie('22','');" class="navigationTop">Patients &amp; Visitors</a></td>
+		<td class="navigationTop" valign="top" align="left" title=""><span class="between"></span></td>
+		<td class="navigationTop" valign="top" align="left" title=""><a href="body.cfm?id=23"  onClick="NavBar_setPLinkIDCookie('23','');" class="navigationTop">Health Professionals</a></td>
+		<td class="navigationTop" valign="top" align="left" title=""><span class="between"></span></td>
+		<td class="navigationTop" valign="top" align="left" title=""><a href="body.cfm?id=162"  onClick="NavBar_setPLinkIDCookie('162','');" class="navigationTop">Research</a></td>
+		<td class="navigationTop" valign="top" align="left" title=""><span class="between"></span></td>
+		<td class="navigationTop" valign="top" align="left" title=""><a href="body.cfm?id=27"  onClick="NavBar_setPLinkIDCookie('27','');" class="navigationTop">Regional Cancer Program</a></td>
+	</tr>
+</table>		
+				
+			
+<!-- End NavBar Output -->
+		
+</td>
+								<td class="collapse minWidth" style="padding:8px 15px 0 0;">
+	<form id="hotlink1" name="hotlink1" method="post" action="" style="margin:0px;">
+		<table cellspacing="0" class="HotLink">
+			<tr class="HotLink">
+				<td valign="top" class="HotLink">
+				<select id="SiteURL1" name="SiteURL1" onChange="GoToSite1();" class="HotLink">
+					<option value="">Quick Links: Choose an Area</option>
+				</select>
+				</td>
+			</tr>
+		
+		</table>	
+	</form></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table class="collapse maxWidth containerBar">
+	<tr>
+		<td class="collapse" style="padding:10px 0 10px 0;">
+			<table class="collapse container" align="center">
+				<tr>
+					<td class="collapse" style="padding:0 0 0 10px;">
+						<table class="collapse minWidth">
+							<tr>
+								<td class="collapse minWidth">
+									<table class="collapse" style="background:url(images/template/cap_top-navigationLeft_.gif) no-repeat #5474a9;width:236px;">
+										<tr>
+											<td class="collapse" style="background:url(images/template/cap_bottom-navigationLeft_.gif) left bottom no-repeat;padding:0 0 5px 0;">
+												<table class="collapse">
+													<tr>
+														<td class="collapse"><span class="pageName"><a href="
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+			
+		
+		 
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		body.cfm?id=38">About Us</a></span></td>
+													</tr>
+													<tr>
+														<td class="collapse" id="navigationLeft">
+	<!-- Begin NavBar Output  -  Version:  v0.79a 09/30/2006  -->
+	
+         		
+   <!-- Begin NavBar CSS Output... -->
+   <style type="text/css">
+all.NavBarNum4 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: none; color: 0000FF;   }
+all.NavBarNum4CurrentGroupTD {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;  }		
+all.NavBarNum4CurrentGroup {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }
+all.NavBarNum4CurrentGrouphover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }
+all.NavBarNum4Hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }}				
+.NavBarNum4CurrentGroup {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;  }				
+.NavBarNum4Layer {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: none; color: 000000;   }
+.NavBarNum4SubMenu {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: none; color: 0000FF;   }
+.NavBarNum4SubMenu:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }	
+.NavBarNum4CurrentGrouphover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }
+		
+A.NavBarNum4:link	{  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: none; color: 0000FF;   }
+A.NavBarNum4:visited {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: none; color: 0000FF;   }
+A.NavBarNum4:hover  {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }
+A.NavBarNum4:active  {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: none; color: 0000FF;   }
+A.NavBarNum4CurrentGroup:link	{  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }
+A.NavBarNum4CurrentGroup:visited {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }
+A.NavBarNum4CurrentGroup:hover  {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }
+A.NavBarNum4CurrentGroup:active  {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 10pt; text-decoration: underline; color: 0000FF;   }
+.NavBarNum4ErrorTxt { font-family:verdana,helvetica,sans-serif; color:#FF0000; }
+   </style>
+
+         	
+		<!-- Begin NavBar Bar #4 Content Output... -->
+		<table  border="0" cellspacing="0" cellpadding="0">	<tr>		<td class="NavBarNum4"   valign="top" align="left" title=""><a href="body.cfm?id=261"  class="NavBarNum4">Message from the President</a></td>	</tr>	<tr class="NavBarNum4CurrentGroup">		<td class="NavBarNum4CurrentGroup" colspan="2" valign="top" align="left" title=""><span class="between"></span></td>	</tr>	<tr>		<td class="NavBarNum4CurrentGroup"   valign="top" align="left" title=""><a href="body.cfm?id=257"  class="NavBarNum4CurrentGroup">Margaret &amp; Charles Juravinski</a></td>	</tr>	<tr class="NavBarNum4">		<td class="NavBarNum4" colspan="2" valign="top" align="left" title=""><span class="between"></span></td>	</tr>	<tr>		<td class="NavBarNum4"   valign="top" align="left" title=""><a href="body.cfm?id=83"  class="NavBarNum4">History</a></td>	</tr>	<tr class="NavBarNum4">		<td class="NavBarNum4" colspan="2" valign="top" align="left" title=""><span class="between"></span></td>	</tr>	<tr>		<td class="NavBarNum4"   valign="top" align="left" title=""><a href="body.cfm?id=172"  class="NavBarNum4">Parking/Directions</a></td>	</tr></table>
+	
+		<!-- End NavBar Output -->
+	
+</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									
+									
+									
+									
+									<table class="collapse" style="margin:10px 0 0 0;">
+										<tr>
+											<td class="collapse">
+										<a href="javascript:SM1_BannerClick()" onMouseOver="return SM1_BannerWindowStatus();" onMouseOut="window.status='';SM1_MO=false;"><img src="images/cta_PatientFamilyHandbook.jpg" name="BodyLeftTop" Width="236" Height="122" Border="0" alt=""></a>
+		<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"> <!--
+			SM1_MO=false;
+			SM1_Timer = null;
+			SM1_ThisBanner = 0;
+			SM1_BannerItems = new Array();
+			
+			
+				
+				
+				
+				
+					
+					
+					
+						
+					
+				
+			
+				SM1_BannerItems[0] = new Array();
+				SM1_BannerItems[0][0]=new Image();
+				SM1_BannerItems[0][0].src='images/cta_PatientFamilyHandbook.jpg';
+				SM1_BannerItems[0][1]='http://www.hamiltonhealthsciences.ca/documents/Patient%20Education/PatientFamilyHandbookJCC-th.pdf';
+				SM1_BannerItems[0][2]='parent._blank.';
+			
+			
+			function SM1_BannerClick(){SM1_BannerWindowStatus();
+				if (SM1_BannerItems[SM1_ThisBanner][2]=="parent._blank."){
+					window.open(SM1_BannerItems[SM1_ThisBanner][1]);
+				// }else 	 if(!eval(SM1_BannerItems[SM1_ThisBanner][2]+'document')){
+	//				window.open(SM1_BannerItems[SM1_ThisBanner][1],); 
+				}else{
+					eval(SM1_BannerItems[SM1_ThisBanner][2] + "location.href=SM1_BannerItems[SM1_ThisBanner][1]");
+				}
+			}
+			function SM1_BannerWindowStatus(){SM1_MO=true;window.status=SM1_BannerItems[SM1_ThisBanner][1]; return true}
+			function SM1_SwapBanner(){
+				iNum=SM1_ThisBanner+1;if(iNum>=SM1_BannerItems.length)iNum=0;
+				document.BodyLeftTop.src=SM1_BannerItems[iNum][0].src; 
+				SM1_ThisBanner=iNum;
+				SM1_Timer=setTimeout('SM1_SwapBanner()',20000);
+				if(SM1_MO){SM1_BannerWindowStatus();}else{window.status='';}
+			}
+				
+			SM1_Timer=setTimeout('SM1_SwapBanner()',20000);
+		//-->
+		</SCRIPT> 
+
+									</td>
+										</tr>
+									</table>
+									
+									
+									
+								</td>
+								<td class="collapse">
+									<table class="collapse navigationTopDHTMLBody" style="border-collapse:collapse;margin:0;padding:0;">
+										<tr>
+											<td class="collapse" id="navigationTopDHTML" onMouseOut="DHTMLRestoreAll()">
+
+<script type="text/javascript">
+<!--
+
+function DHTMLNavBar_configureCookie(linkID) {
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";
+	if(linkID.length)
+		DHTMLNavBar_setPLinkIDCookie(linkID);
+
+	for (i = 0; i < a_all_cookies.length; i++)
+	{
+		a_temp_cookie = a_all_cookies[i].split( '=' );
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+
+		//expire all cookies for every slidingTable_navbar intances.
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)
+			document.cookie = cookie_name.toUpperCase() + "=";
+	}
+}
+function DHTMLNavBar_setPLinkIDCookie(linkID){
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;
+}
+function findPosY(obj) {
+	var curtop = 0;
+	if (obj.offsetParent)
+	{
+		while (obj.offsetParent)
+		{
+			curtop += obj.offsetTop
+			obj = obj.offsetParent;
+		}
+	}
+	else if (obj.y)
+	{
+		curtop += obj.y;
+	}
+	return curtop;
+}
+var aryDHTMLLayerMoused = new Array();
+var DHTMLrunMouseOvers = false;
+var aryDHTMLMoImages = new Array();
+var DHTMLimageList = new Array();
+var DHTMLTimerID=null;
+var itmp=0;
+
+function DHTMLMOImage() {
+	var a = DHTMLMOImage.arguments;
+	this.ptrImage = DHTMLNavBarMM_findObj(a[0]);
+	this.imageMO = new Image();
+	this.imageMO.src = a[1];
+	this.HTMLname = a[0];
+	this.Moused = false;
+	this.OriginalSrc = '';
+}
+// 0) html image name 1) mo image src 2)image Name for rollover key (rollover may have multiple mos for one html Image)
+function DHTMLNavBarImagePreload() {
+	var arg = DHTMLNavBarImagePreload.arguments;
+	imageKey = (arg[2])?arg[2]:arg[0];
+	DHTMLimageList[DHTMLimageList.length] = imageKey;
+	if(!(aryDHTMLMoImages[imageKey]))
+		aryDHTMLMoImages[imageKey] = new DHTMLMOImage(arg[0],arg[1]);
+}
+function DHTMLNavBarMouseover() {
+	var a = null;
+	var imageKey = null;
+	var o = null;
+	if (DHTMLrunMouseOvers)
+	{
+		//args 0)ImageName 1)OriginalSrc 2)array index (caller imagename)
+		a = DHTMLNavBarMouseover.arguments;
+		imageKey = (a[2])?a[2]:a[0];
+		if(!(aryDHTMLMoImages[imageKey].ptrImage))
+			aryDHTMLMoImages[imageKey].ptrImage = DHTMLNavBarMM_findObj(a[0]);
+		if(aryDHTMLMoImages[imageKey] && (o = aryDHTMLMoImages[imageKey].ptrImage))
+		{
+			aryDHTMLMoImages[imageKey].OriginalSrc = a[1];
+			aryDHTMLMoImages[imageKey].Moused = true;
+			o.src = aryDHTMLMoImages[imageKey].imageMO.src;
+		}
+	}
+}
+
+var DHTMLNavBarTemponload = null;
+if (window.onload && window.onload != null)
+	DHTMLNavBarTemponload = window.onload;
+
+function DHTMLFullyLoaded() {
+	if (DHTMLNavBarTemponload != null)
+		DHTMLNavBarTemponload();
+	DHTMLrunMouseOvers = true;
+	return true;
+}
+function DHTMLNavBarMouseOutTimer() {
+	if(DHTMLTimerID)
+		clearTimeout(DHTMLTimerID);
+	DHTMLTimerID = setTimeout("DHTMLNavBarLayerRestore()",5000);
+}
+function DHTMLRestoreParent(layername) {
+	for(var i=0;i < aryDHTMLLayerNames.length;i++)
+	{
+		if(!aryDHTMLNavBarLayerInfo[aryDHTMLLayerNames[i]].isDefault)
+		{
+			if(!(aryDHTMLLayerNames[i] == layername) && aryDHTMLLayerNames[i].indexOf("grand") == -1)
+				DHTMLNavBarRestoreLayers(aryDHTMLLayerNames[i]);
+		}
+	}
+}
+function DHTMLRestoreAll() {
+	DHTMLNavBarMouseoverRestore();
+	DHTMLNavBarLayerRestore();
+}
+function DHTMLNavBarMouseoverRestore() {
+	var i = 0;
+	var o = null;
+	if (DHTMLrunMouseOvers)
+	{
+		for (var i=0; i < DHTMLimageList.length; i++)
+		{
+			if (aryDHTMLMoImages[imageList[i]].Moused && (o = aryDHTMLMoImages[imageList[i]].ptrImage)) {
+				o.src = aryDHTMLMoImages[imageList[i]].OriginalSrc;
+				aryDHTMLMoImages[imageList[i]].Moused = false;
+			}
+		}
+	}
+	return true;
+}
+function DHTMLNavBarLayerRestore() {
+	for(var i=0;i < aryDHTMLLayerNames.length;i++)
+	{
+		if(!aryDHTMLNavBarLayerInfo[aryDHTMLLayerNames[i]].isDefault)
+			DHTMLNavBarRestoreLayers(aryDHTMLLayerNames[i]);
+	}
+}
+function DHTMLNavBarArrayPushUnique(aryArray, varNewElement){
+	//only pushes if unique value
+	var pushIt = true;
+	for (var i=0;i < aryArray.length && pushIt;i++)
+	{
+		pushIt = (varNewElement!=aryArray[i]);
+	}
+	if(pushIt)
+		DHTMLNavBarArrayPush(aryArray, varNewElement);
+
+	return pushIt;
+}
+function DHTMLNavBarArrayPush(aryArray, varNewElement) {
+	//Implement Array Push 'cause IE cant handle it
+	aryArray[aryArray.length]=varNewElement;
+}
+function DHTMLNavBarArrayPop(aryArray) {
+	//Implement Array Pop 'cause IE cant handle it before 5.5
+	var varItemToPop = null;
+	if(aryArray[aryArray.length-1]) {
+		varItemToPop = aryArray[aryArray.length-1];
+		aryArray[aryArray.length]=null;
+	}
+	return varItemToPop;
+}
+
+var registeredObjects = new Array();
+//v3.0 name changed to avoid clash with possible other JS in content, this function complements of MM Dreamweaver
+function DHTMLNavBarMM_findObj(n, d) {
+	x = document.getElementById(n);
+	return x;
+}
+
+var DHTMLNavBarTime         = 100;
+var DHTMLNavBarTimes        = 2;
+var DHTMLNavBarmoveDistance = 1;
+var DHTMLNavBarThisLoc      = 325;
+var aryDHTMLLayerNames      = new Array();
+var aryDHTMLNavBarLayerInfo = new Array();
+var aryDHTMLNavBarLayers    = new Array();
+
+function DHTMLNavBarArrayContains()	{
+	var a = DHTMLNavBarArrayContains.arguments;
+	var foundit = false;
+	for(var i=0; i < a[0].length && !foundit; i++)
+	{
+		foundit = (a[1]==a[0][i]);
+	}
+	return foundit;
+}
+
+function DHTMLNavBarRegisterLayer()	{
+	var a = DHTMLNavBarRegisterLayer.arguments;
+	var n = a[0];
+	var d = a[1];
+	if(a[2] && a[2] == 'MOutLayer')
+		var mo = true;
+	else
+		var mo = false;
+
+	if(!(DHTMLNavBarArrayContains(aryDHTMLLayerNames,n)))
+	{
+		if(o = DHTMLNavBarMM_findObj(n))
+		{
+			aryDHTMLNavBarLayers[n] = o;
+			DHTMLNavBarArrayPushUnique(aryDHTMLLayerNames,n);
+			aryDHTMLNavBarLayerInfo[n] = new DHTMLNavBarLayer(n,d,mo);
+		}
+	}
+}
+
+// v3.0 name changed, this function complements of MM Dreamweaver with customizations
+function DHTMLNavBarMM_showHideLayers()	{
+	var i,p,v,x,obj,args = DHTMLNavBarMM_showHideLayers.arguments;
+	if(args[args.length-1] != "menu")
+		DHTMLNavBarMouseOutTimer();
+	for (var i=0; i<(args.length-2); i+=3)
+	{
+		if(!aryDHTMLNavBarLayers[args[i]]) {
+			x = (args[i+2]=='show')?'hide':'show';
+			DHTMLNavBarRegisterLayer(args[i],x);
+		}
+	 	if ((obj=aryDHTMLNavBarLayers[args[i]])!=null)
+		{
+			v = args[i+2];
+			aryDHTMLNavBarLayerInfo[args[i]].isDefault = false;
+	 		if(args[args.length-1] == "restore")
+				v = (v=='show')?'hide':'show';
+			if (obj.style)
+				obj.style.visibility = (v=='show')?'visible':(v='hide')?'hidden':v;
+			else
+				obj.visibility = v;
+		}
+	}
+}
+
+// v3.0 name changed, this function complements of MM Dreamweaver with customizations
+function DHTMLNavBarMM_showHideGrandLayers() {
+	var i,p,v,x,obj,args = DHTMLNavBarMM_showHideGrandLayers.arguments;
+	if(args[args.length-1] != "menu")
+		DHTMLNavBarMouseOutTimer();
+	for (var i=0; i < (args.length-2); i+=3)
+	{
+		if(!aryDHTMLNavBarLayers[args[i]]) {
+			x = (args[i+2]=='show')?'hide':'show';
+			DHTMLNavBarRegisterLayer(args[i],x);
+		}
+	 	if ((obj=aryDHTMLNavBarLayers[args[i]])!=null)
+		{
+			v = args[i+2];
+			aryDHTMLNavBarLayerInfo[args[i]].isDefault = false;
+	 			if(args[args.length-1] == "restore"){
+				v = (v=='show')?'hide':'show';
+			}
+			if (obj.style)
+				obj.style.visibility = (v=='show')?'visible':(v='hide')?'hidden':v;
+			else
+	 			obj.visibility = v;
+		}
+	}
+}
+function DHTMLNavBarRestoreLayers()	{
+	var i,p,v,obj,args = DHTMLNavBarRestoreLayers.arguments;
+	for (var i=0; i < (args.length); i++)
+	{
+	 	if (obj = aryDHTMLNavBarLayers[args[i]])
+		{
+			v = aryDHTMLNavBarLayerInfo[args[i]].defaultVisibility;
+			var strobjid = obj.id;
+			if (obj.style)
+			{
+				obj=obj.style;
+				v=(v=='show')?'visible':(v='hide')?'hidden':v;
+			}
+			obj.visibility = v;
+			if (!aryDHTMLNavBarLayerInfo[args[i]].MOutLayer)
+				aryDHTMLNavBarLayerInfo[args[i]].isDefault=true;
+		}
+	}
+}
+function DHTMLNavBarLayer()	{
+	var a = DHTMLNavBarLayer.arguments;
+	this.defaultVisibility = a[1];
+	this.isDefault = true;
+	this.MOutLayer = a[2];
+}
+
+var viz = "hide";
+function DHTMLNavBarNavMove() {
+	if(thisl==DHTMLNavBarMM_findObj("DHTMLNavBarScrollLayer"))
+	{
+		if(thisl.style)
+		{
+			thisl=thisl.style;
+			viz="hidden";
+		}
+		thisl.top = DHTMLNavBarThisLoc -= 3;
+		if(DHTMLNavBarThisLoc < -750)
+		{
+			DHTMLNavBarThisLoc=325;
+			DHTMLNavBarTimes--;
+		}
+	}
+	if (DHTMLNavBarTimes<=0)
+	{
+		otherl=DHTMLNavBarMM_findObj("DHTMLNavBarLayer");
+		otherl.visibility=viz;
+	}
+	else setTimeout("DHTMLNavBarNavMove()",DHTMLNavBarTime);
+}
+function DHTML_swapImgRestore()	{
+ 	var i,x,a=document.Sliding_sr;
+ 	for(var i=0; a && i < a.length && (x=a[i]) && x.oSrc; i++)
+	{
+		x.src = x.oSrc;
+	}
+}
+function DHTML_preloadImages() {
+ 	var d=document;
+ 	if(d.images)
+ 	{
+ 		if(!d.Sliding_p)
+			d.Sliding_p=new Array();
+		var i,j=d.Sliding_p.length,a=DHTML_preloadImages.arguments;
+		for(var i=0; i < a.length; i++)
+		{
+	 		if (a[i].indexOf("#")!=0)
+			{
+				d.Sliding_p[j]=new Image;
+				d.Sliding_p[j++].src=a[i];
+			}
+		}
+	}
+}
+function DHTML_findObj(n, d) {
+	var p,i,x;
+	if(!d)
+		d=document;
+	if((p=n.indexOf("?")) > 0 && parent.frames.length)
+	{
+	 	d=parent.frames[n.substring(p+1)].document;
+		n=n.substring(0,p);
+	}
+	if(!(x=d[n]) && d.all)
+		x=d.all[n];
+	for (var i=0; !x && i < d.forms.length; i++)
+	{
+		x = d.forms[i][n];
+	}
+	for(var i=0; !x && d.layers && i < d.layers.length; i++)
+	{
+		x = DHTML_findObj(n,d.layers[i].document);
+	}
+	 if(!x && d.getElementById)
+		x=d.getElementById(n);
+
+	return x;
+}
+function DHTML_swapImage() {
+	var i,j=0,x,a=DHTML_swapImage.arguments;
+	document.Sliding_sr=new Array;
+	for(var i=0; i < (a.length-2); i+=3)
+	{
+		if ((x=DHTML_findObj(a[i]))!=null)
+		{
+			document.Sliding_sr[j++] = x;
+			if(!x.oSrc)
+				x.oSrc=x.src;
+			x.src = a[i+2];
+		}
+	}
+}
+function DHTMLNavBarSwapRollover(swapimage,defaultimage,imageID) {
+	if(imageID.length > 0 && document.getElementById(imageID))
+	{
+		if(swapimage.length > 0)
+			document.getElementById(imageID).src = "images/" + swapimage;
+		else
+			document.getElementById(imageID).src = "images/" + defaultimage;
+	}
+}
+window.onload = DHTMLFullyLoaded;
+			
+
+//-->
+</script>
+			
+	
+		<div id="lryParentmain29" class="Parentmain1"  onmouseover="DHTMLRestoreParent('lyr29');DHTMLNavBarMM_showHideLayers('lyr29','','show','menu');" onclick="DHTMLNavBar_configureCookie('29');">
+			<table border="0" class="ParentNav1" width="100%" cellpadding="0" cellspacing="0">
+				<tr id="pRow29" style="vertical-align: top; background-color: transparent;" >
+					<td valign="top" style="" id="pLink29"><a href="body.cfm?id=29" target="" class="clMain1"><img src="images/button_navigationTop-CareServicesSpecialties.gif" border="0" id="button_navigationTop-CareServicesSpecialties_1_29" alt="Information For Patients" ></a></td>
+				</tr>
+			</table>
+			<div id="lyr29" class="clLeft1" onMouseOut="DHTMLRestoreAll();">
+				<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+					<tr id="cRow29_1" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink29_1">
+						<div id="lyr145_29container" style="position:relative;z-index:14; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=145" target="" class="clSubb1">Help Us Manage Your Symptoms</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow29_2" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink29_2">
+						<div id="lyr56_29container" style="position:relative;z-index:12; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=56" target="" class="clSubb1">Accessing our Cancer Treatment Services</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow29_3" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr57_29grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr29','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink29_3">
+						<div id="lyr57_29container" style="position:relative;z-index:10; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=57" target="" class="clSubb1">New Patients</a><br>
+							<div id="lyr57_29grand" class="clLeftGrand1" style="z-index: 9">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow57_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink57_1"><a href="http://www.hamiltonhealthsciences.ca/documents/Patient%20Education/PatientFamilyHandbookJCC-th.pdf" target="_blank" class="clSubb1">JCC New Patient Family Handbook</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow29_4" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr58_29grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr29','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink29_4">
+						<div id="lyr58_29container" style="position:relative;z-index:8; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=58" target="" class="clSubb1">Patient &amp; Family Resource Centre</a><br>
+							<div id="lyr58_29grand" class="clLeftGrand1" style="z-index: 7">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow58_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink58_1"><a href="body.cfm?id=92" target="" class="clSubb1">Welcome</a></td>
+									</tr>
+									<tr id="cRow58_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink58_2"><a href="body.cfm?id=112" target="" class="clSubb1">How We Can Help</a></td>
+									</tr>
+									<tr id="cRow58_3" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink58_3"><a href="body.cfm?id=113" target="" class="clSubb1">Resources</a></td>
+									</tr>
+									<tr id="cRow58_4" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink58_4"><a href="body.cfm?id=173" target="" class="clSubb1">Pathfinders</a></td>
+									</tr>
+									<tr id="cRow58_5" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink58_5"><a href="body.cfm?id=315" target="" class="clSubb1">New Book Display</a></td>
+									</tr>
+									<tr id="cRow58_6" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink58_6"><a href="body.cfm?id=93" target="" class="clSubb1">News And Events</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow29_5" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr263_29grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr29','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink29_5">
+						<div id="lyr263_29container" style="position:relative;z-index:6; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=263" target="" class="clSubb1">Patient Education</a><br>
+							<div id="lyr263_29grand" class="clLeftGrand1" style="z-index: 5">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow263_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink263_1"><a href="body.cfm?id=319" target="" class="clSubb1">Welcome</a></td>
+									</tr>
+									<tr id="cRow263_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink263_2"><a href="body.cfm?id=318" target="" class="clSubb1">Patient Education Library</a></td>
+									</tr>
+									<tr id="cRow263_3" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink263_3"><a href="body.cfm?id=273" target="" class="clSubb1">Podcasts</a></td>
+									</tr>
+									<tr id="cRow263_4" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink263_4"><a href="body.cfm?id=264" target="" class="clSubb1">Education Events</a></td>
+									</tr>
+									<tr id="cRow263_5" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink263_5"><a href="body.cfm?id=317" target="" class="clSubb1">Drug Information</a></td>
+									</tr>
+									<tr id="cRow263_6" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink263_6"><a href="body.cfm?id=291" target="" class="clSubb1">Community Services Locator</a></td>
+									</tr>
+									<tr id="cRow263_7" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink263_7"><a href="body.cfm?id=294" target="" class="clSubb1">Resource Links</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow29_6" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr60_29grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr29','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink29_6">
+						<div id="lyr60_29container" style="position:relative;z-index:4; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=60" target="" class="clSubb1">Cancer Screening Program</a><br>
+							<div id="lyr60_29grand" class="clLeftGrand1" style="z-index: 3">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow60_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink60_1"><a href="body.cfm?id=324" target="" class="clSubb1">Screen for Life Coach</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow29_7" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink29_7">
+						<div id="lyr293_29container" style="position:relative;z-index:2; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=293" target="" class="clSubb1">Therapy Dog Program</a><br>
+						</div>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+		<div id="lryParentmain30" class="Parentmain1"  onmouseover="DHTMLRestoreParent('lyr30');DHTMLNavBarMM_showHideLayers('lyr30','','show','menu');" onclick="DHTMLNavBar_configureCookie('30');">
+			<table border="0" class="ParentNav1" width="100%" cellpadding="0" cellspacing="0">
+				<tr id="pRow30" style="vertical-align: top; background-color: transparent;" >
+					<td valign="top" style="" id="pLink30"><a href="body.cfm?id=30" target="" class="clMain1"><img src="images/button_navigationTop-ClinicsCentres.gif" border="0" id="button_navigationTop-ClinicsCentres_1_30" alt="Treatment and Services" ></a></td>
+				</tr>
+			</table>
+			<div id="lyr30" class="clLeft1" onMouseOut="DHTMLRestoreAll();">
+				<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+					<tr id="cRow30_1" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_1">
+						<div id="lyr68_30container" style="position:relative;z-index:18; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=68" target="" class="clSubb1">Chemotherapy</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow30_2" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr62_30grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr30','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_2">
+						<div id="lyr62_30container" style="position:relative;z-index:16; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=62" target="" class="clSubb1">Clinical Trials</a><br>
+							<div id="lyr62_30grand" class="clLeftGrand1" style="z-index: 15">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow62_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink62_1"><a href="body.cfm?id=91" target="" class="clSubb1">Actively Accruing Clinical Trials</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow30_3" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_3">
+						<div id="lyr63_30container" style="position:relative;z-index:14; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=63" target="" class="clSubb1">Diagnostic Services</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow30_4" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_4">
+						<div id="lyr64_30container" style="position:relative;z-index:12; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=64" target="" class="clSubb1">Inpatient Care</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow30_5" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_5">
+						<div id="lyr307_30container" style="position:relative;z-index:10; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=307" target="" class="clSubb1">JCC Clinics</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow30_6" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr65_30grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr30','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_6">
+						<div id="lyr65_30container" style="position:relative;z-index:8; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=65" target="" class="clSubb1">Pharmacy</a><br>
+							<div id="lyr65_30grand" class="clLeftGrand1" style="z-index: 7">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow65_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink65_1"><a href="body.cfm?id=101" target="" class="clSubb1">Drug Information for Patients</a></td>
+									</tr>
+									<tr id="cRow65_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink65_2"><a href="body.cfm?id=100" target="" class="clSubb1">Retail Pharmacy</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow30_7" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr66_30grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr30','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_7">
+						<div id="lyr66_30container" style="position:relative;z-index:6; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=66" target="" class="clSubb1">Radiation Therapy</a><br>
+							<div id="lyr66_30grand" class="clLeftGrand1" style="z-index: 5">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow66_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink66_1"><a href="body.cfm?id=325" target="" class="clSubb1">Deep Inspiration Breath Hold</a></td>
+									</tr>
+									<tr id="cRow66_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink66_2"><a href="body.cfm?id=300" target="" class="clSubb1">CyberKnife</a></td>
+									</tr>
+									<tr id="cRow66_3" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink66_3"><a href="body.cfm?id=322" target="" class="clSubb1">Brachytherapy</a></td>
+									</tr>
+									<tr id="cRow66_4" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink66_4"><a href="body.cfm?id=118" target="" class="clSubb1">Pediatric Radiation Therapy Program</a></td>
+									</tr>
+									<tr id="cRow66_5" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink66_5"><a href="body.cfm?id=326" target="" class="clSubb1">Rapid Access Mets Program (RAMP)</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow30_8" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr67_30grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr30','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_8">
+						<div id="lyr67_30container" style="position:relative;z-index:4; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=67" target="" class="clSubb1">Supportive Care</a><br>
+							<div id="lyr67_30grand" class="clLeftGrand1" style="z-index: 3">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow67_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_1"><a href="body.cfm?id=84" target="" class="clSubb1">Aboriginal Patient Navigator</a></td>
+									</tr>
+									<tr id="cRow67_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_2"><a href="body.cfm?id=85" target="" class="clSubb1">Chaplain</a></td>
+									</tr>
+									<tr id="cRow67_3" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_3"><a href="body.cfm?id=144" target="" class="clSubb1">Genetic Counselling Services</a></td>
+									</tr>
+									<tr id="cRow67_4" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_4"><a href="body.cfm?id=86" target="" class="clSubb1">Mental Health Services</a></td>
+									</tr>
+									<tr id="cRow67_5" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_5"><a href="body.cfm?id=87" target="" class="clSubb1">Pain and Symptom Management Team</a></td>
+									</tr>
+									<tr id="cRow67_6" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_6"><a href="body.cfm?id=88" target="" class="clSubb1">Registered Dietitians</a></td>
+									</tr>
+									<tr id="cRow67_7" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_7"><a href="body.cfm?id=89" target="" class="clSubb1">Social Workers</a></td>
+									</tr>
+									<tr id="cRow67_8" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_8"><a href="body.cfm?id=90" target="" class="clSubb1">Patient Wellness Programs</a></td>
+									</tr>
+									<tr id="cRow67_9" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink67_9"><a href="body.cfm?id=61" target="" class="clSubb1">Therapeutic Arts Program</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow30_9" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink30_9">
+						<div id="lyr69_30container" style="position:relative;z-index:2; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=69" target="" class="clSubb1">Surgical Oncology</a><br>
+						</div>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+		<div id="lryParentmain31" class="Parentmain1"  onmouseover="DHTMLRestoreParent('lyr31');DHTMLNavBarMM_showHideLayers('lyr31','','show','menu');" onclick="DHTMLNavBar_configureCookie('31');">
+			<table border="0" class="ParentNav1" width="100%" cellpadding="0" cellspacing="0">
+				<tr id="pRow31" style="vertical-align: top; background-color: transparent;" >
+					<td valign="top" style="" id="pLink31"><a href="body.cfm?id=31" target="" class="clMain1"><img src="images/button_navigationTop-Hospitals.gif" border="0" id="button_navigationTop-Hospitals_1_31" alt="Disease Site Teams" ></a></td>
+				</tr>
+			</table>
+			<div id="lyr31" class="clLeft1" onMouseOut="DHTMLRestoreAll();">
+				<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+					<tr id="cRow31_1" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_1">
+						<div id="lyr70_31container" style="position:relative;z-index:22; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=70" target="" class="clSubb1">Breast</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_2" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr71_31grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr31','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_2">
+						<div id="lyr71_31container" style="position:relative;z-index:20; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=71" target="" class="clSubb1">Gastrointestinal</a><br>
+							<div id="lyr71_31grand" class="clLeftGrand1" style="z-index: 19">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow71_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink71_1"><a href="body.cfm?id=262" target="" class="clSubb1">Treatments &amp; Services for GI Cancers</a></td>
+									</tr>
+									<tr id="cRow71_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink71_2"><a href="body.cfm?id=268" target="" class="clSubb1">Patient Resources</a></td>
+									</tr>
+									<tr id="cRow71_3" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink71_3"><a href="body.cfm?id=269" target="" class="clSubb1">GI Clinical Trials</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_3" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr72_31grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr31','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_3">
+						<div id="lyr72_31container" style="position:relative;z-index:18; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=72" target="" class="clSubb1">Genitourinary</a><br>
+							<div id="lyr72_31grand" class="clLeftGrand1" style="z-index: 17">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow72_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink72_1"><a href="body.cfm?id=270" target="" class="clSubb1">Treatments and Services</a></td>
+									</tr>
+									<tr id="cRow72_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink72_2"><a href="body.cfm?id=271" target="" class="clSubb1">Patient Education and Resources</a></td>
+									</tr>
+									<tr id="cRow72_3" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink72_3"><a href="body.cfm?id=272" target="" class="clSubb1">GU Clinical Trials</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_4" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_4">
+						<div id="lyr73_31container" style="position:relative;z-index:16; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=73" target="" class="clSubb1">Gynecologic Oncology</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_5" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_5">
+						<div id="lyr74_31container" style="position:relative;z-index:14; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=74" target="" class="clSubb1">Hematology</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_6" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_6">
+						<div id="lyr75_31container" style="position:relative;z-index:12; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=75" target="" class="clSubb1">Head &amp; Neck</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_7" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_7">
+						<div id="lyr76_31container" style="position:relative;z-index:10; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=76" target="" class="clSubb1">Lung</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_8" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_8">
+						<div id="lyr77_31container" style="position:relative;z-index:8; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=77" target="" class="clSubb1">Mycosis (CTCL)</a><br>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_9" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr78_31grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr31','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_9">
+						<div id="lyr78_31container" style="position:relative;z-index:6; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=78" target="" class="clSubb1">Neuro-Oncology</a><br>
+							<div id="lyr78_31grand" class="clLeftGrand1" style="z-index: 5">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow78_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink78_1"><a href="body.cfm?id=285" target="" class="clSubb1">Tumour Management</a></td>
+									</tr>
+									<tr id="cRow78_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink78_2"><a href="body.cfm?id=286" target="" class="clSubb1">Neuro-Oncology Clinical Trials</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_10" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();DHTMLNavBarMM_showHideGrandLayers('lyr79_31grand','','show','menu');DHTMLNavBarMM_showHideLayers('lyr31','','show','menu');">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_10">
+						<div id="lyr79_31container" style="position:relative;z-index:4; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=79" target="" class="clSubb1">Sarcoma</a><br>
+							<div id="lyr79_31grand" class="clLeftGrand1" style="z-index: 3">
+								<table cellpadding="0" cellspacing="0" class="ChildNav1" border="0">
+									<tr id="cRow79_1" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink79_1"><a href="body.cfm?id=265" target="" class="clSubb1">Treatment Management</a></td>
+									</tr>
+									<tr id="cRow79_2" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink79_2"><a href="body.cfm?id=266" target="" class="clSubb1">Patient Education</a></td>
+									</tr>
+									<tr id="cRow79_3" style="vertical-align: top; background-color: transparent;" >
+										<td valign="top" class="ChildNav1" style="" id="cLink79_3"><a href="body.cfm?id=267" target="" class="clSubb1">Sarcoma Clinical Trials</a></td>
+									</tr>
+								</table>
+								
+							</div>
+						</div>
+						</td>
+					</tr>
+					<tr id="cRow31_11" style="vertical-align: top; background-color: transparent;"  onmouseover="DHTMLRestoreAll();">
+						<td valign="top" class="ChildNav1" style="" id="cLink31_11">
+						<div id="lyr80_31container" style="position:relative;z-index:2; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border:0px;"><a href="body.cfm?id=80" target="" class="clSubb1">Skin</a><br>
+						</div>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div></td>
+										</tr>
+									</table>
+									<table class="collapse" style="margin:0 10px 0 9px;">
+										
+										
+										<tr>
+											<td class="collapse"><img src="images/cap_top-breadcrumb.gif" alt=""></td>
+										</tr>
+										<tr>
+											<td class="collapse" style="background:url(images/cap_bottom-breadcrumb.gif) left bottom no-repeat;padding:5px 10px 5px 15px;">
+												<table class="collapse maxWidth breadcrumb">
+													<tr>
+														<td class="collapse" style="padding:0 7px 0 0;white-space:nowrap;">Current Location:</td>
+														<td class="collapse maxWidth" style="width:580px;">
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+	
+	
+	
+	 
+	
+	
+		
+	
+	
+		
+		
+			
+			
+			
+			
+			
+		
+		
+	
+		
+		
+			
+			
+			
+			
+			
+		
+		
+	
+		
+		
+			
+		
+		
+	
+
+
+<table cellpadding="0" cellspacing="0" class="breadcrumb">
+	<tr>
+		<td style="white-space:nowrap;" class="breadcrumb">
+			
+				
+				<div style="white-space:nowrap; float:left;" class="breadcrumb home"><a href="default.cfm?id=1">Welcome</a></div>
+				<div style="white-space:nowrap; float:left" class="breadcrumb separator">&nbsp;&gt;&nbsp;</div>
+				
+			
+			
+				
+				<div style="white-space:nowrap; float:left" class="breadcrumb"><a href="/body.cfm?id=38" class="breadcrumb">About Us</a></div>
+				
+				
+				<div style="white-space:nowrap; float:left" class="breadcrumb separator">&nbsp;&gt;&nbsp;</div>
+							
+			
+				
+				<div style="white-space:nowrap; float:left" class="breadcrumb">Margaret & Charles Juravinski</div>
+				
+							
+			
+		</td>
+	</tr>
+</table>
+</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td class="collapse printEmail"></td>
+										</tr>
+									</table>
+									<table class="collapse" style="margin:8px 0 0 0;">
+										<tr>
+											<td class="collapse" style="padding:0 0 0 12px;"><img src="images/template/spliter_content.gif" alt=""></td>
+										</tr>
+									</table>
+									<table class="collapse" style="margin:0 10px 0 9px;">
+										<tr>
+											<td class="collapse content" style="padding:10px 15px 0 15px;" id="content">
+
+
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><br>
+
+
+
+												
+													<script type="text/javascript">
+														if(objContent=document.getElementById('content')){
+															objContent.style.display='none';
+															smt_fontsizeAddEvent(window, 'load', displayContent);
+														}
+														function displayContent(){
+															if(objContent=document.getElementById('content')){
+																objContent.style.display='block';
+															}
+														}
+													</script>
+													
+		
+		<h1>Margaret and Charles Juravinski&nbsp;</h1>
+<h2>A couple from humble beginnings donate $43 million in support of health care in Hamilton<br /><br />
+<table border="0" align="left">
+<tbody>
+<tr>
+<td><img class="sm6generalwizard" src="images/CONTENT/MC%20Juravinski%20-%20new%20logo.jpg" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<table style="width: 460px; height: 52px;" border="0" align="left">
+<tbody>
+<tr>
+<td><em>On September 18, 2003, Margaret and Charles Juravinski unveiled the new name of the Cancer Centre at a special ceremony attended by patients, staff and community members. The name, Margaret &amp; Charles Juravinski Cancer Centre honours the couple's generous $5-million donation to the Cancer Centre's expansion campaign.</em></td>
+</tr>
+</tbody>
+</table>
+<br /></h2>
+<p>Both Charles and Margaret love to give. They say there is no other feeling quite like it. Perhaps that's because they know what it's like to need money.</p>
+<p>Charles was born in Saskatchewan in November 1929, just as the Great Depression began. There was not a penny to spare in his household, and with no plumbing and no heat, things were far from easy. His whole family had to work to keep food on the table, which was tough because jobs were few and far between.</p>
+<p>When Charles was 12, the Juravinski family moved to Hamilton. The outbreak of World War II had created an abundance of jobs and the Juravinskis were anxious to work. Charles was too young to fight in the war so he contributed to the household by working multiple jobs, quite often taking on up to three at a time. He picked beans, worked as a delivery boy, shined shoes and held a paper route.</p>
+<p>Eventually he met Margaret, the daughter of a hard-working butcher who also struggled to get his family through the Depression. Like Charles, Margaret knew the feeling of poverty. Their relationship grew and in September 1956, they got married.</p>
+<p>After working in the construction industry for a while, Charles and his brother-in-law, Bill McCann, decided to start their own company. They launched WilChar Construction Ltd. in 1958. Their business grew and soon they were handling multi-million dollar projects, including industrial, commercial, high-density, residential and institutional buildings.</p>
+<p>In 1971, WilChar Construction closed its doors, and Charles moved on to bigger and different things. With no prior knowledge of racetracks or horse racing, Charles took a chance and turned a farmer's field into Flamboro Downs, a multi-million dollar half-mile racetrack. He raced horses and ran the racetrack devotedly for the next 30 years.</p>
+<p>"We had very few rules for employees at Flamboro Downs, but Charlie always instilled in everybody that anybody could work for him as long as you didn't steal from him, you didn't lie to him and that you treated his wife and his dog with respect," said Richard Jacob, a friend and former colleague of Charles.</p>
+<p>Throughout his entire life, Charles has maintained an impeccable work ethic and always achieved his goals. "He's driven, absolutely driven. He's like one of his race horses, he gets the bit in his mouth and nothing can stop him until he accomplishes what he sets out to do," said Bill Gregory, a friend of the Juravinskis.</p>
+<p>Add Margaret's dedication, energy and wisdom to the mix and it's no wonder Charles and Margaret have achieved success. Although Flamboro Downs thrived for years, the industry was changing and Charles decided it was time to move on. In 2003, he sold the racetrack to Magna Entertainment Corporation for $72 million.</p>
+<p>Today the Juravinskis spend their time and money improving health care in Hamilton. They believe health is the most important thing people have and say there is nothing more fulfilling than knowing they are contributing to people's health.</p>
+<p>Before they began donating their money, the Juravinskis consulted their good friends Patrick and Barbara Keenan, who have been philanthropists for years. "We said, 'if you're going to do this, anonymity helps no one," said Patrick. "Put your name out there - do it, and in that way, you'll have an opportunity at leadership. And that's what's so important in philanthropy - is to accept the fact that you're going to be a target, but it's a very worthy target."</p>
+<p>Since 2003, Juravinski has become a household name in Hamilton and both Margaret and Charles have established themselves as strong leaders within this community. They've lead by example and encouraged others to give. In the process, they've also become a source of inspiration.</p>
+<p>The Juravinskis' gifts to health care in the Hamilton region:<br /><br />$15 million - Cornerstone of Care Campaign (Hamilton Health Sciences)<br />&nbsp;&nbsp;&nbsp; 5 million - Juravinski Cancer Centre (Hamilton Health Sciences)<br />&nbsp;&nbsp;&nbsp; 2 million - Hamilton General Hospital Surgical Suite (Hamilton Health Sciences)<br />&nbsp;&nbsp;&nbsp; 1 million - Surgical Fellowship Fund (Hamilton Health Sciences)<br />&nbsp;&nbsp;&nbsp; 7 million - St. Joseph's Healthcare Hamilton<br />&nbsp;&nbsp;&nbsp; 5 million - St. Peter's<br />&nbsp;&nbsp;&nbsp; 5 million - St. Joseph's Villa<br />&nbsp;&nbsp;&nbsp; 2 million - Wellwood Centre<br />&nbsp;&nbsp;&nbsp; 1 million - McMaster University research centre<br /><strong>$43 million</strong></p>
+<p><br />&nbsp;</p>
+	 
+
+												
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table class="collapse maxWidth footerBar">
+	<tr>
+		<td class="collapse">
+			<table class="collapse" align="center">
+				<tr>
+					<td class="collapse container">
+						<table class="collapse maxWidth">
+							<tr>
+								<td colspan="collapse minWidth"><span>Hamilton Health Sciences &bull; Hamilton, Ontario &bull; <strong>905.521.2100</strong></span></td>
+								<td colspan="collapse maxWidth" id="navigationFooter" style="text-align:right;padding:0 17px 0 0;">
+			
+<!-- Begin NavBar Bar #4 Content Output... -->
+
+			<table  border="0" cellspacing="0" cellpadding="0" onclick="NavBar_deleteCookie();">
+	<tr class="navigationFooter">
+		<td class="navigationFooter" valign="top" align="left" title=""><a href="body.cfm?id=139"  onClick="NavBar_setPLinkIDCookie('139','');" class="navigationFooter">Contact Us</a></td>
+		<td class="navigationFooter" valign="top" align="left" title=""><span class="between">|</span></td>
+		<td class="navigationFooter" valign="top" align="left" title=""><a href="http://hamiltonhealthsciences.ca/body.cfm?id=46"  onClick="NavBar_setPLinkIDCookie('327','');" class="navigationFooter">Patient Privacy</a></td>
+		<td class="navigationFooter" valign="top" align="left" title=""><span class="between">|</span></td>
+		<td class="navigationFooter" valign="top" align="left" title=""><a href="default.cfm?id=1"  onClick="NavBar_setPLinkIDCookie('1','');" class="navigationFooter">Home</a></td>
+		<td class="navigationFooter" valign="top" align="left" title=""><span class="between">|</span></td>
+		<td class="navigationFooter" valign="top" align="left" title=""><a href="body.cfm?id=52"  onClick="NavBar_setPLinkIDCookie('52','');" class="navigationFooter">Site Map</a></td>
+	</tr>
+</table>		
+				
+			
+<!-- End NavBar Output -->
+		
+</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+ 

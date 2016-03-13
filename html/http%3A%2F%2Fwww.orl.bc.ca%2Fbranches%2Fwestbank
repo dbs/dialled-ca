@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<base href="http://www.orl.bc.ca/" />
+	<title>Westbank - Okanagan Regional Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="description" content="Okanagan Regional Library: library system covering the entire Thompson-Okanagan region of British Columbia, Canada." />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/style.css?v=v8" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/calendar_2013.css?v=v4" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/contact_us.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/search.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/left_menu.css?v=v2" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_l.css" type="text/css" media="screen" id="link_text_l" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_m.css" type="text/css" media="screen" id="link_text_m" title="text" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/text_s.css" type="text/css" media="screen" id="link_text_s" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/contrast.css" type="text/css" media="screen" id="link_contrast" title="contrast" />
+	<link rel="alternate" type="application/rss+xml" title="Okanagan Regional Library RSS Feed" href="news-events/rss" />
+	<script src="manager/media/script/mootools/mootools.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/jquery.fancybox.js" type="text/javascript"></script>
+	<script type="text/javascript">var $j = jQuery.noConflict();</script>
+	<script src="assets/templates/orlv2/js/form-check.js?v=v1" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/swfobject.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/script.js?v=v7" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="assets/templates/orlv2/css/dhtmlgoodies_calendar.css" media="screen" />  
+	<script src="assets/templates/orlv2/js/dhtmlgoodies_calendar.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pathToImages = '/assets/templates/orlv2/images/layout/';
+		//SWFObject
+		var flashvars = {};
+		var params = {
+			wmode: "transparent"
+		};
+	</script>
+<!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAMmBdV5STCVExvFTDWp50DBQn_DD64N2y7rZVstjCgjH1jrOTvBTbfltFh8gj6JbFUyeasDAlowgpPA" type="text/javascript"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9zKi3DlhGhdgZ5zWPYklEM59GzU0pys&sensor=false"></script>
+<script type="text/javascript" src="//use.typekit.net/igq5whz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+	<body>
+
+    	<div id="wrap">
+        <div class="background-header">
+                       <div id="header">
+                <span class="font-adjust-container">
+<a href="/sitemap">Site Map</a> | <a class="text_l" id="large-text-link" href="javascript:clickTextLarge();">A</a>&nbsp;<a class="text_m" id="medium-text-link" href="javascript:clickTextMedium();">A</a>&nbsp;<a class="text_s" id="small-text-link" href="javascript:clickTextSmall();">A</a>
+				</span>
+            </div>
+            <!-- Header Image/Top Menu Row -->
+            <div class="top-menu-div">
+                <div id="logo"><a href="/"><img src="/assets/templates/orlv2/images/layout/logo-new.gif" alt="Okanagan Regional Library" /></a></div>
+                <div id="welcome"><img src="/assets/templates/orlv2/images/layout/background-bar-left.png" /></div>
+                <div id="social">
+	                <a href="http://www.youtube.com/OKRegLibrary" target="_blank">Youtube</a>
+	                <a href="http://75-years-orl.blogspot.com/" target="_blank">Blogger</a>
+	                <a href="http://www.facebook.com/OKRegLib" target="_blank">Facebook</a>
+	                <a href="http://twitter.com/ORLreads" target="_blank">Twitter</a>
+	                <a href="http://ipac.orl.bc.ca/mobile">ORL Mobile</a>
+                </div>
+            </div>
+<div id="header-search-2013">
+                    <script language="javascript">
+                        String.prototype.trim = function () { return this.replace(/^\s*|\s*$/g, ''); }
+                        function ProcessInput(e) {
+                            if (window.event)       // IE
+                                keyNum = e.keyCode;
+                            else if (e.which)       // Netscape/Firefox/Opera
+                                keyNum = e.which;
+                            if (keyNum == 13) {
+                                e.returnValue = false;
+                                e.cancelBubble = true;
+                                DoKeywordSearch();
+                                return false;
+                            }
+                            return true;
+                        }
+                        function DoKeywordSearch() {
+                            if (document.getElementById('textboxTerm').value.trim() != '')
+                                window.location = 'http://ipac.orl.bc.ca/polaris/view.aspx?keyword=' + escape(document.getElementById('textboxTerm').value);
+                            else
+                                document.getElementById('textboxTerm').focus();
+                        }
+                    </script>
+                    <a class="redbutton" href="javascript:;" onclick="DoKeywordSearch();"><span>Go</span></a>
+                    <input type=text id=textboxTerm size=45 class="cleartxt inactive search" value="Search Catalogue..." 
+                     onblur="if (this.value == '') {this.value = 'Search Catalogue...';}"
+                     onfocus="if(this.value == 'Search Catalogue...') { this.value = ''; }" 
+                     onkeypress="return ProcessInput(event)" />
+                    <script language="javascript">
+                        document.getElementById('textboxTerm').blur();
+                    </script>
+                 </div>
+		<br />
+                     <p class="f_right"><a href="http://ipac.orl.bc.ca/polaris/patronaccount/default.aspx?ctx=1.1033.0.0.3">Login to My Account</a></p>
+		
+
+            <!-- Main Menu -->
+           <div id="left-menu-container">
+             <div id="top-menu-header">
+    <img src="/assets/templates/orl/images/layout/menu-text.png" alt="Menu" />
+</div>
+<div id="left-menu">
+<ul class=" left-menu-header"><li >
+  <div class="menusection"><h3 class=""><a class="" href="/about-us">About Us</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/news-events">News &amp; Events</a></h3></div>
+</li>
+<li  class="active">
+  <div class="menusection"><h3 class="active"><a class="active" href="/branches">Branches</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/Borrowing-services">Borrowing & Services</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/online-resources">Web Resources</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/kids">Kids</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/teens">Teens</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/book-lovers">Book Lovers</a></h3></div>
+</li>
+<li  class="last">
+  <div class="menusection"><h3 class="last"><a class="last" href="/contact">Contact Us</a></h3></div>
+</li>
+</ul>
+</div>
+           </div>
+
+            <!-- Menu/Intro Row -->
+                <div id="intro-wide">
+                   
+                   <div id="background-image-box-big"><div id="slideshow"></div></div>
+<div id="background-box-overlay"></div>
+<script type="text/javascript" src="http://www.orl.bc.ca/assets/js/rokslideshow.js"></script>
+		<script type="text/javascript">
+			window.RokSlideshowPath = '';
+			var myshow;
+			window.addEvent('load', function(){
+				var imgs = [];
+				
+				imgs.push({
+					file: 'WK branch slide show 3.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'WK branch slide show 1.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'WK branch slide show 2.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				myshow = new Slideshow('slideshow', { 
+					type: 'fade',
+					showTitleCaption: 0,
+					captionHeight: 45,
+					width: 550, 
+					height: 340, 
+					loadingDiv: 0,
+					resize: true,
+					duration: [2000, 4000],
+					transition: Fx.Transitions.Expo.easeOut,
+					images: imgs, 
+					path: '/assets/images/Branch-Slideshow/westbank/'
+				});
+				myshow.caps.h2.setStyles({
+					color: '#fff',
+					fontSize: '13px'
+				});
+				myshow.caps.p.setStyles({
+					color: '#ccc',
+					fontSize: '11px'
+				});
+			});
+		</script>
+                   <div id="intro-wide-content">
+                               <span class="B_crumbBox"><span class="B_firstCrumb"><a class="B_homeCrumb" href="/home" title="Find Books, Music, Movies, and More">Home</a></span> &raquo; <a class="B_crumb" href="/branches" title="Branches">Branches</a> &raquo; <span class="B_lastCrumb"><span class="B_currentCrumb">Westbank</span></span></span>
+                               <h1>Westbank</h1>
+                               <div id="page-sub-menu">
+<ul class="submenu">
+<li>no result<script type%3D"text/javascript">$j("#page-sub-menu").hide();</script></li> 
+</ul>
+<script type="text/javascript">
+$j('.submenu').makeacolumnlists({cols: 2, colWidth: 0, equalHeight: false, startN: 12});
+</script>
+</div>
+                               
+<div id="content-header-text">
+<ul class="tabs">
+    <li class="tab1"><a href="#tab1">Location</a></li>
+    <li class="tab2"><a href="#tab2">Open Hours</a></li>
+    <li class="tab3"><a href="#tab3">Parking</a></li>
+    <li class="tab4"><a href="#tab4"></a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content"><hr />
+<p style="text-align: center;"><strong>Westridge Mall</strong><br /><strong>#31 - 2484 Main St. (Hwy 97 S)</strong><br /><strong>West Kelowna, B.C. V4T 2G2</strong><br /><strong>250-768-4369</strong></p>
+<p>When the library is closed there are book return chutes located beside the front door.</p>
+<p>Please find our events below on the branch calendar, or search the <a href="news-events/event-search">ORL Calendar of Events</a>.</p></div>
+    <div id="tab2" class="tab_content"><table id="openhours"><tr><td>Monday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Tuesday: </td><td>10:00 a.m. to 6:00 p.m.</td></tr><tr><td>Wednesday: </td><td>10:00 a.m. to 8:00 p.m.</td></tr><tr><td>Thursday: </td><td>10:00 a.m. to 6:00 p.m.</td></tr><tr><td>Friday: </td><td>10:00 a.m. to 6:00 p.m.</td></tr><tr><td>Saturday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Sunday: </td><td>CLOSED</td></tr><tr><td></td><td>All branches are closed on statutory holidays</td></tr></table></div>
+    <div id="tab3" class="tab_content"><p>Free parking is available in the Westridge&nbsp;Centre parking lot. Conveniently located parking spaces are available for people with disabilities.</p></div>
+    <div id="tab4" class="tab_content"></div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var tabCount = 0;
+	//When page loads...
+	jQuery(".tab_content").hide(); //Hide all content
+	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	jQuery(".tab_content:first").show(); //Show first tab content
+//hide empty tabs
+jQuery(".tab_content").each(function(){
+	if(jQuery(this).html() == ''){
+		jQuery("."+jQuery(this).attr("id")).hide();
+	} else {
+		if(jQuery("."+jQuery(this).attr("id")+" a").html() == ''){
+			jQuery("."+jQuery(this).attr("id")).hide();
+		} else {
+			tabCount++;
+		}
+	}
+});
+
+if(tabCount > 1){
+jQuery(".tab_container").show();
+jQuery("ul.tabs").show();
+} else {
+jQuery("#content-header-text").html(jQuery("#tab1").html());
+}
+
+	//On Click Event
+	jQuery("ul.tabs li").click(function() {
+
+		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+		jQuery(this).addClass("active"); //Add "active" class to selected tab
+		jQuery(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = jQuery(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		jQuery(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});
+</script>
+
+</div>
+                  </div>
+                </div>
+            <!-- Banners/Content Row -->
+               <div class="content-row-div"><div id="sidebanners">
+                   <div style="float: left; width: 244px;">
+<div class="banner-map" style="margin-bottom:28px;">
+<a name="content"></a>
+    <div id="map" style="width:244px; height:166px;"></div><script type="text/javascript">
+    //var map = new google.maps.Map(document.getElementById("map"));
+    //var point = new google.maps.LatLng(49.829589, -119.630156);
+    //map.setCenter(point, 14);
+    //var marker = new google.maps.Marker(point);
+    //map.addOverlay(marker);
+    //map.addControl(new GSmallMapControl());
+      var map = new google.maps.Map(
+        document.getElementById("map"), {
+          center: new google.maps.LatLng(49.829589, -119.630156),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(49.829589, -119.630156),
+            map: map
+      });
+    </script>
+</div>
+<div class="banner-calendar print-hide" id="branch-calendar" style="margin-bottom:28px;">
+    <!--[if IE 7 ]> <div class="calendar-div ie7"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!--> <div class="calendar-div"> <!--<![endif]-->
+    <div id="calendar">
+	<div id="calendar-heading">
+    	<div class="month prev"><a href="index.php?id=56&amp;cid=37&amp;m=2&amp;y=2016#content">&laquo;</a></div>
+		<div class="monthyear">
+			<div class="month heading">March</div>
+			<div class="year heading">2016</div>
+		</div>
+    	<div class="month next"><a href="index.php?id=56&amp;cid=37&amp;m=4&amp;y=2016#content">&raquo;</a></div>
+	</div>
+	<div id="day-heading-background">
+		<div class="day heading">Sun</div>
+		<div class="day heading">Mon</div>
+		<div class="day heading">Tue</div>
+		<div class="day heading">Wed</div>
+		<div class="day heading">Thu</div>
+		<div class="day heading">Fri</div>
+		<div class="day heading">Sat</div>
+	</div>	
+	<div id="date-background">
+		<div class="day none"></div><div class="day none"></div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-9').style.display='block';document.getElementById('fade').style.display='block'">9</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-9', this)">9</a>
+<div id="day-popup-9" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-9').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Friends of the Westtbank Library Speaker Series</h3>
+	<h4>March 09, 2016</h4>
+	<p>
+		<p></p>
+		
+	</p>
+	<a id="event_details" href="westbank?event_id=3444">Event Details</a>
+
+</div>
+-->
+<h3>Friends of the Westtbank Library Speaker Series<span class="date">March 09, 2016</span></h3>
+<p></p>
+<p style="text-align: right;"><a href="branches/westbank?event_id=3444">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">10</div><div class="day today">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div><div class="day none"></div><div class="day none"></div>
+	</div>
+	<div class="clearer"></div>
+	<div id="upcoming-events"><a href="/news-events/upcoming-events?cid=37">Search Our Upcoming Events</a></div>
+</div>
+</div>
+</div>
+</div>
+               </div>
+               <div style="float:left; width:650px;">
+                   <p style="text-align: center;">&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h1 style="text-align: center;"><em><strong>Spring Break Programs at Westbank Library&nbsp;</strong></em></h1>
+<h1 style="text-align: center;">Quill a Bug</h1>
+<p style="text-align: center;"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Ladybug.jpg" alt="" width="75" height="82" /></p>
+<h2 style="text-align: center;">Learn how to make a ladybug using paper quilling techniques</h2>
+<h2 style="text-align: center;">with local artist Mary Walker</h2>
+<h2 style="text-align: center;">Monday, March 14 from 11:00am-12:00pm</h2>
+<h2 style="text-align: center;">Ages 8-12 *Registration required</h2>
+<p style="text-align: center;"><strong><br /></strong></p>
+<h1 style="text-align: center;"><em>Lego Builders</em></h1>
+<p style="text-align: center;"><strong><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Lego_Blocks.jpg" alt="" width="100" height="62" /><br /></strong></p>
+<h2 style="text-align: center;">Have fun building with Lego!</h2>
+<h2 style="text-align: center;">Wednesday, March 16 from 3:30-4:30pm</h2>
+<h2 style="text-align: center;">Ages 5+ *Registration required</h2>
+<p style="text-align: center;"><strong><br /></strong></p>
+<h1 style="text-align: center;"><em>Puppet Show</em></h1>
+<p style="text-align: center;"><strong><img src="assets/images/Image%20Bank%20for%20Branch%20Use/South%20Shuswap/Owl-20.png" alt="" width="75" height="71" /><br /></strong></p>
+<h2 style="text-align: center;">Based on the books: "I'm Not Scared!" by Jonathan Allen</h2>
+<h2 style="text-align: center;">and "Little Owl Lost" by Chris Haughton</h2>
+<h2 style="text-align: center;">Wednesday, March 23 at 2:00pm</h2>
+<h2 style="text-align: center;">Ages 3+ *No registration required</h2>
+<p>&nbsp;</p>
+<hr />
+<p style="text-align: center;"><strong style="font-size: 28px; font-style: italic;"><em><br /></em></strong></p>
+<p style="text-align: center;"><strong style="font-size: 28px; font-style: italic;"><em>Film Night at the Westbank Library</em></strong></p>
+<h2 style="text-align: center;"><strong><em>Wednesday, Mar. 16 at 6:00 pm.</em></strong></h2>
+<p style="text-align: center;"><strong>This program is free, and no registration is required.</strong></p>
+<h1 style="text-align: center;"><strong>"The Wanted 18"</strong></h1>
+<h3><strong><em>This feature film incorporates live footage with animation to tell the curious story of 18 cows.&nbsp; Acquired by a Palestinian community in the late 1980's, the cows were a symbol of freedom and resistance, providing milk for the Palestinians of Beit Sahour so that they would not rely on Israeli producers.&nbsp; Soon the illegal cows, cherished&nbsp; by the Palestinians, were being sought by the Israeli army as a </em></strong><strong><em>threat to National security.&nbsp; With humour and passion, this film captures the spirit of the 1987 uprising through the personal experiences of those who lived it.</em></strong></h3>
+<h3 style="text-align: center;"><strong><em>76 min.</em></strong>&nbsp;</h3>
+<h3 style="text-align: center;">For more information please contact the Westbank Library</h3>
+<h3 style="text-align: center;">250-768-4369</h3>
+<hr />
+<h1 style="text-align: center;"><strong><em>Zentrepreneurism:</em></strong></h1>
+<h1 style="text-align: center;"><strong>A Twenty-First Century Guide to the New World of Business&nbsp;</strong></h1>
+<h2 style="text-align: center;"><strong><em>Wed</em></strong><strong><em>nesday, Mar 23 at &nbsp;6:30 p.m.</em></strong></h2>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<p style="text-align: center;"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Westbank/Allan_Holender.png" alt="" width="182" height="166" /></p>
+<p style="text-align: center;"><strong><em></em></strong>&nbsp;</p>
+<h1 style="text-align: center;"><strong>Author Reading</strong></h1>
+<h2 style="text-align: center;"><strong>by Allan Holender</strong></h2>
+<p style="text-align: center;"><strong><em></em></strong>&nbsp;</p>
+<hr />
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;<strong><span style="text-decoration: underline;"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Westbank/Winter_Banner3.jpg" alt="" width="308" height="175" /></span></strong></p>
+<h1 style="text-align: center;"><strong><span style="text-decoration: underline;">Storytime&nbsp;</span></strong></h1>
+<h3 style="text-align: center;"><span style="font-size: 28px; font-style: italic; font-weight: normal;">&nbsp;Thursday, January 14th</span></h3>
+<h1 style="text-align: center;">through April 28th</h1>
+<h1 style="text-align: center;">from 10:15-10:45</h1>
+<h2 style="text-align: center;">For all children 18 months to 5 years.&nbsp; Drop in for stories and songs the whole family can enjoy.</h2>
+<h2 style="text-align: center;">Parents or caregivers must attend.</h2>
+<h1 style="text-align: center;"><strong>&nbsp;&nbsp;<span style="text-decoration: underline;">Babytime</span></strong></h1>
+<h1 style="text-align: center;">Tuesday, January 19th</h1>
+<h1 style="text-align: center;">through March 22nd</h1>
+<h1 style="text-align: center;">&nbsp; from 10:15-10:45&nbsp;</h1>
+<h2 style="text-align: center;">For newborns - 18 months.&nbsp; Enjoy songs, rhymes and stories.</h2>
+<h3 style="text-align: center;">Parents/caregiver must participate.&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+<h1 style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>All babytime and storytime programs are</em><strong><em> drop-in and FREE!</em></strong></h1>
+<hr /><hr /><hr /><hr />
+<p style="text-align: left;">&nbsp;</p>
+<h2 style="text-align: center;"><strong>100 Books to Read Together Before Kindergarten<a title="Size: 17kb" onclick="OpenFile('assets/images/Image%20Bank%20for%20Branch%20Use/schoolbus.jpg');return false;" href="manager/media/browser/mcpuk/frmresourceslist.html"></a></strong></h2>
+<h3 style="text-align: center;"><strong>The Okanagan Regional Library is pleased to announce a wonderful way to make sure your child enjoys </strong></h3>
+<h3 style="text-align: center;"><strong>some of the best children&rsquo;s books available at the library!</strong></h3>
+<h3 style="text-align: center;"><strong>&nbsp;Pick up your copy of&nbsp;<em>100 Books to Read Together Before Kindergarten</em>.</strong></h3>
+<p style="text-align: center;">&nbsp;&nbsp;</p>
+<h2 style="text-align: center;"><img src="data:image/png;base64,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" alt="" /><img src="data:image/png;base64,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" alt="" /><img src="data:image/png;base64,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" alt="" /><img src="data:image/png;base64,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" alt="" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAfCAIAAADlQT3NAAAI8klEQVRoge2Y+18Sax7Hz5+xu6cytdLsqpVdvHR107KblRKoICKCyDAzwAww3GZABLl5gwQDAUVMjynqapqZdsxLpWl52qNptpf/g/2h3bZzHISX/rD7g58f5/l+P/OZ9+uZ55lnfgjtaIN++F8H+H/UDhQS7UAh0Q4UEkUFhcHmbvM213Jv/ml3zHYcEg8cSE/P2GaMkpt3oimLCkp7z0B80tHtpKm3PbyYc3M7DiCXy2JXbMfhatq5WkQaTWVkKKmnT4/NzGfnF20n0PSbOQYg3o7DQLtfrqzajoMZAJ1yPP7HPRErI0NR4pqxmTmOTLvlNHl5dxfeL8Ea05YdEvbv+zQ7jRP6w0eObdnkncvllKkup56LWBkZyovJqRczcwKtdV/Ska2lsdvtCwtLQsKYdvnPW3OoZDJXZ6dwdXXe3YKtOZw/dny9vc2JKrj3qBGLI0BJPnFi5cs/x2beCrSWa1t9gxbmFxcW3sO4kc6DtubQ7/WuTk/hyioQ3OI7WMMpX2/zOFE5UlwWsTgCFIlcubL+j7GZOYHWykJVW0iTez13ZXllYX5RSNRAKsMWHOL2xqxNTa5OT+JKrRiWHd3ShH1rt617WpxCBCksyUpJ3bz431CSz6QxK6FKRMZHMADBABQDUAxAsBdTs5++/H1s+q1Aa4F1dSxIQueCdC5A5wLFXIDO5ReW867dpYRCobj9iUUsTiUsBoQoIEIBGAFECCBEO3/qWV1eXny3IMQNsKq6EpbQWeV0FodeymGUltNZHHoJ+27+g68xKJRCPpcH8gCwEoB4lRC3AqrgPTQa1ydfro2PEwpCDEmFfJhJoTEphUwKjZlPZd6jlNynUG/cid8dEwqFbl/K4hVQIWohTKVBBVSogALdpxAlrDWX57Pb7YRECJWO0RjMnFxmznVmznVm9nVmTi4zJ7coK/tEwsHfQAmFQmlXczGrwxbo6X4++ez1wrPZ989fL07MLa18/tuL6Teg1mL1dXn6R719o97+UXfPcF1bN9HopnIF3xwOpaSKNMZad/vj/pHhienRV2+e/zw79ur1xw8fFuYWRWp9dUNza1efrzPY2hn0dfQ0udqqLXYeJNm1J+arw+6YOJ4AsZobOrxtz3oHJvr/MhEceNkb/OX587XxMQJTE5jGb3cF7I8CNmd7g8NlqLNghIQLHkk89C0GI6/ABKFtuG7YXDdRZ5+obZiw1L9rsH9udjpBobyY1SpTBRR4AFMF5GoPKq8HhOqS8vPJJ38/U75qz76EUrES1FoxS1Odr+vx0/HhmfnpxY9j02+09hZv/6j7yVCtr0td/0hYVctXGdKyrm2cew/K+JBKL9FZzU0t/u6B4ec/T07NLrx5qzLU+zqD3o6eRlebzmxD8WoYI3LzSBbOm7fui8RyKaoy6YxtjkcjHV2T3cFfR57pMdzb0OSvdzTX1JrkWgUoQbhgIZnD+dQzwiKmlM42cAUeFBvS6SfM1o8Pbc0g3CyStis0bhSzVsLqEjZKo3Nu39v7hz+SvD7f6wa1RKC1gFoLqLWiRpvZHQgMjBhd7YpaJ1xlBQkTqDGVCuUx+xI29n5V5tVcgVwHqvSQUodoagyNzs6uoNnmJkyNYqUelmthjOCL5MdSToVzOHb8BAAgYlgqhiQSWFqj0j5udNiqDAaMwAAU4UIIFxSVVV48mx7OIXbXbm4eBaEyECodpTGqWBwfIvGIZeYKUEkvQ6h0hEpHaIw7GZc29pIvtMfPZPCU1TKzvbmjZ+TllLG5VWa0gYQJJEwgYbzxgB4uyjfFJRwsAyUSwmhztgwPjdicHsJYD2MaGNPAGFFUGtW5obiQKYWldYR+0OnyW+qMmAapABEOiHAALo0RF8W54c6FyyiVaSrnd8tVfWq8hgOgNMZXImA+LflAImlX2N2HD8IfV1aX19YfdfQoapscj/tgrUVAmMqj3oOuXM76ZX5+dWmpP9gvwatb2jqlar1QhgtleJQOoVDoQ0/3l6HBGX+7DBB7TI1aoRRhVyJlvKT4/VE6jGp1aw7Hkq2RKCm3Q4i5QoBQixAq41LKyXAtYaEMDA6tfP7ydPwVpDErLE2+4IjZFQAJE4jX7IqJjSaNsapq9f3im8lJCV4tUVW3tnc3PWoVyQmhRH3q5OloHBi3bn0ZHFju7dGJZShH4DXU+gxmjAMgpdzczIvROJzcv3+tybHmdNj5EEJl2CFRu1yFM9nIg2Jm+LMYOZS4uPiVtbW590vSmgZQY1JYHnr7Rry9w+paB4jXXLl+O5pA0y9e/Do/pzfXwzJCIte2+n/y+zvN1kaRREUrZETj4Ndp1/uDbm0NwuGjbMCrMwaMtU0KAmVy+BR6NA7Se/c/Ox19ShyhMRAq3Q6hAbnKI5FLixjIg8JwXeRQKip4y5/WTE4viJvKUXXK2Qy0yujrHXJ19SM6K4MvipjmfHr66rt5n8cvlOICseJs+gV2Oa/N29Hm61Crq4UiLJpHWnnSPdLkQNmV4jJedublO1eyfYQ+UGUyAmKEXpYQxdFuvFr32mySFZYgVEbB5auZySecIjQgV9lBIUKlZxw+TtpFDqU32NcRHATxmruM8m8XbxXQ3J1BW2snpNZHTKNTKsYGn4oxgsnmf7t47lym86G7xemVoopjR5M3d3iQnbPQ6ldwIX4R6+B/VpCEvXFWEPGrtWoW9+rptM0djsbG/tVuM7A5QkrhucP//fWhZJQG5Bp9Oa/02i3SRhIoe2JixqdmQbzm9IWs3w0lHj5qsrkMNldmVs7mgUZ7nihxfc6NvI1DKpnKbm0oyKNs7uDGZFYxRr1B8luIl09xS5R8si+U7yW6fccrQtlkGe5dyvJIFYpiFmkjCZQiBhNSVu3aGx/uZlwI4SPyTdKcPXXKaLAcOkI+OUOhUH5evjbSHtSiVGekhF2Pz6ecMnD5sb/96PqdHIDgZsaFcKNJsfv0HN7Zg4c3DpFAuRBpFoRCobPhbxYKhc6kRt5ckhIS98eG5Z4UF7/3x90RTU4mJG06Sv4Z8r1IN+adH9ck2oFCoh0oJNqBQqIdKCTagUKifwEjsUv8O+HPLgAAAABJRU5ErkJggg==" alt="" /><img src="data:image/png;base64,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" alt="" /></h2>
+<h1 style="text-align: center;">&nbsp;&nbsp;Do you Knit or Crochet?</h1>
+<h3 style="text-align: center;">Meet new friends while knitting, crocheting, cross-stitching, doing needlepoint, etc.</h3>
+<h3 style="text-align: center;">Some supplies will be available.</h3>
+<h2 style="text-align: center;">Drop-in &ndash; all abilities welcome!</h2>
+<h2 style="text-align: center;">Mondays 1-3:30pm&nbsp;</h2>
+<h2 style="text-align: center;">+++</h2>
+<hr />
+<h2 style="text-align: center;"><strong>&nbsp;Meeting Room:</strong></h2>
+<p style="text-align: center;">Westbank branch has a meeting room available for rent.&nbsp;With a theatre style set-up, the room has a seating capacity of 20-25.</p>
+<p style="text-align: center;">The room&nbsp;is available on open days and rents for $40.00 for the first 2 hours and $10.00 per hour for each additional hour.&nbsp;&nbsp;</p>
+<p style="text-align: center;"><strong>Bookings are not confirmed until the rental fee has been paid.</strong></p>
+<p style="text-align: center;">Please contact the branch at<strong> 250-768-4369</strong> for further information or to book a room.</p>
+<p style="text-align: center;">&nbsp;</p>
+<hr />
+<h1 style="text-align: center;"><span style="text-decoration: underline;">Local Artists on Display&nbsp;in the Library&nbsp;this Month</span></h1>
+<h2 style="text-align: center;"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Westbank/Eagle.jpg" alt="" width="181" height="150" /><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Westbank/Desert_Garden.jpg" alt="" width="125" height="149" /></h2>
+<h2 style="text-align: center;">Featured artist this month</h2>
+<h2 style="text-align: center;">Mary Walker</h2>
+<p style="text-align: center;"><strong>"The 13th Century lost art of Quilling"</strong></p>
+<h3 style="text-align: center;">Theresa Bishop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Karen M. Andrews&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ralph Carlson&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E. Stella Tessier</h3>
+<h3 style="text-align: center;">Jenny Mohr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pat Derrickson&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Irene Scott&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eileen Toews&nbsp;&nbsp;</h3>
+<hr style="text-align: center;" />
+<h1 style="text-align: center;">Friends of the Library</h1>
+<h3 style="text-align: left;">The&nbsp;Westbank Friends of the Library, formed in February 2001, actively support the work of the library and its staff.&nbsp; The monies raised from their book sales are used to buy non-budget items and to sponsor various programs and events that take place in the library.</h3>
+<h3 style="text-align: left;">The Friends also organize the popular Wednesday &nbsp;Evening Speakers Programs that take place in the library once a month during the winter/spring months.</h3>
+<h3 style="text-align: left;">If you&nbsp;would like more information or would like to attend a Friends of the Westbank Library meeting please contact the library at 250-768-4369.&nbsp;Dates of meetings and Speakers Programs are posted on our branch calendar.&nbsp;</h3>
+<p>&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+<hr />
+<h1 style="text-align: left;">Community Links</h1>
+<p style="text-align: left;">City&nbsp;of West Kelowna&nbsp; <a href="http://www.westkelownacity.ca">http://www.westkelownacity.ca</a></p>
+<p style="text-align: left;">Greater Westside Board of Trade&nbsp; <a href="http://www.westbankchamber.com">http://www.westbankchamber.com</a></p>
+<p style="text-align: left;">Westside Health Network <a href="http://westsidehealthnetwork.com">http://westsidehealthnetwork.com</a></p>
+<p style="text-align: left;">Visit Westside (West Kelowna Visitors Centre) <a href="http://www.visitwestside.com">http://www.visitwestside.com</a>&nbsp;</p>
+<p style="text-align: left;">Suk'?t?msqilx? West Kelowna Arts Council<em>&nbsp; <a href="http://www.swac-arts.com">http://www.swac-arts.com</a></em></p>
+<p style="text-align: left;">&nbsp;</p>
+<p>&nbsp;</p>
+               </div></div>
+</div>  <!-- end of background -->
+           <!-- Copyright -->
+	<div class="content-footer-container-bottom-div">
+		<span id="footer-copyright" class="content-footer-text">&copy; 2013 Okanagan Regional Library | Last updated on March  9, 2016 | <a href="/search">Website Search</a></span>
+		<span id="footer-twin-creek" class="content-footer-text"><a href="http://www.twincreekmedia.com" target="_blank">Kelowna Marketing by Twin Creek Media</a></span>
+	</div>
+<div class="footer-contentpage-div">
+	<!-- Location/Nav Row -->
+	<div class="content-footer-container">
+		<div id="footer-location"><h5>Locations, Hours, and Programs</h5><!--<img src="/assets/templates/orl/images/layout/locations-and-hours-footer.gif" alt="Locations &amp; Hours" />--></div>
+		<div id="footer-navigation"><h5>Navigation</h5><!--<img src="/assets/templates/orl/images/layout/navigation-footer.gif" alt="Navigation" />--></div>
+	</div>
+	<!-- Divider -->
+	<div class="content-footer-divider"></div>
+	<!-- City/Menu Row -->
+	<div class="content-footer-container">
+                <div class="content-footer-locations-link-branches">
+                    <div><ul><li><a href="/branches/armstrong" title="Armstrong" >Armstrong</a></li>
+<li><a href="/branches/cherryville" title="Cherryville" >Cherryville</a></li>
+<li><a href="/branches/enderby" title="Enderby" >Enderby</a></li>
+<li><a href="/branches/falkland" title="Falkland" >Falkland</a></li>
+<li><a href="/branches/golden" title="Golden" >Golden</a></li>
+<li class="last"><a href="/branches/hedley" title="Hedley" >Hedley</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/kaleden" title="Kaleden" >Kaleden</a></li>
+<li><a href="/branches/kelowna" title="Kelowna" >Kelowna</a></li>
+<li><a href="/branches/keremeos" title="Keremeos" >Keremeos</a></li>
+<li><a href="/branches/lake-country" title="Lake Country" >Lake Country</a></li>
+<li><a href="/branches/lumby" title="Lumby" >Lumby</a></li>
+<li class="last"><a href="/branches/mission" title="Mission" >Mission</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/naramata" title="Naramata" >Naramata</a></li>
+<li><a href="/branches/north-shuswap" title="North Shuswap" >North Shuswap</a></li>
+<li><a href="/branches/okanagan-falls" title="Okanagan Falls" >Okanagan Falls</a></li>
+<li><a href="/branches/oliver" title="Oliver" >Oliver</a></li>
+<li><a href="/branches/osoyoos" title="Osoyoos" >Osoyoos</a></li>
+<li class="last"><a href="/branches/oyama" title="Oyama" >Oyama</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/peachland" title="Peachland" >Peachland</a></li>
+<li><a href="/branches/princeton" title="Princeton" >Princeton</a></li>
+<li><a href="/branches/revelstoke" title="Revelstoke" >Revelstoke</a></li>
+<li><a href="/branches/rutland" title="Rutland" >Rutland</a></li>
+<li><a href="/branches/salmon-arm" title="Salmon Arm" >Salmon Arm</a></li>
+<li class="last"><a href="/branches/sicamous" title="Sicamous" >Sicamous</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/silver-creek" title="Silver Creek" >Silver Creek</a></li>
+<li><a href="/branches/south-shuswap" title="South Shuswap" >South Shuswap</a></li>
+<li><a href="/branches/summerland" title="Summerland" >Summerland</a></li>
+<li><a href="/branches/vernon" title="Vernon" >Vernon</a></li>
+<li class="last active"><a href="/branches/westbank" title="Westbank" >Westbank</a></li>
+</ul></div>
+                </div>
+		<div class="content-footer-locations-link-divider"></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/about-us" title="About Us" >About Us</a></li>
+<li><a href="/news-events" title="News &amp; Events" >News &amp; Events</a></li>
+<li class="active"><a href="/branches" title="Branches" >Branches</a></li>
+<li class="last"><a href="/Borrowing-services" title="Borrowing & Services" >Borrowing & Services</a></li>
+</ul></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/online-resources" title="Web Resources" >Web Resources</a></li>
+<li><a href="/kids" title="Kids" >Kids</a></li>
+<li><a href="/teens" title="Teens" >Teens</a></li>
+<li><a href="/book-lovers" title="Book Lovers" >Book Lovers</a></li>
+<li class="last"><a href="/contact" title="Contact Us" >Contact Us</a></li>
+</ul></div>
+	</div>
+</div>
+            
+        </div>
+
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3147068-38");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://bclibraries.org/piwik/" : "http://bclibraries.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 62);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://bclibraries.org/piwik/piwik.php?idsite=62" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Tag -->
+	</body>
+</html>

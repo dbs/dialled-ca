@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>
+	Search All Collections
+</title>
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" type="text/css" href="http://esplanade.ca/media/css/ie.css" />
+  <![endif]-->
+<link rel="stylesheet" type="text/css" href="/layout/EsplanadeTemplate/index.css" media="all" />
+<!-- <link rel="shortcut icon" href="layout/images/favicon.ico" type="image/vnd.microsoft.icon" /> -->
+<!-- ANDORNOT STYLES -->
+<link href="/layout/AndornotStyles.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 7]>
+    	<script type="text/javascript" src="/layout/scripts/json2-min.js"></script>
+    <![endif]-->
+    <script type='text/javascript' src="/layout/scripts/jquery-1.6.4.min.js"></script>
+
+	
+    
+  <script type="text/javascript" src='/layout/scripts/AndornotUtilities_Search_1_12.js' ></script>
+  <link href='/layout/onesearch.css' rel="stylesheet" type="text/css" />
+  <script type="text/javascript">
+  
+        function MarkCheckboxes(markAsSelected)
+        {
+            for (var i = 0; i < document.forms[0].length; i++)
+            {
+                if (document.forms[0].elements[i].type == "checkbox")
+                {
+                    document.forms[0].elements[i].checked = markAsSelected;
+                }
+            }
+        }
+		$(document).ready(function() {
+		$("input:text:visible:first").focus();
+
+		
+            // set submit btn behaviour
+            var btn = $("#ctl00_main_SearchButton");
+            var qi = $("#ctl00_main_QI");
+            btn.click(function(e) {
+                // update hidden query input
+                qi.val($("#xQI").val());
+
+                AutoBoolean("&", qi.attr("id"), true);
+                SetRewind();
+                return qi.val() === "" ? false : true;
+            });
+        });
+    </script>
+</head>
+<body>
+  <a id="a_pageTop" name="pageTop"></a>
+
+  <div style="display: block;" id="background_wrapper">
+    <div id="background_img"></div>
+  </div>
+
+  <div id="header">
+    <div id="header_top_nav_wrapper">
+    <div class="container_12">
+      <div class="grid_12">
+      
+      <ul id="header_top_nav" class="navlist float-right">
+        <li><a href="http://www.esplanade.ca/about/">About</a>  </li>
+        <li><a href="http://volunteer.tridemedia.com/">Volunteer</a>  </li>
+        <li><a href="http://www.esplanade.ca/membership/">Membership</a>  </li>
+        <li><a href="http://www.esplanade.ca/travelling-exhibitions/">TREX</a>  </li>
+        <li><a href="http://www.esplanade.ca/category/special-events/special-events-current-and-upcoming/">Special Events</a>  </li>
+        <li><a href="http://www.esplanade.ca/culture-blog/">Culture Blog</a>  </li>
+        <li><a href="http://www.esplanade.ca/ewart-duggan-house/">Ewart Duggan House</a>  </li>
+        <li><a href="http://www.esplanade.ca/facility-booking/">Facility Booking</a>  </li>
+        <li><a href="http://www.esplanade.ca/contact-us/">Contact Us</a></li>
+      </ul>
+      
+      </div>
+    </div>
+    </div>
+    <div id="header_main_nav_wrapper">
+    <div class="container_12">
+      <div class="grid_5">
+        <a href="http://esplanade.ca/" class="sprite header_footer-sprite sprite-header_logo no-border-hover">Return Home</a>
+      </div>
+      <div class="grid_7">
+      
+      <ul id="header_main_nav" class="navlist float-right">
+        <li style="margin-left: 0px;"><a href="http://www.esplanade.ca/category/art-gallery/art-gallery-current-and-upcoming/" id="art_gallery" class="main_nav_element art_gallery">Art Gallery</a></li>
+        <li><a href="http://www.esplanade.ca/category/museum/museum-current-and-upcoming/" id="museum" class="main_nav_element museum">Museum</a></li>
+        <li><a href="http://www.esplanade.ca/category/theatres/theatres-current-upcoming-theatres/" id="theatres" class="main_nav_element theatres">Theatres</a></li>
+        <li><a href="http://www.esplanade.ca/category/archives/archives-current-and-upcoming/" id="archives" class="main_nav_element archives">Archives</a></li>
+        <li><a href="http://www.esplanade.ca/category/education/education-current-upcoming/" id="education" class="main_nav_element education">Education</a></li>
+      </ul>
+      
+      </div>
+    </div>
+    </div>
+
+  </div> <!-- end header -->
+
+<div id="main_content" class="clearfix">
+ <div id="main_content_wrapper">
+  <div class="container_12">
+
+<!--   <div id="leftnav"> -->
+    <div id="section_nav" class="background-about grid_3"> 
+      <h2>Search the Collections</h2>
+	  <h3>Archives</h3>
+
+		<ul class="ul-archives">
+			<li><a href="/">All Collections</a></li>
+			<li><a href="/manuscripts/">Collection / Fonds Summaries</a></li>
+			<li><a href="/archives/">Textual Files</a></li>
+			<li><a href="/audiovisual/">Audio-Visual Collection</a></li>
+			<li><a href="/images/">Images</a></li>
+			<li><a href="/maps/">Maps</a></li>
+		</ul>
+		<div style="clear:both;"></div>
+		<h3>Art Gallery</h3>
+		<ul class="ul-archives">
+			<li><a href="/art/">Art Collection</a></li>
+		</ul>		
+		<div style="clear:both;"></div>
+        <h3>Museum</h3>
+		<ul class="ul-archives">
+			<li><a href="/artifacts/">Artifacts</a></li>
+		</ul>		
+		<div style="clear:both;"></div>
+		<ul class="ul-archives">
+			<li>&nbsp;</li>
+			<li><a href="/help.aspx">Help with Searching</a></li>		
+		</ul>	
+		<div style="clear:both;"></div>
+	</div> <!-- end section_nav -->
+
+
+    <div id="section_showcase_wrapper" class="grid_9"> <!-- Main section for search and results -->
+		
+        
+
+<h2>Search All Collections</h2>
+  <form name="aspnetForm" method="post" action="default.aspx" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_main_SearchButton')" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzNjE5MzAxOTVkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYIBRxjdGwwMCRtYWluJFRleHRiYXNlQ2hvaWNlcyQwBRxjdGwwMCRtYWluJFRleHRiYXNlQ2hvaWNlcyQxBRxjdGwwMCRtYWluJFRleHRiYXNlQ2hvaWNlcyQyBRxjdGwwMCRtYWluJFRleHRiYXNlQ2hvaWNlcyQzBRxjdGwwMCRtYWluJFRleHRiYXNlQ2hvaWNlcyQ0BRxjdGwwMCRtYWluJFRleHRiYXNlQ2hvaWNlcyQ1BRxjdGwwMCRtYWluJFRleHRiYXNlQ2hvaWNlcyQ2BRxjdGwwMCRtYWluJFRleHRiYXNlQ2hvaWNlcyQ2I3q0We5cSqUzNSa5aAlNeoDGT4Y=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=OvAAhvXlejNnDdvgPkZfr5FWq_H7bw09f6jAlZf9NqWPCxjcB1U6Z4SmQMR1yZE-sjLUegKZXBIPQhtar_S001eGnq81&amp;t=635906231961921940" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=gOqnK0SEsgFJXVxe6ME2h6nxkobIp2xzCF_AelPbL5vivjWEEuhTc6ZP0PajdqBbkwfh9ceLtU9Vx_tEviagCRz444sp69Bw9WdYOARHUNGxe1OGdZXIEm2-egZAv67HRqQS5TOXhGlRwSusy4Q5DROQFcFUZxkPMmpcEkMErujOrDgn0&amp;t=2e2045e2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=8Y_CrYq2tLnJ4Eri-wdVzOoNHNPoVD2rBvdVW_aE2XMF6o3GTIe826F15mu1O-Cu334h-bcUD6qQDLRl19TNmmMGMXsAtGmZpwriqjl9FGpGN4mzd6_0rTG3K3FTR1Mkbe9ox7tkpOwaaSI9m1UdTT-PtqBtql0BAmVYcTN89fzUr0R40&amp;t=2e2045e2" type="text/javascript"></script>
+<script src="/WebResource.axd?d=yZOhiZsxGTI0sEs_1fvuGqHpQyCJKcqyeI1aX40gX5nMS8GpR7R0MS366rsNu2R1ffs8ZjcWK-vDwqGLHXvesoqxOUY1&amp;t=635906231961921940" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWKwLe3PuTAwL6n4KSAQLb4c2nBgK+ueOVDwLtltPKDwL25eiHDAKp0r+UCALIvN/gBgLtlr/vBgL25eyHDAKq0r+UCALIvPO7DwLtlvuAAQL25eCHDAKn0r+UCALIvIeXCALtluelCAL25eSHDAKo0r+UCALIvJtyAu2Wg94MAvbl2IcMAqXSv5QIAsi8j/QDAu2W74IEAvbl3IcMAqbSv5QIAsi8o88MAu2Wq5QOAvbl0IcMAqPSv5QIAsi8t6oFAuaWrLYIAuaWwJEBAuaWhIAHAuaWmNsPAuaW3MkFAuaW8KQOAuaWtJMEAozPuJMPAo3PuJMPAojPuJMPAoOg0v4Df758f0l2Q83p3WBFohEBDCZS0Ic=" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$main$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['fctl00$main$ResultsPanel'], ['ctl00$main$SearchButton'], [], 90);
+//]]>
+</script>
+
+    <div id="SearchContent">
+
+      <div id="ctl00_main_OnesearchMembers">
+	
+        <input name="ctl00$main$QI" type="text" id="ctl00_main_QI" class="Searchbox" style="display:none;" />
+        <input id="xQI" name="xQI" type="text" class="OneSearchbox" autocomplete="off" Title="Enter any keywords" />
+        <input type="submit" name="ctl00$main$SearchButton" value="Go" id="ctl00_main_SearchButton" />
+        <!-- <input type="reset" value="Reset" onclick="window.location = window.location;" /> -->
+        <input name="ctl00$main$NumberTextbases" type="hidden" id="ctl00_main_NumberTextbases" value="7" />
+
+                <input name="ctl00$main$Textbase0" type="hidden" id="ctl00_main_Textbase0" value="Collection / Fonds Summaries" />
+                <input name="ctl00$main$Action0" type="hidden" id="ctl00_main_Action0" value="localhost/ics-wpd/exec/IcsWPPro.dll" />
+                <input name="ctl00$main$Query0" type="hidden" id="ctl00_main_Query0" value="XC=/manuscripts/Results.aspx&amp;TN=holdings&amp;DF=WebFull&amp;RF=WebBriefFonds&amp;DL=0&amp;RL=0&amp;NP=255&amp;MF=GENERICENGWPMSG.INI&amp;AC=QBE_QUERY&amp;QB0=AND&amp;QF0=Name|FondsOrCollection|History|ScopeContent|Notes|SubjectHeadings|Topic|People" />
+                <input name="ctl00$main$ResultAction0" type="hidden" id="ctl00_main_ResultAction0" value="http://archives.esplanade.ca/manuscripts/Results.aspx" />
+
+                <input name="ctl00$main$Textbase1" type="hidden" id="ctl00_main_Textbase1" value="Textual Files" />
+                <input name="ctl00$main$Action1" type="hidden" id="ctl00_main_Action1" value="localhost/ics-wpd/exec/IcsWPPro.dll" />
+                <input name="ctl00$main$Query1" type="hidden" id="ctl00_main_Query1" value="XC=http://esplanade/archives/Results.aspx&amp;TN=listings&amp;RF=WebBriefFonds&amp;DF=WebFull&amp;BU=http://esplanade/&amp;RL=0&amp;DL=0&amp;NP=255&amp;MF=GENERICENGWPMSG.INI&amp;AC=QBE_QUERY&amp;QB0=AND&amp;QF0=FondsorCollection|AccessionNumber|FileNumber|FileTitle|BoxNumber|FileDescription|SousFondsSeries|Notes|MediaNumbers|Published|Author|Publisher|Editor|CitationNotes|PlacePublished|TitleOfPublication|ArticleTitle|People|Subject" />
+                <input name="ctl00$main$ResultAction1" type="hidden" id="ctl00_main_ResultAction1" value="http://archives.esplanade.ca/archives/Results.aspx" />
+
+                <input name="ctl00$main$Textbase2" type="hidden" id="ctl00_main_Textbase2" value="Audio-Visual" />
+                <input name="ctl00$main$Action2" type="hidden" id="ctl00_main_Action2" value="localhost/ics-wpd/exec/IcsWPPro.dll" />
+                <input name="ctl00$main$Query2" type="hidden" id="ctl00_main_Query2" value="XC=/audiovisual/Results.aspx&amp;TN=audiovisual&amp;DF=WebFull&amp;RF=WebBriefFonds&amp;DL=0&amp;RL=0&amp;NP=255&amp;MF=GENERICENGWPMSG.INI&amp;AC=QBE_QUERY&amp;QB0=AND&amp;QF0=Working Title|FondsOrCollection|PieceTitle|ProgramTitle|Subject-Description|Notes|Genre|Presenter|Informant" />
+                <input name="ctl00$main$ResultAction2" type="hidden" id="ctl00_main_ResultAction2" value="http://archives.esplanade.ca/audiovisual/Results.aspx" />
+
+                <input name="ctl00$main$Textbase3" type="hidden" id="ctl00_main_Textbase3" value="Images" />
+                <input name="ctl00$main$Action3" type="hidden" id="ctl00_main_Action3" value="localhost/ics-wpd/exec/IcsWPPro.dll" />
+                <input name="ctl00$main$Query3" type="hidden" id="ctl00_main_Query3" value="XC=/images/Results.aspx&amp;TN=images&amp;DF=WebFull&amp;RF=WebBriefFonds&amp;DL=0&amp;RL=0&amp;NP=255&amp;MF=GENERICENGWPMSG.INI&amp;AC=QBE_QUERY&amp;QB0=AND&amp;QF0=Title|Photographer|People|ScopeContent|History|FondsOrCollection" />
+                <input name="ctl00$main$ResultAction3" type="hidden" id="ctl00_main_ResultAction3" value="http://archives.esplanade.ca/images/Results.aspx" />
+
+                <input name="ctl00$main$Textbase4" type="hidden" id="ctl00_main_Textbase4" value="Maps" />
+                <input name="ctl00$main$Action4" type="hidden" id="ctl00_main_Action4" value="localhost/ics-wpd/exec/IcsWPPro.dll" />
+                <input name="ctl00$main$Query4" type="hidden" id="ctl00_main_Query4" value="XC=/maps/Results.aspx&amp;TN=maps&amp;DF=WebFull&amp;RF=WebBriefFonds&amp;DL=0&amp;RL=0&amp;NP=255&amp;MF=GENERICENGWPMSG.INI&amp;AC=QBE_QUERY&amp;QB0=AND&amp;QF0=MapTitle|Notes|GeographicLocation|SubjectHeadings|SupplyTitle|FondsorCollection" />
+                <input name="ctl00$main$ResultAction4" type="hidden" id="ctl00_main_ResultAction4" value="http://archives.esplanade.ca/maps/Results.aspx" />
+
+                <input name="ctl00$main$Textbase5" type="hidden" id="ctl00_main_Textbase5" value="Art" />
+                <input name="ctl00$main$Action5" type="hidden" id="ctl00_main_Action5" value="localhost/ics-wpd/exec/IcsWPPro.dll" />
+                <input name="ctl00$main$Query5" type="hidden" id="ctl00_main_Query5" value="XC=/art/Results.aspx&amp;TN=artcollection&amp;DF=WebFull&amp;RF=WebBrief&amp;DL=0&amp;RL=0&amp;NP=255&amp;MF=GENERICENGWPMSG.INI&amp;AC=QBE_QUERY&amp;QB0=AND&amp;QF0=ArtistName|Title|ArtistNationality" />
+                <input name="ctl00$main$ResultAction5" type="hidden" id="ctl00_main_ResultAction5" value="http://archives.esplanade.ca/art/Results.aspx" />
+
+                <input name="ctl00$main$Textbase6" type="hidden" id="ctl00_main_Textbase6" value="Artifacts" />
+                <input name="ctl00$main$Action6" type="hidden" id="ctl00_main_Action6" value="localhost/ics-wpd/exec/IcsWPPro.dll" />
+                <input name="ctl00$main$Query6" type="hidden" id="ctl00_main_Query6" value="XC=/artifacts/Results.aspx&amp;TN=artifacts&amp;DF=WebFull&amp;RF=WebBrief&amp;DL=0&amp;RL=0&amp;NP=255&amp;MF=GENERICENGWPMSG.INI&amp;AC=QBE_QUERY&amp;QB0=AND&amp;QF0=OBJECT_TERM|SOURCE_NAME|COLOUR|MATERIAL|MAKER|CULTURE|DESCRIPTION_TEXT|PROVENANCE|OBJECT_CATEGORY|OBJECT_CLASS" />
+                <input name="ctl00$main$ResultAction6" type="hidden" id="ctl00_main_ResultAction6" value="http://archives.esplanade.ca/artifacts/Results.aspx" />
+				
+				
+        
+</div>
+      <div id="TextbaseChoicesPanel">
+	  <p><strong>Select:</strong></p>
+        <table id="ctl00_main_TextbaseChoices" border="0">
+	<tr>
+		<td><input id="ctl00_main_TextbaseChoices_0" type="checkbox" name="ctl00$main$TextbaseChoices$0" checked="checked" /><label for="ctl00_main_TextbaseChoices_0">Collection / Fonds Summaries</label></td>
+	</tr><tr>
+		<td><input id="ctl00_main_TextbaseChoices_1" type="checkbox" name="ctl00$main$TextbaseChoices$1" checked="checked" /><label for="ctl00_main_TextbaseChoices_1">Textual Files</label></td>
+	</tr><tr>
+		<td><input id="ctl00_main_TextbaseChoices_2" type="checkbox" name="ctl00$main$TextbaseChoices$2" checked="checked" /><label for="ctl00_main_TextbaseChoices_2">Audio-Visual Collection</label></td>
+	</tr><tr>
+		<td><input id="ctl00_main_TextbaseChoices_3" type="checkbox" name="ctl00$main$TextbaseChoices$3" checked="checked" /><label for="ctl00_main_TextbaseChoices_3">Images</label></td>
+	</tr><tr>
+		<td><input id="ctl00_main_TextbaseChoices_4" type="checkbox" name="ctl00$main$TextbaseChoices$4" checked="checked" /><label for="ctl00_main_TextbaseChoices_4">Maps</label></td>
+	</tr><tr>
+		<td><input id="ctl00_main_TextbaseChoices_5" type="checkbox" name="ctl00$main$TextbaseChoices$5" checked="checked" /><label for="ctl00_main_TextbaseChoices_5">Art</label></td>
+	</tr><tr>
+		<td><input id="ctl00_main_TextbaseChoices_6" type="checkbox" name="ctl00$main$TextbaseChoices$6" checked="checked" /><label for="ctl00_main_TextbaseChoices_6">Artifacts</label></td>
+	</tr>
+</table>
+        
+					<p><br /><input type="checkbox" id="SelectAll" onclick="MarkCheckboxes(this.checked);" />Select / deselect all collections</p>
+
+        <!-- This section allows the user to choose the number of search results to display after clicking View Results
+                <p><span class="label">Display </span>
+                <select name="ctl00$main$MR" id="ctl00_main_MR">
+	<option value="10">10</option>
+	<option selected="selected" value="20">20</option>
+	<option value="50">50</option>
+	<option value="">All</option>
+
+</select>
+                <span class="label">records per page&nbsp;</span>
+                </p>
+-->
+      </div>
+      <!-- end div TextbaseChoicesPanel -->
+      <div id="ctl00_main_ResultsPanel">
+	
+
+          
+                   
+			<div id="ctl00_main_ResultsProgress" style="visibility:hidden;display:block;">
+		
+              <div class="ProgressIndicator"> <img src="/layout/images/circle_indicator.gif" alt="circle indicator" /> <br />
+                Searching... </div>
+            
+	</div>
+		  
+        
+</div>
+    </div>     <!-- end div SearchContent -->
+    
+    <div id="SearchTips"> <!-- Search Tips - Begin -->
+      <h3>Search Tips</h3>
+    <ul>
+      <li>Search terms are automatically joined by 'AND'<br />
+        e.g. <em>POW German</em> finds <em>POW</em> and <em>German</em></li>
+      <li>Truncation is automatic<br />
+        e.g. <em>German</em> finds German, Germans, Germanic, Germany,</em> etc. </li>
+      <li>Use / for OR<br />
+        e.g. <em>military / army / militia / armed forces / war</em> </li>
+      <li>Use ! for NOT<br />
+        e.g. <em>musical ! theatre</em> </li>
+      <li>Use " " to search for a phrase<br />
+        e.g. <em>"City Council"</em></li>
+    </ul>
+    <p> <img src="/layout/images/help_16.gif" align="top" alt="help" /> <a href="/help.aspx">More
+        help is available.</a></p>
+
+    </div>     <!-- Search Tips - End -->
+  
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('QI');Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":10,"dynamicLayout":false}, null, null, $get("ctl00_main_ResultsProgress"));
+});
+//]]>
+</script>
+</form>
+  </div>
+
+		
+    </div> <!-- end section_showcase_wrapper -->
+   </div> <!-- end section_nav_showcase_wrapper -->
+  </div> <!-- end container_12 -->
+ </div> <!-- end main_content_wrapper -->
+</div><!-- end main_content -->
+
+  
+
+  <div id="footer">
+    
+    
+    <div id="footer_top_wrapper">
+    <div class="container_12">
+      <div class="grid_12">
+      <ul id="footer_top_nav" class="navlist">
+        <li><a href="http://www.tixx.ca/" target="_top" class="sprite header_footer-sprite sprite-btn_footer_tixx footer_top_spacing">TIXX</a></li>
+        <li><a href="http://www.trexprogramsoutheast.ca/" target="_top" class="sprite header_footer-sprite sprite-btn_footer_trex footer_top_spacing">TREX</a></li>
+        <li><a href="https://www.facebook.com/MedHatEsplanade" class="sprite header_footer-sprite sprite-btn_footer_facebook" target="_top">Facebook</a></li>
+        <li><a href="https://twitter.com/Esplanade" class="sprite header_footer-sprite sprite-btn_footer_twitter">Twitter</a></li>
+<!--        <li><a href="#" class="sprite header_footer-sprite sprite-btn_footer_rss footer_top_spacing">RSS</a></li>-->
+	<li><a href="http://pinterest.com/esplanadeag"><img src="/layout/icons/pinterest.png" border="0"></a></li>
+        <li><a href="http://www.medicinehat.ca/index.aspx?page=212" target="_top" class="sprite header_footer-sprite sprite-btn_footer_heritage">Heritage Resources Committee</a></li>
+      </ul>
+      </div>
+    </div>
+    </div>
+    
+    
+    <div id="footer_middle_wrapper">
+    <div class="container_12">
+      <div class="footer_middle_background grid_12">
+      <div class="footer_info grid_4 alpha">
+        <p class="alpha"><strong>Esplanade Arts and Heritage Centre</strong> <br>
+          401 First St SE, Medicine Hat, AB T1A 8W2 <br>
+          Hours: Mon-Fri 9AM-5PM &nbsp;/&nbsp; Sat 12-5<br>
+	  Sun/Holidays: Closed
+        </p>
+      </div>
+      <div class="footer_info grid_4">
+        <p>
+          Ph: 403.502.8580 &nbsp;|&nbsp; Fax: 403.502.8589 <br>
+          Ticket Hotline: 403.502.8777 &nbsp;|&nbsp; <a href="http://www.tixx.ca/" target="_top">www.tixx.ca</a> <br>
+          <a href="http://www.esplanade.ca/">www.esplanade.ca</a>
+        </p>
+      </div>
+      <div class="footer_info grid_4 omega">
+        <a href="http://www.medicinehat.ca/" target="_top" class="sprite header_footer-sprite sprite-btn_footer_city float-right no-border-hover">City of Medicine Hat</a>
+        <div class="clear"></div>
+        <p class="small float-right omega" style="padding-top: 10px; padding-right: 20px;">&copy;2013 City of Medicine Hat. All rights reserved.</p>
+      </div>
+      </div>      
+    </div>
+    </div>
+    
+    <div id="footer_bottom_wrapper">
+    <div class="container_12">
+      <div class="footer_bottom_background grid_12">
+      <div class="grid_4 alpha">
+	  <a href="http://www.andornot.com/" target="_blank">Search Application by Andornot Consulting</a>
+      </div>
+      <div class="grid_8 omega">
+        <p>
+          This information is subject to change without notice. Call 403-502-8580 to verify program details, costs and times. <br>
+          The Esplanade reserves the right to cancel courses, workshops, lectures and/or film showings without notice.
+        </p>
+      </div>
+      </div>      
+    </div>
+    </div>
+    
+  </div> <!-- end footer -->
+
+
+<div style="width: 1204px; height: 1739px; display: none;" id="lightbox-overlay"><div id="lightbox-overlay-text"><p><span id="lightbox-overlay-text-close">Click to close</span><br>&nbsp;<span style="display: none;" id="lightbox-overlay-text-interact">Hover to interact</span></p></div></div><div style="left: 0px; top: 360.8px; display: none;" id="lightbox"><div id="lightbox-imageBox"><div id="lightbox-imageContainer"><img id="lightbox-image"><div id="lightbox-nav"><a href="#" id="lightbox-nav-btnPrev"></a><a href="#" id="lightbox-nav-btnNext"></a></div><div id="lightbox-loading"><a href="#" id="lightbox-loading-link"><img src="loading.gif"></a></div></div></div><div id="lightbox-infoBox"><div id="lightbox-infoContainer"><div id="lightbox-infoHeader"><span id="lightbox-caption"><a href="#" title="Download." id="lightbox-caption-title"></a><span id="lightbox-caption-seperator"></span><span id="lightbox-caption-description"></span></span></div><div id="lightbox-infoFooter"><span id="lightbox-currentNumber"></span><span id="lightbox-close"><a href="#" id="lightbox-close-button" title="You can also click anywhere outside the image to close.">Close X</a></span></div><div id="lightbox-infoContainer-clear"></div></div></div></div>
+
+<script type="text/javascript">
+var addthis_config = addthis_config||{};
+addthis_config.data_use_cookies = false;
+var name = "__atuvc";
+document.cookie = name + '=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
+</script>	
+</body>
+</html>

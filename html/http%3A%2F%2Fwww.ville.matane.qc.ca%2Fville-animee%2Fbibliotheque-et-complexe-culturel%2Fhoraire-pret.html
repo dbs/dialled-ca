@@ -1,0 +1,698 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="description" content="Toutes les informations pratiques concernant la Bibliothèque municipale Fonds de solidarité FTQ: horaire, abonnement, prêt, services.">
+<meta name="keywords" content="livres, horaire, bibliothèque, abonnement, prêt de documents, audiovisuel, jours, volumes, services ">
+<meta name="revisit-after" content="30 days">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+<meta property="og:url" content="http://www.ville.matane.qc.ca/ville-animee/bibliotheque-et-complexe-culturel/horaire-pret.html" />
+<meta property="og:title" content="Bibliothèque municipale Fonds de solidarité FTQ --  Ville de Matane" />
+<meta property="og:description" content="Toutes les informations pratiques concernant la Bibliothèque municipale Fonds de solidarité FTQ: horaire, abonnement, prêt, services." />
+<meta property="og:image" content="http://www.ville.matane.qc.ca/images/Skin/Ville-de-Matane.jpg?v=1" />
+<title>Bibliothèque municipale Fonds de solidarité FTQ --  Ville de Matane</title>
+<base href="http://www.ville.matane.qc.ca/">
+
+<link rel="stylesheet" href="css/general.css" type="text/css">
+<link href="css/WebARTchitecte.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="js/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" type="text/css">
+<link rel="stylesheet" href="js/vendor/swipebox/src/css/swipebox.css?v=0"><style type="text/css">
+.meteo{
+	display:block;
+}
+.weatherFeed
+{
+	background-position: 35px -7px;
+    color: #000000;
+    float: left;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 90%;	
+    height: 140px;
+    margin: 2px;
+    width: 270px;
+	text-align:left;
+	position:relative;
+}
+.weatherFeed a { color: #888; }
+.weatherFeed a:hover
+{
+	color: #eee;
+	text-decoration: none;
+}
+.weatherItem
+{
+	padding: 0.8em;
+	text-align: right;
+}
+.villeMeteo {
+	 text-transform: uppercase; 
+	 color: #777;
+	font-weight: bold;
+	 padding-top:5px;
+	 font-size:10px;
+	  }
+.temperatureMeteo
+{
+	font-size: 20px;
+	font-weight: 700;
+	color: #BD0404;
+	padding:15px 0!important;
+	
+}
+
+.weatherDesc { margin-bottom: 5px;}
+.weatherRange, .weatherWind { font-size: 0.8em; line-height:1.1em; }
+.weatherLink
+{
+	margin-top: 6px;
+	text-align: right;
+	font-size: 0.8em;
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+
+
+</style></head>
+<body id="Page-ville-avec-bg" class="page-ville-animee-bibliotheque-et-complexe-culturel-horaire-pret">
+
+  		      
+        
+    <div id="fond_photo" class="fond_photo page-bg-section"></div>
+    
+		<a name="Haut"></a>
+<div class="fond_photo" id="fond_photo"></div>
+<header>
+    <div class="row">
+        <div class="large-12 columns wrapCol">
+            <div class="background_gris">
+                <div class="row">
+                    <div class="large-12 columns bg_blanc">
+                        <div class="col_border_top">
+                            <div class="logo"><a href="accueil.html"><img src="images/Skin/logo-ville-de-matane.png" alt="Ville de Matane... Passion et savoir-faire" title="Matane... PASSION ET SAVOIR-FAIRE" width="281" height="100"/></a></div>
+                            <div class="module_recherche"> <form action="http://www.ville.matane.qc.ca/recherche.html" id="cse-search-box"  > 
+    <input type="hidden" name="cx" value="015467521298466120270:7ftjyjt26gm" />  
+    <input type="hidden" name="cof" value="FORID:11" />
+    <!-- <INPUT type="button" class="bouton-recherche" NAME="Submit" ALT="Rechercher">-->
+    <div class="zone-recherche">
+        <input name="q" type="text" id="q" class="champ-recherche">
+        <button type="submit" class="bouton-recherche" NAME="Submit" ALT="Rechercher"></button> 
+    </div>
+    <div class="clear"></div>
+</form>
+</div>
+                            <div class="module_meteo">
+                                <div class="date_aujourdhui">Le vendredi 11 mars 2016</div>
+                                <div class="meteo">
+  <div id="weather" class="items"></div>
+</div>
+<br style="clear:both"/>
+
+ 
+    
+        
+        <textarea id="weather-template" style="display: none">
+                     <div class="weatherFeed" style="background-image: url({background}); background-repeat: no-repeat;">
+             	<div class="villeMeteo">{city}</div>
+				<div class="temperatureMeteo">{temp}&deg;</div>
+				<div class="weatherDesc">{text}</div>
+				<div class="weatherRange">Max : {high} &deg;C Min : {low} &deg;C</div>
+				
+            	<div class="weatherLink"><a href="{lien}" target="_blank"><img src="images/Skin/yahoo.png" width="22" height="13"/></a></div>
+            </div>
+                        
+        </textarea>
+        
+                            </div>
+                            <div class="bloc_menu">
+                                <div class="menu_tertiare">
+                                                                        <nav>
+                                        <ul>
+                                                                                        <li><a href="la-ville-vous-informe.html">La Ville vous informe</a></li>
+                                            <li><a href="coordonnees.html">Nous joindre</a></li>
+                                            <li><a href="environnement/accueil.html">Environnement</a></li>
+                                            <li><a href="culture/accueil.html">Culture</a></li>
+                                        </ul>
+                                    </nav>                                </div>
+                                <div class="menu_secondaire">
+                                                                        <nav>
+                                        <ul>
+                                                                                        <li><a href="faq.html" data-tooltip class="has-tip" title="F.A.Q."><i class="fa fa-question"><span class="invis">F.A.Q.</span></i></a></li>
+                                            <li><a href="calendrier.html" data-tooltip class="has-tip" title="Calendrier"><i class="fa fa-calendar"><span class="invis">Calendrier</span></i></a></li>
+                                            <li><a href="galeries_photos.html" data-tooltip class="has-tip" title="Galerie Photos"><i class="fa fa-camera"><span class="invis">Galerie Photos</span></i></a></li>
+                                            <li><a href="nouvelles.html" data-tooltip class="has-tip" title="Nouvelles"><i class="fa fa-bullhorn"><span class="invis">Nouvelles</span></i></a></li>
+                                            <li><a href="plan.html" data-tooltip class="has-tip" title="Plan du site"><i class="fa fa-sitemap"><span class="invis">Plan du site</span></i></a></li>
+                                            <li><a href="informations_pratiques.html" data-tooltip class="has-tip" title="Info-pratique"><i class="fa fa-flag"><span class="invis">Info-pratique</span></i></a></li>
+                                            <li><a href="https://www.facebook.com/VilledeMatane" target="_blank" data-tooltip class="has-tip" title="Facebook"><i class="fa fa-facebook"><span class="invis">Facebook</span></i></a></li>
+                                            <li><a href="rss.html" data-tooltip class="has-tip" title="RSS"><i class="fa fa-rss"><span class="invis">RSS</span></i></a></li>
+                                        </ul>
+                                    </nav>                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="scroll_auto"></div>
+                <div class="lemenu">
+                    <nav class="top-bar">
+                        <ul class="title-area"> 
+                            <li class="name"></li>
+                            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                        </ul>
+                        <section class="top-bar-section">
+                            <ul><li class="plan-accueil"><a class="lien_accueil" href="accueil.html">&nbsp;</a></li>
+<li class="has-dropdown"><a href="#">Vie municipale</a><ul class="dropdown"><li><a href="vie-municipale/armoiries-et-image-graphique.html">Armoiries et image graphique</a></li>
+<li><a href="vie-municipale/conseil-municipal.html">Conseil municipal</a></li>
+<li><a href="vie-municipale/seances-du-conseil.html">S&eacute;ances du conseil</a></li>
+<li><a href="vie-municipale/webdiffusion.html">Webdiffusion</a></li>
+<li><a href="vie-municipale/politiques-municipales.html">Politiques municipales</a></li>
+<li><a href="vie-municipale/budget-et-reglements.html">Budget et r&egrave;glements</a></li>
+<li><a href="vie-municipale/contrats-et-appels-offres.html">Contrats et appels d'offres</a></li>
+<li><a href="vie-municipale/direction-municipale-et-personnel.html">Direction municipale et &eacute;quipe</a></li>
+<li><a href="vie-municipale/carriere.html">Carri&egrave;re municipale</a></li>
+<li><a href="vie-municipale/documents-municipaux.html">Documents municipaux</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Habiter Matane</a><ul class="dropdown"><li class="has-dropdown"><a href="#">Tout sur ma propri&eacute;t&eacute;</a><ul class="dropdown"><li><a href="habiter-matane/tout-sur-ma-propriete/construction-et-renovation.html">Construction et r&eacute;novation</a></li>
+<li><a href="habiter-matane/tout-sur-ma-propriete/eau-et-aqueduc.html">Eau et aqueduc</a></li>
+<li><a href="habiter-matane/tout-sur-ma-propriete/pelouse.html">Pelouse </a></li>
+<li><a href="habiter-matane/tout-sur-ma-propriete/permis-et-certificats.html">Permis et certificats</a></li>
+<li><a href="habiter-matane/tout-sur-ma-propriete/piscines.html">Piscines</a></li>
+<li><a href="habiter-matane/tout-sur-ma-propriete/taxes-et-evaluation.html">Taxes et &eacute;valuation fonci&egrave;re</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Ordures et recyclage</a><ul class="dropdown"><li><a href="habiter-matane/ordures-et-recyclage/collectes.html">Horaire et carte des collectes</a></li>
+<li><a href="http://www.environnementmatane.ca/environnement/matieres-residuelles/ecocentre-let.html" target="_blank">Enfouissement et &eacute;cocentre</a></li>
+<li><a href="http://www.environnementmatane.ca/environnement/matieres-residuelles/residus-peintures.html" target="_blank">R&eacute;cup&eacute;ration de peinture</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Circulation et stationnement</a><ul class="dropdown"><li><a href="habiter-matane/circulation-et-stationnement/stationnement.html">Stationnement</a></li>
+<li><a href="habiter-matane/circulation-et-stationnement/deneigement.html">D&eacute;neigement</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">S&eacute;curit&eacute; et pr&eacute;vention</a><ul class="dropdown"><li><a href="habiter-matane/securite-et-prevention/prevention.html">Pr&eacute;vention</a></li>
+<li><a href="habiter-matane/securite-et-prevention/urgences.html">911 et urgences</a></li>
+<li><a href="habiter-matane/securite-et-prevention/feux-exterieurs.html">Feux ext&eacute;rieurs</a></li>
+<li><a href="habiter-matane/securite-et-prevention/ramonage.html">Ramonage</a></li>
+<li><a href="habiter-matane/securite-et-prevention/en-cas-inondation.html">En cas d&rsquo;inondation</a></li>
+<li><a href="habiter-matane/securite-et-prevention/activites-dans-les-ecoles.html">Activit&eacute;s dans les &eacute;coles</a></li>
+<li><a href="habiter-matane/securite-et-prevention/devenir-pompier.html">Devenir pompier</a></li>
+</ul></li>
+<li><a href="habiter-matane/animaux.html">Animaux</a></li>
+<li><a href="habiter-matane/ventes-de-garages.html">Ventes de garage</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Ville attractive</a><ul class="dropdown"><li class="has-dropdown"><a href="#">Pour la d&eacute;couvrir</a><ul class="dropdown"><li><a href="ville-attractive/pour-la-decouvrir/statistiques.html">Statistiques</a></li>
+<li><a href="ville-attractive/pour-la-decouvrir/arts-et-culture.html">Arts et culture</a></li>
+<li><a href="ville-attractive/pour-la-decouvrir/histoire.html">Histoire</a></li>
+<li><a href="ville-attractive/pour-la-decouvrir/sites-patrimoniaux.html">Sites patrimoniaux</a></li>
+<li><a href="ville-attractive/pour-la-decouvrir/sports-loisirs.html">Sports et loisirs</a></li>
+<li><a href="ville-attractive/pour-la-decouvrir/tourisme.html">Tourisme</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Pour m'&eacute;tablir</a><ul class="dropdown"><li><a href="ville-attractive/pour-m-etablir/nouveaux-arrivants.html">Nouveaux arrivants</a></li>
+<li><a href="ville-attractive/pour-m-etablir/terrains-et-immobilier.html">Terrains et immobilier</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Pour la qualit&eacute; de vie</a><ul class="dropdown"><li><a href="ville-attractive/pour-la-qualite-de-vie/centre-ville.html">Centre-ville</a></li>
+<li><a href="ville-attractive/pour-la-qualite-de-vie/parcs-et-espaces-verts.html">Parcs et espaces verts</a></li>
+<li><a href="ville-attractive/pour-la-qualite-de-vie/pistes-cyclables.html">Pistes cyclables </a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Pour des services de proximit&eacute;</a><ul class="dropdown"><li><a href="ville-attractive/pour-des-services-de-proximite/ecoles-et-garderies.html">&Eacute;coles et garderies</a></li>
+<li><a href="ville-attractive/pour-des-services-de-proximite/services-de-sante.html">Services de sant&eacute;</a></li>
+</ul></li>
+<li><a href="ville-attractive/carriere.html">Pour faire carri&egrave;re</a></li>
+<li class="has-dropdown"><a title="pour-m-impliquer" href="#">Pour m'impliquer</a><ul class="dropdown"><li><a href="ville-attractive/pour-m-impliquer/impliquer.html">O&ugrave;, quand, comment</a></li>
+<li><a href="ville-attractive/pour-m-impliquer/reconnaissance-des-benevoles.html">Reconnaissance des b&eacute;n&eacute;voles</a></li>
+</ul></li>
+<li><a href="ville-attractive/ville-plus-verte.html">Ville plus verte</a></li>
+<li><a href="ville-attractive/concours-calendrier.html">Concours de photographies Calendrier 2016</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Ville anim&eacute;e</a><ul class="dropdown"><li class="has-dropdown"><a href="#">Biblioth&egrave;que et complexe culturel</a><ul class="dropdown"><li><a href="ville-animee/bibliotheque-et-complexe-culturel/horaire-pret.html">Horaire, abonnement, pr&ecirc;t</a></li>
+<li><a href="ville-animee/bibliotheque-et-complexe-culturel/animation.html">Activit&eacute;s et animation</a></li>
+<li><a href="ville-animee/bibliotheque-et-complexe-culturel/catalogue.html">Biblioth&egrave;que en ligne</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Ar&eacute;na et patinoires</a><ul class="dropdown"><li><a href="ville-animee/arena-et-patinoires/colisee.html">Colis&eacute;e B&eacute;ton Provincial</a></li>
+<li><a href="ville-animee/arena-et-patinoires/patinoires-exterieures.html">Patinoires ext&eacute;rieures</a></li>
+<li><a href="ville-animee/arena-et-patinoires/activites-sur-glace.html">Activit&eacute;s sur glace</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Piscine municipale</a><ul class="dropdown"><li><a href="ville-animee/piscine-municipale/horaire-et-coordonnees.html">Horaire et coordonn&eacute;es</a></li>
+<li><a href="ville-animee/piscine-municipale/bains-libres.html">Bains libres</a></li>
+<li><a href="ville-animee/piscine-municipale/cours-de-natation.html">Cours de natation</a></li>
+<li><a href="ville-animee/piscine-municipale/activites-aquatiques.html">Activit&eacute;s aquatiques</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Autres installations</a><ul class="dropdown"><li><a href="ville-animee/autres-installations/camping.html">Camping de la rivi&egrave;re Matane</a></li>
+<li><a href="ville-animee/autres-installations/ski-mont-castor.html">Centre de ski Mont-Castor</a></li>
+<li><a href="ville-animee/autres-installations/golf.html">Club de golf</a></li>
+<li><a href="ville-animee/autres-installations/marina.html">Marina de Matane</a></li>
+<li><a href="ville-animee/autres-installations/parc-multirecreatif.html">Parc multir&eacute;cr&eacute;atif</a></li>
+<li><a href="ville-animee/autres-installations/pavillon-de-la-cite.html">Pavillon de la cit&eacute;</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Cong&eacute;s scolaires</a><ul class="dropdown"><li><a href="ville-animee/conges-scolaires/semaine-de-relache.html">Semaine de rel&acirc;che</a></li>
+<li><a href="ville-animee/conges-scolaires/camp-de-jour.html">Camp de jour</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Activit&eacute;s et &eacute;v&eacute;nements</a><ul class="dropdown"><li><a href="ville-animee/activites-et-evenements/loisirs.html">Activit&eacute;s de loisirs</a></li>
+<li><a title="calendrier" href="../../ville-animee/activites-et-evenements/calendrier.html">Calendrier des &eacute;v&eacute;nements</a></li>
+<li><a href="ville-animee/activites-et-evenements/journees-de-la-culture.html">Journ&eacute;es de la culture</a></li>
+<li><a href="ville-animee/activites-et-evenements/matane-ete-eclate.html">Matane &eacute;t&eacute; &eacute;clat&eacute;</a></li>
+<li><a href="ville-animee/activites-et-evenements/festi-mots.html">Festi-Mots</a></li>
+</ul></li>
+<li><a href="ville-animee/salles-spectacles.html">Salles de spectacles</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Ville d'affaires</a><ul class="dropdown"><li class="has-dropdown"><a href="#">Avantages strat&eacute;giques</a><ul class="dropdown"><li><a href="ville-d-affaires/avantages-strategiques/profil.html">Profil socio-&eacute;conomique</a></li>
+<li><a href="ville-d-affaires/avantages-strategiques/infrastructures.html">Infrastructures</a></li>
+<li><a href="ville-d-affaires/avantages-strategiques/programmes.html">Programmes sp&eacute;ciaux</a></li>
+</ul></li>
+<li><a href="ville-d-affaires/parc-industriel.html">Parc industriel</a></li>
+<li><a href="ville-d-affaires/centre-ville.html">Centre-ville</a></li>
+<li><a href="ville-d-affaires/partenaires.html">Partenaires de d&eacute;veloppement &eacute;conomique</a></li>
+<li><a href="ville-d-affaires/repertoire.html">R&eacute;pertoire des entreprises</a></li>
+<li><a href="ville-d-affaires/image.html">Cr&eacute;neau de l'image</a></li>
+<li><a href="ville-d-affaires/colloques-evenements.html">Colloques et &eacute;v&eacute;nements</a></li>
+</ul></li>
+<li class="has-dropdown"><a href="#">Services en ligne</a><ul class="dropdown"><li><a href="services-en-ligne/carte.html">Carte interactive</a></li>
+<li><a class="lien-externe" href="https://portail.accescite.net/ProfileGovern/UEL/WEB_UEL_CITY.aspx?action=styleselection&amp;CityId=08053&amp;language=fr&amp;CookiesOn=yes" target="_blank">R&ocirc;le d'&eacute;valuation</a></li>
+<li><a class="lien-externe" href="http://www.goazimut.com/GOnet6/index.html?08053" target="_blank">Matrice graphique</a></li>
+<li><a class="lien-externe" href="http://www2.gouv.qc.ca/entreprises/portail/quebec/recherche?lang=fr&amp;x=permis" target="_blank">Permis et licences</a></li>
+<li><a href="services-en-ligne/infolettre.html">Abonnez-vous &agrave; nos listes d'envoi</a></li>
+<li><a class="lien-externe" href="https://www.sport-plus-online.com/PrmsINSC/Pages/Accueil.aspx?VirId=162&amp;ArrId=221" target="_blank">Inscriptions aux loisirs</a></li>
+<li><a class="lien-externe" href="http://biblio.ville.matane.qc.ca/Regard" target="_blank">Biblioth&egrave;que en ligne</a></li>
+<li><a class="lien-externe" href="http://zapbsl.org/points-dacces/" target="_blank">ZAP - Voir les zones d'acc&egrave;s Internet gratuites &agrave; Matane</a></li>
+<li><a class="lien-externe" href="http://www.campingmatane.com/reservation_internet.html" target="_blank">R&eacute;servation en ligne, Camping de la rivi&egrave;re Matane</a></li>
+<li><a class="lien-externe" href="http://www.lirelamer.org/3-cam%C3%A9ra%20du%20phare.html" target="_blank">Cam&eacute;ra du phare de Matane</a></li>
+<li><a href="services-en-ligne/visitesvirtuelles.html">Visites virtuelles 360 degr&eacute;s</a></li>
+<li><a href="services-en-ligne/cartesvirtuelles.html">Cartes postales virtuelles</a></li>
+</ul></li>
+</ul>
+<div class="clear"></div>                        </section>
+                    </nav>
+                    <div class="clear"></div>
+                    <div class="large-12 columns"><div class="barre_orange"></div></div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</header>        
+        
+        
+        <main>
+            <div class="row">
+                <div class="large-12 columns wrapCol">
+                    <div class="main">
+                        <div class="row">
+                            <div class="large-8 columns aucun_espace">
+                                <div class="zone-top-ColG">
+                                    <section>
+                                        <div class="fil-ariane">Vous êtes ici : Ville animée / Bibliothèque et complexe culturel / <a href="ville-animee/bibliotheque-et-complexe-culturel/horaire-pret.html">Horaire, abonnement, prêt</a></div>
+                                                                                <!--DEBUT 130--><div class="article boite-encadrer-titre-pointe module pos1" id="130" style="display:block"><a name="130"></a><!--module--><div class="boite_titre_encadrer Boite_encadrer titre_pointe"> 
+    <h1 class="TitreBoite">Bibliothèque municipale, Fonds de solidarité FTQ</h1> 
+    <div class="corps-txt">
+        
+<p><strong><img class="img_cadre_gauche" src="images/Upload/Ville_animee/Bibliotheque_et_complexe_culturel/Horaire_abonnement_pret/biblio.jpg" alt="Complexe culturel Joseph-Rouleau" width="255" height="187" />Complexe culturel Joseph-Rouleau<br /></strong>520, avenue Saint-J&eacute;r&ocirc;me<br />Matane (Qu&eacute;bec) G4W 3B5</p>
+<p>T&eacute;l. : 418 562-9233<br />T&eacute;l&eacute;c. : 418 566-2064<br />Responsable de la biblioth&egrave;que : Christiane Melan&ccedil;on<br />Courriel : <a href="mailto:c.melancon@ville.matane.qc.ca">c.melancon@ville.matane.qc.ca</a></p>
+
+<div class="Ancres" id="Ancres"> 
+</div>
+        <div class="clear"></div>
+    </div>
+</div><!--finmodule-->
+</div><!--FIN 130--><!--DEBUT 135--><div class="article SousTitreBox pos2" id="135" style="display:block"><a name="135"></a><div class="boite_sous_titre Boite_encadrer titre_pointe">    <h2 class="TitreBoite">Prêt de documents</h2> 
+    <div class="corps-txt">
+        <p><strong>La carte d'abonn&eacute; est obligatoire pour l'emprunt des livres ou autres documents.</strong></p>
+<table class=" tableau-custom" style="width: 100%;">
+<tbody>
+<tr class="tableau-titre">
+<td>
+<p>Type de documents</p>
+</td>
+<td>
+<p style="text-align: center;">Dur&eacute;e du pr&ecirc;t</p>
+</td>
+<td>
+<p style="text-align: center;">Nombre</p>
+</td>
+<td>
+<p style="text-align: center;">Amende/jour</p>
+</td>
+</tr>
+<tr>
+<td valign="top">Romans,albums, documentaires</td>
+<td valign="top">
+<p align="center">28 jours</p>
+</td>
+<td align="center">
+<p align="center">10</p>
+</td>
+<td align="center">
+<p align="center">0,25 $</p>
+</td>
+</tr>
+<tr>
+<td valign="top">Bandes dessin&eacute;es</td>
+<td valign="top" width="118">
+<p align="center">28&nbsp;jours</p>
+</td>
+<td align="center">
+<p align="center">10</p>
+</td>
+<td align="center">
+<p align="center">0,25 $</p>
+</td>
+</tr>
+<tr>
+<td valign="top">C&eacute;d&eacute;roms documentaires</td>
+<td valign="top">
+<p align="center">7 jours</p>
+</td>
+<td align="center">
+<p align="center">1</p>
+</td>
+<td align="center">
+<p align="center">1,00&nbsp;$</p>
+</td>
+</tr>
+<tr>
+<td valign="top">Disques compacts</td>
+<td valign="top">
+<p align="center">21&nbsp;jours</p>
+</td>
+<td align="center">
+<p align="center">6</p>
+</td>
+<td align="center">
+<p align="center">1,00 $</p>
+</td>
+</tr>
+<tr>
+<td>DVD</td>
+<td>
+<p align="center">7 jours</p>
+</td>
+<td align="center">2</td>
+<td align="center">1,00 $</td>
+</tr>
+<tr>
+<td valign="top">Livres-audio</td>
+<td valign="top">
+<p align="center">21&nbsp;jours</p>
+</td>
+<td align="center">
+<p align="center">6</p>
+</td>
+<td align="center">
+<p align="center">1,00&nbsp;$</p>
+</td>
+</tr>
+<tr>
+<td valign="top">Vid&eacute;ocassettes</td>
+<td valign="top">
+<p align="center">7 jours</p>
+</td>
+<td align="center">
+<p align="center">2</p>
+</td>
+<td align="center">
+<p align="center">1,00&nbsp;$</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Un abonn&eacute; peut avoir en sa possession jusqu'&agrave; un maximum de&nbsp;10 documents en sus des livres en location, des r&eacute;servations, des livres num&eacute;riques et des PEB (pr&ecirc;ts entre biblioth&egrave;ques).</p>        <div class="clear"></div>     
+    </div>
+</div> </div><!--FIN 135--><!--DEBUT 33555523--><div class="article EmptyBox pos3" id="33555523" style="display:block"><a name="33555523"></a><div class="boite-sans-titre">
+    <div class="corps-txt">
+        <p><span class="TexteBleuGras">HORAIRE DU&nbsp; 1er SEPTEMBRE 2015 au 25 juin 2016</span> :</p>
+<ul>
+<li>Dimanche : <strong>Ferm&eacute;e</strong></li>
+<li>Lundi : <strong>Ferm&eacute;e</strong></li>
+<li>Mardi : 12 h 30 &agrave; 20 h 00</li>
+<li>Mercredi : 12 h 30 &agrave; 20 h 00</li>
+<li>Jeudi : 9 h 30 &agrave; 12 h et 12 h 30 &agrave; 20 h</li>
+<li>Vendredi : 12 h 30 &agrave; 20 h 00</li>
+<li>Samedi : 9 h &agrave; 12 h et 13 h&nbsp; &agrave; 17 h</li>
+</ul>
+<p><strong>Inscription gratuite pour tous les r&eacute;sidents de la MRC de la Matanie.</strong> </p>
+<h4>Retour de livres</h4>
+<p>Lorsque la biblioth&egrave;que est ferm&eacute;e, il est possible de d&eacute;poser vos volumes dans la chute &agrave; livres accessible &agrave; l'int&eacute;rieur de l'entr&eacute;e principale sur l'avenue Saint-J&eacute;r&ocirc;me.</p>
+<ul class="liste_fleche_colonne">
+<li>Lundi au vendredi : 7 h &agrave; 21 h</li>
+<li>Samedi : 9 h &agrave; 17 h</li>
+<li>Dimanche : 9 h &agrave; 16 h</li>
+</ul>
+<p><strong>La chute &agrave; livres n'est pas accessible durant les cong&eacute;s f&eacute;ri&eacute;s.</strong></p>
+        <div class="clear"></div>
+    </div>
+</div></div><!--FIN 33555523--><!--DEBUT 137--><div class="article SousTitreBox pos4" id="137" style="display:block"><a name="137"></a><div class="boite_sous_titre Boite_encadrer titre_pointe">    <h2 class="TitreBoite">Services</h2> 
+    <div class="corps-txt">
+        <h2><strong>Saviez-vous&hellip; </strong></h2>
+<p>Qu&rsquo;en tant que citoyen de la MRC de la Matanie, vous avez acc&egrave;s aux services suivants :</p>
+<ul>
+<li>Pr&ecirc;t informatis&eacute; des documents;</li>
+<li>Consultation du catalogue informatis&eacute; (recherche par auteur, titre et sujet);</li>
+<li>Acc&egrave;s &agrave; votre dossier en ligne (historique des documents emprunt&eacute;s, liste des pr&ecirc;ts, r&eacute;servations, renouvellements...);</li>
+<li>Lecture sur place de revues et journaux;</li>
+<li>Recherche sur place dans diff&eacute;rents ouvrages de r&eacute;f&eacute;rence;</li>
+<li>Renouvellement de volumes par t&eacute;l&eacute;phone ou au comptoir du pr&ecirc;t;</li>
+<li>Acc&egrave;s &agrave; 6 postes Internet gratuitement;</li>
+<li>Suggestions d&rsquo;achats;</li>
+<li>Location de best-sellers;</li>
+<li>Animation litt&eacute;raire;</li>
+<li>Aide aux lecteurs;</li>
+<li>Photocopieur.</li>
+</ul>
+<h5>Livres &eacute;crits en gros caract&egrave;res</h5>
+<p>La biblioth&egrave;que poss&egrave;de une collection de&nbsp;720 livres &eacute;crits en gros caract&egrave;res. Ces livres s&rsquo;adressent surtout aux personnes ayant des troubles visuels. Le Club Lions de Matane subventionne une partie de l&rsquo;achat de ces livres.</p>
+<h5>Projet municipal - Scolaire</h5>
+<p>Les professeurs de la MRC de la Matanie qui d&eacute;sirent offrir &agrave; leurs &eacute;l&egrave;ves une visite, une p&eacute;riode d&rsquo;initiation &agrave; la biblioth&egrave;que, une activit&eacute; de recherche ou une p&eacute;riode de pr&ecirc;ts de livres peuvent s&rsquo;informer en communiquant avec Christiane Melan&ccedil;on, responsable de la biblioth&egrave;que en t&eacute;l&eacute;phonant au 418 562-9233 et faites le 4.</p>        <div class="clear"></div>     
+    </div>
+</div> </div><!--FIN 137--><!--DEBUT 33555664--><div class="article SousTitreBox pos5" id="33555664" style="display:block"><a name="33555664"></a><div class="boite_sous_titre Boite_encadrer titre_pointe">    <h2 class="TitreBoite"></h2> 
+    <div class="corps-txt">
+        <p class="listeFichiers"><a href="images/Upload/Ville_animee/Bibliotheque_et_complexe_culturel/Horaire_abonnement_pret/Politique_affichage_-_Complexe_culturel.pdf" target="_blank"><img class="icone" style="border: 0pt none; vertical-align: middle;" src="images/Upload/Icones/PDF_SMALL.png" alt="Politique_daffichage_GiCUM.pdf" width="20" height="20" />Politique d'affichage - Complexe culturel (56,63 ko)</a></p>        <div class="clear"></div>     
+    </div>
+</div> </div><!--FIN 33555664--> 
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="large-4 columns aucun_espace">
+                                <div class="corps-colD">
+                                
+                                
+                                <div class="credit-photo-bandeau">
+									<span class="credit">Photo &copy; </span>
+								</div>
+
+                                
+                                
+                                    <aside>
+                                        <div class="menu-outils"><span class="agrandir-texte fleft"><a class="a-plus">A<sup>+</sup></a><a class="a-moins">A<sup>-</sup></a></span>
+<div class="fright">
+    <div class="addthis_toolbox addthis_default_style ">
+        <a class="addthis_button_preferred_1" href="javascript:void(0)"></a>
+        <a class="addthis_button_preferred_2" href="javascript:void(0)"></a>
+        <a class="addthis_button_preferred_3" href="javascript:void(0)"></a>
+        <a class="addthis_button_preferred_4" href="javascript:void(0)"></a>
+        <a class="addthis_button_compact" href="javascript:void(0)"></a>
+        <a class="addthis_counter addthis_bubble_style" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="clear"></div></div>
+                                                                                     <div class="show-for-medium-up">
+                                            <div style="display:block" class="LitleBox2">
+                                                <div class="boite_encadrer_icone_signet Boite_icone"> 
+                                                    <h3 class="titre-icon">Ville animée</h3><div class="corps-txt"><ul class="liens-page-section"><li><a href="#">Bibliothèque et complexe culturel</a><ul><li><a href="ville-animee/bibliotheque-et-complexe-culturel/horaire-pret.html">Horaire, abonnement, prêt</a></li> <li><a href="ville-animee/bibliotheque-et-complexe-culturel/animation.html">Activités et animation</a></li> <li><a href="ville-animee/bibliotheque-et-complexe-culturel/catalogue.html">Bibliothèque en ligne</a></li> </ul></li> <li><a href="#">Aréna et patinoires</a><ul><li><a href="ville-animee/arena-et-patinoires/colisee.html">Colisée Béton Provincial</a></li> <li><a href="ville-animee/arena-et-patinoires/patinoires-exterieures.html">Patinoires extérieures</a></li> <li><a href="ville-animee/arena-et-patinoires/activites-sur-glace.html">Activités sur glace</a></li> </ul></li> <li><a href="#">Piscine municipale</a><ul><li><a href="ville-animee/piscine-municipale/horaire-et-coordonnees.html">Horaire et coordonnées</a></li> <li><a href="ville-animee/piscine-municipale/bains-libres.html">Bains libres</a></li> <li><a href="ville-animee/piscine-municipale/cours-de-natation.html">Cours de natation</a></li> <li><a href="ville-animee/piscine-municipale/activites-aquatiques.html">Activités aquatiques</a></li> </ul></li> <li><a href="#">Autres installations</a><ul><li><a href="ville-animee/autres-installations/camping.html">Camping de la rivière Matane</a></li> <li><a href="ville-animee/autres-installations/ski-mont-castor.html">Centre de ski Mont-Castor</a></li> <li><a href="ville-animee/autres-installations/golf.html">Club de golf</a></li> <li><a href="ville-animee/autres-installations/marina.html">Marina de Matane</a></li> <li><a href="ville-animee/autres-installations/parc-multirecreatif.html">Parc multirécréatif</a></li> <li><a href="ville-animee/autres-installations/pavillon-de-la-cite.html">Pavillon de la cité</a></li> </ul></li> <li><a href="#">Congés scolaires</a><ul><li><a href="ville-animee/conges-scolaires/semaine-de-relache.html">Semaine de relâche</a></li> <li><a href="ville-animee/conges-scolaires/camp-de-jour.html">Camp de jour</a></li> </ul></li> <li><a href="#">Activités et événements</a><ul><li><a href="ville-animee/activites-et-evenements/loisirs.html">Activités de loisirs</a></li> <li><a title="calendrier" href="../../ville-animee/activites-et-evenements/calendrier.html">Calendrier des événements</a></li> <li><a href="ville-animee/activites-et-evenements/journees-de-la-culture.html">Journées de la culture</a></li> <li><a href="ville-animee/activites-et-evenements/matane-ete-eclate.html">Matane été éclaté</a></li> <li><a href="ville-animee/activites-et-evenements/festi-mots.html">Festi-Mots</a></li> </ul></li> <li><a href="ville-animee/salles-spectacles.html">Salles de spectacles</a></li> </ul><div class="clear"></div></div>                                                </div> 
+                                            </div>
+                                        </div>
+                                                                                <div><!--DEBUT 138--><div class="article LitleBox pos1" id="138" style="display:block"><a name="138"></a><div class="boite_sous_titre_encadrer Boite_encadrer titre_pointe"> 
+    <h2 class="TitreBoite">Quelques conseils pratiques pour vos livres...</h2>
+    <div class="corps-txt">
+        <P>Ne jamais laisser vos livres dormir dans votre voiture l'hiver. Le froid abîme les livres. </P>
+<P>Toujours transporter vos livres dans un sac; la neige, la pluie et l'humidité sont des ennemis redoutables.</P>
+<P>Attention! lire dans son bain peut &ecirc;tre plaisant, mais... plouf! Un livre &agrave; l'eau.</P>
+<P>Attention! ne pas manger avec son livre sur la table, si un verre ou une tasse se renverse. Un livre taché c'est désagréable. </P>
+        <div class="clear"></div>
+    </div>
+</div></div><!--FIN 138--><!--DEBUT 33555244--><div class="article LitleBox pos2" id="33555244" style="display:block"><a name="33555244"></a><div class="boite_sous_titre_encadrer Boite_encadrer titre_pointe"> 
+    <h2 class="TitreBoite"></h2>
+    <div class="corps-txt">
+        <p><img src="images/Upload/Ville_animee/Bibliotheque_et_complexe_culturel/Horaire_abonnement_pret/mccw3.gif" alt="" width="211" height="81" /></p>
+        <div class="clear"></div>
+    </div>
+</div></div><!--FIN 33555244--></div>
+                                        <div> </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+    <div class="row">
+        <div class="columns large-12">
+            <div class="row">
+                <div class="container_footer">
+                    <div class="large-4 columns separateur_droite">
+                        <img src="images/Skin/logo-ville-matane-footer.png" width="68" height="81" alt="Ville de Matane" class="fleft">
+                        <h4>Ville de Matane</h4>
+                        <p>230, avenue Saint-Jérôme<br>Matane (Québec) G4W 3A2</p>
+                    </div>
+                    <div class="large-3 columns separateur_droite padding_special">
+                        <h4><i class="fa fa-envelope">&nbsp;</i> Nous joindre</h4>
+                        <p>Téléphone : <a href="tel:+14185622333">418 562-2333</a><br>Télécopieur : <a href="tel:+14185624869">418 562-4869</a></p>
+                    </div>
+                    <div class="large-5 columns padding_special">
+                        <h4>Partagez-nous</h4>
+                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                            <a class="addthis_button_facebook"></a>
+                            <a class="addthis_button_twitter"></a>
+                            <a class="addthis_button_google_plusone_share"></a>
+                            <a class="addthis_button_pinterest_share"></a>
+                            <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+                        </div>
+                    </div>
+                                        <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns large-12">
+            <div class="row row_footer">
+                <div class="large-6 columns padding_left_mod">Ville de Matane &copy; 2016 Tous droits réservés</div>
+                <div class="large-6 columns txt_right padding_right_mod">
+                    <a href="http://www.kaleidos.ca" target="_blank"><img src="images/Skin/logo-kaleidos-agence-web.png" width="120" height="23" alt="Kaleidos Agence Web"></a> &nbsp; <a href="http://www.kaleidos.ca/produits/cms-webartchitecte.html" target="_blank"><img src="images/Skin/logo-webartchitecte.png" width="102" height="28" alt="WebARTchitecte"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<a title="Retour haut" alt="Retour haut" href="ville-animee/bibliotheque-et-complexe-culturel/horaire-pret.html#Haut" class="retourhautfixe"></a>    <script type="text/javascript" src="includes/ext-core/ext-core.js?v1"></script>
+<script type="text/javascript" src="includes/ext-core/ext-core-extend-min.js?v1"></script>
+<script type="text/javascript" src="includes/wa/WebARTchitecte.js"></script>
+<script type="text/javascript">
+var addthis_config = addthis_config||{};
+addthis_config.data_track_addressbar = false;
+addthis_config.data_track_clickback = false;
+addthis_config.pubid = 'ra-4fd2309e2081b6ec';
+addthis_config.ui_language = "fr";
+addthis_config.ui_click=true ;
+</script>
+<script src="http://s7.addthis.com/js/300/addthis_widget.js#async=1" type="text/javascript"></script>
+<script type="text/javascript" src="js/vendor/custom.modernizr.js"></script>
+<script type="text/javascript" src="js/vendor/jquery-min.js"></script>
+<script type="text/javascript" src="js/vendor/jquery-cookie-min.js"></script>
+<script type="text/javascript" src="js/vendor/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="js/vendor/navigate/custom-min.js"></script>
+<script type="text/javascript" src="js/foundation/foundation-min.js"></script>
+<script type="text/javascript" src="js/foundation/foundation.forms-min.js"></script>
+<script src="js/vendor/swipebox/lib/ios-orientationchange-fix.js"></script>
+<script src="js/vendor/swipebox/src/js/jquery.swipebox.js"></script>
+<script type="text/javascript" src="js/foundation/foundation.abide-min.js"></script>
+<script type="text/javascript" src="js/foundation/foundation.orbit-min.js"></script>
+<script type="text/javascript" src="js/foundation/foundation.placeholder-min.js"></script>
+<script type="text/javascript" src="js/foundation/foundation.tooltips-min.js"></script>
+<script type="text/javascript" src="js/foundation/foundation.activites-min.js"></script>
+<script type="text/javascript" src="js/foundation/responsive-tables-min.js"></script>
+<script type="text/javascript" src="js/illico/foundation.topbar.patched-min.js"></script>
+<script type="text/javascript">$(document).foundation();</script>
+<script type="text/javascript" src="js/onglet-min.js"></script>
+<script type="text/javascript" src="js/accordeon-min.js"></script>
+<script type="text/javascript" src="js/scroll-top-min.js"></script>
+<script type="text/javascript" src="js/mod-menu-min.js"></script>
+<script type="text/javascript" src="js/main-min.js"></script>
+<script type="text/javascript">
+var iniFontsize= 1;
+var elemNavIntern = '.liens-page-section';
+var classActive = 'page-actuelle';
+var lienspage = 'ville-animee/bibliotheque-et-complexe-culturel/horaire-pret.html';
+
+
+function addthisReady(evt) {
+
+	setTimeout(function(){
+   $("div.menu-outils a[href$='#']").click(function(e) {
+   	 e.preventDefault();
+	}); 
+	}, 2000);
+}
+
+//$(document).ready(function(){
+	jQuery( document ).ready(function( $ ) {
+	addthis.init();	
+	//addthis.addEventListener('addthis.ready', addthisReady);
+	
+	
+	$("a[href$='#']").click(function(e) {
+   	 e.preventDefault();
+	});  
+	
+	
+	/*AUTO-SÉLECTION DES MENUS*/
+	
+	$(elemNavIntern+' a[href="'+lienspage+'"]').parent('li').addClass(classActive);
+	
+	/*BLOQUER LE CLIC DES SOUS-MENUS AVEC LIEN DIÈSE*/
+	/*$('.top-bar-section a[href="#"]').on('click',function(){
+		var lien = $(this);
+		if(!lien.parents().is('.expanded')){
+			return false;
+		}
+	});*/
+	/*$('#plandesite a[href="/#"]').on('click',function(){
+		return false;
+	});*/
+
+	
+	/*Changer la taille de la font*/
+
+	$.fn.changerTaille();
+			/*AUTO-SCROLL TOP*/
+		if($(window).width() < 990 && window.location['hash'] == ''){
+			$(window).scrollTop($("#scroll_auto").offset().top);
+		}
+		
+
+	
+});
+
+</script>
+<script type="text/javascript" src="http://cse.google.com/cse/brand?form=cse-search-box&amp;lang=fr"></script>
+<script type="text/javascript" src="../includes/ext-core/jsonp-min.js"></script>
+<script type="text/javascript" src="meteo/meteo.js"></script>
+<script language="javascript" type="text/javascript">
+
+function getArticleAncre(){
+var DivAncres=document.getElementById("Ancres");
+var MonTitre="Bibliothèque municipale, Fonds de solidarité FTQ";
+	if (DivAncres){
+	var ListeDesArticles = document.getElementsByTagName('h2');
+		for(i=0;i<ListeDesArticles.length;i++){
+			if (ListeDesArticles[i].className=='TitreBoite' && ListeDesArticles[i].childNodes[0] ){
+			
+					titreArticle=(ListeDesArticles[i].childNodes[0].nodeName!="IMG") ? ListeDesArticles[i].innerHTML : ListeDesArticles[i].childNodes[0].getAttribute("ALT");
+					bufferAName=document.createElement('a');
+					bufferAName.setAttribute('id','ancre'+i);
+					bufferAName.setAttribute('Name','ancre'+i);
+					DivAncre=document.createElement('div');
+					DivAncre.className='AncreItem'; 
+					racourcis=document.createElement('a'); 
+					racourcis.setAttribute('href',"ville-animee/bibliotheque-et-complexe-culturel/horaire-pret.html#ancre"+i); 
+					racourcis.innerHTML=titreArticle;
+			//racourcisTexte=document.createTextNode(titreArticle); 
+			//racourcis.appendChild(racourcisTexte); 
+					DivAncre.appendChild(racourcis); 
+					if (titreArticle!=MonTitre) DivAncres.appendChild(DivAncre);					ListeDesArticles[i].insertBefore(bufferAName,ListeDesArticles[i].firstChild);
+					//ListeDesArticles[i].appendChild(bufferAName); 
+					
+				}
+		 }
+	}
+};
+window.onload=getArticleAncre;
+
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-438210-1");
+pageTracker._trackPageview();
+} catch(err) {}</script></body>
+</html>

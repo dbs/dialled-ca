@@ -1,0 +1,1079 @@
+
+<!DOCTYPE HTML>
+<!---->
+
+<!---->
+<html id="ctl00_Html1" class="no-js theme-red" xmlns="http://www.w3.org/1999/xhtml" __expr-val-dir="ltr" lang="en-us" dir="ltr"><head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- robots -->
+<!-- page title - overridden by asp:content on pages or page layouts --><!-- Putting everything in one line to avoid blocks when ajax calls are made --><title>
+	The City of Calgary - 
+	Home
+
+</title><!-- Dublin Core page metadata values -->
+<meta name="DC.title" content="" /><meta name="DC.description" content="" /><meta name="DC.creator" content="The City of Calgary" /><meta name="DC.subject" content="" /><meta name="Description" content=""/><meta name="DC.date.modified" scheme="W3CDTF" content="" /><meta name="DC.date" scheme="W3CDTF" content="3/7/2011 1:27:34 PM" /><meta name="DC.rights" content="Copyright: The City of Calgary" /><meta name="DC.publisher" content="The City of Calgary" /><meta name="DC.format" scheme="IMT" content="text/html" /><meta name="DC.language" scheme="RFC1766" content="en-CAN" /><meta name="DC.coverage" content="Calgary, Alberta, Canada" /><meta name="WT.ti" content="" /><meta name="WT.mc_id" content="" /><!-- additional meta tag placeholder - overridden by asp:content on pages or page layouts -->
+    <meta name="WT.ti" content="Home Page" />
+
+<!-- Code above is on a single line to prevent ajax blocking issues -->
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="/Style Library/cocis/favicon.ico" type="image/vnd.microsoft.icon" />
+		
+		<!-- load limited HTML5 support for legacy IE browsers -->
+        <!--[if lt IE 9]><script src="/Scripts/common/html5shiv/html5shiv.js" type="text/javascript"></script><![endif]-->
+        
+        <!-- [BRENDAN]: upgraded jquery because more recent version is required by most microsites (includes migrate plugin to support legacy jquery code) -->
+	    <script src="/Scripts/common/jquery/jquery-1.11.3/jquery-1.11.3.min.js"></script><!-- previously 1.9.1, 1.4.4 -->
+		<script src="/Scripts/common/jquery.migrate/v1.2.1/jquery-migrate-1.2.1.min.js"></script><!-- jQuery Migrate needed to overcome 2 errors that appear in our code -->
+
+		<!-- all OOTB css -->
+		<!-- [BRENDAN TODO]: would like to suppress out-of-the-box css in anonymous view (server-side loads in controls.css, corev4.css to this spot) - also, it does not seem like we're making use of SharePoint Themes at this time and have been implementing custom themes through our MasterPage.v3.css -->
+		<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/layouts.css?rev=ntZm7Swfe3gVlwGtlb8OdQ%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css?rev=p63%2BuzTeSJc22nVGNZ5zwg%3D%3D"/>
+
+		
+		<!-- NOTE: All sub-site on calgary.ca (except for CPS) are set up through SharePoint settings to use cocis.master and Microsoft SharePoint Foundation default styles is checked off -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
+		<!-- [BRENDAN]: loading as much OOTB Sharepoint dependencies as possible through <link /> elements -->
+		<!-- [BRENDAN TODO]: Note: cocis-rte.css was needed to style tables within the RTE of Sharepoint pages.. css could be carefully moved in to our MasterPage.v3.css if we can figure out which of the following is needed and which is not -->	
+		<!-- [BRENDAN]: moved these OOTB Sharepoint authoring environment dependencies from Page Layouts in to Master Page code here: -->
+		<link href="/Style Library/en-US/Core Styles/page-layouts-21.css" rel="stylesheet" type="text/css" /><link href="/Style Library/en-US/Core Styles/rca.css" rel="stylesheet" type="text/css" /><link href="/Style Library/cocis/cocis-rte.css" rel="stylesheet" type="text/css" />
+		<!-- [BRENDAN]: loading all remaining css dependencies through <link /> elements -->
+		<link href="/Style Library/cocis/cocis-styles-min-v2.css" rel="stylesheet" type="text/css" /><link href="/Scripts/MasterPage/fonts/IcoMoon/cocicon-style.css" rel="stylesheet" type="text/css" /><!-- icons: www.calgary.ca/Scripts/MasterPage/fonts/IcoMoon/demo.html -->
+		<link href="/Scripts/MasterPage/COC.MasterPage.v2.css?v6" rel="stylesheet" type="text/css" /><link href="/Scripts/MasterPage/COC.MasterPage.v3.css" rel="stylesheet" type="text/css" /><link href="/Scripts/AlertBanner/alertbanner.css" rel="stylesheet" type="text/css" /><link href="/Scripts/common/bootstrap/v2.3.2-custom-gridonly/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<!-- [Brendan]: load styles for print -->
+		<link href="/Style Library/cocis/cocis-print-styles.css" rel="stylesheet" type="text/css" media="print" />
+        <!-- [BRENDAN]: changed the ordering of this so that it loads after css (Chrome Developer Tools audit suggested that external script files load after css) -->
+		<!-- optimizely for split a/b - will only load in anonymous view so we can load with http://  (note: do not load with "//cdn.optimizely.com" because this causes problems in Sharepoint) -->
+		<script src="http://cdn.optimizely.com/js/808089511.js" type="text/javascript"></script>
+
+		<!-- page manager interacts with script and the sharepoint object model -->
+		
+		
+		<!-- unified logging service -->
+		
+		
+		<!-- identifies to scripting elements that this is a v4 master page. required for scrolling? -->
+		<script type="text/javascript">
+		    var _fV4UI = true;
+		</script>
+
+        <!-- Suppress SharePoint javascript for anonymous. -->
+        
+        <!-- load SharePoint javascript -->
+		<script type="text/javascript">
+// <![CDATA[
+document.write('<script type="text/javascript" src="/_layouts/1033/init.js?rev=lEi61hsCxcBAfvfQNZA%2FsQ%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/cocis/js/createnewpage.js"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/cocis/js/autoapproveribbonbutton.js"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=uuQ_udl-RnlXzNqS-BYXNEf8L9bNnNYqwlLD04RWTqJIrLZ7YpRSG41SpEF8RanHErLT9-cJsrlW8RxuqL3hzllF0zogh0F8VTV2j1FfNUBxnkObh5RXuRY1IuCrJSj-6Q8jlOhESf5nC7KKEFI7WwUzcac1&amp;t=2e2045e2"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=c6BqH6sWqr9brsaIWccjGQXcfjV51IeNMvcsci8jlICcoyI866vV9oVdYsCGaABDQIQ5B6lLtzOYnQ7Res0v1ylnrS2G4t8OAyy18UR_sxTsyzq_VJe34c8d9-gLCAEAHSXa3fxrD5galFdyHGClmqRW3J7EUJEQJrdVJX4R94FqjUPU0&amp;t=2e2045e2"></' + 'script>');
+// ]]>
+</script>
+
+
+		<!-- IE version conditionals will apply classes to html element if old IE -->
+		<!--[if IE]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "ie";</script><![endif]-->
+		<!--[if IE 6]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "ie6";</script><![endif]-->
+		<!--[if IE 7]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "ie7";</script><![endif]-->
+		<!--[if IE 8]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "ie8";</script><![endif]-->
+		<!--[if IE 9]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "ie9";</script><![endif]-->
+		<!--[if IE 10]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "ie10";</script><![endif]-->
+		<!--[if lt IE 7 ]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "lt-ie7";</script><![endif]-->
+		<!--[if lt IE 8 ]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "lt-ie8";</script><![endif]-->
+		<!--[if lt IE 9 ]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "lt-ie9";</script><![endif]-->
+		<!--[if lt IE 10 ]><script type="text/javascript">var element = document.getElementById("ctl00_Html1"); element.className += " " + "lt-ie10";</script><![endif]-->	
+		
+		<!-- useful globals -->
+		<script type="text/javascript">
+			JSRequest.EnsureSetup(); 
+			var spdata = JSRequest; // holds useful global info
+
+			var cocUrlString;
+
+     		var site = 
+     		{	
+     			ads: 1, // toggle ads
+     	 		mode: 'display', // authoring mode detection
+     	 		mobile: 'false', // placeholder for mobile device detection: not implemented yet
+     	 		dir : 'ltr',
+     	 		lang : 'en-us'
+     		}
+		</script>		
+		
+			
+		
+		<script type="text/javascript">
+  			$(function(){ $('body').addClass('mode-' + site.mode); $('html').addClass('mode-' + site.mode); } );
+		</script>
+	
+		<!-- apply fix for in-page anchor tags pushing the ribbon off the page in authoring mode -->
+		<!-- IE 8+ isssue only. IE 7 is not functionally affected. -->
+		<!--[if gte IE 8]>
+	  		<script>
+	  			$(function() {
+	  			// correct scrolling issues in authoring mode only
+			  		if( ( window.location.hostname === "spprd-authoring.calgary.ca" ) && ( site.mode != 'edit' ) ) {
+				  		$('.ie body').css('overflow','scroll');
+					  					
+						$('.ie body #s4-workspace').css('position','static');
+						$('.ie body #s4-workspace').css('overflow-x','visible');
+						$('.ie body #s4-workspace').css('overflow-y','visible');
+					}
+				}); 
+			</script>
+		<![endif]-->
+		
+		
+		<!-- [BRENDAN]: loading all dependencies through <script> elements that were previously concatenated in to a single ScriptResource.axd on the server-side -->
+		<script src="/Style Library/cocis/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+		<script src="/Style Library/cocis/js/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
+		<script src="/Style Library/cocis/js/cocis-common.js" type="text/javascript"></script>
+		<script src="/_layouts/cocis/js/date.format.js" type="text/javascript"></script>
+		<!-- [BRENDAN]: loading all remaining Javascript dependencies through <script> elements -->
+		<script src="/Scripts/common/json2.js" type="text/javascript"></script>
+		<script src="/Scripts/common/modernizr/full-minified/modernizr-full-minified.js" type="text/javascript"></script>
+		<script src="/Scripts/MasterPage/COC.MasterPage.v2_00002.js?v5" type="text/javascript"></script>
+		<!--<script src="/Scripts/MasterPage/analytics/COC.Analytics.v2.BrendanTest.js" type="text/javascript"></script>-->
+		<script src="/Scripts/MasterPage/analytics/COC.Analytics.v2.js?v2" type="text/javascript"></script>
+		<script src="/Scripts/coc/parts/coc.parts.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			// Answers Cloud Services Embed Script v1.02
+			// DO NOT MODIFY BELOW THIS LINE *****************************************
+			;(function (g) {
+				var d = document, i, am = d.createElement('script'), h = d.head || d.getElementsByTagName("head")[0],
+						aex = {
+							"src": "//gateway.answerscloud.com/thecityofcalgary-ca/production/gateway.min.js",
+							"type": "text/javascript",
+							"async": "true",
+							"data-vendor": "acs",
+							"data-role": "gateway"
+						};
+				for (var attr in aex) { am.setAttribute(attr,aex[attr]); }
+				h.appendChild(am);
+				g['acsReady'] = function () {var aT = '__acsReady__', args = Array.prototype.slice.call(arguments, 0),k = setInterval(function () {if (typeof g[aT] === 'function') {clearInterval(k);for (i = 0; i < args.length; i++) {g[aT].call(g, function(fn) { return function() { setTimeout(fn, 1) };}(args[i]));}}}, 50);};
+			})(window);
+			// DO NOT MODIFY ABOVE THIS LINE *****************************************
+		</script>
+		<!-- [BRENDAN]: moved this snippet occuring in every Page Layout in to the Master Page code here: -->
+		<!-- work around to keep page alive for lengthy periods of time -->
+	    	
+		
+		<!--<script src="http://partner.googleadservices.com/gampad/google_service.js" type="text/javascript"></script>-->
+					
+		<style type="text/css">
+			/* fix scrolling on list pages */
+			#s4-bodyContainer {
+				position: relative;
+			}
+	
+			/* hide body scrolling (SharePoint will handle) */
+			body {
+				/*height:100%;*/
+				/*overflow:hidden;*/ 
+				width:100%;
+			}
+					
+			/* popout breadcrumb menu needs background color for firefox */
+			.s4-breadcrumb-menu {
+				background:#F2F2F2;
+			}
+		</style>
+	
+		<!-- link to our custom  -->
+        
+				<!-- [BRENDAN] commented out loading of cocis-print-styles.css at this location and now loading it further up in the DOM -->
+        
+        
+		<!-- javascript to override the active-x message in ie 
+			// See http://blog.drisgill.com/2010/02/removing-name-activex-control-warning.html for more info
+			// Remove if the IM pressence icons are needed in SharePoint
+		-->
+		<script type="text/javascript">
+		    function ProcessImn() { }
+		    function ProcessImnMarkers() { }	
+		</script>
+		
+		<!-- additional header delegate control -->
+		
+		
+		<!-- additional header placeholder - overridden by asp:content on pages or page layouts -->
+		
+	<link href="/Style%20Library/cocis/MobileWallpapers.css" rel="stylesheet" type="text/css" />
+	<script src="/SitePages/cocis/MobileWallpaperManager.js" type="text/javascript"></script>
+
+
+		<!-- microsoft says these should always be inside the head tag. -->
+		
+		
+		
+			
+		<!-- google website translator -->
+		<meta name="google-translate-customization" content="100286fc01a4d79e-6f1438148a8cde52-geb233fa454e71460-e" />
+		
+		<!-- iOS metatags -->
+		<meta name="viewport" content="width=device-width" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /></head>
+
+	<body scroll="no" onload="javascript:_spBodyOnLoadWrapper();" class="cocis-homepage">
+		
+				<!-- [BRENDAN] commented out loading of cocis-print-styles-ie8.css at this location and now loading it further up in the DOM -->
+        
+		
+		<!-- [BRENDAN] preload image for new visual identity -->
+		<img src="/Scripts/MasterPage/images-v2/cocLogo.svg" style="display:none;" />
+		
+        <!--googleoff: all-->
+        
+
+        <!--googleon: all-->
+
+		<form name="aspnetForm" method="post" action="default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x6EFE3E5F44F488B186CF918BCD84393720C589DBCFD0E7473CA006AE0BC3C267C32F59DEF0D21FEE5A715B826DDF2B9292ACE1F50F075E458FEB03779ABC87AA,11 Mar 2016 20:23:00 -0000" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIFD2QWBAIGD2QWAmYPFgIeB1Zpc2libGVoZAIID2QWBAIND2QWAgIBD2QWBGYPZBYCAgEPFgIfAGgWAmYPZBYEAgIPZBYGAgEPFgIfAGhkAgMPFggeE0NsaWVudE9uQ2xpY2tTY3JpcHQFaWphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDUzLCAnaHR0cDpcdTAwMmZcdTAwMmZ3d3cuY2FsZ2FyeS5jYScsIC0xLCAtMSwgJycsICcnKR4YQ2xpZW50T25DbGlja05hdmlnYXRlVXJsZB4oQ2xpZW50T25DbGlja1NjcmlwdENvbnRhaW5pbmdQcmVmaXhlZFVybGQeDEhpZGRlblNjcmlwdAUiVGFrZU9mZmxpbmVEaXNhYmxlZCgxLCA1MywgLTEsIC0xKWQCBQ8WAh8AaGQCAw8PFgoeCUFjY2Vzc0tleQUBLx4PQXJyb3dJbWFnZVdpZHRoAgUeEEFycm93SW1hZ2VIZWlnaHQCAx4RQXJyb3dJbWFnZU9mZnNldFhmHhFBcnJvd0ltYWdlT2Zmc2V0WQLrA2RkAgEPZBYEAgUPZBYCAgEPEBYCHwBoZBQrAQBkAgcPZBYCZg9kFgJmDxQrAANkZGRkAhMPZBYCAgEPZBYCZg9kFgICAw9kFgICBQ8PFgQeBkhlaWdodBsAAAAAAAB5QAEAAAAeBF8hU0ICgAFkFgICAQ88KwAJAQAPFgQeDVBhdGhTZXBhcmF0b3IECB4NTmV2ZXJFeHBhbmRlZGdkZGQLEp45gHUEjsXbovMJGB+5W4UIhg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=LumMegDGbxONfteUPUfAOgbIcdcXZrUqP9vwl-INFjJuaRPKfEb3Gxuwr14ZzDJUjn63YTp_UNUeIvFKH-3TkKcyRbc1&amp;t=635588373558834052" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'aspnetForm';
+var g_presenceEnabled = true;
+var g_wsaEnabled = false;
+var g_wsaLCID = 1033;
+var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
+var g_wsaListTemplateId = 119;
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{2f01888c-2de1-45ba-a185-08101c8c28c8}",pageItemId:2, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};//]]>
+</script>
+<script type="text/javascript">
+<!--
+var L_Menu_BaseUrl="";
+var L_Menu_LCID="1033";
+var L_Menu_SiteTheme="";
+//-->
+</script>
+<script type="text/javascript">
+//<![CDATA[
+document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};//]]>
+</script>
+
+<script src="/Style Library/cocis/js/cocis-wallpaper-rotator.js?v=3.5.67" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+wallpaperRotator.SetWallpaperJson([{"Url":"/WallpaperPictures/bow-river-ice-990.jpg","ThumbUrl":"/WallpaperPictures/_t/bow-river-ice-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr valign=\"top\"\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eIce gathering on the Bow River. The Bow is a valued recreational resource. But equally important, a range of City programs protect the river as a source of drinking water for the city. \u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/UEP/WATER/Pages/Water-Services.aspx\"\u003eMore info\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e\u003c/font\u003e\u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd background=\"/PublishingImages/red-line-4.jpg\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eThe City is saving water through conservation initiatives such as universal metering, leak detection and customer education. \u003ci\u003e\u003cstrong\u003e| 30 in 30 Conservation Policy Goal:\u003c/strong\u003e\u003c/i\u003e By 2033, per capita water consumption will be reduced by 30 per cent.\u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/General/Pages/Onward.aspx\"\u003e /Onward\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e\u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr valign=\"top\"\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\r\n​​​​","InfoUrl":null,"AlternateInfo":"Ice gathering on the Bow River."},{"Url":"/WallpaperPictures/Downtown-winter-990.jpg","ThumbUrl":"/WallpaperPictures/_t/Downtown-winter-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr valign=\"top\"\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eCalgarians welcome the morning sun with views of downtown and the Rocky Mountains. Photo courtesy Kimber-Leigh Larsen. Visit \u003ca href=\"/yycphoto\"\u003eYYCPhoto\u003c/a\u003e to find out how you can have your photo featured on our homepage\u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e\u003c/font\u003e\u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd background=\"/PublishingImages/red-line-4.jpg\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eIn 2010, Calgary was named the world\u0027s top eco-city in the Mercer Quality of Life survey. \u003ci\u003e\u003cstrong\u003e| imagineCalgary vision:\u003c/strong\u003e\u003c/i\u003e By 2036, low-impact renewable sources will supply 30 percent of Calgary\u0027s energy.\u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/General/Pages/Onward.aspx\"\u003e /Onward\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e\u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr valign=\"top\"\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\r\n​​​","InfoUrl":null,"AlternateInfo":""},{"Url":"/WallpaperPictures/Old-City-Hall-Winter-990.jpg","ThumbUrl":"/WallpaperPictures/_t/Old-City-Hall-Winter-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr valign=\"top\"\u003e\u003ctd width=\"520\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eThe classic sandstone architecture of Old City Hall stands out in downtown Calgary. Photo courtesy Ferdinand Floresca. Visit \u003cb\u003e\u003ca href=\"/yycphoto\"\u003eYYCPhoto\u003c/a\u003e\u003c/b\u003e to find out how your photo could be featured on our homepage. \u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\r\n​​","InfoUrl":null,"AlternateInfo":""}]); wallpaperRotator.SetInitialWPIndex(1);var dlc_fvsi = {"DefaultViews":[],"ViewUrls":[],"WebUrl":"\/"};//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+function _spNavigateHierarchy(nodeDiv, dataSourceId, dataPath, url, listInContext, type) {
+    CoreInvoke('ProcessDefaultNavigateHierarchy', nodeDiv, dataSourceId, dataPath, url, listInContext, type, document.forms.aspnetForm, "", "\u002fSitePages\u002fcocis\u002fdefault.aspx");
+
+}
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'aspnetForm';//]]>
+</script>
+<script type="text/javascript" >
+<!--
+//-->
+</script>
+<script src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
+UpdateFormDigest('\u002f', 5760000);return _spFormOnSubmitWrapper();
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="38ABF14C" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKSkeoWAqGXpvsMAqP7zPEHyhOjB6D6dhb+FudMFRYp4l1PbBk=" />
+</div>
+
+            <!-- Turn off the GSA indexing for the common page elements. -->
+			<!--googleoff: all-->
+
+			<!-- COC: handles the customization of the ribbon -->
+			
+
+			<!-- handles SharePoint scripts -->
+			<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+			
+            <!-- For any content pages that require additional script references (mapping) -->
+            
+			
+			<!-- controls the web parts and zones -->
+			
+			
+			<!-- accessibility, link to jump to main content and to search -->
+			<span class="s4-notdlg">
+				<a id="A1" href="#cocis-maincontent" class="ms-SkiptoMainContent" accesskey="S">
+				    Skip to main content.
+                </a>
+                <a id="A2" href="#cocis-search-field" class="ms-SkiptoMainContent" accesskey="4">
+				    Skip to search.
+                </a>
+                
+			</span>
+
+			<!-- this control is more navigation for mysites, otherwise it is empty -->
+			
+
+			<!-- =====  Begin Ribbon ============================================================ -->
+
+			
+
+			<!-- =====  End Ribbon and other Top Content ============================================================ -->
+
+
+			<!-- =====  Start Scrolling Body Area ============================================================ -->
+	
+			<div id="s4-overlay-header" style="width:100%;"></div>
+			<!-- navigation hook -->
+			<div id="s4-overlay" style="display:none;"></div>
+	
+			<!-- these two div id's are used to setup the main scrolling page area, they should stay if you are sticking the ribbon to the top -->
+			<div id="s4-workspace" >  <!-- NOTE: s4-nosetwidth is used when you are setting a fixed page width in css, remove for 100% -->
+				<div id="s4-workspace-authoring-messages" style="display:none;"></div>
+				<div id="s4-bodyContainer">
+					<!-- id="mso_contentdiv" required, helps SharePoint put the web part editing pane in the main body on the right, you can move the ID if needed -->
+					<div id="ctl00_MSO_ContentDiv">
+						<!-- Table to hold the content so that the grey background takes up 100% height when the content is both small and large. -->
+						<div id="cocis-bkgd-table">
+							<div id="cocis-bkgd-td">																				
+									<div id="cocis-wrapper">
+										<!-- inline display:none required for fade-in animation -->
+										<div id="cocis-news-wrapper">
+											<div id="cocis-news" class="cocis-ticker-default" style="display:none;">
+												<!-- [BRENDAN] START of newsTicker web part code as rendered to DOM - News items get triggered to load in through Javascript on DOM ready -->
+												<!-- News ticker and 'All News' drop down -->
+												<div id="cocis-news-ticker">
+												    <a id="cocis-home-button" href="/" class="cocis-hidden-text">Go to home page</a>
+													<div id="cocis-news-ticker-container">
+														<a id="cocis-news-view-all" href="http://newsroom.calgary.ca/" class="" target="_blank">View All News</a>
+														<a id="cocis-news-pause" href="#pause-news" class="cocis-hidden-text" alt="Pause News">Pause news ticker</a>
+														<a id="cocis-news-play" href="#play-news" class="cocis-hidden-text" alt="Play News">Play news ticker</a>
+														<div id="cocis-news-items">
+															<ul class="nobullet"></ul>
+														</div>
+													</div>
+													<div id="cocis-all-news-container" style="display: none;">
+														<div id="cocis-news-all-news-tab">
+															<h2 class="cocis-hidden-text">All city news</h2>
+															<div class="cocis-left"></div>
+															<div class="cocis-centre"></div>
+															<div class="cocis-right"></div>
+														</div>
+														<div id="cocis-all-news-items">
+															<!-- The scrollbar, track, thumb, end, viewport and overview div's are all necessary in order to use the tinyscrollbar jquery plugin. -->
+															<div class="scrollbar" style="height: 0px;"><div class="track" style="height: 0px;"><div class="thumb"><div class="end"></div></div></div></div>
+															<div class="viewport">
+																<div class="overview">
+																	<ul class="nobullet"></ul>
+																</div>
+															</div>				        		  
+														</div>
+														<div class="cocis-close-button">
+															<a href="javascript:void(0);" class="cocis-hidden-text">Close all city news</a>
+														</div>
+														<div class="cocis-centre"></div>
+														<div class="cocis-right"></div>
+														<div class="cocis-footer">
+															<div class="cocis-left"></div>
+															<div class="cocis-centre"></div>
+															<div class="cocis-right"></div>
+														</div>
+													</div>
+												</div>
+												<!-- [BRENDAN] END of newsTicker web part code as rendered to DOM here -->
+											</div>
+										</div>
+										<!-- mod code behind Cocis:NewsTicker control -->
+										<script>
+											$(function() {
+												$('#cocis-news-view-all').text('View All News');
+												
+												$('#cocis-news-view-all').removeClass('cocis-hidden-text');
+												
+												$('#cocis-news').fadeOut(1).animate(300, 'easeOutBack').fadeIn(2000);
+											});
+										</script>
+										<div id="cocis-header" class="cocis-fixedHeader">
+												<div id="cocis-headerMain" class="s4-notdlg" role="banner"><!-- NOTE: any time you see s4-notdlg, this element will be hidden from SharePoint dialog windows  -->
+													<!--<div class="fullwidth-header-space span1" style="display:none;"></div>-->
+													<a id="cocis-cocLogo" class="" href="/SitePages/cocis/default.aspx">
+	            										<span>Calgary.ca</span><!--img class="cocis-cocLogo-img" src="/Scripts/coc/core-styles/images/blank.gif" title="Return to the Calgary.ca homepage" alt="Return to the Calgary.ca homepage"-->
+	            									</a>
+																												
+													<!-- search bar -->
+													<div class="cocis-search-nav">
+													<ul id="cocis-searchCategory">
+	                    								<li><a href="#"><span class="cocis-headerCategory-txt">ALL</span><span class="cocis-downArrow"></span></a>
+	                        								<ul>
+	                            								<li><a href="#">DOCUMENTS</a></li>
+	                            								<li><a href="#">MAPS</a></li>
+	                            								<li><a href="#">NEWS</a></li>
+	                            								<li><a href="#">MULTIMEDIA</a></li>
+	                            								<li><a href="#">CALENDAR</a></li>
+	                            								<li><a href="#">GET INVOLVED</a></li>
+	                        								</ul>
+	                    								</li>
+	               									 </ul>
+	               									 
+	               									 <div id="cocis-searchField">
+	               									 	<!-- used when search bar not visible in header bar -->
+	               									 	<h1 id="cocis-headerTitle">Browse by Topic</h1>
+	               									 	
+	               									 	<!-- Search box -->
+		                                                
+															<div id="cocis-search-box"  class="s4-notdlg">
+		                                                        
+
+
+<script type="text/javascript">
+
+    function SubmitSearchRedirect() {
+
+        //Build GSA Search Request  TODO check for validity
+        if (!window.location.origin) {
+            window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+        }
+        var searchUrl = window.location.origin + "/_layouts/CoCIS/GSASearchresults.aspx?";
+        var baseQueryParams = "getfields=*&output=xml_no_dtd&ud=1&oe=UTF-8&ie=UTF-8&num=10&ulang=en&access=p&entqrm=0&requiredfields=-CalendarCategory:Space Unavailable";
+        searchUrl = searchUrl + baseQueryParams;
+
+        //Get sort option
+        var sort = (RegExp('sort' + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1];
+        if (sort != null) {
+            searchUrl = searchUrl + "&sort=" + sort;
+        }
+
+        //Get dynamic navigation filters
+        var dynNav = (RegExp('dnavs' + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1];
+        //Persist filter options
+        if (dynNav != null) {
+            searchUrl = searchUrl + "&dnavs=" + dynNav;
+        }
+
+        //Get query terms
+        var searchTerms = document.getElementById('ctl00_PlaceHolderSearchArea_ctl00_txtSearch').value;
+        if (window.searchHint && searchTerms === searchHint.searchHint) { // searchHint is global object in cocis-common.js
+            searchTerms = "";
+        }
+
+        //check searchtype popular & new, everything, or calendar and set query params accordingly
+        var searchType = (RegExp('searchType' + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1];
+        if (searchType == "popular") {
+            searchUrl = searchUrl + "&searchType=" + searchType;
+            searchUrl = searchUrl + "&site=popular_coll";
+            searchUrl = searchUrl + "&entsp=a__popular_policy";
+            searchUrl = searchUrl + "&proxystylesheet=CoC_frontend";
+            searchUrl = searchUrl + "&client=CoC_frontend";
+            searchUrl = searchUrl + "&filter=p";
+            if (dynNav != null) {
+                searchUrl = searchUrl + "&q=" + escapeProperly(searchTerms) + "+" + dynNav;
+            }
+            else {
+                searchUrl = searchUrl + "&q=" + escapeProperly(searchTerms);
+            }
+        }
+        else if (searchType == "everything") {
+            searchUrl = searchUrl + "&searchType=" + searchType;
+            searchUrl = searchUrl + "&site=everything_coll";
+            searchUrl = searchUrl + "&entsp=a__everything_policy";
+            searchUrl = searchUrl + "&proxystylesheet=CoC_frontend";
+            searchUrl = searchUrl + "&client=CoC_frontend";
+            searchUrl = searchUrl + "&filter=p";
+            if (dynNav != null) {
+                searchUrl = searchUrl + "&q=" + escapeProperly(searchTerms) + "+" + dynNav;
+            }
+            else {
+                searchUrl = searchUrl + "&q=" + escapeProperly(searchTerms);
+            }
+        }
+        else if (searchType == "calendar") {
+            searchUrl = searchUrl + "&searchType=" + searchType;
+            searchUrl = searchUrl + "&site=calendar_coll";
+            searchUrl = searchUrl + "&entsp=a__calendar_policy";
+            searchUrl = searchUrl + "&proxystylesheet=Calendar_frontend";
+            searchUrl = searchUrl + "&client=Calendar_frontend";
+            searchUrl = searchUrl + "&filter=0";
+            searchUrl = searchUrl + "&sort=date:A:S:d1";
+            //set date range filters
+            var today = new Date();
+            var nextWeek = new Date();
+            nextWeek = cocisUtilities.AddDays(today, 365);
+            //set query
+            if (dynNav != null) {
+                searchUrl = searchUrl + "&q=" + escapeProperly(searchTerms) + "+" + dynNav + "+inmeta%3AStartDateNoTime%3Adaterange%3A.." + nextWeek.format("yyyy-mm-dd") + " AND " + "inmeta:EndDateNoTime:daterange:" +
+			today.format("yyyy-mm-dd") + ".." + "&selectedDate=" + today.format("yyyy-mm-dd");
+            }
+            else {
+                searchUrl = searchUrl + "&q=" + escapeProperly(searchTerms) + "+inmeta:StartDateNoTime:daterange:.." + nextWeek.format("yyyy-mm-dd") + " AND " + "inmeta:EndDateNoTime:daterange:" +
+			today.format("yyyy-mm-dd") + ".." + "&selectedDate=" + today.format("yyyy-mm-dd");
+            }
+        }
+        //default to popular if searchType is not set
+        else {
+            searchUrl = searchUrl + "&searchType=" + "popular";
+            searchUrl = searchUrl + "&site=popular_coll";
+            searchUrl = searchUrl + "&entsp=a__popular_policy";
+            searchUrl = searchUrl + "&proxystylesheet=CoC_frontend";
+            searchUrl = searchUrl + "&client=CoC_frontend";
+            searchUrl = searchUrl + "&filter=p";
+            if (dynNav != null) {
+                searchUrl = searchUrl + "&q=" + escapeProperly(searchTerms) + "+" + dynNav;
+            }
+            else {
+                searchUrl = searchUrl + "&q=" + escapeProperly(searchTerms);
+            }
+        }
+
+        window.location.href = searchUrl;
+    }
+</script>
+
+
+<!--Search Controls-->
+
+
+<div id="cocis-search-field-type-and-submit">
+
+<!-- The Google Search Appliance search input box goes here -->
+<label for="ctl00_PlaceHolderSearchArea_ctl00_txtSearch" class="cocis-hidden-text">Search field</label>			
+<input name="ctl00$PlaceHolderSearchArea$ctl00$txtSearch" type="text" id="ctl00_PlaceHolderSearchArea_ctl00_txtSearch" />
+
+<!-- There needs to be some HTML between this and the search input for this to work. -->
+<script type="text/javascript">
+    // Make search input the focus on the homepage on load if the first-time popup is not showing.
+    if (!$("#cocis-first-time-callout").length) {
+        $("body.cocis-homepage #ctl00_PlaceHolderSearchArea_ctl00_txtSearch").focus();
+    }
+
+</script>
+
+<!-- If this is removed hitting enter will not issue query -->
+<input name="ctl00$PlaceHolderSearchArea$ctl00$cocis_search_type" type="hidden" id="ctl00_PlaceHolderSearchArea_ctl00_cocis_search_type" value="typeahead" />
+
+<a id="cocis-search-submit" href="javascript:void(0);" class="cocis-hidden-text"  onClick="javascript:SubmitSearchRedirect();javascript:return false;">Submit search</a>
+<script type="text/javascript">
+
+    var searchTypeText = $("#ctl00_PlaceHolderSearchArea_ctl00_cocis_search_type")[0].value;
+
+    var searchBox = $("#ctl00_PlaceHolderSearchArea_ctl00_txtSearch");
+
+    searchBox.css("z-index", "99999");
+
+    searchBox.keydown(function (event) {
+
+        if (event.keyCode == 13) {
+            $("#cocis-search-submit").click();
+            //returning false prevents beeping in IE browser
+            return false;
+        }
+    });
+
+
+</script>
+
+<div class="cocis-left"></div>
+<div id="cocis-search-field-bkgd"></div>
+<div id="cocis-search-powered-by-google" class="cocis-hidden-text">powered by Google Search Appliance</div>
+</div>
+
+<!--googleoff: index-->
+<!--googleon: index-->
+
+		                                                    </div>
+		                                                
+		                                                <!-- override visual style of news bar -->
+		                                                <script>
+		                                                	$(function() {
+		                                                		// override default news ticker behavior...
+			                                                		$('#cocis-news-ticker').css('display','block !important');
+			                                           		});
+		                                               	</script>
+		                                                <!-- override visual style of search bar -->
+		                                                <script>
+		                                                	//don't wait for document ready for these
+		                                                	$("#cocis-search-submit").text('Search'); 
+
+															//hide search bar on modified navigation pages
+															if( spdata.QueryString["requiredfields"] != null  ) {
+																if( spdata.QueryString["requiredfields"].indexOf("Navigation:") != -1 )
+																	$('body').addClass('cocis-no-searchbar');	 
+															}    
+															
+			                                                $(function() {
+																if ($('#ctl00_PlaceHolderSearchArea_ctl00_txtSearch').val()!='What are you looking for?')
+																{
+																	$('#ctl00_PlaceHolderSearchArea_ctl00_txtSearch').css('color','black');
+																}
+																
+																$("#ctl00_PlaceHolderSearchArea_ctl00_txtSearch").focus( function () {
+																	if($(this).val() === "What are you looking for?")
+																	{
+																		$(this).val('');
+																	}
+																}); 
+																
+                       
+			                           		                });
+		                                                </script>
+		                                           	</div>     
+		                                        </div>
+		                                        
+		                                        <!--<div id="cocis-mainNav">
+		                                       		<span id="cocis-header-closeNav"><a>CLOSE</a></span>
+									                <span id="cocis-header-closeNav-mobile"><a href="#"></a></span>
+	                   							</div>-->
+	                   							
+	                   						</div>		
+										</div>
+										
+										<!--<div class="clear"></div>-->
+										<div id="header-fixed-space"></div>
+
+										<div id="cocis-main">								
+										<div id="cocis-bottom-rows">
+												<div id="cocis-body-row">
+												<!-- Left column section. Currently contains some default content. The left column is different for each page type (home, map, search results, content) 
+													 so it's actual content will be determined on the .aspx pages for those page types. -->
+												<div id="cocis-left-column" class="s4-notdlg">
+													
+													<div id="cocis-sidebar-didnt-find">
+														<h3>Did you find what you were looking for?</h3>
+					                                    <p>If you’re having trouble searching calgary.ca, try our 
+                                                           
+                                                                   <a href="/General/Pages/Search-Tips.aspx">search tips</a>.
+                                                        		If you still need assistance, please 
+                                                            
+                                                                    <a href="/General/Pages/Contact-Us.aspx">contact us</a>
+                                                                .
+                                                            </p>
+														</div>
+													</div>
+                                                    				
+                                                    <!-- Turn on the GSA indexing for the page content. -->		
+													<!--googleon: all-->
+                                                    								
+													<!-- Main Content section -->
+													<div id="cocis-maincontent" class="cocis-maincontent" role="main">
+																												
+														<div class="s4-notdlg">
+															<!-- Google Translate -->
+															<div id="cocis-translate">
+																<div id="google_translate_element"></div>
+															</div>
+															<!-- page title -->
+															
+															<!-- clearfix -->
+															<div style="clear:both;"></div>
+														</div>
+														
+														<!-- place a table around this to handle funky markup in _Layouts/areacachesettings.aspx (if you want) -->
+														
+														
+														
+														
+														<div>
+															<!-- page content loads from the pages and pages layout -->
+															
+	<!-- Wallpaper picture rotator -->
+    
+
+
+    <div class="cocis-wallpapers">
+		<div class="cocis-wallpaper"><img class="cocis-wallpaper-img" alt="" src="/WallpaperPictures/Downtown-winter-990.jpg" /></div>
+		<div class="cocis-wallpaper"><img class="cocis-wallpaper-img" alt="" src="/_layouts/images/blank.gif" /></div>
+	</div>
+    <div id="cocis-wallpaper-control">
+        <a id="cocis-wallpaper-pause" href="javascript:void(0);" class="cocis-hidden-text">Pause wallpaper image gallery</a>
+        <a id="cocis-wallpaper-play" href="javascript:void(0);" class="cocis-hidden-text">Play wallpaper image gallery</a>
+        <div id="cocis-wallpaper-info">
+            <a id="cocis-wallpaper-info-link" href="javascript:void(0);" class="cocis-hidden-text">Wallpaper image info</a>
+        	<div id="cocis-wallpaper-info-text">    
+        		<div class="cocis-body"><table width="520" border="0" cellspacing="0" style="margin-top:-13px;margin-left:-10px;position:absolute"><tbody><tr><td width="290" bgcolor="#cccccc"> </td>
+<td bgcolor="#fafafa"> </td>
+<td bgcolor="#fafafa"> </td>
+<td width="215" bgcolor="#fafafa"> </td></tr>
+<tr valign="top"><td width="290" bgcolor="#cccccc" style="padding-right:5px;padding-left:10px"><font face="arial">Calgarians welcome the morning sun with views of downtown and the Rocky Mountains. Photo courtesy Kimber-Leigh Larsen. Visit <a href="/yycphoto">YYCPhoto</a> to find out how you can have your photo featured on our homepage<font color="#9c2020"><strong><i></i></strong></font></font></td>
+<td bgcolor="#fafafa"> </td>
+<td background="/PublishingImages/red-line-4.jpg"> </td>
+<td width="215" bgcolor="#fafafa" style="padding-right:5px;padding-left:10px"><font face="arial">In 2010, Calgary was named the world's top eco-city in the Mercer Quality of Life survey. <i><strong>| imagineCalgary vision:</strong></i> By 2036, low-impact renewable sources will supply 30 percent of Calgary's energy.<font color="#9c2020"><strong><i><a href="/General/Pages/Onward.aspx"> /Onward</a></i></strong></font></font></td></tr>
+<tr valign="top"><td width="290" bgcolor="#cccccc"> </td>
+<td bgcolor="#fafafa"> </td>
+<td bgcolor="#fafafa"> </td>
+<td width="215" bgcolor="#fafafa"> </td></tr></tbody></table>
+​​​</div>
+        		<div class="cocis-footer"><a href="" target="_blank" id="cocis-wallpaper-more-info-link">More Info</a></div>
+        	</div>
+        </div>  
+        <div id="cocis-wallpaper-thumbnails">
+        	<ul id="cocis-wallpaper-thumbnail-control">     
+        	</ul>
+        	<ul id="cocis-wallpaper-thumbnail-images">
+        	</ul>
+        </div>
+    </div>
+
+
+
+														</div>
+													</div>
+													
+                                                    <!-- Turn off the GSA indexing for the common page elements. -->
+			                                        <!--googleoff: all-->
+
+                                                    <div id="cocis-right-column" class="s4-notdlg" >
+                                                        
+                                                    </div>
+													<div class="clear"></div>
+												</div>	
+												
+												<div id="cocis-floating-footerWrapper" class="is-fixed" style="display:none;">		
+													<div id="cocis-floating-footer" class="s4-notdlg cocis-footer-fixed">
+										                <ul class="cocis-list-horiz">
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Calgary-City-Council.aspx">Council</a></li>
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/ca/city-manager/Pages/About-Us/OurCity.aspx">Our Organization</a></li>
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/_layouts/CoCIS/GSASearchResults.aspx?k=calendar&amp;selectedDate={today}&amp;searchType=calendar">Calendar</a></li>
+										                    <!--<script>
+										                    //<![CDATA[
+																//set date range filters for calendar query
+																function COC_Calendar_URL_Update(href) 
+																{
+																	//alert(href);
+																	var today = new Date();
+																	var nextWeek = new Date();
+																	nextWeek = cocisUtilities.AddDays(today, 365);
+																	var calendar_url= href+'?getfields=*&output=xml_no_dtd&ud=1&oe=UTF-8&ie=UTF-8&num=10&ulang=en&access=p&entqr=3&entqrm=0&sort=date:D:L:d1&searchType=calendar&site=calendar_coll&entsp=a__calendar_policy&proxystylesheet=Calendar_frontend&client=Calendar_frontend&filter=0&requiredfields=-CalendarCategory:Space+Unavailable&q=calendar+inmeta%3AStartDateNoTime%3Adaterange%3A..'+nextWeek.format('yyyy-mm-dd')+' AND '+'inmeta%3AEndDateNoTime%3Adaterange%3A'+today.format('yyyy-mm-dd')+ '..'+'&selectedDate='+today.format('yyyy-mm-dd');
+																	//alert(calendar_url);
+																	windows.location.href=calendar_url;
+																	//setTimeout(function(){document.location.href = calendar_url;},500);
+																	return false;
+																}
+															//]]>
+															</script>
+															<li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/_layouts/CoCIS/GSASearchResults.aspx" onclick="javascript:COC_Calendar_URL_Update(this.href);javascript:return false;">Calendar</a></li>
+										                    -->
+										                    <!--<li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/_layouts/CoCIS/GSASearchResults.aspx?getfields=*&output=xml_no_dtd&ud=1&oe=UTF-8&ie=UTF-8&num=10&ulang=en&access=p&entqr=3&entqrm=0&sort=date:D:L:d1&searchType=calendar&site=calendar_coll&entsp=a__calendar_policy&proxystylesheet=Calendar_frontend&client=Calendar_frontend&filter=0&requiredfields=-CalendarCategory:Space+Unavailable&q=calendar+inmeta%3AStartDateNoTime%3Adaterange%3A..2015-06-27 AND inmeta%3AEndDateNoTime%3Adaterange%3A2014-06-27..&selectedDate=2014-06-27">Calendar</a></li>-->
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="http://maps.calgary.ca/">Map</a></li>
+										                    <li id="cocis-footer-nav">
+										                        <a href="/SitePages/cocis/navigation/navigation.aspx">
+											                        <div id="cocis-navTxt">BROWSE BY TOPIC</div>
+											                        <div id="cocis-navBtn">≡</div>
+										                        </a>
+										                    </li>
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer cocis-no-border" href="/General/Pages/eServices.aspx">eServices</a></li>
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/CS/HR/Pages/Careers/Career-Opportunities.aspx">Careers</a></li>
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/engage/Pages/EngagePortal.aspx">engage!</a></li>
+										                </ul>
+										        	</div>
+									        	</div>	
+											</div>
+											<!-- End of 'body rows' div -->
+											
+											<!-- begin footer div -->
+											<footer>
+												<div class="cocis-socialNetworks">	<!-- used to contain and position the social network linked icons -->
+											        <div class="cocis-socialNetworks-subWrapper">
+												        <ul>
+												        	<li><a href="http://www.facebook.com/TheCityofCalgary" id="cocis-facebook" target="_blank" title="The City of Calgary on Facebook"><span class="icon-facebook2"></span><span>Facebook</span></a></li>
+												            <li><a href="http://www.twitter.com/cityofcalgary" id="cocis-twitter" target="_blank" title="The City of Calgary on Twitter"><span class="icon-twitter2"></span><span>Twitter</span></a></li>
+												            <li><a href="http://www.youtube.com/thecityofcalgary" id="cocis-youtube" target="_blank" title="The City of Calgary on YouTube"><span class="icon-youtube22"></span><span>Youtube</span></a></li>
+												            <li><a href="http://www.linkedin.com/company/city-of-calgary" id="cocis-linkedIn" target="_blank" title="The City of Calgary on LinkedIn"><span class="icon-linkedin2"></span><span>LinkedIn</span></a></li>
+												            <li><a href="http://www.flickr.com/photos/cityofcalgary/" id="cocis-flickr" target="_blank" title="The City of Calgary on Flickr"><span class="icon-flickr2"></span><span>Flickr</span></a></li>
+												            <li><a href="http://www.calgarycitynews.com" target="_blank" id="cocis-blogger" title="Calgary City News Blog"><span class="icon-citynews"></span><span>City News Blog</span></a></li>
+												            <li><a href="https://instagram.com/thecityofcalgary/" target="_blank" id="cocis-instagram" title="The City of Calgary on Instagram"><span class="icon-instagram-with-circle"></span><span>Instagram</span></a></li>
+												        </ul>
+													</div>
+											    </div>
+											    <div id="cocis-footer-row" class="s4-notdlg" role="footer">
+											        <div id="cocis-footer-links">
+											            <ul>
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Privacy-Policy.aspx">Privacy Policy</a></li>    
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Terms-of-Use.aspx">Terms of Use</a></li>    
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Accessibility.aspx">Accessibility</a></li>    
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Contact-Us.aspx">Contact Us</a></li>    
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/Pages/SiteMap.aspx">Site Map</a></li>    
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Search-Tips.aspx">Search Tips</a></li>    
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/">Home</a></li>    
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/cfod/it/Pages/myID-registration-instructions.aspx">myID</a></li>
+											            </ul>
+											        </div>
+
+											        <div id="cocis-footer-copyright">
+											        © 2016. All rights reserved. Official web site of The City of Calgary, located in Calgary, Alberta, Canada.
+											        </div>
+											        <a id="cocis-cityLogo-crest" href="/SitePages/cocis/default.aspx">
+														<img class="cocis-cocLogo-img" src="/Scripts/coc/core-styles/images/blank.gif" title="Return to the Calgary.ca homepage" alt="Return to the Calgary.ca homepage">
+													</a>											        
+											    </div>
+											</footer>
+											<!-- end footer div -->
+															
+											<!-- Modals or popups that appear in front of all of the page content -->
+											<div id="cocis-popup">
+												
+												
+											</div>
+										</div>
+									</div>
+		
+									<!-- the developer dashboard can be turned on by administrators and shows debuging and performance info for the page -->
+									<div id="DeveloperDashboard" class="ms-developerdashboard">
+										
+									</div>
+								</div>
+							</div>						
+						</div>							
+
+			<!-- =====  End scrolling body area with these two previous div's ============================================================ -->
+
+			<!-- The form digest security control used to for security validation on forms -->
+			
+				
+			
+
+			<!-- =====  Hidden Placeholders ============================================================ -->
+			
+			<script type="text/javascript">
+				ExecuteOrDelayUntilScriptLoaded(function(){
+					document.write('<script type="text/javascript" src="/scripts/ie9fix/rte.ie9fix.js"></' + 'script>');
+				}, 'form.js');
+				ExecuteOrDelayUntilScriptLoaded(function(){
+					document.write('<script type="text/javascript" src="/scripts/ie9fix/imn.ie9fix.js"></' + 'script>');
+				}, 'init.js');
+			</script>
+			<script type="text/javascript" src="/scripts/ie9fix/entityeditor.ie9fix.js" ></script>
+			<!-- Handle Search "enter" key and back button -->
+			<input type="text" name="__spDummyText1" style="display:none;" size="1"/>
+			<input type="text" name="__spDummyText2" style="display:none;" size="1"/>
+
+		
+
+<script type="text/javascript">
+//<![CDATA[
+function loadMDN2() { EnsureScript('MDN.js', typeof(loadFilterFn), null); }
+function loadMDN1() { ExecuteOrDelayUntilScriptLoaded(loadMDN2, 'sp.ribbon.js'); }
+_spBodyOnLoadFunctionNames.push('loadMDN1');
+function _spNavigateHierarchyEx(nodeDiv, dataSourceId, dataPath, url, listInContext, type, additionalQString) {
+    SetAdditionalNavigateHierarchyQString(additionalQString);
+    g_originalSPNavigateFunc(nodeDiv, dataSourceId, dataPath, url, listInContext, type);
+}
+
+g_originalSPNavigateFunc = _spNavigateHierarchy;
+_spNavigateHierarchy = _spNavigateHierarchyEx;
+var _fV4UI = true;
+function EnsureScripts(scriptInfoList, finalFunction)
+{
+if (scriptInfoList.length == 0)
+{
+finalFunction();
+}
+else
+{
+var scriptInfo = scriptInfoList.shift();
+var rest = function () { EnsureScripts(scriptInfoList, finalFunction); };
+var defd;
+try
+{
+eval('defd = typeof(' + scriptInfo[1] + ');');
+}
+catch (e)
+{
+defd = 'undefined';
+}
+if (scriptInfo[2])
+{
+EnsureScript(scriptInfo[0], defd, null);
+ExecuteOrDelayUntilScriptLoaded(rest, scriptInfo[0]);
+}
+else
+{
+EnsureScript(scriptInfo[0], defd, rest);
+}
+}
+}
+function PublishingRibbonUpdateRibbon()
+{
+var pageManager = SP.Ribbon.PageManager.get_instance();
+if (pageManager)
+{
+pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
+}
+}var _fV4UI = true;var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';var _spFormDigestRefreshInterval = 5760000;//]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+document.write('<script type="text/javascript" src="/scripts/ie9fix/core.ie9fix.js"></' + 'script>');
+// ]]>
+</script>
+<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=b6\u00252FcRx1a6orhAQ\u00252FcF\u00252B0ytQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("cui.js", "\u002f_layouts\u002fcui.js?rev=OOyJv78CADNBeet\u00252FvTvniQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002finplview.js?rev=WB6Gy8a027aeNCq7koVCUg\u00253D\u00253D");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("sp.ui.policy.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EUI\u00252EPolicy\u00252EResources\u0026rev=YhBHGmUAGyJ3lAgSdE4V\u00252Fw\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("mdn.js", "\u002f_layouts\u002fmdn.js?rev=gwmFFJ2\u00252FfFacqXWAqG\u00252FqKg\u00253D\u00253D");RegisterSodDep("mdn.js", "sp.core.js");RegisterSodDep("mdn.js", "sp.runtime.js");RegisterSodDep("mdn.js", "sp.js");RegisterSodDep("mdn.js", "cui.js");RegisterSodDep("mdn.js", "ribbon");RegisterSodDep("mdn.js", "sp.ui.policy.resources.resx");</script>
+<script type="text/javascript">RegisterSod("sp.publishing.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EPublishing\u00252EResources\u0026rev=q6nxzZIVVXE5X1SPZIMD3A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.pub.ribbon.js", "\u002f_layouts\u002fsp.ui.pub.ribbon.js?rev=RGQSBI9Dm0E345iq\u00252FxUpHg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fie55up.js?rev=UgTcwUTI6YcRzTMBxD93Xg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSodDep("browserScript", "msstring.js");</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+
+		<!-- extra form for some instances -->
+		
+
+		
+
+		<!-- warn users of old browsers that they need to upgrade -->
+		
+
+		<!-- edit mode webpart menu fixes -->
+		<script>
+			$(function() {
+				if (site.mode == 'edit') {
+				//correct for webpart dialog box
+					$('#MSOTlPn_Tbl').css('min-width', '450px');
+					$('table').css('margin','0 0 0 0');
+					$('#MSOTlPn_Tbl a').css('text-decoration','none');
+				}
+			});
+		</script>
+		
+		<!-- display elements elegantly -->
+		<script type="text/javascript">
+			$(function() {
+		    	$('#cocis-floating-footerWrapper').css('display','block');
+		    });
+		</script>
+														
+	<!-- work ads in gracefully without breaking percieved content loading speed (basic fade in) -->
+		<script>
+			$(document).ready(function() {			
+				$('#cocis-ad-group').appendTo('#cocis-right-column');
+				$('.cocis-ad-right').delay(500).fadeIn(2000);
+			});
+		</script>
+													
+        <!-- Analytics section -->
+        
+        <!-- Copyright (c) 1996-2010 WebTrends Inc.  All rights reserved. -->
+        <!-- Version: 9.3.0 -->
+        <!-- Tag Builder Version: 3.1  -->
+        <!-- Created: 11/29/2010 6:08:17 PM -->
+
+        
+                <script src="https://www1.calgary.ca/sdc/calgarycawebtrends.js" type="text/javascript"></script>
+            
+        
+        <!-- ----------------------------------------------------------------------------------- -->
+        <!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
+        <!-- JavaScript include file can cause serious problems with cross-domain tracking.      -->
+        <!-- ----------------------------------------------------------------------------------- -->
+        <script type="text/javascript">
+        //<![CDATA[
+            var _tag = new WebTrends();
+            _tag.dcsGetId();
+        //]]>
+        </script>
+        <script type="text/javascript">
+        //<![CDATA[
+            _tag.dcsCustom = function () {
+                // Add custom parameters here.
+                //_tag.DCSext.param_name=param_value;
+            }
+            _tag.dcsCollect();
+        //]]>
+        </script>
+        <noscript>
+                <div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="/dcsfa1cmy000004zpu5bf81c3_6n1i/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.3.0&amp;WT.dcssip=www.calgary.ca"/></div>
+        </noscript>
+
+        <script type="text/javascript">
+        //<![CDATA[
+            function dcsAction(creators, title, action) {
+            	if(_tag != null) {
+	                _tag.dcsMultiTrack('DCSext.meta_dc.creator', creators, 'WT.ti', title, 'DCS.dcsuri', title + '/' + action);
+	            }
+            }
+        //]]>
+        </script>
+
+	    <!-- End of WebTrends code -->
+	    
+	     	<!-- qualaroo for qualitative measurements - will only load in anonymous view so we can load with http://  (note: do not load with "//s3.amazonaws.com" because this causes problems in Sharepoint) -->
+			
+			<!-- Qualaroo for calgary.ca --> 
+			<!-- Paste this code right after the <body> tag on every page of your site. --> 
+				<script type="text/javascript">
+		        //<![CDATA[
+				  var _kiq = _kiq || []; 
+				  (function(){ 
+				    setTimeout(function(){ 
+				    var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript'; 
+				
+				    s.async = true; s.src = 'http://s3.amazonaws.com/ki.js/54312/bRL.js'; f.parentNode.insertBefore(s, f); 
+				    }, 1); 
+				  })(); 
+		        //]]>
+				</script>
+			
+
+        <!-- End of Analytics section -->
+
+        <!-- Closing GSA flag -->
+        <!--googleon: all-->
+
+	</body>
+</html>

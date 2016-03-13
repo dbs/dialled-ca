@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBliC "-//W3C//DTD html 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<style type="text/css">
+#service {
+	width:95%;
+	background:#FFF380;
+	padding:0px;
+	margin-left:10px;
+	text-align:left;
+	font-size:14px;	
+}
+</style>
+	<head>
+		<title>Richmond Hill Public Library</title>
+		<script type="text/javascript" charset="utf-8">
+	var _page_load_start = new Date().getTime();
+</script>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Version 1.6.5.23625M (Coupland Patch 1) Last updated 2011/01/17 21:03 [appserver6]" name="App-Version">
+<link media="all" href="../styles/base.css" type="text/css" rel="stylesheet">
+<link media="all" href="../styles/dashboard.css" type="text/css" rel="stylesheet">
+<link media="all" href="../styles/stylesheet.css" type="text/css" rel="stylesheet">
+<link media="all" href="../styles/StickyWin.css" type="text/css" rel="stylesheet">
+<link media="screen" href="../styles/screenStyle.css" type="text/css" rel="stylesheet">
+<!--[if IE]>
+	<link media="screen" href="../styles/IE.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<!--[if IE 6]>
+	<link media="screen" href="../styles/IE6.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<!--[if IE 7]>
+	<link href="../styles/IE7.css" media="screen" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 8]>
+	<link href="../styles/IE8.css" media="screen" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--link media="print" href="../styles/Print.css" type="text/css" rel="stylesheet"-->
+<link media="print" href="../styles/item_print.css" type="text/css" rel="stylesheet">
+<script src="../scripts/firebugx.js" type="text/javascript"></script>
+<script type="text/javascript">
+	disable_firebug();
+	console.warn("starting page render");
+	document.write("<style type=\"text/css\">.hide_on_script{display:none;}</style>");
+	var messages = [];
+</script>
+<script type="text/javascript" src="../scripts/mootools-1.2.5-core.js"></script>
+<script type="text/javascript" charset="utf-8">
+	var auto_suggest_enabled = true;
+	var dom_ready = false;
+	var open_dropdown = "";
+	var open_popup = "";
+	var open_editor = "";
+	var open_details = "";
+	var selected_items = [];
+	var open_tip = "";
+	var help_win = false;
+	var registrar = {
+		hooks: {},
+		handlers: {},
+		remove_hook: function(type){
+			this.hooks[type] = [];
+		},
+		add_hook: function(type, o) {
+			if (typeof(o) == "string") o = {element: o};
+			if (this.hooks[type] == undefined) {
+				this.hooks[type] = [];
+			}
+			this.hooks[type].push(o);
+			if (this.handlers[type] != undefined) {
+				for (var i=0; i < this.handlers[type].length; i++) {
+					this.inform_handler(this.handlers[type][i], o);
+				};
+			}
+		},
+		add_handler: function(types, handler, opts) {
+			if (typeof(types) != "object") {
+				types = [types];
+			}
+			if (opts == undefined) {
+				opts = {delay: 0};
+			}
+			for (var i=0; i < types.length; i++) {
+				var type = types[i];
+				if (this.handlers[type] == undefined) {
+					this.handlers[type] = [];
+				}
+				var h = {handler: handler, opts: opts};
+				this.handlers[type].push(h);
+				if (this.hooks[type] != undefined) {
+					var hook_length = this.hooks[type].length;
+					if (hook_length > 0) {
+						if (h.opts.delay != 0) {
+							this.chained_inform_handler(0, h, type);
+						} else {
+							for (var i=0; i < this.hooks[type].length; i++) {
+								this.inform_handler(h, this.hooks[type][i]);
+							}
+						}
+					}
+				}
+			};
+		},
+		chained_inform_handler: function(idx, h, type) {
+			if (idx < this.hooks[type].length) {
+				registrar.inform_handler(h, this.hooks[type][idx]);
+				setTimeout(function() { registrar.chained_inform_handler(idx+1, h, type); }, h.opts.delay);
+			}
+		},
+		inform_handler: function(h, hook) {
+			h.handler(hook);
+		}
+	};
+	registrar.add_handler(["rating", "popup", "ajax_link", "help"], function(o) {
+		if (document.getElementById(o.element)) document.getElementById(o.element).onclick = function(){return false;};
+	});
+	registrar.add_handler("dropdown", function(o) {
+		var hover = false;
+		if (o.hover != undefined && o.hover != null) hover = o.hover;
+		if (!o.hover && o.trigger) document.getElementById(o.trigger).onclick = function(){return false;};
+	});
+</script>
+<script src="../scripts/IframeShim.js" type="text/javascript"></script> <!-- MooTools More -->
+<script src="../scripts/Element.Measure.js" type="text/javascript"></script> <!-- MooTools More -->
+<script src="../scripts/StyleWriter.js" type="text/javascript"></script> <!-- MooTools plugin (ClientCide) -->
+<script src="../scripts/StickyWin.js" type="text/javascript"></script>  <!-- MooTools plugin (ClientCide) -->
+<script src="../scripts/StickyWinFx.js" type="text/javascript"></script> <!-- MooTools plugin (ClientCide) -->
+<script src="../scripts/PopupDetails.js" type="text/javascript"></script> <!-- MooTools plugin (ClientCide) -->
+<script src="../scripts/Autocompleter.Observer.js" type="text/javascript"></script> <!-- MooTools plugin (ClientCide) -->
+<script src="../scripts/Autocompleter.js" type="text/javascript"></script> <!-- MooTools plugin (ClientCide) -->
+<script src="../scripts/Autocompleter.Remote.js" type="text/javascript"></script>  <!-- MooTools plugin (ClientCide) -->
+<script src="../scripts/MooExtensions.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/Util.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/AutoSuggest.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/Dropdown.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/Expander.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/Messages.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/Placeholder.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/Spinner.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/global.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+<script src="../scripts/BibBrowser.js" type="text/javascript"></script> <!-- Bibliocommons? -->
+
+
+
+<script type="text/javascript" charset="utf-8"> 
+	j_callback = "";
+	if (j_callback != "") { 
+		var element_name= j_callback;
+		registrar.add_hook('j_callback', {element:element_name});
+	}
+	registrar.add_hook('system_message_manager', {element: 'div.systemMessages', inBranch: false});
+</script>
+  <!--Google Analytics-->      
+<script language="javascript">
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+				ga('create', 'UA-56810862-1', 'auto', {'allowLinker': true});//	RHPLWebStats / Richmond Hill Public Library
+				ga('send', 'pageview');//					RHPLWebStats / Richmond Hill Public Library (implemented)
+				
+				
+				ga('create', 'UA-56810862-3', 'auto', {'name': 'r_rollup'}, {'allowLinker': true});//	Rollup
+				ga('send', 'pageview');//					Rollup				
+				
+				
+
+			ga('require', 'linker');
+			ga('linker:autoLink', ['richmondhill.on.ca', 'bibliocommons.com','rhpl.ca'] ); 	
+			
+			ga('r_rollup.send', 'pageview');
+			ga('send', 'pageview');
+			
+</script>			
+
+<script language="javascript" src="/jquery-1.9.1.min.js"></script>
+<script language="javascript" src="/outbound.js"></script>
+<script language="javascript" src="/quickga.js"></script>
+
+<!--Google Analytics Script Ends-->  
+<script type="text/javascript" src="/scripts/webtrends.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+		var _tag=new WebTrends();
+		_tag.dcsGetId();
+	//]]>>
+</script>
+<script type="text/javascript">
+	//<![CDATA[
+		// Add custom parameters here.
+		//_tag.DCSext.param_name=param_value;
+		_tag.dcsCollect();
+	//]]>>
+</script>
+<noscript><div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="http://rhpl-wt-sdc.rhpl.ca/dcs9qpqko10000c54gfargfo3_2y5u/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=8.6.0"/></div></noscript>
+<style type="css/text">
+a {
+color:RGB(135,0,87);
+}
+</style>
+<link href="../images/favicon.png" rel="shortcut icon">
+		<link media="screen" href="styles/frontStyle.css" type="text/css" rel="stylesheet">
+		<!--meta content="360" url="" http-equiv="refresh"--> 
+
+	</head>
+    
+
+	<body class="two_col">
+		<div class="spinner" id="globalSpinner"><img title="" alt="Loading" src="../images/spinner.gif"> Loading… </div>
+		<div id="page"> <!-- 960px wide -->
+			<div style="background-color:RGB(255,255,255);">
+	<div style="float:left; clear:both; padding:10px;"><a href="http://www.rhpl.richmondhill.on.ca"><img title="Richmond Hill Public Library" alt="Richmond Hill Public Library" src="../images/logo_new.png"></a></div>
+	<div style="float:right;">
+		<div style="height:22px; line-height:20px; color:RGB(255,255,255); margin-right:10px;">
+			<div style="float:right;">
+				<div style="float:right;">
+					<a href="http://help.bibliocommons.com" target="_blank" style="color:RGB(51,51,51);">Help</a>
+					&nbsp;|&nbsp;
+					<a href="https://richmondhill.bibliocommons.com/user/login" style="color:RGB(51,51,51);">Log In</a>
+				</div>
+			</div>
+		</div>
+		<form style="position: relative; z-index: 10000; margin-top:25px; margin-right:10px;" onsubmit="javascript: $(this).getElements('input.defaultText').set('value','');" action="http://richmondhill.bibliocommons.com/search" method="get">
+			<h4 style="font-size:14px; color:RGB(255,255,255;">Find books, music, movies, and more.</h4>
+			<select class="hideMe" id="t" name="t">
+				<option title="Keyword" value="smart" selected>Keyword</option>
+				<option title="Title" value="title">Title</option>
+				<option title="Author" value="author">Author</option>
+				<option title="Subject" value="subject">Subject</option>
+				<option title="Tag" value="tag">Tag</option>
+				<option title="List" value="userlist">List</option>
+				<option title="User" value="user">User</option>
+			</select>
+			<input class="text" style="width:350px;" title="Search the RHPL Catalogue" name="q" value="">
+			<input style="padding:2px 7px; border-radius:5px; border-width:2px; border-style:inset; border-color:rgba(255,255,255,0.5); cursor:pointer; background-color:RGB(135, 0, 87); color:#fff; font-weight:600" title="Search" type="submit" alt="Search" value=" Search " name="commit">		</form>
+		<div style="font-size:14px; margin-top:0.5em;"><a href="http://richmondhill.bibliocommons.com/search">Advanced Search</a></div>
+	</div>
+	<br class="clear">
+	<div id="topNav">
+		<ul id="mainNav" style="background:RGB(81, 132, 46);">
+			<li class=" " id="top_nav_item_id_4qzf9oycsx1phzr347vfjz0u3"><a class="navLabel" href="http://www.rhpl.richmondhill.on.ca" style="font-weight:600;">Home</a></li>
+			<li class="dropDown extendedNav" id="top_nav_item_id_9wanmk5kfl5w869c6bk1m14sc">
+				<a class="navLabel" href="http://richmondhill.bibliocommons.com/checkedout"style="font-weight:600;">My RHPL</a>
+				<div class="dropDownContent">
+					<ul class="clearfix">
+						<li>
+							<h5>My Borrowing</h5>
+							<ul>
+								<li><a href="http://richmondhill.bibliocommons.com/checkedout">Checked Out</a></li>
+								<li><a href="http://richmondhill.bibliocommons.com/holds/index/active">Holds</a></li>
+								<li><a href="http://richmondhill.bibliocommons.com/fines">Fines</a></li>
+							</ul>
+						</li>
+						<li>
+							<h5>My Shelves</h5>
+							<ul>
+								<li><a href="http://richmondhill.bibliocommons.com/collection/show/my/library/completed">Completed</a></li>
+								<li><a href="http://richmondhill.bibliocommons.com/collection/show/my/library/in_progress">In progress</a></li>
+								<li><a href="http://richmondhill.bibliocommons.com/collection/show/my/library/for_later">For later</a> </li>
+							</ul>
+						</li>
+						<li>
+							<h5>My Lists</h5>
+							<ul>
+								<li><a href="http://richmondhill.bibliocommons.com/lists/show/mine">My Lists</a></li>
+							</ul>
+						</li>
+						<li>
+							<h5>My Networks</h5>
+							<ul>
+								<li><a href="http://richmondhill.bibliocommons.com/trustedsources">Following</a></li>
+								<li><a href="http://richmondhill.bibliocommons.com/ignoredusers">Ignored Users</a></li>
+								<li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/recommendations" >Recently Shared</a></li>
+							</ul>
+						</li>
+						<li>
+							<h5>My Account</h5>
+							<ul>
+								<li><a href="http://richmondhill.bibliocommons.com/user/edit/account">Account Settings</a></li>
+								<li><a href="http://richmondhill.bibliocommons.com/user/edit/privacy">Privacy</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<script type="text/javascript" charset="utf-8">registrar.add_hook("dropdown", {element: "top_nav_item_id_9wanmk5kfl5w869c6bk1m14sc", hover: true, zindex: 9999});</script>
+			</li>
+			<li class=" dropDown  " id="top_nav_item_id_5z9pl2taebq6x9ukoqsmq37mf">
+				<a href="http://richmondhill.bibliocommons.com/dashboard" class="navLabel" style="font-weight:600;">Explore</a>
+				<div class="dropDownContent">
+					<ul class="clearfix">
+				      <!--li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/recommendations" >Recommendations</a></li-->
+					  <li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/dashboard" >Recent Activity</a></li>
+					  <li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
+					  <li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/explore/index/awards" >Awards</a></li>
+					  <li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/explore/index/best_sellers" >Bestsellers</a></li>
+				    </ul>
+				</div>
+				<script type="text/javascript" charset="utf-8">registrar.add_hook("dropdown", {element: "top_nav_item_id_5z9pl2taebq6x9ukoqsmq37mf", hover: true, zindex: 9999});</script>
+			</li>
+			<li class="dropDown" id="top_nav_item_id_789081">
+				<a class="navLabel" href="../VirtualLibrary/index.cfm" style="font-weight:600;">Virtual Library</a>
+				<div class="dropDownContent">
+					<ul class="clearfix">
+						<li class="dropDownItem"><a href="../VirtualLibrary/Read.cfm">Read</a></li>
+						<li class="dropDownItem"><a href="../VirtualLibrary/Listen.cfm">Listen</a></li>
+						<li class="dropDownItem"><a href="../VirtualLibrary/Learn.cfm">Learn</a></li>
+						<li class="dropDownItem"><a href="../VirtualLibrary/SubjectListIndex.cfm">Research</a></li>
+						<li class="dropDownItem"><a href="../EResources/TitleList.cfm?fr=a&to=a">E-Resources A to Z</a></li>
+						<li class="dropDownItem"><a href="http://rhpl-agent.auto-graphics.com">One Search</a></li>
+						<li class="dropDownItem"><a href="../VirtualLibrary/ForKids.cfm">Just for Kids</a></li>
+						<li class="dropDownItem"><a href="../GraphicNovels">Graphic Novels Lair</a></li>
+						<li class="dropDownItem"><a href="../InputForms/AskForm.cfm">Ask A Librarian</a></li>
+					</ul>
+				</div>
+				<script type="text/javascript" charset="utf-8">
+					registrar.add_hook("dropdown", {element: "top_nav_item_id_789081", hover: true, zindex: 9999});
+				</script>
+			</li>
+			<li class="dropDown" id="top_nav_item_id_2jbhi6n6oyfm9q8q7qa7wc3j">
+				<a class="navLabel" href="../Programs" style="font-weight:600;">Programs</a>
+				<div class="dropDownContent">
+					<ul class="clearfix">
+						<li class="dropDownItem"><a href="../Programs/StorytimeList.cfm">Storytime</a></li>
+						<li class="dropDownItem"><a href="../Programs/ProgramList.cfm?categoryID=1">Kids</a></li>
+						<li class="dropDownItem"><a href="../Programs/ProgramList.cfm?categoryID=2">Teens</a></li>
+						<li class="dropDownItem"><a href="../Programs/ProgramList.cfm?categoryID=3">Adults</a> </li>
+						<li class="dropDownItem"><a href="../Kids/ClubsList.cfm">Book Clubs for Kids</a></li>
+						<li class="dropDownItem"><a href="../ReadersCorner/ReadingGroup.cfm">Book Clubs for Adults</a></li>
+						<!--li class="dropDownItem"><a href="../OPLW/index.cfm">Ontario Public Library Week</a></li-->
+						<!--li class="dropDownItem"><a href="../ReadersCorner/BookClub2Go.cfm">Book Club to Go</a></li-->
+						<!--li class="dropDownItem"><a href="../Programs/WriterInResidence.cfm">Writer in Residence</a></li-->
+					</ul>
+				</div>
+				<script type="text/javascript" charset="utf-8">registrar.add_hook("dropdown", {element: "top_nav_item_id_2jbhi6n6oyfm9q8q7qa7wc3j", hover: true, zindex: 9999});</script>
+			</li>
+			<li class="dropDown" id="top_nav_item_id_789082">
+				<a class="navLabel" style="font-weight:600;">Key Users</a>
+				<div class="dropDownContent">
+					<ul class="clearfix">
+						<li class="dropDownItem"><a href="../Kids">Kids</a></li>
+						<li class="dropDownItem"><a href="../Teens">Teens</a></li>
+						<li class="dropDownItem"><a href="../Students">Students</a></li>
+						<!--li class="dropDownItem"><a href="../Seniors">Seniors</a></li-->
+						<li class="dropDownItem"><a href="../Newcomers">Newcomers</a></li>
+					</ul>
+				</div>
+				<script type="text/javascript" charset="utf-8">
+					registrar.add_hook("dropdown", {element: "top_nav_item_id_789082", hover: true, zindex: 9999});
+				</script>
+			</li>
+			<li class="dropDown" id="top_nav_item_id_789083">
+				<a class="navLabel" style="font-weight:600;">Interest Areas</a>
+				<div class="dropDownContent">
+					<ul class="clearfix">
+						<!--li class="dropDownItem"><a href="../ArtsContest/">Arts Contest</a></li-->
+						<li class="dropDownItem"><a href="../BusinessResearch">Business Research</a></li>
+						<li class="dropDownItem"><a href="../CareersJobhunting">Careers &amp; Job Hunting</a></li>
+						<li class="dropDownItem"><a href="../CommunityInformation">Community Information</a></li>
+						<li class="dropDownItem"><a href="../FinanceInvesting">Finance &amp; Investing</a></li>
+						<li class="dropDownItem"><a href="../GraphicNovels">Graphic Novels Lair</a></li>
+						<li class="dropDownItem"><a href="../HealthWellness">Health &amp; Wellness</a></li>
+						<li class="dropDownItem"><a href="../LocalHistory">Local History &amp; Genealogy</a></li>
+						<!--li class="dropDownItem"><a href="../MoviesFilms">Movies &amp; Films</a></li-->
+						<li class="dropDownItem"><a href="../ReadersCorner">Readers<span style="font-family:serif;">&rsquo;</span> Corner</a></li>
+						<li class="dropDownItem"><a href="../SmallBusiness">Small Business</a></li>
+					</ul>
+				</div>
+				<script type="text/javascript" charset="utf-8">registrar.add_hook("dropdown", {element: "top_nav_item_id_789083", hover: true, zindex: 9999});</script>
+			</li>
+			<li class="dropDown" id="top_nav_item_id_789084">
+				<a class="navLabel" style="font-weight:600;">Services</a>
+				<div class="dropDownContent">
+					<ul class="clearfix">
+						<li class="dropDownItem"><a href="../Services/AccessibilityServices.cfm">Accessibility Services</a></li>
+						<li class="dropDownItem"><a href="../InputForms/AskForm.cfm">Ask a Librarian</a></li>
+						<li class="dropDownItem"><a href="../InputForms/LHForm.cfm">Local History &amp; Genealogy Questions</a></li>
+						<li class="dropDownItem"><a href="../Services/InterlibraryLoans.cfm">Interlibrary Loan Requests</a></li>
+						<li class="dropDownItem"><a href="../Services/RoomRentals.cfm">Meeting Room Rentals</a></li>
+						<!--li class="dropDownItem"><a href="../">Recommend a Title</a></li-->
+					</ul>
+				</div>
+				<script type="text/javascript" charset="utf-8">registrar.add_hook("dropdown", {element: "top_nav_item_id_789084", hover: true, zindex: 9999});</script>
+			</li>
+			<li class="dropDown" id="top_nav_item_id_789085">
+				<a class="navLabel" href="../AboutUs" style="font-weight:600;">About Us</a>
+				<div class="dropDownContent">
+					<ul class="clearfix">
+						<!--li class="dropDownItem"><a href="../AboutUs/MissionStatement.cfm">Mission Statement</a></li-->
+						<li class="dropDownItem"><a href="../AboutUs/HoursOperation.cfm">Locations &amp; Hours</a></li>
+						<li class="dropDownItem"><a href="../OakRidges/">Oak Ridges Library Building Project</a></li>
+						<!--li class="dropDownItem"><a href="../AboutUs">Services</a></li-->
+						<li class="dropDownItem"><a href="../AboutUs/LibraryCards.cfm">Library Cards &amp; Membership</a></li>
+						<li class="dropDownItem"><a href="../AboutUs/OverdueFines.cfm">Fines for Overdue Materials</a></li>
+						
+						<li class="dropDownItem"><a href="../AboutUs/LibraryPolicies.cfm">Policies</a></li>
+						<li class="dropDownItem"><a href="../AboutUs/LibraryBoard.cfm">Library Board</a></li>
+						<!--li class="dropDownItem"><a href="../AboutUs">Senior Staff</a></li-->
+						<li class="dropDownItem"><a href="../AboutUs/HolidaySchedule.cfm">Holiday Schedule</a></li>
+						<li class="dropDownItem"><a href="../MediaZone/index.cfm">Media Zone</a></li>
+						<li class="dropDownItem"><a href="../AboutUs/JobPostings.cfm">Employment Opportunities</a></li>
+						<li class="dropDownItem"><a href="../DoingBusiness">Doing Business with the Library</a></li>
+						<li class="dropDownItem"><a href="../AboutUs">Supporting the Library</a></li>
+						<li class="dropDownItem"><a href="../AboutUs/ContactInformation.cfm">Contact Us</a></li>
+					</ul>
+				</div>
+				<script type="text/javascript" charset="utf-8">registrar.add_hook("dropdown", {element: "top_nav_item_id_789085", hover: true, zindex: 9999});</script>
+			</li>
+			<script type="text/javascript" src="//www.browsealoud.com/plus/scripts/ba.js"></script>
+		</ul>
+
+		<!--ul class="clearfix extendedSubNav" id="subNav">
+			<li class="active"><a href="http://richmondhill.bibliocommons.com/dashboard">Recent Activity</a></li>
+			<li><a href="http://richmondhill.bibliocommons.com/recommendations">Recommendations</a></li>
+			<li><a href="http://richmondhill.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
+			<li><a href="http://richmondhill.bibliocommons.com/explore/index/awards">Awards</a></li>
+			<li><a href="http://richmondhill.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
+			<li><a href="">What to Read</a></li>
+		</ul-->
+	</div>
+</div>
+<div class="errorSpace messaging">
+	<div class="errors"></div>
+</div>
+<div class="messageSpace messaging">
+	<div class="messages"></div>
+</div>
+<div class="messaging" id="id_6bffjrvvne8llw5y8bmy568qw">
+	<div class="messageContent"><p id=msg_id_8x23uexewslke0ae0rjtlw03w><a name=""></a></p></div>
+</div>
+<script type="text/javascript" charset="utf-8">
+	registrar.add_hook('message', {element: 'msg_id_8x23uexewslke0ae0rjtlw03w', key: [], type: ["message"]});
+</script>
+<div class="messaging" id="id_2lsmoteu4er5pknet6dcj5xmz">
+	<div class="messageContent"><p id="msg_id_9p6b2qwqzhl23fb6p2mg37se7"><a name=""></a></p></div>
+</div>
+<script type="text/javascript" charset="utf-8">
+	registrar.add_hook('message', {element: 'msg_id_9p6b2qwqzhl23fb6p2mg37se7', key: [], type: ["error"]});
+</script>
+<!--div class="systemMessages">
+	<div class="sys_message" id="sys_message_78943136">
+		<img class="systemMessageIcon" title="" alt="" src="../images/icon.priority.critical.png"><p>Message text.</p><a class="close_btn" href="http://richmondhill.bibliocommons.com/#">hide</a>
+	</div>
+</div-->
+			<div class="clearfix" id="main">
+				<div id="content">
+              
+
+ <!--Service Notification--> 
+<!--div id=service style="width:695px; padding:15px; margin-top:0.5em; margin-bottom:1em; margin-right:2em; border:solid 1px RGB(153,153,153);">
+	<div class="headlineText">Notice of Service Disruption</div>
+		<div class="frontText" style="margin-top:1em;">
+        	<strong>Effective Date &amp; Time:</strong> Saturday, December 19, 2015 - 6 - 10 am
+            	<p><strong>Library Customers:</strong> The library website will be unavailable on Saturday, December 19 from 6 am to 10 am for scheduled maintenance. The library catalogue will still be available at https://richmondhill.bibliocommons.com</p>
+                <p>We apologize for any inconvenience this may cause.</p>
+	</div>
+</div--> 
+
+<!--div id=service style="width:695px; padding:10px; margin-top:0.5em; margin-bottom:5px; margin-right:2em; border:solid 1px RGB(153,153,153); ">
+       <div class="headlineText">Service Notification</div>
+       <div class="frontText">Please note that during the Santa Claus Parade on Sunday, November 22, the Town of Richmond Hill will be using the bottom half of the parking lot at Central Library. Yonge Street and Hopkins Street will be completely blocked off from 12-4 pm. Access to the upper parking lot will be available from Major Mackenzie Drive West and Atkinson Street.      
+         <p>We apologize for any inconvenience this may cause. This notice is posted in compliance with AODA requirements.</p>
+       </div>    
+</div-->                   
+            <!--div id=service style="width:695px; padding:10px; margin-top:0.5em; margin-bottom:5px; margin-right:2em; border:solid 1px RGB(153,153,153); ">
+       <div class="headlineText"> Service Notification</div>
+       <div class="frontText"> 
+         <p>Service Notification Text </p>
+       </div>     
+       </div-->  
+<!--Service Notification end-->
+
+
+
+
+<!--Full page span notice begins--> 
+
+<div class="frontText" style="text-align:center; margin-top:1em"><a href="../../NewRHPLCard/"><img src="../../Communications/images/RHPL_card_campaign.png"/></a>
+</div>
+<div class="headlineText" align="center"><a href="../../NewRHPLCard/">Learn More About Our Library Card Campaign</a></div>
+<div class="headlineText" align="center">Do you use our digital resources and have a new card?<a href="../../NewRHPLCard/"> Read more</a></div>
+<hr />
+<!--div class="frontText"><a href="../../ArtsContest/index.cfm"><img src="../../Communications/images/Arts_contest2016.png"/></a>
+</div>  
+<hr /-->
+
+<!--div id=service style="width:695px; padding:15px; margin-top:0.5em; margin-bottom:1em; margin-right:2em; border:solid 1px RGB(153,153,153);">
+	<div class="headlineText">Notice: Construction at Richmond Green Library</div>
+	<div class="frontText" style="margin-left:10px; margin-top:10px;">The Richmond Green Library will be undergoing a major sidewalk repair project from July 6 to 24. The branch will remain open to the public.  Construction fences will be set up around the parking lot, please follow the posted signs for direction. </div>
+</div-->
+
+<!--div><img src="../../Communications/images/RG_celebration.png"/></div-->
+
+<!--div class="headlineText" style="text-align:center; margin-top:20px;" ><img src="../Communications/images/LibraryatNight1.jpg" width="300" style="float:left; margin-right:10px; margin-top:5px; margin-bottom:10px; margin-left:10px;" >Extended Study Hours at Central <br />
+  November 23, 2015 to December 22, 2015</div>
+<div class="frontText" style="margin-left:10px; margin-top:10px;">Monday to Thursday, 9:00 <span class="timeSize">pm</span> to midnight </p>
+<p>No extended hours on Friday.</p>
+<p> Saturday & Sunday, 5:00 <span class="timeSize">pm</span> to 9:00 <span class="timeSize">pm</span> </p> 
+ <p> See the <a href="../WhatsNew/pdf/StudyHall2015r.pdf">Extended Study Hours FAQ</a></p></div-->
+ <!--div class="bodyText">Extended Study Hours will not run during holiday hours.</div-->
+<!--hr /-->
+
+<!--Full page span notice ends-->             
+
+
+<!--Book slider-->
+<!--div class="headlineText" align="center" style="margin-top:1em">Canada Reads 2016</div>
+<div align="center">
+	<a href="https://richmondhill.bibliocommons.com/item/show/620462029_birdie"><img src="../../Communications/images/Birdie.png" alt="Birdie by Tracey Lindberg" style="padding:10px;"/></a>
+   <a href="https://richmondhill.bibliocommons.com/item/show/497129029_bone_and_bread"><img src="../../Communications/images/BoneBread.png" alt="Bone and Bread by Saleema Nawaz" style="padding:10px;"/></a>
+   <a href="https://richmondhill.bibliocommons.com/item/show/650832029_the_heros_walk"><img src="../../Communications/images/Heros_walk.png" alt="The Hero's Walk by Anita Rau Badami" style="padding:10px;"/></a>
+   <a href="https://richmondhill.bibliocommons.com/item/show/624370029_the_illegal"><img src="../../Communications/images/Illegal.png" alt="The Illegal by Lawrence Hill" style="padding:10px;"/></a>
+   <a href="https://richmondhill.bibliocommons.com/item/show/550771029_minister_without_portfolio"><img src="../../Communications/images/Minister.png" alt="Minister Without Portfolio by Michael Winter" style="padding:10px;"/></a> 
+</div>
+<hr /-->
+
+  <!--div style="text-align:center; clear:left;"> 
+    <iframe src="//richmondhill.bibliocommons.com/list/list_browse/user/577012028" height="315" width="680" frameBorder="0" scrolling="no" style="margin-bottom:10px"></iframe>
+  </div> 
+<hr /-->
+  <!--div style="text-align:center; clear:left;"> 
+    <iframe src="//richmondhill.bibliocommons.com/list/list_browse/user/514401328" height="315" width="680" frameBorder="0" scrolling="no" style="margin-top:10px;"></iframe>
+  </div--> 
+  
+<!--Book slider end-->
+
+					<div class="content">
+                    <div id="leftColumn">
+
+<!DOCTYPE html>
+<html lang="en">
+</html>
+
+<!-- Current articles --->
+
+
+ <!-- Small Service Notificaiton --->
+<!--div id=service style="width:325px; padding:10px; margin-top:0.5em; margin-bottom:5px; margin-right:2em; border:solid 1px RGB(153,153,153); ">
+<div class="headlineText">Systems Maintenance</div>
+<div class="frontText">On Sunday, February 14 between 6-8 a.m., customers may experience intermittent connection issues to the Library Catalogue  due to systems maintenance.  This will not impact other areas of the Library website.  Access to the former catalogue is still available through the link at the bottom of every page of the Library website.      
+         <p>We apologize for any inconvenience this may cause.</p>
+</div>     
+</div> 
+<hr /-->
+<!--div id=service style="width:325px; padding:10px; margin-top:0.5em; margin-bottom:5px; margin-right:2em; border:solid 1px RGB(153,153,153); ">
+       <div class="headlineText">Service Notification</div>
+       <div class="frontText"> 
+         <p>The Central Library elevator leading from the parking garage  to the east entrance is currently out of order.</p>
+         <p>Until it is repaired, the underground parking garage is closed. Repairs are expected to take 1 week.</p>       
+         <p>We apologize for any inconvenience this may cause.</p>
+       </div>     
+</div--> 
+ <!--div id=service style="width:325px; padding:10px; margin-top:0.5em; margin-bottom:5px; margin-right:2em; border:solid 1px RGB(153,153,153); ">
+       <div class="headlineText"> Service Notification</div>
+       <div class="frontText"> 
+         <p>The Library would like to make its customers aware of the following service disruption. </p>
+         <p>The elevator from the underground parking garage to the Central library is closed for repairs. The underground parking garage may be open, weather permitting, but there will be no direct access to main library from the undergroud lot.</p>       
+         <p>Please check this page for updates for information as to when the underground parking will re-open. We apologize for any inconvenience this may cause. This notice is posted in compliance with AODA requirements. </p>
+       </div>     
+       </div--> 
+ <!-- Small Service Notificaiton End --->
+<div><a href="../../Programs/ProgramList.cfm?categoryID=1"><img src="../../Communications/images/MarchBreak.png"/></a>
+</div>
+<div class="frontText" style="margin-top:10px;">All 4 branches have many amazing programs to keep your kids busy and entertained this March Break. <a href="../../Programs/ProgramList.cfm?categoryID=1">Read more.</a> For programs listed by date and branch, <a href="../../Programs/pdf/March_Break_2016.pdf">download</a> the flyer.
+</div>  
+<hr />
+<div class="bodyText" style="text-align:center;"><a href="http://rhpl.lib.overdrive.com/23DBD2F5-5F94-4ABA-BE17-D5CDF09ED454/10/50/en/ContentDetails.htm?id=84B3C6B3-6CC7-487B-B746-CAEE8A482782"><img src="../../Communications/images/BigLibraryRead.png" /></a></div>
+<div class="bodyText">Join millions of readers around the world who are reading <a href="http://rhpl.lib.overdrive.com/23DBD2F5-5F94-4ABA-BE17-D5CDF09ED454/10/50/en/ContentDetails.htm?id=84B3C6B3-6CC7-487B-B746-CAEE8A482782">American sniper</a>. This event takes place March 17-31, 2016.</div>
+<hr />
+
+<div class="headlineText">lynda.com Library Now Available</div>
+<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=192"><img src="../../Communications/images/lyndalogo.png" /></a></div>
+<div class="bodyText">Need to learn a new skill? lynda.com library is an online learning site that includes over 3,000 courses led by expert instructors. General areas include business, computers, design, marketing and more. Sofware courses are also available. To register, you need your library card number and PIN. You need to register your name and email address to track your course progress. Certificates are available on course completion. lynda.com is only available through the library website and your browser - the app is not available to library customers.<a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=192"> Explore Now</a></div>
+<hr />
+
+<div class="headlineText">E-Resource for Children</div>
+<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=78"><img src="../../Communications/images/clickhere_logoBanner1.png" /></a></div>
+<div class="bodyText">Picture books, fiction, graphic novels, non-fiction, videos, and much more. For preschoolers and kids up to grade 6. 
+<a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=78"> Explore Now</a></div>
+<hr /> 
+
+<div class="headlineText">Homework Help</div>
+<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=36"><img src="http://assets.cengage.com/gale/icons/AONE-web.png" /></a></div>
+<div class="bodyText">Find full-text articles from magazines, newspapers and other resources.
+<a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=36"> Explore Now</a></div>
+<hr />
+
+<div class="headlineText">Smartphone/Tablet Encyclopedia</div>
+<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=101"><img src="../../Communications/images/Britannica_library.jpg" /></a></div>
+<div class="bodyText">Information to go for the entire family. <a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=101">Explore Now</a></div>
+<hr />
+ 
+
+<div class="headlineText">New Oak Ridges Library</div>
+<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/OakRidges/"><img src="../../Communications/images/New_OR.png" /></a></div>
+<div class="bodyText">
+Planning for the new Oak Ridges Library is well underway. Check the Oak Ridges Building Project page for updates. <a href="http://www.rhpl.richmondhill.on.ca/OakRidges/">Read more</a></div>
+<hr />
+
+<div class="headlineText">Richmond Hill Aerial Photographs</div>
+<div class="bodyText"><a href="http://news.ourontario.ca/RHPL/3123179/data?n=2"><img src="../../Communications/images/MillPond1959.png" /></a></div>
+<div class="bodyText">This photograph was taken around 1959 and shows an ice-covered Mill Pond with Mill Street along the bottom of the photograph. Looking north, it's clear that these were new houses, and that this area of Richmond Hill was rural at the time. <a href="http://news.ourontario.ca/RHPL/search">Browse the collection</a></div>
+<!--hr /-->  
+
+<!--div class="headlineText">Local History eBook</div>
+<div class="frontText"><img src="../../Communications/images/ECRH.jpg"></div>
+<div class="frontText">Originally published in 1973 for the Town of Richmond Hill's Centennial year, <em>Explore Centennial Richmond Hill</em> has been updated for 2015. It's now <a href="http://rhpl.lib.overdrive.com/428CB504-2EE0-4BA3-897B-790EE1B1980D/10/50/en/ContentDetails.htm?id=1B66151F-9B4F-4B3E-9253-C9CFFEE992F3">available as an eBook.</a></div-->
+<!--hr /-->
+
+<!--div class="headlineText">Freegal Music: Now Streaming</div>
+<div class="frontText" style="text-align:center;"><img src="../../VirtualLibrary/images/FreegalListenHere.jpg" /></div>
+<div class="frontText">
+Library cardholders can stream all of the music on Freegal 24 hours per day, 7 days a week.<a href="http://richmondhill.freegalmusic.com/homes/index">Try it now</a></div-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</div>
+					<div id="rightColumn">
+                    	
+                    	<!--Total width:282px-->
+<!--Text width:232px-->
+<!DOCTYPE html>
+<html lang="en">
+</html>
+
+<!--Time conditional article-->
+
+
+
+<!-- Current articles -->
+
+<div class="headlineText">Movie Madness</div>
+<div style="text-align:center; margin-bottom:10px;"><img src="../../Communications/images/GoodDinosaur.png"></div>
+<div class="frontText">Join in the fun at the Central Library on Saturday, March 19 at 2 pm and watch The Good Dinosaur.  <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=728"> More Details</a></div>
+<hr />
+
+<div class="headlineText">Children's Spring program registration begins online Monday March 7</div>
+<div class="frontText" style="text-align:center;"><img src="../../Communications/images/Paint-brushes.png" width="280" height="187" /></div>
+<div class="frontText">Check out the full list of our exciting line up of children's programs at the library.  Spaces are limited! <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramList.cfm?categoryID=1">More Details</a></div>
+<hr />
+
+<div class="headlineText">March Break Teen Zone</div>
+<div class="frontText"><img src="../../Communications/images/teens.png"></div>
+<div class="frontText">Join us at Central Library on Monday, March 14 from 6-8 pm for teen only fun and food. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1408">More Details</a></div>
+<hr />
+
+<div class="headlineText">Astronomy: The Art</div>
+<div class="frontText"><img src="../../Communications/images/Astronomy.png"></div>
+<div class="frontText">Join us on Tuesday, March 15 from 7-8:30 pm at Central Library and listen to Chris Vaughan (AKA @astrogeoguy) as he takes us on a tour of the Universe. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1441">More Details</a></div>
+<hr />
+
+<div class="headlineText">Entrepreneurs in Residence:<br/> Inspirational Storytelling</div>
+<div class="frontText"><img src="../../Communications/images/Boardroom-meeting.jpg"></div>
+<div class="frontText">Join the conversation as local entrepreneurs share their stories of their journey and what they learned along the way. Come listen to four dynamic and passionate entrepreneurs on Thursday, March 10 at 7 pm in the Library event room on the 3rd floor of the Central Library. <a href="../../Programs/pdf/Entrepreneurs_March_2016.pdf">More Details</a></div>
+<hr />
+
+
+
+<!--div class="headlineText">Hatch Canada Open House</div>
+<div class="frontText"><img src="../../Communications/images/HatchCanada.png"></div>
+<div class="frontText">Join us on Monday, March 7 from 5:30-8:30 pm at the Hatch Canada Open House at the Central Library. Get a sneak peak at kid's coding programs. <a href="http://www.rhpl.richmondhill.on.ca/Kids/pdf/HatchCanada.pdf">More Details</a></div>
+<hr /-->
+
+<div class="headlineText">Tax Clinics</div>
+<div class="frontText"><img src="../../Communications/images/Tax.png"></div>
+<div class="frontText"><!--CPA Ontario volunteers will provide free Tax Clinics for residents of Richmond Hill in March. Please print an <a href="../../Programs/pdf/TaxClinicForm.pdf"> application form</a>,or pick it up at the main service desk at any branch. Please return the completed form to the 3rd Floor Reference Desk at the Central Library. Only those eligible will be contacted for an appointment. <a href="../../Programs/pdf/TaxChecklist.pdf">Eligibility checklist</a--><strong>Note:</strong> Tax Clinics at the Central Library are now fully booked, and there are no available appointments</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+				</div>
+			</div>
+				<div class="secondary " id="rightBar"><!-- 217px wide -->
+					<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+.right {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 10px;
+    text-align:center;
+    color:#000;
+	font-size:16px;
+}
+
+.right a:hover {
+	font-weight: bolder;
+	text-decoration:none;
+	color:#000;
+}
+
+.right a {
+ 	color:#000;
+	text-decoration: none;
+
+}
+
+/* mouse over link */
+a:hover {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<!--div class="headlineText" style="margin-top:1em; text-align:center;">Canada Day</div>
+			<div class="marginList" style="margin-top:1em; margin-bottom:0.5em; margin-left:30px;"><img src="../../Communications/Images/CanadaDay.jpg"><div class="headlineText" style="margin-top:1em;">Wednesday, July 1</div><div class="frontText">All locations CLOSED</div></div-->
+            
+<!--hr /-->
+
+<div class="marginHeading" style="text-align:center; color:#870057">Program Guide</div>
+            <div class="marginList" style="text-align:center; margin-left:10px; margin-right:10px;">The <a href="../../Programs/ProgramGuides/ProgramGuide.pdf" target="_parent" style="text-decoration:none;">Current Program Guide</a> is available for downloading</div>
+            
+			<div class="marginList" style="margin-top:1em; margin-bottom:0.5em; margin-left:30px;"><a href="../../Programs/ProgramGuides/ProgramGuide.pdf" target="_parent" style="text-decoration:none;"><img src="../../Programs/ProgramGuides/images/programGuide.jpg" width="150" height="193" alt="Program Guide In the Know" /></a></div>
+            
+<hr />
+
+<div class="marginHeading" style="margin-top:30px; margin-bottom:10px; text-align:center; color:#870057">eMagazines</div>
+<div style="width:146px; margin-left:10px;"><a href="http://www.rbdigital.com/richmondhillon/service/zinio/landing"><img src="../../Communications/images/ZinioSide.jpg" alt="Zinio logo" style="border:none;"></a></div>
+
+<div class="marginHeading" style="margin-top:30px; margin-bottom:10px; margin-left:80px; color:#870057">eMusic</div>
+<div style="width:146px; margin-left:10px;"><a href="http://richmondhill.freegalmusic.com"><img src="../../Communications/images/FreegalSide.jpg" alt="freegal logo" style="border:none;"></a></div>
+<!--div class="marginHeading style="text-align:center;">Streaming Music</div>
+<div style="text-align:center"><a href=""><img src="../../VirtualLibrary/images/FreegalListenHere.jpg" /></a></div-->
+
+<div class="marginHeading" style="margin-top:30px; margin-bottom:10px; margin-left:80px; color:#870057">eBooks</div>
+<div style="width:146px; margin-left:10px;"><a href="http://rhpl.lib.overdrive.com"><img src="../../Communications/images/OverdriveSide.jpg" alt="OverDrive logo" style="border:none;"></a></div>
+<div class="marginHeading" style="text-align:center; margin-bottom:2px; color:#870057"><a href="http://frontline.overdrive.com/?Lib=Richmond%20Hill%20Public%20Library">OverDrive Help</a></div>
+
+<div style="width:146px; margin-left:10px;"><a href="https://ebook.3m.com/library/richmondhillpl/"><img src="../../Communications/images/3MSidecolour.jpg" alt="3M button"></a></div>
+
+<div style="width:146px; margin-left:10px;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=170"><img src="../../Communications/images/ArchembaultSide.jpg" width="200" height="103" alt="MaBiblio numerique logo" /></a></div>
+<hr />
+
+<div class="right" style="margin-top:10px; margin-bottom:20px;border:solid 3px RGB(96,144,32)"><a href="../InputForms/AskForm.cfm">Ask A Librarian</a></div>
+
+
+
+<div class="marginHeading"><iframe title="Events Calendar" src="../Programs/includes/programCalendar.cfm" frameborder="0" width="215" height="200" scrolling="no"></iframe></div
+
+>
+
+
+
+
+</body>
+</html>
+      
+					<!--iframe title="Events Calendar" src="../Programs/includes/programCalendar_plus.cfm" frameborder="0" width="215" height="750" scrolling="no"></iframe-->
+				</div>
+			</div>
+			<div id="footer">
+				<div class="footerContent clearfix">
+					<!--!DOCTYPE html>
+
+<!--menu-->
+<html lang="en">
+<style>
+#column-left
+   {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size:16px;
+   padding-bottom:5px;
+   color: #870057;
+   
+}
+#column-right
+   {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size:16px;
+   padding-bottom:5px;
+   color: #870057;
+   
+}
+
+
+</style>
+</html-->
+
+<div id="column-left" style="vertical-align:middle; float:left;">
+<p style="margin-bottom:20px; margin-top:30px; margin-left:65px;">Connect with Us</p>
+	<a href="../../RHPL/fbrefer.cfm" target="_parent"><img src="../../RHPL/images/logos/FB-f-Logo__blue_29.jpg" style="vertical-align: middle; margin-right: 10px;" alt="Facebook" border="0" /></a>                
+	<a href="http://www.twitter.com/rhpltweets" target="_parent"><img src= "../../RHPL/images/logos/Twitter_logo_blue_web.jpg" style="vertical-align: middle; margin-right: 10px;" alt="Twitter" border="0" /></a>                
+	<a href="http://instagram.com/rhplibrary" target="_parent"><img src="../../RHPL/images/logos/Instagram_Icon.jpg" style="vertical-align: middle; margin-right: 10px;" alt="Instagram" border="0" /></a>
+	<a href="https://www.youtube.com/user/RHPLibrary" title="You Tube" target="_parent"><img src="../../RHPL/images/logos/YouTube-icon-full_color.jpg" style="vertical-align: middle; margin-right: 10px;" alt="YouTube"  border="0" /></a>
+	<a href="https://www.linkedin.com/company/richmond-hill-public-library?trk=top_nav_home" title="LinkedIn" target="_parent"><img src="../../RHPL/images/logos/LinkedIn-InBug-2C.jpg" style="vertical-align: middle; margin-right: 10px;" alt="Linked In" border="0" /></a>
+	<a href="http://www.pinterest.com/RHPLibrary/" title="Pinterest" target="_parent"><img src="../../RHPL/images/logos/Pinterest_Badge_Red.jpg" style="vertical-align: middle; margin-right: 10px;" alt="Pinterest" border="0" /></a> 
+            
+</div>
+            
+   <div id="column-right" style="float:right; margin-bottom:10px;">
+    <p style="margin-bottom:10px; margin-top:10px;"><span>RHPL Strategic Plan</span><span style="margin-left:25px;">Report to the Community 2014</span></p>
+ <p> <span style="margin-bottom:10px; margin-left:25px;"><a href="../../AboutUs/StrategicPlan.cfm"><img src="../../AboutUs/images/strategicPlan.jpg" width="112" height="87" alt="Strategic Plan" /></a></span>
+       <span style="margin-bottom:10px; margin-left:65px;"> <a href="../../AboutUs/pdf/CommunityReport2014.pdf"><img src="../../AboutUs/images/communityReport2014.jpg" width="104" height="87" alt="Report to the Community" /></a></span></p>
+</div>
+
+
+
+<div class="col" style="clear:left; clear:right;"><img src="../RHPL/images/logos/SOLS0010_FullBanner_1A.jpg" width="468" height="60" alt="SOLS Acknowledgement" style="margin-left:200px;">
+<p style="margin-top:30px; color:#870057">&copy;2015 Richmond Hill Public Library</p></div>
+<div class="col footerLinks" style="margin-top:90px;"><a href="http://www.rhpl.richmondhill.on.ca">Home</a> • <a href="../AboutUs/Contact.cfm">Contact Us</a> • <a href="http://www.rhpl.richmondhill.on.ca/InputForms/AskForm.cfm">Ask A Librarian</a> • <a href="../AboutUs/HoursOperation.cfm">Locations &amp; Hours</a> • <a href="http://illuvator.rhpl.ca/uhtbin/cgisirsi/x/0/0/49">Former Catalog</a> • <a href="../AboutUs/PrivacyStatement.cfm">Privacy Statement</a></div>
+
+
+
+
+				</div>
+			</div>
+		</div>
+		<!-- BEGIN Invitation Positioning  -->
+			<script language="javascript" type="text/javascript">
+				var lpPosY = 100;
+			</script>
+
+
+</script>
+		<!-- END Invitation Positioning  -->
+	</body>
+</html>

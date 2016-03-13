@@ -1,0 +1,1255 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' ' http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" onmousedown="afficheadmin(event)"><head>
+<title>SHGIJ - Accueil</title>
+
+<meta name="keywords" content="Société d'histoire, généalogie, Île Jésus, Laval, Centre de documentation, Centre d'archives de Laval, Alain-Grandbois, histoire, archive, archiviste, fonds, patrimoine, SHGIJ, CAL, Bulletins, dons, conférence, formation,,,,,,">
+<meta name="description" content="La Société d'histoire et de généalogie de l'Île Jésus est un organisme sans but lucratif qui a pour mission de préserver et diffuser le patrimoine lavallois, de retracer et faire connaître l'histoire de l'île Jésus ainsi que de faciliter les recherches en histoire et en généalogie. Affilié au Centre d'archives de Laval.">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1;">
+	<meta property="og:image" content="http://shgij.org/client_file/themes/default/interface//site/logo.gif" />
+<link REL="shortcut icon" type="image/ico" href="/favicon.ico?id=1.726125073E+12"><link href="/client_file/themes/default/css/album_photos.css" rel="stylesheet" type="text/css">
+<link href="/client_file/themes/default/css/catalog.css" rel="stylesheet" type="text/css">
+<link href="/client_file/themes/default/css/cssDinamique.php" rel="stylesheet" type="text/css">
+<link href="/client_file/themes/default/css/interface.css" rel="stylesheet" type="text/css">
+<link href="/client_file/themes/default/css/modalWindows.css" rel="stylesheet" type="text/css">
+<link href="/client_file/themes/default/css/style.css" rel="stylesheet" type="text/css">
+<link href="/js/jquery_tools/UI_css/smoothness/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+function formatCurrency(num) 
+{
+	num = num.toString().replace(/\$|\,/g,'');
+	
+	if(isNaN(num))
+		num = "0";
+		
+	sign = (num == (num = Math.abs(num)));
+	num = Math.floor(num*100+0.50000000001);
+	cents = num%100;
+	num = Math.floor(num/100).toString();
+	
+	if(cents<10)
+		cents = "0" + cents;
+		
+	for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
+	num = num.substring(0,num.length-(4*i+3))+','+
+	num.substring(num.length-(4*i+3));
+	return (((sign)?'':'-') + '$' + num + '.' + cents);
+}
+//-->
+</script><script language="JavaScript">
+var actualnews = 1;
+
+function change_news(news){
+		document.getElementById('news_1').style.display='none';document.getElementById('newslink_1').className='linkChangeNews';document.getElementById('news_2').style.display='none';document.getElementById('newslink_2').className='linkChangeNews';document.getElementById('news_3').style.display='none';document.getElementById('newslink_3').className='linkChangeNews';document.getElementById('news_4').style.display='none';document.getElementById('newslink_4').className='linkChangeNews';		document.getElementById('news_'+news).style.display='block';
+		document.getElementById('newslink_'+news).className='linkChangeNewsSelect';
+}
+
+var numberNews = 4;
+var roll = '';
+function timer_news(){
+	change_news(actualnews);
+	actualnews = actualnews+1;
+	if(actualnews > numberNews){actualnews=1;}
+	roll = setTimeout("timer_news()",10*1000);
+}
+
+function stoproll(news){
+	change_news(news);
+	clearTimeout(roll);
+}
+
+</script><script language="JavaScript">
+var dFilterStep
+
+function dFilterStrip (dFilterTemp, dFilterMask)
+{
+    dFilterMask = replace(dFilterMask,'#','');
+    for (dFilterStep = 0; dFilterStep < dFilterMask.length++; dFilterStep++)
+		{
+		    dFilterTemp = replace(dFilterTemp,dFilterMask.substring(dFilterStep,dFilterStep+1),'');
+		}
+		return dFilterTemp;
+}
+
+function dFilterMax (dFilterMask)
+{
+ 		dFilterTemp = dFilterMask;
+    for (dFilterStep = 0; dFilterStep < (dFilterMask.length+1); dFilterStep++)
+		{
+		 		if (dFilterMask.charAt(dFilterStep)!='#')
+				{
+		        dFilterTemp = replace(dFilterTemp,dFilterMask.charAt(dFilterStep),'');
+				}
+		}
+		return dFilterTemp.length;
+}
+
+function dFilter (key, textbox, dFilterMask)
+{
+	if (window.event)
+	{
+		key = event.keyCode;		
+	}
+	
+		dFilterNum = dFilterStrip(textbox.value, dFilterMask);
+		
+		if (key==9)
+		{
+		    return true;
+		}
+		else if (key==8&&dFilterNum.length!=0)
+		{
+		 	 	dFilterNum = dFilterNum.substring(0,dFilterNum.length-1);
+		}
+ 	  else if ( ((key>47&&key<58)) && dFilterNum.length<dFilterMax(dFilterMask) )
+		{
+        dFilterNum=dFilterNum+String.fromCharCode(key);
+		}
+
+		var dFilterFinal='';
+    for (dFilterStep = 0; dFilterStep < dFilterMask.length; dFilterStep++)
+		{
+        if (dFilterMask.charAt(dFilterStep)=='#')
+				{
+					  if (dFilterNum.length!=0)
+					  {
+				        dFilterFinal = dFilterFinal + dFilterNum.charAt(0);
+					      dFilterNum = dFilterNum.substring(1,dFilterNum.length);
+					  }
+				    else
+				    {
+				        dFilterFinal = dFilterFinal + "";
+				    }
+				}
+		 		else if (dFilterMask.charAt(dFilterStep)!='#')
+				{
+				    dFilterFinal = dFilterFinal + dFilterMask.charAt(dFilterStep); 			
+				}
+//		    dFilterTemp = replace(dFilterTemp,dFilterMask.substring(dFilterStep,dFilterStep+1),'');
+		}
+
+
+		textbox.value = dFilterFinal;
+    return false;
+}
+
+function replace(fullString,text,by) {
+// Replaces text with by in string
+    var strLength = fullString.length, txtLength = text.length;
+    if ((strLength == 0) || (txtLength == 0)) return fullString;
+
+    var i = fullString.indexOf(text);
+    if ((!i) && (text != fullString.substring(0,txtLength))) return fullString;
+    if (i == -1) return fullString;
+
+    var newstr = fullString.substring(0,i) + by;
+
+    if (i+txtLength < strLength)
+        newstr += replace(fullString.substring(i+txtLength,strLength),text,by);
+
+    return newstr;
+}
+</script><script>
+function UpdatePermissionCounter(col, user_list) {
+	user_list = user_list.split(',');
+	i = 0;
+	j = 0;
+	e = 'users' + col + '_' + user_list[i];
+	while (document.getElementById(e)) {
+		if (document.getElementById(e).checked == true)
+			j++;
+		i++;
+		e = 'users' + col + '_' + user_list[i];
+	}
+	document.getElementById('perm_count'+col).firstChild.data = j;
+}
+
+function ToggleGroupes(prefix, id_list, col, value) {
+	id_list = id_list.split(',');
+	i = 0;
+	e = prefix + col + '_' + id_list[i];
+	while (document.getElementById(e)) {
+		document.getElementById(e).checked = value;
+		i++;
+		e = prefix + col + '_' + id_list[i];	
+	}
+}
+function Groups_ToggleGroupes(prefix, user_list, col, value) {
+	if (value === false) {
+		e = prefix + col;
+		document.getElementById(e).checked = value;
+	}
+	
+	// cocher les users
+	user_list = user_list.split(',');
+	i = 0;
+	e = 'users' + col + '_' + user_list[i];
+	while (document.getElementById(e)) {
+		document.getElementById(e).checked = value;
+		i++;
+		e = 'users' + col + '_' + user_list[i];	
+	}
+}
+function Users_ToggleGroupes(prefix, group_list, col, value) {
+	if (value === false) {
+		e = prefix + col;
+		document.getElementById(e).checked = value;
+		
+		// cocher les groupes
+		group_list = group_list.split(',');
+		i = 0;
+		e = 'groups' + col + '_' + group_list[i];
+		while (document.getElementById(e)) {
+			document.getElementById(e).checked = value;
+			i++;
+			e = 'groups' + col + '_' + group_list[i];	
+		}
+	}
+}
+</script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-ui-1.8.9.custom.min.js"></script>
+
+
+<script type="text/javascript">
+<!--
+// Fonction activatePlayMusicPopup, hidePlayMusicPopup et closeMusicPopup special pour SDC du Village pour faire le pop-up du juke box.
+// La fonction activatePlayMusicPopup est appeler OnLoad dans le body du fichier client_file/themes/default/hpage.php
+// La fonction hidePlayMusicPopup est appeler OnBlur dans le body du fichier client_file/themes/default/hpage.php
+// un fichier juke_box.php existe directement dans le rooth du site contenant la page qui doit apparaître.
+	function activatePlayMusicPopup(URL, WINNAME, FEATUR){
+		popupJukeBoxWindow = window.open(URL,WINNAME,FEATUR);
+		popupJukeBoxWindow.moveTo(0,0);
+	}
+	var doONCE = 0;
+	function hidePlayMusicPopup(DELAYTIMER){
+		if (doONCE != 1){
+			setTimeout('self.focus()', DELAYTIMER)
+			doONCE = 1;
+		}
+	}
+	function closeMusicPopup(){
+		popupJukeBoxWindow.close();
+	}
+
+
+// Fonction launchPopup pour Mont-Royal.net pour faire le pop-up.
+// La fonction est appeler par OnLoad dans le body du fichier client_file/themes/default/hpage.php
+// un fichier pagePopupSpecialMR.php existe directement dans le rooth du site contenant la page qui doit apparaître.
+	var cookieEnabled=(navigator.cookieEnabled)? true : false
+	function launchPopup(URL, WINNAME, FEATUR){
+		popupJukeBoxWindow = window.open(URL,WINNAME,FEATUR);
+	}
+
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+/*		btn_1_over = newImage("./client_file/themes/default/interface/menu/FR/btn_1_over.gif");
+		btn_2_over = newImage("./client_file/themes/default/interface/menu/FR/btn_2_over.gif");
+		btn_3_over = newImage("./client_file/themes/default/interface/menu/FR/btn_3_over.gif");
+		btn_4_over = newImage("./client_file/themes/default/interface/menu/FR/btn_4_over.gif");
+		btn_5_over = newImage("./client_file/themes/default/interface/menu/FR/btn_5_over.gif");
+		smenu_over = newImage("./client_file/themes/default/interface/menu/smenu_over.gif");
+*/		preloadFlag = true;
+	}
+}
+
+function open_deroulant(id){
+	//alert(document.getElementById("deroulant"+id).style.display);
+	document.getElementById("deroulant"+id).style.display='';
+	changeImages('btn_'+id, '/client_file/themes/default/interface/menu/FR/btn_'+id+'_over.gif');
+}
+
+function close_deroulant(id){
+	document.getElementById("deroulant"+id).style.display='none';
+	changeImages('btn_'+id, '/client_file/themes/default/interface/menu/FR/btn_'+id+'.gif');
+}
+
+
+preloadImages();
+// -->
+</script><script language="JavaScript">
+/* By Pass of Console.log */
+if(typeof(console)=="undefined"){
+   function Console(){}
+   console = new Console();
+   Console.prototype.log = function(param){};
+   Console.prototype.render = function(){};
+}
+
+var Login_Timeout = "";
+function set_timer(){
+	Login_Timeout = setTimeout("deconnection_login()",900000);
+}
+function deconnection_login(){
+	alert('Votre session est expirée veuillez vous reconnecter pour continuer.');
+	clearTimeout(Login_Timeout);
+	window.location="http://shgij.org/catalog/logoff.php";
+}
+function trimString (str) 
+{
+  str = this != window? this : str;
+  return str.replace(/\s+/g, '').replace(/\s+$/g, '');
+}
+
+String.prototype.trim = trimString;
+
+// REDIRECTION VERS UN AUTRE URL
+function Redirection(theUrl){
+	window.location.href=(theUrl);
+}
+
+function Recherche_interface(){ //v3.0
+	window.location.href=('/rechercher.php?rechercher=' + document.formrecherche_int.rechercher_int.value + '&rechercher_type=2&rechercheparF=all&change_section=null&langue=FR');
+}
+
+// REDIRECTION PAR MENU DEROULANT
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+	eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+	 if (restore) selObj.selectedIndex=0;
+}
+
+//OUVERTURE D'UN POPUP
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+	window.open(theURL,winName,features);
+}
+
+// RECUPERATION DES INFO SUR LE NAVIGATEUR
+nav = navigator.appName.substring(0,3);
+ver = navigator.appVersion.substring(0,1)
+
+// LIEN POUR INSERER LE SITE DANS LES FAVORIS
+function addFav(){
+	if (nav == "Mic" && ver >= 4){
+		url_site="http://shgij.org/";
+		titre_site = "Gi2";
+		document.write(' - <A HREF="#" onClick="window.external.AddFavorite(url_site, titre_site);return(false);">Ajouter &agrave; mes favoris</A> -')
+	}else{
+		document.write('')
+	}
+}
+// LIEN POUR INSERER FAIRE CE SITE UNE PAGE D'ACCUEIL
+function AfficheHomePage(){
+	if (document.all && document.getElementById){
+		document.write('<A HREF="#" onClick="HomePage(this);return(false);">Faites GI2 votre page d&#039;accueil</A>');
+	}
+}
+
+function HomePage(obj){
+	obj.style.behavior='url(#default#homepage)';
+	obj.setHomePage('http://shgij.org/');
+}
+
+
+
+var win=null;
+function openfenetre(mypage,myname,w,h,scroll,pos){
+	if(pos=="random"){LeftPosition=(screen.width)?Math.floor(Math.random()*(screen.width-w)):100;TopPosition=(screen.height)?Math.floor(Math.random()*((screen.height-h)-75)):100;}
+	if(pos=="center"){LeftPosition=(screen.width)?(screen.width-w)/2:100;TopPosition=(screen.height)?(screen.height-h)/2:100;}
+	else if((pos!="center" && pos!="random") || pos==null){LeftPosition=0;TopPosition=20}
+	settings='width='+w+',height='+h+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=no';
+	win=window.open(mypage,myname,settings);
+}
+
+function datepicker(champ){
+	var newWindow;
+	var urlstring = '/admin/inc/libs/ext/datepicker/calendar.php?champ='+champ;
+	openfenetre(urlstring,'date','232','200','no','center');
+}
+
+function validate(current_form) 
+{  
+  var missing_fields = new Array()
+  var total_missing = 0;
+ 
+  
+  // Loop through all the form elements
+  for (counter = 0; counter < current_form.length; counter++) 
+  {  
+  /*
+  	if (current_form[counter].type == "radio")
+	{
+		chosen = "";
+		len = document.getElementsByName(current_form[counter].name).length;
+		
+		for (i = 0; i <len; i++) 
+		{
+			if (current_form[counter].checked) 
+			{
+				chosen = current_form[counter].value;
+				break;
+			}
+		}
+		
+		if (chosen == "") 
+		{
+	        missing_fields[total_missing] = current_form[counter]
+    	    total_missing++
+		}				
+	}
+*/
+	
+    // Is this a visible text field that's mandatory?
+    if (current_form[counter].type == "text" || current_form[counter].type == "textarea" || current_form[counter].type == "password")  
+	{
+            // Is it empty?
+      if (its_empty(current_form[counter].value)) 
+	  {       
+        // If so, add the field to the array of missing fields
+        missing_fields[total_missing] = current_form[counter]
+        total_missing++
+      }
+    }
+  }
+
+  // Were there any fields missing?
+  if (total_missing > 0) 
+  {  
+    // Start the message
+    var missing_message = "Veuillez remplir les champs manquants suivants " +
+               "\n______________________________\n\n"
+    
+    // Loop through the missing fields
+    for (counter = 0; counter < missing_fields.length; counter++) {
+      missing_message += missing_fields[counter].name + "\n"
+    }
+  
+    // Finish up and display the message
+    missing_message += "\n______________________________\n\n";
+    alert(missing_message)
+    
+    // For emphasis, put the focus on the first missing field
+    missing_fields[0].focus()
+	return false;
+  }
+  else 
+  {
+  
+    // Otherwise, go ahead and submit
+    return true;
+  }
+}
+
+function its_empty(string_value) 
+{
+  // Check for the empty string and null
+  if (string_value == "" || string_value == null) 
+  {  
+    // If either, it's empty so return true
+    return true
+  }
+  
+  // Otherwise, it's not empty so return false
+  return false
+}
+
+
+function attribDiv(id,val) 
+{
+    document.getElementById(''+id+'').style.display = "block";
+    document.getElementById(''+id+'').innerHTML = val;
+}
+
+function attribDiv1ToDiv2(id1,id2) 
+{
+    //alert(document.getElementById(''+id1+'').innerHTML);
+    document.getElementById(''+id2+'').style.display = "block";
+    document.getElementById(''+id2+'').innerHTML = document.getElementById(''+id1+'').innerHTML;
+}
+
+function attribVal1ToVal2(id1,id2) 
+{
+    //alert(document.getElementById(''+id1+'').value);
+    document.getElementById(''+id2+'').value = document.getElementById(''+id1+'').value;
+}
+
+function replaceDivVal(id,val,red) 
+{
+    if (red == 1)
+        document.getElementById(''+id+'').innerHTML = "<span style='color:red'>*</span> " + val;
+    else
+        document.getElementById(''+id+'').innerHTML = val;
+}
+
+function replaceInputVal(id,val) 
+{
+    document.getElementById(''+id+'').value = val;
+}
+
+function toggleBlock(id) 
+{
+	if (document.getElementById)
+	{
+		if (document.getElementById(''+id+'').style.display == "block")	
+			document.getElementById(''+id+'').style.display = "none";
+		else
+			document.getElementById(''+id+'').style.display = "block";
+	}
+	else if (document.layers) 
+	{
+		if (document.layers[''+id+''].visibility == "show")	
+			document.layers[''+id+''].visibility = "hide";
+		else
+			document.layers[''+id+''].visibility = "show";	
+	}
+}
+
+function toggleBlockStatut(source,id,statut_open,statut_close) 
+{
+	//alert(source.innerHTML);
+	if (document.getElementById)
+	{
+
+		if (document.getElementById(''+id+'').style.display == "block")	
+		{
+			document.getElementById(''+id+'').style.display = "none";
+			source.innerHTML = statut_open;
+		}
+		else
+		{
+			document.getElementById(''+id+'').style.display = "block";
+			source.innerHTML = statut_close;
+		}
+	}
+	else if (document.layers) 
+	{
+		if (document.layers[''+id+''].visibility == "show")	
+			document.layers[''+id+''].visibility = "hide";
+		else
+			document.layers[''+id+''].visibility = "show";	
+	}
+}
+
+//Get cookie routine by Shelley Powers 
+function get_cookie(Name) 
+{
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    // if cookie exists
+    if (offset != -1) { 
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1) end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+
+
+
+function FormSendMail(form)
+{
+	var valeur = "";
+	
+	form.Submit.style.visibility = "hidden";
+
+	if (!(typeof(window.tblTexte) == "undefined"))
+		valeur += window.tblTexte.outerHTML;
+
+	if (!(typeof(window.tblForm) == "undefined"))
+		valeur += window.tblForm.outerHTML;
+		
+	form.FormValues.value  = valeur;
+	//alert(form.FormValues.value);
+	return true;
+}
+
+function FormSendMail_byGenerator(TFID)
+{
+	e = window.document.form1.elements;
+	
+	for (i=0; i < e.length ; i++) 
+	{
+		e[i].setAttribute('value',e[i].value);
+		//alert(e[i].type);
+		
+		if (e[i].type == "button" || e[i].type == "submit")
+		{
+			e[i].style.visibility = "hidden";
+		}
+		else if (e[i].type == "radio" || e[i].type == "checkbox")
+		{
+			if (e[i].checked == true)
+			{
+				e[i].setAttribute('checked',true);
+				//e[i].checked = "on";
+				//alert("tri" + e[i].value);
+			}
+			else
+			{
+				e[i].removeAttribute('checked','');
+			}			
+		}		
+		else if (e[i].type == "select-one")
+		{	
+			//alert(e[i].selectedIndex);			
+			//e[i].options[e[i].selectedIndex].selected = true;
+			
+			for (j=0;j<e[i].length;j++)
+			{
+				e[i].options[j].removeAttribute('selected','');
+			}
+			
+			e[i].options[e[i].selectedIndex].setAttribute('selected',true);
+		}
+		else if (e[i].type == "textarea")
+		{
+//			alert(e[i].type + " = " + e[i].value);
+//			e[i].setAttribute('value',e[i].value);
+			e[i].innerHTML = e[i].value;
+		}
+	}	
+
+	var valeur = "";
+	var TFORM = document.getElementById(TFID);
+	if (TFORM.Reset) TFORM.Reset.style.visibility = "hidden";
+	if (TFORM.Submit) TFORM.Submit.style.visibility = "hidden";
+
+	if (!(typeof(window.tblForm) == "undefined"))
+		valeur += window.tblForm.outerHTML;
+
+	if ((!valeur || valeur == "undefined") && document.getElementById(TFID).innerHTML)
+		valeur = document.getElementById(TFID).innerHTML;
+
+	if (valeur)
+	{
+		document.getElementById('FormValues').value  = valeur;
+		//window.document.form1.FormValues.value = valeur;
+		return true;
+	}
+	else return false;
+}
+
+function disableEnterKey(e, tId)
+{
+     var key;     
+     if(window.event) key = window.event.keyCode; //IE
+     else key = e.which; //firefox     
+     
+     return (key != 13);
+}
+
+function stopRKey(evt) 
+{ 
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  //if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}   
+  if ((evt.keyCode == 13) && ((node.type=="text") || (node.type=="password"))) {return false;}
+} 
+
+function formTelephoneAutoFormatField(e, phoneFieldId, phoneValueNew){
+     var key;     
+     if(window.event) key = window.event.keyCode; //IE
+     else key = e.which; //firefox     
+
+    var keyNumbers = new Array();
+        keyNumbers[48]='0';keyNumbers[49]='1';keyNumbers[50]='2';keyNumbers[51]='3';keyNumbers[52]='4';keyNumbers[53]='5';keyNumbers[54]='6';keyNumbers[55]='7';keyNumbers[56]='8';keyNumbers[57]='9';
+        keyNumbers[96]='0';keyNumbers[97]='1';keyNumbers[98]='2';keyNumbers[99]='3';keyNumbers[100]='4';keyNumbers[101]='5';keyNumbers[102]='6';keyNumbers[103]='7';keyNumbers[104]='8';keyNumbers[105]='9';
+    phoneValue = String(phoneValueNew) + String(keyNumbers[key]);
+
+    // 0-9 keypad = 96-105 , 0-9 board = 48-57
+    if((key >= 48 && key <= 57) || (key >= 96 && key <= 105)){
+        // Check if the value IS a number. If not, warn the user to input only numbers.
+        phoneValue = phoneValue.replace(/-/g, '');
+        phoneValue = phoneValue.replace(/e/g, '');
+        phoneValue = phoneValue.replace(/x/g, '');
+        phoneValue = phoneValue.replace(/t/g, '');
+        phoneValue = phoneValue.replace(/:/g, '');
+        phoneValue = phoneValue.replace(/ /g, '');
+        var sLen = String(phoneValue).length;
+
+        if(phoneValue.substring(0, 1) == 1){
+            if (sLen == 1) newPhoneValue = phoneValue;
+            else if (sLen >= 2 && sLen <= 4) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1);
+            else if (sLen >= 5 && sLen <= 7) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4);
+            else if (sLen >= 7 && sLen <= 11) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4, 7) + '-' + phoneValue.substring(7);
+            else if (sLen >= 11) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4, 7) + '-' + phoneValue.substring(7, 11) + ' ext:' + phoneValue.substring(11, sLen);
+        }
+        else{
+            if (sLen <= 3) newPhoneValue = phoneValue;
+            else if (sLen >= 3 && sLen <= 6) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3);
+            else if (sLen >= 6 && sLen <= 10) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3, 6) + '-' + phoneValue.substring(6);
+            else if (sLen >= 10) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3, 6) + '-' + phoneValue.substring(6, 10) + ' ext:' + phoneValue.substring(10, sLen);
+        }
+        document.getElementById(phoneFieldId).setAttribute('maxlength', 30);
+        document.getElementById(phoneFieldId).value = newPhoneValue;
+
+        return (key != key);
+    }
+   else if ((key != 8) && (key !=9))
+	 return (key != key);
+}
+
+// eric@viglob.com :: feb 7 2008
+function showHideElement_sk(elementId){
+    if(document.getElementById(elementId).style.display == 'none') document.getElementById(elementId).style.display = '';
+    else document.getElementById(elementId).style.display = 'none';
+}
+
+var firstCall = true;
+var TITREONCE = 0, STYLE5ONCE = 0, SOUSTITREONCE = 0, TITRE_f_ONCE = 0;
+
+function changeFontsize(fSize, increment) {
+	
+  if (firstCall) {
+    firstCall = false;
+    if (increment != "")
+      changeFontsize('11', '');
+  }
+  if (document.getElementsByTagName) {
+    tags = new Array ("div","td","span");
+    for (j=0; j<tags.length; j++) 
+    {
+      var getElement = document.getElementById('contenuReSizable').getElementsByTagName(tags[j]);
+      var eachElement, currentFontSize, fontIncrease, newFontSize;
+
+      if (document.getElementById('contenuReSizable').getElementsByTagName(tags[j]).name != 'noResize'){
+	      for (i=0; i<getElement.length; i++) {
+	        eachElement = getElement[i];
+	
+	        if (increment != "") {
+	          currentFontSize = parseInt(eachElement.style.fontSize);
+	          fontIncrease = parseInt(increment);
+	          newFontSize = currentFontSize + fontIncrease;
+	        }
+	        else if (fSize != "")
+	          newFontSize = parseInt(fSize);
+	
+	
+	        if (eachElement.className == "titre"){
+	        	if (TITREONCE == 0){
+	        		TITREONCE = 1;
+	        		newFontSize = newFontSize + 3;
+	        	}
+	        }
+			  if (eachElement.className == "titre_fondation"){
+	        	if (TITRE_f_ONCE == 0){
+	        		TITRE_f_ONCE = 1;
+	        		newFontSize = newFontSize + 5;
+	        	}
+	        }
+	        if (eachElement.className == "sous_titre"){
+	        	if (SOUSTITREONCE == 0){
+	        		SOUSTITREONCE = 1;
+					newFontSize = newFontSize + 1;
+	        	}
+	        }
+			if (eachElement.className == "style5"){
+	        	if (STYLE5ONCE == 0){
+	        		STYLE5ONCE = 1;
+	        		newFontSize = newFontSize + 30;
+	        	}
+	        }
+
+	       	eachElement.style.fontSize = newFontSize + "px";
+	      }
+	  }
+    }
+  }
+}
+
+function ExecuteJavascriptInString(html_content) {
+	// need to loop it, eventually
+	str_start = '<scr'+'ipt>';
+	str_end = '</scr'+'ipt>';
+	
+	pos_start = html_content.indexOf(str_start);
+	pos_end = html_content.indexOf(str_end,pos_start);
+	
+//	alert(pos_start);
+//	alert(pos_end);
+	
+	content = html_content.substr(pos_start+str_start.length, pos_end-(pos_start+str_start.length))
+//	alert(content);
+	eval(content);
+	
+	pos_start = html_content.indexOf(str_start,pos_start+1);
+	pos_end = html_content.indexOf(str_end,pos_end+1);
+	
+//	alert(pos_start);
+//	alert(pos_end);
+	
+	content = html_content.substr(pos_start+str_start.length, pos_end-(pos_start+str_start.length))
+//	alert(content);
+	eval(content);
+}
+
+function SecureLevel(response) {
+	max_val = parseInt(document.getElementById('secure_level').style.width);
+	response = parseFloat(response)
+	if (response < 0.5) color = '#ff0000';
+	else if (response < 0.8) color = '#ffff00';
+	else color = '#00ff00';
+	document.getElementById('secure_level_value').style.backgroundColor = color;
+	document.getElementById('secure_level_value').style.width = Math.round(max_val * response) + 'px';
+}
+</script>
+<script language="JavaScript">
+var Menu_open="null";
+var timeout="";
+
+function show_SMenu(idname) 
+{
+	// Ouverture d'un sous-menu
+	clearTimeout(timeout);
+	
+	if(Menu_open!="null")
+	{
+		if(document.getElementById(Menu_open).style.display == 'block')
+		{
+			document.getElementById(Menu_open).style.display='none';				
+		}
+	}	
+	
+	document.getElementById(idname).style.display = 'block';
+				
+	Menu_open=idname;
+}
+
+function off_SMenu(idname) 
+{
+	//timer pour la fermeture d'un menu
+	//document.getElementById(idname).style.display = 'none';
+	timeout=setTimeout("document.getElementById('"+idname+"').style.display='none'; Menu_open='null';",1000);
+}
+
+function out_Smenu()
+{
+	if(Menu_open!="null")
+	{
+		if(document.getElementById(Menu_open).style.display == 'block')
+		{
+			document.getElementById(Menu_open).style.display='none';
+		}
+	}
+}
+
+var Menu_open2="null";
+var timeout2="";
+
+function show_SMenu2(idname) 
+{
+	// Ouverture d'un sous-menu
+	clearTimeout(timeout2);
+	
+	if(Menu_open2!="null")
+	{
+		if(document.getElementById(Menu_open2).style.display == 'block')
+		{
+			document.getElementById(Menu_open2).style.display='none';				
+		}
+	}	
+	
+	document.getElementById(idname).style.display = 'block';
+				
+	Menu_open2=idname;
+}
+
+function off_SMenu2(idname) 
+{
+	//timer pour la fermeture d'un menu
+	//document.getElementById(idname).style.display = 'none';
+	timeout2=setTimeout("document.getElementById('"+idname+"').style.display='none'; Menu_open2='null';",1000);
+}
+
+function out_Smenu2()
+{
+	if(Menu_open2!="null")
+	{
+		if(document.getElementById(Menu_open2).style.display == 'block')
+		{
+			document.getElementById(Menu_open2).style.display='none';
+		}
+	}
+}
+
+function toggleDiv(id,flagit) 
+{
+	if (flagit=="1")
+	{
+		if (document.layers) document.layers[''+id+''].visibility = "show";
+		else if (document.all) document.all[''+id+''].style.display = "block";
+		else if (document.getElementById) document.getElementById(''+id+'').style.display = "block";
+	}
+	else
+	{
+		if (document.layers) document.layers[''+id+''].visibility = "hide";
+		else if (document.all) document.all[''+id+''].style.display = "none";
+		else if (document.getElementById) document.getElementById(''+id+'').style.display = "none";
+	}
+}
+
+function closeDiv(id) 
+{
+	if (document.layers) document.layers[''+id+''].visibility = "hide";
+	else if (document.all) document.all[''+id+''].style.display = "none";
+	else if (document.getElementById) document.getElementById(''+id+'').style.display = "none";
+}
+
+
+function findPos(obj) 
+{
+	var curleft = curtop = 0;
+	
+	if (obj.offsetParent) 
+	{
+		curleft = obj.offsetLeft
+		curtop = obj.offsetTop
+		
+		while (obj = obj.offsetParent) 
+		{
+			curleft += obj.offsetLeft
+			curtop += obj.offsetTop
+		}
+	}
+	return [curleft,curtop];
+}
+
+var ONSUBMENU = 0;
+function menuDeroulant(ACTION, MENUNAME, KEYID){
+	WHICH = MENUNAME+KEYID;
+	if (ACTION == 'show'){
+		document.getElementById(WHICH).style.display=''; 
+	}
+	else if (ACTION == 'hide'){
+		document.getElementById(WHICH).style.display='none';
+	}
+}
+
+function show_hide(ETAT, OBJ, BG){
+	
+	if(ETAT == 'show'){
+		document.getElementById(OBJ).image  = BG;
+	
+	}else if(ETAT == 'hide'){
+		document.getElementById(OBJ).style.background.image  = "";
+	}
+}
+
+function rollover(ETAT, OBJ,IMG ){
+	if(ETAT == 'affiche'){
+		document.getElementById(OBJ).src=IMG;
+	}else if(ETAT == 'hide'){
+		document.getElementById(OBJ).src=IMG;
+	}
+}
+
+</script><script>
+
+var go_afficheadmin = true;
+//script pour l edition rapide    
+function afficheadmin(event, type, id)
+{
+	if (go_afficheadmin) {
+	    if (event.shiftKey == 1 && navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2){
+			site_url = "http://shgij.org/"; 
+			if (type == 'page_system') {
+				window.open(site_url + "admin/views/plan_site/edition_rapide_system.php?type_action=afficher&action=modifier&langue=FR&id="+id,"ed_r","width=410, height=360, scrollbars=no,status=no,menubar=no,toolbar=no,resizable=1,location=no,directories=no, top=30px,left=100px");
+			} else {
+alert("Impossible d'identifier cette page afin de permettre l'édition rapide.")			}
+		}
+	}
+	go_afficheadmin = true;
+}
+
+// Fonction spécial unique pour le module École de CSDUFERS
+// Besoin pour le Ajax des Écoles
+/*
+function afficheadmin(event)
+{
+    //code 101 est la touche 'e'
+    
+    //if(event.keyCode=='101'){ //capte le touche 'e'
+    if (event.shiftKey == 1 ){
+        adresse=document.URL; //recuperer le numero de la page a recuperer
+
+        if(!(/freepage/.test(adresse)))//verifier si c est une freepage
+            alert("Vous ne pouve qu editer les\npages libre pour l instant");
+        else if (adresse.substring(40, 45) == "110.7" || adresse.substring(40, 41) == "7"){
+            if (document.getElementById('csdufer_ecole_loginDiv').style.display == '') document.getElementById('csdufer_ecole_loginDiv').style.display = 'none';
+            else document.getElementById('csdufer_ecole_loginDiv').style.display = '';
+        }
+        else {
+            page = adresse.split("?");
+            page = page[1].split("=");
+            page = page[1];
+            page = page.split(".");
+            page = page[page.length -1];
+            site_url = "http://shgij.org/";
+            //alert(site_url+":"+page);
+            window.open(site_url+"admin/gestion_contenue/edition_rapide.php?type_action=afficher&action=modifier&langue=FR&id="+page,"ed_r","width=640, height=465, scrollbars=no,status=no,menubar=no,toolbar=no,resizable=no,location=no,directories=no, top=30px,left=100px");
+        }
+    }
+}
+function ecoleLogin(){
+    ajax.replace('client_file/formulaire/ecoles_edit.php', 'csdufer_ecole_loginDiv', 'POST', ajax.formToUrlArguments('adminLoginForm'), ecoleDoNothing, ecoleLogingIn);
+}
+function ecoleDoNothing(){
+}
+function ecoleLogingIn(){
+    document.getElementById('csdufer_ecole_loginDiv').style.display = 'none';
+    ajax.replace('client_file/formulaire/ecoles_edit.php', 'infoEcoles', 'POST', 'actionRun=ajax&amp;action=accessSchool&amp;ecole=7');
+}
+function ecoleShowHideSelector(){
+    if (document.getElementById('ecoleSelector').style.display == 'none') document.getElementById('ecoleSelector').style.display = '';
+    else document.getElementById('ecoleSelector').style.display = 'none';
+}
+/**/
+
+    //capte les event pour MOZILLA
+    //document.captureEvents(Event.CLICK);
+    //document.onclick=doMainClick;
+</script>
+
+<script language="javascript" type="text/javascript" src="/js/ajax_fd.js"></script>
+<script type="text/javascript" src="http://shgij.org/js/modal_fd.js"></script>
+<script type="text/javascript" src="http://shgij.org/js/dimension_fd.js"></script>
+<script type="text/javascript" src="http://shgij.org/js/toggle_fd.js"></script>
+<script type="text/javascript" src="http://shgij.org/js/AC_RunActiveContent.js"></script>
+<script language="javascript" type="text/javascript">
+    var ajax = new ajaxObject();
+</script>
+
+</head>
+<body>
+<div class="cont_main">
+    <div class="cont_sub">
+        <div class="cont_top">
+     	<div class="cont_header" style="background:url(/client_file/upload/image_page/default.jpg) no-repeat;">
+            <!-- Si tu veux mettre cette image en tant qu'image et non en background il faut: 
+            1)enlever les commentaire en bas;
+            2)enlever le code equivalent plus haut 
+            3)Changer la variable $type_header dans dynamic_header.php 
+                        -->
+              <div><div class="cont_menu_sec"><div style='text-align:right;'><span class='boutonSecond_sep'>|</span><a href='http://shgij.org/faire-un-don' class='boutonSecond' >Faire un don </a></div><div style='text-align:right;'><span class='boutonSecond_sep'>|</span><a href='http://shgij.org/contact' class='boutonSecond' >Pour nous contacter</a></div></div></div>
+        		<div class="cont_search_form"><form action="http://shgij.org/rechercher.php" method="post" style="margin:0px; padding:0px;"> 
+	<div class="cont_search_box">
+        <table border="0" cellpadding="0" cellspacing="0" style='margin-right:auto;'>
+        <tr>
+            <td align="right" style=""><input name="s" title="envoyer" type="image" src="http://shgij.org/client_file/themes/default/interface/site/btn_search.gif" class="bouton"/></td>
+            <td align="right">
+                <input name="rechercher" type="text" value="" size="15" class="formw" />
+            </td>
+        </tr>
+        </table>
+    </div>
+	<input style="border:0px;" type="hidden" name="rechercher_type" value="0">
+	<input style="border:0px;" type="hidden" name="rechercheparF" value="all">
+</form></div>  
+        </div>
+        <div class="cont_menu_principale"><table cellpadding="0" cellspacing="0" border="0" style="margin-left:auto;">
+	<tr><td  class='td_menu_princ'>
+				<a href='http://shgij.org/_home' class='a_menu_principale_actif' id='a_menu_principale_35'>Accueil</a></td><td onmouseover='document.getElementById("id_sm_53").style.display=""; document.getElementById("a_menu_principale_53").style.background="#72723f";' onmouseout='document.getElementById("id_sm_53").style.display="none"; document.getElementById("a_menu_principale_53").style.background="none";' class='td_menu_princ'>
+				<a href='http://shgij.org/societe' class='a_menu_principale' id='a_menu_principale_53'>Société d'histoire</a><div id="id_sm_53" style="display:none;" class="cont_smenu"><a href='http://shgij.org/societe/conseil-personnel' class='a_smenu'  style=''>Conseil d'administration et personnel</a><a href='http://shgij.org/societe/mission-historique' class='a_smenu'  style=''>Mission et historique</a><a href='http://shgij.org/societe/armoiries' class='a_smenu'  style=''>Armoiries</a><a href='http://shgij.org/societe/politique-collection' class='a_smenu'  style=''>Politique de gestion des collections</a><a href='http://shgij.org/societe/publications' class='a_smenu'  style='border:none;'>Publications</a></div></td><td onmouseover='document.getElementById("id_sm_960").style.display=""; document.getElementById("a_menu_principale_960").style.background="#72723f";' onmouseout='document.getElementById("id_sm_960").style.display="none"; document.getElementById("a_menu_principale_960").style.background="none";' class='td_menu_princ'>
+				<a href='http://shgij.org/cal' class='a_menu_principale' id='a_menu_principale_960'>Centre d'archives</a><div id="id_sm_960" style="display:none;" class="cont_smenu"><a href='http://shgij.org/cal/cal-conseil' class='a_smenu'  style=''>Conseil d'administration et personnel</a><a href='http://shgij.org/cal/mandat-historique' class='a_smenu'  style=''>Mandat et historique</a><a href='http://shgij.org/cal/politique' class='a_smenu'  style=''>Politique d'acquisition</a><a href='http://shgij.org/cal/fonds' class='a_smenu'  style=''>Fonds d'archives et collections</a><a href='http://shgij.org/cal/dons-archives' class='a_smenu'  style=''>Dons d'archives</a><a href='http://shgij.org/cal/preservation' class='a_smenu'  style=''>Préserver vos archives</a><a href='http://shgij.org/cal/gestion-documentaire' class='a_smenu'  style='border:none;'>Gestion documentaire</a></div></td><td onmouseover='document.getElementById("id_sm_43").style.display=""; document.getElementById("a_menu_principale_43").style.background="#72723f";' onmouseout='document.getElementById("id_sm_43").style.display="none"; document.getElementById("a_menu_principale_43").style.background="none";' class='td_menu_princ'>
+				<a href='http://shgij.org/services' class='a_menu_principale' id='a_menu_principale_43'>Services et tarifs</a><div id="id_sm_43" style="display:none;" class="cont_smenu"><a href='http://shgij.org/services/services-tarifs' class='a_smenu'  style=''>Services et tarifs</a><a href='http://shgij.org/services/conferences' class='a_smenu'  style=''>Conférences et ateliers</a><a href='http://shgij.org/services/bulletins-de-lile-jesus' class='a_smenu'  style=''>Bulletins de l'Île Jésus</a><a href='http://shgij.org/services/centre-de-documentation' class='a_smenu'  style=''>Centre de documentation</a><a href='http://shgij.org/services/genealogie' class='a_smenu'  style='border:none;'>Généalogie</a></div></td><td onmouseover='document.getElementById("id_sm_36").style.display=""; document.getElementById("a_menu_principale_36").style.background="#72723f";' onmouseout='document.getElementById("id_sm_36").style.display="none"; document.getElementById("a_menu_principale_36").style.background="none";' class='td_menu_princ'>
+				<a href='http://shgij.org/apropos' class='a_menu_principale' id='a_menu_principale_36'>À propos</a><div id="id_sm_36" style="display:none;" class="cont_smenu"><a href='http://shgij.org/contact' target='_blank' class='a_smenu'  style=''>Contact</a><a href='http://shgij.org/apropos/ouverture' class='a_smenu'  style=''>Heures d'ouverture</a><a href='http://shgij.org/apropos/implications' class='a_smenu'  style=''>Implications communautaires</a><a href='http://shgij.org/apropos/reglements' class='a_smenu'  style=''>Règlements généraux</a><a href='http://shgij.org/apropos/devenir-membre' class='a_smenu'  style=''>Devenir membre</a><a href='http://shgij.org/apropos/devenir-benevole' class='a_smenu'  style='border:none;'>Devenir bénévole</a></div></td></tr>
+	</table></div>        </div>
+               
+            <table border="0" cellpadding="0" cellspacing="0" width="756px" class="maintable">
+            <tr valign="top">
+                                   <td class="td_column_left" width="189px">
+                        <div class="cont_column_left">
+                            <div class="cont_smenu_left"><a href='http://shgij.org/menu-gauche/_news' class='a_smenu_left' >Nouvelles</a><a href='http://shgij.org/services/conferences' target='_blank' class='a_smenu_left' >Conférences 2016</a><a href='http://shgij.org/menu-gauche/chroniques-50e' class='a_smenu_left' >Chroniques du 50e</a><a href='http://shgij.org/menu-gauche/bulletin-ile-jesus' class='a_smenu_left' >Bulletin Île Jésus</a><a href='http://shgij.org/menu-gauche/histoire' class='a_smenu_left' >Histoire</a><a href='http://shgij.org/menu-gauche/_album_photos/cat/1' class='a_smenu_left' >Album</a><a href='http://shgij.org/menu-gauche/partenaires' class='a_smenu_left' >Partenaires</a><a href='http://shgij.org/menu-gauche/_plan_site' class='a_smenu_left' style='border:0px;'>Plan du site</a></div>                            <div class='titre_calendrier' style="width:154px; margin-left:auto; margin-right:auto;">Saviez-vous que?</div>
+                                                        <div class='cont_calendrier'>
+		<div class='cont_sub_calendrier'>
+			<div class='calenEntete_mois'>mars 2016</div><table cellspacing='1' cellpadding='2' border='0' align='center' width='100%' >
+<tr><td class='calenEntete_jour'>Di</td><td class='calenEntete_jour'>Lu</td><td class='calenEntete_jour'>Ma</td><td class='calenEntete_jour'>Me</td><td class='calenEntete_jour'>Je</td><td class='calenEntete_jour'>Ve</td><td class='calenEntete_jour'>Sa</td></tr>
+<tr><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier_day'>1</td><td class='calendrier_day'>2</td><td class='calendrier_day'>3</td><td class='calendrier_day'>4</td><td class='calendrier_day'>5</td></tr>
+<tr><td class='calendrier_day'>6</td><td class='calendrier_day'>7</td><td class='calendrier_day'>8</td><td class='calendrier_day'>9</td><td class='calendrier_day'>10</td><td class='calendrier_day'>11</td><td class='calendrier_day'>12</td></tr>
+<tr><td class='calendrier_day'>13</td><td class='calendrier_day'>14</td><td class='calendrier_day'>15</td><td class='calendrier_day'>16</td><td class='calendrier_day'>17</td><td class='calendrier_day'>18</td><td class='calendrier_day'>19</td></tr>
+<tr><td class='calendrier_day'>20</td><td class='calendrier_day'>21</td><td class='calendrier_day'>22</td><td class='calendrier_day'>23</td><td class='calendrier_day'>24</td><td class='calendrier_day'>25</td><td class='calendrier_day'>26</td></tr>
+<tr><td class='calendrier_day'>27</td><td class='calendrier_day'>28</td><td class='calendrier_day'>29</td><td class='calendrier_day'>30</td><td class='calendrier_day'>31</td><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier' class='oday'>&nbsp;</td></tr>
+<tr><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier' class='oday'>&nbsp;</td><td class='calendrier' class='oday'>&nbsp;</td></tr>
+</table>
+</div></div><script type="text/javascript">
+$(function() {
+  $(".calenSelect").mouseover(function(evt) {
+    $(this).find('div').css({
+      top: evt.pageY + 5,
+      left: evt.pageX + 5
+    }).show('slow');
+  }).mouseout(function(){
+   $(this).find('div').hide('slow');
+  });
+
+});
+</script>
+
+                                                                                    <div style="width:160px; margin-left:auto; margin-right:auto; margin-top:20px;"><div id='banniere_pub0' style='display:block;'><a href='http://shgij.org/compteur_clic_pub.php?idpub=2' target='_blank'><img width='160'height='249' src='http://shgij.org/client_file/upload/banniere_pub/affiche_site-web_f copie.jpg' border=0></a></div>
+<script language="javascript" type="text/javascript">
+	setInterval('change_banner()', 15000);
+	var i=0;
+	function change_banner(){
+		document.getElementById('banniere_pub'+i).style.display = "none";
+		nMax = 0;
+		
+//		i = Math.round(Math.random() * nMax);
+		if (++i > nMax) i = 0;
+//		alert('banniere_pub'+i);
+
+		document.getElementById('banniere_pub'+i).style.display = "block";
+	}
+</script></div>
+                        </div>
+                    </td>
+                                <td class="td_contenu" id="contenuepage">
+                    <div class="contenu">
+
+                
+<DIV align=center><SPAN class=gi2_soustitre style="FONT-SIZE: 14pt"><EM>De la Seigneurie de l'île Jésus</EM></SPAN></DIV>
+<DIV align=center><SPAN class=gi2_soustitre style="FONT-SIZE: 14pt"><EM>à la Ville de Laval</EM></SPAN></DIV>
+<DIV align=center><SPAN class=gi2_soustitre style="FONT-SIZE: 14pt"><EM></EM></SPAN> </DIV>
+<DIV align=center><EM><SPAN class=gi2_texte style="FONT-SIZE: 14pt">- 4 siècles d'histoire -</SPAN></EM></DIV>
+<DIV> </DIV>
+<DIV align=center><SPAN class=gi2_intro style="FONT-SIZE: 10pt">La Société d'histoire et de généalogie </SPAN></DIV><SPAN class=gi2_intro>
+<DIV align=center><SPAN style="FONT-SIZE: 10pt">de l'Île Jésus et le Centre d'archives de Laval <BR>vous souhaitent la bienvenue! </SPAN></DIV>
+<DIV align=center><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: Times New Roman; COLOR: rgb(0,0,0)"></SPAN></DIV>
+<DIV align=center> </DIV>
+<DIV align=center> </DIV>
+<DIV align=center> </DIV>
+<DIV align=center> </DIV>
+<DIV align=center><STRONG class=gi2_texte_bold><A href="http://shgij.org/services/conferences"><STRONG class=gi2_texte_bold><SPAN style="FONT-SIZE: 10pt">CONFÉRENCES - PRINTEMPS 2016</SPAN></STRONG></A></STRONG></DIV>
+<DIV align=center><STRONG><SPAN class=gi2_intro></SPAN></STRONG> </DIV>
+<DIV align=center><SPAN style="FONT-SIZE: 8pt">
+<DIV></DIV>
+<DIV align=center><SPAN style="FONT-SIZE: 10pt"></SPAN></DIV></SPAN></DIV>
+<DIV align=center><SPAN style="FONT-SIZE: 10pt">Découvrez notre programmation pour le printemps: ateliers de généalogie et de paléographie, ainsi que conférences historiques ayant pour thème "L'Université s'invite à Laval".</SPAN></DIV>
+<DIV align=center><SPAN style="FONT-SIZE: 8pt">
+<DIV></DIV>
+<DIV align=center></DIV></SPAN></DIV>
+<DIV align=center> </DIV>
+<DIV align=center> </DIV>
+<DIV align=center><A style="COLOR: #115eab" href="http://shgij.org/menu-gauche/chroniques-50e"><SPAN class=gi2_soustitre style="COLOR: #666633">DÉCOUVREZ NOS CHRONIQUES DU 50E</SPAN></A><SPAN style="FONT-SIZE: 8pt"></DIV>
+<DIV align=center></DIV>
+<DIV align=center><SPAN style="FONT-SIZE: 8pt">
+<DIV></DIV>
+<DIV align=center><SPAN class=gi2intro1 style="FONT-SIZE: 8pt"><SPAN style="FONT-SIZE: 8pt; LINE-HEIGHT: 115%"></SPAN></SPAN></DIV></SPAN></DIV>
+<DIV align=center></SPAN><SPAN class=gi2intro1 style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%"></SPAN></SPAN> </DIV>
+<DIV align=center><SPAN class=gi2intro1 style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%">Dans le cadre du 50e anniversaire de la fusion des 14 municipalités de l'île Jésus, revivez les siècles d'histoire qui ont précédé la création de Laval.</SPAN></SPAN></DIV></SPAN>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 10pt" align=center><SPAN class=gi2_intro></SPAN> </P><SPAN class=gi2_intro><A href="http://shgij.org/_news/id/4">
+<DIV align=center></DIV><SPAN class=gi2_soustitre style="COLOR: #666633">
+<DIV align=center>VISITEZ NOTRE EXPOSITION VIRTUELLE</DIV>
+<DIV align=center> </DIV>
+<DIV align=center><SPAN style="FONT-SIZE: 8pt">
+<DIV></DIV></SPAN></A>
+<DIV align=center><SPAN class=gi2_intro style="FONT-SIZE: 10pt"></SPAN></DIV></SPAN></DIV></SPAN></A>
+<DIV align=center><SPAN class=gi2_intro style="FONT-SIZE: 10pt">Visitez notre exposition « L'agriculture à Laval, de la tradition à la spécialisation (1900-2000)» et découvrez toute la richesse du passé agricole de l'île Jésus.</SPAN></DIV>
+<DIV align=center><SPAN class=gi2_intro></SPAN><SPAN class=gi2_intro></SPAN> </DIV>
+<DIV align=center><SPAN class=gi2_intro></SPAN> </DIV>
+<DIV align=center><SPAN class=gi2_soustitre style="COLOR: #666633"><A href="http://shgij.org/_news/id/5"><EM><SPAN class=gi2_soustitre style="COLOR: #666633">SUIVEZ-NOUS SUR LES RÉSEAUX SOCIAUX</SPAN></EM></A></SPAN></DIV>
+<DIV align=center><SPAN class=gi2_intro style="FONT-SIZE: 8pt; COLOR: #666633"></SPAN> </DIV>
+<DIV align=center><SPAN class=gi2_intro style="FONT-SIZE: 10pt">Découvrez des pièces de nos archives et des bribes d'histoire lavalloise, en plus d'échanger avec d'autres passionnés du patrimoine lavallois. </SPAN></DIV>
+<P><BR></P></SPAN>
+<DIV style="WIDTH: 334px; MARGIN-LEFT: auto; MARGIN-RIGHT: auto">
+<DIV><IMG  src="http://shgij.org//client_file/upload/image/interface/top_box_home.gif"></DIV>
+<DIV style="BACKGROUND: rgb(204,204,153)" align=center>
+<TABLE style="WIDTH: 318px; BORDER-COLLAPSE: collapse" cellSpacing=0 cellPadding=2 border=0>
+<TBODY>
+<TR>
+<TD style="BACKGROUND: rgb(255,255,255)">
+<DIV><A href="http://shgij.org/histoire"><IMG style="MARGIN-RIGHT: 16px" border=0 alt=""  src="http://shgij.org//client_file/upload/image/test.jpg" width=90 align=left height=102></A> </DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt"></SPAN></DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt"></SPAN></DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt">Histoire</SPAN></DIV>
+<DIV style="MARGIN-RIGHT: 35px" align=left><SPAN style="FONT-SIZE: 8pt"><SPAN class=gi2_texte style="FONT-SIZE: 8pt">Récits, faits, évènements historiques</SPAN></SPAN><BR></DIV><A href="http://shgij.org/histoire"><IMG style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 27px" border=0 alt=""  src="http://shgij.org//client_file/upload/image/boutontriangle.jpg" width=17 align=right height=18></A> 
+<DIV> </DIV></TD></TR>
+<TR>
+<TD height=14></TD></TR>
+<TR>
+<TD style="BACKGROUND: rgb(255,255,255)">
+<DIV><A href="http://shgij.org/genealogie"><IMG style="MARGIN-RIGHT: 16px" border=0 alt=""  src="http://shgij.org//client_file/upload/image/test2.jpg" width=90 align=left height=102></A> </DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt"></SPAN></DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt"></SPAN></DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt">Généalogie</SPAN></DIV>
+<DIV style="MARGIN-RIGHT: 35px" align=left><SPAN style="FONT-SIZE: 8pt"><SPAN class=gi2_texte style="FONT-SIZE: 8pt">Recherche de l'origine et de la filiation des personnes et des familles.</SPAN></SPAN><A href="http://shgij.org/genealogie"> </A></DIV><A href="http://shgij.org/genealogie"><IMG style="MARGIN-BOTTOM: 0px; MARGIN-LEFT: 0px; MARGIN-TOP: 10px" border=0 alt=""  src="http://shgij.org//client_file/upload/image/boutontriangle.jpg" width=17 align=right height=18></A></TD></TR>
+<TR>
+<TD height=14></TD></TR>
+<TR>
+<TD style="BACKGROUND: rgb(255,255,255)">
+<DIV><A href="http://shgij.org/patrimoine"><IMG style="MARGIN-RIGHT: 16px" border=0 alt=""  src="http://shgij.org//client_file/upload/image/patrimoine.jpg" width=90 align=left height=102></A> </DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt"></SPAN></DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt"></SPAN></DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt">Patrimoine</SPAN></DIV>
+<DIV align=left><SPAN class=gi2_texte style="FONT-SIZE: 8pt">Dossiers en cours </SPAN></DIV>
+<DIV align=left><SPAN class=gi2_texte style="FONT-SIZE: 8pt"></SPAN><SPAN style="FONT-FAMILY: Georgia; COLOR: rgb(102,102,51)"></SPAN><BR><A href="http://shgij.org/patrimoine"><IMG style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 27px" border=0 alt=""  src="http://shgij.org//client_file/upload/image/boutontriangle.jpg" width=17 align=right height=18></A></DIV></TD></TR>
+<TR>
+<TD height=14></TD></TR>
+<TR>
+<TD style="BACKGROUND: rgb(255,255,255)">
+<DIV><A href="http://shgij.org/archives-"><IMG style="MARGIN-RIGHT: 16px" border=0 alt=""  src="http://shgij.org//client_file/upload/image/centredarchives.jpg" width=90 align=left height=102></A> </DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt"></SPAN></DIV>
+<DIV align=left><SPAN class=gi2_titre style="FONT-SIZE: 10pt">C</SPAN><SPAN class=gi2_titre style="FONT-SIZE: 10pt">entre d'archives de Laval</SPAN></DIV>
+<DIV align=left><SPAN style="FONT-SIZE: 8pt"><SPAN class=gi2_texte style="FONT-SIZE: 8pt">Acquisition, traitement, préservation et mise en valeur du patrimoine archivistique lavallois.</SPAN></SPAN><SPAN style="FONT-SIZE: 8pt"><SPAN style="FONT-SIZE: 8pt"><A href="http://shgij.org/archives-"><IMG style="MARGIN-TOP: 27px" border=0 alt=""  src="http://shgij.org//client_file/upload/image/boutontriangle.jpg" width=17 align=right height=18></A></SPAN></SPAN></DIV></TD></TR></TBODY></TABLE>
+<DIV><IMG  src="http://shgij.org//client_file/upload/image/interface/bottom_box_home.gif"></DIV></DIV></DIV>
+<DIV><SPAN class=gi2_intro></SPAN> </DIV><SPAN class=gi2_intro>
+<DIV align=center><EM></EM> </DIV></SPAN><script language=javascript src="awstats_misc_tracker.js"></script>
+<noscript><img src="awstats_misc_tracker.js?nojs=y" height=0 width=0 border=0 style="display: none"></noscript>
+    </div>
+                </td>
+                                <td class="td_column_right">
+					
+                    <a href="" style="display:block; margin-bottom:26px;"><img src="http://shgij.org/client_file/themes/default/interface/site/FR/btn_exposition.gif" /></a>                
+                	<div class="cont_news_home">
+                    	<div class="cont_sub_news_home">
+                        <div class="titre_news_home"><a href="http://shgij.org/_news/deb/0" class="lien_news_home" style="color:#666633; font-family:Arial,Helvetica,sans-serif; text-decoration:none;">Actualit&eacute;s</a></div>
+						<div class='content_news_home'>L'UNIVERSITÉ S'INVITE À LAVAL -
+Calendrier d'activités pour le printemps 2016</div><div class='lien_news_home'><a href="http://shgij.org/news.php?id=23&deb=&ancre=news0" >Acc&eacute;der &raquo;</a></div><div class='content_news_home'>HORAIRE DES FÊTES 2015-2016</div><div class='lien_news_home'><a href="http://shgij.org/news.php?id=15&deb=&ancre=news0" >Acc&eacute;der &raquo;</a></div>                        </div>
+                    </div>
+                </td>
+                           </tr>
+           </table>
+    </div>
+
+<div class="cont_bottom">
+	<div style="text-align:center"><img src="http://shgij.org/client_file/themes/default/interface/site/bottom_barre.jpg"/></div>
+	<div class="cont_sub_bottom">
+		<span id="system_page_FR_1074" onmousedown="afficheadmin(event, 'page_system', 1074);go_afficheadmin=false"><TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR vAlign=top>
+<TD align=left><SPAN class=gi2_text_bottom>© Copyright 2010 Société d'histoire et de de généalogie de l'Île Jésus <BR>Designer web: Mathilde Caramagno&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></TD>
+<TD style="TEXT-ALIGN: right; VERTICAL-ALIGN: middle" align=right><SPAN class=gi2_text_bottom><IFRAME style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100px; HEIGHT: 21px; OVERFLOW: hidden; BORDER-TOP: medium none; BORDER-RIGHT: medium none" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fsearch%2F%3Fq%3DSoci%25C3%25A9t%25C3%25A9%2Bd%2527histoire%2Bet%2Bde%2Bg%25C3%25A9n%25C3%25A9alogie%2Bde%2Bl%2527%25C3%258Ele%2BJ%25C3%25A9sus%26init%3Dquick%26tas%3Dsearch_preload%23%21%2Fpages%2FSociete-dhistoire-et-de-genealogie-de-lIle-Jesus%2F131940616823785%3Fref%3Dsearch&amp;layout=button_count&amp;show_faces=true&amp;width=100&amp;action=like&amp;font=verdana&amp;colorscheme=light&amp;height=21" frameBorder=0 allowTransparency scrolling=no></IFRAME></SPAN></TD>
+<TD style="TEXT-ALIGN: right; VERTICAL-ALIGN: middle"><A class=twitter-share-button href="http://twitter.com/share" data-lang="fr" data-via="SHGIJ" data-count="horizontal">Tweet</A>
+<SCRIPT type=text/javascript src="http://platform.twitter.com/widgets.js"></SCRIPT>
+ </TD></TR></TBODY></TABLE></span>        <div style="text-align:center;"><a href='http://shgij.org/imprimer.php?' target='_blank'><img src='http://shgij.org/client_file/themes/default/interface/imprimer.gif' alt='Imprimer cette page' /></a>  <span>&nbsp; &nbsp; &nbsp; &nbsp;</span>
+        <a href="javascript:void(open('http://shgij.org/refere.php?action=change_langue&langue=&url='+escape(document.URL)+'&titre='+escape(document.title), 'Envoyer', 'width=550,height=400,scrollbars=no,toolbar=no,menubar=no'));"><img src="http://shgij.org/client_file/themes/default/interface/faire_connaitre.gif" alt="Faire conna&icirc;tre ce site" /></a>
+        <span>&nbsp; &nbsp; &nbsp; &nbsp;</span>
+        <a href="javascript:window.external.AddFavorite(location.href, document.title);"><img src="http://shgij.org/client_file/themes/default/interface/favori.gif" alt="Ajouter &agrave; mes favoris" /></a>
+        <span>&nbsp; &nbsp; &nbsp; &nbsp;</span> 
+        <a href="#" onClick="this.style.behavior='url(#default#homepage)'; this.setHomePage(location.href);"><img src="http://shgij.org/client_file/themes/default/interface/accueil.gif" alt="Afficher à la page d'accueil" /></a>
+    	</div>
+    </div>      
+</div>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1639838-7";
+urchinTracker();
+</script>
+</body>
+</html>

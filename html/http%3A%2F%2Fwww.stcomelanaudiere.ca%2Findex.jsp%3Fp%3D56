@@ -1,0 +1,501 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+	<title>Erreur : page introuvable :: Municipalité de Saint-Côme Lanaudière :: Au rythme du plein air!</title>
+
+	<!-- File MIME.TYPES -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<meta http-equiv="content-style-type" content="text/css" />
+
+	<!-- ContentLanguage -->
+	<meta name="language" content="fr" />
+	<meta http-equiv="content-language" content="fr" />
+
+	<!--  MS specific  -->
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="MSSmartTagsPreventParsing" content="TRUE" />
+
+	<!-- ROBOTS -->
+	<meta name="robots" content="index, follow" />
+
+	<!-- about: CONTENT -->
+	<meta name="keywords" content="municipalité de saint-sôme lanaudière st-come st-côme activités été hiver plein air hébergement festival en glace ma rivière en chanson couleurs ski alpin de fond canot kayak raquettes quad motoneige pêche blanche golf randonnée équitation parc régional chute-à-bull mont tremblant forêt ouareau ranch sentier national station touristique skidoo vtt restaurant auberge forfait a.f.e.a.s. afeas âge d'or belle montagne association des pompiers bibliothèque centre amitié centre d'accès communautaire internet caci centre du patrimoine vivant de lanaudière cpvl chambre de commerce chevaliers de colomb trappeurs pétanque premiers répondants renouveau charismatique circuit québec canada " />
+	<meta name="description" content="Municipalité de Saint-Côme Lanaudière. Activités été et hiver. Plein air. Hébergement. Festival Saint-Côme en glace. Ma rivière en chanson. Festival des couleurs. Ski alpin et de fond, canot, kayak, raquettes, quad, motoneige, pêche, golf, randonnée, équitation." />
+	
+	<!-- StyleSheets -->	
+	<link rel="stylesheet" type="text/css" href="/css/all.css?201511" media="all" />
+	<link rel="stylesheet" type="text/css" href="/css/screen.css?201511" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/print.css?201511" media="print" />
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-slideshow.js?20120612"></script>
+	<script type="text/javascript" src="/js/jquery.innerfade.js?20120612"></script>
+	
+	<script type="text/javascript">
+		$.noConflict();
+	</script>
+	
+	<script type="text/JavaScript" src="/js/utils.js"></script>
+
+	
+	
+		
+	
+	<script type="text/javascript">
+		var aujourdhui = new Date();
+		var moisEnCours = aujourdhui.getMonth() + 1;
+		var anneeEnCours = aujourdhui.getFullYear();
+		var tabMoisFr = new Array("x","janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre");
+		
+		var dateActuelleInt = null;
+		var dateActuelle = ""; 
+		
+		if ( dateActuelleInt != null ){
+			dateActuelle = String(dateActuelleInt);
+		}
+				
+		if ( dateActuelle != "" ){
+			moisEnCours = parseInt(dateActuelle.substr(4,2),10);
+			anneeEnCours = parseInt(dateActuelle.substr(0,4),10);
+		}
+				
+		jQuery(document).ready(function () {
+			jQuery("#Calendrier-Date").text(tabMoisFr[moisEnCours] + " " + anneeEnCours);
+			
+	
+			jQuery("#Calendrier-Suivant").click(function() {
+				
+				jQuery("#Calendrier-Attente").addClass("visible");
+				jQuery('#Calendrier-Contenu').html("");
+				jQuery.ajax({
+				   type: "POST",
+				   url: "ajax-calendrier.jsp",
+				   data: "mois=" + (moisEnCours + 1 < 13 ? moisEnCours +1 : 1) + "&annee=" + (moisEnCours + 1 < 13 ? anneeEnCours : anneeEnCours+1),
+				   error:function(msg){
+				     alert( "Une erreur s'est produite : " + msg );
+				     jQuery("#Calendrier-Attente").removeClass("visible");
+				   },
+				   success:function(data){
+					if(moisEnCours == 12) {
+						moisEnCours = 1;
+						anneeEnCours++;
+					} else {
+						moisEnCours++;
+					}
+					
+					jQuery("#Calendrier-Attente").removeClass("visible");
+					jQuery("#Calendrier-Date").text(tabMoisFr[moisEnCours] + " " + anneeEnCours);
+					jQuery('#Calendrier-Contenu').html(data);
+					
+				}});
+							
+			});
+			
+			jQuery("#Calendrier-Precedent").click(function() {
+				
+				jQuery("#Calendrier-Attente").addClass("visible");
+				jQuery('#Calendrier-Contenu').html("");
+				jQuery.ajax({
+				   type: "POST",
+				   url: "ajax-calendrier.jsp",
+				   data: "mois=" + (moisEnCours - 1 == 0 ? 12 : moisEnCours - 1) + "&annee=" + (moisEnCours - 1 == 0 ? anneeEnCours - 1 : anneeEnCours),
+				   error:function(msg){
+				     alert( "Une erreur s'est produite : " + msg );
+				     jQuery("#Calendrier-Attente").removeClass("visible");
+				   },
+				   success:function(data){
+					if(moisEnCours == 1) {
+						moisEnCours = 12;
+						anneeEnCours--;
+					} else {
+						moisEnCours--;
+					}
+					
+					jQuery("#Calendrier-Attente").removeClass("visible");
+					jQuery("#Calendrier-Date").text(tabMoisFr[moisEnCours] + " " + anneeEnCours);
+					jQuery('#Calendrier-Contenu').html(data);
+					
+				}});
+							
+			});
+			
+	
+		});
+	
+	</script>
+	
+</head>
+
+<body id="page_-1" class="saison_hiver typePage_undefined" onload="MM_preloadImages('/images/hiver/menu-accueil-hover.gif','/images/hiver/menu-municipalite-hover.gif','/images/hiver/menu-commerce-hover.gif','/images/hiver/menu-citoyens-hover.gif','/images/hiver/menu-tourisme-hover.gif','/images/hiver/menu-contact-hover.gif');">
+	<a name="haut"></a>
+	
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {	
+			var js, fjs = d.getElementsByTagName(s)[0];
+			
+			if (d.getElementById(id)) return;
+			
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v2.4";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<div id="page" class="page_-1">
+		<div id="haut-deco"></div>		
+		<div id="haut">
+		
+			<a id="logo-site" href="/">Saint-Côme, au rythme du plein air!</a>
+		
+				<div id="menu">
+		<div class="menu-item">
+			<a id="menu-accueil" class="item-princ" href="/index.jsp">Accueil</a>
+		</div><!-- fin .menu-item -->
+		
+		<div class="menu-item">
+			<a id="menu-municipalite" class="item-princ" href="/index.jsp?p=2">Municipalité</a>
+			<div class="dropmenu">				
+				<ul>
+<li class=""><a class="" href="/index.jsp?p=24">Communications</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=20">Conseil municipal et Séances ordinaires</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=141">Culture</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=27">Équipe de l'Hôtel de ville</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=274">Environnement</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=290">Évaluation et Taxation</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=281">Loisirs</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=81">Organismes et Associations</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=272">Politique familiale municipale et Municipalité Amie des Aînés</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=14">Profil de la Municipalité</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=37">Règlements et contrats de plus de 25 000 $</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=275">Sécurité publique</a>
+</li>
+<li class=" dernier"><a class="" href="/index.jsp?p=265">Services de santé</a>
+</li>
+</ul>
+				
+			</div>
+		</div><!-- fin .menu-item -->
+		
+		<div class="menu-item">
+			<a id="menu-commerce" class="item-princ" href="/index.jsp?p=3">Commerce</a>
+			<div class="dropmenu">				
+				<ul>
+<li class=""><a class="" href="/index.jsp?p=47">Chambre de Commerce</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=137">Commerces</a>
+</li>
+<li class=" dernier"><a class="" href="/index.jsp?p=127">Investir à Saint-Côme</a>
+</li>
+</ul>
+				
+			</div>
+		</div><!-- fin .menu-item -->
+		
+		<div  class="menu-item">
+			<a id="menu-citoyen" class="item-princ" href="/index.jsp?p=4">Citoyen</a>
+			<div class="dropmenu">				
+				<ul>
+<li class=""><a class="" href="/index.jsp?p=257">Bonne Boîte Bonne Bouffe</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=271">Bureau d'Accueil Touristique et Centre Internet</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=71">Calendrier</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=289">Contrôleur canin</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=293">Culture</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=61">Environnement</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=291">Évaluation et Taxation</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=303">Internet haute vitesse</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=292">Loisirs</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=109">Organismes et Associations</a>
+</li>
+<li class=" dernier"><a class="" href="/index.jsp?p=273">Politique familiale municipale et Municipalité Amie des Aînés</a>
+</li>
+</ul>
+
+			</div>
+		</div><!-- fin .menu-item -->
+		
+		<div  class="menu-item">
+			<a id="menu-tourisme" class="item-princ" href="/index.jsp?p=5">Tourisme</a>
+			<div class="dropmenu">				
+				<ul>
+<li class=""><a class="" href="/index.jsp?p=74">Activités et attraits</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=73">Bureau d'Accueil Touristique et Centre Internet</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=156">Cartes</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=168">Festival St-Côme en glace</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=162">Festival Ma Rivière en Chanson</a>
+</li>
+<li class=""><a class="" href="/index.jsp?p=99">Hébergement</a>
+</li>
+<li class=" dernier"><a class="" href="/index.jsp?p=108">Restauration</a>
+</li>
+</ul>
+				
+			</div>
+		</div><!-- fin .menu-item -->
+		
+		<div  class="menu-item">
+			<a id="menu-contact" class="item-princ" href="/index.jsp?p=6">Contact</a>
+		</div><!-- fin .menu-item -->
+		
+		<div id="recherche">
+			<form id="frmRecherche" method="post" action="/index.jsp?p=90"><div class="innerForm"><input type="text" id="motsCles" name="mc" /> <input type="image" src="/images/hiver/bouton-recherche.gif" alt="Recherche" /></div></form>
+		</div>
+		
+		<div class="clear"></div>
+	</div><!-- fin #menu -->
+			
+			<div id="img-entete">
+				<!--
+				<div><img src="images/bannieres/hiver/1.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver/2.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver/3.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver/5.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver/7.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver/8.jpg" alt=""></div>
+				-->
+				
+				<!--
+				<div><img src="images/bannieres/ete2013/1.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2013/2.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2013/3.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2013/4.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2013/5.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2013/6.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2013/7.jpg" alt=""></div>
+				-->
+				
+				<!--
+				<div><img src="images/bannieres/automne2013/1.jpg" alt=""></div>
+				<div><img src="images/bannieres/automne2013/2.jpg" alt=""></div>
+				<div><img src="images/bannieres/automne2013/3.jpg" alt=""></div>
+				<div><img src="images/bannieres/automne2013/4.jpg" alt=""></div>
+				<div><img src="images/bannieres/automne2013/5.jpg" alt=""></div>
+				-->
+				
+				<!--
+				<div><img src="images/bannieres/hiver2013/banniere7.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere8.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere9.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere10.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere13.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere14.jpg" alt=""></div>
+				-->
+				
+				<!--
+				<div><img src="images/bannieres/ete2014/ete-2014-1.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2014/ete-2014-2.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2014/ete-2014-3.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2014/ete-2014-4.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2014/ete-2014-5.jpg" alt=""></div>
+				-->
+				
+				<!--
+				<div><img src="images/bannieres/hiver/1.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver/3.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver/5.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere7.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere10.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere12.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2013/banniere15.jpg" alt=""></div>
+				-->
+				
+				<!--
+				<div><img src="images/bannieres/ete2015/halte-5a.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2015/photo-ete-004.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2015/photo-ete-022.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2015/photo-ete-023.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2015/photo-ete-030.jpg" alt=""></div>
+				<div><img src="images/bannieres/ete2015/photo-ete-033.jpg" alt=""></div>
+				-->
+				
+				<div><img src="images/bannieres/hiver2016/autour-du-feu.jpg" alt=""></div>
+				<!--<div><img src="images/bannieres/hiver2016/dalton-contre-jour.jpg" alt=""></div>-->
+				<div><img src="images/bannieres/hiver2016/festival-st-come-en-glace.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2016/halte-village.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2016/pano-auberge.jpg" alt=""></div>
+				<div><img src="images/bannieres/hiver2016/pano-chutes-a-bull.jpg" alt=""></div>
+				
+			</div>
+			
+			
+		</div><!-- fin #haut -->
+		
+		
+		
+		
+		<div id="milieu" >			
+			
+			<div id="contenu-env">
+			<div id="contenu">
+			
+
+
+	<div id="texte">
+
+		<div id="colonne_gauche" class="sansMenu">
+</div><!-- /colonne_gauche -->
+
+
+						
+		<h1>Erreur 404 - La page n'existe pas</h1>
+	
+
+		
+		<p>Désolé, la page demandée est introuvable sur notre site.</p>
+
+		<p>Il se peut que le document que vous cherchez ait été déplacé ou n'existe plus.</p>
+
+		<p>Essayez l'une des options suivantes :</p>
+
+		<ul>
+			<li>Vérifier que l'adresse Internet que vous avez entrée est correcte</li>
+			<li>Utiliser la barre de recherche à votre droite.</li>
+			<li>Essayer d'accéder à la page en passant par la <a href="/">page d'accueil</a>.</li>
+			<li>Consulter le <a href="/index.jsp?p=7">plan du site</a>.</li>
+			<li>Pour rapporter un problème, veuillez <a href="/index.jsp?p=6">nous contacter</a>.</li>
+		</ul>
+				
+		<div class="clear"></div>		
+	</div><!-- fin #texte -->	
+
+								
+				
+			</div><!-- fin #contenu -->	
+			</div><!-- fin #contenu-env -->
+			
+						<div id="colonne-env">
+				<div id="colonne">
+
+					
+						<div id="sous_menu_droite" class="colonne_bloc">
+							
+							<div id="nom_section"><span></span></div>							
+							<div id="colonne_gauche" class="sansMenu">
+</div><!-- /colonne_gauche -->
+							
+								
+						</div>
+										
+					
+					<div id="acces_rapide" class="colonne_bloc">						
+						<ul>
+							<li><a href="/index.jsp?p=281">Loisirs</a></li>
+							<li><a href="/index.jsp?p=138">Culture</a></li>
+							<li><a href="/index.jsp?p=285">Bibliothèque</a></li>
+							<li><a href="/index.jsp?p=125">Environnement</a></li>
+							<li><a href="/index.jsp?p=272">Politique familiale - MADA</a></li>
+							<li><a href="/index.jsp?p=5">Tourisme</a>
+								<ul>
+									<li><a href="/index.jsp?p=99">Hébergement</a></li>
+									<li><a href="/index.jsp?p=108">Restaurants</a></li> 
+									<li><a href="/index.jsp?p=74">Activités et attraits</a></li>
+									<li><a href="/index.jsp?p=73">Bureau d'accueil touristique</a></li>								
+								</ul>							
+							</li>
+							<li class="lien_blogue"><a href="https://bloguesaintcome.wordpress.com/" target="_blank">Événements et activités <br/><span>(consultez notre blogue)</span></a>
+						</ul>
+					</div>
+					
+					<div id="bloc_facebook" class="colonne_bloc">
+						<div class="titre-col">Facebook</div>
+						<div class="fb-page" data-href="https://www.facebook.com/aurythmedupleinair" data-width="235" data-height="327" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/aurythmedupleinair"><a href="https://www.facebook.com/aurythmedupleinair">Municipalité de Saint-Côme</a></blockquote></div></div>
+					</div>
+					
+					<div id="heures_ouvertures" class="colonne_bloc">	
+						<strong>Heures d’ouverture de <br/>l’Hôtel de ville</strong><br/>
+						Du lundi au vendredi de 8h30 à 16h30 (fermé entre 12h et 13h).<br/>
+						<br/>
+						450 883-2726<br/>
+						<a href="mailto:info@stcomelanaudiere.ca">info@stcomelanaudiere.ca</a>
+					</div>
+					
+					<div id="colonne_infolettre" class="colonne_bloc">
+						<div class="gauche">
+							<a href="/index.jsp?p=82"><img src="/images/colonne/col-infolettre.png" alt="infolettre" /></a>
+						</div>
+						
+						<div class="droite">
+							<a href="/index.jsp?p=82">
+								<span class="infolttre_1">Ne manquez plus nos activités!</span>
+								<span class="infolttre_2">Abonnez-vous à notre infolettre</span>
+							</a>							
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div id="meteo-iframe" class="colonne_bloc">
+						<div class="titre-col">Météo</div>
+						<iframe width="227" height="30" src="/inc/meteo.html" ></iframe>
+					</div> 
+					
+					<div id="col_sopfeu" class="colonne_bloc">
+						<div class="titre-col">Indice de feu</div>
+						<div class="pad">
+							<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="160" height="115">
+								<param name="movie" value="http://www.sopfeu.qc.ca/imports/swf/danger.swf?r=16">
+								<param name="quality" value="high">
+								<embed src="http://www.sopfeu.qc.ca/imports/swf/danger.swf?r=16" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="160" height="115">
+							</object>
+						</div>
+					</div>
+				
+				</div><!-- fin colonne -->
+			</div><!-- fin colonne-env -->
+			
+			<div class="clear"></div>	
+			
+			<div id="milieu-bas">
+			
+				<div id="credits"> 
+					&copy; 2008-2016, Municipalité de Saint-Côme. Tous droits réservés. &nbsp; |  &nbsp; <a href="/index.jsp?p=7">Plan du site</a> &nbsp; | &nbsp; Conception graphique : <a href="http://www.kiwigraphik.com/" target="_blank">Kiwigraphik</a> &nbsp; | &nbsp; Réalisation : <a href="http://www.nexion.biz/" target="_blank">NeXion</a> 
+					<span></span>  
+				</div><!-- fin #credits -->
+				
+			</div><!-- fin #milieu-bas -->
+							
+		</div><!-- fin #milieu -->
+	
+	</div><!-- fin #page -->
+	
+</body>
+</html>

@@ -1,0 +1,3136 @@
+
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <script type="text/javascript" src="textsizer.js"></script>
+    <script language="javascript" type="text/javascript" src="/portail/script/jquery-1.7.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/portail/script/jquery.cycle.js?v=2015.01.22"></script>
+    <script language="javascript" type="text/javascript" src="/portail/script/script_onglets_accueil.js"></script>
+    <script language="javascript" type="text/javascript" src="/portail/script/jquery.simplemodal.js"></script>
+
+    <link href="/portail/theme/style_accueil.css?v=2015.03.16.2" rel="stylesheet" type="text/css" />
+    <link href="/portail/theme/style_piedPage.css?v=2014.06.25" rel="stylesheet" type="text/css" />
+    <!--[if IE ]>
+    <link href="/portail/theme/style_blocPromo_IE7.css?v=2014.06.25" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 6]>
+    <link href="/portail/theme/style_piedPage.css?v=2014.06.25" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="/portail/theme/livres_numeriques.css?v=2016.00126" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn|Lato' rel='stylesheet' type='text/css' />
+
+	<!-- TITRE DU SITE -->
+	<title>Réseau BIBLIO du Bas-Saint-Laurent</title>
+	
+	<!-- META DU SITE -->
+	  <META NAME="author" 		CONTENT="LANEC">
+  <META NAME="design" 		CONTENT="LANEC">
+  <META NAME="updates" 		CONTENT="LANEC">
+  <META NAME="description" 	CONTENT="Le Réseau Biblio du Québec : un accès direct et interactif aux divers services de 800 bibliothèques membres présentes dans 15 régions du Québec.">
+  <META NAME="Keywords" 	CONTENT="Bibliothèques,bibliothèque,bibliothèque publique,bibliothèque municipale,livres,livre,portail,services aux bibliothèques,abonnés des bibliothèques,prêts entre bibliothèques,catalogue simb@,Info-Biblio,échanges des collections,calendrier des échanges,lecture,documentation,animation des bibliothèques,programme de formation pour bibliothèques,Lanaudiere,Centre-du-quebec,Mauricie,Montérégie,Capitale-Nationale,Lac St-Jean,Saguenay,Laurentides,Estrie,Gaspésie,Bas-St-Laurent,Abitibi-Témiscamingue,Côte-Nord,Chaudieres-Appalaches,Outaouais,Iles de la Madeleine,Nord du québec, STC, services techniques coopératifs">
+  <META NAME="category" 	CONTENT="Organisme, Bibliothèques, livres, catalogue">
+  <META NAME="location" 	CONTENT="Québec, Canada">
+  <META NAME="classification" 	CONTENT="" url="http://www.reseaubiblioduquebec.qc.ca">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+
+  <LINK REL="Bookmark Icon" 	HREF="favicon.ico">
+  <LINK REL="Address Bar" 	HREF="favicon.ico">
+  <LINK REL="Shortcut Icon" 	HREF="favicon.ico">
+
+	
+	<!-- JAVASCRIPT DU SITE -->
+	<SCRIPT LANGUAGE="JavaScript">
+
+<!-- dÃ©but -->
+
+ function stringTrim (s) {
+  return this.replace(/^\s+/, '').replace(/\s+$/, '');
+}
+String.prototype.trim = stringTrim;
+
+ function codePostalValide(aCode)
+ {
+ 	var code;
+ 	var i;
+ 	var valid;
+ 	
+ 	valid=true; 	
+ 	code=aCode.trim();
+ 	
+ 	if(code.length != 6) return false;
+ 		
+ 	for (i=0;i<6;i++)
+ 	{
+ 		if(!valid) break;
+ 		switch (i) 		
+		{ 			
+ 			case 0:
+ 			case 2:
+ 			case 4:
+ 				if(aCode.charCodeAt(i) < 65 || aCode.charCodeAt(i) > 122) valid=false;
+ 				break;
+ 			
+ 			case 1:
+ 			case 3:
+ 			case 5:
+ 				if(aCode.charCodeAt(i) < 48 || aCode.charCodeAt(i) > 57) valid=false
+ 				break;
+ 		}
+ 	}
+ 	return valid;
+ }
+ 
+ function dateFrancaiseValide(aDate,aSep)
+ {
+ 	var xDate
+ 	xDate=aDate.trim()
+ 	
+ 	if(xDate.length != 10) return false;
+ 	
+ 	var day;
+ 	var month;
+ 	var year;
+ 	
+ 	day=xDate.substr(0,2);
+ 	month=xDate.substr(3,2);
+ 	year=xDate.substr(6,4);
+ 	
+	var sep1;
+	var sep2;
+	
+	sep1=xDate.substr(2,1);
+	sep2=xDate.substr(5,1);
+ 	
+ 	if(sep1 != aSep || sep2 != aSep) return false;
+	
+	if(day<1 || day >31) return false;
+	if(month<1 || month>12) return false;
+	if(year<1000 || year>9999) return false;
+
+ 	return true;
+ }
+ 
+ function emailValide (aEmail) 
+ { 
+	var checkTLD=0; 
+	var knownDomsPat=/ ^(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum)$/; 
+	var emailPat=/^(.+)@(.+)$/; 
+	var specialChars="\\(\\)><@,;:\\\\\\\"\\.\\[\\]"; 
+	var validChars="\[^\\s" + specialChars + "\]"; 
+	var quotedUser="(\"[^\"]*\")"; 
+	var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/; 
+	var atom=validChars + '+'; 
+	var word="(" + atom + "|" + quotedUser + ")"; 
+	var userPat=new RegExp("^" + word + "(\\." + word + ")*$"); 
+	var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$"); 
+	var matchArray=aEmail.match(emailPat); 
+
+	if (matchArray==null) { 
+		return false; 
+	} 
+
+	var user=matchArray[1]; 
+	var domain=matchArray[2]; 
+
+for (i=0; i<user.length; i++) { 
+	if (user.charCodeAt(i)>127) { 
+		return false; 
+	} 
+	return true;
+} 
+
+for (i=0; i<domain.length; i++) { 
+	if (domain.charCodeAt(i)>127) { 
+		return false; 
+	} 
+} 
+
+if (user.match(userPat)==null) { 
+	return false; 
+} 
+
+var IPArray=domain.match(ipDomainPat); 
+
+if (IPArray!=null) { 
+	for (var i=1;i<=4;i++) { 
+		if (IPArray>255) { 
+			return false; 
+		} 
+	} 
+	return true; 
+} 
+
+}
+//Change le texte de la status bar sur le OnMouseOver des Tags "a" ! (Utiliser l'attribut status='xxx') Bye bye magicalmouse
+function init_status() {
+  if (!document.getElementById) return
+  var statusarr = document.getElementsByTagName('a');
+  var texte
+  var temparr = new Array();
+  var temparr2 = new Array();
+  
+  for (var i = 0; i < statusarr.length; i++) {	
+	temparr[i]=new String();
+	temparr[i]=statusarr[i].getAttribute('status');	
+	
+	temparr2[i]=new String();
+	temparr2[i]=statusarr[i].getAttribute('over');
+	
+	if (statusarr[i].getAttribute('status')) {					
+		statusarr[i].onmouseover = function() {			
+			
+			eval(this.getAttribute('over'));			
+			window.status = this.getAttribute('status');
+			return true;
+		}
+		statusarr[i].onmouseout = function() {
+			eval(this.getAttribute('out'));
+			window.status = "RÃ©seau BIBLIO du QuÃ©bec";
+			return true;
+		}
+	}
+  }
+}
+
+function init_status_td() {
+  if (!document.getElementById) return
+  var statusarr = document.getElementsByTagName('td');
+  var texte
+  var temparr = new Array();
+  var temparr2 = new Array();
+
+    for (var i = 0; i < statusarr.length; i++) {	
+	temparr[i]=new String();
+	temparr[i]=statusarr[i].getAttribute('status');	
+	
+	temparr2[i]=new String();
+	temparr2[i]=statusarr[i].getAttribute('over');
+	
+	if (statusarr[i].getAttribute('status')) {					
+		statusarr[i].onmouseover = function() {			
+			
+			eval(this.getAttribute('over'));			
+			window.status = this.getAttribute('status');
+			return true;
+		}
+		statusarr[i].onmouseout = function() {
+			eval(this.getAttribute('out'));
+			window.status = "RÃ©seau BIBLIO du QuÃ©bec";
+			return true;
+		}
+	}
+  }
+}
+
+function init_status_tr() {
+  if (!document.getElementById) return
+  var statusarr = document.getElementsByTagName('tr');
+  var texte
+  var temparr = new Array();
+  var temparr2 = new Array();
+
+    for (var i = 0; i < statusarr.length; i++) {	
+	temparr[i]=new String();
+	temparr[i]=statusarr[i].getAttribute('status');	
+	
+	temparr2[i]=new String();
+	temparr2[i]=statusarr[i].getAttribute('over');
+	
+	if (statusarr[i].getAttribute('status')) {					
+		statusarr[i].onmouseover = function() {			
+			
+			eval(this.getAttribute('over'));			
+			window.status = this.getAttribute('status');
+			return true;
+		}
+		statusarr[i].onmouseout = function() {
+			eval(this.getAttribute('out'));
+			window.status = "RÃ©seau BIBLIO du QuÃ©bec";
+			return true;
+		}
+	}
+  }
+}
+
+function init_status_div() {
+  if (!document.getElementById) return
+  var statusarr = document.getElementsByTagName('div');
+  var texte
+  var temparr = new Array();
+  var temparr2 = new Array();
+
+    for (var i = 0; i < statusarr.length; i++) {	
+	temparr[i]=new String();
+	temparr[i]=statusarr[i].getAttribute('status');	
+	
+	temparr2[i]=new String();
+	temparr2[i]=statusarr[i].getAttribute('over');
+	
+	if (statusarr[i].getAttribute('status')) {					
+		statusarr[i].onmouseover = function() {			
+			
+			eval(this.getAttribute('over'));			
+			window.status = this.getAttribute('status');
+			return true;
+		}
+		statusarr[i].onmouseout = function() {
+			eval(this.getAttribute('out'));
+			window.status = "RÃ©seau BIBLIO du QuÃ©bec";
+			return true;
+		}
+	}
+  }
+}
+
+
+function init_hsrc() {
+  if (!document.getElementById) return
+  var imgOriginSrc;
+  var MouseOverHappened;
+  var imgTemp = new Array();
+  var imgarr = document.getElementsByTagName('img');
+  for (var i = 0; i < imgarr.length; i++) {
+	if (imgarr[i].getAttribute('hsrc')) {
+		imgTemp[i] = new Image();
+		imgTemp[i].src = imgarr[i].getAttribute('hsrc');
+		imgarr[i].onmouseover = function() {
+			imgOriginSrc = this.getAttribute('src');			
+			this.setAttribute('src',this.getAttribute('hsrc'));
+			MouseOverHappened=true;
+		}
+		imgarr[i].onmouseout = function() {
+			if(MouseOverHappened)
+				this.setAttribute('src',imgOriginSrc);
+		}
+	}
+  }
+}
+
+function init_custom_tags(){
+	init_status();
+	init_status_td();
+	init_status_tr();
+	init_status_div();
+	init_hsrc();
+}
+onload=init_custom_tags;
+
+	function ChangeLanguage(lang)
+	{
+		var _url = String(window.location);
+		var _l = _url.length;
+		var _x = _url.indexOf("?");
+		var _i
+		
+		if(_x < 0) 
+			_i="page=0"
+		else
+			_i = _url.substring(_x+1,_l);	
+								
+		var languageParam = _i.indexOf("&language=");		
+		
+		if(languageParam>0) _i= _i.substring(0,languageParam);			
+
+		var topAnchor = _i.indexOf("#top");
+		if(topAnchor>0) _i= _i.substring(0,topAnchor);			
+		window.location = "index.asp?" + _i + "&language=" + lang;
+	}
+
+
+
+	// Les 2 fonctions suivantes activent/dÃ©sactivent un textbox selon sa case Ã  cocher associÃ©e.
+	// Par exemple, si on veut activer/desactiver un textbox selon une case Ã  cocher, on doit
+	// dÃ©finir un checkbox avec le nom "chkNomQuelconque". Le textbox associÃ© doit avoir le 
+	// meme nom que le checkbox mais avec le prÃ©fixe "txt" au lieu de "chk"
+	
+	function InitialiserChampsTexte()
+	{
+		var i;	
+		var oInputCheck;
+		var oInputText;
+		var textboxname;
+						
+		for (i=0;i<=document.getElementsByTagName('input').length-1;i++)
+      {
+      oInputCheck = document.getElementsByTagName('input').item(i)
+      if (oInputCheck.type == "checkbox")
+      {
+      // est-ce qu'il y a un textbox associÃ©?
+      textboxname = oInputCheck.name;
+      textboxname = "txt" + textboxname.substr(3,textboxname.length);
+      oInputText = document.getElementsByName(textboxname);
+
+      if(oInputText(0)!=null)
+      {
+      oInputCheck.onclick = RendreDispoChampTexte;
+      if(!oInputCheck.checked)
+      {
+      oInputText(0).disabled = true;
+      oInputText(0).value = "";
+      }
+
+      if(bPermettreModifBGInput)
+      {
+      oInputText(0).style.backgroundImage = StyleDisabled;
+      }
+      }
+      }
+      }
+      }
+
+      // **********************************************
+
+      function RendreDispoChampTexte()
+      {
+      textboxname = this.name;
+      textboxname = "txt" + textboxname.substr(3,textboxname.length);
+      var oInputText;
+      oInputText = document.getElementsByName(textboxname);
+
+      if (this.checked == true)
+      {
+      oInputText(0).disabled 	= false;
+      oInputText(0).focus();
+      if (bPermettreModifBGInput)
+      {
+      oInputText(0).style.backgroundImage = StyleEnabled;
+      }
+      }
+      else
+      {
+      oInputText(0).disabled 	= true;
+      oInputText(0).value	= "";
+      if (bPermettreModifBGInput)
+      {
+      oInputText(0).style.backgroundImage = StyleDisabled;
+      }
+      }
+      }
+
+      function OpenPopupCenter(aPage,aName,aWidth,aHeight)
+      {
+      var LeftPos = screen.availWidth/2-(aWidth/2);
+      var TopPos  = screen.availHeight/2-(aHeight/2);
+      window.open(aPage,aName,"status=no,location=no,scrollbars=yes,resize=no,directories=no,toolbar=no,menubar=no,copyhistory=no,width=" + aWidth + ",height=" + aHeight + ",left=" + LeftPos + ",top=" + TopPos);return false;
+      }
+      function OpenPopupCenter2(aPage,aName,aWidth,aHeight)
+      {
+      var LeftPos = screen.availWidth/2-(aWidth/2);
+      var TopPos  = screen.availHeight/2-(aHeight/2);
+      window.open(aPage,aName,"status=no,location=no,scrollbars=no,resize=no,directories=no,toolbar=no,menubar=no,copyhistory=no,width=" + aWidth + ",height=" + aHeight + ",left=" + LeftPos + ",top=" + TopPos);return false;
+      }
+
+
+    </SCRIPT>
+
+
+
+
+
+	<!-- STYLE DU SITE -->
+	  <style TYPE="text/css">
+	A:link { text-decoration:none; color:#0000AA;}
+	A:active { text-decoration:none; color:#0000AA;}
+	A:visited { text-decoration:none; color:#0000AA;}
+	A:hover { text-decoration:underline; color:#990000;}
+	
+	BODY {font-family:Verdana,Arial,helvetica; font-size:11px;}
+	
+	SELECT {font-family:Verdana,Arial,helvetica; font-size:11px;}
+	
+	H3 {font-family:Verdana,Arial,helvetica;}
+
+	div.gallerie{filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+
+	TD {font-family:Verdana,Arial,helvetica; font-size:11px;}
+	TD.petit {font-family:Verdana,Arial,Helvetica; font-size:10px;}
+	TD.petit2 {font-family:Verdana,Arial,Helvetica; font-size:10px;line-height:15px}
+	TD.Chemin {font-family:Arial,Helvetica,Verdana; font-size:10px;}
+
+	TD.tableau1 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #B5B287;padding:2px}
+	TD.tableau2 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #B5B287;padding:2px;background-color:#F5F4E8}
+	TD.tableau3 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #003366;background-color:#E3E2CC}
+	TD.tableau4 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #003366;background-color:#F1F0E6}
+	TD.tableau5 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #003366;padding:2px}
+
+	TD.normal2 {font-family:Verdana,Arial,Helvetica; font-size:11px;line-height:15px}
+	TD.normal {font-family:Verdana,Arial,Helvetica;font-size:11px;}
+
+	TD.Titre {font-family:Verdana,Arial,helvetica; font-size:13px;}
+
+	
+	INPUT.texte {font-family:Verdana,Arial,helvetica; font-size:11px; border:1px solid #333333; padding:1px; padding-left:10px; height:17; background-image:url("image/input01aoff.gif");}
+	INPUT.texteOn {font-family:Verdana,Arial,helvetica; font-size:11px; border:1px solid #333333; padding:1px; padding-left:10px; height:17; background-image:url("image/input01aon.gif");}
+
+	INPUT.texteNoBack {font-family:Verdana,Arial,helvetica; font-size:11px; border:1px solid #333333; padding:1px; padding-left:2px; height:17; background-color:#FFFFFF;}
+	INPUT.texteNoBackOn {font-family:Verdana,Arial,helvetica; font-size:11px; border:1px solid #333333; padding:1px; padding-left:2px; height:17; background-color:#EDEDC7;}
+
+	Option.textepair {font-family:Verdana,Arial,helvetica; font-size:11px;background-color:#000000}
+	Option.texteimpair {font-family:Verdana,Arial,helvetica; font-size:11px;background-color:#000000}
+	Option.texteOn {font-family:Verdana,Arial,helvetica; font-size:11px;background-color:#000000}
+	
+	.Petit {font-family:Verdana,Arial,Helvetica; font-size:10px}
+	.Normal {font-family:Verdana,Arial,Helvetica; font-size:11px}
+	.Grand {font-family:Verdana,Arial,Helvetica; font-size:12px}
+	
+	SPAN.Titre {font-family:Verdana,Arial,Helvetica; font-size:14px;font-weight:bold}
+
+	.NouvTitre {color:#990000; font-weight:normal}
+	.NouvTexte {font-family:Verdana,Arial,helvetica; font-size:9px}
+  </style>
+
+	
+	<script src="addons/swfobject.js" type="text/javascript"></script>
+</head>
+
+<body bgcolor="#F1F0E6" text="#000000" link="#0000AA" vlink="#0000AA" alink="#0000AA" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<!--<a href="javascript:ts('body',6)">+ Larger Font</a> | <a href="javascript:ts('body',-6)">+ Smaller Font</a>-->
+  <form name="fMain" method="post" action="index.aspx?page=2&amp;RID=2" id="fMain">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTkxNzQ3MTE1Nw9kFgJmD2QWDgIBDxYCHgtfIUl0ZW1Db3VudGZkAgIPFgIfAAIBZAIFDxYCHwBmZAIODxYCHwACBBYGZg9kFgICAQ9kFgJmD2QWAgIBD2QWCGYPD2QWCh4Kb25hY3RpdmF0ZQUZdGhpcy5jbGFzc05hbWU9J3RleHRlT24nOx4Mb25kZWFjdGl2YXRlBRd0aGlzLmNsYXNzTmFtZT0ndGV4dGUnOx4Hb25Gb2N1cwUJc2VsZWN0KCk7HgZvbkJsdXIFC3ZhbHVlPXZhbHVlHglvbmtleWRvd24FS2ZuVHJhcEtEKGRvY3VtZW50LmFsbC5jZW50ZXJSZXBlYXRlcl9jdGwwMF9jb2x1bW5Ib2xkZXJfY3RsMDBfYlJlY2hlcmNoZXIpO2QCAQ8WAh4HVmlzaWJsZWgWAgIBDxAPFgIeC18hRGF0YUJvdW5kZ2QQFRAPVG91dCBsZSBSw6lzZWF1FkFiaXRpYmktVMOpbWlzY2FtaW5ndWURQmFzLVNhaW50LUxhdXJlbnQSQ2FwaXRhbGUtTmF0aW9uYWxlEUNlbnRyZS1kdS1RdcOpYmVjFUNoYXVkacOocmUtQXBwYWxhY2hlcwpDw7R0ZS1Ob3JkBkVzdHJpZR9HYXNww6lzaWUvw45sZXMtZGUtbGEtTWFkZWxlaW5lC0xhbmF1ZGnDqHJlC0xhdXJlbnRpZGVzCE1hdXJpY2llDE1vbnTDqXLDqWdpZQ9Ob3JkLWR1LVF1w6liZWMJT3V0YW91YWlzF1NhZ3VlbmF5L0xhYy1TYWludC1KZWFuFRACLTEBOAExATMCMTcCMTIBOQE1AjExAjE0AjE1ATQCMTYCMTABNwEyFCsDEGdnZ2dnZ2dnZ2dnZ2dnZ2cWAWZkAgQPFgIfBmgWAgICDw9kFgIeB29uY2xpY2sFFnJldHVybiBjaGtTZWxlY3Rpb24oKTtkAgUPDxYCHwZoZGQCAQ9kFgICAQ9kFgJmD2QWAmYPZBYCZg8PFgIeC05hdmlnYXRlVXJsBWlodHRwOi8vbWFwcy5nb29nbGUuY2EvbWFwcz9mPXEmc291cmNlPXNfcSZobD1mciZnZW9jb2RlPSZxPTQ2NSwrcnVlK3NhaW50LXBpZXJyZSxyaXZpw6hyZS1kdS1sb3VwLHF1w6liZWNkFgJmDw8WAh4ISW1hZ2VVcmwFGS9wb3J0YWlsL2ltYWdlL2dvb2dsZS5naWZkZAIDD2QWAgIBD2QWAmYPZBYCAgEPDxYCHwZnZBYCZg8PFgIfBmhkZAIQDxYCHwACBBYCAgEPZBYCAgEPZBYCZg9kFgICAQ8PFgIfBmdkFgJmDxYCHwACBhYMZg9kFgQCAQ8WAh8GaBYEAgEPD2QWAh4Dc3JjBRlpbWFnZS9pY29uL2ljbl9jb21tX3IuZ2lmZAICDxUBSE9mZnJlIGQnZW1wbG9pIHBvdXIgw6l0dWRpYW50LWFuaW1hdGV1ciBkdSBDbHViIGRlIGxlY3R1cmUgZGFucyBMYSBNaXRpc2QCAw9kFghmDxUBSE9mZnJlIGQnZW1wbG9pIHBvdXIgw6l0dWRpYW50LWFuaW1hdGV1ciBkdSBDbHViIGRlIGxlY3R1cmUgZGFucyBMYSBNaXRpc2QCAQ8VAgU4MjM5MgEwZAICDw9kFgIfCwUZaW1hZ2UvaWNvbi9pY25fY29tbV9yLmdpZmQCAw8VAkhPZmZyZSBkJ2VtcGxvaSBwb3VyIMOpdHVkaWFudC1hbmltYXRldXIgZHUgQ2x1YiBkZSBsZWN0dXJlIGRhbnMgTGEgTWl0aXNIT2ZmcmUgZCdlbXBsb2kgcG91ciDDqXR1ZGlhbnQtYW5pbWF0ZXVyIGR1IENsdWIgZGUgbGVjdHVyZSBkYW5zIExhIE1pdGlzZAIBD2QWBAIBDxYCHwZoFgQCAQ8PZBYCHwsFGWltYWdlL2ljb24vaWNuX2NvbW1fci5naWZkAgIPFQFDSGV1cmVzIGRlIGNvbnRlIGRlIFDDonF1ZXMgZGFucyBsZXMgYmlibGlvdGjDqHF1ZXMgZGUgTGEgTWF0YXDDqWRpYWQCAw9kFghmDxUBQ0hldXJlcyBkZSBjb250ZSBkZSBQw6JxdWVzIGRhbnMgbGVzIGJpYmxpb3Row6hxdWVzIGRlIExhIE1hdGFww6lkaWFkAgEPFQIFNzIzOTIBMGQCAg8PZBYCHwsFGWltYWdlL2ljb24vaWNuX2NvbW1fci5naWZkAgMPFQJDSGV1cmVzIGRlIGNvbnRlIGRlIFDDonF1ZXMgZGFucyBsZXMgYmlibGlvdGjDqHF1ZXMgZGUgTGEgTWF0YXDDqWRpYUNIZXVyZXMgZGUgY29udGUgZGUgUMOicXVlcyBkYW5zIGxlcyBiaWJsaW90aMOocXVlcyBkZSBMYSBNYXRhcMOpZGlhZAICD2QWBAIBDxYCHwZoFgQCAQ8PZBYCHwsFGWltYWdlL2ljb24vaWNuX2NvbW1fci5naWZkAgIPFQFtTGEgYmlibGlvdGjDqHF1ZSBtdW5pY2lwYWxlIGV0IHNjb2xhaXJlIFF1aWxpdCBkZSBTYXlhYmVjIHZvdXMgaW52aXRlIMOgIHJlbmNvbnRyZXIgbCdhdXRldXJlIERpYW5lIFN0LVBpZXJyZWQCAw9kFghmDxUBbUxhIGJpYmxpb3Row6hxdWUgbXVuaWNpcGFsZSBldCBzY29sYWlyZSBRdWlsaXQgZGUgU2F5YWJlYyB2b3VzIGludml0ZSDDoCByZW5jb250cmVyIGwnYXV0ZXVyZSBEaWFuZSBTdC1QaWVycmVkAgEPFQIFNzIzODkBMGQCAg8PZBYCHwsFGWltYWdlL2ljb24vaWNuX2NvbW1fci5naWZkAgMPFQJtTGEgYmlibGlvdGjDqHF1ZSBtdW5pY2lwYWxlIGV0IHNjb2xhaXJlIFF1aWxpdCBkZSBTYXlhYmVjIHZvdXMgaW52aXRlIMOgIHJlbmNvbnRyZXIgbCdhdXRldXJlIERpYW5lIFN0LVBpZXJyZW1MYSBiaWJsaW90aMOocXVlIG11bmljaXBhbGUgZXQgc2NvbGFpcmUgUXVpbGl0IGRlIFNheWFiZWMgdm91cyBpbnZpdGUgw6AgcmVuY29udHJlciBsJ2F1dGV1cmUgRGlhbmUgU3QtUGllcnJlZAIDD2QWBAIBDxYCHwZoFgQCAQ8PZBYCHwsFGWltYWdlL2ljb24vaWNuX2NvbW1fci5naWZkAgIPFQF6SW52aXRhdGlvbiBsYW5jw6llIGF1eCBiaWJsaW90aMOocXVlcyBkdSBRdcOpYmVjIGFmaW4gZGUgcGFydGljaXBlciDDoCBsYSBKb3VybsOpZSBkZSBsJ0h5bW5lIGF1IHByaW50ZW1wcyBsZSAyMSBtYXJzIDIwMTZkAgMPZBYIZg8VAXpJbnZpdGF0aW9uIGxhbmPDqWUgYXV4IGJpYmxpb3Row6hxdWVzIGR1IFF1w6liZWMgYWZpbiBkZSBwYXJ0aWNpcGVyIMOgIGxhIEpvdXJuw6llIGRlIGwnSHltbmUgYXUgcHJpbnRlbXBzIGxlIDIxIG1hcnMgMjAxNmQCAQ8VAgU3MjM4NwEwZAICDw9kFgIfCwUZaW1hZ2UvaWNvbi9pY25fY29tbV9yLmdpZmQCAw8VAnpJbnZpdGF0aW9uIGxhbmPDqWUgYXV4IGJpYmxpb3Row6hxdWVzIGR1IFF1w6liZWMgYWZpbiBkZSBwYXJ0aWNpcGVyIMOgIGxhIEpvdXJuw6llIGRlIGwnSHltbmUgYXUgcHJpbnRlbXBzIGxlIDIxIG1hcnMgMjAxNnpJbnZpdGF0aW9uIGxhbmPDqWUgYXV4IGJpYmxpb3Row6hxdWVzIGR1IFF1w6liZWMgYWZpbiBkZSBwYXJ0aWNpcGVyIMOgIGxhIEpvdXJuw6llIGRlIGwnSHltbmUgYXUgcHJpbnRlbXBzIGxlIDIxIG1hcnMgMjAxNmQCBA9kFgQCAQ8WAh8GaBYEAgEPD2QWAh8LBRlpbWFnZS9pY29uL2ljbl9jb21tX3IuZ2lmZAICDxUBgQEiTGUgdGjDqcOidHJlIGRlIEbDqWxpeCBMZWNsZXJjIiwgdW5lIGV4cG9zaXRpb24gZHUgUsOpc2VhdSBCSUJMSU8tQlNMIMOgIGxhIE1haXNvbiBkZSBsYSBjdWx0dXJlIGR1IENow6J0ZWF1IExhbmRyeSBkZSBNb250LUpvbGlkAgMPZBYIZg8VAYMBJydMZSB0aMOpw6J0cmUgZGUgRsOpbGl4IExlY2xlcmMnJywgdW5lIGV4cG9zaXRpb24gZHUgUsOpc2VhdSBCSUJMSU8tQlNMIMOgIGxhIE1haXNvbiBkZSBsYSBjdWx0dXJlIGR1IENow6J0ZWF1IExhbmRyeSBkZSBNb250LUpvbGlkAgEPFQIFNzIzNjYBMGQCAg8PZBYCHwsFGWltYWdlL2ljb24vaWNuX2NvbW1fci5naWZkAgMPFQKDAScnTGUgdGjDqcOidHJlIGRlIEbDqWxpeCBMZWNsZXJjJycsIHVuZSBleHBvc2l0aW9uIGR1IFLDqXNlYXUgQklCTElPLUJTTCDDoCBsYSBNYWlzb24gZGUgbGEgY3VsdHVyZSBkdSBDaMOidGVhdSBMYW5kcnkgZGUgTW9udC1Kb2xpgQEiTGUgdGjDqcOidHJlIGRlIEbDqWxpeCBMZWNsZXJjIiwgdW5lIGV4cG9zaXRpb24gZHUgUsOpc2VhdSBCSUJMSU8tQlNMIMOgIGxhIE1haXNvbiBkZSBsYSBjdWx0dXJlIGR1IENow6J0ZWF1IExhbmRyeSBkZSBNb250LUpvbGlkAgUPZBYGAgEPFgIfBmgWBAIBDw9kFgIfCwUZaW1hZ2UvaWNvbi9pY25fY29tbV9yLmdpZmQCAg8VAShMZSBSZWdyb3VwZW1lbnQgZGVzIMOJY3JpdmFpbnMgZHUgRmxldXZlZAIDD2QWCGYPFQEoTGUgUmVncm91cGVtZW50IGRlcyDDiWNyaXZhaW5zIGR1IEZsZXV2ZWQCAQ8VAgU1MjI4MQEwZAICDw9kFgIfCwUZaW1hZ2UvaWNvbi9pY25fY29tbV9yLmdpZmQCAw8VAihMZSBSZWdyb3VwZW1lbnQgZGVzIMOJY3JpdmFpbnMgZHUgRmxldXZlKExlIFJlZ3JvdXBlbWVudCBkZXMgw4ljcml2YWlucyBkdSBGbGV1dmVkAgUPFgIeBXN0eWxlBRJ2aXNpYmlsaXR5OmhpZGRlbjtkAhQPZBYCAgEPDxYCHwZnZGQCGA9kFgJmDw8WAh8GaGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBTNjZW50ZXJSZXBlYXRlciRjdGwwMCRjb2x1bW5Ib2xkZXIkY3RsMDAkYlJlY2hlcmNoZXJNMK2p/KREt9iAp1Vz8IYHj+lu5g==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5F566626" />
+</div>
+
+    <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td width="100%" background="image/couleur01/fond_entete.gif" align="center" nowrap>
+			
+			<div style="position:absolute;width:100%"><a href="index.aspx?page=1" status="Retour à l'accueil" target="_top"><img src="image/couleur01/entete03.gif" align="right" width="140" height="110" hspace="0" border="0" alt="Membre du Réseau BIBLIO du Québec"></a><a href="index.aspx?page=2&RID=2" status="Retour à l'accueil" target="_top"><img src="image/trans.gif" width="645" height="128" border="0"></a></div>
+			
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td width="100%" align="center" nowrap>
+			<a href="index.aspx?page=2&RID=2" status="Retour à l'accueil" target="_top"><img src="image/couleur01/entete01_2.gif" width="286" height="128" border="0" alt="Retour à l'accueil"></a><a href="index.aspx?page=2&RID=2" status="Retour à l'accueil" target="_top"><img src="image/couleur01/entete02.gif" width="359" height="128" border="0" alt="Retour à l'accueil"></a><img src="image/trans.gif" width="125" height="1"></td>
+	</tr>
+</table></td>
+	</tr>
+</table>
+
+
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4145700-11");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+		<tr>
+			<td width="100%" background="image/couleur01/fond_qc.gif" align="center" style="background-repeat:no-repeat;background-position:center top">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td width="770" align="left">
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td colspan="3" width="770" valign="top">
+									    
+									</td>
+								</tr>
+								<tr>
+									<td width="203" valign="top">
+									    
+									    	<script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4" >
+			<table cellpadding="0" cellspacing="0" border="0" width="">
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur01/menu_niv1_cap.gif" width="203" height="6" border="0"></td>
+				</tr>
+				<tr status="Services aux membres" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=31';return false;">
+					<td height="1">
+						<img src="image/couleur01/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#003366" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+					<td bgcolor="#003366" height="1" rowspan="3">
+						<img src="image/trans.gif" width="1" height="19"></td>
+				</tr>
+				<tr status="Services aux membres" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=31';return false;">
+					<td height="17" background="image/couleur01/menu_niv1_left.gif" valign="top">
+						<img src="image/couleur01/menu_niv1_fleche.gif" width="18" height="17" border="0"></td>
+					<td bgcolor="#43608A" height="17">
+						<B><a href="#" style="color:#FFFFFF">Services aux membres</a></B></td>
+				</tr>
+				<tr status="Services aux membres" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=31';return false;">
+					<td height="1">
+						<img src="image/couleur01/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#002447" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+				</tr>
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur01/menu_niv1_shadow.gif" width="203" height="2" border="0"></td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Catalogue régional Simb@" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.open('http://ibistro-bsl.reseaubiblio.ca');return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Catalogue régional Simb@</a></B><img src="image/lien_externe.gif" align="absmiddle" border="0" hspace="0"  style="margin-left:4px" vspace="1"></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div32" OnMouseOver="div32.style.visibility='visible'" OnMouseOut="div32.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Prêt entre bibliothèques (PEB/PIB)" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=34&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Prêt entre bibliothèques (PEB/PIB)</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div34" OnMouseOver="div34.style.visibility='visible'" OnMouseOut="div34.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Ressources électroniques" Over="div36.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div36.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=36&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Ressources électroniques</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div36" OnMouseOver="div36.style.visibility='visible'" OnMouseOut="div36.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Encyclopédie et dictionnaires Larousse en ligne" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div36.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.open('http://www.larousse.fr/#');return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Encyclopédie et dictionnaires Larousse en ligne</a><img src="image/lien_externe.gif" align="absmiddle" border="0" hspace="0"  style="margin-left:4px" vspace="1"></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Services de référence sur place et à distance de la Bibliothèque et Archives nationales du Québec" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div36.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.open('https://www.banq.qc.ca/portal/dt/formulaires/formulaire_reference/formulaire_reference.jsp');return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Services de référence sur place et à distance de la Bibliothèque et Archives nationales du Québec</a><img src="image/lien_externe.gif" align="absmiddle" border="0" hspace="0"  style="margin-left:4px" vspace="1"></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Services techniques coopératifs (STC)" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=38&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Services techniques coopératifs (STC)</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div38" OnMouseOver="div38.style.visibility='visible'" OnMouseOut="div38.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Échange des collections" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=40&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Échange des collections</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div40" OnMouseOver="div40.style.visibility='visible'" OnMouseOut="div40.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Animation et promotion" Over="div42.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div42.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=42';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Animation et promotion</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div42" OnMouseOver="div42.style.visibility='visible'" OnMouseOut="div42.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Consentement pour la publication de photos" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div42.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.open('../../documents/builder/crsbp/2/PDF/1437/Formulaire de consentement pour publication .pdf');return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Consentement pour la publication de photos</a><img src="image/lien_pdf.gif" align="absmiddle" border="0"  style="margin-left:4px" vspace="1"></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Communiqué de presse" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div42.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1340&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Communiqué de presse</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Activité d'animation, fiche technique" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div42.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1341&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Activité d'animation, fiche technique</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Contrat d'animation (modèle)" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div42.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1346&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Contrat d'animation (modèle)</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Contrat pour exposition (modèle)" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div42.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1347&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Contrat pour exposition (modèle)</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Rapport d'activité, animation ponctuelle" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div42.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1348&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Rapport d'activité, animation ponctuelle</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Formation" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=44&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Formation</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div44" OnMouseOver="div44.style.visibility='visible'" OnMouseOut="div44.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Soutien technique et professionnel" Over="div46.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div46.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=46&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Soutien technique et professionnel</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div46" OnMouseOver="div46.style.visibility='visible'" OnMouseOut="div46.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Dépannage informatique" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div46.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=546&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Dépannage informatique</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Bon de commande - Fournitures" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div46.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.open('../../documents/builder/crsbp/2/PDF/1313/Bon de commande - Fournitures.pdf');return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Bon de commande - Fournitures</a><img src="image/lien_pdf.gif" align="absmiddle" border="0"  style="margin-left:4px" vspace="1"></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Publications" Over="div48.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div48.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=48';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Publications</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div48" OnMouseOver="div48.style.visibility='visible'" OnMouseOut="div48.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Rapports annuels" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div48.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=456&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Rapports annuels</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Bulletin - Vent d'est" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div48.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=50&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Bulletin - Vent d'est</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Lois" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div48.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=51&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Lois</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Manifeste de l'UNESCO" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div48.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'http://www.unesco.org/webworld/libraries/manifestos/libraman_fr.html';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Manifeste de l'UNESCO</a><img src="image/lien_externe.gif" align="absmiddle" border="0" hspace="0"  style="margin-left:4px" vspace="1"></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Le Bon Choix" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div48.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=457&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Le Bon Choix</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Rabais Campus" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div48.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=547&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Rabais Campus</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="BookMyne" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1298&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >BookMyne</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1298" OnMouseOver="div1298.style.visibility='visible'" OnMouseOut="div1298.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td colspan="4">	
+			<img src="image/reseau_bas.gif" width="203" height="4"></td>
+	</tr>
+</table>
+<BR>
+
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4" >
+			<table cellpadding="0" cellspacing="0" border="0" width="">
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur01/menu_niv1_cap.gif" width="203" height="6" border="0"></td>
+				</tr>
+				<tr status="Présentation du Réseau" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=53';return false;">
+					<td height="1">
+						<img src="image/couleur01/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#003366" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+					<td bgcolor="#003366" height="1" rowspan="3">
+						<img src="image/trans.gif" width="1" height="19"></td>
+				</tr>
+				<tr status="Présentation du Réseau" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=53';return false;">
+					<td height="17" background="image/couleur01/menu_niv1_left.gif" valign="top">
+						<img src="image/couleur01/menu_niv1_fleche.gif" width="18" height="17" border="0"></td>
+					<td bgcolor="#43608A" height="17">
+						<B><a href="#" style="color:#FFFFFF">Présentation du Réseau</a></B></td>
+				</tr>
+				<tr status="Présentation du Réseau" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=53';return false;">
+					<td height="1">
+						<img src="image/couleur01/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#002447" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+				</tr>
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur01/menu_niv1_shadow.gif" width="203" height="2" border="0"></td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Politique qualité" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=54&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Politique qualité</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div54" OnMouseOver="div54.style.visibility='visible'" OnMouseOut="div54.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Mission" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=55&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Mission</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div55" OnMouseOver="div55.style.visibility='visible'" OnMouseOut="div55.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Code de règlements généraux" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=56&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Code de règlements généraux</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div56" OnMouseOver="div56.style.visibility='visible'" OnMouseOut="div56.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Cadre organisationnel" Over="div57.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div57.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=57&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Cadre organisationnel</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div57" OnMouseOver="div57.style.visibility='visible'" OnMouseOut="div57.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Conseil d'administration" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div57.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=58&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Conseil d'administration</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Organigramme" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div57.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=59&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Organigramme</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Personnel" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=60&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Personnel</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div60" OnMouseOver="div60.style.visibility='visible'" OnMouseOut="div60.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td colspan="4">	
+			<img src="image/reseau_bas.gif" width="203" height="4"></td>
+	</tr>
+</table>
+<BR>
+
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4" >
+			<table cellpadding="0" cellspacing="0" border="0" width="">
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur01/menu_niv1_cap.gif" width="203" height="6" border="0"></td>
+				</tr>
+				<tr status="Animation" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1328&cr=1&CPage=1';return false;">
+					<td height="1">
+						<img src="image/couleur01/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#003366" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+					<td bgcolor="#003366" height="1" rowspan="3">
+						<img src="image/trans.gif" width="1" height="19"></td>
+				</tr>
+				<tr status="Animation" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1328&cr=1&CPage=1';return false;">
+					<td height="17" background="image/couleur01/menu_niv1_left.gif" valign="top">
+						<img src="image/couleur01/menu_niv1_fleche.gif" width="18" height="17" border="0"></td>
+					<td bgcolor="#43608A" height="17">
+						<B><a href="#" style="color:#FFFFFF">Animation</a></B></td>
+				</tr>
+				<tr status="Animation" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1328&cr=1&CPage=1';return false;">
+					<td height="1">
+						<img src="image/couleur01/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#002447" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+				</tr>
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur01/menu_niv1_shadow.gif" width="203" height="2" border="0"></td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Le Carrousel du livre" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1329&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Le Carrousel du livre</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1329" OnMouseOver="div1329.style.visibility='visible'" OnMouseOut="div1329.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Infos Express" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1332&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Infos Express</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1332" OnMouseOver="div1332.style.visibility='visible'" OnMouseOut="div1332.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Les contagions lecture" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1333&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Les contagions lecture</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1333" OnMouseOver="div1333.style.visibility='visible'" OnMouseOut="div1333.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Kamishibaï" Over="div1363.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div1363.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1363&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Kamishibaï</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1363" OnMouseOver="div1363.style.visibility='visible'" OnMouseOut="div1363.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Présentation" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1363.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1387&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Présentation</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Liste des kamishibaïs" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1363.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1386&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Liste des kamishibaïs</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Les petits contes du tapis" Over="div1364.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div1364.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1364&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Les petits contes du tapis</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1364" OnMouseOver="div1364.style.visibility='visible'" OnMouseOut="div1364.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Présentation" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1364.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1388&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Présentation</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Liste des petits contes du tapis" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1364.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1389&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Liste des petits contes du tapis</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Expositions et boîtes d'animation" Over="div1330.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div1330.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1330&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Expositions et boîtes d'animation</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1330" OnMouseOver="div1330.style.visibility='visible'" OnMouseOut="div1330.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Expositions thématiques et saisonnières" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1330.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.open('../../documents/builder/crsbp/2/PDF/1331/Expositions thématiques et saisonnières 2015.pdf');return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Expositions thématiques et saisonnières</a><img src="image/lien_pdf.gif" align="absmiddle" border="0"  style="margin-left:4px" vspace="1"></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Exposition Publications du Québec" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1330.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1336&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Exposition Publications du Québec</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Expositions itinérantes (Oeuvres d'art)" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1330.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1338&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Expositions itinérantes (Oeuvres d'art)</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Boîtes d'animation" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1330.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1339&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Boîtes d'animation</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Le fou du livre, la mascotte du Réseau BIBLIO-BSL" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1362&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Le fou du livre, la mascotte du Réseau BIBLIO-BSL</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1362" OnMouseOver="div1362.style.visibility='visible'" OnMouseOut="div1362.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Une naissance, un livre" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1342&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Une naissance, un livre</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1342" OnMouseOver="div1342.style.visibility='visible'" OnMouseOut="div1342.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Clubs de lecture d'été" Over="div1343.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div1343.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1343&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Clubs de lecture d'été</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1343" OnMouseOver="div1343.style.visibility='visible'" OnMouseOut="div1343.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Club de lecture d'été Desjardins 2013" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1343.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1344&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Club de lecture d'été Desjardins 2013</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Club de lecture d'été Desjardins 2014" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1343.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1345&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Club de lecture d'été Desjardins 2014</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Club de lecture d'été Desjardins 2015" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1343.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1401&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Club de lecture d'été Desjardins 2015</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Club de lecture d'été Desjardins 2016" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1343.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1438&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Club de lecture d'été Desjardins 2016</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Ressources artistiques régionales" Over="div1349.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div1349.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=100&RID=2&MenuID=1349';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Ressources artistiques régionales</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1349" OnMouseOver="div1349.style.visibility='visible'" OnMouseOut="div1349.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Art de la scène" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1349.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1350&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Art de la scène</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Arts visuels" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1349.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1351&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Arts visuels</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Métiers d'art" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1349.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1352&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Métiers d'art</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Communication" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1349.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1353&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Communication</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Lettres" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1349.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1354&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Lettres</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Quelques prix littéraires 2013-2014-2015-2016" Over="div1361.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out="div1361.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1361&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Quelques prix littéraires 2013-2014-2015-2016</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1361" OnMouseOver="div1361.style.visibility='visible'" OnMouseOut="div1361.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Prix hors Québec" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1361.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1368&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Prix hors Québec</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Prix du Gourverneur général" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1361.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1369&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Prix du Gourverneur général</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Prix au Québec" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1361.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1370&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Prix au Québec</a></td>
+								</tr>
+
+								<tr>
+									<td bgcolor="#BEBA86">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+
+								<tr status="Prix des libraires du Québec" Over="this.style.cursor='hand';this.style.backgroundColor='#F2F1D7';" Out="div1361.style.visibility='hidden';;this.style.backgroundColor='#E2E1C9'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1371&cr=1&CPage=1';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Prix des libraires du Québec</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Cinéclub ONF" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1443&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Cinéclub ONF</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1443" OnMouseOver="div1443.style.visibility='visible'" OnMouseOut="div1443.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td colspan="4">	
+			<img src="image/reseau_bas.gif" width="203" height="4"></td>
+	</tr>
+</table>
+<BR>
+
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4" >
+			<table cellpadding="0" cellspacing="0" border="0" width="">
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur01/menu_niv1_cap.gif" width="203" height="6" border="0"></td>
+				</tr>
+				<tr status="Prix d'excellence Gérard-Desrosiers" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1445&cr=1&CPage=1';return false;">
+					<td height="1">
+						<img src="image/couleur01/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#003366" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+					<td bgcolor="#003366" height="1" rowspan="3">
+						<img src="image/trans.gif" width="1" height="19"></td>
+				</tr>
+				<tr status="Prix d'excellence Gérard-Desrosiers" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1445&cr=1&CPage=1';return false;">
+					<td height="17" background="image/couleur01/menu_niv1_left.gif" valign="top">
+						<img src="image/couleur01/menu_niv1_fleche.gif" width="18" height="17" border="0"></td>
+					<td bgcolor="#43608A" height="17">
+						<B><a href="#" style="color:#FFFFFF">Prix d'excellence Gérard-Desrosiers</a></B></td>
+				</tr>
+				<tr status="Prix d'excellence Gérard-Desrosiers" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1445&cr=1&CPage=1';return false;">
+					<td height="1">
+						<img src="image/couleur01/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#002447" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+				</tr>
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur01/menu_niv1_shadow.gif" width="203" height="2" border="0"></td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Dépliant informationnel" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1446&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Dépliant informationnel</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1446" OnMouseOver="div1446.style.visibility='visible'" OnMouseOut="div1446.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Fiche d'inscription" Over=";this.style.cursor='hand';this.style.backgroundColor='#EBE9C3';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=2&module=101&RID=2&MenuID=1447&cr=1&CPage=1';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Fiche d'inscription</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div1447" OnMouseOver="div1447.style.visibility='visible'" OnMouseOut="div1447.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E2E1C9">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td colspan="4">	
+			<img src="image/reseau_bas.gif" width="203" height="4"></td>
+	</tr>
+</table>
+<BR>
+
+
+									    
+                                        
+                                        
+                                    </td>
+ 	<td width="567" valign="top" class="petit" style="padding-left:10px;" colspan="2">
+
+                                        
+    
+
+                                        <!-- DEBUT PUB sur 2 colonnes -->  
+                                         
+                                          
+                                          
+                                                                               
+                                       <div id="pnlPubGlobalImportante" style="padding-bottom:10px;">
+	
+                                            
+                                            
+                                        
+</div>
+                                         
+                                        
+                                        
+                                        
+                                            
+                                        
+
+                                        <!-- FIN PUB sur 2 colonnes -->
+                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td width="395" valign="top" class="petit" >
+                                                
+									            
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+
+<script language="JavaScript">
+  function chkSelection(){  	
+  	var lstOption = document.getElementById('lstResultats')
+  	if (lstOption.selectedIndex>=0){
+  		if (lstOption.value!="-1"){
+  			return true;
+  		}
+  	}
+  	alert('Vous devez sÃ©lectionner une bibliothÃ¨que.');
+  	return false;
+  }
+
+  function lstSelection(){
+    if (chkSelection()){
+		document.getElementById('centerRepeater_ctl00_columnHolder_ctl00_bValider').click();
+	}
+  }
+
+  function lstKeyCode(){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			lstSelection();
+		}
+  	}
+  }
+</script>
+
+<input name="centerRepeater$ctl00$columnHolder$ctl00$NbRows" type="hidden" id="centerRepeater_ctl00_columnHolder_ctl00_NbRows" value="6" />
+
+<div id="centerRepeater_ctl00_columnHolder_ctl00_pnlRecherche">
+	
+<div style="position:relative;z-Index:50;">
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td>
+			<img src="image/couleur01/titre_acceder1.gif" width="310" height="70" alt="Accéder aux services de votre BIBLIO"></td>
+		<td>
+			<img src="image/couleur01/titre_coccinelle.gif" width="65" height="70" onMouseOver="coccinelle.style.visibility='visible';this.style.cursor='help'; return true" onMouseOut="coccinelle.style.visibility='hidden'; return true"></td>
+	</tr>
+</table>
+	<img src="image/couleur01/titre_coccinelle2.gif" width="35" height="25" align="right" hspace="0" style="margin-right:10px" >
+	<img src="image/trans.gif" width="1" height="6"><BR>
+	<div style="position:absolute;top:25px;left:355px;visibility:hidden;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);" id="coccinelle" onMouseOver="coccinelle.style.visibility='visible';this.style.cursor='help'; return true" onMouseOut="coccinelle.style.visibility='hidden'; return true">
+		<table cellpadding="0" cellspacing="0" border="0">	
+			<tr>	
+				<td width="10" class="petit" rowspan="3" valign="top">
+					<img src="image/coccinelle_fleche.gif" width="10" height="10" vspace="5"></td>
+				<td bgcolor="#333333" width="1" class="petit" rowspan="3" valign="top">
+					<img src="image/coccinelle_fleche2.gif" width="1" height="10" vspace="5"></td>
+				<td bgcolor="#333333" width="150" class="petit">
+					<img src="image/trans.gif" width="1" height="1"></td>
+				<td bgcolor="#333333" width="1" class="petit" rowspan="3">
+					<img src="image/trans.gif" width="1" height="1"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFDD" width="150" class="petit" style="padding:4px;">
+				Vous cherchez un document ou une information?<BR>
+				<img src="image/trans.gif" width="8" height="3"><BR>
+				La <B>coccinelle</B> est toujours là pour vous inviter à profiter des services de votre BIBLIO</td>
+			</tr>
+			<tr>	
+				<td bgcolor="#333333" width="150" class="petit">
+					<img src="image/trans.gif" width="150" height="1" alt="" /></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="Petit">
+		Inscrire votre localit&eacute; :<br />
+		<img src="image/trans.gif" width="8" height="3" alt="" /><br />
+		<input name="centerRepeater$ctl00$columnHolder$ctl00$txtkeyWord" type="text" maxlength="30" id="centerRepeater_ctl00_columnHolder_ctl00_txtkeyWord" typeCol="tRecherche" class="Texte" onactivate="this.className='texteOn';" ondeactivate="this.className='texte';" onFocus="select();" onBlur="value=value" onkeydown="fnTrapKD(document.all.centerRepeater_ctl00_columnHolder_ctl00_bRechercher);" style="width:250px" /><br />
+		
+
+		<img src="image/trans.gif" width="8" height="15" alt="" /><br />
+		<input type="image" name="centerRepeater$ctl00$columnHolder$ctl00$bRechercher" id="centerRepeater_ctl00_columnHolder_ctl00_bRechercher" align="absmiddle" alt="Rechercher" src="image/rechercher.gif" style="height:20px;width:80px;border-width:0px;" /><br />
+		
+		
+	</div>
+</div>
+									<div style="padding-left:14px">
+									<img src="image/sep_millieu.gif" width="351" height="1" vspace="15">
+									</div>
+
+
+</div>
+									                
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="375">
+	<tr valign="top">
+		<td width="375" valign="top" class="Normal" style="line-height:15px">
+			<p align="center"><a href="http://biblioaidants.ca/"><img style="HEIGHT: 116px; WIDTH: 126px" src="http://www.reseaubiblioduquebec.qc.ca/documents/builder/crsbp/2/galleriePhotos/BiblioAidants%20rouge.jpg" width="176" height="155"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/reseaubibliobsl"><img style="HEIGHT: 124px; WIDTH: 106px" src="http://www.reseaubiblioduquebec.qc.ca/documents/builder/crsbp/2/galleriePhotos/badge.jpg" width="120" height="135"></a><br /><br /><font size="3" face="Arial"><br />Accéder à <a href="http://reseaubibliobsl.pretnumerique.ca/home">la collection de livres numériques</a><br /></font><font color="navy" size="3" face="Arial"><br /><a href="http://reseaubibliobsl.pretnumerique.ca/resources/56ce1f6d9bbb7b06a935d6d4"><img style="HEIGHT: 157px; WIDTH: 116px" src="http://www.reseaubiblioduquebec.qc.ca/documents/builder/crsbp/2/galleriePhotos/sainticitte.jpg" width="200" height="299"></a>&nbsp; <a href="http://reseaubibliobsl.pretnumerique.ca/resources/56ce1f6d9bbb7b06a935d6b8"><img style="HEIGHT: 162px; WIDTH: 112px" src="http://www.reseaubiblioduquebec.qc.ca/documents/builder/crsbp/2/galleriePhotos/BFF.jpg" width="200" height="299"></a>&nbsp;<br /><a href="http://reseaubibliobsl.pretnumerique.ca/resources/56a0e5a75f2f74ace2ab19f8"><img style="HEIGHT: 166px; WIDTH: 114px" src="http://www.reseaubiblioduquebec.qc.ca/documents/builder/crsbp/2/galleriePhotos/maudithiver.jpg" width="200" height="295"></a>&nbsp; <a href="http://reseaubibliobsl.pretnumerique.ca/resources/56ce1f6d9bbb7b06a935d6be"><img style="HEIGHT: 164px; WIDTH: 116px" src="http://www.reseaubiblioduquebec.qc.ca/documents/builder/crsbp/2/galleriePhotos/autisme.jpg" width="200" height="314"></a><br /><br /><a href="http://banq.pretnumerique.ca/help">Aide pour le prêt numérique</a></font></p></td>
+	</tr>			
+</table>
+
+
+
+
+<div id="centerRepeater_ctl01_columnHolder_ctl00_pnlCoordonnees">
+	
+<table cellpadding="0" cellspacing="0" border="0" width="375">
+	<tr>
+		<td width="375" valign="top" class="petit">
+			<img src="image/titre_coordonnees.gif" width="180" height="20" border="0" alt="" /><br />
+			<img src="image/trans.gif" width="1" height="2" border="0" alt="" /><br />
+			
+			
+				<table cellpadding="0" cellspacing="0" border="0" align="right">
+					<tr>
+						<td class="petit" width="170px" style="padding:8px;border:1px solid #666666;background-image:url('image/fond_quad.gif');" align="center">
+							<a id="centerRepeater_ctl01_columnHolder_ctl00_hlAdresseGoogle" href="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=465,+rue+saint-pierre,rivière-du-loup,québec" target="_blank"><img id="centerRepeater_ctl01_columnHolder_ctl00_imgCarte" border="0" alt="Comment se rendre chez nous?" src="/portail/image/google.gif" style="height:17px;width:74px;border-width:0px;" /><br /><b>Comment se rendre<br />chez nous ?</b><br /></a></td>
+					</tr>
+				</table>
+				
+	    	  
+			<span style="line-height:14px">
+			465, rue Saint-Pierre<br />
+	    	  Rivière-du-Loup&nbsp;(Québec)<br />
+	    	  G5R 4T6<br />
+	    	  <img src="image/trans.gif" width="1" height="9" border="0" alt="" /><br />
+	    	
+		    		Tél : <b>(418) 867-1682&nbsp;&nbsp;&nbsp;</b><br />
+		    	
+		    	    Télec : <b>(418) 867-3434</b><br />
+		    	
+	    		<img src="image/trans.gif" width="1" height="9" border="0"><BR>
+	    	
+			</span>			
+			
+					Courriel : <b><a href="mailto:crsbp@crsbp.net" status="Envoyer un courriel à crsbp@crsbp.net"><img src="image/courriel2.gif" alt="" width="18" height="14" border="0" align="absmiddle" hspace="2" style="margin-top:4px">crsbp@crsbp.net</a></b><BR>
+	    		
+		</td>
+	</tr>
+
+	
+</table>
+
+</div>
+									                
+									    	            
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4">	
+			<img src="image/trans.gif" width="1" height="12"><BR></td>
+	</tr>
+</table>
+</asp:panel>
+									                
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+<div id="centerRepeater_ctl03_columnHolder_ctl00_pnlBiblio">
+	
+<div>
+
+	<table cellpadding="0" cellspacing="0" border="0" width="375">
+		<tr>
+			<td height="50%" background="image/couleur01/coinfg.gif" valign="top">
+				<img src="image/couleur01/coin1.gif" width="10" height="10" border="0"></td>
+			<td width="14" rowspan="2" style="border-top:1px solid #666666;border-bottom:1px solid #666666;padding:1px;background-color:#F9F8EE">
+				<img src="image/logo_biblio.gif" width="14" height="16" align="absmiddle" alt="Réseau BIBLIO du Québec"></td>
+			
+			<td width="351" rowspan="2" style="padding-left:8px;border-top:1px solid #666666;border-bottom:1px solid #666666;border-right:1px solid #666666;background-color:#F9F8EE;" status="Votre BIBLIO : Lac-des-Plages" Over="this.style.backgroundColor='#F0EDCE';this.style.cursor='hand'" Out="this.style.backgroundColor='#F9F8EE'" OnClick="window.location = 'index.aspx?page=3&BID=507';">
+				<span class="Grand"><b>Votre BIBLIO : <a href="#" OnClick="return false;" target="_top">Lac-des-Plages</a></b></span></td>
+		</tr>
+		<tr>
+			<td height="50%" background="image/couleur01/coinfg.gif" valign="bottom">
+				<img src="image/couleur01/coin3.gif" width="10" height="10" border="0"></td>
+		</tr>
+	</table>	
+
+<img src="image/trans.gif" width="300" height="7"><BR>
+
+
+	<div style="padding-right:18px;height:160px"><UL>
+
+		<span class="normal"><img src="image/trans.gif" width="2" height="4" border="0"><BR>
+		
+		<img src="image/trans.gif" width="2" height="3" border="0"><BR><BR>
+		<!--<div style="position:relative"><span onClick="alert('Cette section n\'est pas disponible pour l\'instant.');"><img src="image/fleche02.gif" width="7" height="9" border="0"><a href="#" onclick="return false;" status="Catalogue Simb@" target="_top"><B>Catalogue Simb@</B></A><img src="image/trans.gif" width="2" height="1">--><!---<img src="image/point_intero2.gif" align="absmiddle" onMouseOver="simba2.style.visibility='visible';this.style.cursor='help'; return true" onMouseOut="simba2.style.visibility='hidden'; return true" width="14" height="14">---><!--<BR><BR>--></span>
+		<!--	<div style="position:absolute;top:-22px;left:130px;visibility:hidden;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);" id="simba2" onMouseOver="simba2.style.visibility='visible';this.style.cursor='help'; return true" onMouseOut="simba2.style.visibility='hidden'; return true">
+		<table cellpadding="0" cellspacing="0" border="0">	
+			<tr>	
+				<td width="10" class="petit" rowspan="3" valign="top">
+					<img src="image/coccinelle_fleche.gif" width="10" height="10" vspace="25"></td>
+				<td bgcolor="#333333" width="1" class="petit" rowspan="3" valign="top">
+					<img src="image/coccinelle_fleche2.gif" width="1" height="10" vspace="25"></td>
+				<td bgcolor="#333333" width="150" class="petit">
+					<img src="image/trans.gif" width="1" height="1"></td>
+				<td bgcolor="#333333" width="1" class="petit" rowspan="3">
+					<img src="image/trans.gif" width="1" height="1"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFDD" width="150" height="60" valign="top" class="petit" style="padding:4px;">
+				<B>Simb@</B> : Définition à venir</td>
+			</tr>
+			<tr>	
+				<td bgcolor="#333333" width="150" class="petit">
+					<img src="image/trans.gif" width="150" height="1"></td>
+			</tr>
+		</table></div></div>-->
+			
+						<img src="image/titre_coordonnees.gif" width="180" height="20" border="0" alt="Nos coordonnées"><BR>
+						<img src="image/trans.gif" width="1" height="2" border="0"><BR>
+						<span style="line-height:14px" class="petit">
+						2053, chemin Tour-du-Lac<BR>
+				    	  Lac-des-Plages&nbsp;(Québec)<BR>
+						  J0T 1K0<BR>
+						  
+				    	  <img src="image/trans.gif" width="1" height="9" border="0"><BR>
+				    	  
+					    		Tél : <B>(819) 426-2391&nbsp;&nbsp;&nbsp;Poste 1755</B><BR>
+					    	
+					    	    Télec : <B>(819) 426-2085</B><BR>
+					    	
+				    		<img src="image/trans.gif" width="1" height="9" border="0"><BR>
+				    	
+						</span>			
+						<span class="petit">
+						
+								<b><a href="#" onclick="var ML1 = 'mai'; var ML2 = 'lto'; var ML3 = ML1 + ML2 + ':admdesplages&#64;crsbpo.qc.ca?subject=Message provenant du site Internet du R%E9seau BIBLIO du Qu%E9bec'; window.open(ML3); return false;" status="Envoyer un courriel à admdesplages&#64;crsbpo.qc.ca"><img width="18" height="14" src="/portail/image/courriel2.gif" align="absMiddle" border="0" style="margin-top:4px;"><font style="text-decoration:none;">&nbsp;</font>admdesplages&#64;crsbpo.qc.ca</a></b><BR>
+				    		
+				    	 </span>
+						<span class="petit">
+						
+								<BR>Emplacement : <b>Centre communautaire</b><BR>
+				    		
+				    	 </span>
+					<BR>
+	</UL></div>
+</div>
+
+</div>
+									                </td>
+                                            
+                                            <td width="172" valign="top">
+                                                <!-- début publicite avant menu -->
+                                                
+                                                <!-- fin publicite avant menu -->
+                                                
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+									                
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+<div id="rightRepeater_ctl01_columnHolder_ctl00_pnlCommuniques">
+	
+<table cellpadding="0" cellspacing="0" border="0">
+
+	<tr>
+		<td colspan="3">
+			<img src="image/couleur01/biblio_quoi_neuf_titre.gif" width="172" height="27" alt="Quoi de neuf" alt="" /><br />
+			
+				<img src="image/icon/legendeR.gif" width="172" height="26" alt="Quoi de neuf" alt="" /><br />
+				
+			</td>
+	</tr>
+	<tr>
+
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1" alt="" /></td>
+		<td width="170" class="petit" bgcolor="#D6D4B2">	
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+
+<!-- COMMUNIQUÉS -->
+	   			
+					<tr>
+							
+
+							<div id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl00_TitreEnabled">
+							<td id="TitreEnabled" class="petit" style="padding-left:4px" status="Offre d'emploi pour étudiant-animateur du Club de lecture dans La Mitis" over="this.style.backgroundColor='#EBE9C3';this.style.cursor='hand';" out="this.style.backgroundColor='Transparent';" onclick="window.location = 'index.aspx?page=2&module=1&RID=2&CID=82392&All=0';">
+								<img src="image/trans.gif" width="1" height="6" alt="" /><br />
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td valign="top">
+											<img id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl00_imgProvenance" src="image/icon/icn_comm_r.gif" src="" style="border-width:0px;margin-right:2px" /></td>
+										<td class="NouvTitre Petit">
+											<a href="#" status="Offre d'emploi pour étudiant-animateur du Club de lecture dans La Mitis">Offre d'emploi pour étudiant-animateur du Club de lecture dans La Mitis</a></td>
+									</tr>
+								</table>
+								<img src="image/trans.gif" width="1" height="6" alt="" /><BR></td>
+							</div>
+					</tr>
+					<tr id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl00_repeatLine">
+		<td class="petit" style="padding-left:5px">
+							<img src="image/couleur01/couleur01.gif" width="160" height="1" vspace="0"alt="" /><br /></td>
+	</tr>
+	
+	     			
+					<tr>
+							
+
+							<div id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl01_TitreEnabled">
+							<td id="TitreEnabled" class="petit" style="padding-left:4px" status="Heures de conte de Pâques dans les bibliothèques de La Matapédia" over="this.style.backgroundColor='#EBE9C3';this.style.cursor='hand';" out="this.style.backgroundColor='Transparent';" onclick="window.location = 'index.aspx?page=2&module=1&RID=2&CID=72392&All=0';">
+								<img src="image/trans.gif" width="1" height="6" alt="" /><br />
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td valign="top">
+											<img id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl01_imgProvenance" src="image/icon/icn_comm_r.gif" src="" style="border-width:0px;margin-right:2px" /></td>
+										<td class="NouvTitre Petit">
+											<a href="#" status="Heures de conte de Pâques dans les bibliothèques de La Matapédia">Heures de conte de Pâques dans les bibliothèques de La Matapédia</a></td>
+									</tr>
+								</table>
+								<img src="image/trans.gif" width="1" height="6" alt="" /><BR></td>
+							</div>
+					</tr>
+					<tr id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl01_repeatLine">
+		<td class="petit" style="padding-left:5px">
+							<img src="image/couleur01/couleur01.gif" width="160" height="1" vspace="0"alt="" /><br /></td>
+	</tr>
+	
+	     			
+					<tr>
+							
+
+							<div id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl02_TitreEnabled">
+							<td id="TitreEnabled" class="petit" style="padding-left:4px" status="La bibliothèque municipale et scolaire Quilit de Sayabec vous invite à rencontrer l'auteure Diane St-Pierre" over="this.style.backgroundColor='#EBE9C3';this.style.cursor='hand';" out="this.style.backgroundColor='Transparent';" onclick="window.location = 'index.aspx?page=2&module=1&RID=2&CID=72389&All=0';">
+								<img src="image/trans.gif" width="1" height="6" alt="" /><br />
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td valign="top">
+											<img id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl02_imgProvenance" src="image/icon/icn_comm_r.gif" src="" style="border-width:0px;margin-right:2px" /></td>
+										<td class="NouvTitre Petit">
+											<a href="#" status="La bibliothèque municipale et scolaire Quilit de Sayabec vous invite à rencontrer l'auteure Diane St-Pierre">La bibliothèque municipale et scolaire Quilit de Sayabec vous invite à rencontrer l'auteure Diane St-Pierre</a></td>
+									</tr>
+								</table>
+								<img src="image/trans.gif" width="1" height="6" alt="" /><BR></td>
+							</div>
+					</tr>
+					<tr id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl02_repeatLine">
+		<td class="petit" style="padding-left:5px">
+							<img src="image/couleur01/couleur01.gif" width="160" height="1" vspace="0"alt="" /><br /></td>
+	</tr>
+	
+	     			
+					<tr>
+							
+
+							<div id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl03_TitreEnabled">
+							<td id="TitreEnabled" class="petit" style="padding-left:4px" status="Invitation lancée aux bibliothèques du Québec afin de participer à la Journée de l'Hymne au printemps le 21 mars 2016" over="this.style.backgroundColor='#EBE9C3';this.style.cursor='hand';" out="this.style.backgroundColor='Transparent';" onclick="window.location = 'index.aspx?page=2&module=1&RID=2&CID=72387&All=0';">
+								<img src="image/trans.gif" width="1" height="6" alt="" /><br />
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td valign="top">
+											<img id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl03_imgProvenance" src="image/icon/icn_comm_r.gif" src="" style="border-width:0px;margin-right:2px" /></td>
+										<td class="NouvTitre Petit">
+											<a href="#" status="Invitation lancée aux bibliothèques du Québec afin de participer à la Journée de l'Hymne au printemps le 21 mars 2016">Invitation lancée aux bibliothèques du Québec afin de participer à la Journée de l'Hymne au printemps le 21 mars 2016</a></td>
+									</tr>
+								</table>
+								<img src="image/trans.gif" width="1" height="6" alt="" /><BR></td>
+							</div>
+					</tr>
+					<tr id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl03_repeatLine">
+		<td class="petit" style="padding-left:5px">
+							<img src="image/couleur01/couleur01.gif" width="160" height="1" vspace="0"alt="" /><br /></td>
+	</tr>
+	
+	     			
+					<tr>
+							
+
+							<div id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl04_TitreEnabled">
+							<td id="TitreEnabled" class="petit" style="padding-left:4px" status="''Le théâtre de Félix Leclerc'', une exposition du Réseau BIBLIO-BSL à la Maison de la culture du Château Landry de Mont-Joli" over="this.style.backgroundColor='#EBE9C3';this.style.cursor='hand';" out="this.style.backgroundColor='Transparent';" onclick="window.location = 'index.aspx?page=2&module=1&RID=2&CID=72366&All=0';">
+								<img src="image/trans.gif" width="1" height="6" alt="" /><br />
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td valign="top">
+											<img id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl04_imgProvenance" src="image/icon/icn_comm_r.gif" src="" style="border-width:0px;margin-right:2px" /></td>
+										<td class="NouvTitre Petit">
+											<a href="#" status="''Le théâtre de Félix Leclerc'', une exposition du Réseau BIBLIO-BSL à la Maison de la culture du Château Landry de Mont-Joli">"Le théâtre de Félix Leclerc", une exposition du Réseau BIBLIO-BSL à la Maison de la culture du Château Landry de Mont-Joli</a></td>
+									</tr>
+								</table>
+								<img src="image/trans.gif" width="1" height="6" alt="" /><BR></td>
+							</div>
+					</tr>
+					<tr id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl04_repeatLine">
+		<td class="petit" style="padding-left:5px">
+							<img src="image/couleur01/couleur01.gif" width="160" height="1" vspace="0"alt="" /><br /></td>
+	</tr>
+	
+	     			
+					<tr>
+							
+
+							<div id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl05_TitreEnabled">
+							<td id="TitreEnabled" class="petit" style="padding-left:4px" status="Le Regroupement des Écrivains du Fleuve" over="this.style.backgroundColor='#EBE9C3';this.style.cursor='hand';" out="this.style.backgroundColor='Transparent';" onclick="window.location = 'index.aspx?page=2&module=1&RID=2&CID=52281&All=0';">
+								<img src="image/trans.gif" width="1" height="6" alt="" /><br />
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td valign="top">
+											<img id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl05_imgProvenance" src="image/icon/icn_comm_r.gif" src="" style="border-width:0px;margin-right:2px" /></td>
+										<td class="NouvTitre Petit">
+											<a href="#" status="Le Regroupement des Écrivains du Fleuve">Le Regroupement des Écrivains du Fleuve</a></td>
+									</tr>
+								</table>
+								<img src="image/trans.gif" width="1" height="6" alt="" /><BR></td>
+							</div>
+					</tr>
+					<tr id="rightRepeater_ctl01_columnHolder_ctl00_repeaterAllComm_ctl05_repeatLine" style="visibility:hidden;">
+		<td class="petit" style="padding-left:5px">
+							<img src="image/couleur01/couleur01.gif" width="160" height="1" vspace="0"alt="" /><br /></td>
+	</tr>
+	
+	     			
+
+				<div id="rightRepeater_ctl01_columnHolder_ctl00_pnlArchives">
+		
+				
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td width="100%" align="left" class="petit" style="padding-left:5px" onmouseover="this.style.backgroundColor='#EBE9C3';this.style.cursor='hand';" onmouseout="this.style.backgroundColor='Transparent';" onclick="window.location='index.aspx?page=2&module=2&RID=2';">
+										<img src="image/trans.gif" width="1" height="6" alt="" /><BR>
+										<img src="image/fleche04.gif" width="3" height="7" align="absmiddle" hspace="3" alt="" /><a href="index.aspx?page=2&module=2&RID=2" status="Visualiser les archives"><b>Visualiser les archives</b></A><br />
+										<img src="image/trans.gif" width="1" height="6" alt="" /></td>
+								</tr>
+								<tr>
+								    <td align="left" >
+                                         
+                                          
+                                         <img src="image/trans.gif" width="3" height="10" alt="" />
+								    </td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				
+	</div>
+			</table></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<img src="image/couleur01/biblio_bas_titre.gif" width="172" height="5" alt="" /></td>
+	</tr>
+</table>
+
+</div>
+
+									                
+									    	            
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4">	
+			<img src="image/trans.gif" width="1" height="12"><BR></td>
+	</tr>
+</table>
+</asp:panel>
+									                
+									    	            
+									                
+                                                
+                                                
+                                                <div id="logoJustePrix">
+	
+                                                    <div style="padding-top:12px; text-align:right;*text-align:center;">
+                                                        <a href="http://noslivresajusteprix.com/" target="_blank"><img alt="Nos livres à juste prix" src="/portail/image/Pub/bouton_livresToutprix.jpg" border="0" /></a>
+                                                    </div>
+                                                
+</div>
+                                                <div id="pnlPubGlobalImportante02">
+	
+                                                    <div id="pnlPubGlobal00">
+		
+                                                        <div style="padding-top:12px; text-align:right;*text-align:center; padding-bottom:10px;">
+                                                            <a href="http://www.agenda21c.gouv.qc.ca/" target="_blank"><img alt="Agenda 21" src="/portail/image/Pub/bandeau_agenda21.jpg" border="0" /></a>
+                                                        </div>
+                                                    
+	</div>
+                                                    <div id="pnlPubGlobal11">
+		
+                                                        <div style="padding-top:5px; text-align:right;*text-align:center; padding-bottom:10px;">
+                                                            <a href="http://www.banq.qc.ca/appel_numerisation/index.html" target="_blank"><img alt="Pour la numérisation du patrimoine culturel québécois, signez l'Appel." src="/portail/image/Pub/bt_numerisation.jpg" border="0" /></a>
+                                                        </div>
+                                                    
+	</div>
+                                                    <div id="pnlPubGlobal22">
+		
+                                                        <div style="padding-top:5px; text-align:right; *text-align:center; width:164px; padding-bottom:10px; height:148px; margin-left:4px; float:right; *float:left;">
+                                                            <div style="background:url(image/pub/fond_bandeauLoi51.jpg) no-repeat; width:164px; height:148px; font-size:11px;">
+	                                                            <div style="padding-top:106px; padding-left:8px; padding-right:52px; *padding-right:49px;"><img alt="" src="image/pub/puce.gif" /><a href="http://www.mcccf.gouv.qc.ca/index.php?id=4436" target="_blank" style="color:white; text-decoration:none">En savoir plus...</a></div>  
+	                                                        </div>
+                                                        </div>
+                                                    
+	</div>
+                                                
+</div>
+                                                <div id="pnlFondsJeunesse">
+	
+                                                    <div style="padding-top:10px; text-align:right;*text-align:center; padding-bottom:10px;">
+                                                        <a href="http://reseaubiblioduquebec.qc.ca/portail/index.aspx?page=1&module=101&MenuID=37&cr=1&CPage=1"><img alt="Fonds Jeunesse CDJL" src="/portail/image/Pub/btFondsJeunesse.jpg" border="0" /></a>
+                                                    </div>
+                                                
+</div>
+	                                            <div id="pnlBonChoix" style="padding-top:10px;text-align:right;*text-align:center; ">
+	
+                                                    <div id='PubBanniereBonChoix' style='padding:none;'></div>
+                                                    <script type='text/javascript'>
+	                                                    var so = new SWFObject('image/Pub/bandeau_bon_choix.swf', 'bouton01', '164', '55', '6', '#FFFFFF');
+	                                                    so.write('PubBanniereBonChoix');
+	                                                </script>
+	                                                <noscript>
+	                                                    <object id="objBonChoix" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="164" height="55">
+	                                                        <param name="wmode" value="transparent" />
+	                                                        <param name="movie" value="image/Pub/bandeau_bon_choix.swf" />
+	                                                        <param name="bgcolor" value="#FFFFFF" />
+	                                                        <embed name="ctrFlash" src="image/Pub/bandeau_bon_choix.swf" swLiveConnect="false" width="164" height="55" type="application/x-shockwave-flash" bgcolor="#FFFFFF" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+                                                        </object>
+                                                    </noscript>
+	                                            
+</div>
+	                                            
+                                            </td>
+                                         </tr>
+                                         </table>
+                                    </td>
+
+								</tr>
+							</table></td>
+					</tr>
+				</table></td>
+		</tr>
+	</table>
+
+    
+<BR>
+<table cellpadding="0" cellspacing="0" border="0" align="center" width="770" height="75" style="position:relative; z-index:100">
+	<tr>
+		<td width="21" valign="top" style="padding-top:30px">
+			<img src="image/couleur01/bas_gauche.gif" width="21" height="45" border="0" align="left" onclick="return false;" onmouseover="return false;" hspace="0"></td>
+		<td width="100%" valign="top" style="padding-top:30px">
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td bgcolor="#666666">
+						<img src="image/trans.gif" width="1" height="1"></td>
+				</tr>
+				<tr>
+					<td height="43" style="padding-top:9px" valign="top" class="petit" bgcolor="#FFFFFF">
+						<a href="/login.aspx?Type=2&RID=2" status="Accès privée à BIBLIO.net" target="_blank">Accès privé</a><BR>
+						</td>
+				</tr>
+				<tr>
+					<td bgcolor="#666666">
+						<img src="image/trans.gif" width="1" height="1"></td>
+				</tr>
+			</table>
+        </td>
+		        
+            <!-- PLAN DU SITE -->
+        <td valign="top" background="image/couleur01/bas_btnfond.gif">
+			
+			<span onClick="window.location = 'index.aspx?page=2&module=900&RID=2';"><a href="#" onclick="return false;" status="Plan du site" target="_top"><img src="image/bas_btn01off.gif" width="69" height="75" hsrc="image/bas_btn01on.gif" border="0" alt="Plan du site"></a></span><img src="image/trans.gif" width="10" height="30"></td>
+        
+            <!-- ACCÉDER À VOTRE BIBLIO -->
+		<td valign="top" background="image/couleur01/bas_btnfond.gif">
+			<span onClick="window.location = 'index.aspx?page=2&module=950&RID=2';"><a href="#" onclick="return false;" status="Accéder à votre biblio" target="_top"><img src="image/bas_btn06off.gif?v=2015.01.30" width="120" height="75" hsrc="image/bas_btn06on.gif?v=2015.01.28" border="0" alt="Liste des bibliothèques du Réseau"></a></span></td>
+		
+            <!-- NOUS JOINDRE -->
+        <td valign="top" background="image/couleur01/bas_btnfond.gif">
+			
+				<span onClick="window.location = 'index.aspx?page=2&module=975&RID=2';"><a href="#" onclick="return false;" status="Nous joindre" target="_top"><img src="image/bas_btn05off.gif" hsrc="image/bas_btn05on.gif" width="102" height="75" border="0" alt="Nous joindre"></a></span>
+			</td>
+		<td valign="top" background="image/couleur01/bas_btnfond.gif">
+			<img src="image/bas_btn_fin.gif" width="3" height="75" border="0" alt="Réseau BIBLIO du Québec"></td>
+	</tr>
+</table>
+<div class="espaceMinimumFooter">&nbsp;</div>
+<div class="basPageMaster">
+    <div class="contenuFooter">
+            <div class="titrePartenaires">Partenaires</div>
+            <div class="logos">
+            <div class="imgLogos"><a href="http://www.banq.qc.ca/accueil/" target="_blank"><img title="Bibliothèque et Archives nationales du Québec 
+            (BAnQ)" alt="Bibliothèque et Archives nationales du Québec (BAnQ)" src="/portail/image/piedPage/logos/bibliosArchives02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/bibliosArchives02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/bibliosArchives02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.abpq.ca/" target="_blank">
+            <img title="Association des bibliothèques publiques du Québec" alt="Association des bibliothèques publiques du Québec" 
+            src="/portail/image/piedPage/logos/associationBibliotheques.png" onmouseover="this.src='/portail/image/piedPage/logos/associationBibliotheques_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/associationBibliotheques.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.fqm.ca/" target="_blank"><img title="Fédération québécoise des municipalités" 
+            alt="Fédération québécoise des municipalités" src="/portail/image/piedPage/logos/fqm.png"
+             onmouseover="this.src='/portail/image/piedPage/logos/fqm_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/fqm.png'" /></a></div>
+            <div class="imgLogos2"><a href="http://www.admq.qc.ca/" target="_blank"><img title="Association des directeurs municipaux du Québec" 
+            alt="Association des directeurs municipaux du Québec" src="/portail/image/piedPage/logos/ADMQ02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/ADMQ02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/ADMQ02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.ruralite.qc.ca/" target="_blank"><img title="Solidarité rurale du Québec (SRQ)" 
+            alt="Solidarité rurale du Québec (SRQ)" src="/portail/image/piedPage/logos/solidarite03.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/solidarite03_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/solidarite03.png'" /></a></div>
+            <div class="clear"></div>
+            <div class="imgLogos"><a href="http://www.umq.qc.ca/" target="_blank"><img title="Union des municipalités du Québec" 
+            alt="Union des municipalités du Québec" src="/portail/image/piedPage/logos/UMQ02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/UMQ02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/UMQ02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.arts-ville.org/" target="_blank"><img title="Les Arts et la Ville" 
+            alt="Les Arts et la Ville" src="/portail/image/piedPage/logos/artsville02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/artsville02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/artsville02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.asted.org/" target="_blank"><img 
+            title="Association pour l’avancement des sciences et des techniques de la documentation (ASTED)" 
+            alt="Association pour l’avancement des sciences et des techniques de la documentation (ASTED)" 
+            src="/portail/image/piedPage/logos/asted02.png" onmouseover="this.src='/portail/image/piedPage/logos/asted02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/asted02.png'" /></a></div>
+            <div class="imgLogos"><a href="https://cbpq.qc.ca/" target="_blank"><img 
+            title="Corporation des bibliothécaires professionnels du Québec (CBPQ)" 
+            alt="Corporation des bibliothécaires professionnels du Québec (CBPQ)" src="/portail/image/piedPage/logos/corporation02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/corporation02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/corporation02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://anel.qc.ca/" target="_blank"><img 
+            title="Association nationale des éditeurs de livres (ANEL)" 
+            alt="Association nationale des éditeurs de livres (ANEL)" src="/portail/image/piedPage/logos/anel.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/anel_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/anel.png'" /></a></div>
+            <div class="clear"></div> 
+            </div>  
+            <div class="logoRBQ"><a href="/portail/index.aspx" title="Réseau BIBLIO du Québec"></a></div> 
+            <div class="menuPiedPage">
+                <ul class="leftMargin">
+                    <li><a href="/portail/index.aspx?page=2&RID=1">Abitibi-Témiscamingue</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=2">Bas-Saint-Laurent</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=9">Capitale-Nationale</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=6">Centre-du-Québec</a></li>
+                </ul>
+                <ul class="leftMargin">
+                    <li><a href="/portail/index.aspx?page=2&RID=9">Chaudière-Appalaches</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=3">Côte-Nord</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=11">Estrie</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=4">Gaspésie/Îles-de-la-Madeleine</a></li>
+                </ul>
+                <ul class="leftMargin">
+                    <li><a href="/portail/index.aspx?page=2&RID=6">Lanaudière</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=5">Laurentides</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=6">Mauricie</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=7">Montérégie</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a href="/portail/index.aspx?page=2&RID=1">Nord-du-Québec</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=8">Outaouais</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=10">Saguenay/Lac-Saint-Jean</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>        
+            <div class="clear"></div>       
+        <div class="copyrightLANEC">
+            <a href="http://www.lanec.com" target="_blank" title="Agence Web :: LANEC" class="copyrightLanec">Agence Web</a>
+            :: <a href="http://www.lanec.com" target="_blank" title="Agence de site Web :: LANEC" class="copyrightLanec">LANEC</a> -
+            <a href="http://www.infocyble.ca/" target="_blank" title="Infocyble" class="copyrightLanec">Infocyble</a> -
+            <a href="/portail/index.aspx" title="Réseau BIBLIO du Québec" class="copyrightLanec">Réseau BIBLIO du Québec</a> ©
+        </div>
+    </div>
+</div>   
+    
+
+  
+<SCRIPT language="javascript">
+function fnTrapKD(btn){
+ if (document.all){
+   if (event.keyCode == 13)
+   { 
+     event.returnValue=false;
+     event.cancel = true;
+     btn.click();
+   } 
+ } 
+else return 
+}
+</SCRIPT>
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4145700-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3367566-7");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>

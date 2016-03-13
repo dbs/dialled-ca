@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8" />
+	<title>KTPL Main Page  TEST Platform www.king-library.on.ca </title>
+
+<script type="text/javascript" src="/aScripts/crawler.js">
+/* Text and/or Image Crawler Script v1.5 (c)2009-2011 John Davenport Scheuer
+   as first seen in http://www.dynamicdrive.com/forums/ username: jscheuer1 - This Notice Must Remain for Legal Use. updated: 4/2011 for random order option, more (see below)
+*/                                     
+</script>
+
+<script type="text/javascript" src="/aScripts/ajaxBase.js"></script>
+<script type="text/javascript" src="/aScripts/fader.js"></script>
+<link rel="stylesheet" type="text/css" href="/aCSS/ktplStyle.css">
+
+<script type="text/javascript">
+zoomIndex = 100;
+function zoom(vTemp) {
+	if  ((zoomIndex * vTemp > 200) || (zoomIndex * vTemp < 70))  {vTemp = 1 };
+	zoomIndex = zoomIndex * vTemp;
+	document.body.style.zoom = zoomIndex + "%" 
+	document.body.style['MozTransform'] = 'scale(' + zoomIndex/100 + ')';
+	document.body.style.MozTransformOrigin = "0 0";
+
+        }
+function startIt()
+{
+//	document.getElementById('loadingImg').style.visibility = 'hidden';
+	marqueeInit({
+		uniqueid: 'mycrawler2',
+		style: {
+			'padding': '5px',
+			'width': '450px',
+			'height': '210px'
+		},
+		inc: .5, //speed - pixel increment for each iteration of this marquee's movement
+		mouse: 'pause' //mouseover behavior ('pause' 'cursor driven' or false)
+	});
+}
+
+
+var vPanelHeight;
+var arMenus = new Array ("topBarMenu1","topBarMenu2" ,"topBarMenu3", "topBarMenu4","topBarMenu5","topBarMenu6","menuBox1", "menuBox2", "menuBox3", "menuBox4", "menuBox5", "menuBox6", "menuBox7")
+
+function setPanelContents(item)
+{	document.getElementById('panelContents').innerHTML = "<center>" + document.getElementById(item.id + "hide").innerHTML + "</center>";}
+function getPanelHeight()
+{
+	var xShort = document.getElementById('panel').style;
+	xShort.visibility='hidden'; xShort.position='absolute'; xShort.display='block'; xShort.height='auto';
+	vPanelHeight = document.getElementById('panel').offsetHeight + 20;
+	xShort.position='relative'; xShort.display='none';
+}
+
+function panel_down(vIndex, vAmt)
+{	// set up variables
+	var xShort = document.getElementById('panel').style; var xShortC = document.getElementById('panelContents').style;
+	// visibility set, time set, height set, and Content top set
+	xShort.visibility='visible'; xShort.display='block'; xShort.height = vIndex + 'px';
+	vTime =  Math.min( (vPanelHeight/vIndex),1); vIndex = vIndex + vAmt ;
+	xShortC.top = 10 - (10*(vPanelHeight/vIndex)) + "px"
+	if (vIndex <= 0) { xShort.display = 'none'; }
+
+ 	if ( (vAmt > 0 && vIndex < vPanelHeight ) || (vAmt < 0 && vIndex > 0 )) { t = setTimeout( function(){panel_down(vIndex, vAmt);} , vTime); }
+ 	if (vAmt < 0  && vIndex < 10 ) { boxMenuClear("xxx"); }	
+}	
+
+function boxMenuChange(item) { 
+	document.getElementById('panelContents').innerHTML = "<center>" + document.getElementById(item.id + "Hide").innerHTML  + "</center>"; 
+//	document.getElementById('panelContents').innerHTML = document.getElementById(item.id + "Hide").innerHTML  ; 
+	item.style.background='#700015'; item.style.color='white'; boxMenuClear(item.id); 
+	}
+function boxMenuClear(itemID) { 
+	for(var i in arMenus){ if (arMenus[i] != itemID) { document.getElementById(arMenus[i]).style.color= ""; document.getElementById(arMenus[i]).style.background="";} }
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+<div id="wrapper"><a id="top" name="top"></a>
+
+<div class="Header" aria-activedescendant="topBarMenus" >
+	<div id="topBarMenus" aria-expanded="true">
+	<span id="topBarMenu1" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);">Contact Us</span> 
+	<span id="topBarMenu2" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);">Location & Hours</span> 
+	<span id="topBarMenu3" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);">About Us</span> 
+	<span id="topBarMenu4" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);">My Account</span> 
+	<span id="topBarMenu5" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);">Programs</span> 
+	<span id="topBarMenu6" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);">Donate</span> 
+	</div> <!-- end of topBarMenus div -->
+
+</div>
+
+<div id="topBarContent">
+	<a href="index.php"><img src="Images/KTPL_Logo-A.png" border=0 style = "position: relative; top: -10px; " title="KTPL - Home" alt="King Township Public Library - Home" ></a>
+	<span id="topBarSearch1"><a style="text-decoration: none;" href="http://olco.canlib.ca/client/en_US/king" target="_blank" ><input type="button" class="catBtn" value="Click to Search KTPL Catalogue"></a></span>
+	<form id="topBarSearch2" method="post" action= "/siteSearch.php">Library Website Search<br><input  id="searchstring" name="searchstring" onchange="document.getElementById('topBarSearch2').submit" type="text" class="topBarSearchInput" placeholder="Keyword"></form>
+	<span id="topBarSearch2A" >
+	<script type="text/javascript">// <![CDATA[ var _baLocale = 'us', _baUseCookies = true, _baHiddenMode = false, _baHideOnLoad = true; // ]]></script>
+<script type="text/javascript" src="//www.browsealoud.com/plus/scripts/ba.js"></script></span>
+
+
+	
+	<span id="topBarSearch3"><a name="grow" onclick="zoom(1.1);" style="font-weight: bold; font-size: 20px;">A&uarr;</a>
+	<a name="grow" onclick="zoom(.9);" style="font-weight: normal; font-size: 12px;">A&darr;</a></span>
+
+<div id="menuBoxWrapper" >
+<div id="menuBox1" class="menuBox" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 7);" >Using the Library</div>
+<div id="menuBox2" class="menuBox" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 7);">Apps, Books, & eReading</div>
+<div id="menuBox3" class="menuBox" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 7);">Databases</div>
+<div id="menuBox4" class="menuBox" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 7);">Local <br>History</div>
+<div id="menuBox5" class="menuBox" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 7);">Explore <br>Our<br> Community</div>
+<div id="menuBox6" class="menuBox" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 7);">Adults & Seniors</div>
+<div id="menuBox7" class="menuBox" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 7);">Kids <br> & Teens</div>
+</div>
+
+</div> <!-- end of topBarContent div -->
+
+
+<!-- *************************** Panel Block Content **************************** -->
+<br>
+<div id="panel" class="panel" >
+	<!-- gradient divider --><div class="Header1" style="height: 5px;" > &nbsp; </div> <br>
+	<div id="panelContents">  </div>
+	<!-- Close button --><div id="btnClose" tabIndex="0" onkeydown="if (event.keyCode == 13) this.onclick();"  onclick="panel_down(vPanelHeight, -5);"><font style="background: #888888; color: #ffffff;">&#10006;</font> Close &nbsp; &nbsp;  </div> <br>
+	<!-- gradient divider --><div class="Header1" style="height: 5px;" > &nbsp; </div> <br>
+</div> <!-- end of Panel div -->
+
+<!-- *************************** Centre Block Content **************************** -->
+<div id="centerBlock">
+
+<div id="centerBlockLeft"> 
+	<script>
+		var indexContent=0;
+		arContent[0] = "<a href='WW1Letters/EarlCampbell.php' onclick='fader(0);'  target=_blank ><img src='FaderFiles/Earl Campbell banner2.jpg' class='boxImage'></a>";arContent[1] = "<a href='Images/March Break Booklet - 2016.pdf' onclick='fader(0);'  ><img src='FaderFiles/March Break 2016.jpg' class='boxImage'></a>";arContent[2] = "<a href='https://www.surveymonkey.com/r/ShopKINGResidentSurvey' onclick='fader(0);'  target=_blank ><img src='FaderFiles/shopkingbanner.jpg' class='boxImage'></a>";arContent[3] = "<a href='Pages/Download_Help.php' onclick='fader(0);'  target=_blank ><img src='FaderFiles/eBooks large banner.jpg' class='boxImage'></a>";arContent[4] = "<a href='Pages/Magazine_Help.php' onclick='fader(0);'  target=_blank ><img src='FaderFiles/ziniowebbanner.jpg' class='boxImage'></a>";arContent[5] = "<a href='Pages/pageKidsBooks.php' onclick='fader(0);'  target=_blank ><img src='FaderFiles/ebooks for kids banner.jpg' class='boxImage'></a>";arContent[6] = "<a href='Pages/Video_Help.php' onclick='fader(0);'  target=_blank ><img src='FaderFiles/Hoopla banner.jpg' class='boxImage'></a>";	</script>
+	<div id="BoxFader" ><a href='WW1Letters/EarlCampbell.php' onclick='fader(0);'  target=_blank ><img src='FaderFiles/Earl Campbell banner2.jpg' class='boxImage'></a></div>
+	<div id="BoxFader1" ><a href='WW1Letters/EarlCampbell.php' onclick='fader(0);'  target=_blank ><img src='FaderFiles/Earl Campbell banner2.jpg' class='boxImage'></a></div>
+
+	<!-- fader index div -->	
+	<div style="position: relative; top: 360px; left: 5px; ">
+		<div id="faderIndex0" class="faderIndex" style="left: 290px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(0);" width="5" height="5"></div>
+		<div id="faderIndex1" class="faderIndex" style="left: 305px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(1);" width="5" height="5"></div>
+		<div id="faderIndex2" class="faderIndex" style="left: 320px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(2);" width="5" height="5"></div>
+		<div id="faderIndex3" class="faderIndex" style="left: 335px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(3);" width="5" height="5"></div>
+		<div id="faderIndex4" class="faderIndex" style="left: 350px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(4);" width="5" height="5"></div>
+		<div id="faderIndex5" class="faderIndex" style="left: 365px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(5);" width="5" height="5"></div>
+		<div id="faderIndex6" class="faderIndex" style="left: 380px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(6);" width="5" height="5"></div>
+		<div id="faderIndex7" class="faderIndex" style="left: 395px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(7);" width="5" height="5"></div>
+		<div id="faderIndex8" class="faderIndex" style="left: 410px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(8);" width="5" height="5"></div>
+		<div id="faderIndex9" class="faderIndex" style="left: 425px; height: 5px;"><img src="Images/spacer.gif" onclick="jump(9);" width="5" height="5"></div>
+	</div>
+	<!-- fader index div end-->	
+
+	<script>	var lenContent = arContent.length; for ($i = lenContent; $i<= 9; $i++) {$temp = "faderIndex"+$i; document.getElementById($temp).style.visibility="hidden"; }
+			fade();
+	</script>
+
+</div>
+
+
+<div id="centerBlockRight"> 
+	<body lang=EN-CA link="#666633" vlink="#333366"><div class=WordSection1><p class=MsoNormal><b><span style='color:#7030A0'><a href="http://www.kinglibrary.ca/Images/March%20Break%20Booklet%20-%202016.pdf"><span style='color:#7030A0'>March Break 2016 @ the Library</span></a> &nbsp;</span></b><b><span style='color:#1F497D'><o:p></o:p></span></b></p><p class=MsoNormal>Click <a href="http://www.kinglibrary.ca/Images/March%20Break%20Booklet%20-%202016.pdf">here</a> to check out the library&#8217;s programs for March Break.&nbsp; Register early to avoid disappointment! &nbsp;<o:p></o:p></p><p class=MsoNormal><b><span style='color:#7030A0'><o:p>&nbsp;</o:p></span></b></p><p class=MsoNormal><b><span style='color:#7030A0'><o:p>&nbsp;</o:p></span></b></p><p class=MsoNormal><b><u><span style='color:#7030A0'>Pack your Bags <o:p></o:p></span></u></b></p><p class=MsoNormal><span style='color:windowtext'>Plan a getaway or a travel adventure with travel books from the library.&nbsp; Learn a new language online using </span><a href="https://connect.mangolanguages.com/king-township/login?u=874328">Mango</a><span style='color:windowtext'> or check out things to see and do with <a href="http://www.atozworldtravel.com/">A to Z Travel. &nbsp;</a>&nbsp;All with your library card! <o:p></o:p></span></p><p class=MsoNormal><o:p>&nbsp;</o:p></p></div></div>
+
+<br><br>
+<div id="externalBar">
+	<div id="externalBar1"><a href="http://www.king.ca/Pages/default.aspx" target="_blank"><img src="Images/BI_KingTownLogo.png" style="width: 123px; height: 50px; " alt="Go to King Township" title="Go to King Township"></a></div>
+	<div id="externalBar2"><a href="http://host2.evanced.info/kingtownship/evanced/eventcalendar.asp?EventType=ALL&Lib=ALL" target="_blank"><img src="Images/BI_Calendar.png" style="width: 101px; height: 50px; " alt="Go to the Community Calendar" title="Go to the Community Calendar"></a></div>
+	<div id="externalBar3"><a href="Pages/Newsletter_Recent.php"><img src="Images/BI_Newsletter.png" alt="Go to KTPL Newsletters" style="width: 101px; height: 50px; " title="Go to KTPL Newsletters"></a></div>
+	<div id="externalBar4"><a href="http://www.twitter.com/kinglibraries" target="_blank"><img src="Images/BI_Twitter.png" style="width: 101px; height: 50px; " alt="Go to Twitter" title="Go to Twitter"></a></div>
+	<div id="externalBar5"><a href="https://instagram.com/king_township_public_library" target="_blank"><img src="Images/BI_instagram.png" style="width: 101px; height: 50px; " alt="Go to Instagram" title="Go to Instagram"></a></div>
+	<div id="externalBar6"><a href="http://www.youtube.com" target="_blank"><img src="Images/BI_Youtube.png" style="width: 101px; height: 50px; " alt="Go to YouTube" title="Go to YouTube"></a></div>
+	<div id="externalBar7"><a href="http://www.facebook.com/KTPLibrary" target="_blank"><img src="Images/BI_Facebook.png" style="width: 101px; height: 50px; " alt="Go to Facebook" title="Go to Facebook"></a></div>
+	<div id="externalBar8"><a href="http://www.browsealoud.com/uk/download/" target="_blank"><img src="Images/downloadBrowsealoud.gif"  alt="Download and Install BrowseAloud" title="Download and Install BrowseAloud"></a></div>
+
+<br><br><br>
+<div class="Header1" style="height: 5px;" > &nbsp; </div> <br>
+</div> <!-- end of External Link Bar div -->
+
+
+<!-- *************************** Below Block Content **************************** -->
+<br><br>
+<div id = "belowWrapper" >
+	<!-- Below Block fader box -->
+	<div id="belowFader">
+		<!-- Scroller requirements -->
+		<form target='_blank' method='POST' action='' id="form" >
+			<div class="marquee" id="mycrawler2" style=" visibility: visible;"><br>
+				<div id="loadingImg" style="background: #f7931e; color: white; width: 90%; " ><img src="Images/Child_drawing.gif" align="middle"> Loading ... thanks for your patience</div>
+			</div>
+		</form>
+
+		<div id="infoPerson" style=" display: none;"></div>
+		<form id="form1" style=" display: none;"></form>
+		<script> aData( "scrollerAjax.php"); </script>
+	</div>
+
+
+	<!-- Below Block box 1-->
+	<div id="belowBox1">
+	</div>
+
+	<!-- Below Block box 2-->
+	<div id="belowBox2">
+	</div>
+
+	<div id="belowBox3">
+	</div>
+
+
+	<div id="belowTwitter">
+<!--		<a class="twitter-timeline"   href="https://twitter.com/KingLibraries"  data-widget-id="421379557816414208">Tweets by @KingLibraries</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+-->
+		<a class="twitter-timeline"  style="width: 300px;" ref="https://twitter.com/KingLibraries"  data-widget-id="427888781081837568">Tweets by @KingLibraries</a>
+    		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+	</div>
+</div> <!-- end of Below Block div -->
+
+<!-- *************************** Bottom Bar  Block Content **************************** -->
+<div style="position: relative; width: 100%">
+	<br><br><br>
+	<div class="Header" aria-activedescendant="topBarMenus" >
+		<div id="topBarMenus" aria-expanded="true">
+		<span id="topBarMenu1" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);scroll(0,0);">Contact Us</span> 
+		<span id="topBarMenu2" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);scroll(0,0);">Location & Hours</span> 
+		<span id="topBarMenu3" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);scroll(0,0);">About Us</span> 
+		<span id="topBarMenu4" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);scroll(0,0);">My Account</span> 
+		<span id="topBarMenu5" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);scroll(0,0);">Programs</span> 
+		<span id="topBarMenu6" tabindex="0" onkeydown="if (event.keyCode == 13) this.onclick();" onclick="boxMenuChange(this); getPanelHeight(); panel_down(10, 5);scroll(0,0);">Donate</span> 
+		</div> <!-- end of topBarMenus div -->
+	</div>
+	<br>
+	<div style="text-align: center; width: 100%; font-size: 9px;"> &copy; Fenside Consulting Ltd. 2015</div>
+</div>
+</div>
+<!-- *************************** Wrapper End **************************** -->
+
+</div> <!-- end of Wrapper div -->
+
+
+<!-- *************************** Hidden Menu Content **************************** -->
+
+<div id="topBarMenu1Hide" class="menuHide"></div>
+<div id="topBarMenu2Hide" class="menuHide"></div>
+<div id="topBarMenu3Hide" class="menuHide"></div>
+<div id="topBarMenu4Hide" class="menuHide"></div>
+<div id="topBarMenu5Hide" class="menuHide"></div>
+<div id="topBarMenu6Hide" class="menuHide"></div>
+<div id="menuBox1Hide" class="menuHide"></div>
+<div id="menuBox2Hide" class="menuHide"></div>
+<div id="menuBox3Hide" class="menuHide"><table><tr><td>
+<font class='panelHead'>Databases</font><br>
+<div class='panelDiv'><a href='Pages/Business_Information.php'>Business Databases</a></div>
+<div class='panelDiv'><a href='Pages/Database_BySubject.php'>Databases by Subject</a></div>
+<div class='panelDiv'><a href='Pages/Database_ByTitle.php'>Databases by Title</a></div>
+<div class='panelDiv'><a href='Pages/Local_History.php'>Genealogy & Local History</a></div>
+<div class='panelDiv'><a href='http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=sols148&profile=mfe'>General Search</a></div>
+<div class='panelDiv'><a href='Pages/pageKidsHomework.php'>Kids Databases</a></div>
+<div class='panelDiv'><a href='Pages/Database_BySubject.php'>Teen Databases</a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Popular Databases </font><br>
+<div class='panelDiv'><a href='http://www.atozworldtravel.com/worldtravel1.asp?c=kinglibrary'>A-Z World Travel</a></div>
+<div class='panelDiv'><a href='http://ancestrylibrary.proquest.com/'>Ancestry Library Edition</a></div>
+<div class='panelDiv'><a href='http://library.eb.com/storelibrarycard?id=kingtwnsppl'>Britannica Encyclopaedia</a></div>
+<div class='panelDiv'><a href='http://quest.eb.com/storelibrarycard?id=kingtwnsppl'>Britannica Image Quest</a></div>
+<div class='panelDiv'><a href='http://search.proquest.com/?accountid=62301'>Canadian Business & Current Affairs</a></div>
+<div class='panelDiv'><a href='http://www.careercruising.com/home/autologin.aspx'>Career Cruising</a></div>
+<div class='panelDiv'><a href='http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=sols148&profile=chc'>Consumer Health Complete</a></div>
+<div class='panelDiv'><a href='http://search.ebscohost.com/login.aspx?authtype=ip%2ccpid&custid=sols148%20&profile=crcrc'>Consumer Reports & Best Cars</a></div>
+</td><td><font class='panelHead'> </font><br>
+<div class='panelDiv'><a href='http://www.mto.gov.on.ca/english/publications/handbooks.shtml'>Driver's Handbook (MTO) </a></div>
+<div class='panelDiv'><a href='http://search.proquest.com/hnpglobeandmail/barcode?accountid=62301&groupid=16728'>Globe & Mail 1844-2012</a></div>
+<div class='panelDiv'><a href='http://www.learningexpresslibrary3.com/?AuthToken=3F1F7A2F-8932-4AFF-BB74-6D0C78639AEE'>Learning Express</a></div>
+<div class='panelDiv'><a href='http://connect.mangolanguages.com/king-township/start'>Mango Languages</a></div>
+<div class='panelDiv'><a href='http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=sols148&profile=mfe'>MasterFile (General Search) </a></div>
+<div class='panelDiv'><a href='http://search.epnet.com/Login.aspx?custid=sols148&ip=yes&lp=cpidlogin.asp?custid=sols148&ref=&authtype=ip,cpid'>Novelist (What to read next)</a></div>
+<div class='panelDiv'><a href='http://siblive.shakespeareinbits.com/'>Shakespeare in Bits</a></div>
+<div class='panelDiv'><a href='http://search.proquest.com/hnptorontostar/barcode?accountid=62301&groupid=16728'>Toronto Star 1894-2011</a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>eContent</font><br>
+<div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Download_Help.php'>Help Quick Tips</a></div>
+<div class='panelDiv'><a href='Pages/Video_Help.php'>Hoopla Digital Media</a></div>
+<div class='panelDiv'><a href='Pages/Video_Help.php'>IndieFlix Streaming Video</a></div>
+<div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Audio_Help.php'>eAudiobooks </a></div>
+<div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Ebook_Help.php'>eBooks </a></div>
+<div class='panelDiv'><a href='Pages/Magazine_Help.php'>eMagazines </a></div>
+</td></tr></table>
+</div>
+<div id="menuBox4Hide" class="menuHide"><table><tr><td>
+<font class='panelHead'>Digitized Local History Books</font><br>
+<div class='panelDiv'><a href='http://www.ourroots.ca/e/toc.aspx?id=13269'>Album of Oldies</a></div>
+<div class='panelDiv'><a href='http://www.ourroots.ca/e/toc.aspx?id=11412'>Early Settlements of King /Elizabeth McClure Gillham</a></div>
+<div class='panelDiv'><a href='http://ourontario.ca/'>Our Ontario - Digitized Books</a></div>
+<div class='panelDiv'><a href='http://www.ourroots.ca/toc.aspx?id=11807&qryID=f94856ac-eeb1-4c1d-8932-e80f1ca57fd7'>Schomberg & its School /Sawdon & Love </a></div>
+<div class='panelDiv'><a href='http://www.ourroots.ca/e/toc.aspx?id=11802'>Story of Kettleby/ J.M. Walton </a></div>
+<div class='panelDiv'><a href='Images/Bridging of the Three Centuries.pdf'>The Bridging of Three Centuries:  Pheobe Crossley Lloyd</a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Local History</font><br>
+<div class='panelDiv'><a href='http://ancestrylibrary.proquest.com/'>Ancestry Library Edition</a></div>
+<div class='panelDiv'><a href='Pages/Local_History.php'>Genealogy & Local History</a></div>
+<div class='panelDiv'><a href='Pages/Local_History.php'>Letters from the Great War (1915-1919) - Earl  Campbell</a></div>
+<div class='panelDiv'><a href='Pages/Local_History.php'>Our Soldiers - Great War, W.W. 2</a></div>
+<div class='panelDiv'><a href='Pages/Villages_Home.php'>People and Villages of King</a></div>
+<div class='panelDiv'><a href='Pages/Local_History.php'>Timeless King Online</a></div>
+<div class='panelDiv'><a href='tweedHistory.php?pageID=heritage&subPageID=tweed&param=Kettleby'>Tweedsmuir History - local history of villages & people, </a></div>
+<div class='panelDiv'><a href='http://www.kinglibrary.ca/WalterRolling/sepia.php?pageID=sepia'>Walter Rolling Online</a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Maps and Properties</font><br>
+<div class='panelDiv'><a href='Pages/Cemetery_Links.php'>Cemetery Map King Township </a></div>
+<div class='panelDiv'><a href='http://findyourproperty.moraineforlife.org/'>Find Property Oak Ridges Moraine</a></div>
+<div class='panelDiv'><a href='Pages/Maps.php'>Fire Insurance Maps 1904 & 1910</a></div>
+<div class='panelDiv'><a href='http://www.king.ca/Visitors/HistoryandHeritage/Heritage/Heritage%20Sites/Pages/default.aspx'>Heritage Sites in King</a></div>
+<div class='panelDiv'><a href='Pages/Maps.php'>Maps - Current & Historical</a></div>
+</td></tr></table>
+</div>
+<div id="menuBox5Hide" class="menuHide"><table><tr><td>
+<font class='panelHead'>Business</font><br>
+<div class='panelDiv'><a href='http://services.bizpal-perle.ca/eng/?b=01'>BizPal</a></div>
+<div class='panelDiv'><a href='Pages/Business_Information.php'>Business Information</a></div>
+<div class='panelDiv'><a href='http://kingchamber.ca/'>Chambers of Commerce</a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Community</font><br>
+<div class='panelDiv'><a href='Pages/Explore_Bus.php'>Bus Routes YRT 22 & 61</a></div>
+<div class='panelDiv'><a href='http://host2.evanced.info/kingtownship/evanced/eventcalendar.asp?EventType=ALL&Lib=ALL'>Community Calendar</a></div>
+<div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Community_Contacts.php'>Community Contacts</a></div>
+<div class='panelDiv'><a href='Pages/Community_Groups.php'>Community Groups</a></div>
+<div class='panelDiv'><a href='Pages/Explore_train.php'>Getting around (Train & Taxi)</a></div>
+<div class='panelDiv'><a href='Pages/Government_Services.php'>Government Services </a></div>
+<div class='panelDiv'><a href='http://www.king.ca/'>King Township</a></div>
+<div class='panelDiv'><a href='Pages/Newcomer_Immigrants.php'>Newcomers & Immigration </a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Education & Careers </font><br>
+<div class='panelDiv'><a href='http://www.careercruising.com/home/autologin.aspx'>Career Cruising</a></div>
+<div class='panelDiv'><a href='Pages/Continuing_Education.php'>Continuing Education</a></div>
+<div class='panelDiv'><a href='Pages/Community_Contacts.php'>Schools </a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Maps and Properties</font><br>
+<div class='panelDiv'><a href='http://www.kinglibrary.ca/pdfs/AMP%202012%20User%20Guide%20External.pdf'>About my Property MPAC </a></div>
+<div class='panelDiv'><a href='Pages/Cemetery_Links.php'>Cemetery Map King Township </a></div>
+<div class='panelDiv'><a href='http://findyourproperty.moraineforlife.org/'>Find Property Oak Ridges Moraine</a></div>
+<div class='panelDiv'><a href='Pages/Maps.php'>Fire Insurance Maps 1904 & 1910</a></div>
+<div class='panelDiv'><a href='Pages/Maps.php'>Maps - Current & Historical</a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Newspapers</font><br>
+<div class='panelDiv'><a href='http://www.yorkregion.com/yorkregion-community/'>King Connection</a></div>
+<div class='panelDiv'><a href='http://www.kingsentinel.com/'>King Weekly Sentinel</a></div>
+<div class='panelDiv'><a href='http://www.ourontario.ca/demo/News.html'>Other Newspapers</a></div>
+</td></tr></table>
+</div>
+<div id="menuBox6Hide" class="menuHide"><table><tr><td>
+<font class='panelHead'>Databases & eReading</font><br>
+<div class='panelDiv'><a href='Pages/Database_BySubject.php'>Databases</a></div>
+<div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Download_Help.php'>Help Quick Tips</a></div>
+<div class='panelDiv'><a href='Pages/Video_Help.php'>Hoopla Digital Media</a></div>
+<div class='panelDiv'><a href='Pages/Video_Help.php'>IndieFlix Streaming Video</a></div>
+<div class='panelDiv'><a href='Pages/Librarycard_smart.php'>Library card on Smartphone</a></div>
+<div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Audio_Help.php'>eAudiobooks </a></div>
+<div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Ebook_Help.php'>eBooks </a></div>
+<div class='panelDiv'><a href='Pages/Magazine_Help.php'>eMagazines </a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Information Links </font><br>
+<div class='panelDiv'><a href='Pages/Accessibility_Main.php'>Accessibility</a></div>
+<div class='panelDiv'><a href='http://ancestrylibrary.proquest.com/'>Ancestry Library Edition</a></div>
+<div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Community_Contacts.php'>Community Contacts</a></div>
+<div class='panelDiv'><a href='Pages/Seniors_Finance.php'>Financial</a></div>
+<div class='panelDiv'><a href='Pages/Fun_Games.php'>Fun & Games </a></div>
+<div class='panelDiv'><a href='Pages/Explore_train.php'>Getting around (Train & Taxi)</a></div>
+<div class='panelDiv'><a href='Pages/Government_Services.php'>Government Services </a></div>
+<div class='panelDiv'><a href='Pages/Seniors_Health.php'>Health</a></div>
+</td><td><font class='panelHead'> </font><br>
+<div class='panelDiv'><a href='Pages/homebound_program.php'>Homebound Service</a></div>
+<div class='panelDiv'><a href='Pages/Seniors_Housing.php'>Housing</a></div>
+<div class='panelDiv'><a href='Pages/Seniors_Legal.php'>Legal</a></div>
+<div class='panelDiv'><a href='Pages/Seniors_Leisure.php'>Leisure & Travel</a></div>
+<div class='panelDiv'><a href='Pages/Maps.php'>Maps - Current & Historical</a></div>
+<div class='panelDiv'><a href='Pages/Mouse_Keyboard.php'>Mouse & Keyboarding Exercises </a></div>
+<div class='panelDiv'><a href='Pages/Local_Newspapers.php'>Newspapers </a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Programs</font><br>
+<div class='panelDiv'><a href='Pages/Book_Clubs.php'>Book Clubs</a></div>
+<div class='panelDiv'><a href='Pages/Camera_Club.php'>Camera Club</a></div>
+<div class='panelDiv'><a href='http://host2.evanced.info/kingtownship/evanced/eventcalendar.asp?EventType=ALL&Lib=ALL'>Community Calendar</a></div>
+<div class='panelDiv'><a href='Pages/Computer_Lessons.php'>Computer & Internet Lessons</a></div>
+<div class='panelDiv'><a href='Pages/Library_Week.php'>Ontario Public Library Week</a></div>
+<div class='panelDiv'><a href='Pages/Travel_Diaries.php'>Travel Diary Series</a></div>
+<div class='panelDiv'><a href=''>Write Now @ King</a></div>
+</td></tr></table>
+</div>
+<div id="menuBox7Hide" class="menuHide"><table><tr><td>
+<font class='panelHead'>Kids</font><br>
+<div class='panelDiv'><a href='Pages/pageKidsMain5.php'>Kids</a></div>
+</td><td style='border-left: 1px solid black;'>
+<font class='panelHead'>Teens </font><br>
+<div class='panelDiv'><a href='Pages/pageTeensMain.php'>Teens</a></div>
+</td></tr></table>
+</div>
+
+<script>
+document.getElementById("topBarMenu1Hide").innerHTML = "<table><tr><td><font class='panelHead'>Contact Us</font><br><div class='panelDiv'><a href='Pages/Branch_Hours.php'>Branch Phone #</a></div><div class='panelDiv'><a href='Pages/Employment_Opportunities.php'>Employment Opportunities</a></div><div class='panelDiv'><a href='Pages/Management_Information.php'>Management Information</a></div></td></tr></table>";
+document.getElementById("topBarMenu2Hide").innerHTML = "<table><tr><td><font class='panelHead'>Location and Hours</font><br><div class='panelDiv'><a href='Pages/Branch_Hours.php'>Branch Hours</a></div><div class='panelDiv'><a href='Pages/Location_Ansnorveldt.php'>Location - Ansnorveldt Public Library</a></div><div class='panelDiv'><a href='Pages/Location_King.php'>Location - King City Public Library</a></div><div class='panelDiv'><a href='Pages/Location_Nobleton.php'>Location - Nobleton Public Library</a></div><div class='panelDiv'><a href='Pages/Location_Schomberg.php'>Location - Schomberg Public Library</a></div></td></tr></table>";
+document.getElementById("topBarMenu3Hide").innerHTML = "<table><tr><td><font class='panelHead'>About Us</font><br><div class='panelDiv'><a href='http://host2.evanced.info/kingtownship/evanced/eventcalendar.asp?EventType=ALL&Lib=ALL'>Community Calendar</a></div><div class='panelDiv'><a href='Pages/Employment_Opportunities.php'>Employment Opportunities</a></div><div class='panelDiv'><a href='Pages/Library_History.php'>History of Libraries</a></div><div class='panelDiv'><a href='Pages/Holiday_Closures.php'>Holiday Closures</a></div><div class='panelDiv'><a href='Pages/Library_Partners.php'>Library Partners</a></div><div class='panelDiv'><a href='http://www.youtube.com/watch?v=3d_K0527_pE'>Library Promotional Video</a></div><div class='panelDiv'><a href='Pages/Library_Partners.php'>Neighbouring Libraries</a></div><div class='panelDiv'><a href='Pages/Newsletter_Recent.php'>Newsletter</a></div></td><td><font class='panelHead'> </font><br><div class='panelDiv'><a href='http://host2.evanced.info/kingtownship/evanced/eventcalendar.asp?EventType=ALL&Lib=ALL'>Programs</a></div><div class='panelDiv'><a href=' http://kinglibrary.ca/cgi-bin/portal2.cgi'>Staff Portal</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Board Information</font><br><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Board_Minutes.php'>Agendas & Minutes</a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Board_Minutes.php'>Board Meeting Schedule </a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Board_Minutes.php'>Board Members</a></div><div class='panelDiv'><a href='Pages/Board_NewMember.php'>How to become a Board Member</a></div><div class='panelDiv'><a href='Pages/Library_Policies.php'>Library Policies</a></div><div class='panelDiv'><a href='http://www.kinglibrary.ca/cgi-bin/meetings_new.cgi'>Meeting Materials Archive</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Donate </font><br><div class='panelDiv'><a href='https://www.canadahelps.org/en/search/app/?q=king+township+public+library&models=charity.charityprofile'>Canada Helps</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Reports</font><br><div class='panelDiv'><a href=''>Facilities Master Plan</a></div><div class='panelDiv'><a href=''>Strategic Plan 2013-2016</a></div></td></tr></table>";
+document.getElementById("topBarMenu4Hide").innerHTML = "<table><tr><td><font class='panelHead'>My Account</font><br><div class='panelDiv'><a href='http://olco.canlib.ca/client/king'>My Account </a></div></td></tr></table>";
+document.getElementById("topBarMenu5Hide").innerHTML = "<table><tr><td><font class='panelHead'>Adults and Seniors</font><br><div class='panelDiv'><a href='Pages/Book_Clubs.php'>Book Clubs</a></div><div class='panelDiv'><a href='Pages/Camera_Club.php'>Camera Club</a></div><div class='panelDiv'><a href='Pages/Computer_Lessons.php'>Computer & Internet Lessons</a></div><div class='panelDiv'><a href='Pages/Travel_Diaries.php'>Travel Diary Series</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Kids</font><br><div class='panelDiv'><a href='Pages/pageKidsEvents.php'>Events</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Newsletter</font><br><div class='panelDiv'><a href='Pages/Newsletter_Recent.php'>Newsletter</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Programs</font><br><div class='panelDiv'><a href='http://host2.evanced.info/kingtownship/evanced/eventcalendar.asp?EventType=ALL&Lib=ALL'>Community Calendar</a></div><div class='panelDiv'><a href='Pages/Library_Week.php'>Ontario Public Library Week</a></div><div class='panelDiv'><a href='Images/Library Services Brochure 2015.pdf'>Programs & Services Guide</a></div></td></tr></table>";
+document.getElementById("topBarMenu6Hide").innerHTML = "<table><tr><td><font class='panelHead'>Donate </font><br><div class='panelDiv'><a href='https://www.canadahelps.org/en/search/app/?q=king+township+public+library&models=charity.charityprofile'>Canada Helps</a></div></td></tr></table>";
+document.getElementById("menuBox1Hide").innerHTML = "<table><tr><td><font class='panelHead'>Accessibility </font><br><div class='panelDiv'><a href='Pages/Accessibility_Main.php'>Accessibility</a></div><div class='panelDiv'><a href='Pages/Accessibility_Browsealoud.php'>BrowseAloud text & translation </a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Borrowing Material</font><br><div class='panelDiv'><a href='http://olco.canlib.ca/client/king'>Best Sellers</a></div><div class='panelDiv'><a href='Pages/BorrowingMaterial_eMailHolds.php'>Due Date Reminders</a></div><div class='panelDiv'><a href='Pages/BorrowingMaterial_eMailHolds.php'>Email Notifications</a></div><div class='panelDiv'><a href='Pages/Loan_Periods.php'>Holds & Renewals</a></div><div class='panelDiv'><a href='Pages/BorrowingMaterial_Interlibraryloans.php'>Interlibrary Loan</a></div><div class='panelDiv'><a href='Pages/Library_Charges.php'>Library Charges</a></div><div class='panelDiv'><a href='Pages/Loan_Periods.php'>Loan Periods</a></div><div class='panelDiv'><a href='http://olco.canlib.ca/client/king'>My Account </a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Get a library card </font><br><div class='panelDiv'><a href='Pages/Using_Library.php'>How to get a library card</a></div><div class='panelDiv'><a href='Pages/Librarycard_smart.php'>Library card on Smartphone</a></div><div class='panelDiv'><a href='Pages/Library_Partners.php'>Neighbouring Libraries</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Services</font><br><div class='panelDiv'><a href='Pages/Garbage_Tags.php'>Bag Tags & Battery Recycling</a></div><div class='panelDiv'><a href='Pages/Class_Visits.php'>Class Visits & Outreach</a></div><div class='panelDiv'><a href='Pages/Community_Calendar.php'>Community Calendar</a></div><div class='panelDiv'><a href='Pages/homebound_program.php'>Homebound Service</a></div><div class='panelDiv'><a href='Pages/internet_wifi.php'>Internet & WiFI</a></div><div class='panelDiv'><a href='Pages/meeting_room.php'>Meeting Room & Equipment Rental</a></div><div class='panelDiv'><a href='Pages/Library_Charges.php'>Photocopy, Fax, Scan to email</a></div><div class='panelDiv'><a href='Images/Library Services Brochure 2015.pdf'>Programs & Services Guide</a></div></td><td><font class='panelHead'> </font><br><div class='panelDiv'><a href='Pages/reference_advisory.php'>Reference & Reader's Advisory</a></div></td></tr></table>";
+document.getElementById("menuBox2Hide").innerHTML = "<table><tr><td><font class='panelHead'>Books, Movies, eReading</font><br><div class='panelDiv'><a href='http://olco.canlib.ca/client/king'>Award Winners</a></div><div class='panelDiv'><a href='http://olco.canlib.ca/client/king'>Best Sellers</a></div><div class='panelDiv'><a href='http://olco.canlib.ca/client/king'>Books, Movies, eReading</a></div><div class='panelDiv'><a href='Pages/Download_Help.php'>Downloadable eBooks, eAudiobooks, Streaming Movies and Music</a></div><div class='panelDiv'><a href='http://olco.canlib.ca/client/king/search/results?qf=ITYPE%09Material+Type%091%3AKT-FFILM%091%3AKT-FFILM&st=TL'>Foreign Films</a></div><div class='panelDiv'><a href='http://olco.canlib.ca/client/king'>Placing Holds & Renewals</a></div><div class='panelDiv'><a href='http://olco.canlib.ca/client/king/search/results?qf=ITYPE%09Material+Type%091%3AKTTV%091%3AKTTV&st=TL'>TV Series</a></div><div class='panelDiv'><a href='Pages/Read_Next.php'>What to Read Next</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Mobile Apps</font><br><div class='panelDiv'><a href='Pages/Mobile_Apps.php'>3M eBooks</a></div><div class='panelDiv'><a href='Pages/Mobile_Apps.php'>Access my Library</a></div><div class='panelDiv'><a href='Pages/Mobile_Apps.php'>Bookmyne </a></div><div class='panelDiv'><a href='Pages/Mobile_Apps.php'>Ebscohost Databases</a></div><div class='panelDiv'><a href='Pages/Mobile_Apps.php'>Keyring -smartphone library card</a></div><div class='panelDiv'><a href='Pages/Mobile_Apps.php'>Mango Languages App</a></div><div class='panelDiv'><a href='Pages/Mobile_Apps.php'>OneClickDigital-eBooks & eAudioBooks</a></div><div class='panelDiv'><a href='Pages/Mobile_Apps.php'>Overdrive-eBooks & eAudio</a></div></td><td><font class='panelHead'> </font><br><div class='panelDiv'><a href='http://www.king.ca/KingPages/mobileappregistration/Pages/default.aspx'>Twp of King - King-miCity </a></div></td></tr></table>";
+document.getElementById("menuBox3Hide").innerHTML = "<table><tr><td><font class='panelHead'>Databases</font><br><div class='panelDiv'><a href='Pages/Business_Information.php'>Business Databases</a></div><div class='panelDiv'><a href='Pages/Database_BySubject.php'>Databases by Subject</a></div><div class='panelDiv'><a href='Pages/Database_ByTitle.php'>Databases by Title</a></div><div class='panelDiv'><a href='Pages/Local_History.php'>Genealogy & Local History</a></div><div class='panelDiv'><a href='http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=sols148&profile=mfe'>General Search</a></div><div class='panelDiv'><a href='Pages/pageKidsHomework.php'>Kids Databases</a></div><div class='panelDiv'><a href='Pages/Database_BySubject.php'>Teen Databases</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Popular Databases </font><br><div class='panelDiv'><a href='http://www.atozworldtravel.com/worldtravel1.asp?c=kinglibrary'>A-Z World Travel</a></div><div class='panelDiv'><a href='http://ancestrylibrary.proquest.com/'>Ancestry Library Edition</a></div><div class='panelDiv'><a href='http://library.eb.com/storelibrarycard?id=kingtwnsppl'>Britannica Encyclopaedia</a></div><div class='panelDiv'><a href='http://quest.eb.com/storelibrarycard?id=kingtwnsppl'>Britannica Image Quest</a></div><div class='panelDiv'><a href='http://search.proquest.com/?accountid=62301'>Canadian Business & Current Affairs</a></div><div class='panelDiv'><a href='http://www.careercruising.com/home/autologin.aspx'>Career Cruising</a></div><div class='panelDiv'><a href='http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=sols148&profile=chc'>Consumer Health Complete</a></div><div class='panelDiv'><a href='http://search.ebscohost.com/login.aspx?authtype=ip%2ccpid&custid=sols148%20&profile=crcrc'>Consumer Reports & Best Cars</a></div></td><td><font class='panelHead'> </font><br><div class='panelDiv'><a href='http://www.mto.gov.on.ca/english/publications/handbooks.shtml'>Driver's Handbook (MTO) </a></div><div class='panelDiv'><a href='http://search.proquest.com/hnpglobeandmail/barcode?accountid=62301&groupid=16728'>Globe & Mail 1844-2012</a></div><div class='panelDiv'><a href='http://www.learningexpresslibrary3.com/?AuthToken=3F1F7A2F-8932-4AFF-BB74-6D0C78639AEE'>Learning Express</a></div><div class='panelDiv'><a href='http://connect.mangolanguages.com/king-township/start'>Mango Languages</a></div><div class='panelDiv'><a href='http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=sols148&profile=mfe'>MasterFile (General Search) </a></div><div class='panelDiv'><a href='http://search.epnet.com/Login.aspx?custid=sols148&ip=yes&lp=cpidlogin.asp?custid=sols148&ref=&authtype=ip,cpid'>Novelist (What to read next)</a></div><div class='panelDiv'><a href='http://siblive.shakespeareinbits.com/'>Shakespeare in Bits</a></div><div class='panelDiv'><a href='http://search.proquest.com/hnptorontostar/barcode?accountid=62301&groupid=16728'>Toronto Star 1894-2011</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>eContent</font><br><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Download_Help.php'>Help Quick Tips</a></div><div class='panelDiv'><a href='Pages/Video_Help.php'>Hoopla Digital Media</a></div><div class='panelDiv'><a href='Pages/Video_Help.php'>IndieFlix Streaming Video</a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Audio_Help.php'>eAudiobooks </a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Ebook_Help.php'>eBooks </a></div><div class='panelDiv'><a href='Pages/Magazine_Help.php'>eMagazines </a></div></td></tr></table>";
+document.getElementById("menuBox4Hide").innerHTML = "<table><tr><td><font class='panelHead'>Digitized Local History Books</font><br><div class='panelDiv'><a href='http://www.ourroots.ca/e/toc.aspx?id=13269'>Album of Oldies</a></div><div class='panelDiv'><a href='http://www.ourroots.ca/e/toc.aspx?id=11412'>Early Settlements of King /Elizabeth McClure Gillham</a></div><div class='panelDiv'><a href='http://ourontario.ca/'>Our Ontario - Digitized Books</a></div><div class='panelDiv'><a href='http://www.ourroots.ca/toc.aspx?id=11807&qryID=f94856ac-eeb1-4c1d-8932-e80f1ca57fd7'>Schomberg & its School /Sawdon & Love </a></div><div class='panelDiv'><a href='http://www.ourroots.ca/e/toc.aspx?id=11802'>Story of Kettleby/ J.M. Walton </a></div><div class='panelDiv'><a href='Images/Bridging of the Three Centuries.pdf'>The Bridging of Three Centuries:  Pheobe Crossley Lloyd</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Local History</font><br><div class='panelDiv'><a href='http://ancestrylibrary.proquest.com/'>Ancestry Library Edition</a></div><div class='panelDiv'><a href='Pages/Local_History.php'>Genealogy & Local History</a></div><div class='panelDiv'><a href='Pages/Local_History.php'>Letters from the Great War (1915-1919) - Earl  Campbell</a></div><div class='panelDiv'><a href='Pages/Local_History.php'>Our Soldiers - Great War, W.W. 2</a></div><div class='panelDiv'><a href='Pages/Villages_Home.php'>People and Villages of King</a></div><div class='panelDiv'><a href='Pages/Local_History.php'>Timeless King Online</a></div><div class='panelDiv'><a href='tweedHistory.php?pageID=heritage&subPageID=tweed&param=Kettleby'>Tweedsmuir History - local history of villages & people, </a></div><div class='panelDiv'><a href='http://www.kinglibrary.ca/WalterRolling/sepia.php?pageID=sepia'>Walter Rolling Online</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Maps and Properties</font><br><div class='panelDiv'><a href='Pages/Cemetery_Links.php'>Cemetery Map King Township </a></div><div class='panelDiv'><a href='http://findyourproperty.moraineforlife.org/'>Find Property Oak Ridges Moraine</a></div><div class='panelDiv'><a href='Pages/Maps.php'>Fire Insurance Maps 1904 & 1910</a></div><div class='panelDiv'><a href='http://www.king.ca/Visitors/HistoryandHeritage/Heritage/Heritage%20Sites/Pages/default.aspx'>Heritage Sites in King</a></div><div class='panelDiv'><a href='Pages/Maps.php'>Maps - Current & Historical</a></div></td></tr></table>";
+document.getElementById("menuBox5Hide").innerHTML = "<table><tr><td><font class='panelHead'>Business</font><br><div class='panelDiv'><a href='http://services.bizpal-perle.ca/eng/?b=01'>BizPal</a></div><div class='panelDiv'><a href='Pages/Business_Information.php'>Business Information</a></div><div class='panelDiv'><a href='http://kingchamber.ca/'>Chambers of Commerce</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Community</font><br><div class='panelDiv'><a href='Pages/Explore_Bus.php'>Bus Routes YRT 22 & 61</a></div><div class='panelDiv'><a href='http://host2.evanced.info/kingtownship/evanced/eventcalendar.asp?EventType=ALL&Lib=ALL'>Community Calendar</a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Community_Contacts.php'>Community Contacts</a></div><div class='panelDiv'><a href='Pages/Community_Groups.php'>Community Groups</a></div><div class='panelDiv'><a href='Pages/Explore_train.php'>Getting around (Train & Taxi)</a></div><div class='panelDiv'><a href='Pages/Government_Services.php'>Government Services </a></div><div class='panelDiv'><a href='http://www.king.ca/'>King Township</a></div><div class='panelDiv'><a href='Pages/Newcomer_Immigrants.php'>Newcomers & Immigration </a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Education & Careers </font><br><div class='panelDiv'><a href='http://www.careercruising.com/home/autologin.aspx'>Career Cruising</a></div><div class='panelDiv'><a href='Pages/Continuing_Education.php'>Continuing Education</a></div><div class='panelDiv'><a href='Pages/Community_Contacts.php'>Schools </a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Maps and Properties</font><br><div class='panelDiv'><a href='http://www.kinglibrary.ca/pdfs/AMP%202012%20User%20Guide%20External.pdf'>About my Property MPAC </a></div><div class='panelDiv'><a href='Pages/Cemetery_Links.php'>Cemetery Map King Township </a></div><div class='panelDiv'><a href='http://findyourproperty.moraineforlife.org/'>Find Property Oak Ridges Moraine</a></div><div class='panelDiv'><a href='Pages/Maps.php'>Fire Insurance Maps 1904 & 1910</a></div><div class='panelDiv'><a href='Pages/Maps.php'>Maps - Current & Historical</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Newspapers</font><br><div class='panelDiv'><a href='http://www.yorkregion.com/yorkregion-community/'>King Connection</a></div><div class='panelDiv'><a href='http://www.kingsentinel.com/'>King Weekly Sentinel</a></div><div class='panelDiv'><a href='http://www.ourontario.ca/demo/News.html'>Other Newspapers</a></div></td></tr></table>";
+document.getElementById("menuBox6Hide").innerHTML = "<table><tr><td><font class='panelHead'>Databases & eReading</font><br><div class='panelDiv'><a href='Pages/Database_BySubject.php'>Databases</a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Download_Help.php'>Help Quick Tips</a></div><div class='panelDiv'><a href='Pages/Video_Help.php'>Hoopla Digital Media</a></div><div class='panelDiv'><a href='Pages/Video_Help.php'>IndieFlix Streaming Video</a></div><div class='panelDiv'><a href='Pages/Librarycard_smart.php'>Library card on Smartphone</a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Audio_Help.php'>eAudiobooks </a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Ebook_Help.php'>eBooks </a></div><div class='panelDiv'><a href='Pages/Magazine_Help.php'>eMagazines </a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Information Links </font><br><div class='panelDiv'><a href='Pages/Accessibility_Main.php'>Accessibility</a></div><div class='panelDiv'><a href='http://ancestrylibrary.proquest.com/'>Ancestry Library Edition</a></div><div class='panelDiv'><a href='http://kinglibrary.ca/Pages/Community_Contacts.php'>Community Contacts</a></div><div class='panelDiv'><a href='Pages/Seniors_Finance.php'>Financial</a></div><div class='panelDiv'><a href='Pages/Fun_Games.php'>Fun & Games </a></div><div class='panelDiv'><a href='Pages/Explore_train.php'>Getting around (Train & Taxi)</a></div><div class='panelDiv'><a href='Pages/Government_Services.php'>Government Services </a></div><div class='panelDiv'><a href='Pages/Seniors_Health.php'>Health</a></div></td><td><font class='panelHead'> </font><br><div class='panelDiv'><a href='Pages/homebound_program.php'>Homebound Service</a></div><div class='panelDiv'><a href='Pages/Seniors_Housing.php'>Housing</a></div><div class='panelDiv'><a href='Pages/Seniors_Legal.php'>Legal</a></div><div class='panelDiv'><a href='Pages/Seniors_Leisure.php'>Leisure & Travel</a></div><div class='panelDiv'><a href='Pages/Maps.php'>Maps - Current & Historical</a></div><div class='panelDiv'><a href='Pages/Mouse_Keyboard.php'>Mouse & Keyboarding Exercises </a></div><div class='panelDiv'><a href='Pages/Local_Newspapers.php'>Newspapers </a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Programs</font><br><div class='panelDiv'><a href='Pages/Book_Clubs.php'>Book Clubs</a></div><div class='panelDiv'><a href='Pages/Camera_Club.php'>Camera Club</a></div><div class='panelDiv'><a href='http://host2.evanced.info/kingtownship/evanced/eventcalendar.asp?EventType=ALL&Lib=ALL'>Community Calendar</a></div><div class='panelDiv'><a href='Pages/Computer_Lessons.php'>Computer & Internet Lessons</a></div><div class='panelDiv'><a href='Pages/Library_Week.php'>Ontario Public Library Week</a></div><div class='panelDiv'><a href='Pages/Travel_Diaries.php'>Travel Diary Series</a></div><div class='panelDiv'><a href=''>Write Now @ King</a></div></td></tr></table>";
+document.getElementById("menuBox7Hide").innerHTML = "<table><tr><td><font class='panelHead'>Kids</font><br><div class='panelDiv'><a href='Pages/pageKidsMain5.php'>Kids</a></div></td><td style='border-left: 1px solid black;'><font class='panelHead'>Teens </font><br><div class='panelDiv'><a href='Pages/pageTeensMain.php'>Teens</a></div></td></tr></table>";
+document.getElementById("belowBox1").innerHTML = "<a href='Pages/Travel_Diaries.php'  target=_blank ><img src='/BoxFiles/box1_Sample3.jpg' border=0 class='boxImage'></a>";
+document.getElementById("belowBox2").innerHTML = "<a href='Pages/Using_Library.php'  ><img src='/BoxFiles/box1_Sample1.jpg' border=0 class='boxImage'></a>";
+document.getElementById("belowBox3").innerHTML = "<a href='/WW1Letters/EarlCampbell.php'  target=_blank ><img src='/BoxFiles/box3_Sample.jpg' border=0 class='boxImage'></a>";
+
+</script>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript" >
+</script>
+<script type="text/javascript">
+_uacct = "UA-384033-7";
+_udn = "www.king-library.on.ca";
+urchinTracker();
+</script>
+
+
+</body>
+</html>

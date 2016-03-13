@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Canadian Water Quality Association</title>
+
+		<link rel="stylesheet" type="text/css" href="/global_inc/site_templates/YM-FX-02/combined.css?_v=1.71.105.112&context=hp"/>
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/container/assets/skins/sam/container.css">
+		<!--[if IE]><link rel="stylesheet" type="text/css" href="/global_inc/site_templates/YM-FX-02/ie.css"><![endif]-->
+
+		
+			<meta name="viewport" content="width=device-width" />
+
+			
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/dragdrop/dragdrop-min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/container/container-min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/json/json-min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>	
+		<script type="text/javascript" src="/combined.js?context=hp&_v=1.54"></script>
+		<script type='text/javascript'>
+			var _gaq = _gaq || [];(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+								(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+								m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+								})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-72353624-1', 'auto');
+ga('send', 'pageview');
+ga('create', 'UA-2449742-47', 'auto');
+ga('send', 'pageview');
+</script>
+	
+		<script type="text/javascript">
+			var m_pulse = new Pulse('');
+			m_pulse.Start();
+		</script>
+	
+		
+		<!-- SlickNav -->
+		<script type="text/javascript" src="/global_inc/js/jquery.slicknav.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				//Clone the current RadMenu
+				var $menu = $('ul.horizontal.rootGroup').clone();
+
+				//Clean up the html
+				$menu.removeAttr('class'); //.attr('id', 'mobileMenu');
+				cleanupHtmlForMobileMenu($($menu).find('li'));
+
+				//Create the mobile menu
+				$menu.slicknav({
+					prependTo: $('ul.horizontal.rootGroup').parent().parent(),
+					allowParentLinks: true
+				});
+			});
+		</script>
+		
+	</head>
+
+
+
+<body id="PageBody" onunload="try{if(m_blnDoBodyUnload) Body_OnUnload();}catch(e){}">
+	
+	<div id="icontainer">
+
+		<div id="itoolbar_bg">
+			
+			<div id="isearch">
+				<form id="QuickSearchForm" name="QuickSearchForm" action="/search/all.asp">
+		<div id="QuickSearchFormInner1" class="ui-widget">
+			<input id="QuickSearchForm_bst" name="bst" maxlength='50' value='Enter search criteria...'@"onfocus='QuickSearchForm_OnFocus();'/>
+		</div>
+		<div id='QuickSearchFormInner2'><a href='#' id='QuickSearchSubmit' onclick='return QuickSearchForm_DoSubmit();'>Search&nbsp;&raquo;</a></div>
+</form><script type="text/javascript">
+function QuickSearchForm_DoSubmit()
+{
+		var QuickSearchForm = document.QuickSearchForm;
+     if(QuickSearchForm)
+     {
+			ClearDefaultValue(QuickSearchForm.bst);
+         QuickSearchForm.submit();
+     }
+		return false;
+}
+$(document).ready(function ()
+{
+		$("#QuickSearchForm_bst").click(function()
+		{
+			if ($("#QuickSearchForm_bst").val() == "Enter search criteria...")
+				$("#QuickSearchForm_bst").val('');
+			});
+			$("#QuickSearchForm_bst").blur(function ()
+			{
+				if ($("#QuickSearchForm_bst").val() == '')
+					$("#QuickSearchForm_bst").val('Enter search criteria...');
+				});
+				$("#QuickSearchForm_bst").autocomplete({
+					minLength: 3,
+					delay: 1000,
+					source: function (request, response)
+					{
+						$.ajax({
+						url: url = '/general/CategorySearchReciever.aspx?SearchTerm=' + $("#QuickSearchForm_bst").val() + "&cb=" + getCurrentTime(),
+						dataType: "json",
+						data: {
+						featureClass: "P",
+						style: "full",
+						maxRows: 20,
+						name_startsWith: request.term
+					},
+					success: function (data)
+					{
+						response($.map(data.CatalogSearchSuggestions, function (item)
+						{
+							return item;
+						}));
+					}
+				});
+			},
+			focus: function (event, ui)
+			{
+				return false;
+			},
+			select: function (event, ui)
+			{				document.location.href = ui.item.url;
+				return false;
+			},
+			open: function ()
+			{
+				$(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+			},
+			close: function ()
+			{
+				$(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+			}
+         }).data("autocomplete")._renderItem = function (ul, item)
+         {
+				var linkText = "";
+             var index = parseInt(item.index);
+				if (item.category != "")
+				{
+					linkText = item.category + ": ";
+				}
+				linkText += item.desc;
+             if (index > 0)
+             {
+					return $("<li>").data("item.autocomplete", item).append("<a href=" + item.url + ">" + linkText + "</a>").appendTo(ul);
+             }
+				else
+             {
+                 return $("<li class=\"FirstAutoCompleteItem\">").data("item.autocomplete", item).append(linkText).appendTo(ul)
+             }
+         }
+	});
+</script>
+			</div>
+			
+			<div id="itoolbar">
+				<a href="/?page=AboutCWQA">About CWQA</a> &nbsp; | &nbsp; <a href='/general/?type=CONTACT'>Contact Us</a> &nbsp; | &nbsp; <a href='/login.aspx'>Sign In</a> &nbsp; | &nbsp; <a href='/general/register_start.asp'>Join CWQA</a>
+			</div>
+		</div>
+
+		<div id="header"><script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Raleway:400,100,300,200,500,600,700,800,900:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+
+<!-- header -->
+<div id="head">
+	<a href="/" target="_parent" style="color:#000;" id="logo"><img border=0 src="/graphics/logo.png"></a>
+</div>
+
+<div class="head-social">
+	<p>Follow Us</p>
+	<!--<a href="#" target="_blank" class="logo_fb"></a>
+	<a href="#" target="_blank" class="logo_twit"></a>-->
+	<a href="https://www.linkedin.com/grp/home?gid=3948494" target="_blank" class="logo_li"></a>
+	<!--<a href="#" target="_blank" class="logo_eml"></a>-->
+</div><style type="text/css">
+      #Head
+      {
+          background-image: url('/graphics/bg_top.gif');
+      }
+  </style></div>
+
+		<div id="mainmenu">
+			<div id="FrontendMainMenu" class="radmenu RadMenu_YMPublic ">
+	<!-- 4.3.2 --><script type="text/javascript" src="/global_inc/RadControls/Menu/Scripts/4_3_2/RadMenu.js"></script><span id="FrontendMainMenuStyleSheetHolder" style="display:none;"></span><script type="text/javascript">RadControlsNamespace.AppendStyleSheet(false, 'FrontendMainMenu', '/global_inc/RadControls/Menu/Scripts/4_3_2/menu.css');</script><script type="text/javascript">RadControlsNamespace.AppendStyleSheet(false, 'FrontendMainMenu', '/global_inc/RadControls/Menu/Skins/YMPublic/styles.css');</script><ul class="horizontal rootGroup">
+		<li class="item first"><a href="/?page=ForConsumers" id="FrontendMainMenu_m0" class="link"><span class="text">Consumers</span></a><div class="slide">
+			<ul class="vertical group level1">
+				<li class="item first"><a href="/?page=CommonWaterProblems" id="FrontendMainMenu_m0_m0" class="link"><span class="text">Common Water Problems</span></a></li><li class="item"><a href="/?page=TypesofTreatment" id="FrontendMainMenu_m0_m1" class="link"><span class="text">Types of Water Treatment</span></a></li><li class="item"><a href="/?page=Lead" id="FrontendMainMenu_m0_m2" class="link"><span class="text">Information on Lead</span></a></li><li class="item"><a href="/?page=ProductCertification" id="FrontendMainMenu_m0_m3" class="link"><span class="text">Product Certifications</span></a></li><li class="item last"><a href="/?page=Environment" id="FrontendMainMenu_m0_m4" class="link"><span class="text">CWQA and the Environment</span></a></li>
+			</ul>
+		</div></li><li class="item"><a href="/?page=Membership" id="FrontendMainMenu_m1" class="link"><span class="text">Membership</span></a><div class="slide">
+			<ul class="vertical group level1">
+				<li class="item first"><a href="/events/event_list.asp" id="FrontendMainMenu_m1_m0" class="link"><span class="text">Member Events</span></a></li><li class="item"><a href="/?page=WhyJoin" id="FrontendMainMenu_m1_m1" class="link"><span class="text">Why Join CWQA</span></a></li><li class="item"><a href="/?page=TypesofMembership" id="FrontendMainMenu_m1_m2" class="link"><span class="text">Types of Membership</span></a></li><li class="item last"><a href="/search/custom.asp?id=3802" id="FrontendMainMenu_m1_m3" class="link"><span class="text">Member Directory</span></a></li>
+			</ul>
+		</div></li><li class="item"><a href="/?page=Training" id="FrontendMainMenu_m2" class="link"><span class="text">Training</span></a><div class="slide">
+			<ul class="vertical group level1">
+				<li class="item first"><a href="/?CourseDescription" id="FrontendMainMenu_m2_m0" class="link"><span class="text">Course Descriptions</span></a></li><li class="item last"><a href="/events/event_list.asp?show=&amp;group=&amp;start=1%2F13%2F2016&amp;end=&amp;view=&amp;cid=15138" id="FrontendMainMenu_m2_m1" class="link"><span class="text">Training Dates</span></a></li>
+			</ul>
+		</div></li><li class="item"><a href="/?page=TechnicalResources" id="FrontendMainMenu_m3" class="link"><span class="text">Support</span></a><div class="slide">
+			<ul class="vertical group level1">
+				<li class="item first"><a href="/?page=Lead" id="FrontendMainMenu_m3_m0" class="link"><span class="text">Information on Lead</span></a></li><li class="item"><a href="/?page=CommonWaterSolutions" id="FrontendMainMenu_m3_m1" class="link"><span class="text">Common Water Solutions</span></a></li><li class="item last"><a href="/?page=HotTopics" id="FrontendMainMenu_m3_m2" class="link"><span class="text">Hot Topics</span></a></li>
+			</ul>
+		</div></li><li class="item"><a href="/?page=Advocacy" id="FrontendMainMenu_m4" class="link"><span class="text">Advocacy</span></a></li><li class="item last"><a href="/?page=RegulatoryAffairs" id="FrontendMainMenu_m5" class="link"><span class="text">Regulatory</span></a></li>
+	</ul><input type="hidden" id="FrontendMainMenu_Hidden" name="FrontendMainMenu" /><script type="text/javascript">window["FrontendMainMenu"] = RadMenu.Create("FrontendMainMenu");window["FrontendMainMenu"].Initialize({"EnableAutoScroll":true,"Skin":"YMPublic","Enabled":true},{});</script>
+</div>
+		</div>
+
+		<div id="mobile-nav">
+			<a href="sub.html">Menu</a>
+		</div>
+
+		<div id="islideshow"><script type="text/javascript">
+$(function() {
+	 function slidePanel(newPanel) {
+		$slider.children('.slide-panel.active').fadeOut(1000, function() {
+			$(this).removeClass('active');
+			$('#full-slider-nav-left').show();
+			$('#full-slider-nav-right').show();
+		});
+		$($sliderPanels[newPanel]).addClass('active').fadeIn(1000,  function() {$(this).removeClass('notactive');});
+		return $($sliderPanels[newPanel]).attr("duration");
+	}
+	var $slider = $('#full-slider');
+	var $sliderPanels = $slider.children('.slide-panel');
+	var $navLeft = $('<div id="full-slider-nav-left" class="full-slider-nav"><img src="/global_graphics/icons/slideShowPrev.png" /></div>').appendTo($slider);
+	var $navRight = $('<div id="full-slider-nav-right" class="full-slider-nav"><img src="/global_graphics/icons/slideShowNext.png" /></div>').appendTo($slider);
+	var currPanel = 0;
+	var autoPlayTId = null;
+	var autoPlayDelaySeconds = 4;
+$navLeft.click(function() {
+		currPanel--;
+			$('#full-slider-nav-left').hide();
+			$('#full-slider-nav-right').hide();
+		if (currPanel < 0) currPanel = $sliderPanels.length - 1;
+		if(autoPlayTId!=null) clearTimeout(autoPlayTId);
+		slidePanel(currPanel, 'right');
+});
+$navRight.click(function() {
+		currPanel++;
+			$('#full-slider-nav-right').hide();
+			$('#full-slider-nav-left').hide();
+		if (currPanel >= $sliderPanels.length) currPanel = 0;
+		if(autoPlayTId!=null) clearTimeout(autoPlayTId);
+		slidePanel(currPanel, 'left');
+});
+	function autoPlay() {
+		autoPlayTId = setTimeout(function() {
+			currPanel++;
+			if (currPanel >= $sliderPanels.length) currPanel = 0;
+			autoPlayDelaySeconds = slidePanel(currPanel);
+			autoPlay();
+		}, (autoPlayDelaySeconds*1000));
+	}
+	$(document).ready(function (){ $slider.children('.slide-panel.notactive').hide(); $slider.children('.slide-panel.notactive').removeClass('notactive'); autoPlay();});
+});
+</script>
+<div id="full-slider-wrapper" style='height:320px; width:1000px;'>
+<div id="full-slider">
+<div class="slide-panel active" id='slide1' duration='4' >
+<a href='http://cwqa.site-ym.com/events/event_details.asp?id=726711'> <img src='/resource/resmgr/homepage/Members_Forum_Logo_1000x307.jpg' border=0 /></a></div>
+<div class="slide-panel notactive" id='slide2' duration='4' >
+<a href='http://cwqa.site-ym.com/?page=Advocacy'> <img src='/resource/resmgr/homepage/Advocacy_Banner.jpg' border=0 /></a></div>
+<div class="slide-panel notactive" id='slide3' duration='4' >
+<a href='http://cwqa.site-ym.com/?page=Training'> <img src='/resource/resmgr/homepage/Constantly_Evolving_Training_Banner.jpg' border=0 /></a></div>
+<div class="slide-panel notactive" id='slide4' duration='4' >
+<a href='http://cwqa.site-ym.com/events/event_list.asp'> <img src='/resource/resmgr/homepage/Business_People_Banner_Networking&_events.jpg' border=0 /></a></div>
+<div class="slide-panel notactive" id='slide5' duration='4' >
+<a href='http://cwqa.site-ym.com/?page=RegulatoryAffairs'> <img src='/resource/resmgr/homepage/Government_Relations_Banner.jpg' border=0 /></a></div>
+<div class="slide-panel notactive" id='slide6' duration='4' >
+<a href='http://cwqa.site-ym.com/?page=AskAnExpert'> <img src='/resource/resmgr/homepage/Ask_An_Expert_Banner.jpg' border=0 /></a></div>
+</div>
+</div>
+</div>
+		<div id="iContentAreaSlideshow" style="display:none;"><!--YMPSTITLE=TgBBAA==/YMPSTITLE--></div>
+		
+
+		<div id="hp-main">			
+			
+			<div id="hp-center">
+					<div class="content"><!--YMPSTITLE=TgBBAA==/YMPSTITLE--></div>
+			</div>
+			<div id="hp-left">
+					<div class="content"><!--YMPSTITLE=TgBBAA==/YMPSTITLE--><h6><span style="font-size: 18px;"><img src="/resource/resmgr/Images/Maple_leaf_from_Fotolia.jpg" style="width: 93px; height: 93px; float: left; border: 4px solid rgb(255, 255, 255);">We are the Canadian Water Quality Association (CWQA); your source of information for water quality information and the leading Canadian trade association for the water treatment industry. </span></h6>
+<h6><span style="font-size: 18px;">&nbsp;</span></h6>
+<h6><span style="font-size: 18px;"><strong>Registrations are coming in for our upcoming Spring Event!&nbsp;</strong>&nbsp; &nbsp;</span></h6>
+<h6><span style="font-size: 18px;">&nbsp;</span></h6>
+<h6><span style="font-size: 18px;">Register today - you don't want to miss these conversations. &nbsp;(Link under Calendar below)</span></h6>
+<h6><span style="font-size: 18px;">&nbsp;</span></h6>
+<h6 style="text-align: center;">
+</h6>
+<h6><span style="font-size: 18px;"><strong>Thank you for your support!</strong>&nbsp;</span></h6>
+<p>&nbsp;</p></div>
+			</div>
+
+			
+				<div class="zone" id="login">
+					<div class="irailhead">Sign In</div>
+					<div class="irailcontent"><script language="javascript" type="text/javascript" src="/global_inc/js/jquery.data.js"></script><script language="javascript" type="text/javascript" src="/global_inc/js/jquery.watermark.min.js"></script><script type="text/javascript">
+                             $(document).ready(function () {
+                             $('.loginuser').watermark('Username');
+                             $('.loginpass').watermark('Password');});</script><form id='LoginForm' action='https://cwqa.site-ym.com/Login.aspx?returl=' method='post'><INPUT TYPE='hidden' NAME='ERR_u' VALUE='u|Username|20|1||0'><INPUT TYPE='hidden' NAME='ERR_p' VALUE='p|Password|20|1||0'><p><div id="LoginUserName"><input class="small loginuser" type="text" name="u" size="20" maxlength="255" value=""/></div><div id="LoginPassword"> <br/>
+                        <input class="small loginpass" type="password" name="p" size="20" maxlength="64" autocomplete="off"></div></p>
+                        <p id="RememberMe"><input id="FrontendControls_RememberMe"
+                            type="checkbox" name="rememberme" value="true" checked><label
+                            for="FrontendControls_RememberMe">Remember Me</label></p>
+                        <p id="LoginSubmit"><input type="submit" name="btn_submitLogin" value="Sign In" class="formbutton">
+							<img class="securesubmit" src="/global_graphics/icons/securesubmit.png" title="Secured with SSL encryption." /></p></form><p id="LoginForgot"><a href='/general/email_pass.asp'>Forgot your password?</a></p><p id="LoginRegister"><a href='/general/register_start.asp'>Haven't registered yet?</a></p></div>
+				</div>
+			
+
+			<div class="clear"></div>
+
+			<div id="bottom-left">
+				
+				<div class="content"><!--YMPSTITLE=TgBBAA==/YMPSTITLE--><p>&nbsp;</p>
+<h5>Resources</h5>
+<p><a href="http://www.hc-sc.gc.ca/ewh-semt/pubs/water-eau/sum_guide-res_recom/index-eng.php" id="link_1454439925109">Lead - Cdn Drinking Water Quality Guidelines</a></p>
+<p ><a href="https://www.wqa.org/" id="link_1451940662650">Water Quality Association</a><br>
+<br>
+<a href="http://www.hc-sc.gc.ca/" id="link_1451940744745"></a><a href="http://www.csagroup.org/global/en/home" id="link_1451940715046">CSA Group</a><br>
+<br>
+<a href="http://www.hc-sc.gc.ca/ewh-semt/water-eau/drink-potab/index-eng.php" target="_blank" id="link_1452715595549" title="Health Canada">Health Canada</a><br>
+<br>
+<a href="http://www.ec.gc.ca/" id="link_1451940779396">Environment Canada</a><br>
+<br>
+<a href="http://www.epa.gov/learn-issues/water-resources#drinking-water" id="link_1451940835499">Environmental Protection Agency</a><br>
+<br>
+<a href="http://www.cwwa.ca/" id="link_1451940878558">Canadian Water and Wastewater Association</a><br>
+<br>
+<br>
+<br>
+<br>
+</p></div>
+				
+			</div>
+
+			
+			<div class="zone" id="news">
+				<div class="irailhead">
+					Latest News
+					<a href="/news/">more</a>
+				</div>
+				<div class="irailcontent"><p id='NewsPnl_277934'><span class="LatestNewsItemDate">  3/2/2016</span><a href="/news/277934/Aggressive-Door-to-Door-Sales-Tactics-Reported-in-Orangeville.htm">Aggressive Door-to-Door Sales Tactics Reported in Orangeville</a></p><p id='NewsPnl_277354'><span class="LatestNewsItemDate">  2/29/2016</span><a href="/news/277354/Man-charged-with-fraud-in-connection-with-sale-of-water-treatment-systems.htm">Man charged with fraud in connection with sale of water treatment systems</a></p><p id='NewsPnl_274070'><span class="LatestNewsItemDate">  2/10/2016</span><a href="/news/274070/Hamilton-Water-Scam.htm">Hamilton Water Scam</a></p><p id='NewsPnl_271431'><span class="LatestNewsItemDate">  1/27/2016</span><a href="/news/271431/Decentralizing-Water---Kevin-Wong-published-article.htm">Decentralizing Water - Kevin Wong published article!</a></p></div>
+			</div>
+			
+			<div class="zone" id="calendar">
+				<div class="irailhead">
+					Calendar
+					<a href="/events/event_list.asp">more</a>
+				</div>
+				<div class="irailcontent"><div id="tt-container" class="yui-skin-sam"></div><div class='UpcomingEvents UpcomingEvents_1'><p id="EventPnl764997">4/27/2016<br clear=all><a href='/events/EventDetails.aspx?id=764997'>CWQA Certification Course:  Basics/Fundamentals</a></p><script>var YMTTipEventPnl764997 = new YAHOO.widget.Tooltip("YMTTipEventPnl764997", { context: "EventPnl764997", container: "tt-container", width: "245px", text: "Annual forum to provide member interaction, professional presentations and hold annual general meeting.", autodismissdelay: 120000 });</script></div><div class='UpcomingEvents UpcomingEvents_2'><p id="EventPnl726711">4/27/2016 &raquo; 4/28/2016<br clear=all><a href='/events/EventDetails.aspx?id=726711'>CWQA Members Forum</a></p><script>var YMTTipEventPnl726711 = new YAHOO.widget.Tooltip("YMTTipEventPnl726711", { context: "EventPnl726711", container: "tt-container", width: "245px", text: "A members forum to provide interactions, industry presentations and member updates and opportunities.", autodismissdelay: 120000 });</script></div></div>
+			</div>
+						
+
+			<div class="clear"></div>
+			
+			
+			<div id="bottomcontentarea"><!--YMPSTITLE=TgBBAA==/YMPSTITLE--></div>
+
+		</div>
+		<div id="foot"><!-- footer --></div>
+	</div>
+
+	<div id="FooterContentArea">
+		<!--YMPSTITLE=TgBBAA==/YMPSTITLE--><div id="footer">
+	<div id="col1" class="col">
+    	<h4>CONTACT US</h4>
+        <p>Canadian Water Quality Association<br/>
+            295 The West Mall, Suite 504 Toronto, ON M9C 4Z4<br/>
+            Phone: (416) 695-3068<br/>
+            Toll Free: 1-866-383-7617<br/>
+            Fax: (416) 695-2945
+        </p>
+    </div>
+    <div id="col2" class="col">
+    	<h4>LINKS</h4>
+        <div id="inner-col1">
+        	<a href="/">Site Map</a>
+            <a href="/">Legal Terms</a>
+            <a href="/">Privacy Policy</a>
+        </div>
+    </div>
+    <div id="col3" class="col">
+    	<img src="/graphics/logo_foot.png"/>
+    </div>
+</div>
+	</div>
+
+	<div id="icopyright">
+		<div id="icopyright-inner">Membership Software Powered by <a href='http://www.yourmembership.com/'>YourMembership.com<span style='font-size:11px'>&reg;</span></a> &nbsp;::&nbsp; <a href='/ams/legal-privacy.htm'>Legal</a><!-- Copyright (c) 1998-2016 YourMembership.com Inc. All Rights Reserved. Copyright: Certain elements of this website are: Copyright (c) 1998-2016, YourMembership.com, Incorporated. YourMembership.com, Incorporated provides a limited license to use its Copyrights to the entity from whose web page you are viewing. Certain elements of this website may also be copyrighted by that entity; please see its Terms of Use or contact the organization for more information. General information about copyright laws can be found at: http://www.copyright.gov/. For more specific information, please consult an attorney. --></div>
+	</div>
+	<div id="PageBase_RaiseAlert" class="yui-skin-sam"></div>
+
+	<!-- 
+	!!! DO NOT REMOVE !!!
+	QA-www.cwqa.com
+	!!! DO NOT REMOVE !!!
+	-->
+	
+</body>
+
+
+</html>
+
+</html>
+<!--END_OF_FILE-->

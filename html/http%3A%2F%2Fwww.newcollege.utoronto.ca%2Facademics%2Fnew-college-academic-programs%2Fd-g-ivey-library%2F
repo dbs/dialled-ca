@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>D.G. Ivey Library &laquo;  New College &#8211; University of Toronto</title>
+	<meta name="description" content="New College &#8211; University of Toronto">
+	<meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/css/base.css">
+	<link rel="stylesheet" href="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/css/skeleton.css">
+	<link rel="stylesheet" href="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/css/layout.css">
+	<link rel="stylesheet" href="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/css/flexslider.css">
+	<link rel="stylesheet" href="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/style.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Zeyada">
+	
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/favicon.ico">
+
+	<!-- Wordpress
+	================================================== -->
+		<link rel="alternate" type="application/rss+xml" title="New College - University of Toronto &raquo; Feed" href="http://www.newcollege.utoronto.ca/feed/" />
+<link rel="alternate" type="application/rss+xml" title="New College - University of Toronto &raquo; Comments Feed" href="http://www.newcollege.utoronto.ca/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"http:\/\/www.newcollege.utoronto.ca\/wp-includes\/js\/wp-emoji.js?ver=f37341dc7de4bf7f18d410389a7e53ab","twemoji":"http:\/\/www.newcollege.utoronto.ca\/wp-includes\/js\/twemoji.js?ver=f37341dc7de4bf7f18d410389a7e53ab"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='jquery-ui-css-css'  href='http://www.newcollege.utoronto.ca/wp-content/plugins/contact-form-7-datepicker-fix/css/jquery-ui.css?ver=f37341dc7de4bf7f18d410389a7e53ab' type='text/css' media='all' />
+<link rel='stylesheet' id='pcs-styles-css'  href='http://www.newcollege.utoronto.ca/wp-content/plugins/post-content-shortcodes/default-styles.css?ver=f37341dc7de4bf7f18d410389a7e53ab' type='text/css' media='screen' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-28811996-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.newcollege.utoronto.ca/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.newcollege.utoronto.ca/wp-includes/wlwmanifest.xml" /> 
+
+<link rel='canonical' href='http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/' />
+<link rel='shortlink' href='http://www.newcollege.utoronto.ca/?p=346' />
+<!-- <meta name="NextGEN" version="2.1.23" /> -->
+<script charset="utf-8" type="text/javascript">var switchTo5x=true;</script>
+<script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script charset="utf-8" type="text/javascript">stLight.options({"publisher":"31611819-807e-41c4-b757-5053a5bd5dd0","doNotCopy":true,"hashAddressBar":false,"doNotHash":true});var st_type="wordpress3.9.2";</script>
+<script type="text/javascript">/* <![CDATA[ */
+			/* ]]> */</script>
+	<style type="text/css">
+			</style>
+	<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<script type="text/javascript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+	//window.open(selObj.options[selObj.selectedIndex].value, '');
+  if (restore) selObj.selectedIndex=0;
+}
+
+//-->
+</script>
+
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='http://www.newcollege.utoronto.ca/wp-content/plugins/captcha/css/style.css?ver=f37341dc7de4bf7f18d410389a7e53ab' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://www.newcollege.utoronto.ca/wp-includes/css/dashicons.css?ver=f37341dc7de4bf7f18d410389a7e53ab' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='http://www.newcollege.utoronto.ca/wp-content/plugins/captcha/css/desktop_style.css?ver=f37341dc7de4bf7f18d410389a7e53ab' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.newcollege.utoronto.ca/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=f37341dc7de4bf7f18d410389a7e53ab' type='text/css' media='all' />
+<link rel='stylesheet' id='wpfront-scroll-top-css'  href='http://www.newcollege.utoronto.ca/wp-content/plugins/wpfront-scroll-top/css/wpfront-scroll-top.css?ver=f37341dc7de4bf7f18d410389a7e53ab' type='text/css' media='all' />
+</head>
+<body class="page page-id-346 page-parent page-child parent-pageid-305 page-template page-template-page-default-threeCol page-template-page-default-threeCol-php pagename-d-g-ivey-library">
+	<div id="headerContainer">
+		<div id="headerHolder">
+			<div class="container">
+				<div class="sixteen columns">
+					<div id="headerContentHolder">
+						<header id="main">
+							<hgroup>
+								<h1><a href="http://www.newcollege.utoronto.ca/" accesskey="h" tabindex="1" title="Link to New College Home Page">New College &#8211; University of Toronto</a></h1>
+							</hgroup>
+						</header>
+						<nav id="secondaryNavigation">
+							<ul id="topNav">
+								<li class="spacer"><a href="http://www.rosi.utoronto.ca" accesskey="r" tabindex="8">ROSI</a> | </li>
+								<li class="spacer"><a href="http://www.portal.utoronto.ca" accesskey="p" tabindex="9">Portal</a> | </li>
+								<li class="spacer"><a href="http://www.newcollege.utoronto.ca/staff-directory-listing/" accesskey="o" tabindex="10">Contacts</a> | </li>
+								<li class="spacer"><a href="http://www.newcollege.utoronto.ca/staff-directory-listing/a-z/" accesskey="z" tabindex="11">A-Z Index</a></li>
+								<li class="searchItem">
+																		<form id="search" name="searchform" method="get" action="/">
+										<input id="s" name="s" title="Search Blog" placeholder="SEARCH" type="search">
+										<button id="searchsubmit" type="submit" value="search"></button>
+										<div class="clearMe"></div>
+									</form>
+																	</li>
+							</ul>
+						</nav>
+					</div>
+					<nav id="mainNavigation">
+						<!-- Main nav bar -->
+						<div class="table">
+						    <ul id="menu">
+								<li class="mega"><a href="http://www.newcollege.utoronto.ca/current-students/" target="_self" rel="1" accesskey="c" tabindex="2">CURRENT STUDENTS</a></li>
+								<li class="mega"><a href="http://www.newcollege.utoronto.ca/future-students/" target="_self" rel="2" accesskey="f" tabindex="3">FUTURE STUDENTS</a></li>
+								<li class="mega"><a href="http://www.newcollege.utoronto.ca/alumni-friends/" target="_self" rel="3" accesskey="a" tabindex="4">ALUMNI &amp; FRIENDS</a></li>
+								<li class="mega"><a href="http://www.newcollege.utoronto.ca/academics/" target="_self" rel="4" accesskey="d" tabindex="5">ACADEMICS</a></li>
+								<li class="mega"><a href="http://www.newcollege.utoronto.ca/new-resources/" target="_self" rel="5" accesskey="n" tabindex="6">NC RESOURCES</a></li>
+								<li class="mega"><a href="http://www.newcollege.utoronto.ca/about-us/" target="_self" rel="6" accesskey="b" tabindex="7">ABOUT US</a></li>
+							</ul>
+						</div>
+						<div class="clearMe"></div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div id="navSlideout">
+			<div class="container">
+				<div class="sixteen columns">
+						<div class="mega-menu">
+							
+							<!-- FIRST MENU -->
+							<div class="cat-menu" id="cat-1-menu" style="height:180px;">
+								<div class="five columns alpha">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/newly-admitted-students/">Newly Admitted Students</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/academic-advising-registrarial-services/">Academic Advising and Registrarial Services</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/studentlife/">Student Life and Leadership at New College</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/residence-at-new-college/">Residence at New College</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/scholarships-and-financial-aid/">Scholarships and Financial Aid</a></li>
+									</ul>
+								</div>
+								<div class="five columns">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/new-college-student-council/">New College Student Council</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/writing-centre/">New College Writing Centre</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/d-g-ivey-library/">Donald G. Ivey Library</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/important-dates/">Important Dates</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/current-students/room-bookings-conference-services-at-new-college/">Room Bookings and Conference Services at New College</a></li>
+									</ul>
+								</div>
+								<div class="five columns offset-by-one omega">
+									<a href="/academics/new-college-academic-programs/writing-centre/" title="Link to Writing Centre"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-writingCentre.png" class="navButton" alt="Button Writing Centre" /></a><br />
+									<a href="/academics/new-college-academic-programs/" title="Link to Our Programs"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-ourProgram.png" class="navButton" alt="Button Our Programs" /></a>
+								</div>
+							</div> <!-- END cat-1-menu -->
+							
+							<!-- Second MENU -->
+							<div class="cat-menu" id="cat-2-menu" style="height:180px;">
+								<div class="five columns alpha">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/future-students/colleges-and-the-university-of-toronto/">Colleges and the University of Toronto</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/future-students/why-new-college/">Why New College?</a></li>
+<li><a href="http://www.newcollege.utoronto.ca/future-students/viewbook/">Viewbook</a></li>
+
+<li><a href="http://www.newcollege.utoronto.ca/academics/newone-learning-without-borders/">New One: Learning Without Borders</a></li>
+										
+									</ul>
+								</div>
+								<div class="five columns">
+									<ul>
+<li><a href="http://www.newcollege.utoronto.ca/future-students/visiting-new-college/">Visiting New College</a></li>										
+<li><a href="http://www.newcollege.utoronto.ca/future-students/apply-to-residence-at-new-college/">Apply to Residence at New College</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/future-students/money-matters/">Money Matters (Fees, Scholarships and Financial Aid)</a></li>
+										
+									</ul>
+								</div>
+								<div class="five columns offset-by-one omega">
+									<a href="/current-students/newly-admitted-students/first-year-checklist/" title="Link to First Year Check List"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-firstYearCheckList.png" class="navButton" alt="Button First Year Check List" /></a>
+									<a href="/current-students/residence-at-new-college/" title="Link to Residence"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-residence.png" class="navButton" alt="Button Residence" /></a><br />
+								</div>
+							</div> <!-- END cat-2-menu -->
+							
+							<!-- THIRD MENU -->
+							<div class="cat-menu" id="cat-3-menu" style="height:180px;">
+								<div class="five columns alpha">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/get-involved/stay-connected/">Stay Connected</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/alumni-resources/">Alumni Resources</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/alumni-stories/">Alumni Stories</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/renew/">Re:New Magazine</a></li>
+										
+										
+									</ul>
+								</div>
+								<div class="five columns">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/student-spotlight/">Student Spotlight</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/giving-to-new-college/">Support New College</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/giving-to-new-college/where-to-give/">Where to Give</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/contact-us/">Contact the Office of Advancement</a></li>
+									</ul>
+								</div>
+								<div class="five columns offset-by-one omega">
+									<a href="/alumni-friends/get-involved/" title="Link to Get Involved"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-getInvolved.png" class="navButton" alt="Button Get Involved" /></a><br />
+									<a href="/alumni-friends/giving-to-new-college/give-now/" title="Link to Give Now"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-giveNow.png" class="navButton" alt="Button Give Now" /></a>
+								</div>
+							</div> <!-- END cat-3-menu -->
+							
+							<!-- FOURTH MENU -->
+							<div class="cat-menu" id="cat-4-menu" style="height:180px;">
+								<div class="five columns alpha">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/">New College Academic Programs</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/newone-learning-without-borders/">New One: Learning Without Borders</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/independent-studies/">Independent Studies</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/community-engaged-learning/">Community Engaged Learning</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/academic-employment/">Academic Employment</a></li>
+
+									</ul>
+								</div>
+								<div class="five columns">
+									<ul>
+										
+										<li><a href="http://www.newcollege.utoronto.ca/academics/d-g-ivey-library/">Library</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/writing-centre/">New College Writing Centre</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/math-aid-and-statistics-aid-centres/">Math and Statistics Aid Centre</a></li>
+										
+<li><a href="http://www.newcollege.utoronto.ca/academics/senior-doctoral-fellowships/">Senior Doctoral Fellowships</a></li>
+									</ul>
+								</div>
+								<div class="five columns offset-by-one omega">
+									<a href="/academics/new-college-academic-programs/d-g-ivey-library/" title="Link to Our Library"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-ourLibrary.png" class="navButton" alt="Button Our Library" /></a><br />
+									<a href="/academics/new-college-academic-programs/" title="Link to Our Programs"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-ourProgram.png" class="navButton" alt="Button Our Programs" /></a>
+								</div>
+							</div> <!-- END cat-4-menu -->
+							
+							<!-- FIFTH MENU -->
+							<div class="cat-menu" id="cat-5-menu" style="height:180px;">
+								<div class="five columns alpha">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/">Donald G. Ivey Library</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/writing-centre/">New College Writing Centre</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/new-resources/computer-labs/">Computer Labs</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/new-resources/academic-advising/">Academic Advising</a></li>
+									</ul>
+								</div>
+								<div class="five columns">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/new-resources/summer-residence-accomodation/">Summer Residence Accommodations</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/academics/academic-employment/">Academic Employment</a></li>
+										<li><a href="http://www.artsci.utoronto.ca/current/advising/ell" target="_blank">English Language Learning Program (ELL)</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/new-resources/room-bookings-and-conference-services-at-new-college/">Room Bookings and Conference Services at New College</a></li>
+									</ul>
+								</div>
+								<div class="five columns offset-by-one omega">
+									<a href="/academics/new-college-academic-programs/writing-centre/" title="Link to Writing Centre"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-writingCentre.png" class="navButton" alt="Button Writing Centre" /></a><br />
+									<a href="/academics/new-college-academic-programs/d-g-ivey-library/" title="Link to Our Library"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-ourLibrary.png" class="navButton" alt="Button Our Library" /></a><br />
+								</div>
+							</div> <!-- END cat-5-menu -->
+							
+							<!-- SIXTH MENU -->
+							<div class="cat-menu" id="cat-6-menu" style="height:180px;">
+								<div class="five columns alpha">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/about-us/whats-new/">What's NEW?</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/about-us/office-of-the-principal/">Office of the Principal</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/about-us/nc-academic-planning/">Academic Planning</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/about-us/governance/">Governance</a></li>
+									</ul>
+								</div>
+								<div class="five columns">
+									<ul>
+										<li><a href="http://www.newcollege.utoronto.ca/about-us/business-services/">Business Services</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/about-us/it-services/">IT Services</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/about-us/facilities/">Facilities</a></li>
+										<li><a href="http://www.newcollege.utoronto.ca/about-us/contact-us/">Contact Us</a></li>
+									</ul>
+								</div>
+								<div class="five columns offset-by-one omega">
+									<a href="/staff-directory-listing/" title="Link to Staff Directory"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-staffDirectory.png" class="navButton" alt="Button Staff Directory" /></a><br />
+									<a href="/academics/academic-employment/" title="Link to Academic Employment"><img src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/i/button-academicEmployment.png" class="navButton" alt="Button Academic Employment" /></a>
+								</div>
+							</div> <!-- END cat-6-menu -->
+					
+						</div> <!-- END .mega-menu -->
+				</div>
+			</div> <!-- END .container -->
+		</div> <!-- END #headerHolder -->
+	</div> <!-- END #headerContainer -->
+	<div class="container" id="breadcrumbs">
+		<div class="row">
+			<!-- Breadcrumb NavXT 5.3.1 -->
+<a title="Go to New College - University of Toronto." href="http://www.newcollege.utoronto.ca">New College - University of Toronto</a> &gt; <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to Academics." href="http://www.newcollege.utoronto.ca/academics/" class="post post-page">Academics</a></span> &gt; <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to New College Academic Programs." href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/" class="post post-page">New College Academic Programs</a></span> &gt; <span typeof="v:Breadcrumb"><span property="v:title">D.G. Ivey Library</span></span>		</div>
+	</div>
+		<div class="container">
+	
+			<aside id="sidebar" class="three columns alpha">
+				<div class="widget" id="subpageNavigationWidget">
+			<div class="widgetHolder">
+				<nav>
+					<ul class="sectionNavigation-list" id="sideAccor">
+						<li class="page_item page-item-10799"><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/african-newspapers-search-engine/">African News Search Engine</a></li>
+<li class="page_item page-item-16193"><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/women-and-gender-studies-journals/">Women &#038; Gender Studies Journals</a></li>
+<li class="page_item page-item-17935"><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/student-job-is-the-d-g-ivey-library/">Student jobs in the D.G. Ivey Library</a></li>
+<li class="page_item page-item-23349"><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/research-consultations/">Research Consultations</a></li>
+<li class="page_item page-item-24851"><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/list-of-african-journals/">List of African Journals</a></li>
+<li class="page_item page-item-24897"><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/blind-date-with-a-book/">Blind Date with a Book</a></li>
+<li class="page_item page-item-10703"><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/caribbean-newspapers-search-engine/">Caribbean News Search Engine</a></li>
+<li class="page_item page-item-355"><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/resources-2/">Resources</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+			</aside>
+
+
+		<section class="eight columns">
+
+					<div class="post post-346 page type-page status-publish has-post-thumbnail hentry" id="post-346">
+				<div class="postHeader">
+					<h2>D.G. Ivey Library</h2>
+				</div>
+				<div class="postContent">
+					<p><a href="http://webserver.newcollege.utoronto.ca/wp-content/uploads/2011/10/liblevels.jpg"><img class="alignnone wp-image-1260 size-full" title="liblevels" src="http://www.newcollege.utoronto.ca/wp-content/uploads/2011/10/liblevels.jpg" alt="Photo of New College Library lower level " width="550" height="200" /></a></p>
+<div style="color: black; padding: 1em; margin-top: 2em; margin-bottom: 2em; background-color: #d9ead3; box-shadow: 5px 5px 3px #888888; border: 1px solid #339933;">Library Hours:</p>
+<p>Monday &#8211; Thursday  9am &#8211; 11pm<br />
+Friday 9am &#8211; 5pm<br />
+Saturday 2pm &#8211; 6pm<br />
+Sunday 1pm &#8211; 9pm</p>
+</div>
+<li><a href="http://link.library.utoronto.ca/library/hours/month.cfm?library_id=22" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://link.library.utoronto.ca/library/hours/month.cfm?library_id=22', 'Hours of Operation');" title="Library Hours"  target="_blank">Hours of Operation</a></li>
+<li><a href="http://maps.google.ca/maps?q=20+Willcocks+Street,+Toronto,+Ontario+M5S+1A1&amp;hl=en&amp;sll=43.665621,-79.39343&amp;sspn=0.006845,0.013797&amp;hnear=20+Willcocks+St,+Toronto,+Toronto+Division,+Ontario+M5S+3B2&amp;t=m&amp;z=16" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://maps.google.ca/maps?q=20+Willcocks+Street,+Toronto,+Ontario+M5S+1A1&amp;hl=en&amp;sll=43.665621,-79.39343&amp;sspn=0.006845,0.013797&amp;hnear=20+Willcocks+St,+Toronto,+Toronto+Division,+Ontario+M5S+3B2&amp;t=m&amp;z=16', 'Map and Directions');" title="Map and Directions">Map and Directions</a> &amp; <a href="#Contact Information">Contact and address</a></li>
+<li><a href="http://www.newcollege.utoronto.ca/academics/d-g-ivey-library/policies/">Library Policies</a> (Borrowing, Photocopying, Printing, Study Rooms)</li>
+<li>Course Reserves
+<ul>
+<li>Student &#8211; <a href="http://toroprod.library.utoronto.ca/uhtbin/cgisirsi/x/x/0/36/485/X/BLASTOFF/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://toroprod.library.utoronto.ca/uhtbin/cgisirsi/x/x/0/36/485/X/BLASTOFF/', 'Look up materials on course reserve');" title="Look up materials on course reserve">Look up materials on course reserve</a></li>
+<li>Faculty &#8211; <a title="Course Reserves" href="http://www.newcollege.utoronto.ca/academics/d-g-ivey-library/course-reserves/">Place an item on course reserve </a></li>
+</ul>
+</li>
+<li><a title="Suggest a title" href="http://webserver.newcollege.utoronto.ca/academics/d-g-ivey-library/suggest-a-title/">Suggest a title</a></li>
+</ul>
+<p>The Donald G. Ivey Library contains over 25,000 volumes in circulating and reference collections in the social sciences and other fields. Special collections focus on New College programs in African Studies, Caribbean Studies, Disability Studies, Equity Studies, and Women and Gender Studies. Women and Gender Studies is also supported by an important inter-disciplinary collection of women and gender studies journals.</p>
+<p>The Ivey Library is also home to the print working collection used to develop and update <a href="http://rpo.library.utoronto.ca/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://rpo.library.utoronto.ca/', 'Representative Poetry Online');">Representative Poetry Online</a> (RPO).</p>
+<p>The Ivey Library has comfortable study areas located on both the mezzanine and lower levels, including upholstered chairs for leisure reading and study carrels and tables. The library provides a bright open study space with large windows overlooking the inner quad. The Student Council provides current magazines and newspapers for a relaxing read between classes.</p>
+<p>The College Library in Wilson Hall has full wireless access for student laptops and houses twenty workstations providing access to the Internet, e-mail and electronic library catalogues. Also available are two of the College&#8217;s <a title="Computer Labs" href="http://www.newcollege.utoronto.ca/new-resources/computer-labs/">Student Computer Facilities (NCSCF)</a>.</p>
+<p>New College students have access to all the materials in the <a href="http://www.library.utoronto.ca/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.library.utoronto.ca/', 'University Library System');" title="University of Toronto Libraries"  target="_blank">University Library System</a> including departmental and other branch libraries across the campus. The University of Toronto Library system is rated among the top 4 academic library systems in North America, containing over 15 million items.<br />
+<!--
+
+<h2><a id="Custom Search Engines"></a>Custom Search Engines</h2>
+
+
+These search tools were developed in-house using Google Custom Search Engine to provide access to newspapers from Africa and the Caribbean.
+
+<h3>Caribbean News Search Engine</h3>
+
+
+<a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/caribbean-newspapers-search-engine/"><img class="alignnone wp-image-12231 size-full" src="http://www.newcollege.utoronto.ca/wp-content/uploads/2011/10/caribbeanSea_x-small1.jpg" alt="Upclose of caribbean sea map" width="550" height="100" /></a>
+
+<h3>African News Search Engine</h3>
+
+
+<a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/african-newspapers-search-engine/"><img class="alignnone wp-image-12232 size-full" src="http://www.newcollege.utoronto.ca/wp-content/uploads/2011/10/africa_x-small1.jpg" alt="Upclose of africa map" width="550" height="100" /></a> --></p>
+<p>&nbsp;</p>
+<h2><a id="Contact Information"></a>Contact Information</h2>
+<h3><span class="Apple-style-span" style="font-size: 15px; font-weight: bold;">College Librarians:</span></h3>
+<p><a title="Email Jeff Newman" href="mailto:jeff.newman@utoronto.ca">Jeff Newman</a><br />
+<a title="Email Mona Elayyan" href="mailto:mona.elayyan@utoronto.ca">Mona Elayyan</a></p>
+<h3>Address:</h3>
+<p>20 Willcocks Street, Wilson Hall<br />
+Toronto, Ontario<br />
+Canada, M5S 1A1<br />
+Phone: (416) 978-2493</p>
+<div>
+<p><iframe src="http://www.bing.com/maps/embed/viewer.aspx?v=3&amp;cp=43.661758~-79.399803&amp;lvl=17&amp;w=460&amp;h=400&amp;sty=r&amp;typ=s&amp;pp=&amp;ps=55&amp;dir=0&amp;mkt=en-ca&amp;src=SHELL&amp;form=BMEMJS" width="460" height="400" frameborder="0"></iframe></p>
+<div style="margin: 12px 0 0 0;"><a href="http://www.bing.com/maps/?cp=43.661758~-79.399803&amp;sty=r&amp;lvl=17&amp;sp=&amp;mm_embed=map" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.bing.com/maps/?cp=43.661758~-79.399803&amp;sty=r&amp;lvl=17&amp;sp=&amp;mm_embed=map', 'View Larger Map');" target="_blank">View Larger Map</a>  |  <a href="http://www.bing.com/maps/?cp=43.661758~-79.399803&amp;sty=r&amp;lvl=17&amp;rtp=~pos.43.661758_-79.399803____&amp;mm_embed=dir" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.bing.com/maps/?cp=43.661758~-79.399803&amp;sty=r&amp;lvl=17&amp;rtp=~pos.43.661758_-79.399803____&amp;mm_embed=dir', 'Get Directions');" target="_blank">Get Directions</a>  |  <a href="http://www.bing.com/maps/?cp=r897x98ch0f9&amp;sty=b&amp;lvl=18&amp;sp=&amp;mm_embed=be" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.bing.com/maps/?cp=r897x98ch0f9&amp;sty=b&amp;lvl=18&amp;sp=&amp;mm_embed=be', 'View Bird&#8217;s Eye');" target="_blank">View Bird&#8217;s Eye</a></div>
+</div>
+<h2>Also see:</h2>
+<ul>
+<li><a href="http://link.library.utoronto.ca/library/hours/month.cfm?library_id=22" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://link.library.utoronto.ca/library/hours/month.cfm?library_id=22', 'Library Hours');" title="Library Hours"  target="_blank">Library Hours</a></li>
+<li><a href="http://main.library.utoronto.ca/guide/libraryMap.cfm?ID=22&amp;detail=14" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://main.library.utoronto.ca/guide/libraryMap.cfm?ID=22&amp;detail=14', 'Map and Directions');" title="Map and Directions">Map and Directions</a></li>
+</ul>
+<h2>Have a Question?</h2>
+<div role="form" class="wpcf7" id="wpcf7-f4249-p346-o1" dir="ltr">
+<div class="screen-reader-response"></div>
+<form action="/academics/new-college-academic-programs/d-g-ivey-library/#wpcf7-f4249-p346-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="4249" />
+<input type="hidden" name="_wpcf7_version" value="4.3.1" />
+<input type="hidden" name="_wpcf7_locale" value="" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f4249-p346-o1" />
+<input type="hidden" name="_wpnonce" value="5124a81492" />
+</div>
+<p>Name<br />
+<span class="wpcf7-form-control-wrap Name"><input type="text" name="Name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
+<p>Email address<br />
+   <span class="wpcf7-form-control-wrap Emailaddress"><input type="email" name="Emailaddress" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </p>
+<p>Question/ Inquiry<br />
+<span class="wpcf7-form-control-wrap QuestionInquiry"><textarea name="QuestionInquiry" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </p>
+<p>Are you a New College Student?<br />
+<span class="wpcf7-form-control-wrap ncstudent"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required wpcf7-exclusive-checkbox" id="ncstudent"><span class="wpcf7-list-item first"><label><input type="checkbox" name="ncstudent" value="Yes" />&nbsp;<span class="wpcf7-list-item-label">Yes</span></label></span><span class="wpcf7-list-item last"><label><input type="checkbox" name="ncstudent" value="No" />&nbsp;<span class="wpcf7-list-item-label">No</span></label></span></span></span></p>
+<p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" /></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+				</div>
+				<div class="postFooter">
+				</div>
+			</div>
+				
+		</section>
+
+		<aside id="sidebar" class="five columns omega">
+			<div class="widget advanced_text" id="advanced_text-39"><div class='AdvancedText'><h4 class="sidebar texture">D.G. Ivey library Events</h4><div class="widgetHolder"><ul class="">
+							</ul>
+</div></div><div class="clearMe"></div></div>
+<div class="widget advanced_text" id="advanced_text-16"><div class='AdvancedText'><h4 class="sidebar texture">New College Features</h4><div class="widgetHolder"><ul class="sidebar-list">
+								<li id="post-25250" class="post-25250 news type-news status-publish has-post-thumbnail hentry news-topics-new-college-features"><a href="http://news.utoronto.ca/did-our-hominid-ancestors-leave-africa-and-return" rel="bookmark" title="Permanent Link to New College undergraduate Klara Komza participates in anthropology research">New College undergraduate Klara Komza participates in anthropology research</a></li>
+								<li id="post-24485" class="post-24485 news type-news status-publish has-post-thumbnail hentry news-topics-new-college-features"><a href="http://www.newcollege.utoronto.ca/news/brains-bridges-and-bucks-a-roundup-of-this-brand-new-series/" rel="bookmark" title="Permanent Link to Brains, bridges and bucks: A roundup of this brand-new series">Brains, bridges and bucks: A roundup of this brand-new series</a></li>
+								<li id="post-24049" class="post-24049 news type-news status-publish has-post-thumbnail hentry news-topics-new-college-features"><a href="http://www.newcollege.utoronto.ca/news/ami-baba/" rel="bookmark" title="Permanent Link to New College&#8217;s Ami Baba profiled in U of T feature on international students">New College&#8217;s Ami Baba profiled in U of T feature on international students</a></li>
+								<li id="post-23688" class="post-23688 news type-news status-publish has-post-thumbnail hentry news-topics-new-college-features"><a href="http://www.newcollege.utoronto.ca/news/fall-finery/" rel="bookmark" title="Permanent Link to Fall finery">Fall finery</a></li>
+					
+</ul></div></div><div class="clearMe"></div></div>
+		
+		</aside>
+	</div><!-- END .container -->
+	<div id="footerTopper"></div>
+	<footer>
+		<div id="footerOuter">
+			<div class="container">
+				<div class="row">
+					<section class="one-sixth column alpha">
+						<h6>GIVE</h6>
+						<ul>
+							<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/giving-to-new-college/where-to-give/">Where to Give</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/giving-to-new-college/give-now/">Give Now</a></li>		
+						</ul>
+					</section>	
+		
+					<section class="one-sixth column">
+						<h6>LEARN</h6>
+						<ul>
+							<li><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/">Our Programs</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/academics/writing-centre/">The Writing Centre</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/d-g-ivey-library/">Library</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/current-students/academic-advising-registrarial-services/academic-advising/">Academic Advising</a></li>
+						</ul>
+					</section>	
+		
+					<section class="one-sixth column">
+						<h6>LIVE</h6>
+						<ul>
+							<li><a href="http://www.newcollege.utoronto.ca/current-students/residence-at-new-college/">Residence</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/studentlife/student-life/student-clubs-groups/">Student Groups</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/event/">Events</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/current-students/student-life-and-leadership-at-new-college/clubs-councils-and-groups/volunteer/">Volunteer</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/current-students/residence-at-new-college/current-residents/living-at-new-college/student-job-opportunities/">Jobs</a></li>
+						</ul>
+					</section>	
+		
+					<section class="one-sixth column">
+						<h6>EXPLORE</h6>
+						<ul>
+							<li><a href="http://www.newcollege.utoronto.ca/about-us/whats-new/the-history-of-nc/">History</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/">Arts &amp; Culture</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/">Community</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/">Values</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/">Vision</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/future-students/visiting-new-college/">Visitors</a></li>
+						</ul>
+					</section>
+		
+					<section class="one-sixth column">
+						<h6>APPLY</h6>
+						<ul>
+							<li><a href="http://www.newcollege.utoronto.ca/future-students/why-new-college/">Why New</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/future-students/money-matters/">Fees</a></li>
+							<li><a href="http://www.adm.utoronto.ca/admissions/">Admissions</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/future-students/money-matters/">Financial Aid</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/academics/newone-learning-without-borders/">New One</a></li>
+						</ul>
+					</section>
+					
+					<section class="one-sixth column omgea">
+						<h6>ENGAGE</h6>
+						<ul>
+							<li><a href="http://www.newcollege.utoronto.ca/event/">Events</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/alumni-friends/giving-to-new-college/give-now/">Giving</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/academics/new-college-academic-programs/community-engaged-learning/">Community Engaged Learning</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/studentlife/student-life/student-clubs-groups/">Student Groups</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/">Mentoring Opportunities</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/">Volunteering Opportunities</a></li>
+							<li><a href="http://www.newcollege.utoronto.ca/studentlife/">Student Life & Leadership Program</a></li>
+						</ul>
+					</section>	
+				</div>
+			</div><!-- container -->
+		</div><!-- END #footerOuter -->
+		<div id="lowerFooter">
+			<section class="container">
+<!--
+				<a href="http://www.newcollege.utoronto.ca/" class="icon" id="flickr">Flickr</a>
+				<a href="http://www.newcollege.utoronto.ca/" class="icon" id="youtube">Youtube</a>
+-->
+				<a href="http://www.twitter.com/newcollegeUofT/" class="icon" id="twitter">Twitter</a>
+				<a href="https://www.facebook.com/pages/New-College-Alumni-Friends-University-of-Toronto/192175714169723" class="icon" id="facebook">Facebook</a>
+				<a href="http://www.newcollege.utoronto.ca/feed/rss/" class="icon" id="rss">RSS</a>
+				<p>
+					&copy; 2011-2015 • New College • University of Toronto • All rights reserved. Designed & Developed by <a href="http://www.theblogstudio.com" target="_blank">The Blog Studio</a><br />
+					<a href="http://www.newcollege.utoronto.ca/notes-on-accessibility/">Notes on Accessibility</a> - <a href="http://www.newcollege.utoronto.ca/site-map/" accesskey="s">Site Map</a>
+				</p>
+			</section><!-- container -->
+		</div><!-- END lowerFooter -->
+	</footer>
+
+
+	<!-- End Document
+	================================================== -->
+	<!-- ngg_resource_manager_marker --><script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-includes/js/jquery/ui/core.min.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-includes/js/jquery/ui/widget.min.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-includes/js/jquery/ui/button.min.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-includes/js/jquery/ui/datepicker.min.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-content/plugins/contact-form-7-datepicker-fix/js/jquery.ui.spinner.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-content/plugins/contact-form-7-datepicker-fix/js/cf7-datepicker-ie-fixer.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=f37341dc7de4bf7f18d410389a7e53ab-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.newcollege.utoronto.ca\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-includes/js/jquery/jquery.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-includes/js/jquery/jquery-migrate.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cptch_vars = {"nonce":"7e433493b8","ajaxurl":"http:\/\/www.newcollege.utoronto.ca\/wp-admin\/admin-ajax.php","enlarge":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-content/plugins/captcha/js/front_end_script.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+<script type='text/javascript' src='http://www.newcollege.utoronto.ca/wp-content/plugins/wpfront-scroll-top/js/wpfront-scroll-top.js?ver=f37341dc7de4bf7f18d410389a7e53ab'></script>
+
+
+
+    <div id="wpfront-scroll-top-container"><img src="http://www.newcollege.utoronto.ca/wp-content/plugins/wpfront-scroll-top/images/icons/53.png" alt="Back to top" /></div>
+    <script type="text/javascript">if(typeof wpfront_scroll_top == "function") wpfront_scroll_top({"scroll_offset":100,"button_width":0,"button_height":0,"button_opacity":0.8,"button_fade_duration":200,"scroll_duration":400,"location":1,"marginX":150,"marginY":20,"hide_iframe":false,"auto_hide":false,"auto_hide_after":2});</script>
+	<!-- JS
+	================================================== -->
+	<!--[if IE 8]>
+	<script src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/js/ie8_fix_maxwidth.js"></script>
+	<![endif]-->
+	<script src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/js/jquery.flexslider-min.js"></script>
+	<script src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/js/jquery-ui-1.8.4.custom.min.js"></script>
+	<script src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/js/jquery.hoverIntent.minified.js"></script>
+	<script src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/js/jquery.dcjqaccordion.2.7.min.js"></script>
+	<script src="http://www.newcollege.utoronto.ca/wp-content/themes/newcollege/js/j.js"></script>
+
+	
+</body>
+</html>

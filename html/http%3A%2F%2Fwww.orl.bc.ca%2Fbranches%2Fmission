@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<base href="http://www.orl.bc.ca/" />
+	<title>Mission - Okanagan Regional Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="description" content="Okanagan Regional Library: library system covering the entire Thompson-Okanagan region of British Columbia, Canada." />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/style.css?v=v8" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/calendar_2013.css?v=v4" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/contact_us.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/search.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/left_menu.css?v=v2" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_l.css" type="text/css" media="screen" id="link_text_l" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_m.css" type="text/css" media="screen" id="link_text_m" title="text" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/text_s.css" type="text/css" media="screen" id="link_text_s" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/contrast.css" type="text/css" media="screen" id="link_contrast" title="contrast" />
+	<link rel="alternate" type="application/rss+xml" title="Okanagan Regional Library RSS Feed" href="news-events/rss" />
+	<script src="manager/media/script/mootools/mootools.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/jquery.fancybox.js" type="text/javascript"></script>
+	<script type="text/javascript">var $j = jQuery.noConflict();</script>
+	<script src="assets/templates/orlv2/js/form-check.js?v=v1" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/swfobject.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/script.js?v=v7" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="assets/templates/orlv2/css/dhtmlgoodies_calendar.css" media="screen" />  
+	<script src="assets/templates/orlv2/js/dhtmlgoodies_calendar.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pathToImages = '/assets/templates/orlv2/images/layout/';
+		//SWFObject
+		var flashvars = {};
+		var params = {
+			wmode: "transparent"
+		};
+	</script>
+<!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAMmBdV5STCVExvFTDWp50DBQn_DD64N2y7rZVstjCgjH1jrOTvBTbfltFh8gj6JbFUyeasDAlowgpPA" type="text/javascript"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9zKi3DlhGhdgZ5zWPYklEM59GzU0pys&sensor=false"></script>
+<script type="text/javascript" src="//use.typekit.net/igq5whz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+	<body>
+
+    	<div id="wrap">
+        <div class="background-header">
+                       <div id="header">
+                <span class="font-adjust-container">
+<a href="/sitemap">Site Map</a> | <a class="text_l" id="large-text-link" href="javascript:clickTextLarge();">A</a>&nbsp;<a class="text_m" id="medium-text-link" href="javascript:clickTextMedium();">A</a>&nbsp;<a class="text_s" id="small-text-link" href="javascript:clickTextSmall();">A</a>
+				</span>
+            </div>
+            <!-- Header Image/Top Menu Row -->
+            <div class="top-menu-div">
+                <div id="logo"><a href="/"><img src="/assets/templates/orlv2/images/layout/logo-new.gif" alt="Okanagan Regional Library" /></a></div>
+                <div id="welcome"><img src="/assets/templates/orlv2/images/layout/background-bar-left.png" /></div>
+                <div id="social">
+	                <a href="http://www.youtube.com/OKRegLibrary" target="_blank">Youtube</a>
+	                <a href="http://75-years-orl.blogspot.com/" target="_blank">Blogger</a>
+	                <a href="http://www.facebook.com/OKRegLib" target="_blank">Facebook</a>
+	                <a href="http://twitter.com/ORLreads" target="_blank">Twitter</a>
+	                <a href="http://ipac.orl.bc.ca/mobile">ORL Mobile</a>
+                </div>
+            </div>
+<div id="header-search-2013">
+                    <script language="javascript">
+                        String.prototype.trim = function () { return this.replace(/^\s*|\s*$/g, ''); }
+                        function ProcessInput(e) {
+                            if (window.event)       // IE
+                                keyNum = e.keyCode;
+                            else if (e.which)       // Netscape/Firefox/Opera
+                                keyNum = e.which;
+                            if (keyNum == 13) {
+                                e.returnValue = false;
+                                e.cancelBubble = true;
+                                DoKeywordSearch();
+                                return false;
+                            }
+                            return true;
+                        }
+                        function DoKeywordSearch() {
+                            if (document.getElementById('textboxTerm').value.trim() != '')
+                                window.location = 'http://ipac.orl.bc.ca/polaris/view.aspx?keyword=' + escape(document.getElementById('textboxTerm').value);
+                            else
+                                document.getElementById('textboxTerm').focus();
+                        }
+                    </script>
+                    <a class="redbutton" href="javascript:;" onclick="DoKeywordSearch();"><span>Go</span></a>
+                    <input type=text id=textboxTerm size=45 class="cleartxt inactive search" value="Search Catalogue..." 
+                     onblur="if (this.value == '') {this.value = 'Search Catalogue...';}"
+                     onfocus="if(this.value == 'Search Catalogue...') { this.value = ''; }" 
+                     onkeypress="return ProcessInput(event)" />
+                    <script language="javascript">
+                        document.getElementById('textboxTerm').blur();
+                    </script>
+                 </div>
+		<br />
+                     <p class="f_right"><a href="http://ipac.orl.bc.ca/polaris/patronaccount/default.aspx?ctx=1.1033.0.0.3">Login to My Account</a></p>
+		
+
+            <!-- Main Menu -->
+           <div id="left-menu-container">
+             <div id="top-menu-header">
+    <img src="/assets/templates/orl/images/layout/menu-text.png" alt="Menu" />
+</div>
+<div id="left-menu">
+<ul class=" left-menu-header"><li >
+  <div class="menusection"><h3 class=""><a class="" href="/about-us">About Us</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/news-events">News &amp; Events</a></h3></div>
+</li>
+<li  class="active">
+  <div class="menusection"><h3 class="active"><a class="active" href="/branches">Branches</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/Borrowing-services">Borrowing & Services</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/online-resources">Web Resources</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/kids">Kids</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/teens">Teens</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/book-lovers">Book Lovers</a></h3></div>
+</li>
+<li  class="last">
+  <div class="menusection"><h3 class="last"><a class="last" href="/contact">Contact Us</a></h3></div>
+</li>
+</ul>
+</div>
+           </div>
+
+            <!-- Menu/Intro Row -->
+                <div id="intro-wide">
+                   
+                   <div id="background-image-box-big"><div id="slideshow"></div></div>
+<div id="background-box-overlay"></div>
+<script type="text/javascript" src="http://www.orl.bc.ca/assets/js/rokslideshow.js"></script>
+		<script type="text/javascript">
+			window.RokSlideshowPath = '';
+			var myshow;
+			window.addEvent('load', function(){
+				var imgs = [];
+				
+				imgs.push({
+					file: '002.JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'IMG_2983.JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'Fireplace.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				myshow = new Slideshow('slideshow', { 
+					type: 'fade',
+					showTitleCaption: 0,
+					captionHeight: 45,
+					width: 550, 
+					height: 340, 
+					loadingDiv: 0,
+					resize: true,
+					duration: [2000, 4000],
+					transition: Fx.Transitions.Expo.easeOut,
+					images: imgs, 
+					path: '/assets/images/Branch-Slideshow/mission/'
+				});
+				myshow.caps.h2.setStyles({
+					color: '#fff',
+					fontSize: '13px'
+				});
+				myshow.caps.p.setStyles({
+					color: '#ccc',
+					fontSize: '11px'
+				});
+			});
+		</script>
+                   <div id="intro-wide-content">
+                               <span class="B_crumbBox"><span class="B_firstCrumb"><a class="B_homeCrumb" href="/home" title="Find Books, Music, Movies, and More">Home</a></span> &raquo; <a class="B_crumb" href="/branches" title="Branches">Branches</a> &raquo; <span class="B_lastCrumb"><span class="B_currentCrumb">Mission</span></span></span>
+                               <h1>Mission</h1>
+                               <div id="page-sub-menu">
+<ul class="submenu">
+<li>no result<script type%3D"text/javascript">$j("#page-sub-menu").hide();</script></li> 
+</ul>
+<script type="text/javascript">
+$j('.submenu').makeacolumnlists({cols: 2, colWidth: 0, equalHeight: false, startN: 12});
+</script>
+</div>
+                               
+<div id="content-header-text">
+<ul class="tabs">
+    <li class="tab1"><a href="#tab1">Location</a></li>
+    <li class="tab2"><a href="#tab2">Open Hours</a></li>
+    <li class="tab3"><a href="#tab3">Parking</a></li>
+    <li class="tab4"><a href="#tab4"></a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content"><p><strong>Capital News Centre<br />4105 Gordon Dr.<br />Kelowna, B.C. V1W 4Z1<br />(250) 764-2254</strong></p>
+<p style="text-align: justify;">When the library is closed there are book return drops located on the west side of the building, underneath the Library sign. These are open 24 hours a day, except during the Easter and Christmas closures.</p>
+<p>Please find our events below on the branch calendar, or search the <a href="news-events/event-search">ORL Calendar of Events</a>.</p></div>
+    <div id="tab2" class="tab_content"><table id="openhours"><tr><td>Monday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Tuesday: </td><td>10:00 a.m. to 8:00 p.m.</td></tr><tr><td>Wednesday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Thursday: </td><td>10:00 a.m. to 8:00 p.m.</td></tr><tr><td>Friday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Saturday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Sunday: </td><td>CLOSED</td></tr><tr><td></td><td>All branches are closed on statutory holidays</td></tr></table></div>
+    <div id="tab3" class="tab_content"><p>Free parking is available in the Capital News Centre parking lot.</p></div>
+    <div id="tab4" class="tab_content"></div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var tabCount = 0;
+	//When page loads...
+	jQuery(".tab_content").hide(); //Hide all content
+	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	jQuery(".tab_content:first").show(); //Show first tab content
+//hide empty tabs
+jQuery(".tab_content").each(function(){
+	if(jQuery(this).html() == ''){
+		jQuery("."+jQuery(this).attr("id")).hide();
+	} else {
+		if(jQuery("."+jQuery(this).attr("id")+" a").html() == ''){
+			jQuery("."+jQuery(this).attr("id")).hide();
+		} else {
+			tabCount++;
+		}
+	}
+});
+
+if(tabCount > 1){
+jQuery(".tab_container").show();
+jQuery("ul.tabs").show();
+} else {
+jQuery("#content-header-text").html(jQuery("#tab1").html());
+}
+
+	//On Click Event
+	jQuery("ul.tabs li").click(function() {
+
+		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+		jQuery(this).addClass("active"); //Add "active" class to selected tab
+		jQuery(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = jQuery(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		jQuery(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});
+</script>
+
+</div>
+                  </div>
+                </div>
+            <!-- Banners/Content Row -->
+               <div class="content-row-div"><div id="sidebanners">
+                   <div style="float: left; width: 244px;">
+<div class="banner-map" style="margin-bottom:28px;">
+<a name="content"></a>
+    <div id="map" style="width:244px; height:166px;"></div><script type="text/javascript">
+    //var map = new google.maps.Map(document.getElementById("map"));
+    //var point = new google.maps.LatLng(49.835686, -119.482779);
+    //map.setCenter(point, 14);
+    //var marker = new google.maps.Marker(point);
+    //map.addOverlay(marker);
+    //map.addControl(new GSmallMapControl());
+      var map = new google.maps.Map(
+        document.getElementById("map"), {
+          center: new google.maps.LatLng(49.835686, -119.482779),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(49.835686, -119.482779),
+            map: map
+      });
+    </script>
+</div>
+<div class="banner-calendar print-hide" id="branch-calendar" style="margin-bottom:28px;">
+    <!--[if IE 7 ]> <div class="calendar-div ie7"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!--> <div class="calendar-div"> <!--<![endif]-->
+    <div id="calendar">
+	<div id="calendar-heading">
+    	<div class="month prev"><a href="index.php?id=34&amp;cid=20&amp;m=2&amp;y=2016#content">&laquo;</a></div>
+		<div class="monthyear">
+			<div class="month heading">March</div>
+			<div class="year heading">2016</div>
+		</div>
+    	<div class="month next"><a href="index.php?id=34&amp;cid=20&amp;m=4&amp;y=2016#content">&raquo;</a></div>
+	</div>
+	<div id="day-heading-background">
+		<div class="day heading">Sun</div>
+		<div class="day heading">Mon</div>
+		<div class="day heading">Tue</div>
+		<div class="day heading">Wed</div>
+		<div class="day heading">Thu</div>
+		<div class="day heading">Fri</div>
+		<div class="day heading">Sat</div>
+	</div>	
+	<div id="date-background">
+		<div class="day none"></div><div class="day none"></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-1').style.display='block';document.getElementById('fade').style.display='block'">1</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-1', this)">1</a>
+<div id="day-popup-1" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-1').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		<p>Stories, music, fingerplays,movement and more for your 0 - 18 month old.Free and drop in10:15 am.</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3346">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+<p>Stories, music, fingerplays,movement and more for your 0 - 18 month old.Free and drop in10:15 am.</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3346">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-2').style.display='block';document.getElementById('fade').style.display='block'">2</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-2', this)">2</a>
+<div id="day-popup-2" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-2').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Wednesday</h4>
+	<p>
+		<p>Stories, songs, movementand more for your 18 monthto 3 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3496">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Wednesday</span></h3>
+<p>Stories, songs, movementand more for your 18 monthto 3 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3496">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-3').style.display='block';document.getElementById('fade').style.display='block'">3</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-3', this)">3</a>
+<div id="day-popup-3" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-3').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>Stories, songs, movementand more for your 3 year old to 5 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3497">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Thursday</span></h3>
+<p>Stories, songs, movementand more for your 3 year old to 5 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3497">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-8').style.display='block';document.getElementById('fade').style.display='block'">8</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-8', this)">8</a>
+<div id="day-popup-8" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-8').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		<p>Stories, music, fingerplays,movement and more for your 0 - 18 month old.Free and drop in10:15 am.</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3346">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+<p>Stories, music, fingerplays,movement and more for your 0 - 18 month old.Free and drop in10:15 am.</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3346">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-9').style.display='block';document.getElementById('fade').style.display='block'">9</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-9', this)">9</a>
+<div id="day-popup-9" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-9').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Wednesday</h4>
+	<p>
+		<p>Stories, songs, movementand more for your 18 monthto 3 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3496">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Wednesday</span></h3>
+<p>Stories, songs, movementand more for your 18 monthto 3 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3496">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-10').style.display='block';document.getElementById('fade').style.display='block'">10</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-10', this)">10</a>
+<div id="day-popup-10" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-10').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>Stories, songs, movementand more for your 3 year old to 5 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3497">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Thursday</span></h3>
+<p>Stories, songs, movementand more for your 3 year old to 5 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3497">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day today">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-15').style.display='block';document.getElementById('fade').style.display='block'">15</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-15', this)">15</a>
+<div id="day-popup-15" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-15').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3346">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+
+<p style="text-align: right;"><a href="branches/mission?event_id=3346">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Teen Time</h3>
+	<h4>March 15, 2016</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3498">Event Details</a>
+
+</div>
+-->
+<h3>Teen Time<span class="date">March 15, 2016</span></h3>
+
+<p style="text-align: right;"><a href="branches/mission?event_id=3498">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-16').style.display='block';document.getElementById('fade').style.display='block'">16</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-16', this)">16</a>
+<div id="day-popup-16" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-16').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Wednesday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3496">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Wednesday</span></h3>
+
+<p style="text-align: right;"><a href="branches/mission?event_id=3496">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Mission Reads</h3>
+	<h4>March 16, 2016</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3361">Event Details</a>
+
+</div>
+-->
+<h3>Mission Reads<span class="date">March 16, 2016</span></h3>
+
+<p style="text-align: right;"><a href="branches/mission?event_id=3361">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-17').style.display='block';document.getElementById('fade').style.display='block'">17</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-17', this)">17</a>
+<div id="day-popup-17" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-17').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3497">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Thursday</span></h3>
+
+<p style="text-align: right;"><a href="branches/mission?event_id=3497">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Mission Reads</h3>
+	<h4>March 17, 2016</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3362">Event Details</a>
+
+</div>
+-->
+<h3>Mission Reads<span class="date">March 17, 2016</span></h3>
+
+<p style="text-align: right;"><a href="branches/mission?event_id=3362">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-18').style.display='block';document.getElementById('fade').style.display='block'">18</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-18', this)">18</a>
+<div id="day-popup-18" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-18').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>LEGO Builder</h3>
+	<h4>March 18, 2016</h4>
+	<p>
+		<p>Build with LEGO.&nbsp; Your onlylimit is your imagination.</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3499">Event Details</a>
+
+</div>
+-->
+<h3>LEGO Builder<span class="date">March 18, 2016</span></h3>
+<p>Build with LEGO.&nbsp; Your onlylimit is your imagination.</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3499">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-19').style.display='block';document.getElementById('fade').style.display='block'">19</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-19', this)">19</a>
+<div id="day-popup-19" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-19').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Retirment Workshop</h3>
+	<h4>March 19, 2016</h4>
+	<p>
+		<p>Saturday, at 10 am.</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3495">Event Details</a>
+
+</div>
+-->
+<h3>Retirment Workshop<span class="date">March 19, 2016</span></h3>
+<p>Saturday, at 10 am.</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3495">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">20</div><div class="day">21</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-22').style.display='block';document.getElementById('fade').style.display='block'">22</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-22', this)">22</a>
+<div id="day-popup-22" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-22').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		<p>Stories, music, fingerplays,movement and more for your 0 - 18 month old.Free and drop in10:15 am.</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3346">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+<p>Stories, music, fingerplays,movement and more for your 0 - 18 month old.Free and drop in10:15 am.</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3346">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-23').style.display='block';document.getElementById('fade').style.display='block'">23</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-23', this)">23</a>
+<div id="day-popup-23" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-23').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Wednesday</h4>
+	<p>
+		<p>Stories, songs, movementand more for your 18 monthto 3 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3496">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Wednesday</span></h3>
+<p>Stories, songs, movementand more for your 18 monthto 3 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3496">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-24').style.display='block';document.getElementById('fade').style.display='block'">24</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-24', this)">24</a>
+<div id="day-popup-24" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-24').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>Stories, songs, movementand more for your 3 year old to 5 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3497">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Thursday</span></h3>
+<p>Stories, songs, movementand more for your 3 year old to 5 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3497">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-29').style.display='block';document.getElementById('fade').style.display='block'">29</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-29', this)">29</a>
+<div id="day-popup-29" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-29').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		<p>Stories, music, fingerplays,movement and more for your 0 - 18 month old.Free and drop in10:15 am.</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3346">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+<p>Stories, music, fingerplays,movement and more for your 0 - 18 month old.Free and drop in10:15 am.</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3346">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-30').style.display='block';document.getElementById('fade').style.display='block'">30</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-30', this)">30</a>
+<div id="day-popup-30" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-30').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Wednesday</h4>
+	<p>
+		<p>Stories, songs, movementand more for your 18 monthto 3 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3496">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Wednesday</span></h3>
+<p>Stories, songs, movementand more for your 18 monthto 3 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3496">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-31').style.display='block';document.getElementById('fade').style.display='block'">31</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-31', this)">31</a>
+<div id="day-popup-31" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-31').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>Stories, songs, movementand more for your 3 year old to 5 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+		
+	</p>
+	<a id="event_details" href="mission?event_id=3497">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Thursday</span></h3>
+<p>Stories, songs, movementand more for your 3 year old to 5 year old and parent orcaregiver.&nbsp; 10:15 am</p>
+<p style="text-align: right;"><a href="branches/mission?event_id=3497">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day none"></div><div class="day none"></div>
+	</div>
+	<div class="clearer"></div>
+	<div id="upcoming-events"><a href="/news-events/upcoming-events?cid=20">Search Our Upcoming Events</a></div>
+</div>
+</div>
+</div>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/Borrowing-services/internet-access"><img src="/assets/templates/orl/images/banners/hotspot.jpg" alt="Free Internet Access" /></a>
+</div>
+               </div>
+               <div style="float:left; width:650px;">
+                   <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&nbsp;</p>
+<h2 style="text-align: center;"><a href="https://twitter.com/MissionBranch" target="_blank"><img src="assets/images/follow_bird-a.png" alt="Follow us on Twitter" width="113" height="36" /></a></h2>
+<h1 style="text-align: center;">&nbsp;<strong>RETIREMENT WORKSHOP</strong></h1>
+<h2 style="text-align: center;">Are you retiring soon?&nbsp; Thinking of retiring?</h2>
+<h2 style="text-align: center;">Then you might want to attend our retirement workshop on</h2>
+<h2 style="text-align: center;">Saturday, March 19 at 10 am.&nbsp; It is free and drop in.</h2>
+<h1 style="text-align: center;"><strong>*</strong></h1>
+<h2 style="text-align: center;"><br /><strong><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Lake%20Country/Knitting_Needles.png" alt="" width="300" height="134" /></strong></h2>
+<h1 style="text-align: center;"><strong>Mission Knits!</strong></h1>
+<h2 style="text-align: center;"><strong>Join us on&nbsp;Tuesday afternoons&nbsp;at 1 pm.&nbsp; Knitters and crocheters&nbsp;of all abilities are welcome.&nbsp; Please bring needles and yarn and a project to work on.&nbsp;</strong></h2>
+<h2 style="text-align: center;"><strong>&nbsp;It's free!&nbsp; Just drop&nbsp; in!</strong>&nbsp;</h2>
+<h1 style="text-align: center;">*</h1>
+<h1 style="text-align: center;"><strong>Spring&nbsp;Children's Storytimes</strong></h1>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<p style="text-align: center;"><strong></strong><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Spring_Flowers.jpg" alt="" width="335" height="220" />&nbsp;<strong></strong></p>
+<p style="text-align: left;">&nbsp;</p>
+<h3 style="text-align: center;">&nbsp;<strong><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></strong><strong><em>All storytime programs are drop-in and FREE!&nbsp;&nbsp; </em></strong></h3>
+<p><em>&nbsp;</em>&nbsp;&nbsp;</p>
+<h2><strong>Babytime</strong>:&nbsp;<strong>Tuesdays&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;March&nbsp;1 -&nbsp;Apr. 26&nbsp;&nbsp;&nbsp;10:15- 10-45 am</strong></h2>
+<h2>Bond with your baby ~ Introduce language with rhymes, songs, fingerplays and stories for&nbsp;newborns&nbsp;- 1&frac12; years, their parents and caregivers.</h2>
+<h3>&nbsp;</h3>
+<h2><strong>Toddlertime: Wednesdays&nbsp;&nbsp;March 2&nbsp;-&nbsp;Apr. 27&nbsp;&nbsp;&nbsp;10:15-10:45 am</strong></h2>
+<h2>Interact with your toddler ~ Encourage curiosity with songs, rhymes, fingerplays and stories for toddlers 1&frac12; - 3 years, their parents and caregivers.</h2>
+<p>&nbsp;</p>
+<h2><strong>Storytime:&nbsp;Thursdays&nbsp;&nbsp;&nbsp;March 3&nbsp;-&nbsp;Apr. 28&nbsp;&nbsp; 10:15 - 10:45 am</strong></h2>
+<h2>Enjoy fun with your preschooler ~ Get ready to read with stories, rhymes, songs and fingerplays for preschoolers 3 - 5 years, their parents and caregivers.</h2>
+<h1 style="text-align: center;"><strong>*</strong></h1>
+<h1 style="text-align: center;"><strong>&nbsp; Teen/Tween Programs</strong></h1>
+<h1 style="text-align: center;"><strong><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Peachland/shamrock.jpg" alt="" width="217" height="195" /></strong></h1>
+<h2 style="text-align: center;"><strong>Tuesday, March 15 ~ Beaded Jewelry Making</strong></h2>
+<h3 style="text-align: center;"><strong>Spring has sprung!</strong></h3>
+<h3 style="text-align: center;"><strong>Kristin returns to help you create a beautiful,</strong></h3>
+<h3 style="text-align: center;"><strong>beaded Easter jewelry project.</strong></h3>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<h2 style="text-align: center;"><strong>Please register in person or by phone as space is limited!</strong></h2>
+<h2 style="text-align: center;"><strong>For ages 8-18! All programs are from 6:30-7:30pm!</strong></h2>
+<h1 style="text-align: center;"><strong>*</strong></h1>
+<h1 style="text-align: center;"><strong>Mission</strong><em><strong> </strong></em><strong>Reads</strong><strong> Book Club</strong></h1>
+<h2>Please join us&nbsp;each month on&nbsp;Wednesday afternoon at 1:30pm OR Thursday evening at 6:45pm for a lively discussion of that month's title.&nbsp; Sit by the fireplace and enjoy coffee and treats and great conversation.&nbsp;&nbsp; There will be copies of the next book handed out at each meeting.</h2>
+<p><strong></strong>&nbsp;</p>
+<h2><strong>Oct. 14 or 15&nbsp;&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>The Girl Who was Saturday Night&nbsp;</strong>by Heather O'Neill<strong>&nbsp;</strong></h2>
+<h2><strong>Nov. 18 or 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Virgin Cure </strong>by Ami McKay<strong>&nbsp;</strong></h2>
+<h2><strong>Dec. 16 or 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Us Conductors&nbsp;</strong>by&nbsp;Sean Michaels</h2>
+<h2><strong>Jan. 20 or 21</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Confined Space</strong>&nbsp;by&nbsp;Deryn Collier</h2>
+<h2><strong>Feb.&nbsp;17 or 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Circling the Sun&nbsp;</strong>by&nbsp;Paula McLain</h2>
+<h2><strong>March 16 or 17&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;They Left Us Everything </strong>by Plum Johnson</h2>
+<h2><strong>April 20 or 21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orphan Train </strong>by Christina Baker Kline</h2>
+<h2><strong></strong>&nbsp;</h2>
+<h2 style="text-align: center;"><strong>*</strong></h2>
+<p style="text-align: center;"><strong><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Lego_Blocks.jpg" alt="" width="286" height="176" /></strong></p>
+<h1 style="text-align: center;">&nbsp;&nbsp;<strong>Mission LEGO Builders</strong></h1>
+<p style="text-align: center;"><strong>Love LEGO? We provide the LEGO and you bring your imagination!</strong></p>
+<p style="text-align: center;"><strong>Come play, create, and experiment. Creations are diplayed in the library until the next session.</strong></p>
+<p style="text-align: center;"><strong>&nbsp;Contact the Library at 250-764-2254 to register for&nbsp;winter sessions</strong></p>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<h2 style="text-align: center;"><strong>Spring Break&nbsp;&nbsp; Friday,&nbsp; &nbsp;March 18, 10:15-11:15 am</strong>&nbsp;</h2>
+<h2 style="text-align: center;"><strong>Thursday</strong><strong>,&nbsp;&nbsp;&nbsp;April 14,&nbsp; 3:00-4:00 pm</strong></h2>
+<h2 style="text-align: center;"><strong>Thursday, &nbsp;May 19,&nbsp; 3:00-4:00 pm</strong></h2>
+<h2 style="text-align: center;"><strong>Thursday,&nbsp;&nbsp; June 16, 3:00- 4:00 pm</strong>&nbsp;</h2>
+<p style="text-align: center;">&nbsp;</p>
+<h1 style="text-align: center;"><a href="http://missionlibrary.wordpress.com/2013/08/21/mission-lego-builders-6/" target="_blank"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Mission/Lego_Builders_Club.jpg" alt="" width="240" height="83" />Mission LEGO<strong> </strong>Builders</a>&nbsp;</h1>
+<p style="text-align: center;">click on the link to see LEGO projects created by Mission Builders</p>
+<h1 style="text-align: center;">&nbsp;<strong>*</strong></h1>
+<h1 style="text-align: center;"><strong>&nbsp;&nbsp;&nbsp;</strong>&nbsp;<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.kelownafol.ca/" target="_blank"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Kel%20FoL%20logo.jpg" alt="" width="240" height="85" /></a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/pages/Kelowna-Friends-of-the-Library/233941663288496" target="_blank"><img src="assets/images/facebook.jpg" alt="Kelowna Friends of the Library Facebook page" width="99" height="89" /></a></h1>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;<strong>*&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></h1>
+<p><strong></strong>&nbsp;</p>
+<h2><strong><img style="float: right;" src="assets/images/Image%20Bank%20for%20Branch%20Use/scrabble.jpg" alt="Scrabble" width="138" height="134" />Fun and Games Night!&nbsp;at Mission Branch of Okanagan Regional Library!&nbsp;&nbsp;&nbsp;</strong></h2>
+<h2><strong>First Thursday of the month,&nbsp;<em>6:30 - 7:30 p.m.&nbsp;</em>&nbsp; Join us for Scrabble, Checkers,&nbsp;Apples-to-Apples, Chess, and more!&nbsp;</strong></h2>
+<h2><em><strong>Drop-in, it's FREE!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></em></h2>
+<p>&nbsp;</p>
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *</strong></p>
+<p><strong></strong>&nbsp;</p>
+<h2><em>Mission Library School Class Visits</em></h2>
+<h2>Mission Library is happy to&nbsp;welcome class visits&nbsp;to the library for children and teens.&nbsp; We can provide an introduction to the library, or tailor a visit around a class project or assignment.&nbsp; Contact us to see how we can help your class.&nbsp; To book your free class&nbsp;visit, call Mission Library at 250-764-2254.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>
+               </div></div>
+</div>  <!-- end of background -->
+           <!-- Copyright -->
+	<div class="content-footer-container-bottom-div">
+		<span id="footer-copyright" class="content-footer-text">&copy; 2013 Okanagan Regional Library | Last updated on March 10, 2016 | <a href="/search">Website Search</a></span>
+		<span id="footer-twin-creek" class="content-footer-text"><a href="http://www.twincreekmedia.com" target="_blank">Kelowna Marketing by Twin Creek Media</a></span>
+	</div>
+<div class="footer-contentpage-div">
+	<!-- Location/Nav Row -->
+	<div class="content-footer-container">
+		<div id="footer-location"><h5>Locations, Hours, and Programs</h5><!--<img src="/assets/templates/orl/images/layout/locations-and-hours-footer.gif" alt="Locations &amp; Hours" />--></div>
+		<div id="footer-navigation"><h5>Navigation</h5><!--<img src="/assets/templates/orl/images/layout/navigation-footer.gif" alt="Navigation" />--></div>
+	</div>
+	<!-- Divider -->
+	<div class="content-footer-divider"></div>
+	<!-- City/Menu Row -->
+	<div class="content-footer-container">
+                <div class="content-footer-locations-link-branches">
+                    <div><ul><li><a href="/branches/armstrong" title="Armstrong" >Armstrong</a></li>
+<li><a href="/branches/cherryville" title="Cherryville" >Cherryville</a></li>
+<li><a href="/branches/enderby" title="Enderby" >Enderby</a></li>
+<li><a href="/branches/falkland" title="Falkland" >Falkland</a></li>
+<li><a href="/branches/golden" title="Golden" >Golden</a></li>
+<li class="last"><a href="/branches/hedley" title="Hedley" >Hedley</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/kaleden" title="Kaleden" >Kaleden</a></li>
+<li><a href="/branches/kelowna" title="Kelowna" >Kelowna</a></li>
+<li><a href="/branches/keremeos" title="Keremeos" >Keremeos</a></li>
+<li><a href="/branches/lake-country" title="Lake Country" >Lake Country</a></li>
+<li><a href="/branches/lumby" title="Lumby" >Lumby</a></li>
+<li class="last active"><a href="/branches/mission" title="Mission" >Mission</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/naramata" title="Naramata" >Naramata</a></li>
+<li><a href="/branches/north-shuswap" title="North Shuswap" >North Shuswap</a></li>
+<li><a href="/branches/okanagan-falls" title="Okanagan Falls" >Okanagan Falls</a></li>
+<li><a href="/branches/oliver" title="Oliver" >Oliver</a></li>
+<li><a href="/branches/osoyoos" title="Osoyoos" >Osoyoos</a></li>
+<li class="last"><a href="/branches/oyama" title="Oyama" >Oyama</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/peachland" title="Peachland" >Peachland</a></li>
+<li><a href="/branches/princeton" title="Princeton" >Princeton</a></li>
+<li><a href="/branches/revelstoke" title="Revelstoke" >Revelstoke</a></li>
+<li><a href="/branches/rutland" title="Rutland" >Rutland</a></li>
+<li><a href="/branches/salmon-arm" title="Salmon Arm" >Salmon Arm</a></li>
+<li class="last"><a href="/branches/sicamous" title="Sicamous" >Sicamous</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/silver-creek" title="Silver Creek" >Silver Creek</a></li>
+<li><a href="/branches/south-shuswap" title="South Shuswap" >South Shuswap</a></li>
+<li><a href="/branches/summerland" title="Summerland" >Summerland</a></li>
+<li><a href="/branches/vernon" title="Vernon" >Vernon</a></li>
+<li class="last"><a href="/branches/westbank" title="Westbank" >Westbank</a></li>
+</ul></div>
+                </div>
+		<div class="content-footer-locations-link-divider"></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/about-us" title="About Us" >About Us</a></li>
+<li><a href="/news-events" title="News &amp; Events" >News &amp; Events</a></li>
+<li class="active"><a href="/branches" title="Branches" >Branches</a></li>
+<li class="last"><a href="/Borrowing-services" title="Borrowing & Services" >Borrowing & Services</a></li>
+</ul></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/online-resources" title="Web Resources" >Web Resources</a></li>
+<li><a href="/kids" title="Kids" >Kids</a></li>
+<li><a href="/teens" title="Teens" >Teens</a></li>
+<li><a href="/book-lovers" title="Book Lovers" >Book Lovers</a></li>
+<li class="last"><a href="/contact" title="Contact Us" >Contact Us</a></li>
+</ul></div>
+	</div>
+</div>
+            
+        </div>
+
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3147068-38");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://bclibraries.org/piwik/" : "http://bclibraries.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 62);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://bclibraries.org/piwik/piwik.php?idsite=62" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Tag -->
+	</body>
+</html>

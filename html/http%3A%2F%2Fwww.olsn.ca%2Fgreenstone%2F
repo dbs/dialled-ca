@@ -1,0 +1,503 @@
+<!--
+INSTRUCTIONS
+
+1.To crop images use this code:    
+  		 <div class="focal-point left-5 down-3">
+ 				<div><img src="img/header.png" alt="logo"></div>
+           </div>
+2. Add cushycms class to areas you want clients to edit and add editor account to cushyCMS for client. 
+3. Change the OPLD library ID in the variable
+4. JASI libraries: change the enterprise search string library name and enable the new book scroller.
+
+-->  
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Greenstone Public Library</title>
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
+
+<!--[if lt IE 9]>
+<h1>You are using an outdated version of Internet Explorer. Please upgrade your browser.</h1>
+ <script> if (confirm('Your version of Internet Explorer is outdated and needs to be upgraded. Would you like to upgrade now? If not, this website will not display properly.')){
+    window.location.href='http://windows.microsoft.com/en-us/internet-explorer/download-ie-MCM';
+    }</script>
+<![endif]-->
+
+
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+
+<script src="js/GreenstoneAnalytics.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type="text/javascript" src="js/fancydropdown.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+
+<!-- Google Calendar function for libraries who have a google account and want to use a google calendar for lirbary events -->
+<!--<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'http://www.google.com/calendar/feeds/ami4h2ao0g8brkj6d80v8acd94@group.calendar.google.com/public/full',
+                  maxresults: 1
+		        });
+		    });
+		
+		
+</script>-->
+
+
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	    $("#eventlist").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true
+
+    });
+
+		//Load main content
+		$(".topContent").load("services.asp");
+		
+		//$(".events").load("calendar.html");
+		
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+
+
+    
+});
+//Enterprise Search
+function search_cat()
+{
+search = document.getElementById('search').value
+document.location.href = 'https://olsn.ent.sirsidynix.net/client/greenstone/search/results?qu='+ search +'&te=ILS';	 //IMPORTANT - change the library.GREENSTONE is not a JASI library so we cant use this.
+}
+</script>
+<script type="text/javascript">
+   google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+
+
+    <body>
+    
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=168852916485401";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <section class="hide" id="sizer"></section>
+    <section class="hide" id="button-bar">
+ 
+    
+    <div class="fb-like" data-href="http://www.olsn.ca/greenstone" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+	
+    
+    <!--IMPORTANT - change the email address to the libary's your -->
+    <!--<a href="mailto:greenstonepl@hotmail.com?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a>   -->      
+    </section>
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+               <img src="img/full_1000.png" class="full" alt=" " >
+               <img src="img/landscape.png" class="tablet" alt=" ">
+               <img src="img/portrait.png" class="mobile" alt=" " >
+              
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>
+                               
+                <li><a href="?id=home.asp&label=Home" alt="home">Home</a></li>
+                <li><a href="?id=services.asp&label=Programs+%26+Services" alt="services">Programs &<br> Services</a></li>
+                <li><a href="#" alt="branches">Branches</a>
+                 				<ul>
+                                    <li><a href="?id=beardmore.asp&label=beardmore" alt="beardmore">Beardmore Branch</a></li>
+                                    <li><a href="?id=geraldton.asp&label=geraldton" alt="geraldton">Geraldton Branch</a></li>
+                                    <li><a href="?id=longlac.asp&label=longlac" alt="longlac">Longlac Branch</a></li>
+                                    <li><a href="?id=nakina.asp&label=nakina" alt="nakina">Nakina Branch</a></li>
+                               
+       <!--<li><a href="?id=about.asp?branch=Beardmore&label=Beardmore&lib=114&br="  alt="Beardmore Branch" >Beardmore</a></li>
+           	<li><a href="?id=about.asp?branch=Geraldton&label=Geraldton" alt="Geraldton Branch">Geraldton</a></li>
+           	<li><a href="?id=about.asp?branch=Longlac&label=Longlac&lib=Greenstone" alt="Longlac Branch">Longlac</a></li>
+    		<li><a href="?id=about.asp?branch=Nakina&label=Nakina" alt="Nakina Branch">Nakina</a></li>-->
+                                   
+                                </ul>
+                </li>   
+                <li><a href="?id=resources.asp&label=resources" alt="electronic resources">eResources</a></li> 
+                
+               <li><a href="http://library.greenstone.ca/" alt="search">Catalogue</a></li>
+               <li><a href="?id=contact.asp&label=Home" alt="Longlac Branch">Policies &<br>Administration</a></li>    
+               <!--  can use script to read a google event so clients dont have to update the site.<li><a href="" alt="search">Events</a></li> -->  
+            </ul>
+         </nav>    
+        <!-- end of NAV -->
+      
+          <section class="hoursContent">
+              <article><span class="tdhourstxt">Today's hours:&nbsp; </span>   
+                <ul id="hours-slider">
+                    
+                        <li>Geraldton  closed/fermÃ©
+</li>
+                
+                                 
+                        <li>Beardmore  closed/fermÃ©
+</li>
+                
+                                 
+                        <li>Longlac  closed/fermÃ©
+</li>
+                
+                                 
+                        <li>Nakina  closed/fermÃ©
+</li>
+                
+                             
+                        </ul> 
+                            
+                            
+              </article>
+         </section>
+        
+    </header>
+        <!-- End of HEADER -->
+    
+       <!--  <section class="searchContent"> USED FOR ENTERPRISE - JASI Libraries Only
+          
+                <article><span class="hide">Search</span>
+               
+                <input type="text"  title="find material at your library search button" name="search" class="search" id="search" placeholder=" find materials @ your library"/> 
+                <input type="image" title="find material at your library search button" class="search" alt="find material at your library search button" src="img/search button.png" onClick="search_cat()" />
+               
+                </article>  
+              
+         </section>-->
+         
+   		
+       <section class="full"> 
+         <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>  
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="topSidebar">
+               <h2>Library Events</h2>
+                          <article class="cushycms">&#xD;
+</article>
+                          </aside>
+     
+    
+            
+    <aside class="middleSidebar">
+       <h2>Hours & Locations</h2>
+                          
+                        <ul>  
+                            
+                            
+                            <h3>Geraldton Branch</h3>
+                            
+                          		405 2nd Street West<br>
+                                Geraldton,&nbsp;ON<br>
+                                P0T 1M0<br>
+                                <a href="tel:(807) 854-1490">(807) 854-1490</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 1:00-5:00,7:00-9:00
+<br>Tues/mar 1:00-5:00
+<br>Wed/mer 1:00-5:00,7:00-9:00
+<br>Thurs/jeu 1:00-5:00
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam 1:00-5:00
+<br>Sun/dim closed/fermÃ©</details>
+                             
+                            
+                            <h3>Beardmore Branch</h3>
+                            
+                          		285 Main St.<br>
+                                Beardmore,&nbsp;ON<br>
+                                P0T 1G0<br>
+                                <a href="tel:(807) 875-2212">(807) 875-2212</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 6:00-9:00
+<br>Tues/mar 12:30-4:00
+<br>Wed/mer 6:00-9:00
+<br>Thurs/jeu 6:30-9:00
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam closed/fermÃ©
+<br>Sun/dim closed/fermÃ©</details>
+                             
+                            
+                            <h3>Longlac Branch</h3>
+                            
+                          		110 Kenogami Street<br>
+                                Longlac,&nbsp;ON<br>
+                                P0T 2A0<br>
+                                <a href="tel:(807) 876-4515">(807) 876-4515</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 12:30-4:30,6:30-8:30
+<br>Tues/mar 1:00-5:00
+<br>Wed/mer 9:00-12:00,6:30-8:30
+<br>Thurs/jeu 1:00-5:00,7:00-9:00
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam 9:00-12:00
+<br>Sun/dim closed/fermÃ©</details>
+                             
+                            
+                            <h3>Nakina Branch</h3>
+                            
+                          		216 North Street<br>
+                                Nakina,&nbsp;ON<br>
+                                P0T 2H0<br>
+                                <a href="tel:(807) 329-5906">(807) 329-5906</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 1:00-4:00
+<br>Tues/mar 1:00-4:00,6:30-8:30
+<br>Wed/mer 1:00-4:00,6:30-8:30
+<br>Thurs/jeu 6:30-8:30
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam 9:00-1:00
+<br>Sun/dim closed/fermÃ©</details>
+                             
+                           
+                      </ul>  
+         
+    </aside>   
+     
+        
+ <!--  <aside class="bottomSidebar">
+        
+         <article>
+            <h2>Social Feed</h2>
+                <p> This is the social feed</p>
+                
+        </article>    
+    </aside>-->
+    </section>
+    
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Programs & Services</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Locations</summary>
+                        
+                        <ul>  
+                            
+                            <h3>Nakina Branch</h3>
+                          		216 North Street<br>
+                                Nakina,&nbsp;ON<br>
+                                P0T 2H0<br>
+                                <a href="tel:(807) 329-5906">(807) 329-5906</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 1:00-4:00
+<br>Tues/mar 1:00-4:00,6:30-8:30
+<br>Wed/mer 1:00-4:00,6:30-8:30
+<br>Thurs/jeu 6:30-8:30
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam 9:00-1:00
+<br>Sun/dim closed/fermÃ©</details>
+                               
+                            <h3>Geraldton Branch</h3>
+                          		405 2nd Street West<br>
+                                Geraldton,&nbsp;ON<br>
+                                P0T 1M0<br>
+                                <a href="tel:(807) 854-1490">(807) 854-1490</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 1:00-5:00,7:00-9:00
+<br>Tues/mar 1:00-5:00
+<br>Wed/mer 1:00-5:00,7:00-9:00
+<br>Thurs/jeu 1:00-5:00
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam 1:00-5:00
+<br>Sun/dim closed/fermÃ©</details>
+                               
+                            <h3>Greenstone </h3>
+                          		405 2nd Street West<br>
+                                Geraldton,&nbsp;ON<br>
+                                P0T 1M0<br>
+                                <a href="tel:(807) 854-2421">(807) 854-2421</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 1:00-5:00,7:00-9:00<BR>
+Tues/mar 1:00-5:00<BR>
+Wed/mer 1:00-5:00,7:00-9:00<BR>
+Thurs/jeu 1:00-5:00<BR>
+Fri/ven closed/fermÃ©<BR>
+Sat/sam 1:00-5:00<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                            <h3>Beardmore Branch</h3>
+                          		285 Main St.<br>
+                                Beardmore,&nbsp;ON<br>
+                                P0T 1G0<br>
+                                <a href="tel:(807) 875-2212">(807) 875-2212</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 6:00-9:00
+<br>Tues/mar 12:30-4:00
+<br>Wed/mer 6:00-9:00
+<br>Thurs/jeu 6:30-9:00
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam closed/fermÃ©
+<br>Sun/dim closed/fermÃ©</details>
+                               
+                            <h3>Longlac Branch</h3>
+                          		110 Kenogami Street<br>
+                                Longlac,&nbsp;ON<br>
+                                P0T 2A0<br>
+                                <a href="tel:(807) 876-4515">(807) 876-4515</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 12:30-4:30,6:30-8:30
+<br>Tues/mar 1:00-5:00
+<br>Wed/mer 9:00-12:00,6:30-8:30
+<br>Thurs/jeu 1:00-5:00,7:00-9:00
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam 9:00-12:00
+<br>Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  </details>
+         
+    </div>
+     
+    
+            
+ <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+    </div>   
+     
+        
+
+    
+    </section> 
+    
+    
+    <!-- end of SIDEBARS -->
+    
+    
+    
+        
+     <!-- Enterprise New Books Scroller placeholder 
+      <footer class="mainBookScroller">
+        <p>Enterprise Book Scroller container</p>
+      </footer>   --> 
+        
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Greenstone Public Library&nbsp;2016</p> 
+        <a href="http://freehitcountercode.com/" title="hitcounter"><img class="hide" border="0" src="http://www.freehitcountercode.com/counter.php?b=ffffff&r=000000&f=000000&unique=1&start=0" alt="counter" /></a><br /><span style="font-size: 2%;"><a href="http://freehitcountercode.com/" title="counter"></a></span>
+    </footer>
+    
+<!-- end of FOOTER -->   
+
+</body>
+
+</html>

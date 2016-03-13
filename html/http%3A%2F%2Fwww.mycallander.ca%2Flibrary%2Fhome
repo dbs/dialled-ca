@@ -1,0 +1,590 @@
+			<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Library Home  |  Municipality of Callander</title>
+		
+		<link rel="shortcut icon" href="http://www.mycallander.ca/images/favblue.ico">
+		<meta name="description" content="Situated on Callander Bay on Lake Nipissing in northeastern Ontario, Canada, the Municipality of Callander provides visitors and residents alike with Four Seasons of Reasons to enjoy the great outdoors." />
+		<link rel="stylesheet" href="http://www.mycallander.ca/wp-content/themes/blankslate/css/style.css" type="text/css" > 
+		<link rel="stylesheet" href="http://www.mycallander.ca/wp-content/themes/blankslate/css/blueprint/screen.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="http://www.mycallander.ca/wp-content/themes/blankslate/css/blueprint/print.css" type="text/css" media="print">    
+		<!--[if lt IE 8]><link rel="stylesheet" href="http://www.mycallander.ca/wp-content/themes/blankslate/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+			
+		<script src="http://www.mycallander.ca/wp-content/themes/blankslate/jquery/prototype.js" type="text/javascript"></script>
+		<script src="http://www.mycallander.ca/wp-content/themes/blankslate/jquery/effects.js" type="text/javascript"></script>
+		<script src="http://www.mycallander.ca/wp-content/themes/blankslate/jquery/scriptaculous.js?load=effects" type="text/javascript"></script>
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script type="text/javascript">
+		var $j = jQuery.noConflict();
+        onload = function () {
+			var $globalContainer = $j('.span-24');
+			var $menuContainer = $j('.menuContainer');
+
+			$globalContainer.children('ul.ldd_menu').children('li').each(function(){
+			var title = $j(this).text();
+			
+			if (title.toUpperCase().indexOf('MENU ') >= 0){
+				title = (title.toUpperCase().replace('MENU ', '').toLowerCase().replace(/\b[a-z]/g, function(letter) { return letter.toUpperCase(); }));
+				}
+			
+			var $color = $menuContainer.children('div#' + title).attr('class').replace('ldd_submenu ', '');
+			$j(this).attr('class', '');
+			$j(this).html('<span class="' + $color.toLowerCase() + '">' + title + '</span>');
+			$j(this).attr('class', title);
+			});
+
+			$menuContainer.children('div').each(function(){
+			var $currentDiv = $j(this);
+			var currentid = $j(this).attr('id');
+			$currentDiv.attr('class', $currentDiv.attr('class').toLowerCase());
+			$currentDiv.clone().appendTo($j('li.' + currentid));
+			$j(this).remove();
+			});
+		
+		$j(function() {
+				/**
+				 * the menu
+				 */
+				var $menu = $j('#ldd_menu');
+				/**
+				* for each list element,
+				* we show the submenu when hovering and
+				* expand the span element (title) to 510px
+				*/
+				$menu.children('li').each(function(){
+					var $this = $j(this);
+					var $span = $this.children('span');
+					$span.data('width',$span.width());
+					
+					$this.bind('mouseenter',function(){
+						$menu.find('.ldd_submenu').stop(true,true).hide();
+						$span.stop().animate({'width':'250px'},300,function(){
+							$this.find('.ldd_submenu').slideDown(300);
+						});
+					}).bind('mouseleave',function(){
+						$this.find('.ldd_submenu').stop(true,true).hide();
+						$span.stop().animate({'width':$span.data('width')+'px'},300);
+					});
+				});				
+			});
+		
+			//get menu
+			var $menu = $j('#ldd_menu');
+			//start new unordered list
+			var str = '<ul style="width:140px;">';
+			//counts the amount of headers used
+			var headercount = 0;
+			//get Headers within menu
+			$menu.children('li').children('div').children('ul').children('li').each(function(){
+			var ListItem = $j(this).children('a');
+			
+			if (ListItem.text().toUpperCase().indexOf('HEADER ') >= 0){
+				ListItem.text(ListItem.text().toUpperCase().replace('HEADER ', '').toLowerCase().replace(/\b[a-z]/g, function(letter) { return letter.toUpperCase(); }));
+				}
+			//check for newcolumn tag, will create a new column if this tag is present
+			if (ListItem.text().toUpperCase().indexOf('NEWCOLUMN ') >= 0){
+				ListItem.text(ListItem.text().toUpperCase().replace('NEWCOLUMN ', '').toLowerCase().replace(/\b[a-z]/g, function(letter) { return letter.toUpperCase(); }));
+					
+				//if new column is found, adds an end tag to the unordered list and adds it to the div container, then starts a new list
+				if(headercount >= 1) {
+					str += '</ul>';
+					$j(this).parent().parent().append(str);
+					str = '<ul style="width:140px;">';
+				}
+			}
+				
+			//changes a href into label if header tag is present and adds it to the list
+			ListItem.html("<li><label class='ldd_heading'>" + ListItem.text() + "</label></li>");
+			
+			if( str == '<ul style="width:140px;">'){
+				str +=  ListItem.html();
+			}
+			else if($j.browser.version == '6.0' || $j.browser.version == '7.0' || $j.browser.version == '8.0'){
+			str += '<li><br /><br /></li>' + ListItem.html();
+			}
+			else{
+			str += '<li><br /></li>' + ListItem.html();
+			}
+			//gets Pages within each Header
+			$j(this).children('ul').children('li').each(function(){
+			//removes any children of the child UL, preventing the list from looking bad if additional indents have been made in wordpress
+			$j(this).children('ul').remove();
+			str += this.outerHTML;
+			});
+				
+			//increments headercount
+			headercount = headercount + 1;
+			
+			//variable to keep track of remaining pages
+			var liCount = $j(this).parent().children().length;
+			
+			// if the last page has been reached, the orignal unordered list is removed and the final new unordered list is added to the div container
+			if(liCount == 1){
+			$j(this).parent().parent().append(str);
+			str = '<ul style="width:140px;">';
+			$j(this).parent().remove();
+			}
+			$j(this).remove();
+			});	
+			
+			//var $page = $j('#page');
+			//$page.data('background-image', 'url('http://www.mycallander.ca/wp-content/themes/blankslate/img/bg_.gif')');
+		}
+		</script>
+				
+		<link rel="alternate" type="application/rss+xml" title="Municipality of Callander &raquo; Feed" href="http://www.mycallander.ca/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Municipality of Callander &raquo; Comments Feed" href="http://www.mycallander.ca/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Municipality of Callander &raquo; Library Home Comments Feed" href="http://www.mycallander.ca/library/home/feed/" />
+<link rel='stylesheet' id='gllrStylesheet-css'  href='http://www.mycallander.ca/wp-content/plugins/gallery-plugin/css/stylesheet.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='gllrFancyboxStylesheet-css'  href='http://www.mycallander.ca/wp-content/plugins/gallery-plugin/fancybox/jquery.fancybox-1.3.4.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox.css-css'  href='http://www.mycallander.ca/wp-includes/js/thickbox/thickbox.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://www.mycallander.ca/wp-includes/css/dashicons.min.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='http://www.mycallander.ca/wp-includes/js/thickbox/thickbox.css?ver=20131201' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery.lightbox.min.css-css'  href='http://www.mycallander.ca/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.mycallander.ca/wp-content/plugins/information-reel/information-reel.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-content/plugins/gallery-plugin/fancybox/jquery.mousewheel-3.0.4.pack.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-content/plugins/gallery-plugin/fancybox/jquery.fancybox-1.3.4.pack.js?ver=3.8.1'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-content/plugins/spider-event-calendar/elements/calendar.js?ver=1.5.36'></script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-content/plugins/spider-event-calendar/elements/calendar-setup.js?ver=1.5.36'></script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-content/plugins/spider-event-calendar/elements/calendar_function.js?ver=1.5.36'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.mycallander.ca/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.mycallander.ca/wp-includes/wlwmanifest.xml" /> 
+<link rel='next' title='NewColumn Header Businesses' href='http://www.mycallander.ca/heading-businesses/' />
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='canonical' href='http://www.mycallander.ca/library/home' />
+<link rel='shortlink' href='http://www.mycallander.ca/?p=616' />
+		<!-- Start ios -->
+		<script type="text/javascript">
+			(function($){
+				$(document).ready( function() {
+					$( '#fancybox-overlay' ).css({
+						'width' : $(document).width()
+					});	
+				});	
+			})(jQuery);
+		</script>
+		<!-- End ios -->
+	  <script>
+    var xx_cal_xx = '&';
+  </script>
+  			</head>
+	<body class="page page-id-616 page-template-default" style="background-image: url('http://www.mycallander.ca/wp-content/themes/blankslate/img/bg_8.gif');">
+		<div class="container">
+			<div id="header" class="span-24">
+			<a href="http://www.mycallander.ca"><img src="http://www.mycallander.ca/wp-content/themes/blankslate/img/logo.gif" alt="The Municipality of Callander" /></a>
+			</div>
+			<div id="globalcontainer" class="globalcontainer">
+			<div id="menu" class="span-24"><ul id="ldd_menu" class="ldd_menu"><li id="menu-item-960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-960"><a href="http://www.mycallander.ca/header-orange-community/">Menu Community</a></li>
+<li id="menu-item-959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-959"><a href="http://www.mycallander.ca/header-red-services/">Menu Services</a></li>
+<li id="menu-item-958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-958"><a href="http://www.mycallander.ca/header-green-government/">Menu Government</a></li>
+<li id="menu-item-957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-957"><a href="http://www.mycallander.ca/header-blue-environment/">Menu Environment</a></li>
+<li id="menu-item-956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-956"><a href="http://www.mycallander.ca/header-brown-places/">Menu Places</a></li>
+</ul></div>
+			<!-- *********** Place New Menus here ******************* -->
+				<div class="menuContainer" style="visibility:hidden; max-height:0px;">
+				<div id="Community" class="ldd_submenu orange"><ul id="menu-community" class="submenu"><li id="menu-item-2094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2094"><a href="http://www.mycallander.ca/header-our-community/">Header Our Community</a>
+<ul class="sub-menu">
+	<li id="menu-item-2091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2091"><a href="http://www.mycallander.ca/welcome-to-callander/">About Callander</a></li>
+	<li id="menu-item-2108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2108"><a href="http://www.mycallander.ca/what-callander-has-to-offer/">What Callander Has To Offer</a></li>
+	<li id="menu-item-2106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2106"><a href="http://www.mycallander.ca/location/">Location</a></li>
+	<li id="menu-item-2769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2769"><a href="http://www.mycallander.ca/contact-us-form/">Contact Form</a></li>
+</ul>
+</li>
+<li id="menu-item-823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-823"><a href="http://www.mycallander.ca/heading-businesses/">NewColumn Header Businesses</a>
+<ul class="sub-menu">
+	<li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916"><a href="http://www.mycallander.ca/business-directory/">Business Directory</a></li>
+</ul>
+</li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-822"><a href="http://www.mycallander.ca/heading-origins/">Header Origins</a>
+<ul class="sub-menu">
+	<li id="menu-item-828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a href="http://www.mycallander.ca/development-of-callander/">Development of Callander</a></li>
+	<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.mycallander.ca/callander-scotland/">Callander, Scotland</a></li>
+	<li id="menu-item-830" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-830"><a href="http://www.mycallander.ca/geological-formation/">Geological Formation</a></li>
+</ul>
+</li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-821"><a href="http://www.mycallander.ca/heading-famous-citizens/">NewColumn Famous Citizens</a>
+<ul class="sub-menu">
+	<li id="menu-item-831" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-831"><a href="http://www.mycallander.ca/louise-de-kiriline-lawrence/">Louise de Kiriline Lawrence</a></li>
+	<li id="menu-item-833" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-833"><a href="http://www.mycallander.ca/bill-barber/">Bill Barber</a></li>
+	<li id="menu-item-832" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"><a href="http://www.mycallander.ca/michael-j-fox/">Michael J. Fox</a></li>
+	<li id="menu-item-834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-834"><a href="http://www.mycallander.ca/dionne-quintuplets/">Dionne Quintuplets</a></li>
+	<li id="menu-item-835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-835"><a href="http://www.mycallander.ca/dr-a-r-dafoe/">Dr. A.R. Dafoe</a></li>
+	<li id="menu-item-836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-836"><a href="http://www.mycallander.ca/taylor-milne/">Taylor Milne</a></li>
+</ul>
+</li>
+</ul></div>				<div id="Services" class="ldd_submenu red"><ul id="menu-services" class="submenu"><li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-880"><a href="http://www.mycallander.ca/header-administration/">Administration</a>
+<ul class="sub-menu">
+	<li id="menu-item-882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-882"><a href="http://www.mycallander.ca/administrative-services/">Administrative Services</a></li>
+</ul>
+</li>
+<li id="menu-item-881" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-881"><a href="http://www.mycallander.ca/header-chief-building-official/">Header Building Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-883"><a href="http://www.mycallander.ca/chief-building-official/">Chief Building Official</a></li>
+	<li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-906"><a href="http://www.mycallander.ca/links-page/">Links Page</a></li>
+	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="http://www.mycallander.ca/permits/">Permits</a></li>
+</ul>
+</li>
+<li id="menu-item-879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-879"><a href="http://www.mycallander.ca/header-by-laws-and-policies/">Header By-laws and Policies</a>
+<ul class="sub-menu">
+	<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://www.mycallander.ca/by-law-enforcement/">By-law Enforcement</a></li>
+</ul>
+</li>
+<li id="menu-item-876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-876"><a href="http://www.mycallander.ca/header-cemetery-services/">Header Cemetery Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-911"><a href="http://www.mycallander.ca/callander-union-cemetery/">Callander Union Cemetery</a></li>
+</ul>
+</li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-877"><a href="http://www.mycallander.ca/header-callander-union-cemetery/">Header Churches</a>
+<ul class="sub-menu">
+	<li id="menu-item-913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-913"><a href="http://www.mycallander.ca/churches/">Churches</a></li>
+</ul>
+</li>
+<li id="menu-item-875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-875"><a href="http://www.mycallander.ca/header-economic-development/">Header Economic Development</a>
+<ul class="sub-menu">
+	<li id="menu-item-922" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-922"><a href="http://www.mycallander.ca/economic-development-manager/">Economic Development Manager</a></li>
+	<li id="menu-item-920" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-920"><a href="http://www.mycallander.ca/business-start-up/">Business Start Up</a></li>
+	<li id="menu-item-921" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-921"><a href="http://www.mycallander.ca/business-support/">Business Support</a></li>
+	<li id="menu-item-923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-923"><a href="http://www.mycallander.ca/funding-opportunities/">Funding Opportunities</a></li>
+</ul>
+</li>
+<li id="menu-item-874" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-874"><a href="http://www.mycallander.ca/header-newcolumn-education/">NewColumn Education</a>
+<ul class="sub-menu">
+	<li id="menu-item-924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-924"><a href="http://www.mycallander.ca/elementary-schools/">Elementary Schools</a></li>
+</ul>
+</li>
+<li id="menu-item-873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-873"><a href="http://www.mycallander.ca/header-fire-emergencies/">Header Fire &#038; Emergencies</a>
+<ul class="sub-menu">
+	<li id="menu-item-925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-925"><a href="http://www.mycallander.ca/about-the-fire-department/">About the Fire Department</a></li>
+	<li id="menu-item-927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-927"><a href="http://www.mycallander.ca/open-air-burning/">Open Air Burning</a></li>
+	<li id="menu-item-926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-926"><a href="http://www.mycallander.ca/being-prepared/">Being Prepared</a></li>
+	<li id="menu-item-930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-930"><a href="http://www.mycallander.ca/fire-prevention/">Fire Prevention</a></li>
+	<li id="menu-item-931" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-931"><a href="http://www.mycallander.ca/gallery/">Gallery</a></li>
+	<li id="menu-item-932" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-932"><a href="http://www.mycallander.ca/kids-zone/">Kids Zone</a></li>
+	<li id="menu-item-933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-933"><a href="http://www.mycallander.ca/links/">Links</a></li>
+</ul>
+</li>
+<li id="menu-item-872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-872"><a href="http://www.mycallander.ca/header-garbage-recycling/">Header Garbage &#038; Recycling</a>
+<ul class="sub-menu">
+	<li id="menu-item-934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-934"><a href="http://www.mycallander.ca/garbage-recycling-schedule/">Garbage &#038; Recycling Schedule</a></li>
+</ul>
+</li>
+<li id="menu-item-871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-871"><a href="http://www.mycallander.ca/header-medical/">Header Medical</a>
+<ul class="sub-menu">
+	<li id="menu-item-935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935"><a href="http://www.mycallander.ca/medical-services/">Medical Services</a></li>
+</ul>
+</li>
+<li id="menu-item-870" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-870"><a href="http://www.mycallander.ca/header-planning-services/">Header Planning Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-936"><a href="http://www.mycallander.ca/planning-department/">Planning Department</a></li>
+	<li id="menu-item-937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-937"><a href="http://www.mycallander.ca/services/">Services</a></li>
+</ul>
+</li>
+<li id="menu-item-869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-869"><a href="http://www.mycallander.ca/header-newcolumn-police/">NewColumn Police</a>
+<ul class="sub-menu">
+	<li id="menu-item-938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-938"><a href="http://www.mycallander.ca/policing-in-callander/">Policing in Callander</a></li>
+	<li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-939"><a href="http://www.mycallander.ca/operation-lookout/">Operation Lookout</a></li>
+	<li id="menu-item-940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-940"><a href="http://www.mycallander.ca/neighbouhood-watch/">Neighbourhood Watch</a></li>
+</ul>
+</li>
+<li id="menu-item-868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-868"><a href="http://www.mycallander.ca/header-recreation-community-events/">Header Recreation</a>
+<ul class="sub-menu">
+	<li id="menu-item-7522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7522"><a href="http://www.mycallander.ca/community-events-photo-gallery/">Community Events Gallery</a></li>
+	<li id="menu-item-941" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-941"><a href="http://www.mycallander.ca/the-department/">The Department</a></li>
+	<li id="menu-item-943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-943"><a href="http://www.mycallander.ca/recreational-facilities/">Recreational Facilities</a></li>
+	<li id="menu-item-944" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-944"><a href="http://www.mycallander.ca/facility-rentals/">Facility Rentals</a></li>
+</ul>
+</li>
+<li id="menu-item-867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-867"><a href="http://www.mycallander.ca/header-roads/">Header Roads &#038; Public Works</a>
+<ul class="sub-menu">
+	<li id="menu-item-945" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-945"><a href="http://www.mycallander.ca/water-sewage-services/">Water &#038; Sewage Services</a></li>
+	<li id="menu-item-946" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-946"><a href="http://www.mycallander.ca/staff-location/">Staff &#038; Location</a></li>
+</ul>
+</li>
+<li id="menu-item-866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-866"><a href="http://www.mycallander.ca/header-social-services/">Header Social &#038; Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-947"><a href="http://www.mycallander.ca/available-services/">Available Services</a></li>
+	<li id="menu-item-948" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-948"><a href="http://www.mycallander.ca/food-bank/">Food Bank</a></li>
+</ul>
+</li>
+<li id="menu-item-865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-865"><a href="http://www.mycallander.ca/header-treasury/">Header Treasury</a>
+<ul class="sub-menu">
+	<li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a href="http://www.mycallander.ca/finance-department/">Finance Department</a></li>
+	<li id="menu-item-950" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-950"><a href="http://www.mycallander.ca/donation-program/">Donation Program</a></li>
+</ul>
+</li>
+</ul></div>				<div id="Government" class="ldd_submenu Green"><ul id="menu-government" class="submenu"><li id="menu-item-1923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1923"><a href="http://www.mycallander.ca/header-government/">Header Government</a>
+<ul class="sub-menu">
+	<li id="menu-item-977" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-977"><a href="http://www.mycallander.ca/message-from-the-mayor/">Message from the Mayor</a></li>
+	<li id="menu-item-978" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-978"><a href="http://www.mycallander.ca/current-council/">Current Council</a></li>
+	<li id="menu-item-979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-979"><a href="http://www.mycallander.ca/council-responsibilities/">Council Responsibilities</a></li>
+	<li id="menu-item-980" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-980"><a href="http://www.mycallander.ca/council-meeting-dates/">Council Meeting Dates</a></li>
+	<li id="menu-item-1921" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1921"><a href="http://www.mycallander.ca/our-strategic-plan/">Our Strategic Plan</a></li>
+	<li id="menu-item-2711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2711"><a href="http://www.mycallander.ca/past-reeves-mayors/">Past Reeves &#038; Mayors</a></li>
+	<li id="menu-item-6995" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6995"><a href="http://www.mycallander.ca/wp-content/uploads/2015/09/2015-Terms-of-Reference1.pdf">Terms of Reference 2015</a></li>
+</ul>
+</li>
+<li id="menu-item-1392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1392"><a href="http://www.mycallander.ca/header-contact-us/">Header Contact Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-1393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1393"><a href="http://www.mycallander.ca/councillor-contacts/">Councillor Contacts</a></li>
+	<li id="menu-item-1394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1394"><a href="http://www.mycallander.ca/municipal-staff-contacts/">Municipal Staff Contacts</a></li>
+</ul>
+</li>
+<li id="menu-item-986" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-986"><a href="http://www.mycallander.ca/comittees-2/">NewColumn Committees</a>
+<ul class="sub-menu">
+	<li id="menu-item-987" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-987"><a href="http://www.mycallander.ca/committee-of-adjustment/">Committee of Adjustment</a></li>
+	<li id="menu-item-988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-988"><a href="http://www.mycallander.ca/emergency-management-program-committee/">Emergency Management Program Committee</a></li>
+	<li id="menu-item-990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990"><a href="http://www.mycallander.ca/library-board/">Library Board</a></li>
+	<li id="menu-item-992" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-992"><a href="http://www.mycallander.ca/planning-advisory-committee/">Planning Advisory Committee</a></li>
+	<li id="menu-item-993" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-993"><a href="http://www.mycallander.ca/finance-and-community-development-executive-committee/">Finance and Community Development Executive Committee</a></li>
+	<li id="menu-item-994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-994"><a href="http://www.mycallander.ca/operations-and-emergency-services-executive-committee/">Operations and Emergency Services Executive Committee</a></li>
+</ul>
+</li>
+<li id="menu-item-984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-984"><a href="http://www.mycallander.ca/comittees/">NewColumn Volunteer Community Groups</a>
+<ul class="sub-menu">
+	<li id="menu-item-997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-997"><a href="http://www.mycallander.ca/terms-of-reference/">Community Groups&#8217; Terms of Reference</a></li>
+	<li id="menu-item-998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-998"><a href="http://www.mycallander.ca/sports-recreation-festivals-events-volunteer-community-group/">Sports, Recreation, Festivals &#038; Events Volunteer Community Group</a></li>
+	<li id="menu-item-999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-999"><a href="http://www.mycallander.ca/community-enhancement-group/">Community Enhancement Volunteer Group</a></li>
+	<li id="menu-item-1400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1400"><a href="http://www.mycallander.ca/culture-heritage-group/">Culture &#038; Heritage Group</a></li>
+</ul>
+</li>
+</ul></div>				<div id="Environment" class="ldd_submenu BLUE"><ul id="menu-environment" class="submenu"><li id="menu-item-1925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1925"><a href="http://www.mycallander.ca/header-environment/">Header Environment</a>
+<ul class="sub-menu">
+	<li id="menu-item-1489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1489"><a href="http://www.mycallander.ca/dutch-elm-disease/">Dutch Elm Disease</a></li>
+	<li id="menu-item-1005" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="http://www.mycallander.ca/blue-green-algae/">Blue Green Algae</a></li>
+	<li id="menu-item-6964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6964"><a href="http://www.mycallander.ca/restore-your-shore/">Restore Your Shore</a></li>
+	<li id="menu-item-1006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1006"><a href="http://www.mycallander.ca/waste-management/">Waste Management</a></li>
+	<li id="menu-item-1007" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1007"><a href="http://www.mycallander.ca/recycling-program/">Recycling Program</a></li>
+	<li id="menu-item-1008" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1008"><a href="http://www.mycallander.ca/hazardous-wastes/">Hazardous Wastes</a></li>
+	<li id="menu-item-1009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1009"><a href="http://www.mycallander.ca/green-at-home/">Green at Home</a></li>
+	<li id="menu-item-1010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010"><a href="http://www.mycallander.ca/energy/">Energy</a></li>
+	<li id="menu-item-2083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2083"><a href="http://www.mycallander.ca/water/">Water</a></li>
+	<li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1011"><a href="http://www.mycallander.ca/future-technologies/">Future Technologies</a></li>
+</ul>
+</li>
+<li id="menu-item-1003" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1003"><a href="http://www.mycallander.ca/newcolumn-shoreline-fact-files/">NewColumn Shoreline Fact Files</a>
+<ul class="sub-menu">
+	<li id="menu-item-1012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1012"><a href="http://www.mycallander.ca/introduction-to-fact-files/">Introduction to Shoreline Fact Files</a></li>
+	<li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1013"><a href="http://www.mycallander.ca/1-docks-and-structures/">1. Docks and Structures</a></li>
+	<li id="menu-item-1015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1015"><a href="http://www.mycallander.ca/2-septic-systems/">2. Septic Systems</a></li>
+	<li id="menu-item-1016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1016"><a href="http://www.mycallander.ca/3-shoreline-alterations/">3. Shoreline Alterations</a></li>
+	<li id="menu-item-1017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1017"><a href="http://www.mycallander.ca/4-buffer-zones/">4. Buffer Zones</a></li>
+	<li id="menu-item-1018" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1018"><a href="http://www.mycallander.ca/5-landscaping/">5. Landscaping</a></li>
+	<li id="menu-item-1019" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1019"><a href="http://www.mycallander.ca/6-site-planning/">6. Site Planning</a></li>
+	<li id="menu-item-1020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1020"><a href="http://www.mycallander.ca/7-minor-variances/">7. Minor Variances</a></li>
+	<li id="menu-item-1021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1021"><a href="http://www.mycallander.ca/8-building-permits/">8. Building Permits</a></li>
+	<li id="menu-item-1022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1022"><a href="http://www.mycallander.ca/9-building-setbacks/">9. Building Setbacks</a></li>
+	<li id="menu-item-1014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1014"><a href="http://www.mycallander.ca/10-living-by-the-water/">10. Living by the Water</a></li>
+</ul>
+</li>
+</ul></div>				<div id="Places" class="ldd_submenu brown"><ul id="menu-places" class="submenu"><li id="menu-item-1030" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1030"><a href="http://www.mycallander.ca/library2/">Header Library</a>
+<ul class="sub-menu">
+	<li id="menu-item-1031" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-616 current_page_item menu-item-1031"><a href="http://www.mycallander.ca/library/home">Library Home</a></li>
+	<li id="menu-item-1032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1032"><a href="http://www.mycallander.ca/library/about-us/">Contact Us</a></li>
+	<li id="menu-item-6266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6266"><a href="http://www.mycallander.ca/LibraryPhotoGallery">Library Photo Gallery</a></li>
+	<li id="menu-item-1982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1982"><a href="http://www.mycallander.ca/library/policies/">Policies</a></li>
+	<li id="menu-item-4930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4930"><a href="https://olsn.ent.sirsidynix.net/client/en_US/callander/">Library Catalogue</a></li>
+	<li id="menu-item-7478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7478"><a href="http://www.mycallander.ca/library-catalogue-help/">Library Catalogue Help</a></li>
+	<li id="menu-item-4929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4929"><a href="http://www.mycallander.ca/library-news-and-events">Library News and Events</a></li>
+	<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="http://www.mycallander.ca/library/facts/">Library Services</a></li>
+	<li id="menu-item-1035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1035"><a href="http://www.mycallander.ca/library/book-club/">Book Club</a></li>
+	<li id="menu-item-1036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1036"><a href="http://www.mycallander.ca/library/online-databases/">eResources</a></li>
+	<li id="menu-item-1037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1037"><a href="http://www.mycallander.ca/library/raising-readers/">Raising Readers</a></li>
+	<li id="menu-item-1038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1038"><a href="http://www.mycallander.ca/library/new-materials/">New Materials</a></li>
+	<li id="menu-item-1039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1039"><a href="http://www.mycallander.ca/library/friends-of-the-library/">Friends of the Library</a></li>
+	<li id="menu-item-1040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1040"><a href="http://www.mycallander.ca/library/history/">History of the Library</a></li>
+	<li id="menu-item-1041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1041"><a href="http://www.mycallander.ca/library/cap-computer-sessions/">Technology Training</a></li>
+	<li id="menu-item-1043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1043"><a href="http://www.mycallander.ca/library/overdrive-digital-audio-ebook-library/">OverDrive Digital Audio &#038; eBook Library</a></li>
+	<li id="menu-item-4933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4933"><a href="http://www.mycallander.ca/library/Future-Library/">Future Library</a></li>
+	<li id="menu-item-6578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6578"><a href="http://www.mycallander.ca/telling-our-stories/">Telling Our Stories</a></li>
+	<li id="menu-item-7481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7481"><a href="http://www.mycallander.ca/outreach-services/">Outreach Services</a></li>
+</ul>
+</li>
+<li id="menu-item-1029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1029"><a href="http://www.mycallander.ca/newcolumn-museum-home/">NewColumn Museum</a>
+<ul class="sub-menu">
+	<li id="menu-item-2675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2675"><a href="http://www.mycallander.ca/museum-home/">Museum Home</a></li>
+	<li id="menu-item-1044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1044"><a href="http://www.mycallander.ca/permanent-collection/">Permanent Collection</a></li>
+	<li id="menu-item-1045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1045"><a href="http://www.mycallander.ca/permanent-collection-cont/">Permanent Collection Cont&#8217;</a></li>
+	<li id="menu-item-1046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1046"><a href="http://www.mycallander.ca/research-genealogy/">Research / Genealogy</a></li>
+	<li id="menu-item-1047" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1047"><a href="http://www.mycallander.ca/educational-programs/">Educational Programs</a></li>
+	<li id="menu-item-1048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1048"><a href="http://www.mycallander.ca/our-history/">Our History</a></li>
+	<li id="menu-item-1049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1049"><a href="http://www.mycallander.ca/the-dionne-quintuplets/">The Dionne Quintuplets</a></li>
+	<li id="menu-item-1050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1050"><a href="http://www.mycallander.ca/dr-dafoe/">Dr. Dafoe</a></li>
+	<li id="menu-item-4734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4734"><a href="http://www.mycallander.ca/quintland-tour/">Quintland Tours &#8211; 80th Anniversary</a></li>
+	<li id="menu-item-4796" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4796"><a href="http://www.mycallander.ca/museum/callander-dock/retrospective">Callander Dock &#8211; Retrospective</a></li>
+	<li id="menu-item-8659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8659"><a href="http://www.mycallander.ca/past-guests/">Past Guests</a></li>
+	<li id="menu-item-8361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8361"><a href="http://www.mycallander.ca/past-community-events/">Past Community Events</a></li>
+	<li id="menu-item-1051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1051"><a href="http://www.mycallander.ca/mission-statement/">Mission Statement</a></li>
+	<li id="menu-item-1052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1052"><a href="http://www.mycallander.ca/museum-location/">Museum Location</a></li>
+	<li id="menu-item-1053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1053"><a href="http://www.mycallander.ca/related-links/">Related Links</a></li>
+	<li id="menu-item-1447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1447"><a href="http://www.mycallander.ca/museum/historical-walk/">Historical Walking Tour</a></li>
+</ul>
+</li>
+<li id="menu-item-1463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1463"><a href="http://www.mycallander.ca/historical-walk/">NewColumn Header Historical Walk</a>
+<ul class="sub-menu">
+	<li id="menu-item-1445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1445"><a href="http://www.mycallander.ca/museum/historical-walk/callander-hotel/">Callander Hotel</a></li>
+	<li id="menu-item-1446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1446"><a href="http://www.mycallander.ca/museum/historical-walk/dr-allan-roy-dafoe/">Dr. Allan Roy Dafoe</a></li>
+	<li id="menu-item-1448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1448"><a href="http://www.mycallander.ca/museum/historical-walk/knox-presbyterian/">Knox Presbyterian Church</a></li>
+	<li id="menu-item-1449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1449"><a href="http://www.mycallander.ca/museum/historical-walk/mme-legros/">Mme Legros</a></li>
+	<li id="menu-item-1450" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1450"><a href="http://www.mycallander.ca/museum/historical-walk/morrison-general-store/">Morrison General Store</a></li>
+	<li id="menu-item-5060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5060"><a href="http://www.mycallander.ca/museum/historical-walk/1947_firehall/">Firehall</a></li>
+	<li id="menu-item-5140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5140"><a href="http://www.mycallander.ca/museum/historical-walk/carload-grocery">Carload Grocery</a></li>
+	<li id="menu-item-5142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5142"><a href="http://www.mycallander.ca/museum/historical-walk/train-station">Train Station</a></li>
+	<li id="menu-item-5143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5143"><a href="http://www.mycallander.ca/museum/historical-walk/post-office">Post Office</a></li>
+	<li id="menu-item-5144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5144"><a href="http://www.mycallander.ca/museum/historical-walk/orange-hall">Orange Hall</a></li>
+</ul>
+</li>
+<li id="menu-item-1464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1464"><a href="http://www.mycallander.ca/newcolumn-art-gallery/">Header Art Gallery</a>
+<ul class="sub-menu">
+	<li id="menu-item-1054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1054"><a href="http://www.mycallander.ca/alex-dufresne-gallery/">Alex Dufresne Gallery</a></li>
+	<li id="menu-item-3954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3954"><a href="http://www.mycallander.ca/currently-on-display-gallery/">Currently on Display</a></li>
+	<li id="menu-item-3960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3960"><a href="http://www.mycallander.ca/future-shows/">Future Shows</a></li>
+	<li id="menu-item-1055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1055"><a href="http://www.mycallander.ca/past-shows/">Past Shows</a></li>
+	<li id="menu-item-8483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8483"><a href="http://www.mycallander.ca/the-gallery-space/">The Gallery Space</a></li>
+	<li id="menu-item-5363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5363"><a href="http://www.mycallander.ca/call-for-entries">Call for Entries</a></li>
+	<li id="menu-item-3937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3937"><a href="http://www.mycallander.ca/gallery-mandate/">Gallery Mandate</a></li>
+	<li id="menu-item-3928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3928"><a href="http://www.mycallander.ca/art-gallery-submissions/">Artist Submissions</a></li>
+	<li id="menu-item-4122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4122"><a href="http://www.mycallander.ca/admission/">Admission</a></li>
+	<li id="menu-item-4114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4114"><a href="http://www.mycallander.ca/hours-of-operation-gallery/">Hours of Operation</a></li>
+	<li id="menu-item-3924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3924"><a href="http://www.mycallander.ca/contact-information-gallery/">Contact Information</a></li>
+	<li id="menu-item-6147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6147"><a href="http://www.mycallander.ca/gallery-location/">Museum / Gallery Location</a></li>
+</ul>
+</li>
+</ul></div>			
+				</div>
+
+			</div>
+			<!-- ************************************************************************************************************************************************************************************************************
+			* 	 Please copy and paste the following template into the menu container above, replace the fields enclosed in * with your menu information. 																	*	
+			*	 Please makes sure to remove the * when renaming the fields																																					*
+			*																																																				*
+			*	***TEMPLATE**********************************************************************************************************************************************************************************************	*
+			*	*   <div id="*MENU NAME*" class="ldd_submenu *MENU COLOUR*"><ul id="menu-main-menu" class="submenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-960"><a href="http://www.mycallander.ca/header-orange-community/">Menu Community</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-959"><a href="http://www.mycallander.ca/header-red-services/">Menu Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-958"><a href="http://www.mycallander.ca/header-green-government/">Menu Government</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-957"><a href="http://www.mycallander.ca/header-blue-environment/">Menu Environment</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-956"><a href="http://www.mycallander.ca/header-brown-places/">Menu Places</a></li>
+</ul></div> *	*
+			*	*********************************************************************************************************************************************************************************************************	*
+			* 	 You may Choose the following Colours:																							   																			*
+			* 	 orange																																																		*
+			*	 red																																																		*
+			*	 blue																																																		*
+			*	 brown																																																		*
+			*    green																																																		*
+			*****************************************************************************************************************************************************************************************************************-->
+			<div id="headerbar" class="span-24">
+				<div style="float: left; padding-top:8px; padding-left: 10px;">
+					<span class="boldgrey">You are here:</span>
+					<div class="breadcrumbs">
+						<!-- Breadcrumb NavXT 5.0.1 -->
+<a title="Go to Municipality of Callander." href="http://www.mycallander.ca" class="home">Municipality of Callander</a> &gt; Library Home 
+					</div>
+				</div>
+				<div style="float: right; padding-right: 10px;">
+				<form method="get" id="searchform" action="http://www.mycallander.ca/">
+				<div><input type="text" size="18" value="" name="s" id="s" />
+				<input type="submit" id="searchsubmit" value="Search" class="btn" />
+				</div>
+				</form>
+				
+				</div>
+			</div>
+			
+						<div class="span-5">
+
+						
+				<div class="arrowlistmenu">
+						<h2>Library</h2>					<ul>
+						<li><a class="active" href="http://www.mycallander.ca/library/home">Library Home</a></li><li><a href="http://www.mycallander.ca/library/about-us/">Contact Us</a></li><li><a href="http://www.mycallander.ca/LibraryPhotoGallery">Library Photo Gallery</a></li><li><a href="http://www.mycallander.ca/library/policies/">Policies</a></li><li><a href="https://olsn.ent.sirsidynix.net/client/en_US/callander/">Library Catalogue</a></li><li><a href="http://www.mycallander.ca/library-catalogue-help/">Library Catalogue Help</a></li><li><a href="http://www.mycallander.ca/library-news-and-events">Library News and Events</a></li><li><a href="http://www.mycallander.ca/library/facts/">Library Services</a></li><li><a href="http://www.mycallander.ca/library/book-club/">Book Club</a></li><li><a href="http://www.mycallander.ca/library/online-databases/">eResources</a></li><li><a href="http://www.mycallander.ca/library/raising-readers/">Raising Readers</a></li><li><a href="http://www.mycallander.ca/library/new-materials/">New Materials</a></li><li><a href="http://www.mycallander.ca/library/friends-of-the-library/">Friends of the Library</a></li><li><a href="http://www.mycallander.ca/library/history/">History of the Library</a></li><li><a href="http://www.mycallander.ca/library/cap-computer-sessions/">Technology Training</a></li><li><a href="http://www.mycallander.ca/library/overdrive-digital-audio-ebook-library/">OverDrive Digital Audio & eBook Library</a></li><li><a href="http://www.mycallander.ca/library/Future-Library/">Future Library</a></li><li><a href="http://www.mycallander.ca/telling-our-stories/">Telling Our Stories</a></li><li><a href="http://www.mycallander.ca/outreach-services/">Outreach Services</a></li>					</ul>
+				</div>
+			
+										
+			</div>
+			
+						<div id="content" class="span-19 last">
+				<div id="post-616" class="post-616 page type-page status-publish hentry">
+					<h2 class="brown">Library Home</h2>
+<p>&nbsp;</p>
+<div id="cp_widget_1b691606-0dd2-4732-925c-69ef06c68f53">&#8230;</div>
+<p style="text-align: left;"><script type="text/javascript">// <![CDATA[
+var cpo = []; cpo["_object"] ="cp_widget_1b691606-0dd2-4732-925c-69ef06c68f53"; cpo["_fid"] = "AUFAwRdKrDTm"; var _cpmp = _cpmp || []; _cpmp.push(cpo); (function() { var cp = document.createElement("script"); cp.type = "text/javascript"; cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js"; var c = document.getElementsByTagName("script")[0]; c.parentNode.insertBefore(cp, c); })();
+// ]]&gt;</script><span style="color: #800000;">                                                                          <strong>Welcome to the Callander Library!</strong></span></p>
+<h3 style="text-align: center;">
+<noscript>Powered by Cincopa &amp;amp;amp;amp;amp;amp;lt;a href=&#8217;http://www.cincopa.com/video-hosting&#8217;&amp;amp;amp;amp;amp;amp;gt;Video Hosting&amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;gt; for Business solution.&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;Welcome to the Callander Library &amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramake&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; Canon&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;height&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 3456&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;orientation&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;flash&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 24&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;originaldate&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 4/22/2015 10:07:30 PM&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;width&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 4608&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramodel&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; Canon PowerShot ELPH&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;originaldate&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1/1/0001 6:00:00 AM&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;width&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 766&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;height&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 520&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramake&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; SONY&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;height&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 3240&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;orientation&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;flash&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 24&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;originaldate&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 8/24/2011 5:19:25 PM&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;width&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 4320&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramodel&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; DSC-W350&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;flash&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 25&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramake&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; OLYMPUS IMAGING CORP&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;height&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 3216&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;orientation&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;camerasoftware&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; Version 1.0         &amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;originaldate&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 10/9/2012 8:49:20 PM&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;width&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 4288&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramodel&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; VR320,D725&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;flash&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 25&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramake&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; CASIO COMPUTER CO.,L&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;height&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 3000&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;orientation&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;camerasoftware&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1.00             &amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;originaldate&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 2/20/2016 6:12:54 PM&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;width&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 4000&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramodel&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; EX-H10     &amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;flash&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 24&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramake&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; CASIO COMPUTER CO.,L&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;height&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 3000&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;orientation&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;camerasoftware&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1.00             &amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;originaldate&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 2/20/2016 6:53:36 PM&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;width&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 4000&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;cameramodel&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; EX-H10     &amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;originaldate&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1/1/0001 6:00:00 AM&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;width&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 960&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;height&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 720&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;originaldate&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 1/1/0001 6:00:00 AM&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;width&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 960&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt;height&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;lt;span&amp;amp;amp;amp;amp;amp;gt; 720&amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;gt;</noscript>
+</h3>
+<h2 class="brown">Helpful Links</h2>
+<address style="margin-left: 90px;"><strong>                                                      </strong></address>
+<p style="text-align: center;"><span style="line-height: 1.5em;">Check us out at our </span><strong><a style="line-height: 1.5em;" title="" href="http://www.facebook.com/callanderpubliclibrary">Facebook</a></strong><span style="line-height: 1.5em;"> and<strong> <a href="https://twitter.com/ourcplibrary">Twitter </a></strong>page for daily updates, news, pictures and events.</span></p>
+<p style="text-align: center;"><a href="http://www.facebook.com/callanderpubliclibrary"><img class="aligncenter  wp-image-2208" alt="images" src="http://www.mycallander.ca/wp-content/uploads/2013/07/images.jpg" width="130" height="53" /></a></p>
+<p style="text-align: center;"> (no personal facebook account needed)</p>
+<p style="text-align: center;"><strong>Here are some helpful links:</strong></p>
+<table class="Centered aligncenter">
+<tbody>
+<tr>
+<td> <a href="http://ca.yahoo.com/"><img class="alignnone  wp-image-2206" alt="icon_yahoo_mail" src="http://www.mycallander.ca/wp-content/uploads/2013/07/icon_yahoo_mail.jpg" width="60" height="25" /></a>  <a href="https://accounts.google.com/ServiceLogin?service=mail&amp;passive=true&amp;rm=false&amp;continue=https://mail.google.com/mail/&amp;ss=1&amp;scc=1&amp;ltmpl=default&amp;ltmplcache=2&amp;emr=1&amp;osid=1"><img class="alignnone  wp-image-2200" alt="icon_gmail" src="http://www.mycallander.ca/wp-content/uploads/2013/07/icon_gmail.jpg" width="60" height="25" /></a>    <a href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=12&amp;ct=1456946975&amp;rver=6.4.6456.0&amp;wp=MBI_SSL&amp;wreply=https%3a%2f%2foutlook.live.com%2fowa%2f&amp;lc=1033&amp;id=292841&amp;mkt=en-us&amp;cbcxt=out&amp;fl=wld"><img class="alignnone  wp-image-2205" alt="icon_windows_live_hotmail" src="http://www.mycallander.ca/wp-content/uploads/2013/07/icon_windows_live_hotmail.jpg" width="75" height="25" /></a>    <a href="http://www.kijiji.ca/"><img class="alignnone  wp-image-8643" alt="kijiji_logo" src="http://www.mycallander.ca/wp-content/uploads/2013/04/kijiji_logo-300x148.jpg" width="60" height="20" /></a>   <a href="https://www.google.ca/?gws_rd=ssl"><img class="alignnone  wp-image-8641" alt="google_2015_logo_detail" src="http://www.mycallander.ca/wp-content/uploads/2013/04/google_2015_logo_detail1-300x99.png" width="70" height="20" /></a>   <a href="https://www.youtube.com/"><img class="alignnone  wp-image-2207" style="line-height: 1.5em;" alt="icon_you_tube" src="http://www.mycallander.ca/wp-content/uploads/2013/07/icon_you_tube.jpg" width="60" height="25" /></a></td>
+</tr>
+<tr>
+<td><a href="https://www.facebook.com/"><img class="wp-image-2199" alt="icon_facebook" src="http://www.mycallander.ca/wp-content/uploads/2013/07/icon_facebook.jpg" width="60" height="25" /></a>  <a href="http://www.baytoday.ca/"><img class="alignnone  wp-image-2144" alt="baytoday" src="http://www.mycallander.ca/wp-content/uploads/2013/07/baytoday.jpg" width="80" height="45" /></a>  <a href="http://www.northbaynipissing.com/"><img class="alignnone  wp-image-2251" alt="nip-news" src="http://www.mycallander.ca/wp-content/uploads/2013/07/nip-news.jpg" width="70" height="30" /></a>  <a href="http://www.nugget.ca/"><img class="alignnone  wp-image-2203" style="line-height: 1.5em;" alt="icon_north_bay_nugget" src="http://www.mycallander.ca/wp-content/uploads/2013/07/icon_north_bay_nugget.jpg" width="70" height="30" /></a>  <a href="http://www.msn.com/en-ca/"><img class="alignnone  wp-image-2202" alt="icon_msn" src="http://www.mycallander.ca/wp-content/uploads/2013/07/icon_msn.jpg" width="70" height="30" /></a>  <a href="https://twitter.com/"><img class="alignnone  wp-image-8642" alt="Twitter_logo-7" src="http://www.mycallander.ca/wp-content/uploads/2013/04/Twitter_logo-7-300x128.png" width="70" height="40" /></a></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"><a href="https://techboomers.com/"><img class="wp-image-7504 aligncenter" alt="Logo-Tech-Boomers" src="http://www.mycallander.ca/wp-content/uploads/2013/04/Logo-Tech-Boomers.png" width="100" height="20" /></a></p>
+<p style="text-align: center;"></p>
+					<div class="infoline_noprint"></div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+			
+						<div id="footer" class="small span-24">
+				
+				<div class="footermenu">
+					<a href="http://www.mycallander.ca/sitemap.xml" title="Site Map">Site Map</a>&nbsp;|&nbsp;
+					<a href="http://www.mycallander.ca/contact-us" title="">Contact Us</a>&nbsp;|&nbsp;
+					<a href="http://www.mycallander.ca/contact-us" title="">Login</a>
+				</div>
+				<br>The information provided on this website and in attached documents is provided for convenience only.<br>For accurate references, please consult the official volumes in the Office of the Municipal Clerk at 280 Main Street North, Callander, Ontario.<br>&copy; 2013&nbsp;Municipality of Callander
+				
+			</div>
+			
+		</div>
+<link rel='stylesheet' id='Css-css'  href='http://www.mycallander.ca/wp-content/plugins/spider-event-calendar/elements/calendar-jos.css?ver=1.5.36' type='text/css' media='' />
+<link rel='stylesheet' id='wp-color-picker-css'  href='http://www.mycallander.ca/wp-admin/css/color-picker.min.css?ver=3.8.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/www.mycallander.ca\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105'></script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"showInfo":"1","fitToScreen":"0","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","resizeCenter":"","marginSize":"0","linkTarget":"_self","slideshowSpeed":"4000","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","pause":"(pause slideshow)","play":"(play slideshow)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.mycallander.ca/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4'></script>
+			<script type="text/javascript">
+				jQuery.noConflict();
+				(function( $ ) {
+					$(function() {
+						// More code using $ as alias to jQuery
+						$("area[href*=#],a[href*=#]:not([href=#]):not([href^='#tab']):not([href^='#quicktab']):not([href^='#pane'])").click(function() {
+							if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+								var target = $(this.hash);
+								target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+								if (target.length) {
+								$('html,body').animate({
+								scrollTop: target.offset().top - 20  
+								},900 ,'easeInQuint');
+								return false;
+								}
+							}
+						});
+					});
+				})(jQuery);	
+			</script>				
+					</body>
+</html>			

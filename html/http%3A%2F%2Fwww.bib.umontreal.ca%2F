@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" prefix="og: http://ogp.me/ns#"><!-- InstanceBegin template="/Templates/page-accueil-rentree.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="iso-8859-1" />
+<!-- Modele v2.13.0 (2016-01-19) Rev: 1493 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Biblioth&egrave;ques - Universit&eacute; de Montr&eacute;al</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="http://www.bib.umontreal.ca/modele/2.13.0/CSS/tous.min.css" />
+
+<link rel="stylesheet" href="CSS/site-DG.css" type="text/css" charset="ISO-8859-1" />
+
+<link rel="stylesheet" type="text/css" href="CSS/page-accueil-im.css"/>
+
+<!-- InstanceParam name="META_Auteur" type="text" value="" --><!-- InstanceParam name="META_Description" type="text" value="" --><!-- InstanceParam name="META_Mots_cles" type="text" value="" -->
+<meta property="og:image" content="http://www.bib.umontreal.ca/modele/2.13.0/bib-UdeM-smilie-fb.png" />
+<meta property="og:locale" content="fr_CA" />
+<link rel="home" title="Accueil du site" href="http://www.bib.umontreal.ca/" />
+<link rel="index" title="Index AZ&nbsp;du&nbsp;site" href="http://www.bib.umontreal.ca/a-propos/A-Z.htm" />
+<link rel="alternate" type="application/rss+xml" title="Communiqu&eacute;s - Biblioth&egrave;ques - Universit&eacute; de Montr&eacute;al" href="http://www.bib.umontreal.ca/communiques.rss" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.bib.umontreal.ca/favicon.ico" />
+<link rel="search" title="Recherche" href="http://www.umontreal.ca/moteur_rech/index.html?sitesearch=bib.umontreal.ca" />
+
+<link rel="index" title="Index&nbsp;AZ" href="a-propos/A-Z.htm" />
+<!-- InstanceBeginEditable name="Metadonnees-DG" -->
+<!-- InstanceEndEditable -->
+<script src="http://www.bib.umontreal.ca/modele/2.13.0/JS/tous.min.js"></script>
+<script src="http://www.bib.umontreal.ca/modele/GA/3.4/ga.min.js"></script>
+<script type="text/javascript" src="http://www.bib.umontreal.ca/js/corvee/1/corvee.min.js" async></script>
+<!-- InstanceBeginEditable name="javascript-modele-DG" -->
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="javascript" -->
+<link rel="stylesheet" type="text/css" href="bibECLAIR/CSS/bibECLAIR.css"/>
+<script charset="iso-8859-1" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.3/jquery-ui.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery = (bib && bib.jQuery) ? bib.jQuery : Versions.use('jquery','latest');
+
+jQuery(window).error(function(){
+  return true;
+});
+jQuery(function(){
+	jQuery('#bib-timbres a').hide();
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://www.bib.umontreal.ca/JS/timbres/1.0/bib.timbres.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	var $listeAutres = jQuery('#liste-services-autres').hide(),
+		$listeAutresToggle = jQuery('#toggle-liste-services-autres');
+	$listeAutresToggle
+		.data('texte', {ouvrir: $listeAutresToggle.text(), fermer: '...moins'})
+		.on('click', function(e){
+			e.preventDefault();
+			$listeAutres.slideToggle();
+		})
+		.toggle(
+			function(){
+				$(this).text($(this).data('texte').fermer);
+			},
+			function(){
+				$(this).text($(this).data('texte').ouvrir);
+			}
+		);
+});
+</script>
+<script type="text/javascript" src="bibECLAIR/JS/jquery.history.js"></script>
+<script type="text/javascript" src="JS/pannel.js"></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="CSS" -->
+<style type="text/css">
+#um-menu-et-contenu
+{
+	min-height: 540px;
+}
+
+#timbres
+{
+	width: 182px;
+	height: 53px;
+	overflow: hidden;
+}
+
+/* Styles pour le panneau u;u s'affiche le babillard de la rentre */
+
+.pannel
+{
+	/*	cursor: hand;  IE6 */
+/*	cursor: pointer;*/
+	position: absolute;
+	z-index: 1;
+/*	border: 2px solid #D0D0D0;*/
+	border: 0 solid #ffffff;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.pannel-opened
+{
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-ms-border-radius: 0;
+	border-radius: 0;
+}
+
+/*
+#img-aleatoire
+{
+	border: 2px solid #EFEFEF;
+	width: 178px !important;
+	overflow: hidden;
+}*/
+
+#mapIframe
+{
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	border: none;
+	position: absolute;
+	top:0;
+	z-index:2;
+}
+
+.carte-print
+{
+	display: none; /* active dynamiquement lorsque le panneau est ouvert */
+}
+.h2-droit
+{
+	text-align:right;
+	padding-right:17px;}
+#block-trouve-ressources-apprendre li
+{
+	padding-bottom:5px;}
+.h2-centre
+{
+	color:#333333;
+	margin-top:0px;
+	font-size:110%;}
+#um-menu-et-contenu
+{
+	background:none;}
+div.menu-accueil
+{
+	background: url("images/iu/accueil/ligne-fond-vertical.png") repeat-y ;
+	background-position:right;
+	}
+#um-menu-vertical
+{
+	margin-right:20px;}
+</style>
+<link href="CSS/page-accueil-im.css" rel="stylesheet" type="text/css">
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div id="um-enveloppe"> 
+  <!--googleoff: all--> 
+  <a id="bib-b-aller-contenu" class="skip" href="#hdp" accesskey="1" title="Aller au contenu (cl&eacute; d'acc&egrave;s 1)">Aller au contenu [1]</a><a id="bib-b-aller-bandeau" class="skip" href="#menu" accesskey="2" title="Aller au menu secondaire (cl&eacute; d'acc&egrave;s 2)">Aller au menu secondaire [2]</a> 
+  <!--googleon: all-->
+  <header><!-- #BeginLibraryItem "/Library/nav-alpha.lbi" -->
+<p class="bib-hidden-accessible">Menu du site</p>
+<nav class="nav-alpha"> 
+  <ul class="nav-alpha-list">
+    <li><a href="http://www.bib.umontreal.ca"><span class="bib-hidden-accessible">Accueil</span></a></li>
+    <li><a tabindex="0">Catalogue <em>Atrium</em></a>
+      <ul>
+        <li><a href="http://atrium.umontreal.ca">Démarrer <em>Atrium</em></a></li>
+        <li><a href="http://www.bib.umontreal.ca/aide-Atrium/">Guide <em>Atrium</em></a></li>
+        <li><a href="http://atrium.umontreal.ca/dossier">Prolonger vos emprunts</a></li>
+        <li><a href="http://atrium.umontreal.ca/dossier">Votre dossier de lecteur</a></li>
+        <li><a href="http://atrium.umontreal.ca/reserve">Réserve de cours</a></li>
+      </ul>
+    </li>
+    <li><a tabindex="0">Ressources &eacute;lectroniques</a>
+      <ul>
+        <li><a href="http://www.bib.umontreal.ca/Maestro">Maestro <span class="texte-petit">(bases de données)</span></a></li>
+        <li><a href="http://opurl.bib.umontreal.ca:9003/sfx_local/a-z/default">Périodiques électroniques</a></li>
+        <li><a href="http://www.bib.umontreal.ca/dictionnaires">Dictionnaires et encyclopédies</a></li>
+        <li><a href="http://guides.bib.umontreal.ca/disciplines/246-Centre-d-information-statistique">Données statistiques</a></li>
+        <li><a href="http://guides.bib.umontreal.ca/disciplines/147-Donnees-geospatiales">Données géospatiales</a></li>
+        <li><a href="http://www.bib.umontreal.ca/Papyrus">Papyrus <br /><span class="texte-petit">(Dépôt institutionnel numérique)</span></a></li>
+        <li><a href="http://www.bib.umontreal.ca/Calypso">Calypso <br /><span class="texte-petit">(Collections d'objets numériques)</span></a></li>
+        <li><a href="http://www.bib.umontreal.ca/Proxy">Accès hors-campus (Proxy)</a></li>
+      </ul>
+    </li>
+    <li><a tabindex="0">Formation</a>
+      <ul>
+        <li><a href="http://www.bib.umontreal.ca/calendrier">Activités offertes</a></li>
+        <li><a href="http://guides.bib.umontreal.ca/disciplines">Guides</a></li>
+        <li><a href="http://www.bib.umontreal.ca/CI/">Compétence informationnelle</a></li>
+      </ul>
+    </li>
+    <li><a tabindex="0">Obtenir un document</a>
+      <ul>
+        <li><a href="http://jupiter.bib.umontreal.ca/formulaires/livraison-documents.asp">Livraison de documents UdeM<br /><span class="texte-petit">anciennement prêt réseau</span></a></li>
+        <li><a href="http://opurl.bib.umontreal.ca:9003/sfx_local/a-z?param_perform_value=citation">Obtenir un article</a></li>
+        <li><a href="http://guides.bib.umontreal.ca/disciplines/15-theses-et-memoires">Obtenir une thèse / un mémoire</a></li>
+        <li><a href="http://www.bib.umontreal.ca/PB/">Prêt entre bibliothèques</a></li>
+        <li><a href="http://www.bib.umontreal.ca/pret/">Modalités de prêt</a></li>
+        <li><a href="http://guides.bib.umontreal.ca/disciplines/340-Autres-catalogues-de-bibliotheque">Catalogues d'autres bibliothèques</a></li>
+      </ul>
+    </li>
+    <li><a href="http://www.bib.umontreal.ca/horaires">Horaires</a></li>
+    <li><a href="http://www.bib.umontreal.ca/nous-joindre/">Nous joindre</a></li>
+  </ul>
+</nav>
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/nav-UdeM.lbi" -->
+<div id="um-bandeau" role="banner"><a href="http://www.umontreal.ca" class="um-logo"><img src="http://www.bib.umontreal.ca/modele/2.13.0/images/iu/logo-UdeM.svg" alt="Universit&eacute; de Montr&eacute;al" /></a><span class="logo-border"></span><a class="logo-sitetitle" href="http://www.bib.umontreal.ca"><img alt="Les biblioth?ques / UdeM" src="http://www.bib.umontreal.ca/modele/2.13.0/images/iu/logo-Bib.svg" /></a>
+  <hr class="um-cacher" />
+  <nav class="um-nav" role="navigation">
+  	<span class="bib-hidden-accessible">Liens externes</span>
+    <ul>
+      <li><a href="http://jade.daa.umontreal.ca/guichets/services/dgtic/bottin/cgi/11/e=xc13000,p=initialisation">R&eacute;pertoires</a></li>
+      <li><a href="http://www.umontreal.ca/repertoires/facultes.html">Facult&eacute;s</a></li>
+      <li><a href="http://www.bib.umontreal.ca/">Biblioth&egrave;ques</a></li>
+      <li><a href="http://plancampus.umontreal.ca/">Plan campus</a></li>
+      <li><a href="http://www.umontreal.ca/index/az.html">Sites A-Z </a></li>
+      <li><a>Mon UdeM</a>
+        <ul>
+          <li><a href="https://www.portail.umontreal.ca/">Mon portail UdeM</a></li>
+          <li><a href="https://outlook.umontreal.ca">Mon courriel</a></li>
+          <li><a href="https://studium.umontreal.ca/">StudiUM</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <form id="um-recherche-Atrium" action="http://atrium.umontreal.ca/primo_library/libweb/action/search.do?fn=go&amp;ct=search" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" class="um-recherche" role="search">
+    <!-- On force IE ? utiliser UTF-8 lors de l'envoie des donn?es --> 
+    <!--[if lt IE 9]><input name="iehack" type="hidden" value="&#9760;" /><![endif]-->
+    <input id="mode" type="hidden" value="Basic" name="mode" />
+    <input id="tab" type="hidden" value="default_tab" name="tab" />
+    <input id="indx" type="hidden" value="1" name="indx" />
+    <input id="dum" type="hidden" value="true" name="dum" />
+    <input id="str" type="hidden" value="rank" name="srt" />
+    <input id="vid" type="hidden" value="UM" name="vid" />
+    <input id="frbg" type="hidden" value="" name="frbg" />
+    <label for="um-boite-recherche" class="um-cacher">Rechercher&nbsp;: </label>
+    <span class="um-boite-bouton">
+    <input id="um-boite-recherche-Atrium" type="text" value="" name="vl(freeText0)" class="um-boite" title="Tapez le texte que vous recherchez" maxlength="255" placeholder="Atrium" />
+    <input alt="Rechercher" src="http://www.bib.umontreal.ca/modele/2.13.0/images/iu/loupe.gif" type="image" class="um-bouton" />
+    </span><br class="um-cacher" />
+    <span class="um-cacher">Rechercher dans?: </span> <span class="um-boite-radios">
+    <input id="um-radio-Atrium2" name="sitesearch" value="Atrium"  class="um-radio um-radio-Atrium" title="Rechercher dans Atrium, le catalogue des biblioth&egrave;ques" type="radio" />
+    <label for="um-radio-Atrium" class="um-cesite">Atrium</label>
+    <input id="um-radio-udem2" name="sitesearch" checked="checked" value="umontreal.ca" type="radio" title="Rechercher dans le site de l'UdeM" class="um-radio" />
+    <label for="um-radio-udem2" class="um-udem">UdeM</label>
+    </span>
+  </form>
+  <form id="um-recherche" action="http://google.com/cse" class="um-recherche" role="search">
+    <input type="hidden" name="cx" value="011926736769028447783:qlpu3so2kqq" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <label for="um-boite-recherche" class="um-cacher">Rechercher&nbsp;: </label>
+    <span class="um-boite-bouton">
+    <input maxlength="255" value="" name="q" class="um-boite" id="um-boite-recherche" title="Tapez le texte que vous recherchez" type="text" placeholder="UdeM" />
+    <input alt="Rechercher" src="http://www.bib.umontreal.ca/modele/2.13.0/images/iu/loupe.gif" type="image" class="um-bouton" />
+    </span><br class="um-cacher" />
+    <span class="um-cacher">Rechercher dans?: </span><span class="um-boite-radios">
+    <input id="um-radio-Atrium" name="sitesearch" value="Atrium" class="um-radio um-radio-Atrium" title="Rechercher dans Atrium, le catalogue des biblioth&egrave;ques" type="radio" />
+    <label for="um-radio-Atrium" class="um-cesite">Atrium</label>
+    <input id="um-radio-udem" name="sitesearch" checked="checked" value="umontreal.ca" type="radio" title="Rechercher dans le site de l'UdeM" class="um-radio" />
+    <label for="um-radio-udem" class="um-udem">UdeM</label>
+    </span>
+  </form>
+</div>
+<!-- #EndLibraryItem --></header>
+  
+  <div id="um-menu-et-contenu" class="um-clearfix">
+    <div id="um-menu-vertical"> 
+      <!--googleoff: snippet-->
+      <nav id="menu" role="navigation">
+        <div id="img-aleatoire"></div>
+        <noscript>
+        <img src="images/iu/accueil/aleatoire/image01.jpg" width="181" height="295" alt=""  />
+        </noscript>
+        <div class="menu-accueil"><!-- InstanceBeginEditable name="menu-accueil" -->
+          <h2 class="h2-droit">À propos</h2>
+          <ul>
+            <li><a href="http://www.bib.umontreal.ca/collections-nouvelle-ere/">Collections : nouvelle ère</a></li>
+            <li><a href="http://www.bib.umontreal.ca/soutien-informatique/Proxy.htm">Acc&egrave;s hors-campus (Proxy)</a></li>
+            <li><a href="http://www.bib.umontreal.ca/nouvelles-acquisitions/">Nouvelles acquisitions</a></li>
+            <li><a href="a-propos/">&Agrave; propos des biblioth&egrave;ques</a></li>
+            <li><a href="carriere/offres-d-emploi.htm">Offres d'emploi</a></li>
+            <li><a href="http://www.bib.umontreal.ca/faire-un-don/">Faire un don</a></li>
+          </ul><!-- InstanceEndEditable --> </div>
+        <div id="bib-timbres"><!-- InstanceBeginEditable name="timbres" --><!-- InstanceEndEditable --></div>
+        </nav>
+      <!--googleon: snippet--> 
+    </div>
+    <hr class="um-cacher" />
+    <div id="um-contenant">
+      <main id="um-contenu" class="um-clearfix" role="main"> 
+        <!--googleoff: all-->
+        <div id="breadcrumbs"><span>Fil d'Ariane...</span></div>
+        <!--googleon: all--> 
+        <a id="hdp" name="hdp"></a>
+        <div id="titre-section"></div>
+        <!-- InstanceBeginEditable name="accueil-titre-page" -->
+        <h1>Biblioth&egrave;ques</h1>
+        <!-- InstanceEndEditable -->
+        <div id="contenu-accueil-centre">
+          <div id="block-recherche">
+          	<iframe width="557" scrolling="no" height="123" frameborder="0" src="http://atrium.umontreal.ca/primo_library/libweb/action/search.do?&amp;embed=true&amp;vid=UM&amp;sadvanced=true&amp;resloc=_parent&amp;width=557&amp;height=123&amp;bgcolor2=accueil&amp;slabel=Atrium&amp;combo1=false&amp;combo2=false&amp;combo3=false&amp;combo4=false&amp;spreferences=false" id="bib-recherche-Atrium"></iframe>
+          </div>
+          <div id="block-trouve-ressources-apprendre" class="um-clearfix">
+            <div id="trouve-ressources">
+              <h2 class="h2-centre">Des outils pour vos recherches</h2>
+              <!-- InstanceBeginEditable name="trouver" -->
+              <ul>
+                <li><a href="http://guides.bib.umontreal.ca/disciplines">Guides par discipline</a></li>
+                <li><a href="http://guides.bib.umontreal.ca/tutoriels">Guides pour tous et tutoriels</a></li>
+                <li><a href="http://www.bib.umontreal.ca/LGB/">Citer ses sources - styles et logiciels</a></li>
+              </ul>
+              <!-- InstanceEndEditable --> </div>
+            <div id="apprendre-a-trouve-ressources">
+              <h2 class="h2-centre">De l'aide selon vos besoins</h2>
+              <!-- InstanceBeginEditable name="apprendre" -->
+              <ul>
+                <li><a href="http://www.bib.umontreal.ca/calendrier">Activit&eacute;s de formation</a></li>
+                <li><a href="http://www.bib.umontreal.ca/soutien-informatique/">Soutien informatique</a></li>
+                <li><a href="#bibECLAIR/bienvenue">bib<em>&Eacute;CLAIR</em>&nbsp;<img src="images/utilitaires/discipline-icon-17px.png" width="9" height="17" alt="bib&Eacute;CLAIR" />&nbsp;: votre biblioth&egrave;que en un coup d'oeil</a></li>
+              </ul>
+              <!-- InstanceEndEditable --> </div>
+          </div>
+          <div id="quoi-de-neuf">
+            <h2>Quoi de neuf</h2>
+            <!-- InstanceBeginEditable name="quoi-de-neuf" -->
+            <ul>
+              <li><a href="http://www.bib.umontreal.ca/communiques/20160310-SC-Citer-avec-bibtex.htm">Citer ses sources et g&eacute;rer ses bibliographies gr&acirc;ce &agrave; BibTeX</a></li>
+              <li><a href="http://www.bib.umontreal.ca/communiques/20160203-DC-renouvellement-wiley.htm">R&eacute;tablissement de l&rsquo;acc&egrave;s &agrave; l&rsquo;ensemble des p&eacute;riodiques de John Wiley &amp; Sons</a></li>
+              <li>
+                <h1>Service de livraison &eacute;lectronique d&rsquo;articles de p&eacute;riodiques et de chapitres de livres de l&rsquo;UdeM</h1>
+              <a href="http://www.bib.umontreal.ca/communiques/20160120-PB-livraison-electronique.htm">Service de livraison &eacute;lectronique d&rsquo;articles de p&eacute;riodiques et de chapitres de livres de l&rsquo;UdeM</a> </li>
+              <li><a href="http://www.nouvelles.umontreal.ca/campus/bibliotheques/20151223-la-session-dhiver-a-la-bibliotheque.html">La session d'hiver &agrave; la biblioth&egrave;que</a></li>
+              <li>
+                <h1>Plus de 1700 films disponibles sur Vith&egrave;que!</h1>
+              <a href="http://www.bib.umontreal.ca/communiques/20160105-DG-grille-tarifs-2016.htm">              Grille des tarifs pour 2016</a></li>
+            </ul>
+          <!-- InstanceEndEditable --></div>
+          <p class="plus"><a href="http://www.bib.umontreal.ca/communiques/">...plus</a></p>
+        </div>
+        <div id="um-contenu-droite">
+          <h2 class="texte-bleu">Vos biblioth&egrave;ques</h2>
+          <!-- InstanceBeginEditable name="liste-bibliotheques" -->
+          <ul>
+            <li><a href="http://www.bib.umontreal.ca/AM/">Am&eacute;nagement</a></li>
+            <li><a href="http://www.bib.umontreal.ca/BV/">Botanique</a></li>
+            <li><a href="http://www.bib.umontreal.ca/laval/">Campus de Laval</a></li>
+            <li><a href="http://www.bib.umontreal.ca/cartotheque/">Cartoth&egrave;que</a></li>
+            <li><a href="http://www.bib.umontreal.ca/CH/">Chimie</a></li>
+            <li><a href="http://www.bib.umontreal.ca/DR/">Droit</a></li>
+            <li><a href="http://www.bib.umontreal.ca/ED/">&Eacute;PC-Biologie</a></li>
+            <li><a href="http://www.bib.umontreal.ca/GP/">G&eacute;ographie</a></li>
+            <li><a href="http://www.bib.umontreal.ca/SA/">Kin&eacute;siologie</a></li>
+            <li><a href="http://www.bib.umontreal.ca/SS/">Lettres et sciences humaines</a></li>
+            <li><a href="http://www.bib.umontreal.ca/CS/">Livres rares et collections sp&eacute;ciales</a></li>
+            <li><a href="http://www.bib.umontreal.ca/MI/">Math&eacute;matiques et informatique</a></li>
+            <li><a href="http://www.bib.umontreal.ca/MV/">M&eacute;decine v&eacute;t&eacute;rinaire</a></li>
+            <li><a href="http://www.bib.umontreal.ca/MU/">Musique</a></li>
+            <li><a href="http://www.bib.umontreal.ca/SA/">Optom&eacute;trie</a></li>
+            <li><a href="http://www.bib.umontreal.ca/SA/">Param&eacute;dicale</a></li>
+            <li><a href="http://www.bib.umontreal.ca/PY/">Physique</a></li>
+            <li><a href="http://www.bib.umontreal.ca/SA/">Sant&eacute;</a></li>
+          </ul>
+          <!-- InstanceEndEditable -->
+          <div id="liste-services-autres"> <!-- InstanceBeginEditable name="liste-autres-services" -->
+           <h2 class="texte-bleu">Services spécialisés</h2>
+            <ul>
+              <li><a href="http://www.bib.umontreal.ca/conservation/">Centre de conservation / Dépôt Youville</a></li>
+              <li><a href="http://guides.bib.umontreal.ca/disciplines/246-Centre-d-information-statistique">Donn&eacute;es statistiques</a></li>
+              <li><a href="http://www.bib.umontreal.ca/SS/media/">M&eacute;diath&egrave;que J.-A.-DeS&egrave;ve</a></li>
+              <li><a href="http://www.bib.umontreal.ca/PB/">Pr&ecirc;t entre biblioth&egrave;ques</a></li>
+              <li><a href="http://www.bib.umontreal.ca/CA/">Service de catalogage</a></li>
+              <li><a href="http://guides.bib.umontreal.ca/disciplines/426-Services-documentaires-adaptes-aux-etudiants-en-situation-de-handicap">Services documentaires adapt&eacute;s aux &eacute;tudiants en situation de handicap (SDAESH)</a></li>
+            </ul>
+            <h2 class="texte-bleu">Point de service</h2>
+            <ul>
+              <li><a href="http://www.umontreal.ca/campus/longueuil/index.html">Campus de Longueuil</a></li>
+            </ul>
+          <!-- InstanceEndEditable --></div>
+          <p class="plus"><a id="toggle-liste-services-autres" href="#" title="Services">...plus</a></p>
+        </div>
+        <div class="carte-print">
+          <div id="carte-print"></div>
+          <div id="carte-print-contenu" class="no-screen"></div>
+          <div class="liens no-screen">
+            <div class="liens-campus">
+              <h3>Ailleurs sur le campus</h3>
+              <ul>
+                <li><a href="http://www.etudes.umontreal.ca/" target="_top" title="www.etudes.umontreal.ca">Guichet &eacute;tudiant</a><span class="no-screen printable-url">www.etudes.umontreal.ca</span></li>
+                <li><a href="http://www.sae.umontreal.ca/" target="_top" title="www.sae.umontreal.ca">Services aux &eacute;tudiants</a><span class="no-screen printable-url">www.sae.umontreal.ca</span></li>
+                <li><a href="http://www.umontreal.ca/repertoires/facultes.html" target="_top" title="www.umontreal.ca/repertoires/facultes.html">Liste des facult&eacute;s et d&eacute;partements</a><span class="no-screen printable-url">www.umontreal.ca/repertoires/facultes.html</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+         </main>
+    </div>
+  </div>
+  <hr class="um-cacher" /><!-- #BeginLibraryItem "/Library/pied-de-page.lbi" -->
+<footer>
+  <nav>
+    <ul>
+      <li><a href="http://www.urgence.umontreal.ca/">Urgence</a></li>
+      <li><a href="http://www.umontreal.ca/vie-privee.html">Vie priv&eacute;e</a></li>
+      <li><a href="http://www.carrieres.umontreal.ca/">Offres d'emploi</a></li>
+      <li><a href="https://outlook.umontreal.ca/">Mon courriel</a></li>
+      <li><a href="https://studium.umontreal.ca/">StudiUM</a></li>
+      <li><a href="http://itunesu.umontreal.ca/">iTunes U</a></li>
+      <li><a href="http://www.bib.umontreal.ca/a-propos/par-courriel.htm">Nous &eacute;crire</a></li>
+      <li><a href="https://www.facebook.com/bibUdeM"><img src="http://www.bib.umontreal.ca/modele/2.13.0/images/iu/logo-Facebook.png" alt="Facebook" /></a></li>
+      <li><a href="http://www.youtube.com/user/BibliothequesUdeM"><img src="http://www.bib.umontreal.ca/modele/2.13.0/images/iu/logo-YouTube.png" alt="YouTube" /></a></li>
+      <li><a href="https://twitter.com/bibUdeM"><img src="http://www.bib.umontreal.ca/modele/2.13.0/images/iu/logo-Twitter.png" alt="Twitter" /></a></li>
+      <li><a href="http://www.nouvelles.umontreal.ca/frontpage/rss.html"><img src="http://www.bib.umontreal.ca/modele/2.13.0/images/utilitaires/icone-syndication-14x14.png" alt="Fils des nouvelles UdeM" /></a></li>
+    </ul>
+  </nav>
+</footer>
+<!-- #EndLibraryItem --></div>
+<!-- InstanceBeginEditable name="javascript-pied" --> 
+<script type="text/javascript" src="JS/jquery.randomimage/1.1.1/jquery.randomimage.min.js"></script> 
+<script charset="iso-8859-1" type="text/javascript">
+//<![CDATA[
+jQuery(function($){
+	// objet pour image aleatoire
+	var randomImgObj = {
+		array:  ['image01.jpg', 'image02.jpg', 'image03.jpg', 'image04.jpg', 'image05.jpg', 'image06.jpg', 'image07.jpg', 'image08.jpg', 'image09.jpg', 'image10.jpg'],
+		//array: ['image-babillard.jpg'],
+		dir: 'images/iu/accueil/aleatoire/',
+		//dir: 'images/iu/accueil/',
+		width: 181,
+		height: 295
+	};
+	$(document).preloadRandomImages(randomImgObj);
+	$(document).ready(function() {
+		$('#img-aleatoire').displayRandomImage(randomImgObj);
+	});
+});
+//]]>
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

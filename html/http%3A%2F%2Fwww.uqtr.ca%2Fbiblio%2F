@@ -1,0 +1,767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Bibliothèque - Université du Québec à Trois-Rivières</title>
+<meta name="description" content="Bibliothèque de l'Université du Québec à Trois-Rivières" />
+<meta name="keywords" content="bibliothèque, livres, pérodiques, outil de découverte, guides thématiques, endnote, formation, ressources, cartothèque" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<meta http-equiv="content-language" content="fr" />
+<meta name="author" content="Service de soutien pédagogique et technologique + Bibliothèque, Université du Québec à Trois-Rivières" />
+<meta name="robots" content="index, follow" />
+<meta name="geo.region" content="CA-QC" />
+<meta name="geo.placename" content="Trois-Rivières" />
+<meta name="geo.position" content="46.348026;-72.576868" />
+<meta name="ICBM" content="46.348026, -72.576868" />
+
+<base href="http://www.uqtr.ca/biblio/" />
+
+<!-- Feuilles de style -->
+<link rel="stylesheet" href="general.css" type="text/css" />
+<link rel="stylesheet" href="inclusions.css" type="text/css" />
+<link rel="stylesheet" href="menu_horzontal.css" type="text/css" />
+<link rel="shortcut icon" href="interface/favicon_biblio.ico" />
+
+<!-- Font Google -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Menu acces direct -->
+<script type="text/javascript" src="../js/prototypejs-1.6.1.js"></script>
+<script type="text/javascript" src="../js/scriptaculous-js-1.8.3/scriptaculous.js"></script>
+<script type="text/javascript" src="../js/scriptaculous-js-1.8.3/builder.js"></script>
+<script type="text/javascript" src="../js/scriptaculous-js-1.8.3/effects.js"></script>
+
+<!-- Onglets -->
+<script type="text/javascript" src="../javascript/onglets.js"></script>
+
+<!-- Formulaire -->
+<script type="text/javascript">
+<!--
+	function clearText(thefield){
+	if (thefield.defaultValue==thefield.value)
+	thefield.value = "" 
+	}
+//-->
+</script>
+
+
+<!-- Onglets -->
+<script type="text/javascript">
+
+    function gestionOnglet(groupeOnglet, objetOnglet){
+      var infosOnglets = [
+	                      {
+						   "groupe"          : "groupeOnglet1",
+						   "imageOnDefaut"   : "",
+						   "classeOnDefaut"  : "",
+						   "imageOffDefaut"  : "",
+						   "classeOffDefaut" : "",
+						   "onglets" : [
+						                {
+										 "idOnglet"  : "onglet1",
+										 "idContenu" : "ongletContenu1",
+										 "imageOn"   : "/interface/onglet1on.png",
+										 "classeOn"  : "",
+										 "imageOff"  : "/interface/onglet1off.png",
+										 "classeOff" : ""
+										},
+						                {
+										 "idOnglet"  : "onglet2",
+										 "idContenu" : "ongletContenu2",
+										 "imageOn"   : "/interface/onglet2on.png",
+										 "classeOn"  : "",
+										 "imageOff"  : "/interface/onglet2off.png",
+										 "classeOff" : ""
+										}
+						               ]
+                          }
+                         ];
+	
+      afficherOnglets(infosOnglets, groupeOnglet, objetOnglet);
+	  
+    }
+	
+	function afficherCacher(idElementAffichage, idElementLi, classeOuvert, classeFermer){
+	  
+	  var elementObjet = document.getElementById(idElementAffichage);
+	  var elementLi    = document.getElementById(idElementLi);
+	  
+	  if(elementObjet.style.display == ""){
+	    elementObjet.style.display = "none";
+		elementLi.className = classeFermer;
+	  }
+	  else{
+	    elementObjet.style.display = "";
+		elementLi.className = classeOuvert;
+	  }
+	  
+	}
+	
+</script>
+
+
+<!--[if IE]>
+    <style>
+    #rechercheuqtr .loupe{ width:37px; height:26px; border:none; margin:0 0 0 -6px; padding:0; vertical-align:middle; }
+    </style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+	<script type="text/javascript" src="javascript/unitpngfix.js"></script>
+<![endif]--> 
+
+<!-- Google analytics (juste pour la biblio) -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22424753-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--  3 AOÛT 2010 - Fonction créée pour conserver le début d'une adresse pls/protege au besoin / herouxl --> 
+
+<script type="text/javascript">
+//<![CDATA[
+function afficherLienProtege(adresse) {
+    location.href = "https://oraprdnt.uqtr.uquebec.ca/pls/protege/" + adresse;
+}
+
+function afficherLienPublic(adresse) {
+    location.href = "https://oraprdnt.uqtr.uquebec.ca/pls/public/" + adresse;
+}
+//]]>
+</script>
+
+
+
+<!-- Diaporama -->
+<link rel="stylesheet" href="diaporama/diaporama_style.css" type="text/css" />
+<script type="text/javascript" src="diaporama/diaporama_classes/Diaporama.js"></script>
+
+<!-- Detect mobile -->
+<script type="text/javascript" src="check_mobile.js"></script>
+  
+<script language="javascript">
+checkMobile("http://uqtr.mbiblio.ca");
+</script>
+
+
+</head>
+
+<body>
+	<div id="entete">
+        <div id="enteteuqtr">
+  <div id="retouruqtr">
+    <a href="http://www.uqtr.ca"><img src="/interface/transparent.png" style="width:450px; height:70px; border:none;" alt="" /></a>
+  </div>
+  <div id="langues">
+    <ul>
+      <li class="bienvenue">
+        <a href="/bienvenue"></a>
+      </li>
+      <li class="welcome">
+        <a href="/informationgenerale/english.shtml"></a>
+      </li>
+      <li class="bienvenido">
+        <a href="/informationgenerale/espanol.shtml"></a>
+      </li>
+    </ul>
+  </div>
+  <div id="portails">
+    <ul>
+      <li class="personet">
+        <a href="https://oraprdnt.uqtr.uquebec.ca/pls/protege/intw000"></a>
+      </li>
+      <li class="portailetudiant">
+        <a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/etuw000"></a>
+      </li>
+      <li class="bottin">
+        <a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/botw001.afficher_critere"></a>
+      </li>
+    </ul>
+  </div>
+  <!-- Début Formulaire de recherche global -->
+  <div id="rechercheuqtr"></div>
+  <script src="/javascript/moteurRecherche.js"></script>
+  <script>
+  moteurRecherche.creerSaisie('rechercheuqtr', 'x8wchjrs3ag', 'http://www.uqtr.ca/cherche/recherche_google_biblio.shtml', {
+    indice: 'Rechercher dans Bibliothèque',
+    taille: 40,
+    libelleBouton: 'OK'
+  });
+  </script>
+  <!--
+        <div id="rechercheuqtr">
+            <form action="http://www.uqtr.ca/cherche/recherche_google.shtml">
+            <div>
+                <input type="hidden" name="cx" value="006102139671587304770:sys5yjexwba" />
+                <input type="hidden" name="cof" value="FORID:11" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="28" value="Rechercher dans Bibliothèque" onfocus="clearText(this)" />
+                <input type="submit" value="ok" onclick="document.getElementById('q').focus(); document.forms['recherche'].submit();">
+            </div>
+                <script type="text/javascript" src="/cherche/google/ajout_watermark_index.js"></script>
+           </form>
+       </div>
+    -->
+  <!-- Fin Formulaire de recherche global -->
+</div>
+
+        
+<div id="menu">
+    <ul id="navhoriz">
+    	
+        <li id="navretour"><a href="index.shtml">&nbsp;</a></li>
+
+<!-- RESSOURCES -->        
+        <li id="navressources"><a href="javascript:void(0);">&nbsp;</a>
+            <ul class="sousmenu">
+                <li><a href="http://www.metarecherche.ca/V/GMY9GCECJMD56C6D68U97GFA2A4GN2QCTQ923BGLBG49LJ51DR-07162?FUNC=FIND-DB-1&amp;INSTITUTE=UQTR&amp;PORTAL=UQTR&amp;pds_handle=GUEST" target="_blank" class="sub">Bases de donn&eacute;es</a>
+	                <ul>
+                        <li><a href="http://www.metarecherche.ca/V/GMY9GCECJMD56C6D68U97GFA2A4GN2QCTQ923BGLBG49LJ51DR-07162?FUNC=FIND-DB-1&amp;INSTITUTE=UQTR&amp;PORTAL=UQTR&amp;pds_handle=GUEST" target="_blank">Liste complète</a></li>
+                        <li><a href="http://proxy.uqtr.ca/login.cgi?action=login&amp;u=uqtr&amp;db=eureka&amp;url=http%3A%2F%2Fwww.biblio.eureka.cc%2Fip%2Fdefault.aspx%3Fuser%3Duqtr1" target="_blank">Eureka.cc</a></li>
+                        <li><a href="http://proxy.uqtr.ca/login.cgi?action=login&amp;u=uqtr&amp;db=universalis&amp;ezurl=http://www.universalis-edu.com" target="_blank">Encyclopaedia Universalis</a></li>
+                        <li><a href="http://proxy.uqtr.ca/login.cgi?action=login&amp;u=uqtr&amp;db=grand_robert&amp;url=http%3A%2F%2Faccess.demarque.com%2FAccess%2FconnExt.php%3FidRelPC%3D268218" target="_blank">Grand Robert de la langue française</a></li>
+                        <li><a href="http://proxy.uqtr.ca/login.cgi?action=login&amp;u=uqtr&amp;db=robert-collins&amp;url=http%3A%2F%2Faccess.demarque.com%2FAccess%2FconnExt.php%3FidRelPC%3D205959" target="_blank">Grand Robert &amp; Collins</a></li>
+						<li><a href="http://proxy.uqtr.ca/login.cgi?action=login&u=uqtr&db=nouvelliste_partenariat&ezurl=http://lenouvellisteenpartenariat.newspaperdirect.com/epaper/viewer.aspx" target="_blank">Le Nouvelliste</a></li>
+                        <li><a href="http://proxy.uqtr.ca/login.cgi?action=login&amp;u=uqtr&amp;db=repere&amp;ezurl=http://repere2.sdm.qc.ca" target="_blank">Repère</a></li>
+                        <li><a href="http://proxy.uqtr.ca/login.cgi?action=login&amp;u=uqtr&amp;db=scopus&amp;ezurl=http://www.scopus.com" target="_blank">Scopus</a></li>
+					</ul>
+                </li>
+	            <li><a href="ressources/endnote01.shtml">EndNote</a></li>
+                <li><a href="jecherche/index.shtml">Guides th&eacute;matiques</a></li>
+                <li><a href="ressources/livreselectroniques.shtml">Livres &eacute;lectroniques</a></li>
+				<li><a href="http://openurl.uquebec.ca:9003/uqtr/az">Périodiques &eacute;lectroniques</a></li>
+                <li><a href="ressources/statistique01.shtml" target="_blank">Statistique</a></li>
+            </ul>
+        </li>    
+
+<!-- SERVICES -->        
+        <li id="navservice"><a href="javascript:void(0);">&nbsp;</a>
+            <ul class="sousmenu">
+                <li><a href="services/carto_informationgenerale.shtml">Cartothèque</a></li>
+                
+                <li><a href="services/cddeq.shtml">Centre de documentation Desjardins en études québécoises</a></li>
+                
+                <li><a href="javascript:void(0);" class="sub">Centre de ressources didactiques/Didacthèque</a>
+				    <ul>
+                        <li><a href="services/crd_infogenerale.shtml">Campus de Trois-Rivières</a></li>
+                        <li><a href="renseignementsgeneraux/drummond_didactheque.shtml">Campus de Drummondville</a></li>
+					</ul>
+				</li>
+                
+                <li><a href="services/livres_rares.shtml">Livres rares et anciens</a></li>
+				
+				<li><a href="services/mediatheque.shtml">Médiathèque</a></li>
+                
+                <li><a href="services/microtheque.shtml">Microthèque</a></li> 
+
+                <li><a href="services/pdd_infogenerale.shtml" class="sub">Prêt de documents</a>
+                    <ul>
+                        <li><a href="services/pdd_infogenerale.shtml">Information générale</a></li>
+                        <li><a href="services/pdd_renouvellement.shtml">Renouvellement</a></li>
+                        <li><a href="services/pdd_reservation.shtml">Réservation</a></li>
+                        <li><a href="services/pdd_reservedecours.shtml">Documents à la réserve</a></li>
+                        <li><a href="services/pdd_retard.shtml">Documents en retard, perdus ou endommagés</a></li>
+						<li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=449&amp;owa_no_fiche=21" target="_blank">Salle Laviolette - Cueillette</a></li>
+                   </ul>
+                </li>
+
+                <li><a href="services/pretequipementmedia01.shtml" class="sub">Prêt d'équipement multimédia</a>
+                    <ul>
+                        <li><a href="services/pretequipementmedia01.shtml">Comptoir de prêt d'équipement</a></li>
+                        <li><a href="services/pretequipementmedia02.shtml">Équipements disponibles au campus de Trois-Rivières</a></li>
+						<li><a href="services/pretequipementmedia03.shtml">Équipements disponibles au campus de Drummondville</a></li>
+                   </ul>
+                </li>
+                
+                <li><a href="services/peb_tout.shtml">Prêt entre bibliothèques</a></li>
+				
+                <li><a href="services/pret_intercampus.shtml">Prêt intercampus</a></li>
+				
+                <li><a href="services/reservedecours.shtml">Réserve de cours</a></li> 
+
+                <li><a href="services/salledetravail_reservation.shtml">Salles de travail d'équipe</a></li>
+				
+                <li><a href="services/stationsdemontage.shtml">Stations de montage</a></li>
+               
+                <li><a href="services/testo_infogenerale.shtml">Testothèque</a></li>
+            </ul>
+        </li>
+
+<!-- FORMATION -->        
+        <li id="navformation"><a href="javascript:void(0);">&nbsp;</a>
+			<ul class="sousmenu">
+                <li><a href="formation/formation_recherches.shtml" class="sub">Ateliers de formation</a>
+                    <ul>
+                        <li><a href="formation/formation_superieurs.shtml">Cycles supérieurs</a></li>
+						<li><a href="formation/formation_endnote.shtml">EndNote</a></li>
+						<li><a href="formation/formation_recherches.shtml">Recherches documentaires</a></li>
+                        <li><a href="formation/formation_tni.shtml">Tableau numérique</a></li> 
+                    </ul>
+                </li>
+
+                <li><a href="javascript:void(0);" class="sub">Outils de formation</a>
+                    <ul>
+                        <li><a href="formation/citersessources.shtml">Citer ses sources</a></li>
+						<li><a href="formation/competences_info.shtml" target="_blank">Compétences informationnelles</a></li>
+						<li><a href="formation/eviter_plagiat.shtml" target="_blank">Éviter le plagiat</a></li>
+                        <li><a href="http://minutebrillante.uquebec.ca/" target="_blank">Outil de découverte</a></li>
+						<li><a href="formation/profilalerte.shtml">Profils d'alerte</a></li>
+                        <li><a href="formation/recensiondesecrits.shtml">Recension des écrits</a></li> 
+                    </ul>
+                </li>
+			</ul>
+        </li>
+
+<!-- RENSEIGNEMENTS GENERAUX -->        
+        <li id="navrenseignements"><a href="javascript:void(0);">&nbsp;</a>
+			<ul class="sousmenu">
+                <li><a href="renseignementsgeneraux/historique.shtml" class="sub">À propos de la Bibliothèque</a>
+					<ul>
+                        <li><a href="renseignementsgeneraux/historique.shtml">Historique</a></li>
+                        <li><a href="renseignementsgeneraux/fdcd.shtml">Fonds de développement des collections Desjardins</a></li>
+                        <li><a href="renseignementsgeneraux/reglementdelabiblio.shtml">Règlement de la bibliothèque</a></li>
+		        <li><a href="renseignementsgeneraux/libqual_resultats.shtml">Sondage auprès de nos usagers</a></li>
+                    </ul>
+				</li>
+                
+				<li><a href="renseignementsgeneraux/drummond_infogenerale.shtml" class="sub">Bibliothèque de Drummondville</a>
+                    <ul>
+                        <li><a href="renseignementsgeneraux/drummond_infogenerale.shtml">Information générale</a></li>
+						<li><a href="renseignementsgeneraux/drummond_aide.shtml">Aide à la recherche</a></li>
+						<li><a href="renseignementsgeneraux/drummond_didactheque.shtml">Didacthèque</a></li>
+                        <li><a href="renseignementsgeneraux/drummond_pret.shtml">Prêt de documents</a></li>
+                     </ul>
+                </li>
+				
+                <li><a href="renseignementsgeneraux/bci.shtml" class="sub">Carte BCI</a>
+                    <ul>
+                        <li><a href="renseignementsgeneraux/bci.shtml">Information générale</a></li>
+                        <li><a href="renseignementsgeneraux/bci_etudiant.shtml">Étudiants de premier cycle</a></li>
+                        <li><a href="renseignementsgeneraux/bci_professeur.shtml">Professeurs et étudiants des 2e et 3e cycles</a></li>
+                        <li><a href="renseignementsgeneraux/bci_programmesconjoints.shtml">Programmes conjoints</a></li>
+                    </ul>
+                </li>
+               
+			   <li><a href="renseignementsgeneraux/clienteles_etudiant.shtml" class="sub">Clientèles</a>
+                    <ul>
+                        <li><a href="renseignementsgeneraux/clienteles_etudiant.shtml">Étudiants</a></li>
+                        <li><a href="renseignementsgeneraux/clienteles_professeur.shtml">Professeurs et chargés de cours</a></li>
+                        <li><a href="renseignementsgeneraux/clienteles_personnel.shtml">Personnel non enseignant</a></li>
+                        <li><a href="renseignementsgeneraux/clienteles_horscampus.shtml">Centres hors campus</a></li>
+                        <li><a href="renseignementsgeneraux/clienteles_uta.shtml">UTA</a></li>
+                        <li><a href="renseignementsgeneraux/clienteles_cegep.shtml">Cégep de Trois-Rivières et Collège Laflèche</a></li>
+                        <li><a href="renseignementsgeneraux/clienteles_communauteregionale.shtml">Communauté régionale et diplômés</a></li>
+                    </ul>
+                </li>
+				
+				<li><a href="renseignementsgeneraux/usager.shtml" class="sub">Dossier d'usager</a>
+                    <ul>
+                        <li><a href="renseignementsgeneraux/usager.shtml">Information générale</a></li>
+                        <li><a href="renseignementsgeneraux/usager_mdp.shtml">Numéro d'usager et mot de passe</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="renseignementsgeneraux/dons.shtml">Don à la Bibliothèque</a></li>
+				<li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=449&amp;owa_no_fiche=22" target="_blank">Suggestion d'achat de document</a></li>
+
+			</ul>
+        </li>
+        
+<!-- AIDE -->
+        <li id="navaide"><a href="javascript:void(0);">&nbsp;</a>
+					<ul class="sousmenu">
+                <li><a href="aide/aidealarecherche.shtml" class="sub">Aide à la recherche</a>
+										<ul>
+                        <li><a href="aide/aidealarecherche.shtml">Bibliothécaires</a></li>
+                        <li><a href="aide/informationdocumentaire.shtml">Information documentaire</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw030?owa_no_site=1222" target="_blank">D&eacute;pannage informatique</a></li>
+                <li><a href="aide/indexdusiteAB.shtml">Index du site</a></li>
+                
+                <li><a href="aide/mdpprobleme.shtml" class="sub">Accès aux ressources électroniques</a>
+										<ul>
+                        <li><a href="aide/mdpprobleme.shtml">Mot de passe</a></li>
+                        <li><a href="aide/mdpfaq.shtml">Foire aux questions</a></li>
+                        <li><a href="aide/mdpengagement.shtml">Engagement de responsabilité</a></li>
+                    </ul>
+								</li>
+                <li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=449&amp;owa_no_fiche=16" target="_blank">Service de t&eacute;l&eacute;r&eacute;f&eacute;rence</a></li>
+					</ul>
+				</li>
+
+<!-- LOGO DROIT D'AUTEUR -->
+        <li id="navdroitdauteur"><a href="http://www.uqtr.ca/droitsdauteur">&nbsp;</a></li>
+
+    </ul>
+</div>
+
+
+
+
+
+        
+<button class="md-trigger" data-modal="modal-7">Accès direct</button>
+
+<!-- Contenu du modal pour Accès direct -->
+<div class="md-modal md-effect" id="modal-7">
+  <div class="md-content">
+  		<div class="row">
+        <ul>
+
+           <li class="maj important mt20"><a href="/admission/">Admission</a></li>
+            <li class="maj important"><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/etuw000">Portail étudiant</a></li>
+            <li class="maj important"><a href="https://oraprdnt.uqtr.uquebec.ca/pls/protege/intw000">Personet</a></li>
+
+            <li class="maj important mt20"><a href="http://www.uqtr.ca/soutientechnologique/courriel_general.shtml">Courriel</a></li>
+            
+          <li><h3>Arts et musique</h3></li>
+          <li class="accessousmenu"><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw030?owa_no_site=649">CEDAS r3 - Espaces d'exposition</a></li>
+          <li class="accessousmenu"><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw030?owa_no_site=1299&amp;owa_no_fiche=4">Collection d'oeuvres d'art de l'UQTR</a></li>
+          <li class="accessousmenu"><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw030?owa_no_site=159">Ensemble vocal de l'UQTR</a></li>
+          
+          <li><h3>Formation à distance</h3></li>
+              <li><a href="http://www.uqtr.ca/coursenligne">Cours en ligne</a></li>
+              <li><a href="http://www.uqtr.ca/portails_publics">Portails de cours publics</a></li>
+              <li><a href="http://www.uqtr.ca/mooc">MOOC</a></li>
+
+        </ul>             
+  
+        <ul>
+        	<li><h3>Ressources</h3></li>
+          <li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/actw001i?owa_anses=00000">Calendrier universitaire</a></li>
+          <li><a href="http://www.uqtr.ca/crms/">Centre de ressources multiservice</a></li>
+          <li><a href="http://www.uqtr.ca/sfcfhc/">Centres hors campus</a></li>
+					<li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw030?owa_no_site=3310">Cours en ligne</a></li>
+					<li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw030?owa_no_site=40">Développement durable UQTR</a></li>
+					<li><a href="http://www.uqtr.ca/sfcfhc/">Formation continue</a></li>
+          <li><a href="http://www.uqtr.ca/services/heures.shtml">Heures d'accueil</a></li>
+					<li><a href="http://www.uqtr.ca/etudiant/logement.shtml">Logement et résidences</a></li>
+          <li><a href="http://www.uqtr.ca/postesofferts/">Postes offerts à l'UQTR</a></li>
+          <li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=1860">Professionnels de l'orientation</a></li>
+          <li><a href="http://www.uqtr.ca/programme/">Programmes, cours et horaire</a></li>
+          <li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=2007">Santé et sécurité</a></li>
+          <li><a href="http://www.uqtr.ca/media/">Service des communications</a></li>
+					<li><a href="http://www.uqtr.ca/stagesetemplois/">Stages et emplois</a></li>
+          <li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=1428">Université du troisième âge - UTA</a></li>
+        </ul>
+        
+        <ul class="last">
+					<li><h3>Transport</h3></li>
+          <li class="accessousmenu"><a href="http://www.uqtr.covoiturage.ca/">Covoiturage</a></li>
+          <li class="accessousmenu"><a href="http://www.sttr.qc.ca/horaire.php">Transport en commun (STTR)</a></li>
+          <li class="accessousmenu"><a href="http://www.autobushelie.com/">Transport en commun (Rive Sud)</a></li>
+
+        	<li><h3>Les plus consultées</h3></li>
+          <li><a href="http://www.uqtr.ca/futuretudiant/">Futur étudiant</a></li>
+          <li><a href="http://www.uqtr.ca/etudiant/">Étudiant</a></li>
+          <li><a href="http://www.uqtr.ca/recherche/">La recherche</a></li>
+          <li><a href="http://www.uqtr.ca/soutientechnologique/">Soutien technologique</a></li>
+          <li><a href="http://www.uqtr.ca/plancampus">Plan du campus</a></li>
+          <li><a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw030?owa_no_site=1738">Portes ouvertes</a></li>
+          <li><a href="http://caps.uqtr.ca/">Centre de l'activité physique et sportive</a></li>
+          <li><a href="http://www.uqtr.ca/patriotes">Patriotes</a></li>
+        </ul>
+      </div><!-- /row -->  
+
+			<div class="row">
+      	<p><a href="#" class="md-close">x</a></p>
+      </div>
+
+  </div><!-- /md-content -->
+</div><!-- /md-modal -->
+
+<!-- BG Overlay (le fond transparent) -->
+<div class="md-overlay"></div>
+
+<!-- Modal pour Accès direct -->
+<script src="http://www.uqtr.ca/javascript/modal.js"></script>
+
+        <div id="zonetrace">
+            <a href="index.shtml">Accueil</a>
+        </div>
+    </div>
+    
+    <div id="page">
+
+        <div id="contenugauche">
+            <div class="outildecouverte">
+            	<a href="http://decouverte.uquebec.ca/primo_library/libweb/action/search.do?mode=Basic&vid=UQTR&tab=default_tab&" target="_blank"></a>
+            </div>
+            <div class="documentcontenu">
+            	<script type="text/javascript">
+	//<![CDATA[
+		function changeTypeRecherche(noChoix){
+			if(noChoix == 0){
+				document.getElementById('divPrimo').style.display    = "";
+				document.getElementById('divGoogle').style.display   = "none";
+				document.getElementById('divWorldCat').style.display = "none";
+			}
+			if(noChoix == 1){
+				document.getElementById('divPrimo').style.display    = "none";
+				document.getElementById('divGoogle').style.display   = "";
+				document.getElementById('divWorldCat').style.display = "none";
+		    }
+			if(noChoix == 2){
+				document.getElementById('divPrimo').style.display    = "none";
+				document.getElementById('divGoogle').style.display   = "none";
+				document.getElementById('divWorldCat').style.display = "";
+		    }
+	    }
+
+            function validateFormPrimo(){
+                var x=replaceAccents(document.getElementById("inputQueryPrimo").value);
+				if (x==null || x==""){
+                    alert("Entrez un terme de recherche");
+                    return false;
+                } 
+				else {
+                    document.forms.primo.query.value="any,contains,"+x;
+                }
+            }
+		
+            function replaceAccents(s){
+            
+            var sR = s;
+            
+            sR = sR.replace(/à/g,"a");
+            sR = sR.replace(/á/g,"a");
+            sR = sR.replace(/â/g,"a");
+            sR = sR.replace(/ã/g,"a");
+            sR = sR.replace(/ä/g,"a");
+            sR = sR.replace(/ç/g,"c");
+            sR = sR.replace(/è/g,"e");
+            sR = sR.replace(/é/g,"e");
+            sR = sR.replace(/ê/g,"e");
+            sR = sR.replace(/ë/g,"e");
+            sR = sR.replace(/ì/g,"i");
+            sR = sR.replace(/í/g,"i");
+            sR = sR.replace(/î/g,"i");
+            sR = sR.replace(/ï/g,"i");
+            sR = sR.replace(/ñ/g,"n");
+            sR = sR.replace(/ò/g,"o");
+            sR = sR.replace(/ó/g,"o");
+            sR = sR.replace(/ô/g,"o");
+            sR = sR.replace(/õ/g,"o");
+            sR = sR.replace(/ö/g,"o");
+            sR = sR.replace(/ù/g,"u");
+            sR = sR.replace(/ú/g,"u");
+            sR = sR.replace(/û/g,"u");
+            sR = sR.replace(/ü/g,"u");
+            sR = sR.replace(/ý/g,"y");
+            sR = sR.replace(/ÿ/g,"y");
+			
+            sR = sR.replace(/\,/g," ");
+            sR = sR.replace(/\./g," ");
+            sR = sR.replace(/\(/g," ");
+            sR = sR.replace(/\)/g," ");
+            sR = sR.replace(/\{/g," ")
+            sR = sR.replace(/\}/g," ");
+            sR = sR.replace(/\[/g," ");
+            sR = sR.replace(/\]/g," ");
+            sR = sR.replace(/\#/g," ");
+            sR = sR.replace(/\!/g," ");
+            sR = sR.replace(/\//g," ");
+            sR = sR.replace(/\$/g," ");
+            sR = sR.replace(/\%/g," ");
+            sR = sR.replace(/\&/g," ");
+            sR = sR.replace(/\@/g," ");
+            
+            return sR;
+            
+            }
+    //]]>
+    </script>
+
+	<div id="rechercherbleu">
+        
+        <div id="divPrimo">
+            <form id="frmprimo" name="primo" action="http://decouverte.uquebec.ca:1701/primo_library/libweb/action/dlSearch.do?" method="get" onsubmit="return validateFormPrimo()">
+            <div>
+        <input type="hidden" value="default_tab" name="tab" />
+				<input type="hidden" value="UQTR" name="institution" />
+				<input type="hidden" value="false" name="onCampus" />
+				<input type="hidden" value="1" name="indx" />
+				<input type="hidden" value="true" name="dum" />
+				<input type="hidden" value="UQTR" name="vid" />
+				<input type="hidden" value="GUEST" name="group" /> 
+				<input type="hidden" value="UQTRPLUS" name="search_scope" />
+				<input type="hidden" value="" name="query" />
+				<input type="hidden" value="fre" name="lang">
+
+                <label>
+                    <input type="text" size="23" id="inputQueryPrimo" value="" />
+                </label>
+                <label>
+					<input type="submit" value="" />
+                </label>
+            </div>
+            </form>
+        </div>
+
+        <div id="divGoogle" style="display:none;">
+			<form id="frmgoogle" action="http://scholar.google.ca/scholar" method="get" accept-charset="UTF-8" onsubmit="document.getElementById('inputTextGoogle').value=replaceAccents(document.getElementById('inputTextGoogle').value);">
+            <div>
+                <input type="hidden" name="hl"   value="fr" />
+                <input type="hidden" name="btnG" value="Rechercher" />
+                <input type="hidden" name="lr"   value="" />
+
+                <label>
+                    <input type="text" id="inputTextGoogle" name="q" size="26" value="" />
+                </label>
+                <label>
+                    <input type="submit" value="" />
+                </label>
+            </div>
+            </form>
+        </div>
+		
+        <div id="divWorldCat" style="display:none;">
+			<form id="frmworldcat" action="http://www.worldcat.org/search" method="get" accept-charset="UTF-8" onsubmit="document.getElementById('inputWorldCat').value=replaceAccents(document.getElementById('inputWorldCat').value);">
+            <div>
+                <input type="hidden" name="qt"   value="fr" />
+
+                <label>
+                    <input type="text" id="inputWorldCat" name="q" size="26" value="" />
+                </label>
+                <label>
+                    <input type="submit" value="" />
+                </label>
+            </div>
+            </form>
+        </div>
+		
+        <select style="margin:5px 0;" onchange="changeTypeRecherche(this.options[this.selectedIndex].value);">
+        	<option value="0" selected="selected">Livres, articles, vidéos, etc. &nbsp; &nbsp; &nbsp;</option>
+            <option value="1">Google Scholar</option>
+			<option value="2">WorldCat</option>
+        </select>
+	</div>
+            </div><!-- Fin rechercher  -->
+
+            <div class="basedonnees"><!-- Début bouton -->
+                <a href="http://www.metarecherche.ca/V/GMY9GCECJMD56C6D68U97GFA2A4GN2QCTQ923BGLBG49LJ51DR-07162?FUNC=FIND-DB-1&amp;INSTITUTE=UQTR&amp;PORTAL=UQTR&amp;pds_handle=GUEST" target="_blank"></a>
+            </div><!-- Fin bouton -->
+
+            <div class="cherchediscipline"><!-- Début bouton -->
+                <a href="jecherche/index.shtml"></a>
+            </div><!-- Fin bouton -->
+
+            <div class="collectionsvedettestete"></div><!-- Début collections vedettes  -->
+            <div class="documentcontenu collections">
+            	<script type="text/javascript" src="http://oraprdnt.uqtr.uquebec.ca/pls/public/js_uqtr.gsc_fiche_contenu?owa_no_site=2302&amp;owa_no_fiche=1"></script>
+                <div class="savoirplus"><!-- Début bouton -->
+                    <a href="collections/collections.shtml"></a>
+                </div><!-- Fin bouton -->
+            </div><!-- Fin collections vedettes  -->
+
+        </div><!-- Fin contenu gauche -->
+        
+        <div id="contenucentre">
+
+<!-- MESSAGE AVERTISSEMENT PANNE  -->
+           <!--include virtual="inc_panne.html" --> <!-- ATTENTION toujours laisser cet include (utilisé par les DBA -->
+
+<!-- FIN MESSAGE AVERTISSEMENT PANNE -->  
+
+<!-- MESSAGE AVERTISSEMENT PANNE  -->
+					<!-- Début message panne (mettre le # en avant de include virtual pour l'afficher) -->
+					<!--include virtual="inc_panne.html"-->
+					<!-- Fin message panne -->
+
+<!-- FIN MESSAGE AVERTISSEMENT PANNE -->  
+
+            <div id="diaporama">
+                <script type="text/javascript">
+                var diaporama = new Diaporama(
+                428,
+                340,
+                "http://www.uqtr.ca/entetexml/nouv_accueil_biblio.xml",
+                "diaporama/"
+                );
+                </script>
+            </div>        
+        </div>
+        
+        <div id="contenudroit">
+            <div class="heuresaccueiltete"></div>
+            <div class="documentcontenu puceverte">
+            	<script type="text/javascript" src="http://oraprdnt.uqtr.uquebec.ca/pls/public/js_uqtr.gsc_fiche_contenu?owa_no_site=2302&amp;owa_no_fiche=4"></script>
+            </div><!-- Fin document contenu  -->
+            
+            <div class="horairedetaille">
+                <a href="horaire/">
+                <img src="/interface/spacer.png" style="width:245px; height:24px;" alt="Bottin du service" title="Bottin du service" />
+                </a>
+            </div><!-- Fin horaire détaillé  -->
+            
+            <!-- Début zone boutons promo  -->
+            	<script type="text/javascript" src="http://oraprdnt.uqtr.uquebec.ca/pls/public/js_uqtr.gsc_fiche_contenu?owa_no_site=2302&amp;owa_no_fiche=5"></script>
+            <!-- Fin zone boutons promo  -->
+
+
+            <div class="reserversalle"><!-- Début bouton -->
+                <a href="http://www.uqtr.ca/biblio/salleDisponibleAleph.shtml" target="_top"></a>
+            </div><!-- Fin bouton -->
+            
+            <div class="boitereservsalle">
+                <iframe class="tabreserv" src="http://aleph-app.uquebec.ca/requetephp/dispo/uq.html" width="100%" seamless frameborder="0"></iframe>
+            </div>
+
+        </div><!-- Fin contenu droit  -->
+    </div><!-- Fin page  -->
+    
+    <!-- Début pied de page  -->
+    
+<!-- ================================================================================================ -->
+<!-- Début pied de page -->
+<!-- ================================================================================================ -->
+
+
+    <div id="piedpagebiblio">
+    
+        <div id="piedpagebibliogauche">
+        <img src="../interface/ico_courriel.png" alt="Nous joindre" title="Nous joindre" />&nbsp;&nbsp;<a href="nousjoindre/"><span class="texte12px">Pour nous joindre</span></a>&nbsp;&nbsp;  
+        <img src="../interface/ico_telephone.png" alt="Téléphone" title="Téléphone" />&nbsp;&nbsp;<span class="texte12px">819 376-5005</span>&nbsp;&nbsp;|&nbsp;&nbsp;Sans frais : <strong>1 800 365-0922</strong>&nbsp;&nbsp;
+		| <img src="interface/ico_mobile.png" alt="Site web mobile" title="Site web mobile" />&nbsp;&nbsp;<a href="http://uqtr.mbiblio.ca"><span class="texte12px">Site mobile</span></a> (uqtr.mbiblio.ca)
+        <!-- <img src="interface/ico_chat.png" alt="Question en direct" title="Question en direct" />&nbsp;&nbsp;<a href="chat/"><span class="texte12px">Question en direct</span></a> -->
+        <br />
+        3351, boul. des Forges, C.P. 500, pav. <strong>Albert-Tessier 2e étage</strong>, Trois-Rivières (Québec) G9A 5H7  |  Télécopieur : 819 376-5032
+		<br />
+        <a href="nousjoindre/aproposdusite.shtml">A propos du site web</a>  |  <a href="nousjoindre/confidentialite.shtml">Confidentialité</a>
+
+        </div>
+        
+        <div id="piedpagebibliodroit">
+
+        <a href="https://www.facebook.com/biblio.uqtr.ca"><img src="interface/btn_piedpage_facebook.png" alt="Rejoignez-nous sur Facebook" title="Rejoignez-nous sur Facebook" /></a>&nbsp;
+        
+        </div>
+        
+    </div>
+
+
+<!-- ================================================================================================ -->
+<!-- Fin pied de page -->
+<!-- ================================================================================================ -->
+
+
+    <!-- Fin pied de page  -->
+
+
+    
+</body>
+</html>

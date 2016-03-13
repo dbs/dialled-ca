@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Kenora Public Library</title>
+
+  <!-- Grid CSS File (only needed for demo page) -->
+  <link rel="stylesheet" href="/css/paragridma.css">
+
+  <!-- Core CSS File. The CSS code needed to make eventCalendar works -->
+  <link rel="stylesheet" href="/css/eventCalendar.css">
+
+  <!-- Theme CSS file: it makes eventCalendar nicer -->
+  <link rel="stylesheet" href="/css/eventCalendar_theme_responsive.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+  
+    <script type="text/javascript" src="/scripts/access.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="/scripts/utils.init.js"></script>
+    <script type="text/javascript" src="/scripts/catalogue.js"></script>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/colorbox.css" type="text/css" media="screen" />
+
+
+  
+</head>
+  
+  <body class='home'>
+      
+      
+        <div id="top">
+          <div id="header">
+            <a id="library-logo" href="/" title="KENORA Public Library"><img src="/images/library-logo.png" alt="Kenora Public Library Logo"/></a>
+            
+            <div id="kenora-branch-hours" class="location-information">
+              <h3>KENORA BRANCH</h3><a class="map-link" href="https://maps.google.ca/maps?q=24+Main+St.+South,+Kenora,+Ontario+P9N+1S7&hl=en&sll=56,-96&sspn=96.132525,265.253906&hnear=24+Main+St+S,+Kenora,+Ontario+P9N+1S7&t=m&z=17">Map</a>
+              <p>24 Main St. South, Kenora, Ontario P9N 1S7<br />TEL. 807-467-2081&nbsp;|&nbsp;FAX. 807.467-2085</p>
+              <ul class="library-hours">
+                <li>MON<span>9-5</span></li>
+                <li>TUE<span>9-8</span></li>
+                <li>WED<span>9-8</span></li>
+                <li>THU<span>9-8</span></li>
+                <li>FRI<span>9-5</span></li>
+                <li>SAT<span>9-2</span></li>
+                <li class="closed">SUN<span>Closed</span></li>
+              </ul>
+           </div>
+            <div id="keewatin-branch-hours" class="location-information">
+              <h3>KEEWATIN BRANCH</h3><a class="map-link" href="https://maps.google.ca/maps?q=221+Main+St,+Kenora,+Ontario+P0X+1C0&hl=en&sll=49.761111,-94.555825&sspn=0.006501,0.01619&oq=221+Main+St.,+Kenora,+Ontario+P0X+1C0&hnear=221+Main+St,+Kenora,+Kenora+District,+Ontario+P0V+3G0&t=m&z=17">Map</a>
+              <p>221 Main St., Keewatin, Ontario P0X 1C0<br />TEL. 807-547-2145&nbsp;|&nbsp;FAX. 807.547-3145</p>
+              <ul class="library-hours">
+                <li class="closed">MON<span>Closed</span></li>
+                <li>TUE<span>11-4</span></li>
+                <li class="closed">WED<span>Closed</span></li>
+                <li>THU<span>2-7</span></li>
+                <li>FRI<span>11-4</span></li>
+                <li>SAT<span>9-2</span></li>
+                <li class="closed">SUN<span>Closed</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      
+            
+      <div id="container">
+        <a href="https://olsn.ent.sirsidynix.net/client/kenora?TierSlicer1_TSMenuTargetID=0&TierSlicer1_TSMenuTargetType=5&TierSlicer1_TSMenuID=844" id="account-login"><img src="/images/button-account-login.png" alt="Account Log-in" /></a>
+        <a href="/contact-us.aspx" id="ask-a-question"><img src="/images/button-ask-a-question.png" alt="Ask a Question" /></a>
+        <ul id="social-links">
+          <li><a href="http://www.facebook.com/pages/The-City-of-Kenora-Public-Library/175478409525" target="_blank"><img src="/images/facebook32.png" alt="Facebook" /></a></li>
+          <li><a href="http://twitter.com/KenoraLibraries" target="_blank"><img src="/images/twitter_32.png" alt="Twitter" /></a></li>
+          <li><a href="http://pinterest.com/kenoralibrary/" target="_blank"><img src="/images/pinterest.png" alt="Pinterest" /></a></li>
+        </ul>
+        <div id="navigation">
+          <ul id="access">
+            <li class="top" id="orange">
+              <a href="#" class="tab">Browse Catalogue</a>
+              <div class="panel" style="">
+                <div id="catalogue-search">
+                  <h2>BROWSE CATALOGUE</h2>
+                  <form name="browse-catalogue-form" id="browse-catalogue-form" method="get" action="https://olsn.ent.sirsidynix.net/client/kenora/search/results">
+                    <select id="restrictionDropDown" class="dropDown" name="restrictionDropDown" style="">
+                      <option value="">All Fields</option>
+                      <option value="TITLE">Title</option>
+                      <option value="AUTHOR">Author</option>
+                      <option value="AUTHOR_BROWSE">Keyword in Author headings</option>
+                      <option value="SUBJECT">Subject</option>
+                      <option value="SUBJECT_BROWSE">Keyword in Subject headings</option>
+                      <option value="ISBN">ISBN</option>
+                    </select><br />
+                    <input type="text" name="qu" id="catalogue-search-val" />
+                    <input type="hidden" name="te" value="ILS" />
+                    <button type="submit" id="cat-search-submit" class="submit button">GO <span>&raquo;</span></button>
+                  </form>
+                  <a href="https://olsn.ent.sirsidynix.net/client/kenora/search/advanced?">Advanced Search &raquo;</a>
+                  </div>
+                <div class="inner inner-rightside">
+                  <h4>Recommended Links</h4>
+                  <ul class="nav-extra">
+                    <li><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=s8977431" target="_blank"><img src="/images/ecbhost.png" alt="EBSCO Host logo"/></a></li>
+                    <li><a href="http://downloadcentre.library.on.ca/139A2A9B-DD3B-4BC4-AB2E-82F83F69B633/10/50/en/Default.htm" target="_blank"><img src="/images/PoweredByOD.png" alt="OverDrive logo" /></a></li>
+                  </ul>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </li>
+            <li class="top" id="blue"><a href="#" class="tab">Library Resources</a>
+              <div class="panel">
+                <div class="inner left-side">
+                  <ul class="side-by-side">
+                    <li><a href="/library-resources/archives-and-histories.aspx">Archives and Histories</a></li>
+                    <li><a href="/library-resources/catalogues.aspx">E-books/Audio Books</a></li>
+                    <li><a href="/library-resources/find-it-online.aspx">Find it Online</a></li>
+                    <li><a href="/library-resources/newspaper-archives.aspx">Newspaper Archives</a></li>
+                    <li><a href="/library-resources/encyclopedias.aspx">Encyclopedias</a></li>
+                    <li><a href="/library-resources/genealogy.aspx">Genealogy</a></li>
+                    <li><a href="/library-resources/reading-resources.aspx">Reading Resources</a></li>
+                    <li><a href="/library-resources/training-tools.aspx">Training Tools</a></li>
+                    <li><a href="/library-resources/computer-skills.aspx">Computer Skills</a></li>
+                  </ul>
+                  <div class="clear"></div>
+                </div>
+                <div class="inner inner-rightside">
+                  <h4>Recommended Links</h4>
+                  <ul class="nav-extra">
+                    <li><a href="/library-resources/recommended-links/adult-education-training.aspx">Adult Education &amp; Training</a></li>
+                    <li><a href="/library-resources/recommended-links/business.aspx">Business</a></li>
+                    <li><a href="/library-resources/recommended-links/families-parenting.aspx">Families &amp; Parenting</a></li>
+                    <li><a href="/library-resources/recommended-links/first-nations.aspx">First Nations</a></li>
+                    <li><a href="/library-resources/recommended-links/government-links.aspx">Government Links</a></li>
+                    <li><a href="/library-resources/recommended-links/health-wellness.aspx">Health &amp; Wellness</a></li>
+                    <li><a href="/library-resources/recommended-links/local-links.aspx">Local Links</a></li>
+                    <li><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=s8977431">Flipster</a></li>
+                  </ul>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </li>
+            <li class="top" id="green"><a href="#" class="tab">Teens &amp; Kids</a>
+              <div class="panel">
+                <div class="inner full-width">
+                  <ul class="side-by-side">                    
+                    <li>
+                      <h4>Reading Resources</h4>
+                      <ul class="nav-container">
+                        <li><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=s8977431&profile=novelist" target="_blank"><img src="http://www.kenorapubliclibrary.org/media/946/novelist.gif" height="20" alt="Girl reading a book" /> Novelist</a></li>
+                        <li><a href="https://www.pebblego.com/UserLogin.aspx?sqs=p9xqkWWFhYTpk3OLL3sUsQ==" target="_blank"><img src="http://www.kenorapubliclibrary.org/media/954/pebgo-logo_150x72.jpg" height="20" alt="Pebble Go logo" /> Pebble Go</a></li>
+                        <li><a href="http://www.tumblebooks.com/library/auto_login.asp?U=kenora&P=libra" target="_blank"><img src="http://www.kenorapubliclibrary.org/media/969/tumblebooks_150x127.jpg" height="20" alt="Thumble Books logo" /> Tumble Books</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h4>Encyclopedias</h4>
+                      <ul class="nav-container">
+                        <li><a href="http://school.eb.com/"><img src="/media/933/eb.jpg" height="30" alt="EB" /> Encyclopedia Britannica</a></li>
+                        <li><a href="http://www.worldbookonline.com/?subacct=CD21677"><img src="/media/938/worldbook_web_130x39.jpg" height="30" alt="Worldbook _web"> World Book</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h4>Find it Online</h4>
+                      <ul class="nav-container">
+                        <li><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=s8977431" target="_blank"><img src="/images/ecbhost.png" height="20" alt="EBSCO Host logo"/> Ebsco Host</a></li>
+                        <li><a href="http://find.galegroup.com/menu/commonmenu.do?userGroupName=ko_pl_kenorapl" target="_blank"> <img src="/media/907/cl_logo_rgb_jpg_100x44.jpg" alt="CL_Logo _RGB_JPG" height="20" /> Gale Group</a></li>
+                        <li><a href="http://teenhealthandwellness.com/login?username=kenora&password=7kenora7" target="_blank"><img src="/media/912/teen-h_w_100x50.jpg" alt="Teen -H&amp;W" height="20" /> Health &amp; Wellness</a></li>
+                        <li><a href="http://www.rocketlanguages.com/?libID=mY2M2Y1Nz" target="_blank"><img src="/media/1390/rl_web180x150.jpg" alt="Rocket Language" height="20" /> Rocket Languages</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h4>E-books &amp; Audio Books</h4>
+                      <ul class="nav-container">
+                        <li><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=s8977431" target="_blank"><img src="/images/ecbhost.png" height="20" alt="EBSCO Host logo"/> Ebsco Host</a></li>
+                        <li><a href="http://downloadcentre.library.on.ca/8743AB25-91B3-4399-9DFC-7DB7901ED705/" target="_blank"><img src="/images/PoweredByOD.png" height="20" alt="Overdrive logo"/></a></li>
+                        <!--li><a href="https://slz01.scholasticlearningzone.com/auth/intl/SBA" target="_blank"><img src="/images/bookflix.png" height="20" alt="Book FLIX logo"/> BookFlix</a></li>
+                        <li><a href="https://slz01.scholasticlearningzone.com/auth/intl/SBA" target="_blank"><img src="/images/trueflix.png" height="20" alt="True FLIX logo"/> TrueFlix</a></li-->
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </li>
+            <li class="top" id="brown"><a href="#" class="tab">About the Library</a>
+              <div class="panel">
+                <div class="inner left-side">
+                  <ul class="side-by-side">
+                    <li><a href="/about-the-library/hours-of-operation.aspx">Hours of Operation</a></li>
+                    <li><a href="/about-the-library/strategic-plan.aspx">Strategic Plan</a></li>
+                    <li><a href="/about-the-library/collections-services.aspx">Collections &amp; Services</a></li>
+                    <li><a href="/about-the-library/library-policies.aspx">Library Policies</a></li>
+                     <li><a href="/about-the-library/library-board.aspx">Library Board</a></li>
+                    <li><a href="/about-the-library/annual-reports.aspx">Annual Reports</a></li>
+                    <li><a href="/about-the-library.aspx">About the Libraries</a></li>
+                    <li><a href="/about-the-library/accessibility.aspx">Accessibility</a></li>
+                    <li><a href="/about-the-library/cap.aspx">C.A.P.</a></li>
+                  </ul>
+                  <div class="clear"></div>
+                </div>
+                <div class="inner inner-rightside">
+                  <img src="/images/library.jpg" alt="Front of the Kenora Liabrary" width="350" style="padding:0;margin:20px 0 0 0;border:0;box-shadow:5px 5px 10px #333;" />
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        
+  <div id="content" class="content-main">
+    <div id="article">
+        <!--div class="utilities">
+          <div id="account-login">
+            <h3><span>ACCOUNT LOG-IN</span></h3>
+            <p>Log in to view materials checked out, renew items, place holds, and view fines.</p>
+            <a href="http://olsn.ent.sirsidynix.net/client/kenora?TierSlicer1_TSMenuTargetID=0&TierSlicer1_TSMenuTargetType=5&TierSlicer1_TSMenuID=844">  <button type="submit" id="login-submit" class="submit button">GO <span>&raquo;</span></button></a>
+          </div>
+          <div id="quick-search">
+            <h3><span>QUICK SEARCH</span></h3>
+            <p>Fast keyword search of our library catalogue. Search titles, author names, or subjects.</p>
+            <form name="quick-search-form" id="quick-search-form" method="get" action="https://olsn.ent.sirsidynix.net/client/kenora/search/results">
+              <input type="text" name="qu" id="s" class="text watermark" value="Site Search..." />
+              <button type="submit" id="seach-submit" class="submit button">GO <span>&raquo;</span></button>
+            </form>
+            <p class="helplinks"><a href="https://olsn.ent.sirsidynix.net/client/kenora/search/advanced?">Advanced Search</a>.</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <img id="main-image" src="/images/libraries-build-communities.jpg" /-->
+      <div class="entry">
+        <p><h2>Latest News</h2><ul class="summaryList" id="blogSummary"><li><h4><a href="/what's-new/hometown-proud-fierté-du-patrimoine-celebrating-the-50th-anniversary-of-the-flag-of-canada.aspx">Hometown Proud - Fierté du patrimoine: Celebrating the 50th Anniversary of the Flag of Canada</a></h4><p class="excerpt">
+Commemorative E-Book.
+&nbsp; Learn about the Flag
+of Canada from Hometown experts.&nbsp; This book is a collection of
+art and thoughts of
+elementary school students from across Canada throug... <a href="/what's-new/hometown-proud-fierté-du-patrimoine-celebrating-the-50th-anniversary-of-the-flag-of-canada.aspx">read more</a></p></li><li><h4><a href="/what's-new/homebound-delivery-service.aspx">Homebound Delivery Service</a></h4><p class="excerpt">
+Can't make it to the library?&nbsp; Let us come to you!&nbsp;
+Homebound Delivery Service is now available to members of the
+Kenora Public Library. Kenora residents may request home services
+i... <a href="/what's-new/homebound-delivery-service.aspx">read more</a></p></li><li><h4><a href="/what's-new/new-kenora-public-library-fees.aspx">New Kenora Public Library Fees</a></h4><p class="excerpt">
+There will be new Kenora Public Library non-resident membership
+fees effective April 1, 2015. &nbsp;There will also be a charge to
+scan documents to send to an email. &nbsp;If you have any que... <a href="/what's-new/new-kenora-public-library-fees.aspx">read more</a></p></li><li><h4><a href="/what's-new/gps-available-to-borrow-from-kenora-branch-library.aspx">GPS available to borrow from Kenora Branch Library</a></h4><p class="excerpt">
+The Kenora Branch Library is pleased to announce that we now
+loan out GPS units.&nbsp; If you are travelling and want to make
+sure that you are on the right track, come in and borrow our
+Mage... <a href="/what's-new/gps-available-to-borrow-from-kenora-branch-library.aspx">read more</a></p></li><li><h4><a href="/what's-new/children's-story-time.aspx">Children's Story Time</a></h4><p class="excerpt">
+The Kenora Branch Library offers the Rotary Storyhour every
+Saturday for&nbsp;children ages 3 and older.&nbsp; We will read
+stories, have crafts and much more.&nbsp; Come and join
+us&nbsp;eac... <a href="/what's-new/children's-story-time.aspx">read more</a></p></li></ul></p>
+
+<div style="background: #ccc; height: 1px;">&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<br />
+<br />
+      </div>
+      <h2>Business news</h2>
+      <ul class="feedList"><li><h4><a href="http://feeds.reuters.com/~r/reuters/technologyNews/~3/GO1qdZs3658/story01.htm">Intel plans to sell part of venture capital unit: Bloomberg</a></h4><p>(Reuters) - Intel Corp is looking to sell part of its venture capital portfolio, assets that could be worth as much a...</p><small>Friday, March 11, 2016</small></li><li><h4><a href="http://feeds.reuters.com/~r/reuters/technologyNews/~3/TJnH3BCxo0Q/story01.htm">GM buys Cruise Automation to speed self-driving car strategy</a></h4><p>(Reuters) - General Motors Co announced Friday it is buying Cruise Automation, a San Francisco self-driving vehicle s...</p><small>Friday, March 11, 2016</small></li><li><h4><a href="http://feeds.reuters.com/~r/reuters/technologyNews/~3/Dok1Gvws3jU/story01.htm">U.S. says legal hurdles remain to deployment of self-driving cars</a></h4><p>WASHINGTON (Reuters) - The top U.S. auto safety agency said Friday significant legal hurdles must be cleared before s...</p><small>Friday, March 11, 2016</small></li><li><h4><a href="http://feeds.reuters.com/~r/reuters/technologyNews/~3/z-nP4ClkX5M/story01.htm">Malware suspected in Bangladesh bank heist: officials</a></h4><p>DHAKA (Reuters) - Investigators suspect unknown hackers managed to install malware in the Bangladesh central bank's c...</p><small>Friday, March 11, 2016</small></li><li><h4><a href="http://feeds.reuters.com/~r/reuters/technologyNews/~3/YZLZtq_MXNw/story01.htm">Designated 'Smart City' will get vehicle technology boost</a></h4><p>WASHINGTON (Reuters) - The U.S. Transportation Department and NXP Semiconductors NV are joining forces in a pilot pro...</p><small>Friday, March 11, 2016</small></li></ul>
+      <!--h2>JUST ARRIVED</h2>
+      <div class="framedcontent">
+        <iframe id="latestreleases" src="https://olsn.ent.sirsidynix.net/client/en_US/kenora" frameborder="0"></iframe>
+      </div-->
+    </div>
+    <div id="sidebar">        
+      <div class="widget" id="widget-just-arrived">
+        <h2 class="widget-title">Reading Resources</h2>
+        <ul>
+           <li>
+             <h3><a style="font-size: 10px;" href="http://downloadcentre.library.on.ca/139A2A9B-DD3B-4BC4-AB2E-82F83F69B633/10/50/en/Default.htm"> <img src="/images/PoweredByOD.png" alt="OverDrive" /></a></h3>
+             <p><strong>Ontario Library Service - Download Center</strong><br /> Enjoy thousands of popular and best-selling eBooks and audio books free of charge. Download to your computer or mobile device anytime, anywhere. Brought to you by the Ontario Ministry of Tourism, Culture and Sport through the Southern Ontario  Library service and Ontario Library Service-North.</p>
+          </li>
+          <li>
+            <h3><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=s8977431"><img src="/images/ecbhost.png" alt="EBSCO Host logo"/></a></h3>
+            <p><strong>EBSCO Host</strong><br /> EBSCO Information Services provides a complete and optimized research solution comprised of research databases, e-books and e-journals.</p>
+          </li>
+          <!--li>
+            <h3><a href="https://slz01.scholasticlearningzone.com/auth/intl/SBA"><img src="/images/bookflix.png" alt="Book FLIX logo"/></a></h3>
+            <p><strong>BookFlix Ontario</strong><br /> BookFlix is a remarkable new online literacy resource that pairs classic fictional video storybooks from Weston Woods with related non-fiction eBooks from Scholastic.</p></li>
+          <li>
+            <h3><a href="https://slz01.scholasticlearningzone.com/auth/intl/SBA"><img src="/images/trueflix.png" alt="True FLIX logo"/></a></h3>
+            <p><strong>TrueFlix Ontario</strong><br /> TrueFlix uses content from the award-winning True Books to help students strengthen literacy skills, build science and social studies knowledge, and cultivate 21st-century skills through inquiry.</p>
+          </li-->
+          <li>
+            <h3><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&custid=s8977431"><img src="/media/2726/flipster_web_ad_rectangle.jpg" alt="Flipster logo"/></a></h3>
+            <p><strong>Flipster</strong><br /> Read your favourites magazines using Flipster™ from EBSCO. Flipster is a digital magazine service that allows you to browse the latest issues of high quality digital versions of magazines.</p>
+          </li>
+        </ul>
+      </div>
+    </div>    
+  </div>
+
+      </div>
+    
+      
+        <div id="global-page-footer"><a href="/" title="Home">Home</a> | <a href="https://olsn.ent.sirsidynix.net/client/kenora/" title="My Account">My Account</a> | <a href="http://olsn.ent.sirsidynix.net/client/kenora/search" title="Browse Catalogue">Browse Catalogue</a> | <a href="/library-resources.aspx" title="Library Resources">Library Resources</a> | <a href="#" title="About the Library">About the Library</a> | <a href="#">Calendar of Events</a> | <a href="/contact-us.aspx" title="Contact Us">Contact Us</a> | <a href="/sitemap.aspx" title="Site Map">Site Map</a><br /> © 2013 City of Kenora. All Rights Reserved.</div>
+      
+      <!--script src="/scripts/jquery.eventCalendar.js" type="text/javascript"></script-->
+  </body>
+</html> 

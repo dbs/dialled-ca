@@ -1,0 +1,371 @@
+<!--
+INSTRUCTIONS
+
+1.To crop images use this code:    
+  		 <div class="focal-point left-5 down-3">
+ 				<div><img src="img/header.png" alt="logo"></div>
+           </div>
+2. Add cushycms class to areas you want clients to edit and add editor account to cushyCMS for client. 
+3. Change the OPLD library ID in the variable
+4. JASI libraries: change the enterprise search string library name and enable the new book scroller.
+
+-->  
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+<title>Admaston/Bromley Public Library</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type="text/javascript" src="js/fancydropdown.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'http://www.google.com/calendar/feeds/ami4h2ao0g8brkj6d80v8acd94@group.calendar.google.com/public/full',
+                  maxresults: 1
+		        });
+		    });
+		
+		
+</script>
+
+<!-- facebook script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--Google Analytics Script-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27650895-10', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--END Google Analytics Script-->
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	    $("#eventlist").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true
+
+    });
+
+		//Load main content
+		$(".topContent").load("home.asp");
+		
+		$(".events").load("calendar.html");
+		
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+
+
+    
+});
+//Enterprise Search
+function search_cat()
+{
+search = document.getElementById('search').value
+document.location.href = 'https://olsn.ent.sirsidynix.net/client/en_US/admaston/search/results?qu='+ search +'&te=';	 //IMPORTANT - change the library
+}
+</script>
+<script type="text/javascript">
+   google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+
+
+     
+    <body>
+    
+    <section class="hide" id="sizer"></section>
+    
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+               <img src="img/full.png" class="full" alt="Full Public Library Logo">
+               <img src="img/landscape.png" class="tablet" alt="Landscape Public Library Logo">
+               <img src="img/portrait.png" class="mobile" alt="portrait Public Library Logo">
+               
+            
+            
+                  
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>
+                               
+                <li><a href="?id=home.asp&label=Home" alt="home">Home</a></li>
+                <li><a >About the Library</a>
+                	<ul>
+                    	<li><a href="?id=membership.asp&label=membership" alt="membership">Membership</a></li>
+                        <li><a href="?id=policies.asp&label=policies" alt="policies">Policies</a></li>
+                        <li><a href="?id=volunteer.asp&label=volunteer" alt="volunteer">Volunteer</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a>Events & Programs</a>
+                	<ul>
+                    	<li><a href="?id=adultprograms.asp&label=adultprograms" alt="adultprograms">Adult Programs</a></li>
+                        <li><a href="?id=childrensprograms.asp&label=childrensprograms" alt="childrensprograms">Children's Programs</a></li>
+                        <li><a href="?id=events.asp&label=events" alt="events">Events</a></li>
+                        <li><a href="?id=TDSRC.asp&label=TDSummerReadingClub" alt="TDSummerReadingClub">TD Summer Reading Club</a></li>
+
+                       
+                    </ul>
+                </li>
+                <li><a href="?id=services.asp&label=services" alt="services">Services</a></li>
+                
+                <li><li><a href="?id=e_resources.asp&label=e_resources" alt="e_resources">EResources</a></li>
+                <li><a href="?id=links.asp&label=links" alt="links">Links</a></li>
+                              
+                </li>
+                 
+            </ul>
+         </nav>    
+        <!-- end of NAV -->
+        
+  
+        
+     
+          
+        
+    </header>
+        <!-- End of HEADER -->
+        
+        
+      
+        
+    <!-- MAIN CONTENT. This is used only for the articles. -->
+          <section class="searchContent">
+        
+                <span class="hide">Search online </span>
+                <input type="text"  title="find material at your library search button" name="search" class="search" id="search" placeholder=" search our online catalog"/>
+                  <input type="submit" value="Search" alt="search" src="img/search-button.png"  onClick="search_cat()" />
+               
+                
+           
+         </section>
+         
+   		
+       <section class="full"> 
+         <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>  
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="topSidebar">
+                <article>
+                <section class="hide" id="button-bar">
+    <a href="https://www.facebook.com/pages/AdmastonBromley-Public-Library/120297281409518"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/facebook.png" alt="facebook"></a>
+     <a href="https://www.twitter.com/"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/twitter.png" alt="twitter"></a>
+    
+	
+    <!--Email automatically pulled as long as it's in OPLD-->
+    <a href="mailto:info@admastonbromleylibrary.com?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a>      
+    </section>
+                           <h2>Hours & Locations</h2>
+                        <ul>  
+                            
+
+                            <h3>Admaston/Bromley </h3>
+                          		5366 Queen Street<br>
+                                Douglas,&nbsp;ON<br>
+                                K0J 1S0<br>
+                                <a href="tel:(613) 649-2576">(613) 649-2576</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 4:00 - 8:00
+<BR>Tues/mar closed<BR>
+Wed/mer 3:00 - 8:00<BR>
+Thurs/jeu closed/fermÃ©<BR>
+Fri/ven closed/fermÃ©<BR>
+Sat/sam 10:00 - 1:00<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  
+          </article>
+    </aside>
+     
+    
+            
+    <aside class="middleSidebar">
+        <iframe align="middle" src="http://www.fanrx.com/facebook/events.php?theme=zuck&page=AdmastonBromleyPublicLibrary&bgcolor=ffffff&textcolor=000000&linkcolor=555555&max=5" width="95%" height="250" frameborder="no" scrolling="auto"></iframe>
+    </aside>   
+    
+    
+     
+   
+    </section>
+    
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Home</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Locations</summary>
+                        <ul>  
+                            
+                            <h3>Admaston/Bromley </h3>
+                          		5366 Queen Street<br>
+                                Douglas,&nbsp;ON<br>
+                                K0J 1S0<br>
+                                <a href="tel:(613) 649-2576">(613) 649-2576</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 4:00 - 8:00
+<BR>Tues/mar closed<BR>
+Wed/mer 3:00 - 8:00<BR>
+Thurs/jeu closed/fermÃ©<BR>
+Fri/ven closed/fermÃ©<BR>
+Sat/sam 10:00 - 1:00<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  </details>
+         
+    </div>
+     
+    
+            
+    <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+    </div>   
+     
+        
+
+    
+    </section> 
+    
+    
+    <!-- end of SIDEBARS -->
+    
+    
+    
+        
+     <!-- Enterprise New Books Scroller placeholder 
+      <footer class="mainBookScroller">
+        <p>Enterprise Book Scroller container</p>
+      </footer>   --> 
+        
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Admaston/Bromley Public Library&nbsp;2016<br>
+        This website meets WCAG 2.0 (Level AA) Compliance</p> 
+    </footer>
+    
+<!-- end of FOOTER -->   
+
+</body>
+
+</html>

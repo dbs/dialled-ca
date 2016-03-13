@@ -1,0 +1,2689 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>JAC :: John Abbott College</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta http-equiv='Cache-Control' content='no-cache' />
+<meta http-equiv='Expires' content='now' />
+<meta http-equiv='Pragma' content='no-cache' />
+
+
+
+<link rel='stylesheet' type='text/css' href='/theme/opals/css/textbook.css' />
+<link rel='stylesheet' type='text/css' href='/theme/opals/css/equipment.css' />
+<link rel='stylesheet' type='text/css' href='/theme/opals/css/chromestyle.css' />
+<link rel='stylesheet' type='text/css' href='/js/tinybox/style.css' />
+<link rel="stylesheet" type='text/css' href='/theme/opals/css/portal.css' />
+<link rel="stylesheet" id='cssPortalColor' type='text/css' href='/theme/opals/css/blueTheme.css' />
+<link rel="stylesheet" id='cssPortalFont'  type='text/css' href='/theme/opals/css/defaultFont.css' />
+ <script type="text/javascript">
+
+var  opalsApp= null;
+</script>
+<script type="text/javascript" src="/js/angularjs/locale/msg_en.js"></script>
+<script type="text/javascript" src="/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="/js/tinymce/plugins/media/plugin.min.js"></script>
+
+<script type="text/javascript" src='/js/common.js?d=2013101703'></script>
+<script type="text/javascript" src='/js/sessionAjax.js?ss=12112'></script>
+<script type="text/javascript" src='/js/SOTCAnimator.js'></script>
+<script type="text/javascript" src="/js/tinybox/tinybox.js"></script>
+<script type="text/javascript" src="/js/ajax.js?d=20091106"></script>
+
+<script type="text/javascript" src='/js/selection.js?d=20110623'></script>
+<script type="text/javascript" src='/js/search.js'></script>
+<script type="text/javascript" src='/js/marcRecord.js'></script>
+<script type="text/javascript" src='/js/opals_dialogBox.js?d=20091116'></script>
+
+<script type="text/javascript" src='/js/bibliography.js?sss=20131031'></script>
+
+  <link rel="stylesheet" href="/js/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="/js/jquery/jquery-1.12.0.js"></script>
+  <script src="/js/jquery/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="/js/jquery/jquery.rss.js"></script>
+
+
+<script type="text/javascript" src="/js/jquery-migrate.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.textarea-expander.js?d=20120314"></script>
+<script type="text/javascript" src="/js/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="/js/angularjs/angular-resource.min.js"></script>
+<script type="text/javascript" src="/js/angularjs/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="/js/angularjs/angular-route.min.js"></script>
+<script type="text/javascript" src="/js/angularjs/angular-cookies.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css"  href="/js/angularjs/user/opl_userDirective.css?dd=20160309"/>
+<script type="text/javascript" src="/js/angularjs/user/opl_userDirective.js?dd=20160309"></script>
+<script type="text/javascript" src="/js/angularjs/datePickerDirectives.js?dd=20160309"></script>
+
+<link rel="stylesheet" type="text/css" href="/js/angularjs/fullcalendar.css"></link>
+<link rel="stylesheet" type="text/css" href="/js/angularjs/oplDirectives.css?dd=20160309"></link>
+
+ <script type="text/javascript" src='/js/lib/moment.min.js'></script>
+    <link  rel="stylesheet" type="text/css" href='/js/lib/jquery.qtip.min.css' rel='stylesheet' />
+    <script type="text/javascript" src='/js/lib/jquery.qtip.js'></script>    
+
+<script type="text/javascript" src="/js/angularjs/fullcalendar.min.js"></script>
+<script type="text/javascript" src="/js/angularjs/lang-all.js"></script>
+<script type="text/javascript" src="/js/angularjs/oplDirectives.js?dd=20160309"></script>
+
+<script type="text/javascript" src='/theme/opals/locale/en/js/msg.js?dd=20160302001'></script>
+
+
+<!-- script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script -->
+<link rel="stylesheet" href="/js/bootstrap/css/bootstrap_opl.css">
+
+
+<script type="text/javascript">
+
+    var loginUser={uid:"0",
+                          userName:"",
+                          firstName:"",
+                          lastName: "",
+                          phone:    "",
+                          email:     ""
+        };
+
+    if(!opalsApp)
+        opalsApp =angular.module("opalsApp",['ngSanitize','ngResource','ngRoute','oplUI','oplUser']);
+   //------------------------------------------------------------------------------------------------
+     opalsApp.service('pageService',['$http', function($http) {
+         var menuItemList=[
+   {
+      "color" : "#FFDE29",
+      "cssClass" : "blue",
+      "bgColor" : "#4284F7",
+      "title" : "Home",
+      "path" : "/bin/home",
+      "submenuItem" : [
+         {
+            "target" : null,
+            "path" : "/bin/home",
+            "title" : "OPALS Home"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/search/searchPage?srchPage=newItem",
+            "title" : "New Items"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/viewNewsEvent",
+            "title" : "News"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/lHours",
+            "title" : "Library Hours"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/viewWeblink",
+            "title" : "Web Links"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/pf/pfList",
+            "title" : "Pathfinders"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/search/searchPage?srchPage=review",
+            "title" : "Reader Review"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/rs/rsList",
+            "title" : "Reserve Shelf"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/util/genreList",
+            "title" : "Featured - Genre Collections"
+         }
+      ]
+   },
+   {
+      "color" : "#650B0B",
+      "cssClass" : "green",
+      "bgColor" : "#6BAD63",
+      "title" : "Search",
+      "path" : null,
+      "submenuItem" : [
+         {
+            "target" : null,
+            "path" : "/bin/search/searchPage",
+            "title" : "Standard"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/search/advance",
+            "title" : "Advanced"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/search/beginner",
+            "title" : "Beginner"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/search/authorBrowse",
+            "title" : "Author Browse"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/search/subjectBrowse",
+            "title" : "Subject Browse"
+         },
+         {
+            "target" : null,
+            "path" : "/bin/search/searchPage?srchPage=ebook",
+            "title" : "Search Ebook "
+         }
+      ]
+   },
+   {
+      "color" : "#4A3702",
+      "cssClass" : "blue",
+      "bgColor" : "#4284F7",
+      "title" : "Equipment",
+      "path" : null,
+      "submenuItem" : [
+         {
+            "target" : null,
+            "path" : "/bin/eqmnt/searchPage",
+            "title" : "Search"
+         }
+      ]
+   }
+]
+;
+         return {
+                getMenuItemList:function(){
+                    return menuItemList;
+                 },
+                 login:function(username,password,cbFn){
+                    $http({method: 'POST',
+                       url: '/bin/ajax/user/login',
+                       data: $.param({username:username,password:password}),
+                       headers: {'Content-Type': 'application/x-www-form-urlencoded'}}).success(
+                       function(rs){
+                            if(rs.errCode==0){
+                                menuItemList=rs.menuItemList;
+                                loginUser=rs.userInfo;
+                            }
+                            if(cbFn)
+                                cbFn(rs);
+                        })
+                        .error(function(){
+                        });
+
+                 }
+         }
+     }]);
+     
+    //======================================================================================
+    opalsApp.directive('userLogin', ['pageService',function(pageService) {
+        return {
+            restrict: 'E',
+            templateUrl:'opl-user-login.html',
+            replace:true,
+            scope:{showLoginDlg:'=',authBySID:'@'},
+            controller: ['$scope',function($scope){
+                $scope.authBySID=($scope.authBySID==1)||false;
+                $scope.oplMsg=oplMsg;
+                $scope.loginCallbackFn=function(){};
+                $scope.authenticate=function(){
+                    pageService.login($scope.username,$scope.password,$scope.loginCallBackFn);
+                    $("#opl-loginDlg").dialog("close");
+
+                }
+                $scope.showDlg=function(cbFn){
+                    $scope.loginCallBackFn=cbFn;
+                    $("#opl-loginDlg").dialog({modal:true,autoResize:true,
+                                                height:230,width:540});
+
+                }
+            }],
+            link:function(scope,iElement,iAttrs){
+                scope.showLoginDlg=scope.showDlg ;
+             }
+
+                
+            
+        };
+    }]); 
+ 
+    //------------------------------------------------------------------------------------------------
+    opalsApp.controller('menuCtrl', ['$scope','pageService', function ($scope,pageService) {
+        $scope.menuItemList=pageService.getMenuItemList();
+        setInterval(function(){$scope.$digest();}, 3000);
+    }]);
+    
+   
+
+var bibUrl="/bin/util/bibsrc/bibliography";
+setTimeout('ClearBibliography()',600000);
+var cmd="";hiliSearchTerms('amp ');
+//---------------------------------------------------------
+function keyPressHandler(e) {
+  if (!e) var e = window.event;
+  var charReturn = (document.getElementById) ? 13 : e.DOM_VK_RETURN	;
+//  var keyCode  = (document.getElementById) ? e.keyCode : e.which;
+    var keyCode;
+    if (e.keyCode) keyCode = e.keyCode;
+	else if (e.which) keyCode = e.which;
+    if(typeof(eval(window['isInCircTab']))!='undefined' && isInCircTab  && keyCode==27){
+        switchUser();
+    }
+    else if(typeof(eval(window['isInTbCircTab']))!='undefined' && isInTbCircTab  && keyCode==27){
+        switchTbUser();
+    }
+    else if(typeof(eval(window['isInEqCircTab']))!='undefined' && isInEqCircTab  && keyCode==27){
+        switchEqUser();
+    }
+    else if(keyCode==charReturn){
+        var url = getCmd_url();
+        if(url!="")
+            setTimeout(function(){window.open(url,"_self")},1);
+        else
+            cmd="";
+    }
+    else if(keyCode==27){
+        var su=angular.element("#switchUserDiv");
+        if(su && su.scope())
+            su.scope().onSwitchUser();
+    }
+    else{
+        cmd +=String.fromCharCode(keyCode)
+    }
+}
+//---------------------------------------------------------
+function getCmd_url(){
+	retval="";
+    var  cmdTxt = cmd.toUpperCase();
+        cmdTxt  =cmdTxt.replace(/\W/g,'');
+		switch(cmdTxt ){
+			case "OPLOAN":
+				retval="";
+				break;
+			case "OPRENEW":
+				retval="";
+				break;
+			case "OPRETURN":
+				retval="";
+				break;
+			case "OPRESERVE":
+				retval="";
+				break;
+			case "OPNOTICE":
+				retval="";
+				break;
+			case "OPINLIB":
+				retval="";
+				break;
+			case "OPISTAT":
+				retval="";
+				break;
+			case "OPPAY":
+				retval="";
+				break;
+			case "OPSWUSER":
+				curUrl=this.location.href;
+				//retval=curUrl;
+				if(curUrl.match(/test\.htm$|loan$|reserve$/))
+					SetNoUser();
+				break;
+            case "TBKLOAN":
+				retval="?tbk=1";
+				break;
+
+
+		}
+		return retval;
+
+}
+
+//---------------------------------------------------------
+function isSwitchCmd(cmd){
+    if(cmd.match(/OPLOAN|OPRENEW|OPRETURN|OPISTAT|OPINLIB|OPNOTICE|OPRESERVE|OPSWUSER|OPPAY/g))
+        return true;
+    return false;
+}
+//---------------------------------------------------------
+function convertTmClearMillisec(tmClear){
+  var num, unit, retTime;
+    var res = tmClear.match(/([\d]+)([smhdMY])/);
+    if (res) {// && res.length == 3) {
+        num  = res[1];
+        unit = res[2];
+        switch (unit) {
+            case 'm':
+                num *= 60000;
+                break;
+            case 'h':
+                num *= 3600000;
+                break;
+            case 'd':
+                num *= 86400000;
+                break;
+            case 'M':
+                num *= 2592000000;
+                break;
+            case 'y':
+                num *= 31536000000;
+                break;
+            default:
+                num *= 1000;
+        }
+        retTime = num;
+    }
+    else {
+        retTime = '300000'; // 5 minutes
+    }
+    return retTime;
+}
+
+//---------------------------------------------------------
+function setLang(langOpt){
+    var lang = langOpt.options[langOpt.selectedIndex].value;
+    $.cookie('language',lang);
+    this.location="/";
+}
+
+//---------------------------------------------------------
+timeClear = convertTmClearMillisec('10m') ;
+        
+//---------------------------------------------------------
+
+var curDateTime= new Date("2016/03/11 16:15:14");
+
+var myWidth = 0, myHeight = 0;
+function getWindowSize() {
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+    return  myWidth;
+}
+
+
+
+function toggleColorPan(elementId, headerElement)
+{
+   var element = document.getElementById(elementId);
+  if(element.down == null || element.up)
+  {
+      animate(elementId, 0, 0, 145, 25, 250, null);
+      element.down = true;
+      element.up = false;
+   }
+   else    {
+      animate(elementId, 145, 0, 0, 25, 250, null);
+      element.up = true;
+      element.down = false;
+   }
+ }
+
+
+
+function toggleColorPan_bk(elementId, headerElement)
+{
+    //animate(elementID, newLeft, newTop, newWidth, newHeight, time, callback)
+
+   var element = document.getElementById(elementId);
+  if(element.down == null || element.up)
+  {
+      animate(elementId,-50, 0, 125, 25, 250, null);
+      element.down = true;
+      element.up = false;
+   }
+   else    {
+      animate(elementId, -25, 0, 0, 25, 250, null);
+      element.up = true;
+      element.down = false;
+   }
+ }
+
+   
+function setColorPage(obj){
+    $.cookie('colorTheme',$(obj).attr("colorTheme"));
+    var themeTbl=document.getElementById('colorThemeTbl');
+    if(themeTbl){
+        var cells=themeTbl.getElementsByTagName('td');
+        for(var i=0; i<cells.length;i++){
+            cells[i].innerHTML="";
+        }
+
+    }
+    obj.innerHTML="<img src='/theme/opals/image/advance/check.png' border=0>";
+    document.getElementById('cssPortalColor').href ='/theme/opals/css/' + obj.getAttribute("colorTheme") ;
+
+    
+}
+
+function setFontPage(fs){
+    $.cookie('fontTheme',fs);
+    document.getElementById('cssPortalFont').href ='/theme/opals/css/' + fs ;
+
+}
+
+
+$(document).ready(function(){
+   // showCorrectSubMenu();
+   
+    var colorTheme = $.cookie('colorTheme');
+    $("table#colorThemeTbl >tbody > tr > td").each(function(){
+        if($(this).attr("colorTheme") == colorTheme){
+            $(this).html("<img src='/theme/opals/image/advance/check.png' border=0>");
+            return true;    
+        }
+    });
+
+    //show close button in search pan for circ/txtbk/eqmnt pages
+     
+    if($(location).attr('href').search(/(\/bin\/)(circ|txtbk|eqmnt)(\/)/gi)>0){
+        $("#srchPanXbtn").css("display","block");
+    }
+
+    
+     
+   
+});
+ 
+
+ </script>
+
+
+<body onkeydown="keyPressHandler(event);"  style="min-height:1200px" class="yui-skin-sam" ng-app="opalsApp" ng-cloak >
+<script type="text/ng-template" id="menu.html">
+    <div style="width:100%;background:gray; "><ul class="oplMenu">
+            <li class="oplMenu-{{m.cssClass}}"
+                ng-repeat="m in menuItemList track by $index"  
+                ng-mouseover="openSubMenu($index)" 
+                ng-mouseout="closeSubMenu($index)" 
+                id="menuItem_{{$index}}">{{m.title}}
+                <ul style="margin-left:-15px;margin-top:2px">
+                    <li ng-repeat="s in m.submenuItem" ng-click="openPage(s)" ><a href=# >{{s.title}}</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div  class="opl_submenuBar oplSubmenu-{{menuItemList[activeTab].cssClass}}" >
+              <ul class="oplSubmenu" >
+              <li 
+               ng-repeat="s in menuItemList[activeTab].submenuItem" ng-click="openPage(s) "
+               ng-class="{'activeSubmenu':s.active,'oplSubmenu-{{menuItemList[activeTab].cssClass}}':!s.active}">{{s.title}}</li></ul>
+       </div>
+    </div>
+</script>
+
+<div class='pHheader'>
+    <table  id="bgTable" cellpadding="0" cellspacing="0"  width="100%"  border=0  
+      class ="bg000099">
+        <tr>
+        <td  align="left" valign="top" style="padding:0px;width:800px"> 
+         
+            <table style="background:transparent">
+                    <tr><td>
+                        <div>
+                            <div style="float:left;max-height:99px;">
+                                <img src="/bin/util/loadfile?fileName=header_logo" style="max-height:90px">
+                            </div>
+                            <div style="float:left;padding:1em;">
+                                <span style='font-size:24pt;text-shadow: 0 3px 3px black; color:#00CCFF;font-family: arial;color:#FFFFFF'>John Abbott College </span>
+                                    <br>
+                                <span  style='font-size:24pt;text-shadow: 0 3px 3px black; color:white;font-family: arial'>Library Media Services</span>
+                            </div>
+                        </div>
+                    </td></tr>
+                </table>         
+          
+        </td>
+        <td align="right" valign="top" nowrap  style="border:1px;padding-right:5px;">
+                        <span>Friday, March 11 2016</span><br>
+          <span>
+
+    <br />
+        
+        <a href='/bin/user/createAccount' accesskey='r' >Register account</a>
+                    &nbsp;|&nbsp;
+                    
+        <a href='/bin/login' accesskey='l' >Login</a>
+
+          </span><br>
+          <!-- en -->
+          
+          <span>
+            <select id='multilingualSel' name='multilingualSel' onchange='setLang(this)' style='font-size:8pt;color:brown'>
+                    
+                        <option value='en' selected>English</option>
+                    
+                        <option value='fr' >French/Français</option>
+                    
+                </select>
+            </span>
+ 
+          
+          <br>
+
+
+          <div style="width:225px;height:27px; display:inline;" >
+            <div style="display:inline-block;  zoom: 1;*display: inline;width:0px; height:27px;top:0px; left:145px;overflow:hidden;"  id="colorPanel" >
+                <table id='colorThemeTbl' cellspacing=7 style='background:none'><tr align=center>
+                    <td colorTheme="blueTheme.css"  
+                        style="width:27px;height:15px;background:url('/theme/opals/image/advance/bluePattern.png')"  onclick="setColorPage(this)"></td>    
+                    <td colorTheme="greenTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/greenPattern.png')" onclick="setColorPage(this)"></td>    
+                    <td colorTheme="orangeTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/orangePattern.png')"onclick="setColorPage(this)" ></td>    
+                    <td colorTheme="redTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/redPattern.png')"   onclick="setColorPage(this)"></td>
+                    <td colorTheme="tealTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/tealPattern.png')"  onclick="setColorPage(this)"></td>    
+                </tr></table>
+            </div>           
+             <div style="display:inline-block;zoom: 1;*display: inline;width:25px;height:25px;top:0px;left:145px;"
+                onclick="toggleColorPan('colorPanel', this);">
+                <img src='/theme/opals/image/advance/gtk-color-picker.png' border=0 title='Color options' >
+            </div>            <div style="display:inline-block;width:zoom: 1;*display: inline;90px;height:25px;top:0px;left:170px;">
+                <table id='fontSelector' style='background:transparent'>
+                <tr >
+                <td class="fontSelector" style="font-size:8pt;"  onclick='setFontPage("smallerFont.css");'>A</td>
+                <td class="fontSelector" style="font-size:12pt"  onclick='setFontPage("defaultFont.css");'>A</td>
+                <td class="fontSelector" style="font-size:14pt"  onclick='setFontPage("biggerFont.css");'>A</td>
+                <td class="fontSelector"></td>
+
+                </tr>
+                </table>
+           </div>
+          </div><br>
+        </td>
+        </tr>
+    </table>
+
+
+    <div id='qrCode' style='float:right; margin-top:-94px;margin-right: 250px;font-size:8pt;color:#E0E0E0;text-align:center'>
+
+        <img  style='width:80px' src='/bin/util/image/qrcode?ecc=m&text=http://jac.cegep.opalsinfo.net'><br>Scan to access this Catalog</div>
+
+      <!--  end of opals_header_bg:-->
+    </div>
+<!--  end of wicket:id=header div:-->
+</div>
+
+<div style="clear:both;" ng-controller="menuCtrl"  >
+    <opals-menu menu-item-list="menuItemList"></opals-menu>
+</div>
+<div style="clear:both;"  >
+<!-- End of relative div: -->
+</div>
+
+<!-- beginning of main content -->
+
+<div class='content'>
+<div id='main'>
+<form autocomplete='off' method='post' name='clearUser'>
+    <input type="hidden" name="rid" value=''>
+</form>
+<!--Search -->
+
+     <div style='white-space: nowrap; ' >
+     <center>
+     <table id='headerSrch' class='bordernone' width=80% style='background-color: transparent;'>
+        <tr valign=top>
+            <td style='padding-left:10px;border:none' align=center>
+<!-- search form panel-->
+
+<div id="searchFrmPanel"  class='searchPanel'   style="margin-bottom:10px;">
+    
+        
+            
+                <!-- Case Standard/Advanced SEARCH -->   
+                <style>
+img.recFmtIcon
+{
+border:1px solid gray;
+padding: 2px; 
+background:#dddddd;
+border-radius:3px;
+width:21px;height:21px;
+-moz-border-radius:3px; /* Firefox 3.6 and earlier */ 
+-webkit-border-radius: 1px;
+        -moz-box-shadow:    1px 1px 0px gray;
+        -webkit-box-shadow: 1px 1px 0px #7D7D7D;
+        box-shadow:         1px 1px 0px #7D7D7D;
+
+}
+
+
+</style>
+
+<script type='text/javascript'>
+    //---------------------------------------------------------------------------------
+    function switchSearchTmp(opt){
+        if(opt == 'advancedSrch'){
+            document.getElementById('advancedSrch').style.display="block";
+            document.getElementById('simpleSrch').style.display="none";
+            document.searchAdvFrm["kw0"].focus();
+
+            if(!document.getElementById('sRefinePanel') ||
+                document.getElementById('sRefinePanel').style.display =='block') return; 
+            document.getElementById('sRefinePanel').style.display="none";
+       }
+       else{            
+            document.getElementById('advancedSrch').style.display="none";
+            document.getElementById('simpleSrch').style.display="block";
+            
+            if(obj = document.getElementById('menuSidePanel'))
+                obj.style.display="none";
+            document.searchStdFrm.kw0.focus();
+         
+         }
+
+      
+    }
+
+    //---------------------------------------------------------------------------------
+    function onClearSearchFrm(frmId){
+        var frmObj = document.getElementById(frmId);
+        if (!frmObj) return;
+        var input = frmObj.getElementsByTagName('input');
+        for (var y=0; y<input.length; y++){
+            if(input[y].type == "checkbox" && input[y].name == "recType"){
+                input[y].checked = "";
+            }
+            else if(input[y].type == "text" && (input[y].name == "kw0" || 
+               input[y].name == "kw1" || input[y].name == "kw2" || 
+               input[y].name == "kw3" || input[y].name == "kw4" )){
+                input[y].value= "";
+            }
+        }
+    }
+    //---------------------------------------------------------------------------------
+    function initSearchForm(){
+         
+
+            //init simple search form
+            if(document.searchStdFrm)
+                document.searchStdFrm.kw0.value="";
+                
+            
+            var attr_0=getCookie("_att");
+            
+            var sf=document.searchStdFrm.sf0;
+            for(var i=0;i<sf.options.length;i++){
+                if(sf.options[i].value==attr_0){
+                    sf.selectedIndex=i;
+                    break;
+                }
+            }
+            //insert advance search form
+            var obj = document.getElementById("advancedSrch");
+            if(obj && obj.style.display == 'block'){
+                searchAdvFrm["kw0"].focus();
+                for(var i=0;i<searchFormVal.length;i++){
+                    var iName  =searchFormVal[i]["inputName"];
+                    var iValue =searchFormVal[i]["inputVal"];
+                    var iObj =searchAdvFrm[iName];
+                    if(iObj){
+                        if(iObj.type=='text')
+                            iObj.value=iValue;
+                        else if(iObj.type=='select-one'){
+                            for(var j=0; j<iObj.options.length; j++)
+                                if(iObj.options[j].value == iValue ){
+                                    iObj.selectedIndex=j;
+                                    break;
+                                }
+                        }
+                    }
+                }
+            }
+            //if(document.searchStdFrm)
+            //setCookie("_att", document.searchStdFrm.sf0.value);
+
+            
+        
+    }
+    addOnload(initSearchForm);
+    var searchFormVal=[
+    
+    ];
+   
+    //---------------------------------------------------------------------------------------------------
+    function onSearchSubmit(frm){
+        setCookie("_att", frm.sf0.value);
+        if(frm.sf0.value==5000){
+           return checkBcType(frm.kw0);
+       }
+       return true;
+    }
+
+    
+    //---------------------------------------------------------------------------------------------------
+    function checkBcType(bc){
+
+    var validateBarcode= 1 ;
+    if(validateBarcode==0)
+        return true;
+
+    var spectrumBarcode     = 0;
+    var follettBarcode      = 0;
+    var leadingZeroBarcode  = 0;
+    var sagebrushBarcode    = 0;
+
+
+    if(spectrumBarcode==1){
+       return deSpectrumizeBarcode(bc);
+    }
+    else if(follettBarcode==1){
+       return folletizeBarcode(bc);
+    }
+    else if(leadingZeroBarcode==1){
+       return deLeadingZero(bc);
+    }
+    else if(sagebrushBarcode==1){
+       return deSagebrush(bc);
+    }
+    return true;
+
+    }
+
+    //---------------------------------------------------------------------------------------------------
+    function hideSearchPan(){
+        $("#searchFrmPanel").css("display","none"); 
+    }
+
+
+</script>
+   <!-- Case SIMPLE SEARCH -->
+           <form autocomplete="off" action="
+            
+                /bin/search/searchPage" method="post" 
+                onsubmit='onSearchSubmit(this)'
+                name="searchStdFrm" id="searchStdFrm">
+                        
+       <div id="simpleSrch" class='simpleSrch' style='width:100%;'>
+                 
+           <table id='simpleSrchTbl' class='simpleSrchTbl' 
+            style='width:100%;text-align:center;color:gray;background-color: transparent;' >
+              <tr width=100%  >
+              
+               <td   style='vertical-align:middle;' nowrap> 
+               
+                   
+
+               
+                          
+           <b>Location</b> <select name='location' id='location' style=" font-size:9pt;height:22px;" >
+                <option value=''>All</option>
+                
+                    <option value='Audio Cassette - Media Services - Second Floor' >Audio Cassette - Media Services - Second Floor</option>
+                
+                    <option value='Book - Basement' >Book - Basement</option>
+                
+                    <option value='Book - Main Floor' >Book - Main Floor</option>
+                
+                    <option value='Book - Second Floor' >Book - Second Floor</option>
+                
+                    <option value='Book - Technical Services' >Book - Technical Services</option>
+                
+                    <option value='Careers - Main Floor' >Careers - Main Floor</option>
+                
+                    <option value='CD - Media Services - Second Floor' >CD - Media Services - Second Floor</option>
+                
+                    <option value='CD in back of book' >CD in back of book</option>
+                
+                    <option value='CD-ROM - Media Services - Second Floor' >CD-ROM - Media Services - Second Floor</option>
+                
+                    <option value='CD-ROM in back of book' >CD-ROM in back of book</option>
+                
+                    <option value='CD-ROM in front of book' >CD-ROM in front of book</option>
+                
+                    <option value='CDs in back of book' >CDs in back of book</option>
+                
+                    <option value='Compact Disc - Media Services - Second Floor' >Compact Disc - Media Services - Second Floor</option>
+                
+                    <option value='DVD - Media Services - Second Floor' >DVD - Media Services - Second Floor</option>
+                
+                    <option value='DVD in back of book' >DVD in back of book</option>
+                
+                    <option value='DVD in front of book' >DVD in front of book</option>
+                
+                    <option value='E-Book' >E-Book</option>
+                
+                    <option value='E-Video' >E-Video</option>
+                
+                    <option value='Electronic Government Document' >Electronic Government Document</option>
+                
+                    <option value='Film - Media Services - Second Floor' >Film - Media Services - Second Floor</option>
+                
+                    <option value='Government Document - Main Floor' >Government Document - Main Floor</option>
+                
+                    <option value='L-017 - Request at Reference Desk' >L-017 - Request at Reference Desk</option>
+                
+                    <option value='Lecture Pop - Main Floor' >Lecture Pop - Main Floor</option>
+                
+                    <option value='Leisure Reads - Main Floor' >Leisure Reads - Main Floor</option>
+                
+                    <option value='On Order' >On Order</option>
+                
+                    <option value='Online' >Online</option>
+                
+                    <option value='Reference Annex - Second Floor' >Reference Annex - Second Floor</option>
+                
+                    <option value='Reference Books - Main Floor' >Reference Books - Main Floor</option>
+                
+                    <option value='Reserve - Circulation Desk - Main Floor' >Reserve - Circulation Desk - Main Floor</option>
+                
+                    <option value='Technical Services - Request at Reference Desk' >Technical Services - Request at Reference Desk</option>
+                
+                    <option value='Video - Media Services - Second Floor' >Video - Media Services - Second Floor</option>
+                
+                    <option value='Videodisc in back of book' >Videodisc in back of book</option>
+                
+                    <option value='WEB' >WEB</option>
+                
+           </select>
+            
+               
+
+                      <select name='sf0' id='sf0' style=" font-size:9pt;height:22px;" >
+                             
+                             
+                                <option value='1016'  >Anywhere</option>
+                             
+                             
+                             
+                                <option value='9016'  >Anywhere (exact match)</option>
+                             
+                             
+                             
+                                <option value='4'  >Title</option>
+                             
+                             
+                             
+                                <option value='9004'  >Title (exact match)</option>
+                             
+                             
+                             
+                                <option value='5006'  >Title begins with</option>
+                             
+                             
+                             
+                                <option value='1003'  >Author keyword</option>
+                             
+                             
+                             
+                                <option value='21'  >Subject</option>
+                             
+                             
+                             
+                                <option value='9021'  >Subject (exact match)</option>
+                             
+                             
+                             
+                                <option value='5001'  >Local call number</option>
+                             
+                             
+                             
+                                <option value='5000'  >Barcode</option>
+                             
+                             
+                             
+                                <option value='31'  >Date of publication</option>
+                             
+                             
+                             
+                                <option value='7'  >ISBN</option>
+                             
+                             
+                             
+                                <option value='8'  >ISSN</option>
+                             
+                             
+                             
+                                <option value='16'  >LC classification</option>
+                             
+                             
+                             
+                                <option value='5002'  >Medium</option>
+                             
+                             
+                             
+                                <option value='63'  >Note</option>
+                             
+                             
+                             
+                                <option value='1018'  >Publisher</option>
+                             
+                             
+                             
+                                <option value='5'  >Series title</option>
+                             
+                             
+                             
+                                <option value='12'  >Record ID</option>
+                             
+                             
+                             
+                      </select>&nbsp;&nbsp;
+                      <b>Keyword</b>&nbsp;&nbsp;
+                      <input accesskey='/' type='text' name='kw0' value=''
+                              style='width:140px;height:22px;'>
+                          <input type='hidden' name='sortAttr'  value='0' />
+                          <input type='hidden' name='sortOrder' value='0' />
+                       
+                           <input type='hidden' name='zid' value='' />
+                       &nbsp;&nbsp;
+                       <input type='submit' class='btn'  value ='Search' 
+                           onmouseout='this.className="btn"'  
+                           onmouseover='this.className="btn_over"'  > &nbsp;&nbsp;
+                       <input type='button'  class='btn' value ='Clear' onmouseout='this.className="btn"'  
+                           onmouseover='this.className="btn_over"'
+                       onclick="document.searchStdFrm.kw0.value=''; document.searchStdFrm.kw0.focus(); return false;"/>     &nbsp;&nbsp; &nbsp;&nbsp;
+                        
+                             
+                                <a href='#' onclick='switchSearchTmp("advancedSrch");' 
+                                class='toggleTxt'>Advanced<span class='toggleSign'>&nbsp;<img src='/theme/opals/image/show_table_row.png'  border=0></span></a> 
+                            
+                        
+                  </td>
+                 <td>
+                        <a id="srchPanXbtn" style="float: right;margin-top:-18px;display:none" href="javascript:void(0);" onclick="hideSearchPan();"><img src="/theme/opals/image/delete_sm.png" style='height:16px;width:16px;border:none'></a>       
+                        <!--a href=# onclick="showHelpInst('http://help.opalsinfo.net');"><img src="/theme/opals/image/system-help.png" style='height:19px;width:19px;border:none'></a-->     
+
+                 </td> 
+              </tr>
+           </table>
+
+           </div>
+           </form>
+   <!-- Case ADVANDED SEARCH -->
+           <form autocomplete="off" action="/bin/search/searchPage" method="post" 
+           onsubmit='onSearchSubmit(this)'
+           name="searchAdvFrm" id="searchAdvFrm">
+       <div id="advancedSrch" style='width:100%;display:none;' ><div style="float: right;">         
+<a href=# onclick="showHelpInst('http://help.opalsinfo.net');"><img src="/theme/opals/image/system-help.png" style='height:27px;width:27px;border:none'></a>     </div>
+
+             <!-- Case ADVANDED SEARCH -->
+             <table id='advancedSrchTbl' style='width:720px;text-align:center;background:none;margin-right:8%;margin-left:8%'  border=0> 
+              
+             <tr><td><div style="width:40%;text-align:right;"><b>Location</b> <select name='location' id='location' style=" font-size:9pt;height:22px;" >
+                <option value=''>All</option>
+             
+                    <option value='Audio Cassette - Media Services - Second Floor' >Audio Cassette - Media Services - Second Floor</option>
+                
+                    <option value='Book - Basement' >Book - Basement</option>
+                
+                    <option value='Book - Main Floor' >Book - Main Floor</option>
+                
+                    <option value='Book - Second Floor' >Book - Second Floor</option>
+                
+                    <option value='Book - Technical Services' >Book - Technical Services</option>
+                
+                    <option value='Careers - Main Floor' >Careers - Main Floor</option>
+                
+                    <option value='CD - Media Services - Second Floor' >CD - Media Services - Second Floor</option>
+                
+                    <option value='CD in back of book' >CD in back of book</option>
+                
+                    <option value='CD-ROM - Media Services - Second Floor' >CD-ROM - Media Services - Second Floor</option>
+                
+                    <option value='CD-ROM in back of book' >CD-ROM in back of book</option>
+                
+                    <option value='CD-ROM in front of book' >CD-ROM in front of book</option>
+                
+                    <option value='CDs in back of book' >CDs in back of book</option>
+                
+                    <option value='Compact Disc - Media Services - Second Floor' >Compact Disc - Media Services - Second Floor</option>
+                
+                    <option value='DVD - Media Services - Second Floor' >DVD - Media Services - Second Floor</option>
+                
+                    <option value='DVD in back of book' >DVD in back of book</option>
+                
+                    <option value='DVD in front of book' >DVD in front of book</option>
+                
+                    <option value='E-Book' >E-Book</option>
+                
+                    <option value='E-Video' >E-Video</option>
+                
+                    <option value='Electronic Government Document' >Electronic Government Document</option>
+                
+                    <option value='Film - Media Services - Second Floor' >Film - Media Services - Second Floor</option>
+                
+                    <option value='Government Document - Main Floor' >Government Document - Main Floor</option>
+                
+                    <option value='L-017 - Request at Reference Desk' >L-017 - Request at Reference Desk</option>
+                
+                    <option value='Lecture Pop - Main Floor' >Lecture Pop - Main Floor</option>
+                
+                    <option value='Leisure Reads - Main Floor' >Leisure Reads - Main Floor</option>
+                
+                    <option value='On Order' >On Order</option>
+                
+                    <option value='Online' >Online</option>
+                
+                    <option value='Reference Annex - Second Floor' >Reference Annex - Second Floor</option>
+                
+                    <option value='Reference Books - Main Floor' >Reference Books - Main Floor</option>
+                
+                    <option value='Reserve - Circulation Desk - Main Floor' >Reserve - Circulation Desk - Main Floor</option>
+                
+                    <option value='Technical Services - Request at Reference Desk' >Technical Services - Request at Reference Desk</option>
+                
+                    <option value='Video - Media Services - Second Floor' >Video - Media Services - Second Floor</option>
+                
+                    <option value='Videodisc in back of book' >Videodisc in back of book</option>
+                
+                    <option value='WEB' >WEB</option>
+                
+           </select></div>
+
+             </td>
+              </tr>
+             
+                                    
+                     
+                     <tr>
+                         <td style='text-align:left' nowrap>
+                             <input name="kw0" id="kw0" value="" style="width:40%" type="text"> 
+                            <select name='sf0'  style=" width: 180px;"> 
+                             
+                             <option value='1016'  >Anywhere</option>
+                             
+                             <option value='9016'  >Anywhere (exact match)</option>
+                             
+                             <option value='4' selected >Title</option>
+                             
+                             <option value='9004'  >Title (exact match)</option>
+                             
+                             <option value='5006'  >Title begins with</option>
+                             
+                             <option value='1003'  >Author keyword</option>
+                             
+                             <option value='21'  >Subject</option>
+                             
+                             <option value='9021'  >Subject (exact match)</option>
+                             
+                             <option value='5001'  >Local call number</option>
+                             
+                             <option value='5000'  >Barcode</option>
+                             
+                             <option value='31'  >Date of publication</option>
+                             
+                             <option value='7'  >ISBN</option>
+                             
+                             <option value='8'  >ISSN</option>
+                             
+                             <option value='16'  >LC classification</option>
+                             
+                             <option value='5002'  >Medium</option>
+                             
+                             <option value='63'  >Note</option>
+                             
+                             <option value='1018'  >Publisher</option>
+                             
+                             <option value='5'  >Series title</option>
+                             
+                             <option value='12'  >Record ID</option>
+                             
+                            </select>
+                     <a href='#' onclick='switchSearchTmp("simpleSrch");' style='float:right;margin-right:2%' 
+                        class='toggleTxt'> Simple search <span class='toggleSign'><img src='/theme/opals/image/hide_table_row.png' border=0></span></a>
+                            
+                      
+                 
+                     
+                                 <select name='boolop1'>
+                                 
+                                 <option  value='or'  >OR</option> 
+                                 
+                                 <option  value='and' selected >AND</option> 
+                                 
+                                 <option  value='not'  >NOT</option> 
+                                 
+                                </select>
+                        </td>
+                        </tr>
+                     
+                     <tr>
+                         <td style='text-align:left' nowrap>
+                             <input name="kw1" id="kw1" value="" style="width:40%" type="text"> 
+                            <select name='sf1'  style=" width: 180px;"> 
+                             
+                             <option value='1016'  >Anywhere</option>
+                             
+                             <option value='9016'  >Anywhere (exact match)</option>
+                             
+                             <option value='4'  >Title</option>
+                             
+                             <option value='9004'  >Title (exact match)</option>
+                             
+                             <option value='5006'  >Title begins with</option>
+                             
+                             <option value='1003' selected >Author keyword</option>
+                             
+                             <option value='21'  >Subject</option>
+                             
+                             <option value='9021'  >Subject (exact match)</option>
+                             
+                             <option value='5001'  >Local call number</option>
+                             
+                             <option value='5000'  >Barcode</option>
+                             
+                             <option value='31'  >Date of publication</option>
+                             
+                             <option value='7'  >ISBN</option>
+                             
+                             <option value='8'  >ISSN</option>
+                             
+                             <option value='16'  >LC classification</option>
+                             
+                             <option value='5002'  >Medium</option>
+                             
+                             <option value='63'  >Note</option>
+                             
+                             <option value='1018'  >Publisher</option>
+                             
+                             <option value='5'  >Series title</option>
+                             
+                             <option value='12'  >Record ID</option>
+                             
+                            </select>
+                     
+                            
+                      
+                 
+                     
+                                 <select name='boolop2'>
+                                 
+                                 <option  value='or' selected >OR</option> 
+                                 
+                                 <option  value='and'  >AND</option> 
+                                 
+                                 <option  value='not'  >NOT</option> 
+                                 
+                                </select>
+                        </td>
+                        </tr>
+                     
+                     <tr>
+                         <td style='text-align:left' nowrap>
+                             <input name="kw2" id="kw2" value="" style="width:40%" type="text"> 
+                            <select name='sf2'  style=" width: 180px;"> 
+                             
+                             <option value='1016'  >Anywhere</option>
+                             
+                             <option value='9016'  >Anywhere (exact match)</option>
+                             
+                             <option value='4'  >Title</option>
+                             
+                             <option value='9004'  >Title (exact match)</option>
+                             
+                             <option value='5006'  >Title begins with</option>
+                             
+                             <option value='1003'  >Author keyword</option>
+                             
+                             <option value='21' selected >Subject</option>
+                             
+                             <option value='9021'  >Subject (exact match)</option>
+                             
+                             <option value='5001'  >Local call number</option>
+                             
+                             <option value='5000'  >Barcode</option>
+                             
+                             <option value='31'  >Date of publication</option>
+                             
+                             <option value='7'  >ISBN</option>
+                             
+                             <option value='8'  >ISSN</option>
+                             
+                             <option value='16'  >LC classification</option>
+                             
+                             <option value='5002'  >Medium</option>
+                             
+                             <option value='63'  >Note</option>
+                             
+                             <option value='1018'  >Publisher</option>
+                             
+                             <option value='5'  >Series title</option>
+                             
+                             <option value='12'  >Record ID</option>
+                             
+                            </select>
+                     
+                            
+                      
+                 
+                     
+                                 <select name='boolop3'>
+                                 
+                                 <option  value='or' selected >OR</option> 
+                                 
+                                 <option  value='and'  >AND</option> 
+                                 
+                                 <option  value='not'  >NOT</option> 
+                                 
+                                </select>
+                        </td>
+                        </tr>
+                     
+                     <tr>
+                         <td style='text-align:left' nowrap>
+                             <input name="kw3" id="kw3" value="" style="width:40%" type="text"> 
+                            <select name='sf3'  style=" width: 180px;"> 
+                             
+                             <option value='1016'  >Anywhere</option>
+                             
+                             <option value='9016'  >Anywhere (exact match)</option>
+                             
+                             <option value='4'  >Title</option>
+                             
+                             <option value='9004'  >Title (exact match)</option>
+                             
+                             <option value='5006'  >Title begins with</option>
+                             
+                             <option value='1003'  >Author keyword</option>
+                             
+                             <option value='21'  >Subject</option>
+                             
+                             <option value='9021'  >Subject (exact match)</option>
+                             
+                             <option value='5001'  >Local call number</option>
+                             
+                             <option value='5000'  >Barcode</option>
+                             
+                             <option value='31'  >Date of publication</option>
+                             
+                             <option value='7'  >ISBN</option>
+                             
+                             <option value='8'  >ISSN</option>
+                             
+                             <option value='16'  >LC classification</option>
+                             
+                             <option value='5002'  >Medium</option>
+                             
+                             <option value='63'  >Note</option>
+                             
+                             <option value='1018'  >Publisher</option>
+                             
+                             <option value='5' selected >Series title</option>
+                             
+                             <option value='12'  >Record ID</option>
+                             
+                            </select>
+                     
+                            
+                      </td></tr>
+                 
+                 </table>
+                 <table id='advancedSrchOpt' width=80% border=0  style='background:none'>
+                 <tr>
+                     <td style='g-left:150px'>
+                       <span class='toggleTxt'>Add search fields</span>
+                       </td>
+                 </tr>
+                </table>
+                <table id='advancedSrchOptTbl'  width=85%    style='background:none'  >
+
+                 
+                  <tr>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="book" id="book" name="recType" class="checkbox" />
+                        <label for="book" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/book.png'>&nbsp; Book&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="serial" id="serial" name="recType" class="checkbox" />
+                        <label for="serial" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/serial.png'>&nbsp; Serial&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="mapManuscript" id="mapManuscript" name="recType" class="checkbox" />
+                        <label for="mapManuscript" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/mapManuscript.png'>&nbsp; Manuscript Map&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="sheetMusic" id="sheetMusic" name="recType" class="checkbox" />
+                        <label for="sheetMusic" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/sheetMusic.png'>&nbsp; Sheet Music&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="artifact" id="artifact" name="recType" class="checkbox" />
+                        <label for="artifact" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/artifact.png'>&nbsp; Artifact&nbsp;&nbsp;&nbsp;</label> </td>
+                    
+                  </tr>
+                 
+                  <tr>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="bookManuscript" id="bookManuscript" name="recType" class="checkbox" />
+                        <label for="bookManuscript" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/bookManuscript.png'>&nbsp; Manuscript Book&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="electronicMedia" id="electronicMedia" name="recType" class="checkbox" />
+                        <label for="electronicMedia" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/electronicMedia.png'>&nbsp; Electronic Media&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="bookOnTape" id="bookOnTape" name="recType" class="checkbox" />
+                        <label for="bookOnTape" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/bookOnTape.png'>&nbsp; Audiobook&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="movie" id="movie" name="recType" class="checkbox" />
+                        <label for="movie" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/movie.png'>&nbsp; Movie&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="photoPoster" id="photoPoster" name="recType" class="checkbox" />
+                        <label for="photoPoster" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/photoPoster.png'>&nbsp; Photo, Poster&nbsp;&nbsp;&nbsp;</label> </td>
+                    
+                  </tr>
+                 
+                  <tr>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="pdf" id="pdf" name="recType" class="checkbox" />
+                        <label for="pdf" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/pdf.png'>&nbsp; PDF document&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="internet" id="internet" name="recType" class="checkbox" />
+                        <label for="internet" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/internet.png'>&nbsp; Internet&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="musicCassette" id="musicCassette" name="recType" class="checkbox" />
+                        <label for="musicCassette" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/musicCassette.png'>&nbsp; Music Cassette&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="videocassette" id="videocassette" name="recType" class="checkbox" />
+                        <label for="videocassette" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/videocassette.png'>&nbsp; Video Cassette&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="libraryKit" id="libraryKit" name="recType" class="checkbox" />
+                        <label for="libraryKit" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/libraryKit.png'>&nbsp; Library Kit&nbsp;&nbsp;&nbsp;</label> </td>
+                    
+                  </tr>
+                 
+                  <tr>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="ebook" id="ebook" name="recType" class="checkbox" />
+                        <label for="ebook" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/ebook.png'>&nbsp; eBook&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="compactDisc" id="compactDisc" name="recType" class="checkbox" />
+                        <label for="compactDisc" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/compactDisc.png'>&nbsp; Compact Disc&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="CDMusic" id="CDMusic" name="recType" class="checkbox" />
+                        <label for="CDMusic" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/CDMusic.png'>&nbsp; CD Music&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="blu_ray" id="blu_ray" name="recType" class="checkbox" />
+                        <label for="blu_ray" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/blu_ray.png'>&nbsp; Blu ray&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="mixedMaterial" id="mixedMaterial" name="recType" class="checkbox" />
+                        <label for="mixedMaterial" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/mixedMaterial.png'>&nbsp; Mixed Material&nbsp;&nbsp;&nbsp;</label> </td>
+                    
+                  </tr>
+                 
+                  <tr>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="journal" id="journal" name="recType" class="checkbox" />
+                        <label for="journal" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/journal.png'>&nbsp; Journal&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="map" id="map" name="recType" class="checkbox" />
+                        <label for="map" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/map.png'>&nbsp; Map&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="manuscriptMusic" id="manuscriptMusic" name="recType" class="checkbox" />
+                        <label for="manuscriptMusic" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/manuscriptMusic.png'>&nbsp; Manuscript Music&nbsp;&nbsp;&nbsp;</label> </td>
+                    <td width=20% nowrap>
+                        <input type="checkbox" value="DVD" id="DVD" name="recType" class="checkbox" />
+                        <label for="DVD" style='font-size:110%;color:#4B4B4B'><img class='recFmtIcon' src='/theme/opals/image/medium/DVD.png'>&nbsp; DVD&nbsp;&nbsp;&nbsp;</label> </td>
+                    
+                  </tr>
+                 
+
+                 <tr height=50px>
+                     <td  valign=middle style='text-align:center' colspan=6>
+                          <input type='hidden' name='sortAttr'  value='0' />
+                          <input type='hidden' name='sortOrder' value='0' />
+                          
+                           <input type='submit' class='btn'  value ='Search'                           
+                                onmouseout='this.className="btn"'  
+                                onmouseover='this.className="btn_over"'>&nbsp;&nbsp;
+                           <input type='button'  class='btn' value ='Clear' 
+                                onmouseout='this.className="btn"'  
+                                onmouseover='this.className="btn_over"' 
+                                onclick ='onClearSearchFrm("searchAdvFrm");'>
+
+                     </td>
+                 </tr>     
+              </table>
+           </div>
+           </form> 
+
+                
+        
+   
+         
+</div>
+<!-- search form panel-->
+
+</td>
+            <td style='border:none' align=right><script type='text/javascript'>	
+    function onMarcEdit(){
+       //var url="?op=hitlist"; 
+       var url="/bin/marc21/editHitlist?src=bibliography&target=marcEditHitlist"; 
+       this.window.location.href=url;
+    }
+    function onAddRsPathfinder(){
+       var url="/bin/marc21/editHitlist?src=bibliography&target=addRsPathfinder"; 
+       this.window.location.href=url;
+    }
+</script>
+  
+
+<div class='bibPanel' id='bibPanel' style='display:none;text-align:center;width:300px;height:51px'>
+    <span style='color:#AC2E20;'>Total title(s) selected:</span>
+    <span id='bibCounterBottom' class='selNum' >0</span>&nbsp;&nbsp;&nbsp;<br>
+        <!--a href='#' style='float:right;text-decoration:none' onclick='onClearBib();'>Clear</a><br/-->
+    <input type='button' class='btn_01' onmouseout='this.className="btn_01"'  
+                    onmouseover='this.className="btn_01_over"' style='width:72px;height:20px;margin-top:7px;'  
+                    value='View Bib'  onclick='onViewBib();'  accesskey='v'/>
+    <input type='button' class='btn_01' onmouseout='this.className="btn_01"' style="display:none"  
+                    onmouseover='this.className="btn_01_over"' style='width:72px;height:20px;margin-top:7px;'  
+                    value='Edit'  onclick='onMarcEdit();'  accesskey='c'/>
+    <!--input type='button' class='btn_01' onmouseout='this.className="btn_01"'  
+                    onmouseover='this.className="btn_01_over"' style='width:142px;height:20px;margin-top:7px;'  
+                    value='Add to Pathfinder'  onclick='onAddRsPathfinder();'  accesskey='c'/-->                
+    <input type='button' class='btn_01' onmouseout='this.className="btn_01"'  
+                    onmouseover='this.className="btn_01_over"' style='width:72px;height:20px;margin-top:7px;' 
+                    value='Clear' onclick='onClearBib();' accesskey='c'/>
+</div>
+
+</td>
+        </tr>
+     </table> 
+     </center>
+      </div>
+
+
+
+
+
+
+<!-- Page content -->
+<script type="text/ng-template" id='opl-user-login.html'>
+    <div style="display:none" title="Login" id="opl-loginDlg">
+           <div style="padding:7px 2px 7px 57px"> 
+                <div style="display:inline-block;width:110px;text-align:right;font-weight:bold" 
+                ng-show="authBySID">{{oplMsg.usernameTxt}}</div>
+                <div style="display:inline-block;width:110px;text-align:right;font-weight:bold" 
+                ng-show="!authBySID">{{oplMsg.usernameUserBcTxt}}</div>
+                <input type='text'  ng-model="username"  size=22/> 
+           </div>
+           <div style="padding:7px 2px 7px 57px">  
+                <div style="display:inline-block;width:110px;text-align:right;font-weight:bold">{{oplMsg.pwdTxt}} </div>
+                <input type='password'    ng-model="password"  size=22 />
+           </div> 
+        <div style="padding:7px 2px 7px 57px" ng-show="authBySID">
+                <i>{{oplMsg.instructionMsg}}</i>
+        </div>
+           <center><br><input type="button" ng-click="authenticate();" value="Login"></center>                      
+        </div>
+
+</script>
+
+<script type="text/javascript">
+  console.firebug=true;
+</script>
+<style>
+#oplTaskRiminder{   
+   }
+#oplTaskRiminder_bk{
+    display:none; 
+    background-image:url('/theme/opals/image/notePageBg.png');
+    background-repeat:repeat;
+    position:fixed;
+    bottom:10px;
+    right:18px;
+    border: 1px gray solid;
+    width:260px;
+    FILTER: DropShadow(Color=gray, OffX=0, OffY=3, Positive=4);
+        -moz-border-radius: 1px;
+        border-radius:1px 1px 1px 1px;
+        -webkit-border-radius: 3px;
+        -moz-box-shadow:    5px 5px 5px #969696;
+        -webkit-box-shadow: 5px 2px 2px #969696;
+        box-shadow:         5px 2px 2px #969696;
+
+}
+
+#rmd_header{
+    background-image:url('/theme/opals/image/reminderHeader.png');
+    background-repeat:repeat-x;
+    color:white;font-weight:bold;height:40px;
+    font-size:11pt;   font-family:comic sans ms,arial;
+    font-style:italic; 
+    text-shadow: 0 2px 2px black;
+    cursor:pointer;
+     
+}
+#rmd_icon{
+    float:right;
+}
+
+#rmd_tbl {
+    background:none;
+    padding-left:0px;
+    padding-bottom:7px;
+    font-family:arial ,garamond,arial;
+    font-size:10pt;
+    /*font-weight:bold;*/
+}
+
+#rmd_tbl a{
+    text-decoration:none;
+}
+
+#rmd_tbl a:link, #rmd_tbl a:visited, #rmd_tbla:active{
+    color :#303030;
+}
+
+#rmd_tbl  a:hover{
+    color :#292605;
+    background:#EBE056;
+}
+
+#rmd_tbl tr {
+    vertical-align:top;
+    
+}
+#rmd_tbl td {
+    border:none; vertical-align:top;
+
+}
+
+#searchWaiting_rmd{
+    display:none;
+    position:fixed;
+    bottom:8px;
+    right:5px;
+    text-align:center;
+    font-size:10pt; color:brown; font-weight:bold;
+}
+.rmdNotePin{
+    margin-left:5px;
+    margin-top:-5px; width:10px;
+}
+
+.tdRmdNotePin{
+     border:solid 1px red;
+}
+#rmdCont_Panel{
+position:absolute; height:100px;width:310px; top:900px; left:1024px;display:none;
+             background-image:url('/theme/opals/image/notePageBg.png');
+             overflow:hidden; 
+    FILTER: DropShadow(Color=gray, OffX=0, OffY=3, Positive=4);
+        -moz-border-radius: 1px;
+        border-radius:1px 1px 1px 1px;
+        -webkit-border-radius: 3px;
+        -moz-box-shadow:    5px 5px 5px #969696;
+        -webkit-box-shadow: 5px 2px 2px #969696;
+        box-shadow:         5px 2px 2px #969696;
+        padding-bottom:10px;
+}
+
+
+
+</style>
+<script type="text/javascript">
+var rmdHeight=120;
+var reminderPan={
+    minIcon:"/theme/opals/image/toggle_collapse.png",
+    maxIcon:"/theme/opals/image/toggle_expand.png",
+    isLoading:false ,
+    showWaiting:function(){document.getElementById('searchWaiting_rmd').style.display='inline';},
+    hideWaiting:function(){document.getElementById('searchWaiting_rmd').style.display='none';},
+//---------------------------------------------------------
+    init:function(){        
+    },
+//---------------------------------------------------------
+    getRemindNotes:function(){
+         
+        reminderPan.showWaiting();
+        reminderPan.isLoading =true;
+        Ajax.getRequest({
+            url:"/bin/ajax/portlet/getRemindNotes" ,                 
+            load:function(responseObject, ioArgs){
+                if (responseObject) {
+                    reminderPan.updateReminder(responseObject);
+                }
+                reminderPan.hideWaiting();
+                reminderPan.isLoading =false;
+            },
+            error: function(response, ioArgs){
+                reminderPan.hideWaiting();
+                return response;
+            },
+            handleAs: "text"
+
+        });
+
+    },
+//---------------------------------------------------------
+    updateReminder:function(rmd){
+        if(!rmd){
+            return;
+        }
+        reminderPan.isLoading =false;
+        var jObj =eval("(" + rmd + ")");
+        var notes=jObj.remindNotes;
+        var tbl = document.getElementById("rmd_tbl");
+        if(!tbl) return;  
+        var rows=tbl.getElementsByTagName("tr");
+        for(var j=rows.length -1; j>1;  j--)     {
+            var p=rows[j].parentNode;
+            p.removeChild(rows[j]);
+        }
+
+        for(var i=0; i<notes.length; i++){
+            var n=tbl.getElementsByTagName("tr").length;
+            var tr= tbl.insertRow(n);
+             
+            var cell_0 = tr.insertCell(0);
+            var noteImg=document.createElement('img');
+            noteImg.setAttribute('src','/theme/opals/image/pin-small.png');
+            noteImg.setAttribute('class','rmdNotePin');
+            cell_0.appendChild(noteImg);
+
+
+            var cell_1 = tr.insertCell(1);
+            var noteLink=document.createElement('a');
+            noteLink.setAttribute('href',notes[i].url);
+            cell_1.setAttribute('style','text-align:left');
+            var textLink = document.createTextNode(notes[i].note);
+                noteLink.appendChild(textLink);
+            cell_1.appendChild(noteLink);
+
+        }
+      
+        rmdHeight =20*notes.length+100;
+
+    },
+//---------------------------------------------------------
+
+    toggleMinMax:function(elementId){
+        if(reminderPan.isLoading) return;
+ 
+        if($("#"+elementId).css("display")=="block") {
+            $("#"+elementId).css({display:"none"})
+            $("#"+elementId).attr("up","true");
+            $("#"+elementId).attr("down","false");
+            
+        }
+        else {
+            var left =$("#rmdrClock").position().left + $("#rmdrClock").width() -$("#"+elementId).width() -10 +"px";
+            var top  =$("#rmdrClock").position().top   +$("#rmdrClock").height() +"px";
+            $("#"+elementId).css({position:"absolute",left:left,top:top,display:"block"})
+            reminderPan.getRemindNotes();
+            $("#"+elementId).attr("up","false");
+            $("#"+elementId).attr("down","true");
+            
+       }
+    }
+
+  
+
+
+}
+addOnload(reminderPan.init);
+
+</script>
+  <div id="rmdCont_Panel" >
+      <table  cols=2 border=0 id='rmd_tbl' width=100% align=left>
+        <tr height=1 ><td width=10 ></td><td></td></tr>
+        <tr id="rmd_header1" >
+            <td  colspan=2 align=center valign=top >
+            <img src='/theme/opals/image/reminderHeader.png' 
+                 style='margin-left:-255px'
+                 onclick="reminderPan.toggleMinMax('rmdCont_Panel')" 
+                 title='Click to view/hide task reminder'></td></tr>
+        </table>
+  </div>
+
+<!--===============  WAITING MESSAGE  =============== -->
+<div id='searchWaiting_rmd' ><br><br><br><br>Please wait...<br><img src="/theme/opals/image/indicator-big-2.gif"></div>
+
+
+
+
+ 
+
+
+<style>
+ .homeEditIcon{
+        width:36px;height:36px;
+        border:none;
+    }
+
+    .portletText{text-align:center;width:90px;}
+
+    .column {padding-bottom: 50px;}
+    .portlet {
+        margin: 0 1em 1em 0;
+        padding: 0;
+    }
+    .portlet-header {
+        padding: 0.2em 0.3em;
+        margin-bottom: 0.5em;
+        position: relative;
+    }
+    .portlet-toggle {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -8px;
+    }
+    .portlet-content {padding: 0.4em;}
+    .portlet-placeholder {
+        border: 1px dotted black;
+        margin: 0 1em 1em 0;
+        height: 50px;
+    }
+    .ptl_tab_container{
+        width:100%;
+        min-height:300px;
+    }
+    .ptl_tab_container td{
+        vertical-align:top;
+    }
+
+    td.pCol_2 {width:50%; }
+    td.pCol_3 {width:33%;}
+    .pCol_2 {width:50%; }
+    .pCol_3 {width:33%;}
+
+    td.borderDashed{border:dashed 1px gray;}
+
+    .tableNoBorder td, th{border:none;}
+ 
+    .libHours_0{background-color:#E6EEFB;color:#505556;}
+    .libHours_1{background-color:#F3F6FF;color:#505556;}
+
+    div.portlet, a.portlet{font-family:arial;font-size:9pt;}
+    .ui-widget-header{
+        font-size:10pt;font-weight:bold;
+        font-family:arial; color:red;
+    }
+    .ui-menu-item{
+        font-size:9pt;
+        font-family:arial; color:red;
+    }
+    #portletListPan { width: 150px; height: 150px; padding: 0.5em; position:absolute;z-index:10}
+    #portletListPan h3 { text-align: center; margin: 0; }
+
+   div.portletCont{
+       font-size:12pt;font-weight:bold ;background:transparent;margin:-4 0 6 0; padding:0px;
+   }
+  img.setting{padding-right:7px;float:right;}
+
+  table.setting{font-size:9pt;width:100%;background:#EBDA99;margin-top:5px;
+                cell-padding:3px;cell-spacing:3px }
+  table.setting tr.headerRow{background:#CCA300;height:21px}
+  table.pContent(font-size:9pt;border:none;width:100%)
+
+</style>
+
+
+</head>
+<script type='text/javascript'>	
+
+//Closing dates:
+    var cDate =[
+       
+       {
+           dClosed: '2015-04-03',
+           dLabel : 'Good Friday',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-05-18',
+           dLabel : 'Victoria Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-06-24',
+           dLabel : 'St. Jean Baptiste Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-07-01',
+           dLabel : 'Canada Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-09-07',
+           dLabel : 'Labour Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-10-12',
+           dLabel : 'Thanksgiving',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-11-16',
+           dLabel : 'Strike Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-11-17',
+           dLabel : 'Strike Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-12-04',
+           dLabel : 'Friday after Strike Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-12-24',
+           dLabel : 'Christmas Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-12-25',
+           dLabel : 'Christmas Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-12-28',
+           dLabel : 'Christmas Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-12-29',
+           dLabel : 'Christmas Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-12-30',
+           dLabel : 'Christmas Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2015-12-31',
+           dLabel : 'Christmas Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-01-01',
+           dLabel : 'Christmas Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-02-29',
+           dLabel : 'Study Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-03-01',
+           dLabel : 'Study Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-03-02',
+           dLabel : 'Study Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-03-03',
+           dLabel : 'Study Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-03-04',
+           dLabel : 'Study Break',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-03-25',
+           dLabel : 'Good Friday',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-03-28',
+           dLabel : 'Easter Monday',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-05-23',
+           dLabel : 'Victoria Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } ,
+       
+       {
+           dClosed: '2016-06-24',
+           dLabel : 'St. Jean Baptiste Day',
+           note : '',
+           closed:true,
+           imgName:''
+        } 
+           
+    ];
+//-----------------------------------------------------------------
+
+
+
+opalsApp.controller('portalCtrl', ['$scope','$sce','$compile','$resource','$http',function ($scope,$sce,$compile,$resource,$http) {
+     
+    //-----------------------------------------------------------------  
+
+    $scope.editMode=false;
+    //-----------------------------------------------------------------  
+    $scope.portlestList = $resource("/bin/ajax/portlet/getPortalJson", {}, {
+                    query: { method: "GET", isArray: false }
+                    });
+    //-----------------------------------------------------------------  
+    $scope.loadPortal=function(){
+        $scope.portlestList.query(function(data){
+            $scope.tabs =data.tabs;
+            $scope.aboutUs=data.aboutUs;
+            if($scope.editMode){
+                if(!$scope.tabs)
+                     $scope.tabs=[{name:'Tab 1',content:[]}];
+                $scope.tabs.push({name:'+',content:[]});
+                    
+            }           
+            $scope.addClosingDay();
+           // console.log(angular.toJson($scope.tabs));
+            $scope.addPortletIndex();
+            setTimeout(function() { $scope.initPortlet() },0);
+          
+           });
+    }
+    //-----------------------------------------------------------------  
+    $scope.loadPortal();
+    //-----------------------------------------------------------------  
+    $scope.cancel=function(){
+        $scope.loadPortal();
+    }
+    //-----------------------------------------------------------------  
+    $scope.initPortlet=function(){
+         $("#myTabs").tabs();
+         console.log("scope.initPortlet");
+
+         $( ".column" ).sortable({
+                        connectWith: ".column",
+                        handle: ".moveIcon",
+                        cancel: ".portlet-toggle",
+                        placeholder: "portlet-placeholder ui-corner-all",
+                        receive: function(event, ui) {
+                            $scope.activePortletId=ui.item.data("id");
+                            $scope.tabs=$scope.portalToJson();
+                            $scope.tabs.push({name:'+',content:[]});
+      
+    
+                        }
+                     });
+         $(".portlet" )
+                .addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all") ;
+
+         $( ".portlet" ).droppable()
+                        .addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+
+
+     }
+
+    //----------------------------------------------------------------- 
+    $scope.onEventFn=function(action,event){
+       if(!event.closed)
+           return;
+       var e = {
+               dClosed: new Date(event.start).toISOString().substr(0,10),
+               dLabel:event.title,
+               note:event.description,
+               closed:true,
+               id:event.id,
+               cdid:event.cdid
+       };
+       if(!e.cdid)
+           e.cdid=e.id;
+       var i=0;
+       for(i=0; i<cDate.length;i++){
+           if(cDate[i].cdid==e.cdid)
+               break;                
+       }
+       if(i<cDate.length){
+           if(action=='delete')
+               cDate.splice(i,1);
+           else if(action=='update'){
+               cDate[i]=e;
+           }
+
+       }
+       else if(action=='update')
+           cDate.push(e);
+     }
+    //-----------------------------------------------------------------  
+    $scope.removePortlet=function(pIndex){
+          if(confirm("Are you sure that you want to delete this portlet?" )){
+                           var p=pIndex.split("-");
+                    var t=parseInt(p[0]);
+                    var c=parseInt(p[1]);
+                    var r=parseInt(p[2]);
+
+                    $scope.tabs[t].content[c].splice(r,1);
+                    $scope.addPortletIndex();
+                    setTimeout(function() { $scope.initPortlet()},0);
+          }
+                
+    }
+    
+    
+    //-----------------------------------------------------------------  
+    $scope.onAddPortlet=function(pType){
+        var t= $scope.activeTabIdx;
+        var c=$scope.tabs[t].content.length-1;
+        var r=$scope.tabs[t].content[c].length;
+        var params={};
+        if(pType=='calendar'){
+            params.events=[];
+            $scope.fillClosingDay(params.events);
+        }
+        $scope.tabs[t].content[c].push({type:pType,showSetting:true,params:params});
+        pIndex=t+"-"+c +"-" + r;
+        $scope.addPortletIndex();
+        setTimeout(function() { $scope.initPortlet();
+                                window.location.href="#portlet_"+pIndex},0);
+
+    }
+    //-----------------------------------------------------------------  
+    $scope.debug=function(){
+      //  console.log(angular.toJson($scope.portalToJson(),true));
+    }
+   
+    //-----------------------------------------------------------------  
+    $scope.portalToJson=function(){
+        var jObj=[];
+        var t=0;         
+          $(".ptl_tab_container").each(function(){
+              var tabIndex =($(this).attr('tabIndex'));
+              if($scope.tabs[tabIndex].name=='+') return false;
+              jObj[tabIndex]={name:$scope.tabs[tabIndex].name,content:[]};
+              var newC=0;
+              $(this).find(".column").each(function(){
+                  var col=[];
+                  var newR=0;
+                  $(this).find(".portlet").each(function(){
+                    var newPIndex=tabIndex+"-"+newC+"-"+newR;
+                    var pIndex=$(this).attr("pIndex");
+                    var p=pIndex.split("-");
+                    //var t=parseInt(p[0]);
+                    var c=parseInt(p[1]);
+                    var r=parseInt(p[2]);
+                    $scope.tabs[t].content[c][r].showSetting="";
+                    var portlet={};
+                    angular.copy($scope.tabs[t].content[c][r],portlet);
+                    portlet.pIndex=newPIndex;
+                    $scope.activePortletId=newPIndex;
+                    col.push(portlet);
+                    $(this).attr("pIndex",newPIndex);
+                    $(this).attr("data-id",newPIndex);
+                    newR++;
+                  });
+                  newC++;
+                  jObj[tabIndex].content.push(col);
+              });
+              t++;
+          });
+
+          return jObj;
+             
+      }
+    //-----------------------------------------------------------------  
+    $scope.savePortal=function(){
+       headerEditorPan.save();
+       $scope.saveDayClosed();
+       var portalJson =$scope.portalToJson();
+       // remove closed days from calendar events list
+       var t=c=r=0;
+       for(t=0; t<portalJson.length; t++){
+            for(c=0;c<portalJson[t].content.length;c++){
+                for(r=0;r<portalJson[t].content[c].length;r++){
+                    if(portalJson[t].content[c][r].type=="calendar"){
+                       $scope.removeClosingDay(portalJson[t].content[c][r].params.events);
+                    }
+                   
+                }
+            }
+        }
+       var portalJson={"aboutUs": $scope.aboutUs,
+                      "tabs": portalJson};
+      $.post("/bin/ajax/portlet/savePortalJson",{portalJson: angular.toJson(portalJson)})
+        .always(function(){alert("Portal page saved successfully");});
+      }
+    //-----------------------------------------------------------------  
+    $scope.saveDayClosed=function(){
+        var params="";
+        for(var i=0; i<cDate.length;i++){
+            params +="&dClosed=" +cDate[i].dClosed
+                    +"&dLabel=" +encodeURI(cDate[i].dLabel)
+                    +"&note=" +encodeURI(cDate[i].note);
+        }
+        $.post('/bin/ajax/portlet/saveDateEvent' , params);
+    }
+    //-----------------------------------------------------------------  
+    $scope.addPortletIndex=function(){
+        var t=c=r=0;
+        for(t=0; t<$scope.tabs.length; t++){
+            for(c=0;c<$scope.tabs[t].content.length;c++){
+                for(r=0;r<$scope.tabs[t].content[c].length;r++){
+                    $scope.tabs[t].content[c][r].pIndex= t+"-" + c +"-" +r
+                }
+            }
+        }
+    }
+    //-----------------------------------------------------------------  
+    $scope.removeClosingDay=function(events){
+        for(var i=events.length -1; i>=0 ;i--){
+            if(events[i].closed)
+            events.splice(i,1);
+       }
+
+    }
+    //-----------------------------------------------------------------  
+    $scope.fillClosingDay=function(events){
+        for(var p=0;p<cDate.length;p++){
+            cDate[p].cdid=genGUID()
+            events.push(
+                {title:cDate[p].dLabel,
+                 description:cDate[p].note,
+                 start:cDate[p].dClosed,
+                 allDay:true,
+                 closed:true,
+                 cdid:cDate[p].cdid
+                }
+            );
+       }
+
+    }
+    //-----------------------------------------------------------------  
+    $scope.initEventDate=function(events){
+        for(var i=0; i<events.length;i++){
+            if(events[i].start &&  events[i].end){
+                events[i].start=new Date(events[i].start);
+                events[i].end=new Date(events[i].end);
+            }
+        }
+        
+    }
+    //-----------------------------------------------------------------  
+
+    $scope.addClosingDay=function(){
+        var t=c=r=0;
+        for(t=0; t<$scope.tabs.length; t++){
+            for(c=0;c<$scope.tabs[t].content.length;c++){
+                for(r=0;r<$scope.tabs[t].content[c].length;r++){
+                    if($scope.tabs[t].content[c][r].type=="calendar"){
+                        $scope.fillClosingDay($scope.tabs[t].content[c][r].params.events);
+                        $scope.initEventDate($scope.tabs[t].content[c][r].params.events);
+                    }
+                   
+                }
+            }
+        }
+    }
+    //-----------------------------------------------------------------  
+    $scope.tabs=[{ name:'tab 1',content:[]},
+                   {name:'+',content:''}
+		  ];
+ 
+    //-----------------------------------------------------------------  
+     $scope.trustHtml =function(html){
+        return $sce.trustAsHtml(html);
+     }
+    
+    //-----------------------------------------------------------------  
+     $scope.activeTabIdx=0;
+     $scope.activePortletId='';
+     $scope.dlgName='';
+    //-----------------------------------------------------------------  
+     $scope.closeDlg=function(){
+        $("#tabPropDlg").dialog('close');
+     }
+    //-----------------------------------------------------------------  
+     $scope.tabClick=function(index,tabName){
+         if($scope.editMode && tabName=='+'){
+             $("#tabPropFrm input[name=tabName]").val('');
+             $("#tabPropFrm input[name=tabId]").val('');
+             $("#tabPropDlg").dialog({modal:true,width:350});
+             $scope.activeTabIdx= -1; 
+             setTimeout(function(){$("#tabPropFrm input[name=tabName]").focus()},10);
+         }
+         else{
+            $scope.activeTabIdx= index;  
+
+         }
+      };
+    //-----------------------------------------------------------------  
+    $scope.removeTab=function (index) {
+        if(confirm("Are you sure you want to delete this tab?")){
+            $scope.tabs.splice(index, 1);
+        }
+    };
+    //-----------------------------------------------------------------  
+
+    $scope.showEditTabProp=function (index) {
+        $("#tabPropDlg").dialog({modal:true,width:350});
+        $("#tabPropFrm input[name=tabId]").val("ptl_tab_" + index);
+        $("#tabPropFrm input[name=tabName]").val($scope.tabs[index].name);
+        setTimeout(function(){$("#tabPropFrm input[name=tabName]").focus()},10);
+       
+        var oldNumCols= $scope.tabs[index].content.length;
+        $('#tabPropFrm input:radio[name=numCols][value='+ oldNumCols +']').prop("checked",true);
+
+    };
+    //-----------------------------------------------------------------  
+     $scope.addTab=function(tabProp){
+        var n=$scope.tabs.length;
+        $scope.tabs[n-1]={name:tabProp.name,content:[]};
+        for(var i =0; i<tabProp.numCols;i++){
+            $scope.tabs[n-1].content.push([]);
+        }
+        $scope.tabs.push({name:'+',content:[]});
+        setTimeout(function() {
+        $("#myTabs").tabs("refresh");
+        $("#myTabs").tabs({"active":n -1 });
+        },0);
+        setTimeout(function() {
+            $("#myTabs").tabs('enable', n -1).tabs('select', n -1)
+        },0);
+      };
+
+    //-----------------------------------------------------------------  
+      $scope.addUpdateTab=function(){
+          var tabId=$("#tabPropFrm input[name=tabId]").val();
+          var tabName=$("#tabPropFrm input[name=tabName]").val();
+          var numCols=$("#tabPropFrm input:radio[name=numCols]:checked").val();
+          if(tabName.trim()==""){
+              alert("Tab name required");
+              return;
+          }
+          if($scope.activeTabIdx ==-1){
+              var tabProp={name:tabName,numCols:numCols};
+              $scope.activeTabIdx =$scope.tabs.length-1;
+              $scope.addTab(tabProp);
+          }
+          else{
+              var tabEl=$scope.tabs[$scope.activeTabIdx];
+                    tabEl.id = tabId;
+                    tabEl.name =  tabName;
+                    var nTabCols=tabEl.content.length;
+                    if(nTabCols < numCols){
+                        for(var i =nTabCols; i< numCols;i++){
+                            tabEl.content.push([]);
+                        }
+                    }
+                    else{
+                       var nColѕLess=nTabCols-numCols;
+                       for (var d=1; d<=nColѕLess ;d++){
+                           var $lastContArr = tabEl.content.splice(-1,1).pop();
+                           for(var c=0;c< $lastContArr.length;c++){
+                                tabEl.content[0].push($lastContArr[c]);
+                           }
+                       }
+                    }
+                    setTimeout(function() {
+                        $( ".column" ).sortable({
+                            connectWith: ".column",
+                            handle: ".moveIcon",
+                            cancel: ".portlet-toggle",
+                            placeholder: "portlet-placeholder ui-corner-all"
+                         });
+                         $(".portlet" )
+                            .addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+                    },0);
+          }
+          
+          $("#tabPropDlg").dialog("close");
+
+       };
+    //-----------------------------------------------------------------  
+    $scope.viewBookDetail_newItems=function(range,recPos,rid){
+         var url = "/bin/search/recDetailPage?sortAttr=9002&sortOrder=1&srchPage=newItem" +
+                  "&range="  + range +
+                  "&recRsPos=" + recPos +
+                  "&rid="    + rid;
+
+       window.location.href= url;        
+
+    }
+    //-----------------------------------------------------------------  
+    $scope.viewBookDetail_reviews=function(range,recPos,rid){
+        var url = "/bin/search/recDetailPage?sortAttr=9003&sortOrder=desc&srchPage=review" +
+                  "&range="  + range +
+                  "&recRsPos=" + recPos +
+                  "&rid="    + rid;
+
+       window.location.href= url;        
+    }
+    //-----------------------------------------------------------------  
+    $scope.viewBookDetail=function(rid){
+        window.location.href="/bin/pf/recDetailPage?rid=" +rid;
+    }
+    //-----------------------------------------------------------------  
+    $scope.viewPathfinder=function(pfId){
+        window.location.href="/bin/pf/pfView?pfId="+ pfId;
+    }
+    //-----------------------------------------------------------------  
+    $scope.addToBib=function(rid){
+        addToSssion({'value':rid},'bibliography');
+    }
+    //-----------------------------------------------------------------  
+    $scope.removeFromBib=function(rid){
+        delFromSession({'value':rid},'bibliography');
+    }
+    //-----------------------------------------------------------------  
+    $scope.oplMsg=oplMsg;
+    $scope.portletCtrlPanItems=[
+    {"type":"rss","icon":"/theme/opals/image/advance/rss.png","caption":" RSS"},
+    {"type":"newitems","icon":"/theme/opals/image/advance/newBook.png","caption":oplMsg.NewItemsTxt},
+    {"type":"libraryhours","icon":"/theme/opals/image/advance/libHours.png","caption":oplMsg.LibraryHoursTxt},
+    {"type":"weblink","icon":"/theme/opals/image/advance/webLinks.png","caption":oplMsg.WebLinksTxt},
+    {"type":"newsevent","icon":"/theme/opals/image/advance/image_add.png","caption": oplMsg.newsEvent_msg_01},
+    {"type":"pathfinder","icon":"/theme/opals/image/advance/pathFinder.png","caption": oplMsg.pathfinderTxt},
+    {"type":"pfshowcase","icon":"/theme/opals/image/libShowcase.png","caption":oplMsg.pfShowCaseTxt},
+    {"type":"weather","icon":"/theme/opals/image/advance/weather.png","caption":oplMsg.weatherTxt},
+    {"type":"reviewitems","icon":"/theme/opals/image/reviewBooks.png","caption":oplMsg.ReaderReviewTxt},
+    {"type":"calendar","icon":"/theme/opals/image/libCalendar.png","caption":oplMsg.pCalendarTxt},
+    {"type":"portlethtml","icon":"/theme/opals/image/pHtml.png","caption":" HTML"},
+    {"type":"libshowcase","icon":"/theme/opals/image/showcase.png","caption":oplMsg.libShowcaseTxt},
+    {"type":"editor","icon":"/theme/opals/image/editIcon.png","caption":oplMsg.ptextEditorTxt}
+
+    ]
+
+  }]); //END:portalApp
+
+  
+</script>
+<div  ng-controller="portalCtrl" >
+ <div class="portalCmdBar"    ng-show="editMode">
+       <center >
+        <table style='background:none;text-align:center;'><tr >
+            <td  width=80 ng-repeat="item in portletCtrlPanItems track by $index" nowrap>
+                <div class='addNewPortalIcon' ><img  ng-click='onAddPortlet(item.type);' 
+                    ng-src='{{item.icon}}' class='homeEditIcon' title='{{item.caption}}'>
+                    </div><span style="font-size:80%;color:white"">{{item.caption}}</span>
+           </td>
+           <td  style="vertical-align:middle" ng-click="savePortal()"><span class='portalCmdBtn'>{{oplMsg.saveBtn}}</span></td>
+           <td  style="vertical-align:middle" ng-click="cancel()"><span class='portalCmdBtn'>{{oplMsg.cancelBtn}}</span></td>
+         </tr>
+       </table>
+      </center>
+ </div>
+
+<center>
+    <div style='text-align:center ;width:94%;margin-bottom:15px;margin-top:-10px;'>
+        <center><div > <opl-portlet-text-editor   html-cont="aboutUs"   editable="editMode"  show-setting=false   /></div></center>
+
+    </div>
+
+</center>
+
+<div  style="font-size:10pt" >
+
+    <table cols=2 style="width:100%" border=0>
+      <tr><td  id='rightCol' style="vertical-align:top;border:none">
+            <div id="myTabs"   >
+                <ul id='tabList' ng-hide="!editMode && tabs.length==1">
+                    <li class="ui-state-default ui-corner-top " ng-repeat="tab in tabs track by $index" id="ptl_tab_{{$index}}" 
+                        >
+                        <a href="#ptl_tab-{{$index}}" ng-click='tabClick($index,tab.name)' style='border:none' >{{tab.name}}<img style='margin-left:5px;'
+                            ng-show="$index==activeTabIdx" ng-if="editMode" src='/theme/opals/image/editor_sm.png'  
+                            name='edit_{{tab.id}}' title='Edit title tab'    ng-tabid='{{tab.id}}'  ng-click='showEditTabProp($index)'
+                            style='cursor:hand; padding:0 3 0 11;width:15px' ><img  style='margin-left:5px;'
+                            ng-show="$index==activeTabIdx" ng-if="editMode" src='/theme/opals/image/advance/delete.png' 
+                            name='del_{{tab.id}}' title='Remove tab'  ng-tabid='{{tab.id}}' 
+                            style='cursor:hand; padding:0 3 0 5; width:15px'  
+                           ng-click='removeTab($index)' ></a>
+                    </li>
+                </ul>
+                
+                <div id="ptl_tab-{{$index}}"  ng-repeat="tab in tabs track by $index "  tabIndex={{$index}} > 
+                    <table  class="ptl_tab_container" tabIndex={{$index}}><tr>
+                        <td  ng-repeat="col in tab.content track by $index" class='pCol_{{tab.content.length}}' ng-class="{borderDashed:editMode}" > 
+                            <div class="column" >
+                     
+                                <div class="portlet" ng-repeat="p in col" ng-hide="p.hasNoContent && !editMode"  pIndex="{{p.pIndex}}" data-id="{{p.pIndex}}" style="font-size:9pt;padding:10px">
+                                    <span class='moveIcon' style='float:right' ng-if="editMode">
+                                                                                <img src='/theme/opals/image/advance/delete.png'  style='pading:2px' ng-click="removePortlet(p.pIndex);">
+                                        <img src='/theme/opals/image/move_sm.png'         style='height:14px'>
+                                    </span>
+
+                                    <div ng-switch on="p.type">
+                                    <a name="portlet_{{p.pIndex}}" ></a>
+                                    <div ng-switch-when="weather"><opl-portlet-weather zipcode="p.params.zipCode" 
+                                                                                        unit="p.params.unit" 
+                                                                                        editable="editMode"
+                                                                                        show-setting="{{p.showSetting}}"  />  </div>
+
+                                    <div ng-switch-when="rss"><opl-portlet-rss rss-url="p.params.rssUrl"
+                                                                                n-item-show="p.params.nItemShow"
+                                                                                fields-show="p.params.fieldsShow"
+                                                                                editable="editMode"
+                                                                                show-setting="{{p.showSetting}}"  />  </div>
+                                    <div ng-switch-when="libraryhours"><opl-portlet-libraryhours />  </div>
+                                    <div ng-switch-when="newitems"><opl-portlet-newitems n-item-show="p.params.nItemShow" 
+                                                                                         show-book-cover="p.params.showBookCover"
+                                                                                         fields-show="p.params.fieldsShow"
+                                                                                         range=365
+                                                                                         editable="editMode"
+                                                                                         show-setting="{{p.showSetting}}" 
+                                                                                         book-on-click="viewBookDetail_newItems(range,recPos,rid)"
+                                                                                         book-on-select="addToBib(rid)"
+                                                                                         has-no-content="p.hasNoContent"
+                                                                                         book-on-unselect="removeFromBib(rid)" />  </div>
+                                    <div ng-switch-when="reviewitems"><opl-portlet-revieweditems n-item-show="p.params.nItemShow" 
+                                                                                         show-book-cover="p.params.showBookCover"
+                                                                                         fields-show="p.params.fieldsShow"  
+                                                                                         range=0
+                                                                                         editable="editMode"
+                                                                                         show-setting="{{p.showSetting}}"  
+                                                                                         book-on-click="viewBookDetail_reviews(range,recPos,rid)"
+                                                                                         book-on-select="addToBib(rid)"
+                                                                                         has-no-content="p.hasNoContent"
+                                                                                         book-on-unselect="removeFromBib(rid)"/>  </div>
+                                    <div ng-switch-when="newsevent"><opl-portlet-news-event n-item-show="p.params.nItemShow" 
+                                                                                         editable="editMode"
+                                                                                         has-no-content="p.hasNoContent"
+                                                                                         show-setting="{{p.showSetting}}"/> </div>
+                                    <div ng-switch-when="weblink"><opl-portlet-weblink   n-item-show="p.params.nItemShow" 
+                                                                                         fields-show="p.params.fieldsShow"  
+                                                                                         editable="editMode"
+                                                                                         has-no-content="p.hasNoContent"
+                                                                                         show-setting="{{p.showSetting}}"/>  </div>
+                                    <div ng-switch-when="pathfinder"><opl-portlet-pathfinder    n-item-show="p.params.nItemShow"  
+                                                                                                fields-show="p.params.fieldsShow"
+                                                                                                editable="editMode"
+                                                                                                has-no-content="p.hasNoContent"
+                                                                                                show-setting="{{p.showSetting}}" />  </div>
+                                    <div ng-switch-when="libshowcase"><opl-portlet-libshowcase  sc-title="p.params.scTitle" 
+                                                                                                rid-list="p.params.ridList" 
+                                                                                                editable="editMode"
+                                                                                                show-setting="{{p.showSetting}}"
+                                                                                                has-no-content="p.hasNoContent"
+                                                                                                book-on-click="viewBookDetail(rid)"/>  </div>
+                                    <div ng-switch-when="pfshowcase"><opl-portlet-pfshowcase    sc-title="p.params.scTitle" 
+                                                                                                pf-id-list="p.params.pfIdList" 
+                                                                                                editable="editMode"
+                                                                                                show-setting="{{p.showSetting}}"
+                                                                                                has-no-content="p.hasNoContent"
+                                                                                                pf-on-click="viewPathfinder(pfId)"/>  </div>
+                                    <div ng-switch-when="portlethtml"><opl-portlet-html-widget  html="p.params.html" 
+                                                                                                p-title="p.params.pTitle" 
+                                                                                                editable="editMode"
+                                                                                                show-setting="{{p.showSetting}}"  
+                                                                                                height="p.params.height"
+                                                                                                /></div>
+                                    <div ng-switch-when="editor"><opl-portlet-text-editor       html-cont="p.params.htmlCont"
+                                                                                                editable="editMode"
+                                                                                                show-setting="{{editMode}}"   /></div>
+                               
+                                   <div ng-switch-when="calendar"><opl-portlet-calendar events="p.params.events" 
+                                                                                        lang="en"
+                                                                                        editable="editMode" 
+                                                                                        callback-fn="onEventFn(action,event)" /></div>
+                            </div></div>
+                            </div>
+
+                        </td></tr>
+                    </table>
+               </div>
+            </div>
+        </td>
+
+
+      </tr>
+    </table>
+  
+</div>
+
+
+
+<!--
+  *********************** DIALOG: TAB EDITOR   ***********************
+--> 
+
+<div id="tabPropDlg" title="{{oplMsg.editTabTxt}}" style="display:none;font-size:10pt;width:760px"   >
+    <form id="tabPropFrm">
+    <table  style="font-size:10pt;font-family:arial;width:100%">
+        <tr ><td >{{oplMsg.numOfcolsTxt}}:</td><td nowrap>
+            <input type='radio' name='numCols' value=1> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type='radio' name='numCols' value=2 checked> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type='radio' name='numCols' value=3> 3
+            <input type='hidden' name='tabId' value=''> 
+
+           </td></tr>
+           <tr><td>{{oplMsg.headerTxt}}:</td><td><input type='text' name='tabName' ></td></tr>
+
+           <tr><td align=center colspan=2>
+               <input type='button' value='{{oplMsg.okTxt}}'     ng-click='addUpdateTab()'>
+               <input type='button' value='{{oplMsg.cancelBtn}}' ng-click='closeDlg()'>
+              </td></tr>
+    </table>
+    </form>
+</div>
+</div>
+
+
+
+
+
+ 
+ 
+ 
+  <style>
+
+
+ .txtGradien {
+     background-image:url(/theme/opals/image/counterBg.png);
+     font-family:Courier new;
+     font-size:14pt; 
+     color:#FFFFFF;
+     border-top:solid 1px black;
+     border-left:solid 1px black;
+     text-align:center;
+     padding-right:1px;
+}
+
+</style>
+
+<script type='text/javascript'> 
+$(document).ready(function(){
+    var visitorCounter= getCookie('hitCounter');
+    if(visitorCounter && visitorCounter>0){
+        if(vc=document.getElementById('visitorCounter')){
+            var i=0; vcTxt="";
+            while(i<visitorCounter.length)
+                vcTxt +="<span class='txtGradien'>" + visitorCounter.charAt(i++) +"</span>";
+            vc.innerHTML= vcTxt ;
+        }
+    }
+
+});
+</script>
+
+<!-- FOOTER -->
+<div class='footer' style='clear:both;width:100%;margin-top:20px;text-align:right;vertical-align:middle;padding:2px 0 0 0;margin-bottom:-65px' >
+	<div class='footerLinks' style='float:left;'>
+        <a style='color:#fff;' href='http://www.johnabbott.qc.ca/library'>John Abbott College Library Media Services</a> |
+        <a style='color:#fff;' href='http://www.johnabbott.qc.ca/'>John Abbott College, Sainte-Anne-de-Bellevue, Québec, Canada</a>
+	</div>
+    <span id='visitorCounter' style='vertical-align:middle;'></span>
+    <a href='http://opalsinfo.net' target='_blank' title='Last update: 20160304-140315
+'><img src='/theme/opals/image/opals_footer.png' style='vertical-align:middle;'/></a>
+</div>
+</body>
+</html>
+
+

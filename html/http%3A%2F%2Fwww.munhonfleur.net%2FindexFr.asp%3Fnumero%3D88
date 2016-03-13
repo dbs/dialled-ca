@@ -1,0 +1,503 @@
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36659128-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+ 
+<html>
+<head>
+
+	<title>Municipalit&eacute; de Honfleur</title>
+ 	<META NAME="description" lang="fr" CONTENT="Municipalit&eacute; de Honfleur">
+ 	<META NAME="keywords" lang="fr" CONTENT="municipalite, bellechasse, appalache,  Honfleur, quebec, canada">
+ 	<META NAME="revisit-after" CONTENT="14 days">
+ 	<META NAME="robots" CONTENT="index,follow">
+
+<meta name="google-site-verification" content="iOiHOXvXur2EF6NorwNz7Ks7k1DeSwvE66usTzZlEYs" />
+
+
+		<style type="text/css">
+		#csstopmenu, #csstopmenu ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		}
+		#csstopmenu li{
+		float: left;
+		position: relative;
+		}
+		#csstopmenu a{
+		text-decoration: none;
+		}
+		.mainitems{
+		border: 0px solid  #232323;
+		border-left-width: 0px;
+		font:11px verdana;
+		padding:5px 0px;
+		background-color: #232323;
+		width: 163;
+		}
+		.headerlinks a{
+		margin: auto 2px;
+		color: #f6f6e7;
+		}
+		.submenus{
+		display: none;
+		width: 162;
+		position: absolute;
+		top: 2.0em;
+		left: 0;
+		background-color: #bf000a;
+		border: 1px solid #bf000a;
+		}
+		.submenus li{
+		width: 100%;
+		padding:0px 0px;
+		font:11px verdana;
+		}
+		.submenus li a{
+		display: block;
+		width: 100%;
+		padding:5px 0px;
+		color: #ffffff;
+		text-indent: 1px;
+		}
+		html>body .submenus li a{ /* non IE browsers */
+		width: auto;
+		}
+		.submenus li a:hover{
+		background-color: #ffffff;
+		color: #4b2690;
+		}
+		#csstopmenu li>ul {/* non IE browsers */
+		top: auto;
+		left: auto;
+		}
+		#csstopmenu li:hover ul, li.over ul {
+		display: block;
+		filter:alpha(opacity=95);
+		-moz-opacity:95%;
+		}
+		html>body #clearmenu{ /* non IE browsers */
+		height: 3px;
+		}
+		</style>
+		<script type="text/javascript">
+		startMenu = function() {
+		if (document.all&&document.getElementById) {
+		cssmenu = document.getElementById("csstopmenu");
+		for (i=0; i<cssmenu.childNodes.length; i++) {
+		node = cssmenu.childNodes[i];
+		if (node.nodeName=="LI") {
+		node.onmouseover=function() {
+		this.className+=" over";
+		}
+		node.onmouseout=function(){
+		this.className=this.className.replace(" over", "")
+		}
+		}
+		}
+		}
+		}
+		if (window.attachEvent)
+		window.attachEvent("onload", startMenu)
+		else
+		window.onload=startMenu;
+	</script>
+
+<script type="text/javascript" src="administration/ew.js"></script>
+
+<script type="text/javascript">
+
+function changement1()
+{
+
+	document.recherche.numeroMat.value = ""
+}
+
+function changement2()
+{
+	document.recherche.numeroMat.value = ""
+}
+function changement3()
+{
+	document.recherche.rue.value = ""
+	document.recherche.numeroCivique.value = ""
+}
+</script>
+<script language="JavaScript">
+<!-- start Javascript
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    return false
+		 }
+
+		 if (str.indexOf(" ")!=-1){
+		    return false
+		 }
+
+ 		 return true
+	}
+
+
+function  validation1() {
+
+	if (document.formulaire.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.formulaire.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	var emailID=document.formulaire.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+return true;
+}
+
+function  validation2() {
+
+	if (document.courriel.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	if (document.courriel.commentaire.value =="")
+	{
+		alert("Vous devez inscrire votre commentaire.")
+		return false;
+	}
+
+	var emailID=document.courriel.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+
+
+return true;
+}
+function  validation3() {
+
+	if (document.courriel.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.adresse.value =="")
+	{
+		alert("Vous devez inscrire votre adresse.")
+		return false;
+	}
+
+	if (document.courriel.telephone.value =="")
+	{
+		alert("Vous devez inscrire votre telephone.")
+		return false;
+	}
+
+
+
+return true;
+}
+
+function  validation4() {
+
+
+
+
+
+
+	if (document.courriel.AlocalisationFrancais.value =="")
+	{
+		alert("Vous devez inscrire la location.")
+		return false;
+	}
+
+if (document.courriel.AdateDemandeFrancais && !EW_hasValue(document.courriel.AdateDemandeFrancais, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.AdateDemandeFrancais, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+
+	if (document.courriel.AnomFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.AadresseFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre adresse.")
+		return false;
+	}
+
+	if (document.courriel.AcodePostalFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre code postal.")
+		return false;
+	}
+	if (document.courriel.AtelResFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre numero de téléphone.")
+		return false;
+	}
+
+	if (document.courriel.Anom2Francais.value =="")
+	{
+		alert("Vous devez inscrire le nom de votre entrepreneur. ")
+		return false;
+	}
+
+	if (document.courriel.Aadresse2Francais.value =="")
+	{
+		alert("Vous devez inscrire l'adresse de votre entrepreneur.")
+		return false;
+	}
+
+	if (document.courriel.AcodePosta2lFrancais.value =="")
+	{
+		alert("Vous devez inscrire le code postal de votre entrepreneur.")
+		return false;
+	}
+	if (document.courriel.AtelRes2Francais.value =="")
+	{
+		alert("Vous devez inscrire le numero de téléphone de votre entrepreneur.")
+		return false;
+	}
+
+
+
+
+
+if (document.courriel.ADatePrevueDebut && !EW_hasValue(document.courriel.ADatePrevueDebut, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.ADatePrevueDebut, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+if (document.courriel.ADatePrevueFin && !EW_hasValue(document.courriel.ADatePrevueFin, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.ADatePrevueFin, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+	if (document.courriel.ACout.value =="")
+	{
+		alert("Vous devez inscrire le coût approximatif des travaux.")
+		return false;
+	}
+
+
+return true;
+}
+
+// end JavaScript -->
+</script>
+
+
+	<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<style type="text/css">a#vlb{display:none}</style>
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+
+
+<script type="text/javascript" src="administration/popcalendar.js"></script>
+
+</head>
+	<body   background='administration/ConfigurationSite_ImageBg_bv.asp?noId=1' text='1e2202' link='1e2202' alink='1e2202' vlink='1e2202' topmargin='0'  ><table height='275' cellspacing=0 cellpadding=0 align='center' > <tr><td valign='middle' align='center' width='978' colspan='10' height='46' ><marquee direction='left'  scrollamount='3' scrolldelay='0' onmouseover='javascript:this.scrollAmount=0' onmouseout='javascript:this.scrollAmount=3' style="font-weight: bold; color:232323 ; font-family: verdana;font-size: 13; "><div valign=middle  style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 13; "><p></p></div></marquee></td></tr><tr><td colspan='2' height='275'  valign='bottom'>
+		<!-- Start WOWSlider.com BODY section -->
+		<div id="wowslider-container1">
+		<div class="ws_images">
+	<span><img src="data1/images/1.jpg" alt="1" title="1" id="wows0"/></span>
+	<span><img src="data1/images/2.jpg" alt="2" title="2" id="wows1"/></span>
+	</div>
+	<a style="display:none" href="http://wowslider.com">Wordpress Lightbox Gallery by WOWSlider.com v2.0</a>
+		</div>
+		<script type="text/javascript" src="engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
+
+	</td></tr><tr><td colspan='2' bgcolor="232323">
+<ul id="csstopmenu">
+
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">LA MUNICIPALIT&Eacute;</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=6"><span>Mot du maire</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=9"><span>Organisation municipale</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=29"><span>Horaires et services</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=7"><span>Proc&egrave;s-verbaux</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=23"><span>Recyclage et d&eacute;chets</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=28"><span>Finance et taxation</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=4"><span>S&eacute;curit&eacute; publique</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=30"><span>R&egrave;glements municipaux</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=33"><span>CCU</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">SERVICES EN LIGNE</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=174"><span>Avis public</span></a></li>
+			
+ 		      <li><a href="indexFr.asp?numero=80"><span>Paiments & Formulaire taxes</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=93"><span>L&rsquo;info-fleur</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=79"><span>Calendrier</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">LES LOISIRS</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=95"><span>Location de salles</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=88"><span>Biblioth&egrave;que La Livroth&egrave;que</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=37"><span>Terrain de jeux</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=90"><span>Activit&eacute;s autres</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=26"><span>Offre d&rsquo;emplois</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">COMMUNAUTAIRE</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=31"><span>R&eacute;sidence Fleuribel</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=39"><span>MADA</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">NOTRE MILIEU DE VIE</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=15"><span>Notre histoire</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=27"><span>&Eacute;v&eacute;nements</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=92"><span>Armoiries</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=63"><span>Photographies</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+  <li class="mainitems">
+    
+    <div class="headerlinks"><a href="#">NOUS JOINDRE</a></div>
+	
+ 	   <ul class="submenus">
+		
+ 		      <li><a href="indexFr.asp?numero=5"><span>Coordonn&eacute;es</span></a></li>
+ 			
+ 		      <li><a href="indexFr.asp?numero=17"><span>Carte d&rsquo;acc&egrave;s</span></a></li>
+ 			
+	    </ul>
+ 	 </li>
+ 	 
+</ul>
+</td></tr><tr><td colspan='1' valign='top' bgcolor='ffffff'><table  width='160'  border='0' align='center' cellspacing='0' cellpadding='0' ><tr><td valign='top'><img src='administration/Menu_Photo_bv.asp?noId=88' border='0' width='160'></td></tr><tr><td valign='top' ><table  width='160' border='0' align='center' cellspacing='0' cellpadding='0' ><tr><td bgcolor="ffffff" onmouseover="this.style.background='#bf000a'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=160 onclick="window.location.href='indexFr.asp?numero=34';">&nbsp;CONTRATS MUNICIPAUX&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#bf000a'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=160 onclick="window.location.href='indexFr.asp?numero=35';">&nbsp;LOI SUR L&rsquo;&Eacute;THIQUE&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#bf000a'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=160 onclick="window.location.href='indexFr.asp?numero=36';">&nbsp;TERRAINS &Agrave; VENDRE&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#bf000a'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=160 onclick="window.location.href='indexFr.asp?numero=41';">&nbsp;COMMENTAIRES&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#bf000a'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=160 onclick="window.location.href='indexFr.asp?numero=18';">&nbsp;COMMERCES & SERVICES&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#bf000a'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=160 onclick="window.location.href='indexFr.asp?numero=16';">&nbsp;ORGANISMES LOCAUX&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#bf000a'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=160 onclick="window.location.href='indexFr.asp?numero=3';">&nbsp;LIENS UTILES&nbsp;</td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#bf000a'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#1e2202'" style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=160 onclick="window.location.href='indexFr.asp?numero=22';">&nbsp;PLAN DU SITE&nbsp;</td></tr></table></td></tr><tr><td  height='1' bgcolor='000000'></td></tr><tr><td height='12' bgcolor='ffffff'></td></tr><tr><td align='center' bgcolor='ffffff'><marquee direction='up' width=158 height='266' scrollamount='2' scrolldelay='0' onmouseover='javascript:this.scrollAmount=0' onmouseout='javascript:this.scrollAmount=2' style="font-weight: normal; color:1e2202 ; font-family: verdana;font-size: 11; "></marquee></td></tr><tr><td  height='1' bgcolor='000000'></td></tr></table></td><td valign='top'  width='818' height='500'  bgcolor='ffffff'><table  width='818' height='100%' cellspacing='0' cellpadding='0' 	 align='center'><tr><td valign='top'  height='300'><table width='100%' cellspacing='0' cellpadding='0' align='left'><tr><td width='10' valign='top'></td><td valign='top' height='100%'><table width='100%' cellspacing='0' cellpadding='0' ><tr><td align='right'><a href='javascript:window.history.go(-1)'><img src='administration/ConfigurationSite_imagePrecedent_bv.asp?noId=1' alt='Page pr&eacute;c&eacute;dente' border='0'></a></td></tr><tr><td valign='middle' height='60' style="color:232323 ; font-family: verdana; font-size:14;"><b>Biblioth&egrave;que La Livroth&egrave;que </b></td></tr><tr><td valign='top' height='20' style="font-weight: normal; color:1e2202 ; font-family: verdana; font-size:12; "><p align="justify"><em><span style="font-family: times new roman,times; font-size: 12pt;">Pour les amoureux de la lecture, des b&eacute;n&eacute;voles dynamiques et chaleureux se feront un plaisir de r&eacute;pondre &agrave; vos besoins litt&eacute;raires. Pour vous abonner, il suffit de pr&eacute;senter une pi&egrave;ce d&rsquo;identit&eacute; et une preuve de r&eacute;sidence. Ce service est offert gratuitement &agrave; tous les citoyens de Honfleur.</span></em></p>
+<p align="justify"><em><span style="font-family: times new roman,times; font-size: 12pt;">Mme Chantal Morency,<br />Responsable de la biblioth&egrave;que "La Livroth&egrave;que"<br /></span></em></p>
+<p align="justify"><em><span style="font-family: times new roman,times; font-size: 12pt;"><strong>Horaire<br /></strong></span></em><em><span style="font-family: times new roman,times; font-size: 12pt;">Mardi&nbsp;de 19h00 &agrave; 20h30</span></em><br /><em><span style="font-family: times new roman,times; font-size: 12pt;">Jeudi&nbsp;de 19h00 &agrave; 20h30</span></em></p>
+<p align="justify"><em><span style="font-family: times new roman,times; font-size: 12pt;"><strong>Coordonn&eacute;es<br /></strong></span></em><em><span style="font-family: times new roman,times; font-size: 12pt;">320, rue St-Jean</span></em><br /><em><span style="font-family: times new roman,times; font-size: 12pt;">Honfleur (Qu&eacute;bec)&nbsp;&nbsp; G0R 1N0</span></em><br /><em><span style="font-family: times new roman,times; font-size: 12pt;">T&eacute;l&eacute;phone : (418) 885-8212</span></em><br /><em><span style="font-family: times new roman,times; font-size: 12pt;">T&eacute;l&eacute;copieur : (418) 885-9195</span></em><br /><em><span style="font-family: times new roman,times; font-size: 12pt;">Courriel : <a href="mailto:livro@globetrotter.net">livro@globetrotter.net</a></span></em></p>
+<p align="justify"><em><span style="font-family: times new roman,times; font-size: 10pt;"><span style="font-size: 12pt;"><strong>R&eacute;seau Biblio<br /></strong></span><strong><a href="http://www.mabibliotheque.ca/capitale-nationale-et-chaudiere-appalaches/fr/bibliotheques-horaire-et-localisation/B260-bibliotheque-la-livrotheque/index.aspx?utm_">http://www.mabibliotheque.ca/capitale-nationale-et-chaudiere-appalaches/fr/bibliotheques-horaire-et-localisation/B260-bibliotheque-la-livrotheque/index.aspx?utm_</a></strong></span></em></p>
+<p align="justify">&nbsp;</p>
+<p align="center"><img src="../img/Biblio.bmp" alt="" align="baseline" border="0" hspace="0" /></p></td></tr><tr><td align='left'>&nbsp;</td></tr></table></td><td width='10' valign='top'></td>
+<script>
+
+function lightup(imageobject, opacity){
+if (navigator.appName.indexOf("Netscape")!=-1&&parseInt(navigator.appVersion)>=5)
+imageobject.style.MozOpacity=opacity/100
+else if (navigator.appName.indexOf("Microsoft")!=-1&&parseInt(navigator.appVersion)>=4)
+imageobject.filters.alpha.opacity=opacity
+}
+
+</script>
+<td align='center' width='100' valign='top'><table cellspacing='1' align='center' cellpadding='0' width='100' ><tr><td width='100' align='center'><a href='indexFr.asp?numero=79' False ><img src='administration/MenuImage_Photo_bv.asp?noId=1' width='100' alt='Consulter le calendrier municipal'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='center'><a href='indexFr.asp?numero=27' False ><img src='administration/MenuImage_Photo_bv.asp?noId=4' width='100' alt='Pour tout connaître des événements'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='center'><a href='indexFr.asp?numero=174' False ><img src='administration/MenuImage_Photo_bv.asp?noId=9' width='100' alt='Avis public'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='center'><a href='indexFr.asp?numero=7' False ><img src='administration/MenuImage_Photo_bv.asp?noId=8' width='100' alt='Consulter les procès-verbaux'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='center'><a href='http://www.munhonfleur.net/doc/Politique familiale Honfleur.Pdf' target='blank' ><img src='administration/MenuImage_Photo_bv.asp?noId=17' width='100' alt='POLITIQUE FAMILIALE MUNICIPALE'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='center'><a href='http://biblioaidants.ca/' target='blank' ><img src='administration/MenuImage_Photo_bv.asp?noId=18' width='100' alt='BIBLIOAIDANTS'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr></table></td></tr></table></td></tr></table></td></table></td></tr></table></td></tr></table></body></html>

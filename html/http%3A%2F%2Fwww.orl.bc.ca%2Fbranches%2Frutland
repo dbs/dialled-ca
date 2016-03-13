@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<base href="http://www.orl.bc.ca/" />
+	<title>Rutland - Okanagan Regional Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="description" content="Okanagan Regional Library: library system covering the entire Thompson-Okanagan region of British Columbia, Canada." />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/style.css?v=v8" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/calendar_2013.css?v=v4" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/contact_us.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/search.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/left_menu.css?v=v2" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_l.css" type="text/css" media="screen" id="link_text_l" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_m.css" type="text/css" media="screen" id="link_text_m" title="text" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/text_s.css" type="text/css" media="screen" id="link_text_s" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/contrast.css" type="text/css" media="screen" id="link_contrast" title="contrast" />
+	<link rel="alternate" type="application/rss+xml" title="Okanagan Regional Library RSS Feed" href="news-events/rss" />
+	<script src="manager/media/script/mootools/mootools.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/jquery.fancybox.js" type="text/javascript"></script>
+	<script type="text/javascript">var $j = jQuery.noConflict();</script>
+	<script src="assets/templates/orlv2/js/form-check.js?v=v1" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/swfobject.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/script.js?v=v7" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="assets/templates/orlv2/css/dhtmlgoodies_calendar.css" media="screen" />  
+	<script src="assets/templates/orlv2/js/dhtmlgoodies_calendar.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pathToImages = '/assets/templates/orlv2/images/layout/';
+		//SWFObject
+		var flashvars = {};
+		var params = {
+			wmode: "transparent"
+		};
+	</script>
+<!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAMmBdV5STCVExvFTDWp50DBQn_DD64N2y7rZVstjCgjH1jrOTvBTbfltFh8gj6JbFUyeasDAlowgpPA" type="text/javascript"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9zKi3DlhGhdgZ5zWPYklEM59GzU0pys&sensor=false"></script>
+<script type="text/javascript" src="//use.typekit.net/igq5whz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+	<body>
+
+    	<div id="wrap">
+        <div class="background-header">
+                       <div id="header">
+                <span class="font-adjust-container">
+<a href="/sitemap">Site Map</a> | <a class="text_l" id="large-text-link" href="javascript:clickTextLarge();">A</a>&nbsp;<a class="text_m" id="medium-text-link" href="javascript:clickTextMedium();">A</a>&nbsp;<a class="text_s" id="small-text-link" href="javascript:clickTextSmall();">A</a>
+				</span>
+            </div>
+            <!-- Header Image/Top Menu Row -->
+            <div class="top-menu-div">
+                <div id="logo"><a href="/"><img src="/assets/templates/orlv2/images/layout/logo-new.gif" alt="Okanagan Regional Library" /></a></div>
+                <div id="welcome"><img src="/assets/templates/orlv2/images/layout/background-bar-left.png" /></div>
+                <div id="social">
+	                <a href="http://www.youtube.com/OKRegLibrary" target="_blank">Youtube</a>
+	                <a href="http://75-years-orl.blogspot.com/" target="_blank">Blogger</a>
+	                <a href="http://www.facebook.com/OKRegLib" target="_blank">Facebook</a>
+	                <a href="http://twitter.com/ORLreads" target="_blank">Twitter</a>
+	                <a href="http://ipac.orl.bc.ca/mobile">ORL Mobile</a>
+                </div>
+            </div>
+<div id="header-search-2013">
+                    <script language="javascript">
+                        String.prototype.trim = function () { return this.replace(/^\s*|\s*$/g, ''); }
+                        function ProcessInput(e) {
+                            if (window.event)       // IE
+                                keyNum = e.keyCode;
+                            else if (e.which)       // Netscape/Firefox/Opera
+                                keyNum = e.which;
+                            if (keyNum == 13) {
+                                e.returnValue = false;
+                                e.cancelBubble = true;
+                                DoKeywordSearch();
+                                return false;
+                            }
+                            return true;
+                        }
+                        function DoKeywordSearch() {
+                            if (document.getElementById('textboxTerm').value.trim() != '')
+                                window.location = 'http://ipac.orl.bc.ca/polaris/view.aspx?keyword=' + escape(document.getElementById('textboxTerm').value);
+                            else
+                                document.getElementById('textboxTerm').focus();
+                        }
+                    </script>
+                    <a class="redbutton" href="javascript:;" onclick="DoKeywordSearch();"><span>Go</span></a>
+                    <input type=text id=textboxTerm size=45 class="cleartxt inactive search" value="Search Catalogue..." 
+                     onblur="if (this.value == '') {this.value = 'Search Catalogue...';}"
+                     onfocus="if(this.value == 'Search Catalogue...') { this.value = ''; }" 
+                     onkeypress="return ProcessInput(event)" />
+                    <script language="javascript">
+                        document.getElementById('textboxTerm').blur();
+                    </script>
+                 </div>
+		<br />
+                     <p class="f_right"><a href="http://ipac.orl.bc.ca/polaris/patronaccount/default.aspx?ctx=1.1033.0.0.3">Login to My Account</a></p>
+		
+
+            <!-- Main Menu -->
+           <div id="left-menu-container">
+             <div id="top-menu-header">
+    <img src="/assets/templates/orl/images/layout/menu-text.png" alt="Menu" />
+</div>
+<div id="left-menu">
+<ul class=" left-menu-header"><li >
+  <div class="menusection"><h3 class=""><a class="" href="/about-us">About Us</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/news-events">News &amp; Events</a></h3></div>
+</li>
+<li  class="active">
+  <div class="menusection"><h3 class="active"><a class="active" href="/branches">Branches</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/Borrowing-services">Borrowing & Services</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/online-resources">Web Resources</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/kids">Kids</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/teens">Teens</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/book-lovers">Book Lovers</a></h3></div>
+</li>
+<li  class="last">
+  <div class="menusection"><h3 class="last"><a class="last" href="/contact">Contact Us</a></h3></div>
+</li>
+</ul>
+</div>
+           </div>
+
+            <!-- Menu/Intro Row -->
+                <div id="intro-wide">
+                   
+                   <div id="background-image-box-big"><div id="slideshow"></div></div>
+<div id="background-box-overlay"></div>
+<script type="text/javascript" src="http://www.orl.bc.ca/assets/js/rokslideshow.js"></script>
+		<script type="text/javascript">
+			window.RokSlideshowPath = '';
+			var myshow;
+			window.addEvent('load', function(){
+				var imgs = [];
+				
+				imgs.push({
+					file: 'DSC01863[1].JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'DSC01864[1].JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'DSC01873[1].JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				myshow = new Slideshow('slideshow', { 
+					type: 'fade',
+					showTitleCaption: 0,
+					captionHeight: 45,
+					width: 550, 
+					height: 340, 
+					loadingDiv: 0,
+					resize: true,
+					duration: [2000, 4000],
+					transition: Fx.Transitions.Expo.easeOut,
+					images: imgs, 
+					path: '/assets/images/Branch-Slideshow/rutland/'
+				});
+				myshow.caps.h2.setStyles({
+					color: '#fff',
+					fontSize: '13px'
+				});
+				myshow.caps.p.setStyles({
+					color: '#ccc',
+					fontSize: '11px'
+				});
+			});
+		</script>
+                   <div id="intro-wide-content">
+                               <span class="B_crumbBox"><span class="B_firstCrumb"><a class="B_homeCrumb" href="/home" title="Find Books, Music, Movies, and More">Home</a></span> &raquo; <a class="B_crumb" href="/branches" title="Branches">Branches</a> &raquo; <span class="B_lastCrumb"><span class="B_currentCrumb">Rutland</span></span></span>
+                               <h1>Rutland</h1>
+                               <div id="page-sub-menu">
+<ul class="submenu">
+<li>no result<script type%3D"text/javascript">$j("#page-sub-menu").hide();</script></li> 
+</ul>
+<script type="text/javascript">
+$j('.submenu').makeacolumnlists({cols: 2, colWidth: 0, equalHeight: false, startN: 12});
+</script>
+</div>
+                               
+<div id="content-header-text">
+<ul class="tabs">
+    <li class="tab1"><a href="#tab1">Location</a></li>
+    <li class="tab2"><a href="#tab2">Open Hours</a></li>
+    <li class="tab3"><a href="#tab3">Parking</a></li>
+    <li class="tab4"><a href="#tab4"></a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content"><p><strong>Plaza 33 Mall<br />#20 - 301 Hwy. 33 West<br />Kelowna, B.C. V1X 1X8<br />(250) 765-8165</strong></p>
+<p>Two book drop bins are located at the back of the building off Gray Road that are open twenty-four (24) hours a day except Hallowe'en night and the Christmas and Easter closures.</p>
+<p>Please find our events below on the branch calendar, or search the <a href="news-events/event-search">ORL Calendar of Events</a>.</p></div>
+    <div id="tab2" class="tab_content"><table id="openhours"><tr><td>Monday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Tuesday: </td><td>10:00 a.m. to 8:00 p.m.</td></tr><tr><td>Wednesday: </td><td>10:00 a.m. to 8:00 p.m.</td></tr><tr><td>Thursday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Friday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Saturday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Sunday: </td><td>CLOSED</td></tr><tr><td></td><td>All branches are closed on statutory holidays</td></tr></table></div>
+    <div id="tab3" class="tab_content"><p>Parking for the Rutland Library (Plaza 33 Mall) is free. There are entrances in the front and the back of the mall.</p></div>
+    <div id="tab4" class="tab_content"></div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var tabCount = 0;
+	//When page loads...
+	jQuery(".tab_content").hide(); //Hide all content
+	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	jQuery(".tab_content:first").show(); //Show first tab content
+//hide empty tabs
+jQuery(".tab_content").each(function(){
+	if(jQuery(this).html() == ''){
+		jQuery("."+jQuery(this).attr("id")).hide();
+	} else {
+		if(jQuery("."+jQuery(this).attr("id")+" a").html() == ''){
+			jQuery("."+jQuery(this).attr("id")).hide();
+		} else {
+			tabCount++;
+		}
+	}
+});
+
+if(tabCount > 1){
+jQuery(".tab_container").show();
+jQuery("ul.tabs").show();
+} else {
+jQuery("#content-header-text").html(jQuery("#tab1").html());
+}
+
+	//On Click Event
+	jQuery("ul.tabs li").click(function() {
+
+		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+		jQuery(this).addClass("active"); //Add "active" class to selected tab
+		jQuery(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = jQuery(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		jQuery(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});
+</script>
+
+</div>
+                  </div>
+                </div>
+            <!-- Banners/Content Row -->
+               <div class="content-row-div"><div id="sidebanners">
+                   <div style="float: left; width: 244px;">
+<div class="banner-map" style="margin-bottom:28px;">
+<a name="content"></a>
+    <div id="map" style="width:244px; height:166px;"></div><script type="text/javascript">
+    //var map = new google.maps.Map(document.getElementById("map"));
+    //var point = new google.maps.LatLng(49.888956, -119.391238);
+    //map.setCenter(point, 14);
+    //var marker = new google.maps.Marker(point);
+    //map.addOverlay(marker);
+    //map.addControl(new GSmallMapControl());
+      var map = new google.maps.Map(
+        document.getElementById("map"), {
+          center: new google.maps.LatLng(49.888956, -119.391238),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(49.888956, -119.391238),
+            map: map
+      });
+    </script>
+</div>
+<div class="banner-calendar print-hide" id="branch-calendar" style="margin-bottom:28px;">
+    <!--[if IE 7 ]> <div class="calendar-div ie7"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!--> <div class="calendar-div"> <!--<![endif]-->
+    <div id="calendar">
+	<div id="calendar-heading">
+    	<div class="month prev"><a href="index.php?id=44&amp;cid=30&amp;m=2&amp;y=2016#content">&laquo;</a></div>
+		<div class="monthyear">
+			<div class="month heading">March</div>
+			<div class="year heading">2016</div>
+		</div>
+    	<div class="month next"><a href="index.php?id=44&amp;cid=30&amp;m=4&amp;y=2016#content">&raquo;</a></div>
+	</div>
+	<div id="day-heading-background">
+		<div class="day heading">Sun</div>
+		<div class="day heading">Mon</div>
+		<div class="day heading">Tue</div>
+		<div class="day heading">Wed</div>
+		<div class="day heading">Thu</div>
+		<div class="day heading">Fri</div>
+		<div class="day heading">Sat</div>
+	</div>	
+	<div id="date-background">
+		<div class="day none"></div><div class="day none"></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-1').style.display='block';document.getElementById('fade').style.display='block'">1</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-1', this)">1</a>
+<div id="day-popup-1" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-1').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Knit and Gab</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3429">Event Details</a>
+
+</div>
+-->
+<h3>Knit and Gab<span class="date">Weekly: Every Tuesday</span></h3>
+
+<p style="text-align: right;"><a href="branches/rutland?event_id=3429">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3370">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+
+<p style="text-align: right;"><a href="branches/rutland?event_id=3370">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">2</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-3').style.display='block';document.getElementById('fade').style.display='block'">3</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-3', this)">3</a>
+<div id="day-popup-3" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-3').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3371">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Thursday</span></h3>
+<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3371">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-4').style.display='block';document.getElementById('fade').style.display='block'">4</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-4', this)">4</a>
+<div id="day-popup-4" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-4').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Storytime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		<p>A drop-in program for children age 3-5 and their caregivers
+10:15 - 10:45 am</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3372">Event Details</a>
+
+</div>
+-->
+<h3>Storytime<span class="date">Weekly: Every Friday</span></h3>
+<p>A drop-in program for children age 3-5 and their caregivers
+10:15 - 10:45 am</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3372">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-8').style.display='block';document.getElementById('fade').style.display='block'">8</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-8', this)">8</a>
+<div id="day-popup-8" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-8').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Knit and Gab</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3429">Event Details</a>
+
+</div>
+-->
+<h3>Knit and Gab<span class="date">Weekly: Every Tuesday</span></h3>
+
+<p style="text-align: right;"><a href="branches/rutland?event_id=3429">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3370">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+
+<p style="text-align: right;"><a href="branches/rutland?event_id=3370">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">9</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-10').style.display='block';document.getElementById('fade').style.display='block'">10</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-10', this)">10</a>
+<div id="day-popup-10" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-10').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3371">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Thursday</span></h3>
+<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3371">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent today"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-11').style.display='block';document.getElementById('fade').style.display='block'">11</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-11', this)">11</a>
+<div id="day-popup-11" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-11').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Storytime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		<p>A drop-in program for children age 3-5 and their caregivers
+10:15 - 10:45 am</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3372">Event Details</a>
+
+</div>
+-->
+<h3>Storytime<span class="date">Weekly: Every Friday</span></h3>
+<p>A drop-in program for children age 3-5 and their caregivers
+10:15 - 10:45 am</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3372">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-15').style.display='block';document.getElementById('fade').style.display='block'">15</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-15', this)">15</a>
+<div id="day-popup-15" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-15').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Knit and Gab</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3429">Event Details</a>
+
+</div>
+-->
+<h3>Knit and Gab<span class="date">Weekly: Every Tuesday</span></h3>
+
+<p style="text-align: right;"><a href="branches/rutland?event_id=3429">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3370">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+
+<p style="text-align: right;"><a href="branches/rutland?event_id=3370">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">16</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-17').style.display='block';document.getElementById('fade').style.display='block'">17</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-17', this)">17</a>
+<div id="day-popup-17" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-17').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3371">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Thursday</span></h3>
+<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3371">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-18').style.display='block';document.getElementById('fade').style.display='block'">18</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-18', this)">18</a>
+<div id="day-popup-18" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-18').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Storytime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		<p>A drop-in program for children age 3-5 and their caregivers
+10:15 - 10:45 am</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3372">Event Details</a>
+
+</div>
+-->
+<h3>Storytime<span class="date">Weekly: Every Friday</span></h3>
+<p>A drop-in program for children age 3-5 and their caregivers
+10:15 - 10:45 am</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3372">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-22').style.display='block';document.getElementById('fade').style.display='block'">22</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-22', this)">22</a>
+<div id="day-popup-22" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-22').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		<p>A drop-in program for babies 0-18 mos and their caregivers
+10:15 - 10:45 am</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3370">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+<p>A drop-in program for babies 0-18 mos and their caregivers
+10:15 - 10:45 am</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3370">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">23</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-24').style.display='block';document.getElementById('fade').style.display='block'">24</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-24', this)">24</a>
+<div id="day-popup-24" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-24').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3371">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Thursday</span></h3>
+<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3371">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-29').style.display='block';document.getElementById('fade').style.display='block'">29</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-29', this)">29</a>
+<div id="day-popup-29" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-29').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Babytime</h3>
+	<h4>Weekly: Every Tuesday</h4>
+	<p>
+		<p>A drop-in program for babies 0-18 mos and their caregivers
+10:15 - 10:45 am</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3370">Event Details</a>
+
+</div>
+-->
+<h3>Babytime<span class="date">Weekly: Every Tuesday</span></h3>
+<p>A drop-in program for babies 0-18 mos and their caregivers
+10:15 - 10:45 am</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3370">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">30</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-31').style.display='block';document.getElementById('fade').style.display='block'">31</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-31', this)">31</a>
+<div id="day-popup-31" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-31').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Thursday</h4>
+	<p>
+		<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+		
+	</p>
+	<a id="event_details" href="rutland?event_id=3371">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Thursday</span></h3>
+<p>A drop-in program for toddlers 18 mos to 3 yrs and their caregivers
+10:15 - 10:45 AM</p>
+<p style="text-align: right;"><a href="branches/rutland?event_id=3371">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day none"></div><div class="day none"></div>
+	</div>
+	<div class="clearer"></div>
+	<div id="upcoming-events"><a href="/news-events/upcoming-events?cid=30">Search Our Upcoming Events</a></div>
+</div>
+</div>
+</div>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/Borrowing-services/internet-access"><img src="/assets/templates/orl/images/banners/hotspot.jpg" alt="Free Internet Access" /></a>
+</div>
+               </div>
+               <div style="float:left; width:650px;">
+                   <p>Features</p>
+<ul>
+<li>Wheelchair accessible</li>
+<li>Free computer access &amp; wireless hotspot</li>
+<li>All computers have access to a printer (except wireless)</li>
+</ul>
+<hr />
+<h1 style="text-align: center;"><strong>Super Hero Spring Break</strong></h1>
+<p style="text-align: center;"><strong><img style="vertical-align: middle;" src="assets/images/Image%20Bank%20for%20Branch%20Use/South%20Shuswap/super-heros.png" alt="Superhero Spring Break" width="512" height="390" /></strong></p>
+<h2 style="text-align: center;">Thursday, March 17th 2:30pm</h2>
+<h2 style="text-align: center;">Join us for Disney's "Big Hero 6" movie and popcorn.</h2>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: center;">Tuesday, March 22nd 2:00-3:00pm</h2>
+<h2 style="text-align: center;">Come dressed as your favourite superhero. Enjoy an hour of super cartoons!&nbsp;</h2>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: center;">Please stop in or call to register for these FREE events. Ages 5-12.</h2>
+<p style="text-align: center;">&nbsp;</p>
+<hr />
+<h1 style="text-align: center;"><strong></strong>&nbsp;<strong>Winter Children's Programs</strong></h1>
+<p><strong><img style="margin-left: auto; display: block; margin-right: auto;" src="assets/images/Image%20Bank%20for%20Branch%20Use/Snowman.png" alt="Winter Snowman" width="214" height="235" /></strong></p>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<h2 style="text-align: center;"><strong>BabyTi</strong><strong>me</strong></h2>
+<h2 style="text-align: center;">Tuesdays 10:15&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+<h2 style="text-align: center;">&nbsp;Jan 12&nbsp;-&nbsp;May 24&nbsp;</h2>
+<h2 style="text-align: center;">Drop-in program for babies 0-18 months and their caregivers</h2>
+<h2 style="text-align: center;">Join us for rhymes, songs, and stories</h2>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: center;"><strong>ToddlerTime</strong></h2>
+<h2 style="text-align: center;">Thursdays 10:15&nbsp;</h2>
+<h2 style="text-align: center;">Jan 14&nbsp;- May 26</h2>
+<h2 style="text-align: center;">Drop-in program for children ages 18 months to 3 years</h2>
+<h2 style="text-align: center;">Join us for songs, stories, fingerplays, and more</h2>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: center;"><strong>StoryTime</strong></h2>
+<h2 style="text-align: center;">Fridays 10:15&nbsp;&nbsp;</h2>
+<h2 style="text-align: center;">Jan 15&nbsp;- May 27</h2>
+<h2 style="text-align: center;">Drop-in program for children ages 3-5 years</h2>
+<h2 style="text-align: center;">Join us for songs, stories, fingerplays, and more</h2>
+<p style="text-align: center;">&nbsp;</p>
+<hr />
+<h1 style="text-align: center;"><strong>Knit and Gab&nbsp;</strong></h1>
+<h2 style="text-align: center;"><strong>Tuesday nights at 6:30pm</strong></h2>
+<h2 style="text-align: center;"><strong>&nbsp;Jan 12&nbsp;- Mar 15</strong></h2>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<h3 style="text-align: center;"><strong>Drop in Tuesday nights to knit and/ or crochet, and to share your interest in knitting and other wool crafts.&nbsp;</strong></h3>
+<h3 style="text-align: center;"><strong>&nbsp;Join us for engaging conversation, creative inspiration, and an all around good time.&nbsp; </strong></h3>
+<h3 style="text-align: center;"><strong>Registration is free.&nbsp; Register by phone at 250-765-8165 or in person.&nbsp; Feel free to bring your own coffee.</strong></h3>
+<p style="text-align: center;"><strong><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Westbank/Yarn_Sheep.jpg" alt="" width="193" height="150" /></strong></p>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<hr />
+<h1 style="text-align: center;">&nbsp;<strong>LEGO Builders Club</strong></h1>
+<h2 style="text-align: center;"><strong>Thursdays 3:30-4:30pm, March 3rd, April 7th, May 5th</strong></h2>
+<p style="text-align: center;"><strong><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Mission/Lego_Builders_Club.jpg" alt="LEGO Builders Club" width="480" height="165" /></strong></p>
+<h3 style="text-align: center;"><strong>Join us at the Rutland Library for an hour of LEGO fun</strong></h3>
+<h3 style="text-align: center;"><strong>January&nbsp;through May from 3:30-4:30pm.</strong></h3>
+<h3 style="text-align: center;"><strong>Come and use your imagination and build your favourite lego creation!</strong></h3>
+<p style="text-align: center;"><strong>Please call (250) 765-8165 or visit the branch to register, space is limited.</strong></p>
+<p style="text-align: center;">&nbsp;</p>
+<hr />
+<p style="text-align: center;">&nbsp;</p>
+<h1 style="text-align: center;">&nbsp;<strong>Meeting Room Rental</strong></h1>
+<p>&nbsp;</p>
+<h3><strong><em>The Rutland Branch has a meeting room available for rent during open hours. </em></strong></h3>
+<h3><strong><em>The room has 50 chairs and 4 tables.</em></strong></h3>
+<h3><strong><em>You may rent it for $60 for 3 hours, and then $10 for each additional hour. </em></strong></h3>
+<h3><strong><em>Please contact the front desk of the library for more information at 250-765-8165 Extension 5611.</em></strong></h3>
+<h3><strong><em>The Rutland Branch also has a small study room that holds 5 people. You may use this room by it at the front desk of the library.</em></strong></h3>
+<p><strong><em></em></strong>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<h1 style="text-align: center;">&nbsp;&nbsp;Kelowna Friends of the Library</h1>
+<p>See the latest newsletter from the Kelowna Friends of the Library<a href="http://kelownalibrary.posterous.com/latest-kelowna-friends-of-the-library-newslet" target="_blank"> here</a>.</p>
+<p>The Kelowna Friends of the Library, a non-profit organization formed in 1988, is registered under the Society Act of British Columbia and the Canada Income Tax Act. All persons interested in libraries can obtain a membership for $5.00 per year at the Kelowna, Mission or Rutland branch libraries.</p>
+<p>For membership and donation&nbsp;information, please&nbsp; call 250-763-7323 (READ)</p>
+<ul>
+<li>
+<div>26th Great Okanagan Book Sale: Thursday, October&nbsp;16 - Saturday, October&nbsp;18 - Immaculate Conceptin Parish Hall</div>
+</li>
+</ul>
+<p>The major fundraiser, the Great Okanagan Book Sale, takes place in October each year. The Kelowna Friends of the Library sponsor an endowment fund with the Central Okanagan Foundation and they also host various public meetings and author events throughout the year.</p>
+<p>Directors of Kelowna Friends of the Library hold meetings in the Kelowna Branch, at 1pm on the second Monday of each month. No board meetings are held in July &amp; August. The society's AGM is held on a Saturday in late November.</p>
+<p>For further information, please E-mail <a href="mailto:Fol4k@hotmail.com">Fol4k@hotmail.com</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="assets/images/Image Bank for Branch Use/BCLibraries_Change_Lives_banner_1.jpg" alt="" width="300" height="63" /></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<h3 style="text-align: center;">&nbsp;Fines &amp; Lost items can now be paid at the Rutland Branch using Interac</h3>
+<p align="center"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/header_logo.gif" alt="Interac" width="100" height="85" /></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>
+               </div></div>
+</div>  <!-- end of background -->
+           <!-- Copyright -->
+	<div class="content-footer-container-bottom-div">
+		<span id="footer-copyright" class="content-footer-text">&copy; 2013 Okanagan Regional Library | Last updated on February 29, 2016 | <a href="/search">Website Search</a></span>
+		<span id="footer-twin-creek" class="content-footer-text"><a href="http://www.twincreekmedia.com" target="_blank">Kelowna Marketing by Twin Creek Media</a></span>
+	</div>
+<div class="footer-contentpage-div">
+	<!-- Location/Nav Row -->
+	<div class="content-footer-container">
+		<div id="footer-location"><h5>Locations, Hours, and Programs</h5><!--<img src="/assets/templates/orl/images/layout/locations-and-hours-footer.gif" alt="Locations &amp; Hours" />--></div>
+		<div id="footer-navigation"><h5>Navigation</h5><!--<img src="/assets/templates/orl/images/layout/navigation-footer.gif" alt="Navigation" />--></div>
+	</div>
+	<!-- Divider -->
+	<div class="content-footer-divider"></div>
+	<!-- City/Menu Row -->
+	<div class="content-footer-container">
+                <div class="content-footer-locations-link-branches">
+                    <div><ul><li><a href="/branches/armstrong" title="Armstrong" >Armstrong</a></li>
+<li><a href="/branches/cherryville" title="Cherryville" >Cherryville</a></li>
+<li><a href="/branches/enderby" title="Enderby" >Enderby</a></li>
+<li><a href="/branches/falkland" title="Falkland" >Falkland</a></li>
+<li><a href="/branches/golden" title="Golden" >Golden</a></li>
+<li class="last"><a href="/branches/hedley" title="Hedley" >Hedley</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/kaleden" title="Kaleden" >Kaleden</a></li>
+<li><a href="/branches/kelowna" title="Kelowna" >Kelowna</a></li>
+<li><a href="/branches/keremeos" title="Keremeos" >Keremeos</a></li>
+<li><a href="/branches/lake-country" title="Lake Country" >Lake Country</a></li>
+<li><a href="/branches/lumby" title="Lumby" >Lumby</a></li>
+<li class="last"><a href="/branches/mission" title="Mission" >Mission</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/naramata" title="Naramata" >Naramata</a></li>
+<li><a href="/branches/north-shuswap" title="North Shuswap" >North Shuswap</a></li>
+<li><a href="/branches/okanagan-falls" title="Okanagan Falls" >Okanagan Falls</a></li>
+<li><a href="/branches/oliver" title="Oliver" >Oliver</a></li>
+<li><a href="/branches/osoyoos" title="Osoyoos" >Osoyoos</a></li>
+<li class="last"><a href="/branches/oyama" title="Oyama" >Oyama</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/peachland" title="Peachland" >Peachland</a></li>
+<li><a href="/branches/princeton" title="Princeton" >Princeton</a></li>
+<li><a href="/branches/revelstoke" title="Revelstoke" >Revelstoke</a></li>
+<li class="active"><a href="/branches/rutland" title="Rutland" >Rutland</a></li>
+<li><a href="/branches/salmon-arm" title="Salmon Arm" >Salmon Arm</a></li>
+<li class="last"><a href="/branches/sicamous" title="Sicamous" >Sicamous</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/silver-creek" title="Silver Creek" >Silver Creek</a></li>
+<li><a href="/branches/south-shuswap" title="South Shuswap" >South Shuswap</a></li>
+<li><a href="/branches/summerland" title="Summerland" >Summerland</a></li>
+<li><a href="/branches/vernon" title="Vernon" >Vernon</a></li>
+<li class="last"><a href="/branches/westbank" title="Westbank" >Westbank</a></li>
+</ul></div>
+                </div>
+		<div class="content-footer-locations-link-divider"></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/about-us" title="About Us" >About Us</a></li>
+<li><a href="/news-events" title="News &amp; Events" >News &amp; Events</a></li>
+<li class="active"><a href="/branches" title="Branches" >Branches</a></li>
+<li class="last"><a href="/Borrowing-services" title="Borrowing & Services" >Borrowing & Services</a></li>
+</ul></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/online-resources" title="Web Resources" >Web Resources</a></li>
+<li><a href="/kids" title="Kids" >Kids</a></li>
+<li><a href="/teens" title="Teens" >Teens</a></li>
+<li><a href="/book-lovers" title="Book Lovers" >Book Lovers</a></li>
+<li class="last"><a href="/contact" title="Contact Us" >Contact Us</a></li>
+</ul></div>
+	</div>
+</div>
+            
+        </div>
+
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3147068-38");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://bclibraries.org/piwik/" : "http://bclibraries.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 62);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://bclibraries.org/piwik/piwik.php?idsite=62" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Tag -->
+	</body>
+</html>

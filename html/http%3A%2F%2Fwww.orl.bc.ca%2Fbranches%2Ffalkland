@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<base href="http://www.orl.bc.ca/" />
+	<title>Falkland - Okanagan Regional Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="description" content="Okanagan Regional Library: library system covering the entire Thompson-Okanagan region of British Columbia, Canada." />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/style.css?v=v8" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/calendar_2013.css?v=v4" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/contact_us.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/search.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/left_menu.css?v=v2" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_l.css" type="text/css" media="screen" id="link_text_l" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_m.css" type="text/css" media="screen" id="link_text_m" title="text" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/text_s.css" type="text/css" media="screen" id="link_text_s" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/contrast.css" type="text/css" media="screen" id="link_contrast" title="contrast" />
+	<link rel="alternate" type="application/rss+xml" title="Okanagan Regional Library RSS Feed" href="news-events/rss" />
+	<script src="manager/media/script/mootools/mootools.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/jquery.fancybox.js" type="text/javascript"></script>
+	<script type="text/javascript">var $j = jQuery.noConflict();</script>
+	<script src="assets/templates/orlv2/js/form-check.js?v=v1" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/swfobject.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/script.js?v=v7" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="assets/templates/orlv2/css/dhtmlgoodies_calendar.css" media="screen" />  
+	<script src="assets/templates/orlv2/js/dhtmlgoodies_calendar.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pathToImages = '/assets/templates/orlv2/images/layout/';
+		//SWFObject
+		var flashvars = {};
+		var params = {
+			wmode: "transparent"
+		};
+	</script>
+<!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAMmBdV5STCVExvFTDWp50DBQn_DD64N2y7rZVstjCgjH1jrOTvBTbfltFh8gj6JbFUyeasDAlowgpPA" type="text/javascript"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9zKi3DlhGhdgZ5zWPYklEM59GzU0pys&sensor=false"></script>
+<script type="text/javascript" src="//use.typekit.net/igq5whz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+	<body>
+
+    	<div id="wrap">
+        <div class="background-header">
+                       <div id="header">
+                <span class="font-adjust-container">
+<a href="/sitemap">Site Map</a> | <a class="text_l" id="large-text-link" href="javascript:clickTextLarge();">A</a>&nbsp;<a class="text_m" id="medium-text-link" href="javascript:clickTextMedium();">A</a>&nbsp;<a class="text_s" id="small-text-link" href="javascript:clickTextSmall();">A</a>
+				</span>
+            </div>
+            <!-- Header Image/Top Menu Row -->
+            <div class="top-menu-div">
+                <div id="logo"><a href="/"><img src="/assets/templates/orlv2/images/layout/logo-new.gif" alt="Okanagan Regional Library" /></a></div>
+                <div id="welcome"><img src="/assets/templates/orlv2/images/layout/background-bar-left.png" /></div>
+                <div id="social">
+	                <a href="http://www.youtube.com/OKRegLibrary" target="_blank">Youtube</a>
+	                <a href="http://75-years-orl.blogspot.com/" target="_blank">Blogger</a>
+	                <a href="http://www.facebook.com/OKRegLib" target="_blank">Facebook</a>
+	                <a href="http://twitter.com/ORLreads" target="_blank">Twitter</a>
+	                <a href="http://ipac.orl.bc.ca/mobile">ORL Mobile</a>
+                </div>
+            </div>
+<div id="header-search-2013">
+                    <script language="javascript">
+                        String.prototype.trim = function () { return this.replace(/^\s*|\s*$/g, ''); }
+                        function ProcessInput(e) {
+                            if (window.event)       // IE
+                                keyNum = e.keyCode;
+                            else if (e.which)       // Netscape/Firefox/Opera
+                                keyNum = e.which;
+                            if (keyNum == 13) {
+                                e.returnValue = false;
+                                e.cancelBubble = true;
+                                DoKeywordSearch();
+                                return false;
+                            }
+                            return true;
+                        }
+                        function DoKeywordSearch() {
+                            if (document.getElementById('textboxTerm').value.trim() != '')
+                                window.location = 'http://ipac.orl.bc.ca/polaris/view.aspx?keyword=' + escape(document.getElementById('textboxTerm').value);
+                            else
+                                document.getElementById('textboxTerm').focus();
+                        }
+                    </script>
+                    <a class="redbutton" href="javascript:;" onclick="DoKeywordSearch();"><span>Go</span></a>
+                    <input type=text id=textboxTerm size=45 class="cleartxt inactive search" value="Search Catalogue..." 
+                     onblur="if (this.value == '') {this.value = 'Search Catalogue...';}"
+                     onfocus="if(this.value == 'Search Catalogue...') { this.value = ''; }" 
+                     onkeypress="return ProcessInput(event)" />
+                    <script language="javascript">
+                        document.getElementById('textboxTerm').blur();
+                    </script>
+                 </div>
+		<br />
+                     <p class="f_right"><a href="http://ipac.orl.bc.ca/polaris/patronaccount/default.aspx?ctx=1.1033.0.0.3">Login to My Account</a></p>
+		
+
+            <!-- Main Menu -->
+           <div id="left-menu-container">
+             <div id="top-menu-header">
+    <img src="/assets/templates/orl/images/layout/menu-text.png" alt="Menu" />
+</div>
+<div id="left-menu">
+<ul class=" left-menu-header"><li >
+  <div class="menusection"><h3 class=""><a class="" href="/about-us">About Us</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/news-events">News &amp; Events</a></h3></div>
+</li>
+<li  class="active">
+  <div class="menusection"><h3 class="active"><a class="active" href="/branches">Branches</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/Borrowing-services">Borrowing & Services</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/online-resources">Web Resources</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/kids">Kids</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/teens">Teens</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/book-lovers">Book Lovers</a></h3></div>
+</li>
+<li  class="last">
+  <div class="menusection"><h3 class="last"><a class="last" href="/contact">Contact Us</a></h3></div>
+</li>
+</ul>
+</div>
+           </div>
+
+            <!-- Menu/Intro Row -->
+                <div id="intro-wide">
+                   
+                   <div id="background-image-box-big"><div id="slideshow"></div></div>
+<div id="background-box-overlay"></div>
+<script type="text/javascript" src="http://www.orl.bc.ca/assets/js/rokslideshow.js"></script>
+		<script type="text/javascript">
+			window.RokSlideshowPath = '';
+			var myshow;
+			window.addEvent('load', function(){
+				var imgs = [];
+				
+				imgs.push({
+					file: '034.JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: '037.JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'FA_Exterior.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				myshow = new Slideshow('slideshow', { 
+					type: 'fade',
+					showTitleCaption: 0,
+					captionHeight: 45,
+					width: 550, 
+					height: 340, 
+					loadingDiv: 0,
+					resize: true,
+					duration: [2000, 4000],
+					transition: Fx.Transitions.Expo.easeOut,
+					images: imgs, 
+					path: '/assets/images/Branch-Slideshow/falkland/'
+				});
+				myshow.caps.h2.setStyles({
+					color: '#fff',
+					fontSize: '13px'
+				});
+				myshow.caps.p.setStyles({
+					color: '#ccc',
+					fontSize: '11px'
+				});
+			});
+		</script>
+                   <div id="intro-wide-content">
+                               <span class="B_crumbBox"><span class="B_firstCrumb"><a class="B_homeCrumb" href="/home" title="Find Books, Music, Movies, and More">Home</a></span> &raquo; <a class="B_crumb" href="/branches" title="Branches">Branches</a> &raquo; <span class="B_lastCrumb"><span class="B_currentCrumb">Falkland</span></span></span>
+                               <h1>Falkland</h1>
+                               <div id="page-sub-menu">
+<ul class="submenu">
+<li>no result<script type%3D"text/javascript">$j("#page-sub-menu").hide();</script></li> 
+</ul>
+<script type="text/javascript">
+$j('.submenu').makeacolumnlists({cols: 2, colWidth: 0, equalHeight: false, startN: 12});
+</script>
+</div>
+                               
+<div id="content-header-text">
+<ul class="tabs">
+    <li class="tab1"><a href="#tab1">Location</a></li>
+    <li class="tab2"><a href="#tab2">Open Hours</a></li>
+    <li class="tab3"><a href="#tab3">Parking</a></li>
+    <li class="tab4"><a href="#tab4"></a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content"><p><strong>5771 - Highway 97 </strong></p>
+<p><strong><strong>P.O. Box 33</strong></strong></p>
+<p><strong>Falkland, B.C. V0E 1W0</strong></p>
+<p><strong>(250) 379-2705 Extension 1811</strong></p>
+<p><strong><a href="mailto:falkland@orl.bc.ca">falkland@orl.bc.ca</a></strong></p>
+<p>The Falkland Branch is located&nbsp;on highway 97 in the Falkland townsite near the Post Office and the Stampede Grounds.</p>
+<p>When the library is closed there is a book drop bin located near the accessibility ramp.</p>
+<p>Please find our events below on the branch calendar, or search the <a href="news-events/event-search">ORL Calendar of Events</a>.</p></div>
+    <div id="tab2" class="tab_content"><table id="openhours"><tr><td>Monday: </td><td>CLOSED</td></tr><tr><td>Tuesday: </td><td>2:00 p.m. to 5:00 p.m. and 6:00 p.m. to 8:00 p.m.</td></tr><tr><td>Wednesday: </td><td>1:00 p.m. to 6:00 p.m.</td></tr><tr><td>Thursday: </td><td>1:00 p.m. to 6:00 p.m.</td></tr><tr><td>Friday: </td><td>CLOSED</td></tr><tr><td>Saturday: </td><td>CLOSED</td></tr><tr><td>Sunday: </td><td>CLOSED</td></tr><tr><td></td><td>All branches are closed on statutory holidays</td></tr></table></div>
+    <div id="tab3" class="tab_content"><p>FREE parking is available&nbsp;in front of the library and in front of the gate.</p></div>
+    <div id="tab4" class="tab_content"></div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var tabCount = 0;
+	//When page loads...
+	jQuery(".tab_content").hide(); //Hide all content
+	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	jQuery(".tab_content:first").show(); //Show first tab content
+//hide empty tabs
+jQuery(".tab_content").each(function(){
+	if(jQuery(this).html() == ''){
+		jQuery("."+jQuery(this).attr("id")).hide();
+	} else {
+		if(jQuery("."+jQuery(this).attr("id")+" a").html() == ''){
+			jQuery("."+jQuery(this).attr("id")).hide();
+		} else {
+			tabCount++;
+		}
+	}
+});
+
+if(tabCount > 1){
+jQuery(".tab_container").show();
+jQuery("ul.tabs").show();
+} else {
+jQuery("#content-header-text").html(jQuery("#tab1").html());
+}
+
+	//On Click Event
+	jQuery("ul.tabs li").click(function() {
+
+		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+		jQuery(this).addClass("active"); //Add "active" class to selected tab
+		jQuery(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = jQuery(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		jQuery(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});
+</script>
+
+</div>
+                  </div>
+                </div>
+            <!-- Banners/Content Row -->
+               <div class="content-row-div"><div id="sidebanners">
+                   <div style="float: left; width: 244px;">
+<div class="banner-map" style="margin-bottom:28px;">
+<a name="content"></a>
+    <div id="map" style="width:244px; height:166px;"></div><script type="text/javascript">
+    //var map = new google.maps.Map(document.getElementById("map"));
+    //var point = new google.maps.LatLng(50.500392, -119.559824);
+    //map.setCenter(point, 14);
+    //var marker = new google.maps.Marker(point);
+    //map.addOverlay(marker);
+    //map.addControl(new GSmallMapControl());
+      var map = new google.maps.Map(
+        document.getElementById("map"), {
+          center: new google.maps.LatLng(50.500392, -119.559824),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(50.500392, -119.559824),
+            map: map
+      });
+    </script>
+</div>
+<div class="banner-calendar print-hide" id="branch-calendar" style="margin-bottom:28px;">
+    <!--[if IE 7 ]> <div class="calendar-div ie7"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!--> <div class="calendar-div"> <!--<![endif]-->
+    <div id="calendar">
+	<div id="calendar-heading">
+    	<div class="month prev"><a href="index.php?id=26&amp;cid=13&amp;m=2&amp;y=2016#content">&laquo;</a></div>
+		<div class="monthyear">
+			<div class="month heading">March</div>
+			<div class="year heading">2016</div>
+		</div>
+    	<div class="month next"><a href="index.php?id=26&amp;cid=13&amp;m=4&amp;y=2016#content">&raquo;</a></div>
+	</div>
+	<div id="day-heading-background">
+		<div class="day heading">Sun</div>
+		<div class="day heading">Mon</div>
+		<div class="day heading">Tue</div>
+		<div class="day heading">Wed</div>
+		<div class="day heading">Thu</div>
+		<div class="day heading">Fri</div>
+		<div class="day heading">Sat</div>
+	</div>	
+	<div id="date-background">
+		<div class="day none"></div><div class="day none"></div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-4').style.display='block';document.getElementById('fade').style.display='block'">4</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-4', this)">4</a>
+<div id="day-popup-4" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-4').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Ukrainian Eggs Session 2</h3>
+	<h4>March 04, 2016</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="falkland?event_id=3449">Event Details</a>
+
+</div>
+-->
+<h3>Ukrainian Eggs Session 2<span class="date">March 04, 2016</span></h3>
+
+<p style="text-align: right;"><a href="branches/falkland?event_id=3449">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Ukrainian Eggs Session 1</h3>
+	<h4>March 04, 2016</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="falkland?event_id=3448">Event Details</a>
+
+</div>
+-->
+<h3>Ukrainian Eggs Session 1<span class="date">March 04, 2016</span></h3>
+
+<p style="text-align: right;"><a href="branches/falkland?event_id=3448">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-5').style.display='block';document.getElementById('fade').style.display='block'">5</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-5', this)">5</a>
+<div id="day-popup-5" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-5').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Ukrainian Eggs Session 2</h3>
+	<h4>March 05, 2016</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="falkland?event_id=3451">Event Details</a>
+
+</div>
+-->
+<h3>Ukrainian Eggs Session 2<span class="date">March 05, 2016</span></h3>
+
+<p style="text-align: right;"><a href="branches/falkland?event_id=3451">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Ukrainian Eggs Session 1</h3>
+	<h4>March 05, 2016</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="falkland?event_id=3450">Event Details</a>
+
+</div>
+-->
+<h3>Ukrainian Eggs Session 1<span class="date">March 05, 2016</span></h3>
+
+<p style="text-align: right;"><a href="branches/falkland?event_id=3450">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day today">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div><div class="day none"></div><div class="day none"></div>
+	</div>
+	<div class="clearer"></div>
+	<div id="upcoming-events"><a href="/news-events/upcoming-events?cid=13">Search Our Upcoming Events</a></div>
+</div>
+</div>
+</div>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/Borrowing-services/internet-access"><img src="/assets/templates/orl/images/banners/hotspot.jpg" alt="Free Internet Access" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/kids/story-time"><img src="/assets/templates/orl/images/banners/storytime.jpg" alt="Childrens Storytime" /></a>
+</div>
+               </div>
+               <div style="float:left; width:650px;">
+                   <h2>Slippers for the Library! We have&nbsp;5 pairs so far!</h2>
+<p>Have some leftover wool? Enjoy making slippers but everyone at home already has 6 pairs? The library is looking to start a "Slipper Bin" inside the branch so those who have mucky-shoes can wear a pair and save the flooring! So if you have some time and/or materials and would like to make a pair of Mens, Ladies, or Kids-size slippers please do so and bring them in on or before March 31st. For each pair of slippers you bring you will receive an entry into a $20.00 cash prize draw! So dust off the needles and get knitting (or crocheting!)</p>
+<p>And don't forget if you need to find any knitting patterns; the library has&nbsp;a large number of fantastic books available to borrow!</p>
+<p>&nbsp;</p>
+<p>Diana's first slipper...almost done!</p>
+<p><img title="Knitting project" src="assets/images/Image%20Bank%20for%20Branch%20Use/Falkland/Knitting.jpg" alt="Partially completed knitting project sitting on desk" width="252" height="194" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...and the finished product!&nbsp;&nbsp;&nbsp; <img title="Knitted Slipper" src="assets/images/Image%20Bank%20for%20Branch%20Use/Falkland/Slipper.jpg" alt="Knitted slipper" width="152" height="195" /></p>
+<hr />
+<h2>Happy Mother's Clay!</h2>
+<p>Register now for the upcoming program on April&nbsp;23rd from 1-3pm. We will be making modeling clay flower magnets! This program promises to be a lot of fun for adults and older kids alike. Check out our upcoming events calendar for more information. Registration is required.</p>
+<p style="text-align: center;"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Falkland/Flower1.jpg" alt="" width="123" height="102" />&nbsp;<img src="assets/images/Image%20Bank%20for%20Branch%20Use/Falkland/Flower2.jpg" alt="" width="130" height="102" /></p>
+<hr />
+<h2>MasterGardeners Presentation!</h2>
+<p>On Thursday May 19th the Mastergardeners will be at the library to lead an informative and interesting discussion and demonstration about "container gardening." If you have never tried it before; or do it all the time - come join us as there is always something new to learn. This FREE program requires registration so please contact Diana at the branch. You may register by telephone 250-379-2705 ext 1811, by email <a href="mailto:falkland@orl.bc.ca">falkland@orl.bc.ca</a> or in person at the branch. There will be a special door prize draw for attendees! Hope to see you there!<img style="margin-left: auto; display: block; margin-right: auto;" title="Spring Flowers" src="assets/images/Image%20Bank%20for%20Branch%20Use/Spring_Flowers.jpg" alt="Spring flowers" width="400" height="251" /></p>
+<hr />
+<h2>LEGOmania!</h2>
+<p>Our first session of 2016 is set for <em><strong>Tuesday March 22nd </strong></em>from 6-8pm at the library. This is a drop-in FREE program so please stop by for a few minutes or the full 2hrs! Parents must accompany children as supervision cannot be guaranteed during the open hours of the library. The theme for this event is <em><strong>Robots</strong></em>- so put on your thinking caps and prepare for a&nbsp;great time!&nbsp;For more information please stop in and speak with Diana, call her at 250-379-2705 ext 1811, or send an email to <a href="mailto:falkland@orl.bc.ca">falkland@orl.bc.ca</a>.</p>
+<hr />
+<h2>Summer Reading Club...</h2>
+<p>Plans are in the works for the special summer programs- so keep checking back for more information. So far we have two programs set to go:</p>
+<p>10-12noon July 9th -Knots of fun with Paracord</p>
+<p>12-1pm July 15th -Uncle Chris the Clown</p>
+<hr />
+<p>&nbsp;</p>
+<h2>What would you like to see happening in our library branch?</h2>
+<p>We are looking for ideas of programs, crafts, seminars, discussions, etc. that we could have here in our library that are geared towards adults and those who have celebrated their 29th Birthday more than anyone can ever think is actually plausible... If you have something interesting to share with your neighbours and fellow Falklandites stop by and speak with Diana!&nbsp; You can also send me an email at: <a href="mailto:falkland@orl.bc.ca">falkland@orl.bc.ca</a> if you think of something really great at 3am!</p>
+<p>Some programs that we have&nbsp;had over the past year include:</p>
+<p>-several sessions of&nbsp;Ukrainian Egg Making (next one is set for November 14th&nbsp;--see above for&nbsp;details)</p>
+<p>-LEGOmania! programs for kids</p>
+<p>-Notary public visit by Debra Burden (office is located in Vernon BC)</p>
+<p>-Book collecting&nbsp;discussion&nbsp;presented by Bernie Spring&nbsp;of Antiquarius Booksellers&nbsp;</p>
+<p>-MasterGardners discussion of composting and Q &amp; A</p>
+<p>-Valentines, Easter, Summer Reading Club, Halloween etc. kids programs with crafts</p>
+<p>-Book Club meetings</p>
+<p>-Pain Management workshop</p>
+<p>...if you have ideas for other programs we might arrange, or would like to see a repeat of any of the above programs please let Diana know!</p>
+<hr />
+<p>&nbsp;</p>
+<h2><strong>Book Club: Hittin' the books again...</strong></h2>
+<p>The Falkland Branch Book Club is once again getting started! The title we are currently reading is:&nbsp;<em>Little Bee by Chris Cleave.</em> Copies are now available at the branch- please speak with Diana. <strong><em>The next meeting will be held on Wednesday April 6th at 7:30pm inside the library.</em></strong> Coffee, Tea, and cookies will be provided&hellip;so please bring your enthusiasm, your thoughts on this title, and if you have some ideas of other titles we might read- bring those too!</p>
+<p>This is an &ldquo;open&rdquo; group so anyone and everyone living in the Falkland area is invited to attend whenever possible. If this meeting won&rsquo;t work for you, skip it and try next time! Our focus for the group is simply to expose ourselves to some different books and authors that we might never think to select on our own. Lofty and in-depth discussions can occur; but generally we keep our discussions fairly light on the technical, political, and other more &ldquo;serious&rdquo; aspects of the books.</p>
+<p>If you are interesting in joining our group&nbsp;but have any questions&nbsp;please stop by and speak with Diana. You can also send her an email at: <a href="mailto:falkland@orl.bc.ca">falkland@orl.bc.ca</a></p>
+<p>Hope to see you at the next meeting!</p>
+<p>&nbsp;</p>
+<p><strong>Our previous selections:</strong></p>
+<p><em>The Goldfinch </em>by Donna Tartt.</p>
+<p><em>The Ghost Field</em> by Elly Griffith.</p>
+<p><em>Oryx and Crake</em> by Margaret Atwood</p>
+<p>&nbsp;</p>
+<hr />
+<h2>What's New:</h2>
+<ul>
+<li>Our new magazines are finally all here. Stop in to see which ones you might like to take home!</li>
+<li>We have some amazing new Library book bags here in the branch. The price has been lowered to $2.00 per bag with this new design. Pick one up next time you are in the branch (a few older style bags are still available and are now only $2.00)</li>
+<li>We have had an A.E.D. device installed here in the library thanks to the PAD program and the Heart and Stroke Foundation. Diana will be receiving training on use of the device and is working on bringing in a local paramedic to talk about the devices and other important life-saving topics...keep checking back for more information.</li>
+<li>We have a wonderful new rolling shelving unit to house our Junior Board Books. It makes arranging the library for special&nbsp;presentations so much easier!</li>
+<li>Tyler (of Defining Decor- the other tenant in the same building as the library) makes some beautiful displays in the foyer. Stop by to check&nbsp;them out!</li>
+<li>We are offering some exciting&nbsp;adult&nbsp;and family programs this year- if you have any ideas of something you would like to see the library offer in the way of programming please stop by and speak with Diana.</li>
+<li>We have a wonderful selection of great Feature Film movies in our branch. So if you are bored with re-runs on TV&nbsp;or want to try something different; stop by and see what we have to offer. Don't forget that we also have many popular television seasons available to borrow!</li>
+<li>We have a Youth Services email list that parents may sign up for so that they can be kept informed about upcoming Children's programs and events. See staff to sign up or send us an email asking to be added: <a href="mailto:falkland@orl.bc.ca">falkland@orl.bc.ca</a>!</li>
+</ul>
+               </div></div>
+</div>  <!-- end of background -->
+           <!-- Copyright -->
+	<div class="content-footer-container-bottom-div">
+		<span id="footer-copyright" class="content-footer-text">&copy; 2013 Okanagan Regional Library | Last updated on March  8, 2016 | <a href="/search">Website Search</a></span>
+		<span id="footer-twin-creek" class="content-footer-text"><a href="http://www.twincreekmedia.com" target="_blank">Kelowna Marketing by Twin Creek Media</a></span>
+	</div>
+<div class="footer-contentpage-div">
+	<!-- Location/Nav Row -->
+	<div class="content-footer-container">
+		<div id="footer-location"><h5>Locations, Hours, and Programs</h5><!--<img src="/assets/templates/orl/images/layout/locations-and-hours-footer.gif" alt="Locations &amp; Hours" />--></div>
+		<div id="footer-navigation"><h5>Navigation</h5><!--<img src="/assets/templates/orl/images/layout/navigation-footer.gif" alt="Navigation" />--></div>
+	</div>
+	<!-- Divider -->
+	<div class="content-footer-divider"></div>
+	<!-- City/Menu Row -->
+	<div class="content-footer-container">
+                <div class="content-footer-locations-link-branches">
+                    <div><ul><li><a href="/branches/armstrong" title="Armstrong" >Armstrong</a></li>
+<li><a href="/branches/cherryville" title="Cherryville" >Cherryville</a></li>
+<li><a href="/branches/enderby" title="Enderby" >Enderby</a></li>
+<li class="active"><a href="/branches/falkland" title="Falkland" >Falkland</a></li>
+<li><a href="/branches/golden" title="Golden" >Golden</a></li>
+<li class="last"><a href="/branches/hedley" title="Hedley" >Hedley</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/kaleden" title="Kaleden" >Kaleden</a></li>
+<li><a href="/branches/kelowna" title="Kelowna" >Kelowna</a></li>
+<li><a href="/branches/keremeos" title="Keremeos" >Keremeos</a></li>
+<li><a href="/branches/lake-country" title="Lake Country" >Lake Country</a></li>
+<li><a href="/branches/lumby" title="Lumby" >Lumby</a></li>
+<li class="last"><a href="/branches/mission" title="Mission" >Mission</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/naramata" title="Naramata" >Naramata</a></li>
+<li><a href="/branches/north-shuswap" title="North Shuswap" >North Shuswap</a></li>
+<li><a href="/branches/okanagan-falls" title="Okanagan Falls" >Okanagan Falls</a></li>
+<li><a href="/branches/oliver" title="Oliver" >Oliver</a></li>
+<li><a href="/branches/osoyoos" title="Osoyoos" >Osoyoos</a></li>
+<li class="last"><a href="/branches/oyama" title="Oyama" >Oyama</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/peachland" title="Peachland" >Peachland</a></li>
+<li><a href="/branches/princeton" title="Princeton" >Princeton</a></li>
+<li><a href="/branches/revelstoke" title="Revelstoke" >Revelstoke</a></li>
+<li><a href="/branches/rutland" title="Rutland" >Rutland</a></li>
+<li><a href="/branches/salmon-arm" title="Salmon Arm" >Salmon Arm</a></li>
+<li class="last"><a href="/branches/sicamous" title="Sicamous" >Sicamous</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/silver-creek" title="Silver Creek" >Silver Creek</a></li>
+<li><a href="/branches/south-shuswap" title="South Shuswap" >South Shuswap</a></li>
+<li><a href="/branches/summerland" title="Summerland" >Summerland</a></li>
+<li><a href="/branches/vernon" title="Vernon" >Vernon</a></li>
+<li class="last"><a href="/branches/westbank" title="Westbank" >Westbank</a></li>
+</ul></div>
+                </div>
+		<div class="content-footer-locations-link-divider"></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/about-us" title="About Us" >About Us</a></li>
+<li><a href="/news-events" title="News &amp; Events" >News &amp; Events</a></li>
+<li class="active"><a href="/branches" title="Branches" >Branches</a></li>
+<li class="last"><a href="/Borrowing-services" title="Borrowing & Services" >Borrowing & Services</a></li>
+</ul></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/online-resources" title="Web Resources" >Web Resources</a></li>
+<li><a href="/kids" title="Kids" >Kids</a></li>
+<li><a href="/teens" title="Teens" >Teens</a></li>
+<li><a href="/book-lovers" title="Book Lovers" >Book Lovers</a></li>
+<li class="last"><a href="/contact" title="Contact Us" >Contact Us</a></li>
+</ul></div>
+	</div>
+</div>
+            
+        </div>
+
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3147068-38");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://bclibraries.org/piwik/" : "http://bclibraries.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 62);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://bclibraries.org/piwik/piwik.php?idsite=62" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Tag -->
+	</body>
+</html>

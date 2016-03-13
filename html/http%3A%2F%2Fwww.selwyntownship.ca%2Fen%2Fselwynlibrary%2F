@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+<!-- MOBIFY PHONE -->
+<script type="text/javascript">
+
+    var iCreateObject =
+    {
+        isSiteInICreateMode: "False".toLowerCase() == "true",
+        lang: "en",
+        isIe8: false,
+        corpHome: "http://www.selwyntownship.ca/",
+        corpRoot: "",
+        gaTrackingCode: '',
+        isSiteInLocalDevelopment: 'False'.toLowerCase() == "true",
+        calendarUrl: 'http://calendar.selwyntownship.ca/',
+        isSiteInPreviewMode: 'False'.toLowerCase() == "true",
+        newsFeeds: {}
+    }
+
+    var myStringArray = "footerNewsFeedId|781df816-0645-4210-94fe-2ac837502163,footerPublicNoticesFeedId|713d6337-da8e-4c18-8b21-1913046ab860,homepageNewsScrollerFeedId|713d6337-da8e-4c18-8b21-1913046ab860".split(',');
+    for(var i = 0; i < myStringArray.length; i++)
+    {
+        var mySubstring = myStringArray[i].split('|');
+        iCreateObject.newsFeeds[mySubstring[0]] = mySubstring[1];
+    }
+
+    try {
+        if (document.location.href.toLowerCase().indexOf('https://') == 0) {
+            iCreateObject.corpHome = 'https://' + iCreateObject.corpHome.substring(7);
+        }
+    } catch (err) { }
+
+    if (iCreateObject.isSiteInLocalDevelopment)
+        console.log(iCreateObject);
+
+</script><link rel="icon" type="image/ico" href="/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+<meta name="description" content="" />
+
+<!--This is only needed if you are using the Google translate widget-->
+<meta name="google-translate-customization" content="64f17b6d9cb6233b-e59f9de7b0b09f30-g4ca0816f9369ddc5-e"></meta>
+
+<!--<link rel="icon" type="image/ico" href="/favicon.ico">-->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,700,600' rel='stylesheet' type='text/css'>
+<link href="/styles/base.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/structure.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/sitecontent.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/icreate.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/navigation.css?v=v2" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+<link href="https://js.esolutionsgroup.ca/js/libs/jquery-ui/1.10.4/resources/themes/base/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link href='/en/Modules/Calendar/styles/Calendar.css' rel="stylesheet" type="text/css" media="screen" />
+<link href="https://js.esolutionsgroup.ca/js/libs/media-element/2.13.2/mediaelementplayer.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/styles/slick.css" />
+
+ <!-- Modernizr needs to be in head to preview FOUC. Best after stylesheet references -->
+<script type="text/javascript" src="/scripts/modernizr.min.js"></script>
+<!--[if lt IE 9]>
+        <link href="/styles/ie8.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="http://js.esolutionsgroup.ca/js/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery-ui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery_cookie/1.4.0/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/hover-intent/1.8.0/jquery.hoverIntent.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery_superfish/1.7.4/superfish.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/media-element/2.13.2/mediaelement-and-player.min.js"></script>
+
+<script type="text/javascript" src='/scripts/general.js'></script>
+<script type="text/javascript" src='/scripts/quicklinks-dropdown.js'></script>
+<script type="text/javascript" src='/en/Modules/email/scripts/email.js'></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/feedback-form/structure/2.2.7/feedbackStructure.min.js"></script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/slick/1.3.7/slick.min.js"></script>
+<script type="text/javascript" src="/scripts/slickInit.js"></script>
+
+
+<!--[if lt IE 9]><script type="text/javascript">$(function($) { $('body').addClass('ie8'); });</script><![endif]-->
+
+<script type="text/javascript">
+     
+    $(function () {
+        // Drop-down lists
+		
+        $('#nav').superfish({ cssArrows: false, speed: (iCreateObject.isIe8 ? 0 : 'normal'), speedOut: (iCreateObject.isIe8 ? 0 : 'fast') });
+
+		if (!iCreateObject.isSiteInICreateMode) {
+		    $('video,audio').mediaelementplayer({
+		        // if the <video width> is not specified, this is the default
+		        defaultVideoWidth: 480,
+		        // if the <video height> is not specified, this is the default
+		        defaultVideoHeight: 270,
+		        // if set, overrides <video width>
+		        videoWidth: -1,
+		        // if set, overrides <video height>
+		        videoHeight: -1,
+		        // width of audio player
+		        audioWidth: 400,
+		        // height of audio player
+		        audioHeight: 30,
+		        // initial volume when the player starts
+		        startVolume: 0.8,
+		        // useful for <audio> player loops
+		        loop: false,
+		        // enables Flash and Silverlight to resize to content size
+		        enableAutosize: true,
+		        // the order of controls you want on the control bar (and other plugins below)
+		        features: ['playpause', 'progress', 'current', 'duration', 'tracks', 'volume', 'fullscreen'],
+		        // Hide controls when playing and mouse is not over the video
+		        alwaysShowControls: false,
+		        // force iPad's native controls
+		        iPadUseNativeControls: false,
+		        // force iPhone's native controls
+		        iPhoneUseNativeControls: false,
+		        // force Android's native controls
+		        AndroidUseNativeControls: false,
+		        // forces the hour marker (##:00:00)
+		        alwaysShowHours: false,
+		        // show framecount in timecode (##:00:00:00)
+		        showTimecodeFrameCount: false,
+		        // used when showTimecodeFrameCount is set to true
+		        framesPerSecond: 25,
+		        // turns keyboard support on and off for this instance
+		        enableKeyboard: true,
+		        // when this player starts, it will pause other players
+		        pauseOtherPlayers: true,
+		        // array of keyboard commands
+		        keyActions: []
+		    });
+		
+			$(".feedback").feedbackForm({
+			    useDefaultIfNoIdIsSet: "True".toLowerCase() == "true",
+				baseUrl: "https://icreate3.esolutionsgroup.ca/feedback/api/1.0/",
+				getUrl: "client/230570_TownshipofSelwyn/default-form/en",
+				jsServerUrl: "https://js.esolutionsgroup.ca/js/libs/feedback-form/",
+				previewMode: false,
+				showButton: true,
+				pageTitle: document.title.replace(" - Selwyn", "").trim(),
+				buttonText: "",
+				feedbackFormId: $("#FeedbackFormId") === undefined ? "" : $("#FeedbackFormId").val(),
+				language:'en'
+			});
+		
+		}
+    });
+
+    function PrintScreen() {
+        if (iCreateObject.isSiteInICreateMode) {
+            showNAMessage();
+        }
+        else {
+            window.print();
+        }
+    }
+
+	
+
+
+</script>
+<script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/jquery_gallery/1.2.4/jquery.gallery.min.js"></script>
+<script type="text/javascript"> $(function () {$(".eSolutionsGroupPhotoGalleryV2PlaceholderDiv").each(function () { var method = $(this).attr("method"); var id = $(this).attr("id"); if (id != '') { $(this).load(id, function () { return method; })} else { $(this).html(''); }}) });</script>  
+
+
+    <title>index - Selwyn</title>
+    
+    <link rel="stylesheet" type="text/css" href="/styles/landing.css" />  
+
+
+    <link rel="stylesheet" type="text/css" href="/styles/iosLandingSlider.css" />    
+    <script type="text/javascript" src="https://js.esolutionsgroup.ca/js/libs/ios_slider/structure/1.3.42/jquery.iosslider.min.js"></script>
+    <script type="text/javascript" src='/scripts/landingSliderInit.js'></script>
+    <script>
+        $(document).ready(function () {
+            $(".ic-slider-text").each(function () { 
+                $(this).css({ top: "" })
+            });
+
+            $(".ic-slider-text .ic-slider-content-foreground").each(function () {
+                if ($(this).html().trim() == "") $(this).closest(".ic-slider-text").hide();
+            });
+        });
+    </script>
+
+<link media="screen" rel="stylesheet" href="/en/Modules/News/styles/EmergencyAlertBanners.css" type="text/css">
+<script type="text/javascript" src="/en/Modules/News/scripts/jquery.EmergencyAlertBanners.js"></script>
+
+<script type="text/javascript" src='/en/Modules/Calendar/scripts/jquery.mini-calendar-landing.js'></script><!--New-->
+    
+
+<meta property="dcterms.issued" content="2016-03-09T11:20:52-0500" />
+<meta property="og:title" content="index" />
+<meta property="og:url" content="http://www.selwyntownship.ca/en/selwynlibrary/index.asp" />
+<script type="text/javascript">
+/*ICREATE*/try {if (top == parent && parent.loadStyles) {parent.location = location;}var _icrt_keyPressed_ = -1;function _icrt_alertkey(e) {if(!e) {if(window.event) {e = window.event;} else {return;}}var keyCode;if(typeof(e.keyCode) == 'number') {keyCode = e.keyCode;} else if(typeof(e.which) == 'number') {keyCode = e.which;} else if(typeof(e.charCode) == 'number') {keyCode = e.charCode;} else {return;}if (keyCode == 17) {var now = new Date();if (_icrt_keyPressed_ >= 0) {var diff = now.getTime() - _icrt_keyPressed_;if (diff > 0 && diff < 500) {top.location.href = 'https://icreate3.esolutionsgroup.ca/icreate/publishing/editor/issue.do?method=editContent&id=39731&lang=en';}}_icrt_keyPressed_ = now.getTime();}}if(document.captureEvents && Event.KEYUP) {document.captureEvents(Event.KEYUP);}if (document.onkeyup) {var oldFunc = document.onkeyup;document.onkeyup = function(e) {_icrt_alertkey_(e);oldFunc(e);};} else {document.onkeyup = _icrt_alertkey;}}catch(exp){}/*ICREATE*/
+</script>
+</head>
+
+<body>
+    
+    <!--googleoff: all-->
+    <script type="text/javascript">
+    function HideBrowserAlertBanners() {
+        jQuery("#BrowserBannerWrapperOuter").addClass("hide");
+        jQuery.cookie("seenBrowserBanner", 1);
+    }
+</script>
+
+<!--[if lt IE 8]>
+    <script type="text/javascript">
+        jQuery(function () {
+            if ((document.location.href.toLowerCase().indexOf("/edit_") == -1) && (jQuery.cookie("seenBrowserBanner") != 1)) {
+                jQuery("#BrowserBannerWrapperOuter").removeClass("hide");
+            }
+        });
+    </script>
+<![endif]-->
+
+
+<div id="BrowserBannerWrapperOuter" class="hide">
+	<div id="BrowserBanner">
+        <div id="browserAlertBanners" class="bannerContainer">	
+            <div id="BrowserBannerClose"> 
+			    <a href="#" onclick="javascript: HideBrowserAlertBanners();">Close</a>
+		    </div> 			                    
+			<div class="alertbanner browserAlert">
+				<div class="BrowserBannerTitle">Browser Compatibility Notification</div>
+				<div class="BrowserBannerText">It appears you are trying to access this site using an outdated browser.  As a result, parts of the site may not function properly for you.  We recommend updating your browser to its most recent version at your earliest convenience.</div>
+		 	</div>
+		</div>
+	</div>
+</div>
+    <input type="hidden" name="FeedbackFormId" id="FeedbackFormId" value="" />
+    
+
+    <div id="uber" class="interior landing library libraryHome cf">
+        <div id="uberTop">
+            <header class="cf">
+        	    <div id="skipContentWrapper">			
+    <a id="skipContentLink" title="Skip Navigation and go to Content" href="#maincontent">Skip to Content</a>			
+</div>
+                <div class="headerInner">
+                    <div class="headerLeft">
+                        <div id="logo"> 
+    <a href="/en/selwynlibrary/index.asp" title="Home"><img src="/en/images/landing/logo-library.jpg" alt="Selwyn Library Logo" /></a> <!--TODO: LANGC: get translations for title and alt FEATURE: Make Dynamic-->
+</div>
+<div id="printLogo">
+    <a href="/en/selwynlibrary/index.asp" title="Click to go back Home">
+    <img src="/en/images/landing/logo-library.jpg" alt="Selwyn Library Logo" /></a>
+</div>
+                        <h1>Selwyn Public Library</h1>
+                    </div>
+                    <div class="headerRight cf">
+                        
+<div id="topNav">
+
+<a title="View our Staff Contacts page" class="" href="/en/selwynlibrary/Staff-Contacts.asp?_mid_=33472">Staff Contacts</a><a title="View our Library eNewsletter page" class="" href="/en/selwynlibrary/Library-eNewsletter.asp?_mid_=33651">Library eNewsletter</a><a title="Back to Selwyn Township home" class="" href="/en/index.asp">Township</a>
+
+</div>
+
+<nav class="mobileNav">
+    <!--displayed only for smaller viewports-->
+<!--    <a href="#embeddedEmailContainer">
+        <img src='/images/structure/iconPhone.png' alt="Contact Us" />
+        Contact</a>-->
+    <a href="#" class="menuTrigger">
+        <img src="/images/structure/iconList.png" alt="Main menu icon" />
+        <span class="menuTriggerText">Menu</span></a>
+</nav>
+
+                    </div>
+                    <div class="mainNavContainer cf">
+    <div id="mainNav" class="cf">
+        <ul id="nav" class="cf"><li id="navTab01"><a title="View our Library Catalogue page" href="http://selpubliclibrary.gotdns.com/oasis/catalog/?installation=Union" class="mainNavItem" target="_blank"><span>Catalogue</span></a></li><li id="navTab02"><a title="Open to view eBooks" href="http://downloadcentre.library.on.ca/DE36A0B7-D6EE-4DC6-8D59-A2564C377ED3/10/50/en/Default.htm" class="mainNavItem" target="_blank"><span>eBooks</span></a></li><li id="navTab03"><a title="View our Programs page" href="/en/selwynlibrary/Programs.asp" class="mainNavItem"><span>Programs</span></a></li><li id="navTab04"><a title="Open new window to view What to read next" href="/en/selwynlibrary/What-to-read-next.asp" class="mainNavItem"><span>What to <br />Read Next</span></a></li></ul>
+    </div>
+</div>
+                </div>
+                <div class="mobileDropDown"></div>     
+            </header>
+            <div class="welcomeContentOuter cf">
+                <div id="welcomeContentOuterGradient"></div>
+                <div class="ic-container-fluid">
+                    <!--googleon: all-->
+                    <div class="welcome-content cf">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Welcome to Selwyn Public Library.</p>
+
+
+                    </div>
+                    <!--googleoff: all-->
+                </div>
+            </div>
+        </div>
+        
+        <div id="uberMain" class="mainInterior">
+			<div id="mainInner" class="cf">
+                <div id="interiorLeftColumnBorder"> </div>
+				<div id="interiorLeftColumn">
+                    <nav id="subNavContainer" class="cf"><ul class="subNav"><li class="withChildren"><a title="View our Borrowing  page" href="/en/selwynlibrary/Borrowing-.asp" class="">Borrowing </a></li><li class="withChildren"><a title="Open file in new window: Online Resources" href="/en/selwynlibrary/Online-Resources.asp" class="">Online Resources</a></li><li class="withChildren"><a title="View our Services page" href="/en/selwynlibrary/Services.asp" class="">Services</a></li><li class="withChildren"><a title="View our Kids and Teens page" href="/en/selwynlibrary/Kids-and-Teens.asp" class="">Kids and Teens</a></li><li class="withChildren"><a title="View our About My Library page" href="/en/selwynlibrary/About-My-Library.asp" class="">About My Library</a></li><li class="withChildren"><a title="Open new window to view http://support my library" href="/en/selwynlibrary/Support-My-Library.asp" class="">Support My Library</a></li></ul></nav>
+                    <div id="intLeftColumnContentContainer">
+                    	<div id="intLeftColumnContent">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Hours of Operation</h2>
+<p><strong>Bridgenorth&nbsp;Library</strong> <br /><strong>P: 705-292-5065<br />F: 705-292-6695</strong><br />Mon: 1pm - 5pm<br />Tues &amp; Thurs: 10am - 8pm <br />Wed &amp; Fri: 10am - 5pm<br />Sat: 10am - 4pm <br />Sun: Closed</p>
+<p><strong>Ennismore&nbsp;Library</strong> <br /><strong>P: 705-292-8022<br />F: 705-292-8687</strong><br />Mon, Wed &amp; Fri: 1pm - 5pm <br />Tues &amp; Thurs: 10am - 2pm <br />&amp; 6pm - 8pm <br />Sat: 10am - 2pm <br />Sun: Closed</p>
+<p><strong>Lakefield&nbsp;Library</strong> <br /><strong>P: 705-652-8623<br />F: 705-652-8878</strong><br />Tues &amp; Fri: 10am - 5pm <br />Wed: 10am - 2pm <br />Thurs: 10am - 8pm <br />Sat: 10am - 2pm <br />Sun &amp; Mon: Closed</p>
+<p><a title="View our Monetary Donations &amp;amp; Bequests page" href="/en/selwynlibrary/Monetary-Donations---Bequests.asp"><img src="/en/selwynlibrary/resources/Donate-button.png" alt="Donate Button" width="164" height="41" /></a></p>
+
+
+                        </div>
+                        <div class="socialLinks">
+<span>Connect</span>
+<a title="Open new window to view https://www.facebook.com/SelwynPublicLibrary" href="https://www.facebook.com/SelwynPublicLibrary" target="_blank">
+<img alt="Open new window to view https://www.facebook.com/SelwynPublicLibrary" src="/en//resourcesGeneral/socialicons/landing/icon-facebook.png" />
+</a>
+<a title="Open new window to view https://www.pinterest.com/mypubliclibrary" href="https://www.pinterest.com/mypubliclibrary" target="_blank">
+<img alt="Open new window to view https://www.pinterest.com/mypubliclibrary" src="/en//resourcesGeneral/socialicons/landing/icon-pinterest.png" />
+</a>
+<a title="Open new window to view https://twitter.com/selwynlibrary" href="https://twitter.com/selwynlibrary">
+<img alt="Open new window to view https://twitter.com/selwynlibrary" src="/en//resourcesGeneral/socialicons/landing/icon-twitter.png " />
+</a>
+</div>
+
+
+<script type="text/javascript">
+    $("#intFloatRight .socialLinks").append("<span>Connect</span>")
+
+</script>
+
+                    </div>
+
+                </div>
+                 
+                <div id="mainContent" tabindex="-1">
+                    
+                    
+                        <div id="ic-gal-slider-landing" class="slider-container ic-fade">
+                            <div class="ic-slider">
+                                <div id="rotatingBanners" class="bannerContainer slider rsDefault">
+                                    <div class="bannerEdit slide">
+                                            <div class="bannerImage ic-img-1" onclick="javascript:window.location.href='/en/selwynlibrary/March-Break.asp'" data-image-title="" data-anchor-title="View our March Break page" title="View our March Break page" alt="March Break Programs Poster" style="background-image: url(&quot;/en/selwynlibrary/resources/Ad_Space/march-break.png&quot;);"></div>
+                                            <span class="ic-slider-content ic-slider-text">
+                                                <div class="ic-container-fluid">
+                                                    <div class="ic-slider-content-foreground">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div><div class="bannerEdit slide default">
+                                            <div class="bannerImage ic-img-4" onclick="javascript:window.location.href='/en/selwynlibrary/Adult-Workshops.asp'" data-image-title="" data-anchor-title="View our Adult Workshops page" title="View our Adult Workshops page" alt="March Workshops Poster" style="background-image: url(&quot;/en/selwynlibrary/resources/Ad_Space/March-workshops.png&quot;);"></div>
+                                            <span class="ic-slider-content ic-slider-text">
+                                                <div class="ic-container-fluid">
+                                                    <div class="ic-slider-content-foreground">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div><div class="bannerEdit slide">
+                                            <div class="bannerImage ic-img-2" onclick="javascript:window.location.href='/en/selwynlibrary/Adult-Programs.asp'" data-image-title="" data-anchor-title="View our Adult Programs page" title="View our Adult Programs page" alt="cell phone help poster" style="background-image: url(&quot;/en/selwynlibrary/resources/Ad_Space/cell-phone-help.png&quot;);"></div>
+                                            <span class="ic-slider-content ic-slider-text">
+                                                <div class="ic-container-fluid">
+                                                    <div class="ic-slider-content-foreground">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div><div class="bannerEdit slide">
+                                            <div class="bannerImage ic-img-3" onclick="javascript:window.location.href='/en/selwynlibrary/Adult-Programs.asp'" data-image-title="" data-anchor-title="View our Adult Programs page" title="View our Adult Programs page" alt="Tablet help poster" style="background-image: url(&quot;/en/selwynlibrary/resources/Ad_Space/tablet-help.png&quot;);"></div>
+                                            <span class="ic-slider-content ic-slider-text">
+                                                <div class="ic-container-fluid">
+                                                    <div class="ic-slider-content-foreground">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div><script type="text/javascript">$(document).ready(function(){$(".ic-img-0").attr("onclick", "javascript:window.location.href='/en/selwynlibrary/Adult-Workshops.asp'").attr("title", "View our Adult Workshops page").attr("alt", "Ancestry workshop poster").css({"background-image": "url(http://www.selwyntownship.ca/en/selwynlibrary/resources/Ad_Space/Ancestry.png)".replace("http:",  window.location.protocol) });$(".ic-img-1").attr("onclick", "javascript:window.location.href='/en/selwynlibrary/March-Break.asp'").attr("title", "View our March Break page").attr("alt", "March Break Programs Poster").css({"background-image": "url(http://www.selwyntownship.ca/en/selwynlibrary/resources/Ad_Space/march-break.png)".replace("http:",  window.location.protocol) });$(".ic-img-2").attr("onclick", "javascript:window.location.href='/en/selwynlibrary/Adult-Programs.asp'").attr("title", "View our Adult Programs page").attr("alt", "cell phone help poster").css({"background-image": "url(http://www.selwyntownship.ca/en/selwynlibrary/resources/Ad_Space/cell-phone-help.png)".replace("http:",  window.location.protocol) });$(".ic-img-3").attr("onclick", "javascript:window.location.href='/en/selwynlibrary/Adult-Programs.asp'").attr("title", "View our Adult Programs page").attr("alt", "Tablet help poster").css({"background-image": "url(http://www.selwyntownship.ca/en/selwynlibrary/resources/Ad_Space/tablet-help.png)".replace("http:",  window.location.protocol) });$(".ic-img-4").attr("onclick", "javascript:window.location.href='/en/selwynlibrary/Adult-Workshops.asp'").attr("title", "View our Adult Workshops page").attr("alt", "March Workshops Poster").css({"background-image": "url(http://www.selwyntownship.ca/en/selwynlibrary/resources/Ad_Space/March-workshops.png)".replace("http:",  window.location.protocol) });});</script>
+                                </div>
+                                
+                                
+                                </div>
+							     
+                                <div class="ic-slider-controls visible">
+                                    <a class="prev" style="cursor: pointer;"></a>
+                                    <a class="pause"></a>
+                                    <a class="next" style="cursor: pointer;"></a>
+                                </div>
+                                
+							     
+                            </div>
+                    
+                    
+
+                    <div class="mobileBannerText"></div>
+
+                    <div id="contentInt">
+
+                        <nav class="subNavTriggerContainer">
+    <a class="subNavTrigger" href="#" title="subNav Trigger">
+    <img src="/images/structure/icon-subnav.png" alt="subnav icon" />
+    <span class="subNavTriggerText">More</span></a>
+</nav>
+
+                        <div id="printArea">
+
+                            <nav class="mobileSubNavContainer cf">
+    <div class="icrt-mob-subnav-header">More in this Section...</div>
+    <!--subNav will be cloned and appended to this div for narrow devices-->
+</nav>
+
+                            <div id="intFloatRight">
+                            
+                                <input id="CalendarIDPlaceholder" type="hidden" value='eb49b1ed-7935-4e57-93c5-c69f1637ac0c' /><!--TODO: CALENDAR: This is the first Calendar ID in the array.  You may need to Change the 0 to match the CalendarID -->
+
+<!-- TODO: LANGC: Everything on this page needs translations and FEATURE: needs to be made dynamic -->
+<div id="libraryCalendar">
+    <h2>Library Calendar</h2>
+    <div id="calendarContainer"><div id="calendar"><noscript><p>JavaScript disabled <br/>Please enable JavaScript to view this content</p></noscript></div></div>
+    <div id="calendarItemContainer" class="noticeLinks"></div>
+
+    
+    <noscript>JavaScript is disabled. Please enable JavaScript to view this content.</noscript> 
+</div>
+
+
+<script type="text/javascript">
+
+    $(function () {
+        if (iCreateObject.isSiteInICreateMode) {
+            $("#calendar").empty().html("Mini calendar is disabled in iCreate");
+        }
+        else {
+            $("#calendar").empty().html("Loading...").mini_calendar({
+                source: 'http://www.selwyntownship.ca//en/Modules/Calendar/services/GetCalendarsDateWithEvent.ashx?category=Library%20Events',
+                url: "http://calendar.selwyntownship.ca/?Category=Library%20Events", //'http://www.selwyntownship.ca//en/Modules/Calendar/Council/default.aspx?PID=calendar', //TODO: CALENDAR: make this point to this may not always point to the /Council/ folder FEATURE: make this dynamic using the webconfig
+                currentDate: jQuery.getParam("StartDate") ? new Date(jQuery.getParam("StartDate")) : new Date()
+            });
+
+
+        }
+    });
+
+    function parseData(data, divElement) {
+
+        var charLimit = 40;
+        divElement.empty();
+        var html = "";
+
+        $.each(data, function (index, item) {
+           
+            var id = item.Id;
+            var title = item.Title,
+                startDate = item.StartDate,
+                description = item.description;
+            if (title.length > charLimit) {
+                if (title.indexOf(' ', charLimit) >= 0) {
+                    title = title.substring(0, title.indexOf(' ', charLimit)) + "...";
+                }
+            }
+
+            html += "<div class='calendarItem'><span class=\"date\">" + $.datepicker.formatDate('MM dd, yy', $.datepicker.parseDate("mm/dd/yy", startDate.toString())) + "</span><br\/>" + "<a href=\"" + iCreateObject.calendarUrl + "/Event/Index/" + id + "\" title=\"View event: " + title.replace(/'/g, "&#39;") + " - " + startDate + "\" >" + title + "<\/a><\/div>";
+//            html += "<div class='calendarItem " + (index == 1 ? "first " : "") + "cf'><div class='calendarItemLeft'><div class='date'>" + $.datepicker.formatDate('M', $.datepicker.parseDate("mm/dd/yy", startDate.toString())) + "<br\/>" + $.datepicker.formatDate('dd', $.datepicker.parseDate("mm/dd/yy", startDate.toString())) + "<\/div><\/div><div class='description calendarItemright'><a href=\"" + iCreateObject.calendarUrl + "/Event/Index/" + id + "\" title=\"View event: " + title.replace(/'/g, "&#39;") + " - " + startDate + "\" > <span class='title'\/>" + title + "<\/span>" + /*description +*/ "<\/a><\/div><\/div>";
+
+        })
+        html += "<div class='calendarItem'><a class='viewMore' href='http://calendar.selwyntownship.ca/?Category=Library%20Events' title='View All Events'>View All Events</div>";
+		
+        divElement.html(html);
+    }
+
+    $(function () {
+        var divElement = $("#calendarItemContainer");
+        if (iCreateObject.isSiteInICreateMode) {
+            divElement.empty().html("Calendar feed disabled in iCreate.");
+        }
+        else {
+
+            divElement.html("Loading...");
+            var params = $.param(
+            {
+                //Calendar: $("#CalendarIDPlaceholder").val(),
+                Category: "Library Events",
+                limit: 3
+            });
+
+
+            $.ajax({
+                url: iCreateObject.corpHome + '/' + iCreateObject.lang + '/Modules/Calendar/services/GetCalendarEvent.ashx?' + params,
+                async: true,
+                dataType: 'jsonp',
+                crossDomain: true,
+                cache: false,
+                error: function (xhr, textStatus, thrownError) {
+                    divElement.html("An error occured");
+                },
+                success: function (data) {
+                    if (data != "")
+                        parseData(data, divElement);
+                    else
+                        divElement.html("No Events");
+                }
+
+            });
+            
+        }
+    }); 
+</script>
+
+                            </div>
+                            <!--intFloatRight -->
+
+                            <!--googleon: all-->
+                            <div id="printAreaContent" tabindex="-1">
+
+                                <h2 class="Center">ROSEMARY SULLIVAN WINS <br />2016 RBC TAYLOR PRIZE</h2>
+<p><img src="/en/selwynlibrary/resources/2016_winner_rosemry_sullivan.jpg" alt="ROSEMARY SULLIVAN" width="228" height="344" /></p>
+<p>The winner of the 2016 RBC Taylor Prize is Rosemary Sullivan for Stalin's Daughter: The Extraordinary and Tumultuous Life of Svetlana Alliluyeva, published by HarperCollins Publishers.&nbsp;</p>
+<p>About the Book:</p>
+<p>Stalin's Daughter is a work of narrative non-fiction on a grand scale, combining popular history and biography to tell the incredible story of a woman fated to live her life in the shadow of one of history's most monstrous dictators.</p>
+<p>Svetlana Stalina, who died on November 22, 2011, at the age of eighty-five, was the only daughter and the last surviving child of Josef Stalin. Beyond Stalina's controversial defection to the US in a cloak-and-dagger escape via India in 1967, her journey from life as the beloved daughter of a fierce autocrat to death in small-town Wisconsin is an astonishing saga.</p>
+<p>In her research for Stalin's Daughter, Rosemary Sullivan had the full co-operation of Svetlana's American daughter, Olga. Rosemary interviewed dozens of people who knew Svetlana, including family and friends in Moscow and the CIA agent who was in charge of moving her from India when she defected. She also drew on family letters and on KGB, CIA, FBI, NARA and British Foreign Office files.</p>
+<p>The Five Finalists for the 2016 RBC Taylor Prize:<br />. Ian Brown (Toronto, Ontario) for Sixty: The Beginning of the End, or the End of the Beginning?, published by Random House Canada<br />. Camilla Gibb (Toronto, Ontario) for This Is Happy, published by Doubleday Canada<br />. David Halton (Ottawa, Ontario) for Dispatches from the Front: Matthew Halton, Canada's Voice at War, published by McClelland &amp; Stewart<br />. Wab Kinew (Winnipeg, Manitoba) for The Reason You Walk, published by Viking Canada<br />. Rosemary Sullivan (Toronto, Ontario) for Stalin's Daughter: The Extraordinary and Tumultuous Life of Svetlana Alliluyeva, published by HarperCollins Publishers</p>
+<p>We have copies of all five books in our library.<a title="Open new window to view http://selpubliclibrary.gotdns.com/oasis/catalog/(S(5lhjur45tdft3uzfh1nrlr55))/Default.aspx?installation=Union" href="http://selpubliclibrary.gotdns.com/oasis/catalog/(S(5lhjur45tdft3uzfh1nrlr55))/Default.aspx?installation=Union" target="_blank"> Search the catalogue for availability.&nbsp;</a></p>
+<p>&nbsp;</p>
+<p><img src="/en/selwynlibrary/resources/website_acknowledgement.png" alt="The Selwyn Public Library would like to acknowledge the support of the Ministry of Tourism, Culture, and Sport. The Selwyn Public Library would also like to acknowledge the support of the Ontario trillium Foundation. " width="630" height="171" /></p>
+
+                            </div>
+                            <!--googleoff: all-->
+                        </div>
+                        
+                    </div>
+                </div><!--Main content-->
+
+                
+            </div>
+        </div>
+        <!--uberMain-->
+        
+        <footer>
+    <div class="footerTop">
+        <div class="footerTopInner">
+            <div id="footerNav">
+                <a title="" class="" href="#">Home</a><span class="horizNavSeparator">|</span><a title="View our Staff Contacts page" class="" href="/en/selwynlibrary/Staff-Contacts.asp?_mid_=33466">Staff Contacts</a><span class="horizNavSeparator">|</span><a title="" class="" href="#">Accessibility</a><span class="horizNavSeparator">|</span><a title="" class="" href="#">Find us</a><span class="horizNavSeparator">|</span><a title="" class="" href="#">Privacy</a><span class="horizNavSeparator">|</span><a title="View our sitemaplibrary.aspx page" class="" href="/en/sitemaplibrary.aspx">sitemap</a><span class="horizNavSeparator">|</span><a title="Browse Aloud" href="#" class="last"><text>Â </text></a><div id="browseAloudContainer"><script type="text/javascript">var _baTheme=0, _baMode='BrowseAloud', _baUseCookies=true, _baHideOnLoad=true;</script><script type="text/javascript" src="https://www.browsealoud.com/plus/scripts/ba.js"></script></div>
+            </div>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <div class="footerBottomInner">  
+   
+            <div class="footerText">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>&copy; 2015 Township of Selwyn, 1310 Centre Line, Selwyn, ON K9J 6X5, Tel: (705) 292-9507 &amp; (877) 213-7419. <a title="Open new window to send an email to Township Email" href="javascript:emailDialog(1680,'en')&amp;&amp;false">Email Us</a></p>
+
+
+                    
+            </div><!--footerText-->
+
+            <div id="esol"> 
+                <a title="Designed by eSolutionsGroup" target="_blank" href="http://www.esolutionsgroup.ca">Designed by eSolutions</a>
+            </div><!--TODO: LANGC: Get Translations for alt/title FEATURE: Make Dynamic-->
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src='/scripts/responsiveScripts.js'></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51892455-1', 'auto');
+  ga('send', 'pageview');
+
+</script><script type="text/javascript">
+       var _gaq = _gaq || []; var pluginUrl = "https://www.google-analytics.com/plugins/ga/inpage_linkid.js"; _gaq.push(["_require", "inpage_linkid", pluginUrl]); _gaq.push(["_setAccount", iCreateObject.gaTrackingCode]); _gaq.push(["_trackPageview"]); (function () { var e = document.createElement("script"); e.type = "text/javascript"; e.async = true; e.src = ("https:" == document.location.protocol ? "https://" : "http://") + "stats.g.doubleclick.net/dc.js"; var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(e, t) })(); if (typeof jQuery != "undefined") { jQuery(document).ready(function (e) { var t = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i; var n = ""; if (jQuery("base").attr("href") != undefined) n = jQuery("base").attr("href"); jQuery("a").each(function () { var e = jQuery(this).attr("href"); var r = jQuery(this).attr("href"); if (e) { e = e.toLowerCase() } if (e && e.match(/^https?\:/i) && !e.match(document.domain)) { jQuery(this).click(function () { var t = e.replace(/^https?\:\/\//i, ""); _gaq.push(["_trackEvent", "External", "Click", t]); if (jQuery(this).attr("target") != undefined && jQuery(this).attr("target").toLowerCase() != "_blank") { setTimeout(function () { location.href = r }, 200); return false } }) } else if (e && e.match(/^mailto\:/i)) { jQuery(this).click(function () { var t = e.replace(/^mailto\:/i, ""); _gaq.push(["_trackEvent", "Email", "Click", t]) }) } else if (e && e.match(t)) { jQuery(this).click(function () { var t = /[.]/.exec(e) ? /[^.]+$/.exec(e) : undefined; var r = e; _gaq.push(["_trackEvent", "Download", "Click-" + t, r]); if (jQuery(this).attr("target") != undefined && jQuery(this).attr("target").toLowerCase() != "_blank") { setTimeout(function () { location.href = n + e }, 200); return false } }) } }) }) }
+</script>
+
+
+
+
+	<script type="text/javascript" src="https://www.browsealoud.com/plus/scripts/ba.js"></script>
+
+</footer>
+
+
+    </div><!--uber-->
+    <!--googleon: all-->
+</body>
+
+</html>

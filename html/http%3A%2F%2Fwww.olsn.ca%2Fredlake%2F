@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server" >
+    	<title>Red Lake Public Library</title>
+        <meta name="msvalidate.01" content="868347A85B1CFBE3093D959B5EB1C48E" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        
+
+		<link rel="stylesheet" type="text/css" href="css/site1.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fsizer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/vertical.css"/>   
+        <link rel="stylesheet" type="text/css" href="css/redlake.css"/>     
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#sizer').jfontsizer({
+		applyTo: '#content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+});
+			
+			
+function loadContent(id, page) 
+{
+	$("#content").load(id);
+}
+
+activateMenu = function(nav) {
+
+/* currentStyle restricts the Javascript to IE only */
+	if (document.all &&
+ document.getElementById(nav).currentStyle) {  
+        var navroot = document.getElementById(nav);
+        
+        /* Get all the list items within the menu */
+
+        var lis=navroot.getElementsByTagName("LI");  
+        for (i=0; i<lis.length; i++) {
+        
+           /* If the LI has another menu level */
+            if(lis[i].lastChild.tagName=="UL"){
+            
+                /* assign the function to the LI */
+             	lis[i].onmouseover=function() {	
+                
+                   /* display the inner menu */
+                   this.lastChild.style.display="block";
+                }
+                lis[i].onmouseout=function() {   
+                   this.lastChild.style.display="none";
+                }
+            }
+        }
+    }
+}
+window.onload= function(){
+    /* pass the function the id of the top level UL */
+
+    /* remove one, when only using one menu */
+    activateMenu("vertnav"); 
+
+}
+
+
+</script>
+</head>
+<body>
+    
+ <div id="wrapper">
+<div id="sizer"></div>
+	<div id="header"></div>
+    <div id="main"><meta name="keywords" content="Red Lake Public Library, Red Lake, Public Library, Balmertown, Library, Branch, Ontario, Canada, Catalogue, eResources, eBooks, Kiishik, audio books, digital content, video" />
+<meta name="description" content="Red Lake Public Library, 2 branches : Red Lake and Balmertown" />
+
+    <div id="menu">
+            <ul id="vertnav" >
+                     <li><a href="index.asp">Home</a>            
+                     <li><a href="javascript:loadContent('rl_home.html');">Red Lake Branch</a>
+                    <ul>
+                    	<li><a href="javascript:loadContent('rl_history.html');">History</a></li>
+                   	  <li><a href="javascript:loadContent('rl_programs.html');">Programs</a></li>
+
+                    </ul>
+                </li>
+             
+                <li>
+                    <a href="javascript:loadContent('b_home.html');">Balmertown Branch</a>
+                    <ul>
+                        <li><a href="javascript:loadContent('b_history.html');">History</a></li>
+                        <li><a href="javascript:loadContent('b_programs.html');">Programs</a></li>
+                    </ul>
+                </li>
+                                <li>
+                    <a href="javascript:loadContent('services.html');">Services</a>
+                  </li>
+                <li>
+                    <a href="http://www.olsn.ca/e-resource/search.asp?library=redlake" target="_blank">eResources</a>
+                    </li>
+                <li>
+                    <a href="javascript:loadContent('board.html');">Board</a>
+                    </li>
+                <li>
+                    <a href="javascript:loadContent('links.html');">Links</a>
+                    </li>
+                <li>
+                    <a href="javascript:loadContent('partners.html');">Partners</a>
+                    </li>
+                <li>
+                    <a href="javascript:loadContent('kiishik.html');">Kiishik</a>
+                    </li>
+          <li>
+                    <a href="javascript:loadContent('cap.html');">CAP</a>
+                    </li>
+              </ul>
+    </div>
+    <div id="content">
+      <h1>Red Lake Public Library</h1>
+      <p><a href="https://olsn.ent.sirsidynix.net/client/redlake/" target="_blank"><img src="images/catalogue.jpg" alt="Online Catalogue" width="119" height="93" align="middle" class="img_std" />&nbsp;&nbsp;&nbsp;Library Catalogue Online</a></p>
+      <p>&nbsp;</p>
+      <p><strong>Hey Kids!</strong> TumbleBooks are books you can read and interact with on the web&hellip; Click on the icon below to visit the TumbleBooks website </p>
+      <p><a href="http://www.tumblebooks.com/library/auto_login.asp?U=redlake&amp;P=libra" target="_blank"><img src="images/tumblebooks.gif" alt="Tumblebooks" width="238" height="60" align="middle" class="img_std" />&nbsp;&nbsp;&nbsp;Tumblebooks</a> </p>
+      <p><strong>Overdrive</strong>, access to eBooks, audiobooks, and other digital content.</p>
+      <p><a href="http://downloadcentre.library.on.ca" target="_blank"><img src="images/Overdrive.gif" alt="Overdrive" width="175" height="96" align="middle" class="img_std" />&nbsp;&nbsp;&nbsp;Overdrive</a></p>
+<p>Do you know how much a visit to your local library saves you? Try out this fun link to find out!</p>
+      <ul>
+        <li><a href="http://www.levy.lib.fl.us/rooms/documents/worth.htm" target="_blank">Library Value Calculator</a></li>
+      </ul>
+      
+      <p>&nbsp;</p>
+      <p align="center">
+      
+          <!-- Site Meter -->
+<a href="http://s13.sitemeter.com/stats.asp?site=s13redlake" target="_top">
+<img src="http://s13.sitemeter.com/meter.asp?site=s13redlake" alt="Site Meter" border="0"/></a>
+<!-- Copyright (c)2009 Site Meter -->
+
+</p>
+    </div>
+    
+</div>
+    <div id="footer">&copy; Red Lake Public Library</div>
+</div>	
+
+<script type="text/javascript"> 
+ activateMenu("nav"); 
+ activateMenu("vertnav"); 
+</script>
+	
+
+</body>
+</html>

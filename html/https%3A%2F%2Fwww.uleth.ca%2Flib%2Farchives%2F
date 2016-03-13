@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Archives</title>
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="archives" />
+    <meta name="description" content="archives" />
+
+
+
+<div class="HeaderWrap">
+
+<!-- Begin Shem (script modified by Bryson) -->
+					   
+	<div id="header">
+	<style type="text/css">@import url(/lib/styles/style.css);</style>
+	<script src="/lib/scripts/crumbs.js" language="JavaScript" type="text/javascript"></script>
+<!--[if lt IE 8]> 			
+	<style>
+    #PageContent, #tourPageContent {padding:15px 10px 15px 20px;}
+    .HeaderWrap {z-index:1;}
+    #Breadcrumbs {margin-top:120px;}
+	</style>
+<![endif]-->
+    <script type="text/javascript" src="/lib/scripts/jquery-latest.min.js"></script>
+	<!--<script src="/lib/scripts/jflow.plus.js" type="text/javascript"></script>-->
+	<script src="/lib/scripts/newsSlider.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/lib/scripts/topbar.js"></script>
+	<script type="text/javascript">
+	
+		//Variable representing how much time is left while hovering
+		//over the top bar before the full menu drops down
+		var menuTimeout;
+		
+		//Function that lowers the full menu using jQuery
+		function openMenu(){
+		//	if($("#dropdown").css("margin-top")!= "-40px"){
+				$("#dropdown").animate({marginTop: "-40px"}, 500); 
+				$("#downarrow").fadeOut(500);
+				$(".fauxTab").css({cursor: "default"});
+				/*$("#dDmenu").fadeOut(10).delay(100).fadeIn(500);*/
+		//	} else {
+				//do nothing
+		//	}
+	   }
+	
+		//Function that raises the full menu using jQuery
+		function closeMenu(){
+			$("#dropdown").animate({ marginTop: "-375px"}, 200 );//closes the drop down menu
+			$("#downarrow").fadeIn(200);
+			$(".fauxTab").css({cursor: "pointer"});
+		}
+	
+		/*function closeMenuImmediate(){
+			$("#dropdown").fadeOut(0); //closes the drop down menu
+			$("#downarrow").fadeIn(0);
+		}*/
+	
+		$(document).ready(function() {
+			//JQuery event which triggers when hovering over top bar
+			$(".menuDropdown").hover(function(){
+					//After 500ms of hovering over the top bar, trigger openMenu()
+					menuTimeout = setTimeout(openMenu, 500);
+			}, function(){
+				//If the user stops hovering, reset the timeout variable to 
+				//cancel the menu drop
+				clearTimeout(menuTimeout);
+			});
+			
+
+					
+			$(".menuColumns").click(function(){
+				//TODO: Also find a way to prevent the menu from displaying if the menu is fully open before a link is clicked
+				//alert('Handler for .click() called.');
+				//$('#dropdown').clearQueue();
+				closeMenuImmediate();
+				clearTimeout(menuTimeout);	
+			});
+	
+			//Open the menu if the drop down arrow is clicked
+			$(".topBarSlideup").click( function() {
+				closeMenu();
+			});
+			$(".topBarSlideDown").click( function() {
+				openMenu();
+			});
+			
+			//Close the menu if a user stops hovering over the menu
+		   $("#dropdownContent").mouseleave(function(){
+				closeMenu();
+			});
+		}); //End document.ready
+
+		//$(window).load(function() {
+			//$('#dropdowntitlefoldwrap').load("/lib/index5_23.asp #titlefold");
+			//$("#dropdowntitlefoldwrap").width(document.getElementById("titlefold").clientWidth);
+			//$("#dropdowntitlefoldwrap").height(document.getElementById("titlefold").clientHeight);
+		//});
+		
+		</script>
+		<script type="text/javascript" charset="utf-8">
+		//temporary hack for fonts not showing in new chrome update
+ 			$(function() { $('body').hide().show(); });
+		</script>
+	<noscript>JavaScript is not enabled. Please turn on JavaScript to use all the featres of our website.</noscript>
+		<div id="dropdownWrap">
+			<div id="dropdown">
+		   <!-- Slider is "position:fixed;" so that it floats overtop of the header -->
+				<div id="dropdownContentWrap"> 
+					<div id="dropdowntitlefoldwrap">&nbsp;<!-- This div is an instance of #titlefold, jQuery reads the contents of the titlefold div and loads it here --></div>
+					
+					<div id="dropdownContent">
+				
+						<div class="menuColumns">
+						   <p><a href="/lib/resources/">Resources</a></p>
+								<ul>
+								<li>Library Catalogue
+									<ul>
+									<li><a href="http://darius.uleth.ca/search~S1">U of L Library Catalogue</a></li>
+									<li><a href="http://darius.uleth.ca/search~S1/r">Course Reserves</a></li>
+									</ul>
+								</li>      							
+								<li>UofL Digital Collections
+									<ul>
+									<li><a href="/lib/digitized_Collections/">Digitized Collections</a></li>
+									<li><a href="http://www.uleth.ca/dspace/">Institutional Repository</a></li>
+									<li><a href="http://blackfootdigitallibrary.org/">Blackfoot Digital Library</a></li>
+									</ul>
+								</li>    							
+								<li>Databases
+									<ul>
+									<li><a href="/lib/resources/databases/">by title</a></li>
+									<li><a href="/lib/subjects/">by subject</a></li>
+									<li><a href="/lib/resources/databases/type/">by type</a></li>
+									<li><a href="/lib/resources/databases/providers/">by provider</a></li>
+									<li><a href="http://fg2fy8yh7d.search.serialssolutions.com/">Journal title search</a></li>
+									<!--<li><a href="/lib/resources/databases/help/">Help finding journal articles</a></li>-->
+									</ul>
+								</li>      							
+								<li><a href="/lib/resources/display.asp?PageID=186">Web Search Engines</a></li>
+								<li><a href="/lib/resources/data/">Spatial &amp; Numeric Data</a></li>
+								<li><a href="/lib/resources/display.asp?PageID=124">Government Information</a></li>
+								<li><a href="/lib/resources/reference/">E-Reference</a></li>
+								<li><a href="/lib/links/display.asp?PageID=187">Other libraries</a></li>
+								<li><a href="/lib/archives/">Archives</a></li>
+								<li><a href="http://www.uleth.ca/education/currlab/">Education Curriculum Lab</a></li>
+								<li><a href="/lib/index.asp?Tabs=4">How-to Guides</a></li>
+								</ul>
+						</div><!-- End menuColumns -->
+						
+						<div class="menuColumns">
+							 <p><a href="/lib/services/">Services</a></p>
+								<ul>
+								<li><a href="/lib/hours/index.asp" title="hours of opening, Info Desk...">Hours</a></li>
+								<li>Interlibrary Loans
+									<ul>
+									<li><a href="/lib/services/display.asp?PageID=51">Borrowing Guidelines</a></li>
+									<li><a href="/lib/services/display.asp?PageID=53">Lending Guidelines</a></li>
+									<li><a href="http://darius.uleth.ca/screens/illreq_s1.html" title="request an interlibrary loan">Request Interlibrary Loan</a></li>
+									</ul>
+								</li> 
+								<li>Services For
+							        <ul>
+							        <li><a href="/lib/services/display.asp?PageID=131" title="Information for undergraduate students">Undergraduates</a></li>
+							        <li><a href="/lib/services/display.asp?PageID=137" title="Information for graduate students">Graduate Students</a></li>
+							        <li><a href="/lib/services/display.asp?PageID=116" title="Information for faculty/instructors">Faculty/Instructors</a></li>
+							        <li><a href="/lib/services/display.asp?PageID=63" title="Information for students on Calgary Campus">Calgary</a></li>
+							        <li><a href="/lib/services/display.asp?PageID=270" title="Information for students on Edmonton Campus">Edmonton</a></li>
+							        <li><a href="/lib/services/display.asp?PageID=111" title="Information for special needs students">Students with Special Needs</a></li>
+							        <li><a href="/lib/services/display.asp?PageID=62" title="Information for UofL alumni">Alumni</a></li>
+							        <li><a href="/lib/services/display.asp?PageID=66" title="Information for community">Community/TAL</a></li>
+							        </ul>
+							    </li>                                
+								<li><a href="/lib/services/display.asp?PageID=61" title="tours, library courses...">Instruction</a></li>
+								<li><a href="/lib/RSS/" title="listing of RSS feeds and alerts...">RSS Feeds</a></li>
+								<li><a href="http://www.uleth.ca/artsci/academic-writing/writing-centre" title="need help with essays, reports, and other written assignments..." target="_blank">Writing Centre</a></li>
+								<li><a href="/lib/services/display.asp?PageID=57" title="camcorders, digital cameras, laptops...">Media</a></li>
+								<li><a href="/lib/services/display.asp?PageID=50" title="Computers">Computers</a></li>
+								<li><a href="/lib/services/display.asp?PageID=59" title="printers and photocopiers">Printing/Copying</a></li>
+								<li><a href="/lib/borrowing/display.asp?PageID=113" title="Who? What? When? Where? How?">Borrowing Guidelines</a></li>
+								   
+								</ul>
+						</div><!-- End menuColumns -->
+						
+						<div class="menuColumns">
+							<p><a href="/lib/help/">Help</a></p>
+								<ul>
+								<li><a href="/lib/ask_Us/" title="questions, queries...">Ask Us</a></li>
+								<li><a href="/lib/FAQs/display.asp?PageID=162" title="Frequently asked question">FAQs</a></li>
+								<li>Virtual Library Tour
+									<ul>
+									<li><a href="/lib/virtual_Tour/" title="take a virtual tour of the University Library">Library Floor Plans</a></li>
+									<li><a href="http://www.uleth.ca/edu/currlab/handoutsnew/360degreeviews.html" title="tour the Education Curriculum Laboratory online...">Education Curriculum Lab</a></li>
+									</ul>
+								</li>                               
+								<li><a href="http://www.uleth.ca/campus-map/" title="view a map of the University of Lethbridge campus">Campus Map</a></li>
+								<li><a href="/lib/instruction/tip/" title="TIP- Learn how to find, evaluate, and use information effectively...">Library Skills Tutorial</a></li>
+								<li><a href="/lib/index.asp?Tabs=4">How-to Guides</a><br /><!-- name="researchHelp" id="researchHelp"-->
+									<!--<ul>
+									<li><a href="/lib/guides/research/" title="help with research...">Research Guides</a></li>
+									<li><a href="/lib/guides/classes/" title="help for specific classes...">Class Guides</a></li>
+									</ul> -->                
+								</li>
+								<li><a href="http://libguides.uleth.ca/cite?hs=a" title="Help with citing sources">Citing Sources (APA,MLA...)</a></li>
+								</ul>
+						</div><!-- End menuColumns -->
+						<!-- this div is the clickable CSS X that closes the menu  -->
+						<div id="closebutton" class="topBarSlideup">&nbsp;</div>	
+			   
+				<div id="fauxTabs">
+					<div class="fauxTab topBarSlideDown"><span class="menuDropdown"><a href="/lib/resources/">Resources</a></span></div>
+					<div class="fauxTab topBarSlideDown"><span class="menuDropdown"><a href="/lib/services/">Services</a></span></div>
+					<div class="fauxTab topBarSlideDown"><span class="menuDropdown"><a href="/lib/help/">Help</a></span></div>
+				</div>
+					</div><!-- End dropdownontent-->
+					
+				
+				</div><!-- End dropdownContentWrap -->
+			</div><!-- end dropdown -->    		   
+		</div><!-- end dropdownwrap --> 
+		<div id="topbarWrap">
+			<div id="topbar">
+				<ul id="iconbar">
+			
+					<li><a href="https://portal.uleth.ca/"><img src="/lib/images/link_10.png" alt="Student Portal" /><span>ULink</span></a></li>
+					<li><a href="http://www.uleth.ca/notice"><img src="/lib/images/link_01.png" alt="Notice Board" /><span>Notice Board</span></a></li>
+					<li><a href="https://webmail.uleth.ca/"><img src="/lib/images/link_02.png" alt="Web Mail" /><span>Web Mail</span></a></li>
+					<li><a href="http://www.uleth.ca/webtools"><img src="/lib/images/link_03.png" alt="Web Tools" /><span>Web Tools</span></a></li>
+					<li><a href="http://directory.uleth.ca"><img src="/lib/images/link_04.png" alt="Directory" /><span>Directory</span></a></li>
+					<li><a href="http://www.uleth.ca/bridge"><img src="/lib/images/link_05.png" alt="The Bridge" /><span>The Bridge</span></a></li>
+					<li><a href="http://www.uleth.ca/lib/"><img src="/lib/images/link_06.png" alt="Library" /><span>Library</span></a></li>
+					<li><a href="http://www.uleth.ca/ross"><img src="/lib/images/link_07.png" alt="Registrar" /><span>Registrar</span></a></li>
+				</ul>	
+			</div><!-- End topbar-->
+			<div id="downarrowwrap">
+            	<div id="downarrow" class="topBarSlideDown">&nbsp;</div>
+                </div>       
+
+
+<script language="JavaScript" type="text/javascript">
+
+	function OnSubmitSearch(){
+
+		var searchvalue = document.getElementById("edit-search-block-form-1").value;
+		//var pid = //magic code that gets guide id number
+
+		if(document.searchform.source.selectedIndex == 0){
+			document.searchform.action ="/lib/search/index.asp";
+			document.searchform.query.name ="zoom_query";
+		}
+		//shem
+		else if(document.searchform.source.selectedIndex == 2){
+			document.searchform.action ="http://libguides.uleth.ca/search.php?";
+			document.searchform.query.name ="search";
+		}
+		//end shem
+		else{
+			document.searchform.action = "http://www.uleth.ca/search/google";	
+			document.searchform.searchinput.name = "query";	
+		}
+		return true;
+	}	
+</script>
+
+			<div id="topbar-search">
+				<form id="google-cse-searchbox-form" name="searchform" method="get" accept-charset="UTF-8" onsubmit="return OnSubmitSearch();" action="/"> 
+					<div id="usearch-form">
+						<div class="usearch-form-keyword">
+							<div class="form-item" id="edit-keyword-wrapper"> 
+								<label for="edit-search-block-form-1">Search: </label> 
+								<input type="text" title="Enter the terms you wish to search for." value="" size="20" id="edit-search-block-form-1" name="query" maxlength="128" class="form-text usearch-form-keyword-texbox"/> 
+								<input type="hidden" name="gl" id="edit-gl" value="ca"  /> 
+								<input type="hidden" name="cx" value="010507342479695145153:bk_uqf9b6q4" /> 
+							</div> 
+							<div class="usearch-form-source">
+								<div class="form-item" id="edit-source-wrapper">
+									<select name="source" class="form-select usearch-form-source-select" id="edit-source" >
+									<option value="0" selected="selected">Library</option>
+									<option value="1">University</option>
+									<option value="2">Help Guides</option>
+									
+									</select>
+								</div> 
+							</div> <!-- End usearch-form-source -->
+							<div class="usearch-form-submit">
+								<input type="submit" value="Go"  class="form-submit usearch-form-submit-button"  onclick="_gaq.push(['_trackEvent', 'Search', 'Search Bar', 'Search Box in top bar of banner.asp']);"/>
+							</div><!-- End usearch-form-submit -->
+						</div><!-- End usearch-formkeyword -->
+					</div> <!-- End google-cse-searchbox-form -->
+				</form>
+			</div><!-- End topbar-search-->
+
+
+			<div id="logo"><a href="http://www.uleth.ca"><img src="/lib/images/ulogo2.png" border="0" alt="U of L Logo"/></a></div>  
+		</div><!-- end topbarwrap -->
+				
+		<div id="titlefold" >
+			
+				<div id="tftext"><a href="/lib"><img src="/lib/images/bannerlib.png" alt="University of Lethbridge Library"/></a></div>
+			 <!-- this is the Title inside the coloured banner -->
+		</div><!-- end Titlefold -->
+   
+		<div id="Breadcrumbs">
+			<b>Location:</b> 
+			<script language="JavaScript" type="text/javascript">
+				breadcrumbs ("|", "/lib", "");
+			</script>
+		</div><!-- End Breadcrumbs -->
+	</div><!-- end Header --> 
+</div><!-- End header wrap-->
+
+
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.tagcanvas.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        if(!$('#myCanvas').tagcanvas({
+          textColour: '#ffd400',
+          outlineColour: '#ffffff',
+          reverse: true,
+		  freezeActive: false,
+          depth: 0.8,
+		  initial: [0.2,0.0],
+		  shape: 'vcylinder',
+		  lock: 'y',
+		  wheelZoom: false,
+          maxSpeed: 0.05
+        },'tags')) {
+          // something went wrong, hide the canvas container
+          $('#myCanvasContainer').hide();
+        }
+      });
+    </script>   
+ 
+    
+<div id="PageContent">
+    <h1>Archives</h1>
+    <div id="myCanvasContainer">
+    <h3 style="text-align: center; font-size: 18px;">The UofL Timeline Cloud</h3>
+    <p style="text-align: center;">Click on the year you want to find out more about.</p>
+      <canvas width="680" height="400" style="width: 75%; background-color: #00549d; display: block; margin-left: auto; margin-right: auto;" id="myCanvas">
+        <p>Anything in here will be replaced on browsers that support the canvas element</p>
+      </canvas>
+    </div>
+    <div id="tags">
+      <ul style="visibility:hidden; display:none;">
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1966.asp">1966</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1967.asp">1967</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1968.asp">1968</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1969.asp">1969</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1970.asp">1970</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1971.asp">1971</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1972.asp">1972</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1973.asp">1973</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1974.asp">1974</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1975.asp">1975</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1976.asp">1976</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1977.asp">1977</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1978.asp">1978</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1979.asp">1979</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1980.asp">1980</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1981.asp">1981</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1982.asp">1982</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1983.asp">1983</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1984.asp">1984</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1985.asp">1985</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1986.asp">1986</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1987.asp">1987</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1988.asp">1988</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1989.asp">1989</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1990.asp">1990</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1991.asp">1991</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1992.asp">1992</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1993.asp">1993</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1994.asp">1994</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1995.asp">1995</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1996.asp">1996</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1997.asp">1997</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1998.asp">1998</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/1999.asp">1999</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2000.asp">2000</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2001.asp">2001</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2002.asp">2002</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2003.asp">2003</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2004.asp">2004</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2005.asp">2005</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2006.asp">2006</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2007.asp">2007</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2008.asp">2008</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2009.asp">2009</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2010.asp">2010</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2011.asp">2011</a></li>
+                <li><a href="http://www.uleth.ca/lib/archives/timeline/year/2012.asp">2012</a></li>  
+      </ul>
+    </div>
+<p>&nbsp;</p>
+	<div style="float:left; width:45%;">
+	<strong>About Archives</strong><br />
+	<p>The University of Lethbridge Archives is responsible for collecting and preserving noncurrent official records which document the Universityâs fulfillment of its functions of teaching, research, and public service.Â In essence, it houses much of the institutionâs  memory.Â Among its objectives are the  following:</p>
+    <ul>
+      <li>To appraise, acquire, arrange, describe, preserve and make available records of historical value;</li>
+      <li>To provide adequate facilities for the maintenance of such records;</li>
+      <li>To serve as an information resource for teaching and learning;</li>
+      <li>To serve research and scholarship by making holdings available to members of the academic community and of the community at large;</li>
+      <li>To provide information services that assist in the administration of the University;</li>
+      <li>To promote knowledge and understanding of the Universityâs origin, aims, programs, and goals;</li>
+      <li>To work in concert with Records management to facilitate efficient records management.</li>
+    </ul>
+    <p>Archival materials selected for inclusion include:<br />
+      meeting minutes,  correspondence, announcements, university publications, videos, audio tapes, personal papers, reports, building plans, photographs, posters, drama productions, artifacts, theses and dissertations. </p>
+    <p>While there are some restrictions on availability, most records are made available to patrons through an extensive reference service.
+    </div>
+	<div style="float:right; width:45%;">
+<strong>Services</strong><br />
+   <ul>
+     <li><a href="http://digitallibrary.uleth.ca/cdm/landingpage/collection/oralhistory">First Generation Oral History Project</a></li>
+     <li><a href="http://digitallibrary.uleth.ca/cdm/landingpage/collection/archives">Archives Digitized Collection</a></li>
+     <li><a href="/lib/archives/aids/">Finding Aids</a></li>
+     <li><a href="/lib/archives/guidelines.asp" title="">Guidelines</a></li>
+     <li><a href="/lib/archives/fonds.asp" title="">Fonds</a></li>
+     <li><a href="/lib/archives/links.asp" title="Link to other archive websites">Archival Links</a></li>
+     <li><a href="http://www.uleth.ca/lib/archives/timeline/" title="Link to a Timeline of University Historical Highlights">Historical Timeline</li>
+     <li><a href="http://www.uleth.ca/hr/records-management/" title="Information about Records Management">Records Management</a></li>
+   </ul>
+	</div>
+
+	</div><!-- End content -->
+
+	<div id="SecondaryRightSide" style="margin: 145px 0 10px 0;">
+
+		<h4>
+			Contact
+	  </h4>
+		<ul>
+			<li><strong>Mike Perry</strong>, University Archivist</li>
+			<li><strong>Location:</strong> L1172<br />
+          <strong>Hours:</strong> Monday â Friday 8:30 â 12:00, 1:00-4:30 <br />
+		      <strong>Phone:</strong> (403)329 2714 <br />
+			    <strong>Email:</strong> <a href="mailto:mike.perry@uleth.ca ">mike.perry@uleth.ca </a><br />
+          <strong>Mail:</strong>University of Lethbridge Archives, 4401 University Drive, Lethbridge, Alberta T1K 3M4</li>
+		</ul>
+</div>
+<div style="float:right;width:22%;">
+      
+
+<style>
+.badgeLink {
+  width:100%;
+  height:80px;
+  background-repeat:no-repeat;
+  background-position:left center;
+  border-radius:10px 0 0 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center; margin: 1em 0;
+  margin: 0 0 10px 0;
+}
+.badgeLink img{
+  max-width:90%;
+  vertical-align: middle;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+</style>
+<a href="http://www.uleth.ca/lib/archives/timeline/">
+  <div class="badgeLink" style="background:url(/lib/archives/images/timeline-badge_bg.jpg);border:3px solid #fff; background-position:right center;">
+    <span class="helper"></span><img src="/lib/archives/images/timeline-badge_title.png">
+  </div>
+</a>
+<a href="http://digitallibrary.uleth.ca/cdm/landingpage/collection/oralhistory">
+  <div class="badgeLink" style="background:url(/lib/archives/images/ohp-logo_bg.jpg);border:3px solid #fff;">
+    <span class="helper"></span><img src="/lib/archives/images/ohp-logo_title.png">
+  </div>
+</a>
+<a href="http://www.uleth.ca/research/centre-oral-history-and-tradition-coht">
+  <div class="badgeLink" style="background:#fff;border:3px solid #06559d;">
+    <span class="helper"></span><img src="/lib/archives/images/coht-logo.png">
+  </div>
+</a>
+
+  </div>
+
+
+
+
+<div id="FooterINC">
+    <div class="Footer">      
+    </div><!-- End footer -->
+    <div class="Copyright">
+    <div style="margin-left:2%; position:relative;">
+
+      <ul class="divider MenuSection">
+      	<li class="MenuHeading">About Us</li>
+        <li><a href="/lib/contacts/">Contact Us</a></li>
+        <li><a href="/lib/contacts/directory.asp">Library Directory</a></li>
+        <li><a href="/lib/contacts/subject-librarians.asp">Subject Librarians</a></li>
+        <li><a href="/lib/about_Us/display.asp?PageID=105">Plans, Policies, and Publications</a></li>
+        <li><a href="/lib/about_Us/display.asp?PageID=103">Facts and Statistics</a></li>
+        <li><a href="/lib/about_Us/display.asp?PageID=107">Consortia and Partnerships</a></li>
+        <li><a href="/lib/displays/">Library Displays</a></li>
+        <li><a href="/lib/about_Us/display.asp?PageID=140">Donations</a></li>
+        <li><a href="http://libguides.uleth.ca/libqual">LibQUAL Survey</a></li>
+        <li><a href="http://darius.uleth.ca/ftlist~S1/">Collection Highlights</a></li>
+        <!--<li><a href="/lib/about_Us/sitemap.asp">Site Map</a></li>-->
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+      </ul>
+
+      <ul class="MenuSection">
+      <li class="MenuHeading">Resources</li>  
+      <li><a href="/lib/resources/display.asp?PageID=186">Web Search Engines</a></li>
+      <li><a href="/lib/resources/data/">Spatial &amp; Numeric Data</a></li>
+      <li><a href="/lib/resources/display.asp?PageID=124">Government Information</a></li>
+      <li><a href="/lib/resources/reference/">E-Reference</a></li>
+      <li><a href="/lib/links/display.asp?PageID=187">Other libraries</a></li>
+      <li><a href="/lib/archives/">Archives</a></li>
+      <li><a href="http://www.uleth.ca/education/currlab/">Education Curriculum Lab</a></li>
+      <li><a href="/lib/index.asp?Tabs=4">How-to Guides</a></li>
+      <li><b>Library Catalogue</b></li>
+      <ul>
+        <li><a href="http://darius.uleth.ca/search~S1">U of L Library Catalogue</a></li>
+        <li><a href="http://darius.uleth.ca/search~S1/r">Course Reserves</a></li>
+      </ul>
+		</ul>
+
+      <ul class="divider">
+      <li class="MenuHeading">&nbsp;</li>
+      <li><b>UofL Digital Collections</b></li>
+      <ul>
+        <li><a href="/lib/digitized_Collections/">Digitized Collections</a></li>
+        <li><a href="http://www.uleth.ca/dspace/">Institutional Repository</a></li>
+        <li><a href="http://blackfootdigitallibrary.org/">Blackfoot Digital Library</a></li>
+      </ul>
+      <li style="clear: left;"><b>Databases</b></li>
+      <ul>
+        <li><a href="/lib/resources/databases/">by title</a></li>
+        <li><a href="/lib/subjects/">by subject</a></li>
+        <li><a href="/lib/resources/databases/type/">by type</a></li>
+        <li><a href="/lib/resources/databases/providers/">by provider</a></li>
+        <li><a href="http://fg2fy8yh7d.search.serialssolutions.com/">Journal title search</a></li>
+        <li>&nbsp;</li>
+      </ul>
+      </ul>
+
+      <ul class="MenuSection">
+      <li class="MenuHeading">Services</li>
+      <li><a href="/lib/hours/index.asp" title="hours of opening, Info Desk...">Hours</a></li>
+      <li><b>Interlibrary Loans</b></li>
+      <ul>  
+        <li><a href="/lib/services/display.asp?PageID=51">Borrowing Guidelines</a></li>
+        <li><a href="/lib/services/display.asp?PageID=53">Lending Guidelines</a></li>
+        <li><a href="http://darius.uleth.ca/screens/illreq_s1.html" title="request an interlibrary loan">Request Interlibrary Loan</a></li>
+      </ul>                                
+      <li style="clear: left;"><a href="/lib/services/display.asp?PageID=61" title="tours, library courses...">Instruction</a></li>
+      <li><a href="/lib/RSS/" title="listing of RSS feeds and alerts...">RSS Feeds</a></li>
+      <li><a href="http://www.uleth.ca/artsci/academic-writing/writing-centre" title="need help with essays, reports, and other written assignments..." target="_blank">Writing Centre</a></li>
+      <li><a href="/lib/services/display.asp?PageID=57" title="camcorders, digital cameras, laptops...">Media</a></li>
+      <li><a href="/lib/services/display.asp?PageID=50" title="Computers">Computers</a></li>
+      <li><a href="/lib/services/display.asp?PageID=59" title="printers and photocopiers">Printing/Copying</a></li>
+      <li><a href="/lib/borrowing/display.asp?PageID=113" title="Who? What? When? Where? How?">Borrowing Guidelines</a></li>
+      
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+      </ul>
+
+      <ul class="divider">
+      <li class="MenuHeading">&nbsp;</li>
+        <li><b>Services For</b></li>
+        <ul>
+        <li><a href="/lib/services/display.asp?PageID=131" title="Information for undergraduate students">Undergraduates</a></li>
+        <li><a href="/lib/services/display.asp?PageID=137" title="Information for graduate students">Graduate Students</a></li>
+        <li><a href="/lib/services/display.asp?PageID=116" title="Information for faculty/instructors">Faculty/Instructors</a></li>
+        <li><a href="/lib/services/display.asp?PageID=63" title="Information for students on Calgary Campus">Calgary</a></li>
+        <li><a href="/lib/services/display.asp?PageID=270" title="Information for students on Edmonton Campus">Edmonton</a></li>
+        <li><a href="/lib/services/display.asp?PageID=111" title="Information for special needs students">Students with Special Needs</a></li>
+        <li><a href="/lib/services/display.asp?PageID=62" title="Information for UofL alumni">Alumni</a></li>
+        <li><a href="/lib/services/display.asp?PageID=66" title="Information for community">Community/TAL</a></li>
+        </ul>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+      </ul>
+
+      <ul class="divider MenuSection" style="border-right: none;">
+      <li class="MenuHeading">Help</li>
+      <li><a href="/lib/ask_Us/" title="questions, queries...">Ask Us</a></li>
+      <li><a href="http://libguides.uleth.ca/cite?hs=a" title="Help with citing sources">Citing Sources (APA,MLA...)</a></li>
+      <li><a href="/lib/FAQs/display.asp?PageID=162" title="Frequently asked question">FAQs</a></li>
+                                   
+      <li><a href="http://www.uleth.ca/campusmap/" title="view a map of the University of Lethbridge campus">Campus Map</a></li>
+      <li><a href="/lib/instruction/tip/" title="TIP- Learn how to find, evaluate, and use information effectively...">Library Skills Tutorial</a></li>
+      <li><a href="/lib/index.asp?Tabs=4">How-to Guides</a></li>
+      
+      <li><b>Virtual Library Tour</b></li>
+        <ul>
+        <li><a href="/lib/virtual_Tour/" title="take a virtual tour of the University Library">Library Floor Plans</a></li>
+        <li><a href="http://www.uleth.ca/edu/currlab/handoutsnew/360degreeviews.html" title="tour the Education Curriculum Laboratory online...">Education Curriculum Lab</a></li>
+      </ul>
+      <li>&nbsp;</li>
+      <li style="clear: both;"><a href="/lib/"><img style="width:250px" src="/lib/images/logos/library_logo.png" alt="University of Lethbridge Library Logo" /></a></li> 
+      <li>&nbsp;</li>                               
+      </ul>
+       
+    </div>
+    
+    <hr />
+    <div style="margin:10px 2%">
+                &copy; 2002 - 2016, University of Lethbridge Library, Lethbridge, Alberta Canada
+           <br />
+                Last Modified:&nbsp;August 12, 2015
+           <br />
+                <a href="/lib/about_Us/display.asp?PageID=262" target="_blank">Website Information and Credits</a> |
+                <a href="http://www.uleth.ca/hr/privacy-office/web-privacy-statement" target="_blank">Web Privacy Statement</a>
+    </div>
+<!--<img src="http://rd.revolvermaps.com/w/3/s/a/0/40/0/ffffff/010020/aa0000/3eehyjy3rnj.png" alt="Stats" style="visibility:hidden;float:right;width:5px;height:5px;border:0px;">-->
+    </div> <!-- End .Copyright -->
+</div><!-- End FooterINC -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6014683-1']);
+  _gaq.push(['_trackPageview']);
+ _gaq.push(['secondTracker._setAccount', 'UA-30311180-1']);
+ _gaq.push(['secondTracker._trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" src="/lib/scripts/analytics/riveted.min.js"></script>
+<script type="text/javascript">
+	riveted.init({
+	  reportInterval: 15,   // Default: 5
+	});
+</script>
+
+    </div><!-- End container -->
+  </body>
+</html>

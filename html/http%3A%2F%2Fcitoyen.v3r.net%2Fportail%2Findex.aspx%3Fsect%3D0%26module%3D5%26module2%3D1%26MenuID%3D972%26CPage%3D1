@@ -1,0 +1,1539 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Archives - Services juridiques, archives, réclamation et réglementation - Ville de Trois-Rivières</title>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META NAME="description" 	CONTENT="Ville de Trois-Rivières">
+  <META NAME="Keywords" 	CONTENT="Ville de Trois-Rivières">
+  
+    
+    <LINK TYPE="text/css" REL="stylesheet" HREF="image/media/style.css?v=2014.02.20" />
+    <link type="text/css" rel="stylesheet" href="image/media/module_accueil_2011.css" />
+    <LINK TYPE="text/css" REL="stylesheet" HREF="image/media/style-print.css" media="print" />
+    <link rel="stylesheet" href="image/media/sIFR-screen.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="image/media/sIFR-print.css" type="text/css" media="print" />
+  <link type="text/css" rel="stylesheet" href="/portail/image/media/styleEntete2011.css" />
+    <!--[if IE]>
+    <link href="/portail/image/media/styleEntete2011_IE.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="image/media/module_accueil_2011_IE.css" />
+    <![endif]-->
+    <!--[if IE 6 ]>
+    <link href="/portail/image/media/styleEntete2011_IE6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+  <LINK REL="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  <STYLE TYPE="text/css">
+	/* The main calendar widget.  DIV containing a table. */
+
+.calendar {
+  z-index:1px;
+  /*position: relative;*/
+  display: none;
+  font-size: 9px;
+  color: Black;
+  cursor: default;
+  font-family: verdana,tahoma,sans-serif;
+  background: White;
+}
+
+.calendar table {
+  width:168px;
+  font-size: 9px;
+  color: Black;
+  cursor: default;
+  font-family: verdana,tahoma,sans-serif;
+  background: White;
+}
+
+/* Header part -- contains navigation buttons and day names. */
+
+.calendar .button { /* "<<", "<", ">", ">>" buttons have this class */
+  font-size:9px;
+  font-family: verdana,tahoma,sans-serif;
+  padding:0px;
+  width:24px;
+  height:19px;
+  text-align: center;
+  font-weight: bold;
+  background: White;
+  border: 1px solid White;
+  color: #0000CC;
+  text-decoration:underline;
+  cursor:hand;
+}
+
+.calendar thead .title { /* This holds the current "month, year" */
+  font-size:10px;
+  height:21px;
+  padding: 1px;
+  text-align: center;
+  color: white;
+  background-image:URL(/portail/image/fond_calendrier_titre.gif);
+}
+
+.calendar thead .headrow { /* Row <TR> containing navigation buttons */
+}
+
+.calendar thead .daynames { /* Row <TR> containing the day names */
+}
+
+.calendar thead .name { /* Cells <TD> containing the day names */
+  text-align:center;
+  padding-left:0px;
+  font-size:9px;
+  width:24px;
+  color: Black;
+  height:17px;
+  border:1px solid White;
+}
+
+.calendar thead .weekend { /* How a weekend day name shows in header */
+  color: Black;
+}
+
+.calendar thead .hilite { /* How do the buttons in header appear when hover */
+  color: Black;
+}
+
+.calendar thead .active { /* Active (pressed) buttons in header */
+  color: #0000CC;
+}
+
+/* The body part -- contains all the days in month. */
+
+.calendar tbody .day { /* Cells <TD> containing month days dates */
+  font-family: Verdana,tahoma,sans-serif;
+  letter-spacing:-1px;
+  color: Black;
+  padding-right:4px;
+  padding-top:0px;
+  width: 24px;
+  height: 17px;
+  font-size:10px;
+  text-align: right;
+  border:1px solid White;
+}
+
+.calendar table .wn {
+  font-size:10px;
+}
+
+.calendar tbody .rowhilite td {
+}
+
+.calendar tbody .rowhilite td.wn {
+}
+
+.calendar tbody td.hilite { /* Hovered cells <TD> */
+  color:#000000;
+}
+
+.calendar tbody td.active { /* Active (pressed) cells <TD> */
+}
+
+.calendar tbody td.selected { /* Cell showing selected date */
+  color:#000000;
+  text-decoration:bold;
+}
+
+.calendar tbody td.have_event { /* Cell having event MARCHE PAS */
+}
+
+
+.calendar tbody td.weekend { /* Cells showing weekend days */
+}
+
+.calendar tbody td.today { /* Cell showing today date */
+  color:#000000;
+  text-decoration:bold;
+}
+
+.calendar tbody .disabled { color: #F0F0F0; }
+
+.calendar tbody .emptycell { /* Empty cells (the best is to hide them) */
+  background: #FFFFFF;
+  visibility: hidden;
+}
+
+.calendar tbody .emptyrow { /* Empty row (some months need less than 6 rows) */
+  display: none;
+}
+
+/* The footer part -- status bar and "Close" button */
+
+.calendar tfoot .footrow { /* The <TR> in footer (only one right now) */
+}
+
+.calendar tfoot .ttip { /* Tooltip (status bar) cell <TD> */
+  display: none;
+  color: #000000;
+  padding-top:3px;
+  text-align: center;
+  font-size: 11px;
+  height:16px
+}
+
+.calendar tfoot .hilite { /* Hover style for buttons in footer */
+  border: 1px solid #E3E2DB;
+  background: #666666;
+}
+
+.calendar tfoot .active { /* Active (pressed) style for buttons in footer */
+  border: 1px solid #E3E2DB;
+}
+
+/* Combo boxes (menus that display months/years for direct selection) */
+
+.combo {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  cursor: default;
+  border: 1px solid #999999;
+  background: #990000;
+  font-family: Tahoma;Arial,Verdana,Helvetica;
+  font-size: 11px;
+  padding: 1px;
+}
+
+.combo .label {
+  text-align: center;
+  padding: 1px;
+}
+
+.combo .active {
+  background: #990000;
+  border: 1px solid #999999;
+  padding: 0px;
+}
+
+.combo .hilite {
+  background: #999999;
+  color: #E3E2DB;
+}
+  </style>
+  <script type="text/javascript" src="/portail/image/media/eventCalendar/calendar.js"></script>
+
+<script type="text/javascript">
+// ** I18N
+Calendar._DN = new Array
+("Dimanche",
+ "Lundi",
+ "Mardi",
+ "Mercredi",
+ "Jeudi",
+ "Vendredi",
+ "Samedi",
+ "Dimanche");
+Calendar._MN = new Array
+("Janvier",
+ "Fevrier",
+ "Mars",
+ "Avril",
+ "Mai",
+ "Juin",
+ "Juillet",
+ "Août",
+ "Septembre",
+ "Octobre",
+ "Novembre",
+ "Décembre");
+Calendar._AMN = new Array
+("jan.",
+ "fev.",
+ "mar.",
+ "avr.",
+ "mai",
+ "juin",
+ "juil.",
+ "aou.",
+ "sep.",
+ "oct.",
+ "nov.",
+ "dec.");
+
+// tooltips
+Calendar._TT = {};
+Calendar._TT["TOGGLE"] = "Changer 1er jour de la semaine";
+Calendar._TT["PREV_YEAR"] = "Année précédente";
+Calendar._TT["PREV_MONTH"] = "Mois précédent";
+Calendar._TT["GO_TODAY"] = "Atteindre date du jour";
+Calendar._TT["NEXT_MONTH"] = "Mois suivant";
+Calendar._TT["NEXT_YEAR"] = "Année suivante";
+Calendar._TT["SEL_DATE"] = "Choisir une date";
+Calendar._TT["DRAG_TO_MOVE"] = "Déplacer";
+Calendar._TT["PART_TODAY"] = " (Aujourd'hui)";
+Calendar._TT["MON_FIRST"] = "Commencer par lundi";
+Calendar._TT["SUN_FIRST"] = "Commencer par dimanche";
+Calendar._TT["CLOSE"] = "Fermer";
+Calendar._TT["TODAY"] = "Aujourd'hui";
+
+// date formats
+Calendar._TT["DEF_DATE_FORMAT"] = "y-mm-dd";
+Calendar._TT["TT_DATE_FORMAT"] = "DD, d MM";
+
+Calendar._TT["WK"] = "wk";
+</script>
+<!-- helper script that uses the calendar -->
+<script type="text/javascript">
+
+var oldLink = null;
+// code to change the active stylesheet
+function setActiveStyleSheet(link, title) {
+  var i, a, main;
+  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+      a.disabled = true;
+      if(a.getAttribute("title") == title) a.disabled = false;
+    }
+  }
+  if (oldLink) oldLink.style.fontWeight = 'normal';
+  oldLink = link;
+  link.style.fontWeight = 'bold';
+  return false;
+}
+
+function closeHandler(cal) {
+  cal.hide();                        // hide the calendar
+}
+
+function showFlatCalendar(myDate) {
+  var parent = document.getElementById("display");
+  var cal = new Calendar(false, myDate, flatSelected);
+  cal.weekNumbers = false;
+  cal.setEventDay(isEventDay);
+  cal.shootDate(passMeTheDate);
+  cal.create(parent);
+  cal.show();
+}
+</script>
+<script language="javascript">
+	var HOTKEY_ALT_A = "index.aspx?sect=0";
+	var HOTKEY_ALT_B = "";
+	var HOTKEY_ALT_C = "";
+	var HOTKEY_ALT_D = "";
+	var HOTKEY_ALT_E = "";
+	var HOTKEY_ALT_G = "";
+	var HOTKEY_ALT_I = "";
+	var HOTKEY_ALT_J = "";
+	var HOTKEY_ALT_K = "";
+	var HOTKEY_ALT_L = "";
+	var HOTKEY_ALT_M = "";
+	var HOTKEY_ALT_N = "";
+	var HOTKEY_ALT_O = "";
+	var HOTKEY_ALT_P = "";
+	var HOTKEY_ALT_Q = "";
+	var HOTKEY_ALT_R = "";
+	var HOTKEY_ALT_S = "";
+	var HOTKEY_ALT_T = "";
+	var HOTKEY_ALT_U = "index.aspx?sect=1&module=1";
+	var HOTKEY_ALT_V = "";
+	var HOTKEY_ALT_W = "";
+	var HOTKEY_ALT_X = "";
+	var HOTKEY_ALT_Y = "";
+	var HOTKEY_ALT_Z = "";	
+	var HOTKEY_ALT_F1 = "";
+	var HOTKEY_CTRL_B = "/plate-forme/default.aspx?sect=0&switchmode=1";
+	var DEBUG = "0";
+	var NOM_CLIENT = "Ville de Trois-Rivières";
+
+	var ErrorFound = false; // francois
+</script>
+
+   <script src="image/media/sifr.js" type="text/javascript"></script>
+   <script src="image/media/sifr-addons.js" type="text/javascript"></script>
+   <script src="image/media/javascript2.js?v=2015.12.15" type="text/javascript"></script>
+   <script type="text/javascript">
+        //<![CDATA[
+        /* Replacement calls. Please see documentation for more information. */
+
+        if(typeof sIFR == "function"){
+
+        // This is the preferred "named argument" syntax
+	        sIFR.replaceElement(named({sSelector:"h3.far", sFlashSrc:"/portail/image/media/FAR.swf", sColor:"#55481D", sLinkColor:"#4C4C37", sHoverColor:"#6C8500",sWmode:"transparent"}));
+	        sIFR.replaceElement(named({sSelector:"h4.far", sFlashSrc:"/portail/image/media/FAR.swf", sColor:"#55481D", sLinkColor:"#000000", sHoverColor:"#CCCCCC",sWmode:"transparent"}));
+
+        };
+
+        //]]>
+
+    </script>
+    <script language="javascript" type="text/javascript" src="/portail/scripts/jquery-1.4.4.min.js"></script>
+    
+	
+      
+        <script language="javascript" type="text/javascript" src="/portail/scripts/jquery.cycle.all.js"></script>
+        <script language="javascript" type="text/javascript" >
+            $(function () {
+                setTimeout(function () {
+                    $('#BlocPromo').before('<ul id="nav">').cycle({
+                        fx: 'fade',
+                        speed: 450, //diminuer pour augmenter la vitesse de transition
+                        timeout: 5500, //intervalle entre les slides
+                        pager: '#nav',
+                        cleartype: true,
+                        cleartypeNoBg: true,
+                        pagerAnchorBuilder: function (idx, slide) {
+                            return '<li class="png"><a>&nbsp;</a></li>';
+                        }
+                    });
+                    //idx : courant
+                    //slide : cliqué
+                }, 0);
+            });
+        </script>
+    
+    
+
+</head>
+
+
+<body class="main_text" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" bgcolor="#FFFFFF">
+<form name="fMain" method="post" action="index.aspx?sect=0&amp;module=5&amp;module2=1&amp;MenuID=127&amp;CPage=1" id="fMain">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJLTYzNzkzMTM3D2QWAmYPZBYaAgMPDxYCHgtOYXZpZ2F0ZVVybAUlaHR0cDovL3d3dy52M3IubmV0L3BvcnRhaWwvaW5kZXguYXNweGRkAgQPDxYCHwAFJWh0dHA6Ly93d3cudjNyLm5ldC9wb3J0YWlsL2luZGV4LmFzcHhkZAIFD2QWAmYPZBYCZg9kFgRmDw9kFggeCm9uYWN0aXZhdGVlHgxvbmRlYWN0aXZhdGVlHgZvbmJsdXIFC3ZhbHVlPXZhbHVlHglvbmtleWRvd24FJWZuVHJhcEtEKGRvY3VtZW50LmFsbC5jdGwwMF9iU2VhcmNoKTtkAgEPD2QWBh4Hb25jbGljawXlAWlmIChkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY3RsMDBfdHh0U2VhcmNoJykudmFsdWUudHJpbSgpLmxlbmd0aDw0KXsgIGFsZXJ0KCdWZXVpbGxleiBlbnRyZXIgdW4gw6lub25jw6kgZGUgcmVjaGVyY2hlIGNvbnRlbmFudCB1biBtaW5pbXVtIGRlIDQgY2FyYWN0w6hyZXMnKTsgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjdGwwMF90eHRTZWFyY2gnKS5mb2N1cygpOyAgcmV0dXJuIGZhbHNlO30eA3NyYwU1aHR0cDovL3d3dy52M3IubmV0L3BvcnRhaWwvaW1hZ2UvYm91dG9uX3JlY2hlcmNoZS5naWYeA2FsdAUKUmVjaGVyY2hlcmQCBg8PFgIfAAUpaHR0cDovL2xhdmlsbGUudjNyLm5ldC9wb3J0YWlsL2luZGV4LmFzcHhkFgJmDw8WAh4ISW1hZ2VVcmwFFC9pbWFnZXMvYnRfdmlsbGUuanBnFgQeC29ubW91c2VvdmVyBSR0aGlzLnNyYz0nL2ltYWdlcy9idF92aWxsZV9vdmVyLmpwZyceCm9ubW91c2VvdXQFH3RoaXMuc3JjPScvaW1hZ2VzL2J0X3ZpbGxlLmpwZydkAgcPDxYCHwAFKWh0dHA6Ly9jaXRveWVuLnYzci5uZXQvcG9ydGFpbC9pbmRleC5hc3B4ZBYCZg8PFgIfCAUdL2ltYWdlcy9idF9jaXRveWVuX2FjdGl2ZS5qcGdkZAIIDw8WAh8ABSNodHRwOi8vaWRldHIuY29tL3BvcnRhaWwvaW5kZXguYXNweGQWAmYPDxYCHwgFFy9pbWFnZXMvYnRfYWZmYWlyZXMuanBnFgQfCQUndGhpcy5zcmM9Jy9pbWFnZXMvYnRfYWZmYWlyZXNfb3Zlci5qcGcnHwoFInRoaXMuc3JjPScvaW1hZ2VzL2J0X2FmZmFpcmVzLmpwZydkAgkPDxYCHwAFJWh0dHA6Ly93d3cudG91cmlzbWV0cm9pc3JpdmllcmVzLmNvbS9kFgJmDw8WAh8IBRcvaW1hZ2VzL2J0X3RvdXJpc21lLmpwZxYEHwkFJ3RoaXMuc3JjPScvaW1hZ2VzL2J0X3RvdXJpc21lX292ZXIuanBnJx8KBSJ0aGlzLnNyYz0nL2ltYWdlcy9idF90b3VyaXNtZS5qcGcnZAIKD2QWAmYPFgIeC18hSXRlbUNvdW50AgEWAgIBD2QWAgIBDxYCHgRUZXh0BdQCPGEgaHJlZj0iL3BvcnRhaWwvaW5kZXguYXNweD9tb2R1bGU9MTImQlBJRD0xNzciIHRpdGxlPSJQZXJtaXMgZGUgZMOpbmVpZ2VtZW50IiBzdGF0dXM9Imh0dHA6Ly9jaXRveWVuLnYzci5uZXQvcG9ydGFpbC9pbmRleC5hc3B4P3NlY3Q9MCZtb2R1bGU9NSZtb2R1bGUyPTEmTWVudUlEPTk2OSZDUGFnZT0xIiB0YXJnZXQ9Il9ibGFuayI+PGltZyBzcmM9Jy9kb2NzX3VwbG9hZC9iYW5kZWF1eF9wdWJsaWNpdGFpcmVzLzE3Ny9CYW5kZWF1X3Blcm1pcy1kZS1kZW5laWdlbWVudC0yMDE1Xzc3MC5qcGcnIHdpZHRoPSc3NzAnIGJvcmRlcj0nMCcgc3R5bGU9J21hcmdpbi1ib3R0b206MTBweCc+PC9hPmQCCw8PFgQfCAUhL2ltYWdlcy90aXRyZV9zZWN0aW9uX2NpdG95ZW4uanBnHg1BbHRlcm5hdGVUZXh0BRNTZXJ2aWNlcyBhdSBjaXRveWVuZGQCDA9kFgJmD2QWAmYPZBYCAgEPDxYCHwwFyQQ8YSBocmVmPSJodHRwOi8vd3d3LnYzci5uZXQvIiBzdGF0dXM9IkFjY3VlaWwiPjxiPkFjY3VlaWw8L2I+PC9hPiAvIDxhIGhyZWY9ImluZGV4LmFzcHg/cGFnZT0xIiBzdGF0dXM9IlNlY3Rpb24gU2VydmljZXMgYXUgY2l0b3llbiI+PGI+U2VjdGlvbiBTZXJ2aWNlcyBhdSBjaXRveWVuPC9iPjwvYT4gLyA8c3BhbiBvbmNsaWNrPSJ3aW5kb3cubG9jYXRpb249Jy9wb3J0YWlsL2FzcHgvY29tcHRldXJzLmFzcHg/TWVudUlEPTExMiZVcmxWYWx1ZT1odHRwOi8vY2l0b3llbi52M3IubmV0L3BvcnRhaWwvaW5kZXguYXNweD9zZWN0PTAhQU5EIW1vZHVsZT01IUFORCFtb2R1bGUyPTEhQU5EIU1lbnVJRD0xMjchQU5EIUNQYWdlPTEnO3JldHVybiBmYWxzZTsiPjxhIGhyZWY9IiMiICBzdGF0dXM9IlNlcnZpY2VzIGp1cmlkaXF1ZXMsIGFyY2hpdmVzLCByw6ljbGFtYXRpb24gZXQgcsOpZ2xlbWVudGF0aW9uIj5TZXJ2aWNlcyBqdXJpZGlxdWVzLCBhcmNoaXZlcywgcsOpY2xhbWF0aW9uIGV0IHLDqWdsZW1lbnRhdGlvbjwvYT48L3NwYW4+IC8gPEZPTlQgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Ij5BcmNoaXZlczwvRk9OVD4mbmJzcDtkZAIODxYCHgVzdHlsZQUScGFkZGluZy1MZWZ0OjE1cHg7FgZmD2QWAgIBDxYCHwwFKVNlcnZpY2UgZOKAmWFyY2hpdmVzIGV0IENlbnRyZSBkJ2FyY2hpdmVzZAIDD2QWAmYPFgIeB1Zpc2libGVoZAIEDxYCHw9oZAIQDxYCHwwF0R88dGFibGUgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiBib3JkZXI9IjAiIHdpZHRoPSIxMDAlIj4KCTx0cj4KCQk8dGQgYmdjb2xvcj0iIzMxNUUwRCI+CgkJCTxpbWcgc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvdHJhbnMuZ2lmIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiAvPjwvdGQ+Cgk8L3RyPgoJPHRyPgoJCTx0ZCBiZ2NvbG9yPSIjNkZBNDQ0Ij4KCQkJPHRhYmxlIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgYm9yZGVyPSIwIiB3aWR0aD0iNzcwIiBhbGlnbj0iY2VudGVyIj4KCQkJCTx0cj4KCQkJCQk8dGQ+CgkJCQkJCTxhIGhyZWY9Imh0dHA6Ly93d3cudjNyLm5ldC9wb3J0YWlsL2luZGV4LmFzcHg/c2VjdD0wJm1vZHVsZT01Jm1vZHVsZTI9MiI+PGltZyBzcmM9Imh0dHA6Ly93d3cudjNyLm5ldC8vcG9ydGFpbC9pbWFnZS9sYW5nYWdlLzEvcGxhbl9zaXRlX2Jhc19vZmYuZ2lmIiBoc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvbGFuZ2FnZS8xL3BsYW5fc2l0ZV9iYXNfb24uZ2lmIiB3aWR0aD0iOTAiIGhlaWdodD0iMjMiIGJvcmRlcj0iMCIgLz48L2E+PC90ZD4KCQkJCQk8dGQ+CiAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly93d3cudjNyLm5ldC9wb3J0YWlsL2luZGV4LmFzcHg/c2VjdD0wJm1vZHVsZT01Jm1vZHVsZTI9MSZNZW51SUQ9OSZDUGFnZT0xIj4KICAgICAgICAgICAgICA8aW1nIHNyYz0iaHR0cDovL3d3dy52M3IubmV0Ly9wb3J0YWlsL2ltYWdlL2xhbmdhZ2UvMS9ub3VzX2pvaW5kcmVfYmFzX29mZi5naWYiIGhzcmM9Imh0dHA6Ly93d3cudjNyLm5ldC8vcG9ydGFpbC9pbWFnZS9sYW5nYWdlLzEvbm91c19qb2luZHJlX2Jhc19vbi5naWYiIHdpZHRoPSI5OCIgaGVpZ2h0PSIyMyIgYm9yZGVyPSIwIiAvPgogICAgICAgICAgICA8L2E+CiAgICAgICAgICA8L3RkPgoJCQkJCTx0ZD4KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL3d3dy52M3IubmV0L3BvcnRhaWwvaW5kZXguYXNweD9zZWN0PTAmbW9kdWxlPTUmbW9kdWxlMj0xJk1lbnVJRD00JkNQYWdlPTEiPgogICAgICAgICAgICAgIDxpbWcgc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvbGFuZ2FnZS8xL2NhcnRlc19iYXNfb2ZmLmdpZiIgaHNyYz0iaHR0cDovL3d3dy52M3IubmV0Ly9wb3J0YWlsL2ltYWdlL2xhbmdhZ2UvMS9jYXJ0ZXNfYmFzX29uLmdpZiIgd2lkdGg9IjY0IiBoZWlnaHQ9IjIzIiBib3JkZXI9IjAiIC8+CiAgICAgICAgICAgIDwvYT4KICAgICAgICAgIDwvdGQ+CgkJCQkJPHRkPgoJCQkJCQk8aW1nIHNyYz0iaHR0cDovL3d3dy52M3IubmV0Ly9wb3J0YWlsL2ltYWdlL2ZvbmRfYmFzLmpwZyIgd2lkdGg9IjMwMyIgaGVpZ2h0PSIyMyIgLz48L3RkPgoJCQkJCTx0ZD4KCQkJCQkJPGEgaHJlZj0iaHR0cDovL3d3dy52M3IubmV0L3BvcnRhaWwvaW5kZXguYXNweD9zZWN0PTAmbW9kdWxlPTUmbW9kdWxlMj0xJk1lbnVJRD0xMTQmQ1BhZ2U9MSIgdGFyZ2V0PSJfdG9wIj48aW1nIHNyYz0iaHR0cDovL3d3dy52M3IubmV0Ly9wb3J0YWlsL2ltYWdlL2xhbmdhZ2UvMS9oYW5kaWNhcF9vZmYuZ2lmIiBoc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvbGFuZ2FnZS8xL2hhbmRpY2FwX29uLmdpZiIgd2lkdGg9IjIxNSIgaGVpZ2h0PSIyMyIgYm9yZGVyPSIwIiAvPjwvYT48L3RkPgoJCQkJPC90cj4KCQkJPC90YWJsZT48L3RkPgoJPC90cj4KCTx0cj4KCQk8dGQgYmdjb2xvcj0iIzMxNUUwRCI+CgkJCTxpbWcgc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvdHJhbnMuZ2lmIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiAvPjwvdGQ+Cgk8L3RyPgoJPHRyPgoJCTx0ZCBzdHlsZT0icGFkZGluZy10b3A6NnB4O3BhZGRpbmctbGVmdDozcHgiPgoJCQk8dGFibGUgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiBib3JkZXI9IjAiIHdpZHRoPSI3NzAiIGFsaWduPSJjZW50ZXIiPgoJCQkJPHRyPgoJCQkJCTx0ZCBub3dyYXAgY2xhc3M9ImZvbnQxMSIgPgoJCQkJCQk8YSBocmVmPSJodHRwOi8vd3d3LnYzci5uZXQvcG9ydGFpbC9pbmRleC5hc3B4P3NlY3Q9MCZtb2R1bGU9NSZtb2R1bGUyPTEmTWVudUlEPTgmQ3BhZ2U9MSI+PGltZyBzcmM9Imh0dHA6Ly93d3cudjNyLm5ldC8vcG9ydGFpbC9pbWFnZS9idWxsZXQuZ2lmIiBhbGlnbj0iYWJzbWlkZGxlIiBjbGFzcz0iYnVsbGV0IiBib3JkZXI9IjAiIC8+VXRpbGlzYXRpb248L2E+PC90ZD4KCQkJCQk8dGQgY2xhc3M9ImZvbnQxMSI+CgkJCQkJCTxpbWcgc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvdHJhbnMuZ2lmIiB3aWR0aD0iMTUiIGhlaWdodD0iMSIgLz48L3RkPgoJCQkJCTx0ZCBub3dyYXAgY2xhc3M9ImZvbnQxMSIgPgoJCQkJCQk8YSBocmVmPSJodHRwOi8vd3d3LnYzci5uZXQvcG9ydGFpbC9pbmRleC5hc3B4P3NlY3Q9MCZtb2R1bGU9NSZtb2R1bGUyPTEmTWVudUlEPTEwJkNQYWdlPTEiPjxpbWcgc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvYnVsbGV0LmdpZiIgYWxpZ249ImFic21pZGRsZSIgY2xhc3M9ImJ1bGxldCIgYm9yZGVyPSIwIiAvPkNvbmZpZGVudGlhbGl0JmVhY3V0ZTs8L2E+PC90ZD4KCQkJCQk8dGQgY2xhc3M9ImZvbnQxMSI+CgkJCQkJCTxpbWcgc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvdHJhbnMuZ2lmIiB3aWR0aD0iMTUiIGhlaWdodD0iMSIgLz48L3RkPgoJCQkJCTx0ZCBub3dyYXAgY2xhc3M9ImZvbnQxMSIgPgoJCQkJCQk8YSBocmVmPSJodHRwOi8vd3d3LnYzci5uZXQvcG9ydGFpbC9pbmRleC5hc3B4P3NlY3Q9MCZtb2R1bGU9NSZtb2R1bGUyPTEmTWVudUlEPTExJkNQYWdlPTEiPjxpbWcgc3JjPSJodHRwOi8vd3d3LnYzci5uZXQvL3BvcnRhaWwvaW1hZ2UvYnVsbGV0LmdpZiIgYWxpZ249ImFic21pZGRsZSIgY2xhc3M9ImJ1bGxldCIgYm9yZGVyPSIwIiAvPldlYm1lc3RyZTwvYT48L3RkPgogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iZm9udDExIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGltZyBzcmM9Imh0dHA6Ly93d3cudjNyLm5ldC8vcG9ydGFpbC9pbWFnZS90cmFucy5naWYiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxIiAvPjwvdGQ+CiAgICAgICAgICAgICAgICAgICAgPHRkIG5vd3JhcD0iIiBjbGFzcz0iZm9udDExIiA+CiAgICAgICAgICAgICAgICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vaW50cmFuZXQudjNyLm5ldC8iIHRhcmdldD0iX2JsYW5rIj48aW1nIHNyYz0iaHR0cDovL3d3dy52M3IubmV0Ly9wb3J0YWlsL2ltYWdlL2J1bGxldC5naWYiIGFsaWduPSJhYnNtaWRkbGUiIGNsYXNzPSJidWxsZXQiIGJvcmRlcj0iMCIgLz5JbnRyYW5ldDwvYT48L3RkPgogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iZm9udDExIiB3aWR0aD0iMTAwJSIgYWxpZ249InJpZ2h0IiBzdHlsZT0iY29sb3I6IzY2NjY2NjtwYWRkaW5nLXJpZ2h0OjEycHgiIGNsYXNzPSJmb250MTAiPiZuYnNwOwoJCQkJCQk8IS0tPGEgaHJlZj0iaHR0cDovL3d3dy5sYW5lYy5jb20iIHRhcmdldD0iX2JsYW5rIiBzdGF0dXM9IkxBTkVDIj48Qj5MQU5FQzwvQj48L2E+ICZjb3B5OyAyMDA1IHwtLT4gQXVqb3VyZCdodWkgbGUgMTAgamFudmllciAyMDE2PC90ZD4KCQkJCTwvdHI+CgkJCTwvdGFibGU+CgkJPC90ZD4KCTwvdHI+CjwvdGFibGU+IAo8IS0tPHRhYmxlIHdpZHRoPSI3NzAiIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgYWxpZ249ImNlbnRlciIgYm9yZGVyPSIwIj4KCTx0ciB2YWxpZ249InRvcCI+CgkJPHRkIHN0eWxlPSJwYWRkaW5nLXJpZ2h0OjEwcHgiPjxhIGhyZWY9Imh0dHA6Ly93d3cuaW9uaWsuY2EiIHRhcmdldD0iX2JsYW5rIj48aW1nIHNyYz0iaHR0cDovL3d3dy52M3IubmV0Ly9wb3J0YWlsL2ltYWdlL2xhbmdhZ2UvMS9wcm9wdWxzZS5naWYiIGFsaWduPSJyaWdodCIgYm9yZGVyPSIwIiAgdnNwYWNlPSIyIiBoc3BhY2U9IjAiIC8+PC9hPjwvdGQ+Cgk8L3RyPgo8L3RhYmxlPi0tPmQCEQ8WAh8PaBYCZg8WAh8LAgEWAmYPZBYEAgEPDxYEHwwFCUZyYW7Dp2Fpcx8PaBYEHgdPbkNsaWNrBTt3aW5kb3cubG9jYXRpb249J2luZGV4LmFzcHg/c2VjdD0wJmxhbmdhZ2U9MSc7cmV0dXJuIGZhbHNlOx4Gc3RhdHVzBQlGcmFuw6dhaXNkAgIPDxYEHwwFCUZyYW7Dp2Fpcx8PZ2RkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQ1jdGwwMCRiU2VhcmNoz+mFq9oZ9272o/F0TJHuVu2/QQ4=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90824E6A" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQLL871xAoDIrhwCo93M4AICxOTC9AICjpiQsAhpnvELo7SUZzjzA2GsPnrfio39/w==" />
+</div>
+	
+	<input name="HiddenBuilderCounter" type="HIDDEN" id="HiddenBuilderCounter" />
+	<input name="HiddenToExec" type="HIDDEN" id="HiddenToExec" />
+	
+	
+
+<link href="/portail/page_urgence/themes/boiteLightbox.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/portail/page_urgence/scripts/jquery.simplemodal-1.3.js"></script>
+
+
+<div id="lightboxPageUrgence">
+    <div class="contenuUrgence"></div>
+    <div class="logoVille"><img src="/portail/page_urgence/images/logoV3R.jpg" alt="Ville de Trois-Rivières" /></div>
+    <div class="clear"></div>
+</div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="entete">
+	<tr>
+		<td width="50%" background="http://www.v3r.net/portail/image/fond_haut.gif"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="46" alt="" /></td>
+		<td width="770" background="http://www.v3r.net/portail/image/fond_haut.gif" align="left">
+			<a name="top"></a>
+            <div style="position:absolute;top:9px;margin-left:9px;"><a id="hlLogo" href="http://www.v3r.net/portail/index.aspx" target="_top"><img src="/images/logov3r.jpg" alt="Ville de Trois-Rivières" /></a></div>
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td style="padding-left:82px;"><a id="hlAccueilV3R" status="Ville de Trois-Rivières" href="http://www.v3r.net/portail/index.aspx" target="_top"><img src="http://www.v3r.net/portail/image/langage/1/accueil_haut_off.gif" hsrc="http://www.v3r.net/portail/image/langage/1/accueil_haut_on.gif" width="183" height="46" border="0" alt="" /></a></td>
+					
+                    <td><img src="image/fond_haut_nuageB.gif" width="95" height="46" alt="" /></td>
+					<td width="410" background="image/fond_haut_nuage2B.gif">
+						<!---RECHERCHE--->
+						<div id="ctl00_pnlSearch">
+	
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td>
+			<img src="http://citoyen.v3r.net/portail/image/langage/1/recherche_haut.png" width="69" height="46" alt="" /></td>
+		<td valign="top" style="padding-top:4px">
+			<input name="ctl00$txtSearch" type="text" id="ctl00_txtSearch" class="input_recherche" onactivate="" ondeactivate="" onblur="value=value" onkeydown="fnTrapKD(document.all.ctl00_bSearch);" style="height:15px;" /></td>
+		<td valign="top" style="padding-top:5px;padding-left:3px">
+			<input type="image" name="ctl00$bSearch" id="ctl00_bSearch" align="absmiddle" src="http://www.v3r.net/portail/image/bouton_recherche.gif" alt="Rechercher" src="" onclick="if (document.getElementById('ctl00_txtSearch').value.trim().length&lt;4){  alert('Veuillez entrer un énoncé de recherche contenant un minimum de 4 caractères');  document.getElementById('ctl00_txtSearch').focus();  return false;};" style="border-width:0px;" /></td>
+		<td valign="top" style="padding-top:5px;padding-left:12px">
+			<img src="http://citoyen.v3r.net/portail/image/sep_haut.gif" width="1" height="19" alt="" /></td>
+		<td valign="top">
+            <div style="margin-top: 10px;">
+                <a href="#" onclick="window.location='index.aspx?sect=0&module=5&module2=2';return false;" status="Recherche avancée"><img src="image/langage/1/plan_site_haut_off.png" hsrc="image/langage/1/plan_site_haut_on.png" border="0" width="85" height="12" alt="" /></a>
+            </div>
+            <div style="margin-top:4px; margin-left: 5px;">
+                <a href="#" onclick="window.location='http://www.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=9&CPage=1';return false;" status="nous joindre"><img src="image/langage/1/nous_joindre_haut_off.png" hsrc="image/langage/1/nous_joindre_haut_on.png" border="0" width="87" height="12" alt="" /></a>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</div>
+
+					</td>
+				</tr>
+			</table>
+			</td>
+		<td width="50%" background="http://www.v3r.net/portail/image/fond_haut.gif"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="46" alt="" /></td>
+	</tr>
+	<tr>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+		<td width="770" align="left" style="padding-left:10px"></td>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+	</tr>
+	<tr>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+		<td width="770" align="left" >
+            <ul>
+                <li style="margin-right:9px;"><a id="hlLaville" href="http://laville.v3r.net/portail/index.aspx"><img id="imgLaVille" onmouseover="this.src='/images/bt_ville_over.jpg'" onmouseout="this.src='/images/bt_ville.jpg'" src="/images/bt_ville.jpg" style="border-width:0px;" /></a></li>
+                <li style="margin-right:10px;"><a id="hlServiceAuCitoyen" href="http://citoyen.v3r.net/portail/index.aspx"><img id="imgServiceAuCitoyen" src="/images/bt_citoyen_active.jpg" style="border-width:0px;" /></a></li>
+                <li style="margin-right:10px;"><a id="hlAffaires" href="http://idetr.com/portail/index.aspx"><img id="imgAffaires" onmouseover="this.src='/images/bt_affaires_over.jpg'" onmouseout="this.src='/images/bt_affaires.jpg'" src="/images/bt_affaires.jpg" style="border-width:0px;" /></a></li>
+                <li><a id="hlTourisme" href="http://www.tourismetroisrivieres.com/"><img id="imgTourisme" onmouseover="this.src='/images/bt_tourisme_over.jpg'" onmouseout="this.src='/images/bt_tourisme.jpg'" src="/images/bt_tourisme.jpg" style="border-width:0px;" /></a></li>
+            </ul>
+	    </td>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+	</tr>
+	<tr>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+		<td width="770" align="left"><img src="http://www.v3r.net/portail/image/ligne_sep.gif" alt="" class="ligneSeparatrice" /></td>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+	</tr>
+    
+	<tr>
+		<td width="50%"><img src="/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+		<td width="770" align="left" class="blocBandeau">
+            <div class="blocPromo" id="BlocPromo">
+                    <div>
+                        <a href="/portail/index.aspx?module=12&BPID=177" title="Permis de déneigement" status="http://citoyen.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=969&CPage=1" target="_blank"><img src='/docs_upload/bandeaux_publicitaires/177/Bandeau_permis-de-deneigement-2015_770.jpg' width='770' border='0' style='margin-bottom:10px'></a>
+                    </div>
+                </div><div class="fondBouton"></div>
+	    </td>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+	</tr>
+    
+    <tr>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+		<td width="770" align="left"><img id="imgTitreSection" class="imageTitreSection" src="/images/titre_section_citoyen.jpg" alt="Services au citoyen" style="border-width:0px;" /></td>
+		<td width="50%"><img src="http://www.v3r.net/portail/image/trans.gif" width="1" height="7" alt="" /></td>
+    </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="50%"><img src="image/trans.gif" width="1" height="20"></td>
+			<td width="770">
+				<!---CHEMIN--->
+				
+
+<table width="770" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td align="right" class="chemin"><span id="ctl04_lblChemin"><a href="http://www.v3r.net/" status="Accueil"><b>Accueil</b></a> / <a href="index.aspx?page=1" status="Section Services au citoyen"><b>Section Services au citoyen</b></a> / <span onclick="window.location='/portail/aspx/compteurs.aspx?MenuID=112&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=127!AND!CPage=1';return false;"><a href="#"  status="Services juridiques, archives, réclamation et réglementation">Services juridiques, archives, réclamation et réglementation</a></span> / <FONT style="color:#000000;">Archives</FONT>&nbsp;</span></td>
+	</tr>
+	<tr>
+		<td><img src="image/trans.gif" height="19" width="100"></td>
+	</tr>
+</table>
+				
+				<table class="content_td" width="770" cellpadding="0" cellspacing="0" align="center" border="0">
+					<tr valign="top">
+						
+						<td width="210" class="menu_td">
+							<!---MENU--->
+							
+<LINK REL=StyleSheet HREF="image/media/menu.css?v=2013.03.04" TYPE="text/css"> 
+<script src="image/media/menu_builder.js" type="text/javascript"></script>
+<script language="javascript">createItemNiv1(1361,"Animaux","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1361&CPage=1\";return false;",2,"");
+createItemNiv2(1370,"SPA Mauricie","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1370&UrlValue=http://www.spamauricie.com/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1052,"Parcs à chiens","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1052&CPage=1\";return false;",0,"");
+createItemNiv1(11,"Arts et culture","return false;",10,"");
+createItemNiv2(1191,"Amphithéâtre Cogéco","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1191&UrlValue=http://amphitheatre3r.com/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(795,"Arts et culture","window.open(\"/portail/aspx/compteurs.aspx?MenuID=795&UrlValue=http://www.culture.v3r.net\");",0,"");
+createItemNiv2(799,"Boréalis","window.open(\"/portail/aspx/compteurs.aspx?MenuID=799&UrlValue=http://www.borealis3r.ca\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1431,"Calendrier des activités municipales","window.location=\"http://citoyen.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=1427&CPage=1\";return false;",0,"");
+createItemNiv2(1207,"Centre culturel Pauline-Julien","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1207&UrlValue=http://www.ccpj.ca/index.html\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1151,"Centre d'exposition Raymond-Lasnier","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1151&UrlValue=http://www.cer-l.com/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(927,"Enspectacle.ca","window.open(\"/portail/aspx/compteurs.aspx?MenuID=927&UrlValue=http://www.enspectacle.ca/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(796,"Les Découvertes culturelles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=796&CPage=1\";return false;",0,"");
+createItemNiv2(892,"Manoir Boucher-De Niverville","window.open(\"/portail/aspx/compteurs.aspx?MenuID=892&UrlValue=http://www.manoirdeniverville.ca/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1409,"Répertoire des organismes","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1409&UrlValue=http://organismes.v3r.net/Organismes/Culturels.aspx#1\");",0,"");
+createItemNiv1(972,"Bibliothèques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=972&CPage=1\";return false;",13,"");
+createItemNiv2(1004,"Aide à la recherche","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1004&CPage=1\";return false;",5,"");
+createItemNiv3(1005,"Guide d'utilisation du catalogue","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1005&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Bibliotheques/Guide_utilisation_catalogue.pdf\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(1175,"Tutoriels de l'utilisation du catalogue","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1175&UrlValue=http://www.biblio.catalogue.v3r.net/smedia/html/tutoriels.html\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(1006,"Ressources électroniques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1006&CPage=1\";return false;","");
+createItemNiv3(1007,"Bibliothèque virtuelle BREF","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1007&UrlValue=http://services.banq.qc.ca/sdx/bref/accueil.xsp?db=bref\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(1008,"F.A.R. - Fichier d'accès rapide à l'histoire de Trois-Rivières","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1008&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=30\");","");
+createItemNiv2(973,"Activités d'animation","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=973&CPage=1\";return false;",13,"");
+createItemNiv3(1019,"Comment s'inscrire ?","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1019&CPage=1\";return false;","");
+createItemNiv3(1417,"Semaine de relâche","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1417&CPage=1\";return false;","");
+createItemNiv3(1021,"Groupes scolaires","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1021&CPage=1\";return false;","");
+createItemNiv3(11484,"Activités pour jeunes (1 à 7 ans)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11484&CPage=1\";return false;","");
+createItemNiv3(11486,"Spectacles pour jeunes (2 à 10 ans)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11486&CPage=1\";return false;","");
+createItemNiv3(11485,"Activités pour jeunes (6 à 12 ans)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11485&CPage=1\";return false;","");
+createItemNiv3(11483,"Activités pour ados (11 ans et plus)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11483&CPage=1\";return false;","");
+createItemNiv3(11488,"Cinéma en famille!","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11488&CPage=1\";return false;","");
+createItemNiv3(11487,"Activités pour adultes","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11487&CPage=1\";return false;","");
+createItemNiv3(11482,"Club de lecture pour adultes","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11482&CPage=1\";return false;","");
+createItemNiv3(11481,"Ateliers d'informatique pour adultes (débutants)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11481&CPage=1\";return false;","");
+createItemNiv3(11491,"Ateliers d'informatique - conférences","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11491&CPage=1\";return false;","");
+createItemNiv3(11492,"R@conte-moi une histoire","window.open(\"/portail/aspx/compteurs.aspx?MenuID=11492&UrlValue=http://jeunes.banq.qc.ca/pj/ecouter/#/raconte/ \");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(995,"Catalogue et dossier d'abonné","window.open(\"/portail/aspx/compteurs.aspx?MenuID=995&UrlValue=http://www.biblio.catalogue.v3r.net/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1323,"Règlement sur les bibliothèques","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1323&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Bibliotheques/Reglement_sur_les_bibliotheques.pdf\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1029,"À propos des bibliothèques","return false;",2,"");
+createItemNiv3(1030,"Mission, vision et valeurs","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1030&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Bibliotheques/Mission__vision__valeurs.pdf\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(1031,"Rapport annuel 2014","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1031&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Bibliotheques/B3R_rapport_annuel_2014.pdf\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1009,"Collections et services","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1009&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1011!AND!CPage=1\";return false;",8,"");
+createItemNiv3(1011,"Abonnement - Prêt","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1011&CPage=1\";return false;","");
+createItemNiv3(1012,"Prêt entre bibliothèques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1012&CPage=1\";return false;","");
+createItemNiv3(1013,"Collections","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1013&CPage=1\";return false;","");
+createItemNiv3(1238,"Livres numériques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1238&CPage=1\";return false;","");
+createItemNiv3(1374,"Jeux vidéo","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1374&CPage=1\";return false;","");
+createItemNiv3(1016,"Postes Internet - Réseau sans fil","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1016&CPage=1\";return false;","");
+createItemNiv3(1018,"Suggestions d'achat","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1018&CPage=1\";return false;","");
+createItemNiv3(1017,"Lecture mobile - Service de prêt à domicile","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1017&CPage=1\";return false;","");
+createItemNiv2(1412,"Dons de documents","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1412&CPage=1\";return false;",0,"");
+createItemNiv2(997,"Horaire et accès","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=997&CPage=1\";return false;",6,"");
+createItemNiv3(998,"Horaire du réseau","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=998&CPage=1\";return false;","");
+createItemNiv3(999,"Bibliothèque Aline-Piché","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=999&CPage=1\";return false;","");
+createItemNiv3(1000,"Bibliothèque de La Franciade","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1000&CPage=1\";return false;","");
+createItemNiv3(1001,"Bibliothèque Gatien-Lapointe","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1001&CPage=1\";return false;","");
+createItemNiv3(1002,"Bibliothèque Maurice-Loranger","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1002&CPage=1\";return false;","");
+createItemNiv3(1003,"Bibliothèque Simone-L.-Roy","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1003&CPage=1\";return false;","");
+createItemNiv2(1177,"Nouveautés","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1177&UrlValue=http://www.biblio.catalogue.v3r.net/alswww2.dll/APS_ZONES?fn=CatTree3!AND!Style=Portal3!AND!SubStyle=!AND!Lang=FRE!AND!ResponseEncoding=utf-8\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(11462,"Palmarès 2014 des employés","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11462&CPage=1\";return false;",0,"");
+createItemNiv2(1393,"REPONSEATOUT.CA","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1393&CPage=1\";return false;",0,"");
+createItemNiv2(1176,"Suggestions","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1176&UrlValue=http://www.biblio.catalogue.v3r.net/alswww2.dll/APS_ZONES?fn=CatTree1!AND!Style=Portal3!AND!SubStyle=!AND!Lang=FRE!AND!ResponseEncoding=utf-8\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1032,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1032&CPage=1\";return false;",0,"");
+createItemNiv1(505,"Cour municipale","window.location=\"/portail/aspx/compteurs.aspx?MenuID=505&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=510!AND!CPage=1\";return false;",4,"");
+createItemNiv2(510,"Calendrier des séances de cour","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=510&CPage=1\";return false;",0,"");
+createItemNiv2(506,"Constat d'infraction","window.location=\"/portail/aspx/compteurs.aspx?MenuID=506&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=508!AND!CPage=1\";return false;",2,"");
+createItemNiv3(508,"Contestation","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=508&CPage=1\";return false;","");
+createItemNiv3(507,"Paiement","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=507&CPage=1\";return false;","");
+createItemNiv2(509,"Formulaires","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=509&CPage=1\";return false;",0,"");
+createItemNiv2(511,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=511&CPage=1\";return false;",0,"");
+createItemNiv1(1239,"Déchets et recyclage","return false;",11,"");
+createItemNiv2(1303,"Bac roulant","return false;",5,"");
+createItemNiv3(1306,"Collecte automatisée","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1306&CPage=1\";return false;","");
+createItemNiv3(1305,"Disposition des bacs","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1305&CPage=1\";return false;","");
+createItemNiv3(1333,"Matières acceptées (bac bleu)","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1333&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1332!AND!CPage=1\";return false;","");
+createItemNiv3(1334,"Matières acceptées et refusées (ordures ménagères)","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1334&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1307!AND!CPage=1\";return false;","");
+createItemNiv3(1304,"Vente de bacs roulants","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1304&CPage=1\";return false;","");
+createItemNiv2(1279,"Collectes spéciales","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1279&CPage=1\";return false;",0,"");
+createItemNiv2(1262,"Écocentres","return false;",8,"");
+createItemNiv3(11461,"Dépliant écocentre","window.open(\"/portail/aspx/compteurs.aspx?MenuID=11461&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Dechets/Depliant_ecocentre.pdf\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(1269,"Encombrants","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1269&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1281!AND!CPage=1\";return false;","");
+createItemNiv3(1271,"Lieux et horaires","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1271&CPage=1\";return false;","");
+createItemNiv3(1263,"Matières acceptées et refusées","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1263&CPage=1\";return false;","");
+createItemNiv3(1267,"Que deviennent les matières récupérées","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1267&CPage=1\";return false;","");
+createItemNiv3(1268,"Résidus domestiques dangereux (RDD)","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1268&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1263!AND!CPage=1\";return false;","");
+createItemNiv3(1270,"Résidus verts","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1270&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1263!AND!CPage=1\";return false;","");
+createItemNiv3(1265,"Tarifs","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1265&CPage=1\";return false;","");
+createItemNiv2(1280,"Encombrants","return false;",2,"");
+createItemNiv3(1281,"Matières acceptées et refusées","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1281&CPage=1\";return false;","");
+createItemNiv3(1284,"Multilogement","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1284&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1275!AND!CPage=1#encombrants\";return false;","");
+createItemNiv2(1242,"Multilogement","return false;",4,"");
+createItemNiv3(1273,"Consignes et avis aux propriétaires","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1273&CPage=1\";return false;","");
+createItemNiv3(1274,"Encombrants","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1274&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1281!AND!CPage=1\";return false;","");
+createItemNiv3(1275,"Fréquence des collectes","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1275&CPage=1\";return false;","");
+createItemNiv3(1272,"Matières acceptées et refusées","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1272&CPage=1\";return false;","");
+createItemNiv2(1240,"Ordures ménagères","return false;",7,"");
+createItemNiv3(1308,"Bac roulant","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1308&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1306!AND!CPage=1\";return false;","");
+createItemNiv3(1312,"Collectes spéciales","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1312&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1279!AND!CPage=1\";return false;","");
+createItemNiv3(1309,"Encombrants","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1309&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1281!AND!CPage=1\";return false;","");
+createItemNiv3(1310,"Fréquence des collectes","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1310&CPage=1\";return false;","");
+createItemNiv3(1307,"Matières acceptées et refusées","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1307&CPage=1\";return false;","");
+createItemNiv3(1313,"Multilogement","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1313&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1273!AND!CPage=1\";return false;","");
+createItemNiv3(1311,"Résidus verts","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1311&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1263!AND!CPage=1\";return false;","");
+createItemNiv2(1241,"Recyclage","return false;",9,"");
+createItemNiv3(1296,"Bac roulant","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1296&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1306!AND!CPage=1\";return false;","");
+createItemNiv3(1295,"Collectes spéciales","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1295&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1279!AND!CPage=1\";return false;","");
+createItemNiv3(1294,"Encombrants","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1294&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1281!AND!CPage=1\";return false;","");
+createItemNiv3(1297,"Fréquence des collectes","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1297&CPage=1\";return false;","");
+createItemNiv3(1332,"Matières acceptées (bac bleu)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1332&CPage=1\";return false;","");
+createItemNiv3(1293,"Matières acceptées et refusées (écocentre)","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1293&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1263!AND!CPage=1\";return false;","");
+createItemNiv3(1300,"Multilogement","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1300&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1273!AND!CPage=1\";return false;","");
+createItemNiv3(1299,"Résidus domestiques dangereux (RDD)","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1299&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1263!AND!CPage=1\";return false;","");
+createItemNiv3(1302,"Trucs et astuces","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1302&CPage=1\";return false;","");
+createItemNiv2(1292,"Résidus domestiques dangereux (RDD)","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1292&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1263!AND!CPage=1\";return false;",0,"");
+createItemNiv2(1286,"Résidus verts","return false;",5,"");
+createItemNiv3(1289,"Branches et brindilles","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1289&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1263!AND!CPage=1\";return false;","");
+createItemNiv3(1288,"Collectes spéciales","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1288&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1279!AND!CPage=1\";return false;","");
+createItemNiv3(1287,"Herbicyclage","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1287&CPage=1\";return false;","");
+createItemNiv3(1291,"Que deviennent les matières récupérées","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1291&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1267!AND!CPage=1\";return false;","");
+createItemNiv3(1290,"Sapins de Noël","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1290&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1279!AND!CPage=1#sapins\";return false;","");
+createItemNiv2(1244,"Liens utiles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1244&CPage=1\";return false;",0,"");
+createItemNiv2(1245,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1245&CPage=1\";return false;",0,"");
+createItemNiv1(105,"Déneigement","window.location=\"/portail/aspx/compteurs.aspx?MenuID=105&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=970!AND!CPage=1\";return false;",3,"");
+createItemNiv2(970,"Opérations de déneigement","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=970&CPage=1\";return false;",0,"");
+createItemNiv2(969,"Permis de déneigement","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=969&CPage=1\";return false;",0,"");
+createItemNiv2(971,"Rôle du citoyen","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=971&CPage=1\";return false;",0,"");
+createItemNiv1(47,"Eau potable","window.location=\"/portail/aspx/compteurs.aspx?MenuID=47&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=48!AND!CPage=1\";return false;",7,"");
+createItemNiv2(48,"Arrosage","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=48&CPage=1\";return false;",3,"&nbsp;");
+createItemNiv3(1380,"Consommation responsable","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1380&CPage=1\";return false;","");
+createItemNiv3(11456,"Économie d'eau potable","window.location=\"/portail/aspx/compteurs.aspx?MenuID=11456&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1384!AND!CPage=1\";return false;","");
+createItemNiv3(1379,"Patrouilleur de l'eau","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1379&CPage=1\";return false;","");
+createItemNiv2(1179,"Chloramine","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1179&CPage=1\";return false;",0,"");
+createItemNiv2(50,"Drainage du réseau ","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=50&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(1199,"Le point sur l'eau potable","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1199&CPage=1\";return false;",0,"");
+createItemNiv2(103,"Qualité de l'eau","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=103&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(49,"Quoi faire?","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=49&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(135,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=135&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv1(332,"Environnement / développement durable","window.location=\"/portail/aspx/compteurs.aspx?MenuID=332&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1100!AND!CPage=1\";return false;",16,"");
+createItemNiv2(1100,"Certification en développement durable","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1100&CPage=1\";return false;",0,"");
+createItemNiv2(1384,"Économie d'eau potable","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1384&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(919,"Embellissez votre place d'affaires","window.open(\"/portail/aspx/compteurs.aspx?MenuID=919&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Environnement/embellissezplace_affaires.pdf\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1152,"Fondation Trois-Rivières pour un développement durable","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1152&UrlValue=http://www.f3rdd.org\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1124,"Herbe à poux","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1124&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(499,"Politique et plan d'action","window.open(\"/portail/aspx/compteurs.aspx?MenuID=499&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=52!AND!CPage=1\");",0,"");
+createItemNiv2(1233,"Programme Changez d'air","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1233&UrlValue=http://www.changezdair.org/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1039,"Projets et réalisations","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1039&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1043!AND!CPage=1\";return false;",5,"");
+createItemNiv3(1043,"Changements climatiques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1043&CPage=1\";return false;","");
+createItemNiv3(1040,"Développement urbain et milieux naturels","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1040&CPage=1\";return false;","");
+createItemNiv3(1042,"Foresterie urbaine et espaces verts","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1042&CPage=1\";return false;","");
+createItemNiv3(1045,"Herbicyclage","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1045&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1287!AND!CPage=1\";return false;","");
+createItemNiv3(1044,"Nuisances","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1044&CPage=1\";return false;","");
+createItemNiv2(886,"Publications","window.location=\"/portail/aspx/compteurs.aspx?MenuID=886&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=990!AND!CPage=1\";return false;",2,"");
+createItemNiv3(990,"Bonnes pratiques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=990&CPage=1\";return false;","");
+createItemNiv3(989,"Chroniques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=989&CPage=1\";return false;","");
+createItemNiv2(1385,"Raccordements inversés","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1385&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Environnement/raccordement_inverse.pdf\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1083,"Travaux en bordure d'un cours d'eau","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1083&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Urbanisme/Cours_d_eau__rives_et_littoral.pdf\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1443,"Trois-Rivières, Ville équitable","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1443&CPage=1\";return false;",0,"");
+createItemNiv2(1315,"Véhicules récréatifs","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1315&CPage=1\";return false;",0,"");
+createItemNiv2(1257,"Ver blanc","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1257&CPage=1\";return false;",0,"");
+createItemNiv2(500,"Liens utiles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=500&CPage=1\";return false;",0,"");
+createItemNiv2(1071,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1071&CPage=1\";return false;",0,"");
+createItemNiv1(280,"Évaluation foncière","window.location=\"/portail/aspx/compteurs.aspx?MenuID=280&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=615!AND!CPage=1\";return false;",8,"");
+createItemNiv2(615,"Changement d'adresse","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=615&CPage=1\";return false;",0,"");
+createItemNiv2(964,"Consultation du rôle d'évaluation","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=964&CPage=1\";return false;",0,"");
+createItemNiv2(406,"Demande de révision administrative","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=406&CPage=1\";return false;",0,"");
+createItemNiv2(1259,"Publications","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1259&CPage=1\";return false;",0,"");
+createItemNiv2(788,"Qu'est-ce que l'évaluation municipale?","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=788&CPage=1\";return false;",0,"");
+createItemNiv2(281,"Qu'est-ce que le rôle d'évaluation?","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=281&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(284,"Visite de propriétés","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=284&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(285,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=285&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv1(1188,"Fermeture et animation de rues","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1188&CPage=1\";return false;",0,"");
+createItemNiv1(259,"Île Saint-Quentin","window.open(\"/portail/aspx/compteurs.aspx?MenuID=259&UrlValue=http://www.ilesaintquentin.com\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv1(1133,"Immigrant","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1133&UrlValue=http://www.idetr.com/fr/portrait-de-trois-rivieres/immigrer-a-trois-rivieres/index.aspx\");",0,"");
+createItemNiv1(108,"Incendie","return false;",9,"&nbsp;");
+createItemNiv2(513,"Emploi","window.location=\"/portail/aspx/compteurs.aspx?MenuID=513&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=56!AND!CPage=1\";return false;",0,"");
+createItemNiv2(1357,"Identification visuelle","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1357&CPage=1\";return false;",0,"");
+createItemNiv2(584,"Mesures d'urgence","window.location=\"/portail/aspx/compteurs.aspx?MenuID=584&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=583!AND!CPage=1\";return false;",0,"");
+createItemNiv2(653,"Prévention des incendies","window.location=\"/portail/aspx/compteurs.aspx?MenuID=653&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=672!AND!CPage=1\";return false;",10,"");
+createItemNiv3(672,"Accumulation de neige","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=672&CPage=1\";return false;","");
+createItemNiv3(666,"Avertisseurs de fumée","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=666&CPage=1\";return false;","");
+createItemNiv3(661,"Brochure sur la prévention incendie","window.open(\"/portail/aspx/compteurs.aspx?MenuID=661&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/police/Depliant_octobre_2008.pdf\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(663,"Chauffage d'appoint","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=663&CPage=1\";return false;","");
+createItemNiv3(669,"Extincteur portatif","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=669&CPage=1\";return false;","");
+createItemNiv3(671,"Friture","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=671&CPage=1\";return false;","");
+createItemNiv3(670,"Monoxyde de carbone (CO)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=670&CPage=1\";return false;","");
+createItemNiv3(660,"Ramoneurs autorisés","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=660&CPage=1\";return false;","");
+createItemNiv3(1055,"Votre sécurité et le système de chauffage","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1055&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/police/brochure_systemes_de_chauffage_final_avec_signets.pdf\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(673,"Autres risques d'incendie","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=673&CPage=1\";return false;","");
+createItemNiv2(418,"Recensement des personnes handicapées","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=418&CPage=1\";return false;",0,"");
+createItemNiv2(1391,"Sinistré","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1391&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1382!AND!CPage=1\");",0,"");
+createItemNiv2(480,"Structure organisationnelle","window.location=\"/portail/aspx/compteurs.aspx?MenuID=480&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=129!AND!CPage=1\";return false;",0,"");
+createItemNiv2(330,"Schéma de couverture de risques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=330&CPage=1\";return false;",0,"");
+createItemNiv2(475,"Liens","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=475&CPage=1\";return false;",0,"");
+createItemNiv1(396,"Personne handicapée","window.location=\"/portail/aspx/compteurs.aspx?MenuID=396&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1141!AND!CPage=1\";return false;",4,"");
+createItemNiv2(1141,"Dépliants","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1141&CPage=1\";return false;",0,"");
+createItemNiv2(1111,"Fauteuil adapté pour les jeux d'eau","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1111&CPage=1\";return false;",0,"");
+createItemNiv2(1082,"Politiques municipales - Plans d'action","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1082&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=52!AND!CPage=1\");",0,"");
+createItemNiv2(876,"Liens utiles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=876&CPage=1\";return false;",0,"");
+createItemNiv1(242,"Plaintes et réclamations (formulaires)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=242&CPage=1\";return false;",0,"");
+createItemNiv1(107,"Police","return false;",13,"&nbsp;");
+createItemNiv2(1153,"Halte au crime","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1153&UrlValue=https://halteaucrime.v3r.net/\");",0,"");
+createItemNiv2(487,"Identification visuelle","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=487&CPage=1\";return false;",0,"");
+createItemNiv2(583,"Mesures d'urgence","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=583&CPage=1\";return false;",5,"");
+createItemNiv3(587,"Inondations","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=587&CPage=1\";return false;","");
+createItemNiv3(1198,"Matières dangereuses","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1198&CPage=1\";return false;","");
+createItemNiv3(1213,"Se préparer aux sinistres","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1213&UrlValue=http://www.securitepublique.gouv.qc.ca/securite-civile/se-preparer-aux-sinistres.html\");","");
+createItemNiv3(682,"Téléphonie ciblée","window.open(\"/portail/aspx/compteurs.aspx?MenuID=682&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1194!AND!CPage=1\");","");
+createItemNiv3(921,"Urgence nucléaire","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=921&CPage=1\";return false;","");
+createItemNiv2(342,"Prévention","window.location=\"/portail/aspx/compteurs.aspx?MenuID=342&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=345!AND!CPage=1\";return false;",12,"");
+createItemNiv3(345,"Commerces en alerte","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=345&CPage=1\";return false;","");
+createItemNiv3(684,"Conduite responsable","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=684&CPage=1\";return false;","");
+createItemNiv3(683,"Consommation responsable","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=683&CPage=1\";return false;","");
+createItemNiv3(414,"Dangers sur Internet","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=414&CPage=1\";return false;","");
+createItemNiv3(1174,"Maltraitance des aînés","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1174&UrlValue=http://maltraitanceaines.gouv.qc.ca/\");","");
+createItemNiv3(344,"Programme OVNI","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=344&CPage=1\";return false;","");
+createItemNiv3(343,"Programme Pair","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=343&CPage=1\";return false;","");
+createItemNiv3(1214,"Respectez le corridor de sécurité","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1214&UrlValue=http://www.mtq.gouv.qc.ca/securite-transport/Pages/Corridor-securite.aspx\");","");
+createItemNiv3(504,"Sécurité des enfants","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=504&CPage=1\";return false;","");
+createItemNiv3(476,"Sollicitation et harcèlement sexuel","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=476&CPage=1\";return false;","");
+createItemNiv3(488,"Violence contre la personne","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=488&CPage=1\";return false;","");
+createItemNiv3(497,"Liens utiles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=497&CPage=1\";return false;","");
+createItemNiv2(481,"Rapport annuel 2014","window.open(\"/portail/aspx/compteurs.aspx?MenuID=481&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/police/Rapport_annuel_2014.pdf\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1452,"Rapport de police en ligne","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1452&CPage=1\";return false;",1,"");
+createItemNiv3(1453,"Questions fréquentes","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1453&CPage=1\";return false;","");
+createItemNiv2(416,"Sécurité publique en Mauricie - 150 ans","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=416&CPage=1\";return false;",0,"");
+createItemNiv2(1382,"Sinistré","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1382&CPage=1\";return false;",0,"");
+createItemNiv2(479,"Structure organisationnelle","window.location=\"/portail/aspx/compteurs.aspx?MenuID=479&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=129!AND!CPage=1\";return false;",0,"");
+createItemNiv2(1129,"Surveillance de quartier","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1129&UrlValue=http://surveillancedequartier.v3r.net\");",0,"");
+createItemNiv2(512,"Une carrière chez nous : ça vous intéresse ?","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=512&CPage=1\";return false;",0,"");
+createItemNiv2(403,"Liens utiles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=403&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(477,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=477&CPage=1\";return false;",0,"");
+createItemNiv1(1109,"Pyrrhotite","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1109&CPage=1\";return false;",5,"");
+createItemNiv2(11464,"Dépliant - Accompagnement du propriétaire","window.open(\"/portail/aspx/compteurs.aspx?MenuID=11464&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Pyrrhotite/Depliant_-_Accompagnement_du_proprietaire.pdf\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1113,"Quelques conseils pour mieux comprendre vos réactions et savoir comment agir","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1113&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Pyrrhotite/Depliant_pyrrhotite_2015.pdf\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1110,"Foire aux questions","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1110&CPage=1\";return false;",0,"");
+createItemNiv2(1197,"Liens utiles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1197&CPage=1\";return false;",0,"");
+createItemNiv2(1115,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1115&CPage=1\";return false;",0,"");
+createItemNiv1(1447,"Réclamations","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1447&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=242!AND!CPage=1\";return false;",0,"");
+createItemNiv1(112,"Services juridiques, archives, réclamation et réglementation","window.location=\"/portail/aspx/compteurs.aspx?MenuID=112&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=127!AND!CPage=1\";return false;",6,"");
+createItemNiv2(127,"Archives","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=127&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(170,"Constat d'infraction","return false;",2,"&nbsp;");
+createItemNiv3(172,"Contestation","window.location=\"/portail/aspx/compteurs.aspx?MenuID=172&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=508!AND!CPage=1\";return false;","");
+createItemNiv3(171,"Paiement","window.location=\"/portail/aspx/compteurs.aspx?MenuID=171&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=507!AND!CPage=1\";return false;","");
+createItemNiv2(472,"Demande d'accès à un document","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=472&CPage=1\";return false;",0,"");
+createItemNiv2(129,"Formulaire de réclamation","window.location=\"/portail/aspx/compteurs.aspx?MenuID=129&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=242!AND!CPage=1\";return false;",0,"");
+createItemNiv2(128,"Règlements","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=128&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(130,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=130&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv1(73,"Sport","return false;",11,"&nbsp;");
+createItemNiv2(115,"Activités et équipements sportifs","return false;",8,"");
+createItemNiv3(1430,"Calendrier des activités municipales","window.location=\"http://citoyen.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=1427&CPage=1\";return false;","");
+createItemNiv3(148,"Mini-golf","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=148&CPage=1\";return false;","&nbsp;");
+createItemNiv3(163,"Parcs de planche à roulettes","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=163&CPage=1\";return false;","&nbsp;");
+createItemNiv3(246,"Piscines extérieures","window.location=\"/portail/aspx/compteurs.aspx?MenuID=246&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=168!AND!CPage=1\";return false;","");
+createItemNiv3(244,"Pistes cyclables et sentiers","window.location=\"http://www.citoyen.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=71&CPage=1\";return false;","&nbsp;");
+createItemNiv3(164,"Pistes de vélo-cross","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=164&CPage=1\";return false;","&nbsp;");
+createItemNiv3(161,"Terrains de balle/baseball","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=161&CPage=1\";return false;","&nbsp;");
+createItemNiv3(162,"Terrains de soccer","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=162&CPage=1\";return false;","&nbsp;");
+createItemNiv2(114,"Activités libres","return false;",4,"");
+createItemNiv3(1226,"Patinoires extérieures","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1226&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!MenuID=137!AND!FI=1\";return false;","");
+createItemNiv3(11471,"Patinage et hockey libres","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11471&CPage=1\";return false;","");
+createItemNiv3(168,"Piscines extérieures","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=168&CPage=1\";return false;","&nbsp;");
+createItemNiv3(167,"Tennis libre","window.open(\"/portail/aspx/compteurs.aspx?MenuID=167&UrlValue=http://attr.org/v2/parcs/\");","");
+createItemNiv2(1085,"Aquabrigade","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1085&CPage=1\";return false;",0,"");
+createItemNiv2(621,"Disciplines sportives - Organismes accrédités","window.open(\"/portail/aspx/compteurs.aspx?MenuID=621&UrlValue=http://organismes.v3r.net/Organismes/Sportifs.aspx#1\");",0,"");
+createItemNiv2(947,"Orientation en soccer","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=947&CPage=1\";return false;",0,"");
+createItemNiv2(117,"Parcs municipaux","window.location=\"http://www.citoyen.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=65&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(1261,"Piscines extérieures","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1261&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=168!AND!CPage=1\";return false;",0,"");
+createItemNiv2(603,"Plaintes et réclamations - Formulaires","window.location=\"/portail/aspx/compteurs.aspx?MenuID=603&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=242!AND!CPage=1\";return false;",0,"");
+createItemNiv2(941,"Politique de reconnaissance et de soutien aux organismes","window.open(\"/portail/aspx/compteurs.aspx?MenuID=941&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=52!AND!CPage=1\");",0,"");
+createItemNiv2(928,"Liens utiles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=928&CPage=1\";return false;",0,"");
+createItemNiv2(570,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=570&CPage=1\";return false;",0,"");
+createItemNiv1(110,"Stationnement et circulation","return false;",8,"&nbsp;");
+createItemNiv2(1190,"Circulation des camions","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1190&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=128!AND!CPage=1\");",0,"");
+createItemNiv2(122,"Entretien","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=122&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(11468,"Navette fluviale Bécancour-Trois-Rivières","window.open(\"/portail/aspx/compteurs.aspx?MenuID=11468&UrlValue=http://www.tourismetroisrivieres.com/fr/quoi-faire/navette-fluviale-becancour-trois-rivieres/102307\");",0,"");
+createItemNiv2(363,"Rampes de mise à l'eau","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=363&CPage=1\";return false;",0,"");
+createItemNiv2(123,"Société de transport de Trois-Rivières","window.open(\"/portail/aspx/compteurs.aspx?MenuID=123&UrlValue=http://www.sttr.qc.ca\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(125,"Stationnement","return false;",5,"");
+createItemNiv3(1354,"De nuit","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1354&CPage=1\";return false;","");
+createItemNiv3(1327,"Horodateurs","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1327&CPage=1\";return false;","");
+createItemNiv3(1360,"Paiement à distance (PayByPhone)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1360&CPage=1\";return false;","");
+createItemNiv3(299,"Pour personne handicapée","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=299&CPage=1\";return false;","&nbsp;");
+createItemNiv3(699,"Tarifs","window.open(\"/portail/aspx/compteurs.aspx?MenuID=699&UrlValue=http://www.sdctr.qc.ca/Stationnements\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(1102,"Vélo","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1102&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1103!AND!CPage=1\";return false;",4,"");
+createItemNiv3(1103,"Cyclobus","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1103&CPage=1\";return false;","");
+createItemNiv3(1108,"État du vélo au Québec","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1108&UrlValue=http://www.velo.qc.ca/fr/expertise/etat-du-velo-au-Quebec\");","");
+createItemNiv3(1105,"Sécurité","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1105&CPage=1\";return false;","");
+createItemNiv3(1104,"Vélos de quartiers","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1104&UrlValue=http://velosdequartiers.ca/\");","");
+createItemNiv2(126,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=126&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv1(268,"Taxes","return false;",14,"");
+createItemNiv2(277,"Changement d'adresse","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=277&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(272,"Droit de mutation immobilière","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=272&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(270,"Échéances et versements","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=270&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(276,"Exemptions","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=276&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(275,"Fosses septiques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=275&CPage=1\";return false;",0,"");
+createItemNiv2(269,"Modalités de paiement","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=269&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(271,"Nouveau propriétaire","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=271&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(544,"Taux de taxes","window.open(\"/portail/aspx/compteurs.aspx?MenuID=544&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=437!AND!CPage=1\");",0,"");
+createItemNiv2(321,"Taxe à taux variés (TTV)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=321&CPage=1\";return false;",0,"");
+createItemNiv2(274,"Taxe d'amélioration locale","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=274&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(273,"Taxes complémentaires","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=273&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(689,"Taxes de secteur : service de la dette des ex-villes","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=689&CPage=1\";return false;",0,"");
+createItemNiv2(278,"Foire aux questions","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=278&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(279,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=279&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv1(1194,"Téléphonie ciblée","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1194&CPage=1\";return false;",0,"");
+createItemNiv1(52,"Urbanisme et permis","return false;",12,"&nbsp;");
+createItemNiv2(1429,"Schéma d'aménagement","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1429&UrlValue=http://visionvers2030.net/schema-damenagement/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(11479,"Plan de développement de la zone agricole 2015","window.open(\"/portail/aspx/compteurs.aspx?MenuID=11479&UrlValue=http://visionvers2030.net/plan-de-developpement-de-la-zone-agricole/\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(54,"Habitation","return false;",7,"&nbsp;");
+createItemNiv3(263,"Abri d'auto temporaire","window.open(\"/portail/aspx/compteurs.aspx?MenuID=263&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Urbanisme/Normes_abri_d_auto_temporaire.pdf\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(264,"Arrosage (utilisation de l'eau)","window.location=\"http://citoyen.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=48&CPage=1\";return false;","&nbsp;");
+createItemNiv3(543,"Personnes âgées","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=543&CPage=1\";return false;","");
+createItemNiv3(384,"Piscine","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=384&CPage=1\";return false;","");
+createItemNiv3(1084,"Punaises de lit","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1084&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/Urbanisme/Guide_Punaisesdelit_FR.pdf\");","<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_pdf.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv3(1180,"Ramonage de cheminées","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1180&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=660!AND!CPage=1\");","");
+createItemNiv3(1187,"Vente-débarras","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1187&CPage=1\";return false;","");
+createItemNiv2(1451,"Lave-O-thon (formulaire électronique)","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1451&UrlValue=http://citoyen.v3r.net/docs_upload/documents/langue1/eau_potable/Formulaire_2015_-_lave-o-thon.doc\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_doc.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(762,"Patrimoine bâti","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=762&CPage=1\";return false;",0,"");
+createItemNiv2(1209,"Permis ou déclaration de travaux","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1209&CPage=1\";return false;",1,"");
+createItemNiv3(1441,"Plan d'implantation et d'intégration architecturale (PIIA)","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1441&CPage=1\";return false;","");
+createItemNiv2(1068,"Programmes de subvention ","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1068&CPage=1\";return false;",0,"");
+createItemNiv2(55,"Projets domiciliaires","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=55&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(937,"Réglementation d'urbanisme","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=937&CPage=1\";return false;",0,"");
+createItemNiv2(1247,"Statistiques","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1247&CPage=1\";return false;",0,"");
+createItemNiv2(56,"Liens utiles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=56&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(136,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=136&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv1(63,"Vie communautaire et récréative","return false;",13,"&nbsp;");
+createItemNiv2(714,"Carte vélo","window.open(\"/portail/aspx/compteurs.aspx?MenuID=714&UrlValue=http://www.tourismetroisrivieres.com/fr/commandez-nos-publications\");",0,"");
+createItemNiv2(934,"Famille-Services de garde","window.open(\"/portail/aspx/compteurs.aspx?MenuID=934&UrlValue=https://www.laplace0-5.com\");",0,"<img src=\"/plate-forme/image/icon/types_liens_builder/alternate/lien_externe.gif\" align=\"absmiddle\" border=\"0\" hspace=\"5\">");
+createItemNiv2(11458,"Carnavals de districts 2016","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=11458&CPage=1\";return false;",0,"&nbsp;");
+createItemNiv2(1372,"Jardins communautaires","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1372&CPage=1\";return false;",0,"");
+createItemNiv2(931,"Location","window.location=\"/portail/aspx/compteurs.aspx?MenuID=931&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=1321!AND!CPage=1\";return false;",3,"");
+createItemNiv3(1321,"Gymnases","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1321&CPage=1\";return false;","");
+createItemNiv3(1320,"Salles","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1320&CPage=1\";return false;","");
+createItemNiv3(1322,"Terrains de balle","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1322&CPage=1\";return false;","");
+createItemNiv2(65,"Parcs municipaux","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=65&CPage=1\";return false;",3,"&nbsp;");
+createItemNiv3(119,"Action Parc","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=119&CPage=1\";return false;","&nbsp;");
+createItemNiv3(918,"Sécurité dans les parcs","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=918&CPage=1\";return false;","");
+createItemNiv3(1399,"Code d'éthique au parc linéaire","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1399&CPage=1\";return false;","");
+createItemNiv2(849,"Politiques municipales - Plans d'action","window.open(\"/portail/aspx/compteurs.aspx?MenuID=849&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=52!AND!CPage=1\");",0,"");
+createItemNiv2(64,"Programmation des activités","return false;",5,"&nbsp;");
+createItemNiv3(1427,"Calendrier des activités municipales","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=1427&CPage=1\";return false;","");
+createItemNiv3(1249,"Camp de jour","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1249&UrlValue=http://campdejour.v3r.net\");","");
+createItemNiv3(137,"Patinoires extérieures","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=137&CPage=1\";return false;","&nbsp;");
+createItemNiv3(874,"Piscines extérieures","window.open(\"/portail/aspx/compteurs.aspx?MenuID=874&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=168!AND!CPage=1\");","");
+createItemNiv3(71,"Pistes de ski de fond et sentiers","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=71&CPage=1\";return false;","&nbsp;");
+createItemNiv2(68,"Renseignements généraux","window.location=\"/portail/aspx/compteurs.aspx?MenuID=68&UrlValue=http://citoyen.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=86!AND!CPage=1\";return false;",2,"");
+createItemNiv3(86,"Fonds d'aide des bingos","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=86&CPage=1\";return false;","&nbsp;");
+createItemNiv3(1125,"Fonds de développement social","window.open(\"/portail/aspx/compteurs.aspx?MenuID=1125&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=52!AND!CPage=1\");","");
+createItemNiv2(69,"Répertoire des organismes","window.open(\"/portail/aspx/compteurs.aspx?MenuID=69&UrlValue=http://organismes.v3r.net\");",0,"");
+createItemNiv2(930,"Trois-Rivières en Action et en Santé","window.open(\"/portail/aspx/compteurs.aspx?MenuID=930&UrlValue=http://www.t-ras.ca/\");",0,"");
+createItemNiv2(1377,"Virée du Maire 2015","window.location=\"/portail/aspx/compteurs.aspx?MenuID=1377&UrlValue=http://laville.v3r.net/portail/index.aspx?sect=0!AND!module=5!AND!module2=1!AND!MenuID=526!AND!CPage=1\";return false;",0,"");
+createItemNiv2(120,"Contactez-nous","window.location = \"index.aspx?sect=0&module=5&module2=1&MenuID=120&CPage=1\";return false;",0,"&nbsp;");
+buildMenu();
+</script>
+
+							<!---<img src="image/trans.gif" width="1" height="200"></td>-->
+						
+						
+						<td id="tdContenu" style="padding-Left:15px;" width="100%">
+							<!---TITRE--->
+							
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="titre"><h1>Service d’archives et Centre d'archives</h1></td>
+								</tr>
+							</table>
+                            
+							
+			
+							<!--- ZONE DE TEXTE --->
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										<div id="ctl01_placeHolder">
+	
+	<img src="image/trans.gif" width="1" height="10"><BR>
+	<!-- CONTENU TEXTUEL - GALERIE_IMAGES - DOCS TELECHARGEABLES - FLASH -->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">	
+		<tr valign="top">
+			<td width="100%" class="Texte">
+				
+
+<table cellpadidng="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="contenu">
+			<h2>Services des archives</h2><br /><br />Le Service des archives coordonne la gestion documentaire pour tous les services de la Ville et assure l’organisation, la conservation, le traitement, le repérage, la protection et la diffusion des archives de la Ville. <br /><br />Le logiciel SyGID permet d’informatiser tous les dossiers administratifs. Depuis 1992, tous les procès-verbaux sont indexés sur support informatique. De 1845 à 1991, les index sur support papier permettent de faire des recherches. <br /><br /><br /><img border="0" hspace="10" alt="Centre d'archives" vspace="10" align="right" src="http://www.citoyen.v3r.net/docs_upload/galerie_images/langue1/archives/centre_archives-boite.jpg"> 
+<h2>Centres d'archives</h2><br />&nbsp;<br />Le Centre d’archives situé au 370, rue des Forges regroupe les archives des six villes fusionnées : Cap-de-la-Madeleine, Pointe-du-Lac, Sainte-Marthe-du-Cap, Saint-Louis-de-France, Trois-Rivières et Trois-Rivières-Ouest. Ce lieu d’environ 3000 pieds carrés de superficie, abrite 1600 mètres linéaires de documents. La température et l’humidité sont contrôlées informatiquement afin d’assurer une meilleure conservation des documents. <br /><br /><strong>L'accessibilité au Centre d’archives est possible <em>sur rendez-vous</em> <em>seulement</em>.&nbsp;<br /></strong><br />Communiquez avec le <a href="http://www.citoyen.v3r.net/portail/index.aspx?sect=0&amp;module=5&amp;module2=1&amp;MenuID=130&amp;CPage=1" target="_self">Service des archives</a>&nbsp;<br /><br /><br />
+<h2>Demande d'information</h2><br /><br />Les demandes d’information ou de recherche sont faites par <a href="http://www.citoyen.v3r.net/portail/index.aspx?sect=0&amp;module=5&amp;module2=1&amp;MenuID=130&amp;CPage=1" target="_self">téléphone ou par courriel</a>. Veuillez accorder un certain délai aux archivistes pour qu’elles puissent vous répondre adéquatement. <br /><br /><br />
+<h2>Frais</h2><br /><br />Des frais s’appliquent à toute demande de photocopies. <br /><br /><br />
+<h2>Liste des principaux documents conservés aux Archives</h2><br /><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Ordres du jour et procès-verbaux 1845-</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br /><img border="0" hspace="10" alt="Centre d'archives" vspace="10" align="right" src="http://www.citoyen.v3r.net/docs_upload/galerie_images/langue1/archives/centre_archives-livre.jpg"> 
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top"><a href="http://laville.v3r.net/portail/index.aspx?sect=0&amp;module=100" target="_blank">Ordres du jour et procès-verbaux des dernières années <br /><strong>(conseil municipal et comité exécutif)</strong></a></td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br /><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Règlements 1832-</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Principaux règlements municipaux en vigueur</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Rôles d’évaluation 1845- </td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Contrats d’achats, de vente, etc. 1796-</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Permis de construction 1913-1991</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Documents sur la commune 1636-1943 </td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img border="0" hspace="0" src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Collection de photographies</td></tr></tbody></table></td>
+	</tr>
+</table><BR>
+
+<TABLE cellpadding="0" cellspacing="0">
+	<TR>
+		<td class="font11" style="padding:3px;padding-top:5px;color:#FFFFFF" bgcolor="#64963C">
+			<img src="/portail/image/bullet_blanc.gif" width="5" height="5" hspace="4"></TD>
+		<td class="font11" style="padding:3px;padding-right:20px;color:#FFFFFF" bgcolor="#84B159">
+			Photos anciennes</B></TD>
+	</TR>
+</table>
+<TABLE width="100%" cellpadding="0" cellspacing="0" bgcolor="#DFDFD7" style="border:1px solid #64963C">
+	<TR>
+		<TD align="center" valign="middle" bgcolor="#D0D0C7">
+			<table width="100%" cellpadding="10" cellspacing="1" border="0" align="center">
+				
+				<TR spOPEN>
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl00_tdImage" OnClick="window.open('../../docs_upload/builder/487/autobus.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl00_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_autobus.jpg" style="height:67px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl01_tdImage" OnClick="window.open('../../docs_upload/builder/487/autobus002.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl01_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_autobus002.jpg" style="height:66px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl02_tdImage" OnClick="window.open('../../docs_upload/builder/487/bateau.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl02_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_bateau.jpg" style="height:80px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl03_tdImage" OnClick="window.open('../../docs_upload/builder/487/cap_aerien.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl03_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_cap_aerien.jpg" style="height:65px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				</TR spCLOSE>
+				
+				<TR spOPEN>
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl04_tdImage" OnClick="window.open('../../docs_upload/builder/487/eglise.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl04_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_eglise.jpg" style="height:58px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl05_tdImage" OnClick="window.open('../../docs_upload/builder/487/hotel_de_ville__1962_.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl05_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_hotel_de_ville__1962_.jpg" style="height:51px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl06_tdImage" OnClick="window.open('../../docs_upload/builder/487/Montee_du_boulevard.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl06_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_Montee_du_boulevard.jpg" style="height:59px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl07_tdImage" OnClick="window.open('../../docs_upload/builder/487/proces-verbal_pdl.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl07_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_proces-verbal_pdl.jpg" style="height:80px;width:48px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				</TR spCLOSE>
+				
+				<TR spOPEN>
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl08_tdImage" OnClick="window.open('../../docs_upload/builder/487/reglement.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl08_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_reglement.jpg" style="height:80px;width:51px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl09_tdImage" OnClick="window.open('../../docs_upload/builder/487/reglement001.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl09_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_reglement001.jpg" style="height:80px;width:51px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl10_tdImage" OnClick="window.open('../../docs_upload/builder/487/role_tr.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl10_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_role_tr.jpg" style="height:80px;width:47px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+				
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl11_tdImage" OnClick="window.open('../../docs_upload/builder/487/vue_aerienne_port_1.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl11_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_vue_aerienne_port_1.jpg" style="height:52px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				</TR spCLOSE>
+				
+				<TR spOPEN>
+					<TD width="25%" align="center" valign="center" bgcolor="#E4E4DE">
+						<TABLE cellpadding="0" cellspacing="0" border="0">
+							<tr>
+		<td id="ctl01_ctl00_ctl01_repeaterImages_ctl12_tdImage" OnClick="window.open('../../docs_upload/builder/487/Vue_aerienne_T-R_1955.jpg','_blank'); return false;" style="cursor:pointer;border:1px solid #CCCCCC">
+									<TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+										<TR>
+											<TD width="100%" style="cursor:pointer;border:8px solid #FFFFFF" onMouseOver="this.style.border='8px solid #C6D6B8'" onMouseOut="this.style.border='8px solid #FFFFFF'">
+												<img id="ctl01_ctl00_ctl01_repeaterImages_ctl12_imgPhoto" title="Voir l'image à sa taille réelle" src="/docs_upload/builder/487/thumbnails/tn_Vue_aerienne_T-R_1955.jpg" style="height:67px;width:80px;border-width:0px;border:1px solid #666666" />
+											</TD>
+		
+										</TR>
+									</TABLE>
+								</td>
+	</tr>
+						</TABLE>
+					</TD>
+				
+				
+			</table>
+		</TD>
+	</TR>
+</TABLE>
+<BR>
+
+<table cellpadidng="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="contenu">
+			<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 01: autobus</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 02: autobus</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 03: bateau 1911 - Don de John Argall</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 04: vue aérienne de Cap-de-la-Madeleine 1947- B.26.14</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 05: église paroissiale vers 1906 - Don de John Argall</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 06: hôtel de ville 1962 - HO-0010</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 07: montée du boulevard - 19? - Don de John Argall</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 08: procès-verbal</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 09: règlement municipal</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 10: règlement municipal</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 11: rôle d'évaluation (Trois-Rivières)</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 12: vue aérienne du port 1955 - TE-0001</td></tr></tbody></table><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/Spacer5.gif"><br />
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 6px" valign="top"><img src="http://citoyen.v3r.net/docs_upload/galerie_images/langue1/Mise_en_page/bullet.gif"></td>
+<td style="FONT-SIZE: 12px" valign="top">Photo 13: vue aérienne centre-ville de Trois-Rivières 1955 - RE-0311</td></tr></tbody></table><br /><br /></td>
+	</tr>
+</table><BR>
+                
+			</td>
+		</tr>
+	</table>
+
+	<!-- PAGINATION -->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">	
+		<tr valign="top">
+			<td width="100%" class="Texte">
+				<div id="ctl01_ctl00_divPages">
+					
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<!-- BAS DE PAGE-->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">	
+		<tr valign="top">
+			<td width="100%" class="Texte">
+				
+			</td>
+		</tr>
+	</table>
+
+
+	<!-- LISTING -->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">	
+		<tr valign="top">
+			<td width="100%" class="Texte">
+				
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td background="image/fond_utils.gif" style="background-repeat:repeat-x">
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					
+					
+						<td valign="top" style="padding:6px;padding-right:20px" class="font10" nowrap><img src="image/bullet.gif" align="absmiddle" class="bullet"><a id="ctl01_utils_hpAmi" href="javascript:;" onclick="OpenPopupCenter('/portail/aspx/envoyer_ami.aspx?menuid=127&amp;CPage=1','Ami',610,550);return false;" status="Envoyer à un ami">Envoyer à un ami</a></td>
+					
+					
+						<td valign="top" style="padding:6px;padding-right:20px" class="font10" nowrap><img src="image/bullet.gif" align="absmiddle" class="bullet"><a id="ctl01_utils_hpImprimable" href="javascript:;" onclick="OpenPopupCenter('/portail/aspx/version_imprimable.aspx?IDItem=127&amp;sender=builder&amp;CPage=1','VI',600,400);return false;" status="Version imprimable">Version imprimable</a></td>
+					
+					<td style="padding:6px" class="font10" width="100%" align="right"><img src="image/bullet.gif" align="absmiddle" class="bullet"><a status="Haut de page" href="#top">Haut de page</a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+
+
+
+									</td>
+								</tr>
+							</table>
+
+							<!--- ZONE MODULE ACCUEIL 3 BLOCS : COMMUNIQUÉS - AVIS DE TRAVAUX - SORTIR --->
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										</td>
+								</tr>
+							</table>
+								
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="top">
+								<!--- COMMUNIQUES --->
+								
+						</td>
+					    
+						<!---DEBUT COLONNE DROITE--->
+						
+						    
+						<!-- FIN COLONNE DROITE -->
+					</tr>
+				</table>
+						</td>
+
+
+					</tr>
+				</table>
+			</td>
+			
+			<td width="50%"><img src="image/trans.gif" width="1" height="20"></td>
+		</tr>
+	</table>
+	<table width="770" cellpadding="0" cellspacing="0" align="center" border="0">
+		<tr valign="top">
+			<td>
+				<!---MENU BAS--->
+				
+<img src="image/trans.gif" width="1" height="15"><BR>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td bgcolor="#999999">
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+</table>
+<img src="image/trans.gif" width="1" height="15"><BR>
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>		
+	
+	</tr>
+</table>
+<img src="image/trans.gif" width="1" height="15"><BR>
+
+
+			</td>
+		</tr>
+	</table>
+
+	<!---BANDE BAS--->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td bgcolor="#315E0D">
+			<img src="http://www.v3r.net//portail/image/trans.gif" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td bgcolor="#6FA444">
+			<table cellpadding="0" cellspacing="0" border="0" width="770" align="center">
+				<tr>
+					<td>
+						<a href="http://www.v3r.net/portail/index.aspx?sect=0&module=5&module2=2"><img src="http://www.v3r.net//portail/image/langage/1/plan_site_bas_off.gif" hsrc="http://www.v3r.net//portail/image/langage/1/plan_site_bas_on.gif" width="90" height="23" border="0" /></a></td>
+					<td>
+            <a href="http://www.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=9&CPage=1">
+              <img src="http://www.v3r.net//portail/image/langage/1/nous_joindre_bas_off.gif" hsrc="http://www.v3r.net//portail/image/langage/1/nous_joindre_bas_on.gif" width="98" height="23" border="0" />
+            </a>
+          </td>
+					<td>
+            <a href="http://www.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=4&CPage=1">
+              <img src="http://www.v3r.net//portail/image/langage/1/cartes_bas_off.gif" hsrc="http://www.v3r.net//portail/image/langage/1/cartes_bas_on.gif" width="64" height="23" border="0" />
+            </a>
+          </td>
+					<td>
+						<img src="http://www.v3r.net//portail/image/fond_bas.jpg" width="303" height="23" /></td>
+					<td>
+						<a href="http://www.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=114&CPage=1" target="_top"><img src="http://www.v3r.net//portail/image/langage/1/handicap_off.gif" hsrc="http://www.v3r.net//portail/image/langage/1/handicap_on.gif" width="215" height="23" border="0" /></a></td>
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td bgcolor="#315E0D">
+			<img src="http://www.v3r.net//portail/image/trans.gif" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td style="padding-top:6px;padding-left:3px">
+			<table cellpadding="0" cellspacing="0" border="0" width="770" align="center">
+				<tr>
+					<td nowrap class="font11" >
+						<a href="http://www.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=8&Cpage=1"><img src="http://www.v3r.net//portail/image/bullet.gif" align="absmiddle" class="bullet" border="0" />Utilisation</a></td>
+					<td class="font11">
+						<img src="http://www.v3r.net//portail/image/trans.gif" width="15" height="1" /></td>
+					<td nowrap class="font11" >
+						<a href="http://www.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=10&CPage=1"><img src="http://www.v3r.net//portail/image/bullet.gif" align="absmiddle" class="bullet" border="0" />Confidentialit&eacute;</a></td>
+					<td class="font11">
+						<img src="http://www.v3r.net//portail/image/trans.gif" width="15" height="1" /></td>
+					<td nowrap class="font11" >
+						<a href="http://www.v3r.net/portail/index.aspx?sect=0&module=5&module2=1&MenuID=11&CPage=1"><img src="http://www.v3r.net//portail/image/bullet.gif" align="absmiddle" class="bullet" border="0" />Webmestre</a></td>
+                    <td class="font11">
+                        <img src="http://www.v3r.net//portail/image/trans.gif" width="15" height="1" /></td>
+                    <td nowrap="" class="font11" >
+                        <a href="https://intranet.v3r.net/" target="_blank"><img src="http://www.v3r.net//portail/image/bullet.gif" align="absmiddle" class="bullet" border="0" />Intranet</a></td>
+                    <td class="font11" width="100%" align="right" style="color:#666666;padding-right:12px" class="font10">&nbsp;
+						<!--<a href="http://www.lanec.com" target="_blank" status="LANEC"><B>LANEC</B></a> &copy; 2005 |--> Aujourd'hui le 10 janvier 2016</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table> 
+<!--<table width="770" cellpadding="0" cellspacing="0" align="center" border="0">
+	<tr valign="top">
+		<td style="padding-right:10px"><a href="http://www.ionik.ca" target="_blank"><img src="http://www.v3r.net//portail/image/langage/1/propulse.gif" align="right" border="0"  vspace="2" hspace="0" /></a></td>
+	</tr>
+</table>-->
+
+<BR><BR><BR>
+	<table width="770" cellpadding="0" cellspacing="0" align="center" border="0">
+		<tr valign="top">
+			<td>
+				<!--- LANGAGES --->
+				
+			</td>
+		</tr>
+	</table>
+
+
+<SCRIPT language="javascript">
+function fnTrapKD(btn){
+ if (document.all){
+   if (event.keyCode == 13)
+   { 
+     event.returnValue=false;
+     event.cancel = true;
+     btn.click();
+   } 
+ } 
+else return 
+}
+</SCRIPT>
+<script language="JavaScript">
+openItem('mainTRNiveau2_112');activateItem('127','112');
+</script>
+</form>
+</body>
+</html>	
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3477449-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3367566-9");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>

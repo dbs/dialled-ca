@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<FORM name="formXtranet" method="post" action="xtranet.asp" target="_blank" style="display:none;">
+	<INPUT type="hidden" name="no">
+</FORM>
+<SCRIPT language="javascript" type="text/javascript">
+	function loginXtranet(noGrAcces){
+		window.document.formXtranet.no.value = noGrAcces;
+		window.document.formXtranet.submit();
+	}
+</SCRIPT>
+
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Municipalit&eacute; de Saint-Casimir</title>
+    <meta name="description" content="Localit&eacute; pleine de charmes et de couleurs, s'&eacute;tend sur les deux rives de la rivi&egrave;re Sainte-Anne. Les visiteurs sont s&eacute;duits par la beaut&eacute; de plusieurs sites enchanteurs et plus particuli&egrave;rement, par l'imposante &eacute;glise de style gothique." />
+    <meta name="keywords" content="municipalit&eacute;, ville, village, paroisse, pornteuf, qu&eacute;bec, ste-anne, rivi&egrave;re, trou du diable, route 363, familles, environnement, vie, campagne" />
+    <meta name="robot" content= "all" /> 
+    <meta name="robot" content= "default, follow" /> 
+    <meta name="author" content="webT&eacute;l&eacute;com.ca" /> 
+    <meta name="copyright" content="Ville de Saint-Casimir" /> 
+    <meta name="coverage" content="worldwide" /> 
+    <meta name="identifier-URL" content="http://www.saint-casimir.com/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="class.css">
+    
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/highslide.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    
+    <script type="text/javascript" src="./scripts/scripts.js"></script>
+    <script language="javascript" src="./scripts/loadswf.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript" src="./gestion/scripts/xmlhttp.js"></script>
+    <script language="javascript" type="text/javascript" src="./scripts/highslide-with-gallery.js"></script>
+
+    
+    <!--[if lte IE 6]>
+    	<script type="text/javascript" src="./scripts/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script type="text/javascript">
+        	DD_belatedPNG.fix('*');
+		</script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+	hs.graphicsDir = './images/highslide/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.outlineType = 'rounded-white';
+	hs.fadeInOut = true;
+	hs.dimmingOpacity = 0.75;
+	hs.showCredits = false;
+	
+	// Add the controlbar
+	hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		fixedControls: 'fit',
+		overlayOptions: {
+			opacity: .75,
+			position: 'bottom center',
+			hideOnMouseOut: true
+		}
+	});
+	
+	</script>
+
+
+    <script type="text/javascript"> 
+    function affDetail(no){
+	
+        if (window.document.getElementById("detail_"+no).style.display == 'block'){
+            window.document.getElementById("detail_"+no).style.display = 'none';
+            window.document.getElementById("btnDetail_"+no).innerHTML = '&raquo;&nbsp;D&eacute;tails';		
+        }else{
+            window.document.getElementById("detail_"+no).style.display = 'block';
+            window.document.getElementById("btnDetail_"+no).innerHTML = '&raquo;&nbsp;Fermer';		
+        }
+    }
+    
+    function affAutresDates(no){
+        if (window.document.getElementById("AutresDates_"+no).style.display == 'block'){
+            window.document.getElementById("AutresDates_"+no).style.display = 'none';
+            window.document.getElementById("btnAutresDates_"+no).innerHTML = '&raquo;&nbsp;Toutes les dates';		
+        }else{
+            
+            sendRequest("gestion/calendrier_dates.asp", "AutresDates_"+no, "id_dateactivite="+no);
+            window.document.getElementById("AutresDates_"+no).style.display = 'block';
+            window.document.getElementById("btnAutresDates_"+no).innerHTML = '&raquo;&nbsp;Fermer';
+        }	
+    }
+	</script>
+
+    
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=fr"></script>
+	<script type="text/javascript"> 
+		var map_g;	 	
+		
+	  	
+		function set_google_point(lat,long,zoom,arr_point) {
+			
+  			var new_point = new google.maps.LatLng(lat,long);  			
+			//map_g = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+			var myOptions = {
+      			zoom: zoom,
+      			center: new_point,
+      			mapTypeId: google.maps.MapTypeId.ROADMAP
+    		};
+			
+			
+			
+			map_g = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+			//map_g.setCenter(new_point);
+			
+			
+			  			
+			/*var new_point = new google.maps.LatLng(46.8051417,-71.1816152);
+			var marker = new google.maps.Marker({
+      			position: new_point
+			});
+			
+			marker.setMap(map_g);*/
+			//var marker = new Array();
+			if(arr_point.length > 0){
+				var infowindow_content = new Array();
+				var new_point = new Array();
+				for(x=0;x<arr_point.length;x++){
+					new_point[x] = new google.maps.LatLng(arr_point[x]["latitude"],arr_point[x]["longitude"]);
+					if(arr_point[x]["url_icon"] != null && arr_point[x]["url_icon"] !=""){
+						//alert(arr_point[x]["url_icon"]);
+						var image = new google.maps.MarkerImage('images/icones_google/'+arr_point[x]["url_icon"]+'.png',
+				  			new google.maps.Size(30, 30),
+				 			new google.maps.Point(0,0),
+				  			new google.maps.Point(0, 0)
+						);			
+				
+						marker = new google.maps.Marker({
+      						position: new_point[x],
+							clickable: true,
+							title: arr_point[x]["title"],
+							icon : image
+						});
+					} else {
+						marker = new google.maps.Marker({
+      						position: new_point[x],
+							clickable: true,
+							title: arr_point[x]["title"]
+						});
+					}
+				//	
+					infowindow_content[marker.getPosition()] = arr_point[x]["content"];
+					
+					var infowindow = new google.maps.InfoWindow({
+							content: ''																		
+						});
+					google.maps.event.addListener(marker, 'click', function() {
+ 						infowindow.setPosition(this.getPosition());						
+						infowindow.setContent(infowindow_content[this.getPosition()]);
+						infowindow.open(map_g,this);											
+					});
+			
+					marker.setMap(map_g);					
+				}
+			} 
+
+		}
+		
+		/*function add_marker_point(lat,long,content){
+			//marker.setMap(map_g);  			
+			var new_point = new google.maps.LatLng(lat,long);
+			var marker = new google.maps.Marker({
+      			position: new_point
+			});
+		}*/
+		
+		function change_google_point(lat,long){
+			var new_point = new google.maps.LatLng(lat,long);  			
+
+			map_g.setCenter(new_point);
+		}
+		
+		function initialize_map() {
+			
+  		}
+	</script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-23224258-1']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackPageLoadTime']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+    
+    <script language="JavaScript" src="scripts/qm.js"></script>
+
+
+	
+</head>
+
+
+
+<body onload="MM_preloadImages('./images/bkg_headermen_rl.gif','./images/bkg_headermenu_left_rl.gif','./images/bkg_headermenu_right_rl.gif','./images/btn_search_rl.gif')">
+<div class="main">
+	<div class="header">
+   	  <div class="bandeau">
+       	  <div class="logo"><a href="default.asp?no=1"><img src="images/logo_princ.gif" alt="Municipalit&eacute; de Saint-Casimir" /></a></div>
+          
+			<div class="recherche">
+            
+            	<form name="frm_search" id="frm_search" action="default.asp" method="get" enctype="application/x-www-form-urlencoded" >
+                	<input name="PageSize" type="hidden" value="10" />
+                    <input name="Rechercher" type="hidden" value="Rechercher" />
+                    <input name="no" type="hidden" value="4" />
+               	  <table width="190" cellpadding="0" cellspacing="0" border="0">
+                    	<tr>
+                       	  <td width="160" valign="top"><input type="text" name="motscles" id="motscles" value="Recherche" class="textfield" style="width:145px;" onFocus="this.value='';" onBlur="javascript:if (this.value==''){this.value = 'Recherche'};"></td>
+                            <td width="30" valign="top"><input type="image" src="images/btn_search_up.gif" onmouseover="this.src='images/btn_search_rl.gif'" onmouseout="this.src='images/btn_search_up.gif'"></td>
+                        </tr>
+                  </table>
+                </form>
+            </div>
+            <div class="menu"><a href="default.asp?no=1" style="border:none;">Accueil</a><a href="default.asp?no=5">Nous Joindre</a><a href="default.asp?no=87">Plan du site</a></div>
+      </div>
+        <div class="header_menu">
+        	<div class="header_menu_content" style="position:relative;">
+                <a href="javascript:;" xhref="default.asp?no=74" onmouseover="this.innerHTML='&nbsp;&Agrave; venir&nbsp;<span></span>'" onmouseout="this.innerHTML='Actualit&eacute;<span></span>'">Actualit&eacute;<span></span></a>
+                <a href="default.asp?no=75">Calendrier<span></span></a>
+                <!--<a href="default.asp?no=77">Cartes de Saint-Casimir<span></span></a>-->
+                <a href="default.asp?no=76">Carte interactive<span></span></a>
+                <a href="default.asp?no=78">&Eacute;valuation fonci&egrave;re en ligne<span></span></a>            </div>
+        </div>
+  </div>
+    
+    <div class="content">
+        <div class="left">
+                <UL id='qm'>
+<LI id='2' class='li_sousmenu'><div class='puce'></div><A HREF='javascript:;'>Municipalit&#233;</A><div id='smenu_2' class='sousmenu'><UL><LI id='qm_0.7055475'><A target='' HREF='default.asp?no=2'>Mot du maire</A></LI>
+<LI id='qm_0.533424'><A target='' HREF='default.asp?no=7'>Territoire</A></LI>
+<LI id='qm_0.5795186'><A target='' HREF='default.asp?no=10'>Armoiries</A></LI>
+<LI id='qm_0.2895625'><A target='' HREF='default.asp?no=91'>Logo</A></LI>
+<LI id='qm_0.301948'><A target='' HREF='default.asp?no=12'>Historique</A></LI>
+<LI id='qm_0.7747401'><A target='' HREF='default.asp?no=13'>Conseil municipal</A></LI>
+<LI id='qm_1.401764E-02'><A target='' HREF='default.asp?no=14'>Personnel</A></LI>
+<LI id='qm_0.7607236'><A target='' HREF='default.asp?no=111'>Proc&#232;s-verbaux</A></LI>
+<LI id='qm_0.81449'><A target='' HREF='default.asp?no=15'>Avis publics</A></LI>
+<LI id='qm_0.7090379'><A target='' HREF='default.asp?no=221'>Budget et Discours du maire</A></LI>
+<LI id='qm_4.535276E-02'><A target='_blank' HREF='http://www.saint-casimir.com/down/115.pdf'>Politique de gestion contractuelle</A></LI>
+<LI id='qm_0.4140327'><A target='' HREF='default.asp?no=16'>Journal local L'&#201;claireur</A></LI>
+<LI id='qm_0.8626193' class='last'><A target='' HREF='default.asp?no=492'>R&#232;glement d&#8217;urbanisme</A></LI></UL>
+</div></LI>
+<LI id='31' class='li_sousmenu'><div class='puce'></div><A HREF='javascript:;'>Services</A><div id='smenu_31' class='sousmenu'><UL><LI id='qm_0.79048'><A target='' HREF='default.asp?no=3'>&#201;ducation</A></LI>
+<LI id='qm_0.3735362'><A target='' HREF='default.asp?no=19'>Incendie</A></LI>
+<LI id='qm_0.9619532'><A target='' HREF='default.asp?no=22'>Centre d'alphab&#233;tisation l'Ardoise</A></LI>
+<LI id='qm_0.8714458' class='last'><A target='' HREF='default.asp?no=23'>Comit&#233; Saint-Casimir 2000</A></LI></UL>
+</div></LI>
+<LI id='qm_5.623686E-02'><A target='' HREF='default.asp?no=41'>Commerces</A></LI>
+<LI id='44' class='li_sousmenu'><div class='puce'></div><A HREF='javascript:;'>Loisirs et culture</A><div id='smenu_44' class='sousmenu'><UL><LI id='qm_0.9495566'><A target='' HREF='default.asp?no=31'>Programmation des loisirs</A></LI>
+<LI id='qm_0.3640187'><A target='' HREF='default.asp?no=226'>Politique de la famille et des a&#238;n&#233;s</A></LI>
+<LI id='qm_0.5248684'><A target='' HREF='default.asp?no=25'>Biblioth&#232;que</A></LI>
+<LI id='qm_0.7671117'><A target='' HREF='default.asp?no=26'>Fondation du patrimoine</A></LI>
+<LI id='qm_5.350453E-02'><A target='' HREF='default.asp?no=27'>Rendez-vous culturels</A></LI>
+<LI id='qm_0.5924582'><A target='' HREF='default.asp?no=28'>Les Amis de la Musique</A></LI>
+<LI id='qm_0.4687001' class='last'><A target='' HREF='default.asp?no=102'>Soci&#233;t&#233; d'histoire et de g&#233;n&#233;alogie</A></LI></UL>
+</div></LI>
+<LI id='qm_0.2981654'><A target='' HREF='default.asp?no=226'>Politique de la famille et des a&#238;n&#233;s</A></LI>
+<LI id='63' class='li_sousmenu'><div class='puce'></div><A HREF='javascript:;'>&#201;v&#233;nements</A><div id='smenu_63' class='sousmenu'><UL><LI id='qm_0.6226967'><A target='' HREF='default.asp?no=17'>La Petite S&#233;duction</A></LI>
+<LI id='qm_0.6478212' class='last'><A target='' HREF='default.asp?no=32'>Calendrier des &#233;v&#233;nements &#224; venir</A></LI></UL>
+</div></LI>
+<LI id='70' class='li_sousmenu'><div class='puce'></div><A HREF='javascript:;'>Tourisme</A><div id='smenu_70' class='sousmenu'><UL><LI id='qm_0.2637929'><A target='' HREF='default.asp?no=36'>H&#233;bergement</A></LI>
+<LI id='qm_0.2793421'><A target='' HREF='default.asp?no=38'>Restauration</A></LI>
+<LI id='qm_0.8298016'><A target='' HREF='default.asp?no=39'>Activit&#233;s et attraits touristiques</A></LI>
+<LI id='qm_0.8246021' class='last'><A target='_blank' HREF='http://tourisme.portneuf.com/'>Tourisme Portneuf</A></LI></UL>
+</div></LI>
+<LI id='qm_0.589163'><A target='' HREF='default.asp?no=40'>Localisation</A></LI>
+<LI id='qm_0.9860932'><A target='' HREF='default.asp?no=5'>Nous joindre</A></LI>
+<LI id='qm_0.9109643'><A target='_blank' HREF='http://www.seao.ca/Reports/Rapport_Adjudication.aspx'>Adjudication des contrats municipaux</A></LI>
+<LI id='qm_0.226866'><A target='' HREF='default.asp?no=326'>Avis aux citoyens</A></LI>
+<LI id='qm_0.6951155'><A HREF='default.asp?no=350'>Citoyens d'honneur</A>
+</LI></UL>
+<SCRIPT type='text/JavaScript'>initqmenu()</SCRIPT>
+            </div>
+            
+    	<div class="right">
+                <div class="content_text">
+                    <div id='editTool_25' class='coolbar' leNoSite='1' editeur='true' droitModif='0' noFich='25' onclick='top.xToolBar_ie.modifierPageSelect(this.id,25,"Bibliothèque");' style='position:absolute;background-color:#c0c0c0;display:none;cursor:hand;'><img src='http://www.xplore5.com/images/mini_modifier.gif' name='imgDivEdit_25' class='coolButton' ondragstart='return false;' title='Modifier la section : Bibliothèque (#25)'></div><div id='divEdit_25'><P><FONT color=#568b2e size=3>Loisirs et culture</FONT></P>
+<P><STRONG><FONT color=#076ba7 size=5>Bibliothèque</FONT></STRONG></P>
+<P><FONT size=2></FONT>&nbsp;</P>
+<P><FONT size=2>Bibliothèque Jean-Charles-Magnan<BR>Année de fondation : 1980<BR>Nombre de bénévoles : 13</FONT></P>
+<P><FONT size=2></FONT>&nbsp;</P>
+<P><FONT size=2><STRONG>Nom de la responsable :</STRONG> Ange-Aimée Asselin</FONT></P>
+<P><FONT size=2></FONT>&nbsp;</P>
+<P><FONT size=2><STRONG>Adresse de la bibliothèque :</STRONG> <BR>510, boul. de la Montagne<BR>Saint-Casimir (Québec)&nbsp; G0A 3L0</FONT></P>
+<P><FONT size=2></FONT>&nbsp;</P>
+<P><FONT size=2><STRONG>Courriel :</STRONG> <A href="mailto:jcmagnan@csportneuf.qc.ca">jcmagnan@csportneuf.qc.ca</A><BR><STRONG>Site Internet :</STRONG> <A target=_blank href="http://www.reseaubiblioduquebec.qc.ca/portail/index.aspx?page=3&amp;BID=311">http://www.reseaubiblioduquebec.qc.ca/portail/index.aspx?page=3&amp;BID=311</A> <BR>&nbsp;<BR><STRONG>Heures d'ouverture :</STRONG> <BR>Mardi :&nbsp;&nbsp; 13h30 à 15h30<BR>Jeudi :&nbsp;&nbsp;&nbsp; 18h30 à 20h30</FONT></P>
+<P><FONT size=2></FONT>&nbsp;</P>
+<P><FONT size=2></FONT>&nbsp;</P><IMG border=0 src="down/81.jpg"> 
+<P align=center><FONT size=2></P>
+<P><BR></P></FONT></div> 
+                </div>
+            </div>
+            
+   		<div class="clear"></div>
+    </div>
+    
+    <div class="footer">
+    	Copyright &copy; 2010 Municipalit&eacute; de Saint-Casimir. Tous droits r&eacute;serv&eacute;s.   |    220, boul. de la Montagne,   Saint-Casimir (Qc),    G0A 3L0,   T&eacute;l. : 418 339-2543   |    R&eacute;alis&eacute; par <a href="http://www.webtelecom.ca" target="_blank">Webt&eacute;l&eacute;com</a></div>
+    
+</div>
+	
+</body>
+
+</html>

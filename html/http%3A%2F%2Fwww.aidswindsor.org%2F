@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:og="http://ogp.me/ns#"  xmlns:fb="http://ogp.me/ns/fb#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+<link href="http://www.aidswindsor.org/" rel="canonical" />
+
+  <base href="http://www.aidswindsor.org/" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="AIDS, Windsor Ontario Canada" />
+  <meta name="description" content="AIDS Committee of Windsor, Ontario Canada" />
+  <title>AIDS Committee of Windsor</title>
+  <link href="/feed/rss.html" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="/feed/atom.html" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="/templates/ACW_2011/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/plugins/system/jcemediabox/css/jcemediabox.css?0f4b05d31d948a43ed0927f64f899f2a" type="text/css" />
+  <link rel="stylesheet" href="/plugins/system/jcemediabox/themes/standard/css/style.css?3916101f8145353a01c9db932758facb" type="text/css" />
+  <link rel="stylesheet" href="/media/com_finder/css/finder.css" type="text/css" />
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/plugins/system/jcemediabox/js/jcemediabox.js?01f6bb1635ffb37306d7b368d146f889" type="text/javascript"></script>
+  <script src="/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.autocomplete.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});JCEMediaBox.init({popup:{width:"",height:"",legacy:0,lightbox:0,shadowbox:0,resize:1,icons:1,overlay:1,overlayopacity:0.8,overlaycolor:"#000000",fadespeed:500,scalespeed:500,hideobjects:0,scrolling:"fixed",close:2,labels:{'close':'Close','next':'Next','previous':'Previous','cancel':'Cancel','numbers':'{$current} of {$total}'},cookie_expiry:"",google_viewer:0},tooltip:{className:"tooltip",opacity:0.8,speed:150,position:"br",offsets:{x: 16, y: 16}},base:"/",imgpath:"plugins/system/jcemediabox/img",theme:"standard",themecustom:"",themepath:"plugins/system/jcemediabox/themes",mediafallback:0,mediaselector:"audio,video"});jQuery(document).ready(function(){
+	jQuery('.hasTooltip').tooltip({"html": true,"container": "body"});
+});
+jQuery(document).ready(function() {
+	var value, searchword = jQuery('#mod-finder-searchword');
+
+		// Set the input value if not already set.
+		if (!searchword.val())
+		{
+			searchword.val('Search ...');
+		}
+
+		// Get the current value.
+		value = searchword.val();
+
+		// If the current value equals the default value, clear it.
+		searchword.on('focus', function()
+		{	var el = jQuery(this);
+			if (el.val() === 'Search ...')
+			{
+				el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		searchword.on('blur', function()
+		{	var el = jQuery(this);
+			if (!el.val())
+			{
+				el.val(value);
+			}
+		});
+
+		jQuery('#mod-finder-searchform').on('submit', function(e){
+			e.stopPropagation();
+			var advanced = jQuery('#mod-finder-advanced');
+			// Disable select boxes with no value selected.
+			if ( advanced.length)
+			{
+				advanced.find('select').each(function(index, el) {
+					var el = jQuery(el);
+					if(!el.val()){
+						el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});
+	var suggest = jQuery('#mod-finder-searchword').autocomplete({
+		serviceUrl: '/finder.html?format=json&task=suggestions.suggest&tmpl=component',
+		paramName: 'q',
+		minChars: 1,
+		maxHeight: 400,
+		width: 300,
+		zIndex: 9999,
+		deferRequestBy: 500
+	});});
+  </script>
+
+<link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="/templates/ACW_2011/css/template.css" type="text/css" />
+<!--[if IE 6]>
+        <link rel="stylesheet" type="text/css" href="/templates/ACW_2011/css/ie6.css">
+<![endif]-->
+<!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="/templates/ACW_2011/css/ie7.css" />
+<![endif]-->
+<link id="JTKLocalCss" href="/../ACW_2011/css/template.css" rel="stylesheet" type="text/css" />
+
+<script src='/plugins/sh404sefcore/sh404sefsocial/sh404sefsocial.js' type='text/javascript' ></script>
+<script type='text/javascript'>
+      _sh404sefSocialTrack.options = {enableGoogleTracking:true,
+      enableAnalytics:true, trackerName:''};
+      window.fbAsyncInit = _sh404sefSocialTrack.setup;
+      </script>
+<!-- sh404SEF social buttons css -->
+<style type="text/css">
+/* Top padding for buttons set */
+div.sh404sef-social-buttons {
+	padding-top: 0.5em;
+}
+.sh404sef-social-buttons span {
+   	display: inline-block;
+ 	vertical-align: top;
+ 	margin-bottom: 0.3em;
+}
+/* fix for Linkedin, not full fix as Linkedin has some inline style with !important, which can't be overriden */
+.sh404sef-social-buttons span.IN-widget[style] {
+/*  	vertical-align: bottom !important; */
+}
+/* vertical adjustment for Linkedin */
+.sh404sef-social-buttons span.linkedin {
+/*     position: relative; */
+/*     top: 3px; */
+}
+/* vertical adjustment for Google+ page */
+.sh404sef-social-buttons span.googlepluspage {
+/*     position: relative; */
+/*      top: 2px; */
+}
+
+/* Facebook flyout cut-off fix */
+.fb-like span{overflow:visible !important; } 
+.fb-send span{overflow:visible !important;}
+.fb-like iframe{max-width: none !important; } 
+.fb-send iframe{max-width: none !important; }
+
+/* Joomla default templates css fix */
+/* parent elements needs to have overflow visible */
+.items-row.cols-2, .items-leading {overflow:visible !important;}
+#contentarea {overflow:visible !important;}
+
+</style>
+<!-- End of sh404SEF social buttons css -->
+
+<script type='text/javascript'>var _sh404SEF_live_site = 'http://www.aidswindsor.org/';</script>
+<!-- Google Analytics Universal snippet -->
+<script type='text/javascript'>
+	var sh404SEFAnalyticsType = sh404SEFAnalyticsType || [];
+	sh404SEFAnalyticsType.universal = true;
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+	ga('create', 'UA-8033012-9','auto');
+	ga('send', 'pageview');
+</script>
+<!-- End of Google Analytics Universal snippet -->
+
+
+
+<!-- Google sitename markup-->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "WebSite",
+  "name" : "AIDS Committee of Windsor",
+    "url" : "http://www.aidswindsor.org/"
+}
+</script>
+<!-- End of Google sitename markup-->
+
+
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="AIDS Committee of Windsor" />
+  <meta property="og:description" content="AIDS Committee of Windsor, Ontario Canada" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://www.aidswindsor.org/" />
+  <meta property="og:site_name" content="AIDS Committee of Windsor" /></head>
+<body><!-- Facebook SDK -->
+<div id='fb-root'></div>
+<script>(function (d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- End of Facebook SDK -->
+
+
+<div id="wrapper">
+	<div id="logo">
+				<div class="moduletable">
+						
+
+<div class="custom"  >
+	<a href="/"><img style="border-width: 0px; border-style: none; margin: 0px;" alt="acw-asck-logo" src="/images/stories/template_images/acw-asck-logo.jpg" height="94" width="415" /></a></div>
+		</div>
+	
+	</div>
+	<div id="donatenow">
+				<div class="moduletable">
+						
+
+<div class="custom"  >
+	<p><a href="/Support/donate-to-aids-committee-of-windsor.html"><img onmouseover="this.src='/images/stories/template_images/donatenow-over.png';" onmouseout="this.src='/images/stories/template_images/donatenow.png';" title="Donate to the AIDS Committee of Windsor" alt="Donate Now" src="/images/stories/template_images/donatenow.png" height="52" width="109" /></a></p></div>
+		</div>
+	
+	</div>
+	<div id="social">
+				<div class="moduletable">
+						
+
+<div class="custom"  >
+	<p><a target="_blank" href="http://www.facebook.com/pages/AIDS-Committee-of-Windsor-ACW/173901549289073"><img alt="FaceBook-icon-32" src="/images/stories/FaceBook-icon-32.png" height="32" width="32" /></a></p></div>
+		</div>
+	
+	</div>
+	<div id="phone">
+				<div class="moduletable_phone">
+						
+
+<div class="custom_phone"  >
+	<div>1-800-265-4858</div></div>
+		</div>
+	
+	</div>
+
+	<div id="nav1">
+					<div class="moduletable_menu">
+						<ul class="nav menu">
+<li class="item-214 current active"><a href="/" >Home</a></li><li class="item-53 parent"><a href="/About-ACW/about-aids-committee-of-windsor.html" >About ACW/ASCK</a></li><li class="item-54 parent"><a href="/Programs-and-Services/programs.html" >Programs and Services</a></li><li class="item-98 parent"><a href="/AIDS-101-Articles/what-is-hivaids.html" >HIV 101</a></li><li class="item-93 parent"><a href="/Support/support-aids-committee-of-windsor.html" >Support Us</a></li><li class="item-194"><a href="/event-calendar" >Event Calendar</a></li><li class="item-174 parent"><a href="/Newsroom/Newsroom/" >Newsroom</a></li><li class="item-71"><a href="/Contact-Information/contact-us.html" >Contact us</a></li></ul>
+		</div>
+	
+	</div>
+	 
+	<div id="nav2">
+			
+	</div>
+		 
+	<div id="header">
+		<div class="image">
+			<div class="inner">
+						<div class="moduletable_windshield">
+						<div class="random-image_windshield">
+	<img src="/images/windshield/muslimwoman.jpg" alt="muslimwoman.jpg" width="537.88764044944" height="264" /></div>
+		</div>
+	
+			</div>
+		</div>	
+		<div id="nav4">
+						<div class="moduletable">
+						<ul class="nav menu">
+<li class="item-209"><a href="/Support/donate-to-aids-committee-of-windsor.html" >Donate</a></li><li class="item-191"><a href="/Support/volunteer-opportunities.html" >Volunteer</a></li><li class="item-177"><a href="/Information-for-the-Newly-Diagnosed/advice-for-the-newly-diagnosed.html" >Newly Diagnosed</a></li></ul>
+		</div>
+			<div class="moduletable_homesearch">
+						
+<form id="mod-finder-searchform" action="/search.html" method="get" class="form-search">
+	<div class="finder_homesearch">
+		<input type="text" name="q" id="mod-finder-searchword" class="search-query input-medium" size="25" value="" />
+						<input type="hidden" name="Itemid" value="214" />	</div>
+</form>
+		</div>
+	
+		</div>
+		<div id="chat">
+			<div class="inner">
+				<br />
+				<div class="button">
+				
+
+<div class="custom"  >
+	<h3>Connect with Us!</h3>
+<p>Stay connected with AIDS Committee of Windsor and AIDS Support Chatham-Kent by joining our mailing list!&nbsp;</p>
+<p><a href="/newsroom/sign-up-for-our-mailing-list.html" class="button">Sign up today!</a></p></div>
+
+				</div>
+			</div>	
+			</div>
+	</div>
+		
+	<div id="content">
+		<div id="component">
+			<div class="inner">
+			<div class="breadcrumbs"></div>
+            <div id="system-message-container">
+	</div>
+
+		<div class="blog-featured" itemscope itemtype="http://schema.org/Blog">
+
+<div class="items-leading clearfix">
+			<div class="leading-0 clearfix" 
+			itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+			
+
+	<h2 class="item-title" itemprop="name">
+			Where to get a FREE HIV Test		</h2>
+
+
+
+
+
+
+ <p></p>
+<p>Do you know if you are at risk of contracting HIV? Do you even know how HIV is transmitted?&nbsp;<strong>21% OF PEOPLE LIVING WITH HIV DO NOT KNOW THEY HAVE IT!</strong>&nbsp;And testing is the only way to know!&nbsp;</p>
+<p><strong><span style="font-size: 10pt;"></span></strong></p>
+<p>For more information about HIV testing contact our office at 1-800-265-4858 or email&nbsp;<span id="cloak68901">This email address is being protected from spambots. You need JavaScript enabled to view it.</span>.&hellip;</p> <p class='readmore'><a href='/Newsroom/windsor-essex-chatham-kent-testing-days.html'>Read more: Where to get a FREE HIV Test</a></p>
+
+
+
+<!-- sh404SEF social buttons -->
+<div class="sh404sef-social-buttons">
+	<span class="twitter">
+<!-- Twitter share button -->
+<a href="https://twitter.com/share" data-via=""
+   data-url="http://www.aidswindsor.org/Newsroom/windsor-essex-chatham-kent-testing-days.html"
+   data-lang="en" class="twitter-share-button">Tweet</a>
+<!-- End of Twitter share button -->
+
+</span>
+<span class="fb-like">
+<!-- Facebook like button -->
+<fb:like href="http://www.aidswindsor.org/Newsroom/windsor-essex-chatham-kent-testing-days.html"
+         action="recommend" width=""
+         layout="button"
+         show_faces="0"
+         colorscheme="light">
+</fb:like>
+<!-- End Facebook like button -->
+
+</span>
+<span class="fb-share">
+<!-- Facebook share button -->
+<fb:share-button href="http://www.aidswindsor.org/Newsroom/windsor-essex-chatham-kent-testing-days.html" layout="button_count">
+</fb:share-button>
+<!-- Facebook share button -->
+
+</span>
+<span class="linkedin">
+<!-- LinkedIn share button -->
+	<script src="//platform.linkedin.com/in.js"
+	        type="text/javascript">lang: en_GB</script>
+<script type="IN/Share" data-url="http://www.aidswindsor.org/Newsroom/windsor-essex-chatham-kent-testing-days.html" ></script>
+<!-- End of LinkedIn share button -->
+
+</span>
+</div>
+<!-- End of sh404SEF social buttons -->		</div>
+			</div>
+
+
+
+</div>
+
+			</div>
+		</div>
+		<div class="right">
+			<div class="columnwrap">
+			<div class="column1">
+				
+			</div>
+			<div class="column2">
+	            
+				
+			</div>
+			</div>
+			<div class="clr"></div>
+			<div class="memberbox">
+				<div class="moduletable">
+						
+
+<div class="custom"  >
+	<div class="sponsorlogos" style="color: #999999; text-align: center; margin: 10px;">
+<p>Programs and operations at the AIDS Committee of Windsor&nbsp;<br />are funded in part by:<br /><a href="http://www.trilliumfoundation.org" target="_blank" style="color: #721816;"><img src="/images/stories/sponsor_logos/trillium_foundation.gif" alt="trillium_foundation" height="50" width="198" style="border-color: initial; cursor: default; border-width: 0px; border-style: none; padding: 10px;" /></a><a href="http://www.health.gov.on.ca" target="_blank" style="color: #721816;"><img src="/images/stories/sponsor_logos/ohltc.png" alt="ohltc" height="50" width="181" style="border-color: initial; cursor: default; border-width: 0px; border-style: none; padding: 10px;" /></a><a href="http://www.unitedway.chatham-kent.on.ca" target="_blank" style="color: #721816;"><img src="/images/stories/sponsor_logos/united_way.jpg" alt="united_way" height="60" width="65" style="border-color: initial; cursor: default; border-width: 0px; border-style: none; padding: 10px;" /></a><a href="http://www.wechealthunit.org" target="_blank" style="color: #721816;"><img src="/images/stories/sponsor_logos/health_unit.png" alt="health_unit" height="60" width="88" style="border-color: initial; cursor: default; border-width: 0px; border-style: none; padding: 10px;" /></a></p>
+<p><a href="http://www.we-bingo.com" target="_blank" style="color: #721816;"><img src="/images/stories/webingocomlogo_colour.jpg" alt="webingocomlogo_colour" height="24" width="133" style="border-color: initial; cursor: default; border-width: 0px; border-style: none; padding: 10px;" /></a></p>
+<p>The ACW is a member of:<br /><a href="http://www.cdnaids.ca" target="_blank" style="color: #721816;"><img src="/images/stories/sponsor_logos/canadian_aids_society.jpg" alt="canadian_aids_society" height="50" width="129" style="border-color: initial; cursor: default; border-width: 0px; border-style: none; padding: 10px;" /></a>&nbsp;<a href="http://www.ontarioaidsnetwork.on.ca/" target="_blank" style="color: #721816;"><img src="/images/stories/sponsor_logos/ontario_aids_network.gif" alt="ontario_aids_network" height="50" width="217" style="border-color: initial; cursor: default; border-width: 0px; border-style: none; padding: 10px;" /></a></p>
+</div></div>
+		</div>
+			<div class="moduletable">
+						
+
+<div class="custom"  >
+	<p><a href="http://www.ohtn.on.ca/facbar/" target="_blank"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/FACBAR-box.gif" alt="FACBAR-box" /></a></p></div>
+		</div>
+	
+		</div>
+		</div>
+		
+		<div class="clr"></div>
+	</div> 
+	</div>
+<div id="footer">
+
+<div class="subfooter">
+		<div class="moduletable_crn">
+						
+
+<div class="custom_crn"  >
+	<p>Charitable Registration Number:&nbsp; BN 106689854RR0001</p></div>
+		</div>
+			<div class="moduletable_privacy">
+						
+
+<div class="custom_privacy"  >
+	<p><a href="/Log-in.html">Employee Login</a> | <a href="/About-ACW/privacy-statement.html">Privacy Statement</a></p></div>
+		</div>
+	
+</div>
+</div>
+
+<script src='//platform.twitter.com/widgets.js' type='text/javascript'></script></body>
+</html>

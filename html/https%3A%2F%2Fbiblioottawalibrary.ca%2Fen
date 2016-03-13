@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en-CA"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+	<link rel="shortcut icon" href="https://biblioottawalibrary.ca/sites/all/themes/opl/assets/img/favicon.ico" type="image/x-icon">
+
+	<!--[if IE]><![endif]-->
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwEBVFdACgYCUlZXAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function u(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,f=0;s>f;f++)a[f].apply(i,r);var u=c[v[n]];return u&&u.push([w,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return f[t]=f[t]||r(u)}function h(t,e){s(t,function(t,n){e=e||"feature",v[n]=e,e in c||(c[e]=[])})}var m={},v={},w={on:d,emit:u,get:p,listeners:l,context:e,buffer:h};return w}function o(){return new n}var i="nr@context",a=t("gos"),s=t(1),c={},f={},u=e.exports=r();u.backlog=c},{1:24,gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=NREUM.o.EV;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").get("events"),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=t("ee").get("history"),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],9:[function(t,e){var n=t("ee").get("raf"),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").get("timer"),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e){e=e||this;var n=i.context(e);e.readyState>3&&!n.resolved&&(n.resolved=!0,i.emit("xhr-resolved",[],e));try{c.inPlace(e,l,"fn-",r)}catch(o){}}function r(t,e){return e}function o(t,e){for(var n in t)e[n]=t[n];return e}var i=t("ee").get("xhr"),a=t(1),s=t(2),c=s(i),f=s(a),u=NREUM.o,d=u.XHR,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout","onreadystatechange"];e.exports=i,window.XMLHttpRequest=function(t){var e=new d(t);try{i.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&f.inPlace(e,["addEventListener","removeEventListener"],"-",r),e.addEventListener("readystatechange",n,!1)}catch(o){try{i.emit("internal-error",[o])}catch(a){}}return e},o(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:7,2:26,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=n(t,this.lastSize);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var o="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return r(o)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=null,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:15,4:11,5:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],14:[function(t,e){function n(t,e){return function(){r(t,[(new Date).getTime()].concat(i(arguments)),null,e)}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],s=["addPageAction"],c="api-";o(a,function(t,e){newrelic[e]=n(c+e,"api")}),o(s,function(t,e){newrelic[e]=n(c+e)}),e.exports=newrelic,newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),r("err",[t,(new Date).getTime()])}},{1:24,2:25,handle:"D5DuLP"}],15:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n,o){r.buffer([t],o),r.emit(t,e,n)}var r=t("ee").get("handle");e.exports=n,n.ee=r},{ee:"QJf3ax"}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()],null,"api");var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()],null,"api")}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;NREUM.o={ST:setTimeout,XHR:c.XMLHttpRequest,REQ:c.Request,EV:c.Event,PR:c.Promise,MO:c.MutationObserver},t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-885.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()],null,"api");var h=0},{1:24,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script>
+<link rel="shortcut icon" href="https://biblioottawalibrary.ca/sites/default/files/opl_favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" type="application/rss+xml" title="Ottawa Public Library / Bibliothèque publique d&#039;Ottawa RSS" href="https://biblioottawalibrary.ca/en/rss.xml" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+
+	<title>Ottawa Public Library / Bibliothèque publique d&#039;Ottawa</title>
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<!--[if IE]>
+	<meta http-equiv="Page-Enter" content="blendTrans(duration=0)" />
+	<meta http-equiv="Page-Exit" content="blendTrans(duration=0)" />
+	<![endif]-->
+	
+	<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+	<link rel="apple-touch-icon" href="/assets/img/apple-icon-touch.png">
+	<link rel="icon" href="/favicon.png">
+	
+	<!--[if IE]>
+		<link rel="shortcut icon" href="/favicon.ico">
+	<![endif]-->
+	
+	<!-- Favicon.ico for IE10 win -->
+	<meta name="msapplication-TileColor" content="#f01d4f">
+	<meta name="msapplication-TileImage" content="/assets/img/win8-tile-icon.png">
+	
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet'>
+
+	<link type="text/css" rel="stylesheet" href="//biblioottawalibrary.ca/sites/default/files/advagg_css/css__BJ6Ou6QsBRtnFTmxaakamOIS8n4QswDP2XnnZ1sxtaM__NBuvkP6eInGIkb1aJvUHx5PX79XApuxBDkk_77W5tYk__HWb78cm35uj0xdbhQGnN1Unahi4ampJGrcDGShAlPK8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//biblioottawalibrary.ca/sites/default/files/advagg_css/css__Bqg1SDmp9CAe6XEIkqmrkRsGk0iHTZHCcB95hCAlYnY__pvxzJdEyVw_5TVP2BBc6RFQHZTlmfsgpKtyMTJgxw8o__HWb78cm35uj0xdbhQGnN1Unahi4ampJGrcDGShAlPK8.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="//biblioottawalibrary.ca/sites/default/files/advagg_css/css__QLgzeSFQWQna2WL6qaFo17QrtntsqpZ_LaKmDoXHSEc__TDU5t7PBCjXEplxudCOVWDoL5d0Tnz6V1xF6B2bVi6I__HWb78cm35uj0xdbhQGnN1Unahi4ampJGrcDGShAlPK8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//biblioottawalibrary.ca/sites/default/files/advagg_css/css__PyldKJGsT3eUw7w-gaNgv7wvIztYOeja1tDCa9vi6yM__exncqZy3v_sdprCh7lPOLN_jcChI_7I6PlxMxfS5dOE__HWb78cm35uj0xdbhQGnN1Unahi4ampJGrcDGShAlPK8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//biblioottawalibrary.ca/sites/default/files/advagg_css/css__rs13yveTKFkowpvl8R-uAxyt70DV2PtLq612lNC7iyU__G7LJXCjq5VIpgSghoo-OAzsEy48jLivH3wJij0wNtok__HWb78cm35uj0xdbhQGnN1Unahi4ampJGrcDGShAlPK8.css" media="all" />
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" media="all" href="https://biblioottawalibrary.ca/sites/all/themes/opl/assets/css/ie.css">
+	<![endif]-->
+
+	<script type="text/javascript" src="//biblioottawalibrary.ca/sites/default/files/advagg_js/js__9d6quhvGpkCu5uHsX-aHIQR_PGhxIdDG_GYHWXV0mk4__zUA6Ij5h9XahX1oMJICv0kWHCsRLdkz4n-T_RWIzsTk__HWb78cm35uj0xdbhQGnN1Unahi4ampJGrcDGShAlPK8.js"></script>
+<script type="text/javascript" src="//biblioottawalibrary.ca/sites/default/files/advagg_js/js__lSP3DS61m-XxDiW3cZMzQG3Sdfd4p_259w0FbYtHqrg__K0VeSH3x1NUvDt03iWy96tQGqkz1NJ_CX_Dhoj5cEhA__HWb78cm35uj0xdbhQGnN1Unahi4ampJGrcDGShAlPK8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://biblioottawalibrary.ca/sites/default/files/googleanalytics/analytics.js?o3vpk4","ga");ga("create", "UA-1099672-2", {"cookieDomain":".biblioottawalibrary.ca"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="//biblioottawalibrary.ca/sites/default/files/advagg_js/js__I_sWVJCwfo5KSROA6lv0gDqg4VZjhRy6SYBvflrIQKA__JE1Mjen0iQzo8ZNTqNni1rtM3biZpOofgbtqzmP56CA__HWb78cm35uj0xdbhQGnN1Unahi4ampJGrcDGShAlPK8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"opl","theme_token":"0e3MM0Lf1LewebK7cC4KYqKspdYNnbts1iNjlEUVUZQ","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/tipsy\/stylesheets\/tipsy.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/office_hours\/office_hours.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/print\/print_ui\/css\/print_ui.theme.css":1,"modules\/locale\/locale.css":1,"sites\/all\/themes\/opl\/assets\/css\/ckeditor.css":1,"sites\/all\/themes\/opl\/assets\/css\/overrides.css":1,"sites\/all\/themes\/opl\/assets\/css\/main.css":1},"js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/tipsy\/javascripts\/jquery.tipsy.js":1,"sites\/all\/modules\/contrib\/tipsy\/javascripts\/tipsy.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/jump-menu.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"sites\/all\/themes\/opl\/assets\/js\/jquery.migrate.js":1,"sites\/all\/themes\/opl\/assets\/js\/vendor\/modernizr.min.js":1,"sites\/all\/themes\/opl\/assets\/js\/plugins.js":1,"sites\/all\/themes\/opl\/assets\/js\/main.js":1}},"tipsy":{"custom_selectors":[{"selector":".tipsy","options":{"fade":1,"gravity":"w","delayIn":0,"delayOut":0,"trigger":"hover","opacity":"0.8","offset":0,"html":0,"tooltip_content":{"source":"attribute","selector":"title"}}}]},"better_exposed_filters":{"views":{"site_announcements":{"displays":{"block_1":{"filters":[]}}},"frontpage_online_content":{"displays":{"block_3":{"filters":[]},"block_4":{"filters":[]}}},"events_homepage":{"displays":{"block":{"filters":[]}}},"clone_of_promoted_events":{"displays":{"block":{"filters":[]}}},"homepage_content_slider":{"displays":{"block":{"filters":[]}}},"bottom_links_home_page":{"displays":{"block_1":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/en":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":"1"}});
+//--><!]]>
+</script>
+
+</head>
+
+<body class="html front not-logged-in no-sidebars page-node i18n-en two-column sidebar-left en" >
+
+	<!--[if lt IE 8]>
+		<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> to better experience this site.</p>
+	<![endif]-->
+
+	<div id="skip-link">
+		<a href="#main-content" class="accessLink element-invisible element-focusable">Skip to main content</a>
+	</div>
+
+	
+<!--[if lt IE 8]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+
+<nav class="top-nav clearfix" role="navigation">
+    <div class="container clearfix">
+
+            <div id="block-locale-language" class="block block-locale">
+
+            
+    <div class="content">
+        <ul class="language-switcher-locale-url"><li class="en first active"><a href="/en" class="language-link active" xml:lang="en">English</a></li>
+<li class="fr last"><a href="/fr" class="language-link" xml:lang="fr">Français</a></li>
+</ul>    </div>
+</div><div id="block-newtitles-user-login-logout" class="block block-newtitles">
+
+            
+    <div class="content">
+        <a href="https://biblioottawalibrary.ca/en/opluser/login">Login</a>    </div>
+</div><div id="block-menu-block-11" class="block block-menu-block">
+
+            
+    <div class="content">
+        <ul class="menu menu-submenu"><li class="first leaf menu-mlid-94291"><a href="http://kids.biblioottawalibrary.ca/" title="">Kids&#039; Zone</a></li>
+<li class="last leaf menu-mlid-91986"><a href="/en/contact" title="Contact Us">Contact Us</a></li>
+</ul>    </div>
+</div><div id="block-block-168" class="block block-block">
+
+            
+    <div class="content">
+        <ul>
+<li><a href="http://www.browsealoud.com/ca/support/getbrowsealoud/">Browsealoud</a></li>
+</ul>
+    </div>
+</div><div id="block-block-169" class="block block-block">
+
+            
+    <div class="content">
+        <ul>
+<li><a href="/en/sitemap">Site map</a></li>
+</ul>
+    </div>
+</div>
+    </div>
+</nav>
+
+<!-- // .top-nav -->
+<header class="header" role="banner">
+
+    <div class="container clearfix">
+
+        <div class="site-logo">
+
+            <a href="/en" rel="home">
+                <img src="https://biblioottawalibrary.ca/sites/all/themes/opl/assets/img/layout/logo.png" class="logo" alt="Back to Homepage" />
+            </a>
+
+            <p class="tagline">If it's out there, it's in here.</p>
+
+        </div>
+
+                    <a href="#" id="mobile-search" class="sprite mobile-search" title="Search">Search</a>
+                
+<div id="block-opl-form-opl-search-form" class="block block-opl-form">
+        <form action="/en" method="post" id="opl-form-search" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-search-terms">
+  <label for="edit-search-terms">Search the catalogue or website </label>
+ <input type="text" id="edit-search-terms" name="search_terms" value="" size="60" maxlength="128" class="form-text" />
+</div>
+<div class="form-item form-type-select form-item-search-target">
+  <label for="edit-search-target">Options for searching the library catalogue or website </label>
+ <select id="edit-search-target" name="search_target" class="form-select"><option value="catalogue" selected="selected">in Catalogue</option><option value="website">in Website</option></select>
+</div>
+<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><div><div id="edit-advance" class="form-item form-type-item">
+ <a href='http://ottawa.bibliocommons.com/search'>Advanced Search</a>
+</div>
+</div><input type="hidden" name="form_build_id" value="form-aw3nBKY3XIS_9cb24K2k4_qhNf54n-flAeBfAddrL_o" />
+<input type="hidden" name="form_id" value="opl_form_search" />
+</div></form></div>
+        
+    </div>
+    <!-- // .container -->
+
+</header>
+<!-- // .header -->
+
+<ul class="mobile-items">
+    <li><a href="#" class="sprite nav-btn">Menu</a></li>
+    <li><a href="#" id="mobile-account-trigger" class="sprite btn-my-account">My Account</a></li>
+</ul>
+
+    <nav id="nav" role="navigation" class="main-navigation clearfix">
+	<div class="container">
+	<ul class="menu menu-submenu"><li class="first leaf active menu-mlid-91595"><a href="/en" title="" class="active">Home</a></li>
+<li class="leaf menu-mlid-91984"><a href="http://ottawa.bibliocommons.com/dashboard/user_dashboard" title="">My OPL</a></li>
+<li class="leaf has-children menu-mlid-93803"><a href="/en/browse" title="">Browse</a></li>
+<li class="leaf has-children menu-mlid-73248"><a href="/en/library" title="">Hours and locations</a></li>
+<li class="leaf has-children menu-mlid-93805"><a href="/en/services">Services</a></li>
+<li class="leaf has-children menu-mlid-92186"><a href="/en/program" title="">Programs and events</a></li>
+<li class="leaf menu-mlid-92203"><a href="/en/staff-blogs" title="">Blogs</a></li>
+<li class="last leaf has-children menu-mlid-91610"><a href="/en/about" title="">About OPL</a></li>
+</ul>	</div>
+</nav><!-- // .main-navigation -->
+
+<div class="main">
+
+    <div class="container">
+
+        <a href="#" id="account-trigger" class="sprite btn-account">My Account</a>
+
+        <div class="main-col">
+
+            <div class="secondary">
+
+                                        <nav class="page-nav" role="navigation">
+<p class="nav-header">Ottawa Public Library</p>
+<ul>
+<li><a href="/en/getacard" class="icon-card">Get a Card</a></li>
+<li><a href="/en/library" class="icon-hours">Hours and Locations</a></li>
+<li><a href="/en/browse" class="icon-collection">Browse our Collection</a></li>
+</ul>
+</nav>                
+            </div>
+            <!-- // .secondary -->
+
+                <div id="block-views-homepage-content-slider-block" class="block block-views">
+
+            
+    <div class="content">
+        <div class="view view-homepage-content-slider view-id-homepage_content_slider view-display-id-block view-dom-id-be4ddb4ffbd1a9e9f53fa2ddd49ed5f8">
+        
+  
+  
+      <div class="view-content">
+      <div class="bx">
+	<div class="bx-component" id="bx-component">
+					
+<div class="media">
+
+	<div class="media-aside">
+		<a href="https://biblioottawalibrary.ca/en/teen-tech-video-contest" title="Learn more: Teen Tech Week Video Contest"><img src="https://biblioottawalibrary.ca/sites/default/files/20160304-web-fb-ttw.png" alt="Teen Tech Week Video Contest"></a>
+	</div>
+	
+	<div class="media-body">
+		<h2>Teen Tech Week Video Contest</h2>
+		<div class="field-content"><p>Teens 13-18, submit your video for your chance to win an Apple iPad!</p>
+</div>		<p><a href="https://biblioottawalibrary.ca/en/teen-tech-video-contest" class="link-more" title="Learn more: Teen Tech Week Video Contest">Learn more<span class="element-invisible">(Teen Tech Week Video Contest)</span></a></p>
+	</div>
+		
+</div>					
+<div class="media">
+
+	<div class="media-aside">
+		<a href="https://biblioottawalibrary.ca/en/central-library" title="Learn more: Central Library Project update "><img src="https://biblioottawalibrary.ca/sites/default/files/20150306_FB_Central.png" alt="Central Library Project update "></a>
+	</div>
+	
+	<div class="media-body">
+		<h2>Central Library Project update </h2>
+		<div class="field-content"><p>The Ottawa Public Library and Library and Archives Canada to explore a potential&nbsp;partnership&nbsp;</p>
+</div>		<p><a href="https://biblioottawalibrary.ca/en/central-library" class="link-more" title="Learn more: Central Library Project update ">Learn more<span class="element-invisible">(Central Library Project update )</span></a></p>
+	</div>
+		
+</div>					
+<div class="media">
+
+	<div class="media-aside">
+		<a href="https://biblioottawalibrary.ca/en/blogs/full-steam-ahead" title="Learn more: Full S.T.E.A.M. Ahead "><img src="https://biblioottawalibrary.ca/sites/default/files/20160209-Web-FB-March.png" alt="Full S.T.E.A.M. Ahead "></a>
+	</div>
+	
+	<div class="media-body">
+		<h2>Full S.T.E.A.M. Ahead </h2>
+		<div class="field-content"><p>Programs for kids ages 4-12 during&nbsp;<span>March Break,&nbsp;</span>March 14-18</p>
+</div>		<p><a href="https://biblioottawalibrary.ca/en/blogs/full-steam-ahead" class="link-more" title="Learn more: Full S.T.E.A.M. Ahead ">Learn more<span class="element-invisible">(Full S.T.E.A.M. Ahead )</span></a></p>
+	</div>
+		
+</div>			</div>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div>            <!-- // .homepage-slider -->
+
+
+            <section role="main" class="homepage-content" id="main-content">
+                <div class="the-content">
+
+
+                    <h1 class="intro-blurb">
+                        <span><a href="/en/databases/search-all">Online Resources</a></span>
+                        <strong class="sprite">
+                            Access eBooks, audiobooks, music, magazines and online resources                        </strong>
+
+                    </h1>
+
+                        <div id="block-views-a049b59374c775b8c1c5c1984d18357e" class="block block-views">
+
+            
+    <div class="content">
+        <div class="view view-frontpage-online-content view-id-frontpage_online_content view-display-id-block_3 front-online-resources view-dom-id-e4e36ae8a73c457ee9c18cef2ac7c1b1">
+        
+  
+  
+      <div class="view-content">
+      <div class="view-list">    <ul class="view-list-ul">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-name-i18n">        <span class="field-content"><a href="/en/databases/search-all?subject=234">Business</a></span>  </div>  
+  <div class="views-field views-field-field-front-page-database">        <div class="field-content">
+
+			<span property="dc:title" content="ReferenceCanada" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+	
+	<div class="content clearfix">
+		<div class="field field-name-field-image-feature-box field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/content/referencecanada"><img typeof="foaf:Image" src="https://biblioottawalibrary.ca/sites/default/files/ReferenceGroup_100x100.png" width="100" height="100" alt="ReferenceCanada" /></a></div></div></div><div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/content/referencecanada">ReferenceCanada</a></div></div></div>	</div>
+
+	
+
+</div>  </div>  
+  <div class="views-field views-field-edit-term">        <span class="field-content"></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-name-i18n">        <span class="field-content"><a href="/en/databases/search-all?subject=941">eBooks and Audiobooks</a></span>  </div>  
+  <div class="views-field views-field-field-front-page-database">        <div class="field-content">
+
+			<span property="dc:title" content="Learning Express Library" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+	
+	<div class="content clearfix">
+		<div class="field field-name-field-image-feature-box field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/node/19909"><img typeof="foaf:Image" src="https://biblioottawalibrary.ca/sites/default/files/LearnExpLib3_100x100.png" width="100" height="100" alt="Learning Express Library 3.0" /></a></div></div></div><div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/node/19909">Learning Express Library</a></div></div></div>	</div>
+
+	
+
+</div>  </div>  
+  <div class="views-field views-field-edit-term">        <span class="field-content"></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-name-i18n">        <span class="field-content"><a href="/en/databases/search-all?subject=241">Genealogy</a></span>  </div>  
+  <div class="views-field views-field-field-front-page-database">        <div class="field-content">
+
+			<span property="dc:title" content="PRDH (Programme de recherche en démographie historique)" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+	
+	<div class="content clearfix">
+		<div class="field field-name-field-image-feature-box field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/resources/prdh-programme-de-recherche-en-d%C3%A9mographie-historique"><img typeof="foaf:Image" src="https://biblioottawalibrary.ca/sites/default/files/PRDH_180x180.jpg" width="180" height="180" alt="PRDH (Programme de recherche en démographie historique)" /></a></div></div></div><div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/resources/prdh-programme-de-recherche-en-d%C3%A9mographie-historique">PRDH (Programme de recherche en démographie historique)</a></div></div></div>	</div>
+
+	
+
+</div>  </div>  
+  <div class="views-field views-field-edit-term">        <span class="field-content"></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even views-row-last">  
+  <div class="views-field views-field-name-i18n">        <span class="field-content"><a href="/en/databases/search-all?subject=596">Learning</a></span>  </div>  
+  <div class="views-field views-field-field-front-page-database">        <div class="field-content">
+
+			<span property="dc:title" content="L’amour des temps" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+	
+	<div class="content clearfix">
+		<div class="field field-name-field-image-feature-box field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/content/l%E2%80%99amour-des-temps"><img typeof="foaf:Image" src="https://biblioottawalibrary.ca/sites/default/files/LAmourDesTemps_100x100.png" width="100" height="100" alt="L’amour des temps" /></a></div></div></div><div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/content/l%E2%80%99amour-des-temps">L’amour des temps</a></div></div></div>	</div>
+
+	
+
+</div>  </div>  
+  <div class="views-field views-field-edit-term">        <span class="field-content"></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div><div id="block-views-00ebeecab9c1fc3ad72f552c4bf82212" class="block block-views">
+
+            
+    <div class="content">
+        <div class="view view-frontpage-online-content view-id-frontpage_online_content view-display-id-block_4 front-online-resources view-dom-id-9971e6d9eb5e3bf443c6d9c1a24f8b41">
+        
+  
+  
+      <div class="view-content">
+      <div class="view-list">    <ul class="view-list-ul">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-name-i18n">        <span class="field-content"><a href="/en/databases/search-all?subject=238">Magazines</a></span>  </div>  
+  <div class="views-field views-field-field-front-page-database">        <div class="field-content">
+
+			<span property="dc:title" content="Zinio" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+	
+	<div class="content clearfix">
+		<div class="field field-name-field-image-feature-box field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/resources/zinio"><img typeof="foaf:Image" src="https://biblioottawalibrary.ca/sites/default/files/Zinio_180x180.png" width="180" height="180" alt="Zinio" /></a></div></div></div><div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/resources/zinio">Zinio</a></div></div></div>	</div>
+
+	
+
+</div>  </div>  
+  <div class="views-field views-field-edit-term">        <span class="field-content"></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-name-i18n">        <span class="field-content"><a href="/en/databases/search-all?subject=433">Music and Video</a></span>  </div>  
+  <div class="views-field views-field-field-front-page-database">        <div class="field-content">
+
+			<span property="dc:title" content="Hoopla" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+	
+	<div class="content clearfix">
+		<div class="field field-name-field-image-feature-box field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/hoopla"><img typeof="foaf:Image" src="https://biblioottawalibrary.ca/sites/default/files/Hoopla_180x180_0.jpg" width="180" height="180" alt="Hoopla" title="Hoopla" /></a></div></div></div><div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/hoopla">Hoopla</a></div></div></div>	</div>
+
+	
+
+</div>  </div>  
+  <div class="views-field views-field-edit-term">        <span class="field-content"></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-name-i18n">        <span class="field-content"><a href="/en/databases/search-all?subject=237">Newspapers</a></span>  </div>  
+  <div class="views-field views-field-field-front-page-database">        <div class="field-content">
+
+			<span property="dc:title" content="Globe and Mail - Historical" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+	
+	<div class="content clearfix">
+		<div class="field field-name-field-image-feature-box field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/content/globe-and-mail"><img typeof="foaf:Image" src="https://biblioottawalibrary.ca/sites/default/files/GlobeAndMail_100x100.png" width="100" height="100" alt="Globe and Mail" /></a></div></div></div><div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/content/globe-and-mail">Globe and Mail - Historical</a></div></div></div>	</div>
+
+	
+
+</div>  </div>  
+  <div class="views-field views-field-edit-term">        <span class="field-content"></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even views-row-last">  
+  <div class="views-field views-field-name-i18n">        <span class="field-content"><a href="/en/databases/search-all?subject=883">Research and study</a></span>  </div>  
+  <div class="views-field views-field-field-front-page-database">        <div class="field-content">
+
+			<span property="dc:title" content="Academic OneFile" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+	
+	<div class="content clearfix">
+		<div class="field field-name-field-image-feature-box field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/resources/academic-onefile"><img typeof="foaf:Image" src="https://biblioottawalibrary.ca/sites/default/files/Academic_100x100.png" width="100" height="100" alt="Academic OneFile" /></a></div></div></div><div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/en/resources/academic-onefile">Academic OneFile</a></div></div></div>	</div>
+
+	
+
+</div>  </div>  
+  <div class="views-field views-field-edit-term">        <span class="field-content"></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div>                        <div id="block-newtitles-newtitles-block" class="block block-newtitles">
+
+            
+    <div class="content">
+        <h1 class='intro-blurb'><span> <a  href='https://ottawa.bibliocommons.com/explore/index/newly_acquired?locale=en-CA&f_on_order=false' >New Titles</a></span> <strong class='sprite'>Browse the catalogue for new books, music, movies, magazines and more!</strong></h1><div class="grid-row media-listing"><div class="grid grid_4"><a href='https://ottawa.bibliocommons.com/item/show/928091026'><img  src='https://secure.syndetics.com/index.aspx?isbn=9781455536344/MC.GIF&client=ottap&type=xw12' title='The Steel Kiss'  alt='The Steel Kiss'  width='145' height='210' /></a><div class='grid-content'><h2><a href='https://ottawa.bibliocommons.com/item/show/928091026'  >The Steel Kiss</a></h2>By Deaver, Jeffery <br> (2016 - Book)</div></div><div class="grid grid_4"><a href='https://ottawa.bibliocommons.com/item/show/945695026'><img  src='https://secure.syndetics.com/index.aspx?isbn=9780385684545/MC.GIF&client=ottap&type=xw12' title='Far From True'  alt='Far From True'  width='145' height='210' /></a><div class='grid-content'><h2><a href='https://ottawa.bibliocommons.com/item/show/945695026'  >Far From True</a></h2>By Barclay, Linwood <br> (2016 - Book)</div></div><div class="grid grid_4"><a href='https://ottawa.bibliocommons.com/item/show/945675026'><img  src='https://secure.syndetics.com/index.aspx?isbn=9781501110726/MC.GIF&client=ottap&type=xw12' title='Clawback'  alt='Clawback'  width='145' height='210' /></a><div class='grid-content'><h2><a href='https://ottawa.bibliocommons.com/item/show/945675026'  >Clawback</a></h2>By Jance, Judith A. <br> (2016 - Book)</div></div><div class="grid grid_4"><a href='https://ottawa.bibliocommons.com/item/show/945270026'><img  src='https://secure.syndetics.com/index.aspx?isbn=9781442468351/MC.GIF&client=ottap&type=xw12' title='Lady Midnight'  alt='Lady Midnight'  width='145' height='210' /></a><div class='grid-content'><h2><a href='https://ottawa.bibliocommons.com/item/show/945270026'  >Lady Midnight</a></h2>By Clare, Cassandra <br> (2016 - Book)</div></div></div>    </div>
+</div><div id="block-views-clone-of-promoted-events-block" class="block block-views">
+
+            
+    <div class="content">
+        <div class="view view-clone-of-promoted-events view-id-clone_of_promoted_events view-display-id-block view-dom-id-dd49b7c11e048f084ccbcb4891b226e9">
+        
+  
+  
+      <div class="view-content">
+      <div class="featured-event">
+	<h2><a href="/en/program">Events & Programs</a></h2>	<p class="blurb">Register for free programs for children, teens and adults</p>		<article>
+   	
+		<div class="media">
+		
+              <div class="media-aside"><img class="event-img-promo" src="https://biblioottawalibrary.ca/sites/default/files/taxonomy_images/20150507WebEvents%20ArtsCulture.png" alt="" ></div>		<div class="media-body">
+			<h1><a href="/en/colour-your-world-0">Colour Your World</a></h1>
+			<div class="field-content">A rainbow of discoveries.  Stories, activities and crafts.  Ages 4-6.</div>		</div>
+	</div>
+	<p class="ta_right"><a class="more-link" href="/en/colour-your-world-0">Learn more: Colour Your World</a></p>
+		
+</article>	</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div><div id="block-views-events-homepage-block" class="block block-views">
+
+            
+    <div class="content">
+        <div class="view view-events-homepage view-id-events_homepage view-display-id-block view-dom-id-c45642b2354af48cf7550978ee9151c0">
+        
+  
+  
+      <div class="view-content">
+      <div class="featured-blog pane" id="news">
+	<h2><a href="/en/staff-blogs">Staff Blogs</a></h2>	<p class="blurb">Get reading recommendations and find out what's on at the Library</p>		
+<article class="grid grid_2">
+	
+		
+	<h1><a href="/en/blogs/gctc-butcher-nicolas-billon">At the GCTC: Butcher by Nicolas Billon</a></h1>
+	Last weekend, a few of our staff went to see Butcher at the GCTC, an...
+	<footer class="blog-meta">
+		<p class="blog-author">by Angela_biblio</p>		Mar 11 2016 - 11:04am	</footer>
+	
+	<p><a class="more-link" href="/en/blogs/gctc-butcher-nicolas-billon">Read At the GCTC: Butcher by Nicolas Billon</a></p>
+	
+</article>		
+<article class="grid grid_2">
+	
+		
+	<h1><a href="/en/blogs/retelling-peter-pan-second-star-alyssa-b-sheinmel">Retelling of Peter Pan --- Book Review: Second Star by Alyssa B. Sheinmel </a></h1>
+	“The photograph on the bulletin board is a clue... Maybe they left it for m...
+	<footer class="blog-meta">
+		<p class="blog-author">by ML_Teen_Selector_Lib</p>		Mar 10 2016 - 8:40am	</footer>
+	
+	<p><a class="more-link" href="/en/blogs/retelling-peter-pan-second-star-alyssa-b-sheinmel">Read Retelling of Peter Pan --- Book Review: Second Star by Alyssa B. Sheinmel </a></p>
+	
+</article>	</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div>                    <!--
+                    <h1 class="intro-blurb">
+                        <span>New Titles</span> <strong class="sprite">Browse the catalogue for new books, music, movies, magazine and more!</strong>
+                    </h1>
+                    --->
+
+                </div>
+            </section>
+            <!-- // .main-content -->
+
+        </div>
+        <!-- // .main-col -->
+
+                    <aside class="aside" role="complementary">
+                    <div id="block-block-155" class="block block-block">
+
+            
+    <div class="content">
+        <p><a class="sprite book-comp" href="http://libonline.ottawa.ca/mainPageNew.htm">Book a Library Computer</a></p>
+<p><a class="sprite book-equip" href="/en/book-equipment">Book Imagine Space Equipment</a></p>
+<p><a class="sprite book-room" href="/en/booking-meeting-room">Rent a Meeting Room</a></p>
+    </div>
+</div><div id="block-oplusers-login-ssoblock" class="block block-oplusers">
+
+            
+    <div class="content">
+                <h3 class="sprite hdr-your-account">My Account</h3>   
+                <form action="/index.php" method="POST" id="opluser-login">  
+                  <div class="login-field">
+                    <label for="user_name">Username or Barcode:</label>
+                    <input class="form-text" id="user_name" name="name" type="text" value=""  />
+                  </div>
+                  <div class="login-field">
+                    <label for="user_pin">PIN:</label>
+                    <input class="form-text" id="user_pin" name="user_pin" type="password"  value=""   aoutocomplete= "off" />
+                  </div>
+                    <p><input name="destination" type="hidden" value="https://biblioottawalibrary.ca/en" /></1@dmnp>
+                 <p><a href="https://ottawa.bibliocommons.com/user/forgot?destination=https://biblioottawalibrary.ca/en">Forgot your PIN?</a></p>
+                 <input class="form-submit" name="commit" title="Log in" type="submit" value="Login" />
+                 <p class="sprite get-card"><a href="/en/./getacard">Get a Card</a></p>
+                 <p class="sprite pay-fees"><a href="https://smartpay.biblioottawalibrary.ca/scripts/SmartPay/smartpay.dll?finelogin&amp;branchid=ottawasp&amp;Language=English">Pay your fees and fines online</a></p>
+                </form>
+           
+        
+        </div>
+</div>            </aside>
+        
+            <div id="block-views-bottom-links-home-page-block-1" class="block block-views">
+
+            
+    <div class="content">
+        <div class="view view-bottom-links-home-page view-id-bottom_links_home_page view-display-id-block_1 view-dom-id-efe74e98cae82d8c26f141ea615bdaeb">
+        
+  
+  
+      <div class="view-content">
+      <div class="grid-row utilities">
+  <div class="grid grid_4">
+	  
+  <div class="views-field views-field-title-field">        <h3 class="field-content"><a href="https://biblioottawalibrary.ca/en/booking-meeting-room">Rent a meeting room</a></h3>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Reserve space to host a business meeting or community gathering.</p>
+</div>  </div>  
+  <div class="views-field views-field-edit-node">        <span class="field-content"></span>  </div>  </div>
+  <div class="grid grid_4">
+	  
+  <div class="views-field views-field-title-field">        <h3 class="field-content"><a href="https://biblioottawalibrary.ca/en/databases/search-all">Online resources</a></h3>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Find answers to your research questions, or speak a new language.</p>
+</div>  </div>  
+  <div class="views-field views-field-edit-node">        <span class="field-content"></span>  </div>  </div>
+  <div class="grid grid_4">
+	  
+  <div class="views-field views-field-title-field">        <h3 class="field-content"><a href="https://biblioottawalibrary.ca/en/content/tutorials-and-appointments">Book an Appointment</a></h3>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Learn about business, eReaders, genealogy, job searches and computers during a one-on-one session.</p>
+</div>  </div>  
+  <div class="views-field views-field-edit-node">        <span class="field-content"></span>  </div>  </div>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div>
+    </div>
+    <!-- // .container -->
+
+</div>
+<!-- // .main -->
+
+<footer class="footer" role="contentinfo">
+
+    <div class="container clearfix">
+
+
+                        <div id="block-block-174" class="block block-block">
+
+            
+    <div class="content">
+        <p><img src="/sites/all/themes/opl/assets/img/layout/the-card.png" alt="the-card" width="263" height="189" /></p>
+    </div>
+</div><div id="block-menu-menu-footer-menu" class="block block-menu">
+
+            
+    <div class="content">
+        <ul class="menu menu-submenu"><li class="first leaf"><a href="/en/about" title="">About OPL</a></li>
+<li class="leaf"><a href="/en/mediaroom" title="">Media room</a></li>
+<li class="leaf"><a href="/en/opl_board" title="">OPL Board</a></li>
+<li class="leaf"><a href="/en/staff-blogs" title="">OPL Blogs</a></li>
+<li class="leaf"><a href="/en/contact" title="">Contact OPL</a></li>
+<li class="leaf"><a href="/en/getacard" title="">Get an OPL card</a></li>
+<li class="leaf"><a href="/en/make-donation" title="">Support OPL</a></li>
+<li class="leaf"><a href="/en/friends-public-library" title="">Friends of the OPL Association</a></li>
+<li class="leaf"><a href="/en/accessibility" title="">Accessibility</a></li>
+<li class="leaf"><a href="/en/careers-ottawa-public-library" title="">Careers</a></li>
+<li class="last leaf"><a href="/en/privacy-statement" title="">Privacy statement</a></li>
+</ul>    </div>
+</div><div id="block-block-176" class="block block-block">
+
+            
+    <div class="content">
+        <div class="the-social">
+<div class="social-media"><a class="sprite facebook" href="https://www.facebook.com/BiblioOttawaLibrary" target="_blank">Facebook</a> <a class="sprite twitter" href="https://twitter.com/opl_bpo" target="_blank">Twitter</a><a href="/en/staff-blogs" class="sprite blog">Blogs</a> <a class="sprite pinterest" href="http://www.pinterest.com/oplbpo/" target="_blank">Pinterest</a></div>
+<div class="social-media"><a class="sprite android" href="https://play.google.com/store/apps/details?id=com.bibliocommons.opl" target="_blank">Android</a><a href="/en/library-apps" class="sprite appstore">App Store</a><a href="/en/assistive-technology-equipment#browse" class="sprite browsealoud">About Browsealoud</a>
+</div>
+</div>
+    </div>
+</div><div id="block-jump-menu-jump-menu-m-menu-footer-extern" class="block block-jump-menu">
+
+            
+    <div class="content">
+        <form action="/en" method="post" id="ctools-jump-menu--2" accept-charset="UTF-8"><div><div class="container-inline"><div class="form-item form-type-select form-item-jump">
+ <select class="ctools-jump-menu-select ctools-jump-menu-change form-select" id="edit-jump--2" name="jump"><option value="" selected="selected">Other City of Ottawa websites</option><option value="http://www.ottawa.ca/index_en.html" class="d-1">City of Ottawa</option><option value="http://www.octranspo1.com/?lang=en" class="d-1">OC Transpo</option><option value="http://www.ottawapolice.ca/en/home.aspx" class="d-1">Ottawa Police Service</option><option value="http://www.centrepointetheatre.com/index_en.html" class="d-1">Centrepointe Theatre</option><option value="http://shenkmanarts.ca/index_en.html" class="d-1">Shenkman Arts Centre</option><option value="http://www.lansdownepark.ca/index_en.html" class="d-1">Lansdowne Park</option><option value="http://www.ottawalightrail.ca/en/" class="d-1">Ottawa Light Rail</option><option value="http://ottawa.com" class="d-1">Ottawa.com</option></select>
+</div>
+<input class="ctools-jump-menu-button ctools-jump-menu-hide form-submit" type="submit" id="edit-go--2" name="op" value="Go" /></div><input type="hidden" name="form_build_id" value="form-j3fVq6R-5-CCb-qE40w6rFHOKnocdxaIaPhfozoauGQ" />
+<input type="hidden" name="form_id" value="ctools_jump_menu" />
+</div></form>    </div>
+</div>                    
+
+    </div>
+    <!-- // .container-->
+
+</footer>
+<!-- // .footer -->	<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+      setTimeout(function(){var a=document.createElement("script");
+      var b=document.getElementsByTagName('script')[0];
+      a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0021/4560.js";
+      a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+      
+//--><!]]>
+</script>
+	
+	<script src="https://biblioottawalibrary.ca/sites/all/themes/opl/assets/js/ios-orientationchange-fix.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"67081dea35","applicationID":"2526756","transactionName":"ZFQGMkICWUZWARBfWF0eJQVEClhbGAwLUlJsQQUBVTxTUFEDEVpD","queueTime":0,"applicationTime":1046,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

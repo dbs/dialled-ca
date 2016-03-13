@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    	<title>Billings Township Public Library</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+		<link rel="stylesheet" type="text/css" href="css/fsizer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='js/basic.js'></script>
+
+  <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+
+<!-- Contact Form CSS files -->
+<link type='text/css' href='css/basic.css' rel='stylesheet' media='screen' />
+<link type='text/css' href='css/gallery.css' rel='stylesheet' media='screen' />
+
+<!-- IE6 "fix" for the close png image -->
+<!--[if lt IE 7]>
+<link type='text/css' href='css/basic_ie.css' rel='stylesheet' media='screen' />
+<![endif]-->
+
+        
+        
+        
+        
+        
+<script>
+$(document).ready(function(){
+	$('#sizer').jfontsizer({
+		applyTo: '#content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+});
+			
+			
+function loadContent(id, page) 
+{
+
+	$("#editframe").attr("src", "edit.asp?id="+ page); 
+	$("#content").load(id);
+}
+
+activateMenu = function(nav) {
+
+/* currentStyle restricts the Javascript to IE only */
+	if (document.all &&
+ document.getElementById(nav).currentStyle) {  
+        var navroot = document.getElementById(nav);
+        
+        /* Get all the list items within the menu */
+
+        var lis=navroot.getElementsByTagName("LI");  
+        for (i=0; i<lis.length; i++) {
+        
+           /* If the LI has another menu level */
+            if(lis[i].lastChild.tagName=="UL"){
+            
+                /* assign the function to the LI */
+             	lis[i].onmouseover=function() {	
+                
+                   /* display the inner menu */
+                   this.lastChild.style.display="block";
+                }
+                lis[i].onmouseout=function() {   
+                   this.lastChild.style.display="none";
+                }
+            }
+        }
+    }
+}
+window.onload= function(){
+    /* pass the function the id of the top level UL */
+
+    /* remove one, when only using one menu */
+    activateMenu("vertnav"); 
+
+}
+
+function loadmodal(modal)
+{
+		$(modal).modal();
+		return false;
+}
+
+</script>
+
+
+
+</head>
+
+<body onload="javascript:loadContent('content.asp?id=1','1');">
+    
+ <div id="wrapper">
+ 
+
+
+<div id="sizer"></div>
+
+<div id="secure">
+  				<a href="logout.asp" class="basic" onclick="javascript:loadmodal('#login');"><img border="0" src="img/login.png" /></a>
+                
+</div>
+		<!-- modal content -->
+		<div id="login">
+	
+                <h3>Login</h3>
+                <form name="login" action="login.asp" method="post">
+                <input name="library" value="billings" size="9" type="hidden" />
+                <p style="margin-left:150px;">Username:<input name="uname" size="9" type="text" /></p>
+                <p style="margin-left:150px;">&nbsp;Password:<input name="pwd" size="10" type="password" /></p>
+                <input type="submit" value="Login" style="margin-left:150px;" />
+                </form>
+     
+		</div>
+		<div id="edit"><iframe frameborder="0" name="editor" id="editframe" src="edit.asp?id=" width="590" height="380" scrolling="no" allowtransparency="yes"></iframe></div>
+		<!-- preload the images -->
+		<div style='display:none'>
+			<img src='images/x.png' alt='' />
+		</div>
+
+
+
+	<div id="header"      style="background-image:url(img/head2.png)"  ></div>
+    
+
+    
+    
+ 
+   <div id="menu"> 
+            <ul id="nav" >     
+
+				<li><a href="javascript:loadContent('content.asp?id=1','1');">Home</a> </li>
+                	<li><a href="javascript:loadContent('content.asp?id=41','41');">Book and Bake Sale</a></li>                     
+                     <li><a href="#">Programs and Services</a>
+                       <ul>
+                           <li><a href="javascript:loadContent('http://www.olsn.ca/e-resource/search.asp?library=billings')">eResources</a></li> 
+
+                           <li><a href="http://downloadcentre.library.on.ca" target="_blank">Overdrive</a></li> 
+                           
+                          <li><a href="javascript:loadContent('content.asp?id=57','57');">Collections</a></li>
+   	                    
+                        <!-- <li><a href="javascript:loadContent('content.asp?id=59','59');">Best Start</a></li>
+                          <li><a href="javascript:loadContent('content.asp?id=61','61');">Computer Help</a></li> -->
+                         <li><a href="javascript:loadContent('content.asp?id=60','60');">How it all began</a></li>
+   	                                                                                                                       
+					 </ul>                   
+                     </li>
+                     <li><a href="#">About the library</a>
+                     <ul>
+                     <li><a href="javascript:loadContent('content.asp?id=7','7');">Library History</a></li>
+   	                     <li><a href="javascript:loadContent('content.asp?id=9','9');">Library Board</a></li>
+                         <li><a href="javascript:loadContent('content.asp?id=10','10');">Contact Us</a>
+                    
+                     </li>                                                                                                                         
+					 </ul>   
+                     </li>
+                     <li><a href="javascript:loadContent('content.asp?id=169','169');">Friends of the Library</a>
+                     <ul>
+                     <li><a href="javascript:loadContent('content.asp?id=172','172');">About the Friends</a></li>
+                     </ul>
+                     </li>
+           </ul>
+    </div>
+   
+
+   
+    <div id="content"></div>
+    <div id="logleft"></div>
+    <div id="logright"></div>
+    <div id="footer"><img src="img/foot2.png" /></div>
+</div>	
+
+<script type="text/javascript"> 
+ activateMenu("nav"); 
+ activateMenu("vertnav"); 
+</script>
+	
+<script>
+$(function() {
+$(".scrollable").scrollable();
+
+$(".items img").click(function() {
+	// see if same thumb is being clicked
+	if ($(this).hasClass("active")) { return; }
+
+	// calclulate large image's URL based on the thumbnail URL (flickr specific)
+	var url = $(this).attr("src").replace("_t", "");
+
+	// get handle to element that wraps the image and make it semi-transparent
+	var wrap = $("#image_wrap").fadeTo("medium", 0.5);
+
+	// the large image from www.flickr.com
+	var img = new Image();
+
+
+	// call this function after it's loaded
+	img.onload = function() {
+
+		// make wrapper fully visible
+		wrap.fadeTo("fast", 1);
+
+		// change the image
+		wrap.find("img").attr("src", url);
+
+	};
+
+	// begin loading the image from www.flickr.com
+	img.src = url;
+
+	// activate item
+	$(".items img").removeClass("active");
+	$(this).addClass("active");
+
+// when page loads simulate a "click" on the first image
+}).filter(":first").click();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html lang="en" dir="ltr" class="ie ie6 " xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<![endif]-->
+<!--[if IE 7 ]>
+<html lang="en" dir="ltr" class="ie ie7" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<![endif]-->
+<!--[if IE 8 ]>
+<html lang="en" dir="ltr" class="ie ie8" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<![endif]-->
+<!--[if IE 9 ]>
+<html lang="en" dir="ltr" class="ie ie9" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<![endif]-->
+<!--[if gt IE 9]>
+<html lang="en" dir="ltr" class="ie" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<![endif]-->
+<!--[if !IE]><!-->
+<html xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAMEVldVGwQHUlRUBAc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+<link rel="shortcut icon" href="https://rdc.ab.ca/sites/all/themes/custom/rdc_2013/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="/node/174" />
+<link rel="canonical" href="/current-students/library/library" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>Library | Red Deer College</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="https://rdc.ab.ca/search-plugin.xml" title="RDC" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link type="text/css" rel="stylesheet" href="https://rdc.ab.ca/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://rdc.ab.ca/sites/default/files/css/css_mxbvRAV0_YoXwGCXbsQzCkegc1pXHICzfd8PPQD9YE4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://rdc.ab.ca/sites/default/files/css/css_uJ_XJxMQwiRmfag83Jdkgg1egz5Nnn_tAna6DUDFfBg.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://rdc.ab.ca/sites/default/files/css/css_rmEPZhHbPKm0uP6QZjBY86I2nnCi6N95y8d16SMuKIA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://rdc.ab.ca/sites/default/files/css/css_gi_7dlFsKQrpayIP6fmr5nXN34duqmL0Ca9YJklxhSU.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="/sites/all/themes/custom/rdc_2013/css/main.css?o3s78w" />
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="/sites/all/themes/custom/rdc_2013/css/ie.css?o3s78w" />
+  <![endif]-->  
+  <!--[if IE 8]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
+  <!<![endif]-->  
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="https://rdc.ab.ca/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/misc/drupal.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/misc/ui/jquery.ui.core.min.js?v=1.8.7"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/misc/ui/jquery.ui.widget.min.js?v=1.8.7"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/misc/ui/jquery.ui.position.min.js?v=1.8.7"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/misc/ui/jquery.ui.autocomplete.min.js?v=1.8.7"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/libraries/jquery.maphilight/jquery.maphilight.min.js?v=1.2.2"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/misc/ajax.js?v=7.42"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/gss/scripts/autocomplete.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/custom/rdc_twitter/rdc_twitter.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/libraries/colorbox/jquery.colorbox-min.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/colorbox/js/colorbox.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/colorbox/js/colorbox_load.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/colorbox/js/colorbox_inline.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/jq_maphilight/jq_maphilight.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/kaltura/js/kaltura.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/kaltura/js/kaltura.behaviors.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/google_analytics/googleanalytics.js?o3s78w"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-71222-1", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://rdc.ab.ca/misc/progress.js?v=7.42"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/modules/contrib/colorbox_node/colorbox_node.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/themes/custom/rdc_2013/js/modernizr.custom.54127.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/themes/custom/rdc_2013/js/accordion.min.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/themes/custom/rdc_2013/js/jquery.hoverIntent.r5.js?o3s78w"></script>
+<script type="text/javascript" src="https://rdc.ab.ca/sites/all/themes/custom/rdc_2013/js/flexslider.min.js?o3s78w"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"rdc_2013","theme_token":"cf9DxNvyFtDsRv0Kn3JYbzA47tyQ4lzHLrd_ZJP43qU","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.autocomplete.min.js":1,"sites\/all\/libraries\/jquery.maphilight\/jquery.maphilight.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/gss\/scripts\/autocomplete.js":1,"sites\/all\/modules\/custom\/rdc_twitter\/rdc_twitter.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/contrib\/jq_maphilight\/jq_maphilight.js":1,"sites\/all\/modules\/contrib\/kaltura\/js\/kaltura.js":1,"sites\/all\/modules\/contrib\/kaltura\/js\/kaltura.behaviors.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/colorbox_node\/colorbox_node.js":1,"sites\/all\/themes\/custom\/rdc_2013\/js\/modernizr.custom.54127.js":1,"sites\/all\/themes\/custom\/rdc_2013\/js\/accordion.min.js":1,"sites\/all\/themes\/custom\/rdc_2013\/js\/jquery.hoverIntent.r5.js":1,"sites\/all\/themes\/custom\/rdc_2013\/js\/flexslider.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_user\/ldap_user.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/contrib\/colorbox_node\/colorbox_node.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/features\/rdc_awards_and_scholarships_content_type\/css\/rdc_awards_and_scholarships_content_type.css":1,"sites\/all\/modules\/features\/rdc_awards_and_scholarships_view\/css\/rdc_awards_and_scholarships_view.css":1,"sites\/all\/modules\/custom\/rdc_blog_helper\/css\/blog_views.css":1,"sites\/all\/modules\/features\/content_types\/rdc_ct_coned_page\/css\/rdc_ct_coned_page.css":1,"sites\/all\/modules\/features\/content_types\/rdc_ct_event_calendars\/css\/rdc_ct_event_calendars.css":1,"sites\/all\/modules\/features\/content_types\/rdc_ct_rdc_acal_programs\/css\/rdc_ct_rdc_acal_programs.css":1,"sites\/all\/modules\/features\/content_types\/rdc_ct_rdc_acal_programs\/css\/rdc_ct_rdc_acal_programs_view.css":1,"sites\/all\/modules\/features\/content_types\/rdc_ct_rdc_programs\/css\/rdc_ct_rdc_programs.css":1,"sites\/all\/modules\/features\/content_types\/rdc_ct_rdc_timetable\/css\/rdc_ct_rdc_timetable.css":1,"sites\/all\/modules\/features\/content_types\/rdc_ct_site_section_page\/css\/rdc_ct_site_section_page.css":1,"sites\/all\/modules\/features\/content_types\/rdc_ct_timetable_meeting_times\/css\/rdc_ct_timetable_meeting_times.css":1,"sites\/all\/modules\/features\/rdc_events_calendar_view\/css\/rdc_events_calendar_view.css":1,"sites\/all\/modules\/features\/rdc_finaid_program_awards_ct\/css\/rdc_finaid_program_awards_ct.css":1,"sites\/all\/modules\/features\/rdc_finaid_program_awards_view\/css\/rdc_finaid_program_awards.css":1,"sites\/all\/modules\/features\/rdc_finaid_program_categories_ct\/css\/rdc_finaid_program_categories_ct.css":1,"sites\/all\/modules\/features\/rdc_news_settings\/css\/rdc_news_ds.css":1,"sites\/all\/modules\/features\/rdc_news_settings\/rdc_news_view\/css\/rdc_news_view.css":1,"sites\/all\/modules\/features\/rdc_phonedirectory_settings\/css\/rdc_phonedirectory.css":1,"sites\/all\/modules\/features\/rdc_photo_gallery_views\/css\/rdc_photo_gallery_views.css":1,"sites\/all\/modules\/features\/rdc_programs_view\/css\/rdc_programs_view.css":1,"sites\/all\/modules\/features\/rdc_startpage\/css\/startpage.css":1,"sites\/all\/modules\/features\/rdc_timetable_view\/css\/rdc_timetable_view.css":1,"sites\/all\/modules\/custom\/rdc_twitter\/rdc_twitter.css":1,"sites\/all\/modules\/custom\/rdc_views_glossary_links\/css\/glossary.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/libraries\/colorbox\/example1\/colorbox.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/kaltura\/style\/kaltura.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_servers\/ldap_servers.admin.css":1,"sites\/all\/modules\/contrib\/print\/print_ui\/css\/print_ui.theme.css":1,"sites\/all\/themes\/custom\/rdc_2013\/css\/main-rdc-custom.css":1,"sites\/all\/themes\/custom\/rdc_2013\/jquery-ui-1.8.22.custom\/css\/ui-lightness\/jquery-ui-1.8.22.custom.css":1,"sites\/all\/themes\/custom\/rdc_2013\/css\/budgetcalc.css":1}},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.85","slideshow":true,"slideshowAuto":false,"slideshowSpeed":"2500","slideshowStart":"Start Slideshow","slideshowStop":"Stop Slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"maxWidth":"98%","maxHeight":"98%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":true,"mobiledetect":false,"mobiledevicewidth":"480px"},"gss":{"key":"004004274826509446114:qlzkpzlrz6e"},"jq_maphilight":{"fill":"true","fillColor":"000000","fillOpacity":0.2,"stroke":"true","strokeColor":"000000","strokeOpacity":0.2,"strokeWidth":"1","fade":"true","alwaysOn":"false","neverOn":"false","groupBy":"false","allMapsEnabled":"true"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|docx?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xlsx?|xml|z|zip"},"urlIsAjaxTrusted":{"\/current-students\/library\/library":true},"colorbox_node":{"width":"600px","height":"600px"}});
+//--><!]]>
+</script>
+</head>
+
+<!--[if IE ]>
+   <body class="ie html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-174 node-type-site-section-page" >
+<![endif]-->
+<!--[if !IE]>-->
+    <body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-174 node-type-site-section-page" >
+<!--<![endif]-->
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  <noscript>
+   <div class="no-script">For full functionality of this site it is necessary to enable JavaScript.
+   Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+   instructions how to enable JavaScript in your web browser</a>.</div>
+  </noscript>
+    <div class="wrapper">
+	<header>
+		<div class="logo-wrapper">
+			<a href="/" title="Home" rel="home" >
+				<span class="rdc-logo"></span>
+			</a>
+		</div>
+					  <div class="region region-header">
+    <div id="block-block-4" class="block block-block">
+
+    
+  <div class="content">
+    <div class="in-the-loop">
+  <a href="https://portal.rdc.ab.ca/cp/home/displaylogin" target="_blank">
+    <span>
+      <img src="/sites/all/themes/custom/rdc_2013/images/InTheLoop.png" alt="In TheLoop" title="visit InTheLoop Portal">
+    </span>
+  </a>
+</div>  </div>
+</div>
+<div id="block-search-form" class="block block-search">
+
+    
+  <div class="content">
+    <form class="gss" action="/current-students/library/library" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." placeholder="Search" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><button type="submit" class="icon-search"></button></div><input type="hidden" name="form_build_id" value="form-QH12KxKFnlG46JyqzkaHEJp1Lj82gzwbzhWmkbXtBZU" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+  </div>
+		
+	</header>
+</div><!--/ wrapper -->
+
+<div class="mobile-navigation">
+</div>
+
+<div id="wrapper">
+	<div class="global-navigation">  <div class="region region-navigation">
+    <div id="block-rdc-menu-blocks-rdc-mega-menu" class="block block-rdc-menu-blocks">
+
+    
+  <div class="content">
+    <nav class="current-students levels-2" role="menubar"><span class="menu-title">Browse RDC</span><span class="menu-open icon-menu"></span><span class="menu-search icon-search"></span><span class="menu-search-close icon-close"></span><ul id="menu" class="menu"><li  class="first collapsed"><a href="/future-students" title="Future Students">Future Students</a></li><li  class="expanded active-trail rdc-has-children"><a href="/current-students" title="Current Students" class="active-trail active-top active-top-tab">Current Students</a><ul id="localNav" class="subnav"><li  class="first leaf"><a href="/current-students/academic-departments">Academic Departments</a></li><li  class="leaf"><a href="/current-students/academic-schedule">Academic Schedule</a></li><li  class="collapsed"><a href="/current-students/athletics" title="Athletics">Athletics</a></li><li  class="leaf"><a href="/current-students/campus-maps">Campus Maps</a></li><li  class="collapsed"><a href="/current-students/class-info" title="Class Info">Class Info</a></li><li  class="collapsed"><a href="/current-students/convocation" title="Convocation">Convocation</a></li><li  class="leaf"><a href="/current-students/directory-search">Directory Search</a></li><li  class="collapsed"><a href="/current-students/facilities-services" title="Facilities &amp; Services">Facilities &amp; Services</a></li><li  class="collapsed"><a href="/current-students/funding-awards-scholarships" title="Funding, Awards &amp; Scholarships">Funding, Awards &amp; Scholarships</a></li><li  class="collapsed active-trail"><a href="/current-students/library" title="Library" class="active-trail">Library</a></li><li  class="last leaf"><a href="/current-students/student-life">Student Life</a></li></ul></li><li  class="collapsed"><a href="/programs" title="Programs">Programs</a></li><li  class="collapsed"><a href="/continuing-education" title="Continuing Education">Continuing Education</a></li><li  class="collapsed"><a href="/apply" title="Apply">Apply</a></li><li  class="collapsed"><a href="/about" title="About">About</a></li><li  class="last collapsed"><a href="/contact-us" title="Contact Us">Contact Us</a></li></ul></nav>  </div>
+</div>
+<div id="block-rdc-menu-blocks-rdc-side-nav" class="block block-rdc-menu-blocks">
+
+    
+  <div class="content">
+    <div class="side-nav current-students"><span class="menu-open icon-menu"></span><div class="side-nav-heading"><a href="/current-students/library" title="Library" class="active-trail">Library</a></div><ul class="menu">
+			<li class="previous-item"><a href="/current-students">Back to <span class="previous-item-title">Current Students</span></a></li>
+			<li  class="first collapsed"><a href="/current-students/library/about-us" title="About Us">About Us</a></li><li  class="collapsed"><a href="/current-students/library/art" title="Art">Art</a></li><li  class="last collapsed"><a href="/current-students/library/events-news" title="Events &amp; News">Events &amp; News</a></li>
+		</ul></div>  </div>
+</div>
+  </div>
+</div>	  <div class="region region-highlighted">
+    <div id="block-views-e903a8bc514366f895bcdf9208c31343" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-slider view-id-slider view-display-id-slider_block_site_section view-dom-id-0405c64f4d82317658ba35fcd8b1f8de">
+        
+  
+  
+      <div class="view-content">
+      <div class="banner alt library-slider">    <ul class="slides">          <li class="">  
+          <img src="https://rdc.ab.ca/sites/default/files/uploads/images/rdc_slider/4402/library.jpg" width="713" height="382" alt="library" />    
+  <div class="banner-content">        <h3>RDC Library empowers learners to connect, collaborate, and create.</h3>
+        <p>Find out everything you need to know about our RDC Library.</p>
+        <a href="http://rdc.ab.ca/current-students/facilities-services/library/about-us/about-us">Learn More</a>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+</div><!--/wrapper -->
+
+<div class="wrapper page-wrapper">
+          <div id="breadcrumb"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a> » <a href="/current-students">Current Students</a> » <a href="/current-students/library">Library</a></div></div>
+    	<article>
+		<div class="section-content-wrapper green-bucket">
+ <!---NEW for Print Module!!! --->
+
+<div class="print-link">
+<span class="print_html"><a href="https://rdc.ab.ca/print/174" title="Display a printer-friendly version of this page." class="print-page" onclick="window.open(this.href); return false" rel="nofollow"><img class="print-icon print-icon-margin" src="https://rdc.ab.ca/sites/all/modules/contrib/print/icons/print_icon.png" width="16px" height="16px" alt="Print Version" title="Print Version" />Print Version</a></span> </div>
+			<a id="main-content"></a>
+
+			<div id="tabs-wrapper" class="clearfix">									<h1 class="with-tabs site_section_page " >Library</h1>
+									</div>									
+			  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="ds-1col node node-site-section-page view-mode-two_column clearfix">
+
+  
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>RDC Library empowers learners to <strong>connect, collaborate, and create</strong>.</p>
+<!--
+==========================================================================================
+START: EDS HTML Only Search Box Functionality
+==========================================================================================
+--><form action="http://search.ebscohost.com/login.aspx" method="get" target="_blank"><input name="direct" value="true" type="hidden" /><input name="scope" value="site" type="hidden" /><input name="site" value="eds-live" type="hidden" /><!-- Authentication type --><p><input name="authtype" value="ip,guest" type="hidden" /><input name="custid" value="s8484178" type="hidden" /><input name="groupid" value="main" type="hidden" /><input name="profid" value="eds" type="hidden" /><input name="mode" value="AND" type="hidden" /><br /></p><table cellpadding="5" cellspacing="2"><tbody><tr><td><img src="http://lgimages.s3.amazonaws.com/data/imagemanager/6343/rdc_logo_150x51px.gif" width="150" /></td>
+<td valign="top"><b>OneSearch:  Find books, articles &amp; media<br /><b>
+<!-- Search box and Submit button --></b></b><p><input name="bquery" size="30" value="" type="text" /><input value="Find" type="submit" /></p></td>
+</tr></tbody></table></form>
+<!--
+==========================================================================================
+END: EDS HTML Only Search Box Functionality
+==========================================================================================
+--><p>Use <strong>OneSearch</strong> to quickly find a variety of information on your topic.</p>
+<hr /><p><a href="http://ualweb.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/49?user_id=WRED_DEER_C"><b>NEOS Catalogue Search</b></a></p>
+<p>Use <strong>NEOS</strong> to search for books, to search specific RDC collections (e.g., Curriculum) or to limit to a specific NEOS Library (e.g., Olds College).</p>
+<hr /><p><a href="http://www.talonline.ca/"><strong>TAL Online Search</strong></a></p>
+<p>Use <strong>TAL Online</strong> to search for and request library materials from Alberta and around the world.</p>
+<hr /><p><strong>RDC Library Quick Access</strong></p>
+<ul><li><a href="/node/4357"><span style="line-height: 1.538em;">Events &amp; News</span></a></li>
+<li><a href="/node/4352"><span style="line-height: 1.538em;">Art</span></a></li>
+<li><a href="/node/178"><span style="line-height: 1.538em;">Memberships</span></a></li>
+<li><span style="line-height: 1.538em;"><a href="/node/175">About Us</a> </span></li>
+</ul></div></div></div><div class="field field-name-field-media field-type-field-kaltura-entryid field-label-hidden"><div class="field-items"></div></div></div>
+
+  </div>
+</div>
+<div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div class="addthis-btn field">
+	<!-- AddThis Button BEGIN -->
+	<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+		<span style="float: left; margin-right: 10px;">Share: </span>
+		<a class="addthis_button_facebook"></a>
+		<a class="addthis_button_twitter"></a>
+		<a class="addthis_button_google_plusone_share"></a>
+		<a class="addthis_button_linkedin"></a>
+		<a class="addthis_button_email" title="Email to a friend"></a>
+	</div>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-513f313367be739b"></script>
+	<script type="text/javascript">
+		var addthis_config = addthis_config||{};
+		addthis_config.data_track_clickback = false;
+	</script>
+	<!-- AddThis Button END -->
+</div>  </div>
+</div>
+  </div>
+
+						<section>
+				  <div class="region region-subcontent">
+    <div id="block-rdc-twitter-rdclibrary" class="block block-rdc-twitter large-blue-bucket">
+
+    
+  <div class="content">
+    <div class="rdc-twitter-tweets-container">
+	<div>
+		<h3>Tweets</h3>
+		<a class="follow" href="https://twitter.com/rdclibrary" target="_blank"></a>
+	</div>
+	<div id="rdctwitter_rdclibrary" class="tweets">
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/708362755791839232">2h</a></p>
+			</div>
+						<p class="tweet-body">RT <a href="https://twitter.com/RedDeerCollege" target="_blank" rel="nofollow">@<span class="screen-name">RedDeerCollege</span></a>: We're excited to welcome Premier Notley &amp; Minister of Advanced Education Schmidt for The Centre Construction Launch! ht…</p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/708345574156795904">3h</a></p>
+			</div>
+						<p class="tweet-body">Philosopher's Cafe wraps up on Thu., Mar. 17, 7pm. Guest host Roger Davis leads a discussion on "cannibals &amp; consumers." All welcome! <a href="https://twitter.com/search?q=myRDC&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">myRDC</span></a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/708025487403180033">10 Mar</a></p>
+			</div>
+						<p class="tweet-body">Students, mark your calendars: Long Night Against Procrastination is returning to the library, night of March 23! Details soon. <a href="https://twitter.com/search?q=myRDC&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">myRDC</span></a> <a href="https://twitter.com/search?q=LNAP&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">LNAP</span></a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707998266567237632">10 Mar</a></p>
+			</div>
+						<p class="tweet-body">Meet your <a href="https://twitter.com/SARDC" target="_blank" rel="nofollow">@<span class="screen-name">SARDC</span></a> election candidates in the library, now until 1. <a href="https://twitter.com/search?q=MyRDC&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">MyRDC</span></a> <a href="https://t.co/LeNGGrjtUR" rel="nofollow">https://t.co/LeNGGrjtUR</a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707962971687931904">10 Mar</a></p>
+			</div>
+						<p class="tweet-body">RT <a href="https://twitter.com/RedDeerCollege" target="_blank" rel="nofollow">@<span class="screen-name">RedDeerCollege</span></a>: We've noticed the <a href="https://twitter.com/rdclibrary" target="_blank" rel="nofollow">@<span class="screen-name">rdclibrary</span></a> getting busier as the weeks go on. Where's your favourite study hub on campus? <a href="https://twitter.com/search?q=MyRDC&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">MyRDC</span></a> htt…</p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707960890436366336">10 Mar</a></p>
+			</div>
+						<p class="tweet-body">Meet your <a href="https://twitter.com/SARDC" target="_blank" rel="nofollow">@<span class="screen-name">SARDC</span></a> election candidates in the library today, 11-1. They'll be gathering near our clock wall. <a href="https://twitter.com/search?q=myrdc&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">myrdc</span></a> <a href="https://t.co/0CqPZRCVjK" rel="nofollow">https://t.co/0CqPZRCVjK</a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707700915667533824">9 Mar</a></p>
+			</div>
+						<p class="tweet-body">RT <a href="https://twitter.com/itsmissgabriel" target="_blank" rel="nofollow">@<span class="screen-name">itsmissgabriel</span></a>: When the library provided free snacks during exam week! <a href="https://twitter.com/search?q=RDChasmyback&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">RDChasmyback</span></a> <a href="https://twitter.com/RedDeerCollege" target="_blank" rel="nofollow">@<span class="screen-name">RedDeerCollege</span></a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707696139882123265">9 Mar</a></p>
+			</div>
+						<p class="tweet-body"><a href="https://twitter.com/AutumnChrunik" target="_blank" rel="nofollow">@<span class="screen-name">AutumnChrunik</span></a> <a href="https://twitter.com/marinaendicott" target="_blank" rel="nofollow">@<span class="screen-name">marinaendicott</span></a> That's too bad, Autumn. We're ordering a copy of Marina's new book, so watch for that to arrive.</p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707666477315395584">9 Mar</a></p>
+			</div>
+						<p class="tweet-body">RT <a href="https://twitter.com/RedDeerCollege" target="_blank" rel="nofollow">@<span class="screen-name">RedDeerCollege</span></a>: Need a break? Join <a href="https://twitter.com/SARDC" target="_blank" rel="nofollow">@<span class="screen-name">SARDC</span></a> for the Spring Music Festival. Get artsy, enjoy free food, drinks, music, &amp; more! <a href="https://twitter.com/search?q=MyRDC&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">MyRDC</span></a> http…</p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707644687339769856">9 Mar</a></p>
+			</div>
+						<p class="tweet-body">Author <a href="https://twitter.com/marinaendicott" target="_blank" rel="nofollow">@<span class="screen-name">marinaendicott</span></a> sharing her new work with RDC students. <a href="https://twitter.com/search?q=myrdc&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">myrdc</span></a> <a href="https://t.co/mEZH7DheYJ" rel="nofollow">https://t.co/mEZH7DheYJ</a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707619691238268928">9 Mar</a></p>
+			</div>
+						<p class="tweet-body">Author <a href="https://twitter.com/marinaendicott" target="_blank" rel="nofollow">@<span class="screen-name">marinaendicott</span></a> is reading at RDC Library TODAY at noon! Join us for this free event! <a href="https://twitter.com/search?q=MyRDC&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">MyRDC</span></a> <a href="https://twitter.com/search?q=RedDeer&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">RedDeer</span></a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707600890752991232">9 Mar</a></p>
+			</div>
+						<p class="tweet-body">We've got your back! Let us support your success. <a href="https://twitter.com/search?q=MyRDC&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">MyRDC</span></a> <a href="https://twitter.com/search?q=RDChasmyback&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">RDChasmyback</span></a> <a href="https://twitter.com/search?q=RedDeer&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">RedDeer</span></a> <a href="https://t.co/okcH2V4614" rel="nofollow">https://t.co/okcH2V4614</a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707338829615726592">8 Mar</a></p>
+			</div>
+						<p class="tweet-body">RT <a href="https://twitter.com/RedDeerCollege" target="_blank" rel="nofollow">@<span class="screen-name">RedDeerCollege</span></a>: Students share design competition project with Heads of Outreach: 3D printing builds prosthetic dog limb. <a href="https://twitter.com/search?q=MyRDC&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">MyRDC</span></a> https:…</p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707283523502260226">8 Mar</a></p>
+			</div>
+						<p class="tweet-body">There is an ongoing security issue around receiving MS Office Docs through RDC email. Please see link for details. <a href="https://t.co/cX5hL2yoUG" rel="nofollow">https://t.co/cX5hL2yoUG</a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/707264190843584512">8 Mar</a></p>
+			</div>
+						<p class="tweet-body">Public reading by celebrated author Marina Endicott Wed, Mar 9, at noon, <a href="https://twitter.com/search?q=rdclibrary&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">rdclibrary</span></a>. All welcome! Free admission. <a href="https://twitter.com/search?q=RedDeer&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">RedDeer</span></a> <a href="https://twitter.com/search?q=myrdc&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">myrdc</span></a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/706918082120298496">7 Mar</a></p>
+			</div>
+						<p class="tweet-body">It's a busy one! Glad to see you all hard at work 📚💻 <a href="https://t.co/I1Gy8hFHWI" rel="nofollow">https://t.co/I1Gy8hFHWI</a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/706872470930739200">7 Mar</a></p>
+			</div>
+						<p class="tweet-body">You can vote for your <a href="https://twitter.com/search?q=RDReads&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">RDReads</span></a> pick here <a href="https://twitter.com/search?q=RDCLibrary&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">RDCLibrary</span></a>! <a href="https://t.co/ALSb7SwI56" rel="nofollow">https://t.co/ALSb7SwI56</a> <a href="https://t.co/pZO4i3QUoW" rel="nofollow">https://t.co/pZO4i3QUoW</a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/705847964732776448">4 Mar</a></p>
+			</div>
+						<p class="tweet-body">RT <a href="https://twitter.com/RedDeerCollege" target="_blank" rel="nofollow">@<span class="screen-name">RedDeerCollege</span></a>: TSN's James Duthie will be in Red Deer on March 24! Get your tickets in support of RDC student-athletes today! https://…</p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/705807312741470209">4 Mar</a></p>
+			</div>
+						<p class="tweet-body"><a href="https://twitter.com/kylegolsen" target="_blank" rel="nofollow">@<span class="screen-name">kylegolsen</span></a> thank you for your question! Please see the Polytechnic U FAQ page. <a href="https://t.co/obZuLQtvLk" rel="nofollow">https://t.co/obZuLQtvLk</a></p>
+		</div>
+				<div class="tweet">
+			<div class="tweet-header">
+				<p class="tweet-author">
+					<img src="http://pbs.twimg.com/profile_images/669573205313515520/WCfCEdgR_normal.jpg" />
+					<a href="https://twitter.com/rdclibrary" target="_blank">
+						<span class="full-name">RDC Library</span>
+						<span class="screen-name">@rdclibrary</span>
+					</a>
+				</p>
+								<p class="tweet-date"><a href="https://twitter.com/rdclibrary/statuses/705149193288097793">2 Mar</a></p>
+			</div>
+						<p class="tweet-body">RT <a href="https://twitter.com/SARDC" target="_blank" rel="nofollow">@<span class="screen-name">SARDC</span></a>: Executive Council nominations OPEN! Packages @ the Students' Association, SA bulletin boards, election promotion events. <a href="https://twitter.com/search?q=sardc&amp;src=hash" target="_blank" rel="nofollow">#<span class="hashtag">sardc</span></a> …</p>
+		</div>
+			</div>
+	<script type="text/javascript">
+		jQuery('#rdctwitter_rdclibrary').twitterRotate(10000);
+	</script>
+</div>
+  </div>
+</div>
+  </div>
+			</section>
+			
+		</div>
+	</article>
+
+		<aside class="sidebar">
+		  <div class="region region-sidebar-second">
+    <div id="block-block-10" class="block block-block call-to-actions">
+
+    
+  <div class="content">
+    <a href="https://rdc.ab.ca/node/306" class="button blue">Info for New Students</a><a href="https://rdc.ab.ca/future-students/admissions/timetable/list" class="button green">Timetable</a><a href="https://rdc.ab.ca/node/298" class="button green">Add/Drop Courses</a>  </div>
+</div>
+<div id="block-rdc-menu-blocks-rdc-side-nav-placeholder" class="block block-rdc-menu-blocks">
+
+    
+  <div class="content">
+       </div>
+</div>
+<div id="block-ds-extras-ssp-2col-side2" class="block block-ds-extras links">
+
+    
+  <div class="content">
+    <div class="field field-name-field-body-two field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p><a href="/node/193" target="_blank">Ask Us!</a></p>
+<p><a href="/node/176">Library Hours</a></p>
+<p><a href="/node/84288">My Library Account</a></p>
+<p><a href="http://rdc.libguides.com/index.php?gid=1227" target="_blank">Find Your Subject</a></p>
+</div></div></div>  </div>
+</div>
+<div id="block-block-26" class="block block-block">
+
+    
+  <div class="content">
+    <p><span class="external text">Click <strong>Start Chat</strong> to start a conversation.&nbsp; </span><span style="color: #ff0000;">NOTE:&nbsp; The conversation will be lost if you leave this page.</span></p>
+<div id="libchat_e7d28aaeaa2c01462781761b65500e78">&nbsp;</div>
+<script type="text/javascript" src="//v2.libanswers.com/load_chat.php?hash=e7d28aaeaa2c01462781761b65500e78"></script>
+  </div>
+</div>
+  </div>
+	</aside>
+	</div>
+
+
+<footer>
+		<div class="inner-footer">
+		  <div class="region region-footer">
+    <div id="block-block-3" class="block block-block links">
+
+    
+  <div class="content">
+    <div class="inverted-logo"><i class="icon-rdc"></i></div><address><strong>Red Deer College</strong><br>100 College Boulevard<br>P.O. Box 5005<br>Red Deer AB T4N 5H5</address><ul><li><a href="/contact-us/contact">Contact us<span class="chevron">›</span></a></li><li style="font-size: 1.25em;">Follow RDC</li></ul><address><span style="margin-right: 5px;"><a href="https://www.facebook.com/RedDeerCollege" target="_blank"><img alt="rdc facebook" src="/sites/all/themes/custom/rdc_2013/images/facebook.png" height="32" width="32"></a></span><span style="margin-right: 5px;"><a href="https://instagram.com/reddeercollege" target="_blank"><img alt="rdc instagram" src="/sites/all/themes/custom/rdc_2013/images/instagram.png" height="32" width="32"></a></span><span style="margin-right: 5px;"><a href="https://twitter.com/RedDeerCollege" target="_blank"><img alt="rdc twitter" src="/sites/all/themes/custom/rdc_2013/images/twitter.png" height="32" width="32"></a></span><span style="margin-right: 5px;"><a href="https://www.youtube.com/user/TheRdctube" target="_blank"><img alt="rdc youtube" src="/sites/all/themes/custom/rdc_2013/images/youtube.png" height="32" width="32"></a></span>  </div>
+</div>
+<div id="block-menu-menu-footer-menu-1" class="block block-menu links">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="https://rdc.ab.ca/programs/academic-calendar/list" title="">Academic Calendar</a></li>
+<li class="leaf"><a href="https://rdc.ab.ca/node/455" title="">Academic Departments</a></li>
+<li class="leaf"><a href="https://rdc.ab.ca/node/313" title="">Athletics</a></li>
+<li class="leaf"><a href="https://rdc.ab.ca/node/872" title="">Campus Maps</a></li>
+<li class="leaf"><a href="https://rdc.ab.ca/node/168" title="">Campus Store</a></li>
+<li class="last leaf"><a href="http://rdc.ab.ca/node/596" title="">Community</a></li>
+</ul>  </div>
+</div>
+<div id="block-menu-menu-footer-menu-2" class="block block-menu links">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="http://rdc.ab.ca/contact-us/directory-listing" title="">Directory</a></li>
+<li class="leaf"><a href="https://rdc.ab.ca/node/472" title="">Employment</a></li>
+<li class="leaf"><a href="https://rdc.ab.ca/node/174" title="">Library</a></li>
+<li class="leaf"><a href="https://rdc.ab.ca/node/155" title="">Parking</a></li>
+<li class="leaf"><a href="http://rdc.ab.ca/node/570" title="">Creative Arts Showtime</a></li>
+<li class="last leaf"><a href="https://rdc.ab.ca/node/17" title="">Residence</a></li>
+</ul>  </div>
+</div>
+  </div>
+	</div>
+			<div class="copyright">
+		  <div class="region region-copyright">
+    <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <div class="inner-copyright"><p><a href="/about/policies-publications/policies/privacy-statement">Privacy Statement</a> © Copyright Red Deer College </p></div>  </div>
+</div>
+  </div>
+	</div>
+	</footer>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      Modernizr.load([
+        { test: Modernizr.touch,
+          yep: '/sites/all/themes/custom/rdc_2013/js/hammer.min.js'
+        },
+        { test: window.matchMedia,
+          nope: '/sites/all/themes/custom/rdc_2013/js/match.media.js'
+        },
+        '/sites/all/themes/custom/rdc_2013/js/plugins.js',
+        '/sites/all/themes/custom/rdc_2013/js/common.js?1457727732',
+        '/sites/all/themes/custom/rdc_2013/js/mobile-nav.js'
+      ]);
+    });
+  </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fd43dd9da5","applicationID":"7765636,7564532","transactionName":"NFVVMkNSDUpTWkxQXA0fdgVFWgxXHV1LZlYbREUHQmwNVlZcZ0lSBFVoEFhWFA==","queueTime":0,"applicationTime":269,"atts":"GBJWRAtIHkQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

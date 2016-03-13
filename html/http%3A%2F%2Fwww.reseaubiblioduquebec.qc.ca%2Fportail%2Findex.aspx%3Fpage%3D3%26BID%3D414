@@ -1,0 +1,1762 @@
+
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <script type="text/javascript" src="textsizer.js"></script>
+    <script language="javascript" type="text/javascript" src="/portail/script/jquery-1.7.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/portail/script/jquery.cycle.js?v=2015.01.22"></script>
+    <script language="javascript" type="text/javascript" src="/portail/script/script_onglets_accueil.js"></script>
+    <script language="javascript" type="text/javascript" src="/portail/script/jquery.simplemodal.js"></script>
+
+    <link href="/portail/theme/style_accueil.css?v=2015.03.16.2" rel="stylesheet" type="text/css" />
+    <link href="/portail/theme/style_piedPage.css?v=2014.06.25" rel="stylesheet" type="text/css" />
+    <!--[if IE ]>
+    <link href="/portail/theme/style_blocPromo_IE7.css?v=2014.06.25" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 6]>
+    <link href="/portail/theme/style_piedPage.css?v=2014.06.25" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="/portail/theme/livres_numeriques.css?v=2016.00126" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn|Lato' rel='stylesheet' type='text/css' />
+
+	<!-- TITRE DU SITE -->
+	<title>Harrington Harbour</title>
+	
+	<!-- META DU SITE -->
+	  <META NAME="author" 		CONTENT="LANEC">
+  <META NAME="design" 		CONTENT="LANEC">
+  <META NAME="updates" 		CONTENT="LANEC">
+  <META NAME="description" 	CONTENT="Le Réseau Biblio du Québec : un accès direct et interactif aux divers services de 800 bibliothèques membres présentes dans 15 régions du Québec.">
+  <META NAME="Keywords" 	CONTENT="Bibliothèques,bibliothèque,bibliothèque publique,bibliothèque municipale,livres,livre,portail,services aux bibliothèques,abonnés des bibliothèques,prêts entre bibliothèques,catalogue simb@,Info-Biblio,échanges des collections,calendrier des échanges,lecture,documentation,animation des bibliothèques,programme de formation pour bibliothèques,Lanaudiere,Centre-du-quebec,Mauricie,Montérégie,Capitale-Nationale,Lac St-Jean,Saguenay,Laurentides,Estrie,Gaspésie,Bas-St-Laurent,Abitibi-Témiscamingue,Côte-Nord,Chaudieres-Appalaches,Outaouais,Iles de la Madeleine,Nord du québec, STC, services techniques coopératifs">
+  <META NAME="category" 	CONTENT="Organisme, Bibliothèques, livres, catalogue">
+  <META NAME="location" 	CONTENT="Québec, Canada">
+  <META NAME="classification" 	CONTENT="" url="http://www.reseaubiblioduquebec.qc.ca">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+
+  <LINK REL="Bookmark Icon" 	HREF="favicon.ico">
+  <LINK REL="Address Bar" 	HREF="favicon.ico">
+  <LINK REL="Shortcut Icon" 	HREF="favicon.ico">
+
+	
+	<!-- JAVASCRIPT DU SITE -->
+	<SCRIPT LANGUAGE="JavaScript">
+
+<!-- dÃ©but -->
+
+ function stringTrim (s) {
+  return this.replace(/^\s+/, '').replace(/\s+$/, '');
+}
+String.prototype.trim = stringTrim;
+
+ function codePostalValide(aCode)
+ {
+ 	var code;
+ 	var i;
+ 	var valid;
+ 	
+ 	valid=true; 	
+ 	code=aCode.trim();
+ 	
+ 	if(code.length != 6) return false;
+ 		
+ 	for (i=0;i<6;i++)
+ 	{
+ 		if(!valid) break;
+ 		switch (i) 		
+		{ 			
+ 			case 0:
+ 			case 2:
+ 			case 4:
+ 				if(aCode.charCodeAt(i) < 65 || aCode.charCodeAt(i) > 122) valid=false;
+ 				break;
+ 			
+ 			case 1:
+ 			case 3:
+ 			case 5:
+ 				if(aCode.charCodeAt(i) < 48 || aCode.charCodeAt(i) > 57) valid=false
+ 				break;
+ 		}
+ 	}
+ 	return valid;
+ }
+ 
+ function dateFrancaiseValide(aDate,aSep)
+ {
+ 	var xDate
+ 	xDate=aDate.trim()
+ 	
+ 	if(xDate.length != 10) return false;
+ 	
+ 	var day;
+ 	var month;
+ 	var year;
+ 	
+ 	day=xDate.substr(0,2);
+ 	month=xDate.substr(3,2);
+ 	year=xDate.substr(6,4);
+ 	
+	var sep1;
+	var sep2;
+	
+	sep1=xDate.substr(2,1);
+	sep2=xDate.substr(5,1);
+ 	
+ 	if(sep1 != aSep || sep2 != aSep) return false;
+	
+	if(day<1 || day >31) return false;
+	if(month<1 || month>12) return false;
+	if(year<1000 || year>9999) return false;
+
+ 	return true;
+ }
+ 
+ function emailValide (aEmail) 
+ { 
+	var checkTLD=0; 
+	var knownDomsPat=/ ^(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum)$/; 
+	var emailPat=/^(.+)@(.+)$/; 
+	var specialChars="\\(\\)><@,;:\\\\\\\"\\.\\[\\]"; 
+	var validChars="\[^\\s" + specialChars + "\]"; 
+	var quotedUser="(\"[^\"]*\")"; 
+	var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/; 
+	var atom=validChars + '+'; 
+	var word="(" + atom + "|" + quotedUser + ")"; 
+	var userPat=new RegExp("^" + word + "(\\." + word + ")*$"); 
+	var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$"); 
+	var matchArray=aEmail.match(emailPat); 
+
+	if (matchArray==null) { 
+		return false; 
+	} 
+
+	var user=matchArray[1]; 
+	var domain=matchArray[2]; 
+
+for (i=0; i<user.length; i++) { 
+	if (user.charCodeAt(i)>127) { 
+		return false; 
+	} 
+	return true;
+} 
+
+for (i=0; i<domain.length; i++) { 
+	if (domain.charCodeAt(i)>127) { 
+		return false; 
+	} 
+} 
+
+if (user.match(userPat)==null) { 
+	return false; 
+} 
+
+var IPArray=domain.match(ipDomainPat); 
+
+if (IPArray!=null) { 
+	for (var i=1;i<=4;i++) { 
+		if (IPArray>255) { 
+			return false; 
+		} 
+	} 
+	return true; 
+} 
+
+}
+//Change le texte de la status bar sur le OnMouseOver des Tags "a" ! (Utiliser l'attribut status='xxx') Bye bye magicalmouse
+function init_status() {
+  if (!document.getElementById) return
+  var statusarr = document.getElementsByTagName('a');
+  var texte
+  var temparr = new Array();
+  var temparr2 = new Array();
+  
+  for (var i = 0; i < statusarr.length; i++) {	
+	temparr[i]=new String();
+	temparr[i]=statusarr[i].getAttribute('status');	
+	
+	temparr2[i]=new String();
+	temparr2[i]=statusarr[i].getAttribute('over');
+	
+	if (statusarr[i].getAttribute('status')) {					
+		statusarr[i].onmouseover = function() {			
+			
+			eval(this.getAttribute('over'));			
+			window.status = this.getAttribute('status');
+			return true;
+		}
+		statusarr[i].onmouseout = function() {
+			eval(this.getAttribute('out'));
+			window.status = "RÃ©seau BIBLIO du QuÃ©bec";
+			return true;
+		}
+	}
+  }
+}
+
+function init_status_td() {
+  if (!document.getElementById) return
+  var statusarr = document.getElementsByTagName('td');
+  var texte
+  var temparr = new Array();
+  var temparr2 = new Array();
+
+    for (var i = 0; i < statusarr.length; i++) {	
+	temparr[i]=new String();
+	temparr[i]=statusarr[i].getAttribute('status');	
+	
+	temparr2[i]=new String();
+	temparr2[i]=statusarr[i].getAttribute('over');
+	
+	if (statusarr[i].getAttribute('status')) {					
+		statusarr[i].onmouseover = function() {			
+			
+			eval(this.getAttribute('over'));			
+			window.status = this.getAttribute('status');
+			return true;
+		}
+		statusarr[i].onmouseout = function() {
+			eval(this.getAttribute('out'));
+			window.status = "RÃ©seau BIBLIO du QuÃ©bec";
+			return true;
+		}
+	}
+  }
+}
+
+function init_status_tr() {
+  if (!document.getElementById) return
+  var statusarr = document.getElementsByTagName('tr');
+  var texte
+  var temparr = new Array();
+  var temparr2 = new Array();
+
+    for (var i = 0; i < statusarr.length; i++) {	
+	temparr[i]=new String();
+	temparr[i]=statusarr[i].getAttribute('status');	
+	
+	temparr2[i]=new String();
+	temparr2[i]=statusarr[i].getAttribute('over');
+	
+	if (statusarr[i].getAttribute('status')) {					
+		statusarr[i].onmouseover = function() {			
+			
+			eval(this.getAttribute('over'));			
+			window.status = this.getAttribute('status');
+			return true;
+		}
+		statusarr[i].onmouseout = function() {
+			eval(this.getAttribute('out'));
+			window.status = "RÃ©seau BIBLIO du QuÃ©bec";
+			return true;
+		}
+	}
+  }
+}
+
+function init_status_div() {
+  if (!document.getElementById) return
+  var statusarr = document.getElementsByTagName('div');
+  var texte
+  var temparr = new Array();
+  var temparr2 = new Array();
+
+    for (var i = 0; i < statusarr.length; i++) {	
+	temparr[i]=new String();
+	temparr[i]=statusarr[i].getAttribute('status');	
+	
+	temparr2[i]=new String();
+	temparr2[i]=statusarr[i].getAttribute('over');
+	
+	if (statusarr[i].getAttribute('status')) {					
+		statusarr[i].onmouseover = function() {			
+			
+			eval(this.getAttribute('over'));			
+			window.status = this.getAttribute('status');
+			return true;
+		}
+		statusarr[i].onmouseout = function() {
+			eval(this.getAttribute('out'));
+			window.status = "RÃ©seau BIBLIO du QuÃ©bec";
+			return true;
+		}
+	}
+  }
+}
+
+
+function init_hsrc() {
+  if (!document.getElementById) return
+  var imgOriginSrc;
+  var MouseOverHappened;
+  var imgTemp = new Array();
+  var imgarr = document.getElementsByTagName('img');
+  for (var i = 0; i < imgarr.length; i++) {
+	if (imgarr[i].getAttribute('hsrc')) {
+		imgTemp[i] = new Image();
+		imgTemp[i].src = imgarr[i].getAttribute('hsrc');
+		imgarr[i].onmouseover = function() {
+			imgOriginSrc = this.getAttribute('src');			
+			this.setAttribute('src',this.getAttribute('hsrc'));
+			MouseOverHappened=true;
+		}
+		imgarr[i].onmouseout = function() {
+			if(MouseOverHappened)
+				this.setAttribute('src',imgOriginSrc);
+		}
+	}
+  }
+}
+
+function init_custom_tags(){
+	init_status();
+	init_status_td();
+	init_status_tr();
+	init_status_div();
+	init_hsrc();
+}
+onload=init_custom_tags;
+
+	function ChangeLanguage(lang)
+	{
+		var _url = String(window.location);
+		var _l = _url.length;
+		var _x = _url.indexOf("?");
+		var _i
+		
+		if(_x < 0) 
+			_i="page=0"
+		else
+			_i = _url.substring(_x+1,_l);	
+								
+		var languageParam = _i.indexOf("&language=");		
+		
+		if(languageParam>0) _i= _i.substring(0,languageParam);			
+
+		var topAnchor = _i.indexOf("#top");
+		if(topAnchor>0) _i= _i.substring(0,topAnchor);			
+		window.location = "index.asp?" + _i + "&language=" + lang;
+	}
+
+
+
+	// Les 2 fonctions suivantes activent/dÃ©sactivent un textbox selon sa case Ã  cocher associÃ©e.
+	// Par exemple, si on veut activer/desactiver un textbox selon une case Ã  cocher, on doit
+	// dÃ©finir un checkbox avec le nom "chkNomQuelconque". Le textbox associÃ© doit avoir le 
+	// meme nom que le checkbox mais avec le prÃ©fixe "txt" au lieu de "chk"
+	
+	function InitialiserChampsTexte()
+	{
+		var i;	
+		var oInputCheck;
+		var oInputText;
+		var textboxname;
+						
+		for (i=0;i<=document.getElementsByTagName('input').length-1;i++)
+      {
+      oInputCheck = document.getElementsByTagName('input').item(i)
+      if (oInputCheck.type == "checkbox")
+      {
+      // est-ce qu'il y a un textbox associÃ©?
+      textboxname = oInputCheck.name;
+      textboxname = "txt" + textboxname.substr(3,textboxname.length);
+      oInputText = document.getElementsByName(textboxname);
+
+      if(oInputText(0)!=null)
+      {
+      oInputCheck.onclick = RendreDispoChampTexte;
+      if(!oInputCheck.checked)
+      {
+      oInputText(0).disabled = true;
+      oInputText(0).value = "";
+      }
+
+      if(bPermettreModifBGInput)
+      {
+      oInputText(0).style.backgroundImage = StyleDisabled;
+      }
+      }
+      }
+      }
+      }
+
+      // **********************************************
+
+      function RendreDispoChampTexte()
+      {
+      textboxname = this.name;
+      textboxname = "txt" + textboxname.substr(3,textboxname.length);
+      var oInputText;
+      oInputText = document.getElementsByName(textboxname);
+
+      if (this.checked == true)
+      {
+      oInputText(0).disabled 	= false;
+      oInputText(0).focus();
+      if (bPermettreModifBGInput)
+      {
+      oInputText(0).style.backgroundImage = StyleEnabled;
+      }
+      }
+      else
+      {
+      oInputText(0).disabled 	= true;
+      oInputText(0).value	= "";
+      if (bPermettreModifBGInput)
+      {
+      oInputText(0).style.backgroundImage = StyleDisabled;
+      }
+      }
+      }
+
+      function OpenPopupCenter(aPage,aName,aWidth,aHeight)
+      {
+      var LeftPos = screen.availWidth/2-(aWidth/2);
+      var TopPos  = screen.availHeight/2-(aHeight/2);
+      window.open(aPage,aName,"status=no,location=no,scrollbars=yes,resize=no,directories=no,toolbar=no,menubar=no,copyhistory=no,width=" + aWidth + ",height=" + aHeight + ",left=" + LeftPos + ",top=" + TopPos);return false;
+      }
+      function OpenPopupCenter2(aPage,aName,aWidth,aHeight)
+      {
+      var LeftPos = screen.availWidth/2-(aWidth/2);
+      var TopPos  = screen.availHeight/2-(aHeight/2);
+      window.open(aPage,aName,"status=no,location=no,scrollbars=no,resize=no,directories=no,toolbar=no,menubar=no,copyhistory=no,width=" + aWidth + ",height=" + aHeight + ",left=" + LeftPos + ",top=" + TopPos);return false;
+      }
+
+
+    </SCRIPT>
+
+
+
+
+
+	<!-- STYLE DU SITE -->
+	  <style TYPE="text/css">
+	A:link { text-decoration:none; color:#0000BB;}
+	A:active { text-decoration:none; color:#0000BB;}
+	A:visited { text-decoration:none; color:#0000BB;}
+	A:hover { text-decoration:underline; color:#990000;}
+	
+	BODY {font-family:Verdana,Arial,helvetica; font-size:11px;}
+	
+	SELECT {font-family:Verdana,Arial,helvetica; font-size:11px;}
+	
+	H3 {font-family:Verdana,Arial,helvetica;}
+
+	div.gallerie{filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+
+	TD {font-family:Verdana,Arial,helvetica; font-size:11px;}
+	TD.petit {font-family:Verdana,Arial,Helvetica; font-size:10px;}
+	TD.petit2 {font-family:Verdana,Arial,Helvetica; font-size:10px;line-height:15px}
+	TD.Chemin {font-family:Arial,Helvetica,Verdana; font-size:10px;}
+
+	TD.tableau1 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #B5B287;padding:2px}
+	TD.tableau2 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #B5B287;padding:2px;background-color:#F5F4E8}
+	TD.tableau3 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #003366;background-color:#E3E2CC}
+	TD.tableau4 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #003366;background-color:#F1F0E6}
+	TD.tableau5 {font-family:Verdana,Arial,Helvetica; font-size:10px;border:1px solid #003366;padding:2px}
+
+	TD.normal2 {font-family:Verdana,Arial,Helvetica; font-size:11px;line-height:15px}
+	TD.normal {font-family:Verdana,Arial,Helvetica;font-size:11px;}
+
+	TD.Titre {font-family:Verdana,Arial,helvetica; font-size:13px;}
+
+	
+	INPUT.texte {font-family:Verdana,Arial,helvetica; font-size:11px; border:1px solid #333333; padding:1px; padding-left:10px; height:17; background-image:url("image/input01aoff.gif");}
+	INPUT.texteOn {font-family:Verdana,Arial,helvetica; font-size:11px; border:1px solid #333333; padding:1px; padding-left:10px; height:17; background-image:url("image/input01aon.gif");}
+
+	INPUT.texteNoBack {font-family:Verdana,Arial,helvetica; font-size:11px; border:1px solid #333333; padding:1px; padding-left:2px; height:17; background-color:#FFFFFF;}
+	INPUT.texteNoBackOn {font-family:Verdana,Arial,helvetica; font-size:11px; border:1px solid #333333; padding:1px; padding-left:2px; height:17; background-color:#EDEDC7;}
+
+	Option.textepair {font-family:Verdana,Arial,helvetica; font-size:11px;background-color:#000000}
+	Option.texteimpair {font-family:Verdana,Arial,helvetica; font-size:11px;background-color:#000000}
+	Option.texteOn {font-family:Verdana,Arial,helvetica; font-size:11px;background-color:#000000}
+	
+	.Petit {font-family:Verdana,Arial,Helvetica; font-size:10px}
+	.Normal {font-family:Verdana,Arial,Helvetica; font-size:11px}
+	.Grand {font-family:Verdana,Arial,Helvetica; font-size:12px}
+	
+	SPAN.Titre {font-family:Verdana,Arial,Helvetica; font-size:14px;font-weight:bold}
+
+	.NouvTitre {color:#990000; font-weight:normal}
+	.NouvTexte {font-family:Verdana,Arial,helvetica; font-size:9px}
+  </style>
+
+	
+	<script src="addons/swfobject.js" type="text/javascript"></script>
+</head>
+
+<body bgcolor="#F1F0E6" text="#000000" link="#0000BB" vlink="#0000BB" alink="#0000BB" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<!--<a href="javascript:ts('body',6)">+ Larger Font</a> | <a href="javascript:ts('body',-6)">+ Smaller Font</a>-->
+  <form name="fMain" method="post" action="index.aspx?page=3&amp;BID=414" id="fMain">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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Ah8CBdECPGltZyBzcmM9Ii4uLy4uL2ltYWdlL3RyYW5zLmdpZiIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6I0NCRDJEQSIgYWx0PSIiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjMiIGJvcmRlcj0iMCI+PEJSPjxpbWcgc3JjPSIuLi8uLi9pbWFnZS90cmFucy5naWYiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiM4REE0QzQiIGFsdD0iIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIzIiBib3JkZXI9IjAiPjE2OjAwPGltZyBzcmM9Ii4uLy4uL2ltYWdlL3RyYW5zLmdpZiIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6IzhEQTRDNCIgYWx0PSIiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjMiIGJvcmRlcj0iMCI+PEJSPmRkAgEPDxYCHwJlZGQCAg8WAh8AAgEWAmYPZBYGAgEPDxYCHwIFMTxpbWcgc3JjPSJpbWFnZS9jb3VsZXVyMDIvb25nbGV0X2dhdWNoZW9ub24uZ2lmIj5kZAICDxUDI2ltYWdlL2NvdWxldXIwMi9vbmdsZXRfZm9uZG9ub24uZ2lmmQFkaXZIMS5zdHlsZS5kaXNwbGF5PSdibG9jayc7ZGl2SDIuc3R5bGUuZGlzcGxheT0nbm9uZSc7ZGl2SDMuc3R5bGUuZGlzcGxheT0nbm9uZSc7ZGl2SDQuc3R5bGUuZGlzcGxheT0nbm9uZSc7c3Bhbk9uZ2xldHMuc3R5bGUuaGVpZ2h0PWRpdkgxLm9mZnNldEhlaWdodDsJUsOpZ3VsaWVyZAIDDw8WAh8CBTE8aW1nIHNyYz0iaW1hZ2UvY291bGV1cjAyL29uZ2xldF9kcm9pdGVvbm9uLmdpZiI+ZGQCAw8WAh8AAgIWBGYPZBYCAgEPD2QWAh8BBRhiYWNrZ3JvdW5kLWNvbG9yOiNDQkQyREEWCGYPZBYCZg8PFgIfAgV5PGltZyBzcmM9Ii4uLy4uL2ltYWdlL3RyYW5zLmdpZiIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6IiBhbHQ9IiIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMyIgYm9yZGVyPSIwIj48QlI+Jm5ic3A7TWVyY3JlZGkgIGRkAgEPZBYCZg8P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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5F566626" />
+</div>
+
+    <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td width="100%" background="image/couleur02/fond_entete.gif" align="center" nowrap>
+			
+			<div style="position:absolute;width:100%"><a href="index.aspx?page=1" status="Retour à l'accueil" target="_top"><img src="image/couleur02/entete03.gif" align="right" width="140" height="110" hspace="0" border="0" alt="Membre du Réseau BIBLIO du Québec"></a><a href="index.aspx?page=2&RID=3" status="Retour à l'accueil" target="_top"><img src="image/trans.gif" width="645" height="128" border="0"></a></div>
+			
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td width="100%" align="center" nowrap>
+			<a href="index.aspx?page=2&RID=3" status="Retour à l'accueil" target="_top"><img src="image/couleur02/entete01_3.gif" width="286" height="128" border="0" alt="Retour à l'accueil"></a><a href="index.aspx?page=2&RID=3" status="Retour à l'accueil" target="_top"><img src="image/couleur02/entete02.gif" width="359" height="128" border="0" alt="Retour à l'accueil"></a><img src="image/trans.gif" width="125" height="1"></td>
+	</tr>
+</table></td>
+	</tr>
+</table>
+
+
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4145700-12");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+		<tr>
+			<td width="100%" background="image/couleur02/fond_qc.gif" align="center" style="background-repeat:no-repeat;background-position:center top">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td width="770" align="left">
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td colspan="3" width="770" valign="top">
+									    
+									    	<script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" style="margin-left:9px;" width="760">
+	<tr>
+		<td width="760" align="center" status="Harrington Harbour" Over="this.style.cursor='hand'" OnClick="window.location = 'index.aspx?page=3&BID=414';">
+			<H1 style="font-size:15pt"><b><I><a href="#" status="Harrington Harbour" target="_top" OnClick="return false;" style="color:#2C5CA1">Harrington Harbour</a></I></b>
+			</td>
+	</tr>
+</table>
+
+<img src="image/trans.gif" width="300" height="7"><BR>
+
+<!---
+<table cellpadding="0" cellspacing="0" border="0" style="margin-left:9px;" width="760">
+	<tr>
+		<td>
+			<img src="image/coin_bleu01.gif" width="10" height="20" border="0"></td>
+		<td width="740" align="center" style="background-color:#2C5CA1;border-top:1px solid #003366;border-bottom:1px solid #003366;padding:2px">
+			<H1 style="font-size:9pt;color:#FFFFFF"><b>Catalogue Simb@ de la bibliothèque</b>
+			</td>
+		<td>
+			<img src="image/coin_bleu02.gif" width="10" height="20" border="0"></td>
+	</tr>
+</table>
+
+<img src="image/trans.gif" width="300" height="7"><BR>
+--->
+									    
+									</td>
+								</tr>
+								<tr>
+									<td width="203" valign="top">
+									    
+									    	<script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4" >
+			<table cellpadding="0" cellspacing="0" border="0" width="">
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur02/menu_niv1_cap.gif" width="203" height="6" border="0"></td>
+				</tr>
+				<tr status="Services réseau aux abonnés" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=100&MenuID=5';return false;">
+					<td height="1">
+						<img src="image/couleur02/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#003366" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+					<td bgcolor="#003366" height="1" rowspan="3">
+						<img src="image/trans.gif" width="1" height="19"></td>
+				</tr>
+				<tr status="Services réseau aux abonnés" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=100&MenuID=5';return false;">
+					<td height="17" background="image/couleur02/menu_niv1_left.gif" valign="top">
+						<img src="image/couleur02/menu_niv1_fleche.gif" width="18" height="17" border="0"></td>
+					<td bgcolor="#2C5CA1" height="17">
+						<B><a href="#" style="color:#FFFFFF">Services réseau aux abonnés</a></B></td>
+				</tr>
+				<tr status="Services réseau aux abonnés" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=100&MenuID=5';return false;">
+					<td height="1">
+						<img src="image/couleur02/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#002447" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+				</tr>
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur02/menu_niv1_shadow.gif" width="203" height="2" border="0"></td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Catalogue régional Simb@" Over=";this.style.cursor='hand';this.style.backgroundColor='#F3F0C6';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.open('http://ibistro-cotenord.reseaubiblio.ca/uhtbin/cgisisri.exe/x/x/0/49');return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Catalogue régional Simb@</a></B><img src="image/lien_externe.gif" align="absmiddle" border="0" hspace="0"  style="margin-left:4px" vspace="1"></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div6" OnMouseOver="div6.style.visibility='visible'" OnMouseOut="div6.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E9E8CD">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td colspan="4">	
+			<img src="image/reseau_bas.gif" width="203" height="4"></td>
+	</tr>
+</table>
+<BR>
+
+
+									    
+									    	<script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4" >
+			<table cellpadding="0" cellspacing="0" border="0" width="">
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur02/menu_niv1_cap.gif" width="203" height="6" border="0"></td>
+				</tr>
+				<tr status="Services aux abonnés" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=200&MenuID=2478';return false;">
+					<td height="1">
+						<img src="image/couleur02/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#003366" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+					<td bgcolor="#003366" height="1" rowspan="3">
+						<img src="image/trans.gif" width="1" height="19"></td>
+				</tr>
+				<tr status="Services aux abonnés" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=200&MenuID=2478';return false;">
+					<td height="17" background="image/couleur02/menu_niv1_left.gif" valign="top">
+						<img src="image/couleur02/menu_niv1_fleche.gif" width="18" height="17" border="0"></td>
+					<td bgcolor="#2C5CA1" height="17">
+						<B><a href="#" style="color:#FFFFFF">Services aux abonnés</a></B></td>
+				</tr>
+				<tr status="Services aux abonnés" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=200&MenuID=2478';return false;">
+					<td height="1">
+						<img src="image/couleur02/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#002447" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+				</tr>
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur02/menu_niv1_shadow.gif" width="203" height="2" border="0"></td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Prêt entre bibliothèques" Over="div2479.style.visibility='visible';;this.style.cursor='hand';this.style.backgroundColor='#F3F0C6';" Out="div2479.style.visibility='hidden';;this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=200&MenuID=2479';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Prêt entre bibliothèques</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div2479" OnMouseOver="div2479.style.visibility='visible'" OnMouseOut="div2479.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E9E8CD">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+								<tr status="Formulaire «en ligne»" Over="this.style.cursor='hand';this.style.backgroundColor='#F8F7D9';" Out="div2479.style.visibility='hidden';;this.style.backgroundColor='#E9E8CD'" OnClick="window.location = 'index.aspx?page=3&module=520&BID=414';return false;">
+									<td class="petit" style="padding:4px;">
+										<a href="#" >Formulaire «en ligne»</a></td>
+								</tr>
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td colspan="4">	
+			<img src="image/reseau_bas.gif" width="203" height="4"></td>
+	</tr>
+</table>
+<BR>
+
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4" >
+			<table cellpadding="0" cellspacing="0" border="0" width="">
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur02/menu_niv1_cap.gif" width="203" height="6" border="0"></td>
+				</tr>
+				<tr status="Présentation de la BIBLIO" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=200&MenuID=2481';return false;">
+					<td height="1">
+						<img src="image/couleur02/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#003366" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+					<td bgcolor="#003366" height="1" rowspan="3">
+						<img src="image/trans.gif" width="1" height="19"></td>
+				</tr>
+				<tr status="Présentation de la BIBLIO" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=200&MenuID=2481';return false;">
+					<td height="17" background="image/couleur02/menu_niv1_left.gif" valign="top">
+						<img src="image/couleur02/menu_niv1_fleche.gif" width="18" height="17" border="0"></td>
+					<td bgcolor="#2C5CA1" height="17">
+						<B><a href="#" style="color:#FFFFFF">Présentation de la BIBLIO</a></B></td>
+				</tr>
+				<tr status="Présentation de la BIBLIO" Over="this.style.cursor='hand';" OnClick="window.location = 'index.aspx?page=3&BID=414&RID=3&module=200&MenuID=2481';return false;">
+					<td height="1">
+						<img src="image/couleur02/menu_niv1_top.gif" width="18" height="1" border="0"></td>
+					<td bgcolor="#002447" height="1">
+						<img src="image/trans.gif" width="184" height="1"></td>
+				</tr>
+				<tr>
+					<td height="1" colspan="3">
+						<img src="image/couleur02/menu_niv1_shadow.gif" width="203" height="2" border="0"></td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Portrait" Over=";this.style.cursor='hand';this.style.backgroundColor='#F3F0C6';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=3&module=500&BID=414';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Portrait</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div2482" OnMouseOver="div2482.style.visibility='visible'" OnMouseOut="div2482.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E9E8CD">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+
+				<img src="image/pointille_182.gif" width="182" height="1" hspace="5"><BR>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td width="9">	
+			<img src="image/trans.gif" width="9" height="1"></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+		<td width="192" bgcolor="#D6D4B2">	
+			<div style="position:relative;z-Index:1000;">
+			<table cellpadding="0" cellspacing="0" border="0" width="192">
+
+				<tr status="Équipe" Over=";this.style.cursor='hand';this.style.backgroundColor='#F3F0C6';" Out=";this.style.backgroundColor='Transparent'" OnClick="window.location = 'index.aspx?page=3&module=510&BID=414';return false;">
+					<td style="padding-left:5px;padding-top:5px;padding-bottom:5px;" class="petit" width="10" valign="top">
+						<img src="image/fleche01.gif" width="10" height="10"></td>
+					<td style="padding-top:5px;padding-bottom:5px;padding-right:5px;" class="petit" width="162">
+						<B><a href="#" >Équipe</a></B></td>
+				</tr>
+			</table>
+
+			<div style="position:absolute;left:185;top:0;Visibility:Hidden;z-index:1000" id="div2483" OnMouseOver="div2483.style.visibility='visible'" OnMouseOut="div2483.style.visibility='hidden'">
+				<table cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td valign="top">
+							<img src="image/sm_fl2a.gif" width="4" height="15"></td>
+						<td valign="top" bgcolor="#003366">
+							<img src="image/sm_fl2b.gif" width="1" height="7" vspace="8"></td>
+						<td style="padding:0px;font-family:verdana;font-size:11px;border-top:1px solid #003366;border-right:1px solid #003366;border-bottom:1px solid #003366" bgcolor="#E9E8CD">
+							<table cellpadding="0" cellspacing="0" width="180">
+
+							</table></td>
+					</tr>
+				</table></div>
+
+			</div>
+</td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1"></td>
+	</tr>
+
+	<tr>
+		<td colspan="4">	
+			<img src="image/reseau_bas.gif" width="203" height="4"></td>
+	</tr>
+</table>
+<BR>
+
+
+									    
+                                        
+                                        
+                                    </td>
+ 	<td width="567" valign="top" class="petit" style="padding-left:10px;" colspan="2">
+
+                                        
+    
+
+                                        <!-- DEBUT PUB sur 2 colonnes -->  
+                                         
+                                          
+                                          
+                                                                               
+                                       <div id="pnlPubGlobalImportante" style="padding-bottom:10px;">
+	
+                                            
+                                            
+                                        
+</div>
+                                         
+                                        
+                                        
+                                        
+                                            
+                                        
+
+                                        <!-- FIN PUB sur 2 colonnes -->
+                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td width="395" valign="top" class="petit" >
+                                                
+									            
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+<div id="centerRepeater_ctl00_columnHolder_ctl00_pnlLivresNumeriques" class="accueilOutaouais">
+	
+
+    <div id="centerRepeater_ctl00_columnHolder_ctl00_pnlRessource_CoteNord" class="bandePromo">
+		
+        <div id="BlocPromo">
+            <a href="http://biblioaidants.ca/" target="_blank">
+                <img alt="Biblio-Aidants" src="/image/accueil/cote-nord/promos/biblio-aidants.jpg" />
+            </a>
+        </div>
+    
+	</div>
+
+    <ul class="menu">
+        <li>
+            <a href="/portail/index.aspx?page=2&module=950&RID=3&region=9">
+            <img src="/image/accueil/cote-nord/bt-acceder-a-ma-biblio.png?v=2" width="181" height="162">
+            </a>
+        </li>
+        <li>
+            <a href="http://ibistro-cotenord.reseaubiblio.ca/uhtbin/cgisirsi.exe/" target="_blank">
+            <img src="/image/accueil/cote-nord/bt-catalogue-en-ligne.png?v=2" width="181" height="162">
+            </a>
+        </li>
+        <li>
+            <a href="/portail/index.aspx?page=2&module=101&RID=3&MenuID=1434&cr=1&CPage=1">
+            <img src="/image/accueil/cote-nord/bt-livres-et-ressources.png?v=2" width="181" height="162">
+            </a>
+        </li>
+        <li>
+            <a href="http://biblioaidants.ca/" target="_blank">
+            <img src="/image/accueil/cote-nord/bt-biblio-aidants.png?v=2" width="181" height="162" alt="Biblio-Aidants">
+            </a>
+        </li>
+    </ul>
+    
+	
+
+    
+
+</div>
+
+									                
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="375">
+	<tr valign="top">
+		<td width="375" valign="top" class="Normal" style="line-height:15px">
+			</td>
+	</tr>			
+</table>
+
+<br />
+<!--
+<table cellpadding="0" cellspacing="0" border="0" width="375">
+	<tr valign="top">
+		<td width="375" valign="top" class="Normal" style="line-height:15px" align="center">
+			<a href="http://www.defitabac.ca/" target="_blank" status="Defi J'arrete j'y gagne!"><img src="/portail/image/defitabac.jpg" width="363" height="50" border="0" align="absmiddle"></a>
+		</td>
+	</tr>
+</table>
+<br>
+-->
+
+<table cellpadding="0" cellspacing="0" border="0" width="375">
+	<tr>
+		<td width="375" valign="top" class="petit">
+			<img src="image/titre_coordonnees.gif" width="180" height="20" border="0" alt="Nos coordonnées" alt="" /><br />
+			<img src="image/trans.gif" width="1" height="2" border="0" alt="" /><br />
+			
+			<div id="centerRepeater_ctl01_columnHolder_ctl00_pnlNousJoindre">
+	
+				<table cellpadding="0" cellspacing="0" border="0" align="right">
+					<tr>
+						<td class="petit" width="170px" style="padding:8px;border:1px solid #666666;background-image:url('image/fond_quad.gif');" align="center">
+						   <a id="centerRepeater_ctl01_columnHolder_ctl00_hlAdresseGoogle" target="_blank"><img id="centerRepeater_ctl01_columnHolder_ctl00_imgCarte" border="0" src="modules/Biblio/image/google.gif" alt="Comment se rendre chez nous?" style="height:17px;width:74px;border-width:0px;" /><br /><b>Comment se rendre<br />chez nous ?</b><br /></a></td>
+					</tr>
+				</table>
+			
+</div>
+	    	  
+			<span style="line-height:14px">
+			Harrington Harbour&nbsp;(Québec)<BR>
+			  G0G 1N0<BR>
+			  
+	    	  <img src="image/trans.gif" width="1" height="9" border="0"><BR>
+	    	  
+		    		Tél : <B>(418) 787-2244&nbsp;&nbsp;&nbsp;</B><BR>
+		    	
+		    	    Télec : <B>(418) 787-2241</B><BR>
+		    	
+	    		<img src="image/trans.gif" width="1" height="9" border="0"><BR>
+	    	
+			</span>			
+			
+					<b><a href="#" onclick="var ML1 = 'mai'; var ML2 = 'lto'; var ML3 = ML1 + ML2 + ':jfotis&#64;crsbpcn.qc.ca?subject=Message provenant du site Internet du R%E9seau BIBLIO du Qu%E9bec'; window.open(ML3); return false;" status="Envoyer un courriel à jfotis&#64;crsbpcn.qc.ca"><img width="18" height="14" src="/portail/image/courriel2.gif" align="absMiddle" border="0" style="margin-top:4px;"><font style="text-decoration:none;">&nbsp;</font>jfotis&#64;crsbpcn.qc.ca</a></b><BR>
+	    		
+						<BR>Emplacement : <b>Centre communautaire</b><BR>
+		    		
+		</td>
+	</tr>
+</table>
+<br />
+
+
+<div class="clear"></div>
+									                
+									    	            
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4">	
+			<img src="image/trans.gif" width="1" height="12"><BR></td>
+	</tr>
+</table>
+</asp:panel>
+									                
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+<input name="centerRepeater$ctl03$columnHolder$ctl00$HiddenNbHoraires" type="hidden" id="centerRepeater_ctl03_columnHolder_ctl00_HiddenNbHoraires" value="1000" />
+<input name="centerRepeater$ctl03$columnHolder$ctl00$pCurrentDay" type="hidden" id="centerRepeater_ctl03_columnHolder_ctl00_pCurrentDay" value="&amp;nbsp;Samedi    " />
+<input name="centerRepeater$ctl03$columnHolder$ctl00$pCurrentColor" type="hidden" id="centerRepeater_ctl03_columnHolder_ctl00_pCurrentColor" value="#8DA4C4" />
+
+<table cellpadding="0" cellspacing="0" border="0" width="375">
+	<tr>
+		<td width="375" valign="top" class="petit">
+			<img src="image/titre_horaires.gif" width="220" height="20" border="0" alt="Nos horaires"><BR>
+
+			<div id="centerRepeater_ctl03_columnHolder_ctl00_pnlDivHoraires">
+
+			<div id="spanOnglets" style="width:375px;margin-bottom:20px;">
+
+
+<!-- H1 -->
+			<div id="divH1" >
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+         		<tr height="18" valign="bottom">
+					<td valign="top" class="petit">
+					    
+		               		<table cellpadding="0" cellspacing="0" border="0" align="left">
+								<tr>
+									<td nowrap><span><img src="image/couleur02/onglet_gaucheonon.gif"></span></td>
+									<td id="tdH1" nowrap class="Petit" style="padding-left:3px;padding-right:3px" background="image/couleur02/onglet_fondonon.gif" onmouseover="this.style.cursor='hand';" onclick="divH1.style.display='block';divH2.style.display='none';divH3.style.display='none';divH4.style.display='none';spanOnglets.style.height=divH1.offsetHeight;">
+										Régulier</td>
+									<td nowrap><span><img src="image/couleur02/onglet_droiteonon.gif"></span></td>
+								</tr>
+							</table>
+					    
+					</td>
+				</tr>
+		        <tr>
+			    	<td width="100%" style="padding:6px;border-left:1px solid #003366;border-bottom:1px solid #003366;border-right:1px solid #003366" bgcolor="#D6D4B2">
+			        	<table cellpadding="0" cellspacing="0" border="0" align="Center">
+			            	<tr>
+	                			<td style="border:1px solid #003366">
+					    			
+											<table cellpadding="0" cellspacing="0" width="340" border="0" align="center">
+										         <tr id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_repeatRow" style="background-color:#CBD2DA">
+	<td id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_cell1" align="left" class="Petit" style="width:170px;"><span id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_lblJour" style="padding-left:0px;"><img src="../../image/trans.gif" style="background-color:" alt="" width="100%" height="3" border="0"><BR>&nbsp;Mercredi  </span></td><td id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_cell2" align="right" class="Petit" style="width:70px;"><span id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_lblDebut" style="padding-left:0px;"><img src="../../image/trans.gif" style="background-color:" alt="" width="100%" height="3" border="0"><BR>19:00</span></td><td id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_cell3" align="center" class="Petit" style="width:30px;"><span id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_lblA" style="padding-left:0px;"><img src="../../image/trans.gif" style="background-color:" alt="" width="100%" height="3" border="0"><BR>à</span></td><td id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_cell4" align="left" class="Petit" style="width:70px;"><span id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl00_lblFin" style="padding-left:0px;"><img src="../../image/trans.gif" style="background-color:" alt="" width="100%" height="3" border="0"><BR>20:00</span></td>
+</tr>
+											</table>
+						      			
+											<table cellpadding="0" cellspacing="0" width="340" border="0" align="center">
+										         <tr id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_repeatRow" style="background-color:#8DA4C4">
+	<td id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_cell1" align="left" class="Petit" style="width:170px;"><span id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_lblJour" style="padding-left:0px;"><img src="../../image/trans.gif" style="background-color:#CBD2DA" alt="" width="100%" height="3" border="0"><BR><img src="../../image/trans.gif" style="background-color:#8DA4C4" alt="" width="100%" height="3" border="0">&nbsp;Samedi    <img src="../../image/trans.gif" style="background-color:#8DA4C4" alt="" width="100%" height="3" border="0"><BR></span></td><td id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_cell2" align="right" class="Petit" style="width:70px;"><span id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_lblDebut" style="padding-left:0px;"><img src="../../image/trans.gif" style="background-color:#CBD2DA" alt="" width="100%" height="3" border="0"><BR><img src="../../image/trans.gif" style="background-color:#8DA4C4" alt="" width="100%" height="3" border="0">14:00<img src="../../image/trans.gif" style="background-color:#8DA4C4" alt="" width="100%" height="3" border="0"><BR></span></td><td id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_cell3" align="center" class="Petit" style="width:30px;"><span id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_lblA" style="padding-left:0px;"><img src="../../image/trans.gif" style="background-color:#CBD2DA" alt="" width="100%" height="3" border="0"><BR><img src="../../image/trans.gif" style="background-color:#8DA4C4" alt="" width="100%" height="3" border="0">à<img src="../../image/trans.gif" style="background-color:#8DA4C4" alt="" width="100%" height="3" border="0"><BR></span></td><td id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_cell4" align="left" class="Petit" style="width:70px;"><span id="centerRepeater_ctl03_columnHolder_ctl00_repeaterH1_ctl01_lblFin" style="padding-left:0px;"><img src="../../image/trans.gif" style="background-color:#CBD2DA" alt="" width="100%" height="3" border="0"><BR><img src="../../image/trans.gif" style="background-color:#8DA4C4" alt="" width="100%" height="3" border="0">16:00<img src="../../image/trans.gif" style="background-color:#8DA4C4" alt="" width="100%" height="3" border="0"><BR></span></td>
+</tr>
+											</table>
+						      			</td>
+						    </tr>
+						</table>
+	                	<table cellpadding="0" cellspacing="0" border="0" align="left">
+	                		<tr>
+	                			<td class="Petit" width="100%" style="padding-left:8px;">
+					    			<span id="centerRepeater_ctl03_columnHolder_ctl00_lblNotesH1"></span></td>
+					    	</tr>
+					    </table></td>
+		    	</tr>
+			</table>
+			</div>
+<!-- H2 -->
+			<div id="divH2" >
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+         		<tr height="18" valign="bottom">
+					<td valign="top" class="petit">
+					    </td>
+				</tr>
+		        <tr>
+			    	<td width="100%" style="padding:6px;border-left:1px solid #003366;border-bottom:1px solid #003366;border-right:1px solid #003366" bgcolor="#D6D4B2">
+			        	<table cellpadding="0" cellspacing="0" border="0" align="Center">
+			            	<tr>
+	                			<td style="border:1px solid #003366">
+					    			</td>
+						    </tr>
+						</table>
+	                	<table cellpadding="0" cellspacing="0" border="0" align="left">
+	                		<tr>
+	                			<td class="Petit" width="100%" style="padding-left:8px;">
+					    			<span id="centerRepeater_ctl03_columnHolder_ctl00_lblNotesH2"></span></td>
+					    	</tr>
+					    </table></td>
+		    	</tr>
+			</table>
+			</div>
+<!-- H3 -->
+			<div id="divH3" >
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+         		<tr height="18" valign="bottom">
+					<td valign="top" class="petit">
+					    </td>
+				</tr>
+		        <tr>
+			    	<td width="100%" style="padding:6px;border-left:1px solid #003366;border-bottom:1px solid #003366;border-right:1px solid #003366" bgcolor="#D6D4B2">
+			        	<table cellpadding="0" cellspacing="0" border="0" align="Center">
+			            	<tr>
+	                			<td style="border:1px solid #003366">
+					    			</td>
+						    </tr>
+						</table>
+	                	<table cellpadding="0" cellspacing="0" border="0" align="left">
+	                		<tr>
+	                			<td class="Petit" width="100%" style="padding-left:8px;">
+					    			<span id="centerRepeater_ctl03_columnHolder_ctl00_lblNotesH3"></span></td>
+					    	</tr>
+					    </table></td>
+		    	</tr>
+			</table>
+			</div>
+<!-- H4 -->
+			<div id="divH4" >
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+         		<tr height="18" valign="bottom">
+					<td valign="top" class="petit">
+					    </td>
+				</tr>
+		        <tr>
+			    	<td width="100%" style="padding:6px;border-left:1px solid #003366;border-bottom:1px solid #003366;border-right:1px solid #003366" bgcolor="#D6D4B2">
+			        	<table cellpadding="0" cellspacing="0" border="0" align="Center">
+			            	<tr>
+	                			<td style="border:1px solid #003366">
+					    			</td>
+						    </tr>
+						</table>
+	                	<table cellpadding="0" cellspacing="0" border="0" align="left">
+	                		<tr>
+	                			<td class="Petit" width="100%" style="padding-left:8px;">
+					    			<span id="centerRepeater_ctl03_columnHolder_ctl00_lblNotesH4"></span></td>
+					    	</tr>
+					    </table></td>
+		    	</tr>
+			</table>
+			</div>
+			</div>
+			</div>
+<!-- Aucun horaire disponible -->
+			</td>
+	</tr>
+</table>
+
+<script language="JavaScript">
+
+    
+	divH1.style.display='none';
+	divH2.style.display='none';
+	divH3.style.display='none';
+	divH4.style.display='none';
+
+		divH1.style.display='block';
+	    
+</script>
+
+									                </td>
+                                            
+                                            <td width="172" valign="top">
+                                                <!-- début publicite avant menu -->
+                                                
+                                                <!-- fin publicite avant menu -->
+                                                
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+
+									                
+									    	            <script language="JavaScript">
+
+  //********************************************************************************************************************
+  function lstResultatsKeyCode(target){
+  	var keyCode;
+  	if (window.event != null) {
+    	keyCode=window.event.keyCode;
+		if (keyCode == 13){
+			document.getElementById(target).click();
+		}
+  	}
+  }
+
+  function autoJumpKeyDown(aTB){
+	document.getElementById(aTB).lastValue = document.getElementById(aTB).value;
+	return true;
+  }
+
+  function autoJumpKeyUp(initialTB,targetTB,MaxLength){
+	var tb1;
+	var tb2;		
+	tb1=document.getElementById(initialTB);
+	tb2=document.getElementById(targetTB) 
+	if(tb1.value.length == MaxLength && tb1.value!=tb1.lastValue && tb1.lastValue!=null)
+	{
+		tb2.focus();
+		tb1.lastValue=tb1.value;
+  		tb1.value = tb1.value.toUpperCase();
+	}
+	return true;
+  }
+
+</script>
+<div id="rightRepeater_ctl01_columnHolder_ctl00_pnlCommuniques">
+	
+<table cellpadding="0" cellspacing="0" border="0">
+
+	<tr>
+		<td colspan="3">
+			<img src="image/couleur02/biblio_quoi_neuf_titre.gif" width="172" height="27" alt="Quoi de neuf" alt="" /><br />
+			
+				<img src="image/icon/legendeL.gif" width="172" height="26" alt="Quoi de neuf" alt="" /><br />
+				
+			</td>
+	</tr>
+	<tr>
+
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1" alt="" /></td>
+		<td width="170" class="petit" bgcolor="#D6D4B2">	
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+
+<!-- COMMUNIQUÉS -->
+	   			
+
+				<div id="rightRepeater_ctl01_columnHolder_ctl00_pnlArchives">
+		
+				
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td width="100%" align="left" class="petit" style="padding-left:5px" onmouseover="this.style.backgroundColor='#F3F0C6';this.style.cursor='hand';" onmouseout="this.style.backgroundColor='Transparent';" onclick="window.location='index.aspx?page=3&module=2&BID=414';">
+										<img src="image/trans.gif" width="1" height="6" alt="" /><BR>
+										<img src="image/fleche04.gif" width="3" height="7" align="absmiddle" hspace="3" alt="" /><a href="index.aspx?page=3&module=2&BID=414" status="Visualiser les archives"><b>Visualiser les archives</b></A><br />
+										<img src="image/trans.gif" width="1" height="6" alt="" /></td>
+								</tr>
+								<tr>
+								    <td align="left" >
+                                         
+                                          
+                                         <img src="image/trans.gif" width="3" height="10" alt="" />
+								    </td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				
+	</div>
+			</table></td>
+		<td width="1" bgcolor="#003366">	
+			<img src="image/trans.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<img src="image/couleur02/biblio_bas_titre.gif" width="172" height="5" alt="" /></td>
+	</tr>
+</table>
+
+</div>
+
+									                
+									    	            
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="4">	
+			<img src="image/trans.gif" width="1" height="12"><BR></td>
+	</tr>
+</table>
+</asp:panel>
+									                
+									    	            
+									                
+                                                
+                                                
+                                                <div id="logoJustePrix">
+	
+                                                    <div style="padding-top:12px; text-align:right;*text-align:center;">
+                                                        <a href="http://noslivresajusteprix.com/" target="_blank"><img alt="Nos livres à juste prix" src="/portail/image/Pub/bouton_livresToutprix.jpg" border="0" /></a>
+                                                    </div>
+                                                
+</div>
+                                                <div id="pnlPubGlobalImportante02">
+	
+                                                    
+                                                    
+                                                    
+                                                
+</div>
+                                                <div id="pnlFondsJeunesse">
+	
+                                                    <div style="padding-top:10px; text-align:right;*text-align:center; padding-bottom:10px;">
+                                                        <a href="http://reseaubiblioduquebec.qc.ca/portail/index.aspx?page=1&module=101&MenuID=37&cr=1&CPage=1"><img alt="Fonds Jeunesse CDJL" src="/portail/image/Pub/btFondsJeunesse.jpg" border="0" /></a>
+                                                    </div>
+                                                
+</div>
+	                                            <div id="pnlBonChoix" style="padding-top:10px;text-align:right;*text-align:center; ">
+	
+                                                    <div id='PubBanniereBonChoix' style='padding:none;'></div>
+                                                    <script type='text/javascript'>
+	                                                    var so = new SWFObject('image/Pub/bandeau_bon_choix.swf', 'bouton01', '164', '55', '6', '#FFFFFF');
+	                                                    so.write('PubBanniereBonChoix');
+	                                                </script>
+	                                                <noscript>
+	                                                    <object id="objBonChoix" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="164" height="55">
+	                                                        <param name="wmode" value="transparent" />
+	                                                        <param name="movie" value="image/Pub/bandeau_bon_choix.swf" />
+	                                                        <param name="bgcolor" value="#FFFFFF" />
+	                                                        <embed name="ctrFlash" src="image/Pub/bandeau_bon_choix.swf" swLiveConnect="false" width="164" height="55" type="application/x-shockwave-flash" bgcolor="#FFFFFF" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+                                                        </object>
+                                                    </noscript>
+	                                            
+</div>
+	                                            
+                                            </td>
+                                         </tr>
+                                         </table>
+                                    </td>
+
+								</tr>
+							</table></td>
+					</tr>
+				</table></td>
+		</tr>
+	</table>
+
+    
+<BR>
+<table cellpadding="0" cellspacing="0" border="0" align="center" width="770" height="75" style="position:relative; z-index:100">
+	<tr>
+		<td width="21" valign="top" style="padding-top:30px">
+			<img src="image/couleur02/bas_gauche.gif" width="21" height="45" border="0" align="left" onclick="window.open('/login.aspx?Type=2&RID=3&BID=414');" onmouseover="this.style.cursor='hand';" hspace="0"></td>
+		<td width="100%" valign="top" style="padding-top:30px">
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td bgcolor="#666666">
+						<img src="image/trans.gif" width="1" height="1"></td>
+				</tr>
+				<tr>
+					<td height="43" style="padding-top:9px" valign="top" class="petit" bgcolor="#FFFFFF">
+						<a href="/login.aspx?Type=2&RID=3&BID=414" status="Accès privée à BIBLIO.net" target="_blank">Accès privé</a><BR>
+						<div id="footer_pnlReseau">
+	
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td height="5">
+										<img src="image/trans.gif" width="1" height="1"></td>
+								</tr>
+								<tr>
+									<td>
+                                        
+										<a href="index.aspx?page=2&RID=3" status="Réseau BIBLIO de la Côte-Nord" target="_top">Réseau BIBLIO de la Côte-Nord</a></td>
+                                        
+								</tr>
+							</table>
+						
+</div></td>
+				</tr>
+				<tr>
+					<td bgcolor="#666666">
+						<img src="image/trans.gif" width="1" height="1"></td>
+				</tr>
+			</table>
+        </td>
+		        
+            <!-- PLAN DU SITE -->
+        <td valign="top" background="image/couleur02/bas_btnfond.gif">
+			
+			<span onClick="window.location = 'index.aspx?page=3&module=900&BID=414';"><a href="#" onclick="return false;" status="Plan du site" target="_top"><img src="image/bas_btn01off.gif" width="69" height="75" hsrc="image/bas_btn01on.gif" border="0" alt="Plan du site"></a></span><img src="image/trans.gif" width="10" height="30"></td>
+        
+            <!-- ACCÉDER À VOTRE BIBLIO -->
+		<td valign="top" background="image/couleur02/bas_btnfond.gif">
+			</td>
+		
+            <!-- NOUS JOINDRE -->
+        <td valign="top" background="image/couleur02/bas_btnfond.gif">
+			</td>
+		<td valign="top" background="image/couleur02/bas_btnfond.gif">
+			<img src="image/bas_btn_fin.gif" width="3" height="75" border="0" alt="Réseau BIBLIO du Québec"></td>
+	</tr>
+</table>
+<div class="espaceMinimumFooter">&nbsp;</div>
+<div class="basPageMaster">
+    <div class="contenuFooter">
+            <div class="titrePartenaires">Partenaires</div>
+            <div class="logos">
+            <div class="imgLogos"><a href="http://www.banq.qc.ca/accueil/" target="_blank"><img title="Bibliothèque et Archives nationales du Québec 
+            (BAnQ)" alt="Bibliothèque et Archives nationales du Québec (BAnQ)" src="/portail/image/piedPage/logos/bibliosArchives02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/bibliosArchives02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/bibliosArchives02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.abpq.ca/" target="_blank">
+            <img title="Association des bibliothèques publiques du Québec" alt="Association des bibliothèques publiques du Québec" 
+            src="/portail/image/piedPage/logos/associationBibliotheques.png" onmouseover="this.src='/portail/image/piedPage/logos/associationBibliotheques_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/associationBibliotheques.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.fqm.ca/" target="_blank"><img title="Fédération québécoise des municipalités" 
+            alt="Fédération québécoise des municipalités" src="/portail/image/piedPage/logos/fqm.png"
+             onmouseover="this.src='/portail/image/piedPage/logos/fqm_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/fqm.png'" /></a></div>
+            <div class="imgLogos2"><a href="http://www.admq.qc.ca/" target="_blank"><img title="Association des directeurs municipaux du Québec" 
+            alt="Association des directeurs municipaux du Québec" src="/portail/image/piedPage/logos/ADMQ02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/ADMQ02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/ADMQ02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.ruralite.qc.ca/" target="_blank"><img title="Solidarité rurale du Québec (SRQ)" 
+            alt="Solidarité rurale du Québec (SRQ)" src="/portail/image/piedPage/logos/solidarite03.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/solidarite03_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/solidarite03.png'" /></a></div>
+            <div class="clear"></div>
+            <div class="imgLogos"><a href="http://www.umq.qc.ca/" target="_blank"><img title="Union des municipalités du Québec" 
+            alt="Union des municipalités du Québec" src="/portail/image/piedPage/logos/UMQ02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/UMQ02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/UMQ02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.arts-ville.org/" target="_blank"><img title="Les Arts et la Ville" 
+            alt="Les Arts et la Ville" src="/portail/image/piedPage/logos/artsville02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/artsville02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/artsville02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://www.asted.org/" target="_blank"><img 
+            title="Association pour l’avancement des sciences et des techniques de la documentation (ASTED)" 
+            alt="Association pour l’avancement des sciences et des techniques de la documentation (ASTED)" 
+            src="/portail/image/piedPage/logos/asted02.png" onmouseover="this.src='/portail/image/piedPage/logos/asted02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/asted02.png'" /></a></div>
+            <div class="imgLogos"><a href="https://cbpq.qc.ca/" target="_blank"><img 
+            title="Corporation des bibliothécaires professionnels du Québec (CBPQ)" 
+            alt="Corporation des bibliothécaires professionnels du Québec (CBPQ)" src="/portail/image/piedPage/logos/corporation02.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/corporation02_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/corporation02.png'" /></a></div>
+            <div class="imgLogos"><a href="http://anel.qc.ca/" target="_blank"><img 
+            title="Association nationale des éditeurs de livres (ANEL)" 
+            alt="Association nationale des éditeurs de livres (ANEL)" src="/portail/image/piedPage/logos/anel.png" 
+            onmouseover="this.src='/portail/image/piedPage/logos/anel_over.png'" 
+            onmouseout="this.src='/portail/image/piedPage/logos/anel.png'" /></a></div>
+            <div class="clear"></div> 
+            </div>  
+            <div class="logoRBQ"><a href="/portail/index.aspx" title="Réseau BIBLIO du Québec"></a></div> 
+            <div class="menuPiedPage">
+                <ul class="leftMargin">
+                    <li><a href="/portail/index.aspx?page=2&RID=1">Abitibi-Témiscamingue</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=2">Bas-Saint-Laurent</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=9">Capitale-Nationale</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=6">Centre-du-Québec</a></li>
+                </ul>
+                <ul class="leftMargin">
+                    <li><a href="/portail/index.aspx?page=2&RID=9">Chaudière-Appalaches</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=3">Côte-Nord</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=11">Estrie</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=4">Gaspésie/Îles-de-la-Madeleine</a></li>
+                </ul>
+                <ul class="leftMargin">
+                    <li><a href="/portail/index.aspx?page=2&RID=6">Lanaudière</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=5">Laurentides</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=6">Mauricie</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=7">Montérégie</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a href="/portail/index.aspx?page=2&RID=1">Nord-du-Québec</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=8">Outaouais</a></li>
+                    <li><a href="/portail/index.aspx?page=2&RID=10">Saguenay/Lac-Saint-Jean</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>        
+            <div class="clear"></div>       
+        <div class="copyrightLANEC">
+            <a href="http://www.lanec.com" target="_blank" title="Agence Web :: LANEC" class="copyrightLanec">Agence Web</a>
+            :: <a href="http://www.lanec.com" target="_blank" title="Agence de site Web :: LANEC" class="copyrightLanec">LANEC</a> -
+            <a href="http://www.infocyble.ca/" target="_blank" title="Infocyble" class="copyrightLanec">Infocyble</a> -
+            <a href="/portail/index.aspx" title="Réseau BIBLIO du Québec" class="copyrightLanec">Réseau BIBLIO du Québec</a> ©
+        </div>
+    </div>
+</div>   
+    
+
+  
+<SCRIPT language="javascript">
+document.getElementById('tdH1').click();
+</SCRIPT>
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4145700-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3367566-7");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>

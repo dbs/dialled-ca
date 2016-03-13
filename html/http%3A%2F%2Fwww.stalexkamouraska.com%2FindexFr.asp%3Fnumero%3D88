@@ -1,0 +1,530 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54466129-19', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+<html>
+<head>
+
+	<title>Municipalit&eacute; de Saint-Alexandre de Kamouraska</title>
+ 	<META NAME="description" lang="fr" CONTENT="Municipalit&eacute; de Saint-Alexandre de Kamouraska">
+ 	<META NAME="keywords" lang="fr" CONTENT="municipalite, Saint-Alexandre de Kamouraska, quebec, canada">
+ 	<META NAME="revisit-after" CONTENT="14 days">
+ 	<META NAME="robots" CONTENT="index,follow">
+
+
+
+		<style type="text/css">
+		#csstopmenu, #csstopmenu ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		}
+		#csstopmenu li{
+		float: left;
+		position: relative;
+		}
+		#csstopmenu a{
+		text-decoration: none;
+		}
+		.mainitems{
+		border: 0px solid  #c8590f;
+		border-left-width: 0px;
+		font:11px verdana;
+		padding:5px 0px;
+		background-color: #c8590f;
+		width: 244;
+		}
+		.headerlinks a{
+		margin: auto 8px;
+		color: #ffffff;
+		}
+		.submenus{
+		display: none;
+		width: 243;
+		position: absolute;
+		top: 2.1em;
+		left: 0;
+		background-color: #F0C74C;
+		border: 1px solid #F0C74C;
+		}
+		.submenus li{
+		width: 100%;
+		padding:0px 0px;
+		font:11px verdana;
+		}
+		.submenus li a{
+		display: block;
+		width: 100%;
+		padding:5px 0px;
+		color: #232323;
+		text-indent: 9px;
+		}
+		html>body .submenus li a{ /* non IE browsers */
+		width: auto;
+		}
+		.submenus li a:hover{
+		background-color: #c8590f;
+		color: #ffffff;
+		}
+		#csstopmenu li>ul {/* non IE browsers */
+		top: auto;
+		left: auto;
+		}
+		#csstopmenu li:hover ul, li.over ul {
+		display: block;
+		filter:alpha(opacity=95);
+		-moz-opacity:95%;
+		}
+		html>body #clearmenu{ /* non IE browsers */
+		height: 3px;
+		}
+		</style>
+		<script type="text/javascript">
+		startMenu = function() {
+		if (document.all&&document.getElementById) {
+		cssmenu = document.getElementById("csstopmenu");
+		for (i=0; i<cssmenu.childNodes.length; i++) {
+		node = cssmenu.childNodes[i];
+		if (node.nodeName=="LI") {
+		node.onmouseover=function() {
+		this.className+=" over";
+		}
+		node.onmouseout=function(){
+		this.className=this.className.replace(" over", "")
+		}
+		}
+		}
+		}
+		}
+		if (window.attachEvent)
+		window.attachEvent("onload", startMenu)
+		else
+		window.onload=startMenu;
+	</script>
+<script type="text/javascript" src="administration/ew.js"></script>
+
+<script type="text/javascript">
+
+function changement1()
+{
+
+	document.recherche.numeroMat.value = ""
+}
+
+function changement2()
+{
+	document.recherche.numeroMat.value = ""
+}
+function changement3()
+{
+	document.recherche.rue.value = ""
+	document.recherche.numeroCivique.value = ""
+}
+</script>
+<script language="JavaScript">
+<!-- start Javascript
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    return false
+		 }
+
+		 if (str.indexOf(" ")!=-1){
+		    return false
+		 }
+
+ 		 return true
+	}
+
+
+function  validation1() {
+
+	if (document.formulaire.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.formulaire.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	var emailID=document.formulaire.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+return true;
+}
+
+function  validation2() {
+
+	if (document.courriel.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	if (document.courriel.commentaire.value =="")
+	{
+		alert("Vous devez inscrire votre commentaire.")
+		return false;
+	}
+
+	var emailID=document.courriel.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+
+
+return true;
+}
+function  validation3() {
+
+	if (document.courriel.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.adresse.value =="")
+	{
+		alert("Vous devez inscrire votre adresse.")
+		return false;
+	}
+
+	if (document.courriel.telephone.value =="")
+	{
+		alert("Vous devez inscrire votre telephone.")
+		return false;
+	}
+
+
+
+return true;
+}
+
+function  validation4() {
+
+
+
+
+
+
+	if (document.courriel.AlocalisationFrancais.value =="")
+	{
+		alert("Vous devez inscrire la location.")
+		return false;
+	}
+
+if (document.courriel.AdateDemandeFrancais && !EW_hasValue(document.courriel.AdateDemandeFrancais, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.AdateDemandeFrancais, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+
+	if (document.courriel.AnomFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.AadresseFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre adresse.")
+		return false;
+	}
+
+	if (document.courriel.AcodePostalFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre code postal.")
+		return false;
+	}
+	if (document.courriel.AtelResFrancais.value =="")
+	{
+		alert("Vous devez inscrire votre numero de téléphone.")
+		return false;
+	}
+
+	if (document.courriel.Anom2Francais.value =="")
+	{
+		alert("Vous devez inscrire le nom de votre entrepreneur. ")
+		return false;
+	}
+
+	if (document.courriel.Aadresse2Francais.value =="")
+	{
+		alert("Vous devez inscrire l'adresse de votre entrepreneur.")
+		return false;
+	}
+
+	if (document.courriel.AcodePosta2lFrancais.value =="")
+	{
+		alert("Vous devez inscrire le code postal de votre entrepreneur.")
+		return false;
+	}
+	if (document.courriel.AtelRes2Francais.value =="")
+	{
+		alert("Vous devez inscrire le numero de téléphone de votre entrepreneur.")
+		return false;
+	}
+
+
+
+
+
+if (document.courriel.ADatePrevueDebut && !EW_hasValue(document.courriel.ADatePrevueDebut, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.ADatePrevueDebut, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+if (document.courriel.ADatePrevueFin && !EW_hasValue(document.courriel.ADatePrevueFin, "TEXT" )) {
+	if (!EW_onError(document.courriel, document.courriel.ADatePrevueFin, "TEXT", "S.V.P. complétez le champs requis - Date "))
+		return false;
+}
+
+	if (document.courriel.ACout.value =="")
+	{
+		alert("Vous devez inscrire le coût approximatif des travaux.")
+		return false;
+	}
+
+
+return true;
+}
+
+// end JavaScript -->
+</script>
+
+
+	<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<style type="text/css">a#vlb{display:none}</style>
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+
+<script type="text/javascript" src="administration/ew.js"></script>
+
+<script type="text/javascript" src="administration/popcalendar.js"></script>
+<!-- New popup calendar -->
+<!--link rel="stylesheet" type="text/css" media="all" href="calendar/calendar-win2k-1.css" title="win2k-1" /-->
+<!--script type="text/javascript" src="calendar/calendar.js"></script-->
+<!--script type="text/javascript" src="calendar/lang/calendar-en.js"></script-->
+<!--script type="text/javascript" src="calendar/calendar-setup.js"></script-->
+
+
+
+</head>
+	<body  background='img/f2.gif' text='232323' link='232323' alink='232323' vlink='232323' topmargin='0'  ><table cellspacing=0 cellpadding=0 align='center' > <tr><td valign=middle align='center' width='979' colspan=10 height=46 ><marquee direction='left'  scrollamount='3' scrolldelay='0' onmouseover='javascript:this.scrollAmount=0' onmouseout='javascript:this.scrollAmount=3' style="font-weight: normal; color:777777 ; font-family: verdana;font-size: 13; "><div valign=middle  style="font-weight: normal; color:777777 ; font-family: verdana;font-size: 13; "><p><p>La prochaine s&eacute;ance du conseil municipal sera le mardi 1er mars 2016, &agrave; 20h00, &agrave; la salle les B&acirc;tisseurs. Bienvenue &agrave; tous!</p></p></div></marquee></td></tr><tr><td colspan='2' valign=middle>
+
+
+		<!-- Start WOWSlider.com BODY section -->
+		<div id="wowslider-container1">
+		<div class="ws_images">
+	<span><img src="data1/images/1.jpg" alt="1" title="1" id="wows0"/></span>
+	<span><img src="data1/images/2.jpg" alt="2" title="2" id="wows1"/></span>
+	</div>
+	<a style="display:none" href="http://wowslider.com">Wordpress Lightbox Gallery by WOWSlider.com v2.0</a>
+		</div>
+		<script type="text/javascript" src="engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
+
+	</td></tr><tr><td colspan='2' bgcolor="c8590f">
+<ul id="csstopmenu">
+
+  <li class="mainitems">
+    <div class="headerlinks"  align="center"><a href="#">LA MUNICIPALIT&Eacute;</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=6"><span>Bienvenue chez nous !</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=9"><span>Organisation municipale</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=35"><span>Complexe municipal</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=29"><span>Heures d&rsquo;ouverture</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=7"><span>Proc&egrave;s verbaux</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=30"><span>R&egrave;glements municipaux</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=34"><span>Politique familiale et des a&icirc;n&eacute;s</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=37"><span>Plan de d&eacute;veloppement</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=28"><span>Finance et taxation</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=36"><span>Urbanisme</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=4"><span>S&eacute;curit&eacute; publique</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=23"><span>Hygi&egrave;ne du milieu</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=33"><span>Portrait &eacute;conomique</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=26"><span>Emplois</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=43"><span>Contrats municipaux</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+  <li class="mainitems">
+    <div class="headerlinks"  align="center"><a href="#">R&Eacute;PERTOIRE</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=68"><span>Bottin des ressources</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=18"><span>Commerces et services</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=16"><span>Organismes locaux</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+  <li class="mainitems">
+    <div class="headerlinks"  align="center"><a href="#">LOISIRS, CULTURE, D&Eacute;VELOPPEMENT</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=70"><span>Aide Alimentaire</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=65"><span>A.D.E.L.</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=88"><span>Biblioth&egrave;que</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=8"><span>Camp de jour</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=64"><span>Programmation</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=38"><span>Culture</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=96"><span>Infrastructures de loisir</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=66"><span>Loisirs a&icirc;n&eacute;s - Table d&rsquo;harmonisation</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=71"><span>Jardin Communautaire</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=67"><span>Parc R&eacute;gional du Haut-Pays du Kamouraska</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+  <li class="mainitems">
+    <div class="headerlinks"  align="center"><a href="#">TOURISME ET PATRIMOINE</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=40"><span>Armoirie</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=15"><span>Historique</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=91"><span>Attraits touristiques</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=89"><span>H&eacute;bergement</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=32"><span>G&eacute;ographie</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=90"><span>Restauration</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=63"><span>Photographies</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=46"><span>Cartes postales d&rsquo;&eacute;poque</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+</ul>
+</td></tr><tr><td colspan='1' valign='top' bgcolor='ffffff'><table  width='180'  border='0' align='center' cellspacing='0' cellpadding='0' ><tr><td valign='top'><img src='administration/Menu_Photo_bv.asp?noId=88' border='0' width='180'></td></tr><tr><td valign='top' ><table  width='180' border='0' align='center' cellspacing='0' cellpadding='0' ><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=93';">&nbsp;ALEX LE JASEUR !&nbsp;</td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=85';">&nbsp;AVIS ET INFORMATIONS&nbsp;</td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=41';">&nbsp;COMMENTAIRES&nbsp;</td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=78';">&nbsp;CALENDRIERS&nbsp;</td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=31';">&nbsp;COORDONN&Eacute;ES&nbsp;</td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=17';">&nbsp;CARTE D&rsquo;ACC&Egrave;S&nbsp;</td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=3';">&nbsp;LIENS UTILES&nbsp;</td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=86';">&nbsp;LISTE DE DIFFUSION&nbsp;</td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#c8590f'; this.style.color='#ffffff'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=180 onclick="window.location.href='indexFr.asp?numero=22';">&nbsp;PLAN DU SITE&nbsp;</td></tr></table></td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr><tr><td height='12' bgcolor='ffffff'></td></tr><tr><td align='center' bgcolor='ffffff'><marquee direction='up' width=178 height='266' scrollamount='2' scrolldelay='0' onmouseover='javascript:this.scrollAmount=0' onmouseout='javascript:this.scrollAmount=2' style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 13; "><div align='center' style="font-weight: bold; color:232323 ; font-family: verdana;font-size: 18; "><p>Prochaine r&eacute;union du conseil</p></div><div align='center' style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 13; "><p><p>Mardi 1er mars&nbsp;2016, &agrave; 20h00, &agrave; la salle les B&acirc;tisseurs. Bienvenue &agrave; tous!</p></p></div><div align='center'><p>&nbsp;</p></div></marquee></td></tr><tr><td  height='1' bgcolor='ffffff'></td></tr></table></td><td valign='top'  width='799' height='500' ><table  width='799' height='100%' cellspacing='0' cellpadding='0' bgcolor='ffffff'	 align='center'><tr><td valign='top'  height='300'><table width='100%' cellspacing='0' cellpadding='0' align='left'><tr><td width='10' valign='top'></td><td valign='top' height='100%'><table width='100%' cellspacing='0' cellpadding='0' ><tr><td align='right'><a href='javascript:window.history.go(-1)'><img src='administration/images/prec.gif' alt='Page pr&eacute;c&eacute;dente' border='0'></a></td></tr><tr><td valign='middle' height='60' style="color:232323 ; font-family: verdana; font-size:16;"><b>Biblioth&egrave;que </b></td></tr><tr><td valign='top' height='20' style="font-weight: normal; color:232323 ; font-family: verdana; font-size:14; "><p align="justify"><span style="font-family: verdana,arial,helvetica,sans-serif;">La biblioth&egrave;que de Saint-Alexandre se situe dans l&rsquo;ancienne salle d&rsquo;&eacute;ducation physique de l&rsquo;&Eacute;cole Hudon-Ferland, entr&eacute;e ouest.&nbsp;Elle a &eacute;t&eacute; compl&egrave;tement r&eacute;am&eacute;nag&eacute;e au cours de 2008.&nbsp;Les gens ont maintenant acc&egrave;s &agrave; un service internet pour des travaux et recherches.&nbsp;Elle est affili&eacute;e au CRSBP.</span></p>
+<p align="center"><strong><span style="font-family: verdana,arial,helvetica,sans-serif;"><img src="http://www.stalexkamouraska.com/img/biblio.jpg" alt="" align="baseline" border="0" hspace="0" /></span></strong></p>
+<p align="center"><span style="font-family: Verdana;"><span style="font-size: small;"><em>2009 : <span style="font-family: Times New Roman;">Mme Nicole Desch&ecirc;nes, portant la photo de son mari, M. Bertrand Desch&ecirc;nes, en compagnie du maire de Saint-Alexandre, M. Jean-Simon B&eacute;langer et du ministre, M. Claude B&eacute;chard</span></em></span></span></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><strong><span style="font-family: verdana,arial,helvetica,sans-serif;">Heures d&rsquo;ouverture de la biblioth&egrave;que municipale :</span></strong></p>
+<p>&nbsp;</p>
+<ul>
+<li>
+<div class="MsoNormal" style="margin: 0cm 0cm 0pt;" align="left"><span style="font-size: 14pt;"><span style="font-family: verdana,arial,helvetica,sans-serif; color: #000066;">Les lundis de 19h &agrave; 20h30</span></span></div>
+</li>
+<li>
+<div class="MsoNormal" style="margin: 0cm 0cm 0pt;" align="left"><span style="font-size: 14pt;"><span style="font-size: 14pt;"><span style="font-family: verdana,arial,helvetica,sans-serif; color: #000066;">Les mercredis de 14h &agrave; 15h30</span></span></span></div>
+</li>
+<li>
+<div class="MsoNormal" style="margin: 0cm 0cm 0pt;" align="left"><span style="font-size: 14pt;"><span style="font-size: 14pt;"><span style="font-size: 14pt;"><span style="color: #000066;"><span style="font-family: verdana,arial,helvetica,sans-serif;">Les jeudis de 19h &agrave; 20h</span></span></span></span></span></div>
+</li>
+<li>
+<div class="MsoNormal" style="margin: 0cm 0cm 0pt;" align="left"><span style="font-size: 14pt;"><span style="font-family: verdana,arial,helvetica,sans-serif; color: #000066;">Les samedis de 9h30 &agrave; 11h30</span></span></div>
+</li>
+</ul>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;" align="left"><span style="font-size: 14pt;"><span style="color: #000066;"><span style="font-family: verdana,arial,helvetica,sans-serif;">Pour conna&icirc;tre les derni&egrave;res nouvelles&nbsp;</span><span style="font-family: verdana,arial,helvetica,sans-serif;">du comit&eacute;, vous pouvez les retrouver dans chaque &eacute;dition du journal municipal : <span style="text-decoration: underline; background-color: #00ccff;"><em><strong><a href="http://www.stalexkamouraska.com/indexFr.asp?numero=93" target="_blank"><span style="background-color: #00ccff;">Alex Le Jaseur!</span></a></strong></em></span></span></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;" align="left">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;" align="left">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;" align="left">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana,arial,helvetica,sans-serif;">480, avenue de l&rsquo;&Eacute;cole, <br />Saint-Alexandre-de-Kamouraska (Qu&eacute;bec)<br />G0L 2G0</span></p>
+<h2><span style="font-family: verdana,arial,helvetica,sans-serif;"><span style="font-size: medium;">T&eacute;l : (418) 495-3123<br /><span lang="FR-CA">biblio.alexi<a href="mailto:biblio.alexi@crsbp.net">@crsbp.net</a></span></span></span></h2>
+<h2>&nbsp;</h2></td></tr><tr><td align='left'>&nbsp;</td></tr></table></td><td width='10' valign='top'></td>
+<script>
+
+function lightup(imageobject, opacity){
+if (navigator.appName.indexOf("Netscape")!=-1&&parseInt(navigator.appVersion)>=5)
+imageobject.style.MozOpacity=opacity/100
+else if (navigator.appName.indexOf("Microsoft")!=-1&&parseInt(navigator.appVersion)>=4)
+imageobject.filters.alpha.opacity=opacity
+}
+
+</script>
+</table></td></tr></table></td></tr></table></td></table></td></tr></table></td></tr></table></body></html>

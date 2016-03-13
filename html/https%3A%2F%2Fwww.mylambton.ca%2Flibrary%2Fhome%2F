@@ -1,0 +1,917 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head id="ctl00_ctl00_Head1"><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><meta http-equiv="X-UA-Compatible" content="IE=9" /><title>
+	
+ 
+
+Library -  Home | MyLambton Portal
+</title><meta name="description" content="Student, faculty and staff portal site for Lambton College in Sarnia, Ontario." /><link rel="stylesheet" type="text/css" href="/WorkArea/FrameworkUI/css/ektron.stylesheet.ashx?id=-1759591071+-1426835244+-1510701721" /><script type="text/javascript" src="/WorkArea/FrameworkUI/js/ektron.javascript.ashx?id=-569449246+-1939951303+-1080527330+-1687560804+-1388997516+2009761168+27274999+1979897163+-422906301+-1818005853+-1008700845+-1253165105+-1475916077"></script>
+    
+
+
+    <!-- JavaScripts -->
+    <!-- script placeholder, for template specific JavaScripts -->
+    
+    
+
+
+    
+    
+    <script type="text/javascript" src="/scripts/thickbox/thickbox.js"></script>
+    
+    
+    <script type="text/javascript" src="/scripts/hoverIntent.js"></script>
+    
+    <script type="text/javascript" src="/scripts/TextBoxes/TextBoxes.js"></script>
+    <!-- hover delay on menus -->
+    <!-- see http://www.thatsquality.com/articles/creating-delayed-drop-down-menus-in-jquery-without-losing-accessibility -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#menu li.drop").hoverIntent({
+                interval: 50, // ms delay before onMouseOver
+                over: drops_show,
+                timeout: 250, // ms delay before onMouseOut
+                out: drops_hide
+            });
+            $("#menu li.drop").addClass('with-js'); //make menu open delay work
+        });
+
+        function drops_show() { $(this).addClass('show'); $(this).removeClass('with-js'); }
+        function drops_hide() { $(this).removeClass('show'); $(this).addClass('with-js'); }
+    </script>
+    <!-- CSS styles -->
+    <link href="/styles/main.css?v=1" rel="stylesheet" type="text/css" /><link href="/scripts/thickbox/thickbox.css" rel="stylesheet" type="text/css" media="screen" /><style type="text/css">.basecolour{color: #007f64;}h2 { color: #007f64 ! important; }.breadcrumbpng { background-color: #007f64; }th { background-color: #007f64; }.customtable th { background-color: #007f64; }#calendar div#head { background-color: #007f64 !important; }.btn { background: #007f64;}.btn-outline { color: #007f64; border: 2px solid #007f64; background: white;}.btn-outline:hover, .btn-outline:focus, .btn-outline.disabled, .btn-outline[disabled] { background: #007f64; color: white;}</style>
+    
+    <!-- style placeholder, for template specific CSS styles -->
+    
+    
+    
+     <link rel="Stylesheet" type="text/css" href="/styles/forms.css" />
+     <link rel="Stylesheet" type="text/css" href="/styles/EditorStyles.css" />
+
+</head>
+<body>
+    <form method="post" action="/library/home/" id="aspnetForm" class="footer-bg-g">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="EktronClientManager" id="EktronClientManager" value="-1759591071,-569449246,-1939951303,-1080527330,-1687560804,-1388997516,2009761168,27274999,1979897163,-422906301,-1818005853,-1008700845,-1426835244,-1253165105,-1510701721,-1475916077" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUILTg1Mzc2MjIPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCZg9kFgJmD2QWBAIBD2QWBAICD2QWAgIBDxYCHgRUZXh0BSJMaWJyYXJ5IC0gIEhvbWUgfCBNeUxhbWJ0b24gUG9ydGFsZAINDxYCHwEF+QM8c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5iYXNlY29sb3Vye2NvbG9yOiAjMDA3ZjY0O31oMiB7IGNvbG9yOiAjMDA3ZjY0ICEgaW1wb3J0YW50OyB9LmJyZWFkY3J1bWJwbmcgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA3ZjY0OyB9dGggeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA3ZjY0OyB9LmN1c3RvbXRhYmxlIHRoIHsgYmFja2dyb3VuZC1jb2xvcjogIzAwN2Y2NDsgfSNjYWxlbmRhciBkaXYjaGVhZCB7IGJhY2tncm91bmQtY29sb3I6ICMwMDdmNjQgIWltcG9ydGFudDsgfS5idG4geyBiYWNrZ3JvdW5kOiAjMDA3ZjY0O30uYnRuLW91dGxpbmUgeyBjb2xvcjogIzAwN2Y2NDsgYm9yZGVyOiAycHggc29saWQgIzAwN2Y2NDsgYmFja2dyb3VuZDogd2hpdGU7fS5idG4tb3V0bGluZTpob3ZlciwgLmJ0bi1vdXRsaW5lOmZvY3VzLCAuYnRuLW91dGxpbmUuZGlzYWJsZWQsIC5idG4tb3V0bGluZVtkaXNhYmxlZF0geyBiYWNrZ3JvdW5kOiAjMDA3ZjY0OyBjb2xvcjogd2hpdGU7fTwvc3R5bGU+ZAIDEGRkFggCAQ9kFgYCAQ8PFgIeB1Zpc2libGVoZGQCAw8PFgIeC05hdmlnYXRlVXJsBUcvTG9naW5fU2hhZG93Ym94LmFzcHg/S2VlcFRoaXM9dHJ1ZSZUQl9pZnJhbWU9dHJ1ZSZoZWlnaHQ9MzAwJndpZHRoPTMyMGRkAgUPZBYEAgEPZBYCAgEPFgIfAmhkAgMPDxYCHwJnZBYCAgEPFgIfAmhkAgMPZBYCAgEPZBYKAgEPDxYCHwJoZBYCAgEPFgIfAWVkAgMPZBYCAgcPDxYCHwEFBkxvZyBJbmRkAgUPZBYCAgEPFgIfAQUHTGlicmFyeWQCCw8PFgIfAmdkFgICAQ9kFgICAw8PFgIfAmdkFgICAw8WAh8BBQcgLyBIb21lZAIND2QWAgIDD2QWAgIHD2QWAmYPZBYCZg9kFgICAw9kFgJmD2QWAgIBDxYCHgVjbGFzcwUQZHJvcHpvbmUgUEJDbGVhchYCAgMPFgIeC18hSXRlbUNvdW50AgEWAmYPZBYCAgEPFgQfBAUJUEJWaWV3aW5nHgVzdHlsZQULd2lkdGg6MTAwJTsWAgIBD2QWAgIDDxYCHwUCAhYCZg9kFgICAQ9kFgJmD2QWAmYPZBYCAgEPZBYCAgMPZBYCZg9kFgICAw9kFgICAQ9kFgJmD2QWAmYPZBYCZg9kFgQCAQ9kFgICAg8WAh8BBZ8BPGltZyBzcmM9Ii91cGxvYWRlZEltYWdlcy9teUxhbWJ0b24vU2VydmljZXMvTGlicmFyeS9saWJyYXJ5X2hvbWUuanBnIiBib3JkZXI9IjAiIHdpZHRoPSI3NzciIGhlaWdodD0iMTE1IiB0aXRsZT0iSG9tZXBhZ2UgQmFubmVyIiBhbHQ9IkhvbWVwYWdlIEJhbm5lciI+PC9pbWc+ZAIDDxYCHwJoFgJmDxYCHwJoZAIJDxYCHwEFJiAmY29weTsgQ29weXJpZ2h0IDIwMTYgTGFtYnRvbiBDb2xsZWdlZAINDw8WBB4IQ3NzQ2xhc3MFIWJ0bi10ZWFsIGYtYWNjZXNzaWJpbGl0eS1uby1ldmVudB4EXyFTQgICZGQYBQUzY3RsMDAkY3RsMDAkY3BoQ29udGVudCRjcGhDb250ZW50JE1pZGRsZSR1eFVYU3dpdGNoDw9kZmQFdWN0bDAwJGN0bDAwJGNwaENvbnRlbnQkY3BoQ29udGVudCRNaWRkbGUkY29sdW1uRGlzcGxheSRjdGwwMCRjb250cm9sY29sdW1uJGN0bDAwJFdpZGdldEhvc3QkV2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkBWZjdGwwMCRjdGwwMCRjcGhDb250ZW50JGNwaENvbnRlbnQkTWlkZGxlJGNvbHVtbkRpc3BsYXkkY3RsMDAkY29udHJvbGNvbHVtbiRjdGwwMSRXaWRnZXRIb3N0JHV4VVhTd2l0Y2gPD2RmZAV1Y3RsMDAkY3RsMDAkY3BoQ29udGVudCRjcGhDb250ZW50JE1pZGRsZSRjb2x1bW5EaXNwbGF5JGN0bDAwJGNvbnRyb2xjb2x1bW4kY3RsMDEkV2lkZ2V0SG9zdCRXaWRnZXRIb3N0X3dpZGdldCRWaWV3U2V0Dw9kZmQFZmN0bDAwJGN0bDAwJGNwaENvbnRlbnQkY3BoQ29udGVudCRNaWRkbGUkY29sdW1uRGlzcGxheSRjdGwwMCRjb250cm9sY29sdW1uJGN0bDAwJFdpZGdldEhvc3QkdXhVWFN3aXRjaA8PZGZkp5ZV6u43XeEt0hT7OAFhJwH3lG08QfAkfhB+DU95juQ=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=dll3xRVkGMQpTxOS1Xuo5Mk1gh3rRF8FIUXA3WluY710vVE0bb9eABmltROEWV3BAi7enSMWWkuNQPMxgG9dIUlUyDEp7o5WYh9oLFu6R_w1&amp;t=635802997220000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=PbEBzP6yzLhumIvk3z10njm2J55hXAiDEpKNDNs8p7yhpj5-KZR2D8dob0VYobnVNxifOK9FfHFDmkejJC5oRtdlgkR9bCMSJcAHo1-gyAmev8zjQv9kiA6Zdkh5ZylDvghl68D1ASHcpMsTdItnSYawi0SIAQFWnKBrSTtFXh01&amp;t=5f9d5645" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=HijO0tF3Vji3EPV4GRWSbQpsm22D_16vC7wU55wscE0RIicy1vRiupwKGsECEFVDnDkZOxezrSU9JQRrLypN5rsJHb9_Q_ELzTpL4LQO3Ahgdv9HtR5BRzBYnACLVQSHnTI9bR6OrgvPYm-M9zzSvvq-dVc2EUT6L_AAQdq0p8U28_f-S_x4SgidEUcwtntY0&amp;t=5f9d5645" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E886D309" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV0dQyBNxcQFwaHTWuIfg6hkuy85p5nCJR3zvkY/9QjbRbcEsbCsoYPs/zMQW4NP83F7cgLQBJO/P++w3IZCLz58EY0IBmtUwvXSZLKM+BVsqdEO3H+IbcVf8l/1/FWM5Tf0qLX6fGzoma3VayxOTbI" />
+</div>
+        <!-- header -->
+        <div id="ctl00_ctl00_pnlBlank1">
+	
+            <div id="header" class="header-bg-g">
+                <!-- inner div -->
+                <div class="header-container">
+                    <a href="/Default.aspx" style="line-height: 1px;">
+                        <img src="/uploadedImages/myLambton/Templates/main_master/2013/logo.png" alt="myLambton"
+                            style="border-width: 0;" />
+                    </a><a href="#skiptocontent" id="skip">Skip to Content</a>
+                    <div class="links-search-wrap">
+                        
+                        <div class="links-3-wrap">
+                            
+                            <div class="link-header-wrap blue-alpha60">
+                                <a class="headerbutton support" target="_blank" href="http://support.lambtoncollege.ca">Request Support</a>
+                            </div>
+                            <div class="link-blue-bg-wrap navy-alpha60">
+                                <a class="headerlinks" href="http://www.lambtoncollege.ca" target="_blank">lambtoncollege.ca</a>
+                                <span class="forwardslash">&nbsp; | &nbsp;</span>
+                                
+                                
+                                <a id="ctl00_ctl00_hypLogin" class="thickbox headerlinks" href="/Login_Shadowbox.aspx?KeepThis=true&amp;TB_iframe=true&amp;height=300&amp;width=320" style="color:White;">Log In</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- main top menu -->
+            <div class="main-nav-wrap">
+                
+<div id="mainMenu-wrapper">
+        <div class="mainmenu">
+            <!-- this div is required for IE7 so menus appear in front of Flash -->
+            <ul id="menu">
+                
+                
+                
+                
+                <div id="ctl00_ctl00_LCMainMenu_pnlServicesLIVE">
+		
+                    <li class="drop"><a href="/">HOME</a></li>
+                    <!-- begin services container -->
+                    <li class="drop"><a href="#" class="drop">SERVICES &amp; DEPARTMENTS</a>
+                        <div class="dropdown_3columns">
+                            <div class="dropdown_inner">
+                                <!-- first column -->
+                                <div class="col_1 firstcol">
+                                    <h3>
+                                        Office of the Registrar</h3>
+                                    <ul class="submenu">
+                                        <li><a href="/Registrar/Home/">Office of the Registrar</a></li>
+                                        <li><a href="/Admissions/Home/">Admissions</a></li>
+                                        <li><a href="/Financial_Aid/Home/">Financial Aid</a></li>
+                                    </ul>
+                                    <h3>
+                                        College Departments</h3>
+                                    <ul class="submenu">
+                                        <li><a href="/Research/">Applied Research</a></li>
+                                        <li><a href="/Facilities/Home/">Facilities</a></li>
+                                        <li><a href="/Finance/Home/">Finance</a></li>
+                                        <li><a href="/HR/Home/">Human Resources</a></li>
+                                        <li><a href="/IT/Home/">Information Technology</a></li>
+                                        <li><a href="/custom/International/">International</a></li>
+                                        <li><a href="/LInC/Home/">Learning Innovation Centre (LInC)</a></li>
+                                        <li><a href="/Marketing/Home/">Marketing &amp; Communications</a></li>
+                                        <li><a href="/Quality_Assurance/Home/">Quality Assurance</a></li>
+                                        
+                                        <li><a href="/Safety/Home/">Safety &amp; Security</a></li>
+                                    </ul>
+                                </div>
+                                <!-- second column -->
+                                <div class="col_1">
+                                    <h3>
+                                        Student Services</h3>
+                                    <ul class="submenu">
+                                        <li><a href="/Aboriginal/Home/">Aboriginal Cultural &amp; Learning Centre</a></li>
+                                        <li><a href="/Accessibility_Centre/Home/">Accessibility Centre</a></li>
+                                        <li><a class="open-in-new-window" href="http://www.lclions.ca/" target="_blank">Athletics</a></li>
+                                        <li><a class="open-in-new-window" href="http://campus-shop.lambtoncollege.ca/" target="_blank">Campus Shop</a></li>
+                                        <li><a href="/CAI/Home/">Centre for Academic Integrity</a></li>
+                                        <li><a href="/Centre_for_Educational_Pathways/Home/">Centre for Educational Pathways</a></li>
+                                        <li><a href="/SocialJustice/Home/">Centre for Social Justice</a></li>
+                                        <li><a href="/Chaplaincy_Services/Home/">Chaplaincy Services</a></li>
+                                        <li><a href="/Departments/Counselling/Home/">Counselling</a></li>
+                                        <li><a href="/CCR/Home/">Co-Curricular Record</a></li> 
+                                        <li><a href="/Schools/FCP/Home/">Field/Clinical Placement Requirements</a></li>
+                                        <li><a href="/First_Generation/Home/">First Generation Services</a></li>
+                                        <li><a href="/Wellness/Home/">Health &amp; Wellness Centre</a></li>
+                                        
+                                        <li><a href="/Library/Home/">Library Resource Centre</a></li>
+                                        <li><a href="/SOS/Home/">Mental Health Hub</a></li>
+                                        <li><a href="/Mobile_Learning/Home/">Mobile Learning</a></li>
+                                        <li><a href="/mycareer/Home/">MyCareer Centre</a></li>
+                                        <li><a href="/Parking/Fees/">Parking</a></li>
+										<li><a href="/Residence/Home/">Residence and Student Housing</a></li>
+                                        
+                                        <li><a href="/Testing_Services/Home/">Testing Services</a></li>
+                                        <li><a href="/Tutoring_Services/Home/">Tutoring Services</a></li>
+                                    </ul>
+                                </div>
+                                <!-- third column -->
+                                <div class="col_1">
+                                    <h3>
+                                        Administration</h3>
+                                    <ul class="submenu">
+                                        <li><a href="/President/Home/">Office of the President</a></li>
+                                        <li><a href="/BOG/Home/">Board of Governors</a></li>
+                                        
+                                    </ul>
+                                    <h3>
+                                        Academic Divisions</h3>
+                                    <ul class="submenu">
+                                        
+                                        <li><a href="/Schools/Business_Creative_Design/Home/">Business &amp; Creative Design, Liberal Studies &amp; English</a></li>
+                                        <li><a href="/Schools/CSLS/Home/">Community Services</a></li>
+                                        <li><a href="/Schools/Computer_Studies/Home/">Computer Studies</a></li>
+                                        <li><a href="/Schools/Fire/Home/">Fire Sciences</a></li>
+                                        <li><a href="/Schools/Health_Sciences/Home/">Health Sciences</a></li>
+                                        <li><a href="/Online_and_Continuing_Education/Home/">Online and Continuing Education</a></li>
+                                        <li><a href="/Schools/Technology/Home/">Technology, Energy &amp; Apprenticeship</a></li>
+                                        <li><a href="/Math_Physics/Home/">Mathematics &amp; Physics Department</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- end of Services container -->
+                    <!-- begin Policies and Procedures container -->
+                    <li class="drop"><a href="/Policies/">POLICIES</a></li>
+                    <!-- begin MY PROFILE container -->
+                    
+                    <!-- begin Campus Life container (the crazy span is for adding the last divider line) -->
+                    <span class="mainmenu-gray-line">
+                        <li class="drop"><a href="#" class="drop">CAMPUS LIFE</a>
+                            <div class="dropdown_1column">
+                                <div class="dropdown_inner">
+                                    <div class="col_1 firstcol">
+                                        <h3>
+                                            Clubs</h3>
+                                        <ul class="submenu">
+                                            
+                                            <li><a href="/Best_Buddies/Home/">Best Buddies</a></li>
+                                            <li><a href="/Enactus/Home/">Enactus</a></li>
+                                                                                       
+                                            
+                                            <li><a href="/jack.org_Lambton_College/Home/">jack.org Lambton College</a></li>
+                                            <li><a href="/LC2/Home/">LC2 (Lambton College Connections Committee)</a></li>
+                                            <li><a href="/Retirees/Home/">Retirees' Club</a></li>
+                                            
+                                            <li><a href="/TheCube/Home/">The Cube</a></li>
+                                            
+                                        </ul>
+                                        <h3>
+                                            Student Life</h3>
+                                        <ul class="submenu">
+                                            <li><a href="/Campus_Connection/Home/">Campus Connection</a></li>
+                                            <li><a href="/Transitions_Orientation/Home/">Transitions Orientation</a></li>
+                                            <li><a href="/1st_Day/Home/">1<sup>st</sup> Day</a></li>
+                                            <li><a href="/SAC/Home/">Students' Administrative Council</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </span>
+                
+	</div>
+            </ul>
+            <!-- end menu items -->
+        </div>
+</div>
+
+            </div>
+            <!-- end top menu -->
+        
+</div>
+        <!-- end of first blank panel -->
+        <!-- everything between header and footer -->
+        <!-- begin secondary page layout -->
+        <div class="s-p-layout">
+            <div id="ctl00_ctl00_pnlnonDefaultLogin" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_btnLogin&#39;)">
+	
+                
+                <div id="ctl00_ctl00_pnlWide">
+		
+                    <div class="wide-panel-ms">
+                        <!-- left hand column -->
+                        <div id="lefthandcolumn">
+                            <div id="loginbox">
+                                
+                                
+                                
+                                <div id="ctl00_ctl00_pnlUserPass">
+			
+                                    <div class="login-box-mm">
+                                        <input name="ctl00$ctl00$txtUsername" type="text" value="username" id="ctl00_ctl00_txtUsername" title="Username" onclick="clearUsername2(this)" onblur="resetUsername2(this)" />
+                                    </div>
+                                    <div class="login-box-mm">
+                                        <input name="ctl00$ctl00$txtPassword" type="password" id="ctl00_ctl00_txtPassword" title="Password" onblur="ShowPasswordText2(this,document.getElementById(&#39;ctl00_ctl00_txtFakePassword&#39;))" style="display: none" />
+                                        <input name="ctl00$ctl00$txtFakePassword" type="text" value="password" id="ctl00_ctl00_txtFakePassword" title="Password" onfocus="HidePasswordText2(this,document.getElementById(&#39;ctl00_ctl00_txtPassword&#39;))" style="height:25px;width:158px;" />
+                                    </div>
+                                    <input type="submit" name="ctl00$ctl00$btnLogin" value="Log In" id="ctl00_ctl00_btnLogin" title="Log In" class="btn-login-mm" />
+                                    
+                                    <p>
+                                        <a href="/WhyLogon.aspx?KeepThis=true&amp;TB_iframe=true&amp;height=500&amp;width=550"
+                                            class="thickbox" style="color: #2ccfda;">Why do I need to log in?</a>
+                                    </p>
+                                
+		</div>
+                                
+                                <hr class="hr-mm" />
+                                <!-- departmental menus -->
+                                <div class="departmental-menu">
+                                    <div id="ctl00_ctl00_divMenutTitle" class="basecolour departmental-menu-txt">
+                                        Library
+                                    </div>
+                                    <div id="ctl00_ctl00_leftSideMenu">
+			<link type="text/css" rel="stylesheet" href="/styles/expand1.css" /><div class="expand1"><div class="ekflexmenu" id="e3763b2e3_2147483766_0_ekflexmenu"><div class="ekflexmenu_menu_level_0 ekflexmenu_submenu"><ul class="ekflexmenu_submenu_items" id="e3763b2e3_2147483766_0_submenu_items"><li><a class="ekflexmenu_link_selected" href="/Library/Home/" target="_self">Library Home</a></li><li><a class="ekflexmenu_link" href="/Library/need_help/" target="_self">Ask Us!</a></li><li><a class="ekflexmenu_link" href="/Library/Hours/" target="_self">Our Hours</a></li><li><a class="ekflexmenu_link" href="/Library/ResearchDatabases.aspx" target="_self">Research Databases</a></li><li><a class="ekflexmenu_link" href="/library/ebooks/" target="_self">Ebook Collections</a></li><li><a class="ekflexmenu_link" href="/library/library_Research_assistance/" target="_self">Research Assistance</a></li><li><a class="ekflexmenu_link" href="/library/Selected_Web_Resources/" target="_self">Selected Web Resources</a></li><li><a class="ekflexmenu_link" href="/library/video_streaming/" target="_self">Video Streaming</a></li><li><a class="ekflexmenu_link" href="http://192.139.190.78/oasis/catalog/(S(cglcui55qazwvc555u4hch45))/Default.aspx?installation=default" target="_blank">Online Catalogue</a></li><li><a class="ekflexmenu_link" href="/Library/Copyright/" target="_self">Copyright</a></li><li><a class="ekflexmenu_link" href="/Library/About_The_Library/" target="_self">Library Services</a></li><li><a class="ekflexmenu_link" href="/Library/About_The_Library/" target="_self">About The Library</a></li><li><a class="ekflexmenu_link" href="/library/Whats_New/" target="_self">What's New</a></li><li><a class="ekflexmenu_link" href="/Library/Library_Resource_Centre_Staff/" target="_self">Staff Directory</a></li><li><a class="ekflexmenu_link" href="http://campus-shop.lambtoncollege.ca/" target="_blank">Campus Shop</a></li></ul></div></div></div><script language="JavaScript" type="text/javascript">
+			// Pass server control properties, etc., to Javascript:
+			if (("undefined" == typeof window.ekFlexMenu_ekflexmenuArray)
+				|| (null == window.ekFlexMenu_ekflexmenuArray)) {
+				window.ekFlexMenu_ekflexmenuArray = new Array;
+			}
+			window.ekFlexMenu_ekflexmenuArray[window.ekFlexMenu_ekflexmenuArray.length] = "e3763b2e3_2147483766_0";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_swRev)
+			|| (null == window.ekFlexMenu_swRev)) {
+			window.ekFlexMenu_swRev = new Array;
+			}
+			window.ekFlexMenu_swRev["e3763b2e3"] = "8.0.0.073";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startupSubmenuBranchId)
+			|| (null == window.ekFlexMenu_startupSubmenuBranchId)) {
+			window.ekFlexMenu_startupSubmenuBranchId = new Array;
+			}
+			window.ekFlexMenu_startupSubmenuBranchId["e3763b2e3"] = "";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_autoCollapseBranches)
+			|| (null == window.ekFlexMenu_autoCollapseBranches)) {
+			window.ekFlexMenu_autoCollapseBranches = new Array;
+			}
+			window.ekFlexMenu_autoCollapseBranches["e3763b2e3"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startCollapsed)
+			|| (null == window.ekFlexMenu_startCollapsed)) {
+			window.ekFlexMenu_startCollapsed = new Array;
+			}
+			window.ekFlexMenu_startCollapsed["e3763b2e3"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startWithRootFolderCollapsed)
+			|| (null == window.ekFlexMenu_startWithRootFolderCollapsed)) {
+			window.ekFlexMenu_startWithRootFolderCollapsed = new Array;
+			}
+			window.ekFlexMenu_startWithRootFolderCollapsed["e3763b2e3"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_masterControlIdHash)
+				|| (null == window.ekFlexMenu_masterControlIdHash)) {
+				window.ekFlexMenu_masterControlIdHash = new Array;
+			}
+			window.ekFlexMenu_masterControlIdHash["e3763b2e3"] = "";
+			
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxEnabled)
+			|| (null == window.ekFlexMenu_ajaxEnabled)) {
+			window.ekFlexMenu_ajaxEnabled = new Array;
+			}
+			window.ekFlexMenu_ajaxEnabled["e3763b2e3"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxWSPath)
+			|| (null == window.ekFlexMenu_ajaxWSPath)) {
+			window.ekFlexMenu_ajaxWSPath = new Array;
+			}
+			window.ekFlexMenu_ajaxWSPath["e3763b2e3"] = "/WorkArea/webservices/";
+			// 
+			if (("undefined" == typeof window.ekFlexMenu_displayXslt)
+			|| (null == window.ekFlexMenu_displayXslt)) {
+			window.ekFlexMenu_displayXslt = new Array;
+			}
+			window.ekFlexMenu_displayXslt["e3763b2e3"] = "/xsl/Demo.xsl";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_cacheInterval)
+			|| (null == window.ekFlexMenu_cacheInterval)) {
+			window.ekFlexMenu_cacheInterval = new Array;
+			}
+			window.ekFlexMenu_cacheInterval["e3763b2e3"] = "0";
+			//
+			//////////////////////////////////////////////////////////////////
+			// Add event handler calling functions:
+			//   Test to ensure that ekFlexMenu is valid/reachable (this is needed 
+			//   to prevent intermittent Javascript errors that can occur if user
+			//   causes event to fire while page is being torn down (i.e. a link is
+			//   clicked, browser is fetching new page, movement causes mouse-out...):
+			function ekFlexMenu_IsValid(obj) {
+				return (("undefined" != typeof obj) && (null != obj));
+			}
+			function ekFlexMenuPopupMsIn(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseIn)) {
+					return (ekFlexMenu.mouseIn(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuPopupMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseOut)) {
+					return (ekFlexMenu.mouseOut(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuKey(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnKeyHdlr)) {
+					return (ekFlexMenu.menuBtnKeyHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOutHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOutHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOvr(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOverHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOverHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuClk(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnClickHdlr)) {
+					return (ekFlexMenu.menuBtnClickHdlr(event));
+				}
+				return (true);
+			}
+		</script>
+		</div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end left hand column -->
+                        <!-- content column -->
+                        <div class="main-content-column">
+                            <div class="main-content-wrap-mm">
+                                <div id="ctl00_ctl00_pnlBreadcrumb">
+			
+                                    <div id="ctl00_ctl00_breadcrumbdiv" class="breadcrumbpng breadcrumb-mm">
+                                        <div class="breadcrumb">
+                                            
+                                            <div id="ctl00_ctl00_ektronbreadcrumb">
+				
+                                                <span id="ctl00_ctl00_EktronFolderBreadCrumb"><a target="_self" href="/" title="Site Home">Home</a> / <a target="_self" href="/Library/Home" title="Library">Library</a></span>
+                                                 / Home
+                                            
+			</div>
+                                        </div>
+                                    </div>
+                                
+		</div>
+                                
+
+    
+    
+    <div style="margin: 20px 0px;">
+    
+    
+    
+        
+
+        <div id="ctl00_ctl00_cphContent_cphContent_Middle_updatepanel" class="">
+			
+                <div id="ctl00_ctl00_cphContent_cphContent_Middle_dzcontainer" class="dropzone PBClear">
+                    
+                    
+                            <div id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_zone" class="PBViewing" style="width:100%;">
+                                <ul id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_column" class="columnwidgetlist">
+                                    
+                                    
+                                            <li class="PBItem">
+                                                
+        <div id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_dropcontainer" class="widget">
+            <span id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_lblErrorMessage"></span>
+            <div id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_updatepanel">
+				
+                    
+                    <div id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_dvContent" class="content">
+                        
+    <span id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_errorLb"></span>
+        <div id="container">
+            <img src="/uploadedImages/myLambton/Services/Library/library_home.jpg" border="0" width="777" height="115" title="Homepage Banner" alt="Homepage Banner"></img>
+        </div>
+        
+        
+    
+                    </div>
+                
+			</div>
+        </div>
+    
+                                            </li>
+                                        
+                                            <li class="PBItem">
+                                                
+        <div id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_dropcontainer" class="widget">
+            <span id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_lblErrorMessage"></span>
+            <div id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_updatepanel">
+				
+                    
+                    <div id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_dvContent" class="content">
+                        
+        
+        <div id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_WidgetHost_widget_CB">
+					<link data="data" rel="stylesheet" href="/styles/GenericContent.css" />
+<style type="text/css">DIV#content {	WIDTH: 100%}#content TABLE {	MARGIN-TOP: 1.5em; WIDTH: 100%}#content TABLE TH {	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px}#content TABLE TD {	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px}#content TABLE TD LI {	LINE-HEIGHT: 1.5em}span.highlight{background-color:red; }</style><div id="content"><div style="text-align: right;"><a title="comment box" href="http://www.mylambton.ca/library/comments/"><img width="56" height="47" style="margin: 5px; width: 56px; height: 47px;" title="Comment box" alt="Comment box" src="/uploadedImages/myLambton/Services/Library/comment box2.jpg?n=8732" /></a>&#160;&#160;&#160;<a title="askON logo" href="http://www.mylambton.ca/Library/askon/"><img width="51" border="0" height="50" align="top" style="width: 51px; height: 50px; margin: 5px;" title="askON logo" alt="askON logo" src="/uploadedImages/myLambton/Services/Library/askONlogoEngLG.jpg?n=3067" /></a>&#160;&#160;&#160;<a title="Twitter logo" href="https://twitter.com/lambtonlrc"><img width="47" vspace="5" height="37" align="top" style="width: 47px; height: 37px; margin: 5px;" title="Twitter logo" alt="Twitter logo" src="/uploadedImages/myLambton/Services/Library/Twitter_logo_blue.jpg?n=3297" /></a>&#160;&#160;&#160;<a title="Facebook logo" href="https://www.facebook.com/LambtonCollegeLibrary"><img width="40" border="0" height="40" align="top" style="width: 40px; height: 40px; margin: 5px;" title="Facebook logo" alt="Facebook logo" src="/uploadedImages/myLambton/Services/Library/FB-f-Logo__blue_57.png?n=7687" /></a></div>
+<table style="width: 100%;">
+<tbody>
+<tr>
+<th colspan="2" style="text-align: left;">Find Information</th>
+</tr>
+<tr>
+<td style="width: 50%;"><ul>
+<li><a title="Research Databases" href="/Library/ResearchDatabases.aspx">Research Databases</a></li>
+<li><a title="Ebook Collections" href="http://www.mylambton.ca/library/ebooks/">Ebook Collections</a></li>
+<li><a href="/library/Selected_Web_Resources/" title="Selected Web Resources">Selected Web Resources</a></li>
+<li><a target="_blank" href="http://192.139.190.78/oasis/catalog/(S(cglcui55qazwvc555u4hch45))/Default.aspx?installation=default" title="Online Catalogue">Online Catalogue</a></li>
+<li><a href="/Library/Search_Library_Online_Catalogues/" title="Other Library Catalogues">Other Library Catalogues</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;</td>
+<td style="width: 50%;"><ul>
+<li><a href="/library/Video_Streaming/" title="Video Streaming">Video Streaming</a></li>
+<li><a href="/Library/Virtual_Reference_Desk/" title="Virtual Reference Desk">Virtual Reference Desk</a></li>
+<li><a href="/Library/searching_the_web/" title="Web Search Tools">Web Search Tools</a></li>
+<li><a href="/Library/Interlibrary_Loan/" title="Interlibrary Loan">Interlibrary Loan</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;</td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" style="width: 100%;">
+<tbody>
+<tr>
+<th style="text-align: left;">Library Research Assistance</th>
+<th style="text-align: right;"><span style="font-weight: normal;"><a href="/Library/Library_Research_Assistance/" style="color: white;">more...</a></span></th>
+</tr>
+<tr>
+<td style="width: 50%;"><ul>
+<li><a title="The Seven Steps of the Research Process" href="http://www.library.cornell.edu/olinuris/ref/research/skill1.htm">The Seven Steps of the Research Process</a></li>
+<li><a title="Research Worksheet" href="/uploadedFiles/myLambton/Services/Library/Research_Worksheet.pdf">Research Worksheet</a></li>
+<li><a title="Guide to Searching Research Databases" href="/uploadedFiles/myLambton/Services/Library/Guide_to_Searching_Research_Databases.pdf">Guide to Searching Research Databases</a></li>
+<li><a title="Types of Periodicals" href="/uploadedFiles/myLambton/Services/Library/Types_of_Periodicals.pdf">Types of Periodicals</a></li>
+<li><a title="Distinguishing Scholarly Journals from Other Periodicals" href="http://www.library.cornell.edu/olinuris/ref/research/skill20.html">Distinguishing Scholarly Journals from Other Periodicals</a></li>
+<li><a title="How to Identify a Scholarly Article" href="/uploadedFiles/myLambton/Services/Library/Identify_Scholarly_Articles.pdf">How to Identify a Scholarly Article</a></li>
+<li><a title="Elements of a Research Article" href="http://utsa.edu/tlc/Learning_Technology/article_analysis_lm/index.html">Elements of a Research Article</a></li>
+<li><a href="http://www.lib.ncsu.edu/tutorials/scholarly-articles/" title="Anatomy of a Scholarly Article">Anatomy of a Scholarly Article</a></li>
+</ul>
+
+
+
+
+&#160;</td>
+<td style="width: 50%;"><ul>
+<li><a title="How do I ...? Online Tutorials" href="/Library/Online_Tutorials/">How do I ...? Online Tutorials</a></li>
+<li><a href="/library/Selected_Web_Resources/Plagiarism/" title="Plagiarism">Plagiarism</a></li>
+<li><a title="Web Page Evaluation Guide and Checklist" href="/uploadedFiles/myLambton/Services/Library/Web_Page_Evaluation_Guide_and_Checklist.pdf">Web Page Evaluation Guide and Checklist</a></li>
+<li><a href="/library/Selected_Web_Resources/Writing_Research_Guides/" title="Writing and Research Guides">Writing and Research Guides</a></li>
+<li><a title="Primary, Secondary and Tertiary Sources" href="/uploadedFiles/myLambton/Services/Library/Primary_Secondary_and_Tertiary_Sources.pdf">Primary, Secondary and Tertiary Sources</a></li>
+<li><a href="/library/Internet_Guides_Web_Search_Tutorials_and_Web_Search_Tips/" title="Internet Guides, Web Search Tutorials and Web Search Tips">Internet Guides, Web Search Tutorials and Web Search Tips</a></li>
+<li><a title="Choose the Best Search for Your Information Need" href="http://www.noodletools.com/debbie/literacies/information/5locate/adviceengine.html">Choose the Best Search for Your Information Need</a></li>
+</ul>
+
+
+
+
+&#160;</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 100%;">
+<tbody>
+<tr>
+<th colspan="2" style="text-align: left !important;">Library Resource Centre Services</th>
+</tr>
+<tr>
+<td style="width: 50%;"><ul>
+<li><a href="/Library/Borrowing/" title="What can I borrow? ">What can I borrow? </a></li>
+<li><a href="/Library/Reference_Services/" title="Reference Services">Reference Services</a></li>
+<li><a href="/Library/Computers_and_Printing/" title="Computers and Printing ">Computers &amp; Printing </a></li>
+<li><a href="/Library/Photocopiers_and_Scanners/" title="Photocopiers and Scanners ">Photocopiers and Scanners </a></li>
+<li><a href="/library/Course_Reserves_for_Students/" title="Course Reserves for Students">Course Reserves for Students</a></li>
+<li><a title="Guest Patrons" href="https://www.mylambton.ca/library/guest_patrons/">Guest Patrons</a></li>
+</ul>
+
+
+&#160;</td>
+<td style="width: 50%;"><ul>
+<li><a href="/library/Services_and_Information_for_Lambton_College_Faculty/" title="Services for Faculty ">Services for Faculty </a></li>
+<li><a href="/Library/Frequently_Asked_Questions#audio_visual_materials" title="Audio Visual Services for Students ">Audio Visual Services for Students </a></li>
+<li><a href="/library/Laptops/" title="Laptops">Laptops</a></li>
+<li><a target="_blank" href="/uploadedFiles/myLambton/Services/IT/PDFs/ConnecttoWireless.pdf" title="Wireless Internet - Windows 7 and iOS 7">Wireless Internet</a></li>
+<li><a target="_blank" href="/uploadedFiles/myLambton/Services/IT/PDFs/wireless_printing_student.pdf" title="Wireless Printing - Students">Wireless Printing</a></li>
+</ul>
+
+
+
+
+&#160;</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 100%;">
+<tbody>
+<tr>
+<th colspan="2" style="text-align: left !important;">About the Library Resource Centre</th>
+</tr>
+<tr>
+<td style="width: 50%;"><ul>
+<li><a href="/Library/Hours/" title="Our hours ">Our hours </a></li>
+<li><a href="/Library/Library_Resource_Centre_Staff/" title="Staff Directory">Staff Directory</a></li>
+<li><a href="/Library/Frequently_Asked_Questions/" title="Frequently Asked Questions ">Frequently Asked Questions</a></li>
+<li><a href="/Library/Virtual_Tours/" title="Virtual Tour ">Virtual Tour</a></li>
+</ul>
+
+
+
+&#160;</td>
+<td style="width: 50%;"><ul>
+<li><a href="/library/Cell_Phone_Courtesy_and_Noise_Guidelines/" title="Noise Guidelines">Noise Guidelines</a></li>
+<li><a href="/library/Cell_Phone_Courtesy_and_Noise_Guidelines/" title="Cell Phone Courtesy">Cell Phone Courtesy</a></li>
+<li><a href="/library/Food_and_Drinks/" title="Food &amp;amp; Drinks">Food &amp; Drinks</a></li>
+<li><a title="Study and Group Meeting Rooms" href="/Library/Virtual_Tours/#Study_and_Group_Meeting_Rooms">Study Room Reservations</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+				</div>
+        
+        
+        <span id="ctl00_ctl00_cphContent_cphContent_Middle_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_WidgetHost_widget_errorLb"></span>
+    
+                    </div>
+                
+			</div>
+        </div>
+    
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        
+                </div>
+            
+		</div>
+
+        
+    
+    </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;">
+                    </div>
+                
+	</div>
+            
+</div>
+            <!-- end secondary page content layout -->
+            <!-- skip to content anchor -->
+            <a id="skiptocontent"></a>
+            <!-- begin index page layout -->
+            
+            
+    
+    
+
+        </div>
+        <div class="misc-block">
+        </div>
+        <!-- Footer - all pages -->
+        <div id="footer">
+            <div class="footer-wrap">
+                <div class="footer-nav">
+                    <a class="white" href="/Default.aspx">Home</a> <span class="forwardslash">/</span>
+                    <a class="white" href="/ServicesDepartments.aspx">Services &amp; Departments</a>
+                    <span class="forwardslash">/</span> <a class="white" href="/Policies">Policies</a>
+                    <span class="forwardslash">/</span> <a class="white" href="/MyProfile/">My Profile</a>
+                    <span class="forwardslash">/</span> <a class="white" href="/CampusLife.aspx">Campus
+                    Life</a> <span class="forwardslash">/</span> <a class="thickbox white" href="/Feedback.aspx?KeepThis=true&amp;TB_iframe=true&amp;height=550&amp;width=500">Site Feedback</a>
+                    <br />
+                    <p class="copyright-mm">
+                         &copy; Copyright 2016 Lambton College
+                    </p>
+                    <p>
+                        
+                    </p>
+                </div>
+				<div class="footer-buttons">
+					<a id="ctl00_ctl00_lnkAccessibility" class="btn-teal f-accessibility-no-event" href="http://www.lambtoncollege.ca/Accessibility/">
+						Accessibility
+					</a>
+				</div>
+            </div>
+        </div>
+    </form>
+	<!-- Google Analytics code -->
+	<script type="text/javascript">
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-33291178-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>

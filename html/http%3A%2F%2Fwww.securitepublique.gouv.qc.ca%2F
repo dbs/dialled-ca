@@ -1,0 +1,400 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2013 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at http://typo3.org/
+-->
+
+<base href="http://www.securitepublique.gouv.qc.ca/" />
+<link rel="shortcut icon" href="http://www.securitepublique.gouv.qc.ca/fileadmin/templates/images/piv/favicon.ico" type="image/x-ico; charset=binary" />
+<link rel="icon" href="http://www.securitepublique.gouv.qc.ca/fileadmin/templates/images/piv/favicon.ico" type="image/x-ico; charset=binary" />
+
+<meta name="generator" content="TYPO3 4.5 CMS" />
+<meta name="description" content="Découvrez toutes les facettes de votre sécurité, qu’elle soit sous votre responsabilité 
+ ou sous la responsabilité gouvernementale. Notre site contient de l’information pour les 
+ citoyens, les jeunes, les écoles, les municipalités, les entreprises et les organismes sans 
+ but lucratif sur la sécurité incendie, la sécurité civile, la sécurité privée, la prévention 
+ et la répression de la criminalité, les services de police, la médecine légale, les sciences 
+ judiciaires, la détention et la réinsertion sociale des personnes contrevenantes. Le ministère 
+ de la Sécurité publique administre les corps de police et les établissements de détention. 
+ De plus, il coordonne les actions de sécurité civile, de la prévention des sinistres jusqu’au 
+ retour à la vie normale." />
+<meta name="copyright" content="Gouvernement du Québec" />
+<meta name="author" content="Ministère de la Sécurité publique du Québec MSP" />
+<meta name="truc" content="9e5236b0197a19704ab82b7bd13ff745" />
+
+<link rel="stylesheet" type="text/css" href="typo3temp/stylesheet_3b575697e1.css?1343932495" media="all" />
+
+
+
+<script src="typo3temp/javascript_92bc0eb2aa.js?1341339226" type="text/javascript"></script>
+
+
+<meta name="DC.date.created" content="2012-02-27" />
+<meta name="google-site-verification" content="g7k1nMXDQf5w2f0kKVL1WewjJulWhpZjDx6SwiXaLQ4" />
+	<script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+
+		sfHover = function() {
+			var sfEls = document.getElementById("navigtop").getElementsByTagName("LI");
+			for (var i=0; i<sfEls.length; i++) {
+				sfEls[i].onmouseover=function() {
+					this.className+=" sfhover";
+				}
+				sfEls[i].onmouseout=function() {
+					this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+				}
+			}
+		}
+		if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+		//--><!]]>
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="fileadmin/templates/html/../css/accueil.css" />
+	<link rel="stylesheet" type="text/css" href="fileadmin/templates/html/../css/section.css" />
+<meta property="og:image" content="http://www.securitepublique.gouv.qc.ca/fileadmin/images/commun/quebec_media_sociaux.jpg" /><title>Accueil&nbsp;- Ministère de la Sécurité publique</title>     <link rel="stylesheet" type="text/css" href="fileadmin/templates/css/msp_print.css" media="print" />
+    <script type="text/javascript" src="fileadmin/templates/js/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload=readCookie; 
+
+
+ 
+  function readCookie(){
+    
+    
+    var ca = document.cookie.split(';');
+    var nameEQ = "bandeau_urgence=";
+    for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) {
+        var valeur = c.split('=');
+        document.getElementById('bandeau_urgence').setAttribute("class",valeur[1]);
+        document.getElementById('bandeau_urgence').className =valeur[1];
+        if(valeur[1] == 'bandeau_ferme'){
+          document.getElementById('texte_urgence').style.display = 'none';
+          document.getElementById('ajuster_taille_lien').innerHTML = 'Afficher les détails';
+        }
+        else{
+          document.getElementById('texte_urgence').style.display = 'block';
+        }    
+      }
+    }
+
+  }
+  function setCookie(){
+
+    className = document.getElementById('bandeau_urgence').getAttribute("class");
+    cookieName = "bandeau_urgence";
+    if(className == "bandeau_ouvert"){
+      document.getElementById('bandeau_urgence').setAttribute("class","bandeau_ferme");
+      document.getElementById('bandeau_urgence').className ="bandeau_ferme";
+      document.getElementById('texte_urgence').style.display = 'none';
+      document.getElementById('ajuster_taille_lien').innerHTML = 'Afficher les détails';
+
+    }
+    else{
+      if(className == "bandeau_ferme"){
+         document.getElementById('bandeau_urgence').setAttribute("class","bandeau_ouvert");
+         document.getElementById('bandeau_urgence').className ="bandeau_ouvert";
+         document.getElementById('texte_urgence').style.display = 'block';
+         document.getElementById('ajuster_taille_lien').innerHTML = 'Réduire ce bandeau';
+      document.getElementById('ajuster_taille_lien').innerHTML = '';
+      }
+      else{
+           document.getElementById('ajuster_taille_lien').innerHTML = 'Afficher les détails';
+          }
+    }
+    
+    var date = new Date();
+    
+
+    date.setTime(date.getTime()+(365*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+    
+    className = document.getElementById('bandeau_urgence').getAttribute("class");
+    
+    document.cookie = cookieName+"="+className+expires; 
+  }
+  </script>
+  <link rel="alternate" type="application/rss+xml" title="Ministère de la Sécurité publique : Actualités" href="http://www.securitepublique.gouv.qc.ca/ministere/salle-presse/3988.html" />
+  <link rel="alternate" type="application/rss+xml" title="Ministère de la Sécurité publique : Événements" href="http://www.securitepublique.gouv.qc.ca/ministere/salle-presse/4373.html" />
+  <link rel="alternate" type="application/rss+xml" title="Ministère de la Sécurité publique : Communiqués" href="http://www.securitepublique.gouv.qc.ca/ministere/salle-presse/4372.html" />      <link rel="stylesheet" type="text/css" href="fileadmin/templates/css/snap.css" />	<link rel="stylesheet" href="typo3conf/ext/msp_menutreeview/treeview/jquery.treeview.css" />   <link href="fileadmin/templates/css/ui.totop.css" media="screen" rel="stylesheet" type="text/css" />  
+
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript" src="typo3conf/ext/msp_carrousel/Resources/Public/js/jquery.jcarousel.pack.js" ></script>
+		<script type="text/javascript" src="typo3conf/ext/msp_carrousel/Resources/Public/js/slideShow.js" ></script>
+		<link href="typo3conf/ext/msp_carrousel/Resources/Public/css/jquery.jcarousel.css" rel="stylesheet" type="text/css" />
+		<link href="typo3conf/ext/msp_carrousel/Resources/Public/css/skin.css" rel="stylesheet" type="text/css" />
+		<link href="typo3conf/ext/msp_carrousel/Resources/Public/css/slideShow.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="301">
+
+<div id="contenu"> <a href="accueil.html#colonne1" accesskey="s" class="visuallyhidden">Passer au contenu</a>
+  <div id="entete"> 
+    <div id="piv-bandeau"><div class="mo"><a href="http://www.securitepublique.gouv.qc.ca/" title="Ministère de la Sécurité publique. Retour à l'accueil du site." target="_top" >Ministère de la Sécurité publique</a></div><div class="idSite">Internet ministériel</div><div id="piv-bandeau-navig"><ul><li><a href="accueil.html" accesskey="1">Accueil</a></li><li><a href="plan-site.html" accesskey="3">Plan du site</a></li><li><a href="ministere/nous-joindre.html" accesskey="9">Nous joindre</a></li><li><a href="http://www.gouv.qc.ca/portail/quebec/pgs/commun" target="_blank">Portail Québec</a></li><li><a href="ministere/carriere.html" >Carrières</a></li><li  class="langue"><a href="en.html">English</a></li></ul></div></div>
+    <!-- Recherche -->
+    <div id="recherche"><form action="fileadmin/redirect_google.php" method="get" >
+  <label for="query" class="rechercher">Rechercher</label>
+  <input accesskey="4" class="champ" type="text" value="" name="query" id="query" size="20"  />
+  <input class="button" name="" type="submit" value="Recherche" />  
+ <input type="hidden" name="__ncforminfo" value="niDa_zN46LLW-iOhR-UKlrPHz9Xw_rOB5vgJ6gFQ2NkWYDvUCpn2osF0N3lFpl6exZALHiny2dfUIpSV7YC-g1ub-YvYjYRke-v2byOf_j4rKeYY081JvDOJIDRJZaCS"/></form></div>
+     <div id="alerte-cog"><!--TYPO3SEARCH_begin--><!--TYPO3SEARCH_end--></div>
+    
+    <div id="breadcrumb"></div>
+    <div id="navigtop"><ul><li class="ministere"><a href="ministere.html"  >Le ministère</a></li><li class="police"><a href="police.html"  >Police et prévention</a></li><li class="dgscsi"><a href="securite-civile-incendie.html"  >Sécurité civile et incendie</a><ul id="menu_dgscsi"><li><a href="securite-civile.html"  >Sécurité civile</a></li><li><a href="securite-incendie.html"  >Sécurité incendie</a></li></ul></li><li class="correctionnels"><a href="services-correctionnels.html"  >Services correctionnels</a></li><li class="laboratoire"><a href="lsjml/a-propos.html"  >Laboratoire de sciences judiciaires et de médecine légale</a></li><li class="organisme"><a href="ministere/organismes.html"  >Organismes relevant du ministre</a></li></ul></div>
+  </div>
+  <div id="colonne1">
+    <h1>Ministère de la Sécurité publique</h1>
+    <div id="slider">
+	<!--  CONTENT ELEMENT, uid:49425/list [begin] -->
+		<a id="c49425"></a>
+		<!--  Plugin inserted: [begin] -->
+			<div class="tx-msp-carrousel">
+	
+<div id="welcomeHero">
+   <div id="slideshow-carousel">
+	 <ul id="carousel" class="jcarousel jcarousel-skin-tango">
+	
+		
+    				<li  class="arrow temps-5" ><a  href="index.html#" rel="p1"><span><p class="bodytext">Changement d'heure : le 13 mars 2016 </p></span></a></li>
+  			
+	
+		
+    				<li   class="temps-5" ><a  href="index.html#" rel="p2"><span><p class="bodytext">Concours de photos «&nbsp;Pompiers en action&nbsp;»</p> </span></a></li>
+  			
+	
+		
+    				<li   class="temps-5" ><a  href="index.html#" rel="p3"><span><p class="bodytext">Programme Prévention jeunesse</p> </span></a></li>
+  			
+	
+		
+    				<li   class="temps-5" ><a  href="index.html#" rel="p4"><span><p class="bodytext">Aide financière aux sinistrés</p> </span></a></li>
+  			
+	
+	</ul>
+   </div>
+
+   <div id="slideshow-main">
+	<ul>
+	
+		
+				
+				<li class="p1 active">
+					
+						<a href="securite-incendie/prevenir-incendie/conseils-prevention/avertisseur-fumee.html"><img src="fileadmin/carrousel/accueil/Carrousel_ChangementHeure_2016-03_.jpg"  alt="Soyez pile à l&apos;heure - Vérifiez vos avertisseurs!" /></a>
+					
+				</li>
+			
+
+	
+		
+    				<li  class="p2" >
+					
+						<a href="http://www.securitepublique.gouv.qc.ca/ministere/salle-presse/communiques/communiques.html?tx_ttnews%5Btt_news%5D=12922"><img src="fileadmin/carrousel/accueil/Concours_photos_2016_2016-02_.png"  alt="" /></a>
+					
+					
+				</li>
+  			
+
+	
+		
+    				<li  class="p3" >
+					
+						<a href="http://www.securitepublique.gouv.qc.ca/ministere/salle-presse/communiques/communiques.html?tx_ttnews%5BbackPid%5D=1129&amp;tx_ttnews%5Btt_news%5D=12914"><img src="fileadmin/carrousel/accueil/Prevention_jeunesse_2016-02_.png"  alt="" /></a>
+					
+					
+				</li>
+  			
+
+	
+		
+    				<li  class="p4" >
+					
+						<a href="securite-civile/aide-financiere-sinistres.html"><img src="fileadmin/carrousel/securite_civile/aide_financiere_bleu.jpg"  alt="Aide financière aux sinistrés" /></a>
+					
+					
+				</li>
+  			
+
+	
+	</ul>
+   </div>
+   <div class="clear"></div>
+
+</div>
+<img id="carrousel-pause" title="Mettre en pause" alt="Pause" src="typo3conf/ext/msp_carrousel/Resources/Public/images/btn_pause.png" width="10" height="10" />
+
+
+</div>
+		<!--  Plugin inserted: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:49425/list [end] -->
+		</div>
+    <div id="sectionClienteles" class="blocGris">
+      <div id="clienteles">
+	<!--  CONTENT ELEMENT, uid:42592/text [begin] -->
+		<a id="c42592"></a>
+		<!--  Header: [begin] -->
+			<div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Vous êtes ...</h2></div>
+		<!--  Header: [end] -->
+			
+		<!--  Text: [begin] -->
+			<ul><li><a href="clienteles/citoyens.html" >Citoyen</a></li><li><a href="clienteles/partenaires.html" >Partenaire</a></li><li><a href="clienteles/entreprises.html" >Entreprise</a></li></ul>
+		<!--  Text: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:42592/text [end] -->
+		
+	<!--  CONTENT ELEMENT, uid:42610/textpic [begin] -->
+		<a id="c42610"></a>
+		<!--  Image block: [begin] -->
+			<div class="csc-textpic csc-textpic-intext-left"><div class="csc-textpic-imagewrap csc-textpic-single-image"><img src="fileadmin/images/ministere/ministre/photos_officielles/Photo_du_ministre_Martin_Coiteux_37x40.jpg" width="37" height="44" border="0" alt="" /></div><div class="csc-textpic-text">
+		<!--  Text: [begin] -->
+			<p class="bodytext"><a href="ministere/mission/ministre.html" >Le ministre des Affaires municipales et de l’Occupation du territoire et ministre de la Sécurité publique</a></p>
+		<!--  Text: [end] -->
+			</div></div><div class="csc-textpic-clear"><!-- --></div>
+		<!--  Image block: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:42610/textpic [end] -->
+		
+	<!--  CONTENT ELEMENT, uid:79278/textpic [begin] -->
+		<a id="c79278"></a>
+		<!--  Image block: [begin] -->
+			<div class="csc-textpic csc-textpic-intext-left"><div class="csc-textpic-imagewrap csc-textpic-single-image"><img src="fileadmin/images/commun/ico_telephone.png" width="35" height="34" border="0" alt="" /></div><div class="csc-textpic-text">
+		<!--  Text: [begin] -->
+			<p class="bodytext"><a href="ministere/nous-joindre/coordonnees/dgscsi/cog-247.html" >Pour signaler une urgence<br /> en sécurité civile</a></p>
+<p class="align-right"><strong><br /><br />1 866 776-8345</strong></p>
+		<!--  Text: [end] -->
+			</div></div><div class="csc-textpic-clear"><!-- --></div>
+		<!--  Image block: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:79278/textpic [end] -->
+		
+	<!--  CONTENT ELEMENT, uid:94560/textpic [begin] -->
+		<a id="c94560"></a>
+		<!--  Image block: [begin] -->
+			<div class="csc-textpic csc-textpic-intext-left"><div class="csc-textpic-imagewrap csc-textpic-single-image"><img src="fileadmin/images/commun/ico_qc-alerte.png" width="35" height="34" border="0" alt="" /></div><div class="csc-textpic-text">
+		<!--  Text: [begin] -->
+			<p class="bodytext"><a href="https://alerte.securitepublique.gouv.qc.ca/" >Québec En Alerte</a></p>
+		<!--  Text: [end] -->
+			</div></div><div class="csc-textpic-clear"><!-- --></div>
+		<!--  Image block: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:94560/textpic [end] -->
+		
+	<!--  CONTENT ELEMENT, uid:95157/textpic [begin] -->
+		<a id="c95157"></a>
+		<!--  Image block: [begin] -->
+			<div class="csc-textpic csc-textpic-intext-left"><div class="csc-textpic-imagewrap csc-textpic-single-image"><img src="fileadmin/images/commun/ico_telephone.png" width="35" height="34" border="0" alt="" /></div><div class="csc-textpic-text">
+		<!--  Text: [begin] -->
+			<p class="bodytext"><a href="http://www.info-radical.org/" title="Ce lien s'ouvre dans une nouvelle fenêtre." target="_blank" class="external-link-new-window" >Centre de prévention de la radicalisation menant à la violence</a></p>
+<p class="align-right"><strong><br /><br /><br />1 877 687-7141</strong></p>
+		<!--  Text: [end] -->
+			</div></div><div class="csc-textpic-clear"><!-- --></div>
+		<!--  Image block: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:95157/textpic [end] -->
+		</div>
+    </div>
+    <div id="sectionSujets" class="blocGris">
+      <div id="sujets">
+	<!--  CONTENT ELEMENT, uid:100306/text [begin] -->
+		<a id="c100306"></a>
+		<!--  Header: [begin] -->
+			<div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Sujets d'intérêt</h2></div>
+		<!--  Header: [end] -->
+			
+		<!--  Text: [begin] -->
+			<ul><li><a href="services-correctionnels/bottins/bottin-centres-detention.html" >Bottins des&nbsp;établissements de détention</a></li><li><a href="securite-civile/se-preparer-aux-sinistres/sinistres.html" >Conseils de prévention : principaux sinistres</a></li><li><a href="ministere/carriere.html" >Emplois au ministère&nbsp;</a></li><li><a href="securite-incendie/prevenir-incendie/conseils-prevention/plan-evacuation-maison-incendie.html" >Incendie - Plan d'évacuation de la maison</a></li><li><a href="police/police-quebec/services-police.html" >Services de police</a></li><li><a href="securite-civile/se-preparer-aux-sinistres/plan-familial.html" >Sinistres - Plan familial d'urgence</a></li><li><a href="police/phenomenes-criminels.html" >Principaux phénomènes criminels</a></li> <li><a href="ministere/programmes-services-formulaires.html" >Programmes, services et formulaires</a></li></ul>
+		<!--  Text: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:100306/text [end] -->
+		</div>
+    </div>
+  </div>
+  <div id="colonne2">
+    <div class="blocGris" id="medias-sociaux"><!--TYPO3SEARCH_begin-->
+	<!--  CONTENT ELEMENT, uid:91504/text [begin] -->
+		<a id="c91504"></a>
+		<!--  Header: [begin] -->
+			<div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Suivez-nous</h2></div>
+		<!--  Header: [end] -->
+			
+		<!--  Text: [begin] -->
+			<p class="bodytext"><a href="https://www.youtube.com/user/securitepubliqueqc" title="Ce lien s'ouvre dans une nouvelle fenêtre. Le contenu pourrait être non accessible." target="_blank" class="external-link-non-accessible" ><img src="fileadmin/images/commun/youtube.png" alt="YouTube" height="21" width="30" /></a>&nbsp;<a href="https://www.facebook.com/securitepublique" title="Ce lien s'ouvre dans une nouvelle fenêtre. Le contenu pourrait être non accessible." target="_blank" ><img alt="Facebook" src="fileadmin/images/commun/facebook.png" height="21" width="21" /></a> <a href="https://twitter.com/secpubliqueqc" title="Ce lien s'ouvre dans une nouvelle fenêtre. Le contenu pourrait être non accessible." target="_blank" ><img alt="Twitter" src="fileadmin/images/commun/twitter.png" height="21" width="21" /></a> <a href="ministere/salle-presse/fils-nouvelles.html" title="Abonnez-vous à notre fil RSS" ><img alt="RSS" src="fileadmin/images/commun/rss.png" height="21" width="21" /></a></p>
+		<!--  Text: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:91504/text [end] -->
+		<!--TYPO3SEARCH_end--></div>
+    <div class="blocGris" id="nouvelle"><!--TYPO3SEARCH_begin-->
+	<!--  CONTENT ELEMENT, uid:42599/list [begin] -->
+		<a id="c42599"></a>
+		<!--  Header: [begin] -->
+			<div class="csc-header csc-header-n1"><h2 class="csc-firstHeader">Salle de presse</h2></div>
+		<!--  Header: [end] -->
+			
+		<!--  Plugin inserted: [begin] -->
+			<ul class="news-list-item">
+	
+		<li> <div class="date"> 7 mars 2016</div>
+			<h3><a href="ministere/salle-presse/communiques/communiques.html?tx_ttnews%5Btt_news%5D=12942" title=""> Le gouvernement donne déjà suite au rapport du Protecteur du citoyen  </a></h3>
+			<p class="bodytext">À la suite du dépôt du rapport sur les conditions de détention, l’administration de la justice et la prévention de la criminalité au Nunavik du Protecteur du citoyen, le député d’Ungava, M. Jean Boucher, et des ministres du gouvernement confirment qu’ils donnent déjà suite aux constats et aux recommandations du rapport.</p>
+
+			</li>
+		
+		<li> <div class="date"> 4 mars 2016</div>
+			<h3><a href="ministere/salle-presse/communiques/communiques.html?tx_ttnews%5Btt_news%5D=12937" title=""> Colloque régional en sécurité incendie à Dégelis, le 16 avril 2016&nbsp;  </a></h3>
+			<p class="bodytext">Sur le thème « La sécurité est notre priorité, il faut s’unir pour mieux agir. », l’Association des pompiers de l’Est du Québec, en collaboration avec le ministère de la Sécurité publique, vous invite à son colloque annuel en sécurité incendie. &nbsp;</p>
+
+			</li>
+		
+		<li> <div class="date"> 4 mars 2016</div>
+			<h3><a href="ministere/salle-presse/communiques/communiques.html?tx_ttnews%5Btt_news%5D=12936" title=""> La Ville de Gracefield et ses citoyens touchés bénéficient d’une aide financière gouvernementale&nbsp;   </a></h3>
+			<p class="bodytext">Cette aide survient à la suite des inondations du 5 au 31 janvier en raison d'embâcles sur la rivière Gatineau.&nbsp;</p>
+
+			</li>
+		
+	</ul>
+<p class="toutes-nouvelles"><a href="ministere/salle-presse.html" >Salle de presse</a></p>
+
+		<!--  Plugin inserted: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:42599/list [end] -->
+		
+	<!--  CONTENT ELEMENT, uid:42604/text [begin] -->
+		<div id="c42604" class="csc-default" ></div>
+	<!--  CONTENT ELEMENT, uid:42604/text [end] -->
+		<!--TYPO3SEARCH_end--></div>
+  </div>
+</div>
+<div id="cleaner"></div>
+<div id="vignette"><!--TYPO3SEARCH_begin-->
+	<!--  CONTENT ELEMENT, uid:40406/image [begin] -->
+		<a id="c40406"></a>
+		<!--  Image block: [begin] -->
+			<div class="csc-textpic csc-textpic-center csc-textpic-above"><div class="csc-textpic-imagewrap" style="width:516px;"><ul><li class="csc-textpic-image csc-textpic-firstcol" style="width:120px;"><a href="http://www.jeunesse.securitepublique.gouv.qc.ca/" title="Ce lien s'ouvre dans une nouvelle fenêtre." target="_blank" ><img src="fileadmin/images/vignettes/sos-securo-120x60.png" width="120" height="60" border="0" alt="Site jeunesse S.O.S. Sécuro." /></a></li><li class="csc-textpic-image" style="width:120px;"><a href="https://www.cybertip.ca/app/fr/" title="Ce lien s'ouvre dans une nouvelle fenêtre." target="_blank" ><img src="fileadmin/images/vignettes/cyberaide.png" width="120" height="60" border="0" alt="cyberaide.ca" /></a></li><li class="csc-textpic-image" style="width:120px;"><a href="http://www.justice.gouv.qc.ca/francais/programmes/ligne1888.htm" title="Ce lien s'ouvre dans une nouvelle fenêtre." target="_blank" ><img src="fileadmin/images/vignettes/1888_mars2012FR.png" width="120" height="60" border="0" alt="Ligne-ressource sans frais – Victimes d'agression sexuelle : 1 888 933-9007" /></a></li><li class="csc-textpic-image csc-textpic-lastcol" style="width:126px;"><a href="https://www.mfa.gouv.qc.ca/fr/intimidation/prix/Pages/index.aspx" target="_blank" ><img src="fileadmin/images/vignettes/anim_prix-intimidation.gif" width="126" height="60" border="0" alt="Prix - Ensemble contre l'intimidation!" /></a></li></ul></div></div><div class="csc-textpic-clear"><!-- --></div>
+		<!--  Image block: [end] -->
+			
+	<!--  CONTENT ELEMENT, uid:40406/image [end] -->
+		<!--TYPO3SEARCH_end--></div>
+<div id="piv-pied"><ul><li><a href="accessibilite.html"  accesskey="0">Accessibilité</a></li><li><a href="confidentialite.html"  >Confidentialité</a></li><li><a href="ministere/acces-information-protection.html"  >Accès à l'information</a></li><li class="last"><a href="ministere/acces-diffusion.html"  >Diffusion de documents</a></li><li><a href="ministere/mission/orientations-politiques/declaration-services.html"  >Déclaration de services aux citoyens</a></li><li><a href="http://www.gouv.qc.ca/FR/PolitiquesConditionsUtilisation/Pages/PolitiqueLinguistique.aspx" target="_blank"  >Politique linguistique</a></li><li><a href="regles-d-utilisation-des-medias-sociaux.html"  >Règles d'utilisation des médias sociaux</a></li><li class="last"><a href="a-propos-du-site.html"  >À&nbsp;propos&nbsp;de&nbsp;ce&nbsp;site</a></li></ul><a href="http://www.gouv.qc.ca" title="Portail gouvernement du Québec (ouvre ce lien dans une nouvelle fenêtre)" target="_blank" ><img src="typo3temp/pics/b12ab00d02.gif" width="105" height="32" border="0" alt="Gouvernement du Québec, 2016" /></a><br /><span class="copyright"><a href="http://www.droitauteur.gouv.qc.ca/copyright.php" title="La gestion des droits d'auteurs du gouvernement du Québec (ouvre ce lien dans une nouvelle fenêtre)" target="_blank" >&#169; Gouvernement du Québec, 1996-2016</a></span><br /><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-3576205-17']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);})();</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-18200390-1', 'auto'); ga('send', 'pageview');</script></div>
+
+<script src="/fileadmin/templates/js/menu_focus.js?1412622911" type="text/javascript"></script>
+<script src="/fileadmin/templates/js/jquery-migrate.min.js?1444313141" type="text/javascript"></script>
+<script src="/fileadmin/templates/js/table_over.js?1421954501" type="text/javascript"></script>
+<script src="fileadmin/templates/js/commun.js?1421954267" type="text/javascript"></script>
+<script src="/fileadmin/templates/js/jquery-ui.min.js?1424113418" type="text/javascript"></script>
+<script src="/fileadmin/templates/js/jquery.ui.totop.js?1400685175" type="text/javascript"></script>
+
+
+</body>
+</html>

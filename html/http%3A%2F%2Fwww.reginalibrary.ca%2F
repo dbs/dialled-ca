@@ -1,0 +1,705 @@
+ 	 	<!--
+
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26146695-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<title>Regina Public Library</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<style type="text/css">
+
+/*Make sure your page contains a valid doctype at the top*/
+#simplegallery1{ //CSS for Simple Gallery Example 1
+position: relative; /*keep this intact*/
+visibility: hidden; /*keep this intact*/
+border: 10px solid darkred;
+}
+
+#simplegallery1 .gallerydesctext{ //CSS for description DIV of Example 1 (if defined)
+text-align: left;
+padding: 2px 5px;
+}
+
+</style>
+
+<script type="text/javascript" src="simplegallery.js">
+
+
+
+
+</script>
+<script type="text/javascript">
+	$(document).ready(function()
+{
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+	today = mm+'/'+dd+'/'+yyyy;
+	
+	$.ajax({
+        type: 'GET',
+        url: 'user/delete_banner.php',
+        data: "id=" + today,
+        success: function(data){
+            
+        }
+    });
+});
+</script>
+<script type="text/javascript">
+var mygallery=new simpleGallery({
+	wrapperid: "slidegallery", //ID of main gallery container,
+	dimensions: [760, 300], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+	imagearray: [
+
+//["images/Banner/Notice_OnlineReg_WEB.jpg","","",""],
+//["images/Banner/SILS_GenMain_WEB.jpg","","",""],
+//["images/Banner/TechDiff_Cal_web.jpg","","",""],
+//["images/Banner/TechDifficult_web_Apr22.jpg","","",""],
+ ["user/banners/64091844WEB_BookClubBag.jpg","http://www.reginalibrary.ca/readers_cafe/bookclubinabag.html","",""],  ["user/banners/8616080RPL_english.jpg","http://www.reginalibrary.ca/literacy/index.html","",""],  ["user/banners/56438273RPL-0013C_Fall_Campaign_Homepage_Banner_Reel.jpg","http://www.reginalibrary.ca/awareness/","",""],  ["user/banners/56020433WIR_StoryBlog_MainBanner.jpg","http://www.reginalibrary.ca/story/","",""], 
+
+
+		
+											 
+
+											
+
+	],
+	autoplay: [true, 10000, 25], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	oninit:function(){ //event that fires when gallery has initialized/ ready to run
+		//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
+	},
+	onslide:function(curslide, i){ //event that fires after each slide is shown
+		//Keyword "this": references current gallery instance
+		//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+		//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+	}
+})
+
+</script>
+
+
+<!-- ImageReady Preload Script (navbar.psd) -->
+
+<script type="text/javascript">
+//<![CDATA[
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		business_over = newImage("images/images/business-over.gif");
+		literacy_over = newImage("images/images/literacy-over.gif");
+		prairie_over = newImage("images/images/prairie-over.gif");
+		film_over = newImage("images/images/film-over.gif");
+		dag_over = newImage("images/images/dag-over.gif");
+		classroom_over = newImage("images/images/classroom-over.gif");
+		db_over = newImage("images/topbanner_db_over.gif");
+		ask_over = newImage("images/topbanner_ask_over.gif");	
+		preloadFlag = true;
+	}
+}
+
+
+// ]]>
+
+</script>
+<!-- End Preload Script -->
+
+
+<style type="text/css">
+body {margin: 0 0;padding:0 0;}
+#main {width:780px; margin:0 auto; overflow:visible; min-height:1441px;}
+body {margin: 0 0;padding:0 0;}
+#main {width:780px; margin:0 auto; overflow:visible; min-height:1441px;}
+.regular { font-family: arial, helvetica, sans-serif; font-size: 10pt }
+.white { font-family: arial, helvetica, sans-serif; color: #ffffff;
+font-size: 11pt }
+.yellow { font-family: arial, helvetica, sans-serif; color: #FFFF00;
+font-size: 10pt }
+
+A:link { color:#39678f; text-decoration:underline; }
+A:visited { color:#39678f; text-decoration:underline; }
+A:hover { color:#7d064e; text-decoration: none; }
+
+</style>
+</head>
+<body onload="preloadImages();">
+
+<div id="main">
+<div></div>
+	
+
+<!--top links table -->
+
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td width="173"><a href="http://reginalibrary.ca"><img src="http://www.reginalibrary.ca/images/logo.gif" border="0"></a></td>
+	<td width="587" valign="top">
+<table width="587" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2"><br><div align="right"><span class="regular"><img src="http://www.reginalibrary.ca/images/whitespacer2.gif"> <a href="http://www.reginalibrary.ca/about/index.html">About Us</a> <img src="http://www.reginalibrary.ca/images/whitespacer2.gif"> | <img src="http://www.reginalibrary.ca/images/whitespacer2.gif"> <a href="http://www.reginalibrary.ca/contactus.html">Contact Us</a> <img src="http://www.reginalibrary.ca/images/whitespacer2.gif"> | <img src="http://www.reginalibrary.ca/images/whitespacer2.gif"> <a href="http://www.reginalibrary.ca/searchingoptions.html">Search</a> <img src="http://www.reginalibrary.ca/images/whitespacer2.gif"> | <img src="http://www.reginalibrary.ca/images/whitespacer2.gif"> <a href="http://www.reginalibrary.ca/sitemap.html">Site Map</a> 
+<img src="http://www.reginalibrary.ca/images/whitespacer2.gif"> | <img src="http://www.reginalibrary.ca/images/whitespacer2.gif"><br><br></td>
+
+<td width="320" align="right">
+
+ <!--<form method="get" action="http://search.reginalibrary.ca/iii/encore/Home,$Search.form.sdirect" id="form" style="float:right; margin-top:38px; margin-right:20px;">
+  <input name="formids" value="target" type="hidden" />
+  <input name="lang" value="eng" type="hidden" />
+  <input name="suite" value="def" type="hidden" />
+  <input name="reservedids" value="lang,suite" type="hidden" />
+  <input name="submitmode" value="" type="hidden" />
+  <input name="submitname" value="" type="hidden" />
+  <input name="target" onBlur="if(!this.value.replace(/ /g,'').length){this.value='Search The Catalogue';};" onFocus="if(this.value.indexOf('Search The Catalogue',0)&gt;-1){this.value='';};" value="Search The Catalogue" id="target" class="encmyaccount" type="text" size="25" style="margin-right:3px;" />
+  <input type="image" src="http://www.reginalibrary.ca/images/submit_button.gif" style="position:absolute;" /><br /> 
+  </form>-->
+  <form action="http://search.reginalibrary.ca/eds/search" method="POST" id="sils-eds-grouped-search-form" accept-charset="UTF-8">
+<input placeholder="Search the Catalogue" id="edit-search-terms" name="search_terms" value="" size="20" maxlength="128" type="text" style="float:left; padding:3px;margin-top:3px;">
+<select id="edit-field-code" name="field_code" class="form-select" style="visibility:hidden; display:none"><option value="" selected="selected">Any</option></select>
+<button class="button form-submit" id="edit-submit" name="op" type="submit" style="background:none;border:none;cursor:pointer;margin-top:5px;"><img src="http://www.reginalibrary.ca/images/submit_button.gif"/></button>
+<input name="form_id" value="sils_eds_grouped_search_form" type="hidden">
+</form>
+
+ <form name="progsearchform" action="http://www.reginalibrary.ca/events/search_data.php" method="get">
+
+<input placeholder="Search for Programs" id="progsearch_input" name="keyword" value="" size="20" maxlength="128" type="text" style="float:left; padding:3px;margin-top:3px;">
+
+<button class="button form-submit" id="edit-submit" name="op" type="submit" style="background:none;border:none;cursor:pointer;margin-top:5px;"><img src="http://www.reginalibrary.ca/images/submit_button.gif"/></button>
+</form>
+  
+
+
+
+
+
+<script src="/adjustSearchFormCss.js" type="text/javascript">
+</script>
+
+</span></div></td>
+  </tr>
+  <tr>
+    <td width="231" valign="top"><div align="right"><a href="http://www.reginalibrary.ca/kidspace/index.html"><img src="http://www.reginalibrary.ca/images/homepagetop_kidspace.gif" border="0"></a></div></td>
+    <td width="231"><div align="center"><a href="http://www.reginalibrary.ca/teenzone/index.html"><img src="http://www.reginalibrary.ca/images/homepagetop_teenzone.gif" border="0"></a></div></td>
+    <td width="125"><a href="http://www.reginalibrary.ca/outreach.html"><img src="http://www.reginalibrary.ca/images/special-needs.gif" border="0"><br></a><a href="http://www.reginalibrary.ca/m/">Text-only version</a></div></td>
+  </tr>  
+</table>
+	
+	</td>
+</tr>
+</table>
+
+
+
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <td colspan="7"><img src="http://www.reginalibrary.ca/images/topblue.gif"></td></tr><tr>
+    <td width="217"><img src="http://www.reginalibrary.ca/images/coverphoto01.jpg"></td>
+    <td width="1"><img src="http://www.reginalibrary.ca/images/whitespacer1.gif"></td>
+    <td width="180"><a href="http://www.reginalibrary.ca/findstuff/index.html"
+				onmouseover="changeImages('books', 'http://www.reginalibrary.ca/images/topbanner_books_over.gif'); return true;"
+				onmouseout="changeImages('books', 'http://www.reginalibrary.ca/images/topbanner_books.gif'); return true;"
+				onmousedown="changeImages('books', 'http://www.reginalibrary.ca/images/topbanner_books.gif'); return true;"
+				onmouseup="changeImages('books', 'http://www.reginalibrary.ca/images/topbanner_books.gif'); return true;">
+				<img name="books" src="http://www.reginalibrary.ca/images/topbanner_books.gif" width="180" height="86" border="0" alt=""></a></td>
+    <td width="1"><img src="http://www.reginalibrary.ca/images/whitespacer1.gif"></td>
+    <td width="180"><a href="http://www.reginalibrary.ca/databases/index.html"
+				onmouseover="changeImages('db', 'http://www.reginalibrary.ca/images/topbanner_db_over.gif'); return true;"
+				onmouseout="changeImages('db', 'http://www.reginalibrary.ca/images/topbanner_db.gif'); return true;"
+				onmousedown="changeImages('db', 'http://www.reginalibrary.ca/images/topbanner_db.gif'); return true;"
+				onmouseup="changeImages('db', 'http://www.reginalibrary.ca/images/topbanner_db.gif'); return true;">
+				<img name="db" src="http://www.reginalibrary.ca/images/topbanner_db.gif" width="180" height="86" border="0" alt=""></a></td>
+    <td width="1"><img src="http://www.reginalibrary.ca/images/whitespacer1.gif"></td>
+  <td width="180"><a href="http://www.reginalibrary.ca/asklibrarian/index.html"
+				onmouseover="changeImages('ask', 'http://www.reginalibrary.ca/images/topbanner_ask_over.gif'); return true;"
+				onmouseout="changeImages('ask', 'http://www.reginalibrary.ca/images/topbanner_ask.gif'); return true;"
+				onmousedown="changeImages('ask', 'http://www.reginalibrary.ca/images/topbanner_ask_over.gif'); return true;"
+				onmouseup="changeImages('ask', 'http://www.reginalibrary.ca/images/topbanner_ask_over.gif'); return true;">
+				<img name="ask" src="http://www.reginalibrary.ca/images/topbanner_ask.gif" width="180" height="86" border="0" alt=""></a></td>
+  </tr><tr><td colspan="7"><img src="http://www.reginalibrary.ca/images/whiteline.gif"></td></td>
+</table>
+
+
+
+
+
+<table id="Table_01" width="760" height="81" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2">
+			<a href="http://www.reginalibrary.ca/business/index.html"
+				onmouseover="changeImages('business', 'http://www.reginalibrary.ca/images/business-over.gif'); return true;"
+				onmouseout="changeImages('business', 'http://www.reginalibrary.ca/images/business.gif'); return true;"
+				onmousedown="changeImages('business', 'http://www.reginalibrary.ca/images/business-over.gif'); return true;"
+				onmouseup="changeImages('business', 'http://www.reginalibrary.ca/images/business-over.gif'); return true;">
+				<img name="business" src="http://www.reginalibrary.ca/images/business.gif" width="105" height="44" border="0" alt=""></a></td>
+		<td colspan="3">
+			<a href="http://www.reginalibrary.ca/literacy/index.html"
+				onmouseover="changeImages('literacy', 'http://www.reginalibrary.ca/images/literacy-over.gif'); return true;"
+				onmouseout="changeImages('literacy', 'http://www.reginalibrary.ca/images/literacy.gif'); return true;"
+				onmousedown="changeImages('literacy', 'http://www.reginalibrary.ca/images/literacy-over.gif'); return true;"
+				onmouseup="changeImages('literacy', 'http://www.reginalibrary.ca/images/literacy-over.gif'); return true;">
+				<img name="literacy" src="http://www.reginalibrary.ca/images/literacy.gif" width="158" height="44" border="0" alt=""></a></td>
+		<td colspan="3">
+			<a href="http://www.reginalibrary.ca/prairiehistory/index.html"
+				onmouseover="changeImages('prairie', 'http://www.reginalibrary.ca/images/prairie-over.gif'); return true;"
+				onmouseout="changeImages('prairie', 'http://www.reginalibrary.ca/images/prairie.gif'); return true;"
+				onmousedown="changeImages('prairie', 'http://www.reginalibrary.ca/images/prairie-over.gif'); return true;"
+				onmouseup="changeImages('prairie', 'http://www.reginalibrary.ca/images/prairie-over.gif'); return true;">
+				<img name="prairie" src="http://www.reginalibrary.ca/images/prairie.gif" width="148" height="44" border="0" alt=""></a></td>
+		<td colspan="3">
+			<a href="http://www.reginalibrary.ca/filmtheatre/index.html"
+				onmouseover="changeImages('film', 'http://www.reginalibrary.ca/images/film-over.gif'); return true;"
+				onmouseout="changeImages('film', 'http://www.reginalibrary.ca/images/film.gif'); return true;"
+				onmousedown="changeImages('film', 'http://www.reginalibrary.ca/images/film-over.gif'); return true;"
+				onmouseup="changeImages('film', 'http://www.reginalibrary.ca/images/film-over.gif'); return true;">
+				<img name="film" src="http://www.reginalibrary.ca/images/film.gif" width="127" height="44" border="0" alt=""></a></td>
+		<td colspan="3">
+			<a href="http://www.dunlopartgallery.org"
+				onmouseover="changeImages('dag', 'http://www.reginalibrary.ca/images/dag-over.gif'); return true;"
+				onmouseout="changeImages('dag', 'http://www.reginalibrary.ca/images/dag.gif'); return true;"
+				onmousedown="changeImages('dag', 'http://www.reginalibrary.ca/images/dag-over.gif'); return true;"
+				onmouseup="changeImages('dag', 'http://www.reginalibrary.ca/images/dag-over.gif'); return true;">
+				<img name="dag" src="http://www.reginalibrary.ca/images/dag.gif" width="115" height="44" border="0" alt=""></a></td>
+		<td>
+			<a href="http://www.reginalibrary.ca/classroom/index.html"
+				onmouseover="changeImages('classroom', 'http://www.reginalibrary.ca/images/classroom-over.gif'); return true;"
+				onmouseout="changeImages('classroom', 'http://www.reginalibrary.ca/images/classroom.gif'); return true;"
+				onmousedown="changeImages('classroom', 'http://www.reginalibrary.ca/images/classroom-over.gif'); return true;"
+				onmouseup="changeImages('classroom', 'http://www.reginalibrary.ca/images/classroom-over.gif'); return true;">
+				<img name="classroom" src="http://www.reginalibrary.ca/images/classroom.gif" width="107" height="44" border="0" alt=""></a></td>
+	</tr>
+	<tr>
+		<td colspan="15">
+			<img src="http://www.reginalibrary.ca/images/navbar_07.gif" width="760" height="5" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<a href="index.html">
+				<img src="http://www.reginalibrary.ca/images/home.gif" width="72" height="31" border="0" alt=""></a></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_09.gif" width="33" height="1" alt=""></td>
+		<td rowspan="2">
+			<a href="http://www.reginalibrary.ca/locations/index.html">
+				<img src="http://www.reginalibrary.ca/images/locations.gif" width="88" height="31" border="0" alt=""></a></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_11.gif" width="40" height="1" alt=""></td>
+		<td colspan="2" rowspan="2">
+			<a href="http://www.reginalibrary.ca/events">
+				<img src="http://www.reginalibrary.ca/images/events.gif" width="66" height="31" border="0" alt=""></a></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_13.gif" width="39" height="1" alt=""></td>
+		<td colspan="2" rowspan="2">
+			<a href="http://www.reginalibrary.ca/howdoi/index.html">
+				<img src="http://www.reginalibrary.ca/images/howdoi.gif" width="94" height="31" border="0" alt=""></a></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_15.gif" width="39" height="1" alt=""></td>
+		<td colspan="2" rowspan="2">
+			<a href="http://www.reginalibrary.ca/community/index.html">
+				<img src="http://www.reginalibrary.ca/images/community.gif" width="126" height="31" border="0" alt=""></a></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_17.gif" width="9" height="1" alt=""></td>
+		<td colspan="2" rowspan="2">
+			<a href="http://search.reginalibrary.ca/spm/account/login">
+				<img src="http://www.reginalibrary.ca/images/libaccount.gif" width="154" height="31" border="0" alt=""></a></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_19.gif" width="33" height="30" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_20.gif" width="40" height="30" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_21.gif" width="39" height="30" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_22.gif" width="39" height="30" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/navbar_23.gif" width="9" height="30" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="72" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="33" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="88" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="40" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="30" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="36" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="39" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="73" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="21" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="39" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="67" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="59" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="9" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="47" height="1" alt=""></td>
+		<td>
+			<img src="http://www.reginalibrary.ca/images/spacer.gif" width="107" height="1" alt=""></td>
+	</tr>
+</table>
+
+
+
+
+<!--end top links table -->
+
+<!-- End ImageReady Slices -->
+
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+<td width="760">
+
+<div id="slidegallery"></div>
+
+</td></tr>
+
+
+</table><img src="images/dottedcover.gif"/>
+
+
+<table border='0' cellspacing='0' cellpadding='0'>
+	<tr>
+		<td width="760">
+			<div class="mainContent">
+				<div class="mainContentTop">
+					<div class="mainContentTopLeft">
+						<div class="headData">@ the Library</div>
+						<div class="headBottom">
+							<div class="headBottomleft"><a href="http://www.reginalibrary.ca/events/at_the_library.html"><img src="events/images/ATL_16_02_cover.jpg" style="width:120px;"/></a></div>
+                                                        <div class="headBottomright"><p>The new edition of <strong>@ the Library </strong>is now available at all RPL locations, and drop points around the city. Check out the online version <a href="http://www.reginalibrary.ca/events/at_the_library.html#april">here</a> to find out about the programs and services being offered at our locations across Regina in April, May and June.</p>
+
+<p>Late March program information can be found in the January / February / March edition <a href="http://www.reginalibrary.ca/events/at_the_library.html">here</a>.</p>
+
+
+								 </div>
+						</div>
+						<div class="mainContentTopLeft">
+						<div class="headData">Central Library Development Reports 2015</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/cld"><img src="images/RPL_Reports.jpg" style="width:80px;"/></a></div>
+							<div class="headBottomright1">Read the external reports on the Central Library building and on the public opinion concerning the future of the facility.<br>
+								 </div>
+						</div>
+                                                </div>
+                                                 <div class="mainContentTopLeft" style="margin-top:10px;">
+						<div class="headData">RPL App</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/findstuff/apps.html"><img src="images/app_rpl.png" style="width:80px;"/></a></div>
+							<div class="headBottomright1">Search for books and e-books, check your library account, and find a location-all from your mobile phone! Click here to download the RPL App.</div>
+						</div>
+                                                 </div>
+					
+					</div>
+					
+
+					<!--<div class="mainContentTopRight">
+						<div class="headData">Help us redesign our website!</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="https://www.surveymonkey.com/s/RPLwebsitesurvey"><img src="css/images/survey-icon.png" style="width:80px;"/></a></div>
+							<div class="headBottomright1">We'd like your input on how our website could be improved. Please take a moment to complete this short website survey! Click <a href="https://www.surveymonkey.com/s/RPLwebsitesurvey">here</a></div>
+						</div>
+						
+					</div>-->
+					<div class="mainContentTopRight">
+<!--						<div class="headData">New Library Catalogue System</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://search.reginalibrary.ca/spm/account/login"><img src="css/images/polaris_logo.png" style="width:80px;"/></a></div>
+                                                        <div class="headBottomright1"><b>September 17-24, 2015 </b><br>Public Libraries in Saskatchewan will be migrating to a new library catalogue system.
+                                                            <br>Click <a href="http://www.reginalibrary.ca/migration/">here</a> to find out what this means for you.
+                                                        </div>
+						</div>-->
+						<!--
+                                                <div class="headData">MDLP End User Survey</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://gos.fluidsurveys.com/s/MDLP2015survey/"><img src="css/images/MDLP-Star.png" style="width:80px;"/></a></div>
+                                                        <div class="headBottomright1">Participate in Saskatchewan Libraries Online Resources survey.
+                                                         
+                                                        </div>
+						</div>
+						-->
+                                        <div class="mainContentTopRight" style="margin-top:5px;">
+						<div class="headData">Innovation and Technology at the Library</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/printing"><img src="css/images/RPL_Innovation_1.jpg" style="width:80px;"/></a></div>
+                                                        <div class="headBottomright1">3D printing is a fascinating technological advancement that provides limitless possibilities! <br>Check out our new <a href="http://www.reginalibrary.ca/printing">3D Printer!</a></div>
+						</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="/mobile_printing/"><img src="css/images/logo_printhand.jpg" style="width:80px;"/></a></div>
+                                                        <div class="headBottomright1">Mobile printing allows you to print documents from your mobile phone, tablet, or laptop. <br> Check out more about <a href="/mobile_printing/">Mobile Printing</a></div>
+						</div>
+						
+					</div>
+					<div class="mainContentTopRight" >
+						<div class="headData">Writer in Residence</div>
+                                                
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/wir/"><img src="css/images/WIR.jpg" style="width:80px;"/></a></div>
+                                                        <div class="headBottomright1" style="margin-left:0px;">
+                                                            <ul>
+                                                                <!--<li><a href="http://www.reginalibrary.ca/about/wir.html">General information and Call for 2016 Applications</a></li>-->
+                                                                <li><a href="http://www.reginalibrary.ca/wir/">Current RPL Writer in Residence Blog</a></li>
+                                                                <li><a href="http://www.reginalibrary.ca/story/">Current Collective Storytelling Blog</a></li>
+                                                            </ul>
+                                                           
+						</div>
+					</div>	
+                                        </div>
+                                        <div class="mainContentTopRight" style="margin-top:5px;">
+						<div class="headData">Books 4 Me</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/books4me/"><img src="css/images/RPL_Books4Me.jpg" style="width:80px;"/></a></div>
+							<div class="headBottomright1">Let an RPL librarian help you find your next great read. Answer a few quick questions and we'll put together a personalized book list for you!</div> 							
+						</div>
+					</div>
+					</div>	
+<!--					
+					<div class="mainContentTopRight" style="margin-top:5px;">
+					
+					<div class="headData">Job Opportunities at RPL</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/blogs/index.php?blog=24"><img src="css/images/jobs.jpg" style="width:80px;"/></a></div>
+							<div class="headBottomright1">Looking for a career change? Click here to view a list of job opportunities available at RPL.</div>
+						</div>
+					</div>
+
+				</div>
+-->				
+				
+				<div class="mainContentTop">
+
+					<div class="mainContentTopLeft">
+						<div class="headData"><a href="http://www.reginalibrary.ca/findstuff/ebooks.html" style="text-decoration: none;color:black;">E-Books, Audio Books and Magazines</a><br><br></div>
+						<div class="headBottom">
+							Visit one of RPL's digital collections to read books and magazines online.<br>
+							<table>
+								<tr>
+									<td><a href="http://ebook.3m.com/library/ReginaPublicLibrary/"><img src="css/images/3m.jpg" class="smallImg"/></a> </td>
+									<td><a href="http://ebook.3m.com/library/ReginaPublicLibrary/"><span class="smallText">3M Cloud Library</span></a> provides access to eBooks and eAudiobooks</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr>
+									<td><a href="http://saskatchewan.lib.overdrive.com/"><img src="css/images/ltogo.jpg" class="smallImg"/></a></td>
+									<td><a href="http://saskatchewan.lib.overdrive.com/1ACAE55B-BBC8-442C-880F-F8EF9FAF094E/10/50/en/Default.htm"><span class="smallText">library2go</span> </a>provides access to eBooks and eAudiobooks </td>
+								</tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr>
+							<td><a href="http://reginalibrary.freading.com/index"><img src="css/images/freading.png" class="smallImg"/></a></td>
+									<td><a href="http://reginalibrary.freading.com/index"><span class="smallText">Freading</span></a> provides access to eBooks</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr>
+									<td><a href="http://ezproxy.reginalibrary.ca:2048/login?url=http://www.rbdigital.com/reginask/zinio"><img src="css/images/zinio.png" class="smallImg"/></td>
+									<td><a href="http://ezproxy.reginalibrary.ca:2048/login?url=http://www.rbdigital.com/reginask/zinio"><span class="smallText">Zinio </span></a> provides access to magazine collections </td>
+								</tr>
+							</table>
+							 
+						</div>
+					</div>
+					
+					<div class="mainContentTopRight">
+						
+						<div class="headData">Download and Stream Music, Movies, Television and More!</div>
+						<div class="headBottom">
+							Download movies, music and television from our digital media services - free with your library card! 
+							<table>
+								<tr>
+									<td><a href="http://www.reginalibrary.ca/findstuff/hoopla.html"><img src="css/images/hoopla.png" class="smallImg"/> </a></td>
+									<td><a href="http://www.reginalibrary.ca/findstuff/hoopla.html"><span class="smallText">Hoopla</span></a> provides access to movies, television shows, music, and audiobooks </td>
+								</tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<!--<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr>
+									<td><a href="http://reginalibrary.freegalmusic.com/homes/index"><img src="css/images/freegal.jpg" class="smallImg"/></a></td>
+									<td><a href="http://reginalibrary.freegalmusic.com/homes/index"><span class="smallText">Freegal</span></a> provides access to music from Sony Music Canada and IODA </td>
+								</tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>-->
+								<tr>
+									<td><a href="https://www.nfb.ca/explore-all-films/"><img src="css/images/nfb.jpg" class="smallImg"/></a></td>
+									<td><a href="https://www.nfb.ca/explore-all-films/"><span class="smallText">NFB</span></a> provides access to free streaming video of National Film Board of Canada films.</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr>
+									<td><a href="http://ezproxy.reginalibrary.ca:2048/login?url=http://rpl.naxosmusiclibrary.com/"><img src="css/images/nml.png" class="smallImg"/></a></td>
+									<td><a href="http://ezproxy.reginalibrary.ca:2048/login?url=http://rpl.naxosmusiclibrary.com/"><span class="smallText">Naxos Music Library</span></a> provides access to thousands of classical music tracks. </td>
+								</tr>
+							</table>
+						</div>
+						
+						
+					</div>
+				</div>
+				<div class="mainContentTop">
+					<div class="mainContentTopLeft">
+						<div class="headData">Online Courses</div>
+						<div class="headBottom">
+							Learn more about the world around you - take an online course! 
+							<table>
+								<tr>
+									<td><a href="http://www.reginalibrary.ca/databases/gale-courses.html"><img src="css/images/gale.png" class="smallImg"/> </a></td>
+									<td><a href="http://www.reginalibrary.ca/databases/gale-courses.html"><span class="smallText">Gale Courses</span></a> free access to interactive, instructor-led online courses </td>
+								</tr>
+								<tr><td></td></tr>
+								<tr>
+									<td><a href="http://www.reginalibrary.ca/databases/lynda.html"><img src="css/images/linda.png" class="smallImg"/></a></td>
+									<td><a href="http://www.reginalibrary.ca/databases/lynda.html"><span class="smallText">Lynda.com</span> </a>online video tutorials with emphasis on enhancing your business, software, technology and creative skills </td>
+								</tr>
+								
+							</table>
+							  
+						</div>
+						<div class="headData">Read Together Regina</div>
+						<div class="headBottom">
+						<table>
+							<tr>
+									<td><a href="http://www.readtogetherregina.ca/"><img src="css/images/monkey.jpg" class="smallImg"/></a></td>
+									<td><a href="http://www.readtogetherregina.ca/"><span class="smallText">Read Together Regina </span> </a>is a program designed to raise awareness about the importance of developing early literacy skills in young children. The message will be delivered to parents by giving each baby born at the Regina General Hospital a book bag containing early literacy resources and books.</td>
+								</tr>
+						</table>
+						</div>
+					</div>
+					<div class="mainContentTopRight">
+						<div class="headData">Online Databases</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/databases/index.html#main_database_left"><img src="css/images/db.jpg" style="width:80px;"/></a></div>
+							<div class="headBottomright1">A wealth of information available at your fingertips. Search in-depth information, and full-text articles from Canadian, U.S., and international sources on a variety of topics including automobile repair, careers, law and much more!</div>
+						
+						</div>
+						<table>
+							<tr>
+								<td colspan="2"><strong><a href="http://bkflix.grolier.com/splash">Database of the Month</a></strong> - All new!&nbsp;<a href="http://go.galegroup.com/ps/start.do?p=MSIC&amp;u=reginaplweb" target="_blank">Research in Context&nbsp;</a>is designed for students in grades 6 to 8. It brings together two previously separate collections:
+
+<ul>
+	<li>Discovering Collection, and</li>
+	<li>Infotrac Junior Edition 2002-present.</li>
+</ul>
+
+<p>Research in Context contains information on current events, the arts, science, popular culture, health, people, government, history, sports, and much more - all organized in a student-friendly way.</p>
+
+</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="mainContentTop">
+					<div class="mainContentTopLeft">
+						<div class="headData">UpFront - RPL Blog</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/blog/"><img src="css/images/blog.jpg" style="width:80px;"/></a></div>
+							<div class="headBottomright1">Get the latest picks and recommendations from RPL librarians!</div>
+						</div>
+					</div>
+                                   <div class="mainContentTopRight">
+						<div class="headData">Program & App Status</div>
+						<div class="headBottom">
+							<div class="headBottomleft1"><a href="http://www.reginalibrary.ca/issues.html"><img src="css/images/status.jpg" style="width:80px;"/></a></div>
+							<div class="headBottomright1">Check out any changes to RPL programs and services - program cancellations, e-services notifications, and more. Any issues or changes will be posted to this page.</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="mainContentTop">
+					
+					
+				</div>
+			</div>
+		</td>
+		
+	</tr>
+</table>
+
+<img src="images/bottom.gif"><br>
+
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+	
+  <tr>
+    <td width="668">
+	<div align="center">
+<span class="regular">
+<script type="text/javascript">
+<!-- Begin
+copyright=new Date();
+update=copyright.getFullYear();
+document.write("&copy; 1997-"+ update + " Regina Public Library");
+//  End -->
+</script>  </span> </div>		
+	</td>
+	<td width="92" valign="top"><a href="http://twitter.com/OfficialRPL"><img src="images/rpl_twitter_small.jpg" border="0"></a>
+	<a href="http://www.facebook.com/reginapubliclibrary"><img src="images/rpl_facebook_small.jpg" border="0"></a>
+	<td width="92" valign="top"><a href="/rss.html#feeds"><img src="images/xmlfeeds.gif" border="0"></a>
+	
+	</td>
+  </tr>
+</table><br><br><br><br>
+
+</div>
+</body>
+</html>

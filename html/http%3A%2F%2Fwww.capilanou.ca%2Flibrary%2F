@@ -1,0 +1,1405 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.wwwstwwwsorg/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="iso-8859-1"?> 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head id="ctl00_HTMLHead"><title>
+	Capilano University Library - Capilano University
+</title><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="Author" content="Capilano University" /><meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /><meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /><meta property="og:title" content="Capiano University" /><meta property="og:type" content="university" /><meta property="og:url" content="http://www.capilanou.ca" /><meta property="og:image" content="http://www.capilanou.ca/images/logo/Capilano-University.jpg" /><meta property="og:site_name" content="Capilanou University" /><meta property="fb:admins" content="858845390" /><meta property="fb:app_id" content="208142009236983" /><meta property="og:description" content="A teaching-focused university in North Vancouver, B.C. with programs in Arts, Sciences, Fine and Applied Arts, Business, Tourism, Outdoor Recreation, Health, Education, Preparatory Studies and more." /><meta property="og:email" content="infocentre@capilanou.ca" /><meta property="og:phone_number" content="604-986-1911" /><meta property="og:fax_number" content="604-984-4985" /><meta property="og:latitude" content="49.190503" /><meta property="og:longitude" content="123.011178" /><meta property="og:street-address" content="2055 Purcell Way" /><meta property="og:locality" content="North Vancouver" /><meta property="og:region" content="British Columbia" /><meta property="og:postal-code" content="V7J 3H5" /><meta property="og:country-name" content="Canada" /><link rel="stylesheet" type="text/css" href="/WorkArea/FrameworkUI/css/ektron.stylesheet.ashx?id=-1759591071+1597669889+646986939+-300771134+1985268503" /><script type="text/javascript" src="/WorkArea/FrameworkUI/js/ektron.javascript.ashx?id=-569449246+-1939951303+-1080527330+-1687560804+-1388997516+2009761168+27274999+1979897163+-422906301+-1818005853+-1008700845+1338359439+-1793043690+1628691364"></script><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <!--
+            /* @license
+             * MyFonts Webfont Build ID 2456658, 2013-01-22T14:58:35-0500
+             * 
+             * The fonts listed in this notice are subject to the End User License
+             * Agreement(s) entered into by the website owner. All other parties are 
+             * explicitly restricted from using the Licensed Webfonts(s).
+             * 
+             * You may obtain a valid license at the URLs below.
+             * 
+             * Webfont: Serifa Black by Bitstream
+             * URL: http://www.myfonts.com/fonts/bitstream/serifa/black/
+             * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+             * 
+             * 
+             * License: http://www.myfonts.com/viewlicense?type=web&buildid=2456658
+             * 
+             * © 2013 MyFonts Inc
+            */
+
+            -->
+        <!-- 1. load the webfonts -->
+        <link rel="stylesheet" type="text/css" href="/css/MyFontsWebfontsKit.css" /><link rel="stylesheet" media="screen" href="/css/layout.css" type="text/css" /><link rel="stylesheet" media="print" href="/css/print.css" type="text/css" />
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="/css/IE7styles-layout.css" />
+        <![endif]-->  	
+        <!--[if ! lte IE 6]><!-->
+            <link rel="stylesheet" media="screen" href="/css/layout.css" type="text/css" /><link rel="stylesheet" media="print" href="/css/print.css" type="text/css" />
+            <!--<link rel="stylesheet" href="/css/themes/base/jquery.ui.all.css" />-->
+        <!--<![endif]-->
+        <!--[if IE 6]>
+            <link rel="stylesheet" type="text/css" href="/css/IE6styles-layout.css" /> 
+        <![endif]-->
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#campus-dir-radio').click(function() {
+                    $('#site-radio').removeClass("radio-selected");
+                    $('#site-radio').addClass("radio-not-selected");
+                    $('#campus-dir-radio').removeClass("radio-not-selected");
+                    $('#campus-dir-radio').addClass("radio-selected");
+                });
+                $('#site-radio').click(function() {
+                    $('#campus-dir-radio').removeClass("radio-selected");
+                    $('#campus-dir-radio').addClass("radio-not-selected");
+                    $('#site-radio').removeClass("radio-not-selected");
+                    $('#site-radio').addClass("radio-selected");
+                });
+                //handles search button
+                $("#search-button").click(function() {
+                    searchStr = jQuery.trim($("#search-box").val());
+                    if (searchStr != "") {
+                        if ($("#site-radio").hasClass("radio-selected")) {                            
+                            window.location = "/search.aspx?query=" + searchStr;
+                        } else if ($("#campus-dir-radio").hasClass("radio-selected")) {
+                            window.location = "http://phonebook.capilanou.ca/phonebook/phonebook.serv?search=" + searchStr;
+                        }
+                    }
+                });
+                //handles enter key
+                $('#aspnetForm').keypress(function(e) {
+                    if (e.keyCode == 13) {
+                        var searchStr = "";
+                        //if on search page...
+                        if (location.href.search((/search.aspx/i)) != -1) {
+                            if ($("#site-radio").hasClass("radio-selected")) {
+                                if (jQuery.trim($("#search-box").val()) != "") {
+                                    $('.gsc-input').val(jQuery.trim($("#search-box").val()));
+                                    $("#search-box").val("");
+                                    $('.gsc-search-button').trigger('click');
+                                } else {
+                                    $('.gsc-search-button').trigger('click');
+                                }
+                            } else if ($("#campus-dir-radio").hasClass("radio-selected")) {
+                                window.location = "http://phonebook.capilanou.ca/phonebook/phonebook.serv?search=" + jQuery.trim($("#search-box").val());
+                            }
+                        } else {
+                            searchStr = jQuery.trim($("#search-box").val());
+                            if (searchStr != "") {
+                                if ($("#site-radio").hasClass("radio-selected")) {
+                                    window.location = "/search.aspx?query=" + searchStr;
+                                } else if ($("#campus-dir-radio").hasClass("radio-selected")) {
+                                    window.location = "http://phonebook.capilanou.ca/phonebook/phonebook.serv?search=" + searchStr;
+                                }
+                            }
+                        }
+                        return false;
+                    }
+                });
+            });         
+        </script>
+        <script type="text/javascript">
+        function selectReplacement(obj) {
+        var ul = document.createElement('ul');
+        ul.className = 'selectReplacement';
+        // collect our object’s options
+        var opts = obj.options;
+        // iterate through them, creating <li>s
+        for (var i=0; i<opts.length; i++) {
+            var li = document.createElement('li');
+            var txt = document.createTextNode(opts[i].text);
+            li.appendChild(txt);
+            ul.appendChild(li);
+        }
+        // add the ul to the form
+        obj.parentNode.appendChild(ul);
+        }
+        </script>
+	<!-- Google Analytics - 9/25/2014 - tf-->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-1507277-1', 'auto');
+            ga('send', 'pageview');
+
+</script>	
+
+<!--<div id="queries"></div>-->
+<!--<script src="https://cse.google.com/query_renderer.js"></script>-->
+<!--<script src="https://cse.google.com/api/017860802598013033650/cse/6xfvil9glla/queries/js?view=day&callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>-->
+    <meta name="Description" content="A teaching-focused university in North Vancouver, B.C. with programs in Arts, Sciences, Fine and Applied Arts, Business, Tourism, Outdoor Recreation, Health, Education, Preparatory Studies and more." /><meta name="Keywords" content="Capilano University,Capilano U,British Columbia universities,Canadian University,Cap U,arts education,business courses,health education,tourism,science education,bachelor degree,Capilano College,degree,diploma,certificate,postsecondary,post-secondary" /></head>
+    <body>
+        <form method="post" action="/library/" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="EktronClientManager" id="EktronClientManager" value="-1759591071,-569449246,-1939951303,-1080527330,-1687560804,-1388997516,2009761168,27274999,1979897163,-422906301,-1818005853,-1008700845,1597669889,1338359439,-1793043690,646986939,1628691364,-300771134,1985268503" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQ5MTY5ODAzMg9kFgJmD2QWAgIDEGRkFgICAw9kFgoCAQ8WAh4EVGV4dAVdPGEgaWQ9J21lbnVfdGl0bGUnIGhyZWY9Jy9Xb3JrQXJlYS9saW5raXQuYXNweD9MaW5rSWRlbnRpZmllcj1JRCZhbXA7SXRlbUlEPTI0NTEnPkxpYnJhcnk8L2E+ZAIJD2QWAmYPZBYEZg9kFgICAw9kFgJmD2QWAgIBDxYCHgVjbGFzcwUQZHJvcHpvbmUgUEJDbGVhcmQCAQ9kFgICAQ9kFgJmD2QWAgIBD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIBFgJmD2QWBmYPFQIUIHN0eWxlPSd3aWR0aDoyMDBweCcAZAIBDxYCHgdWaXNpYmxlaGQCAw8WAh8CAgUWCmYPZBYCAgEPZBYCZg9kFgICAQ9kFgICAQ9kFgJmD2QWAgIBD2QWAmYPZBYCZg9kFgRmD2QWBgIBDxYCHwBlZAIDDw8WCB4FVGl0bGUFBDEwNzYeE0NhdGFsb2dJY29uSW1hZ2VVcmwFLi9Xb3JrQXJlYS9pbWFnZXMvYXBwbGljYXRpb24vaWNvbl9kb2N1bWVudC5naWYeEVRpdGxlSWNvbkltYWdlVXJsZR8DaGRkAgUPFgIfAAWjBTxkaXYgY2xhc3M9J2NvbnZlcnNpb25zJz48cD48YSBocmVmPSJodHRwOi8vbGlicmFyeS5jYXBpbGFub3UuY2EvcGF0cm9uaW5mbyIgdGl0bGU9IkFjY2VzcyB5b3VyIGxpYnJhcnkgYWNjb3VudCBvbmxpbmUgZm9yIG92ZXJkdWVzLCByZW5ld2FscywgYW5kIG9ubGluZSBhY2Nlc3MgdG8gZGF0YWJhc2VzLiIgdGFyZ2V0PSJfYmxhbmsiPk15IExpYnJhcnkgQWNjb3VudDwvYT48L3A+PHA+PGEgaHJlZj0iL1dvcmtBcmVhL2xpbmtpdC5hc3B4P0xpbmtJZGVudGlmaWVyPWlkJmFtcDtJdGVtSUQ9NDc1NSIgdGl0bGU9IkxpYnJhcnkgaW5mb3JtYXRpb24gYW5kIHNlcnZpY2VzIGZvciBzdHVkZW50cyI+U3R1ZGVudHM8L2E+PC9wPjxwPjxhIGhyZWY9Ii9Xb3JrQXJlYS9saW5raXQuYXNweD9MaW5rSWRlbnRpZmllcj1pZCZhbXA7SXRlbUlEPTQ3NjgiIHRpdGxlPSJMaWJyYXJ5IGluZm9ybWF0aW9uIGFuZCBzZXJ2aWNlcyBmb3IgSW5zdHJ1Y3RvcnMiPkluc3RydWN0b3JzPC9hPjwvcD48cD48YSBocmVmPSJodHRwOi8vd3d3LmNhcGlsYW5vdS5jYS9saWJyYXJ5L3VzZS9zdHVkZW50cy9yZWdpb25hbC5odG1sIiB0aXRsZT0iUmVnaW9uYWwgU3R1ZGVudCBHdWlkZSB0byB0aGUgTGlicmFyeSIgdGFyZ2V0PSJfYmxhbmsiPlNlY2hlbHQgYW5kIFNxdWFtaXNoIEluZm88L2E+PC9wPjwvZGl2PmQCAQ9kFgJmDxBkZBYAZAIBD2QWAgIBD2QWAmYPZBYCAgEPZBYCAgEPZBYCZg9kFgICAQ9kFgJmD2QWAgIBD2QWAmYPZBYCAgEPDxYCHwAF7wg8YnIgLz48c3BhbiBjbGFzcz0iYm9yZGVybGVzcy10YWJsZSI+Cjx0YWJsZSBzdHlsZT0iYm9yZGVyLXNwYWNpbmc6IDBweDsgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsgYm9yZGVyOiBub25lOyI+CiAgPHRib2R5PgogICAgPHRyPgogICAgICA8dGQgc3R5bGU9InBhZGRpbmc6IDJweDsiPgogICAgICA8YSBocmVmPSJodHRwczovL3d3dy5mYWNlYm9vay5jb20vQ2FwVUxpYnJhcnk/ZnJlZj10cyI+CiAgICAgIDxpbWcgc3JjPSIvYXNzZXRzLzAvMzk2Lzc1OS8zMDc5L3RodW1iX2FhNzgxMGM4LWE1YjQtNGM0MC1iMGQ3LWJlOWM5NjdlOWFiOC5wbmciIHRpdGxlPSJDYXBVIExpYnJhcnkgb24gRmFjZWJvb2siIHdpZHRoPSIzMiI+PC9hPgogICAgICA8L3RkPgogICAgICAKICAgICAgPHRkIHN0eWxlPSJwYWRkaW5nOiAycHg7Ij4KICAgICAgPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9DYXBVTGlicmFyeSI+CiAgICAgIDxpbWcgc3JjPSIvYXNzZXRzLzAvMzk2Lzc1OS8zMDc5L3RodW1iXzZlYWY0NDA4LTZkZDUtNGQ2OS04MTJhLWE1YmU2ZjE3NDU3Zi5wbmciIHRpdGxlPSJDYXBVIExpYnJhcnkgb24gVHdpdHRlciIgd2lkdGg9IjMyIj48L2E+CiAgICAgIDwvdGQ+CiAgICAgIAogICAgICA8dGQgc3R5bGU9InBhZGRpbmc6IDJweDsiPgogICAgICA8YSBocmVmPSJodHRwczovL3d3dy55b3V0dWJlLmNvbS91c2VyL0NhcFVMaWJyYXJ5Ij4KICAgICAgPGltZyBzcmM9Ii9hc3NldHMvMC8zOTYvNzU5LzMwNzkvdGh1bWJfYTczMDgxMmItNWIzYi00MzYxLWE1OWUtZmU5NThmZTFhODIzLnBuZyIgdGl0bGU9IkNhcFUgTGlicmFyeSBvbiBZb3VUdWJlIiB3aWR0aD0iMzIiPjwvYT4KICAgICAgPC90ZD4KICAgICAgCiAgICAgIDx0ZCBzdHlsZT0icGFkZGluZzogMnB4OyI+CiAgICAgIDxhIGhyZWY9Imh0dHA6Ly9pbnN0YWdyYW0uY29tL2NhcHVsaWJyYXJ5Ij4KICAgICAgPGltZyBzcmM9Ii9hc3NldHMvMC8zOTYvNzU5LzMwNzkvdGh1bWJfMGQyNmRiMDUtMjlkYi00OWRhLTljOTgtYzljYmIxMjMyODM4LnBuZyIgdGl0bGU9IkNhcFUgTGlicmFyeSBvbiBJbnN0YWdyYW0iIHdpZHRoPSIzMiI+PC9hPgogICAgICA8L3RkPgogICAgPC90cj4KICA8L3Rib2R5Pgo8L3RhYmxlPgo8L3NwYW4+ZGQCAg9kFgICAQ9kFgJmD2QWAgIBD2QWAgIBD2QWAmYPZBYCAgEPZBYCZg9kFgJmD2QWBGYPZBYGAgEPFgIfAGVkAgMPDxYEHwQFASAfA2hkZAIFDxYCHwAF1gM8ZGl2IGNsYXNzPSd3aWRnZXQtYm94Jz48aDI+TGF0ZXN0IE5ld3M8L2gyPjx1bCBjbGFzcz0nd2lkZ2V0LWNvbnRlbnQnPjxsaSBjbGFzcz0nbmV3cy1pY29uJz48YSBocmVmPScvbGlicmFyeS9uZXdzL1JpdGEtSm9obnNvbi8nPlJpdGEgSm9obnNvbiBNZW1vcmlhbCBMaWJyYXJ5PC9hPjwvbGk+PGxpIGNsYXNzPSduZXdzLWljb24nPjxhIGhyZWY9Jy9saWJyYXJ5L25ld3MvUHJpZGUtV2Vlay8nPlN1cHBvcnQgUHJpZGUgV2VlazwvYT48L2xpPjxsaSBjbGFzcz0nbmV3cy1pY29uJz48YSBocmVmPScvbGlicmFyeS9uZXdzL3RoZXJhcHktZG9ncy8nPlRoZXJhcHkgRG9ncyBAIENhcFUgTGlicmFyeTwvYT48L2xpPjxsaSBjbGFzcz0ndmlldy1hbGwtYnRuJz48YSBocmVmPScvV29ya0FyZWEvbGlua2l0LmFzcHg/TGlua0lkZW50aWZpZXI9aWQmSXRlbUlEPTI0NTQnPlZpZXcgYWxsIG5ld3M8L2E+PC9saT48L3VsPjwvZGl2PmQCAQ9kFgICAw8QZGQWAWZkAgMPZBYCAgEPZBYCZg9kFgICAQ9kFgICAQ9kFgJmD2QWAgIBD2QWAmYPZBYCAgEPZBYCZg9kFgICAQ8PFgIfAAUNPHA+Jm5ic3A7PC9wPmRkAgQPZBYCAgEPZBYCZg9kFgICAQ9kFgICAQ9kFgJmD2QWAgIBD2QWAmYPZBYCAgEPZBYCZg9kFgICAQ8PFgIfAAXBAzxhIGNsYXNzPSJ0d2l0dGVyLXRpbWVsaW5lIiBocmVmPSJodHRwczovL3R3aXR0ZXIuY29tL0NhcFVMaWJyYXJ5IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIzNTAiIGRhdGEtd2lkZ2V0LWlkPSI2ODQxMzk3MjA2NTgzODY5NDUiPlR3ZWV0cyBieSBAQ2FwVUxpYnJhcnk8L2E+CjxzY3JpcHQ+IWZ1bmN0aW9uKGQscyxpZCl7dmFyIGpzLGZqcz1kLmdldEVsZW1lbnRzQnlUYWdOYW1lKHMpWzBdLHA9L15odHRwOi8udGVzdChkLmxvY2F0aW9uKT8naHR0cCc6J2h0dHBzJztpZighZC5nZXRFbGVtZW50QnlJZChpZCkpe2pzPWQuY3JlYXRlRWxlbWVudChzKTtqcy5pZD1pZDtqcy5zcmM9cCsiOi8vcGxhdGZvcm0udHdpdHRlci5jb20vd2lkZ2V0cy5qcyI7ZmpzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGpzLGZqcyk7fX0oZG9jdW1lbnQsInNjcmlwdCIsInR3aXR0ZXItd2pzIik7PC9zY3JpcHQ+ZGQCCw9kFgICAQ9kFgJmD2QWBGYPZBYCAgMPZBYCZg9kFgICAQ8WAh8BBRBkcm9wem9uZSBQQkNsZWFyZAIBD2QWAgIBD2QWAmYPZBYCAgEPZBYCAgEPFgIfAgIBFgJmD2QWBmYPFQITIHN0eWxlPSd3aWR0aDoxMDAlJwBkAgEPFgIfA2hkAgMPFgIfAgIBFgJmD2QWAgIBD2QWAmYPZBYCAgEPZBYCAgEPZBYCZg9kFgICAQ9kFgJmD2QWAmYPZBYEZg9kFggCAQ8WAh8AZWQCAw8PFgYfBAUEMTQ1NB8FBS4vV29ya0FyZWEvaW1hZ2VzL2FwcGxpY2F0aW9uL2ljb25fZG9jdW1lbnQuZ2lmHwZlZGQCBQ8PFgYfBAUDMTU5HwUFLi9Xb3JrQXJlYS9pbWFnZXMvYXBwbGljYXRpb24vaWNvbl9kb2N1bWVudC5naWYfBmVkZAIHDxYCHwAFsRE8c2NyaXB0IHR5cGU9J3RleHQvamF2YXNjcmlwdCcgc3JjPScvanMvbGliL2pxdWVyeS5qcyc+PC9zY3JpcHQ+PHNjcmlwdCB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0nL2pzL2pxdWVyeS5jeWNsZS5hbGwuanMnPjwvc2NyaXB0PjxzY3JpcHQgdHlwZT0ndGV4dC9qYXZhc2NyaXB0Jz4kKGRvY3VtZW50KS5yZWFkeShmdW5jdGlvbigpIHskKCcuc2xpZGVzaG93LWNvbnRhaW5lcicpLmFmdGVyKCc8ZGl2IGNsYXNzPSJzbGlkZXNob3ctbmF2aWdhdGlvbiIvPicpLmN5Y2xlKHtmeDogJ2ZhZGUnLHBhdXNlOiB0cnVlLCB0aW1lb3V0OiA3MDAwLCBwYWdlcjogIi5zbGlkZXNob3ctbmF2aWdhdGlvbiJ9KTt9KTs8L3NjcmlwdD48ZGl2IGNsYXNzPSdzbGlkZXNob3ctY29udGFpbmVyJz48ZGl2IGNsYXNzPSdmaXJzdCcgb25jbGljaz0iamF2YXNjcmlwdDp3aW5kb3cub3BlbignaHR0cDovL2V6cHJveHkuY2FwaWxhbm91LmNhL2xvZ2luP3VybD1odHRwOi8vc2VhcmNoLmVic2NvaG9zdC5jb20vbG9naW4uYXNweD9kaXJlY3Q9dHJ1ZSZicXVlcnk9KEVBUCtBTkQrUmVhZGluZytBTkQrQ29sbGVjdGlvbikmY2xpMD1GQyZjbHYwPVkmY2xpMT1GVDEmY2x2MT1ZJnR5cGU9MSZzaXRlPWVkcy1saXZlJywgJ19ibGFuaycpOyJzdHlsZT0iY3Vyc29yOiBwb2ludGVyOyBjdXJzb3I6IGhhbmQ7IGJhY2tncm91bmQtaW1hZ2U6IHVybCgnL3VwbG9hZGVkSW1hZ2VzL2NvbnRlbnQvc2VydmljZXMvdGVhY2hpbmctbGVhcm5pbmctY2VudHJlKDEpL3NsaWRlcy9FQVAgUmVhZGluZyBDb2xsZWN0aW9uLmpwZycpOyBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0OyI+PGRpdiBpZD0naGVhZGxpbmUtdGVhc2VyJz48aDM+Kk5FVyogRUFQIFJlYWRpbmcgQ29sbGVjdGlvbjwvaDM+PHA+TG9jYXRpb246IExpYnJhcnkgbWFpbiBmbG9vci4gSW1wcm92ZSB5b3VyIEVuZ2xpc2ggJiByZWFkIGEgZ29vZCBib29rLiBDbGljayBmb3IgdGl0bGVzLjwvcD48L2Rpdj48L2Rpdj48ZGl2IG9uY2xpY2s9ImphdmFzY3JpcHQ6d2luZG93LmxvY2F0aW9uPScvV29ya0FyZWEvbGlua2l0LmFzcHg/TGlua0lkZW50aWZpZXI9aWQmSXRlbUlEPTE5MzI3MzU2MjUxJyJzdHlsZT0iY3Vyc29yOiBwb2ludGVyOyBjdXJzb3I6IGhhbmQ7IGJhY2tncm91bmQtaW1hZ2U6IHVybCgnL3VwbG9hZGVkSW1hZ2VzL2NvbnRlbnQvc2VydmljZXMvdGVhY2hpbmctbGVhcm5pbmctY2VudHJlKDEpL3NsaWRlcy9yaXRhIGpvaG5zb24uanBnJyk7IGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7Ij48ZGl2IGlkPSdoZWFkbGluZS10ZWFzZXInPjxoMz5DZWxlYnJhdGluZyBDYXAgSGlzdG9yeTwvaDM+PHA+Uml0YSBKb2huc29uIE1lbW9yaWFsIExpYnJhcnkgb24gZGlzcGxheSBNYXIgMS0xMyBAQ2FwVSBMaWJyYXJ5PC9wPjwvZGl2PjwvZGl2PjxkaXYgb25jbGljaz0iamF2YXNjcmlwdDp3aW5kb3cubG9jYXRpb249Jy9Xb3JrQXJlYS9saW5raXQuYXNweD9MaW5rSWRlbnRpZmllcj1pZCZJdGVtSUQ9MzI4OTQnInN0eWxlPSJjdXJzb3I6IHBvaW50ZXI7IGN1cnNvcjogaGFuZDsgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcvdXBsb2FkZWRJbWFnZXMvY29udGVudC9zZXJ2aWNlcy90ZWFjaGluZy1sZWFybmluZy1jZW50cmUoMSkvc2xpZGVzL2Jvb2thc3R1ZHlyb29tLmpwZycpOyBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0OyI+PGRpdiBpZD0naGVhZGxpbmUtdGVhc2VyJz48aDM+TmVlZCBhIGJldHRlciBncm91cCBzdHVkeSBzcGFjZT88L2gzPjxwPkJvb2sgYSBzdHVkeSByb29tIGZvciB5b3VyIGdyb3VwIG9mIDItMTIrIG9ubGluZS48L3A+PC9kaXY+PC9kaXY+PGRpdiBvbmNsaWNrPSJqYXZhc2NyaXB0OndpbmRvdy5sb2NhdGlvbj0naHR0cDovL3d3dy5jYXBpbGFub3UuY2EvbGlicmFyeS8nInN0eWxlPSJjdXJzb3I6IHBvaW50ZXI7IGN1cnNvcjogaGFuZDsgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcvdXBsb2FkZWRJbWFnZXMvY29udGVudC9zZXJ2aWNlcy90ZWFjaGluZy1sZWFybmluZy1jZW50cmUoMSkvc2xpZGVzL0RJWSBMaWJyYXJ5IDIwMTUwODI1IDczNlgyNTUgd2Vic2l0ZSBzbGlkZS5qcGcnKTsgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDsiPjxkaXYgaWQ9J2hlYWRsaW5lLXRlYXNlcic+PGgzPlN0YXJ0IHlvdXIgcHJvamVjdHMgYXQgdGhlIExpYnJhcnkgZm9yIG9wdGltdW0gcmVzdWx0cy48L2gzPjwvZGl2PjwvZGl2PjwvZGl2PmQCAQ9kFgJmDxBkZBYAZAIPDw8WAh8ABRtDYXBpbGFubyBVbml2ZXJzaXR5IExpYnJhcnlkZAIRD2QWAmYPZBYEZg9kFgICAw9kFgJmD2QWAgIBDxYCHwEFEGRyb3B6b25lIFBCQ2xlYXJkAgEPZBYCAgEPZBYCZg9kFgICAQ9kFgICAQ8WAh8CAgEWAmYPZBYGZg8VAhQgc3R5bGU9J3dpZHRoOjczMHB4JwBkAgEPFgIfA2hkAgMPFgIfAgIFFgZmD2QWAgIBD2QWAmYPZBYCAgEPZBYCAgEPZBYCZg9kFgICAQ9kFgJmD2QWAgIBD2QWAmYPZBYCAgEPDxYCHwAF8kg8IURPQ1RZUEUgaHRtbD4KPGhlYWQ+Cgk8dGl0bGU+Q2FwaWxhbm8gVW5pdmVyc2l0eSBMaWJyYXJ5IHNlcnZpY2VzIGhvbWVwYWdlIGhvdXJzIGRpc3BsYXk8L3RpdGxlPgoKCTxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04Ij4KCTwhLS0gZm9yIEhUTUwgNCAtLT4KCTxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KCTwhLS0gZm9yIEhUTUwgNSAtLT4KCTxtZXRhIG5hbWU9Im1zYXBwbGljYXRpb24tdGFwLWhpZ2hsaWdodCIgY29udGVudD0ibm8iIC8+Cgk8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCIgLz4KCTxtZXRhIG5hbWU9ImRlc2NyaXB0aW9uIiBjb250ZW50PSJEaXNwbGF5IGxpYnJhcnkgaG91cnMgb24gbGlicmFyeSBob21lcGFnZSBmb3IgQ2FwaWxhbm8gVW5pdmVyc2l0eSBMaWJyYXJ5IGNsb3VkLWJhc2VkIGxpYnJhcnkgaG91cnMuIj4KCTxtZXRhIG5hbWU9ImF1dGhvciIgY29udGVudD0iR2xlbiBHcmVlbmx5Ij4KCTxtZXRhIG5hbWU9ImNvcHlyaWdodCIgY29udGVudD0iQ29weXJpZ2h0KGMpIDIwMTYgR2xlbiBHcmVlbmx5IGZvciBDYXBpbGFubyBVbml2ZXJzaXR5LiBBbGwgcmlnaHRzIHJlc2VydmVkLiBMYXN0IHJldi4gMjAxNi0wMi0xMCIgLz4KCgk8bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSJodHRwczovL2RsLmRyb3Bib3guY29tL3Mvbml4cGZpa3U4NWZ3dzAzL0hvbWVwYWdlJTIwbGlicmFyeSUyMGhvdXJzJTIwMjAxNTA3MjAuY3NzP2RsPTAiPgoKCTwhLS0gSFRNTDUgc2hpbSBhbmQgUmVzcG9uZC5qcyBJRTggc3VwcG9ydCBvZiBIVE1MNSBlbGVtZW50cyBhbmQgbWVkaWEgcXVlcmllcyAtLT4KCTwhLS1baWYgbHQgSUUgOV0+Cgk8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvaHRtbDVzaGl2LzMuNy4yL2h0bWw1c2hpdi5taW4uanMiPjwvc2NyaXB0PgoJPHNjcmlwdCBzcmM9Imh0dHBzOi8vb3NzLm1heGNkbi5jb20vbGlicy9yZXNwb25kLmpzLzEuMy4wL3Jlc3BvbmQubWluLmpzIj48L3NjcmlwdD4KCTwhW2VuZGlmXS0tPgoKPCEtLSBDYW4ndCB1c2UgbmV3ZXIgSlF1ZXJ5IGFzIGl0IGNvbmZsaWN0cyB3aXRoIGV4cGVjdGF0aW9ucyBvZiBvdGhlciBwYWdlIGVsZW1lbnRzIC0tPgo8IS0tPHNjcmlwdCBzcmM9Imh0dHBzOi8vYWpheC5nb29nbGVhcGlzLmNvbS9hamF4L2xpYnMvanF1ZXJ5LzEuMTEuMy9qcXVlcnkubWluLmpzIj48L3NjcmlwdD4tLT4KPC9oZWFkPgoKPGJvZHk+Cgo8ZGl2Pgo8c3BhbiBjbGFzcz0iYm9yZGVybGVzcy10YWJsZSI+Cjx0YWJsZSBjbGFzcz0iaG91cnMiPgoJPHRyIGNsYXNzPSJob3Vyc19oZWFkZXJyb3ciPgogICAgCTx0ZCBjbGFzcz0iaG91cnNfbGVmdGhlYWRlciI+PGEgaHJlZj0iaHR0cDovL3d3dy5jYXBpbGFub3UuY2EvbGlicmFyeS9ob3Vycy8iIHN0eWxlPSJjb2xvcjogI0ZGRkZGRiI+PGZvbnQgY29sb3I9IkZGRkZGRiI+VE9EQVknUyBIT1VSUzwvZm9udD48L2E+PC90ZD4KICAgIAk8dGQgY2xhc3M9ImhvdXJzX3JpZ2h0aGVhZGVyIiBpZD0ieGRhdGUiPjwvdGQ+CiAgICA8L3RyPgogICAgPHRyIGNsYXNzPSJob3VycyI+CgkJPHRkIGNsYXNzPSJ0ZGhvdXJzIiBpZD0ibGliaG91cnMiPjwvdGQ+CgkJPHRkIGNsYXNzPSJzdGF0dXMiIGlkPSJzdGF0dXNfbGlicmFyeSI+PC90ZD4KCTwvdHI+CjwvdGFibGU+Cjwvc3Bhbj4KCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KCi8vIEphdmFTY3JpcHQgZXhlY3V0aW9uIHN0YXJ0cyBoZXJlIHdoZW4gZG9jdW1lbnQgaXMgcmVhZHkgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgokLnN1cHBvcnQuY29ycyA9IHRydWU7CQkJLy8gZml4ZXMgSlF1ZXJ5IGJ1ZyB3aGVuIHVzaW5nIENPUlMgb24gSW50ZXJuZXQgRXhwbG9yZXIKbm93ID0gbmV3IERhdGUoKTsJCQkJLy8gR2xvYmFsIHZhcmlhYmxlIHVzZWQgYnkgc2V2ZXJhbCBmdW5jdGlvbnMKCQokKGRvY3VtZW50KS5yZWFkeShmdW5jdGlvbigpIHsKZ2V0X0pTT05faG91cnMoKTsJCQkvLyBHRVQgbGlicmFyeSBob3VycyBmcm9tIGNsb3VkLCBkaXNwbGF5IGl0LCBsb29wIGV2ZXJ5IDIgc2Vjb25kcwp9KTsKCi8vIHN1cHBvcnQgZnVuY3Rpb25zIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgpmdW5jdGlvbiBnZXRfSlNPTl9ob3VycygpIHsgLy8gb3RoZXIgcGFnZSBlbGVtZW50IChzbGlkZXNob3cpIHJlbGllcyBvbiBkZXByaWNhdGVkIEpRIGZ1bmN0aW9ucyBpbiBvbGRlciBKUSwgc28gdXNlIEpTIGZvciBKU09OIENPUlMsIG5vdCBKUSBBamF4IG1ldGhvZCBpbiBuZXdlciBKUQp2YXIgY3JlYXRlQ09SU1JlcXVlc3QgPSBmdW5jdGlvbihlLCB0KSB7CiAgICAgICAgdmFyIGEgPSBuZXcgWE1MSHR0cFJlcXVlc3Q7CiAgICAgICAgcmV0dXJuICJ3aXRoQ3JlZGVudGlhbHMiIGluIGEgPyBhLm9wZW4oZSwgdCwgITApIDogInVuZGVmaW5lZCIgIT0gdHlwZW9mIFhEb21haW5SZXF1ZXN0ID8gKGEgPSBuZXcgWERvbWFpblJlcXVlc3QsIGEub3BlbihlLCB0KSkgOiBhID0gbnVsbCwgYQogICAgfSwKICAgIHVybCA9ICJodHRwczovL2FwaS5teWpzb24uY29tL2JpbnMvNHliamciLAogICAgbWV0aG9kID0gIkdFVCIsCiAgICB4aHIgPSBjcmVhdGVDT1JTUmVxdWVzdChtZXRob2QsIHVybCk7Cgp4aHIub25sb2FkID0gZnVuY3Rpb24oKSB7CiAgICBKU09OZGF0YSA9IEpTT04ucGFyc2UoeGhyLnJlc3BvbnNlKTsKCWxpYmRhdGEgPSBKU09OZGF0YS5ob3Vycy5saWI7CglkYXRldGltZSgpOwkJCQkJCQkJCS8vIFZhbGlkYXRlLCBmb3JtYXQsYW5kIGRpc3BsYXkgbGlicmFyeSBob3VycwoJc2V0SW50ZXJ2YWwoZnVuY3Rpb24oKSB7ZGF0ZXRpbWUoKX0sIDIwMDApOwkvLyBMT09QIHRvIHVwZGF0ZSBob3VycyBkaXNwbGF5IGV2ZXJ5IDIgc2Vjb25kcwp9LAp4aHIub25lcnJvciA9IGZ1bmN0aW9uKCkgewoJZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInhkYXRlIikuaW5uZXJIVE1MID0gZ2V0dG9kYXlzZGF0ZSgpOwoJZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImxpYmhvdXJzIikuaW5uZXJIVE1MID0gZ2V0aG91cnNieWhhbmQobm93KTsKfSwKeGhyLnNlbmQoKTsKfTsKCi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgpmdW5jdGlvbiBnZXRob3Vyc2J5aGFuZCh0b2RheSkgewoJdmFyIHRvZGF5c2RhdGU9dG9kYXkuZ2V0RGF0ZSgpOwoJdmFyIHRvZGF5c21vbnRoPXRvZGF5LmdldE1vbnRoKCk7CglpZiAodG9kYXlzZGF0ZT09MTAgJiYgdG9kYXlzbW9udGg9PTEpIHsKCQlob3Vyc25vSlNPTj0iODowMGFtLTU6MDBwbSI7CgkJcmV0dXJuIChob3Vyc25vSlNPTik7Cgl9OwoJaWYgKHRvZGF5c2RhdGU9PTExICYmIHRvZGF5c21vbnRoPT0xKSB7CgkJaG91cnNub0pTT049Ijg6MDBhbS01OjAwcG0iOwoJCXJldHVybiAoaG91cnNub0pTT04pOwoJfTsKCWlmICh0b2RheXNkYXRlPT0xMiAmJiB0b2RheXNtb250aD09MSkgewoJCWhvdXJzbm9KU09OPSI4OjAwYW0tNTowMHBtIjsKCQlyZXR1cm4gKGhvdXJzbm9KU09OKTsKCX07CglpZiAodG9kYXlzZGF0ZT09MTMgJiYgdG9kYXlzbW9udGg9PTEpIHsKCQlob3Vyc25vSlNPTj0iMTE6MDBhbS02OjAwcG0iOwoJCXJldHVybiAoaG91cnNub0pTT04pOwoJfTsKCWlmICh0b2RheXNkYXRlPT0xNCAmJiB0b2RheXNtb250aD09MSkgewoJCWhvdXJzbm9KU09OPSJDbG9zZWQiOwoJCXJldHVybiAoaG91cnNub0pTT04pOwoJfTsKCWlmICh0b2RheXNkYXRlPT0xNSAmJiB0b2RheXNtb250aD09MSkgewoJCWhvdXJzbm9KU09OPSI4YW0tMTBwbSI7CgkJcmV0dXJuIChob3Vyc25vSlNPTik7Cgl9OwoJaWYgKHRvZGF5c2RhdGU9PTE2ICYmIHRvZGF5c21vbnRoPT0xKSB7CgkJaG91cnNub0pTT049IjhhbS0xMHBtIjsKCQlyZXR1cm4gKGhvdXJzbm9KU09OKTsKCX0KCWVsc2UKCXZhciBob3Vyc25vSlNPTj0iTW9uLVRodSA4YW0tMTBwbTsgRnJpIDhhbS02cG07IFNhdCAxMWFtLTZwbTsgU3VuIENsb3NlZCI7CglyZXR1cm4oaG91cnNub0pTT04pOwp9CgpmdW5jdGlvbiBkYXRldGltZSgpIHsJCQkJCQkJCQkJCQkJCQkvLyBkaXNwbGF5IHRvZGF5cyBsaWJyYXJ5IGhvdXJzIGFuZCBvcGVuL2Nsb3NlZCBzdGF0dXMKCW9wZW5jb2xvciA9ICIjMGJjZTUwIjsKCWNsb3NlZGNvbG9yID0gIiNmMDAiOwoKCXRlcm0gPSBsaWJkYXRhW25vdy5nZXRNb250aCgpXVtub3cuZ2V0RGF0ZSgpLTFdWzBdOwkJCQkJCQkvLyBjYWxjdWxhdGUgYW5kIGRpc3BsYXkgbGlicmFyeSBob3VycyBhbmQgb3BlbiBzdGF0dXMKCXRleHQgPSBsaWJkYXRhW25vdy5nZXRNb250aCgpXVtub3cuZ2V0RGF0ZSgpLTFdWzFdOwoJaDEgICA9IGxpYmRhdGFbbm93LmdldE1vbnRoKCldW25vdy5nZXREYXRlKCktMV1bMl07CgltMSAgID0gbGliZGF0YVtub3cuZ2V0TW9udGgoKV1bbm93LmdldERhdGUoKS0xXVszXTsKCWgyICAgPSBsaWJkYXRhW25vdy5nZXRNb250aCgpXVtub3cuZ2V0RGF0ZSgpLTFdWzRdOwoJbTIgICA9IGxpYmRhdGFbbm93LmdldE1vbnRoKCldW25vdy5nZXREYXRlKCktMV1bNV07CgloMyAgID0gbGliZGF0YVtub3cuZ2V0TW9udGgoKV1bbm93LmdldERhdGUoKS0xXVs2XTsKCW0zICAgPSBsaWJkYXRhW25vdy5nZXRNb250aCgpXVtub3cuZ2V0RGF0ZSgpLTFdWzddOwoJaDQgICA9IGxpYmRhdGFbbm93LmdldE1vbnRoKCldW25vdy5nZXREYXRlKCktMV1bOF07CgltNCAgID0gbGliZGF0YVtub3cuZ2V0TW9udGgoKV1bbm93LmdldERhdGUoKS0xXVs5XTsKCXN0YXR1cyA9ICJDTE9TRUQiOwkJCQkJCQkJCQkJCQkJCS8vIGRlZmF1bHQKCWxpYnRpbWVzdHJpbmc9IkNMT1NFRCI7CQkJCQkJCQkJCQkJCQkvLyBkZWZhdWx0CgoJZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInhkYXRlIikuaW5uZXJIVE1MID0gZ2V0dG9kYXlzZGF0ZShub3cpOwoKCWlmICh2YWxpZHRpbWUoaDEsbTEpICYmIHZhbGlkdGltZShoMixtMikpIHsKIAkJdmFyIHRpbWUxPUNvbnN0cnVjdFRpbWUoaDEsbTEpOwoJCXZhciB0aW1lMj1Db25zdHJ1Y3RUaW1lKGgyLG0yKTsKCQlpZiAodGltZTEgPD0gdGltZTIpIHsKCQkJbGlidGltZXN0cmluZz1UaW1lX0Rpc3BsYXkodGltZTEsdGltZTIpOwoJCQlzdGF0dXM9Z2V0b3BlbnN0YXR1c19zaW5nbGUobm93LCB0aW1lMSwgdGltZTIpOwkJCQkJCQkvLyBjYWxjdWxhdGUgb3BlbiBzdGF0dXMgdXNpbmcgc2luZ2xlIHZhbGlkIHRpbWUgcmFuZ2UKCQkJaWYgKHZhbGlkdGltZShoMyxtMykgJiYgdmFsaWR0aW1lKGg0LG00KSkgewoJCQkJdmFyIHRpbWUzPUNvbnN0cnVjdFRpbWUoaDMsbTMpOwoJCQkJdmFyIHRpbWU0PUNvbnN0cnVjdFRpbWUoaDQsbTQpOwkKCQkJCWlmICgodGltZTIgPD0gdGltZTMpICYmICh0aW1lMyA8PSB0aW1lNCkpIHsKCQkJCQlsaWJ0aW1lc3RyaW5nKz0iOyAiICsgVGltZV9EaXNwbGF5KHRpbWUzLHRpbWU0KTsKCQkJCQlzdGF0dXM9Z2V0b3BlbnN0YXR1c19kb3VibGUobm93LCB0aW1lMSwgdGltZTIsIHRpbWUzLCB0aW1lNCk7CS8vIHJlLWNhbGN1bGF0ZSBvcGVuIHN0YXR1cyB1c2luZyB0d28gdmFsaWQgdGltZSByYW5nZXMgCgkJCQl9CgkJCX0KCQl9Cgl9CglpZiAoKHRleHQhPSJ4IikgJiYgKHRleHQhPSIiKSl7CgkJbGlidGltZXN0cmluZys9IiAgKCIgKyB0ZXh0ICsgIikiOwoJfQoKCWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJ4ZGF0ZSIpLmlubmVySFRNTCA9IGdldHRvZGF5c2RhdGUoKTsKCWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsaWJob3VycyIpLmlubmVySFRNTCA9IGxpYnRpbWVzdHJpbmc7Cglkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgic3RhdHVzX2xpYnJhcnkiKS5pbm5lckhUTUwgPSBzdGF0dXM7Cglkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgic3RhdHVzX2xpYnJhcnkiKS5zdHlsZS5jb2xvciA9IChzdGF0dXM9PSJPUEVOIik/IG9wZW5jb2xvciA6IGNsb3NlZGNvbG9yIDsJCn0KCi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgpmdW5jdGlvbiBnZXR0b2RheXNkYXRlKCl7Cgl2YXIgbW9udGhzID0gWwoJIkpBTiIsIkZFQiIsIk1BUiIsIkFQUiIsIk1BWSIsIkpVTiIsIkpVTCIsIkFVRyIsIlNFUFQiLCJPQ1QiLCJOT1YiLCJERUMiXTsKCXZhciBkYXRldGV4dCA9IG1vbnRoc1tub3cuZ2V0TW9udGgoKV0gKyAiICIgKyBub3cuZ2V0RGF0ZSgpICsgIiwgIiArIG5vdy5nZXRGdWxsWWVhcigpICsgIiAiOwoJcmV0dXJuIGRhdGV0ZXh0Owp9OwoKLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCmZ1bmN0aW9uIEdldFRpbWUoZGF0ZSkgewoJdmFyIGN1cnJlbnRUaW1lID0gKG5ldyBEYXRlKGRhdGUpKQoJdmFyIGhvdXJzID0gY3VycmVudFRpbWUuZ2V0SG91cnMoKQoJdmFyIHN1ZmZpeCA9ICcnOwoJaWYgKGhvdXJzID4gMTEpIHsKCQkJc3VmZml4ICs9ICJwbSI7CgkJfSBlbHNlIHsKCQkJc3VmZml4ICs9ICJhbSI7CgkJfQoJCXZhciBtaW51dGVzID0gY3VycmVudFRpbWUuZ2V0TWludXRlcygpCgkJaWYgKG1pbnV0ZXMgPCAxMCkgewoJCQltaW51dGVzID0gIjAiICsgbWludXRlcwoJCX0KCQlpZiAoaG91cnMgPiAxMikgewoJCQlob3VycyAtPSAxMjsKCQl9IGVsc2UgaWYgKGhvdXJzID09PSAwKSB7CgkJCWhvdXJzID0gMTI7CgkJfQoJCXZhciB0aW1lID0gaG91cnMgKyAiOiIgKyBtaW51dGVzICsgc3VmZml4OwoJCXJldHVybiB0aW1lOwp9OwoKLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCmZ1bmN0aW9uIGlzSW50ZWdlcih2YWx1ZSkgewogIHJldHVybiAhaXNOYU4odmFsdWUpICYmIChmdW5jdGlvbih4KSB7IHJldHVybiAoeCB8IDApID09PSB4OyB9KShwYXJzZUZsb2F0KHZhbHVlKSkKfQoKLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCmZ1bmN0aW9uIHZhbGlkdGltZShob3VyLG1pbnV0ZSkgewoJaWYgKGlzSW50ZWdlcihob3VyKSAmJiAoaG91ciA+PTApICYmIChob3VyIDwyNCkgJiYgaXNJbnRlZ2VyKG1pbnV0ZSkgJiYgKG1pbnV0ZSA+PTApICYmIChtaW51dGUgPDYwKSkgewoJCXJldHVybiB0cnVlCgl9CgllbHNlIHsKCQlyZXR1cm4gZmFsc2UKCX0KfQoKLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCmZ1bmN0aW9uIENvbnN0cnVjdFRpbWUodGltZV9oLHRpbWVfbSkgewoJdmFyIHRpbWUgPSBuZXcgRGF0ZSgpOwoJdGltZS5zZXRIb3Vycyh0aW1lX2gpOwoJdGltZS5zZXRNaW51dGVzKHRpbWVfbSk7Cgl0aW1lLnNldFNlY29uZHMoMCk7CnJldHVybiB0aW1lOwp9OwoKLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCmZ1bmN0aW9uIFRpbWVfRGlzcGxheSh0aW1lXzEsdGltZV8yKSB7Cgl2YXIgdGltZXJhbmdlPUdldFRpbWUodGltZV8xKSArICItIiArIEdldFRpbWUodGltZV8yKTsKcmV0dXJuIHRpbWVyYW5nZTsKfTsKCi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgpmdW5jdGlvbiBnZXR0ZXJtKHRlcm1jb2RlKXsKCXN3aXRjaCh0ZXJtY29kZSkKCQl7CgkJY2FzZSAiUyI6CgkJCQkgICB0ZXJtPSJTUFJJTkcgVEVSTSI7CgkJCQkgICBicmVhazsKCQljYXNlICJJIjoKCQkJCSAgIHRlcm09IklOVEVSVEVSTSI7CgkJCQkgICBicmVhazsKCQljYXNlICJFIjoKCQkJCSAgIHRlcm09IkVYQU0gUEVSSU9EIjsKCQkJCSAgIGJyZWFrOwoJCWNhc2UgIlUiOgoJCQkJICAgdGVybT0iU1VNTUVSIFRFUk0iOwoJCQkJICAgYnJlYWs7CgkJY2FzZSAiRiI6CgkJCQkgICB0ZXJtPSJGQUxMIFRFUk0iOwoJCQkJICAgYnJlYWs7CgkJZGVmYXVsdDogICB0ZXJtPSIiOwoJCQkJICAgYnJlYWs7CgkJfQoJcmV0dXJuIHRlcm07Cn07CgovLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKZnVuY3Rpb24gZ2V0b3BlbnN0YXR1c19zaW5nbGUodG5vdywgdG9wZW4xLCB0Y2xvc2UxKXsKCXN0YXR1cyA9ICgodG5vdyA+PSB0b3BlbjEpICYmICh0bm93IDwgdGNsb3NlMSkpID8gIk9QRU4iIDogIkNMT1NFRCI7CglyZXR1cm4gc3RhdHVzOwp9OwoKLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCmZ1bmN0aW9uIGdldG9wZW5zdGF0dXNfZG91YmxlKHRub3csIHRvcGVuMSwgdGNsb3NlMSwgdG9wZW4yLCB0Y2xvc2UyKXsKCXN0YXR1cyA9ICgodG5vdyA+PSB0b3BlbjEpICYmICh0bm93IDwgdGNsb3NlMSkpIHx8ICgodG5vdyA+PSB0b3BlbjIpICYmICh0bm93IDwgdGNsb3NlMikpID8gIk9QRU4iIDogIkNMT1NFRCI7CglyZXR1cm4gc3RhdHVzOwp9OwoKPC9zY3JpcHQ+CjwvZGl2Pgo8L2JvZHk+CjwvaHRtbD5kZAIBD2QWAgIBD2QWAmYPZBYCAgEPZBYCAgEPZBYCZg9kFgICAQ9kFgJmD2QWAgIBD2QWAmYPZBYCAgEPDxYCHwAF1AE8ZGl2IGNsYXNzPSJsaWItc2VhcmNoIj48aWZyYW1lIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyMjUiIHNyYz0iL3VwbG9hZGVkZmlsZXMvbGlicmFyeS1zZWFyY2gvbGliLXNlYXJjaC13aWRnZXQuaHRtbCIgbmFtZT0ibGliLXNlYXJjaC13aWRnZXQiIGlkPSJsaWItc2VhcmNoLXdpZGdldCIgPjwvaWZyYW1lPjwvZGl2PmRkAgMPZBYCAgEPZBYCZg9kFgICAQ9kFgICAQ9kFgJmD2QWAgIBD2QWAmYPZBYCAgEPZBYCZg9kFgICAQ8PFgIfAAWYAzxzY3JpcHQ+CiAgKGZ1bmN0aW9uKGkscyxvLGcscixhLG0pe2lbJ0dvb2dsZUFuYWx5dGljc09iamVjdCddPXI7aVtyXT1pW3JdfHxmdW5jdGlvbigpewogIChpW3JdLnE9aVtyXS5xfHxbXSkucHVzaChhcmd1bWVudHMpfSxpW3JdLmw9MSpuZXcgRGF0ZSgpO2E9cy5jcmVhdGVFbGVtZW50KG8pLAogIG09cy5nZXRFbGVtZW50c0J5VGFnTmFtZShvKVswXTthLmFzeW5jPTE7YS5zcmM9ZzttLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsbSkKICB9KSh3aW5kb3csZG9jdW1lbnQsJ3NjcmlwdCcsJy8vd3d3Lmdvb2dsZS1hbmFseXRpY3MuY29tL2FuYWx5dGljcy5qcycsJ2dhJyk7CgogIGdhKCdjcmVhdGUnLCAnVUEtNTAwODAzMjAtMScsICdhdXRvJyk7CiAgZ2EoJ3NlbmQnLCAncGFnZXZpZXcnKTsKCjwvc2NyaXB0PmRkGBoFWWN0bDAwJGNwaCRkelNsaWRlU2hvdyR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAwJHV4V2lkZ2V0SG9zdCR1eFVYU3dpdGNoDw9kAgFkBVtjdGwwMCRjcGgkZHpDb252ZXJzaW9ucyR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAzJHV4V2lkZ2V0SG9zdCR1eFVYU3dpdGNoDw9kAgFkBSJjdGwwMCRjcGgkZHpNYWluQ29udGVudCR1eFVYU3dpdGNoDw9kAgFkBWxjdGwwMCRjcGgkZHpNYWluQ29udGVudCR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAzJHV4V2lkZ2V0SG9zdCR1eFdpZGdldEhvc3Rfd2lkZ2V0JFZpZXdTZXQPD2RmZAVsY3RsMDAkY3BoJGR6TWFpbkNvbnRlbnQkdXhDb2x1bW5EaXNwbGF5JGN0bDAwJHV4Q29udHJvbENvbHVtbiRjdGwwMCR1eFdpZGdldEhvc3QkdXhXaWRnZXRIb3N0X3dpZGdldCRWaWV3U2V0Dw9kZmQFW2N0bDAwJGNwaCRkekNvbnZlcnNpb25zJHV4Q29sdW1uRGlzcGxheSRjdGwwMCR1eENvbnRyb2xDb2x1bW4kY3RsMDIkdXhXaWRnZXRIb3N0JHV4VVhTd2l0Y2gPD2QCAWQFbGN0bDAwJGNwaCRkekNvbnZlcnNpb25zJHV4Q29sdW1uRGlzcGxheSRjdGwwMCR1eENvbnRyb2xDb2x1bW4kY3RsMDEkdXhXaWRnZXRIb3N0JHV4V2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkBVtjdGwwMCRjcGgkZHpNYWluQ29udGVudCR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAwJHV4V2lkZ2V0SG9zdCR1eFVYU3dpdGNoDw9kAgFkBWxjdGwwMCRjcGgkZHpDb252ZXJzaW9ucyR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAwJHV4V2lkZ2V0SG9zdCR1eFdpZGdldEhvc3Rfd2lkZ2V0JFZpZXdTZXQPD2RmZAVbY3RsMDAkY3BoJGR6TWFpbkNvbnRlbnQkdXhDb2x1bW5EaXNwbGF5JGN0bDAwJHV4Q29udHJvbENvbHVtbiRjdGwwMSR1eFdpZGdldEhvc3QkdXhVWFN3aXRjaA8PZAIBZAUiY3RsMDAkY3BoJGR6Q29udmVyc2lvbnMkdXhVWFN3aXRjaA8PZAIBZAVsY3RsMDAkY3BoJGR6Q29udmVyc2lvbnMkdXhDb2x1bW5EaXNwbGF5JGN0bDAwJHV4Q29udHJvbENvbHVtbiRjdGwwNCR1eFdpZGdldEhvc3QkdXhXaWRnZXRIb3N0X3dpZGdldCRWaWV3U2V0Dw9kZmQFbGN0bDAwJGNwaCRkekNvbnZlcnNpb25zJHV4Q29sdW1uRGlzcGxheSRjdGwwMCR1eENvbnRyb2xDb2x1bW4kY3RsMDIkdXhXaWRnZXRIb3N0JHV4V2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkBWxjdGwwMCRjcGgkZHpNYWluQ29udGVudCR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAyJHV4V2lkZ2V0SG9zdCR1eFdpZGdldEhvc3Rfd2lkZ2V0JFZpZXdTZXQPD2RmZAVbY3RsMDAkY3BoJGR6TWFpbkNvbnRlbnQkdXhDb2x1bW5EaXNwbGF5JGN0bDAwJHV4Q29udHJvbENvbHVtbiRjdGwwMyR1eFdpZGdldEhvc3QkdXhVWFN3aXRjaA8PZAIBZAVsY3RsMDAkY3BoJGR6Q29udmVyc2lvbnMkdXhDb2x1bW5EaXNwbGF5JGN0bDAwJHV4Q29udHJvbENvbHVtbiRjdGwwMyR1eFdpZGdldEhvc3QkdXhXaWRnZXRIb3N0X3dpZGdldCRWaWV3U2V0Dw9kZmQFbGN0bDAwJGNwaCRkek1haW5Db250ZW50JHV4Q29sdW1uRGlzcGxheSRjdGwwMCR1eENvbnRyb2xDb2x1bW4kY3RsMDQkdXhXaWRnZXRIb3N0JHV4V2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkBSBjdGwwMCRjcGgkZHpTbGlkZVNob3ckdXhVWFN3aXRjaA8PZAIBZAUTY3RsMDAkcGgkdXhVWFN3aXRjaA8PZAIBZAVqY3RsMDAkY3BoJGR6U2xpZGVTaG93JHV4Q29sdW1uRGlzcGxheSRjdGwwMCR1eENvbnRyb2xDb2x1bW4kY3RsMDAkdXhXaWRnZXRIb3N0JHV4V2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkBVtjdGwwMCRjcGgkZHpDb252ZXJzaW9ucyR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAxJHV4V2lkZ2V0SG9zdCR1eFVYU3dpdGNoDw9kAgFkBVtjdGwwMCRjcGgkZHpNYWluQ29udGVudCR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDA0JHV4V2lkZ2V0SG9zdCR1eFVYU3dpdGNoDw9kAgFkBVtjdGwwMCRjcGgkZHpDb252ZXJzaW9ucyR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDA0JHV4V2lkZ2V0SG9zdCR1eFVYU3dpdGNoDw9kAgFkBVtjdGwwMCRjcGgkZHpDb252ZXJzaW9ucyR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAwJHV4V2lkZ2V0SG9zdCR1eFVYU3dpdGNoDw9kAgFkBVtjdGwwMCRjcGgkZHpNYWluQ29udGVudCR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAyJHV4V2lkZ2V0SG9zdCR1eFVYU3dpdGNoDw9kAgFkBWxjdGwwMCRjcGgkZHpNYWluQ29udGVudCR1eENvbHVtbkRpc3BsYXkkY3RsMDAkdXhDb250cm9sQ29sdW1uJGN0bDAxJHV4V2lkZ2V0SG9zdCR1eFdpZGdldEhvc3Rfd2lkZ2V0JFZpZXdTZXQPD2RmZHYzcbgqgOu5cBkuHngQSN7dNgk81coVwuEGcRWcHgXV" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=-c9t7TFcR9KCYgWplp_NW3m3_-CZeuH5WBizUCUs4AOaObkDuIh-Qe_BJQeifflw2RpiF9plB8pehvTWc-ibIIoTM3CLpL0gy8jFyUg1C8g1&amp;t=635589147571259667" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+__$BubbleCloseIconPath='/WorkArea/';__$BubbleCloseIconPath='/WorkArea/';//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=NhSFiWzhG62j5TKrjr6yiNKY32LapulF5N5mkfN5ygvlHFpGcMZVLIlhH-JVBGF0WxKV9wRjHimQ1OIUNpZUYz_ZqwhhyVrUZU7QlT6cK6_0kNx2IjqQBvbTOgWrHEB9XOgSIUdfdr-QFc8iPdRXcaurDhsZeNr6-siIQ8Vj9AQ1&amp;t=ffffffff805766b3" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=OGPCtN_CL0liAlVOP4NORHHGuXiB-L0Y9dk5DQ5MvRWOCVlmbQL2rFQjGloJPhXvQsI40ZnSmcb5Gfzhw3pQcHaskBpQXvuNRssPqJaf96n5JSrUHGSlrtsREQH_aOg5T4DV3hAQksf9qCsuQ6NnfpMzqDPPtS_4b_5ic6vy5FGNxhuXUVjqDIljk5-jdF0w0&amp;t=ffffffff805766b3" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E9302C5B" />
+</div>
+             <div id="pagebuilder-controls">
+                <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ph$ctl03', 'aspnetForm', ['tctl00$cph$dzConversions$uxUpdatePanel','','tctl00$cph$dzSlideShow$uxUpdatePanel','','tctl00$cph$dzMainContent$uxUpdatePanel','','tctl00$cph$dzConversions$uxColumnDisplay$ctl00$uxControlColumn$ctl00$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzConversions$uxColumnDisplay$ctl00$uxControlColumn$ctl01$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzConversions$uxColumnDisplay$ctl00$uxControlColumn$ctl02$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzConversions$uxColumnDisplay$ctl00$uxControlColumn$ctl03$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzConversions$uxColumnDisplay$ctl00$uxControlColumn$ctl04$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzSlideShow$uxColumnDisplay$ctl00$uxControlColumn$ctl00$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzMainContent$uxColumnDisplay$ctl00$uxControlColumn$ctl00$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzMainContent$uxColumnDisplay$ctl00$uxControlColumn$ctl01$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzMainContent$uxColumnDisplay$ctl00$uxControlColumn$ctl02$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzMainContent$uxColumnDisplay$ctl00$uxControlColumn$ctl03$uxWidgetHost$uxUpdatePanel','','tctl00$cph$dzMainContent$uxColumnDisplay$ctl00$uxControlColumn$ctl04$uxWidgetHost$uxUpdatePanel',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+    <script type="text/javascript">
+        Ektron.PBSettings = { 'dontClose': false }
+    </script>
+
+
+
+
+        <div class="ektron-ux-UITheme ux-app-siteApppageBuilder-setSizeTemplate">
+            
+        </div>
+        <script id="EktronScriptBlockohwbw" type="text/javascript">
+
+Ektron.ready(function(event, eventName){
+
+                $ektron(".ux-app-siteApppageBuilder-setSizeTemplate .ui-dialog-buttonpane a").button();
+                $ektron(".ux-app-siteApppageBuilder-setSizeTemplate .framework").accordion({
+                    heightStyle: "content",
+                    activate: function(event, ui){
+                        $ektron(ui).closest(".ui-accordion").accordion("refresh");
+                    }
+                });
+                $ektron(".ux-app-siteApppageBuilder-setSizeTemplate").draggable({ handle: "div.ui-dialog-titlebar ", containment: $ektron("body") });
+            
+});
+
+
+</script>
+		
+        
+    
+
+             </div>
+            <!-- container defines the entire page -->        
+            <div id="container" class="library"> 
+                             
+            <a name="top" id="top"></a> 
+             <div id="print-logo">
+                         <img alt="Capilano University" src="/images/logo/logo-bw.jpg" />
+                     </div>           
+                
+                <div class="clear"></div>
+                
+                <div id="header" class="library">	
+		            <a href="/"><img id="logo" alt="Capilano University Home" src="/images/spacer.gif" class="library" /></a>  
+		            <a href="http://www.capilanou.ca/library"><img id="library-title" alt="Capilano University Library" src="/images/spacer.gif" /></a>  	
+                 </div>
+	            <!-- end header -->
+	            
+	            <div class="clear"></div>
+          
+ <!--[if lte IE 6]>
+<p>To view the Capilano University website please upgrade your web browser from the <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a> website.</p>
+<p>North Vancouver Campus | 2055 Purcell Way, North Vancouver, British Columbia Canada V7J 3H5 Tel: 604.986.1911<br/>
+Squamish Campus | 1150 Carson Place, Squamish, British Columbia Canada V8B 0B1 Tel: 604.892.5322<br/>
+Sunshine Coast Campus | 5627 Inlet Avenue, Sechelt, British Columbia Canada V0N 3A0 Tel: 604.885.9310</p>
+<![endif]-->   
+                              
+                        
+    
+    <div id="wrapper">
+        <!-- container 2 -->
+        <div id="container2">
+            <!-- left-column defines column on the left in the 3 column layout --> 
+            <div id="left-column" class="library"> 
+                <!-- menu title -->
+                <div class="section-title">
+                    <a id='menu_title' href='/WorkArea/linkit.aspx?LinkIdentifier=ID&amp;ItemID=2451'>Library</a>
+                </div>
+                
+                <div id="left-top-menu">
+                <div id="ctl00_cph_mnuTop" class="usersClass">
+	<link type="text/css" rel="stylesheet" href="/css/expand1.css" /><div class="expand1"><div class="ekflexmenu" id="ee3c658bd_157_0_ekflexmenu"><div class="ekflexmenu_menu_level_0 ekflexmenu_submenu"><ul class="ekflexmenu_submenu_items" id="ee3c658bd_157_0_submenu_items"></ul></div></div></div><script language="JavaScript" type="text/javascript">
+			// Pass server control properties, etc., to Javascript:
+			if (("undefined" == typeof window.ekFlexMenu_ekflexmenuArray)
+				|| (null == window.ekFlexMenu_ekflexmenuArray)) {
+				window.ekFlexMenu_ekflexmenuArray = new Array;
+			}
+			window.ekFlexMenu_ekflexmenuArray[window.ekFlexMenu_ekflexmenuArray.length] = "ee3c658bd_157_0";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_swRev)
+			|| (null == window.ekFlexMenu_swRev)) {
+			window.ekFlexMenu_swRev = new Array;
+			}
+			window.ekFlexMenu_swRev["ee3c658bd"] = "8.0.0.073";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startupSubmenuBranchId)
+			|| (null == window.ekFlexMenu_startupSubmenuBranchId)) {
+			window.ekFlexMenu_startupSubmenuBranchId = new Array;
+			}
+			window.ekFlexMenu_startupSubmenuBranchId["ee3c658bd"] = "";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_autoCollapseBranches)
+			|| (null == window.ekFlexMenu_autoCollapseBranches)) {
+			window.ekFlexMenu_autoCollapseBranches = new Array;
+			}
+			window.ekFlexMenu_autoCollapseBranches["ee3c658bd"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startCollapsed)
+			|| (null == window.ekFlexMenu_startCollapsed)) {
+			window.ekFlexMenu_startCollapsed = new Array;
+			}
+			window.ekFlexMenu_startCollapsed["ee3c658bd"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startWithRootFolderCollapsed)
+			|| (null == window.ekFlexMenu_startWithRootFolderCollapsed)) {
+			window.ekFlexMenu_startWithRootFolderCollapsed = new Array;
+			}
+			window.ekFlexMenu_startWithRootFolderCollapsed["ee3c658bd"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_masterControlIdHash)
+				|| (null == window.ekFlexMenu_masterControlIdHash)) {
+				window.ekFlexMenu_masterControlIdHash = new Array;
+			}
+			window.ekFlexMenu_masterControlIdHash["ee3c658bd"] = "";
+			
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxEnabled)
+			|| (null == window.ekFlexMenu_ajaxEnabled)) {
+			window.ekFlexMenu_ajaxEnabled = new Array;
+			}
+			window.ekFlexMenu_ajaxEnabled["ee3c658bd"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxWSPath)
+			|| (null == window.ekFlexMenu_ajaxWSPath)) {
+			window.ekFlexMenu_ajaxWSPath = new Array;
+			}
+			window.ekFlexMenu_ajaxWSPath["ee3c658bd"] = "/WorkArea/webservices/";
+			// 
+			if (("undefined" == typeof window.ekFlexMenu_displayXslt)
+			|| (null == window.ekFlexMenu_displayXslt)) {
+			window.ekFlexMenu_displayXslt = new Array;
+			}
+			window.ekFlexMenu_displayXslt["ee3c658bd"] = "/xslt/Demo.xsl";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_cacheInterval)
+			|| (null == window.ekFlexMenu_cacheInterval)) {
+			window.ekFlexMenu_cacheInterval = new Array;
+			}
+			window.ekFlexMenu_cacheInterval["ee3c658bd"] = "0";
+			//
+			//////////////////////////////////////////////////////////////////
+			// Add event handler calling functions:
+			//   Test to ensure that ekFlexMenu is valid/reachable (this is needed 
+			//   to prevent intermittent Javascript errors that can occur if user
+			//   causes event to fire while page is being torn down (i.e. a link is
+			//   clicked, browser is fetching new page, movement causes mouse-out...):
+			function ekFlexMenu_IsValid(obj) {
+				return (("undefined" != typeof obj) && (null != obj));
+			}
+			function ekFlexMenuPopupMsIn(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseIn)) {
+					return (ekFlexMenu.mouseIn(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuPopupMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseOut)) {
+					return (ekFlexMenu.mouseOut(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuKey(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnKeyHdlr)) {
+					return (ekFlexMenu.menuBtnKeyHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOutHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOutHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOvr(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOverHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOverHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuClk(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnClickHdlr)) {
+					return (ekFlexMenu.menuBtnClickHdlr(event));
+				}
+				return (true);
+			}
+		</script>
+</div>   
+			    </div>             
+                
+                <div id="left-middle-menu">
+                <div id="ctl00_cph_mnuMiddle" class="usersClass">
+	<link type="text/css" rel="stylesheet" href="/css/expand1.css" /><div class="expand1"><div class="ekflexmenu" id="eade3329b_687_0_ekflexmenu"><div class="ekflexmenu_menu_level_0 ekflexmenu_submenu"><ul class="ekflexmenu_submenu_items" id="eade3329b_687_0_submenu_items"><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eade3329b_687_980"><a id="eade3329b_687_980_button" tabindex="0" onkeydown="return (ekFlexMenuKey(event));" onblur="return (ekFlexMenuMsOut(event));" onfocus="return (ekFlexMenuMsOvr(event));" onclick="return (ekFlexMenuClk(event));" onmouseover="return (ekFlexMenuMsOvr(event));" onmouseout="return (ekFlexMenuMsOut(event));" class="ekflexmenu_button" href="http://www.capilanou.ca/AlternativeInterior2Col.pb.aspx?pageid=2451&amp;ekfxmen_noscript=1&amp;ekfxmensel=eade3329b_687_980">Find Resources</a><input type="hidden" id="eade3329b_687_980_parentid" value="eade3329b_687_687" /><ul id="eade3329b_687_980_submenu_items" class="ekflexmenu_submenu_items_hidden"><li><a class="ekflexmenu_link" href="http://search.ebscohost.com/login.aspx?authtype=ip,guest&amp;custid=s5672343&amp;groupid=main&amp;profid=eds" target="_self">Discovery Search</a></li><li><a class="ekflexmenu_link" href="http://libguides.capilanou.ca" target="_blank">All Resources By Subject</a></li><li><a class="ekflexmenu_link" href="http://cufts2.lib.sfu.ca/CRDB/BVAC" target="_blank">Databases (Articles &amp; Media)</a></li><li><a class="ekflexmenu_link" href="http://cufts2.lib.sfu.ca/CJDB/BVAC/browse" target="_blank">Journals, Magazines &amp; Newspapers</a></li><li><a class="ekflexmenu_link" href="http://library.capilanou.ca/search/r" target="_blank">Course Reserves</a></li><li><a class="ekflexmenu_link" href="/library/find/media2.html" target="_self">Media</a></li><li><a class="ekflexmenu_link" href="/library/find/Music-@CapU-Library/" target="_self">Music</a></li><li><a class="ekflexmenu_link" href="/library/new/" target="_self">New Items &amp; Award Winners</a></li><li><a class="ekflexmenu_link" href="/library/find/Other-Libraries/" target="_self">Other Libraries</a></li><li><a class="ekflexmenu_link" href="/library/find/Staff-Picks/Staff-Picks.html" target="_self">Staff Picks</a></li><li><a class="ekflexmenu_link" href="/library/find/capu-authors-publications/" target="_self">CapU Authors &amp; Publications</a></li></ul></li><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eade3329b_687_981"><a id="eade3329b_687_981_button" tabindex="0" onkeydown="return (ekFlexMenuKey(event));" onblur="return (ekFlexMenuMsOut(event));" onfocus="return (ekFlexMenuMsOvr(event));" onclick="return (ekFlexMenuClk(event));" onmouseover="return (ekFlexMenuMsOvr(event));" onmouseout="return (ekFlexMenuMsOut(event));" class="ekflexmenu_button" href="http://www.capilanou.ca/AlternativeInterior2Col.pb.aspx?pageid=2451&amp;ekfxmen_noscript=1&amp;ekfxmensel=eade3329b_687_981">Get Help</a><input type="hidden" id="eade3329b_687_981_parentid" value="eade3329b_687_687" /><ul id="eade3329b_687_981_submenu_items" class="ekflexmenu_submenu_items_hidden"><li><a class="ekflexmenu_link" href="/library/help/ask/" target="_self">Ask a Librarian</a></li><li><a class="ekflexmenu_link" href="/library/help/Liaison-Librarians-by-Faculty/Program/" target="_self">Liaison Librarians by Faculty/Program</a></li><li><a class="ekflexmenu_link" href="http://libguides.capilanou.ca" target="_blank">Research Guides by Subject</a></li><li><a class="ekflexmenu_link" href="http://libguides.capilanou.ca/citeit" target="_blank">Cite It! Online Citation Guides</a></li></ul></li><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eade3329b_687_982"><a id="eade3329b_687_982_button" tabindex="0" onkeydown="return (ekFlexMenuKey(event));" onblur="return (ekFlexMenuMsOut(event));" onfocus="return (ekFlexMenuMsOvr(event));" onclick="return (ekFlexMenuClk(event));" onmouseover="return (ekFlexMenuMsOvr(event));" onmouseout="return (ekFlexMenuMsOut(event));" class="ekflexmenu_button" href="http://www.capilanou.ca/AlternativeInterior2Col.pb.aspx?pageid=2451&amp;ekfxmen_noscript=1&amp;ekfxmensel=eade3329b_687_982">Use the Library</a><input type="hidden" id="eade3329b_687_982_parentid" value="eade3329b_687_687" /><ul id="eade3329b_687_982_submenu_items" class="ekflexmenu_submenu_items_hidden"><li><a class="ekflexmenu_link" href="/library/hours/" target="_self">Library Hours</a></li><li><a class="ekflexmenu_link" href="/library/maps/" target="_self">Library Maps</a></li><li><a class="ekflexmenu_link" href="/library/use/borrowing/" target="_self">Borrowing Guidelines</a></li><li><a class="ekflexmenu_link" href="/library/use/interlibraryloan-form/" target="_self">Interlibrary Loan</a></li><li><a class="ekflexmenu_link" href="/library/use/library-policies.html" target="_self">Library Policies</a></li><li><a class="ekflexmenu_link" href="/library/use/Off-Campus-Access/" target="_self">Off-Campus Access</a></li><li><a class="ekflexmenu_link" href="http://libguides.capilanou.ca/Copyright" target="_blank">Copyright</a></li><li><a class="ekflexmenu_link" href="/library/use/Library-Collection/" target="_self">Library Collection</a></li><li><a class="ekflexmenu_link" href="/library/use/about/" target="_self">About the Library</a></li><li><a class="ekflexmenu_link" href="/library/use/donations/" target="_self">Donations to the Library</a></li><li><a class="ekflexmenu_link" href="/library/use/recommend-purchase/" target="_self">Recommend a Library Purchase</a></li><li class="ekflexmenu_menu_level_2 ekflexmenu_submenu" id="eade3329b_687_983"><a id="eade3329b_687_983_button" tabindex="0" onkeydown="return (ekFlexMenuKey(event));" onblur="return (ekFlexMenuMsOut(event));" onfocus="return (ekFlexMenuMsOvr(event));" onclick="return (ekFlexMenuClk(event));" onmouseover="return (ekFlexMenuMsOvr(event));" onmouseout="return (ekFlexMenuMsOut(event));" class="ekflexmenu_button" href="/WorkArea/linkit.aspx?LinkIdentifier=ID&amp;ItemID=4768">Services for Instructors</a><input type="hidden" id="eade3329b_687_983_parentid" value="eade3329b_687_982" /><ul id="eade3329b_687_983_submenu_items" class="ekflexmenu_submenu_items_hidden"><li><a class="ekflexmenu_link" href="/library/use/instructors/borrowing-guidelines-for-faculty/" target="_self">Borrowing Guidelines for Faculty</a></li><li><a class="ekflexmenu_link" href="/library/use/services-instructors/linking/" target="_self">Linking to the Library</a></li><li><a class="ekflexmenu_link" href="/library/use/instructors/reserves/" target="_self">Course Reserves</a></li><li><a class="ekflexmenu_link" href="/library/use/instructors/research-guides/" target="_self">Research Guides</a></li><li><a class="ekflexmenu_link" href="/library/use/instructors/library-research-classes/" target="_self">Library Research Classes</a></li><li><a class="ekflexmenu_link" href="/library/use/instructors/media-requests/" target="_self">Media Resource Requests</a></li></ul></li><li class="ekflexmenu_menu_level_2 ekflexmenu_submenu" id="eade3329b_687_1026"><a id="eade3329b_687_1026_button" tabindex="0" onkeydown="return (ekFlexMenuKey(event));" onblur="return (ekFlexMenuMsOut(event));" onfocus="return (ekFlexMenuMsOvr(event));" onclick="return (ekFlexMenuClk(event));" onmouseover="return (ekFlexMenuMsOvr(event));" onmouseout="return (ekFlexMenuMsOut(event));" class="ekflexmenu_button" href="/WorkArea/linkit.aspx?LinkIdentifier=ID&amp;ItemID=4755">Services for Students</a><input type="hidden" id="eade3329b_687_1026_parentid" value="eade3329b_687_982" /><ul id="eade3329b_687_1026_submenu_items" class="ekflexmenu_submenu_items_hidden"><li><a class="ekflexmenu_link" href="/library/use/students/borrowing-renewals/" target="_self">Borrowing Guide for Students</a></li><li><a class="ekflexmenu_link" href="/library/help/ask/" target="_self">Ask a Librarian</a></li><li><a class="ekflexmenu_link" href="/library/use/students/accessibility/" target="_self">Accessibility Services</a></li><li><a class="ekflexmenu_link" href="/library/use/students/study-areas-bookable-rooms/" target="_self">Study Areas &amp; Bookable Rooms</a></li><li><a class="ekflexmenu_link" href="/library/use/students/computers/" target="_self">Computers in the Library</a></li><li><a class="ekflexmenu_link" href="/library/use/students/printing-copying/" target="_self">Printing &amp; Copying</a></li><li><a class="ekflexmenu_link" href="/library/use/students/filming/" target="_self">Filming in the Library</a></li><li><a class="ekflexmenu_link" href="/library/use/students/regional.html" target="_self">Sechelt &amp; Squamish</a></li></ul></li></ul></li><li><a class="ekflexmenu_link" href="/library/FAQs/" target="_self">FAQs</a></li><li><a class="ekflexmenu_link" href="/library/Library-Team.html" target="_self">Library Team</a></li></ul></div></div></div><script language="JavaScript" type="text/javascript">
+			// Pass server control properties, etc., to Javascript:
+			if (("undefined" == typeof window.ekFlexMenu_ekflexmenuArray)
+				|| (null == window.ekFlexMenu_ekflexmenuArray)) {
+				window.ekFlexMenu_ekflexmenuArray = new Array;
+			}
+			window.ekFlexMenu_ekflexmenuArray[window.ekFlexMenu_ekflexmenuArray.length] = "eade3329b_687_0";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_swRev)
+			|| (null == window.ekFlexMenu_swRev)) {
+			window.ekFlexMenu_swRev = new Array;
+			}
+			window.ekFlexMenu_swRev["eade3329b"] = "8.0.0.073";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startupSubmenuBranchId)
+			|| (null == window.ekFlexMenu_startupSubmenuBranchId)) {
+			window.ekFlexMenu_startupSubmenuBranchId = new Array;
+			}
+			window.ekFlexMenu_startupSubmenuBranchId["eade3329b"] = "";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_autoCollapseBranches)
+			|| (null == window.ekFlexMenu_autoCollapseBranches)) {
+			window.ekFlexMenu_autoCollapseBranches = new Array;
+			}
+			window.ekFlexMenu_autoCollapseBranches["eade3329b"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startCollapsed)
+			|| (null == window.ekFlexMenu_startCollapsed)) {
+			window.ekFlexMenu_startCollapsed = new Array;
+			}
+			window.ekFlexMenu_startCollapsed["eade3329b"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startWithRootFolderCollapsed)
+			|| (null == window.ekFlexMenu_startWithRootFolderCollapsed)) {
+			window.ekFlexMenu_startWithRootFolderCollapsed = new Array;
+			}
+			window.ekFlexMenu_startWithRootFolderCollapsed["eade3329b"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_masterControlIdHash)
+				|| (null == window.ekFlexMenu_masterControlIdHash)) {
+				window.ekFlexMenu_masterControlIdHash = new Array;
+			}
+			window.ekFlexMenu_masterControlIdHash["eade3329b"] = "";
+			
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxEnabled)
+			|| (null == window.ekFlexMenu_ajaxEnabled)) {
+			window.ekFlexMenu_ajaxEnabled = new Array;
+			}
+			window.ekFlexMenu_ajaxEnabled["eade3329b"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxWSPath)
+			|| (null == window.ekFlexMenu_ajaxWSPath)) {
+			window.ekFlexMenu_ajaxWSPath = new Array;
+			}
+			window.ekFlexMenu_ajaxWSPath["eade3329b"] = "/WorkArea/webservices/";
+			// 
+			if (("undefined" == typeof window.ekFlexMenu_displayXslt)
+			|| (null == window.ekFlexMenu_displayXslt)) {
+			window.ekFlexMenu_displayXslt = new Array;
+			}
+			window.ekFlexMenu_displayXslt["eade3329b"] = "/xslt/Demo.xsl";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_cacheInterval)
+			|| (null == window.ekFlexMenu_cacheInterval)) {
+			window.ekFlexMenu_cacheInterval = new Array;
+			}
+			window.ekFlexMenu_cacheInterval["eade3329b"] = "0";
+			//
+			//////////////////////////////////////////////////////////////////
+			// Add event handler calling functions:
+			//   Test to ensure that ekFlexMenu is valid/reachable (this is needed 
+			//   to prevent intermittent Javascript errors that can occur if user
+			//   causes event to fire while page is being torn down (i.e. a link is
+			//   clicked, browser is fetching new page, movement causes mouse-out...):
+			function ekFlexMenu_IsValid(obj) {
+				return (("undefined" != typeof obj) && (null != obj));
+			}
+			function ekFlexMenuPopupMsIn(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseIn)) {
+					return (ekFlexMenu.mouseIn(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuPopupMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseOut)) {
+					return (ekFlexMenu.mouseOut(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuKey(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnKeyHdlr)) {
+					return (ekFlexMenu.menuBtnKeyHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOutHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOutHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOvr(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOverHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOverHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuClk(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnClickHdlr)) {
+					return (ekFlexMenu.menuBtnClickHdlr(event));
+				}
+				return (true);
+			}
+		</script>
+</div>
+			        </div>
+                
+              <div id="left-bottom-menu">
+                <div id="ctl00_cph_mnuBottom" class="usersClass">
+	<link type="text/css" rel="stylesheet" href="/css/expand1.css" /><div class="expand1"><div class="ekflexmenu" id="e7056be25_688_0_ekflexmenu"><div class="ekflexmenu_menu_level_0 ekflexmenu_submenu"><ul class="ekflexmenu_submenu_items" id="e7056be25_688_0_submenu_items"><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="e7056be25_688_806"><a id="e7056be25_688_806_button" tabindex="0" onkeydown="return (ekFlexMenuKey(event));" onblur="return (ekFlexMenuMsOut(event));" onfocus="return (ekFlexMenuMsOvr(event));" onclick="return (ekFlexMenuClk(event));" onmouseover="return (ekFlexMenuMsOvr(event));" onmouseout="return (ekFlexMenuMsOut(event));" class="ekflexmenu_button" href="http://www.capilanou.ca/AlternativeInterior2Col.pb.aspx?pageid=2451&amp;ekfxmen_noscript=1&amp;ekfxmensel=e7056be25_688_806">News &amp; Events</a><input type="hidden" id="e7056be25_688_806_parentid" value="e7056be25_688_688" /><ul id="e7056be25_688_806_submenu_items" class="ekflexmenu_submenu_items_hidden"><li><a class="ekflexmenu_link" href="/library/News/" target="_self">News</a></li><li><a class="ekflexmenu_link" href="/library/Events/" target="_self">Events</a></li></ul></li><li><a class="ekflexmenu_link" href="/library/Contact-Us/" target="_self">Contact Us</a></li></ul></div></div></div><script language="JavaScript" type="text/javascript">
+			// Pass server control properties, etc., to Javascript:
+			if (("undefined" == typeof window.ekFlexMenu_ekflexmenuArray)
+				|| (null == window.ekFlexMenu_ekflexmenuArray)) {
+				window.ekFlexMenu_ekflexmenuArray = new Array;
+			}
+			window.ekFlexMenu_ekflexmenuArray[window.ekFlexMenu_ekflexmenuArray.length] = "e7056be25_688_0";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_swRev)
+			|| (null == window.ekFlexMenu_swRev)) {
+			window.ekFlexMenu_swRev = new Array;
+			}
+			window.ekFlexMenu_swRev["e7056be25"] = "8.0.0.073";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startupSubmenuBranchId)
+			|| (null == window.ekFlexMenu_startupSubmenuBranchId)) {
+			window.ekFlexMenu_startupSubmenuBranchId = new Array;
+			}
+			window.ekFlexMenu_startupSubmenuBranchId["e7056be25"] = "";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_autoCollapseBranches)
+			|| (null == window.ekFlexMenu_autoCollapseBranches)) {
+			window.ekFlexMenu_autoCollapseBranches = new Array;
+			}
+			window.ekFlexMenu_autoCollapseBranches["e7056be25"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startCollapsed)
+			|| (null == window.ekFlexMenu_startCollapsed)) {
+			window.ekFlexMenu_startCollapsed = new Array;
+			}
+			window.ekFlexMenu_startCollapsed["e7056be25"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startWithRootFolderCollapsed)
+			|| (null == window.ekFlexMenu_startWithRootFolderCollapsed)) {
+			window.ekFlexMenu_startWithRootFolderCollapsed = new Array;
+			}
+			window.ekFlexMenu_startWithRootFolderCollapsed["e7056be25"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_masterControlIdHash)
+				|| (null == window.ekFlexMenu_masterControlIdHash)) {
+				window.ekFlexMenu_masterControlIdHash = new Array;
+			}
+			window.ekFlexMenu_masterControlIdHash["e7056be25"] = "";
+			
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxEnabled)
+			|| (null == window.ekFlexMenu_ajaxEnabled)) {
+			window.ekFlexMenu_ajaxEnabled = new Array;
+			}
+			window.ekFlexMenu_ajaxEnabled["e7056be25"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxWSPath)
+			|| (null == window.ekFlexMenu_ajaxWSPath)) {
+			window.ekFlexMenu_ajaxWSPath = new Array;
+			}
+			window.ekFlexMenu_ajaxWSPath["e7056be25"] = "/WorkArea/webservices/";
+			// 
+			if (("undefined" == typeof window.ekFlexMenu_displayXslt)
+			|| (null == window.ekFlexMenu_displayXslt)) {
+			window.ekFlexMenu_displayXslt = new Array;
+			}
+			window.ekFlexMenu_displayXslt["e7056be25"] = "/xslt/Demo.xsl";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_cacheInterval)
+			|| (null == window.ekFlexMenu_cacheInterval)) {
+			window.ekFlexMenu_cacheInterval = new Array;
+			}
+			window.ekFlexMenu_cacheInterval["e7056be25"] = "0";
+			//
+			//////////////////////////////////////////////////////////////////
+			// Add event handler calling functions:
+			//   Test to ensure that ekFlexMenu is valid/reachable (this is needed 
+			//   to prevent intermittent Javascript errors that can occur if user
+			//   causes event to fire while page is being torn down (i.e. a link is
+			//   clicked, browser is fetching new page, movement causes mouse-out...):
+			function ekFlexMenu_IsValid(obj) {
+				return (("undefined" != typeof obj) && (null != obj));
+			}
+			function ekFlexMenuPopupMsIn(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseIn)) {
+					return (ekFlexMenu.mouseIn(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuPopupMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseOut)) {
+					return (ekFlexMenu.mouseOut(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuKey(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnKeyHdlr)) {
+					return (ekFlexMenu.menuBtnKeyHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOutHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOutHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOvr(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOverHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOverHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuClk(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnClickHdlr)) {
+					return (ekFlexMenu.menuBtnClickHdlr(event));
+				}
+				return (true);
+			}
+		</script>
+</div>	
+			 </div>
+            </div>
+            <!-- end left-column -->
+            <div id="conversions-block" class="library">    
+                 
+        <div id="ctl00_cph_dzConversions_uxUpdatePanel" class="">
+	
+                <div id="ctl00_cph_dzConversions_uxDropZone" data-ux-pagebuilder="DropZone">
+                    
+                            <div data-ux-pagebuilder="Column" style='width:200px'>
+                                
+                                <ul>
+                                    
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl00_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+		
+        
+        <div class='conversions'><p><a href="http://library.capilanou.ca/patroninfo" title="Access your library account online for overdues, renewals, and online access to databases." target="_blank">My Library Account</a></p><p><a href="/WorkArea/linkit.aspx?LinkIdentifier=id&amp;ItemID=4755" title="Library information and services for students">Students</a></p><p><a href="/WorkArea/linkit.aspx?LinkIdentifier=id&amp;ItemID=4768" title="Library information and services for Instructors">Instructors</a></p><p><a href="http://www.capilanou.ca/library/use/students/regional.html" title="Regional Student Guide to the Library" target="_blank">Sechelt and Squamish Info</a></p></div>
+		
+        
+    
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl01_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+<div style="padding: 12px;">
+             
+           <span id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl01_uxWidgetHost_uxWidgetHost_widget_TextLabel"><br /><span class="borderless-table">
+<table style="border-spacing: 0px; border-collapse: collapse; border: none;">
+  <tbody>
+    <tr>
+      <td style="padding: 2px;">
+      <a href="https://www.facebook.com/CapULibrary?fref=ts">
+      <img src="/assets/0/396/759/3079/thumb_aa7810c8-a5b4-4c40-b0d7-be9c967e9ab8.png" title="CapU Library on Facebook" width="32"></a>
+      </td>
+      
+      <td style="padding: 2px;">
+      <a href="https://twitter.com/CapULibrary">
+      <img src="/assets/0/396/759/3079/thumb_6eaf4408-6dd5-4d69-812a-a5be6f17457f.png" title="CapU Library on Twitter" width="32"></a>
+      </td>
+      
+      <td style="padding: 2px;">
+      <a href="https://www.youtube.com/user/CapULibrary">
+      <img src="/assets/0/396/759/3079/thumb_a730812b-5b3b-4361-a59e-fe958fe1a823.png" title="CapU Library on YouTube" width="32"></a>
+      </td>
+      
+      <td style="padding: 2px;">
+      <a href="http://instagram.com/capulibrary">
+      <img src="/assets/0/396/759/3079/thumb_0d26db05-29db-49da-9c98-c9cbb1232838.png" title="CapU Library on Instagram" width="32"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</span></span><br />
+        
+</div>
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl02_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+        
+                
+        <div class='widget-box'><h2>Latest News</h2><ul class='widget-content'><li class='news-icon'><a href='/library/news/Rita-Johnson/'>Rita Johnson Memorial Library</a></li><li class='news-icon'><a href='/library/news/Pride-Week/'>Support Pride Week</a></li><li class='news-icon'><a href='/library/news/therapy-dogs/'>Therapy Dogs @ CapU Library</a></li><li class='view-all-btn'><a href='/WorkArea/linkit.aspx?LinkIdentifier=id&ItemID=2454'>View all news</a></li></ul></div>
+        <span id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl02_uxWidgetHost_uxWidgetHost_widget_ltlError"></span>
+    
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl03_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+<div style="padding: 12px;">
+             
+           <span id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl03_uxWidgetHost_uxWidgetHost_widget_TextLabel"><p>&nbsp;</p></span><br />
+        
+</div>
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl04_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+<div style="padding: 12px;">
+             
+           <span id="ctl00_cph_dzConversions_uxColumnDisplay_ctl00_uxControlColumn_ctl04_uxWidgetHost_uxWidgetHost_widget_TextLabel"><a class="twitter-timeline" href="https://twitter.com/CapULibrary" width="100%" height="350" data-widget-id="684139720658386945">Tweets by @CapULibrary</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span><br />
+        
+</div>
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        
+                </div>
+            
+</div>
+     
+            </div>            
+        </div>
+        <!-- end container 2 -->        
+        <!-- container 3 -->        
+        <div id="container3">
+            
+            <div id="ctl00_cph_panelSlideShow">
+	        
+                <!-- slideshow --> 
+                <span id="ctl00_cph_colSlideShow">
+                    
+        <div id="ctl00_cph_dzSlideShow_uxUpdatePanel" class="">
+		
+                <div id="ctl00_cph_dzSlideShow_uxDropZone" data-ux-pagebuilder="DropZone">
+                    
+                            <div data-ux-pagebuilder="Column" style='width:100%'>
+                                
+                                <ul>
+                                    
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzSlideShow_uxColumnDisplay_ctl00_uxControlColumn_ctl00_uxWidgetHost_uxUpdatePanel">
+			
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+        
+        
+        
+        <script type='text/javascript' src='/js/lib/jquery.js'></script><script type='text/javascript' src='/js/jquery.cycle.all.js'></script><script type='text/javascript'>$(document).ready(function() {$('.slideshow-container').after('<div class="slideshow-navigation"/>').cycle({fx: 'fade',pause: true, timeout: 7000, pager: ".slideshow-navigation"});});</script><div class='slideshow-container'><div class='first' onclick="javascript:window.open('http://ezproxy.capilanou.ca/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(EAP+AND+Reading+AND+Collection)&cli0=FC&clv0=Y&cli1=FT1&clv1=Y&type=1&site=eds-live', '_blank');"style="cursor: pointer; cursor: hand; background-image: url('/uploadedImages/content/services/teaching-learning-centre(1)/slides/EAP Reading Collection.jpg'); background-repeat: no-repeat;"><div id='headline-teaser'><h3>*NEW* EAP Reading Collection</h3><p>Location: Library main floor. Improve your English & read a good book. Click for titles.</p></div></div><div onclick="javascript:window.location='/WorkArea/linkit.aspx?LinkIdentifier=id&ItemID=19327356251'"style="cursor: pointer; cursor: hand; background-image: url('/uploadedImages/content/services/teaching-learning-centre(1)/slides/rita johnson.jpg'); background-repeat: no-repeat;"><div id='headline-teaser'><h3>Celebrating Cap History</h3><p>Rita Johnson Memorial Library on display Mar 1-13 @CapU Library</p></div></div><div onclick="javascript:window.location='/WorkArea/linkit.aspx?LinkIdentifier=id&ItemID=32894'"style="cursor: pointer; cursor: hand; background-image: url('/uploadedImages/content/services/teaching-learning-centre(1)/slides/bookastudyroom.jpg'); background-repeat: no-repeat;"><div id='headline-teaser'><h3>Need a better group study space?</h3><p>Book a study room for your group of 2-12+ online.</p></div></div><div onclick="javascript:window.location='http://www.capilanou.ca/library/'"style="cursor: pointer; cursor: hand; background-image: url('/uploadedImages/content/services/teaching-learning-centre(1)/slides/DIY Library 20150825 736X255 website slide.jpg'); background-repeat: no-repeat;"><div id='headline-teaser'><h3>Start your projects at the Library for optimum results.</h3></div></div></div>
+        
+    
+
+                    </div>
+                </div>
+            
+		</div>
+    
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        
+                </div>
+            
+	</div>
+                                    
+                    
+		        </span>            
+                <!-- end slideshow -->  
+            
+</div>        
+            
+            <!-- main content -->
+            <div id="main-content-2col"> 
+                <div id="breadcrumb-2col"> 
+                    <a target="_self" href="/Home.aspx" title="">Capilano University</a> > <a target="_self" href="/WorkArea/linkit.aspx?LinkIdentifier=id&amp;ItemID=10042" title="">Services</a> > <a target="_self" href="/WorkArea/linkit.aspx?LinkIdentifier=id&amp;ItemID=2451" title="">Library</a>              
+                </div>  
+              
+                <h1 id="content_title"><span id="ctl00_cph_lblTitle" style="display:inline-block;width:100px;">Capilano University Library</span></h1>    
+                <div class="clear"></div> 
+                <div id="column-zone-1">                     
+                
+        <div id="ctl00_cph_dzMainContent_uxUpdatePanel" class="">
+	
+                <div id="ctl00_cph_dzMainContent_uxDropZone" data-ux-pagebuilder="DropZone">
+                    
+                            <div data-ux-pagebuilder="Column" style='width:730px'>
+                                
+                                <ul>
+                                    
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl00_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+<div style="padding: 12px;">
+             
+           <span id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl00_uxWidgetHost_uxWidgetHost_widget_TextLabel"><!DOCTYPE html>
+<head>
+	<title>Capilano University Library services homepage hours display</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- for HTML 4 -->
+	<meta charset="utf-8">
+	<!-- for HTML 5 -->
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Display library hours on library homepage for Capilano University Library cloud-based library hours.">
+	<meta name="author" content="Glen Greenly">
+	<meta name="copyright" content="Copyright(c) 2016 Glen Greenly for Capilano University. All rights reserved. Last rev. 2016-02-10" />
+
+	<link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/nixpfiku85fww03/Homepage%20library%20hours%2020150720.css?dl=0">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+<!-- Can't use newer JQuery as it conflicts with expectations of other page elements -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+</head>
+
+<body>
+
+<div>
+<span class="borderless-table">
+<table class="hours">
+	<tr class="hours_headerrow">
+    	<td class="hours_leftheader"><a href="http://www.capilanou.ca/library/hours/" style="color: #FFFFFF"><font color="FFFFFF">TODAY'S HOURS</font></a></td>
+    	<td class="hours_rightheader" id="xdate"></td>
+    </tr>
+    <tr class="hours">
+		<td class="tdhours" id="libhours"></td>
+		<td class="status" id="status_library"></td>
+	</tr>
+</table>
+</span>
+
+<script type="text/javascript">
+
+// JavaScript execution starts here when document is ready ---------------------------------------------------------------------
+
+$.support.cors = true;			// fixes JQuery bug when using CORS on Internet Explorer
+now = new Date();				// Global variable used by several functions
+	
+$(document).ready(function() {
+get_JSON_hours();			// GET library hours from cloud, display it, loop every 2 seconds
+});
+
+// support functions -----------------------------------------------------------------------------------------------------------
+
+function get_JSON_hours() { // other page element (slideshow) relies on depricated JQ functions in older JQ, so use JS for JSON CORS, not JQ Ajax method in newer JQ
+var createCORSRequest = function(e, t) {
+        var a = new XMLHttpRequest;
+        return "withCredentials" in a ? a.open(e, t, !0) : "undefined" != typeof XDomainRequest ? (a = new XDomainRequest, a.open(e, t)) : a = null, a
+    },
+    url = "https://api.myjson.com/bins/4ybjg",
+    method = "GET",
+    xhr = createCORSRequest(method, url);
+
+xhr.onload = function() {
+    JSONdata = JSON.parse(xhr.response);
+	libdata = JSONdata.hours.lib;
+	datetime();									// Validate, format,and display library hours
+	setInterval(function() {datetime()}, 2000);	// LOOP to update hours display every 2 seconds
+},
+xhr.onerror = function() {
+	document.getElementById("xdate").innerHTML = gettodaysdate();
+	document.getElementById("libhours").innerHTML = gethoursbyhand(now);
+},
+xhr.send();
+};
+
+// -----------------------------------------------------------------------------------------------------------------
+
+function gethoursbyhand(today) {
+	var todaysdate=today.getDate();
+	var todaysmonth=today.getMonth();
+	if (todaysdate==10 && todaysmonth==1) {
+		hoursnoJSON="8:00am-5:00pm";
+		return (hoursnoJSON);
+	};
+	if (todaysdate==11 && todaysmonth==1) {
+		hoursnoJSON="8:00am-5:00pm";
+		return (hoursnoJSON);
+	};
+	if (todaysdate==12 && todaysmonth==1) {
+		hoursnoJSON="8:00am-5:00pm";
+		return (hoursnoJSON);
+	};
+	if (todaysdate==13 && todaysmonth==1) {
+		hoursnoJSON="11:00am-6:00pm";
+		return (hoursnoJSON);
+	};
+	if (todaysdate==14 && todaysmonth==1) {
+		hoursnoJSON="Closed";
+		return (hoursnoJSON);
+	};
+	if (todaysdate==15 && todaysmonth==1) {
+		hoursnoJSON="8am-10pm";
+		return (hoursnoJSON);
+	};
+	if (todaysdate==16 && todaysmonth==1) {
+		hoursnoJSON="8am-10pm";
+		return (hoursnoJSON);
+	}
+	else
+	var hoursnoJSON="Mon-Thu 8am-10pm; Fri 8am-6pm; Sat 11am-6pm; Sun Closed";
+	return(hoursnoJSON);
+}
+
+function datetime() {															// display todays library hours and open/closed status
+	opencolor = "#0bce50";
+	closedcolor = "#f00";
+
+	term = libdata[now.getMonth()][now.getDate()-1][0];							// calculate and display library hours and open status
+	text = libdata[now.getMonth()][now.getDate()-1][1];
+	h1   = libdata[now.getMonth()][now.getDate()-1][2];
+	m1   = libdata[now.getMonth()][now.getDate()-1][3];
+	h2   = libdata[now.getMonth()][now.getDate()-1][4];
+	m2   = libdata[now.getMonth()][now.getDate()-1][5];
+	h3   = libdata[now.getMonth()][now.getDate()-1][6];
+	m3   = libdata[now.getMonth()][now.getDate()-1][7];
+	h4   = libdata[now.getMonth()][now.getDate()-1][8];
+	m4   = libdata[now.getMonth()][now.getDate()-1][9];
+	status = "CLOSED";															// default
+	libtimestring="CLOSED";														// default
+
+	document.getElementById("xdate").innerHTML = gettodaysdate(now);
+
+	if (validtime(h1,m1) && validtime(h2,m2)) {
+ 		var time1=ConstructTime(h1,m1);
+		var time2=ConstructTime(h2,m2);
+		if (time1 <= time2) {
+			libtimestring=Time_Display(time1,time2);
+			status=getopenstatus_single(now, time1, time2);							// calculate open status using single valid time range
+			if (validtime(h3,m3) && validtime(h4,m4)) {
+				var time3=ConstructTime(h3,m3);
+				var time4=ConstructTime(h4,m4);	
+				if ((time2 <= time3) && (time3 <= time4)) {
+					libtimestring+="; " + Time_Display(time3,time4);
+					status=getopenstatus_double(now, time1, time2, time3, time4);	// re-calculate open status using two valid time ranges 
+				}
+			}
+		}
+	}
+	if ((text!="x") && (text!="")){
+		libtimestring+="  (" + text + ")";
+	}
+
+	document.getElementById("xdate").innerHTML = gettodaysdate();
+	document.getElementById("libhours").innerHTML = libtimestring;
+	document.getElementById("status_library").innerHTML = status;
+	document.getElementById("status_library").style.color = (status=="OPEN")? opencolor : closedcolor ;	
+}
+
+// -----------------------------------------------------------------------------------------------------------------
+
+function gettodaysdate(){
+	var months = [
+	"JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEPT","OCT","NOV","DEC"];
+	var datetext = months[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear() + " ";
+	return datetext;
+};
+
+// -----------------------------------------------------------------------------------------------------------------
+
+function GetTime(date) {
+	var currentTime = (new Date(date))
+	var hours = currentTime.getHours()
+	var suffix = '';
+	if (hours > 11) {
+			suffix += "pm";
+		} else {
+			suffix += "am";
+		}
+		var minutes = currentTime.getMinutes()
+		if (minutes < 10) {
+			minutes = "0" + minutes
+		}
+		if (hours > 12) {
+			hours -= 12;
+		} else if (hours === 0) {
+			hours = 12;
+		}
+		var time = hours + ":" + minutes + suffix;
+		return time;
+};
+
+// -----------------------------------------------------------------------------------------------------------------
+
+function isInteger(value) {
+  return !isNaN(value) && (function(x) { return (x | 0) === x; })(parseFloat(value))
+}
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
+function validtime(hour,minute) {
+	if (isInteger(hour) && (hour >=0) && (hour <24) && isInteger(minute) && (minute >=0) && (minute <60)) {
+		return true
+	}
+	else {
+		return false
+	}
+}
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
+function ConstructTime(time_h,time_m) {
+	var time = new Date();
+	time.setHours(time_h);
+	time.setMinutes(time_m);
+	time.setSeconds(0);
+return time;
+};
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
+function Time_Display(time_1,time_2) {
+	var timerange=GetTime(time_1) + "-" + GetTime(time_2);
+return timerange;
+};
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
+function getterm(termcode){
+	switch(termcode)
+		{
+		case "S":
+				   term="SPRING TERM";
+				   break;
+		case "I":
+				   term="INTERTERM";
+				   break;
+		case "E":
+				   term="EXAM PERIOD";
+				   break;
+		case "U":
+				   term="SUMMER TERM";
+				   break;
+		case "F":
+				   term="FALL TERM";
+				   break;
+		default:   term="";
+				   break;
+		}
+	return term;
+};
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
+function getopenstatus_single(tnow, topen1, tclose1){
+	status = ((tnow >= topen1) && (tnow < tclose1)) ? "OPEN" : "CLOSED";
+	return status;
+};
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
+function getopenstatus_double(tnow, topen1, tclose1, topen2, tclose2){
+	status = ((tnow >= topen1) && (tnow < tclose1)) || ((tnow >= topen2) && (tnow < tclose2)) ? "OPEN" : "CLOSED";
+	return status;
+};
+
+</script>
+</div>
+</body>
+</html></span><br />
+        
+</div>
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl01_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+<div style="padding: 12px;">
+             
+           <span id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl01_uxWidgetHost_uxWidgetHost_widget_TextLabel"><div class="lib-search"><iframe frameborder="0" scrolling="no" width="100%" height="225" src="/uploadedfiles/library-search/lib-search-widget.html" name="lib-search-widget" id="lib-search-widget" ></iframe></div></span><br />
+        
+</div>
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl02_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+        <div id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl02_uxWidgetHost_uxWidgetHost_widget_CB">
+			<div class="new-menu"><span class="borderless-table"><table width="634" style="width: 50%; border-spacing: 0px; border-collapse: collapse; border: none;">  <tbody>    <tr>      <td rowspan="3" style="cursor: default;" width="50"> <img src="/uploadedImages/content/services/teaching-learning-centre(1)/general/clear 1x1.gif" width="30" draggable="false"/></td>      <td style="cursor: default;" width="280"><a href="http://libguides.capilanou.ca/citeit" target="_blank" draggable="false"><img alt="Citation guides" src="/uploadedImages/content/services/teaching-learning-centre(1)/general/citation guides button.jpg?n=37" draggable="false"/></a></td>      <td style="cursor: default;" width="280"><a href="https://roombookings.capilanou.ca/" target="_blank" draggable="false"><img alt="Book a study room" src="/uploadedImages/content/services/teaching-learning-centre(1)/general/study room button.jpg?n=8185" draggable="false"/></a></td>    </tr>    <tr>      <td style="cursor: default;" width="280"><a href="/WorkArea/linkit.aspx?LinkIdentifier=id&ItemID=13057" draggable="false"><img alt="Interlibrary loans" src="/uploadedImages/content/services/teaching-learning-centre(1)/general/interlibrary loan button.jpg?n=3733" class="design_selected_field" draggable="false"/></a></td>      <td style="cursor: default;" width="280"><a href="/WorkArea/linkit.aspx?LinkIdentifier=id&ItemID=2993" draggable="false"><img alt="Ask a librarian" src="/uploadedImages/content/services/teaching-learning-centre(1)/general/ask a librarian button.jpg?n=2162" draggable="false"/></a></td>    </tr>    <tr>      <td colspan="2" style="cursor: default;"><a href="http://libguides.capilanou.ca" target="_blank" draggable="false"><img alt="Research Guides" src="/uploadedImages/content/services/teaching-learning-centre(1)/general/researchguides buttonfat(1).jpg" title="Research Guides" draggable="false" data-ektron-highlight="true"/></a></td>    </tr>  </tbody></table></span>
+</div>
+		</div>
+        
+        <span id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl02_uxWidgetHost_uxWidgetHost_widget_errorLb"></span>
+    
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl03_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+<div style="padding: 12px;">
+             
+           <span id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl03_uxWidgetHost_uxWidgetHost_widget_TextLabel"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50080320-1', 'auto');
+  ga('send', 'pageview');
+
+</script></span><br />
+        
+</div>
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                            <li>
+                                                
+        <div id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl04_uxWidgetHost_uxUpdatePanel">
+		
+                <div data-ux-pagebuilder="Widget">
+                    
+                    <div class="widgetBody">
+                        
+        <div id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl04_uxWidgetHost_uxWidgetHost_widget_CB">
+			<link type="text/css" href="/css/library-responsive-home.css" media="screen" rel="stylesheet"/><div id="libraryHomeMobile">                        <h2>FIND RESOURCES</h2>                                                                      <iframe style="width: 100%; height: 50px; border: 0;" src="/uploadedfiles/library-search/lib-mobile-search/widget.html" scrolling="no"></iframe>                     <ul class="libraryHomeList">                                                                                                                                <a href="http://cufts2.lib.sfu.ca/CRDB/BVAC/">                                                                                                                                                                                            <li>Databases</li>        </a>                                                                                                                                <a href="http://cufts2.lib.sfu.ca/CJDB/BVAC/browse/">                                                                                                                                                                                            <li>Journals</li>        </a>                                                                                                                                <a href="http://m-library.capilanou.ca">                                                                                                                                                                                            <li>Library Catalogue</li>        </a>    </ul>                                                                    <h2>GET HELP</h2>                                                                    <ul class="libraryHomeList">                                                                                                                                <a href="http://www.capilanou.ca/library/help/ask/">                                                                                                                                                                                            <li>Ask a Librarian</li>        </a>                                                                                                                                <a href="http://libguides.capilanou.ca/">                                                                                                                                                                                            <li>Research Guides</li>        </a>                                                                                                                                <a href="http://libguides.capilanou.ca/citeit/">                                                                                                                                                                                            <li>Cite It!</li>        </a>    </ul>                                                                    <h2>USE THE LIBRARY</h2>                                                                    <ul class="libraryHomeList">                                                                                                                                <a href="http://m-library.capilanou.ca/patroninfo/">                                                                                                                                                                                            <li>My Library Account</li>        </a>                                                                                                                                <a href="/library/hours/">                                                                                                                                                                                            <li>Hours</li>        </a>                                                                                                                                <a href="/library/use/students/borrowing-renewals/">                                                                                                                                                                                            <li>Borrowing / Renewing Guide</li>        </a>                                                                                                                                <a href="/library/contact-us/">                                                                                                                                                                                            <li>Contact Us</li>        </a>    </ul>                                                                    <ul class="libraryFullSite">                                                                                                                                <li>                                                                                                                                                                                            <a href="/library/full-site/">View Full Site</a>        </li>    </ul> </div>
+		</div>
+        
+        <span id="ctl00_cph_dzMainContent_uxColumnDisplay_ctl00_uxControlColumn_ctl04_uxWidgetHost_uxWidgetHost_widget_errorLb"></span>
+    
+
+                    </div>
+                </div>
+            
+	</div>
+    
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        
+                </div>
+            
+</div>
+                    
+                </div>
+            </div>
+            <!-- end main content -->
+        </div>
+        <!-- end container 3 -->        
+    </div>
+    <img class="bottom-edge" src="/images/backgrounds/wrapper-bottom.png" alt="" />
+ 
+
+               <div class="clear"></div>        
+                 <!-- footer defines the footer quicklink lists, global navigation and campus addresses -->                      
+                <div id="footer" class="library">                
+                  <!-- footer-list defines 5 quicklinks boxes -->	
+                  <div class="footer-list">	             
+		                   <h2>Who Are You?</h2>                    
+                                
+<ul><li><a target="_parent" href="/future/">Future Students</a></li><li><a target="_parent" href="/current/">Current Students</a></li><li><a target="_parent" href="/international/">International Students</a></li><li><a target="_parent" href="/csee/">Continuing Studies &amp; Exec Ed</a></li><li><a target="_parent" href="/alumni/">Alumni</a></li><li><a target="_parent" href="/parents-families/">Parents &amp; Families</a></li><li><a target="_parent" href="/high-school-counsellors/">High School Counsellors</a></li><li><a target="_parent" href="/media/">Media</a></li></ul><script type="text/javascript">
+function GetPreviewURL() {
+ var url = self.location.href;
+ var arString = url.split('?')
+ if (arString.length > 1) { url = url + "&amp;cmsMode=Preview"}
+ else { url = url + "?cmsMode=Preview"}
+ return url;
+}
+</script><script type="text/javascript">
+function PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) { return (EkTbWebMenuPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize));}
+function ecmPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize) { 
+ PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) ; 
+ } 
+</script>
+
+		            </div>	            
+		            <div class="footer-list">		              
+		                     <h2>Get To Know Us</h2>                          
+                                
+<ul><li><a target="_parent" href="/about/Your-Daily-Cap/">Your Daily Cap Blog</a></li><li><a target="_parent" href="/e-newsletter/">Subscribe to E-Newsletter</a></li><li><a target="_parent" href="/future/visit-cap/">Visit Cap: Tours &amp; More</a></li><li><a target="_parent" href="/news.aspx">Capilano News</a></li><li><a target="_parent" href="/services/Career-Planning-Employment/">Employment</a></li><li><a target="_parent" href="/about/Directions-Maps/">Directions &amp; Maps</a></li><li><a target="_parent" href="/contact/">Contact Us</a></li></ul><script type="text/javascript">
+function GetPreviewURL() {
+ var url = self.location.href;
+ var arString = url.split('?')
+ if (arString.length > 1) { url = url + "&amp;cmsMode=Preview"}
+ else { url = url + "?cmsMode=Preview"}
+ return url;
+}
+</script><script type="text/javascript">
+function PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) { return (EkTbWebMenuPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize));}
+function ecmPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize) { 
+ PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) ; 
+ } 
+</script>
+
+		            </div>
+                    <div class="footer-list">
+		                     <h2>Studying at Cap</h2> 	     	              
+		                        
+<ul><li><a target="_parent" href="/programs/A-Z-List-of-Programs-Courses/">A - Z List of Programs &amp; Courses</a></li><li><a target="_parent" href="/programs/areas/">Areas of Study</a></li><li><a target="_parent" href="/programs-courses/programs-credential/">Programs by Credential</a></li><li><a target="_parent" href="/study-abroad/">Study Abroad</a></li><li><a target="_parent" href="/programs/online/">Online Programs</a></li><li><a target="_parent" href="/csee/">Continuing Studies &amp; Exec Ed</a></li><li><a target="_parent" href="/library/">Library</a></li></ul><script type="text/javascript">
+function GetPreviewURL() {
+ var url = self.location.href;
+ var arString = url.split('?')
+ if (arString.length > 1) { url = url + "&amp;cmsMode=Preview"}
+ else { url = url + "?cmsMode=Preview"}
+ return url;
+}
+</script><script type="text/javascript">
+function PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) { return (EkTbWebMenuPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize));}
+function ecmPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize) { 
+ PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) ; 
+ } 
+</script>
+
+		            </div>
+		            <div class="footer-list">
+		                     <h2>Admissions</h2>      
+		                        
+<ul><li><a target="_parent" href="/requirements/">Admission Requirements</a></li><li><a target="_parent" href="/current/calendar/">Capilano University Calendar</a></li><li><a target="_parent" href="/advising/">Advising Centre</a></li><li><a target="_parent" href="/admissions/Transfer-Credit/">Transfer Credit</a></li><li><a target="_parent" href="/fees/">Fees &amp; Fee Payment</a></li><li><a target="_parent" href="/financial-aid/">Financial Aid &amp; Awards</a></li></ul><script type="text/javascript">
+function GetPreviewURL() {
+ var url = self.location.href;
+ var arString = url.split('?')
+ if (arString.length > 1) { url = url + "&amp;cmsMode=Preview"}
+ else { url = url + "?cmsMode=Preview"}
+ return url;
+}
+</script><script type="text/javascript">
+function PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) { return (EkTbWebMenuPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize));}
+function ecmPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize) { 
+ PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) ; 
+ } 
+</script>
+
+                    </div>
+		            <div class="footer-list">
+		                    <h2>Campus Life</h2>	     
+		                        
+<ul><li><a target="_parent" href="/events.aspx">Capilano Events</a></li><li><a target="_parent" href="/athletics/">Athletics &amp; Recreation</a></li><li><a target="_parent" href="/blueshorefinancialcentre/">The BlueShore at Cap</a></li><li><a target="_parent" href="/bookstore/">Bookstore</a></li><li><a target="_parent" href="/career-services/">Career Services</a></li><li><a target="_parent" href="/services/Capilano-Students-Union/">Capilano Students' Union</a></li></ul><script type="text/javascript">
+function GetPreviewURL() {
+ var url = self.location.href;
+ var arString = url.split('?')
+ if (arString.length > 1) { url = url + "&amp;cmsMode=Preview"}
+ else { url = url + "?cmsMode=Preview"}
+ return url;
+}
+</script><script type="text/javascript">
+function PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) { return (EkTbWebMenuPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize));}
+function ecmPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize) { 
+ PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) ; 
+ } 
+</script>
+
+		               </div>		         
+                    <!-- end footer-list -->    
+                        <!-- begin social-media -->       
+		                 <div id="social-media">
+                          <a href="http://yourdailycap.ca/" target="_blank"><img src="/images/icons/ydc.png" border="0" height="33" width="33" alt="Your Daily Cap" /></a>&nbsp;&nbsp;    
+		                  <a href="http://www.facebook.com/capilanou" target="_blank"><img src="/images/icons/facebook.png" border="0" height="33" width="33" alt="Capilano University on Facebook" /></a>&nbsp;&nbsp;
+                          <a href="http://www.youtube.com/user/CapilanoUniversity" target="_blank"><img src="/images/icons/youtube.png" border="0" height="33" width="33" alt="Capilano University on YouTube" /></a>&nbsp;&nbsp;
+                          <a href="http://www.twitter.com/capilanou" target="_blank"><img src="/images/icons/twitter.png" border="0" height="33" width="33" alt="Capilano University on Twitter" /></a>&nbsp;&nbsp;
+                          <a href="https://instagram.com/capilanou/" target="_blank"><img src="/images/icons/instagram.png" border="0" height="33" width="33" alt="Capilano University on Instagram" /></a>   
+                            <br/>
+                          <!--         <img src="/images/logo/eqalogo.png" style="margin: -5px 0 0 -2px;" border="0" height="95" width="100" alt="BC Education Quality Assurance" title="BC Education Quality Assurance"/>
+-->                            
+		                </div>
+                        <!--end social-media-->   
+	                 <div class="clear"></div>               
+	      	   
+    <!-- footer-address defines displays 4 boxes, campus addresses and social media icons -->	
+		           <div class="footer-address">
+		           <p>
+  		           <a href="/about/Education-Quality-Assurance-Designation/"><img src="/images/logo/eqalogo.png" border="0" alt="BC Education Quality Assurance" id="eqa-logo" title="BC Education Quality Assurance"/></a>
+		           <a href="/">Capilano University</a> | 2055 Purcell Way, North Vancouver, British Columbia Canada V7J 3H5 Tel: 604.986.1911<br />
+		           <a href="/squamish/">Squamish Campus</a> | P.O. Box 1538, 1343 Winnipeg Street, Squamish, British Columbia Canada V8B 0B1 Tel: 604.892.5322<br />
+		           <a href="/sunshine/">Sunshine Coast Campus</a> | 5627 Inlet Avenue, Sechelt, British Columbia Canada V0N 3A0   Tel: 604.885.9310
+		           </p>
+	                </div>
+	                <!-- end footer-address --> 
+	                <!-- footer-nav defines the global links in the footer of the page -->
+                    <div id="footer-nav">
+                        
+<ul><li><a target="_parent" href="/current/policies/Privacy-Statement/">Privacy Statement</a></li><li><a target="_parent" href="/copyright/">Copyright Policy</a></li><li><a target="_parent" href="/contact/Contact-the-Webmaster/">Contact the Webmaster</a></li><li><a target="_parent" href="/about/accreditation/Accreditation/">Accredited by the Northwest Commission on Colleges and Universities</a></li></ul><script type="text/javascript">
+function GetPreviewURL() {
+ var url = self.location.href;
+ var arString = url.split('?')
+ if (arString.length > 1) { url = url + "&amp;cmsMode=Preview"}
+ else { url = url + "?cmsMode=Preview"}
+ return url;
+}
+</script><script type="text/javascript">
+function PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) { return (EkTbWebMenuPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize));}
+function ecmPopUpWindow (url, hWind, nWidth, nHeight, nScroll, nResize) { 
+ PopUpWindow(url, hWind, nWidth, nHeight, nScroll, nResize) ; 
+ } 
+</script>
+
+	                </div>
+                    <!-- end footer-nav -->          
+              </div> 
+               <!--end footer--> 
+            </div>
+            <!--end container-->
+        </form>
+        
+<!--<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+_uacct = "UA-1507277-1";
+urchinTracker()
+</script>-->
+<!--[if IE 6]>
+		<script type="text/javascript"> 
+			/*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+			var IE6UPDATE_OPTIONS = {
+				icons_path: "ie6update/images/"
+			}
+		</script>
+		<script type="text/javascript" src="ie6update/ie6update.js"></script>
+		<![endif]-->
+    </body>
+</html>

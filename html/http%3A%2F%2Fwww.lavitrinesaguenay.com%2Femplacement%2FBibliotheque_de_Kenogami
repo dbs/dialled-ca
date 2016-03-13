@@ -1,0 +1,727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<!-- STYLESHEETS -->
+		<link href="../resources/css/main.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/header.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/resultatVignetteStyle.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/pagination.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/resultatListeStyle.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/featuredEventsStyle.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/representation.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/details.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/sideBar.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/footer.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/cmsPage.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/popup_coupdecoeur.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/recherche_google.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/jdpicker.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/searchModal.css" rel="stylesheet" type="text/css" />
+		<!--<link href="http://www2.lavitrine.com/cms/css/styles.css" rel="stylesheet" type="text/css" />-->
+		
+		<!--[if IE]>
+		        <link rel="stylesheet" type="text/css" href="../resources/css/all-ie-only.css" />
+		<![endif]-->
+		
+		<!--[if IE 7]>
+		        <link rel="stylesheet" type="text/css" href="../resources/css/ie7.css">
+		<![endif]-->
+		
+		<!--[if IE 8]>
+		        <link rel="stylesheet" type="text/css" href="../resources/css/ie8.css">
+		<![endif]-->
+		
+		<!--[if IE 9]>
+		        <link rel="stylesheet" type="text/css" href="../resources/css/ie9.css">
+		<![endif]-->
+		
+		<!-- JAVASCRIPT -->
+		<script type="text/javascript">
+			var rootPath = '../',
+				addthis_config = {username: 'xa-4bbddf7f1dea0a0c', ui_click: true},
+				readMore = 'LIRE LA SUITE <img src="../resources/images/arrow_open.png" alt="" style="margin-bottom:2px;" />',
+				readLess = 'LIRE LA SUITE <img src="../resources/images/arrow_close.png" alt="" />',
+				hiddenCommand = 'command=displayLocation&sefURLQuery=Bibliotheque_de_Kenogami',
+				suivantText = 'SUIVANT';
+		</script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.pagination.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.cycle.min.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.maskedinput-1.2.2.min.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.readMoreLess.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.jdpicker.js"></script>
+		<script type="text/javascript" src="../resources/js/ajaxupload.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMUtils.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMImageViewer.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMActivityList.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMDetails.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMFeaturedEventViewer.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMLocationMap.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMModal.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMPaginator.js"></script>		
+		<script type="text/javascript" src="../resources/js/VCMContent.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMHeader.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMPage.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMInscriptionModal.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMLogin.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMSideBar.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMProfileContent.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMProfileBar.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMShowingList.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMSearchModal.js"></script>		
+		<script type="text/javascript" src="../resources/js/VCMGoogleSearch.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMCMSPage.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMHistory.js"></script>
+		<script type="text/javascript" src="../resources/js/VCMContest.js"></script>
+		<script type="text/javascript" src="../resources/js/index.js"></script>
+		<!-- META -->
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<meta name="google-site-verification" content="D2Gc1E9tsrRMifaprJ_s3iN6pEWX46lV80rerFbV7lE" />
+		<meta name="title" content="BIBLIOTHÈQUE DE KÉNOGAMI" />
+		<meta name="description" content="Les Bibliothèques de Saguenay, sont un réseau de 8 bibliothèques publiques, qui ont pour mission de donner 
+un large accès à la culture sous toutes ses formes, de participer à sa diffusion et de stimuler son expression. 
+Des heures d’ouverture nombreuses, un environnement riche et varié de même qu’une grande accessibilité 
+leur confèrent le rôle important de « porte d’entrée de la culture » dans la communauté." />
+		<link rel="image_src" href="http://media.lavitrinesaguenay.com/image/1348686660758.jpg" />
+		<meta property="og:image" content="http://media.lavitrinesaguenay.com/image/1348686660758.jpg"/>
+		<!-- TITLE -->
+		<title>La Vitrine Culturelle de Saguenay &bull; BIBLIOTHÈQUE DE KÉNOGAMI</title>
+	</head>
+	<body style="background-color:#A1A19C">
+		<div id="mainContainer">
+			
+			<!-- Banner -->
+			<div id="banner" class="FR">
+				<div id="bannerLnkDiv"><a id="bannerLnk" href="http://www.lavitrinesaguenay.com/"></a></div>
+				<div id="topLinks">
+						<a id="englishLang" href="#" class="langLink">ENGLISH</a>
+                        <a id="frenchLang" href="#" class="langLink selected">FRANÇAIS</a>
+					<ul style="">
+						<li style="padding-right:8px;height:10px;">
+                                                    <div style="margin-top:-2px;">
+							<a id="home" href="#">ACCUEIL</a>
+                                                    </div>
+						</li>
+						<li class="lastLi" style="height:10px;">
+                                                    <div style="margin-top:-2px">
+							<a id="searchButton" href="#" >
+								RECHERCHE AVANCÉE			
+							</a>
+                                                    </div>
+						</li>
+					</ul>
+					<div style="clear:both;height:10px;"></div>
+					<ul>
+						<li class="lastLi" >
+							<div style="float:left;margin-right:5px;margin-top:1px;color:white;">RECHERCHE</div><div  style="float:left;" id="cse-search-form">Loading</div>
+						</li>
+					</ul>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+			
+			<div id="menuBar">
+				<img src="../resources/images/main_menu_background.png" alt="" style="width: 974px;margin-left: -1px;" />
+				<div id="weekDaysBar" style="height:25px;">
+					<a href="#" id="day0" class="btn weekDays">Aujourd'hui<span class="white_bottom_right_corner"></span></a>
+					
+						<a href="#" id="day1" class="btn weekDays">samedi<span class="white_bottom_right_corner"></span></a>
+					
+						<a href="#" id="day2" class="btn weekDays">dimanche<span class="white_bottom_right_corner"></span></a>
+					
+						<a href="#" id="day3" class="btn weekDays">lundi<span class="white_bottom_right_corner"></span></a>
+					
+						<a href="#" id="day4" class="btn weekDays">mardi<span class="white_bottom_right_corner"></span></a>
+					
+						<a href="#" id="day5" class="btn weekDays">mercredi<span class="white_bottom_right_corner"></span></a>
+					
+						<a href="#" id="day6" class="btn weekDays">jeudi<span class="white_bottom_right_corner"></span></a>
+					
+				</div>
+				<ul style="margin-top: 14px;height: 20px;margin-left: 12px;">
+					<!--<li style="margin-left: 11px;">
+						<a href="#" id="lastMinute" class="btn">
+							Dernière minute
+						</a>
+						<div class="verticalSeparator gray"></div>
+					</li>-->
+					<li style="margin-left: 11px;">
+						<a href="#" id="allDates" class="btn">TOUTES LES DATES</a>
+						<!--<div class="verticalSeparator gray"></div>-->
+					</li>
+				</ul>
+			</div>
+			
+			<div id="sideBar">
+				
+					
+<div id="cmsSidebar">
+	<div id="zone12">	
+		<ul>	
+		
+			<li><a id="cms-1" class="menuItem" name="cms49" href="http://ville.saguenay.ca/fr/activites-et-loisirs/planifier-une-sortie/calendrier" target="_blank" title="Autres activités à Saguenay"><img alt="Autres activités à Saguenay" src="http://media.lavitrinesaguenay.com/image/CMS/menuImages/1398867835238.gif" /></a></li>
+			</br>
+			
+		</ul>		
+	</div>
+	<h1 style="margin-top:0px;">MA VITRINE</h1>
+	<div id="zoneLogin">
+	
+				
+		
+			<form id="loginForm" action="doJSON?command=Login" onsubmit="return false;">
+				
+				<div id="longinFormTitreDiv">
+					<div style="font-size:12px;"><b>SE CONNECTER</b></div>
+					<div style="font-size:9px;">Via mon compte La Vitrine Culturelle de Saguenay</div>
+				</div>
+				<div style="margin-bottom:10px">
+					<label class="label">Courriel</label>
+					<input class="textInput" type="text" name="email" />
+				</div>
+				<div style="clear:both;"></div>
+				<div>
+					<label class="label">Mot de passe</label>
+					<input class="textInput" type="password" name="password" />
+				</div>
+				<div style="width: 127px; float: right;font-family: helvetica;font-size: 10px; text-align: center;">
+                                        <div style="width:105px;float:left;text-align:right;">Se souvenir de moi</div>
+					<input style="float:right;" type="checkbox" name="rememberme" />
+				</div>
+				<div style="clear:both;"></div>
+				<div style="width: 147px; float: right;">
+					<a id="lnkForgotPassword" href="#" class="lnkForgotPassword_FR">J'ai oublié mon mot de passe...</a>
+				</div>
+				<div style="clear:both;"></div>
+				<div style="height:23px;margin-left:-5px;margin-top:5px;">
+					<a id="btnCreateAccount" class="btn left" href="#" style="text-transform: none;text-align:left;">CRÉER UN COMPTE</a>
+					<a id="btnLogin" class="btn left" href="#" style="text-transform: none;text-align:right;">SE CONNECTER</a>
+				</div>
+			</form>
+			<div id="passwordModal" style="display:none;">			
+				<div class="passwordHeader"></div>
+				<div class="passwordContent black_frame">
+					<span class="black_slashed_bottom_right_corner" style="bottom:-1px;right:-1px;"></span>
+					<form class="passwordForm" action="do?action=password" onsubmit="return false;">
+						Vous avez oublié votre mot de passe ?<br />
+						<br />
+						Vous n'avez qu'à entrer l'adresse courriel qui est associée à votre profil La Vitrine Culturelle de Saguenay et nous enverrons immédiatement à ce courriel le mot de passe qui y est associé.<br />
+						<br />
+						L'adresse courriel du profil<br />
+						<div style="position:relative;height:18px;">
+							<input type="text" name="email" style="float:left;margin-right:5px;" />
+							<a class="btn btnSendPassword" class="btn" href="#">ENVOYEZ LE MOT DE PASSE</a>
+						</div>
+					</form>
+					<div class="passwordSent" style="display:none;">
+						<span class="passwordSentTo"></span><br />
+						<br />
+						Il est possible que ce courriel que nous venons d'envoyer ait été classé dans votre dossier de courrier indésirable. Vérifiez ce dossier si vous n'avez rien reçu dans les prochaines minutes. Communiquez avec nous si vous ne recevez aucun courriel par téléphone au 418 698-3157, sans frais au 1 800 463-6565 ou par courriel à profil@lavitrinesaguenay.com<br />
+						<br />
+						Merci !
+					</div>
+				</div>
+				<div class="passwordFooter">
+					<a class="btn right popupCmd close" href="#">FERMER</a>
+				</div>			
+			</div>
+		
+		
+		
+		
+	</div>
+	
+	<div id="inscrire_infolettre">
+		<div id="infolettreSubCmd" class="inner">
+			<a id="lnkCreateAccount" style="color:#E32C43;" class="menuItem" href="http://www.lavitrinesaguenay.com/contenu/infolettre" target="blank">S'INSCRIRE À L'INFOLETTRE</a>
+		</div>
+	</div>
+	<!-- lnkCreateAccount -->
+	
+	<div id="zone1">
+		<ul>
+		
+		</ul>
+	</div>
+<!--	<div id="zone2">
+		<ul>
+		
+		</ul>
+	</div>-->
+	<div id="zone8">
+		<ul>
+		
+			<li><a id="cms-1" class="menuItem" name="cms24" href="http://itunes.apple.com/fr/app/la-vitrine-saguenay/id545322402?mt=8&ign-mpt=uo%3D2" target="_blank" title="Application mobile"><img alt="Application mobile" src="http://media.lavitrinesaguenay.com/image/CMS/menuImages/1341330359199.gif" /></a></li>
+		
+			<li><a id="cms11" class="menuItem" name="cms44" href="../contenu/la_route_des_artisans" target="_blank" title="La route des artisans"><img alt="La route des artisans" src="http://media.lavitrinesaguenay.com/image/CMS/menuImages/1353437866813.jpg" /></a></li>
+		
+		</ul>
+	</div>
+	<h1>PRATICO PRATIQUE</h1>
+	<div id="zone3">
+		<ul>
+		
+			<li><a id="cmsMenuItem10" class="menuItem" href="../contenu/Objectifs" target="_self" title="">OBJECTIFS</a></li>
+		
+			<li><a id="cmsMenuItem42" class="menuItem" href="../contenu/apropos" target="_self" title="">À PROPOS DE LA VITRINE SAGUENAY</a></li>
+		
+			<li><a id="cmsMenuItem43" class="menuItem" href="../contenu/membre" target="_self" title="">POUR DEVENIR MEMBRE</a></li>
+		
+		</ul>
+	</div>
+	<!-- Facebook -->
+	</br>
+	
+        <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FVitrineSaguenay&amp;width=210&amp;height=300&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color=%23DE961D&amp;header=false&amp;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:210px; height:300px;" allowTransparency="true"></iframe>
+	<div id="zone4">
+		<!-- Suivez-nous sur ces réseaux sociaux -->
+		<div>
+		
+			<a id="cmsMenuItem40" href="http://www.facebook.com/VitrineSaguenay" target="_blank" title="facebook"><img src="http://media.lavitrinesaguenay.com/image/CMS/menuImages/1356728351896.jpg"/></a>
+		
+			<a id="cmsMenuItem41" href="https://twitter.com/VitrineSaguenay" target="_blank" title="twitter"><img src="http://media.lavitrinesaguenay.com/image/CMS/menuImages/1356728326084.jpg"/></a>
+		
+		</div>
+	</div>
+</div>
+
+				
+				
+			</div>
+			
+			<!-- le div suivant est reservé pour les résultats de google_search -->
+			<div id="cse" style="display:none;"></div>
+			<div id="content">
+				
+
+
+
+
+
+<div id="detailContainer" class="257676">
+	<div id="detailNorthContainer">
+		<!--<a href="#" class="lnkReturnList left">« RETOUR À LA PAGE PRÉCÉDENTE</a>-->
+		<a href="#" class="lnkReturnList right">« RETOUR À LA PAGE PRÉCÉDENTE</a>
+	</div>
+	<div id="detailWestContainer">
+		<div class="vignetteContainer">
+			
+			
+
+<div id="activityMediaViewer" class="imgContainer">
+
+</style>
+	<div>
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					 <span class="image">
+                        <img src="http://media.lavitrinesaguenay.com/image/1348686660758.jpg" title="" alt="" />
+                     </span>
+					 
+				</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+<div class="imgLabel">
+	JONQUIÈRE
+</div>
+
+
+		</div>
+		<div class="detailPartagerDiv">
+			<a class="addthis_button FR" href="../../emplacement/Bibliotheque_de_Kenogami"></a>
+		</div>
+		
+
+
+<div id="divPublicity">
+	
+</div>
+
+	</div>
+	<div id="detailCenterContainer">
+		<div id="detailCenterNorthContainer">
+			<span class="detailTitle">
+				BIBLIOTHÈQUE DE KÉNOGAMI
+			</span>
+		</div>
+		<div id="detailCenterEastContainer">
+			<div class="sectionTitle">SALLES</div>
+			<div class="detailSalles">
+
+				<div class="detailSalle first">
+					
+					BIBLIOTHÈQUE DE KÉNOGAMI<br />
+					Capacité : 
+				</div>
+
+			</div>
+			<br />
+			<div class="sectionTitle">HEURES D'OUVERTURE</div>
+			<div class="detailHeureOuverture">
+
+				
+				<div class="header">LUN</div>
+				<div class="header">MAR</div>
+				<div class="header">MER</div>
+				<div class="header">JEU</div>
+				<div class="header">VEN</div>
+				<div class="header">SAM</div>
+				<div class="header">DIM</div>
+				<div>
+					
+					<br />
+					
+				</div>
+				<div>
+					<br />
+					
+				</div>
+				<div>
+					10:00<br />
+					17:00
+				</div>
+				<div>
+					10:00<br />
+					17:00
+				</div>
+				<div>
+					10:00<br />
+					17:00
+				</div>
+				<div>
+					10:00<br />
+					17:00
+				</div>
+				<div>
+					<br />
+					
+				</div>
+				<div>
+					<br />
+					
+				</div>
+
+				<div class="comment">
+					
+				</div>
+				<br style="clear:both;" />
+			</div>
+			
+		</div>
+		<div id="detailCenterCenterContainer">
+			<div id="detailDescription">
+				Les Bibliothèques de Saguenay, sont un réseau de 8 bibliothèques publiques, qui ont pour mission de donner <br />un large accès à la culture sous toutes ses formes, de participer à sa diffusion et de stimuler son expression. <br />Des heures d’ouverture nombreuses, un environnement riche et varié de même qu’une grande accessibilité <br />leur confèrent le rôle important de « porte d’entrée de la culture » dans la communauté.
+			</div>
+			<!--<a href="#" class="lnkReturnList left">« RETOUR À LA PAGE PRÉCÉDENTE</a>-->
+			<div id="detailLocation">
+				<div class="detailLocationRight">
+					418 695-7135 (4179)<br />
+					<a class="detailWebsite" href="http://www.ville.saguenay.qc.ca/biblio" target="_blank">Site web</a>
+				</div>
+				3825, rue de Montcalm<br />
+				Jonquière<br />
+				G7X 1V8<br />
+				<a href="#" id="257676" class="bouton detailLocation" style="padding:0px !important;">VOIR SUR LA CARTE</a><br />
+				<br />
+
+				<strong>Transport</strong><br />
+				Autobus STS - Circuit 34, Kénogami
+
+			</div>
+		</div>
+	</div>
+	<div id="detailSouthContainer">
+                <div id="ombreGaucheDetail" class="mouseOut">
+                        <!--<div id="divPrevious" style="display:none;"></div>	
+                --></div>
+                <div id="ombreDroiteDetail" class="mouseOut">
+                        <!--<div id="divNext" style="display:none;"></div>
+                --></div>
+		<div id="divPrevious" class="mouseOut" style="display:none;bottom:102px;left:-34px;top:auto;"></div>
+		<div id="divNext" class="mouseOut" style="display:none;bottom:102px;left:auto;right:-35px;top:auto;"></div>
+		<div class="sectionTitle">LES AUTRES ACTIVITÉS DE CET EMPLACEMENT</div>
+		<div class="detailAutresActivitesContainer">
+			<div class="detailAutresActivites">		
+				
+<div id="topPagination" class="pagination"></div>
+<!-- <div id="bottomPagination" class="pagination"></div>c -->
+<div id="thumbnails"></div>
+<div id="hiddenThumbnails" style="display:none;">
+    
+    
+        <div id="noResults">
+            Oups! La Vitrine Culturelle de Saguenay n'a rien trouvé qui répond à votre sélection
+        </div>
+    
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+			</div>
+			<div id="footer">
+				
+
+
+
+
+
+
+
+
+<div id="footer">
+	<div class="footer_head">
+		<ul id="zone5">
+			<li>
+                            <div style="border-right:1px solid #A1A19C;height:10px;margin-left:-6px !important;padding-right:6px;"><a id="lnkFooterCreateAccount" href="#">S'INSCRIRE À L'INFOLETTRE</a></div>
+			</li>
+			
+				<li>
+					<div style="height:10px;padding-right:6px;border-right:1px solid #A1A19C; "><a href="http://www.lavitrinesaguenay.com/contenu/contacteznous" target="_self">CONTACTEZ-NOUS</a></div>
+				</li>
+			
+				<li>
+					<div style="height:10px;padding-right:6px;border-right:1px solid #A1A19C; "><a href="http://www.lavitrinesaguenay.com/contenu/condition" target="_self">CONDITIONS D'UTILISATION</a></div>
+				</li>
+			
+				<li>
+					<div style="height:10px;padding-right:6px; "><a href="http://www.lavitrinesaguenay.com/contenu/politique" target="_self">POLITIQUE DE CONFIDENTIALITÉ</a></div>
+				</li>
+			
+		</ul>
+		<ul id="zone6">
+			
+		</ul>
+                <div style="float: right;position: absolute;top: -76px;right: 156px;" >
+                    <img src="../resources/images/sidebar_background_l.png"/>
+                </div>
+				<div style="float: right;position: absolute;top: -86px;right: 85px;" >
+                    <img src="../resources/images/sidebar_background_r1.png"/>
+                </div>
+				<div style="float: right;position: absolute;top: -87px;right: 50px;" >
+                    <img src="../resources/images/sidebar_background_r2.png"/>
+                </div>
+	</div>
+	<div class="footer_body">
+	</div>
+	<div class="footer_footer">
+		<div id="copyrights" >
+			2012 - 2013 La Vitrine Culturelle de Saguenay - Tous droits réservés
+		</div>
+                <div  style="position:relative;top:40px;left:-15px;width:650px;max-width:650px;">
+                
+                        <a href="http://ville.saguenay.ca/fr/home" target="_blank"><img style="padding-left:15px;" src="http://media.lavitrinesaguenay.com/image/CMS/menuImages/1399554504501.jpg" /></a>
+                
+                </div>
+	</div>
+</div>
+
+<!--
+<div id="footer">
+	<img src="../resources/images/Footer.jpg" alt="" />
+</div>
+-->
+
+			</div>
+			<div style="display:none;">
+				<span id="txtLoginReminder">Vous devez d'abord vous <strong>identifier</strong> ou <strong>créer un compte</strong> La Vitrine Culturelle de Saguenay dans l'espace «Se connecter».</span>
+				<span id="txtFermer">FERMER</span>
+			</div>
+			
+
+		<div id="smsPopup">
+			<div class="smsContent">
+				<div class="smsHeader FR">
+					TEXTO
+				</div>
+				<div class="smsSucces black_frame">
+					<span class="black_slashed_bottom_right_corner" style="bottom:-1px;right:-1px;"></span>
+					Rapide, pratique et gratuit : La Vitrine Culturelle de Saguenay s'occupe de tout. Nous vous envoyons instantanément les détails de cette activité sur votre sans-fil par message texte.<br />
+					<br />
+					<div style="float:right;">
+						Votre fournisseur :<br />
+						<select class="smsProviders">						
+							<option value="">FOURNISSEURS</option>
+
+							<option value="ATT">ATT</option>
+
+							<option value="BELL">BELL</option>
+
+							<option value="CINGULAR">CINGULAR</option>
+
+							<option value="FIDO">FIDO</option>
+
+							<option value="KOODO">KOODO</option>
+
+							<option value="NEXTEL">NEXTEL</option>
+
+							<option value="PC">PC</option>
+
+							<option value="ROGERS">ROGERS</option>
+
+							<option value="SOLO">SOLO</option>
+
+							<option value="SPRINT">SPRINT</option>
+
+							<option value="TELUS">TELUS</option>
+
+							<option value="TMOBILE">TMOBILE</option>
+
+							<option value="VERIZON">VERIZON</option>
+
+							<option value="VIRGIN_CANADA">VIRGIN CANADA</option>
+
+							<option value="VIRGIN_USA">VIRGIN USA</option>
+
+							<option value="VIDEOTRON">VIDEOTRON</option>
+
+						</select>
+ 					</div>
+ 					Votre numéro de sans-fil :<br />
+					<input class="phoneNumber" type="text" name="phoneNumber" />
+					<div class="smsErreur"></div>
+					<div class="representation">
+						Sélectionnez la représentation désirée :<br />						
+					</div>
+				</div>
+			</div>
+			<div class="smsButtons">
+				<a class="bouton right fermerTexto popupCmd close" style="padding-right:0px;" href="#">FERMER</a>
+				<a class="bouton right envoyerTexto popupCmd" href="#">M'ENVOYER PAR TEXTO</a>				
+			</div>
+		</div>
+			<div id="fbShareModal" style="display:none;">
+				<div class="fbShareHeader"></div>
+				<div class="fbShareBody">
+					Vous venez d'ajouter cette activité à vos favoris.<br />
+					Voulez-vous aussi l'ajouter à votre profile Facebook?
+				</div>
+				<div class="fbShareFooter">
+					<a href="#" class="btn right fbShareNoBtn" style="margin-left:8px;">Non</a>
+					<a href="#" class="btn right fbShareYesBtn">Oui</a>
+				</div>
+			</div>
+		</div>
+<!--		<div id="popupContainer" style="visibility:hidden;z-index:1000;">-->
+<!--			<div id="popupBG"></div>-->
+<!--			<div id="popupDropShadow"></div>-->
+<!--			<div id="popupBox">-->
+<!--				<div id="popupContent"></div>-->
+<!--				<div id="popupClose">-->
+<!--					<img src="../resources/images/close_x.png" width="44" height="44" alt="" usemap="#closemap" />-->
+<!--					<map name="closemap">-->
+<!--						<area id="popupCloseArea" shape="circle" coords="22,22,17" href="#" />-->
+<!--					</map>				-->
+<!--				</div>				-->
+<!--			</div>-->
+<!--		</div>-->
+		
+		
+			<div id="popupContainer" style="z-index:1000;">
+				<div id="popupBG"></div>
+				<div id="popupDropShadow"></div>
+				<div id="popupBox" style="margin-top: -137px;margin-left: -137px;">
+					<!--<div id="popupContent">
+						<a id="" style="color:#E32C43;" href="javascript:void(0);" onclick="javascript:checkInfolettreCookie()"><img src="../resources/images/popup-saguenay-v3.gif" alt=""/></a>
+					</div>-->
+					<div id="popupContent">
+						<a id="" style="color:#E32C43;" href="javascript:void(0);" onclick="javascript:checkInfolettreCookie();"><img src="../resources/images/popup_top_l.gif" alt=""/><img src="../resources/images/popup_top_r.gif" alt=""/></a>
+					</div>
+					<div id="popupContent">
+						<a id="" style="color:#E32C43;" href="javascript:void(0);" onclick="javascript:checkInfolettreCookie();"><img src="../resources/images/popup_bottom_l.gif" alt=""/><img src="../resources/images/popup_bottom_r.gif" alt=""/></a>
+					</div>
+					<div id="popupClose">
+						<img src="../resources/images/close_x.png" width="44" height="44" alt="" usemap="#closemap" />
+						<map name="closemap">
+							<area id="popupCloseAreaInfo" shape="circle" coords="22,22,17" href="#" />
+						</map>				
+					</div>
+				</div>
+			</div>
+			
+		
+		<div id="popupContainer" style="visibility:hidden;z-index:1000;">
+			<div id="popupBG"></div>
+			<div id="popupDropShadow"></div>
+			<div id="popupBox">
+				<div id="popupContent"></div>
+				<div id="popupClose">
+					<img src="../resources/images/close_x.png" width="44" height="44" alt="" usemap="#closemap" />
+					<map name="closemap">
+						<area id="popupCloseArea" shape="circle" coords="22,22,17" href="#" />
+					</map>				
+				</div>				
+			</div>
+		</div>
+		
+		<div id="loginReminder" style="display:none;">
+			<div id="loginReminderBG"></div>
+			<!-- TODO Box and pointer drop shadow -->
+			<div id="loginReminderBox">
+				<div id="loginReminderContent">
+					-
+				</div>
+				<div id="loginReminderClose">
+					<a class="btn right" href="#">-</a>
+				</div>
+			</div>
+			<div id="loginReminderPointer"></div>
+		</div>
+		<script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;key="></script>
+		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+		<script type="text/javascript"> var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34517872-1']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+		
+		<script type="text/javascript">
+			function checkInfolettreCookie(){
+				//verifier si le cookie existe. S'il n'existe pas, le créer
+				var i,x,y,ARRcookies = document.cookie.split(";");
+				var result = "";
+				var test = "infolettre";
+				for (i = 0;i < ARRcookies.length; i++)
+				{
+				  x = ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+				  y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+				  x = x.replace(/^\s+|\s+$/g,"");
+				  if(x == test)
+				  {
+					  result = unescape(y);
+				  }
+				}
+				
+				if(result == null || result == "")
+				{
+					result = "infolettre";
+					var exdate = new Date();
+					exdate.setDate(exdate.getDate() + 365);
+					var c_value = escape(result) + "; expires=" + exdate.toUTCString();
+					document.cookie= "infolettre=" + c_value;
+				}
+
+				$('#lnkCreateAccount').click();
+				
+				return false;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>  
+<link rel="icon" type="image/ico" href="favicon.ico"/>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META NAME="Rating" CONTENT="General">
+<META NAME="Copyright" CONTENT="(c)2013 Guelph Public Library">
+<META NAME="Author" CONTENT="webmaster@guelphpl.ca">
+<META NAME="Generator" CONTENT="Cold Fusion">
+<META NAME="Abstract" CONTENT="Guelph Public Library">
+<META NAME="Keywords" CONTENT="Guelph Public Library, Library, Public Library, books, history, catalogue, archives, reference, database, HIP, local history, literature, novels">
+<META NAME="Description" CONTENT="The Guelph Public Library will provide and promote to the citizens of Guelph friendly, efficient public library service. It will provide appropriately selected and catalogued collections of materials, both print and non-print, properly designed and maintained facilities, and well-trained staff. ">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57900671-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<link rel="stylesheet" href="/header.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/sidemenu.css" type="text/css" media="screen" />
+
+
+
+
+
+
+<!--[if IE]>
+<style>
+    #languagecontainer a#chineseS, #languagecontainer a#chineseT {font-size:0.60em;}
+</style>
+<![endif]-->
+
+
+    
+
+				
+				
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function () {	
+		$('#nav li').load(
+			function() {
+            	$('ul', this).slideUp(100,"linear");
+        	});
+			
+		$('#nav li').hover(
+			function () {
+				//show its submenu
+				$('ul', this).slideDown(100,"linear");
+			}, 
+			//hideMenu('#nav li')
+			function () {
+				//hide its submenu
+				$('ul', this).slideUp(100,"linear");	
+			}
+		);
+		
+	});
+	
+	</script>
+
+
+
+
+
+
+<title>Guelph Public Library</title>
+<!--[if IE 6]>
+<style>
+body {behavior: url("csshover3.htc");}
+#menu li .drop {background:url("img/drop.gif") no-repeat right 8px; 
+</style>
+<![endif]-->
+
+<DIV id="headercontainer">
+
+	<div id="headercontent">    
+    
+	
+    <DIV id="logo-container">
+    	<A href="/index.cfm"><IMG alt="GPL Logo" SRC="/images/gpl-logo.png" /></A>
+    </DIV>   
+    <div id="languagecontainer">
+ 
+    	
+    	
+        <LI><A id="hindi" href="/languages/polish.cfm" title="Getting Started in Polish" >Polski</A></LI><LI>|</LI>
+        <LI><A id="hindi" href="/languages/hindi.cfm" title="Getting Started in Hindi" >हिन्दी</A></LI><LI>|</LI>
+	    <LI><A id="spanish" HREF="/languages/spanish.cfm" title="Getting Started in Spanish" >Español</A></LI> <LI>|</LI>
+        <LI><A id="viet" HREF="/languages/vietnamese.cfm" title="Getting Started in Vietnamese" >Việt Ngữ</A></LI> <LI>|</LI>
+        <LI><A id="chineseS" HREF="/languages/chinese-sc.cfm" title="Getting Started in Simplified Chinese">中文（简体）</A></LI> <LI>|</LI>
+        <LI><A id="chineseT" HREF="/languages/chinese-tc.cfm" title="Getting Started in Traditional Chinese">中文（繁體）</A></LI> <LI>|</LI>
+        <LI><A id="french" href="/languages/french.cfm" title="Getting Started in French">Français</A></LI> <LI>|</LI>
+        <LI><A id="german" href="/languages/german.cfm" title="Getting Started in German">Deutsch</A></LI>
+    </div>
+    
+   
+    
+    <DIV id="search-box-container">
+    	<form name="header-search-form" action="/sitemap/search-results.cfm" method="get">  	
+            <fieldset>
+            <LEGEND class="offscreen">Search:</LEGEND>
+            <div id="radio-buttons">            	
+                <label>Search GPL:
+                    <select name="selSearch" id="selSearch">
+                        <option value="Catalogue">Catalogue</option>
+                        <option value="Website">Website</option>                    
+                        <option value="Resources">Resources</option>                    
+                    </select>
+                </label>            
+            </div>
+            
+            <span id="test">for</span>
+           <div id="search-text-container">
+            	<LABEL for="search-box" class="offscreen">Input your search</LABEL>
+                <input id="search-box" name="SearchText" type="text" size="35" value="Books, movies & more" ONFOCUS="clearDefault(this)">
+                <LABEL for="search-btn" class="offscreen">Click to Search</LABEL>
+                <input alt="search Button" id="search-btn" type="image" value="submit" src="/images/magnifying-glass.png" />
+            </div>
+            
+            </fieldset>
+</form>
+
+<script type="text/javascript">
+function clearDefault(el) {
+	var textBoxValue = $( "#search-box" ).val();
+	var selSearchValue = $( "#selSearch" ).val();
+	var webText = "Programs, events & information!";
+	var catText = "Books, movies & more";
+	var resText = "eResources, the catalog & more!";
+
+	if(textBoxValue == webText || textBoxValue == catText || textBoxValue == resText){
+		$('#search-box').val('');
+		console.log('test2');
+	}
+
+}
+
+$( "#selSearch" ).change(function(){
+		var textBoxValue = $( "#search-box" ).val();
+		var selSearchValue = $( "#selSearch" ).val();
+		var webText = "Programs, events & information!";
+		var catText = "Books, movies & more";
+		var resText = "eResources, the catalog & more!";
+
+
+		if(selSearchValue == "Website"){
+				if(textBoxValue == webText || textBoxValue == catText || textBoxValue == resText ){
+					$( "#search-box" ).val(webText);
+				}
+			}
+
+		if(selSearchValue == "Catalogue"){
+				if(textBoxValue == webText || textBoxValue == catText || textBoxValue == resText ){
+					$( "#search-box" ).val(catText);
+				}
+			}
+
+		if(selSearchValue == "Resources"){
+				if(textBoxValue == webText || textBoxValue == catText || textBoxValue == resText ){
+					$( "#search-box" ).val(resText);
+				}
+			}
+});
+
+
+</script>
+    </DIV>
+    
+    
+    
+        
+   
+    
+  
+  
+    <ul id="nav2">
+        <?xml version="1.0" encoding="UTF-8"?><li><a target="_blank" href="https://catalog.guelphpl.ca/polaris/logon.aspx/">My Account</a></li><li><a target="" href="/about/contact.cfm">Contact Us</a></li><li><a target="" href="/locations/index.cfm">Locations</a></li><li><a target="" href="/about/index.cfm">About Us</a></li>
+    </ul>
+
+<ul id="nav">
+	<?xml version="1.0" encoding="UTF-8"?><li class="shorterli navmenu"><a id="topmenu" href="/search/index.cfm">Search</a><ul><li><a target="_blank" href="http://catalog.guelphpl.ca/polaris/">Books, DVDs &amp; more</a></li><li><a target="" href="/archives/search.cfm">Local History</a></li><li><a target="_blank" href="/search/bookfind.cfm">Guelph's Bookfind</a></li><li><a target="" href="/search/collections.cfm">Information About Our Collections</a></li></ul></li><li class="navmenu"><a id="topmenu" href="/how-do-i/index.cfm">How Do I...</a><ul><DIV/></ul></li><li class="navmenu"><a id="topmenu" href="/elibrary/index.cfm">eLibrary</a><ul><li><a target="" href="/elibrary/ebooks.cfm">eBook &amp; eAudiobook Help</a></li><li><a target="" href="/elibrary/databases/index.cfm">eResources</a></li><li><a target="" href="/elibrary/blogs.cfm">GPL Blogs</a></li><li><a target="" href="/elibrary/ehelp.cfm">Online Help</a></li><li><a target="" href="/elibrary/nextreads.cfm">Next Reads</a></li><li><a target="" href="/elibrary/socialmedia.cfm">Social Media</a></li><li><a target="" href="/elibrary/apps.cfm">Mobile Apps</a></li><li><a target="" href="/elibrary/eExpert.cfm">Book an eExpert</a></li><li><a target="" href="/kids/learn.cfm">Kids eLibrary</a></li><li><a target="" href="/teens/eresources.cfm">Teens eLibrary</a></li></ul></li><li class="navmenu"><a id="topmenu" href="/archives/index.cfm">Local History</a><ul><li><a target="" href="/archives/search.cfm">Search Our Archives</a></li><li><a target="" href="/archives/using.cfm">Using the GPL Archives</a></li><li><a target="" href="/archives/glossary.cfm">Glossary</a></li><li><a target="" href="/archives/hiddenpast.cfm">Guelph's Hidden Past</a></li><li><a target="" href="/archives/famous.cfm">Famous Guelphites</a></li><li><a target="" href="/archives/historypin.cfm">History Pin</a></li><li><a target="" href="/archives/genealogy.cfm">Research Your Family Tree</a></li><li><a target="" href="/archives/househistory.cfm">Research Your Home</a></li><li><a target="" href="/archives/pbook/index.cfm">Rare Book Collection</a></li><li><a target="" href="/archives/microfilm/microfilmdir.cfm">Microfilm</a></li><li><a target="" href="/archives/ask.cfm">Ask the Archivist</a></li><li><a target="" href="/remember/">In Flanders Fields</a></li></ul></li><li class="navmenu"><a id="topmenu" href="/services/index.cfm">Services</a><ul><li><a target="" href="/foundation/pages/calendar/">Events Calendar</a></li><li><a target="" href="/services/finditem/suggest.cfm">Suggest a Purchase</a></li><li><a target="" href="/services/finditem/illo/illo.cfm">Borrow From Another Library System</a></li><li><a target="" href="/services/bookclub/index_choice.cfm">Book Clubs</a></li><li><a target="" href="/services/work.cfm">Searching for Work?</a></li><li><a target="" href="/services/roombooking.cfm">Room Rental</a></li><li><a target="" href="/services/examproc.cfm">Exam Proctoring</a></li><li><a target="" href="/services/tours.cfm">Tours</a></li><li><a target="" href="/services/computers_printing.cfm">Computers and Printing</a></li><li><a target="" href="/services/newcanada.cfm">New Canadians</a></li><li><a target="" href="/services/accessibility.cfm">Accessibility Services</a></li><li><a target="" href="/services/tech-bar.cfm">Tech B@r</a></li></ul></li><li class="navmenu kidsteens"><a id="topmenu" href="/kids/index.cfm">Kids</a><ul><li><a target="_blank" href="http://www.guelphpl.ca/munsch">All Things Munsch</a></li><li><a target="" href="/kids/teachers/index.cfm">Teachers</a></li></ul></li><li class="navmenu kidsteens"><a id="topmenu" href="/teens/index.cfm">Teens</a><ul class="dropdownleft"><li><a target="" href="/teens/eresources.cfm">GPL eResources</a></li><li><a target="" href="/teens/events.cfm">Teen Events</a></li><li><a target="" href="/teens/life-links.cfm">Life Links</a></li><li><a target="" href="/teens/books.cfm">Books</a></li><li><a target="" href="/teens/tag.cfm">TAG/Get Involved</a></li></ul></li>
+</ul>
+
+  
+</div> 
+    
+    
+
+    
+<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	var autoPlayTime=7000;
+	autoPlayTimer = setInterval( autoPlay, autoPlayTime);
+	function autoPlay(){
+		Slidebox('next');
+	}
+	$('#slidebox .next').click(function () {
+		Slidebox('next','stop');
+	});
+	$('#slidebox .previous').click(function () {
+		Slidebox('previous','stop');
+	});
+	
+	$('#slidebox .pause').click(function () {
+		Slidebox('stop');
+	});
+	
+	var yPosition=($('#slidebox').height()-$('#slidebox .next').height())/2;
+	$('#slidebox .next').css('top',yPosition);
+	$('#slidebox .previous').css('top',yPosition);
+	$('#slidebox .pause').css('top',yPosition);
+	$('#slidebox .thumbs a:first-child').removeClass('thumb').addClass('selected_thumb');
+	$("#slidebox .content").each(function(i){
+		slideboxTotalContent=i*$('#slidebox').width();	
+		$('#slidebox .container').css("width",slideboxTotalContent+$('#slidebox').width());
+	});
+});
+
+function Slidebox(slideTo,autoPlay){
+    var animSpeed=1000; //animation speed
+    var easeType='easeInOutExpo'; //easing type
+	var sliderWidth=$('#slidebox').width();
+	var leftPosition=$('#slidebox .container').css("left").replace("px", "");
+	if( !$("#slidebox .container").is(":animated")){
+		if(slideTo=='next'){ //next
+			if(autoPlay=='stop'){
+				clearInterval(autoPlayTimer);
+			}
+			if(leftPosition==-slideboxTotalContent){
+				$('#slidebox .container').animate({left: 0}, animSpeed, easeType); //reset
+				$('#slidebox .thumbs a:first-child').removeClass('thumb').addClass('selected_thumb');
+				$('#slidebox .thumbs a:last-child').removeClass('selected_thumb').addClass('thumb');
+			} else {
+				$('#slidebox .container').animate({left: '-='+sliderWidth}, animSpeed, easeType); //next
+				$('#slidebox .thumbs .selected_thumb').next().removeClass('thumb').addClass('selected_thumb');
+				$('#slidebox .thumbs .selected_thumb').prev().removeClass('selected_thumb').addClass('thumb');
+			}
+			function autoPlay(){
+			Slidebox('next');}
+			
+		} else if(slideTo=='previous'){ //previous
+			if(autoPlay=='stop'){
+				clearInterval(autoPlayTimer);
+			}
+			if(leftPosition=='0'){
+				$('#slidebox .container').animate({left: '-'+slideboxTotalContent}, animSpeed, easeType); //reset
+				$('#slidebox .thumbs a:last-child').removeClass('thumb').addClass('selected_thumb');
+				$('#slidebox .thumbs a:first-child').removeClass('selected_thumb').addClass('thumb');
+			} else {
+				$('#slidebox .container').animate({left: '+='+sliderWidth}, animSpeed, easeType); //previous
+				$('#slidebox .thumbs .selected_thumb').prev().removeClass('thumb').addClass('selected_thumb');
+				$('#slidebox .thumbs .selected_thumb').next().removeClass('selected_thumb').addClass('thumb');
+			}
+		} 
+		  else if(slideTo=='stop'){ //stop
+			  clearInterval(autoPlayTimer);
+			  }
+		
+		  else {
+			var slide2=(slideTo-1)*sliderWidth;
+			if(leftPosition!=-slide2){
+				clearInterval(autoPlayTimer);
+				$('#slidebox .container').animate({left: -slide2}, animSpeed, easeType); //go to number
+				$('#slidebox .thumbs .selected_thumb').removeClass('selected_thumb').addClass('thumb');
+				var selThumb=$('#slidebox .thumbs a').eq((slideTo-1));
+				selThumb.removeClass('thumb').addClass('selected_thumb');
+			}
+		}
+	}
+}
+
+</script>
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+</DIV> 
+
+
+ 
+
+</head>        
+
+
+
+<BODY style="text-align:center;">
+<DIV id="maincontainer">
+
+	
+	
+    
+    <div id="top-shadow-placeholder"></div>
+
+    
+    
+    <div id="bannercontainer">
+        <div id="slidebox" style="width:600px; height:350px; float:left; background-color:#FF0000;  ">
+            <div class="next"></div>
+            <div class="previous"></div>
+            <DIV class="pause" style="margin-top:153px;"></DIV>
+            <div class="thumbs">
+            
+                    
+                  <a href="#" onClick="Slidebox('1');return false" class="thumb">&#8226;</a>
+                    
+                  <a href="#" onClick="Slidebox('2');return false" class="thumb">&#8226;</a>
+                    
+                  <a href="#" onClick="Slidebox('4');return false" class="thumb">&#8226;</a>
+                    
+                  <a href="#" onClick="Slidebox('5');return false" class="thumb">&#8226;</a>
+                    
+                  <a href="#" onClick="Slidebox('3');return false" class="thumb">&#8226;</a>
+                  
+            </div>
+            <div class="container">
+               
+                
+               	<div class="content">
+        
+                    
+                    	<A HREF="https://www.guelphpl.ca/elibrary/databases/eresources.cfm?id=37"><img alt="Learn more..." SRC="/images/rotator/Hoopla_AD_2016.jpg" alt="Learn more..." title="Learn more..." /></A> 
+                    
+                </div>
+                
+               	<div class="content">
+        
+                    
+                    	<A HREF="https://www.guelphpl.ca/about/news.cfm?id=1130"><img alt="Explore with us!" SRC="/images/rotator/StratfordShakespeare_Mar2016.jpg" alt="Explore with us!" title="Explore with us!" /></A> 
+                    
+                </div>
+                
+               	<div class="content">
+        
+                    
+                        <A HREF="/foundation/pages/calendar/index.cfm?progid=1383"><img alt="Explore with us!" SRC="/images/rotator/easterbunny_2016.jpg" alt="Explore with us!" title="Explore with us!" /></A>
+                    
+                </div>
+                
+               	<div class="content">
+        
+                    
+                    	<A HREF="https://www.guelphpl.ca/foundation/Pages/Calendar/index.cfm"><img alt="Explore our events..." SRC="/images/rotator/march break fun_2016.jpg" alt="Explore our events..." title="Explore our events..." /></A> 
+                    
+                </div>
+                
+               	<div class="content">
+        
+                    
+                    	<A HREF="https://www.guelphpl.ca/about/news.cfm?id=1126"><img alt="Explore.Connect.Thrive with us!" SRC="/images/rotator/Teen Contest_Writing_2016.jpg" alt="Explore.Connect.Thrive with us!" title="Explore.Connect.Thrive with us!" /></A> 
+                    
+                </div>
+                
+            </div>
+        </div>
+ 
+    
+    
+    	
+
+    	
+        <DIV id="sideboxcontainer">
+            <DIV id="sidebox1">
+            	<A HREF="https://www.hoopladigital.com/login">
+                	<IMG alt="Hoopla" title="Hoopla" alt="Hoopla" SRC="/images/Hoopla_2014.jpg" />
+            	</A>
+            </DIV>
+            <DIV id="sidebox2">
+                <a href="/elibrary/onlineresources.cfm">
+                    <IMG alt="eBooks" title="eBooks" alt="eBooks" SRC="/images/ebooks_2014_2.jpg" />
+                </a>
+            </DIV>
+
+            <DIV id="sidebox3">
+                <a href="https://epayment.guelphpl.ca/eCommerceWebModule/Home">
+                    <IMG alt="eBooks" title="eBooks" alt="Pay Fines" SRC="/images/fines.png" />
+                </a>
+            </DIV>
+			
+           <DIV id="sidebox4">
+            	<A HREF="/elibrary/blogs.cfm">
+            		<IMG alt="GPL Blogs" title="GPL Blogs" SRC="/images/kitty.jpg" alt="Kitys Blog" />
+                </A>
+            </DIV> 
+        </DIV>
+    </div>
+    
+    
+       
+    <div id="subboxcontainer">
+    
+        <DIV id="socialbox">
+
+             	<a target="_blank" href="http://www.facebook.com/pages/Guelph-Public-Library/155431451134898">
+                <IMG alt="Facebook" SRC="/images/social-media/1-facebook.png" alt="facebook" title="Facebook"  /></a>                
+         
+             <a target="_blank" href="http://twitter.com/#!/GuelphLibrary">
+                <IMG alt="Twitter" SRC="/images/social-media/2-twitter.png" alt="twitter" title="Twitter"  /></a>           
+           
+              <a target="_blank" href="http://www.youtube.com/user/GuelphPublicLibrary">
+                <IMG alt="Youtube" SRC="/images/social-media/3-youtube.png" alt="youtube" title="Youtube" /></a>
+          
+              <A target="_blank" HREF="http://www.flickr.com/photos/81300884@N03">
+                <IMG alt="Flickr" SRC="/images/social-media/4-flickr.png" alt="flickr" title="Flickr" /></A>          
+         
+               <A target="_blank" HREF="http://pinterest.com/gplguelph">
+                <IMG alt="Pinterest" SRC="/images/social-media/5-pinterest.png" alt="pinterest" title="Pinterest" /></A>
+
+
+        </DIV>   
+    	
+        
+        
+    	<DIV id="homeworkbox">
+        	<a href="/elibrary/databases/login.cfm?id=52">
+        		<IMG alt="Homework Help" title="Homework Help" alt="homework help" SRC="/images/homework-help.jpg" />
+                Homework Help
+			</a>
+        </DIV>
+        <DIV id="hoursbox">
+        	<CENTER>
+        	  
+
+ 
+    	<B>Today's Hours</B><br />
+    	Click on a location
+<div style=" font-size:0.8em;float:left; border:1px solid #999;height:100%;width:100%;background-color:#FFFFFF">	
+   
+       <div style="padding:1px 0 1px 0;border:1px solid #999; margin:2px 2px 7px 2px; background-color:#F4F4F4;background-image:url(images/blue-search.png);background-repeat:repeat-x;background-size:177px 23px;color:#FFFFFF;">
+		
+		<b>Friday March 11<sup>
+       
+            th
+            
+        </sup>
+        </b> 
+        
+        
+        
+                
+	</div>
+    <div style="padding:3px 0 0 3px;">
+	
+    
+       			 <DIV id="datetime"><A HREF="/locations/main.cfm">
+       			 <DIV style="float:left; width:110px; text-align:left">Main</DIV><DIV style="float:right; width:50px;">9-5</DIV></A></DIV>
+			
+        		<DIV id="datetime"><A HREF="/locations/main.cfm">
+        		<DIV style="float:left; width:110px; text-align:left">Childrens</DIV><DIV style="float:right; width:50px;">9-5</DIV></A></DIV>
+            
+        		<DIV id="datetime"><A HREF="/locations/bullfrog.cfm">
+       			<DIV style="float:left; width:110px; text-align:left">Bullfrog</DIV><DIV style="float:right; width:50px;">9-5</DIV></A></DIV>    
+            
+		        <DIV id="datetime"><A HREF="/locations/scottsdale.cfm">
+        		<DIV style="float:left; width:110px; text-align:left">Scottsdale</DIV><DIV style="float:right; width:50px;">9-5</DIV></A></DIV>    
+            
+        		<DIV id="datetime"><A HREF="/locations/westend.cfm">
+		        <DIV style="float:left; width:110px; text-align:left">West End</DIV><DIV style="float:right; width:50px;">9-9</DIV></A></DIV>
+            
+       			<DIV id="datetime"><A HREF="/locations/westminster.cfm">
+		        <DIV style="float:left; width:110px; text-align:left">Westminster</DIV><DIV style="float:right; width:50px;">9-5</DIV></A></DIV>    
+            
+        		<DIV id="datetime"><A HREF="/locations/eastside.cfm">
+       			<DIV style="float:left; width:110px; text-align:left">East Side</DIV><DIV style="float:right; width:50px;">9-5</DIV></A></DIV>    
+            
+</DIV>
+</DIV>
+
+        	</CENTER>
+        </DIV>
+       	<DIV id="calendarbox">    	
+            
+            <a href="/foundation/pages/calendar/">
+                <img src="/images/Events Calendar_web_2015.png" alt="Calendar of events"/>
+            </a>
+        </DIV>
+        <DIV id="askonbox">
+        	<a href="/donate/about.cfm">
+	        	<img src="/images/donate.jpg" alt="Donate button - Click here to learn how to support your GPL." />
+            </a>
+        </DIV>
+      
+    </div>
+    
+	
+<DIV style="width:100%;float:left;margin-top:20px;"><hr></DIV>
+    <div id="footnavmenu">
+    
+        <a class="foothome" href="/index.cfm">Home</a> &nbsp;|&nbsp; 
+        <a class="footsearch" href="/search/index.cfm">Search</a> &nbsp;|&nbsp; 
+        <a class="footaccount" target="_blank" href="https://catalog.guelphpl.ca/polaris/logon.aspx?Header=1&src=http://catalog.guelphpl.ca/polaris/default.aspx">My Account</a> &nbsp;|&nbsp;        
+        <a class="footcontact" href="/about/contact.cfm">Contact Us</a> &nbsp;|&nbsp; 
+        <a class="footlocations" href="/locations/index.cfm">Locations</a> &nbsp;|&nbsp; 
+        <a class="footaboutwebsite" href="/about/about-website.cfm">About this Website</a> &nbsp;|&nbsp;
+        <a class="footacknowledgements" href="/acknowledgements/index.cfm">Acknowledgements</a> &nbsp;|&nbsp; 
+        <a class="footpolicy" href="/about/privacy-policy.cfm">Privacy Policy</a> &nbsp;|&nbsp; 
+        <a class="footmap" href="/sitemap/index.cfm">Site Map</a> &nbsp;
+    </div>
+
+
+
+<div id="footercontainer2">
+
+     <div id="textsize">Text Size:
+     	
+        <form method="post">
+        	<button name="fontsize" type="submit" value="0"><P class="offscreen">Font Size Small</P><img alt="Regular Font Size" src="/images/font-size/regular.png"></button>
+            <button name="fontsize" type="submit" value="1"><P class="offscreen">Font Size Medium</P><img alt="Medium Font Size" src="/images/font-size/medium.png"></button>
+            <button name="fontsize" type="submit" value="2"><P class="offscreen">Font Size Large</P><img alt="Large Font Size" src="/images/font-size/large.png"></button>
+        </form>
+        
+     </div>
+
+     
+    <style>
+
+    </style>
+
+     <div id="baloud">
+         <script type="text/javascript">var _baLocale = 'us', _baUseCookies = true, _baMode = '<IMG class="baloud" alt="Browse Aloud" SRC="/images/social-media/BA Button Updated.png" alt="browse aloud" title="browse aloud" />', _baHiddenMode = false, _baHideOnLoad = false;</script>
+         <script type="text/javascript" src="//www.browsealoud.com/plus/scripts/ba.js"></script>
+
+     </div>
+     <DIV id="baloudlink"></DIV>
+     <div id="footerbottom">&copy; 2016 Guelph Public Library</div>
+</div>
+
+
+<!--– start Mosio Support Widget –-->
+<div id="mosio-widget-container"></div>
+<script src="https://chat.mosio.com/chat/widget.js?keyword=GuelphPublicLibrary" type="text/javascript"></script>
+<!--– end Mosio Support Widget –-->
+
+
+
+
+        
+</DIV>
+
+<STYLE>
+/*Puts the modal on top of the website*/
+.ui-front{
+	z-index:600;
+	}
+.ui-widget-header{
+	background-image:url("images/blue-search.png");
+	color:#FFFFFF;	
+	}	
+
+</STYLE>
+
+</BODY>

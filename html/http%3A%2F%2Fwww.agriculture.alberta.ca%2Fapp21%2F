@@ -1,0 +1,1202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+
+<head>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" media="screen" href="http://www.agriculture.alberta.ca/styles/goa/default.css" type="text/css" />
+<link rel="stylesheet" media="print" href="http://www.agriculture.alberta.ca/styles/goa/print.css" type="text/css" />
+<!-- [if lte IE 7]><link rel="stylesheet" href="http://www.agriculture.alberta.ca/styles/goa/ieOnly.css" type="text/css" /><![endif] -->
+<title>Agriculture and Forestry : Ropin' The Web</title>
+
+<script type="text/javascript" src="/app21/rtw/js/jquery-1.8.0.min.js"></script>
+
+<script type="text/javascript" src='/app21/rtw/js/common.js'></script>
+<!-- weather -->
+<link rel="stylesheet" media="screen" href="/app21/rtw/information/weather.css" type="text/css"/>
+<link rel="stylesheet" media="screen" href="/app21/rtw/styles/homepage.css" type="text/css"/>
+
+<script type='text/javascript' src='/app21/dwr/engine.js'></script>
+<script type='text/javascript' src='/app21/dwr/util.js'></script>
+<!-- /weather -->		 
+
+<!-- audience -->
+<script type='text/javascript' src='/app21/dwr/interface/AudienceFacade.js'></script>
+<script type='text/javascript' src='/app21/dwr/engine.js'></script>
+<script type='text/javascript' src='/app21/dwr/util.js'></script>
+<script type="text/javascript" src='/app21/rtw/js/audience.js'></script>
+<script type="text/javascript" src='/app21/rtw/js/cookies.js'></script>
+<script type="text/javascript" src='/app21/rtw/weather/forecast.js'></script>
+<script type="text/javascript" src='/app21/rtw/js/locality.js'></script>
+<script type='text/javascript' src='/app21/dwr/interface/WeatherDataProvider.js'></script>
+
+<script language="Javascript" type="text/javascript">
+	function evenHeight(myScript, numOfChildren){
+		var divArray = new Array();	
+		//set initial div
+		divArray[0] = $("#" + myScript).prev();	
+		//loop through remaining divs
+		for(i=1; i < numOfChildren; i++){
+			divArray[i] = divArray[i-1].prev();
+		}	
+		//Check to make sure we have the element and not a array of size 1 with the element in it
+		for(i=0; i< numOfChildren; i++){
+			if(divArray[i].length){
+				divArray[i] = divArray[i][0];
+			}
+		}	
+		var maxHeight = 0;
+		for(i=0; i < divArray.length;i++){
+			if(divArray[i].offsetHeight > maxHeight)
+				maxHeight = divArray[i].offsetHeight;
+		}	
+		//set all the divs to the max height{
+		for(i=0; i < divArray.length; i++){
+			divArray[i].style.height = "" + maxHeight + "px";
+		}
+	}
+	
+	function bottomAlign(ele){
+		var arr = new Array();
+		arr[0] = $("#" + ele).prev();
+		arr[1] = arr[0].prev();
+		arr[2] = arr[1].prev();
+		
+		for(i=0; i< arr.length; i++){
+			var children = arr[i].children();
+			var h1 = arr[1].outerHeight();
+			var c1 = children[0];
+			var c2 = children[1];
+			c2.style.height = (h1 - c1.offsetHeight - 7) + "px"; 
+		}
+	}	
+	
+	jQuery(function () {
+		try { 
+			initAudience();
+			//initWeather(); 
+			//initWidgetWeather();
+		} catch(e) { alert(e); }
+	});
+	
+	function trackAudience() { 
+	  try { 
+		  // tell the web tracking system what is the current audience
+		dcsMultiTrack('DCS.dcsuri','/app21/infopage','WT.ti','All Audiences');
+	  } catch(e) { alert(e); }
+	}
+	
+	//
+    // The audience value was changed - overrides
+    // the audienceChanged() func in audience.js
+    //
+    var audienceChanged = function () {      
+      var options = document.getElementById("audienceselect").options;
+  	  var index = document.getElementById("audienceselect").selectedIndex;  	  	
+  	  var audienceId = options[index].value;
+	  savedAudienceId = audienceId;
+	
+      setCookie("audienceId", audienceId);
+    
+      // redirect the user to the information home page
+      document.location = "/app21/infopage?start=true";
+    }
+</script>
+<link rel="apple-touch-icon" href="/app21/rtw/icons/rtw.png"/>
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<style>
+.audienceselect {width:155px}
+.highlightImgColumn {vertical-align:text-top;width:15%;}
+.highlightTextColumn {margin-left:3%;width:82%;}
+.highlightImgPadded {padding-top:8px;}
+#homeFeature{width:711px;height:178px;}
+</style>
+<!-- /audience -->	  
+
+
+<script type="text/javascript" src="/app21/rtw/js/jquery.cycle.all.js"></script>
+
+
+
+</head>
+<!--  moved to jquery onready <body id="home" onload="initAudience(); trackAudience(); initWeather();"> -->
+<body id="home">
+   <div id="pageWrap">
+      <div id="page">
+		
+		
+<script type="text/javascript" language="javascript">
+function contactUs() {
+ window.open('/app21/rtw/mailduke.jsp', 'ContactUs', 'toolbar=0,location=0,menubar=0,width=710,height=460,left=5,top=5');
+}
+</script>
+
+<div id="accessHelpers">
+   <p id="skipToNav"><a href="#mainNav">Skip To Navigation</a></p>
+   <p id="skipToContent"><a href="#content">Skip To Content</a></p>
+</div>
+<div id="header">
+   <div id="logo">
+   		<a href="http://www.agriculture.alberta.ca/app21" title="Link to Home Page"><img src="http://www.agriculture.alberta.ca/icons/rtw/site/interface/AaRD.png" alt="Government of Alberta" title="Government of Alberta"/></a>
+   </div>
+   <ul id="metaNav">
+      <li><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/webdoc11806">Using this Site</a></li>
+      <li><a href="/app21/rtw/extranet.jsp">External Access</a></li>
+      <li><a href="/app21/ministrypage?cat1=Ministry&amp;cat2=Contact%20Us">Contact Us</a></li>
+   </ul>
+   <form id="searchForm" method="get" action="http://search.alberta.ca/search" name="searchForm">
+      <input type="text" name="q" size="15"  maxlength="255" value="" class="searchInput"/>
+      <input type="submit" name="btnG" title="Search" class="searchButton"/>
+      <input type="hidden" name="site" value="pub_agric_rtw"/>
+      <input type="hidden" name="client" value="pub_agric_rtw_frontend"/>
+      <input type="hidden" name="proxystylesheet" value="pub_agric_rtw_frontend"/>
+      <input type="hidden" name="output" value="xml_no_dtd"/>	
+      <input type="hidden" name="filter" value="0"/>
+      <input type="hidden" name="proxyreload" value="1"/>	
+      <!-- return metadata field for results display -->
+      <input type="hidden" name="getfields" value="*"/>	      
+      <input type="hidden" name="numgm" value="5" />
+   </form>
+   
+</div><!-- close header -->
+
+
+		
+		      
+        <div id="breadcrumb">
+        <p><a href="http://www.alberta.ca">Alberta.ca</a> &gt; Agriculture and Forestry
+        </div>
+		
+		
+
+
+<div id="mainNav">
+	<ul>
+		
+			
+			<li><a href="http://www.agriculture.alberta.ca/app21/ministrypage">About the Ministry</a></li>
+		
+		
+			
+			<li><a href="http://www.agriculture.alberta.ca/app21/infopage">Agriculture</a></li>
+		
+		
+			
+			<li><a href="http://www.agriculture.alberta.ca/app21/forestrypage">Forestry</a></li>
+		
+		
+			
+			<li><a href="http://www.agriculture.alberta.ca/app88/empinfo/empList.jsp">Find Staff</a></li>
+		
+		
+		
+			<li><a href="http://www.agriculture.alberta.ca/app21/ldcalc">Decision Making Tools</a></li>	
+		
+		
+			
+			<li><a href="http://www.agriculture.alberta.ca/app21/loaddir">Directories</a></li>
+		
+		
+				
+			<li><a href="http://www.agriculture.alberta.ca/app21/loadgs">General Store</a></li>		
+		
+		
+		
+			<li><a href="http://www.agriculture.alberta.ca/app21/loadmedia">Maps &amp; Multimedia</a></li>
+		
+			
+	</ul>
+</div>
+
+		
+		
+		<div id="mainColumn">
+			
+		<div id="contentColumn">
+			<div id="content">
+				
+
+
+
+
+<!--  Begin rotating banner -->
+<div id="homeFeature">
+	<div id="cycle">
+		
+		
+			
+				
+				
+					
+					<a href="http://www.rtw.ca/blue" title="Crop Protection 2016" target="_new">								
+					
+						<img src="http://www.agric.gov.ab.ca/icons/rtw/2016-1-Blue-Bk-Banner-B.jpg" width="711" height="178" border=0 alt="Crop Protection 2016" title="Crop Protection 2016"/>
+					</a>
+					
+				
+					
+					<a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/fpdc15390" title="Alberta Pulse" target="_new">								
+					
+						<img src="http://www.agric.gov.ab.ca/icons/rtw/2016-AB-Pulse-Home-pg-Web-Banner.jpg" width="711" height="178" border=0 alt="Alberta Pulse" title="Alberta Pulse"/>
+					</a>
+					
+				
+					
+					<a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/info1957" title="Hall of Fame" target="_new">								
+					
+						<img src="http://www.agric.gov.ab.ca/icons/rtw/2016-Hall-of-Fame-Banner.jpg" width="711" height="178" border=0 alt="Hall of Fame" title="Hall of Fame"/>
+					</a>
+					
+				
+					
+					<a href="http://work.alberta.ca/farm-and-ranch.html" title="Farm and Ranch Workplace Legislation Changes" target="_new">								
+					
+						<img src="http://www.agric.gov.ab.ca/icons/rtw/FarmandRanch-Banner.png" width="711" height="178" border=0 alt="Farm and Ranch Workplace Legislation Changes" title="Farm and Ranch Workplace Legislation Changes"/>
+					</a>
+					
+				
+					
+					<a href="http://www.growingforward.alberta.ca/index.htm" title="Growing Forward " target="_new">								
+					
+						<img src="http://www.agric.gov.ab.ca/icons/rtw/Growing-Forward-2-Banner-A1.jpg" width="711" height="178" border=0 alt="Growing Forward " title="Growing Forward "/>
+					</a>
+					
+				
+			
+			
+		
+	</div>
+	<script>$('#cycle').cycle({fx: 'fade', pause: true, timeout: 10000});</script>
+</div>
+<!--  End rotating banner -->
+				<div class="spacer"></div>
+				
+
+
+
+	
+  	<div id="tickerContainer">
+			<div class="ticker">
+				
+					<div class="tickerItem" >
+						March 11&nbsp;<a style="text-decoration: none;" href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/all/cotl24883">Weekly Grains and Oilseeds Market Summary</a>
+					</div>
+				
+					<div class="tickerItem" >
+						March 10&nbsp;<a style="text-decoration: none;" href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/all/cotl24880">Business Planning Tools</a>
+					</div>
+				
+					<div class="tickerItem" >
+						March 9&nbsp;<a style="text-decoration: none;" href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/all/cotl24875">Where to Get Market Signals</a>
+					</div>
+				
+			</div>
+			<div class="controls">
+				<div id="play_pause" class="pause"><span></span></div>
+				<div class="previous"><span></span></div>
+				<div class="next"><span></span></div>
+				<div style="float:right;padding-top:2px;"><a style="text-decoration:none;" href="/app21/news">More News</a></div>
+			</div>
+		</div>
+  	<script>
+  		$('.ticker').cycle({
+				fx: 'scrollVert',
+				timeout: 2500,
+				animIn: 'fade',
+				animOut: 'fade',
+				prev: '.previous',
+				next: '.next'
+			})
+			$('#play_pause').click(function(){
+				$('.ticker').cycle('toggle');
+				var cls = $('#play_pause');
+				if(cls.attr('class') == 'play'){
+					cls.attr('class', 'pause');
+				}else{
+					cls.attr('class', 'play');
+				}
+			});
+		</script>
+	
+				<div class="spacer"></div>
+				
+
+
+
+<style>
+.h3link{
+	cursor: default;
+}
+.h3link:hover{
+	cursor: pointer;
+}
+</style>
+	
+  	<div id="spotlight">
+			<div class="columnLeftOneThird">
+				<div>
+					<h3 class="item h3link" style="color: #ff9900" onclick="window.location='http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/ipc4687';">Publications</h3>
+					<p class="spotlightContent h3link" onclick="window.location='http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/ipc4687';">Alberta Agriculture and Forestry catalogue of books, DVDs and CD-ROMs contains hundreds of titles essential for today's farmers</p>
+				</div>
+				<div class="spotlightLink splash" style="color: #ff9900">
+					<table>
+						<tr>
+							<td>
+								<hr style="color:#ff9900;background-color:#ff9900;"></hr>
+								<a style="text-decoration:none;" href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/ipc4687">Find out more
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="columnLeftOneThird">
+				<div>
+					<h3 class="item h3link" style="color: #993366" onclick="window.location='http://aep.alberta.ca/lands-forests/forest-business/default.aspx';">Forestry</h3>
+					<p class="spotlightContent h3link" onclick="window.location='http://aep.alberta.ca/lands-forests/forest-business/default.aspx';">Enhancing the economic, environmental and social contributions of our forests and forest lands to Albertans</p>
+				</div>
+				<div class="spotlightLink splash" style="color: #993366">
+					<table>
+						<tr>
+							<td>
+								<hr style="color:#993366;background-color:#993366" ></hr>
+								<a style="text-decoration:none;" href="http://aep.alberta.ca/lands-forests/forest-business/default.aspx">Find out more
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="columnRightOneThird">
+				<div>
+					<h3 class="item h3link" style="color: #339966" onclick="window.location='http://www.agric.gov.ab.ca/app55/events';">Coming Events</h3>
+					<p class="spotlightContent h3link" onclick="window.location='http://www.agric.gov.ab.ca/app55/events';">Agricultural Coming Events</p>
+				</div>
+				<div class="spotlightLink splash" style="color: #339966">
+					<table>
+						<tr>
+							<td>
+								<hr style="color:#339966;background-color:#339966;"></hr>
+								<a style="text-decoration:none;" href="http://www.agric.gov.ab.ca/app55/events">Find coming events in your area
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<span id="span_spotlight"></span><script>evenHeight("span_spotlight", 3);bottomAlign("span_spotlight");</script>
+			<div style="clear:both;"></div>
+		</div>
+	
+				<div class="spacer"></div>
+				
+				
+				
+				
+				
+				
+					
+						
+						<div>
+						<div class="columnLeftHalf section">
+						<h2 class="section">News</h2>
+						<table>
+						<tr>
+							
+							
+								<td>
+							
+						<ul style="margin-top:0;margin-left:2;">	
+					
+										
+						
+					
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/all/cotl24883">Weekly Grains and Oilseeds Market Summary</a> - March 11, 2016</li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/all/cotl24880">Business Planning Tools</a> - March 10, 2016</li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/all/cotl24875">Where to Get Market Signals</a> - March 9, 2016</li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/all/cotl24869">Poor Snow Cover and Spring Grazing</a> - March 8, 2016</li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/all/cotl24865">Weekly Livestock Market Summary</a> - March 7, 2016</li>
+				
+			
+				
+				<li >For more news, visit <a href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/homemain/cotl">Call of the Land</a> and <a href="http://www1.agric.gov.ab.ca/$department/newslett.nsf/homemain/agnw">Agri-News</a></li>
+				
+			
+				
+				<li >Visit the <a href="http://www.agric.gov.ab.ca/app21/ministrypage?cat1=Newsroom">News Room</a> for the latest Agriculture and Forestry News Releases</li>
+				
+			
+				
+					
+					
+						
+							</ul>
+							</td></tr></table>
+							</div>
+						
+						<div class="columnRightHalf section">
+						<h2 class="section">Spotlight</h2>
+						<table>
+						<tr>
+							
+							
+								<td>
+													
+							<ul style="margin-top:0;margin-left:2;">
+											
+						
+					
+				<li ><b>Forestry related information</b> is available on the <b><a href="http://aep.alberta.ca/">Environment and Parks</a></b> website</li>
+				
+			
+				
+				<li >More information on <b><a href="http://alberta.ca/farm-and-ranch.cfm">Farm and Ranch Workplace Legislation Changes</a></b></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/luf15507">Agricultural Land Fragmentation and Conversion</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/all/aet623">Farm Safety</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/csi12085"><b>Rural Development</b></a></li>
+				
+			
+				
+				<li ><a href="http://agriculture.alberta.ca/webinars">Webinars</a></li>
+				
+			
+				
+				<li ><a href="http://www.growingforward.alberta.ca/Programs/">Some GF2 Programs</a> are now accepting applications.</li>
+				
+			
+				
+				<li >Learn more at the <b><a href="http://www.growingforward.alberta.ca/index.htm">Growing Forward 2</a></b> website.</li>
+				
+			
+				
+				<li >Contact and location information for the <a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/inf12424"> AF Field Offices.</a></li>
+				
+			
+				
+				<li >Find <a href="http://www.agric.gov.ab.ca/app55/events">Coming Events</a> and  <a href="http://www.agric.gov.ab.ca/app21/rtw/markets/markets_map.jsp">Farmers' Markets</a> in your area.</li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/ipc4687">AF Publications, DVDs and CD-ROMs</a><p></li>
+				
+			
+				
+				<li ><p>See what's new on our <b><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/webdoc6478">recent postings</a></b> page</li>
+				
+			
+				
+					
+						
+							</ul>
+							</td></tr></table>
+							</div>
+							<span id="span_20"></span><script>evenHeight("span_20", 2);</script>
+							</div><div style="clear:both;background-color:#F1F2F2;"></div>
+						
+						<div>
+						<div class="columnLeftHalf section">
+						<h2 class="section">Wildfire and Forestry</h2>
+						<table>
+						<tr>
+							
+							
+								<td>
+							
+						<ul style="margin-top:0;margin-left:2;">	
+					
+										
+						
+					
+				<li ><a href="https://albertafirebans.ca/">Fire Bans</a></li>
+				
+			
+				
+				<li ><a href="http://wildfire.alberta.ca/wildfire-status/default.aspx">Wildfire Status Map</a></li>
+				
+			
+				
+				<li ><a href="http://www.programs.alberta.ca/16742.aspx#ad-image-0">Wildfire Mobile phone app</a></li>
+				
+			
+				
+				<li ><a href="https://www.facebook.com/AlbertaWildfireInfo">Alberta Wilfire Info on Facebook</a></li>
+				
+			
+				
+				<li ><a href="https://twitter.com/AlbertaWildfire">Wildfire Management on Twitter</a></li>
+				
+			
+				
+					
+					
+						
+							</ul>
+							</td></tr></table>
+							</div>
+						
+						<div class="columnRightHalf section">
+						<h2 class="section">Livestock and Meat Industry</h2>
+						<table>
+						<tr>
+							
+							
+								<td>
+													
+							<ul style="margin-top:0;margin-left:2;">
+											
+						
+					
+				<li ><a href="http://alma.alberta.ca"><b>ALMA</b> - Alberta Livestock and Meat Agency</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/cpv12455">Alberta's Reportable and Notifiable Diseases</a></li>
+				
+			
+				
+				<li >Everything you wanted to know about <a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/trace12895">traceability,</a>  how to <a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/inf10966">age verify your calves</a></li>
+				
+			
+				
+				<li >Learn more about <a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/all/rsb12530">completing the Alberta Livestock Manifest</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/trace12354">Premises Identification (PID)</a> - program conditions and application are available on-line</li>
+				
+			
+				
+					
+						
+							</ul>
+							</td></tr></table>
+							</div>
+							<span id="span_30"></span><script>evenHeight("span_30", 2);</script>
+							</div><div style="clear:both;background-color:#F1F2F2;"></div>
+						
+						<div>
+						<div class="columnLeftHalf section">
+						<h2 class="section">E-Newsletter</h2>
+						<table>
+						<tr>
+							
+							
+								<td>
+							
+						<ul style="margin-top:0;margin-left:2;">	
+					
+										
+						
+					
+				<li >Sign Up for the Alberta Agriculture <a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/webdoc7998">E-Newsletter</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/webdoc12205">Ropin' the Web Tradeshow Calendar</a></li>
+				
+			
+				
+					
+					
+						
+							</ul>
+							</td></tr></table>
+							</div>
+						
+						<div class="columnRightHalf section">
+						<h2 class="section">Programs and Services</h2>
+						<table>
+						<tr>
+							
+							
+								<td>
+													
+							<ul style="margin-top:0;margin-left:2;">
+											
+						
+					
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/cpv4264">Office of the Chief Provincial Veterinarian</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/general/progserv.nsf/all/pgmsrv42">Veterinary Work Experience Program 2016</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/general/progserv.nsf/all/pgmsrv187">Canada-Alberta BSE Surveillance Program</a></li>
+				
+			
+				
+				<li ><p> ... <a href="http://www.agric.gov.ab.ca/app52/programsservices">more Programs and Services</a></li>
+				
+			
+				
+					
+						
+							</ul>
+							</td></tr></table>
+							</div>
+							<span id="span_36"></span><script>evenHeight("span_36", 2);</script>
+							</div><div style="clear:both;background-color:#F1F2F2;"></div>
+						
+						<div>
+						<div class="columnLeftHalf section">
+						<h2 class="section">Weather & Market Reports</h2>
+						<table>
+						<tr>
+							
+							
+								<td>
+							
+						<ul style="margin-top:0;margin-left:2;">	
+					
+										
+						
+					
+				<li ><a href="http://agriculture.alberta.ca/acis/">Alberta weather and climate data</a>.  The AgroClimatic Information Service provides access to 
+Meteorological data, and maps derived from more than 330 stations.</li>
+				
+			
+				
+				<li >View <a href="http://agriculture.alberta.ca/acis/alberta-climate-maps.jsp">maps</a> of precipitation soil moisture and other elements.</li>
+				
+			
+				
+				<li >View near real time <a href="http://agriculture.alberta.ca/acis/alberta-weather-data-viewer.jsp">Weather Station Data</a>.</li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/ppe9917">Agricultural Moisture Situation Updates</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/sdd4191">Alberta Crop Report</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/sdd6248">Crop Price Review</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/sdd6247">Livestock Price Review</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/webdoc12297">Marketing Links</a></li>
+				
+			
+				
+					
+					
+						
+							</ul>
+							</td></tr></table>
+							</div>
+						
+						<div class="columnRightHalf section">
+						<h2 class="section">Frequently Asked Questions</h2>
+						<table>
+						<tr>
+							
+							
+								<td>
+													
+							<ul style="margin-top:0;margin-left:2;">
+											
+						
+					
+				<li >Do you have an agricultural question? Call the <a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/inf4443?opendocument">Ag-Info Centre at 310-FARM (3276)</a>, toll free in Alberta.</li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/faq7563">Stored Grain Insects Mites and Molds</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/faq7506">Thin Cows Require More Feed Over the Winter</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/faq7689"> What Should I charge to Overwinter Cows</a></li>
+				
+			
+				
+				<li ><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/inf6663?opendocument">More FAQs...</a></li>
+				
+			
+			</ul></td></tr></table></div>
+			
+				<span id="span_x"></span><script>evenHeight("span_x", 2);</script>
+			
+			
+			<div style="clear:both;background-color:#F1F2F2;"></div>
+			
+
+
+
+	<div id="taxonomy" class="columnLeftFull">
+		<h2>Information</h2>
+		<table>
+			<tr>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Crops">Crops</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Livestock">Livestock</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Ag Engineering">Ag Engineering</a></li>
+					</td>
+				
+					
+						</tr>
+						
+							<tr>
+						
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Business %26 Economics">Business &amp; Economics</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Diseases%2FInsects%2F Pests">Diseases/Insects/ Pests</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Food %26 Ag Processing">Food &amp; Ag Processing</a></li>
+					</td>
+				
+					
+						</tr>
+						
+							<tr>
+						
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Food Safety">Food Safety</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Learning %26 4H">Learning &amp; 4H</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Ministry Information">Ministry Information</a></li>
+					</td>
+				
+					
+						</tr>
+						
+							<tr>
+						
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Rural Services">Rural Services</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Soil%2FWater%2FAir">Soil/Water/Air</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Statistics">Statistics</a></li>
+					</td>
+				
+					
+						</tr>
+						
+							<tr>
+						
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Trade">Trade</a></li>
+					</td>
+				
+					
+					<td class="infoColumn">
+						<li><a href="/app21/infopage?cat1=Weather %26 Climate">Weather &amp; Climate</a></li>
+					</td>
+				
+			</tr>
+		</table>
+	</div>
+			</div>
+					<div style="clear:both;"></div>
+					<!--                          -->
+					<!--         Weather          -->
+					<!--                          -->
+    		</div><!-- close content -->
+    	</div><!--  Close content Column -->
+			
+
+
+
+<!-- Start NavColumn -->
+<div id="navColumn" class="float:right;">
+	<div id="bannerPremier">
+		
+			
+			
+				<center><a href=" http://www.assembly.ab.ca/net/index.aspx?p=mla_contact&amp;rnumber=87&amp;leg=29"><img src="http://www.agric.gov.ab.ca/icons/rtw/oneil-carlier-agriculture1.jpg" width="169" height="141" border="0" alt="Honourable Oneil Carlier" title="Honourable Oneil Carlier"/></a></center>
+			
+			
+		
+		
+			
+				
+					<h2>Minister  Oneil Carlier<br>Agriculture and Forestry</h2>
+				
+				
+			
+		
+		
+			<ul>
+				
+					
+						<li><a href="http://aep.alberta.ca//lands-forests/forest-business/default.aspx">Forestry</a></li>
+					
+					
+				
+					
+						<li><a href="http://wildfire.alberta.ca/">Wildfire</a></li>
+					
+					
+				
+					
+						<li><a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_contact&amp;rnumber=87&amp;leg=29">Contact Minister's Office</a></li>
+					
+					
+				
+					
+						<li><a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=87&amp;leg=29">Biography Information</a></li>
+					
+					
+				
+					
+						<li><a href="http://www.servicealberta.gov.ab.ca/minister_expenses/Reports.cfm?path=ard">Minister's Office Expenses</a></li>
+					
+					
+				
+					
+						<li><a href="http://alberta.ca/expenditure/expenditure.cfm?id=65">International Travel Expenses</a></li>
+					
+					
+				
+			</ul>
+		
+	</div>
+	
+	
+	
+	
+
+	<div class="banner">
+		<h3>Social Media</h3>
+		<ul class="social">
+			<li>
+				<span class="socialHeading">Agriculture</span>
+				<a href="https://www.facebook.com/pages/Alberta-Agriculture-and-Rural-Development/259215474123606" alt="Facebook" title="Facebook"><span class="facebook socialMedia"></span></a>
+				<a href="http://twitter.com/AlbertaAg" alt="Twitter" title="Twitter"><span class="twitter socialMedia"></span></a>
+				<a href="http://www.youtube.com/user/AlbertaAgriculture" alt="Youtube" title="Youtube"><span class="youtube socialMedia"></span></a>
+				<a href="https://www.flickr.com/photos/abagriculture/" alt="Flickr" title="Flickr"><span class="flickr socialMedia"></span></a><br />
+			</li>
+			<li>
+				<span class="socialHeading">Alberta Wildfire</span>
+				<a href="https://www.facebook.com/pages/Alberta-Wildfire-Info/357885625988" alt="Facebook" title="Facebook"><span class="facebook socialMedia"></span></a>
+				<a href="https://twitter.com/AlbertaWildfire" alt="Twitter" title="Twitter"><span class="twitter socialMedia"></span></a>
+				<a href="https://instagram.com/albertawildfire/" alt="Instagram" title="Instagram"><span class="instagram"></span></a><br />
+			</li>
+			<li>
+				<span class="socialHeading">Junior Forest Rangers</span>
+				<a href="https://www.facebook.com/AlbertaJuniorForestRangers" alt="Facebook" title="Facebook"><span class="facebook socialMedia"></span></a><br /><br />
+			</li>			
+		</ul>
+	</div>
+	
+	<div class="banner">
+		<h3>Current Weather</h3>
+		
+
+
+
+
+
+
+ <div class="section" style="padding:3px;">
+		
+		<select id="localityselect" name="localityselect" class="localityselect" onchange="localityChanged(this);">			
+	    <option value="">Choose Locality</option>
+			
+				
+				
+					<option value="Airdrie">Airdrie</option>
+				
+			
+				
+				
+					<option value="Brooks">Brooks</option>
+				
+			
+				
+				
+					<option value="Calgary">Calgary</option>
+				
+			
+				
+				
+					<option value="Camrose">Camrose</option>
+				
+			
+				
+				
+					<option value="Cold Lake">Cold Lake</option>
+				
+			
+				
+					<option value="Edmonton" selected>Edmonton</option>
+				
+				
+			
+				
+				
+					<option value="Fort Saskatchewan">Fort Saskatchewan</option>
+				
+			
+				
+				
+					<option value="Grande Prairie">Grande Prairie</option>
+				
+			
+				
+				
+					<option value="Leduc">Leduc</option>
+				
+			
+				
+				
+					<option value="Lethbridge">Lethbridge</option>
+				
+			
+				
+				
+					<option value="Lloydminster">Lloydminster</option>
+				
+			
+				
+				
+					<option value="Medicine Hat">Medicine Hat</option>
+				
+			
+				
+				
+					<option value="Red Deer">Red Deer</option>
+				
+			
+				
+				
+					<option value="Spruce Grove">Spruce Grove</option>
+				
+			
+				
+				
+					<option value="St. Albert">St. Albert</option>
+				
+			
+				
+				
+					<option value="Wetaskiwin">Wetaskiwin</option>
+				
+			
+		</select>
+	
+
+	<script type="text/javascript">
+		//
+		// returns the max # of forecasts that can be shown on 
+		// current interface.
+		//
+		// overrides the function in forecast.js as there are
+		// usually more than 5 forecasts returned from the
+		// WeatherDataProvider
+		//
+		var getMaxNumForecasts = function () {
+			return 3;
+		}
+	
+		
+	    //
+  		// The locality value was changed.
+  		//
+  		// overrides localityChanged() in locality.js as
+  		// that function reloads the page (with the new locality) 
+  		// by default.
+        //
+		var localityChanged = function () {
+			var options = document.getElementById("localityselect").options;
+		 	var index = document.getElementById("localityselect").selectedIndex;
+		 	if(index == 0) return; //first option is just the msg string
+		 	
+			var locality = options[index].text;
+			savedLocality = locality;
+		
+		   setCookie("locality", locality);
+		   
+		   loadWidgetWeather(locality); // reload the <div> with new data from server, ajax style
+		}
+				   	
+	</script>	
+		<div id="widgetweathercurrent"></div>
+		<div style="font-size: 0.79em;">
+			<a href="https://agriculture.alberta.ca/acis/">RTW Weather & Climate Page</a>	
+		</div>	
+  </div>		
+  
+  <script type='text/javascript'>
+  	   	try{ 
+	   		initWidgetWeather(); 
+	   	}
+		catch(e) { alert(e); }   	
+	</script>																
+
+
+	</div>
+
+	
+
+	<div class="banner">
+		<h3>Questions and Comments</h3>
+		<p><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/webdoc12630">Please let us know what you think</a></p>
+	</div>	
+
+	
+					
+</div> <!--  Close Nav Column -->  
+    </div><!-- close mainColumn -->
+		
+		
+
+<div id="footer">
+   <div id="footerLogo">
+      
+      
+      <a href="http://www.alberta.ca"><img src="http://www.agriculture.alberta.ca/icons/rtw/site/interface/page-footer-logo.png" /></a>
+   </div>
+   <div id="footerMenu">
+      <ul id="goaLinks">
+         <li><a href="http://www.agriculture.alberta.ca/app21">Home</a></li>
+         <li><a href="http://www.alberta.ca">Government</a></li>
+         <!--  Search -->
+         <li><a href="http://www.agriculture.alberta.ca/app21/rtw/search.jsp">Search</a></li>
+         <!--  li><a href="#">Site Map</a></li -->
+         <!--  li><a href="#">Accessibility</a></li -->
+         <li><a href="http://alberta.ca/expenses.cfm">Government Expense Disclosures</a></li>
+      </ul>
+      <ul id="siteLinks">
+         <li><a href="http://www1.agric.gov.ab.ca/$Department/deptdocs.nsf/All/webdoc11806">Using this Site</a></li>
+         <li><a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/webdoc3439">Privacy</a></li>
+         <li><a href="/app21/ministrypage?cat1=Ministry&amp;cat2=Contact%20Us">Contact Us</a></li>
+      </ul>
+      <p id="termsConditions">Phone the <a title="AgInfo" href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/inf4443">Ag-Info Centre</a>, toll-free in Alberta at 310-FARM (3276), for agricultural information.</p>
+      <p id="copyright">&copy; 1995 - 2016 <a href="http://alberta.ca/">Government of Alberta</a>&nbsp;<a href="http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/webdoc3438">Copyright and Disclaimer</a></p>
+   </div><!-- close footerMenu -->
+</div><!-- close footer -->
+<!-- START OF SmartSource Data Collector TAG -->
+<!-- Copyright (c) 1996-2014 Webtrends Inc.  All rights reserved. -->
+<!-- Version: 9.4.0 -->
+<!-- Tag Builder Version: 4.1  -->
+<!-- Created: 1/6/2014 5:54:19 PM -->
+<script src="/app102/scripts/webtrends.js" type="text/javascript"></script>
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
+<!-- JavaScript include file can cause serious problems with cross-domain tracking.      -->
+<!-- ----------------------------------------------------------------------------------- -->
+<script type="text/javascript">
+//<![CDATA[
+var _tag=new WebTrends();
+_tag.dcsGetId();
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+_tag.dcsCustom=function(){
+// Add custom parameters here.
+//_tag.DCSext.param_name=param_value;
+}
+_tag.dcsCollect();
+//]]>
+</script>
+<noscript>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="//wtsdc.gov.ab.ca/dcsy8wtf6q0lhb4xayn3hbe8q_9w9y/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.agric.gov.ab.ca"/></div>
+</noscript>
+<!-- END OF SmartSource Data Collector TAG -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+ 
+_gaq.push( 
+  // GOA/Agriculture account
+  ['goa._setAccount', 'UA-39237448-1'],
+  ['goa._trackPageview'],
+ 
+  // GOA Rollup account
+  ['goarollup._setAccount', 'UA-37709807-1'],
+  ['goarollup._trackPageview']
+ 
+);
+ 
+(function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+		
+		        
+     </div><!-- close page -->
+   </div><!-- close pageWrap -->
+   <script type="text/javascript" src="http://www.agriculture.alberta.ca/app102/js/textresizer.js"></script>
+   <script type="text/javascript" src="http://www.agriculture.alberta.ca/app102/js/ufo.js"></script>
+   <script type="text/javascript">
+//<![CDATA[
+	detectCookie();
+	try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {}
+
+//]]>
+</script>   
+</body>
+</html>

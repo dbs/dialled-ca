@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<title>Home</title>
+	<meta name="robots" content="index, follow" />
+	<meta name="description" content="Default description goes here" />
+	<meta name="keywords" content="vepc, centre, society, centre, parkinson's, epilepsy, victoria, non profit, bc, canada, help, elderly, disabilities, health, parkinsonism, parkinson, disorder, illness, assistance, neurology, neurological conditions, seizure, SND, striatonigral degenerati" />
+	<meta name="author" content="Author Name" />
+	<script type="text/javascript" src="//use.typekit.net/wjk3zdk.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link rel="favourites icon" href="http://vepc.bc.ca/favicon.ico" />
+	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/public/themes/vepc/fonts/hand-of-sean/stylesheet.css" media="screen" type="text/css" />
+	<link rel="favourites icon" href="http://vepc.bc.ca/favicon.ico" />
+	<link rel="stylesheet" href="/public/themes/vepc/screen.css" media="screen" type="text/css" />
+	<link href="/public/themes/vepc/style.css" rel="stylesheet" type="text/css" />
+	<link href="/public/themes/vepc/superfish.css" rel="stylesheet" type="text/css" />
+	<link href="/public/themes/vepc/superfish-vertical.css" rel="stylesheet" type="text/css" />
+	<link rel="alternate" type="application/rss+xml" title="Wolf Default RSS Feed" href="http://vepc.bc.ca/rss.xml" />
+    <link type="text/css" href="/scripts/jquery-ui-1.8/css/custom-theme/jquery-ui-1.8.1.custom.css" rel="stylesheet" />	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.cycle/2.9999.8/jquery.cycle.all.min.js" type="text/javascript"></script>
+	<script src="/public/themes/vepc/js/cycle.js" type="text/javascript"></script>
+	<!-- <script src="/scripts/jquery-ui-1.8/global.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/scripts/jquery-ui-1.8/js/jquery-ui-1.8.1.custom.min.js"></script>
+	<script type="text/javascript" src="/scripts/hoverIntent.js"></script>
+	<script type="text/javascript" src="/scripts/superfish.js"></script>
+	<script type="text/javascript">
+	// initialise plugins
+	jQuery(function(){
+		jQuery('ul.sf-menu').superfish({'delay': 360, 'speed' : 'fast'});
+	});
+	</script>
+
+
+
+		
+
+<script type="text/javascript">
+
+//define the days shows will occur on
+var eventDays = [[03,13,2013],[03,20,2013],[03,06,2013],[02,20,2013],[02,27,2013],[03,18,2013],[03,25,2013],[02,13,2013],[03,04,2013],[02,25,2013],[03,11,2013],[10,23,2012],[02,06,2013],[02,18,2013],[09,08,2012],[09,09,2012],[09,16,2012]];
+
+
+
+function setScheduledDays(date) {
+
+    var isScheduled = true;
+
+    var isEvent = true;
+
+    var scheduleStatus = "";
+
+	
+    
+    // Check for show
+    if (eventDays != null)
+		
+		
+
+    {
+
+
+        for (i = 0; i < eventDays.length; i++) {
+
+
+
+          if (date.getMonth() == eventDays[i][0] -1 && date.getDate() == eventDays[i][1] && date.getFullYear() == eventDays[i][2])
+
+          {
+
+            isEvent = false;
+						
+          }
+
+        }
+
+    }   
+
+    if (isEvent)
+
+        return [false];
+
+    else
+
+      return [true];
+
+}  
+
+			$(function(){
+				
+				// Datepicker
+				$('#datepicker').datepicker({					
+					inline: true,
+					dateFormat:'yy-mm-dd',
+					beforeShowDay: setScheduledDays,
+					onSelect: function(date) {
+							//get_films(date, 'date',0);update_filters(this); return false;
+							window.location="/events.html?date="+date;
+
+					}					
+					
+				});
+				
+					
+				//hover states on the static widgets
+				$('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); }, 
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+				
+			});
+					
+		</script>
+
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "ur-500da11c-5415-9be3-eb02-f3612360751b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-42238134-1']);
+		  _gaq.push(['_trackPageview']);
+		  _gaq.push(['_trackEvent']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+
+</head>
+
+<body>
+
+
+<div class="wrapper">
+  <div class="header">
+  	<div id="logo">
+  		<img src="/public/themes/vepc/images/headway_logo.png" alt="Headway - Victoria Epilepsy &amp; Parkinson's Centre" />
+  	</div>
+  	<div id="header-content">
+  		<div id="header-navigation">
+  			<div>
+  				Phone: 250.475.6677
+  			</div>
+  			<a id="donation" href="/about_us/donate-to-victoria-epilepsy-parkinsons-society.html"><img src="/public/themes/vepc/images/make-a-donation.png" alt="Make A Donation" /></a>
+  		</div>
+  		<div id="newsletter">
+  			<div class="label">
+  				Sign-up to Receive Our E-News!
+  			</div>
+  			<div id="signup-form">
+  				<form action="//vepc.us11.list-manage.com/subscribe/post?u=972efce5674bc3b8be4c21ff0&amp;id=30796a89d0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  					<input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+  					<div id="mce-responses" style="display:none;" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_972efce5674bc3b8be4c21ff0_30796a89d0" tabindex="-1" value=""></div>
+  					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+  				</form>
+  			</div>
+  		</div>
+  		<h2 id="slogan">Support. Care. Knowledge.</h2>
+  	</div>
+  </div>
+
+  
+  <div id="navigation">
+  	  <ul>
+    <li>
+        <a href="http://vepc.bc.ca/" >Home</a>    </li>
+    	<li>
+	<a href="http://vepc.bc.ca/about_us.html" >About</a>	<ul>		<li>
+			<a href="http://vepc.bc.ca/about_us/membership.html" >Membership</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/board-of-directors.html" >Board of Directors</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/advisory-committees.html" >Advisory Committees</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/our-team.html" >Our Team</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/volunteer.html" >Volunteer</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/annual-report.html" >Annual Report</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/strategic-plan.html" >Strategic Plan</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/careers.html" >Careers</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/resources.html" >Educational Resources</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/about_us/donate-to-victoria-epilepsy-parkinsons-society.html" >Donate to Victoria Epilepsy &amp; Parkinson's Society</a>		</li>
+	</ul>	</li>
+    	<li>
+	<a href="http://vepc.bc.ca/supporters.html" >Supporters</a>		</li>
+    	<li>
+	<a href="http://vepc.bc.ca/epilepsy-program.html" >Epilepsy Program</a>	<ul><li><a href="/epilepsy-blog">Epilepsy Blog</a></li>		<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/upcoming-programsworkshops.html" >Upcoming Programs/Workshops</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/epilepsy-awareness-month.html" >Epilepsy Awareness Month</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/seizures-101.html" >Seizures 101</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/seizure-first-aid.html" >Seizure First Aid</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/newly-diagnosed.html" >Newly Diagnosed</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/support-groups.html" >Support Groups</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/community-education.html" >Community Education</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/school-programs.html" >School Programs</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/tools-for-success.html" >Tools For Success</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/youth-with-epilepsy.html" >Youth with epilepsy</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/bursaries.html" >Bursaries</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/epilepsy-advisory-committee.html" >Epilepsy Advisory Committee</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/brain-wave-magazine.html" >Brain Wave Magazine</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/epilepsy-booklets.html" >Epilepsy Booklets</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/epilepsy-and-the-law.html" >Epilepsy and the Law</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/sudep.html" >SUDEP</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/epilepsy-program/links.html" >Links</a>		</li>
+	</ul>	</li>
+    	<li>
+	<a href="http://vepc.bc.ca/parkinsons-program.html" >Parkinson's Program</a>	<ul><li><a href="/parkinsons-blog">Parkinson's Blog</a></li>		<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/parkinsons-facts.html" >Parkinson's Facts</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/parkys-peddlers-2015.html" >Parky's Peddlers 2015</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/motion-ways.html" >Motion Ways</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/newly-diagnosed.html" >Newly Diagnosed</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/group-meetings.html" >Group Meetings</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/exercise-programs.html" >Exercise Programs</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/calendar-of-events.html" >Calendar of Events</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/community-education.html" >Community Education</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/parkinsons-massage.html" >Parkinson's Massage</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/transmitter-magazine.html" >Transmitter Magazine</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/parkinsons-program/links.html" >Links</a>		</li>
+	</ul>	</li>
+    	<li>
+	<a href="http://vepc.bc.ca/caregiver-support.html" >Caregiver Support</a>	<ul><li><a href="/caregiver-blog">Caregiver Blog</a></li></ul>	</li>
+    	<li>
+	<a href="http://vepc.bc.ca/events.html" >Events</a>	<ul>		<li>
+			<a href="http://vepc.bc.ca/events/joy-hope-art-show.html" >Joy &amp; Hope Art Show</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/events/purple-day.html" >Purple Day</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/events/headway-charity-golf-classic.html" >HeadWay Charity Golf Classic</a>		</li>
+			<li>
+			<a href="http://vepc.bc.ca/events/plan-your-fundraiser.html" >Plan your Fundraiser!</a>		</li>
+	</ul>	</li>
+    	<li>
+	<a href="http://vepc.bc.ca/contact.html" >Contact</a>		</li>
+     
+</ul>
+  </div>
+  
+  <div id="rotator">
+  	<a id="rotator-arrow-left" class="arrow" href="#"><img src="/public/themes/vepc/images/rotator-arrow-left.png" alt="" /></a>
+  	<a id="rotator-arrow-right" class="arrow" href="#"><img src="/public/themes/vepc/images/rotator-arrow-right.png" alt="" /></a>
+	<div class="slide">
+  		<div class="slide-content">
+  		</div>
+  		<img src="http://vepc.bc.ca/public/Website PM Banner_1.jpg" alt="" />
+  	</div>
+  	<div class="slide">
+  		<div class="slide-content">
+  			<h3>Support</h3>
+  			<p>We provide everything from personal and family consultation, workshops and information sessions, group support sessions and specialized exercise classes.</p>
+  		</div>
+  		<img src="/public/themes/vepc/images/support.jpg" alt="" />
+  	</div>
+  	<div class="slide">
+  		<div class="slide-content">
+  			<h3>Care</h3>
+  			<p>Our professional staff offer a wide variety of services to clients at all stages of the life cycle, from children to seniors, and their loved ones.</p>
+  		</div>
+  		<img src="/public/themes/vepc/images/care.jpg" alt="" />
+  	</div>
+  	<div class="slide">
+  		<div class="slide-content">
+  			<h3>Knowledge</h3>
+  			<p>We welcome calls for information and assistance - connecting with schools, workplaces and the community.</p>
+  		</div>
+  		<img src="/public/themes/vepc/images/knowledge.jpg" alt="" />
+  	</div>
+  	<div class="slide">
+  		<div class="slide-content">
+  			<h3>Headway Charity Golf Classic</h3>
+  			<p>Join our golfers and sponsors at the HeadWay Charity Golf Classic on June 17 2016</p>
+  		</div>
+  		<img src="/public/themes/vepc/images/golf.jpg" alt="" />
+  	</div>
+  </div>
+  
+  <div class="content_wrapper">
+    <div class="content">
+
+	  <h1 class="tk-museo">Headway</h1>
+	  <h2 class="tk-museo">Victoria Epilepsy &amp; Parkinson's Centre</h2>
+	  <div><span class='st_sharethis_large' displayText='ShareThis'></span>
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_googleplus_large' displayText='Google +'></span>
+<span class='st_pinterest_large' displayText='Pinterest'></span>
+<span class='st_email_large' displayText='Email'></span></div>
+	  	  	<h3>Home</h3>
+	  	 <div class="text-content" style="clear: both;">
+<p><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">The Victoria Epilepsy and Parkinson&#39;s Centre Society is a vibrant and welcoming non-profit society whose&nbsp;purpose is to strengthen clients&#39;, families&#39; and communities&#39; ability to manage the physical, psychological and social effects of Parkinson&#39;s and epilepsy.</span></span></p>
+
+<p><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Parkinson&#39;s and epilepsy are unrelated conditions. Sharing administrative resources&nbsp;allows us to provide&nbsp;more cost-effective service&nbsp;to&nbsp;residents of Victoria,&nbsp;surrounding municipalities,&nbsp;the&nbsp;Saanich Peninsula and the Gulf Islands.</span></span></p>
+</div>
+
+<div class="program-info" id="epilepsy-programs">
+<h4 class="tk-museo"><span style="font-size: 18px;"><span style="font-family: cabin,sans-serif;"><a href="/epilepsy-program.html" style="color: rgb(255, 255, 255); text-decoration: none;">Epilepsy Programs &gt;</a></span></span></h4>
+
+<p><span style="font-size: 18px;"><span style="font-family: cabin,sans-serif;">Learn more about our programs, support and resources.</span></span></p>
+</div>
+
+<div class="program-info" id="parkinsons-programs">
+<h4 class="tk-museo"><span style="font-size: 18px;"><span style="font-family: cabin,sans-serif;"><a href="/parkinsons-program.html" style="color: rgb(255, 255, 255); text-decoration: none;">Parkinson&#39;s Programs &gt;</a></span></span></h4>
+
+<p><span style="font-size: 18px;"><span style="font-family: cabin,sans-serif;">Learn more about our programs, support and resources.</span></span></p>
+</div>
+
+<div class="text-content" style="clear: both;">
+<h4><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">What can we offer you?</span></span></h4>
+
+<p><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Our professional staff can help you and your family to:</span></span></p>
+
+<ul>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Learn powerful ways to take action and reduce the impact of Parkinson&#39;s and epilepsy</span></span></li>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Make the best use of limited time with your doctor</span></span></li>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Link you to quality sources of information and the latest research</span></span></li>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Connect with&nbsp;others who understand your situation</span></span></li>
+</ul>
+
+<h4><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">We do this by:</span></span></h4>
+
+<p><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Our professional staff can help you and your family to:</span></span></p>
+
+<ul>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">&nbsp;Providing confidential individual consultations tailored to your unique needs</span></span></li>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Collaborating with local and mainland health care providers to improve care</span></span></li>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Organizing practical programs and meetings to&nbsp;help you live life to the fullest</span></span></li>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Tracking and publishing the latest medical breakthroughs,&nbsp;research and online links</span></span></li>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Offering free public information sessions to educate our community</span></span></li>
+	<li><span style="font-size: 16px;"><span style="font-family: cabin,sans-serif;">Maintaining a lending library of current brochures, books, tapes, CDs and DVDs</span></span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size: 16px; font-family: cabin, sans-serif;">Registered Charity No. 11928 4032 RR0001</span></p>
+
+<p><span style="font-size: 16px; font-family: cabin, sans-serif;">We respect your right to privacy, so please be assured that our Society does not share our membership list with outside individuals or organizations. &nbsp;Occasionally we may ask you to volunteer some information so that we can better understand our members&#39; needs and improve our services to clients and members. &nbsp;Please see our <a href="/public/VictoriaEPSocietyprivacypolicy2015.pdf">privacy policy</a></span></p>
+
+<p>&nbsp;</p>
+</div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+ 
+	  
+	       
+
+  </div>
+  
+  <div id="sidebar">
+  
+    <div>
+	<div>
+	<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FHeadway-Victoria-Epilepsy-and-Parkinsons-Centre%2F106187879413588&amp;width=252&amp;height=82&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:252px; height:82px;" allowTransparency="true"></iframe>
+	</div>
+	<div>
+	<a href="https://twitter.com/VEPC" class="twitter-follow-button" data-show-count="false">Follow @VEPC</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</div>
+  		</div>
+  	
+  	  	<h3>Quicklinks</h3>
+
+<ul>
+	<li><a href="http://vepc.bc.ca/epilepsy-program/seizures-101.html">Epilepsy Facts</a></li>
+	<li><a href="/parkinsons-program/parkinsons-facts.html">Parkinson&#39;s Facts</a></li>
+	<li><a href="/about_us/membership.html">Become a Member</a></li>
+	<li><a href="http://www.parkinson.bc.ca/"><strong><span style="color:#FF0000;">Parkinson Society BC</span></strong></a></li>
+	<li><a href="http://www.bcepilepsy.com/"><span style="color:#800080;"><strong>B.C. Epilepsy Society</strong></span></a></li>
+	<li><a href="http://www.esebc.ca"><span style="color:#800080;"><strong>The Center for Epilepsy &amp; Seizure Education</strong></span></a></li>
+	<li><a href="/public/TransmitterEblast-linksJan2016.compressed.pdf">Latest newsletter Transmitter&nbsp;</a></li>
+	<li><a href="/public/EpilepsyNewsletter-EBLASTJan2016.compressed3.pdf">Latest newsletter&nbsp;Brainwave</a></li>
+	<li><a href="http://visitor.constantcontact.com/manage/optin?v=0013yYWxIr3lUHPdr2DlSytNkgcHLwNyAUElV_T1y3ewmQI_Eln3b16SDL3bqQFjHijcoNfd8JeL9Y%3D" target="_blank">Sign Up to Receive Our E-News!</a></li>
+</ul>
+  	
+  	  	<p>&nbsp;</p>
+
+<p><span style="color: rgb(0, 128, 0); font-family: hand_of_seanregular, sans-serif; font-size: 22px;">Upcoming Events&nbsp;</span><span style="font-family: cabin, sans-serif; font-size: 16px;">&nbsp;</span></p>
+
+<p><span style="color:#4B0082;"><span style="font-family:hand_of_seanregular,sans-serif;"><span style="font-size: 16px;"><a href="http://vepc.bc.ca/events/purple-day.html"><strong>It&#39;s PURPLE MONTH ! </strong></a><br />
+Get involved.<br />
+Call HeadWay to find out how!</span></span></span><br />
+&nbsp;</p>
+
+<p><font color="#4b0082" face="hand_of_seanregular, sans-serif"><a href="http://vepc.bc.ca/events/joy-hope-art-show.html"><strong>JOY &amp; HOPE ART SHOW</strong></a></font><br />
+<span style="color: rgb(75, 0, 130); font-family: hand_of_seanregular, sans-serif;">March 12 to April 5th<br />
+An Epilepsy Awareness Event</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="color: rgb(0, 128, 0); font-family: hand_of_seanregular, sans-serif; font-size: 22px;">This Month&nbsp;we would like to&nbsp;Thank one of&nbsp;our wonderful&nbsp;</span><span style="color: rgb(0, 128, 0); font-family: hand_of_seanregular, sans-serif; font-size: 22px;">Health Fair Sponsors</span><span style="color: rgb(0, 128, 0); font-family: hand_of_seanregular, sans-serif; font-size: 22px;">:</span></p>
+
+<p><a href="http://sphf.ca/"><span style="color: rgb(0, 128, 0); font-family: hand_of_seanregular, sans-serif; font-size: 22px;"><img alt="" src="/public/sphf-logo.gif" style="width: 228px; height: 101px;" /></span></a></p>
+
+<p>&nbsp;</p>
+
+<p><span style="color: rgb(0, 128, 0); font-family: hand_of_seanregular, sans-serif; font-size: 22px;">Upcoming Programs<br />
+&amp;&nbsp;Workshops</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:16px;"><span style="font-family:cabin,sans-serif;">Sign up for Motion Ways! &nbsp;<a href="http://vepc.bc.ca/parkinsons-program/motion-ways.html">Click here</a> for more info.</span></span></p>
+
+<p><a href="http://vepc.bc.ca/parkinsons-program/motion-ways.html"><img alt="" src="/public/Motionways.png" style="width: 100px; height: 88px;" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:16px;"><span style="font-family:cabin,sans-serif;">Get the latest Parkinson&#39;s events/workshops calendar<a href="/public/SchedOfEventJan-Mar16.pdf"> here</a>.</span></span></p>
+
+<p><a href="/public/SchedOfEventJan-Mar162.jpg"><img alt="" src="/public/SchedOfEventJan-Mar16-1sm.jpg" style="width: 250px; height: 201px;" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+  	  	
+  </div>
+  	
+  </div>
+  
+  <div class="footer">
+	  
+	  <div class="nav">
+		  <ul>
+		  	<li><a href="/">Home</a></li>
+		  	<li><a href="/about_us.html">About</a></li>
+		  	<li><a href="/supporters.html">Supporters</a></li>
+		  	<li><a href="/epilepsy-program.html">Epilepsy Programs</a></li>
+		  	<li><a href="/parkinsons-program.html">Parkinson's Programs</a></li>
+		  	<li><a href="/caregiver-support.html">Caregiver Support</a></li>
+		  	<li><a href="/events.html">Events</a></li>
+		  	<li><a href="/contact.html">Contact</a></li>
+		  	<li><a href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=s33908" target="_blank">Donate</a></li>
+		  </ul>
+	  </div>
+	  
+	  <div class="contact-info">
+	  	Suite 202 - 1640 Oak Bay Ave. | Victoria, B.C. | V8R 1B2 | P. 250 475 6677
+	  </div>
+	  
+	  <div class="copyright">
+	  	&copy; Copyright 2013 Victoria Epilepsy &amp; Parkinson's Centre - All Rights Reserved
+	  </div>
+	  
+  </div>
+
+  
+  </div>
+   </body>
+</html>

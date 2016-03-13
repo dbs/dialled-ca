@@ -1,0 +1,700 @@
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6 ie"><![endif]-->
+<!--[if IE 7 ]><html class="ie7 ie"><![endif]-->
+<!--[if IE 8 ]><html class="ie8 ie"><![endif]-->
+<!--[if IE 9 ]><html class="ie9 ie"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+<head>
+	<meta charset="iso-8859-1" />
+
+	<meta name="description" content="Situé sur la rive nord de la rivière des Outaouais, entre Ottawa et Montréal. Reconnu pour le Château Montebello et ses lieux historiques nationaux du Canada." />
+		<meta property="og:image" content="/images/la-centrale-immobiliere.gif" />
+	
+<title>Montebello - Municipalité et Destination Touristique | Outaouais-Québec-Canada | MRC Papineau</title>
+
+<!--[if lt IE 7]>
+<script>
+	IE7_PNG_SUFFIX=".png";
+</script>
+<script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/reset.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/global.css?v=1" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="/administration/include/shadowbox/shadowbox.css" />
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="/administration/ckeditor/ckeditor.js?2"></script>
+<script type="text/javascript" src="/administration/ckeditor/ckfinder/ckfinder.js?2"></script>
+<script type="text/javascript" src="/scripts/functions.js"></script>
+<script type="text/javascript" src="/administration/include/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="/scripts/jquery.carouFredSel-packed.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38903512-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40408226-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript">
+	
+	Shadowbox.init({
+		language: 'fr',
+		players: ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv']
+	});
+	
+	$(document).ready(function(){
+		$("#infoA").click(function() { 
+		 	document.forms["infoL"].submit();
+		});
+		
+		/*$('.hasdrop').mouseenter(function(){
+			$(this).find('.dropmenu').stop(true,false).show('slow');
+		});  
+
+		$('.hasdrop').mouseleave(function(){
+			$(this).find('.dropmenu').stop(true,false).hide('slow');
+		});
+		
+		$('.hassubdrop').mouseenter(function(){
+			$(this).closest('.dropmenu').css("height", "auto");
+			$(this).find('.submenu').stop(true,false).show('fast');
+		});  
+
+		$('.hassubdrop').mouseleave(function(){
+			$(this).closest('.dropmenu').css("height", "auto");
+			$(this).find('.submenu').stop(true,false).hide('fast');
+		});
+		*/
+		
+		
+		if ($("#slider").length != 0){
+			$("#slider").carouFredSel({
+				circular: true,
+				infinite: true,
+				auto    : true,
+				items: {
+					start : 0,
+					visible: 1
+				},
+				prev    : {
+					button  : "#foo2_prev",
+					key     : "left"
+				},
+				next    : {
+					button  : "#foo2_next",
+					key     : "right"
+				},
+				pagination  : "#foo2_pag",
+				scroll: {
+					fx          : "crossfade",
+					duration: 2000,
+					timeoutDuration: 8000,
+					onBefore: function() {
+						
+					}  
+				}
+			});
+		}
+		
+		if ($("#avisslider").length != 0){
+			$("#avisslider").carouFredSel({
+				circular: true,
+				infinite: true,
+				height: 86,
+				auto    : true,
+				items: {
+					start : 0,
+					visible: 1
+				},
+				prev    : {
+					button  : "#avis_prev",
+					key     : "left"
+				},
+				next    : {
+					button  : "#avis_next",
+					key     : "right"
+				},
+				pagination  : "#avis_pag",
+				scroll: {
+					fx          : "left",
+					duration: 2000,
+					timeoutDuration: 5000,
+					onBefore: function() {
+						
+					}  
+				}
+			});
+		}
+		
+	});
+	
+	function getNextActu(value){
+		if(value>=3){
+			$('.actu').each(function(){
+				$(this).css('display','none');
+			});
+			
+			if($('#elemid').val()==0){
+				$('#content1').css('display','block');
+				$('#elemid').val(1);
+				$('#pagecount').text('(2/3)');
+			}
+			else if($('#elemid').val()==1){
+				$('#content2').css('display','block');
+				$('#elemid').val(2);
+				$('#pagecount').text('(3/3)');
+			}
+			else{
+				$('#content0').css('display','block');
+				$('#elemid').val(0);
+				$('#pagecount').text('(1/3)');
+			}
+		}
+		
+		if(value==2){
+			$('.active').removeClass('active').addClass('disable').siblings('.disable').removeClass('disable').addClass('active');
+			if($('#pagecount').text()=='(2/2)'){
+				$('#pagecount').text('(1/2)');
+			}else{
+				$('#pagecount').text('(2/2)');
+			}
+		}
+	}
+	
+	function getPrevActu(value){
+		if(value>=3){
+			$('.actu').each(function(){
+				$(this).css('display','none');
+			});
+			
+			if($('#elemid').val()==0){
+				$('#content2').css('display','block');
+				$('#elemid').val(2);
+				$('#pagecount').text('(3/3)');
+			}
+			else if($('#elemid').val()==1){
+				$('#content0').css('display','block');
+				$('#elemid').val(0);
+				$('#pagecount').text('(1/3)');
+			}
+			else{
+				$('#content1').css('display','block');
+				$('#elemid').val(1);
+				$('#pagecount').text('(2/3)');
+			}
+		}
+		
+		if(value==2){
+			$('.active').removeClass('active').addClass('disable').siblings('.disable').removeClass('disable').addClass('active');
+			if($('#pagecount').text()=='(2/2)'){
+				$('#pagecount').text('(1/2)');
+			}else{
+				$('#pagecount').text('(2/2)');
+			}
+		}
+	}
+				
+	
+</script>	<!--[if lt IE 7]>
+	<div style="clear: both; height: 42px; position: relative; width: 820px; margin: auto;">
+		<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+			<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0024_french.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+		</a>
+	</div> 
+	<![endif]-->
+	<meta charset="iso-8859-1">
+</head>
+<body>
+
+<div id="global">
+	<div class="headerwrap">
+    	<div class="headercontent">
+        	<div class="topmenu">
+        		<ul>
+                <li><a href="/index.php">ACCUEIL</a><span>|</span></li>
+                <li><a href="/actualites.php">ACTUALIT&Eacute;S</a><span>|</span></li>
+                <li><a href="/evenements.php">&Eacute;V&Eacute;NEMENTS</a><span>|</span></li>
+                <li><a href="/nous-joindre.php">NOUS JOINDRE</a><span>|</span></li>
+                <li>SUIVEZ-NOUS SUR <a href="https://www.facebook.com/pages/Municipalit%C3%A9-de-Montebello/492164677497290" class="facebook" target="_blank"></a></li>
+                </ul>
+            </div>
+            <a href="/index.php">
+            <div class="headerlogo">
+            	<p>Municipalité de<br />
+                <span>Montebello</span>
+                </p>
+            </div>
+            </a>
+            <div class="headerslogan">
+            	<p>Une destination quatre saisons<br />
+                <span>de renommée mondiale</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menubg">
+        <div class="menuwrap">
+            <ul>
+            <li class="hasdrop"><a href="javascript:void(0)">Municipalité</a>
+                <div class="cb"></div>
+                <div class="dropmenu">
+                	<ul>
+                    	<li><a href="/mot-du-maire.php?menu=1">Mot du maire</a></li>
+                        <li><a href="/histoire.php?menu=1">Histoire et Armoiries</a></li>
+                    	<li><a href="/conseil.php?menu=1">Conseil municipal</a></li>
+                    	<li><a href="/seances.php?menu=1">Séances du conseil</a></li>
+                    	<li><a href="/reglements.php?menu=1">Règlements municipaux et avis publics</a></li>
+                    	<li><a href="/bulletin.php?menu=1">Bulletin municipal</a></li>
+                    	<li><a href="/comites.php?menu=1">Comités</a></li>
+                	</ul>
+                </div>
+            </li>
+            <li class="hasdrop"><a href="javascript:void(0)">Administration<br /> et finances</a>
+            	<div class="cb"></div>
+                <div class="dropmenu">
+                	<ul>
+                    	<li class="hassubdrop">
+                            <div class="submenu">
+                            	<ul>
+                                	<li><a href="/taxation.php?menu=2">&bull;&nbsp;&nbsp;Taxation et Perception</a></li>
+                                    <li><a href="/taxes.php?menu=2">&bull;&nbsp;&nbsp;Services d'évaluations en ligne</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    	<li class="hassubdrop withlink"><a href="/administration.php?menu=2">Administration</a>
+                            <div class="submenu">
+                            	<ul>
+                                    <li><a href="/politiques.php?menu=2">&bull;&nbsp;&nbsp;Politiques et réglements</a></li>
+                                    <li><a href="/emploi.php?menu=2">&bull;&nbsp;&nbsp;Offres d'emploi</a></li>
+                                    <li><a href="/appel-offres.php?menu=2">&bull;&nbsp;&nbsp;Système d'appel d'offres</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hassubdrop"><a href="javascript:void(0)">Finances</a>
+                            <div class="submenu">
+                            	<ul>
+                                    <li><a href="/maire.php?menu=2">&bull;&nbsp;&nbsp;Rapport du maire</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                	</ul>
+                </div>
+            </li>
+            <li class="hasdrop"><a href="javascript:void(0)">Ressources<br /> et communauté</a>
+            	<div class="cb"></div>
+                <div class="dropmenu">
+                	<ul>
+                    	<li><a href="/paroisse.php?menu=3">Paroisse</a></li>
+                        <li><a href="/ecole.php?menu=3">École</a></li>
+                    	<li><a href="/organismes-regionaux.php?menu=3">Organismes régionaux</a></li>
+                    	<li><a href="/commerces.php?menu=3">Répertoire des commerces</a></li>
+                    	<li><a href="/divers.php?menu=3">Divers</a></li>
+                	</ul>
+                </div>
+            </li>
+            <li class="hasdrop"><a href="javascript:void(0)">Culture<br /> et loisirs</a>
+            	<div class="cb"></div>
+                <div class="dropmenu">
+                	<ul>
+                        <li><a href="/activites-sportives.php?menu=4">Activités sportives</a></li>
+                    	<li><a href="/infrastructures.php?menu=4">Infrastructures</a></li>
+                    	<li><a href="/bibliotheque.php?menu=4">Bibliothèque</a></li>
+                        <li><a href="/politique-familiale.php?menu=4">Politique familiale</a></li>
+                        <li><a href="/comite-des-loisirs.php?menu=4">Comité des loisirs</a></li>
+                        <li><a href="/rockfest.php?menu=4">Rockfest</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="hasdrop"><a href="javascript:void(0)">Services<br /> Municipaux</a>
+            	<div class="cb"></div>
+                <div class="dropmenu">
+                	<ul>
+                    	<li><a href="/urbanisme.php?menu=5">Urbanisme</a></li>
+                        <li><a href="/environnement.php?menu=5">Environnement</a></li>
+                    	<li><a href="/securites.php?menu=5">Sécurité publique</a></li>
+                    	<li><a href="/matieres.php?menu=5">Matières résiduelles</a></li>
+                	</ul>
+                </div>
+            </li>
+            <li class="hasdrop"><a href="javascript:void(0)">Tourisme</a>
+            	<div class="cb"></div>
+                <div class="dropmenu">
+                	<ul>
+                    	<li><a href="/boutiques.php?menu=6">Boutiques</a></li>
+                    	<li><a href="/attraits-touristique.php?menu=6">Attraits touristique</a></li>
+                    	<li><a href="/hebergement.php?menu=6">Hébergement</a></li>
+                        <li><a href="/restauration.php?menu=6">Restauration</a></li>
+                        <li><a href="/marina-camping.php?menu=6">Marina-Camping</a></li>
+                        <li><a href="/le-marche-de-la-gare.php?menu=6">Le marché de la Gare</a></li>
+                	</ul>
+                </div>
+            </li>
+            <li class="hasdrop"><a href="/liens-utiles.php">Liens utiles</a>
+            	<div class="cb"></div>
+                
+            </li>
+            <li><a href="/albums-photos.php">Album photos</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- BODY CONTENT -->
+    <div class="shadowwrap">
+    	<div class="bodyshadow"></div>
+    </div>	
+    <div class="intbodywrap">
+    	
+<div class="cb"></div><div class="rightcol rightcolint">
+    	        	<div class="minimenu">
+            	<h2>Culture<br /> et loisirs</h2>
+							      <ul><li><a href="/activites-sportives.php?menu=4">Activités sportives</a></li>
+									<li><a href="/infrastructures.php?menu=4">Infrastructures</a></li>
+									<li><a href="/bibliotheque.php?menu=4">Bibliothèque</a></li>
+									<li><a href="/politique-familiale.php?menu=4">Politique familiale</a></li>
+									<li><a href="/comite-des-loisirs.php?menu=4">Comité des loisirs</a></li>
+                                    <li><a href="/rockfest.php?menu=4">Rockfest</a></li>
+								</ul>            	<div class="minimenubottom"></div>
+        	</div>
+								<div class="ruban2 yellowruban">
+        		<h2>AVIS PUBLICS</h2>
+                <div id="avisslider">
+                                <div class="avisslide">
+                    <h3>Du 2016-02-29 au 2016-03-22</h3>
+                    <p>Dépôt du rapport financier et du rapport du vérificateur externe pour l'exercice se terminant le 31 décembre 2015</p>
+                    <a href="/uploads/avis/24.pdf" target="_blank" style="float:left;">Voir le fichier &raquo;</a>                </div>
+        				</div>
+            <p class="aviswrap">Voir tous les avis<a href="/avis.php" class="plusbtn2"></a></p>
+        </div>
+		        <div class="rightwrap">
+        		                <div class="sidewrap">
+                <img src="/images/actuIcon.png" alt="" />
+                <h2>ACTUALIT&Eacute;S</h2>
+                				                                <div class="cb"></div>
+           		</div>
+                				 
+            	<div class="sidecontent actu active" id="content0">
+					<h2>Bulletin municipal de février et mars 2016 </h2>
+                    <h3>2016-04-06</h3>
+                    <p>Vous trouverez ci-joint le bulletin municipal des mois de février et mars 2016.</p>            		<a class="eventlink" href="/uploads/actualites/35.pdf" target="_blank" style="float:left;">Voir le fichier &raquo;</a>                </div>
+                <div class="cb"></div>
+                        <input id="elemid" type="hidden" value="0">
+
+            <div class="sidewrap">
+            	<img src="/images/evenIcon.png" alt="" />
+                <h2>&Eacute;V&Eacute;NEMENTS</h2>
+                <a href="/evenements.php" class="plusbtn"></a>
+                <div class="cb"></div>
+            </div>
+             
+            <div class="sidecontent">
+                <h2>Table de concertation Aînés Petite-Nation - Vallée-de-la-Lièvre</h2>
+                <h3>2016-03-22</h3>
+                <p>Vous trouverez ci-joint un document concernant la Table de concertation Aînés Petite-Nation - Vallée-de-la-Lièvre.</p>
+                   <a class="eventlink" href="/uploads/calendrier/74.pdf" target="_blank" style="float:left;">Voir le fichier &raquo;</a>            </div>
+                        <div class="sidewrap">
+            	<img src="/images/lienIcon.png" alt="" />
+                <h2>LIENS RAPIDES</h2>
+                <div class="cb"></div>
+            </div>
+            <div class="sidecontent">
+                <table width="100%">
+                    <tr>
+                    	<td><a href="http://www.montebello.ca/politiques.php?menu=2">Politiques et réglements</a></td>
+                    	<td><a href="http://www.montebello.ca/conseil.php?menu=1">Conseil municipal</a></td>
+                    </tr>
+                    <tr>
+                    	<td><a href="http://www.montebello.ca/securites.php?menu=5">Sécurité publique</a></td>
+	                    <td><a href="http://www.montebello.ca/organismes.php?menu=4">Organisme</a></td>
+                    </tr>
+				    <tr>
+                        <td><a href="http://www.montebello.ca/matieres.php?menu=5">Matières résiduelles</a></td>
+                        <td><a href="http://www.montebello.ca/taxes.php?menu=2">Taxation</a></td>
+
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.montebello.ca/urbanisme.php?menu=5">Urbanisme</a></td>
+                        <td><a href="http://www.montebello.ca/boutiques.php?menu=6">Boutiques</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.montebello.ca/environnement.php?menu=5">Environnement</a></td>
+                        <td><a href="http://www.montebello.ca/emploi.php?menu=2">Emploi</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.montebello.ca/marina-camping.php?menu=6">Marina-Camping</a></td>
+                        <td><a href="http://www.montebello.ca/futur_elus.php?menu=1">Élections municipales 2013</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.montebello.ca/comite-des-loisirs.php?menu=6">Comité des loisirs</a></td>
+                        <td><a href="http://www.montebello.ca/rockfest.php?menu=1">Rockfest</a></td>
+                    </tr>
+				</table>
+            </div>
+            <div class="sidewrapletter">
+            	<h2>ABONNEZ-VOUS &Agrave; L'INFOLETTRE</h2>
+                <!--<form action="" method="post">
+                	<input type="text" value="Votre courriel" onFocus="if(this.value == this.defaultValue) this.value = ''" onBlur="if(this.value == '') this.value = 'Votre courriel'" />
+                    <input type="submit" class="subletter" value="" title="Envoyer" />
+                </form>-->
+                <a name="boite_infolettre"></a>
+                <form name="infoL" action="" method="post" id="infoL">
+                    <input type="text" name="joindre_email" onBlur="if (this.value == '') {this.value = 'Votre adresse courriel';}" onFocus="if (this.value == 'Votre adresse courriel') {this.value = '';}" value="Votre adresse courriel" style="width:131px;"/>	
+                    <input type="hidden" name="frmNewsletter" value="1" />
+                    <input type="submit" id="infoA" class="subletter" value="" title="Envoyer" />
+                </form>
+                
+                				                            </div>
+        </div>
+    </div>
+    
+        	<div class="rightcontent">
+        	<div class="intheader"><h1></h1></div>
+	<table border="0" cellpadding="1" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td>
+			<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+				<tbody>
+					<tr>
+						<td style="text-align: left; vertical-align: top;">
+						<p><img alt="" src="/administration/ckeditor/ckfinder/userfiles/images/photo%20nouvelle%20biblio.JPG" style="width: 200px; height: 149px;" />&#8203;</p>
+
+						<h2 style="font-style: italic;">R&eacute;cipiendaire de la biblioth&egrave;que</h2>
+
+						<h2 style="font-style: italic;">de l&#39;ann&eacute;e 2012-2013</h2>
+
+						<h2 style="font-style: italic;">cat&eacute;gorie: 800 &agrave; 1800 habitants</h2>
+
+						<p>&nbsp;</p>
+
+						<p>&nbsp;</p>
+
+						<p>&nbsp;</p>
+						</td>
+						<td style="text-align: left;">
+						<p>&nbsp;<strong> LA BIBLIOTH&Egrave;QUE EST SITU&Eacute;E AU :</strong><br />
+						&nbsp; &nbsp; &nbsp; &nbsp;<br />
+						&nbsp; 516, rue Notre-Dame (acc&egrave;s porte arri&egrave;re)&nbsp;<br />
+						&nbsp; Montebello &ndash; J0V1L0<br />
+						&nbsp; T&eacute;l. : 819-423-6213<br />
+						&nbsp; &nbsp; &nbsp; &nbsp;<br />
+						&nbsp; Diane Thivierge, responsable</p>
+
+						<p>&nbsp;</p>
+
+						<p>&nbsp; Courrier &eacute;lectronique&nbsp;:&nbsp;biblio.montebello@videotron.ca&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+						<p>&nbsp; Site Web&nbsp;:&nbsp;<a href="http://www.reseaubiblioduquebec.qc.ca">www.reseaubiblioduquebec.qc.ca</a></p>
+
+						<h3 style="font-style: italic;">&nbsp;</h3>
+
+						<p><strong>&nbsp; HEURES D&rsquo;OUVERTURE</strong></p>
+
+						<p>&nbsp; Mardi : 15:30 heures &agrave; 18:30 heures<br />
+						&nbsp; Jeudi : 15:00 heures &agrave; 18:30 heures</p>
+
+						<p><strong>&nbsp; ACC&Egrave;S POUR PERSONNES &Agrave; MOBILIT&Eacute; R&Eacute;DUITE</strong></p>
+
+						<p><strong>&nbsp; ACC&Egrave;S POSTE DE TRAVAIL INTERNET</strong></p>
+
+						<p><strong>&nbsp; </strong></p>
+
+						<p><strong>NOS SERVICES :</strong></p>
+
+						<p>La carte de membre est gratuite pour les r&eacute;sidents de Montebello.</p>
+
+						<p>Un espace est aussi r&eacute;serv&eacute; aux enfants.</p>
+
+						<p>Les usagers peuvent emprunter un maximum de 4 documents&nbsp;<br />
+						<span style="line-height: 1.6em;">pour&nbsp;</span><span style="line-height: 1.6em;">une p&eacute;riode de 4 semaines.</span></p>
+
+						<p>L&#39;abonn&eacute; est responsable des documents emprunt&eacute;s avec sa&nbsp;<br />
+						<span style="line-height: 1.6em;">carte.&nbsp;</span><span style="line-height: 1.6em;">Une facture sera &eacute;mise pour tous documents perdus<br />
+						ou endommag&eacute;s.</span></p>
+
+						<p>Vous pouvez profiter d&rsquo;un service de pr&ecirc;ts entre biblioth&egrave;que&nbsp;<br />
+						<strong style="line-height: 1.6em;">PEB&nbsp;</strong><span style="line-height: 1.6em;">sur place ou avec votre NIP de carte d&rsquo;abonnement.</span></p>
+
+						<p>N&rsquo;h&eacute;sitez pas &agrave; profiter des laissez-passer <strong>gratuits</strong> familials&nbsp;<br />
+						ou individuels pour vos sorties culturelles en Outaouais :&nbsp;<br />
+						mus&eacute;es-centres culturels-centres d&#39;interpr&eacute;tation-lieux&nbsp;<br />
+						<span style="line-height: 1.6em;">historiques&nbsp;</span><span style="line-height: 1.6em;">et sentiers de ski de fond. Ces cartes d&rsquo;acc&egrave;s&nbsp;</span><br />
+						<span style="line-height: 1.6em;">sont disponibles &agrave;&nbsp;</span><span style="line-height: 1.6em;">la biblioth&egrave;que. &nbsp; &nbsp; &nbsp;</span></p>
+
+						<p>Merci pour l&rsquo;implication de tous les b&eacute;n&eacute;voles.</p>
+
+						<p>Bienvenue &agrave; tous,&nbsp;<br />
+						il me fera plaisir de vous conseiller dans vos choix de lecture. &nbsp;&nbsp;</p>
+
+						<p>&nbsp;</p>
+
+						<p>&nbsp;</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div><div class="cb"></div></div> <!-- BODY CONTENT -->
+
+<div class="footshadowwrap">
+	<div class="footshadow"></div>
+</div>
+<div class="footwrap">
+	<div class="topfooter">
+    	<a href="/index.php" class="topfoota"><div class="footlogo"></div>
+        <p>Municipalit&eacute; de<br />
+        <span>Montebello</span>
+        </p>
+        </a>
+        <div class="footerslogan">
+           <a href="http://www.petitenationlievre.qc.ca" target="_blank" ><img class="logoLievre" src="/images/lievre.png" width="156px" height="59px"  alt="" />  </a>
+        </div>
+        <a href="http://www.tourisme-outaouais.ca/default.aspx" target="_blank"><img src="/images/outaouais.png" alt="" /></a>
+        <a href="http://www.villages-relais.qc.ca" target="_blank"><img src="/images/villagerelais.png" alt="" /></a>
+    </div>
+    <div class="bottomfooter">
+        <table>
+            <tr>
+                <td width="120">
+                    <p class="foottitle">Municipalité</p>
+                    <br />
+                    <hr />
+                    <ul>
+                        <li><a href="/mot-du-maire.php?menu=1">Mot du maire</a></li>
+      	                <li><a href="/histoire.php?menu=1">Histoire et Armoiries</a></li>
+                        <li><a href="/conseil.php?menu=1">Conseil municipal</a></li>
+                        <li><a href="/seances.php?menu=1">Séances du conseil</a></li>
+                        <li><a href="/comites.php?menu=1">Comités</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <p class="foottitle">Services municipaux</p>
+                    <hr />
+                    <ul>
+                        <li><a href="/urbanisme.php?menu=5">Urbanisme</a></li>
+                        <li><a href="/environnement.php?menu=5">Environnement</a></li>
+                        <li><a href="/securites.php?menu=5">Sécurité publique</a></li>
+                        <li><a href="/matieres.php?menu=5">Matières résiduelles</a></li>
+                    </ul>
+                </td>
+                <td width="150">
+                    <p class="foottitle">Ressources et communauté</p>
+                    <hr />
+                    <ul>
+                        <li><a href="/paroisse.php?menu=3">Paroisse</a></li>
+                        <li><a href="/ecole.php?menu=3">École</a></li>
+                        <li><a href="/organismes-regionaux.php?menu=3">Organismes régionaux</a></li>
+                        <li><a href="/commerces.php?menu=3">Répertoire des commerces</a></li>
+                        <li><a href="/divers.php?menu=3">Divers</a></li>
+                    </ul>
+                </td>
+                <td rowspan="2">
+                    <p class="foottitle">Administration et finances</p>
+                    <hr />
+                    <ul>
+                        <li><a href="/administration.php?menu=2">Administration</a></li>
+                        <li><a href="/taxes.php?menu=2">Services d'évaluations en ligne</a></li>
+                        <li><a href="/politiques.php?menu=2">Politiques et réglements</a></li>
+                        <li><a href="/emploi.php?menu=2">Offres d'emploi</a></li>
+                        <li><a href="/taxation.php?menu=2">Taxation et Perception</a></li>
+                        <li><a href="/appel-offres.php?menu=2">Système d'appel d'offres</a></li>
+                        <li><a href="/maire.php?menu=2">Rapport du maire</a></li>
+                    </ul>
+                </td>
+                <td class="tdaddress" rowspan="2" width="270">
+                    <img src="/images/contactIcon.png" /><p class="foottitle footjoindre">Pour nous joindre</p><a class="foota" href="/nous-joindre.php">[ + ]</a>
+                    <div class="cb"></div>
+                    <hr />
+                    <ul>
+                        <li>550 rue Notre-Dame</li>
+                        <li>Montebello, Québec</li>
+                        <li>J0V 1L0</li>
+                    </ul>
+                    <ul>
+                        <li><div class="footicon1"></div><span>819-423-5123</span><div class="cb"></div></li>
+                        <li><div class="footicon2"></div><span>819-423-5703</span><div class="cb"></div></li>
+<!--                        <li><div class="footicon3"></div><span><a href="mailto:mun.montebello@videotron.ca">mun.montebello@videotron.ca</a></span><div class="cb"></div></li>-->
+                    </ul>
+                    <ul>
+                        <li>Nos heures d'ouverture</li>
+                        <li>Lundi au jeudi : 9h à 16h30</li>
+                        <li>Fermé le vendredi</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="foottitle">Tourisme</p>
+                    <br />
+                    <hr />
+                    <ul>
+                        <li><a href="/boutiques.php?menu=6">Boutiques</a></li>
+                        <li><a href="/attraits-touristique.php?menu=6">Attraits touristique</a></li>
+                        <li><a href="/hebergement.php?menu=6">Hébergement</a></li>
+                        <li><a href="/restauration.php?menu=6">Restauration</a></li>
+                        <li><a href="/marina-camping.php?menu=6">Marina-Camping</a></li>
+                        <li><a href="/le-marche-de-la-gare.php?menu=6">Le marché de la Gare</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <p class="foottitle">Cultures et loisirs</p>
+                    <hr />
+                    <ul>
+                    <li><a href="/activites-sportives.php?menu=4">Activités sportives</a></li>
+                    <li><a href="/infrastructures.php?menu=4">Infrastructures</a></li>
+                    <li><a href="/bibliotheque.php?menu=4">Bibliothèque</a></li>
+                    <li><a href="/politique-familiale.php?menu=4">Politique familiale</a></li>
+                    <li><a href="/comite-des-loisirs.php?menu=4">Comité des loisirs</a></li>
+                    <li><a href="/rockfest.php?menu=4">Rockfest</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <p class="foottitle"><a href="/albums-photos.php">Albums Photos</a></p>
+    	            <br />
+                    <p class="foottitle"><a href="/liens-utiles.php">Liens utiles</a></p>
+                    <br />
+                </td>
+            </tr>
+        </table>
+        <br style="clear:both;"/>
+        <div class="copy">
+            <div class="copyright">&copy; 2013 Tous droits réservés - Municipalité de Montebello</div>
+            <div class="copyleft">Une réalisation <a href="http://www.distantia.ca" target="_blank">Distantia</a></div>
+        </div>
+    </div>
+</div>
+
+</div> <!-- GLOBAL -->
+
+</body>
+</html>

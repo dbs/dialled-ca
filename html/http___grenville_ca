@@ -1,0 +1,750 @@
+<!DOCTYPE HTML>
+<html>
+
+   <head>
+	<meta name="author" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Village de Grenville</title>
+
+    		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/grenville.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=83583b3d51b8cd70367acee930b868a9"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://grenville.ca/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=83583b3d51b8cd70367acee930b868a9' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css'  href='http://grenville.ca/wp-content/themes/theme_grenville/style/style.css?ver=83583b3d51b8cd70367acee930b868a9' type='text/css' media='all' />
+<script type='text/javascript' src='http://grenville.ca/wp-includes/js/jquery/jquery.js?ver=83583b3d51b8cd70367acee930b868a9'></script>
+<script type='text/javascript' src='http://grenville.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=83583b3d51b8cd70367acee930b868a9'></script>
+<script type='text/javascript' src='http://grenville.ca/wp-content/themes/theme_grenville/script/jquery-ui.1.8.18.custom.min.js?ver=83583b3d51b8cd70367acee930b868a9'></script>
+<script type='text/javascript' src='http://grenville.ca/wp-content/themes/theme_grenville/script/script.js?ver=83583b3d51b8cd70367acee930b868a9'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://grenville.ca/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://grenville.ca/wp-includes/wlwmanifest.xml" /> 
+
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//grenville.ca/?wordfence_logHuman=1&hid=41F981212BC723E4037B9F7BB5586426');
+</script>
+    <script type="text/javascript">
+        var $j = jQuery.noConflict();
+
+        //variables
+
+        var widthSlideShow = 690;
+        var currentImg = 1;
+
+        $j(document).ready(function(){
+            $j('.btnDefilant').click(defilerBanner);
+
+            var interval = setInterval(function() {
+                  defilerBanner()
+            }, 8000);
+        });
+
+        function defilerBanner(){
+            // Faire défiler juste si il n'y a pas de hover
+            var isHovered = $j('#bannerDefilant').is(":hover");
+
+            // Vérifier quel boution a ete cliqué. Si aucun, cest le setinterval qui a appelé la fonction
+            if ($j(this).hasClass("btn1")){currentImg = 1;}
+            else if ($j(this).hasClass("btn2")){currentImg = 2;}
+            else if ($j(this).hasClass("btn3")){currentImg = 3;}
+            else if ($j(this).hasClass("btn4")){currentImg = 4;}
+            else {if (isHovered==false)currentImg++}
+            if (currentImg>=5){currentImg=1;}
+                    
+            // Changer la couleur des boutons
+            for (index=1; index <= 4; index++){
+                name = String(".btn"+index);
+                if (index==currentImg){$j(name).css({ "background-image":"url(http://grenville.ca/wp-content/themes/theme_grenville/images/fleche.png)" });}
+                else{$j(name).css({ "background-image":"none" });}
+            }
+            // Bouger le slideshow
+            $j("#conteneurSlides").stop().animate({ "margin-left":(currentImg-1)*-widthSlideShow },500); 
+
+        }
+
+        //datepicker
+
+        var Event = function(text, className, backgroundColor) {
+            this.text = text;
+            this.className = className;
+            this.backgroundColor = backgroundColor;
+        };
+
+        var events = {};
+                                            
+                        
+                        $color = "#dd9933";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("01/02/2015")] = new Event("Bureau fermé", $color , "#dd9933");
+
+                    
+                        
+                        $color = "#dd9933";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("01/02/2015")] = new Event("Bureau fermé", $color , "#dd9933");
+
+                    
+                        
+                        $color = "#dd3333";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("01/01/2015")] = new Event("Bureau fermé. Bonne année !", $color , "#dd3333");
+
+                    
+                        
+                        $color = "#dd3333";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("12/25/2014")] = new Event("Bureau fermé. Joyeux Noël !", $color , "#dd3333");
+
+                    
+                        
+                        $color = "#dd9933";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("01/02/2015")] = new Event("Bureau fermé", $color , "#dd9933");
+
+                    
+                        
+                        $color = "#dd9933";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("01/05/2015")] = new Event("Bureau fermé", $color , "#dd9933");
+
+                    
+                        
+                        $color = "";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("01/02/2015")] = new Event("Bureau fermé", $color , "");
+
+                    
+                        
+                        $color = "#dd9933";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("12/31/2014")] = new Event("Bureau fermé", $color , "#dd9933");
+
+                    
+                        
+                        $color = "#dd9933";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("12/30/2014")] = new Event("Bureau fermé", $color , "#dd9933");
+
+                    
+                        
+                        $color = "#dd9933";
+                        $color = $color.substring(1, $color.length);  
+
+                        events[new Date("12/29/2014")] = new Event("Bureau fermé", $color , "#dd9933");
+
+                                                    
+        $j(function(){
+            $j('#datepicker').datepicker({  
+                inline: true,  
+                showOtherMonths: true,  
+                dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'], 
+                monthNames: [ "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre" ],  
+                beforeShowDay: function(date) {
+                 
+                    var event = events[date];
+
+                    if (event) {
+                        return [true, event.className, event.text];
+                    }
+                    else {
+                        return [true, '', ''];
+                    }
+                }
+            });  
+        });
+
+        $j(document).ready(function(){
+            $j('#datepicker').click(function(){
+            
+                                                                
+                                                                $color = "#dd9933";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "#dd9933";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "#dd3333";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "#dd3333";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "#dd9933";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "#dd9933";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "#dd9933";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "#dd9933";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                            
+                                                                $color = "#dd9933";
+                                $color = $color.substring(1, $color.length);  
+                                
+                                $j('.'+$color).css('backgroundColor','#'+$color);
+
+                                                                                                })
+
+                                                        
+                                                        $color = "#dd9933";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "#dd9933";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "#dd3333";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "#dd3333";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "#dd9933";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "#dd9933";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "#dd9933";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "#dd9933";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                        
+                                                        $color = "#dd9933";
+                            $color = $color.substring(1, $color.length);  
+                            
+                            $j('.'+$color).css('backgroundColor','#'+$color);
+
+                                                                    
+
+        });
+
+
+
+        
+
+    </script>
+
+
+
+                                        
+                        
+                                                    
+
+    <style type="text/css" media="all">
+
+
+    body{
+
+        background: url(http://grenville.ca/wp-content/uploads/2014/04/bgGrenville.jpg) no-repeat fixed center top ;        
+        
+    }
+        
+    </style>
+
+</head>	<body>
+		<header id="header" class="wrapper">
+	<div class="logo">
+		<a href="http://grenville.ca"><img src="http://grenville.ca/wp-content/themes/theme_grenville/images/armoirie.jpg" alt="armoirie du village de Grenville"></a>
+		<h1>Village de <b>Grenville</b></h1>
+	</div>
+	
+	<!-- menu -->
+	<nav>
+		<div class="menu-menu-principal-container"><ul id="menu-menu-principal" class="menu"><li id="menu-item-724" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-724"><a href="http://grenville.ca/">Accueil</a></li>
+<li id="menu-item-753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-753"><a href="http://grenville.ca/services/">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-755"><a href="http://grenville.ca/services/centre-communautaire/">Centre communautaire</a></li>
+	<li id="menu-item-754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-754"><a href="http://grenville.ca/services/bibliotheque/">Bibliothèque</a></li>
+	<li id="menu-item-762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-762"><a href="http://grenville.ca/services/loisirs/">Loisirs</a>
+	<ul class="sub-menu">
+		<li id="menu-item-765" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-765"><a href="http://grenville.ca/services/loisirs/tourisme-argenteuil/">Tourisme Argenteuil</a></li>
+		<li id="menu-item-764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-764"><a href="http://grenville.ca/services/loisirs/terrain-de-tennis/">Terrain de tennis</a></li>
+		<li id="menu-item-763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="http://grenville.ca/services/loisirs/parc-terrain-de-jeux/">Parc &#038; Terrain de jeux</a></li>
+	</ul>
+</li>
+	<li id="menu-item-757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-757"><a href="http://grenville.ca/services/environnement-matieres-residuelles/">Environnement / Matières résiduelles</a>
+	<ul class="sub-menu">
+		<li id="menu-item-758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-758"><a href="http://grenville.ca/services/environnement-matieres-residuelles/liste-des-matieres-recyclables/">Liste des matières recyclables</a></li>
+		<li id="menu-item-759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-759"><a href="http://grenville.ca/services/environnement-matieres-residuelles/rdd-pneus-branches/">RDD / Pneus / Branches</a></li>
+		<li id="menu-item-760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-760"><a href="http://grenville.ca/services/environnement-matieres-residuelles/service-de-recuperation-des-materiaux-secs/">Récupération des matériaux secs</a></li>
+		<li id="menu-item-761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-761"><a href="http://grenville.ca/services/environnement-matieres-residuelles/recuperation-du-materiel-electronique/">Récupération du matériel électronique</a></li>
+	</ul>
+</li>
+	<li id="menu-item-756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-756"><a href="http://grenville.ca/services/commission-du-patrimoine/">Commission du Patrimoine</a></li>
+</ul>
+</li>
+<li id="menu-item-752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-752"><a href="http://grenville.ca/nous-joindre/">Nous joindre</a></li>
+<li id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-732"><a href="http://grenville.ca/la-ville/">La ville</a>
+<ul class="sub-menu">
+	<li id="menu-item-747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-747"><a href="http://grenville.ca/la-ville/mot-du-maire/">Mot du maire</a></li>
+	<li id="menu-item-750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-750"><a href="http://grenville.ca/la-ville/presentation-du-conseil/">Présentation du conseil</a></li>
+	<li id="menu-item-733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733"><a href="http://grenville.ca/la-ville/armoiries/">Armoiries</a></li>
+	<li id="menu-item-742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742"><a href="http://grenville.ca/la-ville/historique/">Historique</a></li>
+	<li id="menu-item-734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734"><a href="http://grenville.ca/la-ville/canal/">Canal</a></li>
+	<li id="menu-item-749" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749"><a href="http://grenville.ca/la-ville/points-dinterets/">Points d&rsquo;intérêts</a></li>
+	<li id="menu-item-735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-735"><a href="http://grenville.ca/la-ville/eglises/">Églises</a></li>
+	<li id="menu-item-748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-748"><a href="http://grenville.ca/la-ville/photographies-aeriennes/">Photographies aériennes</a></li>
+	<li id="menu-item-751" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751"><a href="http://grenville.ca/la-ville/projets-domiciliaires-et-parc-industriel/">Projets domiciliaires et parc industriel</a></li>
+	<li id="menu-item-767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-767"><a href="http://grenville.ca/la-ville/la-municipalite-en-2014/realisations-2013/">La municipalité en 2014</a>
+	<ul class="sub-menu">
+		<li id="menu-item-746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-746"><a href="http://grenville.ca/la-ville/la-municipalite-en-2014/realisations-2013/">Réalisations 2015</a></li>
+		<li id="menu-item-745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-745"><a href="http://grenville.ca/la-ville/la-municipalite-en-2014/orientations-2014-2015-2016/">Orientations 2016-2017-2018</a></li>
+		<li id="menu-item-744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-744"><a href="http://grenville.ca/la-ville/la-municipalite-en-2014/lactualite/">L&rsquo;actualité</a></li>
+	</ul>
+</li>
+	<li id="menu-item-736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-736"><a href="http://grenville.ca/la-ville/elections-2013/">Élections 2013</a>
+	<ul class="sub-menu">
+		<li id="menu-item-737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-737"><a href="http://grenville.ca/la-ville/elections-2013/candidatures/">Candidatures</a></li>
+		<li id="menu-item-739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-739"><a href="http://grenville.ca/la-ville/elections-2013/liste-electorale-2013/">Liste électorale 2013</a></li>
+		<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-738"><a href="http://grenville.ca/la-ville/elections-2013/date-et-lieu-de-votation-2013/">Date et lieu de votation 2013</a></li>
+		<li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="http://grenville.ca/la-ville/elections-2013/resultat-de-lelection-2013/">Résultat de l&rsquo;élection 2013</a></li>
+		<li id="menu-item-740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-740"><a href="http://grenville.ca/la-ville/elections-2013/president-delection-2013/">Président d&rsquo;élection 2013</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-766"><a href="http://grenville.ca/citoyens/organismes-sans-but-lucratif/">Citoyens</a>
+<ul class="sub-menu">
+	<li id="menu-item-727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-727"><a href="http://grenville.ca/citoyens/organismes-sans-but-lucratif/">Organismes sans but lucratif</a></li>
+	<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="http://grenville.ca/citoyens/service-devaluation-en-ligne/">Service d&rsquo;évaluation en ligne</a></li>
+	<li id="menu-item-729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-729"><a href="http://grenville.ca/citoyens/reglements-municipaux/">Règlements municipaux</a></li>
+	<li id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a href="http://grenville.ca/citoyens/taxes-foncieres/">Taxes foncières</a></li>
+	<li id="menu-item-726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726"><a href="http://grenville.ca/citoyens/calendrier-des-activites/">Calendrier des activités</a></li>
+	<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="http://grenville.ca/citoyens/proces-verbaux/">Procès-verbaux</a></li>
+</ul>
+</li>
+</ul></div>	</nav><!-- /menu -->
+	
+</header><!-- /header -->
+		<div class="contentAccueil wrapper">
+			<!-- section banniere de defilement  -->
+			<section id="bannerDefilant">
+				<!-- bouton de la banniere de defilement -->
+				<div class="boutonsSlideShow">
+
+
+									        				        						        
+				        		
+								<article class="btnDefilant btn1">
+									<img class="thumbnail" src="http://grenville.ca/wp-content/uploads/2015/11/PNEUS-HIVER.jpg" alt="">
+									<h2>Pneus hiver</h2>
+									<span class="date"></span>
+									<p> [...]</p>
+								</article>
+
+								
+					        
+				        		
+								<article class="btnDefilant btn2">
+									<img class="thumbnail" src="http://grenville.ca/wp-content/uploads/2015/09/Tempo.jpg" alt="<p>Les abris temporaires sont permis entre le 1er octobre et le 30 avril</p>
+">
+									<h2>Abri temporaire</h2>
+									<span class="date"></span>
+									<p>Les abris temporaires sont permis entre le 1er octobre  [...]</p>
+								</article>
+
+								
+					        
+				        		
+								<article class="btnDefilant btn3">
+									<img class="thumbnail" src="http://grenville.ca/wp-content/uploads/2015/06/Facebook.jpg" alt="<p>Suivez-nous sur Facebook</p>
+">
+									<h2>Facebook</h2>
+									<span class="date"></span>
+									<p>Suivez-nous sur Facebook [...]</p>
+								</article>
+
+								
+					        
+				        		
+								<article class="btnDefilant btn4">
+									<img class="thumbnail" src="http://grenville.ca/wp-content/uploads/2015/01/table-conseil.jpg" alt="<p>Prochaine séance du conseil municipal: 11 janvier à 20h</p>
+">
+									<h2>Séance conseil</h2>
+									<span class="date"></span>
+									<p>Prochaine séance du conseil municipal: 11 janvier à  [...]</p>
+								</article>
+
+								
+					        				        				    
+				</div>
+
+				<!-- baniere de defilement -->
+
+				<div id="slideShow">
+					<div id="conteneurSlides">
+
+
+											        					        							        
+					        		
+									<div class="oneSlide">
+										<div class="contentDefilant">
+											<h3></h3>
+											<div></div>
+										</div>
+										<div class="grandiantGris"></div>
+										<div class="imageDefilante">
+											<img src="http://grenville.ca/wp-content/uploads/2015/11/PNEUS-HIVER.jpg" class="imgBannerDefilante" alt="image de banniere">
+										</div>
+									</div> 
+
+									
+						        
+					        		
+									<div class="oneSlide">
+										<div class="contentDefilant">
+											<h3>Les abris temporaires sont permis entre le 1er octobre et le 30 avril</h3>
+											<div></div>
+										</div>
+										<div class="grandiantGris"></div>
+										<div class="imageDefilante">
+											<img src="http://grenville.ca/wp-content/uploads/2015/09/Tempo.jpg" class="imgBannerDefilante" alt="image de banniere">
+										</div>
+									</div> 
+
+									
+						        
+					        		
+									<div class="oneSlide">
+										<div class="contentDefilant">
+											<h3>Suivez-nous sur Facebook</h3>
+											<div></div>
+										</div>
+										<div class="grandiantGris"></div>
+										<div class="imageDefilante">
+											<img src="http://grenville.ca/wp-content/uploads/2015/06/Facebook.jpg" class="imgBannerDefilante" alt="image de banniere">
+										</div>
+									</div> 
+
+									
+						        
+					        		
+									<div class="oneSlide">
+										<div class="contentDefilant">
+											<h3>Prochaine séance du conseil municipal:
+
+11 janvier à 20h</h3>
+											<div></div>
+										</div>
+										<div class="grandiantGris"></div>
+										<div class="imageDefilante">
+											<img src="http://grenville.ca/wp-content/uploads/2015/01/table-conseil.jpg" class="imgBannerDefilante" alt="image de banniere">
+										</div>
+									</div> 
+
+									
+						        					        					    
+					</div> <!-- fin masque -->
+				</div> <!-- fin slideshow -->
+				<div class="clearer"></div>
+			</section>
+
+
+			<!-- actualités -->
+			<section class="actualites">
+				<h2 class="titreSection">Actualités</h2>
+				<div class="conteneurArticles">
+
+										        					        	
+						        
+					        		
+									<article>
+										<h3>Décès du maire M. Ronald Tittlit</h3>
+										<span></span>
+										<p><p>C’est avec grande tristesse que nous annonçons le décès de monsieur Ronald Tittlit survenu paisiblement à Montebello le 8 décembre 2015 suite à un long combat livré contre le cancer. [&hellip;]</p>
+</p>
+																					<a href="http://grenville.ca/actualite/deces-du-maire-m-ronald-tittlit/" title="lire la suite">Lire la suite</a>
+																				
+									</article>
+
+								
+
+				        
+					        		
+									<article>
+										<h3>Rapport du maire 2015</h3>
+										<span></span>
+										<p><p>Le rapport du maire 2015 a été déposé à la séance spéciale du 17 novembre 2015. Celui-ci sera distribué sur l&rsquo;ensemble du territoire durant la semaine du 30 novembre 2015. [&hellip;]</p>
+</p>
+																					<a href="http://grenville.ca/actualite/rapport-du-maire-2015/" title="lire la suite">Lire la suite</a>
+																				
+									</article>
+
+								
+
+				        
+					        		
+									<article>
+										<h3>Canal de Grenville &#8211; État de situation</h3>
+										<span></span>
+										<p><p>Le canal fait parler de lui… ce joyau se détériore à grande vitesse. En effet, en 2014, un affaissement des murs est survenu et puis un autre tout récemment. La [&hellip;]</p>
+</p>
+																					<a href="http://grenville.ca/actualite/canal-de-grenville-etat-de-situation/" title="lire la suite">Lire la suite</a>
+																				
+									</article>
+
+								
+
+				        			        			    					
+				</div>
+			</section>
+
+			<!-- calendrier -->
+			<section class="calendrier">
+				<h2 class="titreSection">Calendrier</h2>
+				<div id="datepicker">	
+				</div>
+			</section>
+
+			<!-- meteo -->
+			<section class="meteo">
+				<iframe marginheight="0" marginwidth="0" name="wxButtonFrame" id="wxButtonFrame" height="90" src="http://btn.meteomedia.ca/weatherbuttons/template1.php?placeCode=CAQC0194&category0=Cities&containerWidth=234&btnNo=&backgroundColor=blue&multipleCity=0&citySearch=0&celsiusF=C" align="top" frameborder="0" width="234" scrolling="no" allowTransparency="true"></iframe>
+			</section>
+
+			<!-- publicite -->
+			<section class="pub">
+				<div>
+
+							        	
+				        
+			        									<a href="" target="_blank"><img src="http://grenville.ca/wp-content/uploads/2014/12/stationnement-nuit.jpg" alt="publicité222"></a>
+
+									        			    				</div>
+			</section>
+
+			<!-- avis public -->
+			<section class="avis">
+				<h2 class="titreSection">Avis public en cours</h2>
+				<div>
+								        	
+				        
+			        		
+							<p>Consultez l’ <a href="http://grenville.ca/wp-content/uploads/2015/12/HIVER-2015-2016.pdf" title="voir l'avis public">avis public</a> en cours pour la période Hiver 2015-2016 en ligne dès maintenant!</p>
+
+									        			    					
+					<img src="http://grenville.ca/wp-content/themes/theme_grenville/images/avis.png" alt="icone journal">
+				</div>
+			</section>
+
+			<!-- autres liens -->
+			<section class="autreLiens">
+								        					        
+				        		
+								<a href="http://grenville.ca/bottin-des-entreprises/"><img src="http://grenville.ca/wp-content/uploads/2014/04/btnBottins.jpg" alt="boutons info-collectes"></a>
+
+					        
+				        		
+								<a href="http://grenville.ca/nous-joindre/commentaires-et-suggestions/"><img src="http://grenville.ca/wp-content/uploads/2014/04/btnCommentaires.jpg" alt="boutons info-collectes"></a>
+
+					        
+				        		
+								<a href="https://www.seao.ca/Reports/Rapport_51.aspx"><img src="http://grenville.ca/wp-content/uploads/2014/04/btnSEAO.jpg" alt="boutons info-collectes"></a>
+
+					        
+				        		
+								<a href="http://grenville.ca/offres-demplois/"><img src="http://grenville.ca/wp-content/uploads/2014/04/btnOffreDEmplois.jpg" alt="boutons info-collectes"></a>
+
+					        
+				        		
+								<a href="http://grenville.ca/formulaires/"><img src="http://grenville.ca/wp-content/uploads/2014/04/btnFormulaires.jpg" alt="boutons info-collectes"></a>
+
+					        
+				        		
+								<a href="http://grenville.ca/services/environnement-matieres-residuelles/"><img src="http://grenville.ca/wp-content/uploads/2014/04/btnInfoCollectes.jpg" alt="boutons info-collectes"></a>
+
+					        				        			    			</section>
+
+		</div>
+
+		<footer class="wrapper">
+	
+
+
+
+								        					        	
+						        
+					        		
+									<div class="wrapperFooter">
+										<section class="mrc">
+
+											<h3>Village de Grenville</h3>
+
+											<img src="http://grenville.ca/wp-content/themes/theme_grenville/images/logoFooter.png" alt="armoirie">
+											<p>21, rue Tri-Jean <br>Grenville (Québec)<br>J0V 1J0											</p>
+											<p>Téléphone : (819) 242-2146<br>	
+												Télécopieur : (819) 242-5891 <br>
+												Courriel: <a href="mailto:info@grenville.ca?subject=contact">info@grenville.ca</a></p>
+										</section>
+
+										<section class="carte">
+											<h3>Grenville sur la carte du Québec</h3>
+
+											<img src="http://grenville.ca/wp-content/themes/theme_grenville/images/carteRonde.png" alt="carte du quebec">
+										</section>
+
+										<section class="planDuSite">
+											<h3>Plan du site</h3>
+											<nav>
+												<ul>
+													<li><a href="index.php" title="">accueil</a></li>
+																																									 <li><a href="http://grenville.ca/services/" title="">Services</a></li>
+
+																												 <li><a href="http://grenville.ca/offres-demplois/" title="">Offres d'emplois</a></li>
+
+																												 <li><a href="http://grenville.ca/nous-joindre/" title="">Nous joindre</a></li>
+
+																												 <li><a href="http://grenville.ca/la-ville/" title="">La ville</a></li>
+
+																												 <li><a href="http://grenville.ca/formulaires/" title="">Formulaires</a></li>
+
+																												 <li><a href="http://grenville.ca/citoyens/" title="">Citoyens</a></li>
+
+																												 <li><a href="http://grenville.ca/bottin-des-entreprises/" title="">Bottin des entreprises</a></li>
+
+																									</ul>
+											</nav>
+											
+										</section>
+
+										<section class="boutons">
+											<a href="#"><img src="http://grenville.ca/wp-content/uploads/2014/04/logoFleuronsQC.jpg" alt="logo des fleurons du Québec"></a>
+											<a href="https://www.facebook.com/pages/Municipalit%C3%A9-du-Village-de-Grenville/344816722265286?fref=ts"><img src="http://grenville.ca/wp-content/uploads/2014/04/btnFacebook.jpg" alt="logo facebook suivez-nous"></a>
+										</section>
+									</div>
+
+									<section class="autresMunicipalites">
+										<img src="http://grenville.ca/wp-content/uploads/2014/04/autresMunicipalites.jpg">
+									</section>
+
+
+			        		        		    			<script type='text/javascript' src='http://grenville.ca/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=83583b3d51b8cd70367acee930b868a9-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/grenville.ca\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Envoi en cours ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://grenville.ca/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=83583b3d51b8cd70367acee930b868a9'></script>
+</footer>
+
+	</body>
+</html>

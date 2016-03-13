@@ -1,0 +1,1074 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Royal Saskatchewan Museum</title>
+<link href="http://www.royalsaskmuseum.ca/res/styles/css/screen.css" rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.royalsaskmuseum.ca/blog/rss">
+<script src="http://www.royalsaskmuseum.ca/res/js/jquery.js"></script><link href="http://www.royalsaskmuseum.ca/res/styles/css/jquery.sidr.light.css" rel="stylesheet">
+<script src="http://www.royalsaskmuseum.ca/res/js/jquery.sidr.min.js"></script><script type="text/javascript">
+      $(document).ready(function() {
+        $('#hamburger').sidr({
+          name: 'sidr-main',
+          source: '.navigation',
+          side: 'right'
+        });
+
+        $(window).resize(function() {
+          $.sidr('close', 'sidr-main');
+        });
+      });
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+            <div id="layout">
+				<div id="hd" class="maincontent">
+                    <div id="linksAndSearch">
+                      <div id="searchSpan"><form method="get" action="/search">
+<input name="q" type="text" id="Layout_Search" class="searchBox" placeholder="Search"><input type="image" src="/pub/images/search.png" class="searchButton">
+</form></div>
+                        <div class="headerLinks">
+	<div class="weblinkset-weblinks xrm-entity xrm-editable-adx_weblinkset"><ul>
+<li class="first"><a title="Blog" class="xrm-weblink " href="/blog">Blog</a></li>
+<li><a title="About Us" class="xrm-weblink " href="/about-us">About Us</a></li>
+<li class="last"><a title="Contact Us" class="xrm-weblink " href="/contact-us">Contact Us</a></li>
+</ul></div>
+</div>
+                    </div>
+
+					<div class="headerImage xrm-attribute xrm-editable-html">
+	<div class="xrm-attribute-value"><p><a href="/"><img src="/res/img/RSM_Logo_sized.jpg" alt="" width="264" height="64"></a></p></div>
+</div>
+
+<img src="/res/img/hamburger.png" id="hamburger"><div class="navigation">
+          	<div class="weblinkset-weblinks xrm-entity xrm-editable-adx_weblinkset nav">
+            	<ul class="nav-list">
+<li class="">
+     <a href="http://www.royalsaskmuseum.ca/locations">Locations</a>
+   </li>
+
+
+   <li class="">
+     <a href="http://www.royalsaskmuseum.ca/programs">Programs</a>
+   </li>
+
+
+   <li class="">
+     <a href="http://www.royalsaskmuseum.ca/exhibits">Exhibits</a>
+   </li>
+
+
+   <li class="">
+     <a href="http://www.royalsaskmuseum.ca/research-and-collections">Research &amp; Collections</a>
+   </li>
+
+
+   <li class="">
+     <a href="http://www.royalsaskmuseum.ca/education">Education</a>
+   </li>
+
+</ul>
+</div>
+          </div>
+                    <div class="clear"></div>
+				</div>
+				<div id="bd" class="maincontent">
+
+
+    <script type="text/javascript">
+        var setupRotator = function(items, numberToShow, leftArrow, rightArrow) {
+            var count = items.length;
+            var current = 0;
+
+            items.each(function(i, e) {
+                if($(e).index() > numberToShow - 1) $(e).hide();
+            });
+
+            leftArrow.click(function() {
+                if(current == 0) return;
+                $(items.get(current + numberToShow - 1)).hide();
+                current--;
+                $(items.get(current)).show();
+            });
+
+            rightArrow.click(function() {
+                if(current == count - numberToShow) return;
+                $(items.get(current)).hide();
+                current++;
+                $(items.get(current + numberToShow - 1)).show();
+            });
+        }
+
+
+        $(document).ready(function () {
+
+            var width = $('#homePageSlider').width();
+            var items = $('.homePageSliderBody li');
+            var tabs = $('.homePageSliderTabs li');
+
+            $('.homePageSliderTabs li').each(function (i, e) {
+                $(e).width(1 / items.length * 100 + '%');
+            });
+
+            var current =
+            {
+                item: items.first(),
+                tab: tabs.first()
+            };
+
+            var first =
+            {
+                item: current.item,
+                tab: current.tab
+            };
+
+            var delay = 10000;
+
+            var timeout = null;
+
+            var move = function (to) {
+                if (!to) {
+
+                    if (current.item.next().length == 0) {
+                        to = first;
+                    }
+                    else {
+                        to =
+                        {
+                            item: current.item.next(),
+                            tab: current.tab.next()
+                        };
+                    }
+                }
+
+                current.item.fadeOut(function () {
+                    current.tab.removeClass('currentTab');
+                    current = to;
+                    current.item.fadeIn();
+                    current.tab.addClass('currentTab');
+                    timeout = setTimeout(move, delay);
+                });
+            };
+
+            move(first);
+
+            $('.homePageSliderTabs li').click(function () {
+                clearTimeout(timeout);
+                var item = $(items.get($(this).index()));
+                move({
+                    item: item,
+                    tab: $(this)
+                });
+            });
+
+            setupRotator($('#homeEaG li'), 5, $('#homeEaGLeftArrow'), $('#homeEaGRightArrow'));
+            setupRotator($('#homeEventsList li'), 3, $('#homeEventsLeft'), $('#homeEventsRight'));
+
+            var twitterTab = $('#homeTwitterTab');
+            var facebookTab = $('#homeFacebookTab');
+            var twitter = $('#homeTwitter');
+            var facebook = $('#homeFacebook');
+
+            twitterTab.click(function() {
+                facebookTab.removeClass('currentSocialTab');
+                twitterTab.addClass('currentSocialTab');
+                twitter.show();
+                facebook.hide();
+            }).click();
+
+            facebookTab.click(function() {
+                twitterTab.removeClass('currentSocialTab');
+                facebookTab.addClass('currentSocialTab');
+                facebook.show();
+                twitter.hide();
+            });
+        });
+
+
+    </script><div id="homePageSlider">
+        <div class="homePageSliderBody">
+	<div class="weblinkset-weblinks xrm-entity xrm-editable-adx_weblinkset">
+	  <ul>
+<li class="first">
+        <img src="/pub/slides/FossilExhibit.jpg"><div class="homePageSliderBodyText">
+            <h1 class="homePageSliderBodyTitle serif">#Fossil4SK</h1>
+            <div class="homePageSliderBodyCaption">
+                <p>Vote for Saskatchewan's official fossil emblem.</p>                        
+            </div>
+            <div class="homePageSliderBodyLearnMore">
+                <a title="#Fossil4SK" href="/exhibits/earth-sciences-gallery/saskatchewan-fossil-campaign-2016">LEARN MORE</a>
+            </div>
+        </div>
+      </li> 
+  	  <li class="">
+        <img src="/pub/slides/LocationsSlider.jpg"><div class="homePageSliderBodyText">
+            <h1 class="homePageSliderBodyTitle serif">Two Locations</h1>
+            <div class="homePageSliderBodyCaption">
+                <p>We are in Regina, SK and Eastend, SK</p>                        
+            </div>
+            <div class="homePageSliderBodyLearnMore">
+                <a title="Two Locations" href="http://www.royalsaskmuseum.ca/locations">LEARN MORE</a>
+            </div>
+        </div>
+      </li> 
+  	  <li class="">
+        <img src="/pub/slides/trex-scotty.jpg"><div class="homePageSliderBodyText">
+            <h1 class="homePageSliderBodyTitle serif">Meet Scotty the <em>T. rex</em>
+</h1>
+            <div class="homePageSliderBodyCaption">
+                <p>Our collection is home to the world's most massive <em>T. rex</em> skeleton.</p>                        
+            </div>
+            <div class="homePageSliderBodyLearnMore">
+                <a title="Meet Scotty the &lt;em&gt;T. rex&lt;/em&gt;" href="/exhibits/trex-discovery-centre/the-cretaceous">LEARN MORE</a>
+            </div>
+        </div>
+      </li> 
+  	  <li class="">
+        <img src="/pub/slides/slider_friends.jpg"><div class="homePageSliderBodyText">
+            <h1 class="homePageSliderBodyTitle serif">Become a Member</h1>
+            <div class="homePageSliderBodyCaption">
+                <p>Experience the unique opportunities for our members.</p>                        
+            </div>
+            <div class="homePageSliderBodyLearnMore">
+                <a title="Become a Member" href="/about-us/friends-of-the-museum/become-a-member">LEARN MORE</a>
+            </div>
+        </div>
+      </li> 
+    </ul>
+</div>
+</div>
+
+<div class="homePageSliderTabs">
+	<div class="weblinkset-weblinks xrm-entity xrm-editable-adx_weblinkset">
+  	<ul>
+<li class="first">
+        <h2>#Fossil4SK</h2>
+        <div>
+          <p>Vote for Saskatchewan's official fossil emblem.</p>                        
+        </div>
+      </li>
+    	<li class="first">
+        <h2>Two Locations</h2>
+        <div>
+          <p>We are in Regina, SK and Eastend, SK</p>                        
+        </div>
+      </li>
+    	<li class="first">
+        <h2>Meet Scotty the <em>T. rex</em>
+</h2>
+        <div>
+          <p>Our collection is home to the world's most massive <em>T. rex</em> skeleton.</p>                        
+        </div>
+      </li>
+    	<li class="first">
+        <h2>Become a Member</h2>
+        <div>
+          <p>Experience the unique opportunities for our members.</p>                        
+        </div>
+      </li>
+    </ul>
+</div>
+</div>
+    </div>
+
+
+
+
+    <div id="homeEaG">
+        <div id="homeEaGBackground">
+            <h1><span id="Layout_Body_Snippet1">In The Spotlight</span></h1>
+        </div>
+        <div>
+            <img id="homeEaGLeftArrow" src="/res/img/leftarrow.png"><ul>
+<li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a title="Download our Calendar" href="http://www.royalsaskmuseum.ca/pub/Events%202016/March%20Calendar/March%20Calendar.pdf">                                                    
+          <div class="homeEaGNameWrapper regina">
+              <div>
+                  Download our Calendar
+              </div>
+          </div>
+      <img src="/pub/promobox/MarchCalendarThumb.jpg"></a>
+  </li>
+  <li>
+      <div class="pinpoint saskatchewan">
+          <img src="/res/img/pinpoint_blue.png"><span>SASKATCHEWAN</span>
+      </div>
+      <a title="Get Ready to Vote" href="/education/inquiry-project/fossil-candidates">                                                    
+          <div class="homeEaGNameWrapper saskatchewan">
+              <div>
+                  Get Ready to Vote
+              </div>
+          </div>
+      <img src="/pub/promobox/FossilCampaign.jpg"></a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a title="The Museum Shop" href="/locations/royal-saskatchewan-museum/the-museum-shop">                                                    
+          <div class="homeEaGNameWrapper regina">
+              <div>
+                  The Museum Shop
+              </div>
+          </div>
+      <img src="/pub/promobox/shop-slider.jpg"></a>
+  </li>
+  <li>
+      <div class="pinpoint regina/eastend">
+          <img src="/res/img/pinpoint_blue.png"><span>REGINA/EASTEND</span>
+      </div>
+      <a title="Summer Student Jobs" href="http://www.royalsaskmuseum.ca/summer-jobs">                                                    
+          <div class="homeEaGNameWrapper regina/eastend">
+              <div>
+                  Summer Student Jobs
+              </div>
+          </div>
+      <img src="/pub/promobox/SummerJob-cropped.jpg"></a>
+  </li>
+  <li>
+      <div class="pinpoint eastend">
+          <img src="/res/img/pinpoint_orange.png"><span>EASTEND</span>
+      </div>
+      <a title="T.rex Discovery Centre" href="/locations/trex-discovery-centre">                                                    
+          <div class="homeEaGNameWrapper eastend">
+              <div>
+                  T.rex Discovery Centre
+              </div>
+          </div>
+      <img src="/pub/promobox/fossil-research-thumbnail.jpg"></a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a title="Play in the Paleo Pit" href="/education/royal-saskatchewan-museum/paleo-pit">                                                    
+          <div class="homeEaGNameWrapper regina">
+              <div>
+                  Play in the Paleo Pit
+              </div>
+          </div>
+      <img src="/pub/promobox/paleo-pit-thumb.jpg"></a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a title="Eco Calculator" href="/exhibits/life-sciences-gallery/the-human-factor#calculator">                                                    
+          <div class="homeEaGNameWrapper regina">
+              <div>
+                  Eco Calculator
+              </div>
+          </div>
+      <img src="/pub/promobox/eco-calculator.jpg"></a>
+  </li>
+</ul>
+<img id="homeEaGRightArrow" src="/res/img/rightarrow.png"><div class="clear"></div>
+        </div>
+        <div class="dotBackground" style="padding-top:19px;margin-bottom:40px;"></div>
+    </div>
+    <div id="homeTwoColumn">
+        <div class="homeTwoColumnLeft">
+            <div class="xrm-attribute xrm-editable-html">
+            <h2 style="margin-bottom: 20px; color: rgb(130, 55, 148); font-family: serif; line-height: 17px;"><strong>One museum. Two locations.</strong></h2>
+<p><strong><span style="color: rgb(102, 102, 102);"><a style="color: rgb(130, 55, 148); text-decoration: none;" href="http://royalsaskmuseum.ca/locations/royal-saskatchewan-museum"><span style="color: rgb(102, 102, 102);">Royal Saskatchewan Museum</span></a></span></strong><br>Â Â Â <em>Hours</em>Â  9:30 am to 5:00 pm daily</p>
+<div style="color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; line-height: 17px;">
+<div>
+<div>
+<em>Address</em>Â  2445 Albert Street</div>
+<em>Â Â Â Â Â Â Â Â Â Â Â  Â Â </em>Regina, SKÂ Â  S4P 4W7</div>
+<em>Â  Phone</em>Â Â  <a href="tel:306-787-2815">306-787-2815</a>
+</div>
+<div style="color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; line-height: 17px;">Â Â <em>Â Email</em> Â  <a class="links" style="color: rgb(102, 102, 102); text-decoration: none;" href="mailto:rsminfo@gov.sk.ca">info@royalsaskmuseum.ca</a>
+</div>
+<div style="color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; line-height: 17px;">Â </div>
+<p><strong><span style="color: rgb(102, 102, 102);"><a style="color: rgb(130, 55, 148); text-decoration: none;" href="http://royalsaskmuseum.ca/locations/trex-discovery-centre"><span style="color: rgb(102, 102, 102);">T.rex Discovery Centre</span></a></span></strong><br>Â Â Â <em>Hours</em>Â  CLOSED<br>Â  Â  Â  Â  Â  Â  Â  ReopensÂ May 21, 2016</p>
+<p style="margin-bottom: 20px; color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; line-height: 17px;"><em>Address</em>Â  #1 T-rex Drive, PO Box 460<br>Â Â Â Â Â Â Â Â Â Â Â Â Â  Eastend, SK Â S0N 0T0<br><em>Â  Phone</em>Â  <a href="tel:306-295-4009">306-295-4009</a><br>Â Â <em>Â Email</em>Â Â Â <a style="color: rgb(102, 102, 102); text-decoration: none;" href="mailto:trex.centre@gov.sk.ca">trex.centre@gov.sk.ca</a></p>
+            </div>
+            <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="//royalsaskmuseum.us11.list-manage.com/subscribe/post?u=e50acdc367ca2263ff8b2434d&amp;id=0ce26545da" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2 style="font-weight: normal;font-size: 22px;">Join Our Newsletter</h2>
+	<input style="border: 1px solid #dddddd;max-width: 210px;margin-bottom: 10px; width: 100%;padding: 8px 5px;font-size: 14px;" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;"><input type="text" name="b_e50acdc367ca2263ff8b2434d_0ce26545da" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" style="background: #7F3391;font-weight: 400;margin-top: 15px;" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+        </div>
+        <div class="homeTwoColumnRight">
+            <div id="homeEvents">
+                <h1>EVENTS</h1>
+                <div id="homeEventsButtons">
+                    <img id="homeEventsLeft" src="/res/img/leftarrow.png"><img id="homeEventsRight" src="/res/img/rightarrow.png">
+</div>
+                <div style="clear:both;"></div>
+
+                  <ul id="homeEventsList">
+<li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=251">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Movies/Fant4stic-Thumb.jpg"><div class="homeEventTime">
+              March 13, 2016 - 2:30 pm 4:30 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Fantastic Four (2015) </span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=207">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/smARTies/smARTies_Thumb.jpg"><div class="homeEventTime">
+              March 15, 2016 - 5:45 pm 7:30 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">smARTies</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=213">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/Yoga/YogaWinter2016_Thumb.jpg"><div class="homeEventTime">
+              March 15, 2016 - 6:00 pm 7:15 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Yoga at the Museum</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=201">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/Young%20Explorers%20Winter/YoungExplorers2016_Thumb.jpg"><div class="homeEventTime">
+              March 18, 2016 - 5:30 pm 9:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Cenozoic  Celebration</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=252">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Movies/Jack-Giant-Slayer-Thumb.jpg"><div class="homeEventTime">
+              March 20, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Jack the Giant Slayer (2013)</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=193">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/Megamunch%20Club/MegamunchClub_Thumb.jpg"><div class="homeEventTime">
+              March 20, 2016 - 5:30 pm 7:30 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Gone But Not Forgotten</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=219">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/Yoga/YogaWinter2016_Thumb.jpg"><div class="homeEventTime">
+              March 20, 2016 - 6:00 pm 7:15 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Yoga at the Museum</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=236">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/Storytime.jpg"><div class="homeEventTime">
+              March 21, 2016 - 10:30 am 12:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Storytime in the Paleo Pit</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=282">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Calendar/MegamunchDinoHunt.jpg"><div class="homeEventTime">
+              March 25, 2016 - 9:30 am â April 3, 2016 - 5:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Megamunch's Dino Egg Hunt</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=253">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Movies/Jurassic-World-Thumb.jpg"><div class="homeEventTime">
+              March 27, 2016 - 2:30 pm 4:30 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Jurassic World (2015)</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=254">
+          <img src="http://www.royalsaskmuseum.ca/pub/Events%202016/March%20Movies/Escape-Planet-Earth-Thumb.jpg"><div class="homeEventTime">
+              March 28, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Escape from Planet Earth (2013) </span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=276">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Calendar/ArtOfExhibitThumb.jpg"><div class="homeEventTime">
+              March 29, 2016 - 10:00 am 12:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">The "Art" of Exhibit Making</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=277">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Calendar/ArtOfExhibitThumb.jpg"><div class="homeEventTime">
+              March 29, 2016 - 1:00 pm 3:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">The "Art" of Exhibit Making</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=255">
+          <img src="http://www.royalsaskmuseum.ca/pub/Events%202016/March%20Movies/Holes-Thumb.jpg"><div class="homeEventTime">
+              March 29, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Holes (2003)</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=208">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/smARTies/smARTies_Thumb.jpg"><div class="homeEventTime">
+              March 29, 2016 - 5:45 pm 7:30 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">smARTies</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=214">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/Yoga/YogaWinter2016_Thumb.jpg"><div class="homeEventTime">
+              March 29, 2016 - 6:00 pm 7:15 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Yoga at the Museum</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=278">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Calendar/ArtOfExhibitThumb.jpg"><div class="homeEventTime">
+              March 30, 2016 - 10:00 am 12:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">The "Art" of Exhibit Making</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=279">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Calendar/ArtOfExhibitThumb.jpg"><div class="homeEventTime">
+              March 30, 2016 - 1:00 pm 3:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">The "Art" of Exhibit Making</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=256">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Movies/ChipmunksThumb.png"><div class="homeEventTime">
+              March 30, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Alvin and the Chipmunks: Chipwrecked (2011)</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=280">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Calendar/ArtOfExhibitThumb.jpg"><div class="homeEventTime">
+              March 31, 2016 - 10:00 am 12:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">The "Art" of Exhibit Making</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=281">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/March%20Calendar/ArtOfExhibitThumb.jpg"><div class="homeEventTime">
+              March 31, 2016 - 1:00 pm 3:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">The "Art" of Exhibit Making</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=257">
+          <img src="http://www.royalsaskmuseum.ca/pub/Events%202016/March%20Movies/The-Water-Horse-Thumb.jpg"><div class="homeEventTime">
+              March 31, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"> The Water Horse (2007) </span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>REGINA</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=258">
+          <img src="http://www.royalsaskmuseum.ca/pub/Events%202016/March%20Movies/We-Bought-Zoo-Thumb.jpg"><div class="homeEventTime">
+              April 1, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">We Bought a Zoo (2011)</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=202">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/Young%20Explorers%20Winter/YoungExplorers2016_Thumb.jpg"><div class="homeEventTime">
+              April 1, 2016 - 5:30 pm 9:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">April Fools Theme</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=275">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/April%20Movies/FreeBirds_Thumb.jpg"><div class="homeEventTime">
+              April 3, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Free Birds (2013)</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=194">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/Megamunch%20Club/MegamunchClub_Thumb.jpg"><div class="homeEventTime">
+              April 3, 2016 - 5:30 pm 7:30 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Weather or Not</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=220">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202015/Yoga/YogaWinter2016_Thumb.jpg"><div class="homeEventTime">
+              April 3, 2016 - 6:00 pm 7:15 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Yoga at the Museum</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=274">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/April%20Movies/Dinosaur_Thumb.jpg"><div class="homeEventTime">
+              April 10, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Dinosaur (2000)</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint regina">
+          <img src="/res/img/pinpoint_purple.png"><span>Regina</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=273">
+          <img src="http://royalsaskmuseum.ca/pub/Events%202016/April%20Movies/Pirates_Thumb.jpg"><div class="homeEventTime">
+              April 17, 2016 - 2:30 pm 4:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">The Pirates! Band of Misfits (2012)</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+  <li>
+      <div class="pinpoint eastend">
+          <img src="/res/img/pinpoint_orange.png"><span>Eastend</span>
+      </div>
+      <a href="http://www.royalsaskmuseum.ca/programs/event-calendar/item?id=264">
+          <img src="http://www.royalsaskmuseum.ca/pub/Events%202016/Tea%20and%20Fossils/TeaAndFossilsThumb.jpg"><div class="homeEventTime">
+              April 23, 2016 - 2:00 pm 3:00 pm
+          </div>
+          <h2 class="homeEventName">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Tea &amp; Fossils</span></span>
+          </h2>
+          <div class="homeEventDescription">
+              <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value"></span></span>
+          </div>
+      </a>
+  </li>
+</ul>
+<div style="clear:both;"></div>
+            </div>
+            <div id="homeSocial">
+                <div id="homeTF">
+                    <div id="homeTwitterTab">
+                        <h1>TWITTER</h1>
+                    </div>
+                    <div id="homeSocialTabDivider"></div>
+                    <div id="homeFacebookTab">
+                        <h1>FACEBOOK</h1>
+                        <div class="fb-like" data-href="http://www.facebook.com/Royal.Saskatchewan.Museum" data-send="false" data-layout="button_count" data-width="40" data-show-faces="true"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div id="homeTwitter">
+                        <a class="twitter-timeline" href="https://twitter.com/royalsaskmuseum" data-widget-id="368410496673656834">Tweets by @royalsaskmuseum</a>
+                        <script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+</div>
+                    <div id="homeFacebook">
+                        <div class="fb-like-box" data-href="http://www.facebook.com/Royal.Saskatchewan.Museum" data-width="328" data-show-faces="false" data-stream="true" data-header="true"></div>
+                    </div>
+                </div>
+                <div id="homeBlog">
+                    <h1><span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">BLOG <a href="/Feeds/Blog.ashx"><img src="/pub/images/rsm_rss_icon.png"></a></span></span></h1>
+
+
+                            <ul id="homeBlogList">
+<li>                         
+    <a href="http://www.royalsaskmuseum.ca/blog/wascanaturtles-in-the-winter">
+        <div class="homeBlogDate">
+            22 FEBRUARY 2016
+        </div>
+        <h2 class="homeBlogName">
+            <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">#WascanaTurtles in the Winter</span></span>
+        </h2>
+        <div class="homeBlogSummary">
+            <div class="xrm-attribute xrm-editable-html">
+<div class="xrm-attribute-value"></div>
+</div>
+        </div>
+    </a>
+</li>
+<div class="dotBackground" style="padding-top:15px;margin-bottom:15px;"></div>
+<li>                         
+    <a href="http://www.royalsaskmuseum.ca/blog/why-my-vote-is-for-t-rex">
+        <div class="homeBlogDate">
+            17 FEBRUARY 2016
+        </div>
+        <h2 class="homeBlogName">
+            <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Why My Vote is For Scotty the T. rex</span></span>
+        </h2>
+        <div class="homeBlogSummary">
+            <div class="xrm-attribute xrm-editable-html">
+<div class="xrm-attribute-value"></div>
+</div>
+        </div>
+    </a>
+</li>
+<div class="dotBackground" style="padding-top:15px;margin-bottom:15px;"></div>
+<li>                         
+    <a href="http://www.royalsaskmuseum.ca/blog/where-crocodiles-roam">
+        <div class="homeBlogDate">
+            12 NOVEMBER 2015
+        </div>
+        <h2 class="homeBlogName">
+            <span class="xrm-attribute xrm-editable-text"><span class="xrm-attribute-value">Where the Crocodiles Roam</span></span>
+        </h2>
+        <div class="homeBlogSummary">
+            <div class="xrm-attribute xrm-editable-html">
+<div class="xrm-attribute-value"></div>
+</div>
+        </div>
+    </a>
+</li>
+<div class="dotBackground" style="padding-top:15px;margin-bottom:15px;"></div>
+
+                            </ul>
+<a href="/blog">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fb-root"></div>
+    <script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));
+    </script><div class="clear"></div>
+				</div>
+				<div id="ft">
+                    <div class="maincontent">
+					    <div class="section first">
+                            <div class="webLinks">
+	<div class="weblinkset-weblinks xrm-entity xrm-editable-adx_weblinkset"><ul>
+<li class="first">
+                                    <a title="General Information" href="/locations">General Information</a>
+                                    <ul class="childLinks">
+<li><a href="/locations/royal-saskatchewan-museum">Royal Saskatchewan Museum</a></li>
+
+                                                <li><a href="/locations/trex-discovery-centre">T.rex Discovery Centre</a></li>
+
+                                    </ul>
+</li>
+<li>
+                                    <a title="About Us" href="/about-us">About Us</a>
+                                    <ul class="childLinks">
+<li><a href="/about-us/our-history">Our History</a></li>
+
+                                                <li><a href="/about-us/friends-of-the-museum">Friends of the Museum</a></li>
+
+                                                <li><a href="/about-us/faqs">FAQs</a></li>
+
+                                    </ul>
+</li>
+<li>
+                                    <a title="Services" href="/programs">Services</a>
+                                    <ul class="childLinks">
+<li><a href="/programs/event-calendar">Event Calendar</a></li>
+
+                                                <li><a href="/programs/public-programs-in-regina">Public Programs in Regina</a></li>
+
+                                                <li><a href="/programs/public-programs-in-eastend">Public Programs in Eastend</a></li>
+
+                                    </ul>
+</li>
+<li class="last">
+                                    <a title="Privacy" href="/privacy">Privacy</a>
+                                    <ul class="childLinks"></ul>
+</li>
+</ul></div>
+</div>
+					    </div>
+					    <div class="section">
+						    <div class="socialMedia">
+                    <a title="Cultural Access Pass" class="xrm-weblink " href="http://www.culturalaccesspass.ca" target="_blank" style="display: inline-block;"><img src="/pub/images/CAP_Logo.png" style="margin-bottom: -16px;"></a><a href="http://www.facebook.com/Royal.Saskatchewan.Museum" target="_blank"><i class="sm-icon icon-facebook"></i></a>
+<a href="https://twitter.com/royalsaskmuseum" target="_blank"><i class="sm-icon icon-twitter"></i></a>
+
+
+
+<a href="https://www.youtube.com/user/royalsaskmuseum" target="_blank"><i class="sm-icon icon-youtube"></i></a>
+
+
+<a href="https://instagram.com/royalsaskmuseum/" target="_blank"><i class="sm-icon icon-instagram"></i></a>
+
+                </div>
+                            <div>
+                                &amp;copy <script>document.write(new Date().getFullYear())</script> Royal Saskatchewan Museum.
+                                <br>
+                                All Rights Reserved.
+                            </div>
+                            <img class="ministryLogo" src="/res/img/saskministry.png">
+</div>
+                    </div>
+                    <div class="clear"></div>
+				</div>
+			</div>
+
+  
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-33187135-1');
+          ga('send', 'pageview');
+
+        </script>
+</body>
+</html>

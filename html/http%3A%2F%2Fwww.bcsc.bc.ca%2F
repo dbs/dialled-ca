@@ -1,0 +1,966 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_headMain"><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><title>
+	BC Securities Commission - Home
+</title><link href="/Styles/layout.css" media="screen" rel="stylesheet" type="text/css" /><link href="/Styles/format.css" media="screen" rel="stylesheet" type="text/css" /><link href="/Styles/fontResizer.css" media="screen" rel="stylesheet" type="text/css" /><link href="/Styles/smallFont.css" media="screen" rel="stylesheet" type="text/css" /><link href="/Styles/print.css" rel="stylesheet" type="text/css" media="print" /><link href="/js/css/jquery-ui-1.10.4.custom.min.css" type="text/css" rel="stylesheet" />
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/PublicFunction.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+    
+    <script>
+        //Command
+        //hitType 
+        //Category
+        //Action
+        //Label
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-44764829-5', 'bcsc.bc.ca');
+        ga('send', 'pageview');
+        //ga('create', 'UA-44764829-5', { 'cookieDomain': 'none' });
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //--------------tracking downloads, mailto, telephone click, outbound links starts------------------//
+
+            if (typeof jQuery != 'undefined') {
+                jQuery(document).ready(function ($) {
+                    var filetypes = /\.(zip|exe|dmg|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+                    var baseHref = '';
+                    if (jQuery('base').attr('href') != undefined) baseHref = jQuery('base').attr('href');
+                    jQuery('a').on('click', function (event) {
+                        var el = jQuery(this);
+                        var track = true;
+                        var href = (typeof (el.attr('href')) != 'undefined') ? el.attr('href') : "";
+                        var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]);
+                        if (!href.match(/^javascript:/i)) {
+                            var elEv = []; elEv.value = 0, elEv.non_i = false;
+                            if (href.match(/^mailto\:/i)) {
+                                elEv.category = "Email";
+                                elEv.action = "Click";
+                                elEv.label = href.replace(/^mailto\:/i, '');
+                                elEv.loc = href;
+                            }
+                            else if (href.match(filetypes)) {
+                                var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                                //alert(extension);
+                                elEv.category = "Download";
+                                elEv.action = extension[0];
+                                elEv.label = href.replace(/ /g, "-");
+                                elEv.loc = baseHref + href;
+                            }
+                            else if (href.match(/^https?\:/i) && !isThisDomain) {
+                                elEv.category = "External";
+                                elEv.action = "Click";
+                                elEv.label = href.replace(/^https?\:\/\//i, '');
+                                elEv.non_i = true;
+                                elEv.loc = href;
+                            }
+                            else if (href.match(/^tel\:/i)) {
+                                elEv.category = "Telephone";
+                                elEv.action = "Click";
+                                elEv.label = href.replace(/^tel\:/i, '');
+                                elEv.loc = href;
+                            }
+                            else track = false;
+
+                            if (track) {
+
+                                ga('send', 'event', elEv.category.toLowerCase(), elEv.action.toLowerCase(), elEv.label.toLowerCase(), elEv.value, elEv.non_i);
+
+
+                                if (el.attr('target') == undefined || el.attr('target').toLowerCase() != '_blank') {
+                                    setTimeout(function () { location.href = elEv.loc; }, 400);
+                                    return false;
+                                }
+                            }
+                        }
+                    });
+                });
+            }
+            //tracking downloads, mailto, telephone click, outbound links starts ends//
+
+            //tracking youtube videos plays starts//
+
+            var youTubePlayerLoggers = {};
+            var totalvideos = 0;
+            var videoid = new Array();
+            var videoplayed = new Array();
+
+            function onYouTubePlayerReady(id) {
+                var video = document.getElementById(id);
+
+                //State constants
+                var unstarted = -1;
+                var ended = 0;
+                var playing = 1;
+                var paused = 2;
+                var buffering = 3;
+                var cued = 5; //Page loaded, video has not been played yet
+
+                //Video array default values being set for first time
+                videoid[totalvideos] = id;
+                videoplayed[totalvideos] = false;
+
+                totalvideos = totalvideos + 1;
+
+                youTubePlayerLoggers[id] = function (state) {
+                    var el = document.getElementById(id);
+                    var url = "http://www.youtube.com/watch?v=" + getYoutubeVideoID(el.getVideoUrl());
+                    var arrayindex = arraySearch(id);
+                    var currenttime = Math.ceil(el.getCurrentTime());
+
+                    if (state == playing) {
+                        if (videoplayed[arrayindex] == false) {
+                            ga('send', 'event', 'Video', 'Unique play per page', url, 0);
+
+                        }
+                        ga('send', 'event', 'Video', 'Play', url, 0);
+
+                        //Flag video as having been played once
+                        videoplayed[arrayindex] = true;
+                    }
+
+                    if (state == ended) {
+                        ga('send', 'event', 'Video', 'Ended', url, currenttime);
+                    }
+
+                    if (state == paused) {
+                        ga('send', 'event', 'Video', 'Paused', url, currenttime);
+                    }
+                };
+
+                video.addEventListener("onStateChange", "youTubePlayerLoggers." + id);
+                video.addEventListener('onError', 'onPlayerError');
+            }
+
+            function onPlayerError(errorCode) {
+                alert(errorCode);
+            }
+
+            function getYoutubeVideoID(url) {
+                var urlArr = url.split("v=");
+                var urlArr2 = urlArr[1].split("&");
+                return urlArr2[0];
+            }
+
+            function arraySearch(what) {
+                for (var i = 0, len = totalvideos; i < len; ++i) {
+                    if (videoid[i].indexOf(what) >= 0) return i;
+                }
+            }
+            //tracking youtube videos plays ends
+        });
+        
+
+
+        ////////////////////////////////////////////
+        //Track top 5 forms, top 10 policies
+        ////////////////////////////////////////////
+        $(document).on('click', '[GoogleTag]', function () {
+            var googleTag = $(this).attr("GoogleTag");
+            if (typeof googleTag != 'undefined' && googleTag.length > 0) {
+                var subStr = googleTag.split('|');
+                if (subStr.length > 0) {
+                    var filetype = $(this).attr('href');
+                    if (filetype.indexOf("PDF") >= 0) {
+                        ga('send', 'event', subStr[0], 'PDF', googleTag);
+                        //ga('send', 'event', subStr[0], 'PDF', googleTag, { 'hitCallback': function () { alert('pdf has been sent out'); } });
+                    }
+                    else if (filetype.indexOf("WordDocs") >= 0) {
+                        ga('send', 'event', subStr[0], 'WordDocs', googleTag);
+                        //ga('send', 'event', subStr[0], 'WordDocs', googleTag, { 'hitCallback': function () { alert('word has been sent out'); } });
+                    }
+                }
+            }
+        });
+
+        ////////////////////////////////////////////
+        //End of track top 5 forms, top 10 policies
+        ////////////////////////////////////////////
+        $(document).ajaxComplete(function () {
+            $("a").each(function () {
+                var href = $(this).attr("href");
+                if (typeof href != 'undefined' && href.length > 0 && href.indexOf('.pdf') > -1) {
+                    var regExp = /.*\.pdf$/;
+                    if (href.match(regExp) != null) {
+                        $(this).attr("href", href + '?t=' + $.now());
+                    }
+                }
+            });
+        });
+    </script>
+
+    
+    
+</head>
+<body id="bodyTag" class="">
+
+    
+    
+
+<script type="text/javascript" src="/js/Search.js"></script>
+
+
+
+<div class="topNav">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            AjaxCallCommon("/WebServices/PublicWebServices.asmx/CheckCache", "{}", null, null)
+            //highlights navigation
+            $(".breadCrumbs span").each(function (idx) {
+                if (idx == 2) {
+                    if ($(this).text().toLowerCase().indexOf("marketplaces") > -1) {
+                        $("li.marketplaces").addClass("selected");
+                    }
+                    else if ($(this).text().toLowerCase().indexOf("for registrants") > -1) {
+                        $("li.registrants").addClass("selected");
+                    }
+                    else if ($(this).text().toLowerCase().indexOf("for issuers") > -1) {
+                        $("li.issuers").addClass("selected");
+                    }
+                }
+            });
+
+            $("img.fontBtn").click(function () {
+                var bodyClass = $('#bodyTag').attr("class");
+
+                if (this.id == "btnSmallFont") {
+                    if (bodyClass == "smallFont") {
+                        return true;
+                    }
+
+                    $("#btnBigFont").attr('src', "/Images/font_plus.png");
+
+                    if (bodyClass == "") {
+                        $(this).attr('src', "/Images/font_minus_disabled.png");
+                        $('#bodyTag').attr("class", "smallFont");
+                        $(this).css('cursor', 'default');
+                    }
+                    else {
+                        $(this).attr('src', "/Images/font_minus.png");
+                        $('#bodyTag').attr("class", "");
+                        $(this).css('cursor', 'pointer');
+                    }
+
+                    return true;
+                }
+
+                if (this.id == "btnBigFont") {
+                    if (bodyClass == "bigFont") {
+                        return true;
+                    }
+
+                    $("#btnSmallFont").attr('src', "/Images/font_minus.png");
+
+                    if (bodyClass == "") {
+                        $(this).attr('src', "/Images/font_plus_disabled.png");
+                        $('#bodyTag').attr("class", "bigFont");
+                        $(this).css('cursor', 'default');
+                    }
+                    else {
+                        $(this).attr('src', "/Images/font_plus.png");
+                        $('#bodyTag').attr("class", "");
+                        $(this).css('cursor', 'pointer');
+                    }
+
+                    return true;
+                }
+            });
+        });
+    </script>
+
+    <div class="logoAreaWrapper">
+        <div class="logoArea">
+            <div class="logoImg">
+                <a href="/" style="height: 19px;"><img id="topNav_imgLogo" src="/Images/logo.gif" /></a>
+            </div>
+            <div class="floatRight">
+                <div class="searchElements">
+                    <div class="searchBox">
+                        <form id="basicSearch" name="basicSearch" method="post">
+                            <input name="txtSearchBox" type="text" id="txtSearchBox" class="searchTB" validaterequestcheck="" />
+                            <input type="image" name="btnSearch" id="btnSearch" class="searchImgBtn" src="/Images/btn_search.gif" onclick="return ValidateRequestCheck(StartSearch, '');" />
+                        </form>
+                    </div>
+                    <a href="/Search/Advanced_search/">Advanced Search</a>
+                </div>
+                <div class="logoLinkWrapper">
+                    <ul class="logoLink">
+                        <li><a href="/">Home</a>|</li>
+                        <li><a href="http://eservices.bcsc.bc.ca" id="ctl00_baseMasterBody_ucHeader_aEservices" target="_blank">eServices</a>|</li>
+                        <li><a href="/About_Us/Related_Links/">Related Links</a>|</li>
+                        <li><a href="http://www.investright.org" id="ctl00_baseMasterBody_ucHeader_aInvestRight" target="_blank">InvestRight</a>|</li>
+                        <li><a href="/About_Us/Careers/">Careers</a>|</li>
+                        <li><a href="/About_Us/Contact_Us/">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                function StartSearch() {
+                    return SubmitSearch('/Search/Search_Results/', 'basicSearch', 'txtSearchBox');
+                }
+            </script>
+
+            
+                    <ul class="usersNav">
+                
+                    <li class='issuers'><a href='/For_Companies/'>For Companies</a></li>
+                
+                    <li class='registrants'><a href='/For_Registrants/'>For Registrants</a></li>
+                
+                    <li class='marketplaces'><a href='/Marketplaces/'>Marketplaces, SROs &amp; Clearing Agencies</a></li>
+                
+                    <li class='investor-education'><a href='/About_Us/Investor_Ed/'>Investor Education</a></li>
+                
+                    </ul>
+                
+        </div>
+    </div>
+    <div class="mainMenuWrapper">
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("ul.lvl1 li").mouseover(function () {
+                    $(this).children("ul.lvl2").show();
+                });
+
+                $("ul.lvl1 li").mouseout(function () {
+                    $(this).children("ul.lvl2").hide();
+                });
+
+                $("ul.lvl2").mouseenter(function () {
+                    $(this).prev().addClass("menuOn");
+                });
+
+                $("ul.lvl2").mouseleave(function () {
+                    $(this).prev().removeClass("menuOn");
+                });
+            });
+        </script>
+        <div class="mainMenu" id="mainMenu">
+            <ul class="lvl1">
+                
+                
+                        <li class='securitiesLaw'>
+                            <a id="mainMenu_lnkSecuritiesLaw" class='' title='Securities Law' href='/Securities_Law/'>Securities Law<img id="mainMenu_Image2" class="mainMenuImg" src="/Images/mainMenu_triangle.png" /></a>
+                            <ul class='lvl2 ddsecuritiesLaw'>
+                                
+                                
+                                        <li>
+                                            <a title='Act, Regulations &amp; Rules' href='/Securities_Law/Act_Regulations_and_Rules/'>Act, Regulations &amp; Rules</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Instruments &amp; Policies' href='/Securities_Law/Instruments_and_Policies/'>Instruments &amp; Policies</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    <li>
+                                                        <a title='1 - Procedure &amp; Related Matters' href='/Securities_Law/Instruments_and_Policies/1/'>1 - Procedure &amp; Related Matters </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='2 - Certain Capital Market Participants' href='/Securities_Law/Instruments_and_Policies/2/'>2 - Certain Capital Market Participants </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='3 - Registration Requirements &amp; Related Matters' href='/Securities_Law/Instruments_and_Policies/3/'>3 - Registration Requirements &amp; Related Matters </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='4 - Distribution Requirements' href='/Securities_Law/Instruments_and_Policies/4/'>4 - Distribution Requirements </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='5 - Ongoing Requirements for Issuers &amp; Insiders' href='/Securities_Law/Instruments_and_Policies/5/'>5 - Ongoing Requirements for Issuers &amp; Insiders </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='6 - Takeover Bids &amp; Special Transactions' href='/Securities_Law/Instruments_and_Policies/6/'>6 - Takeover Bids &amp; Special Transactions </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='7 - Securities Transactions Outside the Jurisdiction' href='/Securities_Law/Instruments_and_Policies/7/'>7 - Securities Transactions Outside the Jurisdiction </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='8 - Investment Funds' href='/Securities_Law/Instruments_and_Policies/8/'>8 - Investment Funds </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='9 - Derivatives' href='/Securities_Law/Instruments_and_Policies/9/'>9 - Derivatives </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='National Policy Statements (NPS)' href='/Securities_Law/Instruments_and_Policies/NPS/'>National Policy Statements (NPS) </a>
+                                                    </li>
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Other Historical Instruments &amp; Policies' href='/Securities_Law/Other_Historical_Instruments_and_Policies/'>Other Historical Instruments &amp; Policies</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Forms' href='/Securities_Law/Forms/'>Forms</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='BC Notices' href='/Securities_Law/BCN/'>BC Notices</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Requests for Comment' href='/Securities_Law/Request_for_Comment/'>Requests for Comment</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Applying for an Exemption' href='/Securities_Law/Applying_for_Exemption/'>Applying for an Exemption</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Exemption Orders' href='/Securities_Law/Exemption_Orders/'>Exemption Orders</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                            </ul>
+                        </li>
+                    
+                        <li class='aboutIssuers'>
+                            <a id="mainMenu_lnkSecuritiesLaw" class='' title='About Issuers' href='/About_Issuers/'>About Issuers<img id="mainMenu_Image2" class="mainMenuImg" src="/Images/mainMenu_triangle.png" /></a>
+                            <ul class='lvl2 ddaboutIssuers'>
+                                
+                                
+                                        <li>
+                                            <a title='Reporting Issuers List' href='/About_Issuers/Reporting_Issuers_List/'>Reporting Issuers List</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Reporting Issuers in Default List' href='/About_Issuers/Reporting_Issuers_in_Default_List/'>Reporting Issuers in Default List</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    <li>
+                                                        <a title='Changes to the Reporting Issuers in Default List' href='/About_Issuers/Reporting_Issuers_in_Default_List/Changes_to_the_Reporting_Issuers_in_Default_List/'>Changes to the Reporting Issuers in Default List </a>
+                                                    </li>
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Cease Traded Reporting Issuers List' href='/About_Issuers/Cease_Traded_Reporting_Issuers_List/'>Cease Traded Reporting Issuers List</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Exempt Distributions Summary' href='/About_Issuers/Exempt_Distributions_Summary/'>Exempt Distributions Summary</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                            </ul>
+                        </li>
+                    
+                        <li class='enforcement'>
+                            <a id="mainMenu_lnkSecuritiesLaw" class='' title='Enforcement' href='/Enforcement/'>Enforcement<img id="mainMenu_Image2" class="mainMenuImg" src="/Images/mainMenu_triangle.png" /></a>
+                            <ul class='lvl2 ddenforcement'>
+                                
+                                
+                                        <li>
+                                            <a title='Hearings' href='/Enforcement/Hearings/'>Hearings</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Notices of Hearing &amp; Temporary Orders' href='/Enforcement/Notices_of_Hearing_and_Temporary_Orders/'>Notices of Hearing &amp; Temporary Orders</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Decisions' href='/Enforcement/Decisions/'>Decisions</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Settlements' href='/Enforcement/Settlements/'>Settlements</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Halt Trade Orders' href='/Enforcement/Halt_Trade_Orders/'>Halt Trade Orders</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Cease Trade Orders' href='/Enforcement/Cease_Trade_Orders/'>Cease Trade Orders</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Criminal Enforcement' href='/Enforcement/Criminal_Enforcement/Criminal_Enforcement/'>Criminal Enforcement</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Disciplined Persons List' href='/Enforcement/Disciplined_Persons_List/'>Disciplined Persons List</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Investment Caution List' href='/Enforcement/Investment_Caution_List/'>Investment Caution List</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Returning Funds to Investors' href='/Enforcement/Returning_Funds_to_Investors/'>Returning Funds to Investors</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Sanction Payment Status Report' href='/Enforcement/Sanction_Payment_Status_Report/'>Sanction Payment Status Report</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                            </ul>
+                        </li>
+                    
+                        <li class='aboutUs'>
+                            <a id="mainMenu_lnkSecuritiesLaw" class='' title='About Us' href='/About_Us/'>About Us<img id="mainMenu_Image2" class="mainMenuImg" src="/Images/mainMenu_triangle.png" /></a>
+                            <ul class='lvl2 ddaboutUs'>
+                                
+                                
+                                        <li>
+                                            <a title='Who We Are' href='/About_Us/Who_We_Are/'>Who We Are</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    <li>
+                                                        <a title='Mission, Values &amp; Overall Benefits' href='/About_Us/Who_We_Are/Mission/'>Mission, Values &amp; Overall Benefits </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='Funding &amp; Accountability' href='/About_Us/Who_We_Are/Funding_and_Accountability/'>Funding &amp; Accountability </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='Governance' href='/About_Us/Who_We_Are/Governance/'>Governance </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='Commissioners' href='/About_Us/Who_We_Are/Commissioners/'>Commissioners </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a title='Organizational Chart' href='/About_Us/Who_We_Are/Organizational_Chart/'>Organizational Chart </a>
+                                                    </li>
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Stakeholders &amp; Partners' href='/About_Us/Stakeholders_and_Partners/'>Stakeholders &amp; Partners</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Publications' href='/About_Us/Publications/'>Publications</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Events' href='/About_Us/Events/'>Events</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Speeches' href='/About_Us/Speeches/'>Speeches</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Industry Education' href='/About_Us/Industry_Education/'>Industry Education</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Investor Education' href='/About_Us/Investor_Ed/'>Investor Education</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Subscriptions' href='/About_Us/Subscriptions/'>Subscriptions</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Careers' href='/About_Us/Careers/'>Careers</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Contact Us' href='/About_Us/Contact_Us/'>Contact Us</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                            </ul>
+                        </li>
+                    
+                        <li class='news'>
+                            <a id="mainMenu_lnkSecuritiesLaw" class='' title='News' href='/News/'>News<img id="mainMenu_Image2" class="mainMenuImg" src="/Images/mainMenu_triangle.png" /></a>
+                            <ul class='lvl2 ddnews'>
+                                
+                                
+                                        <li>
+                                            <a title='News Releases' href='/News/News_Releases/'>News Releases</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Media Room' href='/News/Media_Room/'>Media Room</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                                        <li>
+                                            <a title='Weekly Reports' href='/News/Weekly_Reports/'>Weekly Reports</a>
+                                            
+                                            
+                                                    <ul class="lvl3">
+                                                
+                                                    </ul>
+                                                
+                                        </li>
+                                    
+                            </ul>
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="printLogo">
+    <img id="imgLogo" src="/Images/logoPrint.png" style="height: 44px; width: 286px;" />
+</div>
+<div class="bcBackground">
+    <div class="breadCrumbsWrapper">
+        
+        <span class="breadCrumbsShort">
+            
+        </span>
+        
+        <div id="fontPrintControl" class="fontPrintControls">
+            <div class="textSizeBtns">
+                <a class="twitter-button" href="https://twitter.com/BCSC_Info" target="_blank" title="Twitter"></a>
+            </div>
+            <div class="textSizeBtns">
+                <a class="linked-in-button" href="https://www.linkedin.com/company/british-columbia-securities-commission" target="_blank" title="LinkedIN"></a>
+            </div>
+            <div class="textSizeBtns">
+                <a class="youtube-button" href="https://www.youtube.com/user/BCSC4Industry" target="_blank" title="YouTube"></a>
+            </div>
+            <div class="textSizeBtns">
+                <a class="rss-button" href="/About_Us/Subscriptions" title="RSS"></a>
+            </div>
+            <div class="textSizeBtns">
+                <img id="btnSmallFont" class="fontBtn" style="cursor: pointer;" src="/Images/font_minus.png" />
+                <div class="fpcText">TEXT SIZE</div>
+                <img id="btnBigFont" class="fontBtn" style="cursor: pointer;" src="/Images/font_plus.png" />
+            </div>
+            <a class="print-button" onclick="window.print();return false;" id="A1" href="javascript:__doPostBack(&#39;ctl00$ctl00$lnkPrint&#39;,&#39;&#39;)" title="Print">
+            </a>
+        </div>
+    </div>
+</div>
+    <div class="homeMainContent">
+        <div class="mountains">
+            <div class="innerContent">
+                <div class="contentContainer">
+                    <h1 class="tagLine">Investor Protection and Market Integrity in Canadian Capital Markets</h1>
+                    <div class="contentBottom">
+                        <div class="threeColsWrapper">
+                            <div class="homeBottomCols">
+                                <h3>
+                                    Quick Links</h3>
+                                <ul class="bulletList"><li><div class="date Title"><a title="Weekly Reports" style="background-color: white;" href="/News/Weekly_Reports/"> Weekly Reports</a></div></li><li><div class="date Title"><a title="Registration Requirements &amp; Related Matters" href="/For_Registrants/Registration_Requirements___Related_Matters/"> Registration Requirements &amp;  Related Matters</a></div></li><li><div class="date Title"><a title="N" class="newWin" href="http://www.securities-administrators.ca/nrs/nrsearchprep.aspx" target="_blank"> National Registration Search</a></div></li><li><div class="date Title"><a title="Continuous Disclosure Filing Calendar" style="background-color: white;" href="/For_Companies/Continuous_Disclosure/Filing_calendar/"> Continuous Disclosure Filing  Calendar</a></div></li><li><div class="date Title"><a title="Make a Filing" class="newWin" href="http://eservices.bcsc.bc.ca/" target="_blank"> Make a Filing</a></div></li><li><div class="date Title"><a title="SEDAR" style="background-color: white;" href="/For_Companies/Continuous_Disclosure/SEDAR/"> SEDAR</a></div></li><li><div class="date Title"><a title="SEDI" style="background-color: white;" href="/For_Companies/Continuous_Disclosure/Insiders/"> SEDI</a></div></li><li><div class="date Title"><a title="Mining" style="background-color: white;" href="/For_Companies/Mining/"> Mining</a></div></li><li><div class="date Title"><a title="Fees" style="background-color: white;" href="/For_Companies/Continuous_Disclosure/Ongoing_Requirements/Fees/"> Fees</a></div></li><li><div class="date Title"><a title="File a Complaint" class="newWin" href="http://surveys.bcsc.bc.ca/s/Report-to-Us-form/" target="_blank"> File a Complaint</a></div></li></ul>
+                            </div>
+                            <div class="homeBottomCols">
+                                <h3>
+                                    Hot Topics</h3>
+                                <ul class="bulletList"><li><div class="dateTitle"> <a title="http://www.bcsc.bc.ca/About_Us/Events/Industry_Events/Learn_how_to_comply_with_Derivatives_Trade_Reporting_Rules/" href="/About_Us/Events/Industry_Events/Learn_how_to_comply_with_Derivatives_Trade_Reporting_Rules/">Learn how to comply with Derivatives Trade Reporting Rules</a></div></li><li><div class="dateTitle"> <a title="New Investment Dealer Exemption" href="/45-318_[Multilateral_CSA_Notice]_01142016/">New Investment Dealer Exemption</a></div></li><li><div class="dateTitle"><a title="Cooperative Capital Markets Regulatory System News and Publications" class="newWin" style="background-color: white;" href="http://ccmr-ocrmc.ca/" target="_blank">Cooperative Capital Markets  Regulatory System News and  Publications</a></div></li><li><div class="dateTitle"><a title="Crowdfunding" href="/For_Companies/Private_Placements/Crowdfunding/"> Learn more about Crowdfunding</a></div></li><li><div class="dateTitle"><a title="Guide to Capital Raising" href="/For_Companies/Private_Placements/Guide_to_Capital_Raising_for_Small_Business/"> Guide to Capital Raising</a></div></li><li><div class="dateTitle"><a title="Check out 2015 Compliance Report Card in our Compliance Toolkit" href="http://www.bcsc.bc.ca/uploadedFiles/For_Registrants/BCSC_2015_Compliance_Report_Card.pdf?t=1432334346608" target="_blank"> Check out the Compliance Report  Card in our Compliance Tool Kit</a></div></li></ul><p> </p>
+                            </div>
+                            <div class="homeBottomCols">
+                                <h3>
+                                    News Releases</h3>
+                                <ul class="list">
+                                    
+            
+            <li>March 9, 2016<br />
+                <a href="/News/News_Releases/2016/19_BCSC_presents_Be_Fraud_Aware__The_Musical_in_Victoria_to_help_British_Columbians_become_smarter_investors/">2016/19 BCSC presents Be Fraud Aware: The Musical in Victoria to help British Columbians become smarter investors  </a></li>
+        
+            <li>March 4, 2016<br />
+                <a href="/News/News_Releases/2016/18_March_is_Fraud_Prevention_Month__Three_steps_to_protect_yourself_from_investment_fraud/">2016/18 March is Fraud Prevention Month: Three steps to protect yourself from investment fraud </a></li>
+        
+            <li>March 3, 2016<br />
+                <a href="/News/News_Releases/2016/16_Canadian_regulators_implement_passport_expansion_and_automatic_cease_trade_orders_in_multiple_jurisdictions/">2016/16 Canadian regulators implement passport expansion and automatic cease trade orders in multiple jurisdictions </a></li>
+        
+            <li>March 3, 2016<br />
+                <a href="/News/News_Releases/2016/17_Canadian_Securities_Regulators_Release_IIROC_Oversight_Review_Report/">2016/17 Canadian Securities Regulators Release IIROC Oversight Review Report </a></li>
+        
+        
+
+                                </ul>
+                                <div class="indentBtn"><a class="more" href="/News/News_Releases/"><span>View All News Releases</span></a></div>
+                            </div>
+                        </div>
+                        <div class="twoColsWrapper">
+                            <div class="bottomWideCols">
+                                <h3>
+                                    Investor Education</h3>
+                                <a id="aInvestRight" href="http://www.investright.org/" target="_blank" runat="server"><img alt="" src="/Images/investright.png" /></a><a id="aPlanning10" href="http://planning10.bcsc.bc.ca" target="_blank" runat="server"><img alt="" src="/Images/planning10.gif" /></a>
+                            </div>
+                            <div class="bottomWideCols">
+                                <h3>
+                                    Subscribe to BCSC</h3>
+                                <p>Improve efficiency with BCSC’s email subscriptions. Get real-time updates about policy publications and news.</p><div class="indentBtn"><a class="more" style="margin-top: 64px;" href="/About_Us/Subscriptions/"><span>See how we can keep you up to date</span></a></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <div class="footerWrapper">
+        <div class="footer">
+            <div class="copyright">&copy;&nbsp;2016 British Columbia Securities Commission</div>
+            <div class="footerLinks">
+                <ul>
+                    <li><a href="/">Home</a>|</li>
+                    <li><a href="/About_Us/Subscriptions/Subscribe/">Subscribe</a>|</li>
+                    <li><a href="/About_Us/Site_Map/">Site Map</a>|</li>
+                    <li><a href="/About_Us/Legal/">Legal</a>|</li>
+                    <li><a href="/About_Us/Contact_Us/">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setTimeout(function () {
+                var maxHeight = 0;
+                var preSetPading = 0;
+                var browserVer = DetectIEBrowser();
+
+                if (browserVer == -1) {
+                    preSetPading = 20;
+                }
+
+                $(".homeBottomCols").each(function () {
+                    if ($(this).height() > maxHeight) {
+                        maxHeight = $(this).height();
+                    }
+                });
+
+                var col3Height = $($(".homeBottomCols")[2]).height();
+
+                if (col3Height + preSetPading > maxHeight) {
+                    maxHeight = col3Height + preSetPading;
+                }
+
+                $(".homeBottomCols").height(maxHeight);
+            }, 300);
+        });
+    </script>
+
+
+</body>
+</html>

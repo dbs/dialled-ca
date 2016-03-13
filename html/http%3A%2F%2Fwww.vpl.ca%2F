@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vancouver Public Library - Home</title>    
+    <meta http-equiv='Content-type' content='text/html;charset=UTF-8' >    
+    <meta name='timestamp' content="2016-03-11T13:27:25-08:00">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8" >
+    <meta name="google-site-verification" content="48oz6JOO-u6s254kI9N7n5-du8mF0-WsJERT95KKHgo" /> <!-- google search console  -->  
+    <!--  
+    	[if IE]><link rel='shortcut icon' type='image/vnd.microsoft.icon' href='/favicon.ico'><![endif]
+    -->
+    <link id="vpl_global_styles" 	rel='stylesheet' type='text/css' media='screen' href="/styles/vpl.css" >
+    <link id="vpl_print_css" 		rel='stylesheet' type='text/css' media='print'  href="/styles/print.css" >
+    <link id="vpl_front_css"		rel='stylesheet' type='text/css' href="/site_wide/front_page_css" >
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        
+    <script type="text/javascript" src="/js/jquery-2.1.3.min.js"></script>
+    <!-- script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script -->
+ 
+    
+    
+    <script type="text/javascript" id="mobile_cookie" src="/js/lib/jquery.cookie.js"></script>
+    
+    <script id="jquery_no_conflict" type='text/javascript'>
+    	jQuery.noConflict();	// Must be in this position !! After jQuery core load, before any other scripts load.
+    </script>
+
+    <script id="search_form_2015_support" type="text/javascript">    
+    var vpl_default_search_prompt = 'Find books, music, movies and more';
+
+(function($){
+	var self, defaults = {};
+	var Search = function(opt) {
+		self = this;
+		return self.init(opt);
+	}
+	Search.prototype = {
+		init: function(opt) {
+			
+			if( ! window.console ) {
+				window.console = {};
+				window.console.log = function(){;};
+			}
+			
+			console.log( 'Search init' );
+		
+			self.opts = $.extend({},defaults,opt);
+			$('.hide').removeClass('hide');
+			$('#globalQuery').attr('placeholder', self.opts.prompt );
+			$('#searchTargets').change(self.toggle_target ); 
+			$('input.search_button').bind('click',self.forward_to_search_engine);	
+		
+			$('#searchCatalogue').click();			
+							
+			return self;
+		},
+		
+		
+		//
+		//	adjust the form action="" to match
+		//	the selected option
+		//
+		toggle_target: function() {
+			var option = $(this);
+			var key = option.val();  // cat|web|calendar
+		//	console.log( key );
+			
+			var action = '';
+			var hidden = false;
+			var inputField = '';
+			
+			if( key === 'cat' ) 
+			{
+				action = 'http:/'+'/vpl.bibliocommons.com/search';
+				var formName = 'none';
+				$('#globalQuery').data('which','cat').attr('placeholder','Search Catalogue');
+				hidden = '<input type="hidden" name="t" id="t" value="keyword">';
+			}
+			else if( key === 'web' ) {
+				action = 'http:/'+'/www.vpl.ca/psearch/index.php?query=';
+				$('#globalQuery').data('which','web').attr('placeholder',"Search Website");
+			}
+			else if( key === 'calendar' ) {
+				action = 'http:/'+'/vpl.bibliocommons.com/events#/events/search/q=';
+				$('#globalQuery').data('which','calendar').attr('placeholder',"Search Events Calendar");
+			}
+			
+			$('form#globalSearch').attr('action',action);
+			if( hidden ) {
+				$('#hiddenFields').empty().append( hidden );
+			}
+			else {$('#hiddenFields').remove();}
+		},
+		
+		forward_to_search_engine: function() {
+		
+			var which = $('input[name="q"]').data('which');
+			var q = $('#globalQuery').val();
+			    q.replace(/ /g,'+');
+			    q.replace(/%20/g,'+');
+			
+			var url = $('form#globalSearch').attr('action');
+						
+						
+			if( which === undefined ) {	// the initiail state of the form without anyone clicking a radio button
+				url = url + '?q=' + q + '&t=keyword';
+		//		console.log( url );
+				location.href = url;
+				return false;
+			}			
+			else if( which === 'cat' ) {
+				url = url + '?q=' + q + '&t=keyword';
+		//		console.log( url );
+				location.href = url;
+				return false;	
+			}
+			else if( which === 'web' ) { 
+				url = url + q;
+		//		console.log( url );
+				location.href = url;
+				return false;	
+			}
+			else {
+				// event calendar redirect
+				url = url + q;
+		//		console.log( url );
+				location.href = url;				
+				return false;
+			}
+		}
+	}
+	
+	$.fn.search = function(opt) {
+		return new Search(opt);
+	};
+}(jQuery));
+
+jQuery().ready(function($){
+	window.search = $().search(
+	{
+		prompt: 'Find books, music, movies and more'
+	}
+	);
+});
+
+
+
+    </script>
+    
+      
+
+    
+    
+    <script id="yepnope_core" type='text/javascript' src='/js/lib/yepnope/yepnope.js'>
+
+    
+    <script type="text/javascript">
+
+<!--
+
+        var getStr = window.location.search.substr(1);
+
+        var getArray = getStr.split ("&");
+
+        var get = {};
+
+
+
+        for ( var i = 0; i < getArray.length; i++) {
+
+        var tmpArray = getArray[i].split("=");
+
+        get[tmpArray[0]] = tmpArray[1];
+
+        }
+
+
+
+       if (get.m == "yes") {
+
+                window.location = "http://m.vpl.ca"
+
+        }
+
+        else if (get.m == "no") {
+
+                window.location = "http://www.vpl.ca";
+
+        }
+
+
+
+ //-->
+
+</script>
+    <script id="vpl_screenwidth_redirect" type="text/javascript">
+
+/**
+* allCookies.setItem(sKey, sValue, vEnd, sPath, sDomain, bSecure)
+*
+* @argument sKey (String): the name of the cookie;
+* @argument sValue (String): the value of the cookie;
+* @optional argument vEnd (Number - finite or Infinity, String, Date object or null): the max-age in seconds (e.g.
+* 31536e3 for a year) or the expires date in GMTString format or in Date Object format; if not specified it will
+* expire at the end of session;
+* @optional argument sPath (String or null): e.g., "/", "/mydir"; if not specified, defaults to the current path
+* of the current document location;
+* @optional argument sDomain (String or null): e.g., "example.com", ".example.com" (includes all subdomains) or
+* "subdomain.example.com"; if not specified, defaults to the host portion of the current document location;
+* @optional argument bSecure (Boolean or null): cookie will be transmitted only over secure protocol as https;
+* @return undefined;
+**/
+ 
+var allCookies = {
+  getItem: function (sKey) {
+    if (!sKey || !this.hasItem(sKey)) { return null; }
+    return unescape(document.cookie.replace(new RegExp("(?:^|.*;\\s*)" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*((?:[^;](?!;))*[^;]?).*"), "$1"));
+  },
+  setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+    if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) {return;}
+    var sExpires = "";
+    if (vEnd) {
+      switch (vEnd.constructor) {
+        case Number:
+          sExpires = vEnd === Infinity ? "; expires=Tue, 19 Jan 2038 03:14:07 GMT" : "; max-age=" + vEnd;
+          break;
+        case String:
+          sExpires = "; expires=" + vEnd;
+          break;
+        case Date:
+          sExpires = "; expires=" + vEnd.toGMTString();
+          break;
+      }
+    }
+    document.cookie = escape(sKey) + "=" + escape(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+  },
+  removeItem: function (sKey, sPath) {
+    if (!sKey || !this.hasItem(sKey)) {return;}
+    document.cookie = escape(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + (sPath ? "; path=" + sPath : "");
+  },
+  hasItem: function (sKey) {
+    return (new RegExp("(?:^|;\\s*)" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+  },
+  keys: /* optional method: you can safely remove it! */ function () {
+    var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+    for (var nIdx = 0; nIdx < aKeys.length; nIdx++) { aKeys[nIdx] = unescape(aKeys[nIdx]); }
+    return aKeys;
+  }
+};
+
+
+function wantsToViewFullSite()
+{
+	var setting = allCookies.getItem('VPLMobileMode');
+
+	if(setting != null && setting == "fullsite") 
+	{
+		return true;
+	}
+	return false;
+}
+
+jQuery().ready(function() 
+{	
+	if( window.screen.width <= 800 && ! wantsToViewFullSite())
+	{window.location='http://m.vpl.ca';}
+});
+</script>
+   
+
+    
+    
+    
+    <script type="text/javascript">
+function larger() 
+{ 
+   var b = jQuery('body');
+   b.css('font-size','130%');    
+}
+
+function medium() 
+{
+   var b = jQuery('body');
+   b.css('font-size','110%');   
+}
+
+function smaller() 
+{
+   var b = jQuery('body');
+   b.css('font-size','80%');   
+}
+</script> 
+    
+<script>
+  (function(i,s,o,g,r,a,m)  
+  { i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()   
+         
+      {(i[r].q=i[r].q||[]).push(arguments)},
+     
+     i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })
+  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1457930-1', 'auto');
+  ga('send', 'pageview');
+</script>
+     
+   
+</head>
+
+<body>
+
+    <div id='all_pages_header' class='galley_width'>
+        <div class='logo'>
+
+
+	<a href="/" title="Vancouver Public Library home">
+	<img class='logo' src="/images/uploads/logo_rotation/VPL_Standard_logo.gif" 
+		alt="Vancouver Public Library home" />
+	</a>
+
+            
+        </div><!-- .logo -->
+        <div id='search_header' class='clearfix'>
+	<div id='top_links_container' class='clearfix'>
+	   <ul id='top_links' class='inline'>
+	      <li class='last'><a title='Visit the VPL Childrens website' href='http://guides.vpl.ca/kids'>Kids</a></li>
+	      <li><a title='Visit the VPL Teens website' href='http://guides.vpl.ca/teens'>Teens</a></li>
+	      <li><a title='Read the VPL Accessibility Statement' href='/about/details/accessibility_statement'>Accessibility</a></li>
+	      <li class='last'>	<span class='selectSize'>Text Size: 
+	   <a class='s1' href='javascript:smaller();'>A</a> 
+	   <a class='s2' href='javascript:medium();'>A</a> 
+	   <a class='s3' href='javascript:larger();'>A</a>
+	</span></li>
+	      <li class='first'><a class="support_library" title='Visit the VPL Foundation website' href='/foundation/index.html'>Support the Library</a>
+	   </ul><!-- .top_links -->
+	</div><!-- .top_links_container -->
+        <form id='globalSearch' class='clearfix' action="//vpl.bibliocommons.com/search" method='get'>
+           <div id='hiddenFields'>
+               <input type="hidden" name="t" id="t" value="keyword" />
+           </div><!-- hiddenFields -->
+
+           <select id="searchTargets">
+                <option name='searchTarget' id='searchCatalogue' value='cat'>Catalogue</option>
+                <option name='searchTarget' id='searchWebsite' value='web'>Website</option>
+                <option name='searchTarget' id="searchCalendar" value='calendar'>Events</option>
+           </select>
+           <input id='globalQuery' name='q' class='text' type='text' autocomplete='off' value=''/>
+           <input class='search_button' type='submit' value='Search'/>
+	</form>
+     <form id="bibliocommon_login" action="https://vpl.bibliocommons.com/user/login" method="get">
+         <input type="submit" value="Login">
+     </form>
+	<div class='language_selection'>
+	<ul class='inline'>
+	  <li class='label'>VPL in:</li>
+
+	  <li class='first'><a href="/library/details/getting_started_japanese" title="Getting Started Japanese">日 本 語</a></li>
+
+	  <li><a href="/library/details/getting_started_chinese" title="Getting Started Chinese">中文</a></li>
+
+	  <li><a href="/library/details/getting_started_spanish" title="Getting Started Spanish">Español</a></li>
+
+	  <li><a href="/library/details/getting_started_french" title="Getting Started French">Français</a></li>
+
+	  <li><a href="/library/details/getting_started_korean" title="Getting Started Korean">한국어</a></li>
+
+	  <li><a href="/library/details/getting_started_vietnamese" title="Getting Started Vietnamese">Tiếng Việt</a></li>
+
+	  <li><a href="/library/details/getting_started_hindi" title="Getting Started Hindi">हिंदी</a></li>
+
+	</ul><!-- .inline  -->
+	</div><!-- .language_selection -->
+       </div><!-- #search_header -->
+    </div><!-- #all_pages_header .galley_width -->
+<div id="navblock" class="home">
+  <div class="topbox">
+        <div class="boxcontainer clearfix">
+          <div class="box1">
+       
+            <h4><a href="https://vpl.bibliocommons.com/user/login">My VPL</a></h4>
+            <ul>
+              <li><a href="http://vpl.bibliocommons.com/checkedout">Renew Items</a></li>
+              <li><a href="http://vpl.bibliocommons.com/holds/index/active">Check Holds</a></li>
+              <li><a href="http://vpl.bibliocommons.com/checkedout">Check Due Dates</a></li>
+              <li><a href="http://vpl.bibliocommons.com/fines">Check Fines</a></li>
+            </ul>
+          </div>            
+       
+        
+          <div class="box2">
+            <h4><a href="/find/">Explore Online Resources</a></h4>
+            <ul>
+              <li><a href="http://guides.vpl.ca/ebooks_audiobooks">eBooks &amp; Downloadable Audiobooks</a></li>
+              <li><a href="/extDB/login.remoteDB?PressDisplay">Digital Newspapers</a></li>
+              <li><a href="http://guides.vpl.ca/">Subject Guides</a></li>
+              <li><a href="/electronic_databases/">Online Articles, Encyclopedias &amp; More</a></li>
+            </ul>  
+          </div>
+          <div class="box3">
+            <h4><a href="/branches/">Locations &amp; Hours</a></h4>
+            <ul>
+              <li><a href="/branches/">Branches &amp; Hours</a></li>
+              <li><a href="/library/details/outreach_services" title="Outreach provides services to library patrons with disabilities residing in diverse neighbourhoods within the City of Vancouver.">Accessible Services</a></li>
+              <li><a href="/infoaction/" title="Vancouver Public Library's fee-based Information and Research Centre">InfoAction Research</a></li>
+              <li><a href="/about/details/contact_us" title="Contact Information">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="box4">
+            <h4><a href="/programs/">Programs &amp; Services</a></h4>
+<ul>
+    <li><a href="/programs/cat/C1051/">Inspiration Lab</a></li>	
+    <li><a href="http://guides.vpl.ca/whatdoireadnext">What Do I Read Next&#63;</a></li>
+    <li><a href="http://vpl.bibliocommons.com/events/search/fq=audiences:%2853c940484246f6147c000010%20OR%2053c940484246f6147c00000f%20OR%2053c940484246f6147c00000e%20OR%2053c940484246f6147c00000d%29
+">Children&#39;s Programs</a></li>
+    <li><a href="http://vpl.bibliocommons.com/events">Events Calendar</a></li>
+
+		    	       	    	
+		    	       	    	
+		    	       	    	
+		    	       	    	
+		    	       	    	
+		    	       	    	
+		    	       	    	
+		    	       	    	
+	
+		    	       	    	
+		    	       	    	
+		    	       	    	
+		    	       	    	        
+   
+    
+</ul>
+
+          </div>
+          <div class="box5">
+            <h4><a href="/library/">Using the Library</a></h4>
+            <ul>
+              <li><a href="/library/cat/C408/">Get a Library Card</a></li>
+              <li><a href="/library/details/loan_periods_and_fines">Loan Periods & Fines</a></li>
+              <li><a href="/library/details/book_a_computer">Book a Computer</a></li>
+              <li><a href="rooms/index.html">Room Rentals</a></li> 
+            </ul>
+          
+          </div>
+
+      </div>
+  </div>
+</div>  
+<br />
+<div id='doc2' class='yui-t7'>
+  <div id='bd'>
+    <div class='yui-g'>
+    <div id='maincol_homepage'>	    
+    <div class='yui-u first'>
+        <!-- LEFT COLUMN -->
+    	<div id='spotlight' class='homebox' style="width:466px; height:294px; background-image:url(/images/uploads/general/image/about/466x294_Vinesha.jpg);">
+            <a href="http://goo.gl/tmv6i" alt="Vinesha: Find an awesome book" title="Vinesha: Find an awesome book"><img src="/imgs/clear.gif" style="border: 0;" alt="image" width="466" height="294"/></a>        </div><!-- id='spotlight' -->
+    	
+    		
+	<div id='newsletter' class='boxhighlight'> 
+	<h2><a href="/newsletter/">Sign up for our Newsletter</a></h2>          
+	    <div class='newsitem clearfix'>  
+	        <div class='news_info'>  
+	        
+	        <p>Are you in? Event highlights, top reads and updates from Vancouver&rsquo;s library: <a href="http://www.vpl.ca/newsletter" target="_self">Subscribe to our email list here</a>.</p>	        </div><!-- news_info -->
+	    </div><!-- newsitem -->
+	</div><!-- #newsletter .boxhighlight -->
+	
+	
+    	<div class="boxhighlightclear">
+    	
+<h2><a href="http://www.twitter.com/vpl" target="_blank">Tweets</a></h2>
+<a class="twitter-timeline" data-dnt="true" data-tweet-limit="1" href="https://twitter.com/VPL" data-widget-id="347061824790884352" data-chrome="nofooter noheader noborders" >Tweets by @VPL</a>
+<script>
+!function(d,s,id){
+	var js,
+	fjs=d.getElementsByTagName(s)[0],
+	p=/^http:/.test(d.location)?'http':'https';
+	
+	if(!d.getElementById(id)){
+		js=d.createElement(s);
+		js.id=id;
+		js.src=p+"://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js,fjs);
+	}
+}(document,"script","twitter-wjs");
+</script>
+    	</div>
+
+ 	<div id='picks' class='boxhighlight clearfix'>
+	<style>
+#picks {
+    margin: 15px 0px;
+}
+#picks #pick_slider {
+    margin: 0 auto;
+    width: 450px;
+    /* height: 125px; */
+		height: 150px; /* Change height - mc - 2015-09-18 */
+    overflow: auto;
+    position: relative;
+}
+#picks #pick_slider {
+    float: left;
+    display: block;
+    position: relative;
+}
+.pick_item {
+    margin: 0 auto;
+    width: 460px;
+    height: 125px;
+    float: left;
+    vertical-align: top;
+}
+
+
+/**
+* 	pick Slider controls 
+**/
+#pick_controls {
+    float: right;
+    top: -25px;
+    height: 20px;
+    width: 140px;
+    position: relative;
+    /*	border: 1px solid red; */
+}
+
+.pick_control {
+    display: block;
+    width: 40px;
+    height: 25px;
+    text-indent: -2000px;
+    cursor: pointer;
+}
+#go_pick_left {
+    display: inline;
+    position: relative;
+    top: 0;
+    float: left;
+    background: transparent url(/styles/imgs/prev_enabled.png) no-repeat 0 0;
+}
+#go_pick_right {
+    display: inline;
+    position: relative;
+    top: 0;
+    float: right;
+    background: transparent url(/styles/imgs/next_enabled.png) no-repeat 0 0;
+}
+
+
+/********************
+*
+*   pick description 
+*
+*********************/
+
+.pick_image { /* Add white border - mc -2015-09-18 */
+  float: left;
+  width: 85px;
+  /* border: thin solid #ddd; */
+  -moz-box-shadow: 0 1px 5px #ccc;
+  -webkit-box-shadow: 0 1px 5px #ccc;
+  box-shadow: 0px 1px 5px #ccc;
+  border: solid #fff 5px;
+}
+.pick_image a img {
+	width: 85px;
+}
+
+.pick_text {
+    float: left;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 10px;
+    width: 330px;
+}
+
+.picks_footer_link {
+   float: left;
+    margin: 5px;
+    padding: 5px;
+}
+
+</style>
+	<!--POPULAR PICKS -->
+	
+  	<h2><a href="popular_picks/index">Popular Picks</a></h2>
+	
+	<div id="pick_controls">
+	        <span id="go_pick_left" class="pick_control">
+	            Move left
+	        </span><span id="currPos">1</span> of <span id="numberOfPicks">10</span>
+	        <span id="go_pick_right" class="pick_control">
+	            Move right
+	        </span>
+        </div>
+	
+	
+	<div id='popular_picks'>
+	<div id="pick_slider" style="overflow: hidden;">
+
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/602023475_vpl_-_poverty"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9780774812870 /SC.GIF&client=vancp" alt="VPL - Poverty" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/602023475_vpl_-_poverty">VPL - Poverty</a>
+		<p>If you have enjoyed the "Poverty Flags Project" at the library, you will be interested in this selection of titles about poverty in Canada chosen by VPL's Readers' Advisory Team.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/590814117_vpl_-_international_womens_day_2016_-_vpls_to"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9780307265562 /SC.GIF&client=vancp" alt="VPL - International Women's Day, 2016" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/590814117_vpl_-_international_womens_day_2016_-_vpls_to">VPL - International Women's Day, 2016</a>
+		<p>To celebrate International Women's Day in March 2016, VPL selected central feminist texts that represent the historical epoch and cultural zeitgeist of the time in which they were written.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/82873109_vpl_childrens/515932057_syrian_refugee_crisis_childrens_refugee_experiences_in"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9781580896122 /SC.GIF&client=vancp" alt="Syrian Refugee Crisis: Children's Refugee Experiences in Picture Books for ages 5 and up" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/82873109_vpl_childrens/515932057_syrian_refugee_crisis_childrens_refugee_experiences_in">Syrian Refugee Crisis: Children's Refugee Experiences in Picture Books for ages 5 and up</a>
+		<p>These picture books present stories about child  refugee experiences in different eras and nations and are suitable for  most children ages 5 and up. It is recommended that adults read these  books before sharing them with young  children. Web links that offer  tips for for parents and caregivers are included.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/561145587_vpl_-_literacy"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9781412043137 /SC.GIF&client=vancp" alt="VPL - Literacy" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/561145587_vpl_-_literacy">VPL - Literacy</a>
+		<p>Some suggested resources for adult literacy in Canada. Selected by VPL Information Staff.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/592788200_vpl_-_books_that_will_make_your_mother_blush"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9780007296705 /SC.GIF&client=vancp" alt="VPL - Books That Will Make Your Mother Blush" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/592788200_vpl_-_books_that_will_make_your_mother_blush">VPL - Books That Will Make Your Mother Blush</a>
+		<p>In honour of Banned Book Week, VPL's Readers' Advisory Team takes a quirky look at some titles that might make your cheeks pink. Judging by the popular success of a few of these titles, I wonder if it's still possible to shock the average reader.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/586041118"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9781487001087/SC.GIF&client=vancp" alt="VPL Staff Picks - February, 2016" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/586041118">VPL Staff Picks - February, 2016</a>
+		<p>The best fiction and non-fiction titles selected for your enjoyment by VPL's Readers' Advisory Team.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/580579887_vpl_-_black_history_month_2016"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9781770864344 /SC.GIF&client=vancp" alt="VPL - Black History Month 2016" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/580579887_vpl_-_black_history_month_2016">VPL - Black History Month 2016</a>
+		<p>Explore the legacy of black Canadians, past and present, through their experiences, contributions and achievements. These titles were selected by VPL&rsquo;s Reading Experts.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/587871209_vpl_-_valentines_day_-_theories_of_love_liter"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9780586090398/SC.GIF&client=vancp" alt="VPL - Valentine's Day - Theories of Love: Literary Representations" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/587871209_vpl_-_valentines_day_-_theories_of_love_liter">VPL - Valentine's Day - Theories of Love: Literary Representations</a>
+		<p>What makes us fall in love and stay in love? Can we love in different ways? Why are we attracted to certain people and not others? VPL's Readers' Advisory Team attempts to answer these questions and more in this selected reading list.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/581756207_vpl_-_health_and_wellness_-_biographies_and_m"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9780770433246 /SC.GIF&client=vancp" alt="VPL - Health & Wellness - Biographies & Memoirs" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/79828372_vpl_informationservice/581756207_vpl_-_health_and_wellness_-_biographies_and_m">VPL - Health & Wellness - Biographies & Memoirs</a>
+		<p>Enjoy these stories of people on their quests for health and wellness, chosen by the VPL's Readers' Advisory Team.</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	<div class='pick_item'>		
+		<div class='pick_image'>	     	
+		  <a href="https://vpl.bibliocommons.com/list/share/82873109_vpl_childrens/556204097_reading_lights"><img src="http://www.syndetics.com/index.aspx?type=xw12&isbn=9781459802483/SC.GIF&client=vancp" alt="Reading Lights" /></a>				
+		</div><!-- .pick_image -->	
+		
+		<div class='pick_text'>
+		<a href="https://vpl.bibliocommons.com/list/share/82873109_vpl_childrens/556204097_reading_lights">Reading Lights</a>
+		<p>In collaboration with Canadian Writers and Illustrators of BC  (CWILL BC), the Vancouver Public Library will be highlighting the works  of local BC authors and illustrators on permanent plaques placed on lamp  posts around Vancouver.  This list includes the first 20 books that have been selected for these  "Reading Lights."</p>		</div><!-- .pick_text -->
+	</div><!-- .pick_item -->
+	
+	
+	</div>
+	
+	<!-- div class="picks_footer_link" -->
+	<!-- a class='picks_footer_link' href="popular_picks/index">Past Popular Picks</a -->
+	<!-- /div -->
+	</div><!-- #popular_picks -->
+<script type="text/javascript">
+
+(function($){
+	var self, defaults = {};
+	var PPSlider = function(opt) {
+		self = this;
+		return self.init(opt);
+	};
+	PPSlider.prototype = {
+		init: function(opt) {
+		
+			console.log( 'Popular Picks Slider init' );
+			
+			self.opt = $.extend({},defaults,opt);
+			
+			self.control = $('#popular_picks');
+			self.slider = $('#picks_slider');
+			self.slider.css('overflow','hidden');
+			self.items = $('.pick_item');
+			self.controls = $('#pick_controls');
+		self.wrap_slides();
+			$('#numberOfPicks').empty().text( self.num );
+			self.position = 0; // first slide
+			self.update_position();
+			$('.pick_control').click( self.control_click );
+			
+			return self;
+		},
+		
+		wrap_slides: function() {
+		
+		console.log( 'wrap_slides' );
+			self.num = self.items.length;
+			var width = self.opt.slideWidth * self.num;
+			self.items.wrapAll( '<div id="slider_tray"/>' );
+			$('#slider_tray').width( width+'px' );
+			
+		},
+		
+		update_position: function() {
+			$('#currPos').empty().text( self.position + 1 );
+		},
+		
+		update_buttons: function() {
+			if( self.position == 0 ) 
+			{$('#go_pick_left').hide();}
+			else {$('#go_pick_left').show();}
+			if( self.position === self.num -1 )
+			{$('#go_pick_right').hide();}
+			else {$('#go_pick_right').show();}
+		},
+			
+		control_click: function() {
+		
+			console.log( 'control_click' );
+		
+			self.position = ($(this).attr('id')=='go_pick_right') ? self.position+1: self.position-1;
+			self.update_position();
+			self.update_buttons();
+			var offset = self.opt.slideWidth * (-self.position);	
+			$('#slider_tray').css('margin-left',offset+'px');
+		}
+	};
+
+	$.fn.ppSlider = function(opt) {
+		return new PPSlider(opt);
+	};
+
+}(jQuery));
+
+
+jQuery().ready(function($){
+	window.pop_picks_slider = $().ppSlider(
+	{
+		slideWidth: 460
+	});	
+});
+</script>	
+		
+	</div><!-- #picks -->
+    	
+        <div id='titles' class='boxhighlightclear'>
+
+        <style type="text/css">
+.wdirn-content { width: 460px; }
+.wdirn-logo { position: relative; float: left; width: 80px; margin-right: 10px; }
+.wdirn-text { position: relative; float: left; width: 375px; }
+</style>
+<div id='what_do_i_read_next'>
+<h2><a href="http://guides.vpl.ca/content.php?pid=629766&sid=5213855">What Do I Read Next?</a></h2>
+<div class="wdirn-content">
+<div class="wdirn-logo"><a href="http://guides.vpl.ca/content.php?pid=629766&sid=5213855"><img src="/imgs/whatdoireadnext.gif"></a></div>
+<p>Not sure what to read next? Get
+<a href="http://guides.vpl.ca/content.php?pid=629766&sid=5213855">personalized reading recommendations</a> from VPL librarians. 
+You can also browse our <a href="http://vpl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">new titles</a>.
+</p><!-- .wdirn-text -->
+<p>&nbsp;</p>
+</div><!-- .wdirn-content -->
+</div><!-- #what_do_i_read_next -->
+
+	</div><!-- #titles .homebox -->
+	
+	
+    </div><!-- .yui-u .first -->	
+
+    <div class='yui-u'>
+	<!-- RIGHT COLUMN -->
+	    <div class='homebox'>
+			<div id='asklibrarian' class='boxhighlight'>
+	    <h2 class='left'><a href="/about/details/contact_us">Contact Us</a></h2>
+	    <div class='clearfix'>
+		<!-- a href="http://ca.refchatter.net/chat/interlink-main@chat.ca.refchatter.net"><span id='justask_button'></span><br clear="all"/>&nbsp;&nbsp;&nbsp;&nbsp;Chat</a -->
+        	<a href="/library/details/email_us"><span id='email'></span><br clear="all"/>&nbsp;&nbsp;Email</a>               	
+               	<a href="/about/details/contact_us"><span id='call'></span><br clear="all"/>Call</a>               	
+               	<a href="/branches/"><span id='visit'></span><br clear="all"/>&nbsp;Visit</a>               	
+               	<a href="http://help.vpl.ca/"><span id='vplhelp'></span><br clear="all"/>Help@Central</a>
+            </div><!-- .clearfix -->
+	</div><!-- #asklibrarian .boxhighlight -->  
+		 
+        <div class="boxhighlightclear">	
+		<h2><a href="http://www.vpl.ca/extDB/login.remoteDB?ReferenceCanada">Did You Know?</a></h2>
+		<div class="news_img">
+			<a href="http://www.vpl.ca/extDB/login.remoteDB?ReferenceCanada"><img src="/images/uploads/did_you_know/75x75_ElectronicResources.jpg" width="75" height="75" /></a>
+		</div><!-- news_img -->
+				
+		
+		<p>You can find contact information (CEOs, VPs, managers) and more about companies with <a href="http://www.vpl.ca/extDB/login.remoteDB?ReferenceCanada">Reference Canada</a>.</p>	   	<a href="http://www.vpl.ca/extDB/login.remoteDB?ReferenceCanada"></a>	 	<div class="clearfix"></div><!-- clearfix -->
+	 </div><!-- boxhighlight -->    
+	
+
+
+	
+		<style>
+#events {
+	margin-top: 5px;
+}
+#events #event_slider {
+	margin: 0 auto;
+	width: 450px;
+	height: 85px;
+	overflow: auto;
+	position: relative;
+}
+#events #event_slider .event_float {
+	float: left;
+	display: block;
+	position: relative;
+}
+#events #event_slider .event_float .event_item {
+	margin: 0 auto;
+	width: 460px;
+	height: 85px;
+	float: left;
+	vertical-align: top;
+}
+
+/**
+* 	Event Slider controls 
+**/
+#event_controls {
+	float: right;
+	top: -25px;
+	height: 20px;
+	width: 140px;
+	position: relative;
+/*	border: 1px solid red; */
+}
+
+.event_control {
+	display: block;
+	width: 40px;
+	height: 25px;
+	text-indent: -2000px;
+	cursor: pointer;
+}
+#go_event_left {
+	display: inline;
+	position: relative;
+	top: 0;
+	float: left;
+	background: transparent url(/styles/imgs/prev_enabled.png) no-repeat 0 0;
+}
+#go_event_right {
+	display: inline;
+	position: relative;
+	top: 0;
+	float: right;
+	background: transparent url(/styles/imgs/next_enabled.png) no-repeat 0 0;
+}
+
+
+/********************
+*
+*   Event description 
+*
+*********************/
+
+
+
+td.event_image {
+	width: 75px;
+}
+
+
+td.event_text {
+	vertical-align: top;
+	text-align: left;
+	padding-left: 10px;
+}
+
+div.see_more_group {
+	font-size: 90%;
+	display: block;
+	margin-top: 1.4em;
+}
+
+div.see_more {
+	display: inline;
+	width:160px;
+	white-space: nowrap;
+}
+
+div.kids.see_more {
+	float: left;
+}
+
+div.adults.see_more {
+	float: right;
+}
+
+
+.rss {
+	float: right;
+	background-color: #f90;
+	color: #FFF !important;
+	font-size: 95%;
+	font-weight: bold;
+	padding: 4px 6px;
+	text-align: center;	
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+(function($){
+	var self, defaults = {};
+	var UpcomingSlider = function(opt) {
+		self = this;
+		return self.init(opt);
+	};
+	UpcomingSlider.prototype = {
+		init: function(opt) {
+		
+		//	console.log( 'Upcoming Slider init' );
+			
+			self.opt = $.extend({},defaults,opt);
+			
+			self.control = $('#events');
+			self.slider = $('#event_slider');
+			self.slider.css('overflow','hidden');
+			self.items = $('.event_float');
+			self.controls = $('#event_controls');
+			self.wrap_slides();
+			$('#numberOfItems').empty().text( self.num );
+			self.position = 0; // first slide
+			self.update_position();
+			$('.event_control').click( self.control_click );
+			
+			return self;
+		},
+		
+		wrap_slides: function() {
+			self.num = self.items.length;
+			var width = self.opt.slideWidth * self.num;
+			self.items.wrapAll( '<div id="innerWrap"/>' );
+			$('#innerWrap').width( width+'px' );
+			
+		},
+		
+		update_position: function() {
+			$('#currentPosition').empty().text( self.position + 1 );
+		},
+		
+		update_buttons: function() {
+			if( self.position == 0 ) 
+			{$('#go_event_left').hide();}
+			else {$('#go_event_left').show();}
+			if( self.position === self.num -1 )
+			{$('#go_event_right').hide();}
+			else {$('#go_event_right').show();}
+		},
+			
+		control_click: function() {
+		
+			self.position = ($(this).attr('id')=='go_event_right') ? self.position+1: self.position-1;
+			self.update_position();
+			self.update_buttons();
+			var offset = self.opt.slideWidth * (-self.position);	
+			$('#innerWrap').css('margin-left',offset+'px');
+		}
+	};
+
+	$.fn.upcomingSlider = function(opt) {
+		return new UpcomingSlider(opt);
+	};
+
+}(jQuery));
+
+
+jQuery().ready(function($){
+	window.upcoming_slider = $().upcomingSlider(
+	{
+		slideWidth: 460
+	});	
+});
+</script>
+
+  <div xmlns:php="http://php.net/xsl" xmlns:bc="http://bibliocommons.com/rss/1.0/modules/event/" id="upcoming" class="boxhighlight">
+  <h2>
+    <a href="https://vpl.bibliocommons.com/events">
+                Upcoming Events
+            </a>
+  </h2>
+  <div id="events">
+    <div id="event_controls"><span class="event_control" id="go_event_left">
+                    Move left
+                </span><span id="currentPosition">1</span> of <span id="numberOfItems">25</span><span class="event_control" id="go_event_right">
+                    Move right
+                </span></div>
+    <div id="event_slider">
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Exhibits-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56b15c0052c7b9de5c0a55d7">Art Exhibition: Mixed Mediums</a>
+                        at Britannia Branch Library<br/>Art Gallery area of the branch.<br/>Friday at 9:00 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Classes-&amp;-Workshops-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/568dba7b9fdb8abb6203e30e">Digitization Playground in Mandarin - 如何數字化轉存音像製品和老照片(國語)</a>
+                        at Central Branch<br/>Inspiration Lab, Level 3<br/>Friday at 11:00 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Storytimes-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/5633a6cc667789d330002207">Babytime</a>
+                        at Terry Salman Branch Library<br/><br/>Friday at 2:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Storytimes-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/5633a6f0667789d330002215">Babytime</a>
+                        at Terry Salman Branch Library<br/><br/>Friday at 3:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Film-Screenings-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56847af5f870d8e52e028b52">Afternoon at the Movies: Bon Voyage, Charlie Brown</a>
+                        at Renfrew Branch Library<br/><br/>Friday at 3:30 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Classes-&amp;-Workshops-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/568427a4f870d8e52e02747c">ESL Conversation Circle</a>
+                        at Hastings Branch Library<br/><br/>Friday at 3:30 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Classes-&amp;-Workshops-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/568db13452c7b9de5c042b2d">ESL Conversation Circle</a>
+                        at South Hill Branch Library<br/>Study Room<br/>Friday at 3:30 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Reading-Circles-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/5640da72667789d33001d115">Reading Buddies</a>
+                        at Kerrisdale Branch Library<br/><br/>Friday at 4:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Activities-&amp;-Games-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/563d0ba478a4104a14015624">Board Games</a>
+                        at Champlain Heights Branch Library<br/><br/>Friday at 7:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Activities-&amp;-Games-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/5633a8ce667789d330002284">KidsZone: It's Friday, Friday Club</a>
+                        at Terry Salman Branch Library<br/><br/>Friday at 7:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Exhibits-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56b15c0452c7b9de5c0a55db">Art Exhibition: Mixed Mediums</a>
+                        at Britannia Branch Library<br/>Art Gallery area of the branch.<br/>Saturday at 9:00 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Inspiration-Lab-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56bcc21b1263599670003933">The Big Listen: Sharing and Recording Your Stories</a>
+                        at Central Branch<br/>Inspiration Lab, Level 3<br/>Saturday at 10:00 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Storytimes-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/563962c558eb72203e00d106">Family Storytime</a>
+                        at Dunbar Branch Library<br/><br/>Saturday at 10:30 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Classes-&amp;-Workshops-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/5679e182f870d8e52e00f49f">Small Business Tour</a>
+                        at Central Branch<br/>Training Zone, Level 4<br/>Saturday at 10:30 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Book-Clubs-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56327702667789d33000040a">Book Lovers Reading Circle</a>
+                        at Central Branch<br/>Morris J. Wosk Board Room, Level 7<br/>Saturday at 11:00 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Storytimes-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/5633a874667789d330002274">Family Storytime</a>
+                        at Terry Salman Branch Library<br/><br/>Saturday at 11:00 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Storytimes-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56411293667789d33001e5e8">Family Storytime</a>
+                        at Central Branch<br/>Harvey Southam Room Children's Library, LL<br/>Saturday at 11:00 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Storytimes-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/563b91d878a4104a14012231">Family Storytime</a>
+                        at Joe Fortes Branch Library<br/><br/>Saturday at 11:15 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Storytimes-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/565c97c797f1876a2d01f923">Family Storytime</a>
+                        at Renfrew Branch Library<br/><br/>Saturday at 11:15 a.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Storytimes-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56411490667789d33001e687">Digital Storytime</a>
+                        at Central Branch<br/>Harvey Southam Room Children's Library, LL<br/>Saturday at 1:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Classes-&amp;-Workshops-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/563d2bfa78a4104a14015ec0">Spring Break: Programming with Raspberry Pi Microcomputers</a>
+                        at Britannia Branch Library<br/><br/>Saturday at 2:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Classes-&amp;-Workshops-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/565f42ec97f1876a2d02589c">ESL Conversation Circle</a>
+                        at Renfrew Branch Library<br/><br/>Saturday at 2:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Activities-&amp;-Games-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/564270fc667789d330022b1a">Spring Break: Board Games</a>
+                        at Central Branch<br/>Harvey Southam Room Children's Library, LL<br/>Saturday at 2:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Author-Readings-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56bbdf73ff42d80f0d002816">Author Event: Joe Beernink</a>
+                        at Renfrew Branch Library<br/><br/>Saturday at 2:00 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+      <div class="event_float">
+        <table class="event_item">
+          <tr>
+            <td class="event_image">
+              <img alt="VPL" src="http://www.vpl.ca/images/calendar/75x80/VPL-Biblioevents-Activities-&amp;-Games-75x80.png"/>
+            </td>
+            <td class="event_text"><a href="https://vpl.bibliocommons.com/events/56311fbfd3bcd7880d01b05c">KidsZone</a>
+                        at Champlain Heights Branch Library<br/><br/>Saturday at 2:30 p.m.<br/><div class="see_more_group"><a class="see_more_link" href="https://vpl.bibliocommons.com/events">
+                                    Browse All Events
+                                </a></div></td>
+          </tr>
+        </table>
+      </div>
+      <!-- .event_float -->
+    </div>
+  </div>
+</div>
+
+
+
+			<div id='news' class='boxhighlightclear'>
+	    <h2><a href="/news/">Library News</a></h2>
+	    <div class='newsitem clearfix'>  
+	        <div class='news_info'>  
+   	        <div class='news_img'><a href="/news/details/aboriginal_storyteller_2016"><img src="/images/uploads/image/news/ASIR2016_RenaeMorriseau_75x75.jpg" width="75" height="75" /></a></div>	        <p><a href="/news/details/aboriginal_storyteller_2016">Theatre, television and music storyteller Renae Morriseau named VPL’s 2016 aboriginal storyteller in residence</a>
+	        <br /><i>posted on March 10, 2016</i></p>
+	        <p>Join us in welcoming Renae Morriseau &ndash; VPL's new <a href="http://www.vpl.ca/news/details/aboriginal_storyteller_2016" target="_self">aboriginal storyteller</a> at a special event on March 31.</p>	        </div><!-- news_info -->
+	    </div><!-- newsitem -->
+	    <div class='newsitem clearfix'>  
+	        <div class='news_info'>  
+   	        <div class='news_img'><a href="https://vpl.bibliocommons.com/events/search/q=big%20listen"><img src="/images/uploads/image/news/BigListen_75x75.jpg" width="75" height="75" /></a></div>
+   	        	        <p><a href="https://vpl.bibliocommons.com/events/search/q=big%20listen">The Big Listen: Sharing and Recording Your Stories</a>
+	        <br /><i>posted on March 03, 2016</i></p>
+	        <p>Stories are a family's most precious heirloom. Come share your stories or help a loved one preserve theirs with a free mp3. One-hour sessions now available.</p>	        </div><!-- news_info -->
+	    </div><!-- newsitem -->
+	    <div class='newsitem clearfix'>  
+	        <div class='news_info'>  
+   	        <div class='news_img'><a href="https://vpl.bibliocommons.com/events/search/q=spring%20break"><img src="/images/uploads/image/news/SpringBreak2016_75x75.jpg" width="75" height="75" /></a></div>
+   	        	        <p><a href="https://vpl.bibliocommons.com/events/search/q=spring%20break">Spring break at the library March 12 to 26</a>
+	        <br /><i>posted on February 29, 2016</i></p>
+	        <p>Hey kids, celebrate spring break at the library with fun programs and events! <a href="https://vpl.bibliocommons.com/events/search/q=spring%20break" target="_self">Check out the lineup</a></p>	        </div><!-- news_info -->
+	    </div><!-- newsitem -->
+	    <div class='newsitem clearfix'>  
+	        <div class='news_info'>  
+   	        <div class='news_img'><a href="/news/details/donate_used_books_for_the_friends_of_vpl_book_sale_2016"><img src="/images/uploads/image/news/friendsofvpl_100x100.jpg" width="75" height="75" /> </a></div>	        <p><a href="/news/details/donate_used_books_for_the_friends_of_vpl_book_sale_2016">Donate Used Books for the Friends of VPL Book Sale</a>
+	        <br /><i>posted on February 19, 2016</i></p>
+	        <p>From March 1&ndash;31, <a href="http://www.vpl.ca/news/details/donate_used_books_for_the_friends_of_vpl_book_sale_2016" target="_self">donate your used books</a>, CDs, DVDs and LPs to the Friends of the VPL for their upcoming used book sale to support the library.</p>	        </div><!-- news_info -->
+	    </div><!-- newsitem -->
+	 
+	         
+	     </div><!-- #news boxhighlightclear -->
+	   </div><!--  class='homebox' -->  
+	</div><!--  class='yui-u' -->
+    </div><!--  id='maincol_homepage' -->
+</div>
+<div id='ft'>
+
+              <div id='fatft_inside'>
+          <div class='boxcontainer clearfix'>
+          <div class='box1'>
+             <h4><a href='http://vpl.bibliocommons.com'>My VPL</a></h4>
+             <ul>
+	          <li><a href='http://vpl.bibliocommons.com/checkedout'>Renew Items</a></li>
+	          <li><a href='https://fines.vpl.ca/eCommerceWebModule/Home'>Pay Fines Online</a></li>
+	     </ul>
+	     <br/>
+             <h4><a href='/about/details/Support_the_library'>Support the Library</a></h4>
+             <ul>
+	          <li><a href='/foundation/index.html'>Vancouver Public Library Foundation</a></li>
+	          <li><a href='http://www.friendsofthevpl.ca/'>Friends of Vancouver Public Library</a></li>
+             </ul> 
+          </div><!-- box1 -->  
+
+          <div class='box2'>
+             <h4><a href='/find/'>Explore Online Resources</a></h4>
+             <ul>                       
+               
+                  <li><a href="/find/cat/C397">Auditions &amp; Productions List</a></li>
+                  <li><a href='http://guides.vpl.ca/genealogy'>Genealogy Resources</a></li>
+                  <!-- li><a href="/find/cat/C393">Historical Photographs</a></li -->
+                  <li><a href="/find/details/local_history/">Local History</a></li -->
+                  <li><a href="/electronic_databases/">Online Articles, Encyclopedias &amp; More</a></li>
+                  <li><a href="http://guides.vpl.ca/">Subject Guides</a></li>
+                  <li><a href='http://skilledimmigrants.vpl.ca'>Skilled Immigrant InfoCentre</a></li>
+             </ul>
+          </div><!-- box2 -->
+          
+          <div class='box3'> 
+              <h4><a href="/programs/">Programs &amp; Services</a></h4>
+              <ul>
+                  <li><a href="/programs/details/booksale">Book Sale</a></li>
+                  <li><a href="/programs/details/cultural_access_pass">Cultural Access Pass</a></li>
+                  <li><a href="/programs/cat/C836">Aboriginal Storyteller</a></li>
+                 <!--  <li><a href='http://www.vpl.ca/freeforall/'>Free For All</a></li> -->
+                  <li><a href="http://www.vancouververse.ca">Poet Laureate</a></li>
+                  <li><a href="/inspirationpass">Vancouver Inspiration Pass</a>
+                     <li><a href="http://www.vancouverlearningcity.ca">Vancouver Learning Guide</a>
+                  <li><a href="/programs/cat/C839">Writer in Residence</a></li>
+              </ul> 
+          </div><!-- box3 -->
+          
+          <div class='box4'>
+              <h4><a href="/about/">About the Library</a></h4>
+              <ul>
+                  <li><a href="/about/cat/C404">Careers at VPL</a></li>
+                  <li><a href="/about/details/contact_us">Contact Us</a></li>
+                  <li><a href="/about/cat/C339">Library Board</a></li>
+                  <li><a href="/about/details/library_management">Library Management</a></li>
+                  <li><a href="/opendata">Open Data</a></li>
+                  <!-- li><a href='http://ws.vpl.ca'>Sign up for eNewsletter</a></li -->
+                  <li><a href="http://m.vpl.ca">VPL Mobile Site</a></li>
+              </ul> 
+          </div><!-- box4 -->
+          
+          <div class='box5'>
+              <h4><a href="/library/">Using the Library</a></h4>
+              <ul>
+                  <!-- li><a href="/library/cat/C451">Ask a Librarian</a></li -->
+                  <li><a href="/library/details/change_of_address">Change Your Contact Information</a></li>
+                  <li><a href="/library/cat/C410">Computer &amp; Internet</a></li>
+                  <li><a href="http://help.vpl.ca">Help at Central Library</a></li>
+                  <li><a href="/branches/generic/other_library_websites">Other BC Libraries</a></li>                
+                  <li><a href="/library/details/service_interruptions_and_notices">Service Interruptions</a></li>
+                  <li><a href="/library/details/wireless_service_at_vpl">Wireless at VPL</a></li>
+                  
+              </ul>  
+         </div><!-- box5 -->
+         
+         <span class='reset'></span>
+      </div><!-- .box_container .clearfix-->
+   </div><!-- .fatft_inside -->
+      
+   <div id='fatft_bottom' class='clearfix'>
+   	<ul class='inline'>
+            <li class='first'><a class="sitemap_link" href="/sitemap">Sitemap</a></li>
+            	<div class="right social_media">
+	    <a href="http://www.facebook.com/vancouverpubliclibrary#!/vancouverpubliclibrary?sk=wall" title="VPL on Facebook"><img src="/images/general/facebook_25.png" alt='Facebook' width='25px' height='25px'></a>
+	    <a href="http://flickr.com/photos/vancouverpubliclibrary" title="VPL on Flickr"><img src="/images/general/flickr_25.png" alt='Flicker' width='25px' height='25px'></a>
+  	    <a href="http://www.twitter.com/VPL" title="VPL on Twitter"><img src="/images/general/twitter_25.png" alt='Twitter' width='25px' height='25px'></a>
+	</div><!-- right social_media -->
+
+        <div id="refresh_count"></div>
+
+        </ul>
+    </div><!-- fatft_bottom -->
+
+	
+   <div class='nav_container clearfix'>
+       <div class='nav_left'>
+           All content &copy;2016 Vancouver Public Library. All rights reserved.
+       </div><!-- nav_left -->
+       <div class='right'>
+           Funded by: <a href='http://vancouver.ca/'><img src="/imgs/cityvancouver.gif" alt='City of Vancouver' height='40' width='95' border='0'/></a>
+       </div><!-- nav_right -->
+   </div><!-- .nav_container .clearfix -->
+</div><!-- ft -->
+
+<!-- script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js'></script -->
+<script type='text/javascript' src="/scripts/vpl_script.js"></script>
+
+
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://bclibraries.org/piwik/" : "http://bclibraries.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 74);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://bclibraries.org/piwik/piwik.php?idsite=74" style="border:0" alt="" /></p></noscript>
+
+
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0033/7614.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script> 
+
+<a class='bond_email' href='mailto:james.bond@vpl.ca'>james.bond@vpl.ca</a> 
+
+</body>
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<base href="http://www.orl.bc.ca/" />
+	<title>Vernon - Okanagan Regional Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="description" content="Okanagan Regional Library: library system covering the entire Thompson-Okanagan region of British Columbia, Canada." />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/style.css?v=v8" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/calendar_2013.css?v=v4" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/contact_us.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/search.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/left_menu.css?v=v2" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_l.css" type="text/css" media="screen" id="link_text_l" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_m.css" type="text/css" media="screen" id="link_text_m" title="text" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/text_s.css" type="text/css" media="screen" id="link_text_s" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/contrast.css" type="text/css" media="screen" id="link_contrast" title="contrast" />
+	<link rel="alternate" type="application/rss+xml" title="Okanagan Regional Library RSS Feed" href="news-events/rss" />
+	<script src="manager/media/script/mootools/mootools.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/jquery.fancybox.js" type="text/javascript"></script>
+	<script type="text/javascript">var $j = jQuery.noConflict();</script>
+	<script src="assets/templates/orlv2/js/form-check.js?v=v1" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/swfobject.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/script.js?v=v7" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="assets/templates/orlv2/css/dhtmlgoodies_calendar.css" media="screen" />  
+	<script src="assets/templates/orlv2/js/dhtmlgoodies_calendar.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pathToImages = '/assets/templates/orlv2/images/layout/';
+		//SWFObject
+		var flashvars = {};
+		var params = {
+			wmode: "transparent"
+		};
+	</script>
+<!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAMmBdV5STCVExvFTDWp50DBQn_DD64N2y7rZVstjCgjH1jrOTvBTbfltFh8gj6JbFUyeasDAlowgpPA" type="text/javascript"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9zKi3DlhGhdgZ5zWPYklEM59GzU0pys&sensor=false"></script>
+<script type="text/javascript" src="//use.typekit.net/igq5whz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+	<body>
+
+    	<div id="wrap">
+        <div class="background-header">
+                       <div id="header">
+                <span class="font-adjust-container">
+<a href="/sitemap">Site Map</a> | <a class="text_l" id="large-text-link" href="javascript:clickTextLarge();">A</a>&nbsp;<a class="text_m" id="medium-text-link" href="javascript:clickTextMedium();">A</a>&nbsp;<a class="text_s" id="small-text-link" href="javascript:clickTextSmall();">A</a>
+				</span>
+            </div>
+            <!-- Header Image/Top Menu Row -->
+            <div class="top-menu-div">
+                <div id="logo"><a href="/"><img src="/assets/templates/orlv2/images/layout/logo-new.gif" alt="Okanagan Regional Library" /></a></div>
+                <div id="welcome"><img src="/assets/templates/orlv2/images/layout/background-bar-left.png" /></div>
+                <div id="social">
+	                <a href="http://www.youtube.com/OKRegLibrary" target="_blank">Youtube</a>
+	                <a href="http://75-years-orl.blogspot.com/" target="_blank">Blogger</a>
+	                <a href="http://www.facebook.com/OKRegLib" target="_blank">Facebook</a>
+	                <a href="http://twitter.com/ORLreads" target="_blank">Twitter</a>
+	                <a href="http://ipac.orl.bc.ca/mobile">ORL Mobile</a>
+                </div>
+            </div>
+<div id="header-search-2013">
+                    <script language="javascript">
+                        String.prototype.trim = function () { return this.replace(/^\s*|\s*$/g, ''); }
+                        function ProcessInput(e) {
+                            if (window.event)       // IE
+                                keyNum = e.keyCode;
+                            else if (e.which)       // Netscape/Firefox/Opera
+                                keyNum = e.which;
+                            if (keyNum == 13) {
+                                e.returnValue = false;
+                                e.cancelBubble = true;
+                                DoKeywordSearch();
+                                return false;
+                            }
+                            return true;
+                        }
+                        function DoKeywordSearch() {
+                            if (document.getElementById('textboxTerm').value.trim() != '')
+                                window.location = 'http://ipac.orl.bc.ca/polaris/view.aspx?keyword=' + escape(document.getElementById('textboxTerm').value);
+                            else
+                                document.getElementById('textboxTerm').focus();
+                        }
+                    </script>
+                    <a class="redbutton" href="javascript:;" onclick="DoKeywordSearch();"><span>Go</span></a>
+                    <input type=text id=textboxTerm size=45 class="cleartxt inactive search" value="Search Catalogue..." 
+                     onblur="if (this.value == '') {this.value = 'Search Catalogue...';}"
+                     onfocus="if(this.value == 'Search Catalogue...') { this.value = ''; }" 
+                     onkeypress="return ProcessInput(event)" />
+                    <script language="javascript">
+                        document.getElementById('textboxTerm').blur();
+                    </script>
+                 </div>
+		<br />
+                     <p class="f_right"><a href="http://ipac.orl.bc.ca/polaris/patronaccount/default.aspx?ctx=1.1033.0.0.3">Login to My Account</a></p>
+		
+
+            <!-- Main Menu -->
+           <div id="left-menu-container">
+             <div id="top-menu-header">
+    <img src="/assets/templates/orl/images/layout/menu-text.png" alt="Menu" />
+</div>
+<div id="left-menu">
+<ul class=" left-menu-header"><li >
+  <div class="menusection"><h3 class=""><a class="" href="/about-us">About Us</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/news-events">News &amp; Events</a></h3></div>
+</li>
+<li  class="active">
+  <div class="menusection"><h3 class="active"><a class="active" href="/branches">Branches</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/Borrowing-services">Borrowing & Services</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/online-resources">Web Resources</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/kids">Kids</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/teens">Teens</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/book-lovers">Book Lovers</a></h3></div>
+</li>
+<li  class="last">
+  <div class="menusection"><h3 class="last"><a class="last" href="/contact">Contact Us</a></h3></div>
+</li>
+</ul>
+</div>
+           </div>
+
+            <!-- Menu/Intro Row -->
+                <div id="intro-wide">
+                   
+                   <div id="background-image-box-big"><div id="slideshow"></div></div>
+<div id="background-box-overlay"></div>
+<script type="text/javascript" src="http://www.orl.bc.ca/assets/js/rokslideshow.js"></script>
+		<script type="text/javascript">
+			window.RokSlideshowPath = '';
+			var myshow;
+			window.addEvent('load', function(){
+				var imgs = [];
+				
+				imgs.push({
+					file: '20120504_113831.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: '20120505_122235.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				myshow = new Slideshow('slideshow', { 
+					type: 'fade',
+					showTitleCaption: 0,
+					captionHeight: 45,
+					width: 550, 
+					height: 340, 
+					loadingDiv: 0,
+					resize: true,
+					duration: [2000, 4000],
+					transition: Fx.Transitions.Expo.easeOut,
+					images: imgs, 
+					path: '/assets/images/Branch-Slideshow/vernon/'
+				});
+				myshow.caps.h2.setStyles({
+					color: '#fff',
+					fontSize: '13px'
+				});
+				myshow.caps.p.setStyles({
+					color: '#ccc',
+					fontSize: '11px'
+				});
+			});
+		</script>
+                   <div id="intro-wide-content">
+                               <span class="B_crumbBox"><span class="B_firstCrumb"><a class="B_homeCrumb" href="/home" title="Find Books, Music, Movies, and More">Home</a></span> &raquo; <a class="B_crumb" href="/branches" title="Branches">Branches</a> &raquo; <span class="B_lastCrumb"><span class="B_currentCrumb">Vernon</span></span></span>
+                               <h1>Vernon</h1>
+                               <div id="page-sub-menu">
+<ul class="submenu">
+<li>no result<script type%3D"text/javascript">$j("#page-sub-menu").hide();</script></li> 
+</ul>
+<script type="text/javascript">
+$j('.submenu').makeacolumnlists({cols: 2, colWidth: 0, equalHeight: false, startN: 12});
+</script>
+</div>
+                               
+<div id="content-header-text">
+<ul class="tabs">
+    <li class="tab1"><a href="#tab1">Location</a></li>
+    <li class="tab2"><a href="#tab2">Open Hours</a></li>
+    <li class="tab3"><a href="#tab3">Parking</a></li>
+    <li class="tab4"><a href="#tab4"></a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content"><p><strong>2800&nbsp;- 30th Ave.<br />Vernon, B.C. V1T 8S3 <br />(250) 542-7610</strong></p>
+<p>There are three book drop bins located on the east side of the building. They are locked during extended library closures (Easter and Christmas).</p>
+<p>Please find our events below on the branch calendar, or search the <a href="news-events/event-search">ORL Calendar of Events</a>.&nbsp;</p>
+<p>&nbsp;</p></div>
+    <div id="tab2" class="tab_content"><table id="openhours"><tr><td>Monday: </td><td>10:00 a.m. to 5:30 p.m.</td></tr><tr><td>Tuesday: </td><td>10:00 a.m. to 9:00 p.m.</td></tr><tr><td>Wednesday: </td><td>10:00 a.m. to 9:00 p.m.</td></tr><tr><td>Thursday: </td><td>10:00 a.m. to 9:00 p.m.</td></tr><tr><td>Friday: </td><td>10:00 a.m. to 5:30 p.m.</td></tr><tr><td>Saturday: </td><td>10:00 a.m. to 5:30 p.m.</td></tr><tr><td>Sunday: </td><td>12:00 p.m. to 4:00 p.m. Closed March 27th - September 25th, Open October 2nd, 2016</td></tr><tr><td></td><td>All branches are closed on statutory holidays</td></tr></table></div>
+    <div id="tab3" class="tab_content"><p>There is underground parking available&nbsp;at the branch during open hours, with elevator access into the library.&nbsp; The entrance ramp is&nbsp;located beside the south side of the building. The parking rate is&nbsp;50 cents per&nbsp;hour, with a two hour maximum. There is also metered street parking available.</p>
+<p>More downtown parking information is available <a href="http://www.downtownvernon.com/index.php?Itemid=55&amp;id=20&amp;option=com_content&amp;task=blogcategory" target="_blank">here.</a></p></div>
+    <div id="tab4" class="tab_content"></div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var tabCount = 0;
+	//When page loads...
+	jQuery(".tab_content").hide(); //Hide all content
+	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	jQuery(".tab_content:first").show(); //Show first tab content
+//hide empty tabs
+jQuery(".tab_content").each(function(){
+	if(jQuery(this).html() == ''){
+		jQuery("."+jQuery(this).attr("id")).hide();
+	} else {
+		if(jQuery("."+jQuery(this).attr("id")+" a").html() == ''){
+			jQuery("."+jQuery(this).attr("id")).hide();
+		} else {
+			tabCount++;
+		}
+	}
+});
+
+if(tabCount > 1){
+jQuery(".tab_container").show();
+jQuery("ul.tabs").show();
+} else {
+jQuery("#content-header-text").html(jQuery("#tab1").html());
+}
+
+	//On Click Event
+	jQuery("ul.tabs li").click(function() {
+
+		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+		jQuery(this).addClass("active"); //Add "active" class to selected tab
+		jQuery(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = jQuery(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		jQuery(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});
+</script>
+
+</div>
+                  </div>
+                </div>
+            <!-- Banners/Content Row -->
+               <div class="content-row-div"><div id="sidebanners">
+                   <div style="float: left; width: 244px;">
+<div class="banner-map" style="margin-bottom:28px;">
+<a name="content"></a>
+    <div id="map" style="width:244px; height:166px;"></div><script type="text/javascript">
+    //var map = new google.maps.Map(document.getElementById("map"));
+    //var point = new google.maps.LatLng(50.26365, -119.268);
+    //map.setCenter(point, 14);
+    //var marker = new google.maps.Marker(point);
+    //map.addOverlay(marker);
+    //map.addControl(new GSmallMapControl());
+      var map = new google.maps.Map(
+        document.getElementById("map"), {
+          center: new google.maps.LatLng(50.26365, -119.268),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(50.26365, -119.268),
+            map: map
+      });
+    </script>
+</div>
+<div class="banner-calendar print-hide" id="branch-calendar" style="margin-bottom:28px;">
+    <!--[if IE 7 ]> <div class="calendar-div ie7"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!--> <div class="calendar-div"> <!--<![endif]-->
+    <div id="calendar">
+	<div id="calendar-heading">
+    	<div class="month prev"><a href="index.php?id=50&amp;cid=36&amp;m=2&amp;y=2016#content">&laquo;</a></div>
+		<div class="monthyear">
+			<div class="month heading">March</div>
+			<div class="year heading">2016</div>
+		</div>
+    	<div class="month next"><a href="index.php?id=50&amp;cid=36&amp;m=4&amp;y=2016#content">&raquo;</a></div>
+	</div>
+	<div id="day-heading-background">
+		<div class="day heading">Sun</div>
+		<div class="day heading">Mon</div>
+		<div class="day heading">Tue</div>
+		<div class="day heading">Wed</div>
+		<div class="day heading">Thu</div>
+		<div class="day heading">Fri</div>
+		<div class="day heading">Sat</div>
+	</div>	
+	<div id="date-background">
+		<div class="day none"></div><div class="day none"></div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day today">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div><div class="day none"></div><div class="day none"></div>
+	</div>
+	<div class="clearer"></div>
+	<div id="upcoming-events"><a href="/news-events/upcoming-events?cid=36">Search Our Upcoming Events</a></div>
+</div>
+</div>
+</div>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/online-resources/eresources"><img src="/assets/templates/orl/images/banners/eresources.jpg" alt="eResources" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/Borrowing-services/internet-access"><img src="/assets/templates/orl/images/banners/hotspot.jpg" alt="Free Internet Access" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/kids/booklist"><img src="/assets/templates/orl/images/banners/booklist.jpg" alt="Kids Booklist" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/Borrowing-services/information-and-reference-service"><img src="/assets/templates/orl/images/banners/referenceservice.jpg" alt="Have a Question? Information &amp; Reference Service" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/kids/story-time"><img src="/assets/templates/orl/images/banners/storytime.jpg" alt="Childrens Storytime" /></a>
+</div>
+               </div>
+               <div style="float:left; width:650px;">
+                   <h3><span style="font-size: 28px; font-style: italic;">Use our new events calendar </span><a style="font-size: 28px; font-style: italic;" href="http://orl.evanced.info/signup/EventCalendar.aspx?&amp;lib=1026">here</a><span style="font-size: 28px; font-style: italic;"> to register and view upcoming events.</span> <a title="ORL Vernon Branch" href="https://www.facebook.com/OKRegLibraryVE" target="_TOP"><img class="img" style="float: right; border-width: 0px;" src="https://badge.facebook.com/badge/693065167492007.1189.1276369242.png" alt="" width="135" height="234" /></a></h3>
+<hr />
+<p>&nbsp;</p>
+<h2><a href="branches/vernon#Kids">Kids</a></h2>
+<h2><a href="branches/vernon#adults">Adults</a></h2>
+<blockquote>
+<h3><span style="text-decoration: underline;"><a href="branches/vernon#Monday">Monday</a></span></h3>
+<h3><span style="text-decoration: underline;"><a href="branches/vernon#Tuesday">Tuesday</a></span></h3>
+<h3><span style="text-decoration: underline;"><a href="branches/vernon#Wednesday">Wednesday</a></span></h3>
+<h3><span style="text-decoration: underline;"><a href="branches/vernon#Thursday">Thursday</a></span></h3>
+<h3><span style="text-decoration: underline;"><a href="branches/vernon#Friday">Friday</a></span></h3>
+<h3><span style="text-decoration: underline;"><a href="branches/vernon#Saturday">Saturday</a></span></h3>
+<h3><span style="text-decoration: underline;"><a href="branches/vernon#Sunday">Sunday</a></span></h3>
+</blockquote>
+<h2><a href="branches/vernon#services">Services </a></h2>
+<h2><a href="branches/vernon#VFOL">Vernon Friends of the Library</a></h2>
+<hr />
+<h1><em>Vernon Friends of the Library Book Sale</em></h1>
+<h3>at the Vernon Curling Club</h3>
+<h2><strong>Thursday April 28th, 3&nbsp;pm - 9 pm</strong></h2>
+<h2><strong>Friday April 29th, 9 am - 9 pm</strong></h2>
+<h2><strong>Saturday April 30th, 9 am - 4 pm</strong></h2>
+<h2><strong>Sunday May 1st, 11 am - 3 pm</strong></h2>
+<p><strong><br /></strong></p>
+<h1><strong>Spring Break&nbsp;(please register)</strong></h1>
+<ul>
+<li><a style="font-style: italic;" href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2845&amp;lib=">Origami&nbsp;</a><span style="font-style: italic;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; March 21&nbsp;</span></li>
+<li><a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2465&amp;lib=">Shadow Puppet workshop </a>March 22&nbsp;</li>
+<li><a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2844&amp;lib=">Tour of the Universe &nbsp; </a>&nbsp; &nbsp; &nbsp; &nbsp;March 23&nbsp;</li>
+<li><a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2462&amp;lib=">Goldie Blox/Lego &nbsp; &nbsp;</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; March 24&nbsp;</li>
+<li><a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2463&amp;lib=">Are You A Horse? </a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2463&amp;lib=">March 29</a>&nbsp;</li>
+<li><a href="info/signup/EventDetails.aspx?EventId=2464&amp;lib=">Whose Shoe? &nbsp; &nbsp; </a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2464&amp;lib=">March 31</a>&nbsp;</li>
+</ul>
+<p><strong><br /></strong></p>
+<hr />
+<h1><a name="Kids"></a>Kids</h1>
+<p><img style="float: left; padding-left: 2px; margin-right: 10px; border: #545565 5px double;" src="assets/images/Image%20Bank%20for%20Branch%20Use/Vernon/Zetta_library_card.jpg" alt="Little girl with a library card" width="208" height="163" /></p>
+<p>If you have any questions or would like to contact someone for a tour, please contact our Youth Services Librarian Stephanie Vollick <a href="mailto:svollick@orl.bc.ca">svollick@orl.bc.ca&nbsp;</a>&nbsp;or leave a message at 250-542-7610 ext. 6829. For pictures from past events and more see our kids blog&nbsp;<a href="http://vernonlibrarykids.wordpress.com/">http://vernonlibrarykids.wordpress.com/&nbsp;</a></p>
+<p><em>All children's programs are free. Events for young children require a parent or guardian to stay and enjoy the program with them.</em></p>
+<h2>&nbsp;</h2>
+<h2>&nbsp;</h2>
+<p>&nbsp;</p>
+<blockquote>
+<h2><strong>Ages 0-5</strong></h2>
+<p>Parent or guardian participation is always required for this age group.</p>
+<blockquote>
+<h3>Story Time<span style="font-size: 12px;">&nbsp;- drop-in</span></h3>
+<p>Jan 11-May 14</p>
+<div>
+<ul>
+<li>Mondays and Thursdays at 10:30am with Judy</li>
+<li>10:30am&nbsp;Tuesdays and 11am Saturdays with Stephanie&nbsp;</li>
+</ul>
+</div>
+<p><a href="http://www.pinterest.com/orl_vernon/storytimes/">(Examples of past storytimes)</a></p>
+<h3>Toddler Time</h3>
+<p>Feb 3-March 9</p>
+<ul>
+<li>Wednesdays at 11 with Judy</li>
+</ul>
+</blockquote>
+<blockquote>
+<h3>Baby Mother Goose</h3>
+<blockquote>
+<p>A literacy-based program that encourages bonding with parents and caregivers and lots of lovely one-on-one time with your young baby. Featuring songs, rhymes and stories. <strong>You must be registered to attend these programs.</strong>You can register by calling CCRR at 250-542-3121 ext. 111 or by emailing them at&nbsp;<a href="mailto:ccrrvernon@boysandgirlsclubs.ca">ccrrvernon@boysandgirlsclubs.ca</a></p>
+<p>.</p>
+<p>Co-sponsored by<a href="http://www.boysandgirlsclubs.ca/"> the Vernon Boys and Girls Club</a>.</p>
+<ul>
+<li><strong>Mondays at 9:30 - 10:30 am (<strong>January 11-February 29) </strong>or </strong></li>
+<li><strong>Thursdays 11:00 am - noon (January 14-February 25).</strong></li>
+</ul>
+<p><strong>In the Meeting Room (downstairs).</strong></p>
+<p><span style="font-size: 14px; font-weight: bold;"><br /></span></p>
+<h3><span style="font-size: 14px; font-weight: bold;">Toddler Mother Goose</span></h3>
+</blockquote>
+<blockquote>
+<p>A literacy-based program that encourages bonding with parents and caregivers and lots of fun one-on-one time with your toddler. Featuring songs, rhymes and stories.&nbsp;<strong>You must be registered to attend these programs</strong>.&nbsp;You can register by calling TCCRR at 250-542-3121 ext. 111 or by emailing them at&nbsp;<a href="mailto:ccrrvernon@boysandgirlsclubs.ca">ccrrvernon@boysandgirlsclubs.ca</a></p>
+<p>Co-sponsored by<a href="http://www.boysandgirlsclubs.ca/">&nbsp;the Vernon Boys and Girls Club</a>.</p>
+<ul>
+<li><strong>Mondays 11:00 am - noon&nbsp;(<strong>January 11-February 29) </strong>or&nbsp;</strong></li>
+<li><strong>Thursdays 9:30 - 10:30 am (January 14-February 25).</strong></li>
+</ul>
+<p><strong>In the Meeting Room (downstairs).</strong></p>
+<h3><strong></strong><strong style="font-family: Georgia; font-size: 18px;">Ages 5-8&nbsp;</strong></h3>
+</blockquote>
+<p>Parent or guardian participation is always required for this age group.</p>
+<ul>
+<ul>
+<li><a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2462&amp;lib=">Goldie Blox/Lego &nbsp; &nbsp;</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; March 24 &nbsp;(please register)</li>
+<li>Are You A Horse? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2463&amp;lib=">March 29</a> &amp; <a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2513&amp;lib=">May 3&nbsp;</a>(please register)</li>
+<li>Whose Shoe? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2464&amp;lib=">March 31</a> &amp; <a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2514&amp;lib=">May 4&nbsp;</a>(please register)</li>
+<li>If You Give A Mouse An iPhone April 30</li>
+</ul>
+</ul>
+<h2><strong>Ages 9-13</strong></h2>
+<ul>
+<li><a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2845&amp;lib=">Origami </a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; March 21 (please register)</li>
+<li><a href="http://orl.evanced.info/signup/EventDetails.aspx?EventId=2465&amp;lib=">Shadow Puppet workshop &nbsp;</a> March 22&nbsp;(please register)</li>
+</ul>
+</blockquote>
+<h1>Teen</h1>
+<blockquote>
+<p>We are currently displaying teen photography in the youth area.&nbsp;</p>
+<p>July and August we are planning to host Teen Book Club, Teen Graphic Novel Club and writing workshops.</p>
+<p>Check out the teen blog for past events&nbsp;<a href="https://hangingatvebranch.wordpress.com/">Hanging at VE Branch</a>.&nbsp;</p>
+</blockquote>
+<h1>Adults&nbsp;</h1>
+<blockquote>
+<h2><strong>Sunday </strong></h2>
+<p><strong>March 20th is our last open Sunday. We will open for Sundays again October 2nd.</strong></p>
+<h3><strong>The Great Artist Trading Card Exchange&nbsp;</strong></h3>
+<p>&nbsp;Come and create works of art on blank cards the size of hockey trading cards and trade them, one for one, with other artists young and old. Art supplies, including the cards, are free and will be set out. The exchange is open to all.</p>
+<p>&nbsp;You can also choose to pick up blank cards in advance at the upstairs desk of the library branch and bring your completed art to the trading session.</p>
+<p>&nbsp;Space is limited and registration required. You can register at 250-542-7610 Ext. 6820, in person at the upstairs information desk at the library and online at our events calendar at <a href="http://orl.evanced.info/signup/EventCalendar.aspx?&amp;lib=1026">http://orl.evanced.info/signup/EventCalendar.aspx?&amp;lib=1026</a>&nbsp;.</p>
+<p>&nbsp;This free program is sponsored by the Vernon Friends of the Library, Gallery Vertigo and the Okanagan Regional Library.</p>
+<p>&nbsp;<strong>March 6th,&nbsp;1 to 3 p.m. in the meeting room on the main floor.</strong></p>
+<p><strong></strong>&nbsp;</p>
+<h2><strong>Monday </strong></h2>
+<h3>Thailand Corner</h3>
+<p>Learn about&nbsp;Thailand&nbsp;and the&nbsp;Thai&nbsp;ways of life. A display of books, handicrafts, arts and food.&nbsp;</p>
+<div>1pm registration</div>
+<div>1:30 Opening Ceremonies</div>
+<div>1:45 Reception</div>
+<div>3pm Video Visual on introduction to Thai culinary "Taste of Thailand". Discover authentic Thai cooking (Food sampling will be served).</div>
+<div><strong>March 14th, 1 pm in the Meeting Room (downstairs)</strong></div>
+<h3>&nbsp;</h3>
+<h3>Post Secondary Information Sessions</h3>
+<p>Have questions about what Okanagan College can offer you? How can you audit classes? How do credits work? What services are at Okanagan College?</p>
+<p>Kim Strilchuk, Education Advisor, will be at the Vernon Branch every&nbsp; <strong>Monday afternoon (2:30-4:30pm)</strong> &nbsp;to answer your questions.</p>
+<p>&nbsp;</p>
+<h2><strong>Tuesday</strong></h2>
+<h3><span style="font-size: x-small; font-family: Calibri,sans-serif;"><span style="font-size: small; font-family: TimesNewRomanPSMT,sans-serif; color: #000000;">"I'm New here: Migration, Sexuality and Racism" Poetry, Film Screening and Discussion<br /></span></span></h3>
+<p>Join us for an evening of poetry, videos and discussion on migration, sexuality and racism. &ldquo;I&rsquo;m New Here&rdquo; will include a viewing of short films and some photographs based on the experiences of queer, African migrants living in Winnipeg, and a lively discussion led by the project&rsquo;s filmmakers and researchers, Dr. Susan Frohlick and Irene Fubara-Manuel. In addition, local poets will contribute their artistic interpretations of the themes. We welcome all to attend this free, public event.This event is part of UBC Okanagan&rsquo;s Rule Out Racism Week. Rule Out Racism is a week-long series of events organized by the Equity and Inclusion Office focused on the need for greater literacy and conversation about race and racism within UBC and the surrounding communities where our students, staff and faculty call home.</p>
+<p>Please contact <a href="mailto:equity.ubco@ubc.ca">equity.ubco@ubc.ca</a> for any questions. Light refreshments will be provided.</p>
+<h3><span style="font-size: x-small; font-family: Calibri,sans-serif;"><span style="font-size: small; font-family: TimesNewRomanPSMT,sans-serif; color: #000000;">March 22nd, 6 - 8&nbsp;pm&nbsp;in the Meeting Room (downstairs)</span></span></h3>
+<h3><strong></strong>&nbsp;</h3>
+<h3><strong>Seniors Computer Help</strong></h3>
+<p>Junction Literacy tutors are returning to help Vernon seniors discover and learn about their technology. Please contact the Information Desk to reserve an hour long one-on-one session 250-542-7610 ext. 6820</p>
+<p><strong>Every Tuesday and Thursday</strong></p>
+<p><strong><br /></strong></p>
+<h3><strong>Chess Night</strong></h3>
+<p>Come play the game of kings!&nbsp; Everyone is welcome, from beginners to seasoned players.</p>
+<p><strong>Every Tuesday evening, 6:00&nbsp;- 9:00 pm upstairs in the library (just outside the computer lab).</strong></p>
+<p>&nbsp;</p>
+<h3>Meditation Group</h3>
+<p>Join Okanagan Oneness Blessing, a non-denominational meditation group, to learn and practice meditation.&nbsp; No experience is necessary, only an open mind and heart.&nbsp; Free, all are welcome to attend.&nbsp; Drop-in.</p>
+<p><strong>Every Tuesday -&nbsp;6:30 - 8:30 pm in the Meeting Room (downstairs) starting Jan. 19.</strong></p>
+<h3><strong><br /></strong></h3>
+<h3><strong>The CAYA Chatroom</strong></h3>
+<p>Meet with others using AAC devices and learn from and with each other.&nbsp; For more information contact Michelle at 250-809-1098 or <a href="mailto:mbunney@cayabc.org">mbunney@cayabc.org</a> ; or Katherine at 250-809-6990 or <a href="mailto:kwhitrow@cayabc.org">kwhitrow@cayabc.org</a></p>
+<p><strong>The last Tuesday of the month - 10:00-12:00 noon in the Meeting Room (downstairs).</strong></p>
+<p>&nbsp;</p>
+<h3><strong>The Writer's Circle</strong></h3>
+<p>Come join a group of writers dedicated to developing their work through networking and sharing ideas. No registration required, just show up with your ideas!</p>
+<p><strong>Every 2nd and 4th&nbsp;Tuesday of the month, 6:30-8:30pm&nbsp;in the Community Room (upstairs).</strong><strong>&nbsp;</strong></p>
+<p><strong><br /></strong></p>
+<h2><strong>Wednesday</strong></h2>
+<strong></strong>
+<h3><strong>Documentary Screening of Watermark &amp; BCSEA AGM</strong></h3>
+<p>6:30 - 7:00&nbsp;pm British Columbia Sustainable Energy Association AGM</p>
+<p>7:00 pm Screening of Watermark, a documentary from the filmmakers behind Manufactured Landscapes.&nbsp;The film shows water as a terraforming element and the scale of its reach, as well as the magnitude of our need and use. In <em>Watermark</em>, the viewer is immersed in a world defined by a magnificent force of nature that we all too often take for granted - until it's gone.</p>
+<p>&nbsp;</p>
+<h3><strong>North Okanagan Bike Coalition Community Meeting</strong></h3>
+<p>This group is trying to get the community together&nbsp;to work on advocating for people powered&nbsp;transportation,&nbsp;with a focus on biking. This&nbsp;initial meeting will be to&nbsp;see what areas the community is interested in focusing on and on planning some fun, bicycle-related family. Everyone is welcome.&nbsp;</p>
+<p>&ldquo;Our goal is to motivate people of all ages and abilities to safely ride bicycles to school, work, on errands, and for fun&rdquo;.</p>
+<p><strong>March 10th, 7 - 8:45 pm in the&nbsp;Meeting&nbsp;Room&nbsp;(downstairs).</strong></p>
+<p><strong></strong>&nbsp;</p>
+<h3>Restorative Justice: What is it?&nbsp;</h3>
+<p>Everyone is welcome to join the People's Law School and the Restorative Justice Society for an informative evening of education, food and theatre. 6 pm is a complimentary meal, followed by a dramatized criminal trial and a panel on restorative justice at 7 pm.</p>
+<p>Please register if you'd like to attend&nbsp;by calling 250-550-7840.</p>
+<p>&nbsp;</p>
+<h3><strong>RESULTS Vernon</strong></h3>
+<p>Come join RESULTS Vernon for an education and action meeting&nbsp; and learn about global development issues.&nbsp; Join in working together to create the political will to end the worst aspects of poverty.&nbsp; With your help, we can end extreme poverty sooner and prevent more needless deaths and suffering.&nbsp; <a href="http://www.results-resultats.ca/en/">http://www.results-resultats.ca/en/</a></p>
+<p><strong>2nd Wednesday of the month at 7:00-9:00pm in the magazine area.</strong><strong><br /></strong></p>
+<h3><strong></strong>&nbsp;</h3>
+<h3><strong>Okanagan WordPress Meetup</strong></h3>
+<p>Are you're interested in learning more about one of the web's most popular website platforms, just recently started to blog with WordPress, or are a pro-blogger wanting to improve your skills?&nbsp; We'd love to have you join the meetup!&nbsp; A group of local WordPress developers, designers, and publisher will be meeting in the library to get together to share their knowledge and experience and to meet other WordPress users in the area.&nbsp; Please come down to the library to join in to discuss and learn all about WordPress to power projects, blogs, and websites.&nbsp; Check out their website to find out more:&nbsp; <a href="http://www.meetup.com/Okanagan-WordPress-Meetup/">http://www.meetup.com/Okanagan-WordPress-Meetup/</a>.&nbsp; No registration required for this free program - just drop in!</p>
+<p><strong>2nd Wednesday of the month at 6:00pm in the Meeting Room (downstairs)</strong></p>
+<p>&nbsp;</p>
+<h3><strong>Miniature War Gaming Wednesdays</strong></h3>
+<p>Okanagan Board Game Group is pleased to host a night of tabletop miniature wargaming. All types of miniature games are available, from X-Wing Miniatures to the WW2 setting of Dust. New players and experienced players are welcome. Come down and get eye-to-eye with your favourite figures.</p>
+<p><strong>First Wednesday of every month at 6:00 pm<strong>&nbsp;upstairs, outside the computer lab</strong></strong></p>
+<h3><strong><br /></strong></h3>
+<h3><strong>Amnesty International Meeting</strong></h3>
+<p>You can make a difference! <br />Join our Amnesty International's Vernon Group and hear presentations on various human rights issues that Amnesty International is working on. We write at least two letters about a cause or case that Amnesty International has performed a thorough investigation and chosen to support.</p>
+<p><strong>Meeting on the third Wednesday of the month - 7-9pm</strong></p>
+<h3><strong><br /></strong></h3>
+<h3><strong>Vernon Permaculture Group Drop-in</strong></h3>
+<p>Vernon Permaculture is an open community group whose aim is to share regenerative knowledge and hands on experiences with one another in order to build a stronger community and healthier local environment. Everyone is welcome.</p>
+<p><strong>Last&nbsp;Wednesday of the month at 7 pm in the Meeting Room (downstairs).</strong></p>
+<p><strong><br /></strong></p>
+<h3>BC Sustainable Energy Association Community Gathering</h3>
+<p>Every month the Okanagan Chapter of the BCSEA will discuss a new topic related to sustainability and transitioning communities away from fossil fuels.&nbsp;Come, get involved, learn, connect and network; everyone is welcome! Learn more at&nbsp;<a href="http://www.bcsea.org/chapters/okanagan">http://www.bcsea.org/chapters/okanagan</a> or email bcseaok@gmail.com.</p>
+<p><strong>3rd Wednesday of the month at 6:30 p.m. in the Community Room (upstairs).</strong></p>
+<h2><strong><br /></strong></h2>
+<h2><strong>Thursday&nbsp;</strong></h2>
+<h3><strong>North Okanagan Bike Coalition Community Meeting</strong></h3>
+<p><span style="color: #000000;">This group is trying to get the community together&nbsp;to work on advocating for people powered&nbsp;transportation,&nbsp;with a focus on biking. This&nbsp;initial meeting will be to&nbsp;see what areas the community is interested in focusing on and on planning some fun, bicycle-related family. Everyone is welcome.&nbsp;</span></p>
+<p><span style="color: #000000;">&ldquo;Our goal is to motivate people of all ages and abilities to safely ride bicycles to school, work, on errands, and for fun&rdquo;.</span></p>
+<p><strong><span style="color: #000000;">March 10th, 6 - 9 pm in the Meeting Room (downstairs).</span></strong></p>
+<p><strong></strong>&nbsp;</p>
+<h3><strong>Seniors Computer Help</strong></h3>
+<p>Junction Literacy tutors are returning to help Vernon seniors discover and learn about their technology. Please contact the Information Desk to reserve an hour long one-on-one session 250-542-7610 ext. 6820</p>
+<p><strong>Every Tuesday and&nbsp;Thursday </strong></p>
+<p><strong><br /></strong></p>
+<h3>Games Night</h3>
+<p>Come out and Play!</p>
+<p>Our friendly group features gamers of every skill level with a great variety of games played. Bring your own favourite or join us to try out something new - we play everything from light social games all the way to in-depth miniature strategies.<br /><br />Want to know more? Join our Facebook group: <a href="https://www.facebook.com/groups/OkanaganBGs/">Okanagan Board Gamers</a> for more information and special events</p>
+<p><strong>Every Thursday night&nbsp;at&nbsp;5:30 pm&nbsp;<strong><strong>upstairs in the library (just outside the computer lab).</strong></strong></strong></p>
+<p><strong><strong><strong><br /></strong></strong></strong></p>
+<h3>Elders Games Night</h3>
+<p>First&nbsp;Nations Elders are invited to get together and play games. New players are always welcome.</p>
+<p><strong>Every Thursday night&nbsp;at&nbsp;6 pm in the Community Room (upstairs).</strong></p>
+<h3><strong><br /></strong></h3>
+<h3><strong>Mah-Jong Night</strong></h3>
+<p>Come to the library, learn how to play Mah-Jong (American Version), and stay for a game.&nbsp; Drop-in and Free!</p>
+<p><strong>Every Thursday night 6:30 - 8:30 pm in the Magazine area. Begins again January 14th.</strong></p>
+<h2><strong><br /></strong></h2>
+<h2><strong>Saturday</strong></h2>
+<h3><strong>Vernon Knitting Circle</strong></h3>
+<p>These drop-in sessions are&nbsp;for knitters of all experience levels and&nbsp;are open to anyone interested in knitting, whether new or experienced. Bring along yarn and needles, and a project&nbsp; you are working on. You are also welcome to bring your knitting questions and problems, and&nbsp;someone in the group will&nbsp;happily help you work out a solution.</p>
+<p><strong>Every Saturday morning, 10 am - noon&nbsp;<strong><strong>upstairs in the library (just outside the computer lab).</strong></strong></strong></p>
+<h3>&nbsp;</h3>
+<h3><strong>Saturday Adult Book Club</strong></h3>
+<p>Vernon Branch invites you to read the suggested titles and to join us for a lively, facilitated discussion of the featured title. The book club is open to all interested adults and preregistration is not required. Held the third and fourth Saturday of every month (*except March)&nbsp;from <strong>10:30 - 11:30 am in the library's&nbsp;upstairs community&nbsp;room</strong>.&nbsp;Both meetings are the same discussion, so you can choose to attend either.&nbsp;</p>
+<p><strong><em>Thank you to the Vernon Friends of the Library for their support of the Adult Book Club.</em></strong></p>
+<p><strong>2016 Titles</strong></p>
+<p><em><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=154410">Quiet: the Power of Introverts in a World that Can't Stop Talking</a></em> by Susan Cain (March 12th &amp; 19th)</p>
+<p><em><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=228981">A Wizard of Earthsea</a> </em>by Ursula K. Le Guin (April 16th &amp; 23rd)</p>
+<p><em><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=229766">The Underground Girls of Kabul: In Search of a Hidden Resistance in Afghanistan</a></em> by Jenny Nordberg (May 21st &amp; 28th)</p>
+<p><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=20704"><em>Cold Comfort Farm</em> </a>by Stella Webb (June 18th &amp; 25th)</p>
+<p><em><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=240396">H is for Hawk</a></em> by Helen MacDonald (July 16th &amp; 23rd)</p>
+<p><em><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=25965">Year of Wonders: a Novel of the Plague</a></em>&nbsp;by Geraldine Brooks (August 20th &amp; 27th)</p>
+<p><em><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=226926">Being Mortal: Medicine and What Matters in the End</a></em>&nbsp;by Atul Gawande (September 17th &amp; 24th)</p>
+<p><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=220319"><em>Sweetland</em> </a>by Michael Crummey (October 15th &amp; 22nd)</p>
+<p><em><a href="http://ipac.orl.bc.ca/polaris/search/title.aspx?ctx=1.1033.0.0.3&amp;cn=150174">Why Be Happy When You Could Be Normal?</a></em> by Jeanette Winterson (November 19th &amp; 26th)</p>
+<p>&nbsp;<br /><strong>You are responsible for placing a hold on a copy of the book.<br /></strong><strong>Please note: Many titles are also available in ebook and audiobook formats in the ORL catalogue.</strong></p>
+<p>&nbsp;If you have an idea you'd like to see happen @ your library, email us at <a href="mailto:vereference@orl.bc.ca">vereference@orl.bc.ca</a>.</p>
+</blockquote>
+<hr />
+<h1>Services<img style="float: right;" src="assets/images/Image%20Bank%20for%20Branch%20Use/Vernon/eReaderimage.jpg" alt="Branch Head Tara Thompson holding a selection of eReading devices." width="256" height="192" /></h1>
+<h2><strong>Basic eBook Training</strong></h2>
+<p>We offer free one-on-one training sessions to help you learn to use our digital resources including our <a href="http://orl.lib.overdrive.com/6EAC1A4A-52F1-43B1-BFCA-9C4DE041FC50/10/50/en/Default.htm" target="_blank">eBook collections</a>, <a href="http://okanaganbc.oneclickdigital.com/Home/Featured.aspx" target="_blank">digital audiobooks</a> and <a href="http://www.rbdigital.com/okanaganbc/service/zinio/landing" target="_blank">Zinio</a>. <a href="http://www.overdrive.com/drc/" target="_blank">Check here</a> to see if your eReader or Tablet is compatible with the library's eBook provider. Do you have questions about what the library can offer you? Call today to sign up! 250-542-7610 ext. 6820.</p>
+<p>For some tips on purchasing an eReader/Tablet please check out the <a href="http://75-years-orl.blogspot.ca/2013/11/the-gift-that-keeps-on-giving-tablets.html">ORL's Blog post</a> that's loaded with tips.&nbsp;</p>
+<h2><strong>Seniors Tech Help</strong></h2>
+<p>Learn more about your devices, computers, and the Internet.&nbsp;&nbsp; With Junction Literacy volunteers, the libraray is offering Senior Tech Help on Tuesdays and Thursdays.&nbsp; Phone the library (250-542-7610 ext. 6820) to sign-up for a one hour 1-on-1 session to learn computer basics.&nbsp;</p>
+<h2><strong>Free Community Space</strong></h2>
+<p>The library has a beautiful community meeting room that can be booked for up to two hours at a time, free of charge. You may book the room up to one day in advance by calling 250-542-7610 ext. 6820. It's a great space for tutoring, studying, meetings, scrapbooking and more!</p>
+<h2><strong>Exam Invigilation</strong></h2>
+<p>Are you looking for somewhere to take an invigilated&nbsp;exam, either written or online? The library can help you out.&nbsp; Basic information can be found on the <a href="Borrowing-services/other-services/exams-in-the-library">Exams in the Library</a> page.&nbsp; Call or email us for more details at <a href="mailto:vereference@orl.bc.ca">vereference@orl.bc.ca</a> or 250-542-7610 ext. 6820.</p>
+<h2><strong>Internet, Photocopying and Scanning</strong></h2>
+<p>The Vernon Branch has 17 internet terminals with word processing capabilities&nbsp;available for&nbsp;one hour per day with a valid ORL library card. Unlimited wifi access is available all day. Printing and photocopying is $.25 per page, black and white only. Scanning to email is available at the 2nd floor photocopier and is free of charge.</p>
+<h2><strong>Meeting Room Rental</strong></h2>
+<p>The&nbsp;Vernon Branch has meeting rooms available for rent on open days.</p>
+<p>The&nbsp;main meeting room has a capacity of 100 with a theatre style set-up, and can be divided into two smaller rooms, each with a capacity of 50.</p>
+<p>Rental fees are $50.00 for a 3-hour block for each of the smaller rooms and $85.00 for&nbsp;the whole&nbsp;room. There is a fee&nbsp;of $10.00 for each additional hour&nbsp;for both room sizes. &nbsp;Bookings are not confirmed until the rental fee has been paid.</p>
+<p>For further information, please contact the branch at 250-542-7610 ext 6819.</p>
+<p>There is also&nbsp;a small group&nbsp;study room on the second floor of the library which holds about 8-10 people. There is no charge for its use, but bookings are only taken up to one day in&nbsp;advance.</p>
+<p>For further information, please contact the branch at 250-542-7610 ext 6820.</p>
+<h2><strong>Vernon Grows: Seed Lending Library </strong></h2>
+<p style="text-align: left;">The Vernon branch is creating a seed lending library, in conjunction with Okanagan College and Patchwork Farms. Once the library is sufficiently stocked, patrons will be allowed to check out seeds on the condition they replace the seeds the following season from the plants they grew.</p>
+<p style="text-align: left;">Two step-by-step guides on how to save heirloom seeds are now available at the library. Any patron interested in contributing seeds to the library &nbsp;is asked to place seeds from each vegetable in its own envelope and label it with the type of vegetable, variety&nbsp; if known, date collected and general location. The seeds can be dropped off at the upstairs information desk at the library.</p>
+<p style="text-align: left;">For more information please contact the library at 250-546-7610 and ask for Peter.</p>
+<h2><strong>Library at Your Door: a delivery service for homebound seniors</strong></h2>
+<p>The library and NexusBC Seniors Services are working together to deliver library materials to patrons physically unable to visit the library. Service&nbsp;is available in the&nbsp;Coldstream and Vernon areas, and will begin again in September 2015. If you are a homebound senior or know a homebound senior who would benefit from this program, contact NexusBC Seniors Services at 250-545-0585 to be screened for the program.</p>
+<p>Supported by the ORL, Nexus BC, the Vernon Friends of the Library, and Southward Medical Supplies.</p>
+<hr />
+<h1>Vernon Friends of the Library</h1>
+<p>The Vernon Friends of the Library, a non-profit organization formed in 1989, is registered under the Society Act of British Columbia.</p>
+<p>The major fundraiser is the huge book sale held in early May every year.&nbsp;</p>
+<p>In 2014 the Vernon Friends of the Library paid for:</p>
+<ul>
+<li>major sponsorship of the Summer Reading Club for the programs and prizes</li>
+<li>canopy and tables for outreach work</li>
+<li>floor cushions for Toddler Time and carpet for Story Time</li>
+<li>new blinds in the computer lab upstairs</li>
+<li>refreshments at the Adult Book Club</li>
+<li>writer's workshop as part of <a href="http://nanowrimo.org/">NaNoWrit month</a></li>
+<li>other author readings throughout the year</li>
+</ul>
+<p>The Friends also hold smaller book sales throughout the year, and provide book bags to purchase at the branch.</p>
+<p>New members are always welcome, and anyone interested in more information can contact Linda Wills at 250-549-1466 or <a href="mailto:lwills41@telus.net">lwills41@telus.net</a></p>
+<hr />
+<p><span style="font-size: 28px; font-style: italic;">FAQs</span></p>
+<p><strong>Q. What is the name of the "people chairs" under the stairs?</strong></p>
+<p>A. Those chair were bought as part of the the new library and are called Bouloum Lounge chairs.</p>
+<p><strong>Q. &nbsp;Can you tell me more about the artwork in the library?</strong></p>
+<p>A. &nbsp;Most of the artwork should have information tags beside each piece. &nbsp;Our Friends of the LIbrary co-ordinates the artwork in the library and the vast majority is displayed by the Vernon Art Gallery.</p>
+</blockquote>
+               </div></div>
+</div>  <!-- end of background -->
+           <!-- Copyright -->
+	<div class="content-footer-container-bottom-div">
+		<span id="footer-copyright" class="content-footer-text">&copy; 2013 Okanagan Regional Library | Last updated on March  8, 2016 | <a href="/search">Website Search</a></span>
+		<span id="footer-twin-creek" class="content-footer-text"><a href="http://www.twincreekmedia.com" target="_blank">Kelowna Marketing by Twin Creek Media</a></span>
+	</div>
+<div class="footer-contentpage-div">
+	<!-- Location/Nav Row -->
+	<div class="content-footer-container">
+		<div id="footer-location"><h5>Locations, Hours, and Programs</h5><!--<img src="/assets/templates/orl/images/layout/locations-and-hours-footer.gif" alt="Locations &amp; Hours" />--></div>
+		<div id="footer-navigation"><h5>Navigation</h5><!--<img src="/assets/templates/orl/images/layout/navigation-footer.gif" alt="Navigation" />--></div>
+	</div>
+	<!-- Divider -->
+	<div class="content-footer-divider"></div>
+	<!-- City/Menu Row -->
+	<div class="content-footer-container">
+                <div class="content-footer-locations-link-branches">
+                    <div><ul><li><a href="/branches/armstrong" title="Armstrong" >Armstrong</a></li>
+<li><a href="/branches/cherryville" title="Cherryville" >Cherryville</a></li>
+<li><a href="/branches/enderby" title="Enderby" >Enderby</a></li>
+<li><a href="/branches/falkland" title="Falkland" >Falkland</a></li>
+<li><a href="/branches/golden" title="Golden" >Golden</a></li>
+<li class="last"><a href="/branches/hedley" title="Hedley" >Hedley</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/kaleden" title="Kaleden" >Kaleden</a></li>
+<li><a href="/branches/kelowna" title="Kelowna" >Kelowna</a></li>
+<li><a href="/branches/keremeos" title="Keremeos" >Keremeos</a></li>
+<li><a href="/branches/lake-country" title="Lake Country" >Lake Country</a></li>
+<li><a href="/branches/lumby" title="Lumby" >Lumby</a></li>
+<li class="last"><a href="/branches/mission" title="Mission" >Mission</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/naramata" title="Naramata" >Naramata</a></li>
+<li><a href="/branches/north-shuswap" title="North Shuswap" >North Shuswap</a></li>
+<li><a href="/branches/okanagan-falls" title="Okanagan Falls" >Okanagan Falls</a></li>
+<li><a href="/branches/oliver" title="Oliver" >Oliver</a></li>
+<li><a href="/branches/osoyoos" title="Osoyoos" >Osoyoos</a></li>
+<li class="last"><a href="/branches/oyama" title="Oyama" >Oyama</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/peachland" title="Peachland" >Peachland</a></li>
+<li><a href="/branches/princeton" title="Princeton" >Princeton</a></li>
+<li><a href="/branches/revelstoke" title="Revelstoke" >Revelstoke</a></li>
+<li><a href="/branches/rutland" title="Rutland" >Rutland</a></li>
+<li><a href="/branches/salmon-arm" title="Salmon Arm" >Salmon Arm</a></li>
+<li class="last"><a href="/branches/sicamous" title="Sicamous" >Sicamous</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/silver-creek" title="Silver Creek" >Silver Creek</a></li>
+<li><a href="/branches/south-shuswap" title="South Shuswap" >South Shuswap</a></li>
+<li><a href="/branches/summerland" title="Summerland" >Summerland</a></li>
+<li class="active"><a href="/branches/vernon" title="Vernon" >Vernon</a></li>
+<li class="last"><a href="/branches/westbank" title="Westbank" >Westbank</a></li>
+</ul></div>
+                </div>
+		<div class="content-footer-locations-link-divider"></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/about-us" title="About Us" >About Us</a></li>
+<li><a href="/news-events" title="News &amp; Events" >News &amp; Events</a></li>
+<li class="active"><a href="/branches" title="Branches" >Branches</a></li>
+<li class="last"><a href="/Borrowing-services" title="Borrowing & Services" >Borrowing & Services</a></li>
+</ul></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/online-resources" title="Web Resources" >Web Resources</a></li>
+<li><a href="/kids" title="Kids" >Kids</a></li>
+<li><a href="/teens" title="Teens" >Teens</a></li>
+<li><a href="/book-lovers" title="Book Lovers" >Book Lovers</a></li>
+<li class="last"><a href="/contact" title="Contact Us" >Contact Us</a></li>
+</ul></div>
+	</div>
+</div>
+            
+        </div>
+
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3147068-38");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://bclibraries.org/piwik/" : "http://bclibraries.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 62);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://bclibraries.org/piwik/piwik.php?idsite=62" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Tag -->
+	</body>
+</html>

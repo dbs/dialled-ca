@@ -1,0 +1,979 @@
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+<head id="ctl00_Head1">
+<!--[if lte IE 6]>
+<script type="text/javascript">
+alert('Please note that this website has been optimized for use with Internet Explorer 7 or above.');
+</script>
+<![endif]-->
+    <title>
+	CHEO - Home
+</title>
+    <meta name="keywords" content="children's hospitals, child health, hospital, Ontario, pediatric, family, care, research, treatment"/><meta name="description" content="CHEO is a pediatric health and research center providing outstanding family-centered patient care, pioneering breakthrough research, and training the health care professionals of tomorrow."/><meta name="author" content="Ronald Swaine"/><meta name="copyright" content="Pyrescent"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    
+    <script type="text/javascript" src="/js/jquery.maskedinput-1.2.2.js"></script>
+	<script src="/JS/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.carousel-1.1.js"></script>
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+       <script src="/js/selectivizr-min.js" type="text/javascript"></script>
+    <![endif]--> 
+	
+	
+
+    <script type="text/javascript">
+        var GB_ROOT_DIR = "/js/greybox/";
+	</script>
+	
+	<!--[if lt IE 7]>
+        		<script type="text/javascript" src="/png_fix/unitpngfix.js"></script>
+	<![endif]-->
+	
+    <link href="/CSS/Menu.css" rel="stylesheet" type="text/css" /><link href="/CSS/Main.css" rel="stylesheet" type="text/css" /><link href="/CSS/noprint.css" rel="stylesheet" type="text/css" media="print" /><link rel="Stylesheet" type="text/css" href="/css/carousel.css" /><link href="http://fonts.googleapis.com/css?family=Asap" rel="stylesheet" type="text/css" />
+	
+	
+	
+	
+
+	<script type="text/javascript">
+
+//	    alert("Dear User," + '\n' + "Please note that this website is currently being updated in anticipation of your testing." + '\n' + "We will be continuing to perform updates during this testing phase so please be aware that some functionality may not be available.");
+	    
+</script>
+	
+	<script type="text/javascript">
+
+		//function ada_Expand(s)
+		//{
+		//	
+		//}
+
+	    var styles = ['.bodytext', '.header', '.title', '.subtitle', '.bodytext li', '.bodytext a', '.bodytext li', '.bodytext li a'];
+		var changer = "span.changer";
+		var grow = 'spGrow';
+		var srhink = 'spShrink';
+		var growup = 3;
+		var grew = 0; //counter initial value
+
+		// initialize the jquery code
+		$(document).ready(function () {
+
+
+		    var getWidth = $('#container').width();
+
+		    // Set a global variable to keep track of how far
+		    // the "shifter" should be moved.
+		    var setWidth = 0;
+
+		    // Subtract the pane width from the amount by which
+		    // the "shifter" has already been moved.
+		    // Don't forget to give back the changed setWidth variable!
+		    $('a.shiftleft').click(function () {
+		        if (setWidth > -500) {
+		            setWidth = setWidth - getWidth;
+		            var newsnum = parseInt(document.getElementById("newsnum").innerHTML);
+		            newsnum++;
+		            document.getElementById("newsnum").innerHTML = newsnum;
+		            $('#shifter').animate({ left: setWidth }, 500); 
+		            $('.rowright').attr('src', newsnum < 3 ? '/images/new/news_next.jpg' : '/images/new/news_next_off.jpg');
+		            $('.rowleft').attr('src', '/images/new/news_back.jpg');
+		        }
+		        return false;
+		    });
+		    // Same thing in reverse.
+		    $('a.shiftright').click(function () {
+		        if (setWidth < 0) {
+		            setWidth = setWidth + getWidth;
+		            var newsnum = parseInt(document.getElementById("newsnum").innerHTML);
+		            newsnum--;
+		            document.getElementById("newsnum").innerHTML = newsnum;
+		            $('#shifter').animate({ left: setWidth }, 500);
+		            $('.rowleft').attr('src', newsnum > 1 ? '/images/new/news_back.jpg' : '/images/new/news_back_off.jpg');
+		            $('.rowright').attr('src', '/images/new/news_next.jpg');
+		        }
+		        return false;
+		    });
+
+
+		    ////////		    $('a.shiftrightC').click(function() {
+		    ////////				if (setWidth > - 360) {
+		    ////////					setWidth = setWidth - getWidth;
+		    ////////					$('#shifterC').animate({ left: setWidth }, 500);
+		    ////////				}
+		    ////////				return false;
+		    ////////			});
+		    ////////			// Same thing in reverse.
+		    ////////			$('a.shiftleftC').click(function() {
+		    ////////				if (setWidth < 0) {
+		    ////////					setWidth = setWidth + getWidth;
+		    ////////					$('#shifterC').animate({ left: setWidth }, 500);
+		    ////////				}
+		    ////////				return false;
+		    ////////			});
+
+
+		    $(changer).click(function () {
+
+		        for (var i = 0; i < (styles.length); i++) {
+		            var $mainText = $(styles[i]);
+
+		            if ($mainText.css('font-size')) {
+		                var currentSize = $mainText.css('font-size');
+		                var num = parseFloat(currentSize, 10);
+
+		                var unit = currentSize.slice(-2);
+
+		                if (this.id == grow && grew < growup) {
+		                    num += 2;
+		                }
+		                else if (this.id == srhink && grew > 0) {
+		                    num -= 2;
+		                }
+		                $mainText.css('font-size', num + unit);
+		            }
+		        }
+
+		        if (this.id == grow && grew < growup)
+		            grew++;
+		        else if (this.id == srhink && grew > 0)
+		            grew--;
+
+		        return false;
+
+		    });
+
+		    /*$(".WhiteTable").corner();*/
+		    $(".menu_right").click(function () { window.location.href = "http://www.cheo.on.ca" });           // -- "http://cheo.bluelemonmedia.com" });
+		    $(".jDropDown").click(function () {
+
+		        if ($(".jDropDownBox").is(":hidden")) {
+		            $(".jDropDownBox").slideDown("fast");
+		        } else {
+		            $(".jDropDownBox").slideUp("fast");
+		        }
+
+		    });
+		});
+</script>
+
+
+<script type="text/javascript">
+<!--
+    function MM_swapImgRestore() { //v3.0
+        var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+    function MM_preloadImages() { //v3.0
+        var d = document; if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+        }
+    }
+
+    function MM_findObj(n, d) { //v4.01
+        var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+            d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+        }
+        if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+        for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+        if (!x && d.getElementById) x = d.getElementById(n); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+        var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+            if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+        }
+
+        
+//-->
+</script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-16678801-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<style type="text/css">
+.changer{cursor:pointer;}
+</style>
+<style>
+ul 
+{
+    list-style-type: none;
+    list-style-image: url(/images/new/bullet.jpg);
+    vertical-align:top;
+}
+</style>
+
+
+<style type="text/css">
+
+html, body {margin:0;padding:0;} 
+
+img {border:0;}
+
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 70px;}  /* footer height */
+
+#footer {position: relative;
+	margin-top: -70px; /* footer height */
+	height: 70px;
+	background-color:#343434;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#ffffff;
+	clear:both;} 
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+
+
+
+
+
+</style>
+
+
+</head>
+<body style="background-image:url('/images/new/bg.jpg'); background-repeat:repeat-x; width:100%; vertical-align:top; background-color:#bbe0f5;"><form name="aspnetForm" method="post" action="default.aspx?lang=1&amp;seo=home" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAgIDD2QWGAIBDxYCHgRUZXh0BQw8YSBocmVmPSIvIj5kAgMPZBYCZg8WAh8ABSI8YSBocmVmPSIvZnIvaG9tZSI+ZW4gZnJhbmNhaXM8L2E+ZAIEDxYCHwAFsgI8YSBocmVmPSIvZW4vaG9tZSI+SG9tZTwvYT48YSBocmVmPSIiIG9uY2xpY2s9IndpbmRvdy5vcGVuKCcvY29udHJvbHMvcGFnZXNoYXJlL3BhZ2VzaGFyZS5hc3B4P2lkPTEnLCBudWxsLCAnc3RhdHVzPW5vLCB0b29sYmFyPW5vLCBtZW51YmFyPW5vLCBsb2NhdGlvbj1ubywgc2Nyb2xsYmFycz1ubywgc2Nyb2xsaW5nPW5vJyk7Ij5TaGFyZTwvYT48YSBocmVmPSIvZW4vY29udGFjdGNoZW8iPkNvbnRhY3Q8L2E+PGEgaHJlZj0iIyIgb25jbGljaz0iamF2YXNjcmlwdDp3aW5kb3cucHJpbnQoKTtyZXR1cm4gZmFsc2U7Ij5QcmludDwvYT5kAgUPZBYCZg9kFgpmDxYCHwBlZAICDxYCHgdWaXNpYmxlaGQCAw8WAh8AZWQCBA8WAh4JaW5uZXJodG1sBd0iCjxkZWwgY2xhc3M9ImNvbnRhaW5lciI+PHVsIGlkPSJtZW51Ij4KPGxpIGNsYXNzPSJtZW51IHNpeCI+PGEgaHJlZj0iL2VuL0Fib3V0Ij5BYm91dCBVczwvYT48dWw+PGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vQWJvdXQiIHRhcmdldD0iX3NlbGYiPkFib3V0IENIRU88L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL3N1Y2Nlc3NzdG9yaWVzIiB0YXJnZXQ9Il9zZWxmIj5Ib3cgQ0hFTyBNYWRlIE1lIEJldHRlcjwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vQm9hcmRvZlRydXN0ZWVzIiB0YXJnZXQ9Il9zZWxmIj5PdXIgTGVhZGVyczwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vV2F0Y2hVcyIgdGFyZ2V0PSJfc2VsZiI+TmV3cyAmIEV2ZW50czwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vcGF0aWVudHNhZmV0eSIgdGFyZ2V0PSJfc2VsZiI+UGF0aWVudCBTYWZldHkgPC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9hZHZvY2FjeW92ZXJ2aWV3IiB0YXJnZXQ9Il9zZWxmIj5BZHZvY2FjeTwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vYWNjZXNzaWJpbGl0eSIgdGFyZ2V0PSJfc2VsZiI+QWNjZXNzaWJpbGl0eTwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vYW5udWFsLXJlcG9ydHMiIHRhcmdldD0iX3NlbGYiPlJlcG9ydHM8L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL1ByaXZhY3lhbmRDb25maWRlbnRpYWxpdHkiIHRhcmdldD0iX3NlbGYiPlByaXZhY3kgYW5kIENvbmZpZGVudGlhbGl0eSA8L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL2FjY2Vzc190b19pbmZvcm1hdGlvbiIgdGFyZ2V0PSJfc2VsZiI+QWNjZXNzIHRvIEluZm9ybWF0aW9uPC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9QSElQQSIgdGFyZ2V0PSJfc2VsZiI+QWNjZXNzIHRvIFBlcnNvbmFsIEhlYWx0aCBJbmZvcm1hdGlvbjwvYT48dWw+PC91bD4KPC9saT4KPC91bD4KPGxpIGNsYXNzPSJtZW51IHNpeCI+PGEgaHJlZj0iL2VuL1dheXN0b0dpdmUiPldheXMgdG8gR2l2ZTwvYT48dWw+PGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vb3VyZm91bmRhdGlvbiIgdGFyZ2V0PSJfc2VsZiI+RG9uYXRpb248L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL3ZvbHVudGVlcmluZyIgdGFyZ2V0PSJfc2VsZiI+R2V0IEludm9sdmVkPC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9zaGFyZXlvdXJzdG9yeTIiIHRhcmdldD0iX3NlbGYiPkhvdyBDSEVPIE1hZGUgTWUgQmV0dGVyPC9hPjx1bD48L3VsPgo8L2xpPgo8L3VsPgo8bGkgY2xhc3M9Im1lbnUgc2l4Ij48YSBocmVmPSIvZW4vUGF0aWVudHNWaXNpdG9ycyI+UGF0aWVudHMvVmlzaXRvcnM8L2E+PHVsPjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL3Zpc2l0aW5naG91cnMiIHRhcmdldD0iX3NlbGYiPlBsYW5uaW5nIFlvdXIgVmlzaXQ8L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL3NlcnZpY2VzYW5kcmVzb3VyY2VzIiB0YXJnZXQ9Il9zZWxmIj5Gb3IgWW91ciBDb252ZW5pZW5jZTwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vdmlzaXRpbmdlbWVyZ2VuY3kiIHRhcmdldD0iX3NlbGYiPlZpc2l0aW5nIHRoZSBFbWVyZ2VuY3kgRGVwYXJ0bWVudDwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vcGF5eW91cmJpbGwiIHRhcmdldD0iX3NlbGYiPkJpbGxpbmcgYW5kIEFjY291bnRzPC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9rYWl0bGluYXRraW5zb25mcmwiIHRhcmdldD0iX3NlbGYiPkZhbWlseSBSZXNvdXJjZSBMaWJyYXJ5PC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9oZWFsaW5nLWdhcmRlbiIgdGFyZ2V0PSJfc2VsZiI+SGVhbGluZyBHYXJkZW48L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL215Y2hhcnQiIHRhcmdldD0iX3NlbGYiPk15Q2hhcnQ8L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL2ZhbWlseS1mb3J1bSIgdGFyZ2V0PSJfc2VsZiI+RmFtaWx5IEZvcnVtPC9hPjx1bD48L3VsPgo8L2xpPgo8L3VsPgo8bGkgY2xhc3M9Im1lbnUgc2l4Ij48YSBocmVmPSIvZW4vSGVhbHRoQml0c0FaIj5Qcm9ncmFtcyAmIEhlYWx0aCBJbmZvPC9hPjx1bD48bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9IZWFsdGhCaXRzQVoiIHRhcmdldD0iX3NlbGYiPlByb2dyYW1zIGFuZCBIZWFsdGggSW5mbzwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vQVpQcm92aW5jZSIgdGFyZ2V0PSJfc2VsZiI+UHJvdmluY2Utd2lkZSBQcm9ncmFtczwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4va2FmbCIgdGFyZ2V0PSJfc2VsZiI+RmFtaWx5IFJlc291cmNlIExpYnJhcnk8L2E+PHVsPjwvdWw+CjwvbGk+CjwvdWw+CjxsaSBjbGFzcz0ibWVudSBzaXgiPjxhIGhyZWY9Ii9lbi9Qcm9mZXNzaW9uYWxzIj5Qcm9mZXNzaW9uYWxzPC9hPjx1bD48bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9waHlzaWNpYW5zZGlyZWN0ZWR0aGVyYXBpZXMiIHRhcmdldD0iX3NlbGYiPlBoeXNpY2lhbnM8L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL251cnNpbmdvdmVydmlldyIgdGFyZ2V0PSJfc2VsZiI+TnVyc2luZzwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vaGVhbHRoY2FyZXByb2Zlc3Npb25hbHNmb3JwaGFybWFjaXN0cyIgdGFyZ2V0PSJfc2VsZiI+UGhhcm1hY2lzdHM8L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL3RyYWluaW5nb3Bwb3J0dW5pdGllcyIgdGFyZ2V0PSJfc2VsZiI+VHJhaW5pbmcgT3Bwb3J0dW5pdGllczwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vb25saW5lbGVhcm5pbmdjZW50cmUiIHRhcmdldD0iX3NlbGYiPk9ubGluZSBMZWFybmluZyBDZW50ZXI8L2E+PHVsPjwvdWw+CjwvbGk+CjwvdWw+CjxsaSBjbGFzcz0ibWVudSBzaXgiPjxhIGhyZWY9Ii9lbi9DYXJlZXJzIj5DYXJlZXJzPC9hPjx1bD48bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi93aG93ZWFyZWNhcmVlcnMiIHRhcmdldD0iX3NlbGYiPldobyBXZSBBcmU8L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL291cmN1bHR1cmUiIHRhcmdldD0iX3NlbGYiPkxpZmUgYXQgQ0hFTzwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vd2hhdHdlb2ZmZXIiIHRhcmdldD0iX3NlbGYiPldoYXQgV2UgT2ZmZXI8L2E+PHVsPjwvdWw+CjwvbGk+CjxsaSBjbGFzcz0ibWVudXN1YiI+PGEgaHJlZj0iL2VuL2NhcmVlcm9wcG9ydHVuaXRpZXMiIHRhcmdldD0iX3NlbGYiPkNhcmVlciBPcHBvcnR1bml0aWVzPC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi92b2x1bnRlZXJpbmciIHRhcmdldD0iX3NlbGYiPlZvbHVudGVlcmluZzwvYT48dWw+PC91bD4KPC9saT4KPGxpIGNsYXNzPSJtZW51c3ViIj48YSBocmVmPSIvZW4vbnVyc2luZ2luaXRpYXRpdmVzIiB0YXJnZXQ9Il9zZWxmIj5OdXJzaW5nIEluaXRpYXRpdmVzPC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9saWZlaW5vdHRhd2EiIHRhcmdldD0iX3NlbGYiPkxpZmUgaW4gT3R0YXdhPC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9jYXJlZXJ2b2x1bnRlZXJpbmdmYXFzIiB0YXJnZXQ9Il9zZWxmIj5GQVFzPC9hPjx1bD48L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1lbnVzdWIiPjxhIGhyZWY9Ii9lbi9jb250YWN0Y2FyZWVyc1ZvbHVudGVlcmluZyIgdGFyZ2V0PSJfc2VsZiI+Q29udGFjdCBVczwvYT48dWw+PC91bD4KPC9saT4KPC91bD4KPC91bD48L2RlbD5kAgUPFgIfAAVRPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPiQoIiNjdGwwMF9NYWluTWVudV9jdGwwMF9uZXdtZW4iKS5zaG93KCk7PC9zY3JpcHQ+ZAIGD2QWAmYPZBYCAgEPFgIeC18hSXRlbUNvdW50AgQWCGYPZBYCZg8VByxodHRwOi8vd3d3LmNoZW8ub24uY2EvZW4vbmV3c3Jvb20/bmV3c2lkPTY1NgM0ODIFX3NlbGYRL1VwbG9hZHMvQmFubmVycy8BOBJHUCBzZXR0bGVfd2ViNS5wbmczQ0hFT+KAmXMgcGF0ZW50IGRlYWwgd2lsbCBjaGFuZ2UgbWVkaWNpbmUgaW4gQ2FuYWRhZAIBD2QWAmYPFQctaHR0cDovL3d3dy5jaGVvLmNhL2VuL3BlYWstc2Vhc29uLXByZWNhdXRpb25zAzQ3OAVfc2VsZhEvVXBsb2Fkcy9CYW5uZXJzLwE4IVZpc2l0b3IgcmVzdHJpY3Rpb25zX25ldyB0ZXh0LnBuZydXaW50ZXIgcGVhayBzZWFzb24gdmlzaXRvciByZXN0cmljdGlvbnNkAgIPZBYCZg8VBypodHRwOi8vd3d3LmNoZW8ub24uY2EvZW4vTUgtc3RyYXRlZ2ljLXBsYW4DNDY1BV9zZWxmES9VcGxvYWRzL0Jhbm5lcnMvATgjRXh0LWJhbm5lci1IZWFsdGh5WW91bmdNaW5kcy1FTi5wbmckTWVudGFsIEhlYWx0aCBTdHJhdGVneSBmb3IgMjAxNS0yMDIwZAIDD2QWAmYPFQcdaHR0cDovL3d3dy5jaGVvLmNhL2VuL1N1cmdlcnkDNDc2BV9zZWxmES9VcGxvYWRzL0Jhbm5lcnMvATgZc3VyZ2ljYWwgYm9va2xldCBjb3B5LnBuZxNDb21pbmcgZm9yIHN1cmdlcnk/ZAIHD2QWAmYPZBYCAgEPZBYCZg8PFgIfAAWVBjxoMT5XZWxjb21lIDwvaDE+DQo8cD5DSEVPIGlzIGEgcGVkaWF0cmljIGhlYWx0aCBhbmQgcmVzZWFyY2ggY2VudGVyIHByb3ZpZGluZyBvdXRzdGFuZGluZyBmYW1pbHktY2VudGVyZWQgcGF0aWVudCBjYXJlLCBwaW9uZWVyaW5nIGJyZWFrdGhyb3VnaCByZXNlYXJjaCwgYW5kIHRyYWluaW5nIHRoZSBoZWFsdGggY2FyZSBwcm9mZXNzaW9uYWxzIG9mIHRvbW9ycm93LjwvcD4NCjxwPjxzcGFuIGNsYXNzPSJib2R5dGV4dCI+PC9zcGFuPjxhIGhyZWY9Imh0dHA6Ly93d3cuY2hlby5vbi5jYS9lbi9XaG9XZUFyZT9taWQ9Y3RsMDBfTGVmdE1lbnVfY3RsMDBfVGhlTWVudS1tZW51SXRlbTAwMC1zdWJNZW51LW1lbnVJdGVtMDAwIj48aW1nIGFsdD0iTGVhcm4gbW9yZSIgc3JjPSJodHRwOi8vd3d3LmNoZW8ub24uY2EvaW1hZ2VzL2NoZW8yL2J0bl9sZWFybi5qcGciIGJvcmRlcj0iMCIgaGVpZ2h0PSIyMSIgd2lkdGg9Ijc4IiAvPjwvYT48L3A+DQo8dGFibGUgc3R5bGU9IndpZHRoOiAyMzNweDsgaGVpZ2h0OiAxNTdweDsiIGJvcmRlcj0iMCIgY2VsbHBhZGRpbmc9IjIiIGNlbGxzcGFjaW5nPSIyIiB3aWR0aD0iMjMzIj4NCjx0Ym9keT4NCjx0cj4NCjx0ZD48YnIgLz4mbmJzcDs8L3RkPg0KPHRkPjxkaXYgYWxpZ249ImNlbnRlciI+PGltZyBhbHQ9IiIgc3JjPSJodHRwOi8vd3d3LmNoZW8ub24uY2EvVXBsb2Fkcy9BYm91dFVzL0ltYWdlcy9DSEVPJTIwcmVjb2duaXRpb24ucG5nIiBoZWlnaHQ9IjIwMyIgd2lkdGg9IjIwMCIgLz48L2Rpdj48L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPmRkAgkPZBYCZg9kFgICAQ9kFgJmDw8WAh8ABZYJPGEgdGFyZ2V0PSJudWxsIj48L2E+PHRhYmxlIGJvcmRlcj0iMCIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiBoZWlnaHQ9IjM3MSIgd2lkdGg9IjMxNSI+DQogICAgIDx0Ym9keT4NCiAgICAgICAgIDx0ciBhbGlnbj0iY2VudGVyIj4NCiAgICAgICAgICAgICA8dGQ+DQogICAgICAgICAgICAgPGgxPjxzcGFuIGNsYXNzPSJoZWFkZXIiPjwvc3Bhbj48c3BhbiBjbGFzcz0iaGVhZGVyIj5JbiB0aGUgU3BvdGxpZ2h0PC9zcGFuPjwvaDE+DQogICAgICAgICAgICAgPC90ZD4NCiAgICAgICAgIDwvdHI+DQogICAgICAgICA8dHI+DQogICAgICAgICAgICAgPHRkIHN0eWxlPSJoZWlnaHQ6IDE5OHB4OyIgYWxpZ249ImNlbnRlciI+DQogICAgICAgICAgICAgPGlmcmFtZSBzcmM9Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2VtYmVkL0ptZVRIUVlqRHBZP2xpc3Q9UExsWmN6dDh0NEFjOGhibHY0S1ZITUhqdXdZU2VROWd6LSIgYWxsb3dmdWxsc2NyZWVuPSIiIGZyYW1lYm9yZGVyPSIwIiBoZWlnaHQ9IjE4MCIgd2lkdGg9IjMwMCI+PC9pZnJhbWU+PGJyIC8+PC90ZD4NCiAgICAgICAgIDwvdHI+DQogICAgICAgICA8dHIgYWxpZ249ImNlbnRlciI+DQogICAgICAgICAgICAgPHRkIHN0eWxlPSJ3aWR0aDogMjU3cHg7IGhlaWdodDogMTAwcHg7Ij4NCiAgICAgICAgICAgICA8cD48c3Ryb25nPlN0dWR5aW5nIHF1YWxpdHkgb2YgbGlmZSBmb3Igb25jb2xvZ3kgcGF0aWVudHMgPC9zdHJvbmc+PC9wPg0KICAgICAgICAgICAgIDxwIGFsaWduPSJsZWZ0Ij5Eci4gR2FpbCBNYWNhcnRuZXkgZGlzY3Vzc2VzIHJlc2VhcmNoIGludG8gdGhlIGxpbmtzIGJldHdlZW4gcXVhbGl0eSBvZiBsaWZlIGFuZCBkYWlseSBzeW1wdG9tcyBpbiBwZWRpYXRyaWMgY2FuY2VyIHBhdGllbnRzLjwvcD48cCBhbGlnbj0ibGVmdCI+VmlldyB2aWRlbyBvbiA8c3Ryb25nPjxhIHRhcmdldD0iX2JsYW5rIiBocmVmPSJodHRwczovL3lvdXR1LmJlL0ptZVRIUVlqRHBZP2xpc3Q9UExsWmN6dDh0NEFjOGhibHY0S1ZITUhqdXdZU2VROWd6LSI+WW91VHViZTwvYT48L3N0cm9uZz4NCiAgICAgICAgICAgICA8L3A+DQogICAgICAgICAgICAgPGgyPg0KICAgICAgICAgICAgIDwvaDI+DQogICAgICAgICAgICAgPC90ZD4NCiAgICAgICAgIDwvdHI+DQogICAgIDwvdGJvZHk+DQo8L3RhYmxlPmRkAgoPZBYEZg88KwAJAQAPFgQeCERhdGFLZXlzFgAfAwIDZBYGZg9kFgJmDxUES0dyb3VuZC1icmVha2luZyBzZXR0bGVtZW50IGNoYW5nZXMgbGFuZHNjYXBlIGZvciBnZW5ldGljIG1lZGljaW5lIGluIENhbmFkYQowMy8wOS8yMDE2pgE8ZGl2PjxzcGFuIGNsYXNzPSJib2R5dGV4dCI+Q0hFTyBhbmQgVHJhbnNnZW5vbWljIHJlYWNoIGFncmVlbWVudCBvbiBMb25nIFFUIHBhdGVudHMgdGhhdCBzZXRzIHBhdGh3YXkgZm9yIG5leHQgZ2VuZXJhdGlvbiBvZiBwYXRpZW50IGNhcmU8L3NwYW4+PC9kaXY+PGRpdj4gPC9kaXY+Li4uAzY1NmQCAQ9kFgJmDxUEREhvdyB0byBQcmVkaWN0IFBlZGlhdHJpYyBQb3N0LUNvbmN1c3Npb24gU3ltcHRvbXM6IFB1Ymxpc2hlZCBpbiBKQU1BCjAzLzA4LzIwMTa9ASA8c3BhbiBjbGFzcz0iYm9keXRleHQiPkEgbmV3IHN0dWR5IGJhc2VkIG9uIHRoZSBsYXJnZXN0IHByb3NwZWN0aXZlIGNvaG9ydCBvZiBjaGlsZHJlbiB3aXRoIGNvbmN1c3Npb24gaW4gdGhlIHdvcmxkIHB1Ymxpc2hlZCB0b2RheSBpbiB0aGUgSm91cm5hbCBvZiB0aGUgQW1lcmljYW4gTWVkaWNhbCBBc3NvY2lhdGlvbiAoSi4uLgM2NTRkAgIPZBYCZg8VBEBDSEVPIGlzIENhbmFkYeKAmXMgIzEgaGVhbHRoIGNhcmUgZW1wbG95ZXIsIHNheXMgRm9yYmVzIE1hZ2F6aW5lCjAzLzAxLzIwMTa/ATxzcGFuIGNsYXNzPSJib2R5dGV4dCI+Q0hFTyBoYXMgYmVlbiByYW5rZWQgbnVtYmVyIG9uZSBhbW9uZyBoZWFsdGggY2FyZSBhbmQgc29jaWFsIHNlY3RvciBlbXBsb3llcnMgYW5kIG51bWJlciAxMiBvbiBGb3JiZXMmIzgyMTc7IGZpcnN0IGV2ZXIgbGlzdCBvZiBDYW5hZGEmIzgyMTc7cyBCZXN0IEVtcGxveWVycy48L3NwYW4+Li4uAzY1MmQCAQ8WAh8ABQxOZXdzIEFydGljbGVkAgsPZBYCZg8WAh8DAgcWDmYPZBYEZg8WAh8ABagBPGEgaHJlZj0naHR0cDovL2NoZW9tb21zLmNvbS8nIHRhcmdldD0nX3NlbGYnPjxpbWcgY2xhc3M9J2hvdmVyYWJsZScgc3JjPScvU2hvd1BpY3R1cmUuYXNweD9QaWN0dXJlSUQ9MzQmb2g9ZmFsc2UnIHdpZHRoPTE4OSBoZWlnaHQ9NjUgYWx0PSdodHRwOi8vY2hlb21vbXMuY29tLycgLz48L2E+ZAIBDxYEHgVzdHlsZQUYd2lkdGg6MTk1cHg7aGVpZ2h0OjY1cHg7HwFoFgJmDxUBAGQCAQ9kFgRmDxYCHwAFswE8YSBocmVmPScvY29udHJvbHMvY2FsZW5kYXIvY2FsZW5kYXIuYXNweD9JRD0xJyB0YXJnZXQ9J19zZWxmJz48aW1nIGNsYXNzPSdob3ZlcmFibGUnIHNyYz0nL1Nob3dQaWN0dXJlLmFzcHg/UGljdHVyZUlEPTE5Jm9oPWZhbHNlJyB3aWR0aD0xODkgaGVpZ2h0PTY1IGFsdD0nZXZlbnQgY2FsZW5kYXInIC8+PC9hPmQCAQ8WBB8FBRh3aWR0aDoxOTVweDtoZWlnaHQ6NjVweDsfAWgWAmYPFQEAZAICD2QWBGYPFgIfAAW0ATxhIGhyZWY9J2h0dHA6Ly9raWRzLmNoZW8ub24uY2EvJyB0YXJnZXQ9J19zZWxmJz48aW1nIGNsYXNzPSdob3ZlcmFibGUnIHNyYz0nL1Nob3dQaWN0dXJlLmFzcHg/UGljdHVyZUlEPTE0Jm9oPWZhbHNlJyB3aWR0aD0xODkgaGVpZ2h0PTY1IGFsdD0ndmlzaXQgb3VyIGNoaWxkIGZyaWVuZGx5IHpvbmUnIC8+PC9hPmQCAQ8WBB8FBRh3aWR0aDoxOTVweDtoZWlnaHQ6NjVweDsfAWgWAmYPFQEAZAIDD2QWBGYPFgIfAAWnATxhIGhyZWY9Jy9lbi9jaGVvbWVudGFsaGVhbHRoJyB0YXJnZXQ9J19zZWxmJz48aW1nIGNsYXNzPSdob3ZlcmFibGUnIHNyYz0nL1Nob3dQaWN0dXJlLmFzcHg/UGljdHVyZUlEPTI1Jm9oPWZhbHNlJyB3aWR0aD0xODkgaGVpZ2h0PTY1IGFsdD0nYWJvdXQgbWVudGFsIGhlYWx0aCcgLz48L2E+ZAIBDxYEHwUFGHdpZHRoOjE5NXB4O2hlaWdodDo2NXB4Ox8BaBYCZg8VAQBkAgQPZBYEZg8WAh8ABbIBPGEgaHJlZj0nL2VuL3doZW50b2dvJyB0YXJnZXQ9J19zZWxmJz48aW1nIGNsYXNzPSdob3ZlcmFibGUnIHNyYz0nL1Nob3dQaWN0dXJlLmFzcHg/UGljdHVyZUlEPTE1Jm9oPWZhbHNlJyB3aWR0aD0xODkgaGVpZ2h0PTY1IGFsdD0nd2hlbiB0byB2aXNpdCB0aGUgZW1lcmdlbmN5IGRlcGFydG1lbnQnIC8+PC9hPmQCAQ8WBB8FBRh3aWR0aDoxOTVweDtoZWlnaHQ6NjVweDsfAWgWAmYPFQEAZAIFD2QWBGYPFgIfAAW3ATxhIGhyZWY9Jy9lbi9DYXJlZXJzJyB0YXJnZXQ9J19zZWxmJz48aW1nIGNsYXNzPSdob3ZlcmFibGUnIHNyYz0nL1Nob3dQaWN0dXJlLmFzcHg/UGljdHVyZUlEPTIwJm9oPWZhbHNlJyB3aWR0aD0xODkgaGVpZ2h0PTY1IGFsdD0ncHJvdWQgdG8gYmUgb25lIG9mIHRlaCByZWdpb25zIHRvcCBlbXBsb3llcnMnIC8+PC9hPmQCAQ8WBB8FBRh3aWR0aDoxOTVweDtoZWlnaHQ6NjVweDsfAWgWAmYPFQEAZAIGD2QWBGYPFgIfAAXZATxhIGhyZWY9J2h0dHA6Ly93d3cuY2hlby5vbi5jYS92aXJ0dWFsX3RvdXIvaW5kZXguaHRtbCcgdGFyZ2V0PSdfc2VsZic+PGltZyBjbGFzcz0naG92ZXJhYmxlJyBzcmM9Jy9TaG93UGljdHVyZS5hc3B4P1BpY3R1cmVJRD0yMyZvaD1mYWxzZScgd2lkdGg9MTg5IGhlaWdodD02NSBhbHQ9J2NvbWluZyBmb3Igc3VyZ2VyeT8gdGFrZSBhIHZpcnR1YWwgdG91ciBoZXJlJyAvPjwvYT5kAgEPFgQfBQUYd2lkdGg6MTk1cHg7aGVpZ2h0OjY1cHg7HwFoFgJmDxUBAGQCDA9kFgJmD2QWAgIBD2QWAmYPDxYCHwAFswk8dGFibGUgYm9yZGVyPSIwIiBjZWxsc3BhY2luZz0iMTUiIGNlbGxwYWRkaW5nPSIwIj4NCjx0Ym9keT4NCjx0cj4NCjx0ZD48YSBocmVmPSJodHRwOi8vd3d3LmNoZW8ub24uY2EvZW4vYWR2b2NhY3lvdmVydmlldyI+PGltZyBib3JkZXI9IjAiIGFsdD0iaW1hZ2Ugb2YgYSBzcGVha2VycGhvbmUiIHNyYz0iaHR0cDovL3d3dy5jaGVvLm9uLmNhL1VwbG9hZHMvVGFrZUFjdGlvbi9pY29uXzEuanBnIiB3aWR0aD0iNDUiIGhlaWdodD0iNDMiIC8+PC9hPjwvdGQ+DQo8dGQ+DQo8cD48c3BhbiBjbGFzcz0ic3VidGl0bGUiPjxhIGhyZWY9Imh0dHA6Ly93d3cuY2hlby5vbi5jYS9lbi9hZHZvY2FjeW92ZXJ2aWV3Ij5BZHZvY2F0ZTwvYT48L3NwYW4+PC9wPg0KPHA+PHNwYW4gY2xhc3M9ImJvZHl0ZXh0Ij5Ib3cgeW91IGNhbiBoZWxwITwvc3Bhbj4gPGJyIC8+PC9wPjwvdGQ+PC90cj4NCjx0cj4NCjx0ZD48YSBocmVmPSJodHRwOi8vd3d3LmNoZW8ub24uY2EvZW4vV2F5c3RvR2l2ZSI+PGltZyBib3JkZXI9IjAiIGFsdD0iaW1hZ2Ugb2YgYSBjYXJ0b29uIGhlYXJ0ICIgc3JjPSJodHRwOi8vd3d3LmNoZW8ub24uY2EvVXBsb2Fkcy9UYWtlQWN0aW9uL2ljb25fMi5qcGciIHdpZHRoPSI0NSIgaGVpZ2h0PSI0MyIgLz48L2E+PC90ZD4NCjx0ZD4NCjxwPjxzcGFuIGNsYXNzPSJzdWJ0aXRsZSI+PGEgaHJlZj0iaHR0cDovL3d3dy5jaGVvLm9uLmNhL2VuL1dheXN0b0dpdmUiPkRvbmF0ZTwvYT48L3NwYW4+PC9wPg0KPHA+PHNwYW4gY2xhc3M9ImJvZHl0ZXh0Ij5XYXlzIHRvIEdpdmU8L3NwYW4+IDxiciAvPjwvcD48L3RkPjwvdHI+DQo8dHI+DQo8dGQ+PGEgaHJlZj0iaHR0cDovL3d3dy5jaGVvLm9uLmNhL2VuL1NoYXJlWW91clN0b3J5Ij48aW1nIGJvcmRlcj0iMCIgYWx0PSJpbWFnZSBvZiBhIHdvcmQgYnViYmxlIiBzcmM9Imh0dHA6Ly93d3cuY2hlby5vbi5jYS9VcGxvYWRzL1Rha2VBY3Rpb24vaWNvbl8zLmpwZyIgd2lkdGg9IjQ1IiBoZWlnaHQ9IjQzIiAvPjwvYT48L3RkPg0KPHRkPg0KPHA+PHNwYW4gY2xhc3M9InN1YnRpdGxlIj48YSBocmVmPSJodHRwOi8vd3d3LmNoZW8ub24uY2EvZW4vU2hhcmVZb3VyU3RvcnkiPlNoYXJlPC9hPjwvc3Bhbj48L3A+DQo8cD48c3BhbiBjbGFzcz0iYm9keXRleHQiPlNoYXJlIHlvdXIgU3RvcnkhPC9zcGFuPiA8YnIgLz48L3A+PC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT5kZAIND2QWBGYPFCsAAg8WBB4LXyFEYXRhQm91bmRnHwMCCWRkFgJmD2QWEgIBD2QWAmYPZBYCZg9kFgJmDxUCFy9lbi9jYXJlZXJvcHBvcnR1bml0aWVzB0NhcmVlcnNkAgIPZBYCZg9kFgJmD2QWAmYPFQIUL2VuL1BhdGllbnRzVmlzaXRvcnMOVmlzaXRpbmcgaG91cnNkAgMPZBYCZg9kFgJmD2QWAmYPFQISL2VuL0dldHRpbmd0b0NIRU8yD0dldHRpbmcgdG8gQ0hFT2QCBA9kFgJmD2QWAmYPZBYCZg8VAhAvZW4vdm9sdW50ZWVyaW5nDFZvbHVudGVlcmluZ2QCBQ9kFgJmD2QWAmYPZBYCZg8VAg8vZW4vY29udGFjdGNoZW8KQ29udGFjdCB1c2QCBg9kFgJmD2QWAmYPZBYCZg8VAgsvZW4vU3VyZ2VyeRNDb21pbmcgZm9yIHN1cmdlcnk/ZAIHD2QWAmYPZBYCZg9kFgJmDxUCDi9lbi9kaXNjbGFpbWVyCkRpc2NsYWltZXJkAggPZBYCZg9kFgJmD2QWAmYPFQISL2VuL2hlYWx0aHJlY29yZHMyDkhlYWx0aCBSZWNvcmRzZAIJD2QWAmYPZBYCZg9kFgJmDxUCCy9lbi9teWNoYXJ0B015Q2hhcnRkAgEPEA8WBh4NRGF0YVRleHRGaWVsZAUEbmFtZR4ORGF0YVZhbHVlRmllbGQFA3VybB8GZ2QQFQoPSG93IGNhbiBJIGhlbHA/B0NhcmVlcnMOVmlzaXRpbmcgaG91cnMPR2V0dGluZyB0byBDSEVPDFZvbHVudGVlcmluZwpDb250YWN0IHVzE0NvbWluZyBmb3Igc3VyZ2VyeT8KRGlzY2xhaW1lcg5IZWFsdGggUmVjb3JkcwdNeUNoYXJ0FQoEbm9uZRcvZW4vY2FyZWVyb3Bwb3J0dW5pdGllcxQvZW4vUGF0aWVudHNWaXNpdG9ycxIvZW4vR2V0dGluZ3RvQ0hFTzIQL2VuL3ZvbHVudGVlcmluZw8vZW4vY29udGFjdGNoZW8LL2VuL1N1cmdlcnkOL2VuL2Rpc2NsYWltZXISL2VuL2hlYWx0aHJlY29yZHMyCy9lbi9teWNoYXJ0FCsDCmdnZ2dnZ2dnZ2cWAWZkAg4PZBYEZg8WAh8ABTg8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+dmFyIGxhbmcgPSAiZW4iOzwvc2NyaXB0PmQCAQ8WAh8ABZQNPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPnZhciBkbGV0dGVyO2RsZXR0ZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiaiIpO2RsZXR0ZXIuc3JjID0gIi9pbWFnZXMvbmV3L2xldHRlcnMval9vZmYuanBnIjtkbGV0dGVyLmNsYXNzTmFtZSA9ICIiOyQoJyNhaicpLnJlbW92ZUF0dHIoJ2hyZWYnKTtkbGV0dGVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImsiKTtkbGV0dGVyLnNyYyA9ICIvaW1hZ2VzL25ldy9sZXR0ZXJzL2tfb2ZmLmpwZyI7ZGxldHRlci5jbGFzc05hbWUgPSAiIjskKCcjYWsnKS5yZW1vdmVBdHRyKCdocmVmJyk7ZGxldHRlciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJxIik7ZGxldHRlci5zcmMgPSAiL2ltYWdlcy9uZXcvbGV0dGVycy9xX29mZi5qcGciO2RsZXR0ZXIuY2xhc3NOYW1lID0gIiI7JCgnI2FxJykucmVtb3ZlQXR0cignaHJlZicpO2RsZXR0ZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgieCIpO2RsZXR0ZXIuc3JjID0gIi9pbWFnZXMvbmV3L2xldHRlcnMveF9vZmYuanBnIjtkbGV0dGVyLmNsYXNzTmFtZSA9ICIiOyQoJyNheCcpLnJlbW92ZUF0dHIoJ2hyZWYnKTtkbGV0dGVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInkiKTtkbGV0dGVyLnNyYyA9ICIvaW1hZ2VzL25ldy9sZXR0ZXJzL3lfb2ZmLmpwZyI7ZGxldHRlci5jbGFzc05hbWUgPSAiIjskKCcjYXknKS5yZW1vdmVBdHRyKCdocmVmJyk7ZGxldHRlciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJ6Iik7ZGxldHRlci5zcmMgPSAiL2ltYWdlcy9uZXcvbGV0dGVycy96X29mZi5qcGciO2RsZXR0ZXIuY2xhc3NOYW1lID0gIiI7JCgnI2F6JykucmVtb3ZlQXR0cignaHJlZicpO2RsZXR0ZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiaiIpO2RsZXR0ZXIuc3JjID0gIi9pbWFnZXMvbmV3L2xldHRlcnMval9vZmYuanBnIjtkbGV0dGVyLmNsYXNzTmFtZSA9ICIiOyQoJyNhaicpLnJlbW92ZUF0dHIoJ2hyZWYnKTtkbGV0dGVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImsiKTtkbGV0dGVyLnNyYyA9ICIvaW1hZ2VzL25ldy9sZXR0ZXJzL2tfb2ZmLmpwZyI7ZGxldHRlci5jbGFzc05hbWUgPSAiIjskKCcjYWsnKS5yZW1vdmVBdHRyKCdocmVmJyk7ZGxldHRlciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJxIik7ZGxldHRlci5zcmMgPSAiL2ltYWdlcy9uZXcvbGV0dGVycy9xX29mZi5qcGciO2RsZXR0ZXIuY2xhc3NOYW1lID0gIiI7JCgnI2FxJykucmVtb3ZlQXR0cignaHJlZicpO2RsZXR0ZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgieCIpO2RsZXR0ZXIuc3JjID0gIi9pbWFnZXMvbmV3L2xldHRlcnMveF9vZmYuanBnIjtkbGV0dGVyLmNsYXNzTmFtZSA9ICIiOyQoJyNheCcpLnJlbW92ZUF0dHIoJ2hyZWYnKTtkbGV0dGVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInkiKTtkbGV0dGVyLnNyYyA9ICIvaW1hZ2VzL25ldy9sZXR0ZXJzL3lfb2ZmLmpwZyI7ZGxldHRlci5jbGFzc05hbWUgPSAiIjskKCcjYXknKS5yZW1vdmVBdHRyKCdocmVmJyk7ZGxldHRlciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJ6Iik7ZGxldHRlci5zcmMgPSAiL2ltYWdlcy9uZXcvbGV0dGVycy96X29mZi5qcGciO2RsZXR0ZXIuY2xhc3NOYW1lID0gIiI7JCgnI2F6JykucmVtb3ZlQXR0cignaHJlZicpOzwvc2NyaXB0PmQYAgUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFGmN0bDAwJFNlYXJjaFRleHQxJGJ0U2VhcmNoBRtjdGwwMCRCYW5uZXIkY3RsMDAkYnRuU3RhcnQFGmN0bDAwJEJhbm5lciRjdGwwMCRidG5TdG9wBRZjdGwwMCRRdWlja0xpbmtzJGx2aWV3DzwrAAoCBzwrAAkACAIJZKLtGUKDJ46CWPkFUzpVA29FZszU" />
+</div>
+
+
+<script src="/js/greybox/AJS.js" type="text/javascript"></script>
+<script src="/js/greybox/AJS_fx.js" type="text/javascript"></script>
+<script src="/js/greybox/gb_scripts.js" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQLijsA9AvuFrOIJAumLyKoCAt6O6qUCAoK72Z0DkX+bma17+o6wKEyEmTGzyPY0oNs=" />
+</div><div style="width:100%;">
+<center></center>
+
+
+<div style="width:952px; margin:0 auto;">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="background-image:url('/images/new/masthead.png'); background-repeat:no-repeat; height:121px; width:952px; vertical-align:top; padding-right:20px;">
+		<table border="0" cellpadding="0" cellspacing="0" style="width:100%"><tr><td rowspan="2" style="padding-left:30px; height:121px;"><a href="/"><img src="/images/new/logo.jpg" alt="CHEO Logo" /></a></td><td style="height:47px; vertical-align:top; padding-top:13px; padding-right:25px;"><div style="float:right; display:inline;"><table border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;"><span id='spShrink' class='changer'><a href="" title="Decrease Text Size"><img src="/images/new/small.jpg" alt="Decrease Text Size" /></a></span></td><td style="vertical-align:top;"><span id='spGrow' class='changer'><a href="" title="Increase Text Size"><img src="/images/new/big.jpg" alt="Increase Text Size" /></a></span></td><td style="vertical-align:top;"><a href="http://www.facebook.com/CHEOkids?v=wall" target="_blank"><img src="/images/new/facebook.jpg" alt="Facebook" /></a></td><td style="vertical-align:top;"><a href="http://twitter.com/#!/cheohospital" target="_blank"><img src="/images/new/twitter.jpg" alt="Twitter" /></a></td><td style="vertical-align:top;"><a href="http://www.youtube.com/user/CHEOvideos" target="_blank"><img src="/images/new/youtube.jpg" alt="Youtube" /></a></td><td style="padding-left:13px;"><div id="ctl00_SearchText1_Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_SearchText1_btSearch')" style="display:inline;">
+	
+<div style="position:relative; display:inline;"><table cellpadding="0" cellspacing="0" border="0" style="display:inline;"><tr><td style="background-image:url('/images/new/search_bg.jpg'); background-repeat:no-repeat; width:200px; padding-left:10px;">
+<label for="ctl00_SearchText1_tbSearch" class="nosize">Search the CHEO Website</label>
+<link href='/asb_includes/AutoSuggestBox.css' type='text/css' rel='stylesheet'>
+	<script language="javascript">
+	<!--
+	//Constants
+	var ASB_GET_DATA_URL='/asb_includes/GetAutoSuggestData.aspx';
+	//-->
+	</script>
+	<script type='text/javascript' language='JavaScript' src='/asb_includes/AutoSuggestBox.js'></script>
+	<input name="ctl00$SearchText1$tbSearch" type="text" value=" " id="ctl00_SearchText1_tbSearch" class="SearchText" onfocus="if (this.value==search) this.value='';" onblur="asbHideDiv('divMenu_ctl00_SearchText1_tbSearch');" onkeydown="asbOnKeyDown('ctl00_SearchText1_tbSearch', 'divMenu_ctl00_SearchText1_tbSearch', event);" onkeypress="return asbOnKeyPress(event);" onkeyup="asbOnKeyUp('ctl00_SearchText1_tbSearch', 'divMenu_ctl00_SearchText1_tbSearch', 'Searches', event);" autocomplete="off" style="height:24px;width:200px;height:24px;background-color:transparent; color:#555555;font-family:Arial, Helvetica, sans-serif;font-size:18px;vertical-align:middle; border:0px; display:inline;" /><br><div class='asbMenu' style='visibility:hidden' id='divMenu_ctl00_SearchText1_tbSearch'></div>
+	<input type="hidden" id="ctl00_SearchText1_tbSearch_SelectedValue" name="ctl00$SearchText1$tbSearch:SelectedValue" value="">
+	</td><td>
+<label for="ctl00_SearchText1_btSearch" class="nosize">Submit Search Button</label>
+<input type="image" name="ctl00$SearchText1$btSearch" id="ctl00_SearchText1_btSearch" class="searchbutton" src="/images/new/search_btn.jpg" alt="Search" style="border-width:0px;" /></td></tr></table></div><script type="text/javascript">
+var search=' ';
+</script>
+
+</div></td></tr></table></div></td></tr>
+		<tr><td style="vertical-align:top;  padding-right:0px; height:41px; padding-top:20px;"><div style="float:right;" class="utilitymenu"><a href="/fr/home">en francais</a><a href="/en/home">Home</a><a href="" onclick="window.open('/controls/pageshare/pageshare.aspx?id=1', null, 'status=no, toolbar=no, menubar=no, location=no, scrollbars=no, scrolling=no');">Share</a><a href="/en/contactcheo">Contact</a><a href="#" onclick="javascript:window.print();return false;">Print</a></div></td></tr>
+		</table>
+		
+		
+		
+		</td></tr>
+		
+		<tr><td style="height:52px; text-align:right; padding-right:0px; vertical-align:top; padding-top:0px; background-image:url('/images/new/tab_hosp.png'); background-repeat:no-repeat;"><div class="TabMenu" style="padding-top:10px;">
+        
+        <a class="active" href="http://www.cheo.on.ca">Hospital</a><a href="http://www.cheori.org">Research</a><a href="http://www.cheofoundation.com/">Foundation</a>
+        
+        </div>
+		</td></tr>
+		
+		
+		<tr><td style="background-image:url('/images/new/content_bg.png'); background-repeat:repeat-y; padding-left:10px;"><div style="position:relative; height:40px; z-index:9999;"><div style="position:absolute; top:-7px;">
+
+<link href="/CSS/NewMenu.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 8]>
+        		<link href="/CSS/IE_Menu.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+
+<style type="text/css">
+#menu li a
+{
+	padding-left:28px;
+	padding-right:28px;
+}
+</style>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    
+        $("#menu .menu").mouseover(function () { if ($(this).hasClass("menu")) { $(this).removeClass("menu").addClass("menu_hover"); }});
+        $("#menu .menu").mouseout(function(){ $(this).removeClass("menu_hover").addClass("menu");}  );
+
+        $("#menu .menusub").mouseover(function () { $(this).removeClass("menusub").addClass("menusub_hover"); });
+        $("#menu .menusub").mouseout(function () { $(this).removeClass("menusub_hover").addClass("menusub"); });
+
+        $("#menu .menusub_hit").mouseover(function () { $(this).removeClass("menusub_hit").addClass("menusub_hit_hover"); });
+        $("#menu .menusub_hit").mouseout(function () { $(this).removeClass("menusub_hit_hover").addClass("menusub_hit"); });
+
+        $("#menu .menusubsub").mouseover(function () { $(this).removeClass("menusubsub").addClass("menusubsub_hover"); });
+        $("#menu .menusubsub").mouseout(function () { $(this).removeClass("menusubsub_hover").addClass("menusubsub"); });
+        
+        
+        
+
+    });
+
+</script>
+
+<div id="ctl00_MainMenu_ctl00_newmen" class="flex" style="display:none;">
+<del class="container"><ul id="menu">
+<li class="menu six"><a href="/en/About">About Us</a><ul><li class="menusub"><a href="/en/About" target="_self">About CHEO</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/successstories" target="_self">How CHEO Made Me Better</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/BoardofTrustees" target="_self">Our Leaders</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/WatchUs" target="_self">News & Events</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/patientsafety" target="_self">Patient Safety </a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/advocacyoverview" target="_self">Advocacy</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/accessibility" target="_self">Accessibility</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/annual-reports" target="_self">Reports</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/PrivacyandConfidentiality" target="_self">Privacy and Confidentiality </a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/access_to_information" target="_self">Access to Information</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/PHIPA" target="_self">Access to Personal Health Information</a><ul></ul>
+</li>
+</ul>
+<li class="menu six"><a href="/en/WaystoGive">Ways to Give</a><ul><li class="menusub"><a href="/en/ourfoundation" target="_self">Donation</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/volunteering" target="_self">Get Involved</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/shareyourstory2" target="_self">How CHEO Made Me Better</a><ul></ul>
+</li>
+</ul>
+<li class="menu six"><a href="/en/PatientsVisitors">Patients/Visitors</a><ul><li class="menusub"><a href="/en/visitinghours" target="_self">Planning Your Visit</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/servicesandresources" target="_self">For Your Convenience</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/visitingemergency" target="_self">Visiting the Emergency Department</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/payyourbill" target="_self">Billing and Accounts</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/kaitlinatkinsonfrl" target="_self">Family Resource Library</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/healing-garden" target="_self">Healing Garden</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/mychart" target="_self">MyChart</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/family-forum" target="_self">Family Forum</a><ul></ul>
+</li>
+</ul>
+<li class="menu six"><a href="/en/HealthBitsAZ">Programs & Health Info</a><ul><li class="menusub"><a href="/en/HealthBitsAZ" target="_self">Programs and Health Info</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/AZProvince" target="_self">Province-wide Programs</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/kafl" target="_self">Family Resource Library</a><ul></ul>
+</li>
+</ul>
+<li class="menu six"><a href="/en/Professionals">Professionals</a><ul><li class="menusub"><a href="/en/physiciansdirectedtherapies" target="_self">Physicians</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/nursingoverview" target="_self">Nursing</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/healthcareprofessionalsforpharmacists" target="_self">Pharmacists</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/trainingopportunities" target="_self">Training Opportunities</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/onlinelearningcentre" target="_self">Online Learning Center</a><ul></ul>
+</li>
+</ul>
+<li class="menu six"><a href="/en/Careers">Careers</a><ul><li class="menusub"><a href="/en/whowearecareers" target="_self">Who We Are</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/ourculture" target="_self">Life at CHEO</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/whatweoffer" target="_self">What We Offer</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/careeropportunities" target="_self">Career Opportunities</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/volunteering" target="_self">Volunteering</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/nursinginitiatives" target="_self">Nursing Initiatives</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/lifeinottawa" target="_self">Life in Ottawa</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/careervolunteeringfaqs" target="_self">FAQs</a><ul></ul>
+</li>
+<li class="menusub"><a href="/en/contactcareersVolunteering" target="_self">Contact Us</a><ul></ul>
+</li>
+</ul>
+</ul></del></div>
+<script type="text/javascript">$("#ctl00_MainMenu_ctl00_newmen").show();</script></div></div></td></tr>
+		<tr><td style="vertical-align:top; height:10px; background-image:url('/images/new/banner_bg_home.png'); background-repeat:repeat-y; margin:0px;"><img src="/images/new/undermenu.png" style="display:inline;" alt=""></td></tr>
+		
+		
+		<tr><td style="height:240px; vertical-align:top; background-image:url('/images/new/banner_bg_home.png'); background-repeat:repeat-y;">
+				<div style="position:relative; z-index:0;"><div style="position:absolute; left:-17px; top:-4px;">
+
+<style type="text/css">
+
+.controls 
+{
+	position:absolute;
+	right:35px;
+	top:0;
+	z-index:999; 
+    /*filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;*/
+}
+
+.controlsbg
+{
+    background-color:#ffffff;
+    padding-left:4px;
+    padding-right:4px;
+    padding-top:2px;
+    padding-bottom:1px;
+    border:1px solid #ccc;
+}
+
+.controls .startgal
+{
+	margin-right:1px;
+	cursor:pointer;
+}
+
+.controls .stopgal
+{
+	margin-left:1px;
+	cursor:pointer;
+}
+</style>
+
+<script type="text/javascript">
+    //http://0.s3.envato.com/files/43917021/index.html
+    //$(document).ready(function(){$('.carousel').carousel({carouselWidth:930,carouselHeight:330,directionNav:true,shadow:true,buttonNav:'bullets'});});  //Sample 1
+
+    $(document).ready(function () {
+
+        // $('.carousel').carousel({ hAlign: 'center', vAlign: 'top', hMargin: 0.5, vMargin: 0.2 });
+        var car = $('.carousel').carousel({ hAlign: 'center', vAlign: 'center', hMargin: 0.37, autoplay: true });
+        // $('.carousel').carousel({ hAlign: 'center', vAlign: 'center', hMargin: 0.37, directionNav: true, buttonNav: 'bullets' });       
+
+
+        $('.startgal').click(function () {
+            car.resume();
+        });
+
+        $('.stopgal').click(function () {
+            car.pause();
+        });
+    });
+
+
+
+</script>
+<div class="carousel"> <!-- BEGIN CAROUSEL -->
+    
+    <div class="slides"> <!-- BEGIN SLIDES -->
+        
+                <div>
+                    <a href="http://www.cheo.on.ca/en/newsroom?newsid=656" id='i482' target="_self"> 
+                        <img src="/Uploads/Banners/8/GP settle_web5.png"  border="0" alt='CHEO’s patent deal will change medicine in Canada' />
+                    </a>  
+                </div>
+            
+                <div>
+                    <a href="http://www.cheo.ca/en/peak-season-precautions" id='i478' target="_self"> 
+                        <img src="/Uploads/Banners/8/Visitor restrictions_new text.png"  border="0" alt='Winter peak season visitor restrictions' />
+                    </a>  
+                </div>
+            
+                <div>
+                    <a href="http://www.cheo.on.ca/en/MH-strategic-plan" id='i465' target="_self"> 
+                        <img src="/Uploads/Banners/8/Ext-banner-HealthyYoungMinds-EN.png"  border="0" alt='Mental Health Strategy for 2015-2020' />
+                    </a>  
+                </div>
+            
+                <div>
+                    <a href="http://www.cheo.ca/en/Surgery" id='i476' target="_self"> 
+                        <img src="/Uploads/Banners/8/surgical booklet copy.png"  border="0" alt='Coming for surgery?' />
+                    </a>  
+                </div>
+                                       
+    </div> <!-- END SLIDES -->
+       
+</div> <!-- END CAROUSEL -->
+<div class="controls"><div class="controlsbg WhiteTable"><input type="image" name="ctl00$Banner$ctl00$btnStart" id="ctl00_Banner_ctl00_btnStart" title="Start" class="startgal" src="/images/icons/start_white_16.gif" alt="Start" onclick="return false;" style="border-width:0px;" /><input type="image" name="ctl00$Banner$ctl00$btnStop" id="ctl00_Banner_ctl00_btnStop" title="Stop" class="stopgal" src="/images/icons/stop_white_16.gif" alt="Stop" onclick="return false;" style="border-width:0px;" /></div></div>
+
+
+</div></div>
+		</td></tr>
+		
+		
+		
+		<tr><td style="background-image:url('/images/new/content_bg.png'); background-repeat:repeat-y;">
+			
+			
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr><td style="vertical-align:top; width:285px; padding: 20px 0px 10px 20px;">
+<script src="/JS/greybox/AJS.js" type="text/javascript"></script>
+<script src="/JS/greybox/AJS_fx.js" type="text/javascript"></script>
+<script src="/JS/greybox/gb_scripts.js" type="text/javascript"></script>
+<link href="/JS/greybox/gb_styles.css" rel="stylesheet" type="text/css" />
+<table cellspacing="0" cellpadding="0" border="0" style="border:0px;">
+<tr>
+	<td id="ctl00_Welcome_ctl00_tblContent" colspan="4"><span id="ctl00_Welcome_ctl00_litContent"><h1>Welcome </h1>
+<p>CHEO is a pediatric health and research center providing outstanding family-centered patient care, pioneering breakthrough research, and training the health care professionals of tomorrow.</p>
+<p><span class="bodytext"></span><a href="http://www.cheo.on.ca/en/WhoWeAre?mid=ctl00_LeftMenu_ctl00_TheMenu-menuItem000-subMenu-menuItem000"><img alt="Learn more" src="http://www.cheo.on.ca/images/cheo2/btn_learn.jpg" border="0" height="21" width="78" /></a></p>
+<table style="width: 233px; height: 157px;" border="0" cellpadding="2" cellspacing="2" width="233">
+<tbody>
+<tr>
+<td><br />&nbsp;</td>
+<td><div align="center"><img alt="" src="http://www.cheo.on.ca/Uploads/AboutUs/Images/CHEO%20recognition.png" height="203" width="200" /></div></td></tr></tbody></table></span></td>
+
+</tr>
+</table>
+</td><td style="vertical-align:top; width:300px; padding:20px 25px;">
+<script src="/JS/greybox/AJS.js" type="text/javascript"></script>
+<script src="/JS/greybox/AJS_fx.js" type="text/javascript"></script>
+<script src="/JS/greybox/gb_scripts.js" type="text/javascript"></script>
+<link href="/JS/greybox/gb_styles.css" rel="stylesheet" type="text/css" />
+<table cellspacing="0" cellpadding="0" border="0" style="border:0px;">
+<tr>
+	<td id="ctl00_Content_ctl00_tblContent" colspan="4"><span id="ctl00_Content_ctl00_litContent"><a target="null"></a><table border="0" cellpadding="0" cellspacing="0" height="371" width="315">
+     <tbody>
+         <tr align="center">
+             <td>
+             <h1><span class="header"></span><span class="header">In the Spotlight</span></h1>
+             </td>
+         </tr>
+         <tr>
+             <td style="height: 198px;" align="center">
+             <iframe src="https://www.youtube.com/embed/JmeTHQYjDpY?list=PLlZczt8t4Ac8hblv4KVHMHjuwYSeQ9gz-" allowfullscreen="" frameborder="0" height="180" width="300"></iframe><br /></td>
+         </tr>
+         <tr align="center">
+             <td style="width: 257px; height: 100px;">
+             <p><strong>Studying quality of life for oncology patients </strong></p>
+             <p align="left">Dr. Gail Macartney discusses research into the links between quality of life and daily symptoms in pediatric cancer patients.</p><p align="left">View video on <strong><a target="_blank" href="https://youtu.be/JmeTHQYjDpY?list=PLlZczt8t4Ac8hblv4KVHMHjuwYSeQ9gz-">YouTube</a></strong>
+             </p>
+             <h2>
+             </h2>
+             </td>
+         </tr>
+     </tbody>
+</table></span></td>
+
+</tr>
+</table>
+
+				</td><td style="vertical-align:top;">
+<style type="text/css">
+
+#container { width: 270px; /*height:220px;*/ overflow: hidden; margin-left:5px; }
+#shifter { position: relative; margin: 0; width:270px; /*height: 220px;*/  border:0 solid #000000;}
+.pane { position: relative; margin: 0; width: 270px; /*height: 220px;*/  overflow: hidden; border:0 solid #000000;padding:0px;}
+
+/*
+.imgborderWHITE img
+{
+	border:1px solid #ffffff;
+	margin:3px;
+}
+*/
+</style>
+
+
+
+
+
+<div style="position:relative; " class="bodytext">
+<div id="container" style="position:relative;  display:block; overflow:hidden; width:270px;"><div id="shifter">
+    <table id="ctl00_jnews_GV_Main" class="TemplateGrid" cellspacing="0" cellpadding="0" AutoGenerateColumns="False" DataKeyNames="id" PageSize="10" OnRowDataBound="GV_Main_RowDataBound" ondatabound="GV_Main_DataBound" onpageindexchanging="GV_Main_PageIndexChanging" border="0" style="border-collapse:collapse;">
+	<tr>
+		<td valign="top">
+					<div class="pane" style="padding-top:10px;"><center>
+                    <table class="bodytext" width="270" height="140" border="0" cellpadding="0" cellspacing="0">
+                    <tr><td align="left" style="padding-top:10px;"><h1>
+                    
+    Current News
+</h1>
+                    </td></tr>
+                    <tr>
+                            <td valign="top" align="left" style="padding-top:10px;padding-right:20px;">
+                                <span class="newstitle">
+                                    Ground-breaking settlement changes landscape for genetic medicine in Canada</span>
+                            </td></tr><tr style="display:none;">
+                            <td valign="top" align="left"><span style="color:#000000;font-family:Arial;font-size:12px;white-space:nowrap;font-weight:bold;">03/09/2016</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="imgborderWHITE" style="padding-right:20px;padding-top:2px;color:#000000;" colspan="2" align="left"><p><div><span class="bodytext">CHEO and Transgenomic reach agreement on Long QT patents that sets pathway for next generation of patient care</span></div><div> </div>...<a onclick="window.open('/controls/newsroom/news.aspx?id=656', null, 'status=no, toolbar=no, menubar=no, location=no, scrollbars=yes, width=600, height=400');return false;" href='#' target="_new" style="font-weight:bold;color:#b13e43;font-family:Arial;font-size:12px; text-decoration:none;"><span style="color:#005ce6;font-family:Arial;font-size:12px; text-decoration:none;"><br />Read more</span></a></p></td>
+                        </tr></table></center></div></td><td valign="top">
+					<div class="pane" style="padding-top:10px;"><center>
+                    <table class="bodytext" width="270" height="140" border="0" cellpadding="0" cellspacing="0">
+                    <tr><td align="left" style="padding-top:10px;"><h1>
+                    
+    Current News
+</h1>
+                    </td></tr>
+                    <tr>
+                            <td valign="top" align="left" style="padding-top:10px;padding-right:20px;">
+                                <span class="newstitle">
+                                    How to Predict Pediatric Post-Concussion Symptoms: Published in JAMA</span>
+                            </td></tr><tr style="display:none;">
+                            <td valign="top" align="left"><span style="color:#000000;font-family:Arial;font-size:12px;white-space:nowrap;font-weight:bold;">03/08/2016</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="imgborderWHITE" style="padding-right:20px;padding-top:2px;color:#000000;" colspan="2" align="left"><p> <span class="bodytext">A new study based on the largest prospective cohort of children with concussion in the world published today in the Journal of the American Medical Association (J...<a onclick="window.open('/controls/newsroom/news.aspx?id=654', null, 'status=no, toolbar=no, menubar=no, location=no, scrollbars=yes, width=600, height=400');return false;" href='#' target="_new" style="font-weight:bold;color:#b13e43;font-family:Arial;font-size:12px; text-decoration:none;"><span style="color:#005ce6;font-family:Arial;font-size:12px; text-decoration:none;"><br />Read more</span></a></p></td>
+                        </tr></table></center></div></td><td valign="top">
+					<div class="pane" style="padding-top:10px;"><center>
+                    <table class="bodytext" width="270" height="140" border="0" cellpadding="0" cellspacing="0">
+                    <tr><td align="left" style="padding-top:10px;"><h1>
+                    
+    Current News
+</h1>
+                    </td></tr>
+                    <tr>
+                            <td valign="top" align="left" style="padding-top:10px;padding-right:20px;">
+                                <span class="newstitle">
+                                    CHEO is Canada’s #1 health care employer, says Forbes Magazine</span>
+                            </td></tr><tr style="display:none;">
+                            <td valign="top" align="left"><span style="color:#000000;font-family:Arial;font-size:12px;white-space:nowrap;font-weight:bold;">03/01/2016</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="imgborderWHITE" style="padding-right:20px;padding-top:2px;color:#000000;" colspan="2" align="left"><p><span class="bodytext">CHEO has been ranked number one among health care and social sector employers and number 12 on Forbes&#8217; first ever list of Canada&#8217;s Best Employers.</span>...<a onclick="window.open('/controls/newsroom/news.aspx?id=652', null, 'status=no, toolbar=no, menubar=no, location=no, scrollbars=yes, width=600, height=400');return false;" href='#' target="_new" style="font-weight:bold;color:#b13e43;font-family:Arial;font-size:12px; text-decoration:none;"><span style="color:#005ce6;font-family:Arial;font-size:12px; text-decoration:none;"><br />Read more</span></a></p></td>
+                        </tr></table></center></div></td>
+	</tr>
+</table></div></div>
+                        
+                        <table cellpadding="0" cellspacing="0" border="0"  class="noprint"><tr><td style="padding-left:0px;"><a class="shiftright" title="Previous News Item" href="#"><img src="/images/new/news_back_off.jpg" class="rowleft" alt="Left Arrow" /></a></td>
+                        <td><a href='/en/newsreleases' style="color:#005ce6;"><img src="/images/new/news_all.jpg" alt="Read More" /></a></td>
+                        <td style="padding-left:0px;"><a class="shiftleft" title="Next News Item" href="#"><img src="/images/new/news_next.jpg" class="rowright" alt="Arrow Right" /></a></td><td> </td><td style="padding-left:4px;"><div style="display:none;"><table border="0" cellpadding="0" cellspacing="0"  class="noprint"><tr><td></td><td class="bodytext" style="background-image:url('/images/cheo2/barbg2.gif');background-repeat:repeat-x;width:260px;"><table width="100%" cellpadding="0" cellspacing="0" border="0" class="bodytext" style="color:#eab145;"><tr><td align="left">&nbsp;News Article</td><td align="right"><span id="newsnum">1</span>/3</td></tr></table></td><td></td></tr></table></div></td></tr></table>
+</div></td></tr>
+			</table>
+			
+			
+			
+		</td></tr>
+		 <tr><td style="background-image:url('/images/new/slider_bg.png'); background-repeat:no-repeat; height:90px; width:945px; padding:0px 4px 0px 3px;"><div style="width:945px; height:90px;">
+
+<link href="/CSS/bx_styles.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+    .style1
+    {
+        width: 32px;
+    }
+    .pointer
+    {
+        cursor:pointer;
+    }
+</style>
+
+<script src="/jquery.bxSlider.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       $('#slider1').bxSlider({
+            autoStart: ('True'.toLowerCase() == 'true') ? true : false,
+            autoControls: ('True'.toLowerCase() == 'true') ? true : false,
+
+            auto: ('True'.toLowerCase() == 'true') ? true : false,
+            autoStart: ('True'.toLowerCase() == 'true') ? true : false,
+            autoControls: ('True'.toLowerCase() == 'true') ? true : false,
+            autoHover: ('True'.toLowerCase() == 'true') ? true : false,
+            autoDirection: 'next',
+            speed: 7000,
+            displaySlideQty: 4,
+            moveSlideQty: 2,
+            controls: true,
+            prevImage: '/Images/Icons/prev.png',
+            nextImage: '/Images/Icons/next.png',
+            pause: '3000',
+            ticker: ('False'.toLowerCase() == 'true') ? true : false,
+            tickerSpeed:'5000',
+            tickerHover: ('True'.toLowerCase() == 'true') ? true : false,
+            tickerDirection: 'next',
+            startImage: '/Images/carousel/start.png',
+            stopImage: '/Images/carousel/stop.png'
+        });
+    });
+</script>
+<div style="position:relative; top:10px;">
+<table cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="style1">
+        </td>
+        <td>
+            <div id="slider1" style="width:780px; height:65px;" class="slider">
+                
+                    <div style="width:195px; height:65px; display:block; text-align:center; padding:0px 25px 0px 0px;">
+                    
+                    <a href='http://cheomoms.com/' target='_self'><img class='hoverable' src='/ShowPicture.aspx?PictureID=34&oh=false' width=189 height=65 alt='http://cheomoms.com/' /></a>
+                    </div>
+
+                    
+                
+                    <div style="width:195px; height:65px; display:block; text-align:center; padding:0px 25px 0px 0px;">
+                    
+                    <a href='/controls/calendar/calendar.aspx?ID=1' target='_self'><img class='hoverable' src='/ShowPicture.aspx?PictureID=19&oh=false' width=189 height=65 alt='event calendar' /></a>
+                    </div>
+
+                    
+                
+                    <div style="width:195px; height:65px; display:block; text-align:center; padding:0px 25px 0px 0px;">
+                    
+                    <a href='http://kids.cheo.on.ca/' target='_self'><img class='hoverable' src='/ShowPicture.aspx?PictureID=14&oh=false' width=189 height=65 alt='visit our child friendly zone' /></a>
+                    </div>
+
+                    
+                
+                    <div style="width:195px; height:65px; display:block; text-align:center; padding:0px 25px 0px 0px;">
+                    
+                    <a href='/en/cheomentalhealth' target='_self'><img class='hoverable' src='/ShowPicture.aspx?PictureID=25&oh=false' width=189 height=65 alt='about mental health' /></a>
+                    </div>
+
+                    
+                
+                    <div style="width:195px; height:65px; display:block; text-align:center; padding:0px 25px 0px 0px;">
+                    
+                    <a href='/en/whentogo' target='_self'><img class='hoverable' src='/ShowPicture.aspx?PictureID=15&oh=false' width=189 height=65 alt='when to visit the emergency department' /></a>
+                    </div>
+
+                    
+                
+                    <div style="width:195px; height:65px; display:block; text-align:center; padding:0px 25px 0px 0px;">
+                    
+                    <a href='/en/Careers' target='_self'><img class='hoverable' src='/ShowPicture.aspx?PictureID=20&oh=false' width=189 height=65 alt='proud to be one of teh regions top employers' /></a>
+                    </div>
+
+                    
+                
+                    <div style="width:195px; height:65px; display:block; text-align:center; padding:0px 25px 0px 0px;">
+                    
+                    <a href='http://www.cheo.on.ca/virtual_tour/index.html' target='_self'><img class='hoverable' src='/ShowPicture.aspx?PictureID=23&oh=false' width=189 height=65 alt='coming for surgery? take a virtual tour here' /></a>
+                    </div>
+
+                    
+                
+                
+        
+            </div>
+        </td>
+        <td class="style1">
+        </td>
+    </tr>
+</table></div>
+</div></td></tr>
+		
+	
+		
+		
+		<tr><td style="background-image:url('/images/new/content_bg.png'); background-repeat:repeat-y; padding-top:15px;">
+			<table border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top; width:310px; padding-left:30px;"><span class="bottomheader">
+            
+    Take Action
+</span><span class="TakeAction">
+<script src="/JS/greybox/AJS.js" type="text/javascript"></script>
+<script src="/JS/greybox/AJS_fx.js" type="text/javascript"></script>
+<script src="/JS/greybox/gb_scripts.js" type="text/javascript"></script>
+<link href="/JS/greybox/gb_styles.css" rel="stylesheet" type="text/css" />
+<table cellspacing="0" cellpadding="0" border="0" style="border:0px;">
+<tr>
+	<td id="ctl00_TakeAction_ctl00_tblContent" colspan="4"><span id="ctl00_TakeAction_ctl00_litContent"><table border="0" cellspacing="15" cellpadding="0">
+<tbody>
+<tr>
+<td><a href="http://www.cheo.on.ca/en/advocacyoverview"><img border="0" alt="image of a speakerphone" src="http://www.cheo.on.ca/Uploads/TakeAction/icon_1.jpg" width="45" height="43" /></a></td>
+<td>
+<p><span class="subtitle"><a href="http://www.cheo.on.ca/en/advocacyoverview">Advocate</a></span></p>
+<p><span class="bodytext">How you can help!</span> <br /></p></td></tr>
+<tr>
+<td><a href="http://www.cheo.on.ca/en/WaystoGive"><img border="0" alt="image of a cartoon heart " src="http://www.cheo.on.ca/Uploads/TakeAction/icon_2.jpg" width="45" height="43" /></a></td>
+<td>
+<p><span class="subtitle"><a href="http://www.cheo.on.ca/en/WaystoGive">Donate</a></span></p>
+<p><span class="bodytext">Ways to Give</span> <br /></p></td></tr>
+<tr>
+<td><a href="http://www.cheo.on.ca/en/ShareYourStory"><img border="0" alt="image of a word bubble" src="http://www.cheo.on.ca/Uploads/TakeAction/icon_3.jpg" width="45" height="43" /></a></td>
+<td>
+<p><span class="subtitle"><a href="http://www.cheo.on.ca/en/ShareYourStory">Share</a></span></p>
+<p><span class="bodytext">Share your Story!</span> <br /></p></td></tr></tbody></table></span></td>
+
+</tr>
+</table>
+</span></td><td style="vertical-align:top; width:310px; padding-left:30px;"><div class="bottomheader">
+            
+    Quick Links
+
+</div><br /><div><table border="0" cellpadding="0" cellspacing="3" style="background-color:Transparent;color:#333333;cursor:pointer;font-family:Arial;font-size:14px; text-decoration:none;width:185px;padding-left:5px;"><tr><td><tr id="ctl00_QuickLinks_lview_ctrl0_row">
+	<td id="ctl00_QuickLinks_lview_ctrl0_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/careeropportunities'>Careers</a></td>
+</tr>
+<tr id="ctl00_QuickLinks_lview_ctrl1_row">
+	<td id="ctl00_QuickLinks_lview_ctrl1_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/PatientsVisitors'>Visiting hours</a></td>
+</tr>
+<tr id="ctl00_QuickLinks_lview_ctrl2_row">
+	<td id="ctl00_QuickLinks_lview_ctrl2_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/GettingtoCHEO2'>Getting to CHEO</a></td>
+</tr>
+<tr id="ctl00_QuickLinks_lview_ctrl3_row">
+	<td id="ctl00_QuickLinks_lview_ctrl3_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/volunteering'>Volunteering</a></td>
+</tr>
+<tr id="ctl00_QuickLinks_lview_ctrl4_row">
+	<td id="ctl00_QuickLinks_lview_ctrl4_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/contactcheo'>Contact us</a></td>
+</tr>
+<tr id="ctl00_QuickLinks_lview_ctrl5_row">
+	<td id="ctl00_QuickLinks_lview_ctrl5_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/Surgery'>Coming for surgery?</a></td>
+</tr>
+<tr id="ctl00_QuickLinks_lview_ctrl6_row">
+	<td id="ctl00_QuickLinks_lview_ctrl6_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/disclaimer'>Disclaimer</a></td>
+</tr>
+<tr id="ctl00_QuickLinks_lview_ctrl7_row">
+	<td id="ctl00_QuickLinks_lview_ctrl7_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/healthrecords2'>Health Records</a></td>
+</tr>
+<tr id="ctl00_QuickLinks_lview_ctrl8_row">
+	<td id="ctl00_QuickLinks_lview_ctrl8_teedee" width="148" style=" background-image:url(/images/new/quickbullet.jpg); background-repeat:no-repeat; background-position:0px 6px; padding-left:12px; line-height:20px;"><a href='/en/mychart'>MyChart</a></td>
+</tr>
+</td></tr><tr></tr></table></div></td><td style="vertical-align:top; width:330px;padding-left:30px;"><table border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;"><span class="bottomheader">
+
+    Programs & Health Info
+</span></td><td><div style="position:relative; top:-6px;"><img src="/images/new/mag.jpg" alt="magnifying glass" /></div></td></tr></table><script type="text/javascript">var lang = "en";</script>
+<script type="text/javascript">
+
+    var imgloc = "/images/new/letters/";
+
+    $(document).ready(function () {
+
+        $(".letter").hover(function () {
+
+            document.getElementById(this.id).src = imgloc + this.id + "_hover.jpg";
+
+        }, function () {
+
+            document.getElementById(this.id).src = imgloc + this.id + "_on.jpg";
+
+        });
+
+//        $(".letter").click(function () {
+//            window.location.replace("/" + lang + "/HealthBitsAZ#az" + this.id);
+
+//        });
+
+    });
+
+
+    
+    
+</script><br />
+<div style="width:300px;"><a id="aa" href="/en/HealthBitsAZ#aza"><img alt="a" src="/images/new/letters/a_on.jpg" class="letter" id="a" /></a><a id="ab" href="/en/HealthBitsAZ#azb"><img alt="b" src="/images/new/letters/b_on.jpg" class="letter" id="b" /></a><a id="ac" href="/en/HealthBitsAZ#azc"><img alt="c" src="/images/new/letters/c_on.jpg" class="letter" id="c" /></a><a id="ad" href="/en/HealthBitsAZ#azd"><img alt="d" src="/images/new/letters/d_on.jpg" class="letter" id="d" /></a><a id="ae" href="/en/HealthBitsAZ#aze"><img alt="e" src="/images/new/letters/e_on.jpg" class="letter" id="e" /></a><a id="af" href="/en/HealthBitsAZ#azf"><img alt="f" src="/images/new/letters/f_on.jpg" class="letter" id="f" /></a><a id="ag" href="/en/HealthBitsAZ#azg"><img alt="g" src="/images/new/letters/g_on.jpg" class="letter" id="g" /></a>
+<a id="ah" href="/en/HealthBitsAZ#azh"><img alt="h" src="/images/new/letters/h_on.jpg" class="letter" id="h" /></a><a id="ai" href="/en/HealthBitsAZ#azi"><img alt="i" src="/images/new/letters/i_on.jpg" class="letter" id="i" /></a><a id="aj" href="/en/HealthBitsAZ#azj"><img alt="j" src="/images/new/letters/j_on.jpg" class="letter" id="j" /></a><a id="ak" href="/en/HealthBitsAZ#azk"><img alt="k" src="/images/new/letters/k_on.jpg" class="letter" id="k" /></a><a id="al" href="/en/HealthBitsAZ#azl"><img alt="l" src="/images/new/letters/l_on.jpg" class="letter" id="l" /></a><a id="am" href="/en/HealthBitsAZ#azm"><img alt="m" src="/images/new/letters/m_on.jpg" class="letter" id="m" /></a><a id="an" href="/en/HealthBitsAZ#azn"><img alt="n" src="/images/new/letters/n_on.jpg" class="letter" id="n" /></a><a id="ao" href="/en/HealthBitsAZ#azo"><img alt="o" src="/images/new/letters/o_on.jpg" class="letter" id="o" /></a><a id="ap" href="/en/HealthBitsAZ#azp"><img alt="p" src="/images/new/letters/p_on.jpg" class="letter" id="p" /></a><a id="aq" href="/en/HealthBitsAZ#azq"><img alt="q" src="/images/new/letters/q_on.jpg" class="letter" id="q" /></a><a id="ar" href="/en/HealthBitsAZ#azr"><img alt="r" src="/images/new/letters/r_on.jpg" class="letter" id="r" /></a><a id="as" href="/en/HealthBitsAZ#azs"><img alt="s" src="/images/new/letters/s_on.jpg" class="letter" id="s" /></a><a id="at" href="/en/HealthBitsAZ#azt"><img alt="t" src="/images/new/letters/t_on.jpg" class="letter" id="t" /></a>
+<a id="au" href="/en/HealthBitsAZ#azu"><img alt="u" src="/images/new/letters/u_on.jpg" class="letter" id="u" /></a><a id="av" href="/en/HealthBitsAZ#azv"><img alt="v" src="/images/new/letters/v_on.jpg" class="letter" id="v" /></a><a id="aw" href="/en/HealthBitsAZ#azw"><img alt="w" src="/images/new/letters/w_on.jpg" class="letter" id="w" /></a><a id="ax" href="/en/HealthBitsAZ#azx"><img alt="x" src="/images/new/letters/x_on.jpg" class="letter" id="x" /></a><a id="ay" href="/en/HealthBitsAZ#azy"><img alt="y" src="/images/new/letters/y_on.jpg" class="letter" id="y" /></a><a id="az" href="/en/HealthBitsAZ#azz"><img alt="z" src="/images/new/letters/z_on.jpg" class="letter" id="z" /></a></div>
+
+
+
+
+<script type="text/javascript">var dletter;dletter = document.getElementById("j");dletter.src = "/images/new/letters/j_off.jpg";dletter.className = "";$('#aj').removeAttr('href');dletter = document.getElementById("k");dletter.src = "/images/new/letters/k_off.jpg";dletter.className = "";$('#ak').removeAttr('href');dletter = document.getElementById("q");dletter.src = "/images/new/letters/q_off.jpg";dletter.className = "";$('#aq').removeAttr('href');dletter = document.getElementById("x");dletter.src = "/images/new/letters/x_off.jpg";dletter.className = "";$('#ax').removeAttr('href');dletter = document.getElementById("y");dletter.src = "/images/new/letters/y_off.jpg";dletter.className = "";$('#ay').removeAttr('href');dletter = document.getElementById("z");dletter.src = "/images/new/letters/z_off.jpg";dletter.className = "";$('#az').removeAttr('href');dletter = document.getElementById("j");dletter.src = "/images/new/letters/j_off.jpg";dletter.className = "";$('#aj').removeAttr('href');dletter = document.getElementById("k");dletter.src = "/images/new/letters/k_off.jpg";dletter.className = "";$('#ak').removeAttr('href');dletter = document.getElementById("q");dletter.src = "/images/new/letters/q_off.jpg";dletter.className = "";$('#aq').removeAttr('href');dletter = document.getElementById("x");dletter.src = "/images/new/letters/x_off.jpg";dletter.className = "";$('#ax').removeAttr('href');dletter = document.getElementById("y");dletter.src = "/images/new/letters/y_off.jpg";dletter.className = "";$('#ay').removeAttr('href');dletter = document.getElementById("z");dletter.src = "/images/new/letters/z_off.jpg";dletter.className = "";$('#az').removeAttr('href');</script></td></tr></table>
+		</td></tr>
+		
+		
+		<tr><td style=""><img src="/images/new/content_btm.png" alt="" />
+		</td></tr>
+		<tr><td style="text-align:center; padding-top:20px;"></td></tr>
+	</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+	
+	
+	
+	
+	</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=E_v_2wNVK-asfTaEYpZGkZMgiUxBTI_3ZqxHj8f4ijSCw_2_OR4rMye4nZIS9OHj1lviIV96Hwat_leRZOLIGscGBG81&amp;t=635589255570790873" type="text/javascript"></script>
+</form>
+
+<script type="text/javascript">
+    theForm.action = "";
+    //document.getElementById('apolicy').onclick = function() { window.open(this.href, "mywindow", "toolbar=no,location=0,status=0,scrollbars=1,width=500,height=350"); return false; }
+</script>
+
+
+</body>
+</html>

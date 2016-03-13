@@ -1,0 +1,93 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head><title>
+	Bibliothèque Alain-Grandbois – Opac ZonesL
+</title><meta http-equiv="Expires" content="-1" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="imagetoolbar" content="no" />
+
+	<script type = "text/javascript">
+        var active_lang = "FRE";
+			function SetLanguage( lang )
+			{
+				var menu= document.getElementById("Menu");
+				var container = document.getElementById("Container");
+				
+                active_lang = lang;
+				menu.src = "menu.aspx?Lang="+lang;
+				container.src ="box.aspx?fn=libraryZone&Lang=FRE&Lang="+lang;
+			}
+			function ZonesHome()
+			{
+			    SetLanguage(active_lang);
+			}
+			
+			function showFacets( facetInfo )
+			{
+				
+				var menu= document.getElementById("Menu");
+				var menuW = menu.contentWindow;
+				if
+					(menuW != null)
+				{
+					if (menuW.showFacets)
+					{
+						menuW.showFacets( facetInfo);
+					}
+				}
+			}
+            
+            function ChangeMenuLanguage(lang)
+            {
+                active_lang = lang;
+                var menu= document.getElementById("Menu");
+                menu.src = "menu.aspx?Lang="+lang;
+            }
+
+            function Set_Cookie(name, value, expires, path, domain, secure)
+             {
+                // set time, it's in milliseconds
+                var today = new Date();
+                today.setTime(today.getTime());
+
+                /*
+                if the expires variable is set, make the correct 
+                expires time, the current script below will set 
+                it for x number of days, to make it for hours, 
+                delete * 24, for minutes, delete * 60 * 24
+                */
+                if (expires) {
+                    expires = expires * 1000 * 60 * 60 * 24;
+                }
+                var expires_date = new Date(today.getTime() + (expires));
+
+                document.cookie = name + "=" + escape(value) +
+						((expires) ? ";expires=" + expires_date.toGMTString() : "") +
+						((path) ? ";path=" + path : "") +
+						((domain) ? ";domain=" + domain : "") +
+						((secure) ? ";secure" : "");
+            }
+
+            Set_Cookie("scrW", screen.width, 1);
+            
+	</script>
+</head>
+
+
+    <frameset rows="115,*" frameborder="0" noresize="noresize" framespacing="0">
+        <frame src="header.aspx?Lang=FRE" scrolling="no" name="Header"/>	
+         
+             <frameset cols="190,*">
+                <frame src="menu.aspx?Lang=FRE" id="Menu" name = "Menu" scrolling="no" />
+                <frame src="box.aspx?fn=libraryZone&Lang=FRE" scrolling="no" id = "Container" name="Container"/>    
+             <\frameset>
+           
+    </frameset>
+    
+
+</html>
+
+
+

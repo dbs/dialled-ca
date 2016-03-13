@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<base href="http://www.orl.bc.ca/" />
+	<title>Lake Country - Okanagan Regional Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="description" content="Okanagan Regional Library: library system covering the entire Thompson-Okanagan region of British Columbia, Canada." />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/style.css?v=v8" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/calendar_2013.css?v=v4" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/contact_us.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/search.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/left_menu.css?v=v2" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_l.css" type="text/css" media="screen" id="link_text_l" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_m.css" type="text/css" media="screen" id="link_text_m" title="text" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/text_s.css" type="text/css" media="screen" id="link_text_s" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/contrast.css" type="text/css" media="screen" id="link_contrast" title="contrast" />
+	<link rel="alternate" type="application/rss+xml" title="Okanagan Regional Library RSS Feed" href="news-events/rss" />
+	<script src="manager/media/script/mootools/mootools.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/jquery.fancybox.js" type="text/javascript"></script>
+	<script type="text/javascript">var $j = jQuery.noConflict();</script>
+	<script src="assets/templates/orlv2/js/form-check.js?v=v1" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/swfobject.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/script.js?v=v7" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="assets/templates/orlv2/css/dhtmlgoodies_calendar.css" media="screen" />  
+	<script src="assets/templates/orlv2/js/dhtmlgoodies_calendar.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pathToImages = '/assets/templates/orlv2/images/layout/';
+		//SWFObject
+		var flashvars = {};
+		var params = {
+			wmode: "transparent"
+		};
+	</script>
+<!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAMmBdV5STCVExvFTDWp50DBQn_DD64N2y7rZVstjCgjH1jrOTvBTbfltFh8gj6JbFUyeasDAlowgpPA" type="text/javascript"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9zKi3DlhGhdgZ5zWPYklEM59GzU0pys&sensor=false"></script>
+<script type="text/javascript" src="//use.typekit.net/igq5whz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+	<body>
+
+    	<div id="wrap">
+        <div class="background-header">
+                       <div id="header">
+                <span class="font-adjust-container">
+<a href="/sitemap">Site Map</a> | <a class="text_l" id="large-text-link" href="javascript:clickTextLarge();">A</a>&nbsp;<a class="text_m" id="medium-text-link" href="javascript:clickTextMedium();">A</a>&nbsp;<a class="text_s" id="small-text-link" href="javascript:clickTextSmall();">A</a>
+				</span>
+            </div>
+            <!-- Header Image/Top Menu Row -->
+            <div class="top-menu-div">
+                <div id="logo"><a href="/"><img src="/assets/templates/orlv2/images/layout/logo-new.gif" alt="Okanagan Regional Library" /></a></div>
+                <div id="welcome"><img src="/assets/templates/orlv2/images/layout/background-bar-left.png" /></div>
+                <div id="social">
+	                <a href="http://www.youtube.com/OKRegLibrary" target="_blank">Youtube</a>
+	                <a href="http://75-years-orl.blogspot.com/" target="_blank">Blogger</a>
+	                <a href="http://www.facebook.com/OKRegLib" target="_blank">Facebook</a>
+	                <a href="http://twitter.com/ORLreads" target="_blank">Twitter</a>
+	                <a href="http://ipac.orl.bc.ca/mobile">ORL Mobile</a>
+                </div>
+            </div>
+<div id="header-search-2013">
+                    <script language="javascript">
+                        String.prototype.trim = function () { return this.replace(/^\s*|\s*$/g, ''); }
+                        function ProcessInput(e) {
+                            if (window.event)       // IE
+                                keyNum = e.keyCode;
+                            else if (e.which)       // Netscape/Firefox/Opera
+                                keyNum = e.which;
+                            if (keyNum == 13) {
+                                e.returnValue = false;
+                                e.cancelBubble = true;
+                                DoKeywordSearch();
+                                return false;
+                            }
+                            return true;
+                        }
+                        function DoKeywordSearch() {
+                            if (document.getElementById('textboxTerm').value.trim() != '')
+                                window.location = 'http://ipac.orl.bc.ca/polaris/view.aspx?keyword=' + escape(document.getElementById('textboxTerm').value);
+                            else
+                                document.getElementById('textboxTerm').focus();
+                        }
+                    </script>
+                    <a class="redbutton" href="javascript:;" onclick="DoKeywordSearch();"><span>Go</span></a>
+                    <input type=text id=textboxTerm size=45 class="cleartxt inactive search" value="Search Catalogue..." 
+                     onblur="if (this.value == '') {this.value = 'Search Catalogue...';}"
+                     onfocus="if(this.value == 'Search Catalogue...') { this.value = ''; }" 
+                     onkeypress="return ProcessInput(event)" />
+                    <script language="javascript">
+                        document.getElementById('textboxTerm').blur();
+                    </script>
+                 </div>
+		<br />
+                     <p class="f_right"><a href="http://ipac.orl.bc.ca/polaris/patronaccount/default.aspx?ctx=1.1033.0.0.3">Login to My Account</a></p>
+		
+
+            <!-- Main Menu -->
+           <div id="left-menu-container">
+             <div id="top-menu-header">
+    <img src="/assets/templates/orl/images/layout/menu-text.png" alt="Menu" />
+</div>
+<div id="left-menu">
+<ul class=" left-menu-header"><li >
+  <div class="menusection"><h3 class=""><a class="" href="/about-us">About Us</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/news-events">News &amp; Events</a></h3></div>
+</li>
+<li  class="active">
+  <div class="menusection"><h3 class="active"><a class="active" href="/branches">Branches</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/Borrowing-services">Borrowing & Services</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/online-resources">Web Resources</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/kids">Kids</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/teens">Teens</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/book-lovers">Book Lovers</a></h3></div>
+</li>
+<li  class="last">
+  <div class="menusection"><h3 class="last"><a class="last" href="/contact">Contact Us</a></h3></div>
+</li>
+</ul>
+</div>
+           </div>
+
+            <!-- Menu/Intro Row -->
+                <div id="intro-wide">
+                   
+                   <div id="background-image-box-big"><div id="slideshow"></div></div>
+<div id="background-box-overlay"></div>
+<script type="text/javascript" src="http://www.orl.bc.ca/assets/js/rokslideshow.js"></script>
+		<script type="text/javascript">
+			window.RokSlideshowPath = '';
+			var myshow;
+			window.addEvent('load', function(){
+				var imgs = [];
+				
+				imgs.push({
+					file: 'IMG_9350.JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'IMG_9361.JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'IMG_9365.JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				myshow = new Slideshow('slideshow', { 
+					type: 'fade',
+					showTitleCaption: 0,
+					captionHeight: 45,
+					width: 550, 
+					height: 340, 
+					loadingDiv: 0,
+					resize: true,
+					duration: [2000, 4000],
+					transition: Fx.Transitions.Expo.easeOut,
+					images: imgs, 
+					path: '/assets/images/Branch-Slideshow/lake-country/'
+				});
+				myshow.caps.h2.setStyles({
+					color: '#fff',
+					fontSize: '13px'
+				});
+				myshow.caps.p.setStyles({
+					color: '#ccc',
+					fontSize: '11px'
+				});
+			});
+		</script>
+                   <div id="intro-wide-content">
+                               <span class="B_crumbBox"><span class="B_firstCrumb"><a class="B_homeCrumb" href="/home" title="Find Books, Music, Movies, and More">Home</a></span> &raquo; <a class="B_crumb" href="/branches" title="Branches">Branches</a> &raquo; <span class="B_lastCrumb"><span class="B_currentCrumb">Lake Country</span></span></span>
+                               <h1>Lake Country</h1>
+                               <div id="page-sub-menu">
+<ul class="submenu">
+<li>no result<script type%3D"text/javascript">$j("#page-sub-menu").hide();</script></li> 
+</ul>
+<script type="text/javascript">
+$j('.submenu').makeacolumnlists({cols: 2, colWidth: 0, equalHeight: false, startN: 12});
+</script>
+</div>
+                               
+<div id="content-header-text">
+<ul class="tabs">
+    <li class="tab1"><a href="#tab1">Location</a></li>
+    <li class="tab2"><a href="#tab2">Open Hours</a></li>
+    <li class="tab3"><a href="#tab3">Parking</a></li>
+    <li class="tab4"><a href="#tab4"></a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content"><h2><strong>#2 - 10150 Bottom Wood Lake Rd.<br />Lake Country, B.C. V4V 2M1<br />(250) 766-3141</strong></h2>
+<p>The Lake Country Branch is located in the Lake Country Municipal Hall.</p>
+<p>When the library is closed, there is a book drop slot available to customers.</p>
+<p>Our book drops are open 24 hrs except for Halloween night, Easter weekend and Christmas closure, when they are locked.</p>
+<p>Please find our events below on the branch calendar, or search the <a href="news-events/event-search">ORL Calendar of Events</a>.</p></div>
+    <div id="tab2" class="tab_content"><table id="openhours"><tr><td>Monday: </td><td>CLOSED</td></tr><tr><td>Tuesday: </td><td>10:00 a.m. to 6:00 p.m.</td></tr><tr><td>Wednesday: </td><td>10:00 a.m. to 8:00 p.m.</td></tr><tr><td>Thursday: </td><td>10:00 a.m. to 6:00 p.m.</td></tr><tr><td>Friday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Saturday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Sunday: </td><td>CLOSED</td></tr><tr><td></td><td>All branches are closed on statutory holidays</td></tr></table></div>
+    <div id="tab3" class="tab_content"><p>Handicapped parking and access is available.</p></div>
+    <div id="tab4" class="tab_content"></div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var tabCount = 0;
+	//When page loads...
+	jQuery(".tab_content").hide(); //Hide all content
+	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	jQuery(".tab_content:first").show(); //Show first tab content
+//hide empty tabs
+jQuery(".tab_content").each(function(){
+	if(jQuery(this).html() == ''){
+		jQuery("."+jQuery(this).attr("id")).hide();
+	} else {
+		if(jQuery("."+jQuery(this).attr("id")+" a").html() == ''){
+			jQuery("."+jQuery(this).attr("id")).hide();
+		} else {
+			tabCount++;
+		}
+	}
+});
+
+if(tabCount > 1){
+jQuery(".tab_container").show();
+jQuery("ul.tabs").show();
+} else {
+jQuery("#content-header-text").html(jQuery("#tab1").html());
+}
+
+	//On Click Event
+	jQuery("ul.tabs li").click(function() {
+
+		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+		jQuery(this).addClass("active"); //Add "active" class to selected tab
+		jQuery(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = jQuery(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		jQuery(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});
+</script>
+
+</div>
+                  </div>
+                </div>
+            <!-- Banners/Content Row -->
+               <div class="content-row-div"><div id="sidebanners">
+                   <div style="float: left; width: 244px;">
+<div class="banner-map" style="margin-bottom:28px;">
+<a name="content"></a>
+    <div id="map" style="width:244px; height:166px;"></div><script type="text/javascript">
+    //var map = new google.maps.Map(document.getElementById("map"));
+    //var point = new google.maps.LatLng(50.029559, -119.401656);
+    //map.setCenter(point, 14);
+    //var marker = new google.maps.Marker(point);
+    //map.addOverlay(marker);
+    //map.addControl(new GSmallMapControl());
+      var map = new google.maps.Map(
+        document.getElementById("map"), {
+          center: new google.maps.LatLng(50.029559, -119.401656),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(50.029559, -119.401656),
+            map: map
+      });
+    </script>
+</div>
+<div class="banner-calendar print-hide" id="branch-calendar" style="margin-bottom:28px;">
+    <!--[if IE 7 ]> <div class="calendar-div ie7"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!--> <div class="calendar-div"> <!--<![endif]-->
+    <div id="calendar">
+	<div id="calendar-heading">
+    	<div class="month prev"><a href="index.php?id=32&amp;cid=18&amp;m=2&amp;y=2016#content">&laquo;</a></div>
+		<div class="monthyear">
+			<div class="month heading">March</div>
+			<div class="year heading">2016</div>
+		</div>
+    	<div class="month next"><a href="index.php?id=32&amp;cid=18&amp;m=4&amp;y=2016#content">&raquo;</a></div>
+	</div>
+	<div id="day-heading-background">
+		<div class="day heading">Sun</div>
+		<div class="day heading">Mon</div>
+		<div class="day heading">Tue</div>
+		<div class="day heading">Wed</div>
+		<div class="day heading">Thu</div>
+		<div class="day heading">Fri</div>
+		<div class="day heading">Sat</div>
+	</div>	
+	<div id="date-background">
+		<div class="day none"></div><div class="day none"></div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day today">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div><div class="day none"></div><div class="day none"></div>
+	</div>
+	<div class="clearer"></div>
+	<div id="upcoming-events"><a href="/news-events/upcoming-events?cid=18">Search Our Upcoming Events</a></div>
+</div>
+</div>
+</div>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/online-resources/eresources"><img src="/assets/templates/orl/images/banners/eresources.jpg" alt="eResources" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/Borrowing-services/internet-access"><img src="/assets/templates/orl/images/banners/hotspot.jpg" alt="Free Internet Access" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/kids/booklist"><img src="/assets/templates/orl/images/banners/booklist.jpg" alt="Kids Booklist" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/Borrowing-services/information-and-reference-service"><img src="/assets/templates/orl/images/banners/referenceservice.jpg" alt="Have a Question? Information &amp; Reference Service" /></a>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/kids/story-time"><img src="/assets/templates/orl/images/banners/storytime.jpg" alt="Childrens Storytime" /></a>
+</div>
+               </div>
+               <div style="float:left; width:650px;">
+                   <h1 style="text-align: center;">Children's Programs</h1>
+<h2 style="text-align: center;"><em>All storytime programs are FREE and drop-in!</em></h2>
+<p>&nbsp;</p>
+<p><img style="margin-left: auto; display: block; margin-right: auto;" src="assets/images/Image%20Bank%20for%20Branch%20Use/Mission/Story_Time.jpg" alt="" width="302" height="167" /></p>
+<h1 style="text-align: center;"><strong>&nbsp;Babytime</strong></h1>
+<h2 style="text-align: center;">&nbsp;<strong>(Newborns to 18 months)</strong></h2>
+<h2 style="text-align: center;">&nbsp;<strong>January 15 - May 13</strong></h2>
+<h2 style="text-align: center;"><strong>Fridays at 10:30 a.m. - 11:00 a.m. </strong></h2>
+<h2 style="text-align: center;"><strong></strong>&nbsp;Join us for rhymes, songs &amp; fingerplays!</h2>
+<h2 style="text-align: center;">&nbsp;</h2>
+<h1 style="text-align: center;"><strong>Storytime</strong></h1>
+<h2 style="text-align: center;"><strong>(Recommended for 5 years &amp; under)</strong></h2>
+<h2 style="text-align: center;"><strong>January 16 - May 14</strong></h2>
+<h2 style="text-align: center;"><strong>Saturdays at 10:30 a.m. - 11:00 a.m. </strong></h2>
+<h2 style="text-align: center;">Get ready to have fun with great stories, fingerplays, songs and&nbsp;puppets!</h2>
+<hr />
+<h1 style="text-align: center;">Easter&nbsp;Storytime &amp;&nbsp;Craft&nbsp;&nbsp;</h1>
+<h1 style="text-align: center;"><strong></strong>&nbsp;</h1>
+<h2 style="text-align: center;"><strong><strong></strong></strong>&nbsp;<img src="assets/images/Image%20Bank%20for%20Branch%20Use/Easter_Bunnies.jpg" alt="" width="500" height="122" /></h2>
+<h2 style="text-align: center;"><strong><strong>Saturday,&nbsp;March 19&nbsp;&nbsp;10:30-11:30 a.m.</strong></strong></h2>
+<h2 style="text-align: center;"><strong>Recommended for ages 5 &amp; under</strong></h2>
+<h2 style="text-align: center;">Join us for some&nbsp;Easter stories, songs and a craft!</h2>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: center;"><strong>Free &amp; Drop-in!</strong></h2>
+<hr />
+<h1 style="text-align: center;">&nbsp;<strong>Lego Builders</strong></h1>
+<h2 style="text-align: center;"><strong>(Ages 6 - 12)</strong></h2>
+<h2 style="text-align: center;">&nbsp;Join us after school for some building fun!</h2>
+<h2 style="text-align: center;">We provide the lego, kids create!</h2>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: center;"><strong>FREE&nbsp;- Registration is required. </strong></h2>
+<h2 style="text-align: center;"><strong>Registration begins two weeks before the program date!</strong></h2>
+<p>&nbsp;&nbsp;<img style="margin-left: auto; display: block; margin-right: auto;" src="assets/images/Image%20Bank%20for%20Branch%20Use/Lego_Blocks.jpg" alt="lego" width="147" height="79" /></p>
+<h2 style="text-align: center;"><strong>&nbsp;&nbsp;&nbsp;</strong><strong>Crazy Castles</strong>&nbsp;</h2>
+<h2 style="text-align: center;">during Spring Break&nbsp;</h2>
+<h2 style="text-align: center;"><strong>Wednesday, March 23 at 3:30-4:30 p.m.</strong></h2>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<h2 style="text-align: center;"><strong>Zany Zoo - Wednesday, April 27 at 3:30-4:30 p.m.</strong></h2>
+<hr />
+<h1 style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adult Programs</h1>
+<h1 style="text-align: center;"><strong>&nbsp;Book Chat</strong></h1>
+<h2 style="text-align: center;">&nbsp;<strong>Saturday at 2:30 p.m.</strong></h2>
+<h2 style="text-align: center;"><strong>March 12 &amp; April 9</strong></h2>
+<p><strong></strong>&nbsp;<strong><img style="margin-left: auto; display: block; margin-right: auto;" src="assets/images/Image%20Bank%20for%20Branch%20Use/Lake%20Country/Book_Chat.png" alt="" width="300" height="171" /></strong></p>
+<p><strong></strong>&nbsp;</p>
+<h2 style="text-align: center;"><strong>Readers are welcome to share a favourite book </strong></h2>
+<h2 style="text-align: center;"><strong>with other book lovers. </strong></h2>
+<h2 style="text-align: center;"><strong>C</strong><strong>ome and discover new authors &amp; titles! </strong></h2>
+<h2 style="text-align: center;"><strong>Everyone gets five minutes to pitch their latest fantastic read!</strong></h2>
+<h2 style="text-align: center;"><em>Refereshments will be served!</em></h2>
+<h2 style="text-align: center;"><em><strong>FREE &amp; Drop-In</strong></em></h2>
+<hr />
+<h1 style="text-align: center;"><strong>Knitting Circle&nbsp;&nbsp;</strong></h1>
+<p><strong><img style="margin-left: auto; display: block; margin-right: auto;" src="assets/images/Image%20Bank%20for%20Branch%20Use/Lake%20Country/Knitting_Needles.png" alt="" width="300" height="134" /></strong></p>
+<h2 style="text-align: center;"><em></em>&nbsp;</h2>
+<h2 style="text-align: center;"><strong>January 14 to March 31</strong></h2>
+<h2 style="text-align: center;"><strong>Thursday afternoons at 3:00 p.m.</strong></h2>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<h2 style="text-align: center;">Knitters or crocheters of all&nbsp;skill levels are welcome!</h2>
+<h2 style="text-align: center;">Participants must bring their own yarn &amp; needles and a project to work on.</h2>
+<h2 style="text-align: center;"><strong>&nbsp;FREE &amp; Drop-in</strong></h2>
+<hr />
+<p style="text-align: center;">&nbsp;</p>
+<h1 style="text-align: center;"><strong>Understanding Arthritis</strong></h1>
+<h2 style="text-align: center;"><strong>Arthritis Education Event</strong></h2>
+<p style="text-align: center;"><strong></strong>&nbsp;<img src="assets/images/Image%20Bank%20for%20Branch%20Use/Lake%20Country/Arthritis_Society.jpg" alt="" width="169" height="138" />&nbsp;</p>
+<h2 style="text-align: center;"><strong>April 27th&nbsp; at 1:00-3:00 p.m.</strong></h2>
+<h2 style="text-align: center;">Knowledge is power! Find out what is really happening in your body when we talk about arthritis. What you learn may help you become a better self-manager with important information on how pain management, medications, exercise and complementary therapies can help make life easier.</h2>
+<h2 style="text-align: center;"><strong>Cost is Free</strong></h2>
+<h2 style="text-align: center;">Donations to The Arthritis Society are gratefully accepted</h2>
+<h2 style="text-align: center;"><strong></strong>&nbsp;</h2>
+<h2 style="text-align: center;"><strong>To Register Call 1-866-414-7746 </strong></h2>
+<h2 style="text-align: center;"><strong>or e-mail <a href="mailto:registration@bc.arthritis.ca">registration@bc.arthritis.ca</a> </strong></h2>
+<hr />
+<h1 style="text-align: center;"><strong><em>Lake Country Sci-Fi Book Club&nbsp;</em></strong></h1>
+<h2 style="text-align: center;"><em><strong></strong></em><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Lake%20Country/futuristic-docks.jpg" alt="" width="350" height="291" />&nbsp;</h2>
+<h2 style="text-align: center;"><em>For Adults &amp; Young Adults</em></h2>
+<h2 style="text-align: center;"><em><strong>Meets Wednesday evenings at 6:00 p.m.&nbsp;</strong></em></h2>
+<h2 style="text-align: center;"><strong>March 16th &amp; April 20th</strong></h2>
+<h2 style="text-align: center;"><em>Join Pam for a discussion on books to take you out of this world!</em>&nbsp;&nbsp;</h2>
+<h2 style="text-align: center;">Free &amp; Drop-in!</h2>
+<hr />
+<h1 style="text-align: center;">Estate Planning</h1>
+<h1 style="text-align: center;"><strong>Living Well &amp; Leaving Well Workshop</strong></h1>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<p style="text-align: center;"><strong></strong>&nbsp;<img src="assets/images/Image%20Bank%20for%20Branch%20Use/Folks-with-tablet.jpg" alt="" width="300" height="199" /></p>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<h2 style="text-align: center;">Join a representative from Canada Purple Shield</h2>
+<h2 style="text-align: center;">for a free&nbsp;workshop about end-of-life estate planning.</h2>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: center;"><strong>Wednesday, April 20 at 10:00-11:00 a.m.</strong></h2>
+<h2 style="text-align: center;"><strong>Free * Registration Required</strong></h2>
+<h2 style="text-align: center;">Call to register!</h2>
+<hr />
+<h1 style="text-align: center;"><strong>&nbsp;Friends of the Library</strong></h1>
+<h2 style="text-align: center;">Lake Country currently does not have a Friends of the Library group to support the Lake Country and Oyama Branches of ORL. The role of a Friends of the Library group would be to encourage literacy and reading enjoyment through the use of the library and&nbsp;a commitment to the ongoing enhancement of the Lake Country Branches.</h2>
+<h2 style="text-align: center;">&nbsp;</h2>
+<h2 style="text-align: center;">If this is something that appeals to you and you would be interested in getting involved please contact Wendy at Lake Country Branch.</h2>
+<p style="text-align: center;"><strong></strong>&nbsp;</p>
+<hr />
+<h1 style="text-align: center;">&nbsp;Services</h1>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: left;">&nbsp;<strong>Library Tours</strong></h2>
+<h2 style="text-align: left;">We can provide tours to classes/groups free of charge. For students, we can provide an introduction to the library or tailor the visit around a project or assignment. For adult groups,&nbsp;we can provide a tour of the library and ORL's many resources! Contact us to book your tour!</h2>
+<p style="text-align: left;">&nbsp;</p>
+<h2 style="text-align: left;"><strong>School or Group Visits</strong></h2>
+<h2 style="text-align: left;"><strong></strong>&nbsp;Interested in having someone come to visit your Class or Group in Lake Country to talk about the resources and programs we offer? Contact us!</h2>
+<p style="text-align: left;">&nbsp;</p>
+<h2><strong>Meeting Room&nbsp;Availability</strong></h2>
+<h2>Please feel free to use our small quiet meeting room for tutoring, studying, book clubs, formal or informal gatherings&nbsp;when it is not being used for our own programs and events.&nbsp;&nbsp;The room&nbsp;accommodates approximately 15 people&nbsp;and is available for booking on a first-come-first-served basis.&nbsp; We have chairs and tables available for use as well.&nbsp; Please call us at 250-766-3141 or come in for&nbsp;more details.&nbsp;&nbsp;&nbsp;</h2>
+<p>&nbsp;</p>
+<h2><strong>Exam Invigilation</strong></h2>
+<h2>Are you looking for somewhere to take an invigilated&nbsp;exam, either written or online? The library can help you out.&nbsp; Basic information can be found on the <a href="Borrowing-services/other-services/exams-in-the-library">Exams in the Library</a> page.&nbsp; Please come by or call &nbsp;us for more details at 250-766-3141.</h2>
+<p>&nbsp;</p>
+<h2><strong>Internet, Photocopying and Scanning</strong></h2>
+<h2>The Lake Country Branch has 4 internet terminals with word processing capabilities&nbsp;available for&nbsp;one hour per day. Unlimited Wi-Fi access is available all day for people with their own devices. Printing and photocopying is $.25 per page, black and white only. Scanning to email is available and is free of charge.</h2>
+<h2>&nbsp;</h2>
+               </div></div>
+</div>  <!-- end of background -->
+           <!-- Copyright -->
+	<div class="content-footer-container-bottom-div">
+		<span id="footer-copyright" class="content-footer-text">&copy; 2013 Okanagan Regional Library | Last updated on March 10, 2016 | <a href="/search">Website Search</a></span>
+		<span id="footer-twin-creek" class="content-footer-text"><a href="http://www.twincreekmedia.com" target="_blank">Kelowna Marketing by Twin Creek Media</a></span>
+	</div>
+<div class="footer-contentpage-div">
+	<!-- Location/Nav Row -->
+	<div class="content-footer-container">
+		<div id="footer-location"><h5>Locations, Hours, and Programs</h5><!--<img src="/assets/templates/orl/images/layout/locations-and-hours-footer.gif" alt="Locations &amp; Hours" />--></div>
+		<div id="footer-navigation"><h5>Navigation</h5><!--<img src="/assets/templates/orl/images/layout/navigation-footer.gif" alt="Navigation" />--></div>
+	</div>
+	<!-- Divider -->
+	<div class="content-footer-divider"></div>
+	<!-- City/Menu Row -->
+	<div class="content-footer-container">
+                <div class="content-footer-locations-link-branches">
+                    <div><ul><li><a href="/branches/armstrong" title="Armstrong" >Armstrong</a></li>
+<li><a href="/branches/cherryville" title="Cherryville" >Cherryville</a></li>
+<li><a href="/branches/enderby" title="Enderby" >Enderby</a></li>
+<li><a href="/branches/falkland" title="Falkland" >Falkland</a></li>
+<li><a href="/branches/golden" title="Golden" >Golden</a></li>
+<li class="last"><a href="/branches/hedley" title="Hedley" >Hedley</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/kaleden" title="Kaleden" >Kaleden</a></li>
+<li><a href="/branches/kelowna" title="Kelowna" >Kelowna</a></li>
+<li><a href="/branches/keremeos" title="Keremeos" >Keremeos</a></li>
+<li class="active"><a href="/branches/lake-country" title="Lake Country" >Lake Country</a></li>
+<li><a href="/branches/lumby" title="Lumby" >Lumby</a></li>
+<li class="last"><a href="/branches/mission" title="Mission" >Mission</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/naramata" title="Naramata" >Naramata</a></li>
+<li><a href="/branches/north-shuswap" title="North Shuswap" >North Shuswap</a></li>
+<li><a href="/branches/okanagan-falls" title="Okanagan Falls" >Okanagan Falls</a></li>
+<li><a href="/branches/oliver" title="Oliver" >Oliver</a></li>
+<li><a href="/branches/osoyoos" title="Osoyoos" >Osoyoos</a></li>
+<li class="last"><a href="/branches/oyama" title="Oyama" >Oyama</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/peachland" title="Peachland" >Peachland</a></li>
+<li><a href="/branches/princeton" title="Princeton" >Princeton</a></li>
+<li><a href="/branches/revelstoke" title="Revelstoke" >Revelstoke</a></li>
+<li><a href="/branches/rutland" title="Rutland" >Rutland</a></li>
+<li><a href="/branches/salmon-arm" title="Salmon Arm" >Salmon Arm</a></li>
+<li class="last"><a href="/branches/sicamous" title="Sicamous" >Sicamous</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/silver-creek" title="Silver Creek" >Silver Creek</a></li>
+<li><a href="/branches/south-shuswap" title="South Shuswap" >South Shuswap</a></li>
+<li><a href="/branches/summerland" title="Summerland" >Summerland</a></li>
+<li><a href="/branches/vernon" title="Vernon" >Vernon</a></li>
+<li class="last"><a href="/branches/westbank" title="Westbank" >Westbank</a></li>
+</ul></div>
+                </div>
+		<div class="content-footer-locations-link-divider"></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/about-us" title="About Us" >About Us</a></li>
+<li><a href="/news-events" title="News &amp; Events" >News &amp; Events</a></li>
+<li class="active"><a href="/branches" title="Branches" >Branches</a></li>
+<li class="last"><a href="/Borrowing-services" title="Borrowing & Services" >Borrowing & Services</a></li>
+</ul></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/online-resources" title="Web Resources" >Web Resources</a></li>
+<li><a href="/kids" title="Kids" >Kids</a></li>
+<li><a href="/teens" title="Teens" >Teens</a></li>
+<li><a href="/book-lovers" title="Book Lovers" >Book Lovers</a></li>
+<li class="last"><a href="/contact" title="Contact Us" >Contact Us</a></li>
+</ul></div>
+	</div>
+</div>
+            
+        </div>
+
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3147068-38");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://bclibraries.org/piwik/" : "http://bclibraries.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 62);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://bclibraries.org/piwik/piwik.php?idsite=62" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Tag -->
+	</body>
+</html>

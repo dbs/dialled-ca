@@ -1,0 +1,1662 @@
+
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>CBD Home</title>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<link type="text/css" rel="stylesheet" media="all" href="/styles/ui/templates/cbd2011/css/home-combo.min.css"  />
+
+<link type="text/css" rel="stylesheet" media="print"  href="/styles/ui/templates/cbd2011/css/template-print.min.css"  />
+<!--[if lte IE 8]><link type="text/css" rel="stylesheet" media="screen" href="/styles/ui/templates/cbd2011/css/template-msie8.min.css" /><![endif]-->
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1996573-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<link rel="shortcut icon" href="/images/ico-cbd1.ico"/>
+</head>
+
+<body id="t-homepage"  class='LTR ' >
+
+<form method="post" action="" id="f">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM2MTcxNzAwMA9kFgICAQ8WAh4DZGlyBQNsdHIWAgIBDxYCHglpbm5lcmh0bWwFCENCRCBIb21lZGQW35WA88FWyivumg13H9bXY7KiMseTbUiDVNM1ldxgnw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['f'];
+if (!theForm) {
+    theForm = document.f;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script>
+
+(function(window, document) { "use strict";
+
+	var tokenLoaded;
+	var authorizationFrame;
+	var autoReload = true;
+	var pendingOperation = false;
+
+	if(window.location.pathname.lastIndexOf('/')>0) { // Fix cookie with invalid path
+		document.cookie = ".ASPXAUTH_BSCMS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; Path=" + window.location.pathname.substr(0, window.location.pathname.lastIndexOf('/'));
+	}
+
+
+	//==============================
+	//
+	//
+	//==============================
+	function setCookie(cname, cvalue, exdays) {
+
+		if(!cvalue)
+			exdays = -365; 
+
+		var expires="" // session
+		
+		if(exdays!==undefined && exdays!==null) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			expires = "expires="+d.toUTCString() + "; ";
+		}
+
+		document.cookie =  cname + "=" + cvalue + "; Path=/; " + expires;
+	}
+
+	//==============================
+	//
+	//
+	//==============================
+	function getCookie(cname) {
+
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1);
+			if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+		}
+		return "";
+	}
+
+	//==============================
+	//
+	//
+	//==============================
+	function getQueryVariable(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split('&');
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split('=');
+			if (decodeURIComponent(pair[0]) == variable) {
+				return decodeURIComponent(pair[1]);
+			}
+		}
+	}
+
+	//==============================
+	//
+	//
+	//==============================
+	function authenticate() {
+
+		autoReload = false;
+		pendingOperation = true;
+
+		tokenReady(function() {
+
+			var redirectUrl = getQueryVariable("returnUrl") || getQueryVariable("returnurl") || '/';
+
+			try
+			{
+				window.history.replaceState({}, "The Convention on Biological Diversity", redirectUrl); //delete this entry from the history
+				window.location.reload(true);
+			}
+			catch(e)
+			{
+				window.location = redirectUrl; //backward compatibility
+			}
+		}, true);
+	}
+
+	//==============================
+	//
+	//
+	//==============================
+	function signIn(defaultReturnUrl) {
+
+		autoReload = false;
+		pendingOperation = true;
+
+		tokenReady(function(){
+
+			if(defaultReturnUrl===true) //user current url;
+				defaultReturnUrl = window.location.href.replace(/^\w+\:\/\/[a-zA-Z0-9@:\.]+/, '');
+
+			var isAuthenticated = !!getCookie(".ASPXAUTH_BSCMS");
+			var redirectUrl     = getQueryVariable("returnUrl") || getQueryVariable("returnurl") || defaultReturnUrl;
+
+			if(!isAuthenticated) {
+
+				var returnUrl = window.location.protocol +"//"+ window.location.hostname + "/user/authenticate?returnUrl="+encodeURIComponent(redirectUrl);
+
+				redirectUrl = "https://accounts.cbd.int/signin?returnUrl=" + encodeURIComponent(returnUrl);
+			}
+
+			window.location = redirectUrl;
+
+		}, true);
+	}
+
+	//==============================
+	//
+	//
+	//==============================
+	function signOut() {
+
+		autoReload = false;
+		pendingOperation = true;
+
+		tokenReady(function(){
+
+			setCookie('.ASPXAUTH_BSCMS', null);
+
+			authorizationFrame.contentWindow.postMessage(JSON.stringify({ type : 'setAuthenticationToken', authenticationToken : null }), 'https://accounts.cbd.int')
+
+			setTimeout(function(){ window.location = '/'; }, 50);
+
+		}, true);
+	}
+
+	//==============================
+	//
+	//
+	//==============================
+	window.addEventListener('message', function(event) {
+
+		if(event.origin!='https://accounts.cbd.int')
+			return;
+
+		var message = JSON.parse(event.data);
+
+		if(message.type!='authenticationToken')
+			return;
+
+		var oldToken = getCookie(".ASPXAUTH_BSCMS") || '';
+		var newToken = message.authenticationToken  || '';
+
+		if(oldToken!=newToken) {
+			setCookie('.ASPXAUTH_BSCMS', newToken)
+	
+			if(autoReload) {
+				window.location.reload(true);
+				return;
+			}
+		}
+
+		tokenLoaded = true;
+
+	});
+
+	//==============================
+	//
+	//
+	//==============================
+	function initialize(frame){
+
+		if(!authorizationFrame)
+			authorizationFrame = frame;
+
+		authorizationFrame.contentWindow.postMessage(JSON.stringify({ type : 'getAuthenticationToken' }), 'https://accounts.cbd.int');
+	}
+
+	//==============================
+	//
+	//
+	//==============================
+	function tokenReady(callback, ignorePendinOperation){
+
+		if(/DesignMode=true/.test(getCookie("CmsVolatileSettings")||'') && /\?dev=1/.test(window.location.href))
+			return;
+		
+		if(!tokenLoaded) { // frame
+			setTimeout(function() { tokenReady(callback, ignorePendinOperation); }, 50);
+			return;
+		}
+
+		if(!pendingOperation || ignorePendinOperation)
+			callback();
+	}
+
+
+	//==============================
+	//
+	// EXPORTS
+	//
+	//==============================
+	window._account = {
+		initialize : initialize,
+		authenticate : authenticate,
+		signIn : signIn,
+		signOut : signOut,
+		tokenReady : tokenReady
+	}
+
+
+})(window, document);
+
+</script>
+
+<iframe src="https://accounts.cbd.int/app/authorize.html" style="display:none" onload="_account.initialize(event.target || event.srcElement)"></iframe>
+
+<div id="t-centerWrap"><!-- Start: Center Wrap -->
+    <div id="t-header"><!-- Start: Header -->
+        <div class="t-langMenu">
+            <div id="ctl12_CContainer" class="languageBar" style="display:none;">
+<table cellspacing="0" cellpadding="0" >
+<tr>
+    
+        <td>
+            <a href="javascript:__doPostBack('ctl12$BLocale', 'ar');" id="ctl12_DLocaleLink" class="locale">ar</a>
+        </td>
+    <td id="ctl12_DSpacer">&#0160;|&#0160;</td>
+
+        <td>
+            <b id="ctl12_DCurrentLocale" class="locale">en</b>
+        </td>
+    <td id="ctl12_DSpacer">&#0160;|&#0160;</td>
+
+        <td>
+            <a href="javascript:__doPostBack('ctl12$BLocale', 'es');" id="ctl12_DLocaleLink" class="locale">es</a>
+        </td>
+    <td id="ctl12_DSpacer">&#0160;|&#0160;</td>
+
+        <td>
+            <a href="javascript:__doPostBack('ctl12$BLocale', 'fr');" id="ctl12_DLocaleLink" class="locale">fr</a>
+        </td>
+    <td id="ctl12_DSpacer">&#0160;|&#0160;</td>
+
+        <td>
+            <a href="javascript:__doPostBack('ctl12$BLocale', 'ru');" id="ctl12_DLocaleLink" class="locale">ru</a>
+        </td>
+    
+</tr>
+</table>
+</div><div id="ctl12_CContainer" class="languageBarFull" style="display:;">
+<table cellspacing="0" cellpadding="0" >
+<tr>
+    
+        <td>
+            <a href="javascript:__doPostBack('ctl12$BLocale', 'ar');" id="ctl12_DLocaleLink" class="locale">العربية</a>
+        </td>
+    <td id="ctl12_DSpacer">&#0160;|&#0160;</td>
+
+        <td>
+            <b id="ctl12_DCurrentLocale" class="locale">English</b>
+        </td>
+    <td id="ctl12_DSpacer">&#0160;|&#0160;</td>
+
+        <td>
+            <a href="javascript:__doPostBack('ctl12$BLocale', 'es');" id="ctl12_DLocaleLink" class="locale">Espa&#241;ol</a>
+        </td>
+    <td id="ctl12_DSpacer">&#0160;|&#0160;</td>
+
+        <td>
+            <a href="javascript:__doPostBack('ctl12$BLocale', 'fr');" id="ctl12_DLocaleLink" class="locale">Fran&#231;ais</a>
+        </td>
+    <td id="ctl12_DSpacer">&#0160;|&#0160;</td>
+
+        <td>
+            <a href="javascript:__doPostBack('ctl12$BLocale', 'ru');" id="ctl12_DLocaleLink" class="locale">Русский</a>
+        </td>
+    
+</tr>
+</table>
+</div>
+
+
+        </div>
+        <div class="t-userMenu">
+
+<table id="signInBarXXX" cellspacing="0" cellpadding="0" style="display:none">
+<tr>
+    
+        <td><a href="/user/signup/?returnurl=%2f" id="ctl13_BSignUp">Sign up for an account</a></td>
+        <td>&#0160;|&#0160;</td>
+        <td><a href="/user/signin/?returnurl=%2f" id="ctl13_BSignIn" onclick="_account.signIn(true); return false;">Sign In</a></td>
+    
+
+    
+</tr>
+</table>
+
+
+
+<script>
+_account.tokenReady(function(){
+	$("#signInBarXXX").show();
+});
+</script>
+</div>
+        <div id="t-headerLogo">
+            <a href="/">
+                <img src="/styles/ui/templates/cbd2011/images/logo-cbd-leaf-line.gif" id="CCbdLogoLeaf" height="65" width="52" alt="Convention on Biological Diversity" />
+                <img src="/styles/ui/templates/cbd2011/images/logo-cbd-text-en.gif" id="CCbdLogoText" height="65" alt="Convention on Biological Diversity" />
+            </a>
+        </div>
+        <input name="CSearch" type="text" id="CSearch" class="t-headerSearch" placeholder="Search" />
+        
+        <a id="BSearch" href="javascript:__doPostBack(&#39;BSearch&#39;,&#39;&#39;)"></a>
+        <div class="clear"></div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="t-masterNavi">
+<li class="t-navWide">
+<a href="/convention" id="ctl11_menuTopcbd">The Convention</a>
+<div id="ctl11_menuSubcbd" class="t-subNavContainer">
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">About the Convention</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/history">History of the Convention</a></li>
+
+<li><a href="/convention/text">Convention Text</a></li>
+
+<li><a href="/convention/parties/list">List of Parties</a></li>
+
+<li><a href="/decisions">Decisions</a></li>
+
+<li><a href="/gbo4">Global Biodiversity Outlook (GBO 4)</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Convention Protocols</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/biosafety">Cartagena Protocol on Biosafety</a></li>
+
+<li><a href="/abs">Nagoya Protocol on Access and Benefit-Sharing</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Convention Bodies</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/cop">Conference of the Parties (COP)</a></li>
+
+<li><a href="/sbstta">Subsidiary Body on Scientific, Technical and Technological Advice (SBSTTA)</a></li>
+
+<li><a href="/sbi">Subsidiary Body on Implementation (SBI)</a></li>
+
+<li><a href="/abs/icnp">Intergovernmental Committee for the Nagoya Protocol (ICNP)</a></li>
+
+<li><a href="/convention/wg8j.shtml">Working Group on Article 8(j)</a></li>
+
+<li><a href="/convention/wgpa.shtml">Working Group on Protected Areas</a></li>
+
+</ul>
+
+</div>
+
+<div class="t-navSubSection">
+
+</div>
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading"><a href='/sp'>Strategic Plan for Biodiversity 2011-2020</a></div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/sp/elements">Key Elements</a></li>
+
+<li><a href="/sp/targets">Aichi Biodiversity Targets</a></li>
+
+<li><a href="/sp/implementation">Implementation</a></li>
+
+<li><a href="/2011-2020">United Nations Decade on Biodiversity 2011-2020</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading"><a href='/mechanisms'>Mechanisms for Implementation</a></div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/nbsap">National Biodiversity Strategies &amp; Action Plans</a></li>
+
+<li><a href="/reports">National Reports</a></li>
+
+<li><a href="/financial">Financial Resources &amp; Mechanism</a></li>
+
+<li><a href="/chm">Clearing-House Mechanism (CHM)</a></li>
+
+<li><a href="/biobridge">Bio-Bridge Initiative (BBI)</a></li>
+
+<li><a href="/lifeweb">LifeWeb for Financing Protected Areas</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading"><a href='/cooperation'>Cooperation &amp; Partnerships</a></div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/ssc">South-South Cooperation</a></li>
+
+<li><a href="/cooperation/csp/">Consortium of Scientific Partners</a></li>
+
+<li><a href="/rio">Rio Conventions</a></li>
+
+<li><a href="/brc">Biodiversity-related Conventions</a></li>
+
+<li><a href="/jbf">Japan Biodiversity Fund</a></li>
+
+<li><a href="/agreements">Partnership Agreements</a></li>
+
+</ul>
+
+</div>
+
+</div>
+</li><li class="t-navWide">
+<a href="/biosafety" id="ctl11_menuTopcpb" title="Catagena Protocol on Biosafety">Cartagena Protocol</a>
+<div id="ctl11_menuSubcpb" class="t-subNavContainer">
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading"><a href='http://bch.cbd.int/protocol/'>The Cartagena Protocol</a></div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="http://bch.cbd.int/protocol/news/">What&#39;s new</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/background/">About the Protocol</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/text/">Text of the Cartagena Protocol</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/issues/cpb_stplan.shtml">Strategic Plan</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Key Protocol Issues</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="http://bch.cbd.int/protocol/issues/cpb_art35.shtml">Assessment and Review</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art22.shtml">Capacity Building</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art34.shtml">Compliance</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art28.shtml">Financial Mechanism</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art18.shtml">Handling, Transport, Packaging and Identification</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art20.shtml">Information sharing</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/supplementary/">Liability and Redress</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art33.shtml">Monitoring and Reporting</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art23.shtml">Public Awareness and Participation</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art15.shtml">Risk Assessment</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art16.shtml">Risk Management</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_roster.shtml">Roster of Experts</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_detection.shtml">Sampling, Detection and Identification</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art26.shtml">Socio-economic Considerations</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_art17.shtml">Unintentional Transboundary Movements</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Parties</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="http://bch.cbd.int/protocol/parties/">List of Parties</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/ratification.shtml">Becoming a Party</a></li>
+
+<li><a href="http://bch.cbd.int/database/contacts/focalpoints.shtml">National Contacts</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_natreports.shtml">National Reports</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/budget/">Status of Contributions</a></li>
+
+</ul>
+
+</div>
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">COP-MOP (Governing Body)</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_bureau.shtml">COP-MOP Bureau</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_mopmeetings.shtml">COP-MOP Meetings</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/decisions/">COP-MOP Decisions</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Activities and Documentation</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="http://bch.cbd.int/protocol/meetings/">Meetings and Documents</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/notifications/">Notifications</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_esreports.shtml">Reports of the Executive Secretary</a></li>
+
+</ul>
+
+</div>
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Resources</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="http://bch.cbd.int/about/">The Biosafety Clearing-House</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_faq.shtml">Frequently Asked Questions</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_media.shtml">Media and Outreach</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_media_video1.shtml">A video on the Cartagena Protocol</a></li>
+
+<li><a href="http://bch.cbd.int/database/resources/">Search the BIRC</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Publications</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_publications.shtml">Protocols and decisions</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_factsheets.shtml">Fact Sheets and Banners</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_newsletter.shtml">Newsletter</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_technicalseries.shtml">Biosafety Technical Series</a></li>
+
+<li><a href="http://bch.cbd.int/protocol/cpb_otherpubl.shtml">Other Publications</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading"><a href='http://bch.cbd.int/protocol/supplementary/'>Nagoya – Kuala Lumpur Supplementary Protocol on Liability and Redress</a></div>
+<div class="clear"></div>
+<ul>
+
+<li><a>&#160;</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading"><a href='http://bch.cbd.int/'>The Biosafety Clearing-House (BCH)</a></div>
+<div class="clear"></div>
+<ul>
+
+<li><a>&#160;</a></li>
+
+</ul>
+
+</div>
+
+</div>
+</li><li class="t-navWide">
+<a href="/abs" id="ctl11_menuTopnpabs" title="Nagoya Protocol on Access to Genetic Resources and the Fair and Equitable Sharing of Benefits Arising from their Utilization">Nagoya Protocol</a>
+
+</li><li class="t-navWide t-navAlignRight">
+<a href="/programmes" id="ctl11_menuTopprog">Programmes</a>
+<div id="ctl11_menuSubprog" class="t-subNavContainer">
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Thematic Programmes</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/agro">Agricultural Biodiversity</a></li>
+
+<li><a href="/drylands">Dry and Sub-humid Land Biodiversity</a></li>
+
+<li><a href="/forest">Forest Biodiversity</a></li>
+
+<li><a href="/waters">Inland Waters Biodiversity</a></li>
+
+<li><a href="/island">Island Biodiversity</a></li>
+
+<li><a href="/marine">Marine and Coastal Biodiversity</a></li>
+
+<li><a href="/mountain">Mountain Biodiversity</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Major Groups</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/subnational">Cities and Local Governments</a></li>
+
+<li><a href="/parliamentarians/">Parliamentarians</a></li>
+
+<li><a href="/business/">Business</a></li>
+
+<li><a href="/universities/">Universities and the Scientific Community</a></li>
+
+<li><a href="/youth/">Children &amp; Youth</a></li>
+
+<li><a href="http://greenwave.cbd.int">The Green Wave for Schools</a></li>
+
+<li><a href="/ngo/">Non-Governmental Organizations (NGOs)</a></li>
+
+</ul>
+
+</div>
+
+<div class="t-navSubSection">
+
+</div>
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Cross-Cutting Issues</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/lbcd/">Biological and Cultural Diversity</a></li>
+
+<li><a href="/development">Biodiversity for Development</a></li>
+
+<li><a href="/climate">Climate Change and Biodiversity</a></li>
+
+<li><a href="/cepa">Communication, Education and Public Awareness</a></li>
+
+<li><a href="/incentives">Economics, Trade and Incentive Measures</a></li>
+
+<li><a href="/ecosystem">Ecosystem Approach</a></li>
+
+<li><a href="/restoration">Ecosystem Restoration</a></li>
+
+<li><a href="/gender">Gender and Biodiversity</a></li>
+
+<li><a href="/gspc">Global Strategy for Plant Conservation</a></li>
+
+<li><a href="/gti">Global Taxonomy Initiative</a></li>
+
+<li><a href="http://www.cbd.int/health">Health &amp; Biodiversity</a></li>
+
+<li><a href="/impact">Impact Assessment</a></li>
+
+<li><a href="/indicators">Identification, Monitoring, Indicators and Assessments</a></li>
+
+<li><a href="/invasive">Invasive Alien Species</a></li>
+
+<li><a href="/liability">Liability and Redress - Article 14.2</a></li>
+
+<li><a href="/protected">Protected Areas</a></li>
+
+<li><a href="/sustainable">Sustainable Use of Biodiversity</a></li>
+
+<li><a href="/tech-transfer">Technology Transfer and Cooperation</a></li>
+
+<li><a href="/tourism">Tourism and Biodiversity</a></li>
+
+<li><a href="/traditional">Traditional Knowledge, Innovations and Practices - Article 8(j)</a></li>
+
+<li><a href="/emerging">New &amp; Emerging Issues</a></li>
+
+</ul>
+
+</div>
+
+</div>
+</li><li class="t-navWide t-navAlignRight">
+<a href="/information" id="ctl11_menuTopinfo">Information</a>
+<div id="ctl11_menuSubinfo" class="t-subNavContainer">
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">News and Communications</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/new/">CBD Announcements</a></li>
+
+<li><a href="/statements.shtml">Statements</a></li>
+
+<li><a href="/notifications">Notifications</a></li>
+
+<li><a href="/information/news.shtml">News Headlines on Biodiversity</a></li>
+
+<li><a href="/press-releases/">Press Releases</a></li>
+
+<li><a href="/rss/">RSS Feeds</a></li>
+
+<li><a href="http://twitter.com/cbdnews">Twitter</a></li>
+
+<li><a href="http://www.facebook.com/UNBiodiversity">Facebook</a></li>
+
+<li><a href="/forums.shtml">Discussion Forums</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">National Information</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/countries/">Country Profiles</a></li>
+
+<li><a href="/information/parties.shtml">List of Parties</a></li>
+
+<li><a href="/information/nfp.shtml">Lists of National Focal Points</a></li>
+
+<li><a href="/nbsap/">National Biodiversity Strategies and Action Plans (NBSAPs)</a></li>
+
+<li><a href="/reports/">National Reports</a></li>
+
+<li><a href="/convention/parties/contributions.shtml">Status of Contributions</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Multimedia</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/photos">Photo Gallery</a></li>
+
+<li><a href="/videos">Video Gallery</a></li>
+
+<li><a href="http://www.youtube.com/user/chmcbd">YouTube</a></li>
+
+</ul>
+
+</div>
+
+<div class="t-navSubSection">
+
+</div>
+
+<div class="t-navSubSection">
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">General References</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/decisions">Decisions</a></li>
+
+<li><a href="/recommendations">Recommendations</a></li>
+
+<li><a href="/meetings/">Meetings</a></li>
+
+<li><a href="/information/library.shtml">Library and Documents</a></li>
+
+<li><a href="/guidelines/">Principles, Guidelines and Tools</a></li>
+
+<li><a href="/doc/negotiation/">Resources for Negotiators</a></li>
+
+<li><a href="/ecolex/">ECOLEX - A Gateway to Biodiversity-Related Law</a></li>
+
+<li><a href="/case-studies/">Case Studies</a></li>
+
+<li><a href="/links/">Related Websites</a></li>
+
+<li><a href="/agreements/">Partnership Agreements</a></li>
+
+</ul>
+<div id="ctl11_divSubMenuSectionHeading" class="t-navSubHeading">Thematic Databases</div>
+<div class="clear"></div>
+<ul>
+
+<li><a href="/ecosystem/sourcebook/">Ecosystem Approach Sourcebook</a></li>
+
+<li><a href="http://adaptation.cbd.int">Database on Climate Change Adaptation</a></li>
+
+<li><a href="/incentives/case-studies.shtml">Database on Incentive Measures</a></li>
+
+<li><a href="/assessments/">Database of Scientific Assessments</a></li>
+
+<li><a href="/programmes/cross-cutting/technology/search.aspx">Database on Technology Transfer</a></li>
+
+<li><a href="/impact/case-studies/">Case Studies on Impact Assessment</a></li>
+
+<li><a href="/drylands/cs/">Case Studies on Dry and Sub-Humid Land Biodiversity</a></li>
+
+<li><a href="/abs/projects.shtml">ABS Database on Capacity Building Projects</a></li>
+
+<li><a href="/abs/roster/">ABS Roster of Experts</a></li>
+
+</ul>
+
+</div>
+
+</div>
+</li><li class="t-navAlignRight">
+<a href="/secretariat" id="ctl11_menuTopscbd">Secretariat</a>
+<ul id="ctl11_menuSubscbd" class="t-subNavContainer">
+
+<li><a href="/secretariat/role.shtml">About the Secretariat</a></li>
+
+<li><a href="/staff">Staff</a></li>
+
+<li><a href="/museum">Museum of Nature and Culture</a></li>
+
+<li><a href="/secretariat/initiatives.shtml">Initiatives</a></li>
+
+<li><a href="/secretariat/documents.shtml">Secretariat Documents</a></li>
+
+<li><a href="/employment">Employment Opportunities</a></li>
+
+<li><a href="/secretariat/business">Doing Business with the CBD</a></li>
+
+</ul>
+</li>
+</ul>
+
+<script type='text/javascript'>$("#ctl11_menuSubcbd").mouseover(function () { $("#ctl11_menuTopcbd").addClass("hover"); }).mouseout(function () { $("#ctl11_menuTopcbd").removeClass("hover"); });
+$("#ctl11_menuSubcpb").mouseover(function () { $("#ctl11_menuTopcpb").addClass("hover"); }).mouseout(function () { $("#ctl11_menuTopcpb").removeClass("hover"); });
+$("#ctl11_menuSubprog").mouseover(function () { $("#ctl11_menuTopprog").addClass("hover"); }).mouseout(function () { $("#ctl11_menuTopprog").removeClass("hover"); });
+$("#ctl11_menuSubinfo").mouseover(function () { $("#ctl11_menuTopinfo").addClass("hover"); }).mouseout(function () { $("#ctl11_menuTopinfo").removeClass("hover"); });
+$("#ctl11_menuSubscbd").mouseover(function () { $("#ctl11_menuTopscbd").addClass("hover"); }).mouseout(function () { $("#ctl11_menuTopscbd").removeClass("hover"); });
+</script>
+
+
+
+        <div class="clear"></div>
+    </div><!-- End: Header -->
+
+    <div id="t-contentSideWrap"><!-- Start: Content Sidebar Wrap -->
+        <div id="t-contentHome"><!-- Start: Content -->
+
+            
+
+
+<div id="ctl05_CSkin">
+    
+
+    <div id="ctl05_CSkin2">
+        
+        
+
+
+
+ 
+ <div class="t-featured"><!-- Start: Featured -->
+ 
+<ul class="t-featuredNavi"><li><a>&#160;</a></li><li><a>&#160;</a></li><li><a>&#160;</a></li><li><a>&#160;</a></li><li><a>&#160;</a></li><li><a>&#160;</a></li><li><a>&#160;</a></li><li><a>&#160;</a></li><li><a>&#160;</a></li></ul>
+
+
+<ul class="t-featuredFrame"><li><img longdesc="/images/slideshow/slide-gbo4.png" /><h1><span>Global Biodiversity Outlook 4 - reports on status and trends of biodiversity and actions in support of further implementation of the Convention</span><a href="/gbo4" class="t-moreLinkWhite">Read More</a></h1></li><li><img longdesc="/images/slideshow/slide-cop12.jpg" /><h1><span>CBD COP 12, Cartagena Protocol COP-MOP 7 &amp; Nagoya Protocol COP-MOP 1<br />29 September - 17 October 2014, Pyeongchang, Republic of Korea</span><a href="/cop2014" class="t-moreLinkWhite">Read More</a></h1></li><li><img longdesc="/images/slideshow/slide-jaguar.jpg" /><h1><span>The Convention on Biological Diversity is an international treaty to sustain the rich diversity of life on Earth.</span><a href="/convention" class="t-moreLinkWhite">Read More</a></h1></li><li><img longdesc="/images/slideshow/slide-bird.jpg" /><h1><span>195 States and the European Union are party to the Convention on Biological Diversity.</span><a href="/parties" class="t-moreLinkWhite">Read More</a></h1></li><li><img longdesc="/images/slideshow/slide-haystacks.jpg" /><h1><span>The Cartagena Protocol aims at reducing the potential adverse effects of biotechnology on biodiversity.</span><a href="/biosafety" class="t-moreLinkWhite">Read More</a></h1></li><li><img longdesc="/images/slideshow/slide-abs.jpg" /><h1><span>The Nagoya Protocol provides a framework for the fair and equitable sharing of benefits arising out of the utilization of genetic resources.</span><a href="/abs" class="t-moreLinkWhite">Read More</a></h1></li><li><img longdesc="/images/slideshow/slide-coral-reef.jpg" /><h1><span>The Strategic Plan for Biodiversity 2011-2020 and its Aichi Targets represent the world&#39;s commitment to reduce biodiversity loss.</span><a href="/sp" class="t-moreLinkWhite">Read More</a></h1></li><li><img longdesc="/images/slideshow/slide-mountains.jpg" /><h1><span>2011-2020 is the United Nations Decade on Biodiversity to reflect on biodiversity and act for a future in harmony with nature.</span><a href="http://www.cbd.int/doc/strategic-plan/UN-Decade-Biodiversity.pdf" class="t-moreLinkWhite">Read More</a></h1></li><li><img longdesc="/images/slideshow/slide-green-wave-costa-rica.jpg" /><h1><span>The Green Wave is a global campaign to educate children and youth about biodiversity.</span><a href="http://greenwave.cbd.int" class="t-moreLinkWhite">Read More</a></h1></li></ul>
+</div><!-- End: Featured -->
+
+
+
+
+
+
+
+    </div>
+</div>
+<p></p>
+
+
+<div id="ctl07_CSkin">
+    
+
+    <div id="ctl07_CSkin2">
+        
+        
+
+
+<style> 
+.image {
+	position:relative;
+	width: 145px;
+	height: 90px;
+	float:left; /* optional */
+}
+.image .text {
+	position:absolute;
+	bottom: 0px; /* in conjunction with left property, decides the text position */
+	left:0px;
+	width:145px; /* optional, though better have one */
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #333;
+}
+.text a, .text a:active, .text a:visited  {
+    text-decoration: none;
+}
+
+</style>
+
+
+
+<div class="t-carousel"><!-- Start: Carousel -->
+<a href="javascript: void(0)" class="t-carouselPrev"> <!-- Previous --> </a>
+<div class="t-carouselFrame infobox">
+    <ul>
+<li><div class="image"><a href="/2011-2020" title="United Nations Decade on Biodiversity 2011-2020"><img longDesc="/images/carousel/carousel-undb.png" /><span class="text">United Nations<br />Decade on Biodiversity</span></a></div></li>
+
+<li><div class="image"><a href="/2011-2020/goals"><img longDesc="/images/counters/cbd-countdown-2020.png" /><span class="text">Days to meet<br />the Aichi Targets</span></a></div></li>
+
+<li><div class="image"><a href="/cop2014/" title="Twelfth meeting of the Conference of the Parties (COP 12)"><img longDesc="/images/carousel/carousel-cop12.png" /><span class="text">COP 12</span></a></div></li>
+
+<li><div class="image"><a href="/sp" title="Strategic Plan for Biodiversity 2011-2020"><img longDesc="/images/carousel/carousel-strategic-plan.png" /><span class="text">Strategic Plan<br />2011-2020</span></a></div></li>
+
+<li><div class="image"><a href="/cop11/" title="Eleventh meeting of the Conference of the Parties (COP 11)"><img longDesc="/images/carousel/carousel-cop11.png" /><span class="text">COP 11</span></a></div></li>
+
+<li><div class="image"><a href="/champions" title="The Hyderabad call for Biodiversity Champions"><img longDesc="/images/carousel/carousel-champions.png" /><span class="text">Biodiversity<br />Champions</span></a></div></li>
+
+<li><div class="image"><a href="http://cbobook.org/" title="Cities and Biodiversity Outlook"><img longDesc="/images/carousel/carousel-cbo.png" /><span class="text">CBO</span></a></div></li>
+
+<li><div class="image"><a href="/lifeweb" title="LifeWeb - Partnerships for Financing Protected Areas"><img longDesc="/images/carousel/carousel-life-web.png" /><span class="text">LifeWeb</span></a></div></li>
+
+<li><div class="image"><a href="http://www.riopavilion.org" title="Rio Conventions Pavilion"><img longDesc="/images/carousel/carousel-ecosystempavilion.png" /><span class="text">Rio Conventions<br />Pavilion</span></a></div></li>
+
+<li><div class="image"><a href="/edward-norton" title="Edward Norton - United Nations Goodwill Ambassador for Biodiversity"><img longDesc="/images/carousel/carousel-edward-norton.png" /><span class="text">Ambassador<br />Edward Norton</span></a></div></li>
+
+<li><div class="image"><a href="/business" title="Global Platform on Business and Biodiversity"><img longDesc="/images/carousel/carousel-business.png" /><span class="text">Business &amp;<br />Biodiversity</span></a></div></li>
+
+<li><div class="image"><a href="/jbf" title="Japan Biodiversity Fund"><img longDesc="/images/carousel/carousel-japan-fund.png" /><span class="text">Japan Fund for Biodiversity</span></a></div></li>
+
+<li><div class="image"><a href="/nbsap" title="National Biodiversity Strategies and Action Plans (NBSAP)"><img longDesc="/images/carousel/carousel-nbsap.png" /><span class="text">NBSAP</span></a></div></li>
+
+<li><div class="image"><a href="/abs" title="Access and Benefit-sharing"><img longDesc="/images/carousel/carousel-abs.png" /><span class="text">Access &amp;<br />Benefit-sharing</span></a></div></li>
+</ul>
+</div>
+<a href="javascript: void(0)" class="t-carouselNext"> <!-- Next --> </a>                                           
+</div><!-- End: Carousel -->
+
+    </div>
+</div>
+<p></p>
+
+
+<div id="ctl08_CSkin">
+    
+
+    <div id="ctl08_CSkin2">
+        
+        
+
+<div class="t-whatsNew"><!-- Start: What's New -->
+<div class="t-latest">
+<a href="/doc/speech/2016/sp-2016-03-08-women-en.pdf"><img src="/images/145x90/logos/women-day.jpg" style="display:inline;" /></a><br />
+<span class="t-date">7 March 2016</span>
+<h3><a href="/doc/speech/2016/sp-2016-03-08-women-en.pdf">Message of the Executive Secretary of the Convention on Biological Diversity, Braulio Ferreira De Souza Dias, on the occasion of International Women’s Day</a></h3>
+<p class="t-desc">The theme for this year’s International Women’s Day, “Planet 50-50 by 2030: Step it up for Gender Equality”, is well-aligned with the ambitious Agenda 2030 for Sustainable Development, which integrates gender equality and women’s empowerment as a cross-cutting theme across the 17 Sustainable Development Goals and 169 targets, making it clear that equality and empowerment are a necessary part of a sustainable future.</p> 
+<p><a href="/doc/speech/2016/sp-2016-03-08-women-en.pdf" class="t-moreLink">Read More</a></p>
+<div class="clear"></div>
+</div>
+
+<div class="t-wnList">
+<ul><li class="t-wnDesc">
+<img style="display:none;" longdesc="/images/145x90/logos/women-day.jpg" />
+<span class="t-date" style="display:none;">7 March 2016</span>
+<h3><a style="font-weight:bold;">Message of the Executive Secretary of the Convention on Biological Diversity, Braulio Ferreira De Souza Dias, on the occasion of International Women’s Day</a></h3>   
+<p style="display:none;"><span class="t-desc">The theme for this year’s International Women’s Day, “Planet 50-50 by 2030: Step it up for Gender Equality”, is well-aligned with the ambitious Agenda 2030 for Sustainable Development, which integrates gender equality and women’s empowerment as a cross-cutting theme across the 17 Sustainable Development Goals and 169 targets, making it clear that equality and empowerment are a necessary part of a sustainable future.</span> <a href="/doc/speech/2016/sp-2016-03-08-women-en.pdf" class="t-moreLink">Read More</a></p> 
+</li><li class="t-wnDesc">
+<img style="display:none;" longdesc="/images/145x90/logos/wwd.gif" />
+<span class="t-date" style="display:none;">1 March 2016</span>
+<h3><a style="font-weight:normal;">Message of the Executive Secretary of the Convention on Biological Diversity, Braulio Ferreira de Souza Dias, on the occasion of World Wildlife Day</a></h3>   
+<p style="display:none;"><span class="t-desc">Integral to the balance of nature, wildlife nurtures us with a sense of wonder and serves as a source of inspiration.</span> <a href="/doc/speech/2016/sp-2016-03-01-wwd-en.pdf" class="t-moreLink">Read More</a></p> 
+</li><li class="t-wnDesc">
+<img style="display:none;" longdesc="/images/145x90/logos/ipbes-logo.jpg" />
+<span class="t-date" style="display:none;">22 February 2016</span>
+<h3><a style="font-weight:normal;">Statement by Mr. Braulio Ferreira de Souza Dias, Executive Secretary of the Convention on Biological Diversity on the Occasion of the Fourth Session of the Plenary of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services</a></h3>   
+<p style="display:none;"><span class="t-desc">It is a pleasure to join you here in Kuala Lumpur for the fourth session of the IPBES Plenary. We come together for a very exciting moment in the history of IPBES, when the Plenary will be presented with the first two assessments for its acceptance and approval.</span> <a href="/doc/speech/2016/sp-2016-02-22-malaysia-en.pdf" class="t-moreLink">Read More</a></p> 
+</li>
+<li class="t-last-child"><a href="/new" class="t-moreLink">More News</a></li>
+</ul>
+<ul><li class="t-wnDesc">
+<img style="display:none;" longdesc="/images/145x90/logos/cbd-spine.png" />
+<span class="t-date" style="display:none;">2 March 2016</span>
+<h3><a style="font-weight:normal;">Message of the Executive Secretary of the Convention on Biological Diversity, Braulio Ferreira De Souza Dias, on the occasion of Africa Environment Day/Wangari Maathai Day</a></h3>   
+<p style="display:none;"><span class="t-desc">Biodiversity – the diversity of life on Earth - underpins the natural resources that provide food and livelihoods throughout the world.  For many women, biodiversity serves as the cornerstone of their work, their belief systems and their basic survival.</span> <a href="/doc/speech/2016/sp-2016-03-03-WMaathaiDay-en.pdf" class="t-moreLink">Read More</a></p> 
+</li><li class="t-wnDesc">
+<img style="display:none;" />
+<span class="t-date" style="display:none;">26 February 2016</span>
+<h3><a style="font-weight:normal;">Togo and the United Kingdom of Great Britain and Northern Ireland ratify the Nagoya Protocol</a></h3>   
+<p style="display:none;"><span class="t-desc">Ratifications by Togo and the United Kingdom of Great Britain and Northern Ireland has brought the total number of ratifications to the Nagoya Protocol on Access to Genetic Resources and the Fair and Equitable Sharing of Benefits Arising from their Utilization to 72.</span> <a href="/doc/press/2016/pr-2016-02-26-abs-en.pdf" class="t-moreLink">Read More</a></p> 
+</li><li class="t-wnDesc">
+<img style="display:none;" />
+<span class="t-date" style="display:none;">20 February 2016</span>
+<h3><a style="font-weight:normal;">Statement by Braulio Ferreira de Souza Dias, Executive Secretary of the Convention on Biological Diversity, on the occasion of Egyptian Fungus Day</a></h3>   
+<p style="display:none;"><span class="t-desc">First, I would like to congratulate the Arab Society for Fungal Conservation for declaring 20 February as Egyptian Fungus Day. This initiative truly demonstrates commitment towards conservation of biodiversity and promoting the objectives of the Convention on Biological Diversity (CBD).</span> <a href="/doc/speech/2016/sp-2016-02-20-egypt-fungi-en.pdf" class="t-moreLink">Read More</a></p> 
+</li>
+</ul>   
+<div class="clear"></div>
+</div> <div class="clear"></div>                                    
+</div><!-- End: What's New --> 
+<script type='text/javascript'>
+$('.t-whatsNew li.t-wnDesc').click(function(){
+var $active = $(this);
+var $latest = $('.t-whatsNew .t-latest');
+
+$('.t-whatsNew .t-wnDesc h3 a').css('font-weight', 'normal');
+var $activeH3 = $('h3', $active);
+$('h3', $latest)
+    .html($activeH3.html())
+    .attr({
+        'dir': $activeH3.attr('dir'),
+        'align': $activeH3.attr('align')
+        });
+$('.t-date', $latest).html($('.t-date', $active).html());
+
+var $activeDesc = $('.t-desc', $active);
+$('.t-desc', $latest)
+    .html($activeDesc.html())
+    .attr({
+        'dir': $activeDesc.attr('dir'),
+        'align': $activeDesc.attr('align')
+        });
+
+var $longDesc = $('img', $active).attr('longdesc');
+if ($longDesc){ $('img', $latest).attr('src', $longDesc).css('display', 'inline'); } else {$('img', $latest).removeAttr('src').css('display', 'none'); }
+var $moreLink = $('a.t-moreLink', $active).attr('href');
+$('a', $latest).attr('href', $moreLink); //affect all <a>s
+$('h3 a', $active).css('font-weight', 'bold');
+_gaq.push(['_trackEvent', 'whats-new', 'switch', $moreLink]);
+});
+</script>
+
+
+    </div>
+</div>
+<p></p>
+
+
+<div id="ctl09_CSkin">
+    
+
+    <div id="ctl09_CSkin2">
+        
+        <table id="ctl09_W13331_CTable" style="border-collapse: collapse;">
+<tr	>
+<td valign="top" width="45%"		>
+
+<div id="ctl09_W13331_ctl03_CSkin">
+    
+
+    <div id="ctl09_W13331_ctl03_CSkin2">
+        
+        
+
+<div class="t-contentBox t-country t-shadowBox">
+    <h2 class="t-grayTB">
+        <a href="/countries" id="ctl09_W13331_ctl03_W13332_CHeader">Countries</a>
+    </h2>
+    <div class="countryList" style="text-align: center;">
+        <select name="ctl09$W13331$ctl03$W13332$CCountryList" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl09$W13331$ctl03$W13332$CCountryList\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl09_W13331_ctl03_W13332_CCountryList">
+<option value=""			>Choose a country profile</option>
+<option value="af"			>Afghanistan</option>
+<option value="al"			>Albania</option>
+<option value="dz"			>Algeria</option>
+<option value="ad"			>Andorra</option>
+<option value="ao"			>Angola</option>
+<option value="ag"			>Antigua and Barbuda</option>
+<option value="ar"			>Argentina</option>
+<option value="am"			>Armenia</option>
+<option value="au"			>Australia</option>
+<option value="at"			>Austria</option>
+<option value="az"			>Azerbaijan</option>
+<option value="bs"			>Bahamas</option>
+<option value="bh"			>Bahrain</option>
+<option value="bd"			>Bangladesh</option>
+<option value="bb"			>Barbados</option>
+<option value="by"			>Belarus</option>
+<option value="be"			>Belgium</option>
+<option value="bz"			>Belize</option>
+<option value="bj"			>Benin</option>
+<option value="bt"			>Bhutan</option>
+<option value="bo"			>Bolivia (Plurinational State of)</option>
+<option value="ba"			>Bosnia and Herzegovina</option>
+<option value="bw"			>Botswana</option>
+<option value="br"			>Brazil</option>
+<option value="bn"			>Brunei Darussalam</option>
+<option value="bg"			>Bulgaria</option>
+<option value="bf"			>Burkina Faso</option>
+<option value="bi"			>Burundi</option>
+<option value="cv"			>Cabo Verde</option>
+<option value="kh"			>Cambodia</option>
+<option value="cm"			>Cameroon</option>
+<option value="ca"			>Canada</option>
+<option value="cf"			>Central African Republic</option>
+<option value="td"			>Chad</option>
+<option value="cl"			>Chile</option>
+<option value="cn"			>China</option>
+<option value="co"			>Colombia</option>
+<option value="km"			>Comoros</option>
+<option value="cg"			>Congo</option>
+<option value="ck"			>Cook Islands</option>
+<option value="cr"			>Costa Rica</option>
+<option value="ci"			>C&#244;te d&#39;Ivoire</option>
+<option value="hr"			>Croatia</option>
+<option value="cu"			>Cuba</option>
+<option value="cy"			>Cyprus</option>
+<option value="cz"			>Czech Republic</option>
+<option value="kp"			>Democratic People&#39;s Republic of Korea</option>
+<option value="cd"			>Democratic Republic of the Congo</option>
+<option value="dk"			>Denmark</option>
+<option value="dj"			>Djibouti</option>
+<option value="dm"			>Dominica</option>
+<option value="do"			>Dominican Republic</option>
+<option value="ec"			>Ecuador</option>
+<option value="eg"			>Egypt</option>
+<option value="sv"			>El Salvador</option>
+<option value="gq"			>Equatorial Guinea</option>
+<option value="er"			>Eritrea</option>
+<option value="ee"			>Estonia</option>
+<option value="et"			>Ethiopia</option>
+<option value="eur"			>European Union</option>
+<option value="fj"			>Fiji</option>
+<option value="fi"			>Finland</option>
+<option value="fr"			>France</option>
+<option value="ga"			>Gabon</option>
+<option value="gm"			>Gambia (the)</option>
+<option value="ge"			>Georgia</option>
+<option value="de"			>Germany</option>
+<option value="gh"			>Ghana</option>
+<option value="gr"			>Greece</option>
+<option value="gd"			>Grenada</option>
+<option value="gt"			>Guatemala</option>
+<option value="gn"			>Guinea</option>
+<option value="gw"			>Guinea-Bissau</option>
+<option value="gy"			>Guyana</option>
+<option value="ht"			>Haiti</option>
+<option value="va"			>Holy See</option>
+<option value="hn"			>Honduras</option>
+<option value="hu"			>Hungary</option>
+<option value="is"			>Iceland</option>
+<option value="in"			>India</option>
+<option value="id"			>Indonesia</option>
+<option value="ir"			>Iran (Islamic Republic of)</option>
+<option value="iq"			>Iraq</option>
+<option value="ie"			>Ireland</option>
+<option value="il"			>Israel</option>
+<option value="it"			>Italy</option>
+<option value="jm"			>Jamaica</option>
+<option value="jp"			>Japan</option>
+<option value="jo"			>Jordan</option>
+<option value="kz"			>Kazakhstan</option>
+<option value="ke"			>Kenya</option>
+<option value="ki"			>Kiribati</option>
+<option value="kw"			>Kuwait</option>
+<option value="kg"			>Kyrgyzstan</option>
+<option value="la"			>Lao People&#39;s Democratic Republic</option>
+<option value="lv"			>Latvia</option>
+<option value="lb"			>Lebanon</option>
+<option value="ls"			>Lesotho</option>
+<option value="lr"			>Liberia</option>
+<option value="ly"			>Libya</option>
+<option value="li"			>Liechtenstein</option>
+<option value="lt"			>Lithuania</option>
+<option value="lu"			>Luxembourg</option>
+<option value="mg"			>Madagascar</option>
+<option value="mw"			>Malawi</option>
+<option value="my"			>Malaysia</option>
+<option value="mv"			>Maldives</option>
+<option value="ml"			>Mali</option>
+<option value="mt"			>Malta</option>
+<option value="mh"			>Marshall Islands</option>
+<option value="mr"			>Mauritania</option>
+<option value="mu"			>Mauritius</option>
+<option value="mx"			>Mexico</option>
+<option value="fm"			>Micronesia (Federated States of)</option>
+<option value="mc"			>Monaco</option>
+<option value="mn"			>Mongolia</option>
+<option value="me"			>Montenegro</option>
+<option value="ma"			>Morocco</option>
+<option value="mz"			>Mozambique</option>
+<option value="mm"			>Myanmar</option>
+<option value="na"			>Namibia</option>
+<option value="nr"			>Nauru</option>
+<option value="np"			>Nepal</option>
+<option value="nl"			>Netherlands</option>
+<option value="nz"			>New Zealand</option>
+<option value="ni"			>Nicaragua</option>
+<option value="ne"			>Niger</option>
+<option value="ng"			>Nigeria</option>
+<option value="nu"			>Niue</option>
+<option value="no"			>Norway</option>
+<option value="om"			>Oman</option>
+<option value="pk"			>Pakistan</option>
+<option value="pw"			>Palau</option>
+<option value="pa"			>Panama</option>
+<option value="pg"			>Papua New Guinea</option>
+<option value="py"			>Paraguay</option>
+<option value="pe"			>Peru</option>
+<option value="ph"			>Philippines</option>
+<option value="pl"			>Poland</option>
+<option value="pt"			>Portugal</option>
+<option value="qa"			>Qatar</option>
+<option value="kr"			>Republic of Korea</option>
+<option value="md"			>Republic of Moldova</option>
+<option value="ro"			>Romania</option>
+<option value="ru"			>Russian Federation</option>
+<option value="rw"			>Rwanda</option>
+<option value="kn"			>Saint Kitts and Nevis</option>
+<option value="lc"			>Saint Lucia</option>
+<option value="vc"			>Saint Vincent and the Grenadines</option>
+<option value="ws"			>Samoa</option>
+<option value="sm"			>San Marino</option>
+<option value="st"			>Sao Tome and Principe</option>
+<option value="sa"			>Saudi Arabia</option>
+<option value="sn"			>Senegal</option>
+<option value="rs"			>Serbia</option>
+<option value="sc"			>Seychelles</option>
+<option value="sl"			>Sierra Leone</option>
+<option value="sg"			>Singapore</option>
+<option value="sk"			>Slovakia</option>
+<option value="si"			>Slovenia</option>
+<option value="sb"			>Solomon Islands</option>
+<option value="so"			>Somalia</option>
+<option value="za"			>South Africa</option>
+<option value="ss"			>South Sudan</option>
+<option value="es"			>Spain</option>
+<option value="lk"			>Sri Lanka</option>
+<option value="ps"			>State of Palestine</option>
+<option value="sd"			>Sudan</option>
+<option value="sr"			>Suriname</option>
+<option value="sz"			>Swaziland</option>
+<option value="se"			>Sweden</option>
+<option value="ch"			>Switzerland</option>
+<option value="sy"			>Syrian Arab Republic</option>
+<option value="tj"			>Tajikistan</option>
+<option value="th"			>Thailand</option>
+<option value="mk"			>The former Yugoslav Republic of Macedonia</option>
+<option value="tl"			>Timor-Leste</option>
+<option value="tg"			>Togo</option>
+<option value="to"			>Tonga</option>
+<option value="tt"			>Trinidad and Tobago</option>
+<option value="tn"			>Tunisia</option>
+<option value="tr"			>Turkey</option>
+<option value="tm"			>Turkmenistan</option>
+<option value="tv"			>Tuvalu</option>
+<option value="ug"			>Uganda</option>
+<option value="ua"			>Ukraine</option>
+<option value="ae"			>United Arab Emirates</option>
+<option value="gb"			>United Kingdom of Great Britain and Northern Ireland</option>
+<option value="tz"			>United Republic of Tanzania</option>
+<option value="us"			>United States of America</option>
+<option value="uy"			>Uruguay</option>
+<option value="uz"			>Uzbekistan</option>
+<option value="vu"			>Vanuatu</option>
+<option value="ve"			>Venezuela (Bolivarian Republic of)</option>
+<option value="vn"			>Viet Nam</option>
+<option value="ye"			>Yemen</option>
+<option value="zm"			>Zambia</option>
+<option value="zw"			>Zimbabwe</option>
+
+		</select>
+
+    </div><div class="clear"></div>
+
+
+</div><div class="clear"></div>
+   
+
+
+
+
+
+
+    </div>
+</div>
+<p></p>
+
+
+<div id="ctl09_W13331_ctl05_CSkin">
+    
+
+    <div id="ctl09_W13331_ctl05_CSkin2">
+        
+        
+
+<div class="t-contentBox t-newsletter t-shadowBox">
+<h2 class="t-grayTB"><a href="/information/library.shtml">Newsletters &amp; Publications</a></h2>
+<img src="/doc/publications/cbd-aichi-target-10-en-cover.jpg" id="ctl09_W13331_ctl05_W13334_CImageHolder" class="t-no-print" width="90" height="116" alt="Priority Actions to Achieve Aichi Biodiversity Target 10" />
+<ul id="publicationList"><li id="ctl09_W13331_ctl05_W13334_liItem1"><h3><a href="/doc/publications/cbd-aichi-target-10-en.pdf">Priority Actions to Achieve Aichi Biodiversity Target 10</a><img style="display:none;" longDesc="/doc/publications/cbd-aichi-target-10-en-cover.jpg" /></h3></li><li id="ctl09_W13331_ctl05_W13334_liItem2"><h3><a href="/doc/newsletters/news-biz-2015-11-en.pdf">Special Focus on Access and Benefit-Sharing</a><img style="display:none;" longDesc="/doc/newsletters/news-biz-2015-11-en-cover.jpg" /></h3></li><li id="ctl09_W13331_ctl05_W13334_liItem3"><h3><a href="/gbo/gbo4/publication/gbo4-en.pdf">Global Biodiversity Outlook 4</a><img style="display:none;" longDesc="/gbo/gbo4/publication/gbo4-en-cover.jpg" /></h3></li><li id="ctl09_W13331_ctl05_W13334_liItem4"><h3><a href="/marine/ebsa/booklet-02-wcar-en.pdf">EBSA Booklet - WCAR</a><img style="display:none;" longDesc="/marine/ebsa/booklet-02-wcar-en-cover.jpg" /></h3></li><li id="ctl09_W13331_ctl05_W13334_liItem5"><h3><a href="/doc/publications/cbd-ts-82-en.pdf">CBD Technical Series 82</a><img style="display:none;" longDesc="/doc/publications/cbd-ts-82-en-cover.jpg" /></h3></li><li id="ctl09_W13331_ctl05_W13334_liItem6"><h3><a href="/doc/publications/cbd-ts-77-en.pdf">CBD Technical Series 77</a><img style="display:none;" longDesc="/doc/publications/cbd-ts-77-en-cover.jpg" /></h3></li>
+<li id="pubsMore" class="t-last-child"><a href="/information/library.shtml" class="t-moreLink">More Newsletters &amp; Publications</a></li>
+</ul>
+</div><div class="clear"></div>
+
+<script type='text/javascript'>$('#ctl09_W13331_ctl05_W13334_liItem1').hover(function() {$('#ctl09_W13331_ctl05_W13334_CImageHolder').attr('src', $('ul#publicationList > li#ctl09_W13331_ctl05_W13334_liItem1 img').attr('longDesc'));});$('#ctl09_W13331_ctl05_W13334_liItem2').hover(function() {$('#ctl09_W13331_ctl05_W13334_CImageHolder').attr('src', $('ul#publicationList > li#ctl09_W13331_ctl05_W13334_liItem2 img').attr('longDesc'));});$('#ctl09_W13331_ctl05_W13334_liItem3').hover(function() {$('#ctl09_W13331_ctl05_W13334_CImageHolder').attr('src', $('ul#publicationList > li#ctl09_W13331_ctl05_W13334_liItem3 img').attr('longDesc'));});$('#ctl09_W13331_ctl05_W13334_liItem4').hover(function() {$('#ctl09_W13331_ctl05_W13334_CImageHolder').attr('src', $('ul#publicationList > li#ctl09_W13331_ctl05_W13334_liItem4 img').attr('longDesc'));});$('#ctl09_W13331_ctl05_W13334_liItem5').hover(function() {$('#ctl09_W13331_ctl05_W13334_CImageHolder').attr('src', $('ul#publicationList > li#ctl09_W13331_ctl05_W13334_liItem5 img').attr('longDesc'));});$('#ctl09_W13331_ctl05_W13334_liItem6').hover(function() {$('#ctl09_W13331_ctl05_W13334_CImageHolder').attr('src', $('ul#publicationList > li#ctl09_W13331_ctl05_W13334_liItem6 img').attr('longDesc'));});$('#pubsMore').hover(function() {$('#ctl09_W13331_ctl05_W13334_CImageHolder').attr('src','/images/homepage/latest-pubs-home.gif');});</script>
+
+    </div>
+</div>
+<p></p>
+</td>
+<td valign="top" width="45%"		>
+
+<div id="ctl09_W13331_ctl04_CSkin">
+    
+
+    <div id="ctl09_W13331_ctl04_CSkin2">
+        
+        
+
+<div class="t-contentBox t-programme t-shadowBox">
+<h2 class="t-grayTB"><a href="/programmes">Programmes</a></h2>
+<div class="factsheetList">
+<select name="ctl09$W13331$ctl04$W13333$CFactsheetList" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl09$W13331$ctl04$W13333$CFactsheetList\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl09_W13331_ctl04_W13333_CFactsheetList">
+<option value=""			>Choose a factsheet</option>
+<option value="149-factsheet-cbd"			>Convention on Biological Diversity </option>
+<option value="149-factsheet-sp"			>Strategic Plan for Biodiversity  2011–2020</option>
+<option value="149-factsheet-nbsap"			>National Biodiversity Strategies and Action Plans</option>
+<option value="149-factsheet-abs"			>Nagoya Protocol on ABS</option>
+<option value="149-factsheet-biosafety"			>Cartagena Protocol on Biosafety</option>
+<option value="149-factsheet-liability"			>Nagoya—Kuala Lumpur Supplementary Protoco</option>
+<option value="149-factsheet-agriculture"			>Agricultural Biodiversity </option>
+<option value="149-factsheet-drylands"			>Dry and Sub-humid Lands Biodiversity </option>
+<option value="149-factsheet-forest"			>Forest Biodiversity </option>
+<option value="149-factsheet-water"			>Inland Waters Biodiversity  </option>
+<option value="149-factsheet-island"			>Island Biodiversity </option>
+<option value="149-factsheet-marine"			>Marine and Coastal Biodiversity </option>
+<option value="149-factsheet-mountain"			>Mountain Biodiversity </option>
+<option value="149-factsheet-ecoservices"			>Ecosystem Services  </option>
+<option value="149-factsheet-poverty"			>Biodiversity for Development and Poverty Alleviation</option>
+<option value="149-factsheet-business"			>Business and Biodiversity</option>
+<option value="149-factsheet-cc"			>Climate Change and Biodiversity </option>
+<option value="149-factsheet-cepa"			>Communication Education and Public Awareness </option>
+<option value="149-factsheet-incentive"			>Economics Trade and Incentive Measures </option>
+<option value="149-factsheet-ecoapproach"			>Ecosystem Approach </option>
+<option value="149-factsheet-gender"			>Gender and Biodiversity </option>
+<option value="149-factsheet-gspc"			>Global Strategy for Plant Conservation </option>
+<option value="149-factsheet-health"			>Human Health and Biodiversity  </option>
+<option value="149-factsheet-gti"			>Global Taxonomy Initiative</option>
+<option value="149-factsheet-impact"			>Impact assessment </option>
+<option value="149-factsheet-idb"			>International Day for Biological Diversity—22 May</option>
+<option value="149-factsheet-ias"			>Invasive Alien Species </option>
+<option value="149-factsheet-nr"			>National Reports </option>
+<option value="149-factsheet-pa"			>Protected Areas </option>
+<option value="149-factsheet-lifeweb"			>The CBD LifeWeb Initiative</option>
+<option value="149-factsheet-sustainable"			>Sustainable Use of Biodiversity </option>
+<option value="149-factsheet-tttc"			>Technology Transfer and Cooperation</option>
+<option value="149-factsheet-tourism"			>Biodiversity and Tourism </option>
+<option value="149-factsheet-tk"			>Traditional Knowledge, Innovation and Practices</option>
+<option value="149-factsheet-gbo"			>Global Biodiversity Outlook </option>
+<option value="149-factsheet-city"			>City and Biodiversity</option>
+
+		</select>
+</div>
+    
+<p class="factsheetText">Each programme factsheet introduces a key biodiversity topic</p>
+</div><div class="clear"></div>
+   
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<p></p>
+
+
+<div id="ctl09_W13331_ctl06_CSkin">
+    
+
+    <div id="ctl09_W13331_ctl06_CSkin2">
+        
+        
+
+<div class="t-contentBox t-statements t-shadowBox">
+<h2 class="t-grayTB"><a href="/statements/">Executive Secretary&#39;s Statements</a></h2>
+<img src="/styles/ui/templates/cbd2011/images/img-statements.jpg" alt = "Mr. Braulio Ferreira de Souza Dias, Executive Secretary of the Convention on Biological Diversity" class="t-no-print" width="90" />                                 
+<ul id="statementList">
+<li><h3><span class="t-date">7 March 2016</span><div><a href="/doc/speech/2016/sp-2016-03-08-women-en.pdf"> International Women’s Day</a></div></h3></li><li><h3><span class="t-date">2 March 2016</span><div><a href="/doc/speech/2016/sp-2016-03-03-WMaathaiDay-en.pdf">Africa Environment Day/Wangari Maathai Day</a></div></h3></li><li><h3><span class="t-date">1 March 2016</span><div><a href="/doc/speech/2016/sp-2016-03-01-wwd-en.pdf">World Wildlife Day, 3 March 2016</a></div></h3></li>
+<li id="statementMore" class="t-last-child"><a href="/statements/" id="ctl09_W13331_ctl06_W13335_CItemsMore" class="t-moreLink">More Executive Secretary&#39;s Statements</a></li>
+</ul>
+</div><div class="clear"></div>
+
+    </div>
+</div>
+<p></p>
+</td>
+	</tr>
+</table>
+
+
+    </div>
+</div>
+<p></p>
+
+
+        </div><!-- End: Content -->
+        <div id="t-sidebarHome"><!-- Start: Sidebar -->
+        
+
+<div id="ctl02_CSkin">
+    
+
+    <div id="ctl02_CSkin2">
+        
+        
+
+<div class="t-shadowBoxGreen">
+<h2 class="t-greenTB t-first-child"><a href="/news" id="ctl02_W5838_CHeadlines">Media Headlines</a></h2>
+<ul class="t-updatesList">
+<li><div class="t-date">11 March 2016, UN News Centre</div>
+<h3><a href="http://www.un.org/apps/news/story.asp?NewsID=53418#.VuL6MGdIiUk">INTERVIEW: Managing disaster risk vital for sustainable development, UN official stresses</a></h3>
+</li>
+<li><div class="t-date">11 March 2016, BBC News</div>
+<h3><a href="http://www.bbc.com/news/science-environment-35758427">Study suggests UK environment would be &#39;vulnerable&#39; after Brexit</a></h3>
+</li>
+<li><div class="t-date">11 March 2016, Bird-life International</div>
+<h3><a href="http://www.birdlife.org/africa/news/african-vulture-pilot-study-aims-reduce-poisoning-deaths">African vulture pilot study aims to reduce poisoning deaths</a></h3>
+</li>
+<li><div class="t-date">11 March 2016, Christian Science Monitor</div>
+<h3><a href="http://www.csmonitor.com/Science/2016/0310/Researchers-discover-plastic-loving-bacteria-in-recycling-plant">Researchers discover plastic-loving bacteria in recycling plant</a></h3>
+</li>
+<li><div class="t-date">11 March 2016, The Maritime Executive</div>
+<h3><a href="http://www.maritime-executive.com/features/invasive-species-doubts-five-years-after-japans-tsunami">Invasive Species Doubts Five Years After Japan&#39;s Tsunami</a></h3>
+</li>
+
+<li class="t-last-child"><a href="/news" class="t-moreLink">More Headlines</a></li>
+</ul>
+</div>
+
+    </div>
+</div>
+<p></p>
+
+
+<div id="ctl03_CSkin">
+    
+
+    <div id="ctl03_CSkin2">
+        
+        
+
+<div class="t-shadowBoxGreen">
+<h2 class="t-greenTB"><a href="/decisions">Decisions &amp; Recommendations</a></h2>
+<ul class="t-updatesList">
+<li><div class="t-date">17 October 2014, Pyeongchang</div><h3><a href="/decisions/cop/?m=cop-12">COP 12 Decisions</a></h3></li><li><div class="t-date">17 October 2014, Pyeongchang</div><h3><a href="/decisions/cop/?m=np-mop-01">ABS COP MOP 1 Decisions</a></h3></li><li><div class="t-date">3 October 2014, Pyeongchang</div><h3><a href="/decisions/cop/?m=mop-07">BS COP MOP 7 Decisions</a></h3></li><li><div class="t-date">5 November 2015, Montreal</div><h3><a href="/recommendations/sbstta/?m=sbstta-19">SBSTTA-19 Recommendations</a></h3></li><li><div class="t-date">20 June 2014, Montreal</div><h3><a href="/recommendations/sbstta/?m=wgri-05">WGRI-5 Recommendations</a></h3></li><li><div class="t-date">28 February 2014, Pyeongchang</div><h3><a href="/recommendations/sbstta/?m=icnp-03">ICNP 3 Recommendations</a></h3></li>
+<li class="t-last-child"><a href="/decisions" class="t-moreLink">More Decisions &amp; Recommendations</a></li>
+</ul>
+</div>
+
+    </div>
+</div>
+<p></p>
+
+
+<div id="ctl04_CSkin">
+    
+
+    <div id="ctl04_CSkin2">
+        
+        
+
+<div class="t-shadowBoxGreen">
+<h2 class="t-greenTB"><a href="/meetings" id="ctl04_W6423_CUpcomingMeetings">Upcoming Meetings</a></h2>
+<ul class="t-updatesList">
+<li><div class="t-date">7 - 11 March 2016, Ljubljana, Slovenia</div><h3><a href="/doc/?meeting=BSDIWS-2016-01" title="Central and Eastern European Workshop on the Detection and Identification of Living Modified Organisms">Central and Eastern European Workshop on the Detection and Identification of Living Modified Organisms</a></h3></li><li><div class="t-date">14 - 16 March 2016, Montreal, Canada</div><h3><a href="/doc/?meeting=BSLGCB-11" title="Eleventh Meeting of the Liaison Group on Capacity-building for Biosafety">Eleventh Meeting of the Liaison Group on Capacity-building for Biosafety</a></h3></li><li><div class="t-date">16 - 18 March 2016, Bern, Switzerland</div><h3><a href="/doc/?meeting=NBSAPWS-2016-01" title="Second meeting of the informal working group for the development of a voluntary peer review process for the Convention on Biological Diversity">Second meeting of the informal working group for the development of a voluntary peer review process for the Convention on Biological Diversity</a></h3></li><li><div class="t-date">21 - 24 March 2016, Entebbe, Uganda</div><h3><a href="/doc/?meeting=PAWS-2016-01" title="Capacity-building workshop for Africa on achieving Aichi Biodiversity Targets 11 and 12">Capacity-building workshop for Africa on achieving Aichi Biodiversity Targets 11 and 12</a></h3></li><li><div class="t-date">21 - 23 March 2016, Bogis-Bossey, Switzerland</div><h3><a href="/doc/?meeting=IMPWS-2016-01" title="“Friends of the CBD” workshop on mechanisms to support review of implementation of the Convention">“Friends of the CBD” workshop on mechanisms to support review of implementation of the Convention</a></h3></li>
+<li class="t-last-child"><a href="/meetings" class="t-moreLink">More Meetings</a></li>
+</ul>
+</div>
+
+
+    </div>
+</div>
+<p></p>
+
+
+<div id="ctl06_CSkin">
+    
+
+    <div id="ctl06_CSkin2">
+        
+        
+
+<div class="t-shadowBoxGreen">
+<h2 class="t-greenTB"><a href="/notifications" id="ctl06_W13328_CNotifications">Notifications</a></h2>
+<ul class="t-updatesList">
+<li><span class="t-date">8 March 2016</span><h3><a href="/doc/notifications/2016/ntf-2016-031-IPBES-en.pdf" title="Outcomes of the Fourth Session of the Plenary of the Intergovernmental Platform on Biodiversity and Ecosystem Services (IPBES-4)">Outcomes of the Fourth Session of the...</a></h3></li><li><span class="t-date">7 March 2016</span><h3><a href="/doc/notifications/2016/ntf-2016-030-agriculture-en.pdf" title="Preparation of The State of the World’s Biodiversity for Food and Agriculture">Preparation of The State of the World’s...</a></h3></li><li><span class="t-date">4 March 2016</span><h3><a href="/doc/notifications/2016/ntf-2016-029-cbd-social-media-en.pdf" title="CBD Social Media">CBD Social Media</a></h3></li><li><span class="t-date">26 February 2016</span><h3><a href="/doc/notifications/2016/ntf-2016-025-gti-en.doc" title="Nominations for the Global Taxonomy Initiative Training Course on Rapid Identification of Invasive Alien Species for Achieving Aichi Biodiversity Target 9">Nominations for the Global Taxonomy...</a></h3></li><li><span class="t-date">26 February 2016</span><h3><a href="/doc/notifications/2016/ntf-2016-026-nbsap-nr5-en.doc" title="Workshop for Asia on Updating National Biodiversity Strategies and Action Plans and the Preparation of the Fifth National Report, 1 – 3 June 2016 - Beijing, China">Workshop for Asia on Updating National...</a></h3></li>
+<li class="t-last-child"><a href="/notifications" class="t-moreLink">More Notifications</a></li>
+</ul>
+</div>
+
+    </div>
+</div>
+<p></p>
+
+
+       </div><!-- End: Sidebar -->
+        <div class="clear"></div>
+    </div><!-- End: Content Sidebar Wrap -->
+    
+
+
+
+<div id="t-footer" class="tk-ff-meta-web-pro delayImage">
+<div class="t-footerColumn1" >
+<h2 class="tk-ff-meta-web-pro">Quick links</h2>
+<ul><li><a href="/decisions" class="tk-ff-meta-web-pro">Decisions</a></li><li><a href="/meetings" class="tk-ff-meta-web-pro">Meetings</a></li><li><a href="/notifications" class="tk-ff-meta-web-pro">Notifications</a></li><li><a href="/news" class="tk-ff-meta-web-pro">News Headlines</a></li><li><a href="/publications" class="tk-ff-meta-web-pro">Publications</a></li><li><a href="/chm" class="tk-ff-meta-web-pro">CHM</a></li><li><a href="http://bch.cbd.int" class="tk-ff-meta-web-pro">BCH</a></li></ul>
+</div>
+
+<div class="t-footerColumn2">
+<h2 class="tk-ff-meta-web-pro" style="visibility:hidden;">[Column2]</h2>
+<ul><li><a href="/parties" class="tk-ff-meta-web-pro">Parties</a></li><li><a href="/countries" class="tk-ff-meta-web-pro">Country Profiles</a></li><li><a href="/nfp" class="tk-ff-meta-web-pro">National Focal Points</a></li><li><a href="/nbsap" class="tk-ff-meta-web-pro">National Strategies (NBSAPs)</a></li><li><a href="/reports" class="tk-ff-meta-web-pro">National Reports</a></li><li><a href="/contributions" class="tk-ff-meta-web-pro">Contributions</a></li><li><a href="/cooperation" class="tk-ff-meta-web-pro">Cooperation &amp; Partnerships</a></li></ul>
+</div>
+
+<div class="t-footerColumn3">
+<h2 class="tk-ff-meta-web-pro">Follow us</h2>
+<ul><li><img longdesc="/styles/ui/templates/cbd2011/images/ic-rss.png" />&nbsp;&nbsp;<a href="http://www.cbd.int/rss">RSS</a></li><li><img longdesc="/styles/ui/templates/cbd2011/images/ic-twitter.png" />&nbsp;&nbsp;<a href="http://twitter.com/cbdnews">Twitter</a></li><li><img longdesc="/styles/ui/templates/cbd2011/images/ic-facebook.png" />&nbsp;&nbsp;<a href="http://www.facebook.com/UNBiodiversity">Facebook</a></li><li><img longdesc="/styles/ui/templates/cbd2011/images/ic-youtube.png" />&nbsp;&nbsp;<a href="http://www.youtube.com/user/chmcbd">YouTube</a></li><li><img longdesc="/images/templates/cbd2011/ic-instagram.png" />&nbsp;&nbsp;<a href="https://instagram.com/unbiodiversity">Instagram</a></li></ul>
+</div>
+</div>
+
+
+
+    <div class="clear"></div>
+    
+<div id="t-additionalInfo">
+<div id="t-bottomInfo">
+<ul><li><a href="/feedback">Feedback</a></li><li><a href="/map">Site Map</a></li><li><a href="/contact">Contact us</a></li><li><a href="/terms">Terms of Use</a></li><li><a href="/privacy">Privacy Policy</a></li><li><a href="/credits">Credits</a></li><li><a href="/copyright">&#169; CBD Secretariat</a></li></ul>
+<!--[t-rating]-->
+
+
+<style type="text/css">
+.starRating{
+	height: 16px;
+	width: 80px;
+	background: url(/cms/images/starRating.png) -80px 0 no-repeat;
+}
+.oneStar   {    background-position: -64px 0; }
+.twoStars  {    background-position: -48px 0; }
+.threeStars{	background-position: -32px 0; }
+.fourStars { 	background-position: -16px 0; }
+.fiveStars { 	background-position: 0px   0; }
+</style>
+
+<div class="floatNear"><a href="/user/rate.shtml?pid=3647&key=414ca47a24c2329ad1c3459911011c7f&returnurl=%2f">Rate this page</a>&#160;<span>- 272 people have rated this page</span>&#160;</div>
+<div class="floatNear starRating fourStars"></div>
+
+
+
+
+<!--[/t-rating]-->
+<!--[t-updated]-->
+
+
+<!--[/t-updated]-->
+</div>
+<ul id="t-UNlogos" class="delayImage">
+<li><a id="CLinkUN" href="http://www.un.org"><img alt="United Nations" longdesc="/styles/ui/templates/cbd2011/images/un-logo-white.gif" /></a></li>
+<li><a id="CLinkUNENP" href="http://www.unep.org"><img longdesc="/styles/ui/templates/cbd2011/images/unep-logo-white-en.gif" alt="United Nations Environment Programme" /></a></li>
+</ul>
+    <div class="clear"></div>
+</div> 
+
+    
+
+
+</div><!-- End: Center Wrap -->
+
+<!-- Dynamic Menu -->
+<table id="DynamicMenu"
+    style="display:none;position:absolute;border:1px solid #b0b0b0;background-color:#e0e0e0;z-index:99">
+<tr>
+<td valign="top">
+    <table id="DynamicMenu1" style="width:200px" class='menuDyn'>
+    <tr><td></td></tr>
+    </table>
+</td><td valign="top">
+    <table id="DynamicMenu2" style="width:200px" class='menuDyn'>
+    <tr><td></td></tr>
+    </table>
+</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">$(document).ready(function(){});</script></form>
+<!-- Load Script -->  
+
+<script type="text/javascript" src="/styles/ui/templates/cbd2011/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="/styles/ui/templates/cbd2011/js/script.js"></script>
+<script type="text/javascript" src="/cms/scripts/ajaxscript-4.4.0.min.js"></script>
+<script type="text/javascript" language="javascript"  src="/cms/scripts/common.js"></script>
+</body>
+</html>
+

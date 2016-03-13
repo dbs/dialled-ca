@@ -1,0 +1,1082 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	
+<meta name="description" content="" />
+<meta name="keywords" content="" />	
+
+<link href="/styles/base.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/structure.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/sitecontent.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/icreate.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/navigation.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+
+<script type="text/javascript" language="javascript" src="/scripts/jquery-1.4.2.min.js"></script>
+<script language="javascript" type="text/javascript">jQuery.noConflict();</script>
+<script type="text/javascript" language="javascript" src="/scripts/jquery.cookies.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/dropdown.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/general.js"></script>
+
+<script type="text/javascript" language="javascript" src="/en/email/scripts/email.js"></script>
+<script type="text/javascript" language="javascript" src="/__utm.js"></script>
+<script language="javascript" type="text/javascript">
+	jQuery(function() {
+		// Drop-down lists
+		jQuery('#nav > li').bind('mouseenter', jsddm_open)
+		jQuery('#nav > li').bind('mouseleave', jsddm_timer)
+
+
+		// register click events for the SEARCH input
+		jQuery("input.searchOption").click(function () { switchvalue(); });
+
+		jQuery("input#searchField").bind('keyup', function (event) {
+		    if (event.keyCode == 13) {
+		        performsearch();
+		        return false;
+		    }
+		    //event.preventDefault(); 
+		});
+
+		jQuery("#submitbtn").click(function () {
+		    performsearch();
+		    return false;
+		});
+
+
+		var getRadioInputValue = function () {
+		    // Get Radio button value
+		    var value = null;
+		    var radios = document.getElementsByTagName('input');
+
+		    for (var i = 0; i < radios.length; i++) {
+		        var input = radios[i];
+		        if (input.type == 'radio' && input.checked) {
+		            value = input.value;
+		            break;
+		        }
+		    }
+		    return value;
+		}
+
+		var performsearch = function () {
+		    var form = jQuery("form#FormSearch");
+		    if (getRadioInputValue() == 'website') {
+		        form.attr("action", '/en/search/index.aspx');
+		        form.attr("method", "POST");
+		        form.attr("target", "");
+		        jQuery('#searchField').attr('name', 'txt_search')
+		    }
+		    else {
+		        // search = catalogue
+		        form.attr("method", "GET");
+		        form.attr("action", "http://catalogue.huntsvillelibrary.ca/cgi-bin/koha/opac-search.pl");
+		        form.attr("target", "_blank");
+		        jQuery('#searchField').attr('name', 'q')
+		    }
+		    form.submit();
+		}
+
+
+		var switchvalue = function () {
+
+		    if (getRadioInputValue() == "website") {
+		        document.getElementById('searchField').value = 'Search';
+		    }
+		    else {
+		        //catalogue
+		        document.getElementById('searchField').value = 'Find Books, Movies...';
+		    }
+		}
+    
+
+	});
+
+	function getCorpHome() {
+	    return "http://www.huntsvillelibrary.ca/";
+	}
+</script>
+
+<link type="text/css" href="/en/AtoZModule/styles/jquery-atoz.css" rel="stylesheet" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="/en/AtoZModule/styles/jquery-atoz_ie.css" media="screen" />
+<![endif]-->
+<script type="text/javascript" language="javascript" src="/en/AtoZModule/scripts/jquery-atoz.js"></script>
+<script type="text/javascript" src="https://www.browsealoud.com/plus/scripts/ba.js"></script><link rel="alternate" type="application/rss+xml" title="News" href="http://www.huntsvillelibrary.net/en/News-rss-channel.xml" />
+        <title>index - Huntsville Public Library</title>
+	    <link href="/en/iCalendar/styles/icalendar.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" language="javascript" src="/scripts/date.js"></script>
+<!--<script type="text/javascript" language="javascript" src="/scripts/jquery.timers-1.1.2.js"></script>
+<script type="text/javascript" language="javascript" src="/scripts/jquery-auto-scroll.js"></script>-->
+<script type="text/javascript" language="javascript">
+	jQuery(function() {
+
+        // Public Notices
+        jQuery.ajax({
+            url: '/en/NewsModule/feature.aspx?type=2&max=1&deptId=zPSpJroo5lA5HS0zf12mDFZK2QeQuAleQuAl',
+            cache: false,
+            async: false,
+            success: function(html) {
+                jQuery("#columnone").empty();
+                jQuery("#columnone").append("<h1>Public Notices</h1>");
+                jQuery("#columnone").append(jQuery(html).find('#featureNews').html());
+
+            }
+        });  
+        
+       
+        // In the News
+        jQuery.ajax({
+
+            url: '/en/NewsModule/feature.aspx?type=1&max=1&deptId=SyEjZA3SP11AP47N6h5lA5HFFweQuAleQuAl',
+            cache: false,
+            async: false,
+            success: function(html) {
+                jQuery("#columnthree").empty();
+   				jQuery("#columnthree").append("<h1>News</h1>");
+                jQuery("#columnthree").append(jQuery(html).find('#featureNews').html());
+
+            }
+        });   
+
+
+	});
+</script><link href="/en/EmergencyBanner/styles/EmergencyBanner.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+	jQuery(function() {
+
+		if (document.location.href.toLowerCase().indexOf('/edit_') == -1) {
+
+			if (jQuery.cookie('seenBanner') != 1) {
+			
+				jQuery.ajax({
+					type: "GET",
+					url: "/en/EmergencyBanner/services/GetEmergencyBanner.ashx?lang=en",
+					dataType: "xml",
+					success: parseMessage,
+					cache: false
+				});
+
+				jQuery.cookie('seenBanner', 1);
+
+			}
+
+		}
+
+		function parseMessage(xml) {
+
+			jQuery(xml).find('emergencymessage').each(function() {
+
+				emergencyMessage = jQuery(this).find("message").text();
+
+				if (emergencyMessage != "hidemessage") {
+
+					jQuery('#EmergencyBannerTitle').html(jQuery(this).find("title").text());
+					jQuery('#EmergencyBannerText').html(emergencyMessage);
+					jQuery('#EmergencyBanner').addClass(jQuery(this).find("cssclass").text());
+					jQuery('#EmergencyBannerShadow').css('height', jQuery('#EmergencyBanner').css('height'));
+
+					jQuery('#EmergencyBanner').show();
+					jQuery('#EmergencyBannerShadow').height(jQuery('#EmergencyBanner').height()).show();
+
+				}
+
+			});
+
+		}
+
+	});
+
+	function HideEmergencyBanner() {
+	
+		jQuery('#EmergencyBannerShadow').fadeOut(250, function() {
+			jQuery('#EmergencyBanner').fadeOut(500);
+		});
+		
+	}
+
+</script>
+<link href="/en/polling/styles/polling.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+
+	jQuery(document).ready(function() {
+
+		jQuery.ajax({
+			type: "GET",
+			url: "/en/polling/GetCurrentPoll.aspx?corpId=BQk42125Y05lA5HxPONM0KycnweQuAleQuAl&langid=1",
+			dataType: "html",
+			success: parseMessage,
+			error: errorOccurred,
+			cache: false
+		});
+
+		function parseMessage(html) {
+    		jQuery('#currentPoll').html(html);
+		}
+
+		function errorOccurred(xhr, ajaxOptions, thrownError) {
+
+		}
+
+	});
+
+	// Validation logic on polling module.  If no radio buttons are selected displays message.
+	function ValidatePoll() {
+
+		if (jQuery('#currentPoll :radio:checked').length == 0)
+//			jQuery('.pollValidationMessage').html('Please select one of the options.').fadeIn(500);
+			alert("Please select one of the options.");
+		else
+			jQuery('#frmPoll').submit();
+
+	}	
+
+</script>
+<!--<link type="text/css" href="/styles/jquery.rotatingbanners.css" rel="stylesheet" media="screen" /> -->
+<script language="javascript" type="text/javascript" src="/scripts/banner.controller.js"></script>
+<script language="javascript" type="text/javascript">
+    jQuery(function() {
+        document.getElementById("jsEnabled").style.visibility = 'visible';
+        document.getElementById("jsEnabled").style.display = 'block';
+    });
+</script>
+
+
+<meta property="dcterms.issued" content="2015-10-07T14:46:09-0400" />
+<meta property="og:title" content="index" />
+<meta property="og:url" content="http://www.huntsvillelibrary.ca/en/index.asp" />
+<meta property="og:description" content="Huntsville Public Library is committed to providing quality library services, materials and facilities for individual enrichment, self-education, culture and recreation. Everyone in the community - young and old - from all walks of life can come to the Huntsville Public Library to satisfy a wide range of intellectual and recreational needs. The public library is the place to look for information of all kinds, from encyclopaedias to online electronic resources. Huntsville Public Library offers 60,000+ books and 100+ magazine and newspaper subscriptions; videos, CDs, DVDs, eBooks, Books on Tape &amp;amp; Books on CD; access to a wide array of electronic subscription databases; microfilm &amp;amp; microfiche readers; online information; WiFi; public access computers for Internet and word processing; and accessible computer workstations with adaptive technology, thanks to grants from Ontario Trillium Foundation." />
+<script type="text/javascript">
+/*ICREATE*/try {if (top == parent && parent.loadStyles) {parent.location = location;}var _icrt_keyPressed_ = -1;function _icrt_alertkey(e) {if(!e) {if(window.event) {e = window.event;} else {return;}}var keyCode;if(typeof(e.keyCode) == 'number') {keyCode = e.keyCode;} else if(typeof(e.which) == 'number') {keyCode = e.which;} else if(typeof(e.charCode) == 'number') {keyCode = e.charCode;} else {return;}if (keyCode == 17) {var now = new Date();if (_icrt_keyPressed_ >= 0) {var diff = now.getTime() - _icrt_keyPressed_;if (diff > 0 && diff < 500) {top.location.href = 'https://icreate3.esolutionsgroup.ca/icreate/publishing/editor/issue.do?method=editContent&id=21669&lang=en';}}_icrt_keyPressed_ = now.getTime();}}if(document.captureEvents && Event.KEYUP) {document.captureEvents(Event.KEYUP);}if (document.onkeyup) {var oldFunc = document.onkeyup;document.onkeyup = function(e) {_icrt_alertkey_(e);oldFunc(e);};} else {document.onkeyup = _icrt_alertkey;}}catch(exp){}/*ICREATE*/
+</script>
+</head>
+<body>
+
+    <div id="EmergencyBanner">
+	<div id="EmergencyBannerTitle"></div>
+	<div id="EmergencyBannerText"></div>
+	<div id="EmergencyBannerClose">
+		<a href="#" onclick="javascript: HideEmergencyBanner();">Close</a>
+	</div>
+</div>
+<div id="EmergencyBannerShadow"></div>
+
+<div id="homepagebg">
+
+	<div id="uber">
+		<div id="header">
+			
+			<div id="search">
+			        <form id="FormSearch" action="http://catalogue.huntsvillelibrary.net/cgi-bin/koha/opac-search.pl" method="get" target="_blank">
+		<label for="searchField" style="display: none;">Search</label>
+        <input class="searchText" onfocus="Search_Enter(this);" onblur="Search_Leave(this);" name="q" id="searchField" type="text" title="Find Books, Movies, Music..." value="Find Books, Movies..." />
+		<input name="submit" id="submitbtn" type="image" src="/images/structure/spacer.gif" alt="Go!" title="Go!" class="gobutton" />
+        <fieldset>
+             <legend style="display:none;">Search Options</legend>
+        <input type="radio" value="website" class="searchOption" name="search" id="radio1" /> <span class="searchOptionText">Website</span>
+		<label style="display:none;" for="radio1">Website</label>
+        <input type="radio" checked="checked" value="catalogue" class="searchOption" name="search" id="radio2" /> <span class="searchOptionText">Catalogue</span>
+		<label style="display:none;" for="radio2">Catalogue</label>
+        </fieldset>
+	</form>
+
+			</div>
+			
+			<div id="sitesNav">
+				    <ul id="snav">
+	<li id="sTab01"><a class="sNavItem" title="Town Site" href="http://www.huntsville.ca">Town Site</a></li>
+	<li id="sTab02"><a class="sNavItem current" title="Library" href="http://www.huntsvillelibrary.ca">Library</a></li>
+	<li id="sTab03"><a class="sNavItem" title="Theatre" href="http://www.algonquintheatre.ca">Theatre</a></li>
+	<li id="sTab04"><a class="sNavItem" title="Museum" href="http://www.muskokaheritageplace.org">Museum</a></li>
+</ul>
+
+			</div>
+			
+			<div id="topNav">
+    		    <div style="float:left">
+        			<!--googleoff: all-->
+<div style="float:left;">
+<a title="Link to Accessibility" href="/en/aboutus/Accessibility.asp">Accessibility</a><span class="horizNavSeparator"></span><a title="View our Contact Us page" href="/en/aboutus/contactus.asp">Contact Us</a><span class="horizNavSeparator"></span><a title="My Account" href="http://catalogue.huntsvillelibrary.ca/?_mid_=32933">My Account</a><span class="horizNavSeparator"></span><a title="Link to News" href="/en/NewsModule/index.aspx?corpId=BQk42125Y05lA5HxPONM0KycnweQuAleQuAl">News</a><span class="horizNavSeparator"></span>
+<!--<a href="#" onclick="javascript: switchLanguage();" title="Fran&ccedil;ais">Fran&ccedil;ais</a>-->
+</div>
+<!--googleon: all-->
+				</div>
+				<div id="servicesContainer"> 
+				     
+				</div>
+			</div>
+			
+			<div id="logo">
+			    <a title="Home" href="/en/index.asp"><img height="161" width="291" alt="Huntsville Public Library" src="/en/images/structure/library_logo.jpg" /></a>
+		    </div>
+		    
+			<div id="slogan">
+			    <img src="/en/images/structure/slogan.jpg" alt="Touch the Past, Embrace the Future!" width="317" height="47" />
+			</div>
+			
+			<div id="mainNav">
+				<!--googleoff: all-->
+<ul id="nav"><li id="navTab01"><a title="Link to eServices page" href="/en/eservices/eservices.asp" class="mainNavItem">eServices</a><ul class="dropdown"><li><a title="Open new window to view http://huntsvillelibrary.net/custom/opac/index.asp" href="http://catalogue.huntsvillelibrary.ca/" class="" target="_blank">Catalogue Search</a></li><li><a title="View our Creativity &amp;amp; Exploration Hub page" href="/en/eservices/Creativity---Exploration-Hub.asp" class="dropdownItemHasFlyout">Creativity &amp; Exploration Hub</a><ul class="flyout"><li><a title="View our Creativity &amp;amp; Exploration Hub Equipment page" href="/en/eservices/Creativity---Exploration-Hub-Equipment.asp" class="">Hardware and Software</a></li><li class="last"><a title="View our Creativity &amp;amp; Exploration Hub Classes page" href="/en/eservices/Creativity---Exploration-Hub-Classes.asp?_mid_=31385" class="">Creativity &amp; Exploration Hub Classes</a></li></ul></li><li><a title="Link to eBooks from What We Offer" href="/en/eservices/ebooks.asp" class="">eBooks</a></li><li><a title="Link to eAudioBooks from What We Offer" href="/en/eservices/eaudiobooks.asp" class="">eAudioBooks</a></li><li><a title="View our eLearning page" href="/en/eservices/eLearning.asp" class="">eLearning</a></li><li><a title="Link to eResources" href="/en/eservices/eResources.asp" class="">eResources</a></li><li><a title="Link to Government Documents" href="/en/eservices/GovDocs.asp" class="">Government Documents</a></li><li><a title="Link to Interlibrary Loans from What We Offer" href="/en/eservices/interlibraryloans.asp" class="">Interlibrary Loans</a></li><li><a title="View our Print Copy &amp;amp; Scan page" href="/en/eservices/Print-Copy---Scan.asp" class="">Print Copy &amp; Scan</a></li><li><a title="Link to Quick Links page" href="/en/eservices/QuickLinks.asp" class="">Quick Links</a></li><li><a title="Link to Tech Help Desk" href="/en/programs/techhelpdesk.asp" class="">Tech Help Desk</a></li><li><a title="View our What Do I Read Next page" href="/en/eservices/What-Do-I-Read-Next.asp" class="">What Do I Read Next</a></li><li class="last"><a title="Link to Wireless Usage" href="/en/eservices/wireless.asp" class="">Wireless Usage</a></li></ul></li><li id="navTab02"><a title="Link to Books, Collections &amp; More page" href="/en/bookscollectionsmore/bookscollectionsmore.asp" class="mainNavItem">Books, Collections &amp; More</a><ul class="dropdown"><li><a title="Link to Art in the Library" href="/en/programs/artinlibrarymain.asp" class="">Art in the Library </a></li><li><a title="Link to Genealogy &amp; Local History" href="/en/booksCollectionsMore/localhistorygenealogy.asp" class="dropdownItemHasFlyout">Genealogy &amp; Local History</a><ul class="flyout"><li><a title="Link to Genealogy" href="/en/booksCollectionsMore/genealogy.asp" class="">Genealogy</a></li><li class="last"><a title="Link to Local History" href="/en/booksCollectionsMore/localhistory.asp" class="">Local History</a></li></ul></li><li><a title="View our Homework Help page" href="/en/booksCollectionsMore/Homework-Help.asp" class="dropdownItemHasFlyout">Homework Help</a><ul class="flyout"><li><a title="View our Homework Help K-6 page" href="/en/booksCollectionsMore/Homework-Help-K-6.asp" class="">Homework Help K-6</a></li><li class="last"><a title="View our Homework Help 7-12 page" href="/en/booksCollectionsMore/Homework-Help-7-12.asp" class="">Homework Help 7-12</a></li></ul></li><li><a title="View our Little Free Library page" href="/en/booksCollectionsMore/Little-Free-Library.asp" class="">Little Free Library</a></li><li><a title="Link to Muskoka Trail Guides &amp; Pedometers" href="/en/booksCollectionsMore/Muskoka-Trail-Guides---Pedometers.asp" class="">Muskoka Trail Guides &amp; Pedometers</a></li><li><a title="View our Newcomers page" href="/en/booksCollectionsMore/Newcomers.asp" class="">Newcomers</a></li><li><a title="View our Parent Teacher Resource Page page" href="/en/booksCollectionsMore/Parents-Teachers.asp" class="dropdownItemHasFlyout">Parents &amp; Teachers</a><ul class="flyout"><li><a title="View our Parents Resource Page page" href="/en/booksCollectionsMore/Parent-Resources.asp" class="dropdownItemHasFlyout">Parent Resources </a><ul class="secondFlyout"><li><a title="View our Preschool Parents page" href="/en/booksCollectionsMore/Preschool.asp" class="">Preschool </a></li><li><a title="View our Elementary Parents Page page" href="/en/booksCollectionsMore/Elementary.asp" class="">Elementary</a></li><li class="last"><a title="View our Parents of Teens Page page" href="/en/booksCollectionsMore/Teens.asp?_mid_=33662" class="">Teens </a></li></ul></li><li><a title="View our Teachers Resource Page page" href="/en/booksCollectionsMore/Teacher-Resources.asp" class="dropdownItemHasFlyout">Teacher Resources</a><ul class="secondFlyout"><li><a title="View our Primary Junior Teachers Page page" href="/en/booksCollectionsMore/Primary-Junior-Teachers.asp" class="">Primary Junior </a></li><li class="last"><a title="View our Intermediate Senior Teachers Page page" href="/en/booksCollectionsMore/Intermediate-Senior-Teachers.asp" class="">Intermediate Senior </a></li></ul></li><li class="last"><a title="Open file in new window: Homeschool Resources" href="/en/booksCollectionsMore/Homeschool-Resources.asp" class="">Homeschool Resources</a></li></ul></li><li><a title="View our Sustainability page" href="/en/booksCollectionsMore/Sustainability.asp" class="dropdownItemHasFlyout">Sustainability</a><ul class="flyout"><li><a title="Link to Kill-A-Watt Readers" href="/en/programs/Killawatt.asp" class="">Kill-A-Watt Readers</a></li><li><a title="Seed @ HPL" href="http://seedsathpl.wordpress.com/" class="">Seeds @ HPL</a></li><li class="last"><a title="View our Sustainability Collection Subject Listing page" href="/en/booksCollectionsMore/Sustainability-Collection-Subject-Listing.asp" class="">Sustainability Collection Subject Listing</a></li></ul></li><li class="last"><a title="View our Vicki Dodds Memorial Art Book Collection page" href="/en/booksCollectionsMore/Vicki-Dodds-Memorial-Art-Book-Collection.asp" class="">Vicki Dodds Memorial Art Book Collection</a></li></ul></li><li id="navTab03"><a title="Link to Programs from Programs &amp; Resources" href="/en/programs/programsresources.asp" class="mainNavItem">Programs</a><ul class="dropdown lastMainNavDropdown"><li><a title="Link to Kids from Programs &amp; Resources" href="/en/programs/kids.asp" class="dropdownItemHasFlyout">Kids</a><ul class="flyout"><li><a title="View our Homeschoolers page" href="/en/programs/Homeschoolers.asp" class="">Homeschoolers</a></li><li><a title="Link to Lego Builders Club" href="/en/programs/LegoBuildersClub.asp" class="">Lego Builders Club</a></li><li><a title="View our Minecraft page" href="/en/programs/Minecraft.asp" class="">Minecraft</a></li><li><a title="View our PawsToRead page" href="/en/programs/PawsToRead.asp" class="">Paws To Read</a></li><li><a title="Link to Storytimes" href="/en/programs/Storytimes.asp" class="dropdownItemHasFlyout">Storytimes</a><ul class="secondFlyout"><li class="last"><a title="View our Early Literacy page" href="/en/programs/Early-Literacy.asp" class="">Early Literacy</a></li></ul></li><li class="last"><a title="Special Programs For Kids" href="/en/programs/SpecialProgramsForKids.asp" class="">Special Programs For Kids</a></li></ul></li><li><a title="Link to Teens from Programs &amp; Resources" href="/en/programs/teens.asp" class="dropdownItemHasFlyout">Teens</a><ul class="flyout"><li><a title="View our ChessClub page" href="/en/programs/ChessClub.asp" class="">Chess Club For Teens &amp; Tweens</a></li><li class="last"><a title="Teen Advisory Group" href="/en/programs/TeenAdvisoryGroup.asp" class="">Teen Advisory Group</a></li></ul></li><li><a title="Link to Adults Programs &amp; Resources" href="/en/programs/adultsseniors.asp" class="dropdownItemHasFlyout">Adults </a><ul class="flyout"><li><a title="View our Author Series page" href="/en/programs/Author-Series.asp" class="">Author Series</a></li><li><a title="Link to Computer Training Series for Seniors page" href="/en/eservices/Creativity---Exploration-Hub-Classes.asp" class="">Computer Training @ The Hub</a></li><li><a title="View our Green Series page" href="/en/programs/Green-Series.asp" class="">Green Series</a></li><li><a title="View our Book Club page" href="/en/programs/Book-Club.asp" class="">HPL Book Club</a></li><li><a title="View our Ideas of our Time page" href="/en/programs/Ideas-of-our-Time.asp" class="">Ideas of our Time</a></li><li><a title="View our Special Events for Adults &amp;amp; Seniors page" href="/en/programs/specialeventsforadultsandseniors.asp" class="">Special Events for Adults &amp; Seniors</a></li><li class="last"><a title="View our VON SMART Exercise Classes page" href="/en/programs/VONSMART-Exercise-Classes.asp" class="">VON SMART Exercise Classes</a></li></ul></li><li><a title="View our Income Tax Clinics page" href="/en/programs/incometaxclinicsasp.asp" class="">Income Tax Clinics</a></li><li><a title="View our March Break @ Your Library page" href="/en/programs/March-Break---Your-Library.asp" class="">March Break @ Your Library</a></li><li class="last"><a title="View our PADayPrograms page" href="/en/programs/PADayPrograms.asp" class="">PA Days @ the Library </a></li></ul></li><li id="navTab04"><a title="Link to About Us" href="/en/aboutus/aboutyourlibrary.asp" class="mainNavItem">About Us</a><ul class="dropdown lastMainNavDropdown"><li><a title="Link to Accessibility page" href="/en/aboutus/Accessibility.asp?_mid_=29110" class="dropdownItemHasFlyout">Accessibility</a><ul class="flyout"><li><a title="Link to BrowseAloud" href="/en/eservices/browsealoud.asp" class="">BrowseAloud</a></li><li><a title="Link to Accessibility Policy" href="/en/eservices/accessibilitypolicy.asp" class="">Accessibility Policy</a></li><li><a title="Link to Library Collections" href="/en/eservices/accessibilitycollections.asp" class="">Library Collections &amp; Equipment</a></li><li><a title="Link to CELA Services" href="/en/eservices/cela.asp" class="">CELA Services</a></li><li><a title="Link to Home Bound Library Service" href="/en/eservices/homebound.asp" class="">Home Bound Library Service</a></li><li class="last"><a title="Link to Website Accessibility" href="/en/eservices/accessibilitywebsite.asp" class="">Website Accessibility</a></li></ul></li><li><a title="Link to Contact Us from About Your Library" href="/en/aboutus/contactus.asp?_mid_=19605" class="">Contact Us</a></li><li><a title="Link to Employment Opportunities" href="/en/aboutus/employmentopportunities.asp" class="">Employment Opportunities</a></li><li><a title="Link to Facility Rentals from About Your Library" href="/en/aboutus/facilityrentals.asp" class="">Facility Rentals</a></li><li><a title="Link to History from About Your Library" href="/en/aboutus/history.asp" class="">History</a></li><li><a title="View our Hours of Operation page" href="/en/aboutus/hoursandlocation.asp?_mid_=19603" class="">Hours &amp; Location</a></li><li><a title="View our Let Us Know What You Think page" href="/en/aboutus/Let-Us-Know-What-You-Think.asp" class="">Let Us Know What You Think</a></li><li><a title="Link to Library Board from About Your Library" href="/en/aboutus/libraryboard.asp" class="dropdownItemHasFlyout">Library Board</a><ul class="flyout"><li><a title="View our Accreditation page" href="/en/aboutus/Accreditation.asp" class="">Accreditation</a></li><li><a title="Link to Annual Reports" href="/en/aboutus/annualreport.asp" class="">Annual Reports</a></li><li><a title="Link to Mission Statement &amp; Strategic Plan" href="/en/aboutus/strategicplan.asp" class="">Mission Statement &amp; Strategic Plan</a></li><li class="last"><a title="View our Policies" href="/en/aboutus/Policies.asp" class="dropdownItemHasFlyout">Policies</a><ul class="secondFlyout"><li><a title="View our Accessibility Standards for Customer Service page" href="/en/aboutus/Accessibility-Standards-for-Customer-Service.asp" class="">Accessibility Standards for Customer Service</a></li><li><a title="View our Advocacy Policy page" href="/en/aboutus/Advocacy-Policy.asp" class="">Advocacy Policy</a></li><li><a title="View our Art in the Library Policy page" href="/en/aboutus/Art-in-the-Library-Policy.asp" class="">Art in the Library Policy</a></li><li><a title="View our Borrowing Policy page" href="/en/aboutus/Borrowing-Policy.asp" class="">Borrowing Policy</a></li><li><a title="View our Code of Conduct page" href="/en/aboutus/Code-of-Conduct.asp" class="">Code of Conduct</a></li><li><a title="View our Community Analysis  page" href="/en/aboutus/Community-Analysis-.asp" class="">Community Analysis </a></li><li><a title="View our Community Information Policy page" href="/en/aboutus/Community-Information-Policy.asp" class="">Community Information Policy</a></li><li><a title="View our Facilities Rental Policy &amp;amp; Procedures page" href="/en/aboutus/Facilities-Rental-Policy---Procedures.asp" class="">Facilities Rental Policy &amp; Procedures</a></li><li><a title="Open file in new window: Fee_Schedule_-_Meeting_Room__Equipment_Rental_-_November_10_2014_-_Motion_14-83.pdf" href="/en/aboutus/resources/Policies/Fee_Schedule_-_Meeting_Room__Equipment_Rental_-_November_10_2014_-_Motion_14-83.pdf" class="">Fee Schedule - Meeting Room Equipment Rental</a></li><li><a title="Open file in new window: Fee_Schedule_-_Memberships_Fines__Fees_-_14-11_-_February_7_2014.pdf" href="/en/aboutus/resources/Policies/Fee_Schedule_-_Memberships_Fines__Fees_-_14-11_-_February_7_2014.pdf" class="">Fee Schedule: Memberships, Fines &amp; Fees</a></li><li><a title="View our Information Services Policy page" href="/en/aboutus/Information-Services-Policy.asp" class="">Information Services Policy</a></li><li><a title="View our Intellectual Freedom Policy page" href="/en/aboutus/Intellectual-Freedom-Policy.asp" class="">Intellectual Freedom Policy</a></li><li><a title="View our Interlibrary Loan Policy page" href="/en/aboutus/Interlibrary-Loan-Policy.asp" class="">Interlibrary Loan Policy</a></li><li><a title="View our Local History &amp;amp; Genealogy Policy page" href="/en/aboutus/Local-History---Genealogy-Policy.asp" class="">Local History &amp; Genealogy Policy</a></li><li><a title="View our Planning Policy page" href="/en/aboutus/Planning-Policy.asp" class="">Planning Policy</a></li><li><a title="View our Programming Policy page" href="/en/aboutus/Programming-Policy.asp" class="">Programming Policy</a></li><li><a title="View our Written Policy Process and Review Schedule page" href="/en/aboutus/Written-Policy-Process-and-Review-Schedule.asp" class="">Written Policy Process and Review Schedule</a></li><li><a title="View our Safety, Security &amp;amp; Emergency Policy page" href="/en/aboutus/Safety--Security---Emergency-Policy.asp" class="">Safety, Security &amp; Emergency Policy</a></li><li><a title="View our Unattended Children Policy page" href="/en/aboutus/Unattended-Children-Policy.asp" class="">Unattended Children Policy</a></li><li class="last"><a title="View our Volunteer Policy page" href="/en/aboutus/Volunteer-Policy.asp" class="">Volunteer Policy</a></li></ul></li></ul></li><li><a title="" href="/en/aboutus/Calculator.asp" class="">Library Value Calculator</a></li><li><a title="View our MyLibraryCard page" href="/en/aboutus/MyLibraryCard.asp" class="dropdownItemHasFlyout">My Library Card</a><ul class="flyout"><li><a title="View our How To page" href="/en/aboutus/How-To.asp" class="">How To</a></li><li class="last"><a title="View our New System Information and Updates page" href="/en/aboutus/UpdatesFAQs.asp" class="">Updates &amp; FAQs</a></li></ul></li><li><a title="Link to News from About Your Library" href="/en/NewsModule/index.aspx?corpId=BQk42125Y05lA5HxPONM0KycnweQuAleQuAl" class="">News</a></li><li><a title="View our Newsletters page" href="/en/aboutus/Newsletters.asp?_mid_=34457" class="" target="_blank">Newsletters</a></li><li><a title="Link to Partners from About Your Library" href="/en/aboutus/partners.asp" class="">Partners</a></li><li><a title="View our Support Your Library page" href="/en/aboutus/Support-Your-Library.asp" class="dropdownItemHasFlyout">Support Your Library </a><ul class="flyout"><li class="last"><a title="Link to Friends of the Library from About Your Library" href="/en/aboutus/friendsofthelibrary.asp" class="">Friends of the Library</a></li></ul></li><li class="last"><a title="View our Volunteering page" href="/en/aboutus/volunteering.asp" class="">Volunteering</a></li></ul></li></ul>
+<!--googleon: all-->
+			</div>
+			
+		</div>
+		
+		<div id="main">
+		    <div id="homepageBannerArea">
+				<div id="homepageBannerContainer">
+       	           <!-- 
+    -   Show the first include file as the default
+    -   Show the rest if the script is enabled
+    -   Include this in the headHomepage.asp
+    document.getElementById("jsEnabled").style.visibility = 'visible';
+    document.getElementById("jsEnabled").style.display = 'block';	
+-->
+
+<div id="jsDisabled" style="visibility:visible">
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner">
+	<div class="homepageBannerText">
+        <h1>Income Tax Time</h1>
+<p>It's tax time and we've got all your needs covered at the Library. Registration for the <a title="View our Tax Clinic page" href="/en/programs/incometaxclinicsasp.asp">Community Volunteer Income Tax Clinics</a> will begin February 8. We also have a <a title="View our Special Events for Adults &amp;amp; Seniors page" href="/en/programs/specialeventsforadultsandseniors.asp">session on RRSPs and TFSAs</a> by the Investors Group on February 3. Call us or visit the links for more information.</p>
+<p><!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG></o:AllowPNG>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves></w:TrackMoves>
+  <w:TrackFormatting></w:TrackFormatting>
+  <w:PunctuationKerning></w:PunctuationKerning>
+  <w:ValidateAgainstSchemas></w:ValidateAgainstSchemas>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF></w:DoNotPromoteQF>
+  <w:LidThemeOther>EN-CA</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables></w:BreakWrappedTables>
+   <w:SnapToGridInCell></w:SnapToGridInCell>
+   <w:WrapTextWithPunct></w:WrapTextWithPunct>
+   <w:UseAsianBreakRules></w:UseAsianBreakRules>
+   <w:DontGrowAutofit></w:DontGrowAutofit>
+   <w:SplitPgBreakAndParaMark></w:SplitPgBreakAndParaMark>
+   <w:EnableOpenTypeKerning></w:EnableOpenTypeKerning>
+   <w:DontFlipMirrorIndents></w:DontFlipMirrorIndents>
+   <w:OverrideTableStyleHps></w:OverrideTableStyleHps>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"></m:mathFont>
+   <m:brkBin m:val="before"></m:brkBin>
+   <m:brkBinSub m:val="&#45;-"></m:brkBinSub>
+   <m:smallFrac m:val="off"></m:smallFrac>
+   <m:dispDef></m:dispDef>
+   <m:lMargin m:val="0"></m:lMargin>
+   <m:rMargin m:val="0"></m:rMargin>
+   <m:defJc m:val="centerGroup"></m:defJc>
+   <m:wrapIndent m:val="1440"></m:wrapIndent>
+   <m:intLim m:val="subSup"></m:intLim>
+   <m:naryLim m:val="undOvr"></m:naryLim>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"></w:LsdException>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"></w:LsdException>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"></w:LsdException>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"></w:LsdException>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"></w:LsdException>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"></w:LsdException>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"></w:LsdException>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"></w:LsdException>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"></w:LsdException>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"></w:LsdException>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"></w:LsdException>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"></w:LsdException>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"></w:LsdException>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"></w:LsdException>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"></w:LsdException>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"></w:LsdException>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"></w:LsdException>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"></w:LsdException>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+ {mso-style-name:"Table Normal";
+ mso-tstyle-rowband-size:0;
+ mso-tstyle-colband-size:0;
+ mso-style-noshow:yes;
+ mso-style-priority:99;
+ mso-style-parent:"";
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-para-margin-top:0cm;
+ mso-para-margin-right:0cm;
+ mso-para-margin-bottom:10.0pt;
+ mso-para-margin-left:0cm;
+ line-height:115%;
+ mso-pagination:widow-orphan;
+ font-size:11.0pt;
+ font-family:"Calibri","sans-serif";
+ mso-ascii-font-family:Calibri;
+ mso-ascii-theme-font:minor-latin;
+ mso-hansi-font-family:Calibri;
+ mso-hansi-theme-font:minor-latin;
+ mso-fareast-language:EN-US;}
+</style>
+<![endif]--></p>
+	</div>
+	<div class="captionImage">
+	    <p>Call 705-789-5232 for more information.</p>
+    </div>
+	<div class="bannerImage">
+	   <p><img title="Income Tax" src="/en/inc/resources/tax_return.jpg" alt="Tax Forms" /><br />&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	</div>
+	
+</div>
+
+</div>
+
+<div id="jsEnabled" style="visibility:hidden; display:none;">
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner">
+	<div class="homepageBannerText">
+        <h1>Spring Forward</h1>
+<p>Get ready to Spring Forward Huntsville. Daylight Saving Time returns soon and we can look forward to lighter evenings as the winter fades away.&nbsp; When you go to bed Sat. Mar. 12th push your clocks ahead one hour.&nbsp; </p>
+	</div>
+	<div class="captionImage">
+	    <p>Turn your clocks ahead 1 hour!</p>
+    </div>
+	<div class="bannerImage">
+	   <p><img title="Spring Forward" src="/en/resourcesGeneral/Spring-Forward.jpg" alt="picture of an alarm clock on a bed of grass" /><br />&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner">
+	<div class="homepageBannerText">
+        <h1><a title="Open new window to view http://www.huntsvillelibrary.ca/en/programs/artinlibrarymain.asp" href="/en/programs/artinlibrarymain.asp">Art in the Library - Catherine Luce</a></h1>
+<p>Local artist Catherine Luce will be displaying her artwork in the Library through March and April.</p>
+<p>&nbsp;</p>
+<p>A list of the works on display can be found on the <a title="View our Art in the Library Landing Page page" href="/en/programs/artinlibrarymain.asp">Art in the Library page</a>.</p>
+	</div>
+	<div class="captionImage">
+	    <p>Art by Catherine Luce is now on display in the Library.</p>
+    </div>
+	<div class="bannerImage">
+	   <p><img title="Catherine Luce" src="/en/booksCollectionsMore/resources/Art-in-the-Library/catherineluce.jpg" alt="Goose flying over the moon" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner">
+	<div class="homepageBannerText">
+        <h1>March Break @ Your Library</h1>
+<p>Visit the Library during <a href="http://www.huntsvillelibrary.ca/en/programs/March-Break---Your-Library.asp">March Break for tons of programs</a> including&nbsp;the Wild About Technology drop-in fair, Scales Nature Park: Turtle Trouble at the Legion, Try Out Minecraft, a Frozen Party, Anime Drawing, Lego Builders and more!</p>
+	</div>
+	<div class="captionImage">
+	    <p>Some programs require registration.&nbsp; Registration opens Friday, March 4.&nbsp; </p>
+    </div>
+	<div class="bannerImage">
+	   <p><a title="View our March Break @ Your Library page" href="/en/programs/March-Break---Your-Library.asp"><img title="March Break @ Your Library" src="/en/programs/resources/March-Break-2016/march2.jpg" alt="kids with smiling faces" /></a><br />&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner">
+	<div class="homepageBannerText">
+        <h1>Easter Holiday Hours</h1>
+<p>The Library will be closed on:</p>
+<p>Friday March 25th</p>
+<p>Sunday March 27th</p>
+<p>Monday March 28th </p>
+<p>&nbsp;</p>
+<p>The Library will&nbsp; be open on Saturday March 26th at 10:00 AM and will be back to normal hours on Tuesday March 29th at 10:00 AM</p>
+	</div>
+	<div class="captionImage">
+	    <p>HAVE A SAFE AND HAPPY EASTER!</p>
+    </div>
+	<div class="bannerImage">
+	   <p><img title="Happy Easter" src="/en/inc/resources/Do-not-buy-Bunnies-or-Chicks-this-Easter-537x385.jpg" alt="Cute chick and bunny" /><br />&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	</div>
+	
+</div>
+
+   				
+   <div id="homepageBannerNav">
+	    <div id="homepageBannerNavLeft"><a href="#" title="Previous Banner">Previous</a></div>
+	    <div id="homepageBannerSelectButtons">
+		    <div class="homepageBannerSelect"><a href="#" title="01">Banner 01</a></div>
+	    </div>
+	    <div id="homepageBannerNavRight"><a href="#" title="Next Banner">Next</a></div>
+    </div>
+  
+</div>			
+                </div>
+				
+				<div id="homepageBannerContainerRight">
+				    <div class="Highlightbox"><h1><a title="Renew items and place holds." href="/en/aboutus/MyLibraryCard.asp">MyLibraryCard</a></h1><p><a title="Renew items and place holds." href="/en/aboutus/MyLibraryCard.asp">Renew items and place holds.</a></p></div><div class="Highlightbox"><h1><a title="Access our online resources 24/7" href="/en/eservices/eResources.asp">eResources</a></h1><p><a title="Access our online resources 24/7" href="/en/eservices/eResources.asp">Access our online resources 24/7</a></p></div><div class="Highlightbox"><h1><a title="Program Info &amp; Recommended Reads" href="/en/aboutus/Newsletters.asp">Newsletters</a></h1><p><a title="Program Info &amp; Recommended Reads" href="/en/aboutus/Newsletters.asp">Program Info &amp; Recommended Reads</a></p></div>
+				</div>
+				
+			</div>
+		    
+			<div id="printArea">
+				<div id="columnContainer">
+					<div class="cols">
+					    <!-- TOKEN 1 -->
+						<h1>Genealogy/Local History</h1>
+<p style="text-align: center;"><a title="Local History &amp; Genealogy" href="http://www.huntsvillelibrary.ca/en/booksCollectionsMore/localhistorygenealogy.asp"><img title="Genealogy and Local History" src="/en/resources/genealogylocalhistsmall.jpg" alt="river and trees" /></a><br /><br /><a title="Genealogy page" href="http://www.huntsvillelibrary.ca/en/booksCollectionsMore/genealogy.asp">Genealogy</a><br /><br /><a title="Local History page" href="http://www.huntsvillelibrary.ca/en/booksCollectionsMore/localhistory.asp">Local History</a></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+					</div>
+					<div class="cols">
+					    <!-- TOKEN 0 -->
+                        <style type="text/css">
+.bmform_outer553539{width:180px;} .bmform_inner553539{border:1px solid #dadada;} .bmform_head553539{background-color:#64adeb; background-repeat:no-repeat; background-image:url(//www.benchmarkemail.com/images/listbuilder/th6/sk4/images/header.gif);} .bm_headetext553539{color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; padding:55px 8px 8px 8px; text-align:left;} .bmform_body553539{background-color:#64adeb; color:#ffffff; font-family: Verdana, Geneva, sans-serif; font-size:11px; padding:5px 12px 12px 12px;} .bmform_introtxt553539{padding-bottom:12px; text-align:left; ;font-size:14px} .bmform_frmtext553539{padding:5px 0px 3px 0px; display:block; float:none; text-align:left; text-decoration:none; width:auto; font-weight:bold;} .bmform_frm553539{color:#000000; display:block; float:none; font-family:Verdana,sans-serif; font-size:12px; font-style:normal; font-weight:normal; text-align:left; width:145px; padding:3px;} .bmform_button553539{text-align:center; padding-top:15px;} .bmform_submit553539{background-color:#1d84dd; border: 2px solid #f6f6f6; color:#FFFFFF; font-family:Verdana,sans-serif; font-size: 11px; font-style:normal; font-weight:bold; text-decoration: none; padding:2px 10px 2px 10px;} .bmform_footer553539{}.footer_bdy553539{}.footer_txt553539{}#tdLogo553539 img{margin-bottom:10px; max-width:230px;}</style><script type="text/javascript">
+function CheckField553539(fldName, frm){ if ( frm[fldName].length ) { for ( var i = 0, l = frm[fldName].length; i < l; i++ ) {  if ( frm[fldName].type =='select-one' ) { if( frm[fldName][i].selected && i==0 && frm[fldName][i].value == '' ) { return false; }  if ( frm[fldName][i].selected ) { return true; } }  else { if ( frm[fldName][i].checked ) { return true; } }; } return false; } else { if ( frm[fldName].type == "checkbox" ) { return ( frm[fldName].checked ); } else if ( frm[fldName].type == "radio" ) { return ( frm[fldName].checked ); } else { frm[fldName].focus(); return (frm[fldName].value.length > 0); }} }
+function rmspaces(x) {var leftx = 0;var rightx = x.length -1;while ( x.charAt(leftx) == ' ') { leftx++; }while ( x.charAt(rightx) == ' ') { --rightx; }var q = x.substr(leftx,rightx-leftx + 1);if ( (leftx == x.length) && (rightx == -1) ) { q =''; } return(q); }
+function checkfield(data) {if (rmspaces(data) == ""){return false;}else {return true;}}
+function isemail(data) {var flag = false;if (  data.indexOf("@",0)  == -1 || data.indexOf("\\",0)  != -1 ||data.indexOf("/",0)  != -1 ||!checkfield(data) ||  data.indexOf(".",0)  == -1  ||  data.indexOf("@")  == 0 ||data.lastIndexOf(".") < data.lastIndexOf("@") ||data.lastIndexOf(".") == (data.length - 1)   ||data.lastIndexOf("@") !=   data.indexOf("@") ||data.indexOf(",",0)  != -1 ||data.indexOf(":",0)  != -1 ||data.indexOf(";",0)  != -1  ) {return flag;} else {var temp = rmspaces(data);if (temp.indexOf(' ',0) != -1) { flag = true; }var d3 = temp.lastIndexOf('.') + 4;var d4 = temp.substring(0,d3);var e2 = temp.length  -  temp.lastIndexOf('.')  - 1;var i1 = temp.indexOf('@');if (  (temp.charAt(i1+1) == '.') || ( e2 < 1 ) ) { flag = true; }return !flag;}}
+function CheckFieldD553539(fldH, chkDD, chkMM, chkYY, reqd, frm){ var retVal = true; var dt = validDate553539(chkDD, chkMM, chkYY, frm); var nDate = frm[chkMM].value  + " " + frm[chkDD].value + " " + frm[chkYY].value; if ( dt == null && reqd == 1 ) {           nDate = ""; retVal = false;  } else if ( (frm[chkDD].value != "" || frm[chkMM].value != "" || frm[chkYY].value != "") && dt == null) { retVal = false; nDate = "";} if ( retVal ) {frm[fldH].value = nDate;} return retVal; }
+function validDate553539(chkDD, chkMM, chkYY, frm) {var objDate = null;       if ( frm[chkDD].value != "" && frm[chkMM].value != "" && frm[chkYY].value != "" ) {var mSeconds = (new Date(frm[chkYY].value - 0, frm[chkMM].selectedIndex - 1, frm[chkDD].value - 0)).getTime();var objDate = new Date();objDate.setTime(mSeconds);if (objDate.getFullYear() != frm[chkYY].value - 0 || objDate.getMonth()  != frm[chkMM].selectedIndex - 1  || objDate.getDate() != frm[chkDD].value - 0){objDate = null;}}return objDate;}
+function _checkSubmit553539(frm){
+if ( !isemail(frm["fldEmail"].value) ) { 
+   alert("Please enter the Email");
+   return false;
+}
+return true; }
+</script><!-- BEGIN: Signup Form Manual Code from Benchmark Email Ver 2.0 ------>
+
+
+
+<div align="center">
+<form style="display:inline;" action="https://lb.benchmarkemail.com//code/lbform" method="post" name="frmLB553539" accept-charset="UTF-8" onsubmit="return _checkSubmit553539(this);">
+<input type="hidden" name="successurl" value="http://www.huntsvillelibrary.ca/en/Thank-You.asp" />
+<input type="hidden" name="errorurl" value="http://lb.benchmarkemail.com//Code/Error" />
+<input type="hidden" name="token" value="mFcQnoBFKMRSO375vH0IyeZXUawFafLCumbTm379bogJKuq5YEc%2Feg%3D%3D" />
+<input type="hidden" name="doubleoptin" value="" />
+<div class="bmform_outer553539" id="tblFormData553539">
+<div class="bmform_inner553539">
+<div class="bmform_head553539" id="tdHeader553539">
+<div class="bm_headetext553539"></div></div>
+<div class="bmform_body553539">
+<div class="bmform_introtxt553539" id="tdIntro553539">
+Signup for On@HPL<br />our newsletter<br />
+</div>
+<div id="tblFieldData553539" style="text-align:left;">
+
+<div class="bmform_frmtext553539">
+Email <span style="color:#CC0000;font-size:125%;"> *</span> </div>
+<input type="text" class="bmform_frm553539" name="fldEmail" maxlength="100" />
+</div>
+
+<div class="bmform_button553539"><input type="submit" id="btnSubmit" value="Save" krydebug="1751" class="bmform_submit553539" />
+</div></div>
+<div class="bmform_footer553539"><div class="footer_bdy553539"><div class="footer_txt553539"></div></div></div>
+</div></div>
+<table id="tblRequiredField553539" width="180" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size:10px;">
+* Required Field
+</td></tr></tbody></table>
+</form></div>
+<!-- BEGIN: Email Marketing By Benchmark Email ------><div align="center" style="padding-top:5px;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;">Powered by <a href="//www.benchmarkemail.com" target="_new" style="text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;">Benchmark Email</a></div><!-- END: Email Marketing By Benchmark Email ---------->
+
+<!-- END: Signup Form Manual Code from Benchmark Email Ver 2.0 ------>
+					</div>
+					
+					<div class="cols">
+						<div id="currentPoll"></div>
+					</div>
+					
+					<div id="contentRight">
+						<div id="calendarContainer">
+						    <div id="calendarTitle">
+	<h1><a title="Events Calendar" href="/en/Calendar/Default.aspx">Events Calendar</a></h1>
+</div>
+
+<div id="calendarNews" class="jsinclude">
+    <div id="calendarFeed">
+        <p>Events</p>
+        <span id="feedContent">
+            <p>JavaScript Disabled.<br />Please enable JavaScript to view this content.</p>
+        </span>
+        <p><a href="/en/Calendar/Default.aspx">More Events...</a></p>
+    </div>
+</div>
+
+<div id="calendar" class="jsinclude"></div>
+<script type="text/javascript" language="javascript" src="/en/Calendar/scripts/jquery.mini-calendar.js"></script>
+<script type="text/javascript" language="javascript">
+    var divElement = jQuery("#feedContent");
+    divElement.html("Loading...");
+
+    jQuery.ajax({
+        url: '/en/Calendar/services/GetCalendarEvent.ashx',
+        cache: false,
+        async: true,
+        error: function (xhr, textStatus, thrownError) {
+            //debugger;
+            divElement.append("<p>An error occured.</p>");
+        },
+        success: function (data) {
+            divElement.empty();
+            if (data.toString() != "") {
+                var charLimit = 35;
+                jQuery.each(data, function (index, item) {
+                    var title = item.Title;
+                    if (title.length > charLimit) {
+                        if (title.indexOf(' ', charLimit) >= 0) {
+                            title = title.substring(0, title.indexOf(' ', charLimit)) + "...";
+                        }
+                    }
+
+                    divElement.append(jQuery("<p>").append(item.StartDate).append("<br />").append(jQuery("<a>").attr({ "href": "/en/Calendar/Details.aspx?id=" + item.Id, "title": "Event: " + title }).append(title)));
+                });
+            }
+            else {
+                divElement.append("<p>No Events found</p>");
+            }
+        }
+    });
+
+    jQuery("#calendar").html("Loading...");
+
+    // Get events from all calendars
+    jQuery("#calendar").empty().mini_calendar({
+        source: "/en/Calendar/services/getCalendarsDateWithEvent.ashx",
+        url: "/en/Calendar/default.aspx?PID=calendar"
+    });
+</script>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="columnContainerbot">&nbsp;</div>
+			
+		</div>
+	</div>
+	<div id="uberfooter">
+		<!--googleoff: all-->
+<div id="footer">
+	<div id="footerA">
+	
+
+
+
+
+
+
+
+
+
+
+
+<a title="Town of Huntsville" href="http://www.huntsville.ca" target="_blank"><img title="Town of Huntsville" alt="Town of Huntsville Logo" src="/en/inc/resources/bot_huntsville.gif" /><br /></a>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29941600-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+	</div>
+	<div id="footerB">
+		<div id="footerText">
+		    
+
+
+
+
+
+
+
+
+
+
+
+<p>&copy; 2014 Huntsville Public Library</p>
+
+
+		</div>
+		<div id="footerNav">
+		    <a title="Link to Privacy" href="http://www.huntsville.ca/en/townHall/Privacy.asp">Privacy</a><span class="horizNavSeparator">|</span><a title="View our Town Disclaimer" href="http://huntsville.ca/en/townHall/disclaimer.asp" target="_blank">Disclaimer</a><span class="horizNavSeparator">|</span><a title="Link to Sitemap" href="/en/sitemap.asp">Sitemap</a>
+		</div>
+	</div>
+	
+	<div id="footerC">
+		<div id="followus">
+		    <img height="17" width="58" alt="Follow Us" src="/en/images/structure/followus.gif" />
+		
+		    <a title="Link to Twitter" href="https://twitter.com/HuntsvillePL" target="_blank"><img alt="Link to Twitter icon" src="/en/images/structure/icon_twitter.png" /></a><a title="Instagram" href="http://instagram.com/huntsvillepubliclibrary" target="_blank"><img alt="Instagram icon" src="/en/images/structure/icon_instagram.png" /></a><a title="Link to Pinterest" href="http://www.pinterest.com/huntslibrary/" target="_blank"><img alt="Link to Pinterest icon" src="/en/images/structure/icon_pinterest.png" /></a><a title="YouTube" href="https://www.youtube.com/channel/UCUvU8FQQ0ZOFaE3V0lkPmnQ" target="_blank"><img alt="YouTube icon" src="/en/images/structure/icon_youtube.png" /></a><a title="Link to Facebook" href="http://www.facebook.com/townofhuntsville?sk=wall#!/pages/Huntsville-Public-Library/161708837282455" target="_blank"><img alt="Link to Facebook icon" src="/en/images/structure/icon_facebook.png" /></a>
+		</div>
+		
+        <div id="esol">	        <a href="http://www.esolutionsgroup.ca" title="Designed by eSolutionsGroup" target="_blank">Designed by eSolutionsGroup</a>        </div>	</div>
+	
+	<div id="footerD">
+		<iframe title="Weather Network" marginheight="0" marginwidth="0" name="wxButtonFrame" id="wxButtonFrame" src="http://btn.weather.ca/weatherbuttons/template5.php?placeCode=CAON0314&amp;category0=Cities&amp;containerWidth=150&amp;btnNo=&amp;backgroundColor=blue&amp;multipleCity=0&amp;citySearch=0&amp;celsiusF=C" align="top" frameborder="0" style="height:90px; width:150px" scrolling="no" allowTransparency="true"></iframe>
+	</div>
+</div>
+<!--googleon: all-->
+
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="includes/mpl_web.css" />
+<link rel="stylesheet" type="text/css" href="includes/contentslider.css" />
+<link rel="stylesheet" media="print" href="includes/mpl_print.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="includes/mpl_pda.css" media="handheld" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><title>Milton Public Library Home</title>
+<meta name="google-site-verification" content="TlZfmUK4gXvziweysy0X-qG5ZIIYrHa25hKy6-7tJfk" />
+<!-- Second for Google chromebooks -->
+<meta name="google-site-verification" content="4znMdjRL11qd0Xubbdou_aZTQNbHP3N62lQnE6xVlSY" />
+<meta name="Description" content="Milton Public Library, Milton, Ontario, Canada. You have questions? We provide answers! One stop access to high quality products and services: online databases, e-audio books, find books, dvds, cds and more. Public Internet Access, Wireless WiFi Hotspot, Children's Early Literacy Stations, teen computers, storytimes and children's programming, recommended websites for all, for kids, for teens and for seniors." />
+
+
+
+<script type="text/javascript" src="includes/contentslider.js">
+/***********************************************
+* Featured Content Slider- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+</script>
+</head>
+
+<body class="home">
+<div id="wrapper">
+
+	<div id="header">
+		<!-- Beginning of Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47990008-1', 'mpl.on.ca');
+  ga('send', 'pageview');
+
+</script>
+<!-- End of Google Analytics -->
+
+	<div id="logo">
+		<h1><a href="http://www.mpl.on.ca/"><img src="images/menus/MPL_logo.png" width="189" height="85" alt="Milton Public Library logo" border="0"></a></h1>
+	</div>
+<!--
+	<div id="pdamenu">
+	  <h4><a href="index.php">Milton Public Library</a> / <a href="http://m.mpl.on.ca/">Visit Mobile Site</a></h4>
+	  <ul>
+		 <li><a href="http://encore.mpl.on.ca/">Catalogue</a></li>
+		 <li><a href="internet_links.php">Online Library</a></li>
+		 <li><a href="whats_on.php">Programs & Events</a></li>
+		 <li><a href="kids.php">Kids</a></li>
+		 <li><a href="teens.php">Teens</a></li>
+		 <li><a href="adults.php">Adults</a></li>
+		 <li><a href="about_us.php">About Us</a></li>		 
+	   </ul>	 
+	</div>	
+ -->
+	<!-- begin top navigation menu -->
+	<div id="topmenu">
+		<ul id="tm" class="clearfix">
+			<li><a class="pipe" href="https://app.mpl.on.ca/iii/cas/login?service=https%3A%2F%2Fencore.mpl.on.ca%3A443%2Fiii%2Fencore%2Fj_acegi_cas_security_check&lang=eng">My Account</a></li>	
+			<li><a class="pipe" href="join.php">Join</a></li>					
+			<li><a class="pipe" href="hours.php">Locations</a></li>		
+			<li><a class="pipe" href="askus.php" title="Contact Us.">Contact Us</a></li>			
+			<li><a class="pipe edge" href="http://m.mpl.on.ca/" title="Visit mobile site">Mobile Site</a></li>
+		</ul>  
+	</div>
+	<!-- end top navigation menu --> 
+
+ 	<div id="searchbox">
+	 
+	
+		<script type="text/javascript">
+		   function searchEncore(){
+				var encoreBaseURLInput,encoreBaseURL, searchInput, scopeInput, searchString, scopeString, locationHref, charRegExString, base64Regex;
+			   /*base64_encoding_map includes special characters that need to be
+				encoded using base64 - these chars are "=","/", "\", "?"
+				character : base64 encoded */
+				var base64_encoding_map = {"=":"PQ==", "/": "Lw==", "\\":"XA==", "?":"Pw=="};
+		
+				var escapeRegExp = function(string) {
+					return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+				}
+			   encoreBaseURLInput = document.getElementById("encoreBase");
+			   searchInput = document.getElementById("encoreSearchInput");
+		
+				if (searchInput && encoreBaseURLInput) {
+					encoreBaseURL = encoreBaseURLInput.value;
+					searchString = searchInput.value;
+					for(var specialChar in base64_encoding_map) {
+						charRegExString = escapeRegExp(specialChar);
+						base64Regex = new RegExp(charRegExString, "g");
+						searchString = searchString.replace(base64Regex, base64_encoding_map[specialChar])
+					}
+					searchString = encodeURIComponent(searchString);
+		
+					scopeInput = document.getElementById('encoreSearchLocation');
+		
+					if (scopeInput) {
+						scopeString = scopeInput.value;
+					}
+		
+					if (scopeString) {
+						scopeString = encodeURIComponent(scopeString);
+						locationHref = encoreBaseURL + "C__S" + searchString + scopeString +  "__Orightresult__U";
+					} else {
+						locationHref = encoreBaseURL + "C__S" + searchString + "__Orightresult__U";
+					}
+					
+					languageSetting = document.getElementById("encoreLanguage");
+					
+					if (languageSetting) {
+						locationHref = locationHref + "?lang=" + languageSetting.value;
+					}
+					
+					window.location.href = locationHref;
+				}
+				return false;
+			}
+		</script>
+		
+		<form action="?" onsubmit="return searchEncore()">
+	  		<strong>Find Books, Music, Movies, and more....</strong>				
+			<!-- REQUIRED with id="encoreSearchInput" -->
+			<input class="textInputBox" title="Enter catalogue search term" id="encoreSearchInput" type="text" size="45" />
+		
+			<!-- REQUIRED INPUT with id="encoreBase": <ENCORE_FQDN> = encore.mpl.on.ca fully qualified domain name such as "encore.mylibrary.com" -->
+			<input type="hidden" id="encoreBase" value="http://encore.mpl.on.ca/iii/encore/search/" />
+		
+			<!-- OPTIONAL search location hidden field to limit to a predefined scope -->
+			<!-- <input type="hidden" id="encoreSearchLocation" value="__Lf:facetcollections:<Scope_#>:<Scope_#>:<Scope Label>::" /> -->
+			
+			<!-- OPTIONAL non-english language setting: <Language_Code> is code such as "spi" for spanish -->
+			<!-- <input type="hidden" id="encoreLanguage" value="<Language_Code>" /> -->
+			
+		
+			<input class="borderLogoB" type="submit" value="Search" />
+		</form> 
+	  
+	</div>
+
+	<div id="menuContainer">
+		<ul id="menu">
+			<li id="home"><a href="index.php"><b>Home</b></a></li>			
+			<li id="catalogue"><a href="http://encore.mpl.on.ca/"><b>Catalogue</b></a></li>		
+			<li id="online"><a href="internet_links.php"><b>Online Library</b></a></li>			
+			<li id="events"><a href="whats_on.php"><b>Programs & Events</b></a></li>
+			<li id="kids"><a href="kids.php"><b>Kids</b></a></li>
+			<li id="teens"><a href="teens.php"><b>Teens</b></a></li>
+			<li id="adults"><a href="adults.php"><b>Adults</b></a></li>
+			<li id="about"><a href="about_us.php"><b>About Us</b></a></li>		
+		</ul>
+	</div>
+
+<!-- begin ALERT bar -->
+<!-- Enter any disruption noticies here -->
+
+
+<div id="alertbar">
+<!--	<h4>The Library will be closed on ?<sup>th</sup> for ?. <a href="hours.php">View hours.</a></h4> 
+-->
+<!--	<h4>Service interruption: The Catalogue, Libraries on the Go and Freegal are presently unavailable.</h4> -->
+
+
+
+</div>
+
+<!-- end ALERT box -->
+	</div>
+
+<!-- Content Begins -->
+	<div id="gutter">
+	&nbsp;
+	</div>
+
+	<div id="navSideBar">
+	    <div class="Byte center">
+              <h2><a href="http://librariesonthego.library.on.ca/"><img src="images/products/lotg200light.png" width="200" height="85" alt="Libraries on the Go" border="0" /></a></h2>
+
+             <div class="center">
+             <script type="text/javascript"><!--
+                pics = new Array(9);
+    
+                pics[0] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=8D81D51E-38FC-4A84-913C-11848D716CCD'><img src='images/covers/ebook1.jpg' alt='Shakespeare Saved My Life by Laura Bates' border='0'><br />Downloadable eBook";
+				
+                pics[1] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=69485CE7-AC12-4378-AFC2-C6B438F772E7'><img src='images/covers/ebook2.jpg' alt='William Shakespeare's The Phantom Menace by Ian Doescher' border='0'><br />Downloadable eBook";
+     
+                pics[2] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=7780255A-E824-4734-972B-3363537D6F77'><img src='images/covers/ebook3.jpg' alt='Juliet Immortal by Stacey Jay' border='0'><br />Downloadable eBook";			
+
+                pics[3] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=31F8D41D-3103-494F-B3AB-2E8F35690A29'><img src='images/covers/ebook4.jpg' alt='A Thousand Acres by Jane Smiley' border='0'><br />Downloadable eBook";
+                
+                pics[4] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=A6DD25C7-1AC6-46D3-8C5F-E98035086F97'><img src='images/covers/ebook5.jpg' alt='Shakespeare's Wife by Germaine Greer' border='0'><br />Downloadable eBook";	
+						
+    			<!-- eAudiobooks -->
+                pics[5] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=A57A39A8-5318-4EF9-AA67-860F909D50A8'><img src='images/covers/audio1.jpg' alt='Shakespeare by Bill Bryson' border='0'><br />Downloadable audiobook";
+				
+                pics[6] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=B35E87F4-EB3B-4DD8-AACF-0D435ADCA205'><img src='images/covers/audio2.jpg' alt='Spanking Shakespeare by Jake Wizner' border='0'><br />Downloadable audiobook";	  
+                              
+                pics[7] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=FF7E015C-06BE-4225-A7B5-09EB1603763B'><img src='images/covers/audio3.jpg' alt='Untimely Death by Elizabeth J. Duncan' border='0'><br />Downloadable audiobook";
+
+                pics[8] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=A818F578-B7DF-44B1-8F63-DD34E00DD314'><img src='images/covers/audio4.jpg' alt='Shakespeare For Children by Charles Lamb' border='0'><br />Downloadable audiobook";				
+				              
+                pics[9] = "<a href='http://librariesonthego.library.on.ca/10/50/en/ContentDetails.htm?id=F1DC7576-F52C-4DF5-A3E2-A813D3E3B921'><img src='images/covers/audio5.jpg' alt='Shakespeares Sonnets by Shakespeare' border='0'><br />Downloadable audiobook";
+
+
+                index = Math.floor(Math.random() * pics.length);
+    
+                document.write(pics[index]);
+    
+            // --></script>		 
+             </div> 	  
+             &
+			  <p><a href="http://www.tumblebookcloud.com/autologin.aspx?U=miltonpl&amp;P=login"><img src="images/products/Tumble/tbcp-2.jpg" width="180" height="150" alt="Tumble Book Cloud" border="0" /></a></p>			  
+             
+	  </div>    
+		
+	</div>
+	<!-- End of Side NavBar -->
+
+	 <div id="middle">
+
+    <!--Inner content DIVs should always carry "contentdiv" CSS class-->
+    <!--Pagination DIV should always carry "paginate-SLIDERID" CSS class-->
+
+        <div id="slider1" class="sliderwrapper">       
+
+       
+      
+        <div class="contentdiv">
+            <a href="childprograms.php#March"><img src="images/slides/2016_02MarchBreak.png" width="245" height="250" alt="March Break" border="0" class="slideLeft" /></a>
+            <h2><a href="childprograms.php#March">March Break Programs</a></h2>
+            
+			<h3>Oceans Alive - limited spaces available at Main<br />
+            Cost $5 per person.</h3> 
+            
+            <h3>March 18 - Drop-in for Family Fun Day<br />
+            Main & Beaty</h3>            
+			
+
+        </div>
+
+        <div class="contentdiv">
+            <a href="teen_inprint.php#writing"><img src="images/slides/2016_02WritingTeens.png" width="245" height="250" alt="Creative Writing" border="0" class="slideLeft" /></a>
+        <h2><a href="teen_inprint.php#writing">Writing from Real Life</a></h2>
+           
+            <h3>Short story workshop for teens led by author Karen Krossing.</h3>
+            
+            <h4>Wednesday, March 16<sup>th</sup><br />Preregister</h4>
+        </div>
+
+
+	<div class="contentdiv"> 
+    	<a href="http://miltonpl.2016NewcomersPrograms.sgizmo.com/s3/"><img src="images/slides/2016_02Survey.png" width="245" height="250" alt="Online Survey" border="0" class="slideLeft" /></a>
+		<h2><a href="http://miltonpl.2016NewcomersPrograms.sgizmo.com/s3/">Library Survey</a></h2>
+        <h3>What kinds of programs for newcomers would you like to see at MPL?</h3>
+
+        <h4>Survey closes April 30<sup>th</sup>.</h4>
+	</div>        
+        
+        
+
+         <div class="contentdiv">
+            <a href="ol_magazines.php"><img src="images/slides/2016_01Flipster.png" width="245" height="250" alt="eMusic Downloads" border="0" class="slideLeft" /></a>
+            <h2><a href="ol_magazines.php">Now Available on Flipster!</a></h2>
+           
+            <h3>People Magazine<br />Today's Parent<br />MoneySense<br />Car & Driver<br />Vogue</h3>
+            <h3>Enjoy current issues of your favourite magazines in a full colour digital format, cover to cover.</h3>
+        </div>   
+
+
+
+    <div class="contentdiv">
+		<a href="a_programs.php#memories"><img src="images/slides/2015_10Memories.png" width="245" height="250" alt="Old Town Hall" border="0" class="slideLeft" /></a>
+		<h2><a href="a_programs.php#memories">Memories of Milton</a></h2>
+       
+		<h3>Do you have Memories of Milton that you would like to share?</h3>
+        <h3>They can be written or oral stories, photographs or other ephemera.</h3>
+    </div>    
+
+          <div class="contentdiv">
+            <a href="ola_reads.php"><img src="images/slides/2015_12ForestofReading.png" width="245" height="250" alt="Book some Help" border="0" class="slideLeft" /></a>
+           <h2><a href="ola_reads.php">Read the Forest</a></h2>
+           
+            <h3>Did you know that the Forest of Reading&reg; is Canada's largest recreational reading program?</h3>
+            <h3>There are lists for every age group.</h3>
+                            
+            <h3>Start reading through the forest today!</h3>
+		</div> 
+<!--                   
+         <div class="contentdiv">
+            <a href="a_programs.php#onehelp"><img src="images/slides/2012_08TechHelp.png" width="245" height="250" alt="Book some Help" border="0" class="slideLeft" /></a>
+            <h2><a href="a_programs.php#onehelp">One-on-One Help!</a></h2>
+           
+            <h3>We're always here to help you!</h3>
+            <h3>During peak hours consider booking one-on-one help.</h3>
+                            
+            <h3>Get answers!</h3>
+          
+        </div>        
+-->
+
+
+    </div>
+    
+    <div id="paginate-slider1" class="pagination">
+    
+    </div>
+    
+    <script type="text/javascript">
+    
+    featuredcontentslider.init({
+        id: "slider1",  //id of main slider DIV
+        contentsource: ["inline", ""],  //Valid values: ["inline", ""] or ["ajax", "path_to_file"]
+        toc: "#increment",  //Valid values: "#increment", "markup", ["label1", "label2", etc]
+        nextprev: ["Previous", "Next"],  //labels for "prev" and "next" links. Set to "" to hide.
+        revealtype: "click", //Behavior of pagination links to reveal the slides: "click" or "mouseover"
+        enablefade: [true, 0.2],  //[true/false, fadedegree]
+        autorotate: [true, 6000],  //[true/false, pausetime - original value 3000]
+        onChange: function(previndex, curindex){  //event handler fired whenever script changes slide
+            //previndex holds index of last slide viewed b4 current (1=1st slide, 2nd=2nd etc)
+            //curindex holds index of currently shown slide (1=1st slide, 2nd=2nd etc)
+        }
+    })
+    
+    </script>
+
+		<div id="socialbar">
+
+        <ul>     
+        	<li id="facebook" title="Facebook"><a href="http://www.facebook.com/MiltonPublicLibrary" class="facebook"><span class="hide">Facebook</span></a></li> 
+        	<li id="twitter" title="Twitter"><a href="http://www.twitter.com/Milton_Library" class="twitter"><span class="hide">Twitter</span></a></li> 
+        	<li id="flickr" title="Flickr"><a href="http://www.flickr.com/photos/mplflickrphoto/" class="flickr"><span class="hide">Flickr</span></a></li> 
+        	<li id="pinterest" title="Pinterest"><a href="http://pinterest.com/miltonlibrary/" class="pinterest"><span class="hide">Pinterest</span></a></li>                            
+        	<li id="newsletter" title="Library eNewsletter"><a href="publications.php" class="newsletter"><span class="hide">Subscribe to eNewsletter</span></a></li>                
+         </ul>
+		</div>           
+           
+		<div class="headlines">
+            <h2><a href="whats_new.php">Library News</a></h2>
+			<h3><a href="whats_new.php#sherwood">Sherwood Community Centre and Library Plans Advance</a></h3>
+			<p>Development has begun with an anticipated opening of late summer or fall 2018.</p>  
+
+	   </div>
+
+		<br class="clearboth" />  
+
+		<div class="headlines">
+            <h2 class="borderB">From Your Online Library</h2>  
+     
+            
+            <div id="articles">
+                <!-- Monthly selections from the Online Library -->
+
+<script type="text/javascript"><!--
+    news = new Array(10);
+
+<!-- Updated March 4 -->
+                news[0] = "<img src='images/products/generic/finance45.png' width='45' height='45' alt='Money matters' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&db=eon&bquery=Entrepreneur&cli0=EH1&clv0=Y&type=0&authtype=ip,cpid&custid=miltonpl'>Do Not Fear the Fear</a></h3><p>You can beat it. ... <em>Entrepreneur</em> (March 2016 issue on Flipster)</p>";		
+
+<!-- Updated March 4 -->
+                news[1] = "<img src='images/products/generic/business45.png' width='45' height='45' alt='Business' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,cookie,cpid&custid=miltonpl&db=rch&AN=110693982&site=ehost-can&scope=site'>How Indigo Got its Retail Groove Back</a></h3><p>Indigo is a case study of what makes for a successful retailer in 2016. ... <em>Canadian Business</em></p>";
+
+
+<!-- Updated March 4 -->
+
+                news[2] = "<img src='images/products/generic/gardens45.png' width='45' height='45' alt='Gardens and nature' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,cookie,cpid&custid=miltonpl&db=rch&AN=113451972&site=ehost-can&scope=site'>Dishing up the Dirt About Compost</a></h3><p>A beginner\'s guide for turning waste into soil. ... <em>Alive</em></p>";
+
+<!-- Updated March 4 -->
+                news[3] = "<img src='images/products/generic/technology45.png' width='45' height='45' alt='Technology' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,cookie,cpid&custid=miltonpl&db=rch&AN=113121577&site=ehost-can&scope=site'>Which Car Is Right for You?</a></h3><p>The best and worst in every key category ... <em>Consumer Reports</em>.</p>";			
+				
+<!-- Updated March 4 -->
+
+                news[4] = "<img src='images/products/generic/health45.png' width='45' height='45' alt='Healthy Living' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&db=eon&bquery=Newsweek&cli0=EH1&clv0=Y&type=0&authtype=ip,cpid&custid=miltonpl'>Zika Bites</a></h3><p>How a small team of doctors finally got the world to stop ignoring the virus.... <em>Newsweek</em> (March 11, 2016 issue on Flipster)</p>";
+				
+<!-- Updated March 4 -->
+
+                news[5] = "<img src='images/products/generic/home45.png' width='45' height='45' alt='Home Life' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,cookie,cpid&custid=miltonpl&db=cfh&AN=113124998&site=hcrc-live&scope=site'>The Enigmatic Origins of Crochet</a></h3><p>Exploring the origins of crochet from the Vikings to the early publications about crochet ... <em>Interweave Crochet</em></p>";
+
+<!-- Updated March 4 -->
+
+                news[6] = "<img src='images/products/generic/home45.png' width='45' height='45' alt='Home Life' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,cookie,cpid&custid=miltonpl&db=rch&AN=113426332&site=ehost-can&scope=site'>Home Sick</a></h3><p>Evict mold, chemicals and other hazards from your house before they affect your health ... <em>Canadian Living</em></p>";
+
+<!-- Updated March 4-->
+                news[7] = "<img src='images/products/generic/education45.png' width='45' height='45' alt='Education' class='floatLeft' /><h3><a href= http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,cookie,cpid&custid=miltonpl&db=rch&AN=113459381&site=ehost-can&scope=site'>Free Tuition?</a></h3><p>OK, but it\'s just a start. ... <em>Maclean\'s</em></p>";
+
+<!-- Updated March 4 -->
+                news[8] = "<img src='images/products/generic/cook45.png' width='45' height='45' alt='Cooking' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,cookie,cpid&custid=miltonpl&db=rch&AN=113050144&site=ehost-can&scope=site'>Is this the Secret to Healthy Eating?</a></h3><p>... Eating well may be something our ancestors knew how to do all along ... <em>Canadian Living</em></p>";
+
+
+<!-- Updated March 4 -->
+                news[9] = "<img src='images/products/generic/cook45.png' width='45' height='45' alt='Cooking' class='floatLeft' /><h3><a href='http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,cookie,cpid&custid=miltonpl&db=rch&AN=111181740&site=ehost-can&scope=site'>How Butter Works</a></h3><p>Understanding the science of baking will lead to amazing results every time ... <em>Chatelaine</em></p>";
+				
+                index = Math.floor(Math.random() * news.length);
+    
+                document.write(news[index]);
+    
+ // --></script>		 
+            </div>        
+        </div>
+        
+
+	</div>
+	<!-- End of Middle Content Container -->
+
+     <div id="rightSideBar">
+
+	  	<div class="borderB">  
+<!--        	<h2><em>Find it @ My Library</em></h2>-->
+            <h2 class="border"><a href="http://www.onebookonemilton.ca/"><img src="images/OBOM/ObomLogo-200p.png" width="200" height="85" title="Visit One Book, One Milton" alt="One Book One Milton logo" border="0" /></a></h2>
+
+            <h3>Quick Access</h3>
+            <div class="Byte dropnav">		
+		    <form name="howdoi" id="howdoi">
+  	        <select title="Select a topic" name="menu" onchange="location=document.howdoi.menu.options[document.howdoi.menu.selectedIndex].value;" value="GO">
+        		<option selected="selected" value="">I want to...</option>
+				<option value="hours.php">View Locations and Hours</option>
+				<option value="join.php">Get a Library Card</option>                
+				<option value="account.php">Manage My Account</option>				                
+				<option value="renew.php">Renew an Item</option>
+				<option value="borrowing.php#fines">View Fines Information</option>                   
+				<option value="new_materials.php">Browse New Arrivals</option>  
+				<option value="on_order.php">Browse On Order Items</option>                                 
+				<option value="illo.php">Interlibrary Loan a title</option>	                
+				<option value="services.php#proctor">Have an Exam Proctored</option>	                
+		        <option value="wireless.php">Access Wireless</option> 
+		        <option value="publications.php">Subscribe to eNewsletter</option>                                        		
+		    </select>
+			</form>		
+		  </div>  
+          
+          <h3><a href="internet_links.php">Online Library Feature</a></h3>          
+          <p>Have your library card handy if you are accessing remotely.</p>
+          
+			  <p class="center"><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cookie,cpid&amp;custid=miltonpl&amp;profile=eon"><img src="images/products/ebsco/flipster_web_banner_rectangle.jpg" width="180" height="150" alt="Flipster" border="0" /></a></p>		          
+
+			  <p class="center"><a href="https://milton.freegalmusic.com/"><img src="images/products/Freegal/Freegal180x120.png" width="180" height="120" alt="Freegal" border="0" /></a></p>	          
+
+		</div>
+   
+     
+
+     </div>
+	 <!-- End of rightSideBar -->
+
+ <!-- End of Content -->	
+
+	<div id="footer">
+			   <hr>   
+       
+	   <p>&copy; Milton Public Library, Ontario, Canada 1998-2016<br />
+	   
+	   <a href="askus.php">Contact Us</a> / <a href="copyright.php">Copyright & Disclaimer</a> / <a href="p_privacy.php">Privacy</a> / <a href="http://m.mpl.on.ca/">MPL Mobile</a> / <a href="http://www.facebook.com/MiltonPublicLibrary">MPL on Facebook</a> / <a href="http://www.twitter.com/Milton_Library">MPL on Twitter</a> / <a href="http://www.flickr.com/photos/mplflickrphoto/">MPL on Flickr</a> / <a href="http://pinterest.com/miltonlibrary/">MPL on Pinterest</a> / <a href="sitemap.php">Site Map</a></p>
+
+
+
+	</div>
+<!-- End of wrapper -->
+
+</body>
+</html>
+ 

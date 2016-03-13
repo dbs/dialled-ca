@@ -1,0 +1,647 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//fr" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="fr" >
+  <HEAD>
+
+<!-- jQuery -->
+<script type="text/javascript" src="/jquery/slider/li-slider/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="/jquery/slider/li-slider/js/jquery.easing.1.3.js"></script>
+<script src="../documents/javascript/news.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../documents/css/swcontentdiv.css " type="text/css" />
+<link rel="stylesheet" href="../documents/css/swmenu.css " type="text/css" />
+<link rel="shortcut icon" href="../images/favicon.ico" >
+<link rel="stylesheet" type="text/css" href="/jquery/slider/lightbox-0.5/css/jquery.lightbox-0.5.css" />
+<link rel="stylesheet" type="text/css" href="/jquery/slider/prettyphoto/css/prettyPhoto.css" />
+<script type="text/javascript" src="/jquery/slider/lightbox-0.5/js/jquery.lightbox-0.5.min.js"></script>
+<script type="text/javascript" src="/jquery/slider/prettyphoto/js/jquery.prettyPhoto.js"></script>
+<link rel="stylesheet" type="text/css" href="/jquery/slider/li-slider/skins/Pure/skin.css" />
+<script type="text/javascript" src="/jquery/slider/li-slider/js/li-slider-animations-1.1.min.js"></script>
+<script type="text/javascript" src="/jquery/slider/li-slider/js/li-slider-1.1.min.js"></script>
+<title>Ville de Richmond</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40077738-1', 'richmond.qc.ca');
+  ga('send', 'pageview');
+
+</script>
+    
+    <SCRIPT LANGUAGE="JavaScript" src="/_cs/js/fnc_cshyperlink.js"></SCRIPT>
+    <script type="text/javascript" src="/soleweb/js/tiny_mce/plugins/media/js/embed.js"></script>
+    <SCRIPT Language = "JavaScript"> 
+      var gsCurrentLang = "1";
+
+      var gsSinglePagePopupLinkParam = "true"
+      function displayManagerWindow(sAction, sDataId, sLevel, sTopic, sIdParent, sFields, sIdLayout, sLayoutField) { 
+        features = 'toolbar=no,location=no,directories=no,status=no,menubar=no,' + 'scrollbars=yes,resizable=yes,left=0,top=0,width=' + (screen.width - 12) + ',height=' + (screen.height - 55)
+
+        if (sDataId != "") {
+          sDataId = "&data__id=" + sDataId;
+        }
+        if (sFields != "") {
+          sFields = "&fields=" + sFields;
+        }
+        if (sIdLayout != "") {
+          sIdLayout = "&id_layout=" + sIdLayout;
+          if (sLayoutField != "") {
+            sLayoutField = "&layout_field=" + sLayoutField;
+          }
+        }
+        dlg = window.open ("/cgi-cs/cs.wadata.edit?saction=" + sAction + sDataId + "&level__level=" + sLevel + "&data__id_topic=" + sTopic + "&data__id_parent=" + sIdParent + sFields + sIdLayout + sLayoutField,"displayWindow",features) 
+        dlg.focus();
+//        window.parent.parent.location = "/cgi-cs/cs.wadata.edit?saction=" + sAction + sDataId + "&level__level=" + sLevel + "&data__id_topic=" + sTopic + "&data__id_parent=" + sIdParent
+//OpenWin = this.open("/cgi-cs/cs.wadata.edit?saction=" + sAction + sDataId + "&level__level=" + sLevel + "&data__id_topic=" + sTopic + "&data__id_parent=" + sIdParent, "CtrlWindow", "toolbar=yes,menubar=yes,location=yes,scrollbars=yes,resizable=yes");
+      } 
+
+      function displayLevelInfoManagerWindow(sAction, sLevel, sTopic, sIdLayout, sLayoutField) {
+
+        features = 'toolbar=no,location=no,directories=no,status=no,menubar=no,' + 'scrollbars=yes,resizable=yes,left=0,top=0,width=' + (screen.width - 12) + ',height=' + (screen.height - 55)
+
+	if (sIdLayout != "") {
+          sIdLayout = "&id_layout=" + sIdLayout;
+          if (sLayoutField != "") {
+            sLayoutField = "&layout_field=" + sLayoutField;
+          }
+        }
+
+        dlg = window.open ("/cgi-cs/cs.walevel.editintro?saction=" + sAction + "&level__level=" + sLevel + "&level__id_topic=" + sTopic + sIdLayout + sLayoutField,"displayWindow",features) 
+        dlg.focus();
+
+
+      }
+
+	 function displayTopicWindow(sAction, sIdTopic, sTopicType, sLevel) {
+
+        features = 'toolbar=no,location=no,directories=no,status=no,menubar=no,' + 'scrollbars=yes,resizable=yes,left=0,top=0,width=' + (screen.width - 12) + ',height=' + (screen.height - 55);
+//alert("/cgi-cs/cs.watopic.displaymodify?saction=" + sAction + "&topic__id=" + sTopicId + "&topic__type=" + sTopicType + "&topic__level=" + sLevel + "&provenance=site");
+//alert(features);
+        dlg = window.open ("/cgi-cs/cs.watopic.displaymodify?saction=" + sAction + "&topic__id=" + sIdTopic + "&topic__type=" + sTopicType + "&topic__level=" + sLevel + "&provenance=site","displayWindow",features);
+        dlg.focus();
+
+
+      }
+	  
+	  
+      function displayManagerWindowCalendar(sAction, sDataId, sLevel, sTopic, sIdParent, sParameter) { 
+        features = 'toolbar=no,location=no,directories=no,status=no,menubar=no,' + 'scrollbars=yes,resizable=yes,left=0,top=0,width=' + (screen.width - 12) + ',height=' + (screen.height - 55)
+
+        if (sDataId != "") {
+          sDataId = "&data__id=" + sDataId;
+        }
+        
+        if (sParameter != "") {
+          sParameter = "&" + sParameter;
+          //sParameter = sParameter + "&day=" + sParameter;
+          
+        }
+        
+        if (sAction == "create") {
+          sParameter = sParameter + "&month=" + frmData.monthlist.options[frmData.monthlist.selectedIndex].value;
+          sParameter = sParameter + "&year=" + frmData.yearlist.options[frmData.yearlist.selectedIndex].value;
+          
+        }
+
+        dlg = window.open ("/cgi-cs/cs.wadata.editcalendar?saction=" + sAction + sDataId + "&level__level=" + sLevel + "&data__id_topic=" + sTopic + "&data__id_parent=" + sIdParent + sParameter,"displayWindow",features) 
+        dlg.focus();
+
+      } 
+
+
+      function VersionNavigateur(Netscape, Explorer) {
+        if ((navigator.appVersion.substring(0,3) >= Netscape && navigator.appName == 'Netscape') || (navigator.appVersion.substring(0,3) >= Explorer && navigator.appName.substring(0,9) == 'Microsoft')) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+    </SCRIPT>
+
+
+<STYLE>
+body {
+background-image: url(/images/Elements_graphiques/bg1.jpg);			background-repeat: no-repeat;
+        background-position: center 230px;}
+</STYLE>
+
+  </HEAD>
+  <BODY  BGCOLOR=FFFFFF TEXT=000000 LINK=0000d0 VLINK=0000d0 ALINK=000000 topmargin=5 leftmargin=5 marginwidth=5 marginheight=5 BORDER=0>
+
+  <div id="menudiv" class="menu">
+
+
+	
+	
+		<ul><li id="menu_27743"><a href="/fr/richmond_en_bref" >Portrait municipal</a><ul><li id="menu_27743_32606"><a href="/fr/richmond_en_bref" >RICHMOND EN BREF</a></li>
+<li id="menu_27743_32607"><a href="/fr/conseil_municipal" >CONSEIL MUNICIPAL</a></li>
+<li id="menu_27743_32608"><a href="/fr/acces_information" >ACCÈS À L'INFORMATION</a></li>
+</ul>
+</li>
+<li id="menu_27744"><a href="/fr/sport_loisirs_culture" >SERVICES CITOYENS</a><ul><li id="menu_27744_32610"><a href="/fr/sport_loisirs_culture" >SPORTS, LOISIRS ET CULTURE</a></li>
+<li id="menu_27744_32609"><a href="/fr/zone_jeunesse" >ZONE JEUNESSE</a></li>
+<li id="menu_27744_32611"><a href="/fr/matieres_residuelles" >MATIÈRES RÉSIDUELLES</a></li>
+<li id="menu_27744_32612"><a href="/fr/travaux_publics" >TRAVAUX PUBLICS</a></li>
+<li id="menu_27744_32629"><a href="/fr/taxation_role_devaluation" >TAXATION ET RÔLE D'ÉVALUATION</a></li>
+<li id="menu_27744_32630"><a href="/fr/urbanisme_et_inspection" >URBANISME ET INSPECTION</a></li>
+<li id="menu_27744_32631"><a href="/fr/prevention_securite" >PRÉVENTION ET SÉCURITÉ</a></li>
+</ul>
+</li>
+<li id="menu_27745"><a href="/fr/developpement_economique" >Services aux entreprises</a><ul><li id="menu_27745_32617"><a href="/fr/developpement_economique" >DÉVELOPPEMENT ÉCONOMIQUE</a></li>
+</ul>
+</li>
+<li id="menu_27746"><a href="/fr/quoi_faire" >Attraits touristiques</a><ul><li id="menu_27746_32613"><a href="/fr/quoi_faire" >Quoi faire?</a></li>
+<li id="menu_27746_32614"><a href="/fr/ou_manger" >Où manger?</a></li>
+<li id="menu_27746_32615"><a href="/fr/ou_dormir" >Où dormir?</a></li>
+<li id="menu_27746_32616"><a href="/fr/bureau_information_touristique" >Bureau d’information touristique</a></li>
+</ul>
+</li>
+</ul>
+
+	
+</div>
+<map id="map_banniere" name="IMGMAP"></map>
+<table id="table_banniere" height="0" cellspacing="0" cellpadding="0" border="0" width="100%">
+
+</table>
+ <div class="contentDiv">
+  
+
+
+
+
+
+
+
+
+
+
+    <table border=0 CELLPADDING=0 CELLSPACING=0 width="1099">
+
+    
+      <tr>
+        
+          
+        
+          <td id="idL1R1"  WIDTH="1099"  VALIGN="TOP"  BGCOLOR="ffffff"  ><div class="contentDiv">
+
+
+          
+      <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  <TR>
+
+ 
+
+    <TD WIDTH=1099><table border="0" cellpadding="0" cellspacing="0" style="background-image: url(/images/Elements_graphiques/BG_entete.jpg); width: 1099px; background-repeat: no-repeat; height: 181px;">
+<tbody>
+<tr style="height: 25px;" valign="top">
+<td></td>
+<td rowspan="3"><a href="/cgi-cs/cs.waframe.index?lang=1"><img alt="Ville de Richmond" height="167" src="/images/Elements_graphiques/Logo.jpg" title="Ville de Richmond" width="229" /></a></td>
+<td></td>
+<td align="right" valign="bottom">
+<div class="menuHaut">
+<ul>
+<li><a href="/fr/accueil">Accueil</a></li>
+<li><a href="/cgi-cs/cs.waframe.content?topic=49555&amp;lang=1">Plan du site</a></li>
+<li><a href="/cgi-cs/cs.waframe.content?topic=49556&amp;lang=1">Nous joindre</a></li>
+<li><a href="/cgi-cs/cs.waframe.content?topic=49667&amp;lang=1">Recherche</a></li>
+<li><a href="/cgi-cs/cs.waframe.index?lang=2">English</a></li>
+</ul>
+</div>
+</td>
+<td></td>
+<td align="center" valign="bottom"><!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style "><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
+<script src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4fc632a44ef0289c" type="text/javascript"></script>
+<!-- AddThis Button END --></td>
+<td></td>
+</tr>
+<tr style="height: 97px;" valign="top">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr style="height: 45px;" valign="top">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr style="height: 14px;" valign="top">
+<td style="width: 59px;" valign="top"></td>
+<td style="width: 229px;" valign="top"></td>
+<td style="width: 27px;" valign="top"></td>
+<td style="width: 507px;" valign="top"></td>
+<td style="width: 52px;" valign="top"></td>
+<td style="width: 178px;" valign="top"></td>
+<td style="width: 47px;" valign="top"></td>
+</tr>
+</tbody>
+</table></TD>
+  </TR>
+  </table>
+      
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="1"></a><table border="0" cellpadding="0" cellspacing="0" style="width: 1099px; height: 97px;">
+<tbody>
+<tr>
+<td style="width: 59px;" valign="top"></td>
+<td style="width: 998px;" valign="top"></td>
+<td style="width: 42px;" valign="top"></td>
+</tr>
+</tbody>
+</table>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+</TABLE></div>
+  
+
+ </td>
+              
+          
+        
+          
+        
+          <td id="idL1R2"  WIDTH="0"  VALIGN="TOP"  ><div class="contentDiv">
+
+
+      
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  
+</TABLE></div>
+  
+
+ </td>
+              
+          
+        
+      </tr>
+      
+      
+      
+    </table>
+
+    <table border=0 CELLPADDING=0 CELLSPACING=0 width="1099">
+
+    
+      <tr>
+        
+          
+        
+          <td id="idL2I1"  WIDTH="47"  VALIGN="TOP"  ></td>
+              
+          
+        
+          
+        
+          <td id="idL2R1"  WIDTH="231"  VALIGN="TOP"  BGCOLOR="ffffff"  ><div class="contentDiv">
+
+
+          
+      <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  <TR>
+
+ 
+
+    <TD WIDTH=231><div>
+<h1>
+<div style="font-size: 16px;">Services aux citoyens</div>
+</h1>
+</div></TD>
+  </TR>
+  </table>
+      
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="1"></a><div class="menuGauche">
+<ul>
+<li><img src="/images/pictos/125511-matte-white-square-icon-people-things-people-man-circle-sc44.png" /><a href="/fr/sport_loisirs_culture">SPORTS, LOISIRS ET CULTURE </a></li>
+</ul>
+<p><a href="/fr/programmation_inscription">Programmation et inscription</a></p>
+<p><a href="/fr/bibliotheque">Biblioth&egrave;que</a></p>
+<p><a href="/fr/equipements_sportifs">Parcs et &eacute;quipements</a></p>
+</div>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="2"></a><div class="menuGauche">
+<ul>
+<li><img src="/images/pictos/125510-matte-white-square-icon-people-things-people-inspector-sc44.png" /><a href="/fr/zone_jeunesse">ZONE JEUNESSE</a> </li>
+</ul>
+<p><a href="/fr/organismes_jeunesse">Organismes&nbsp; jeunesse</a></p>
+</div>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="3"></a><div class="menuGauche">
+<ul>
+<li><img src="/images/pictos/124864-matte-white-square-icon-business-trashcan3.png" /><a href="/fr/matieres_residuelles">MATI&Egrave;RES R&Eacute;SIDUELLES</a> </li>
+</ul>
+<p><a href="/fr/horaire_recyclage_dechets">Calendrier des collectes</a></p>
+<p><a href="/fr/collectes_speciales">Collectes sp&eacute;ciales</a></p>
+<p><a href="/fr/compostage_domestique">Compostage domestique</a></p>
+<p><a href="/fr/ecocentre">&Eacute;cocentre</a></p>
+<p><a title="conseils environnementaux" href="/fr/conseils_environnement">Conseils environnementaux</a></p>
+</div>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="4"></a><div class="menuGauche">
+<ul>
+<li><img src="/images/pictos/124861-matte-white-square-icon-business-toolset3-sc44.png" /><a href="/fr/travaux_publics">TRAVAUX PUBLICS</a> </li>
+</ul>
+<p><a href="/fr/services_entretien">Services et entretien</a></p>
+<p><a href="/fr/tp_formulaires">Formulaires</a></p>
+</div>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="5"></a><div class="menuGauche">
+<ul>
+<li><img alt="Taxation et r&ocirc;le d'&eacute;valuation Ville de Richmond" height="42" src="/images/Elements_graphiques/picto_taxation.png" title="Taxation Ville de Richmond" width="41" /><a href="/fr/taxation_role_devaluation">TAXATION ET R&Ocirc;LE D'&Eacute;VALUATION</a> </li>
+</ul>
+</div>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="6"></a><div class="menuGauche">
+<ul>
+<li><img alt="Urbanisme Ville de Richmond formulaires et permis" height="42" src="/images/Elements_graphiques/picto_permis.png" title="Urbanisme Ville de Richmond formulaires et permis" width="41" /><a href="/fr/urbanisme_et_inspection">URBANISME ET INSPECTION</a> </li>
+</ul>
+<p><a href="/fr/permis_et_reglements">Permis et r&egrave;glements</a></p>
+<p><a href="/fr/subventions">Subventions</a></p>
+</div>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="7"></a><div class="menuGauche">
+<ul>
+<li><img src="/images/pictos/125510-matte-white-square-icon-people-things-people-inspector-sc44.png" /><a href="/fr/prevention_securite">PR&Eacute;VENTION ET S&Eacute;CURIT&Eacute;</a> </li>
+</ul>
+</div>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+</TABLE></div>
+  
+
+ </td>
+              
+          
+        
+          
+        
+          <td id="idL2I2"  WIDTH="20"  VALIGN="TOP"  ></td>
+              
+          
+        
+          
+        
+          <td id="idL2R2"  WIDTH="801"  VALIGN="TOP"  BGCOLOR="ffffff"  ><div class="contentDiv">
+
+
+          
+      <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  <TR>
+
+ 
+
+    <TD WIDTH=801><h1>Sports, loisirs et culture</h1>
+<h2>Biblioth&egrave;que RCM</h2></TD>
+  </TR>
+  </table>
+      
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  
+  <TR>
+      
+    <TD VALIGN="TOP">
+      <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+        <TR>
+          <TD>
+            <a name="1"></a><p><img alt="Biblioth&egrave;que de Richmond" height="155" src="/images/livre.png" style="margin: 15px; float: left;" title="Biblioth&egrave;que de Richmond" width="250" />Offrant plus de 16&nbsp;000 titres en anglais et en fran&ccedil;ais, la biblioth&egrave;que RCM est un organisme autonome desservant les municipalit&eacute;s de Richmond, du Canton de&nbsp;Cleveland et du Canton de Melbourne.</p>
+<p>&nbsp;</p>
+<h3>Abonnement annuel&nbsp;pour les r&eacute;sidents</h3>
+<p>Adulte&nbsp;:&nbsp;10 $</p>
+<p>Enfant&nbsp;: 5 $</p>
+<p>Famille&nbsp;:&nbsp;20 $</p>
+<p>&nbsp;</p>
+<p>Chaque membre peut emprunter jusqu'&agrave; quatre livres ou revues pendant trois semaines.&nbsp; Les frais de retard sont de 0,15 $ par jour.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Le co&ucirc;t de location d'un <em>best-seller</em> est de 2 $.</p>
+<p>&nbsp;</p>
+<p>Les dons de livres et de revues sont accept&eacute;s pour les int&eacute;grer &agrave; la collection ou pour la revente &agrave; prix modique.</p>
+<p>&nbsp;</p>
+<p>La biblioth&egrave;que sert aussi de point de chute pour vous d&eacute;partir de vos cartouches d'encre et de vos piles usag&eacute;es.</p>
+<p>&nbsp;</p>
+<h3>Heures d'ouverture</h3>
+<strong>
+<p>Mercredi : 14 h &agrave; 16 h et 18 h 30 &agrave; 20 h 30</p>
+<p>Jeudi : 14 h &agrave; 16 h et 18 h 30 &agrave; 20 h 30</p>
+<p>Vendredi : 14 h &agrave; 16 h</p>
+<p>Samedi : 9 h 30 &agrave; 11 h 30</p>
+<p>&nbsp;</p>
+</strong>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>Coordonn&eacute;es</strong></p>
+<p>Biblioth&egrave;que RCM<br />820, rue Gouin<br />Richmond (Qu&eacute;bec) J0B 2H0</p>
+<p>T&eacute;l. : 819 826-5814</p>
+<p>Courriel : <a href="mailto:bibliorcm@ville.richmond.qc.ca">bibliorcm@ville.richmond.qc.ca</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+           </TD>
+        </TR>
+      </TABLE>
+    </TD>
+    
+  </TR>
+  
+</TABLE></div>
+  
+
+ </td>
+              
+          
+        
+      </tr>
+      
+      
+      
+    </table>
+
+    <table border=0 CELLPADDING=0 CELLSPACING=0 width="1099">
+
+    
+      <tr>
+        
+          
+        
+          <td id="idL3R1"  WIDTH="1099"  VALIGN="TOP"  BGCOLOR="ffffff"  ><div class="contentDiv">
+
+
+          
+      <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  <TR>
+
+ 
+
+    <TD WIDTH=1099><div style="text-align: center;">
+<table border="0" cellpadding="0" cellspacing="0" style="background-image: url(/images/Elements_graphiques/BG_bas_page.png); width: 1051px; background-repeat: no-repeat; height: 117px; color: #383838; margin-left: 50px; font-size: 10px;">
+<tbody>
+<tr style="height: 97px;" valign="top">
+<td>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: left;">&nbsp; &nbsp;<a href="/cgi-cs/cs.waframe.content?topic=49559&amp;lang=1"><span style="color: #ffffff;">Droits d'auteur</span></a><span style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><a href="/cgi-cs/cs.waframe.content?topic=49560&amp;lang=1"><span style="color: #ffffff;">Avis l&eacute;gal et politique de confidentialit&eacute;</span></a></p>
+</td>
+<td></td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td valign="bottom">
+<p style="text-align: left;"><span style="color: #383838; font-size: 11px;">2012 &copy; Tous droits r&eacute;serv&eacute;s</span></p>
+</td>
+<td style="text-align: right;" valign="bottom">
+<p><span style="color: #383838; font-size: 11px;">Site propuls&eacute; par <a style="color: #383838; font-size: 11px;" href="http://www.soleweb.com" target="_blank">SoleWeb</a></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></TD>
+  </TR>
+  </table>
+      
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+  
+</TABLE></div>
+  
+
+ </td>
+              
+          
+        
+      </tr>
+      
+      
+      
+    </table>
+
+</div>
+
+  <FORM NAME="frmCSHyperlink">
+    <INPUT TYPE="HIDDEN" NAME="topic">
+    <INPUT TYPE="HIDDEN" NAME="lang">
+    <INPUT TYPE="HIDDEN" NAME="click">
+    <INPUT TYPE="HIDDEN" NAME="image_name">
+	
+  </FORM>
+  
+
+  </BODY>
+</HTML>
+

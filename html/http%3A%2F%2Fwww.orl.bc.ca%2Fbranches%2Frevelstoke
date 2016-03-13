@@ -1,0 +1,855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<base href="http://www.orl.bc.ca/" />
+	<title>Revelstoke - Okanagan Regional Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="description" content="Okanagan Regional Library: library system covering the entire Thompson-Okanagan region of British Columbia, Canada." />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/style.css?v=v8" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/calendar_2013.css?v=v4" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/contact_us.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/search.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/left_menu.css?v=v2" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_l.css" type="text/css" media="screen" id="link_text_l" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/text_m.css" type="text/css" media="screen" id="link_text_m" title="text" />
+	<link rel="stylesheet" href="assets/templates/orlv2/css/text_s.css" type="text/css" media="screen" id="link_text_s" title="text" />
+	<link rel="alternate stylesheet" href="assets/templates/orlv2/css/contrast.css" type="text/css" media="screen" id="link_contrast" title="contrast" />
+	<link rel="alternate" type="application/rss+xml" title="Okanagan Regional Library RSS Feed" href="news-events/rss" />
+	<script src="manager/media/script/mootools/mootools.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/jquery.fancybox.js" type="text/javascript"></script>
+	<script type="text/javascript">var $j = jQuery.noConflict();</script>
+	<script src="assets/templates/orlv2/js/form-check.js?v=v1" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/swfobject.js" type="text/javascript"></script>
+	<script src="assets/templates/orlv2/js/script.js?v=v7" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="assets/templates/orlv2/css/dhtmlgoodies_calendar.css" media="screen" />  
+	<script src="assets/templates/orlv2/js/dhtmlgoodies_calendar.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pathToImages = '/assets/templates/orlv2/images/layout/';
+		//SWFObject
+		var flashvars = {};
+		var params = {
+			wmode: "transparent"
+		};
+	</script>
+<!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAMmBdV5STCVExvFTDWp50DBQn_DD64N2y7rZVstjCgjH1jrOTvBTbfltFh8gj6JbFUyeasDAlowgpPA" type="text/javascript"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9zKi3DlhGhdgZ5zWPYklEM59GzU0pys&sensor=false"></script>
+<script type="text/javascript" src="//use.typekit.net/igq5whz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+	<body>
+
+    	<div id="wrap">
+        <div class="background-header">
+                       <div id="header">
+                <span class="font-adjust-container">
+<a href="/sitemap">Site Map</a> | <a class="text_l" id="large-text-link" href="javascript:clickTextLarge();">A</a>&nbsp;<a class="text_m" id="medium-text-link" href="javascript:clickTextMedium();">A</a>&nbsp;<a class="text_s" id="small-text-link" href="javascript:clickTextSmall();">A</a>
+				</span>
+            </div>
+            <!-- Header Image/Top Menu Row -->
+            <div class="top-menu-div">
+                <div id="logo"><a href="/"><img src="/assets/templates/orlv2/images/layout/logo-new.gif" alt="Okanagan Regional Library" /></a></div>
+                <div id="welcome"><img src="/assets/templates/orlv2/images/layout/background-bar-left.png" /></div>
+                <div id="social">
+	                <a href="http://www.youtube.com/OKRegLibrary" target="_blank">Youtube</a>
+	                <a href="http://75-years-orl.blogspot.com/" target="_blank">Blogger</a>
+	                <a href="http://www.facebook.com/OKRegLib" target="_blank">Facebook</a>
+	                <a href="http://twitter.com/ORLreads" target="_blank">Twitter</a>
+	                <a href="http://ipac.orl.bc.ca/mobile">ORL Mobile</a>
+                </div>
+            </div>
+<div id="header-search-2013">
+                    <script language="javascript">
+                        String.prototype.trim = function () { return this.replace(/^\s*|\s*$/g, ''); }
+                        function ProcessInput(e) {
+                            if (window.event)       // IE
+                                keyNum = e.keyCode;
+                            else if (e.which)       // Netscape/Firefox/Opera
+                                keyNum = e.which;
+                            if (keyNum == 13) {
+                                e.returnValue = false;
+                                e.cancelBubble = true;
+                                DoKeywordSearch();
+                                return false;
+                            }
+                            return true;
+                        }
+                        function DoKeywordSearch() {
+                            if (document.getElementById('textboxTerm').value.trim() != '')
+                                window.location = 'http://ipac.orl.bc.ca/polaris/view.aspx?keyword=' + escape(document.getElementById('textboxTerm').value);
+                            else
+                                document.getElementById('textboxTerm').focus();
+                        }
+                    </script>
+                    <a class="redbutton" href="javascript:;" onclick="DoKeywordSearch();"><span>Go</span></a>
+                    <input type=text id=textboxTerm size=45 class="cleartxt inactive search" value="Search Catalogue..." 
+                     onblur="if (this.value == '') {this.value = 'Search Catalogue...';}"
+                     onfocus="if(this.value == 'Search Catalogue...') { this.value = ''; }" 
+                     onkeypress="return ProcessInput(event)" />
+                    <script language="javascript">
+                        document.getElementById('textboxTerm').blur();
+                    </script>
+                 </div>
+		<br />
+                     <p class="f_right"><a href="http://ipac.orl.bc.ca/polaris/patronaccount/default.aspx?ctx=1.1033.0.0.3">Login to My Account</a></p>
+		
+
+            <!-- Main Menu -->
+           <div id="left-menu-container">
+             <div id="top-menu-header">
+    <img src="/assets/templates/orl/images/layout/menu-text.png" alt="Menu" />
+</div>
+<div id="left-menu">
+<ul class=" left-menu-header"><li >
+  <div class="menusection"><h3 class=""><a class="" href="/about-us">About Us</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/news-events">News &amp; Events</a></h3></div>
+</li>
+<li  class="active">
+  <div class="menusection"><h3 class="active"><a class="active" href="/branches">Branches</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/Borrowing-services">Borrowing & Services</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/online-resources">Web Resources</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/kids">Kids</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/teens">Teens</a></h3></div>
+</li>
+<li >
+  <div class="menusection"><h3 class=""><a class="" href="/book-lovers">Book Lovers</a></h3></div>
+</li>
+<li  class="last">
+  <div class="menusection"><h3 class="last"><a class="last" href="/contact">Contact Us</a></h3></div>
+</li>
+</ul>
+</div>
+           </div>
+
+            <!-- Menu/Intro Row -->
+                <div id="intro-wide">
+                   
+                   <div id="background-image-box-big"><div id="slideshow"></div></div>
+<div id="background-box-overlay"></div>
+<script type="text/javascript" src="http://www.orl.bc.ca/assets/js/rokslideshow.js"></script>
+		<script type="text/javascript">
+			window.RokSlideshowPath = '';
+			var myshow;
+			window.addEvent('load', function(){
+				var imgs = [];
+				
+				imgs.push({
+					file: '011.JPG',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'Exterior1.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				imgs.push({
+					file: 'Exterior2.jpg',
+					title: '',
+					desc: '',
+					url: ''
+				});
+
+				myshow = new Slideshow('slideshow', { 
+					type: 'fade',
+					showTitleCaption: 0,
+					captionHeight: 45,
+					width: 550, 
+					height: 340, 
+					loadingDiv: 0,
+					resize: true,
+					duration: [2000, 4000],
+					transition: Fx.Transitions.Expo.easeOut,
+					images: imgs, 
+					path: '/assets/images/Branch-Slideshow/revelstoke/'
+				});
+				myshow.caps.h2.setStyles({
+					color: '#fff',
+					fontSize: '13px'
+				});
+				myshow.caps.p.setStyles({
+					color: '#ccc',
+					fontSize: '11px'
+				});
+			});
+		</script>
+                   <div id="intro-wide-content">
+                               <span class="B_crumbBox"><span class="B_firstCrumb"><a class="B_homeCrumb" href="/home" title="Find Books, Music, Movies, and More">Home</a></span> &raquo; <a class="B_crumb" href="/branches" title="Branches">Branches</a> &raquo; <span class="B_lastCrumb"><span class="B_currentCrumb">Revelstoke</span></span></span>
+                               <h1>Revelstoke</h1>
+                               <div id="page-sub-menu">
+<ul class="submenu">
+<li>no result<script type%3D"text/javascript">$j("#page-sub-menu").hide();</script></li> 
+</ul>
+<script type="text/javascript">
+$j('.submenu').makeacolumnlists({cols: 2, colWidth: 0, equalHeight: false, startN: 12});
+</script>
+</div>
+                               
+<div id="content-header-text">
+<ul class="tabs">
+    <li class="tab1"><a href="#tab1">Location</a></li>
+    <li class="tab2"><a href="#tab2">Open Hours</a></li>
+    <li class="tab3"><a href="#tab3">Parking</a></li>
+    <li class="tab4"><a href="#tab4"></a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content"><p><strong>Box 1289 (Mailing Address)<br />605 Campbell Avenue (Location)<br />Revelstoke, B.C. V0E 2S0<br />(250) 837-5095</strong></p>
+<p>The Revelstoke Branch is located in the&nbsp;Community Centre on Campbell Avenue.&nbsp;</p>
+<p>There are two book slots to the left of the main entrance along the Campbell Avenue side of the building in which to return books at any time (except during the Easter and Christmas closures).</p>
+<p>Please find our events below on the branch calendar, or search the <a href="news-events/event-search">ORL Calendar of Events</a>.</p></div>
+    <div id="tab2" class="tab_content"><table id="openhours"><tr><td>Monday: </td><td>CLOSED</td></tr><tr><td>Tuesday: </td><td>12:00 p.m. to 8:00 p.m.</td></tr><tr><td>Wednesday: </td><td>12:00 p.m. to 7:00 p.m.</td></tr><tr><td>Thursday: </td><td>10:00 a.m. to 4:00 p.m.</td></tr><tr><td>Friday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Saturday: </td><td>10:00 a.m. to 5:00 p.m.</td></tr><tr><td>Sunday: </td><td>CLOSED</td></tr><tr><td></td><td>All branches are closed on statutory holidays</td></tr></table></div>
+    <div id="tab3" class="tab_content"><p>Free parking is available in the Community Centre parking lot on the south side of the building.</p></div>
+    <div id="tab4" class="tab_content"></div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var tabCount = 0;
+	//When page loads...
+	jQuery(".tab_content").hide(); //Hide all content
+	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	jQuery(".tab_content:first").show(); //Show first tab content
+//hide empty tabs
+jQuery(".tab_content").each(function(){
+	if(jQuery(this).html() == ''){
+		jQuery("."+jQuery(this).attr("id")).hide();
+	} else {
+		if(jQuery("."+jQuery(this).attr("id")+" a").html() == ''){
+			jQuery("."+jQuery(this).attr("id")).hide();
+		} else {
+			tabCount++;
+		}
+	}
+});
+
+if(tabCount > 1){
+jQuery(".tab_container").show();
+jQuery("ul.tabs").show();
+} else {
+jQuery("#content-header-text").html(jQuery("#tab1").html());
+}
+
+	//On Click Event
+	jQuery("ul.tabs li").click(function() {
+
+		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+		jQuery(this).addClass("active"); //Add "active" class to selected tab
+		jQuery(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = jQuery(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		jQuery(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});
+</script>
+
+</div>
+                  </div>
+                </div>
+            <!-- Banners/Content Row -->
+               <div class="content-row-div"><div id="sidebanners">
+                   <div style="float: left; width: 244px;">
+<div class="banner-map" style="margin-bottom:28px;">
+<a name="content"></a>
+    <div id="map" style="width:244px; height:166px;"></div><script type="text/javascript">
+    //var map = new google.maps.Map(document.getElementById("map"));
+    //var point = new google.maps.LatLng(50.997944, -118.200827);
+    //map.setCenter(point, 14);
+    //var marker = new google.maps.Marker(point);
+    //map.addOverlay(marker);
+    //map.addControl(new GSmallMapControl());
+      var map = new google.maps.Map(
+        document.getElementById("map"), {
+          center: new google.maps.LatLng(50.997944, -118.200827),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(50.997944, -118.200827),
+            map: map
+      });
+    </script>
+</div>
+<div class="banner-calendar print-hide" id="branch-calendar" style="margin-bottom:28px;">
+    <!--[if IE 7 ]> <div class="calendar-div ie7"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!--> <div class="calendar-div"> <!--<![endif]-->
+    <div id="calendar">
+	<div id="calendar-heading">
+    	<div class="month prev"><a href="index.php?id=43&amp;cid=29&amp;m=2&amp;y=2016#content">&laquo;</a></div>
+		<div class="monthyear">
+			<div class="month heading">March</div>
+			<div class="year heading">2016</div>
+		</div>
+    	<div class="month next"><a href="index.php?id=43&amp;cid=29&amp;m=4&amp;y=2016#content">&raquo;</a></div>
+	</div>
+	<div id="day-heading-background">
+		<div class="day heading">Sun</div>
+		<div class="day heading">Mon</div>
+		<div class="day heading">Tue</div>
+		<div class="day heading">Wed</div>
+		<div class="day heading">Thu</div>
+		<div class="day heading">Fri</div>
+		<div class="day heading">Sat</div>
+	</div>	
+	<div id="date-background">
+		<div class="day none"></div><div class="day none"></div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-4').style.display='block';document.getElementById('fade').style.display='block'">4</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-4', this)">4</a>
+<div id="day-popup-4" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-4').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3190">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Friday</span></h3>
+
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3190">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3189">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Friday</span></h3>
+
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3189">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-8').style.display='block';document.getElementById('fade').style.display='block'">8</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-8', this)">8</a>
+<div id="day-popup-8" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-8').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Common Threads Knitting Club</h3>
+	<h4>Monthly: Every 2nd Tuesday</h4>
+	<p>
+		<p>6:45ish to 8:30 PM All ages are welcome to to our knitting group. We have cross-stitcher and crocheters too and an instructor on hand to help you with your project.</p>
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3193">Event Details</a>
+
+</div>
+-->
+<h3>Common Threads Knitting Club<span class="date">Monthly: Every 2nd Tuesday</span></h3>
+<p>6:45ish to 8:30 PM All ages are welcome to to our knitting group. We have cross-stitcher and crocheters too and an instructor on hand to help you with your project.</p>
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3193">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">9</div><div class="day">10</div><div class="day hasevent today"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-11').style.display='block';document.getElementById('fade').style.display='block'">11</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-11', this)">11</a>
+<div id="day-popup-11" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-11').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3190">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Friday</span></h3>
+
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3190">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3189">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Friday</span></h3>
+
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3189">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-17').style.display='block';document.getElementById('fade').style.display='block'">17</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-17', this)">17</a>
+<div id="day-popup-17" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-17').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>The Coldest Journey: Crossing the Antarctic</h3>
+	<h4>March 17, 2016</h4>
+	<p>
+		<p>7:00 - 8:00 PM &nbsp;Brian Newham will speak about the first attempt by an "ice team" of 5 men to cross the Antarctic in winter. The extreme environment and dangerous terrain had kept anyone from even...</p>
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3507">Event Details</a>
+
+</div>
+-->
+<h3>The Coldest Journey: Crossing the Antarctic<span class="date">March 17, 2016</span></h3>
+<p>7:00 - 8:00 PM &nbsp;Brian Newham will speak about the first attempt by an "ice team" of 5 men to cross the Antarctic in winter. The extreme environment and dangerous terrain had kept anyone from even...</p>
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3507">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-18').style.display='block';document.getElementById('fade').style.display='block'">18</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-18', this)">18</a>
+<div id="day-popup-18" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-18').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3190">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Friday</span></h3>
+
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3190">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3189">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Friday</span></h3>
+
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3189">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-22').style.display='block';document.getElementById('fade').style.display='block'">22</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-22', this)">22</a>
+<div id="day-popup-22" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-22').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Common Threads Knitting Club</h3>
+	<h4>Monthly: Every 4th Tuesday</h4>
+	<p>
+		<p>6:30ish&nbsp;to 8:30 PM Every 2nd and 4th Tuesday of each month.&nbsp; Come for tea and conversation and get some work done on that project! All levels welcome with expert needle-crafter, Natalie Lebel,...</p>
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3170">Event Details</a>
+
+</div>
+-->
+<h3>Common Threads Knitting Club<span class="date">Monthly: Every 4th Tuesday</span></h3>
+<p>6:30ish&nbsp;to 8:30 PM Every 2nd and 4th Tuesday of each month.&nbsp; Come for tea and conversation and get some work done on that project! All levels welcome with expert needle-crafter, Natalie Lebel,...</p>
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3170">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-23').style.display='block';document.getElementById('fade').style.display='block'">23</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-23', this)">23</a>
+<div id="day-popup-23" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-23').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Shel Silverstein program</h3>
+	<h4>March 23, 2016</h4>
+	<p>
+		<p>3:00 - 4:00 for children aged 6 - 8 (or thereabouts). A program based on the poem Where the Sidewalk Ends. Create your own visual interpretation of this famous poem using a variety of collage materials....</p>
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3483">Event Details</a>
+
+</div>
+-->
+<h3>Shel Silverstein program<span class="date">March 23, 2016</span></h3>
+<p>3:00 - 4:00 for children aged 6 - 8 (or thereabouts). A program based on the poem Where the Sidewalk Ends. Create your own visual interpretation of this famous poem using a variety of collage materials....</p>
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3483">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">24</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-25').style.display='block';document.getElementById('fade').style.display='block'">25</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-25', this)">25</a>
+<div id="day-popup-25" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-25').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Preschool Storytime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3190">Event Details</a>
+
+</div>
+-->
+<h3>Preschool Storytime<span class="date">Weekly: Every Friday</span></h3>
+
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3190">&raquo; Read More</a></p><!--
+<div class="calendar_day">
+
+	<h3>Toddlertime</h3>
+	<h4>Weekly: Every Friday</h4>
+	<p>
+		
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3189">Event Details</a>
+
+</div>
+-->
+<h3>Toddlertime<span class="date">Weekly: Every Friday</span></h3>
+
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3189">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-29').style.display='block';document.getElementById('fade').style.display='block'">29</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-29', this)">29</a>
+<div id="day-popup-29" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-29').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Celebrate Spring Pyjama Storytime</h3>
+	<h4>March 29, 2016</h4>
+	<p>
+		<p>6:30 - 7:15 PM &nbsp;For kids aged 2 to 5. Kids will love singing songs, learning rhymes, and listening to stories in the PJ's! &nbsp;Drop in to this free program.</p>
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3484">Event Details</a>
+
+</div>
+-->
+<h3>Celebrate Spring Pyjama Storytime<span class="date">March 29, 2016</span></h3>
+<p>6:30 - 7:15 PM &nbsp;For kids aged 2 to 5. Kids will love singing songs, learning rhymes, and listening to stories in the PJ's! &nbsp;Drop in to this free program.</p>
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3484">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day hasevent"><!--<a href = "javascript:void(0)" onclick = "document.getElementById('day-popup-30').style.display='block';document.getElementById('fade').style.display='block'">30</a>-->
+<a class="day-link" href="javascript:void(0)" onclick="display_news('day-popup-30', this)">30</a>
+<div id="day-popup-30" class="wstyle">
+	<div class="calendar-popup-close-button">
+    	<a href="javascript:void(0)" onclick = "document.getElementById('day-popup-30').style.display='none';"></a>
+    </div>
+    <div class="calendar-popup-event-div"><!--
+<div class="calendar_day">
+
+	<h3>Upcycling</h3>
+	<h4>March 30, 2016</h4>
+	<p>
+		<p>3:00 - 5:00 PM For kids of all ages. &nbsp;Choose a simple or complex project and see what you can create from recycled containers and other junk! Drop in to this free program.</p>
+		
+	</p>
+	<a id="event_details" href="revelstoke?event_id=3485">Event Details</a>
+
+</div>
+-->
+<h3>Upcycling<span class="date">March 30, 2016</span></h3>
+<p>3:00 - 5:00 PM For kids of all ages. &nbsp;Choose a simple or complex project and see what you can create from recycled containers and other junk! Drop in to this free program.</p>
+<p style="text-align: right;"><a href="branches/revelstoke?event_id=3485">&raquo; Read More</a></p></div>
+</div>
+<!-- <div id="fade" class="bstyle"></div> --></div><div class="day">31</div><div class="day none"></div><div class="day none"></div>
+	</div>
+	<div class="clearer"></div>
+	<div id="upcoming-events"><a href="/news-events/upcoming-events?cid=29">Search Our Upcoming Events</a></div>
+</div>
+</div>
+</div>
+</div><div class="banner print-hide" style="margin-bottom:8px;">
+    <a href="/Borrowing-services/internet-access"><img src="/assets/templates/orl/images/banners/hotspot.jpg" alt="Free Internet Access" /></a>
+</div>
+               </div>
+               <div style="float:left; width:650px;">
+                   <h1 style="text-align: center;"><img src="assets/images/Image%20Bank%20for%20Branch%20Use/Spring_Flowers.jpg" alt="" width="398" height="250" /></h1>
+<h1 style="text-align: left;"><strong style="font-size: 12px;"><span style="font-size: 28px; font-style: italic;">Upcoming Special Events</span></strong></h1>
+<p><strong><span style="font-size: 18px; font-family: Georgia;">Spring Break Programs for all ages</span></strong></p>
+<p><strong>Words Brought to Life</strong>: Bring the world of Shel Silverstein's <em>Where the Sidewalk Ends </em>to life. Sculpt, cut, glue, draw and create while having fun through reading!</p>
+<p><strong>For</strong>: 6 to 8 year olds (or thereabouts!)</p>
+<p><strong>Date</strong>: Wednesday, March 23 &nbsp;3:00 - 4:00 PM</p>
+<p>&nbsp;</p>
+<p><strong>Celebrate Spring Pyjama Storytime</strong>: Stories, songs, rhymes, and lots of movement. Wear your pyjamas and bring your favorite bedtime toy!</p>
+<p><strong>For</strong>: 2 to 5 year olds</p>
+<p><strong>Date</strong>: Tuesday, March 29 &nbsp;6:30 - 7:15 PM</p>
+<p>&nbsp;</p>
+<p><strong>Creative Upcycling</strong>: Use our crafting materials and see what you can turn our junk into! Three stations with simple to more complex projects - try one or all three!</p>
+<p><strong>For</strong>: all ages</p>
+<p><strong>Date</strong>: Wednesday, March 30 &nbsp;3:00 - 5:00 PM</p>
+<p>&nbsp;</p>
+<h2><strong>Brian Newham presents: The Coldest Journey</strong></h2>
+<p>In January of 2013 a six-man "Ice Team" set off from London, England to attempt a first-ever winter crossing of Antarctica. This presentation tells the amazing tale and gives an insight into how and why they made this very bold and committing attempt. Brian Newham has spent over 20 seasons in Antarctica where he has worked as a mountaineer, Base Commander of various Research Stations, and as a Logistics Manager. In the Arctic he has led commercial skiing and mountaineering expeditions, has skied across Greenland, and has sailed extensively in the polar latitudes.</p>
+<p><strong>For</strong>: all ages</p>
+<p><strong>Date</strong>: Thursday, March 17 &nbsp;7:00 - 8:00 PM</p>
+<p>&nbsp;</p>
+<h2><strong>World-Class Mountaineer Sandy Allan</strong></h2>
+<p>Winner of the most coveted climbing award, the Piolet D'Or, Sandy Allan will talk about his first ascent of the Mazeno Ridge on the world's ninth highest mountain in the Himalayas, Nanga Parbat. HIs 2015 book, In Some Lost Place, (so far published only in the U.K.) was a runner up for the Boardman Tasker prize and will be available for sale at the event.</p>
+<p><strong>For</strong>: all ages</p>
+<p><strong>Date</strong>: Thursday, April 7 &nbsp;7:00 - 8:00 PM</p>
+<p>&nbsp;</p>
+<h2><strong>Jim Lawrence: Wildlife Photographer</strong></h2>
+<p>Jim Lawrence will present two of his magnificent wildlife films and speak about the creation of his stunning photographs. See his work at the Art First! gallery at #1 113 First St. West. Jim is a well-known ethical photographer and environmentalist. See his website for more images &nbsp;<a href="http://kootenayreflections.com">http://www.kootenayreflections.com</a></p>
+<p><strong>For</strong>: all ages</p>
+<p><strong>Date</strong>: Thursday, April 21 &nbsp;7:00 - 8:00 PM</p>
+<p>&nbsp;</p>
+<hr />
+<p><span style="font-size: 28px; font-style: italic;">Ongoing Children's Programs</span></p>
+<h2>Toddlertime</h2>
+<p>Stories, songs, puppets,&nbsp;rhymes and more!&nbsp;</p>
+<p>Please call or come in to register for this free program.</p>
+<p><strong>For</strong>: Children 3 and younger will enjoy this program but all ages are welcome.</p>
+<p><strong>Dates:&nbsp;&nbsp;</strong>&nbsp;Every Friday from 10:15 to 10:45 AM January 8 to June 24, 2016</p>
+<p>&nbsp;</p>
+<h2>Storytime</h2>
+<p style="text-align: left;">Fun interactive literacy activities with lots of stories and songs!</p>
+<p style="text-align: left;">Please call or come in to register for this free program.</p>
+<p style="text-align: left;"><strong>For: </strong>Children 4 and older please</p>
+<p style="text-align: left;"><strong>Dates:&nbsp; </strong>Every Friday from 11:00 to 11:30 AM January 8 to to June 24, 2016</p>
+<p style="text-align: left;"><strong>Storytimes will not run when schools are closed for Pro-D days and holidays - all ages will be welcome to attend Toddlertime on those days</strong></p>
+<p style="text-align: left;"><strong><br /></strong></p>
+<h2 style="text-align: left;">Columbia Park Storytime</h2>
+<p>We invite all daycares, preschools, and pre-school aged children in the Columbia Park and Big Eddy areas to our travelling storytime in the Columbia Park Elementary School library!</p>
+<p>Please just drop in - no need to register.</p>
+<p><strong>For</strong>: All pre-school aged children</p>
+<p><strong>Dates: </strong>Every Tuesday from 11:00 to 11:30 AM January 5 to June21, 2016</p>
+<p style="text-align: left;">&nbsp;</p>
+<h2 style="text-align: left;">Lego Club</h2>
+<p style="text-align: left;">Have fun creating fantastic creatures and structures according to the monthly theme! Use the library's huge Lego collection and your creation will be displayed in the library!</p>
+<p style="text-align: left;">No registration is necessary for this free program.</p>
+<p style="text-align: left;"><strong>For:</strong>&nbsp;Children aged&nbsp;6ish and older (younger children are welcome with a caregiver)</p>
+<p style="text-align: left;"><strong>Dates:&nbsp; </strong>From 2:30 to 3:30 PM on the 4th Saturday of every month</p>
+<p style="text-align: left;">&nbsp;</p>
+<h2 style="text-align: left;">Family Craft Day</h2>
+<p style="text-align: left;">We provide the materials and instructions - you do the creating!&nbsp; Create a craft or piece of art&nbsp;to take home.&nbsp;</p>
+<p style="text-align: left;">No registration is necessary for this free program.</p>
+<p style="text-align: left;"><strong>For:</strong>&nbsp;Children of all ages. Children under 4 years of age should be accompanied by a caregiver.</p>
+<p style="text-align: left;"><strong>Dates: </strong>From 10:30 to 4:00 PM on the 1st Saturday of every month</p>
+<p style="text-align: left;">&nbsp;</p>
+<hr />
+<h1 style="text-align: left;">&nbsp;Adult Programs</h1>
+<h2><em>Toastmasters</em></h2>
+<p>For everyone who would like to develop better communication and presentation skills in the personal and/or professional life. Please call Michelle Cole at 250-814-4770 for more information.</p>
+<p><strong>For:</strong> Adults</p>
+<p><strong>Dates:</strong> Every Monday from 6:15 to 7:30 PM&nbsp;</p>
+<p>&nbsp;</p>
+<h2><span style="color: #000000; font-size: 18px; display: inline !important;">Spanish Conversation Group</span></h2>
+<p>Beginner and advanced learners will benefit from this group. &nbsp;Have a cup of tea and just listen or talk about anything and everything - in Spanish of course!</p>
+<p><strong>For: </strong>All ages and all levels of proficiency</p>
+<p><strong>Dates</strong>: From 7:00 to 8:00ish PM every Wednesday</p>
+<p>&nbsp;</p>
+<h2><em>Common Threads Knitting Club</em></h2>
+<p>Do you knit, crochet, cross-stitch, needlepoint or latch-hook?&nbsp; Whether you are experienced&nbsp;or just beginning to learn, come and join the fun (with tea provided) as we learn together!&nbsp; Participants are asked to bring their own supplies.</p>
+<p>This is a free program with no registration required.</p>
+<p><strong>For: &nbsp;</strong>All ages and and all levels of experience</p>
+<p><strong>Dates: </strong>From 6:30 to 8:30 PM every 2nd and 4th Tuesday</p>
+<p>&nbsp;</p>
+<h2><em>Money Skills Workshops for Adults</em></h2>
+<p>The Columbia Basin Alliance for Literacy presents free financial literacy workshops at the library. Please contact Koreen Morrone to register or for more information 250-805-2305 or cbal.koreen@gmail.com</p>
+<p><strong>Planning for the Future: wills, estate planning, and power of attorney</strong>&nbsp;presented by Melissa Klages on Wednesday, February 24 &nbsp;6:30 - 7:30 PM</p>
+<p><strong>First time home buyers: tips from the experts </strong>presented by Ken Baker and Todd Arthurs on Monday, February 29 &nbsp;6:30 - 7:30 PM</p>
+<p><em>watch for more workshops in the coming months....</em></p>
+<p>&nbsp;</p>
+<h2><em>Bookclubs</em></h2>
+<p>We currently have a&nbsp;bookclub that meets on the 3rd Tuesday of every month at 1:00 PM (please leave your name with us if you would like to join).&nbsp;&nbsp;Please let us know if your bookclub would like to meet at the library - we would love to have you meet in our quiet meeting room with kettle, coffeemaker, and any furniture you may require. We would also love to suggest and order in the books that you require.</p>
+<p>&nbsp;&nbsp;&nbsp;</p>
+<hr />
+<h1 style="text-align: left;">Ongoing Services</h1>
+<p>&nbsp;</p>
+<h2>Class visits and tours:&nbsp;</h2>
+<p>We would love to come to your class for a visit&nbsp;or have your class come to the library&nbsp;for a tour, a book-talk, or a storytime!&nbsp; Please&nbsp;give us a call at 250-837-5095 for more information and&nbsp;to&nbsp;set up a time.</p>
+<p>&nbsp;</p>
+<h2><strong>Digital Resource and eBook Help</strong></h2>
+<p>Learn how to download eBooks, audiobooks, digital magazines; how to access any of the Okanagan Regional Library's digital resources; or how to use the library's website and catalogue. Please phone Kendra at 250-837-5095 or email <a href="mailto:krunnalls@orl.bc.ca">krunnalls@orl.bc.ca</a> to set up a one-to-one appointment.</p>
+<p><strong>OR</strong></p>
+<p>Sign up in the computer lab at the Senior's Centre (in the Community Centre) for one-on-one tutoring with Kendra every Thursday between 10:00 and 2:00 PM. This option is for members of the Senior's Centre (anyone over 19 years can join for $10) with a basic knowledge of computers.</p>
+<p><strong>OR</strong></p>
+<p>Follow this link to the help page on our website <a href="online-resources/help">www.orl.bc.ca/online-resources/help</a></p>
+<p>&nbsp;</p>
+<h2>Exam Invigilation</h2>
+<p>We provide free proctoring services in the library during any of our open hours.&nbsp; We have free and unlimited wifi accessibility for your online exams if you have your own device/laptop, or you are welcome to use our public computers if your online exam is less than 60 minutes. Contact Kendra <a href="mailto:krunnalls@orl.bc.ca">krunnalls@orl.bc.ca</a> to set up a time.</p>
+<p>&nbsp;&nbsp;</p>
+<h2>Access to the internet and subscription digital resources</h2>
+<p>We offer one hour per day of&nbsp;free internet access on our three computers for members of the library as well as non-members.&nbsp; We also&nbsp;offer&nbsp;unlimited&nbsp;and free&nbsp;internet access for&nbsp;anyone&nbsp;with their own wireless device.&nbsp;Members of the library (free with proof of local address) also have access to digital resources which the ORL subscribes to such as: <strong>Ancestry.com, BC Codes, Grant Connect, QP LegalEze, and Vehicle Safety &amp; Inspection Standards.</strong></p>
+<p>&nbsp;</p>
+<h2>Meeting Room&nbsp;Availability</h2>
+<p>Please feel free to use our quiet meeting room for tutoring, studying, formal or informal gatherings when it is not being used for our own programs and events.&nbsp;&nbsp;The room&nbsp;accommodates approximately 30 people&nbsp;and is available for booking ahead of time.&nbsp; We have chairs and tables available for use as well.&nbsp; Please call us at 250-837-5095 or come in for&nbsp;more details.&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Photocopying and Printing</h2>
+<p>You can print from our public computers for 25 cents per page.&nbsp; Photocopying is 25 cents as well and we can do it for you or you can help yourself.&nbsp; Our photocopier is capable of making double-sided copies, enlarging/reducing, and sorting. We do not offer scanning at this time.</p>
+<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>
+<h1>Current Displays</h1>
+<p>We have stunning <strong>ceramic wall hangings</strong> on display by local artists <strong>Jacqueline Palmer,&nbsp;Sandra Flood, Evelyn Fisher, Tanis Rebbetoy and Sarah Boaz.</strong></p>
+<p>On loan from the Revelstoke Museum &amp; Archives, we also have Laura Stovel's<strong> Racism In Early Revelstoke </strong>panels on display.</p>
+<p>&nbsp;</p>
+<p>Please contact us if you are interested in displaying your artwork!</p>
+<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>
+<h3><strong></strong>&nbsp;</h3>
+<h1 style="text-align: left;">Community Links:</h1>
+<p style="text-align: left;"><strong>City of Revelstoke</strong> Community Centre information and leisure guide<strong>: </strong><a href="http://www.cityofrevelstoke.com/index.aspx?NID=137">www.cityofrevelstoke.com/index.aspx?NID=137</a></p>
+<p style="text-align: left;"><strong>Columbia Basin Alliance for Literacy</strong> event calendar and list of programs offered: <a href="http://data.axmag.com/data/VIP/201504/U125403/F335004/FLASH/index.html">http://www.cbal.org/revelstoke.html</a></p>
+<p style="text-align: left;"><strong>Okanagan College</strong> Continuing Studies brochure: <a href="http://www.okanagan.bc.ca/Programs/Areas_of_study/cs/continuing_studies_brochures.html">www.okanagan.bc.ca/Programs/Areas_of_study/cs/continuing_studies_brochures.html</a></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">&nbsp;<img src="assets/images/follow_bird-a.png" alt="" width="189" height="49" /></p>
+<h2 style="text-align: left;">Follow&nbsp;<strong>Revelstoke&nbsp;Library</strong>&nbsp;on twitter @RevelstokeB and <strong>Love the Library</strong> on Facebook.</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><span style="font-size: x-large;">&nbsp;</span></p>
+               </div></div>
+</div>  <!-- end of background -->
+           <!-- Copyright -->
+	<div class="content-footer-container-bottom-div">
+		<span id="footer-copyright" class="content-footer-text">&copy; 2013 Okanagan Regional Library | Last updated on March 10, 2016 | <a href="/search">Website Search</a></span>
+		<span id="footer-twin-creek" class="content-footer-text"><a href="http://www.twincreekmedia.com" target="_blank">Kelowna Marketing by Twin Creek Media</a></span>
+	</div>
+<div class="footer-contentpage-div">
+	<!-- Location/Nav Row -->
+	<div class="content-footer-container">
+		<div id="footer-location"><h5>Locations, Hours, and Programs</h5><!--<img src="/assets/templates/orl/images/layout/locations-and-hours-footer.gif" alt="Locations &amp; Hours" />--></div>
+		<div id="footer-navigation"><h5>Navigation</h5><!--<img src="/assets/templates/orl/images/layout/navigation-footer.gif" alt="Navigation" />--></div>
+	</div>
+	<!-- Divider -->
+	<div class="content-footer-divider"></div>
+	<!-- City/Menu Row -->
+	<div class="content-footer-container">
+                <div class="content-footer-locations-link-branches">
+                    <div><ul><li><a href="/branches/armstrong" title="Armstrong" >Armstrong</a></li>
+<li><a href="/branches/cherryville" title="Cherryville" >Cherryville</a></li>
+<li><a href="/branches/enderby" title="Enderby" >Enderby</a></li>
+<li><a href="/branches/falkland" title="Falkland" >Falkland</a></li>
+<li><a href="/branches/golden" title="Golden" >Golden</a></li>
+<li class="last"><a href="/branches/hedley" title="Hedley" >Hedley</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/kaleden" title="Kaleden" >Kaleden</a></li>
+<li><a href="/branches/kelowna" title="Kelowna" >Kelowna</a></li>
+<li><a href="/branches/keremeos" title="Keremeos" >Keremeos</a></li>
+<li><a href="/branches/lake-country" title="Lake Country" >Lake Country</a></li>
+<li><a href="/branches/lumby" title="Lumby" >Lumby</a></li>
+<li class="last"><a href="/branches/mission" title="Mission" >Mission</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/naramata" title="Naramata" >Naramata</a></li>
+<li><a href="/branches/north-shuswap" title="North Shuswap" >North Shuswap</a></li>
+<li><a href="/branches/okanagan-falls" title="Okanagan Falls" >Okanagan Falls</a></li>
+<li><a href="/branches/oliver" title="Oliver" >Oliver</a></li>
+<li><a href="/branches/osoyoos" title="Osoyoos" >Osoyoos</a></li>
+<li class="last"><a href="/branches/oyama" title="Oyama" >Oyama</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/peachland" title="Peachland" >Peachland</a></li>
+<li><a href="/branches/princeton" title="Princeton" >Princeton</a></li>
+<li class="active"><a href="/branches/revelstoke" title="Revelstoke" >Revelstoke</a></li>
+<li><a href="/branches/rutland" title="Rutland" >Rutland</a></li>
+<li><a href="/branches/salmon-arm" title="Salmon Arm" >Salmon Arm</a></li>
+<li class="last"><a href="/branches/sicamous" title="Sicamous" >Sicamous</a></li>
+</ul></div>
+                    <div><ul><li><a href="/branches/silver-creek" title="Silver Creek" >Silver Creek</a></li>
+<li><a href="/branches/south-shuswap" title="South Shuswap" >South Shuswap</a></li>
+<li><a href="/branches/summerland" title="Summerland" >Summerland</a></li>
+<li><a href="/branches/vernon" title="Vernon" >Vernon</a></li>
+<li class="last"><a href="/branches/westbank" title="Westbank" >Westbank</a></li>
+</ul></div>
+                </div>
+		<div class="content-footer-locations-link-divider"></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/about-us" title="About Us" >About Us</a></li>
+<li><a href="/news-events" title="News &amp; Events" >News &amp; Events</a></li>
+<li class="active"><a href="/branches" title="Branches" >Branches</a></li>
+<li class="last"><a href="/Borrowing-services" title="Borrowing & Services" >Borrowing & Services</a></li>
+</ul></div>
+		<div class="content-footer-menu-link"><ul><li><a href="/online-resources" title="Web Resources" >Web Resources</a></li>
+<li><a href="/kids" title="Kids" >Kids</a></li>
+<li><a href="/teens" title="Teens" >Teens</a></li>
+<li><a href="/book-lovers" title="Book Lovers" >Book Lovers</a></li>
+<li class="last"><a href="/contact" title="Contact Us" >Contact Us</a></li>
+</ul></div>
+	</div>
+</div>
+            
+        </div>
+
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3147068-38");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://bclibraries.org/piwik/" : "http://bclibraries.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 62);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://bclibraries.org/piwik/piwik.php?idsite=62" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Tag -->
+	</body>
+</html>

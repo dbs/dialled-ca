@@ -1,0 +1,418 @@
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+	<title>Municipalité de Ste-Marcelline-de-Kildare | MRC Matawinie | Lanaudière</title>
+
+	<!-- File MIME.TYPES -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<meta http-equiv="content-style-type" content="text/css" />
+
+	<!-- ContentLanguage -->
+	<meta name="language" content="fr" />
+	<meta http-equiv="content-language" content="fr" />
+
+	<!--  MS specific  -->
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="MSSmartTagsPreventParsing" content="TRUE" />
+
+	<!-- ROBOTS -->
+	<meta name="robots" content="index, follow" />
+
+	
+	<!-- about: CONTENT -->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	
+	
+	<!-- jQuery -->
+	<script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-slideshow.js"></script>
+	<script type="text/javascript" src="/js/menu.js"></script>
+	
+
+	<!-- StyleSheets -->
+	<link rel="stylesheet" type="text/css" href="/css/site.css?20140526" media="all" />
+	<link rel="stylesheet" type="text/css" href="/css/screen.css?20130326.01" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/slideshow.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/print.css?20111018.01" media="print" />  
+	
+	<script type="text/javascript">
+		var aujourdhui = new Date();
+		var moisEnCours = aujourdhui.getMonth() + 1;
+		var anneeEnCours = aujourdhui.getFullYear();
+		var tabMoisFr = new Array("x","janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre");
+		
+		
+		$(document).ready(function () {
+			$("#Calendrier-Date").text(tabMoisFr[moisEnCours] + " " + anneeEnCours);
+			
+	
+			$("#Calendrier-Suivant").click(function() {
+				
+				$("#Calendrier-Attente").addClass("visible");
+				$('#Calendrier-Contenu').html("");
+				$.ajax({
+				   type: "POST",
+				   url: "ajax-calendrier.jsp",
+				   data: "mois=" + (moisEnCours + 1 < 13 ? moisEnCours +1 : 1) + "&annee=" + (moisEnCours + 1 < 13 ? anneeEnCours : anneeEnCours+1),
+				   error:function(msg){
+				     alert( "Une erreur s'est produite : " + msg );
+				     $("#Calendrier-Attente").removeClass("visible");
+				   },
+				   success:function(data){
+					if(moisEnCours == 12) {
+						moisEnCours = 1;
+						anneeEnCours++;
+					} else {
+						moisEnCours++;
+					}
+					
+					$("#Calendrier-Attente").removeClass("visible");
+					$("#Calendrier-Date").text(tabMoisFr[moisEnCours] + " " + anneeEnCours);
+					$('#Calendrier-Contenu').html(data);
+					
+				}});
+							
+			});
+			
+			$("#Calendrier-Precedent").click(function() {
+				
+				$("#Calendrier-Attente").addClass("visible");
+				$('#Calendrier-Contenu').html("");
+				$.ajax({
+				   type: "POST",
+				   url: "ajax-calendrier.jsp",
+				   data: "mois=" + (moisEnCours - 1 == 0 ? 12 : moisEnCours - 1) + "&annee=" + (moisEnCours - 1 == 0 ? anneeEnCours - 1 : anneeEnCours),
+				   error:function(msg){
+				     alert( "Une erreur s'est produite : " + msg );
+				     $("#Calendrier-Attente").removeClass("visible");
+				   },
+				   success:function(data){
+					if(moisEnCours == 1) {
+						moisEnCours = 12;
+						anneeEnCours--;
+					} else {
+						moisEnCours--;
+					}
+					
+					$("#Calendrier-Attente").removeClass("visible");
+					$("#Calendrier-Date").text(tabMoisFr[moisEnCours] + " " + anneeEnCours);
+					$('#Calendrier-Contenu').html(data);
+					
+				}});
+							
+			});
+			
+	
+		});
+	
+	</script>
+	
+	
+
+
+</head>
+
+<body id="page_1" class="typePage_1 accueil langue_fr estPage">	
+
+<a name="haut"></a>
+
+<div id="Fond-Page">
+	<div id="Page">
+		<div id="Entete">
+			<div id="Logo"><a href="/"><img src="/images/logo.jpg" alt="" /></a></div>
+			<div id="Recherche">
+				<form action="/index.jsp?p=71" method="post">
+					<input type="text" name="mc" />			
+				</form>
+			</div><!-- /recherche -->
+			<div id="Menu-Haut">
+				<a href="/index.jsp?p=68"><img src="/images/menu-liens.gif" alt="Liens" /></a>
+				<a href="/index.jsp?p=106"><img src="/images/menu-faq.gif" alt="Foire aux questions" /></a>
+				<a href="/index.jsp?p=70"><img src="/images/menu-contact.gif" alt="Nous joindre" /></a>
+				<a href="/index.jsp?p=72"><img src="/images/menu-langue.gif" alt="English" /></a>
+				<a href="#" onclick="alert('En ligne sous peu')"><img src="/images/menu-intranet.gif" alt="Intranet" /></a>
+			</div><!-- /Menu-Haut -->
+			<div id="Menu">
+				<a href="/"><img id="img-accueil" src="/images/menu-accueil.png" alt="Accueil" /></a>
+				<a href="/index.jsp?p=4"><img id="img-municipalite" src="/images/menu-municipalite.png" alt="Municipalité" /></a>
+				<a href="/index.jsp?p=35"><img id="img-citoyens" src="/images/menu-citoyens.png" alt="Citoyens" /></a>
+				<a href="/index.jsp?p=45"><img id="img-environnement" src="/images/menu-environnement.png" alt="Environnement" /></a>
+				<a href="/index.jsp?p=52" class="dernier"><img id="img-loisirs" src="/images/menu-loisirs.png" alt="Loisirs et culture" /></a>
+			</div><!-- /Menu -->
+			<div id="Ombre-Menu"></div>
+		</div><!-- /entete -->
+		<div id="Principal">
+		
+
+
+
+
+		<div id="Slideshow">
+				
+				<img src="/images/slideshow-accueil/photo-2.jpg" alt="" />
+				
+			
+		</div><!-- /slideshow -->
+		
+		<div id="Barre-Verte"></div>
+
+	</div><!-- /Principal -->
+	
+	<div id="Colonne-Gauche-Accueil">
+		<div id="Calendrier">
+			<div id="Calendrier-Navigation">
+				<span id="Calendrier-Precedent"><a onclick="return false;" href="#"><img src="/images/fleche-precedent.gif" alt="" /></a></span>
+				<span id="Calendrier-Date"></span>
+				<span id="Calendrier-Suivant" rel="mois='+moisSuivant+'&amp;annee='+anneeSuivante+'"><a href="#" onclick="return false;"><img src="images/fleche-suivant.gif" alt="" /></a></span>
+			</div><!-- /Calendrier-Navigation -->
+			
+			<div id="Calendrier-Attente"><img src="/images/ajax-loader.gif" alt="" /></div>
+			
+			<div id="Calendrier-Contenu">
+				<div id="Calendrier-Jours">
+<div class="col1"></div>
+<div class="col2"></div>
+<div class="col3">
+1
+</div>
+<div class="col4">
+<a title="Livraison Bonne Boîte Bonne Bouffe" href="/index.jsp?p=67&amp;d=20160302">
+2
+</a>
+</div>
+<div class="col5">
+3
+</div>
+<div class="col6">
+4
+</div>
+<div class="col7">
+5
+</div>
+<div class="col1">
+<a title="Semaine des collecte des déchets volumineux autres que les encombrants de métal" href="/index.jsp?p=67&amp;d=20160306">
+6
+</a>
+</div>
+<div class="col2">
+<a title="Semaine des collecte des déchets volumineux autres que les encombrants de métal" href="/index.jsp?p=67&amp;d=20160307">
+7
+</a>
+</div>
+<div class="col3">
+<a title="Semaine des collecte des déchets volumineux autres que les encombrants de métal" href="/index.jsp?p=67&amp;d=20160308">
+8
+</a>
+</div>
+<div class="col4">
+<a title="Semaine des collecte des déchets volumineux autres que les encombrants de métal" href="/index.jsp?p=67&amp;d=20160309">
+9
+</a>
+</div>
+<div class="col5">
+<a title="Semaine des collecte des déchets volumineux autres que les encombrants de métal - Collecte des ordures et récupération" href="/index.jsp?p=67&amp;d=20160310">
+10
+</a>
+</div>
+<div class="col6">
+<a title="Semaine des collecte des déchets volumineux autres que les encombrants de métal" href="/index.jsp?p=67&amp;d=20160311">
+11
+</a>
+</div>
+<div class="col7">
+12
+</div>
+<div class="col1">
+13
+</div>
+<div class="col2">
+<a title="Assemblée du conseil municipal" href="/index.jsp?p=67&amp;d=20160314">
+14
+</a>
+</div>
+<div class="col3">
+15
+</div>
+<div class="col4">
+<a title="Livraison Bonne Boîte Bonne Bouffe" href="/index.jsp?p=67&amp;d=20160316">
+16
+</a>
+</div>
+<div class="col5">
+17
+</div>
+<div class="col6">
+18
+</div>
+<div class="col7">
+19
+</div>
+<div class="col1">
+20
+</div>
+<div class="col2">
+21
+</div>
+<div class="col3">
+22
+</div>
+<div class="col4">
+23
+</div>
+<div class="col5">
+<a title="Collecte des ordures et récupération" href="/index.jsp?p=67&amp;d=20160324">
+24
+</a>
+</div>
+<div class="col6">
+<a title="Bureau municipal fermé - Journée ménage/archivage" href="/index.jsp?p=67&amp;d=20160325">
+25
+</a>
+</div>
+<div class="col7">
+26
+</div>
+<div class="col1">
+27
+</div>
+<div class="col2">
+<a title="Bureau municipal fermé - Lundi Saint" href="/index.jsp?p=67&amp;d=20160328">
+28
+</a>
+</div>
+<div class="col3">
+29
+</div>
+<div class="col4">
+30
+</div>
+<div class="col5">
+31
+</div>
+</div><!-- /Calendrier-jours -->
+<div id="Calendrier-Lien"><a href="/index.jsp?p=67">Voir tous les événements</a></div>
+
+			</div>
+			
+		</div><!-- /Calendrier -->
+		
+		<div id="Logos"> 
+			<a href="/index.jsp?p=59"><img style="padding: 0 22px;" border="0" src="/images/fasm_logo2015.gif" alt="Festival des artisans" /></a><!--<img border="0" src="/images/logo-festival.gif" alt="" />-->
+			<a href="http://www.mrcmatawinie.org/" target="_blank" ><img border="0" src="/images/logo-mrc.gif" alt="" style="vertical-align:top;" /></a>
+		</div><!-- /Logos -->
+	</div><!-- /Colonne-Gauche-Accueil -->
+	
+	<div id="Colonne-Droite-Accueil">
+		<div id="Liens">
+			<a href="/index.jsp?p=12"><img src="/images/lien-carte.jpg" alt="" /></a>
+			<a href="/index.jsp?p=155"><img src="/images/lien-projets-immobiliers.jpg" alt="" /></a>
+			<a href="/index.jsp?p=59"><img src="/images/lien-festival.jpg" alt="" /></a>
+		</div><!-- /liens -->
+		
+		
+
+			<div id="Haut-A-Surveiller">
+				<div id="A-Surveiller">
+					
+					
+					
+						<div class="a-surveiller ">
+							<a href="/upload/File/flyer_08_hres.pdf" target="_blank">
+
+								<div class="a-surveiller-date">22 mars 2016</div>
+								<div class="texte">Matawinie - La rencontre des eaux - Projection du documentaire à l'Église de Sainte-Marcelline-de-Kildare</div>
+							</a>
+						</div>
+					
+					
+					
+						<div class="a-surveiller ">
+							<a href="http://www.ste-marcelline.com/upload/File/Postes_ete_2016.pdf">
+
+								<div class="a-surveiller-date">4 mars 2016</div>
+								<div class="texte">Emplois d'été pour étudiants et étudiantes</div>
+							</a>
+						</div>
+					
+					
+					
+						<div class="a-surveiller ">
+							<a href="http://www.ste-marcelline.com/index.jsp?p=137">
+
+								<div class="a-surveiller-date">25 février 2016</div>
+								<div class="texte">Camp de jour - Été 2016</div>
+							</a>
+						</div>
+					
+					
+					
+						<div class="a-surveiller dernier">
+							<a href="/upload/File/broch_culturelle_ste-marcelline_2016-final.pdf" target="_blank">
+
+								<div class="a-surveiller-date">18 février 2016</div>
+								<div class="texte">Programmation de Diffusion Culturelle 2016</div>
+							</a>
+						</div>
+					
+					
+					
+					<div id="A-Surveiller-Lien"><a href="/index.jsp?p=113">Toutes les nouvelles</a></div>
+				
+				</div><!-- /a-surveiller -->
+			</div><!-- /Haut-A-Surveiller -->
+		
+		
+		
+		<div id="Contenu-Accueil">
+			<!--<div id="Contenu-Accueil-Liens"><a href="/upload/File/role_2013.pdf" target="_blank">Rôle 2013</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/upload/File/Budget%202013%20-%20Presentation.pdf" target="_blank">Budget 2013</a></div>-->
+			
+			<h1>Bienvenue à la municipalité de Sainte-Marcelline-de-Kildare!</h1>
+			
+			<p>La Municipalité de Ste-Marcelline-de-Kildare vous souhaite la bienvenue dans un des endroits les plus pittoresque de Lanaudière où il fait bon vivre. Ce site est mis à votre disposition afin de vous familiariser avec nos <a href="index.jsp?p=20">services</a> et un certain nombres de sujets y sont traités. Nous espérons qu&rsquo;il saura vous guider dans votre recherche. Les <a href="index.jsp?p=73">membres du conseil</a>&nbsp;et les <a href="index.jsp?p=18">employé(e)s municipaux</a> sont à votre entière disposition pour toute question ou commentaire.</p>
+		</div><!-- /contenu-accueil -->
+
+	</div><!-- /colonne-droite -->
+
+	<div class="clear"></div>
+
+	
+		
+		
+		
+
+		
+			
+	</div><!-- /Page -->
+	
+	
+	<div id="Pied">
+		<div id="Pied-Contenu">
+			<div id="Copyright">&copy; 2012-2016, Municipalité de Sainte-Marcelline. Tous droits réservés.<span class="noprint">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/index.jsp?p=2">Plan du site</a></span></div>
+			<div id="Realisation">Conception graphique : <a href="http://www.kiwigraphik.com" target="_blank">Kiwigraphik</a>&nbsp;&nbsp;|&nbsp;&nbsp;Réalisation: <a href="http://www.nexion.biz">NeXion</a></div>	
+			<div class="clear"></div>
+		</div><!-- /pied-contenu -->
+	</div><!-- /Pied -->
+	</div><!-- /Fond-Page -->
+	
+</body>
+</html>
+

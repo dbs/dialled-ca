@@ -1,0 +1,1977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	
+		<title>Perth County &bull; Cultivating Opportunity &bull; Stratford-Perth Archives</title>
+        <meta name="keywords" content="Perth County, Ontario, Canada" />
+		<meta name="description" content="Welcome To Perth County" />
+
+	
+		<!-- Developed By: Resolution Interactive Media Inc. -->
+		<!-- http://www.resolutionim.com -->
+	    <!-- Jonathan Kochis 05/26/09 -->
+		<!-- Brendan Farr-Gaynor 05/26/09 -->
+		<!-- Owain Johnson 05/26/09 -->
+        <!-- Jon Rundle 05/26/09 -->
+
+        <!--  -->
+	
+		
+		<link rel="SHORTCUT ICON" href="/favicon.ico" />
+		<link type="text/css" id="standardStyleSheet" title="standard" rel="stylesheet" href="/css/standard.css" media="screen" />
+		<link type="text/css" id="textOnlyStyleSheet" title="textOnly" rel="alternate stylesheet" href="/css/textOnly.css"	media="screen" />
+        <link type="text/css" rel="stylesheet" href="/css/apps.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.8.6.css" />
+        <style type="text/css">
+        @media print {
+			#header, #primaryNav, #innerSubNav, #upperInhalt, #footer { display:none; }
+		}
+		</style>
+
+
+		<link rel="alternate" type="application/rss+xml" title="Perth County - Central News Feed" href="/rss/centralRSS.php" />
+  		<link rel="alternate" type="application/rss+xml" title="Perth County - News" href="/fileBin/news.xml" />
+  		<link rel="alternate" type="application/rss+xml" title="Perth County - Calendar" href="/rss/events.php" />
+		<link rel="alternate" type="application/rss+xml" title="Perth County - Public Notices" href="/rss/notices.php" />
+        <link type="text/css" rel="stylesheet" href="/css/jquery.treeview.css" />
+        
+      <!--[if lte IE 7]>
+        <style type="text/css">
+        html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+        </style>
+	<![endif]-->
+
+	
+		<script type="text/javascript" src="/js/framework.js"></script>
+		<!--<script type="text/javascript" src="/js/jquery/jquery.js"></script>-->
+		<script src="/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+       	<script src="/js/jquery-ui-1.8.6.min.js" type="text/javascript"></script>
+       	<script src="/js/calendar/calendar.js" type="text/javascript" ></script>
+       	
+        <!-- slidemenu.js is used only for the quick links at the top of the layout, most other elements such as the main nav and home banners are custom jQuery -->
+      	<script type="text/javascript" src="/js/jquery/jquery.pagination.js"></script>
+        <script type="text/javascript" src="/js/swfobject.js"></script>
+		
+		<script src="/js/jquery/jquery.treeview.js" type="text/javascript" ></script>
+		<script src="/js/jquery/jquery.cookie.js" type="text/javascript" ></script>
+        
+              <script type="text/javascript" src="/js/flowplayer-3.1.4.min.js"></script>
+              <!--<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>-->
+
+		
+
+
+<!-- jquery for this page -->
+
+<script type="text/javascript"> 
+/* <![CDATA[ */
+
+$(document).ready(function(){
+
+//video
+ $("a[href*='.flv']").each(function() {
+ 		
+		$(this).attr('style', 'display: block; width: 320px; height: 240px;');
+		$(this).text('');
+		
+		
+		//$(this).after("<a name=\"fb_share\" type=\"button_count\" href=\"http://www.facebook.com/sharer.php\"><img src='/images/fbShare.gif' alt='Share' style='padding:0px; margin:0px;' /></a>");
+	
+		
+  		flowplayer(this, "/flx/flowplayer-3.1.4.swf", {
+		
+		clip: {
+			autoPlay:false,
+			autoBuffering: true
+			
+		}
+		
+		});
+		
+ });
+ //end of video
+
+/********************** vv Magic Style Sheet Changing Code vv **********************/
+/********************** vv Magic Style Sheet Changing Code vv **********************/
+function switchStylestyle(styleName, clickedLink) {
+	$('link[rel*=style][title]').each(function(i) {
+
+		this.disabled = true;
+		if (this.getAttribute('title') == styleName) { 
+			this.disabled = false;
+		}
+	});
+	createCookie('style', styleName, 365);
+}
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	} else { 
+		var expires = "";
+	}
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+//	alert(ca);
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') { 
+			c = c.substring(1,c.length);
+		}
+		if (c.indexOf(nameEQ) == 0) {
+			return c.substring(nameEQ.length,c.length);
+		}
+	}
+	return null;
+}
+
+/********************** ^^ Magic Style Sheet Changing Code ^^ **********************/
+/********************** ^^ Magic Style Sheet Changing Code ^^ **********************/
+
+/********************** vv Magic Style Sheet Changing Code vv **********************/
+/********************** vv Magic Style Sheet Changing Code vv **********************/
+	$('.styleswitch').click(function() {
+		switchStylestyle(this.getAttribute("rel"), this);
+		return false;
+	});
+	var c = readCookie('style');
+	if (c) switchStylestyle(c);
+/********************** ^^ Magic Style Sheet Changing Code ^^ **********************/
+/********************** ^^ Magic Style Sheet Changing Code ^^ **********************/
+	
+/********************** vv Magic Text Resizing Code vv **********************/
+/********************** vv Magic Text Resizing Code vv **********************/
+	var whatToScale = '#content p, #content a:not(.searchResultItemLink)';
+	var MINSIZE = 7;
+	var BASSIZE = Array();
+	var MAXSIZE = 18;
+	var runResize = true;
+ 
+ 
+	/*********** vv init all font-size vv ****************/
+	var initCounter = 0;
+	
+	
+	// home-font is the homepage font size 
+	// always one pixel larger than the other pages
+	var storedSize = readCookie('stored-font');
+	var currentSizeInc = 0;
+	
+	var bodyBaseSize = $('body').css('font-size');
+	bodyBaseSize = parseFloat(bodyBaseSize, 10);
+	
+	$(whatToScale).each(function(i) {
+		
+	 	var currentSize = $(this).css('font-size');
+			
+		// parse the number value out of the font size value, set as a var called 'num'
+		var num = parseFloat(currentSize, 10);
+		// make sure current size is 2 digit number, save as var called 'unit'
+		var unit = currentSize.slice(-2);
+	
+		
+		// BASESIZE is the value of difference between the body font size
+		BASSIZE[initCounter++] = num;
+		
+			
+		if (storedSize != 'normal') {
+			if (storedSize != undefined) {
+				currentSizeInc = storedSize - bodyBaseSize;
+			}
+			
+			/*
+if (initCounter == 1) { 
+				alert(storedSize + ' - ' +  bodyBaseSize);
+				alert(currentSizeInc);
+				alert(num + ' => ' + unit);
+				alert((num + currentSizeInc));
+			}
+*/
+		
+		
+			//alert((num + currentSizeInc) + unit);
+			
+			$(this).css('font-size', (num + currentSizeInc) + unit);
+			
+		}
+		
+	});  
+	/*********** ^^ init all font-size ^^ ****************/
+
+
+	$("a.textScaler").click(function(){
+		$clickedLink = this;
+		var loopCounter = 0;
+		var runResize = true;
+	
+		/***** vv Test for limits vv *****/
+		if($clickedLink.id != 'linkNormal') {
+			$(whatToScale).each(function(i) {
+				
+				var currentSize = $(this).css('font-size'); 
+				var num = parseFloat(currentSize, 10);			
+			
+				if ($clickedLink.id == 'linkLarge' && (storedSize) >= MAXSIZE) {				
+					runResize = false;
+					return false;
+				} else if ($clickedLink.id == 'linkSmall' && num <= MINSIZE) {			
+					runResize = false;
+					return false;
+				} else {
+					//$('#linkLarge').css('text-decoration','underline');					
+				}
+			});
+		}
+		/***** ^^ Test for limits ^^ *****/
+	
+		/***** vv  Change Text size vv *****/
+		if(runResize) {
+			
+			var num;
+			var unit;
+			var clicked;
+			$(whatToScale).each(function(i) {
+			
+				var currentSize = $(this).css('font-size');
+				// parse the number value out of the font size value, set as a var called 'num'
+				num = parseFloat(currentSize, 10);
+				// make sure current size is 2 digit number, save as var called 'unit'
+				unit = currentSize.slice(-2);
+			
+				// javascript lets us choose which link was clicked, by ID
+				if ($clickedLink.id == 'linkLarge') { 
+					num = num + 2;
+					clicked = 'large';
+				} else if ($clickedLink.id == 'linkSmall' && num > MINSIZE) { 
+					num = num - 2; 
+					clicked = 'small';
+				} else if ($clickedLink.id == 'linkNormal') { 					
+					clicked = 'normal';
+					num = BASSIZE[loopCounter++];
+				}
+				// jQuery lets us set the font Size value of the mainText div
+				$(this).css('font-size', num + unit);
+				
+			});
+			
+			if (clicked == 'normal') { 
+				createCookie('stored-font', 'normal', 365);
+			} else if (clicked == 'large') {
+				if (storedSize == 'normal' || storedSize == 'NaN' || storedSize == null) storedSize = bodyBaseSize;
+				storedSize = (+storedSize + 2);
+				createCookie('stored-font', +storedSize, 365);
+				
+				
+			
+			} else if (clicked == 'small') {
+				if (storedSize == 'normal' || storedSize == 'NaN' || storedSize == null) storedSize = bodyBaseSize;
+				
+				storedSize = (+storedSize - 2);
+				createCookie('stored-font', +storedSize, 365);
+				
+			}
+			
+		}		
+		/***** ^^ Change Text size ^^ *****/
+	
+	});
+	
+/********************** ^^ Magic Text Resizing Code ^^ **********************/
+/********************** ^^ Magic Text Resizing Code ^^ **********************/
+
+
+	
+	
+	//BUILD OUT THE NAV	
+	
+	var arrowimages={down:['downarrowclass', '/images/template/standard/downSmall.gif', 10], right:['rightarrowclass', '/images/template/standard/rightSmall.gif']}
+	jqueryslidemenu.buildmenu("primaryNavItems", arrowimages);
+	
+	var arrowimages={down:['downarrowclass', '/images/layout/transparent.gif', 10], right:['rightarrowclass', '/images/layout/transparent.gif']}
+	jqueryslidemenu.buildmenu("externalLinks", arrowimages);
+	
+	var arrowimages={down:['downarrowclass', '/images/layout/transparent.gif', 10], right:['rightarrowclass', '/images/layout/transparent.gif']}
+	jqueryslidemenu.buildmenu("helpYou", arrowimages);
+	
+	if ($.browser.msie) {
+
+		$("#quickLinkCapture").css("left", "auto");
+		$("#quickLinkCapture").css("top", "2px");
+		$("#quickLinkCapture").css("position", "absolute");
+		$("#quickLinkCapture").css("z-index", "900");
+		$("#quickLinkCapture").css("width", "100px");
+		$("#quickLinkCapture").css("height", "25px");
+		
+	}
+	
+	
+	var arrowimages={down:['downarrowclass', '/images/template/standard/down.gif', 23], right:['rightarrowclass', '/images/template/standard/right.gif']}
+	jqueryslidemenu.buildmenu("quickLinkDropDown", arrowimages);
+	//PNG fix for the Home Banner
+	$.ifixpng('/images/pixel.gif');
+	$("img.homeBannerFeaturedGraphic").ifixpng();
+	
+	$("#primaryNavItems ul li ul").ifixpng();
+
+	
+	
+
+
+});//$(document).ready(function(){
+
+
+</script>
+
+	
+
+
+<script language="javascript" type="text/javascript">
+	function setSearchField(whatfield) {
+		switch(whatfield.value) {
+			case '':
+				whatfield.value = 'Search Perth County';
+			break;
+			case 'Search Perth County':
+				whatfield.value = '';
+			break;
+		}
+		
+	}
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+$(function() {
+	$("#primaryNavItems ul li ul li:first-child") .css("margin-top", "15px");
+	$("#primaryNavItems ul li ul li:last-child") .css("margin-bottom", "10px");
+	$("#primaryNavItems ul li ul li ul.dropDownNav li:first-child") .css("margin-top", "5px");
+	$("#primaryNavItems ul li ul li ul.dropDownNav li:last-child") .css("margin-bottom", "5px");
+	$("#primaryNavItems ul li.currentPage a:first") .css("color", "#FFFFFF");
+});	
+</script>
+
+
+ 	</head>
+
+	<body>
+	<div id="footerInhalt" class="orange">  
+        
+	<div id="upperInhalt" class="orange">
+       <div id="upperToolsWrap">
+           <div id="upperTools">
+                <div id="externalLinks">
+                <ul class="dropDownNav" style="z-index:10;" id="list-4">
+                <li><a href="#">External Links</a>
+                
+                  <ul class="dropDownNav" style="z-index:10;" id="listDD-4" >
+										
+										<li>
+										<a href="http://www.stratfordcanada.ca/en/livehere/resources/2013_Parking_Map.pdf" target="_blank">City of Stratford Parking Map</a>
+										</li>
+										
+										<li>
+										<a href="http://www.theweathernetwork.com/weather/CAON0658" target="_blank">Weather Conditions</a>
+										</li></ul>                </li>
+                </ul>
+                </div>
+                <div id="helpYou"><ul class="dropDownNav" style="z-index:10;" id="list-help"><li><a href="#">How Can We Help You?</a><ul class="dropDownNav" style="z-index:10;" id="listDD-15" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/contact_us" target="_self">Parking at the Courthouse</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/page/Weather_Conditions" target="_self">Weather & Road Conditions</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/page/county_council" target="_self">Get To Know The Council</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/page/pay_provincial_offenses" target="_self">Pay a Ticket / Fine</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/page/online_forms" target="_self">Find a Permit or Form</a>
+										</li></ul></li></ul></div>
+            </div> <!-- End of upperTools -->
+       </div> <!-- End of upperToolsWrap -->
+    </div> <!-- End of upperInhalt -->
+    
+	<div id="outerInhalt">
+    <div id="inhalt">
+ 
+			<div id="header">
+            	<div id="headerContent">
+            
+            <!--[if lt IE 7]>
+                <style type="text/css">
+                html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+                </style>
+                <![endif]-->
+            
+
+            <div id="masterLogo"><a href="/"><img src="/images/layout/masterLogo.gif" alt="Perth County" /></a></div>
+            <div id="altLogo"><h1><a href="/">Perth County</a></h1><h2><a href="/">Cultivating Opportunity</a></h2></div>
+
+            <div id="globalToolsWrap">
+            	<div id="globalToolsLeft"><br /><a id="mainPhoneNumber" href="/page/staffDirectory">Staff Directory</a><br />8:30am - 4:30pm, Monday - Friday</div>
+                <div id="globalToolsRight">519.271.0531<br />1 Huron Street<br />Stratford, Ontario N5A 5S4</div>
+            </div>
+            
+                                               <div id="headerTools"><div id="styleModBox"><a class="styleswitch" id="textOnlySwitchLink" rel="textOnly" href="#">Text Only</a> <a class="styleswitch" id="standardSwitchLink" rel="standard" href="#">Standard</a></div><div id="textModBox"><a href="#" id="linkSmall"  class="textScaler">A</a> <a href="#" class="textScaler" id="linkNormal">A</a> <a href="#" class="textScaler" id="linkLarge">A</a></div></div>            
+            <div id="searchBar">
+            	<a id="advancedSearchButton" href="/tools/search/advSearch.php">Advanced Search</a><form action="/tools/search/search.php" method="get"><input class="formStyleAlt" name="q" type="text" onblur="javascript:setSearchField(this);" onfocus="javascript:setSearchField(this);" id="searchQueryField" value="Search Perth County" /><input type="submit" value="" id="searchBtn" /></form>
+            </div>
+            
+       </div> <!-- End of headerContent -->
+       </div> <!-- End of header -->
+       
+       <div id="primaryNav">
+     <div id="primaryNavLeft"><!--&nbsp;--></div> 
+     <div id="primaryNavRight"><!--&nbsp;--></div>
+     <div id="primaryNavItems" style="z-index:10;">
+    
+		    
+            <ul class="dropDownNav" style="z-index:10;" id="listMN0" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/home" target="_self">Home</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/page/ecdevhome" target="_self">Business in Perth County</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/living_in_perth" target="_self">Living in Perth County</a><ul class="dropDownNav" style="z-index:10;" id="listMN24" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/about_perth_county" target="_self">About Perth County</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/publicnotices" target="_self">Public Notices</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/opareview" target="_self">Official Plan - 5 Year Review</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Citizens_News" target="_self">Citizens News</a>
+										</li>
+										
+										<li class="currentPage" >
+										<a href="http://www.perthcounty.ca/stratford_perth_archives" target="_self">Stratford-Perth Archives</a><ul class="dropDownNav" style="z-index:10;" id="listMN373" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Abount_Us" target="_self">Archives - About Us</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Services_and_Fees" target="_self">Archives - Services and Fees</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Hours_and_Locations" target="_self">Archives - Hours</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Resources" target="_self">Archives - Resources</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Campbell_Collection" target="_self">Archives - Campbell Collection</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Archives_Contact_Us" target="_self">Archives - Contact Us</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/County_of_Perth_Official_Plan" target="_self">County of Perth Official Plan</a><ul class="dropDownNav" style="z-index:10;" id="listMN137" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Official_Plan_Sechdules_of_Detailed_Maps" target="_self">Schedules of Detailed Maps</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/ems" target="_self">EMS - Emergency Medical Services</a><ul class="dropDownNav" style="z-index:10;" id="listMN270" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/emergency_services" target="_self">Information Practice Statement</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Paramedic_Community_Care_Fund" target="_self">Paramedic Community Care Fund</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/EMS_Recruitment_Process" target="_self">EMS Recruitment Process </a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/EMS_Provincial_Response_Time_Reporting" target="_self">EMS Provincial Response Time Reporting</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/CPR_Awareness" target="_self">CPR Awareness</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Public_Access_Defibrillator" target="_self">Public Access Defibrillator</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Citizen_Rescue_Award_of_Merit" target="_self">Citizen Rescue Award of Merit</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/emergency_management" target="_self">Emergency Management</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/accessibility" target="_self">Accessibility</a><ul class="dropDownNav" style="z-index:10;" id="listMN105" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Accessible_Customer_Service_Standard" target="_self">Corporate Accessibility Policy</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Accessibility_Advisory_Committee_AAC" target="_self">Accessibility Advisory Committee (AAC)</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Accessibility_Plans" target="_self">Accessibility Plans</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/BrowseAloud" target="_self">BrowseAloud</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/2-1-1_Service" target="_self">2-1-1 Service</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/olh" target="_self">Opportunity Lives Here</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Weather_Conditions" target="_self">Weather & Road Conditions</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/page/thingstodo" target="_self">Visiting Perth County</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/administration" target="_self">Administration</a><ul class="dropDownNav" style="z-index:10;" id="listMN26" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Strategic_Plan" target="_self">Strategic Plan</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Joint_Service_Delivery_Review_2014" target="_self">Joint Service Delivery Review 2014</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/bylaws" target="_self">Bylaws</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/employment" target="_self">Employment</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/staffDirectory" target="_self">Staff Directory</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/pay_provincial_offenses" target="_self">Provincial Offences Administration</a><ul class="dropDownNav" style="z-index:10;" id="listMN59" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/page/Notice_to_Defendant_Form" target="_self">Request for Disclosure Form</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/page/County_of_Perth_Official_Plan" target="_self">County of Perth Official Plan</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Energy_Conservation_Plan" target="_self">Energy Conservation Plan</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/forms" target="_self">Applications and Permits</a><ul class="dropDownNav" style="z-index:10;" id="listMN290" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/travelpermit" target="_self">Travel Permit</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/tenders_rfps" target="_self">Tenders and RFPs</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/financial_info" target="_self">Financial Information</a><ul class="dropDownNav" style="z-index:10;" id="listMN301" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/financial_reports" target="_self">Financial Reports</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Asset_Mgm_Plan" target="_self">Asset Management Plan</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Municipal_Performance_Measurement_Program" target="_self">Performance Measures</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Gas_Tax_Projects" target="_self">Gas Tax Projects</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Member_Municipalities" target="_self">Member Municipalities</a><ul class="dropDownNav" style="z-index:10;" id="listMN118" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Other_Municipalities" target="_self">Other Municipalities</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Other_Agencies_in_Perth_County" target="_self">Other Agencies in Perth County</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/complaints" target="_self">County Services Complaints</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/County_Council" target="_self">Council</a><ul class="dropDownNav" style="z-index:10;" id="listMN361" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Council_Composition" target="_self">Council Composition</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Agenda_-_Council_and_Committees" target="_self">Agenda - Council and Committees</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Minutes_-_Council_and_Committees" target="_self">Minutes - Council and Committees</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Meeting_Schedule" target="_self">Meeting Schedule</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Addressing_Council" target="_self">Addressing Council</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Correspondence_to_Council" target="_self">Correspondence to Council</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Procedures_of_Council" target="_self">Procedures of Council</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Petitions" target="_self">Petitions</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Code_of_Conduct" target="_self">Code of Conduct</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/online_services" target="_self">E-services</a><ul class="dropDownNav" style="z-index:10;" id="listMN36" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/pay_provincial_offenses" target="_self">Pay a Ticket / Fine</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/travelpermit" target="_self">Travel Permit Application</a>
+										</li>
+										
+										<li>
+										<a href="http://maps.perthcounty.ca/public" target="_blank">Interactive Maps</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Calendar" target="_self">Calendar</a><ul class="dropDownNav" style="z-index:10;" id="listMN231" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Event_Request_Form" target="_self">Event Request Form</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/news" target="_self">News</a><ul class="dropDownNav" style="z-index:10;" id="listMN18" >
+										
+										<li>
+										<a href="http://www.perthcounty.ca/News_Article_Request_Form" target="_self">News Article Request Form</a>
+										</li></ul>
+										</li>
+										
+										<li>
+										<a href="/contact_us" target="_self">Contact Us</a>
+										</li></ul>
+
+            
+       
+           
+            
+<div class="clearBox">&nbsp;</div>	
+			</div> <!--End of Primary Nav Items-->
+          
+        </div>	<!--End of Primary Nav-->
+        
+    
+
+	 <div id="body">    
+                
+     <div id="content" class="orange">
+     	<h2 class="innerPageHeading">Stratford-Perth Archives</h2><div class="innerPageRightImage"><img src="/images/specific/innerPageLeaf.gif" alt="Leaf" /></div>     	<div id="contentHeader" class="orange">
+                      
+<div id="breadcrumb"> <a id="homeBreadCrumb" href="/living_in_perth">Living in Perth County</a>  <span class="bcCurrentItem">Stratford-Perth Archives</span></div>       
+
+	</div>
+
+             <div class="clearBox" style="height:0px;">&nbsp;</div>
+
+ <!-- END OF HEADER --> 
+<div id="innerSubNav"><script type="text/javascript">
+$(document).ready(function(){
+
+	// accord function for primary nav  
+	//Brendan Farr-Gaynor
+	//brendan@resolutionim.com
+	
+	//for each navClickerTog inside a li that has a child ul add this click event
+	$('#innerNav ul.navTree li:has(ul)').children("span.navClickerTog").click(function() {
+		
+		//each time the button is clicked toggle it's class to swap the display graphic
+		$(this).toggleClass("navClickerTogUp");
+		//slide up/down the child ul inside this li to open it if it's closed, close it if it's open
+		$($(this).parent().get(0)).children("ul").slideToggle('slow', function() { 
+			//there is a problem with flow as both the li label and navClickerTog are floated so the li was collapsing
+			//a 'flowKill div was inserted in normal flow between these two elements and set to a height of 27px to force the li to display properly
+			//when the child ul was collapsed
+			if($(this).is(':hidden')) { $($(this).parent().get(0)).children("div.flowKill").show(); }
+			
+			
+			
+		
+		});
+		
+		//indent each level of ul children by 10 pixels padding to the left
+		$($(this).parent().get(0)).children("ul").children("li").addClass('innerLi');
+		
+		//if the ul is no longer hidden the li no longer needs to be held open by the flowKill, so hide it for now so that we don't have a big gap at the bottom
+		//Note: toggle() is not used because the animation requires a different sequence to the hide/show, the show must happen after the slide has completed but the hide
+		//must happen immediately
+		if(!$($(this).parent().get(0)).children("ul").is(':hidden')) {
+			$($(this).parent().get(0)).children("div.flowKill").hide();
+		}
+		
+		
+		
+	});
+	
+	
+	//toggle open the current item and any child uls
+	$("#innerNav .currentPage").children("span.navClickerTog").click();
+	
+	//go through the parents
+	$("#innerNav .currentPage").parents("li").children("span.navClickerTog").click();
+
+
+
+	//color the currently selected item white
+	$("#innerNav .currentPage").children("a.navLinkLabel").css('color','#FFFFFF');
+	$("#innerNav .currentPage").css('background','url(/images/template/standard/currentPageLiBack.gif) no-repeat left top #9BB5A0');
+	//$(".currentPage").css('border-bottom','1px solid #C86C2F');
+	//$(".currentPage:has(span.navClickerTog)").css('background','url(/images/template/standard/currentPageLiBackTrans.gif) no-repeat left top');
+
+	
+	
+	
+	$('#noscriptNav').hide();
+	$('#scriptNav').show();
+
+});
+
+
+</script>
+
+<div id="innerNav">
+
+<div id="noscriptNav">
+<p>You are seeing this <strong>full</strong> list of pages because your browser does not appear to support Javascript or it is disabled.</p>
+
+</div>
+
+
+<div id="scriptNav" style="display:none;">
+<ul id="list0" class="navTree" >
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/home" target="_self">Home</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/page/ecdevhome" target="_self">Business in Perth County</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/living_in_perth" target="_self">Living in Perth County</a><ul id="list24" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/about_perth_county" target="_self">About Perth County</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/publicnotices" target="_self">Public Notices</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/opareview" target="_self">Official Plan - 5 Year Review</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Citizens_News" target="_self">Citizens News</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li class="currentPage" >
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/stratford_perth_archives" target="_self">Stratford-Perth Archives</a><ul id="list373" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Abount_Us" target="_self">Archives - About Us</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Services_and_Fees" target="_self">Archives - Services and Fees</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Hours_and_Locations" target="_self">Archives - Hours</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Resources" target="_self">Archives - Resources</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Campbell_Collection" target="_self">Archives - Campbell Collection</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Archives_Contact_Us" target="_self">Archives - Contact Us</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/County_of_Perth_Official_Plan" target="_self">County of Perth Official Plan</a><ul id="list137" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Official_Plan_Sechdules_of_Detailed_Maps" target="_self">Schedules of Detailed Maps</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/ems" target="_self">EMS - Emergency Medical Services</a><ul id="list270" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/emergency_services" target="_self">Information Practice Statement</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Paramedic_Community_Care_Fund" target="_self">Paramedic Community Care Fund</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/EMS_Recruitment_Process" target="_self">EMS Recruitment Process </a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/EMS_Provincial_Response_Time_Reporting" target="_self">EMS Provincial Response Time Reporting</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/CPR_Awareness" target="_self">CPR Awareness</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Public_Access_Defibrillator" target="_self">Public Access Defibrillator</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Citizen_Rescue_Award_of_Merit" target="_self">Citizen Rescue Award of Merit</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/emergency_management" target="_self">Emergency Management</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/accessibility" target="_self">Accessibility</a><ul id="list105" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Accessible_Customer_Service_Standard" target="_self">Corporate Accessibility Policy</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Accessibility_Advisory_Committee_AAC" target="_self">Accessibility Advisory Committee (AAC)</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Accessibility_Plans" target="_self">Accessibility Plans</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/BrowseAloud" target="_self">BrowseAloud</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/2-1-1_Service" target="_self">2-1-1 Service</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/olh" target="_self">Opportunity Lives Here</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Weather_Conditions" target="_self">Weather & Road Conditions</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/page/thingstodo" target="_self">Visiting Perth County</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/administration" target="_self">Administration</a><ul id="list26" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Strategic_Plan" target="_self">Strategic Plan</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Joint_Service_Delivery_Review_2014" target="_self">Joint Service Delivery Review 2014</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/bylaws" target="_self">Bylaws</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/employment" target="_self">Employment</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/staffDirectory" target="_self">Staff Directory</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/pay_provincial_offenses" target="_self">Provincial Offences Administration</a><ul id="list59" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/page/Notice_to_Defendant_Form" target="_self">Request for Disclosure Form</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/page/County_of_Perth_Official_Plan" target="_self">County of Perth Official Plan</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Energy_Conservation_Plan" target="_self">Energy Conservation Plan</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/forms" target="_self">Applications and Permits</a><ul id="list290" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/travelpermit" target="_self">Travel Permit</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/tenders_rfps" target="_self">Tenders and RFPs</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/financial_info" target="_self">Financial Information</a><ul id="list301" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/financial_reports" target="_self">Financial Reports</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Asset_Mgm_Plan" target="_self">Asset Management Plan</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Municipal_Performance_Measurement_Program" target="_self">Performance Measures</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Gas_Tax_Projects" target="_self">Gas Tax Projects</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/Member_Municipalities" target="_self">Member Municipalities</a><ul id="list118" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Other_Municipalities" target="_self">Other Municipalities</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Other_Agencies_in_Perth_County" target="_self">Other Agencies in Perth County</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/complaints" target="_self">County Services Complaints</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/County_Council" target="_self">Council</a><ul id="list361" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Council_Composition" target="_self">Council Composition</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Agenda_-_Council_and_Committees" target="_self">Agenda - Council and Committees</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Minutes_-_Council_and_Committees" target="_self">Minutes - Council and Committees</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Meeting_Schedule" target="_self">Meeting Schedule</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Addressing_Council" target="_self">Addressing Council</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Correspondence_to_Council" target="_self">Correspondence to Council</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Procedures_of_Council" target="_self">Procedures of Council</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Petitions" target="_self">Petitions</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Code_of_Conduct" target="_self">Code of Conduct</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/online_services" target="_self">E-services</a><ul id="list36" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/pay_provincial_offenses" target="_self">Pay a Ticket / Fine</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/travelpermit" target="_self">Travel Permit Application</a>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://maps.perthcounty.ca/public" target="_blank">Interactive Maps</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/Calendar" target="_self">Calendar</a><ul id="list231" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/Event_Request_Form" target="_self">Event Request Form</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<span class="navClickerTog">&nbsp;</span> <a class="navLinkLabel" href="http://www.perthcounty.ca/news" target="_self">News</a><ul id="list18" class="navTree" style="display:none;">
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="http://www.perthcounty.ca/News_Article_Request_Form" target="_self">News Article Request Form</a>
+											
+										
+											
+											
+											
+										</li></ul>
+											
+										
+											
+											
+											
+										</li>
+										
+										<li>
+										
+											
+											
+											
+											<a class="navLinkLabel" href="/contact_us" target="_self">Contact Us</a>
+											
+										
+											
+											
+											
+										</li></ul></div>
+
+
+
+</div></div>
+<div id="fullColOrangeWrap"><div id="fullColOrange">
+		<div class="plainBox" style="width:100%;"> <!-- Master Div -->
+			<div class="plainBoxMainHeader">
+				<h2>Stratford Perth Archives</h2>
+				<div class="plainBoxHeaderCap"><div class="plainBoxHeaderCapContent"> <!-- Header Div --></div></div> </div><!-- End Of Header Div --> <div id="giveMeABox17033" style="display:block;" class="plainBoxBodyMain"><div class="plainBoxBodyMainCap"><p style="text-align: center;"><img style="vertical-align: middle;" src="/fileBin/library/archives/images/2015-10-01_building.jpg" alt="" /></p>
+<p style="text-align: center;">4273 Line 34 (Highway 8 West of Stratford, Next Door to Stratford-Perth Museum)</p>
+<p style="text-align: center;"><strong>WINTER HOURS</strong><br />Monday, September 28, 2015 - Friday, April 1, 2016<br /> Monday &ndash; Friday<br /> 10 AM to 4 PM<br /> Saturdays by appointment. Appointments must be<br /> booked at least 48 hours in advance.</p>
+<p style="text-align: center;"><strong>Telephone: </strong>519-271-0531, ext 259 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Email:</strong> <a href="mailto:archives@perthcounty.ca" target="_blank">archives@perthcounty.ca</a></p>
+<p style="text-align: center;">Please check the <a href="/Hours_and_Locations">Hours</a> page for details about when the Archives is closed for statutory holidays.</p>
+			 <div class="clear">&nbsp;</div>
+			</div></div> <!-- End Of Body Div -->
+		
+		<div class="plainBoxFooter"><div class="plainBoxFooterCap">&nbsp;</div></div>
+		</div><!-- End Of Master Div --><div class="clear">&nbsp;</div>
+		<div class="plainBox" style="width:100%;"> <!-- Master Div -->
+			<div class="plainBoxMainHeader">
+				<h2>Events</h2>
+				<div class="plainBoxHeaderCap"><div class="plainBoxHeaderCapContent"> <!-- Header Div --></div></div> </div><!-- End Of Header Div --> <div id="giveMeABox19327" style="display:block;" class="plainBoxBodyMain"><div class="plainBoxBodyMainCap"><p style="text-align: center;"><strong>Cold Winter, Warm Hearts</strong></p>
+<p style="text-align: left;">Drop in to the Anderson Gallery to check out our free&nbsp; exhibit featuring winter holiday greeting cards from the collections. They cover Christmas, New Year&rsquo;s and Valentines cards dating from before World War I until the 1960s.<br /><strong>&nbsp;</strong></p>
+<p style="text-align: center;"><img src="/fileBin/library/archives/images/2016-01-05_new_years_greeting.jpg" alt="" width="402" height="597" /></p>
+<p style="text-align: center;"><strong></strong></p>
+<p style="text-align: center;"><strong><img src="/fileBin/library/archives/images/OCS_Event.jpg" alt="OCS Event November 28 Show and Tell" /><br /></strong></p>
+<p><strong>What else has been happening in the Anderson Gallery?</strong></p>
+<p>Local author Dean Robinson and friends celebrated the launch of his book 42 Wellington The Music and The Memories, 1929 &ndash; 1969.&nbsp; Copies are for sale at the Archives for $25.00.</p>
+<p style="text-align: center;"><strong><img src="/fileBin/library/archives/images/2015-10-01_dr_crowd.jpg" alt="" width="650" height="322" /></strong></p>
+<p style="text-align: center;"><strong><img src="/fileBin/library/archives/images/2015-09-27_dean_robinson.jpg" alt="" width="650" height="596" /></strong></p>
+<p style="text-align: center;"><strong>&nbsp;</strong></p>
+<strong></strong>
+			 <div class="clear">&nbsp;</div>
+			</div></div> <!-- End Of Body Div -->
+		
+		<div class="plainBoxFooter"><div class="plainBoxFooterCap">&nbsp;</div></div>
+		</div><!-- End Of Master Div --><div class="clear">&nbsp;</div>
+		<div class="plainBox" style="width:100%;"> <!-- Master Div -->
+			<div class="plainBoxMainHeader">
+				<h2>Walking Tours</h2>
+				<div class="plainBoxHeaderCap"><div class="plainBoxHeaderCapContent"> <!-- Header Div --></div></div> </div><!-- End Of Header Div --> <div id="giveMeABox31346" style="display:block;" class="plainBoxBodyMain"><div class="plainBoxBodyMainCap"><p><span style="text-decoration: underline;"><strong>STRATFORD </strong></span></p>
+<p><img style="vertical-align: middle;" src="/fileBin/library/general/images/pdficon_sm.png" alt="pdf icon" width="16" height="16" />&nbsp;<a title="link Avondale Cemetery, A Heritage Walk Tour Guide pdf" href="/fileBin/library/archives/pdfs/2010-Avondale_Cemetery_est_1871_A_Heritage_Walk.pdf" target="_blank">Avondale Cemetery, A Heritage Walk Tour Guide</a></p>
+<p><img style="vertical-align: middle;" src="/fileBin/library/general/images/pdficon_sm.png" alt="pdf icon" width="16" height="16" />&nbsp;<a title="link Avondale Cemetery Tour Map pdf" href="/fileBin/library/archives/pdfs/Avondale Cemetery Tour Map.pdf" target="_blank">Avondale Cemetery Tour Map</a></p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>LISTOWEL</strong></span></p>
+<p><img style="vertical-align: middle;" src="/fileBin/library/general/images/pdficon_sm.png" alt="pdf icon" width="16" height="16" />&nbsp;<a title="link Fairview Cemetery: Stones and Stories pdf" href="/fileBin/library/archives/pdfs/Fairview Cemetery Walking Tour.pdf" target="_blank">Fairview Cemetery: Stones and Stories</a></p>
+<p><img style="vertical-align: middle;" src="/fileBin/library/general/images/pdficon_sm.png" alt="pdf icon" width="16" height="16" /> <a title="Step into the Past: Historic Walking Tour of Listowel" href="/fileBin/library/archives/pdfs/Listowel Historic Walking Tour - Step Into The Past.pdf" target="_blank">Step into the Past: Historic Walking Tour of Listowel</a>&nbsp;</p>
+			 <div class="clear">&nbsp;</div>
+			</div></div> <!-- End Of Body Div -->
+		
+		<div class="plainBoxFooter"><div class="plainBoxFooterCap">&nbsp;</div></div>
+		</div><!-- End Of Master Div --><div class="clear">&nbsp;</div></div></div>
+
+<!-- <div id="standardColBFootPlate">&nbsp;</div>-->
+<!-- BEGIN OF FOOTER INCLUDE -->
+	     
+       
+        <div class="clearBox">&nbsp;</div>
+        </div> <!-- End of content -->
+        </div> <!-- End of body -->
+     
+ 	
+
+            <div id="footer" class="orange">
+            
+                <div id="footerContent">
+                	<div id="footerContentAddress">
+                        <img src="/images/ontario.png" height="39px" width="350px" alt="" />
+                    </div>
+                    
+                  <!--
+  <div id="google_translate_element"></div>
+					<script>
+						function googleTranslateElementInit() {
+							 new google.translate.TranslateElement({
+							 pageLanguage: 'en'
+							}, 'google_translate_element');
+						}
+					</script>
+				<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+-->
+                </div>
+                            
+                <div id="footerNav">
+                   <ul class="dropDownNav" style="z-index:10;" id="list-1" >
+										
+										<li>
+										<a href="/publicnotices" target="_self">Public Notices</a>
+										</li>
+										
+										<li>
+										<a href="/accessibility" target="_self">Accessibility</a>
+										</li>
+										
+										<li>
+										<a href="http://www.visitperth.ca/" target="_blank">Visit Perth County</a>
+										</li>
+										
+										<li>
+										<a href="/contact_us" target="_self">Contact Us</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/Site_Map" target="_self">Site Map</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/privacy" target="_self">Privacy & Disclaimer</a>
+										</li>
+										
+										<li>
+										<a href="http://www.perthcounty.ca/links" target="_self">County Links</a>
+										</li></ul>                
+                <!--
+                <a href="/page/business_in_perth">Business in Perth County</a>
+                <a href="/page/living_in_perth">Living in Perth County</a>
+                <a href="/page/administration">Administration</a>
+                <a href="/page/visiting_perth">Visiting Perth County</a>
+                <a href="/page/online_services">Online Services</a>
+                <a href="/page/news">News</a>
+                <a href="/page/event_calendar">Events</a> -->
+               
+                </div> <!-- End of footerNav -->
+               </div>  <!-- End of footer -->
+               </div> <!-- End of inhalt -->
+               </div> <!-- End of outerInhalt -->
+               </div> <!-- End of footerInhalt -->
+ 
+	<script type="text/javascript" src="/js/jquery/jquery.slidemenu.js"></script>
+        <script type="text/javascript" src="/js/jquery/jquery.scrollTo.js"></script>
+        <script type="text/javascript" src="/js/jquery/jquery.ifixpng.js"></script>
+	<script type="text/javascript" src="/js/jquery/jquery.preload.js"></script>
+        <script type="text/javascript" src="/js/jquery/jquery.slimbox2.js"></script>
+        <script type="text/javascript" src="/js/jquery/jquery.shadow.js"></script>
+        
+        
+<script type="text/javascript">
+$(document).ready(function(){
+	//$("div#body").shadow();
+	$("div.greenBoxMainHeader").shadow();
+	$("div.orangeBoxMainHeader").shadow();
+	$("div.blueBoxMainHeader").shadow();
+	$("div.brownBoxMainHeader").shadow();
+	
+	$(function() {
+		$("#primaryNavItems ul li ul li:has(ul)") .addClass("hasChild");
+	});
+});
+</script>
+
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7220480-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+   
+	</body>
+</html>

@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<title>
+
+Bibliothèques de Victoriaville catalog
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Koha 3.1407000" /> <!-- leave this for stats -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="/opac-tmpl/bootstrap/images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/opac-tmpl/bootstrap/lib/bootstrap/css/bootstrap.min.css" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="/opac-tmpl/bootstrap/lib/jquery/jquery-ui.css" />
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="/opac-tmpl/bootstrap/css/opac.css" />
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/opac-tmpl/bootstrap/css/inlibro.css" />
+    
+
+
+<link rel="stylesheet" type="text/css" media="print" href="/opac-tmpl/bootstrap/css/print.css" />
+
+
+<style type="text/css">#numresults {display:none;}</style>
+<link rel="unapi-server" type="application/xml" title="unAPI" href="http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/unapi" />
+
+<!-- Respond.js brings responsive layout behavior to IE < v.9 -->
+<!--[if lt IE 9]>
+    <script src="/opac-tmpl/bootstrap/lib/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    function _(s) { return s } // dummy function for gettext
+</script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/lib/modernizr.min.js"></script>
+
+
+</head>
+<body id="opac-main">
+<div
+
+	class="notloggedin"
+
+    id="wrap">
+    <div id="header-region">
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <h1 id="logo">
+                        <a class="brand" href="/cgi-bin/koha/opac-main.pl">
+                            
+                                Bibliothèques de Victoriaville
+                            
+                        </a>
+                    </h1>
+                    
+                        <div id="cartDetails" class="cart-message">Your cart is empty.</div>
+                    
+                    <ul class="nav">
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" id="cartmenulink" data-toggle="dropdown" role="button">
+                                    <i id="carticon" class="icon-shopping-cart icon-white"></i> <span class="cartlabel">Cart</span> <span id="basketcount"></span>
+                                </a>
+                                <ul aria-labelledby="cartmenulink" role="menu" class="dropdown-menu">
+                                    <li role="presentation">
+                                        <a href="#" id="cartmenuitem" class="cart-message" tabindex="-1" role="menuitem">Your cart is empty.</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                        
+                            <li class="divider-vertical"></li>
+                        
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" id="listsmenu" data-toggle="dropdown" role="button"><i class="icon-list icon-white"></i> <span class="listslabel">Lists</span> <b class="caret"></b></a>
+                                <ul aria-labelledby="listsmenu" role="menu" class="dropdown-menu">
+                                    
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?display=publicshelves" tabindex="-1" role="menuitem"><strong>Public lists</strong></a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=44&amp;sortfield=" tabindex="-1" role="menuitem">Nouveautés: documentaires (adultes)</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=183&amp;sortfield=" tabindex="-1" role="menuitem">Religion</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=136&amp;sortfield=" tabindex="-1" role="menuitem">série-télé internationale</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=723&amp;sortfield=" tabindex="-1" role="menuitem">Recettes</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=207&amp;sortfield=" tabindex="-1" role="menuitem">lecture estivale</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=685&amp;sortfield=" tabindex="-1" role="menuitem">A lire</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=397&amp;sortfield=" tabindex="-1" role="menuitem">Suggestions de Annie R.</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=661&amp;sortfield=" tabindex="-1" role="menuitem">Histoire du XXè siècle-Films</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=50&amp;sortfield=" tabindex="-1" role="menuitem">Suggestions Guylaine</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=589&amp;sortfield=" tabindex="-1" role="menuitem">Michael Connelly</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?display=publicshelves" tabindex="-1" role="menuitem" class="listmenulink">View All</a></li>
+                                    
+                                    <li class="divider" role="presentation"></li>
+                                    
+                                        <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?display=privateshelves" tabindex="-1" role="menuitem"><strong>Your lists</strong></a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-user.pl" tabindex="-1" class="menu-inactive loginModal-trigger" role="menuitem">Log in to create your own lists</a></li>
+                                        
+                                    
+                                </ul> <!-- / .dropdown-menu -->
+                            </li> <!-- / .dropdown -->
+                        
+                    </ul> <!-- / .nav -->
+                    <div id="listsDetails"></div>
+                    
+                        <a id="user-menu-trigger" class="pull-right" href="#"><i class="icon-user"></i> <span class="caret"></span></a>
+                        <div id="members">
+                            <ul class="nav pull-right">
+                                
+                                    <li><a href="/cgi-bin/koha/opac-user.pl" class="loginModal-trigger" role="button" data-toggle="modal">Log in to your account</a></li>
+                                
+                                
+                                
+                                
+                            </ul>
+                        </div> <!-- /members -->
+                    
+                </div> <!-- /container-fluid -->
+            </div> <!-- /navbar-inner -->
+        </div> <!-- /navbar -->
+
+        
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div id="opacheader">
+                        <div id="customHeader">
+<a id="logo" href="/"><img src="/opac-tmpl/bootstrap/images/inlibro/bibliovicto.jpg"/></a>
+</div>
+                    </div>
+                </div>
+            </div>
+        
+    </div> <!-- / header-region -->
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div id="opac-main-search">
+    <!--             <div class="span2">
+        
+            <h1 id="libraryname">
+        
+            <a href="/cgi-bin/koha/opac-main.pl">Bibliothèques de Victoriaville</a></h1>
+    </div> /.span2 -->
+            <div class="span12">
+                
+                    
+                        
+                            <div class="mastheadsearch librarypulldown">
+                        
+                        <form name="searchform" method="get" action="/cgi-bin/koha/opac-search.pl" id="searchform" class="form-inline">
+                            <label for="masthead_search"> Search
+                                
+                            </label>
+
+                            <select name="idx" id="masthead_search">
+                            
+                                <option value="">Library catalog</option>
+                            
+                            
+                                <option value="ti">Title</option>
+                            
+                            
+                                <option value="au">Author</option>
+                            
+                            
+                                <option value="su">Subject</option>
+                            
+                            
+                                <option value="nb">ISBN</option>
+                            
+                            
+                                <option value="se">Series</option>
+                            
+                            
+                                
+                                    <option value="callnum">Call number</option>
+                                
+                            
+                            </select>
+
+                            
+                            
+                                <input type="text" title="Type search term" class="transl1" name="q" /><span id="translControl"></span>
+                            
+
+                            
+
+                            
+                                <div class="input-append">
+                                    <select name="branch_group_limit" id="select_library">
+                                        <option value="">All libraries</option>
+                                        
+                                            
+                                                <option value="branch:QVAF">Bibliothèque Alcide-Fleury</option>
+                                            
+                                                <option value="branch:QV">Bibliothèque Charles-Édouard-Mailhot</option>
+                                            
+                                                <option value="branch:VictoNumer">Bibliothèque numérique de Victoriaville</option>
+                                            
+                                        
+                                    </select>
+                                    <button type="submit" id="searchsubmit" class="btn btn-primary">Go</button>
+                                </div>
+                            
+
+                        </form>
+                        </div> <!-- / .mastheadsearch -->
+                    
+
+                    <div class="row-fluid">
+                            <div id="moresearches">
+                                <ul>
+                                    <li><a href="/cgi-bin/koha/opac-search.pl">Advanced search</a></li>
+                                    
+                                    
+                                    <li><a href="/cgi-bin/koha/opac-authorities-home.pl">Authority search</a></li>
+                                    <li><a href="/cgi-bin/koha/opac-showreviews.pl">Recent comments</a></li>
+                                    <li><a href="/cgi-bin/koha/opac-tags.pl">Tag cloud</a></li>
+                                    
+                                    
+                                    
+                                        
+                                    
+                                </ul>
+                            </div> <!-- /#moresearches -->
+                    </div> <!-- /.row-fluid -->
+
+                
+            </div> <!-- /.span10 -->
+            </div> <!-- /.opac-main-search -->
+        </div> <!-- / .row-fluid -->
+    </div> <!-- /.container-fluid -->
+
+    <!-- Login form hidden by default, used for modal window -->
+    <div id="loginModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="closebtn" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="modalLoginLabel">Log in to your account</h3>
+        </div>
+        <form action="/cgi-bin/koha/opac-user.pl" method="post" name="auth" id="modalAuth">
+            <div class="modal-body">
+                    <input type="hidden" name="koha_login_context" value="opac" />
+                    <fieldset class="brief">
+                        <label for="muserid">Login:</label><input type="text" id="muserid" name="userid" />
+                        <label for="mpassword">Password:</label><input type="password" id="mpassword" name="password" />
+                    
+                    </fieldset>
+                    
+                         <p><a href="/cgi-bin/koha/opac-password-recovery.pl">Forgot your password?</  a></p>
+                    
+            </div>
+            <div class="modal-footer">
+                <input type="submit" class="btn btn-primary" value="Log in" />
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="cancel">Cancel</a>
+            </div>
+        </form> <!-- /#auth -->
+    </div>  <!-- /#modalAuth  -->
+
+
+<div class="main">
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+    </ul>
+
+    
+        
+            <div id="notloggedin" class="container-fluid">
+        
+    
+
+    <div class="row-fluid">
+    
+        <div class="span2">
+            <div id="navigation">
+                <div id="opacnav"></div>
+
+<div id="opacnavbottom"><h1><a href="http://www.victoriaville.ca/page/883/calendrier-dactivites.aspx" target ="_blank" title="Activités">Activités</a></h1>
+
+<h1>Nouveautés</h1>
+
+<ul>
+
+<li><a href=" http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&op=and&idx=kw&limit-yr=2013-&limit=mc-itype%2Cphr%3AAA&limit=available&sort_by=acqdate_dsc&do=Rechercher" target ="_blank" title="Livres adultes">Livres adultes</a></li>
+
+<li><a href=" http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/opac-search.pl?idx=kw&idx=kw&idx=kw&do=Search&limit-yr=2013-&limit=mc-itype%2Cphr%3AJN&sort_by=acqdate_dsc "  target ="_blank"  title=" Livres jeunes ">Livres jeunes</a></li>
+
+<li><a href=" http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/opac-search.pl?idx=kw&idx=kw&idx=kw&do=Search&limit-yr=2012-&limit=mc-itype%2Cphr%3AFD&limit=mc-itype%2Cphr%3AFF&sort_by=acqdate_dsc "  target ="_blank"  title=" Films ">Films</a></li>
+
+<li><a href=" http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/opac-search.pl?idx=kw&idx=kw&idx=kw&limit-yr=2012-&limit=mc-itype%2Cphr%3ADN&sort_by=acqdate_dsc&do=Search" target ="_blank"  title=" CD ">CD</a></li>
+
+</ul>
+
+<h1><a href=" http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/opac-search.pl?limit=mc-itype%2Cphr%3AEBOOK&sort_by=acqdate_dsc&addto=Ajouter+%C3%A0+%3A&biblionumber=127584&loggedinuser=&biblionumber=127688&loggedinuser=&biblionumber=127754&loggedinuser=&biblionumber=127625&loggedinuser=&biblionumber=130226&loggedinuser=&biblionumber=127682&loggedinuser=&biblionumber=129900&loggedinuser=&biblionumber=130938&loggedinuser=&biblionumber=127676&loggedinuser=&biblionumber=129544&loggedinuser=&biblionumber=128944&loggedinuser=&biblionumber=127670&loggedinuser=&biblionumber=127716&loggedinuser=&biblionumber=127653&loggedinuser=&biblionumber=129618&loggedinuser=&biblionumber=129613&loggedinuser=&biblionumber=129622&loggedinuser=&biblionumber=130231&loggedinuser=&biblionumber=130747&loggedinuser=&biblionumber=130758&loggedinuser=" target ="_blank" title=" Livres numériques ">Livres numériques</a></h1>
+
+<ul>
+
+<li><a href="http://www.victoriaville.ca/upload/pics/20160127 Guide de démarrage, prêt numérique.pdf" target ="_blank" title="Guide de démarrage"> Guide de démarrage </a></li>
+
+</ul>
+
+
+<h1><a href=" http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/opac-search.pl?idx=kw&q=zinio&sort_by=popularity_dsc&addto=Ajouter+%C3%A0+%3A&biblionumber=127080&loggedinuser=&biblionumber=127053&loggedinuser=&biblionumber=127054&loggedinuser=&biblionumber=127086&loggedinuser=&biblionumber=127090&loggedinuser=&biblionumber=127055&loggedinuser=&biblionumber=127056&loggedinuser=&biblionumber=127057&loggedinuser=&biblionumber=127079&loggedinuser=&biblionumber=127058&loggedinuser=&biblionumber=127091&loggedinuser=&biblionumber=127085&loggedinuser=&biblionumber=127059&loggedinuser=&biblionumber=127060&loggedinuser=&biblionumber=127102&loggedinuser=&biblionumber=127061&loggedinuser=&biblionumber=127062&loggedinuser=&biblionumber=127077&loggedinuser=&biblionumber=127063&loggedinuser=&biblionumber=127065&loggedinuser=" target ="_blank" title=" Revues numériques ">Revues numériques</a></h1>
+
+<ul>
+
+<li><a href=" http://mondedusavoir.info/uploads/3/2/2/6/3226731/guideszinio.pdf" target ="_blank" title="Guide de démarrage"> Guide de démarrage </a></li>
+
+</ul>
+
+<h1><a href=" http://www.victoriaville.ca/page/865/bibliotheques.aspx#horaires " target ="_blank" title=" Horaires et coordonnées ">Horaires et coordonnées</a></h1>
+
+
+<h2> Ressources numériques documentaires:</h2>
+
+<p> <a href=" http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/opac-proxypage.pl  " target ="_blank" title=" Eureka.cc "><img src=" http://www.eureka.cc/images/logos/logo_ek_fr.png" width="150" height="150" alt="Eureka.cc"></a>
+<br/>
+<br/>
+<br/>
+<a href=" http://bibliotheque.ville.victoriaville.qc.ca/cgi-bin/koha/opac-proxypage.pl  " target ="_blank" title=" Repère "><img src=" http://repere.sdm.qc.ca/hipres/repere/images/repere2.gif" width="150" height="150" alt="Repère"></a></p>
+</div>
+
+            </div>
+        </div>
+    
+
+    
+        <div class="span7">
+    
+
+        
+
+        
+
+        <div id="opacmainuserblock"><div id="opaccarrousel">
+</div>
+</div>
+        </div> <!-- / .span 7/9 -->
+
+        
+            <div class="span3">
+                
+                    
+                        
+                            <div id="login">
+                                <form action="/cgi-bin/koha/opac-user.pl" method="post" name="auth" id="auth">
+                                    <input type="hidden" name="koha_login_context" value="opac" />
+                                    <fieldset class="brief">
+                                        <legend>Log in to your account:</legend>
+                                        <label for="userid">Login:</label><input type="text" id="userid" name="userid" />
+                                        <label for="password">Password:</label><input type="password" id="password" name="password" />
+                                    <fieldset class="action">
+                                        <input type="submit" value="Log in" class="btn" />
+                                    </fieldset>
+                                    
+                                    </fieldset>
+                                    
+                                        <p><a href="/cgi-bin/koha/opac-password-recovery.pl">Forgot your password?</a></p>
+                                    
+                                </form>
+                            </div> <!-- /#login -->
+                        
+                        
+                    
+                
+                
+                    <div id="opacnavright">
+                        <iframe frameborder="0" height="240" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FBiblioth%25C3%25A8ques-publiques-de-Victoriaville-page-officielle%2F175715469175682&width=292&height=590&show_faces=true&colorscheme=light&stream=true&show_border=true&header=false" style="border: none; overflow: hidden; width: auto; height: 550px;" width="auto"></iframe>
+
+                    </div>
+                
+            </div> <!-- / .span3 -->
+        
+
+        </div> <!-- /.container-fluid -->
+    </div> <!-- /.row-fluid -->
+</div> <!-- /.main -->
+
+
+    
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="opaccredits">
+                        <p align="center"><em>Bienvenue sur le catalogue des bibliothèques de Victoriaville. Nous utilisons Koha, un logiciel intégré de gestion de bibliothèque développé depuis 2000 par une <a href="http://koha-fr.org/">communauté internationale</a> de développeurs et utilisé par les bibliothèques du <a href="http://www.librarytechnology.org/map.pl?ILS=Koha">monde entier</a>. Nous vous invitons aussi à nous contacter par <a href="mailto:bibliotheque@victoriaville.ca">courriel</a> pour toute question liée aux bibliothèques (suggestions, commentaires, fonctionnement du catalogue, etc.), nous nous ferons un devoir de vous répondre le plus rapidement possible : <a href="mailto:bibliotheque@victoriaville.ca">bibliotheque@victoriaville.ca</a> </em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="koha_url" class="clearfix">
+                        <p>Powered by
+                        
+                            <a class="koha_url" href="http://koha-community.org">Koha</a>
+                        </p>
+                    </div>
+                </div> <!-- /.span12 -->
+            </div> <!-- /.row-fluid -->
+        </div> <!-- /.container-fluid -->
+    
+
+</div> <!-- / #wrap in masthead.inc -->
+
+    
+        
+            
+                <div id="changelanguage" class="navbar navbar-fixed-bottom navbar-static-bottom">
+                    <div class="navbar-inner">
+                        <ul id="i18nMenu" class="nav">
+                            <li><p class="lang navbar-text"><strong>Languages:&nbsp;</strong></p></li>
+                            
+                                
+                                    
+                                        
+                                            
+                                                <li class="active"><p class="navbar-text">English</p></li>
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                            
+                                                <li><a href="/cgi-bin/koha/opac-changelanguage.pl?language=fr-CA">Fran&ccedil;ais</a></li>
+                                            
+                                        
+                                    
+                                
+                            
+                        </ul> <!-- / #i18menu -->
+                    </div> <!-- / .navbar-inner -->
+                </div> <!-- / #changelanguage -->
+            
+        
+    
+
+
+
+<!-- JavaScript includes -->
+<script type="text/javascript" src="/opac-tmpl/bootstrap/lib/jquery/jquery.js"></script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/lib/jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/js/global.js"></script>
+<script type="text/javascript">
+    Modernizr.load([
+        // Test need for polyfill
+        {
+            test: window.matchMedia,
+            nope: "/opac-tmpl/bootstrap/lib/media.match.min.js"
+        },
+        // and then load enquire
+        "/opac-tmpl/bootstrap/lib/enquire.min.js",
+        "/opac-tmpl/bootstrap/js/script.js"
+    ]);
+</script>
+
+<script type="text/javascript">//<![CDATA[
+        var NO_AMAZON_IMAGE = _("No cover image available");
+    //]]>
+</script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/js/amazonimages.js"></script>
+
+
+<script type="text/javascript" src="/opac-tmpl/bootstrap/js/basket.js">
+
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    var MSG_CONFIRM_AGAIN = _("Warning: Cannot be undone. Please confirm once again")
+    var MSG_DELETE_SEARCH_HISTORY = _("Are you sure you want to delete your search history?");
+    
+        var MSG_BASKET_EMPTY = _("Your cart is currently empty");
+        var MSG_RECORD_IN_BASKET = _("The item is already in your cart");
+        var MSG_RECORD_ADDED = _("The item has been added to your cart");
+        var MSG_RECORD_REMOVED = _("The item has been removed from your cart");
+        var MSG_NRECORDS_ADDED = _(" item(s) added to your cart");
+        var MSG_NRECORDS_IN_BASKET = _("already in your cart");
+        var MSG_NO_RECORD_SELECTED = _("No item was selected");
+        var MSG_NO_RECORD_ADDED = _("No item was added to your cart");
+        var MSG_CONFIRM_DEL_BASKET = _("Are you sure you want to empty your cart?");
+        var MSG_CONFIRM_DEL_RECORDS = _("Are you sure you want to remove the selected items?");
+        var MSG_ITEM_IN_CART = _("In your cart");
+        var MSG_IN_YOUR_CART = _("Items in your cart: ");
+        var MSG_ITEM_NOT_IN_CART = _("Add to your cart");
+        var MSG_NO_RECORD_SELECTED = _("No item was selected");
+    
+    
+        var MSG_TAGS_DISABLED = _("Sorry, tags are not enabled on this system.");
+        var MSG_TAG_ALL_BAD = _("Error! Your tag was entirely markup code.  It was NOT added.  Please try again with plain text.");
+        var MSG_ILLEGAL_PARAMETER = _("Error! Illegal parameter");
+        var MSG_TAG_SCRUBBED = _("Note: your tag contained markup code that was removed. The tag was added as ");
+        var MSG_ADD_TAG_FAILED = _("Error! The add_tag operation failed on");
+        var MSG_ADD_TAG_FAILED_NOTE = _("Note: you can only tag an item with a given term once.  Check 'My Tags' to see your current tags.");
+        var MSG_DELETE_TAG_FAILED = _("Error! You cannot delete the tag");
+        var MSG_DELETE_TAG_FAILED_NOTE = _("Note: you can only delete your own tags.")
+        var MSG_LOGIN_REQUIRED = _("You must be logged in to add tags.");
+        var MSG_TAGS_ADDED = _("Tags added: ");
+        var MSG_TAGS_DELETED = _("Tags added: ");
+        var MSG_TAGS_ERRORS = _("Errors: ");
+        var MSG_MULTI_ADD_TAG_FAILED = _("Unable to add one or more tags.");
+        var MSG_NO_TAG_SPECIFIED = _("No tag was specified.");
+    
+    
+        $(window).load(function() {
+            verify_images();
+         });
+    
+    $("#opaccarrousel").load('/opac-tmpl/bootstrap/en/carrousel/Nouveaut_s__documentaires__adultes_.html');
+
+$('#hold-request-form select[name="branch"]>option[value="VictoNumer"]').hide();
+    //]]>
+</script>
+
+    <script type="text/javascript" src="/opac-tmpl/bootstrap/js/basket.js"></script>
+
+<script type="text/javascript" src="/opac-tmpl/bootstrap/js/tags.js"></script>
+
+
+
+
+    <script type="text/javascript" src="/opac-tmpl/bootstrap/js/localcovers.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    var NO_LOCAL_JACKET = _("No cover image available");
+    //]]>
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,1251 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head >
+     <title>
+		     Accueil - Assemblée nationale du Québec
+		</title>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="content-language" content="fr" />
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere"  rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen"  />
+<link href="/Images/favicon.ico" rel="shortcut icon" />
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print"  />
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="print"  />
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<script type="text/javascript"  >
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2016-06-10';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "http://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "http://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "http://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "http://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+
+var _urlVerifierSiDomaineInterne = '/WebMethod/WebMethod.aspx/VerifierSiDomaineInterne';
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Message pour sites externes
+var _messageSiteExterne = "L'Assemblée n'assume aucune responsabilité quant au contenu des sites externes.";
+var _arrDomainesInternes = ['172.16.48.120','172.16.48.199','localhost','app1dev.assnat.intranet','wwwdev.assnat.qc.ca','wwwdev2.assnat.qc.ca','wwwfon.assnat.qc.ca','wwwfon2.assnat.qc.ca','wwwfor.assnat.qc.ca','wwwacc.assnat.qc.ca','wwwacc2.assnat.qc.ca','www.assnat.qc.ca','www2.assnat.qc.ca','assnat.qc.ca','WWW.bibliotheque.assnat.qc.ca','fondationbonenfant.qc.ca','sd10sri10v','www.parlementsauprimaire.com','www.paricilademocratie.com'];
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+// URL pour la page de redirection javascript
+var urlPageRedirectionJS = '/fr/redirection.html?d=';
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+</script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.2.2.min.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+    
+    <meta name="google-site-verification" content="OTIEMt5ZYp_tvD-nQXdjKTOQ4hc3lAJ2d85RSbA9mhE" />	   	
+	<script type="text/javascript" src="/scripts/carrousel.min.js"></script>   		
+	<script type="text/javascript">		
+		var _initCalendrierDataJSON = eval({"DateDonnees":new Date(1457672400000),"CodeErreur":0,"ActivitesDuJour":[{"Id":25103,"Titre":"Point de presse de M. François Bonnardel, porte-parole du deuxième groupe d'opposition en matière de finances","TitreCourt":"Point de presse de M. François Bonnardel, porte-parole du deuxième groupe d'opposition en matière de finances","Description":null,"Nature":1,"SousTitre":null,"SousTitreCourt":null,"Privee":false,"Annulee":false,"Reportee":false,"LienDiffusionVideoDirectActivite":"","LienDiffusionAudioDirectActivite":"","InfoDateReport":null,"StatutDiffusion":true,"DirectVideo":true,"DirectAudio":false,"IndTranscription":true,"LienTranscription":"ConferencePointPresse-28883","IndCommuniquePresse":false,"LienCommuniquePresse":null,"DateDebut":new Date(1457706600000),"DateFin":new Date(1457707500000),"Lieu":"Salle Bernard-Lalonde (1.131), Hôtel du Parlement","SousActivites":[],"Documents":[],"Images":[],"VideoAudio":{"UrlClient":"archives-parlementaires/activites-presse/AudioVideo-63525","EstVideo":true,"EstAudio":false},"Categorie":"C","UrlClient":null,"TypeObjetMetier":"","IndPeriodeAffairesCouranteAssemblee":false,"EstSeanceAssembleeExtraordinaire":false},{"Id":24933,"Titre":"Interpellation du député de Granby au ministre des Finances sur le sujet suivant : La nécessité d'une baisse du fardeau fiscal des citoyens et d'un plan de relance économique dans le contexte pré-budgétaire","TitreCourt":"Interpellation","Description":"Séances des commissions","Nature":1,"SousTitre":"Commission des finances publiques","SousTitreCourt":"Commission des finances publiques","Privee":false,"Annulee":false,"Reportee":false,"LienDiffusionVideoDirectActivite":"","LienDiffusionAudioDirectActivite":"","InfoDateReport":null,"StatutDiffusion":true,"DirectVideo":true,"DirectAudio":true,"IndTranscription":true,"LienTranscription":"commissions/cfp-41-1/journal-debats/CFP-160311","IndCommuniquePresse":false,"LienCommuniquePresse":null,"DateDebut":new Date(1457708400000),"DateFin":new Date(1457715600000),"Lieu":"Salle de l'Assemblée nationale (1.172), Hôtel du Parlement","SousActivites":[{"Id":24933,"Titre":"Interpellation du député de Granby au ministre des Finances sur le sujet suivant : La nécessité d'une baisse du fardeau fiscal des citoyens et d'un plan de relance économique dans le contexte pré-budgétaire","TitreCourt":"Interpellation","Description":"Séances des commissions","Nature":1,"SousTitre":"Commission des finances publiques","SousTitreCourt":"Commission des finances publiques","Privee":false,"Annulee":false,"Reportee":false,"LienDiffusionVideoDirectActivite":"","LienDiffusionAudioDirectActivite":"","InfoDateReport":null,"StatutDiffusion":true,"DirectVideo":true,"DirectAudio":true,"IndTranscription":true,"LienTranscription":"commissions/cfp-41-1/journal-debats/CFP-160311","IndCommuniquePresse":false,"LienCommuniquePresse":null,"DateDebut":new Date(1457708400000),"DateFin":new Date(1457715600000),"Lieu":"Salle de l'Assemblée nationale (1.172), Hôtel du Parlement","SousActivites":[],"Documents":[],"Images":[],"VideoAudio":{"UrlClient":"archives-parlementaires/travaux-commissions/AudioVideo-63531","EstVideo":true,"EstAudio":false},"Categorie":"B","UrlClient":"Mandat-34791","TypeObjetMetier":"ANQ.Vigie.Bll.Mandat","IndPeriodeAffairesCouranteAssemblee":false,"EstSeanceAssembleeExtraordinaire":false}],"Documents":[],"Images":[],"VideoAudio":{"UrlClient":"archives-parlementaires/travaux-commissions/AudioVideo-63531","EstVideo":true,"EstAudio":false},"Categorie":"B","UrlClient":"Mandat-34791","TypeObjetMetier":"ANQ.Vigie.Bll.Mandat","IndPeriodeAffairesCouranteAssemblee":false,"EstSeanceAssembleeExtraordinaire":false},{"Id":24567,"Titre":"Consultations particulières et auditions publiques sur le projet de loi n° 81, Loi visant à réduire le coût de certains médicaments couverts par le régime général d’assurance médicaments en permettant le recours à une procédure d’appel d’offres","TitreCourt":"Consultations particulières et auditions publiques sur le projet de loi n° 81","Description":"Séances des commissions","Nature":1,"SousTitre":"Commission de la santé et des services sociaux","SousTitreCourt":"Commission de la santé et des services sociaux","Privee":false,"Annulee":false,"Reportee":false,"LienDiffusionVideoDirectActivite":"","LienDiffusionAudioDirectActivite":"","InfoDateReport":null,"StatutDiffusion":true,"DirectVideo":true,"DirectAudio":true,"IndTranscription":false,"LienTranscription":"","IndCommuniquePresse":false,"LienCommuniquePresse":null,"DateDebut":new Date(1457709300000),"DateFin":new Date(1457716500000),"Lieu":"Salle du Conseil législatif (1.183), Hôtel du Parlement","SousActivites":[{"Id":24567,"Titre":"Consultations particulières et auditions publiques sur le projet de loi n° 81, Loi visant à réduire le coût de certains médicaments couverts par le régime général d’assurance médicaments en permettant le recours à une procédure d’appel d’offres","TitreCourt":"Consultations particulières et auditions publiques sur le projet de loi n° 81","Description":"Séances des commissions","Nature":1,"SousTitre":"Commission de la santé et des services sociaux","SousTitreCourt":"Commission de la santé et des services sociaux","Privee":false,"Annulee":false,"Reportee":false,"LienDiffusionVideoDirectActivite":"","LienDiffusionAudioDirectActivite":"","InfoDateReport":null,"StatutDiffusion":true,"DirectVideo":true,"DirectAudio":true,"IndTranscription":false,"LienTranscription":"","IndCommuniquePresse":false,"LienCommuniquePresse":null,"DateDebut":new Date(1457709300000),"DateFin":new Date(1457716500000),"Lieu":"Salle du Conseil législatif (1.183), Hôtel du Parlement","SousActivites":[],"Documents":[],"Images":[],"VideoAudio":{"UrlClient":"archives-parlementaires/travaux-commissions/AudioVideo-63527","EstVideo":true,"EstAudio":false},"Categorie":"B","UrlClient":"Mandat-34609","TypeObjetMetier":"ANQ.Vigie.Bll.Mandat","IndPeriodeAffairesCouranteAssemblee":false,"EstSeanceAssembleeExtraordinaire":false}],"Documents":[],"Images":[],"VideoAudio":{"UrlClient":"archives-parlementaires/travaux-commissions/AudioVideo-63527","EstVideo":true,"EstAudio":false},"Categorie":"B","UrlClient":"Mandat-34609","TypeObjetMetier":"ANQ.Vigie.Bll.Mandat","IndPeriodeAffairesCouranteAssemblee":false,"EstSeanceAssembleeExtraordinaire":false},{"Id":25105,"Titre":"Point de presse de M. Amir Khadir, député de Mercier","TitreCourt":"Point de presse de M. Amir Khadir, député de Mercier","Description":null,"Nature":1,"SousTitre":null,"SousTitreCourt":null,"Privee":false,"Annulee":false,"Reportee":false,"LienDiffusionVideoDirectActivite":"","LienDiffusionAudioDirectActivite":"","InfoDateReport":null,"StatutDiffusion":true,"DirectVideo":true,"DirectAudio":false,"IndTranscription":true,"LienTranscription":"ConferencePointPresse-28889","IndCommuniquePresse":false,"LienCommuniquePresse":null,"DateDebut":new Date(1457719200000),"DateFin":new Date(1457720100000),"Lieu":"Hall principal de l'hôtel du Parlement, Hôtel du Parlement","SousActivites":[],"Documents":[],"Images":[],"VideoAudio":{"UrlClient":"archives-parlementaires/activites-presse/AudioVideo-63533","EstVideo":true,"EstAudio":false},"Categorie":"C","UrlClient":null,"TypeObjetMetier":"","IndPeriodeAffairesCouranteAssemblee":false,"EstSeanceAssembleeExtraordinaire":false}],"Expositions":[{"Titre":"Entre savoir et pouvoir, l'édifice Pamphile-Le May et la Bibliothèque de l'Assemblée nationale","TitreCourt":"<em>Entre savoir et pouvoir, l'édifice Pamphile-Le May et la Bibliothèque de l'Assemblée nationale</em>","DateDebut":new Date(1442838600000),"DateFin":new Date(1473479940000),"Lieu":"Bibliothèque de l'Assemblée","Lien":"/visiteurs/expositions","TypeObjectMetier":"ANQ.Vigie.Bll.Texte"},{"Titre":"Histoires de députés","TitreCourt":"<em>Histoires de députés</em>","DateDebut":new Date(1399892400000),"DateFin":new Date(1467318600000),"Lieu":"Hall principal de l'hôtel du Parlement","Lien":"/visiteurs/expositions","TypeObjectMetier":"ANQ.Vigie.Bll.Texte"}],"Drapeaux":[],"LangueAffichage":"fr"});
+
+	    //Initialiser le carrousel.
+		$(document).ready(function() {	
+		    if(Carrousel_init())
+		    {
+		        $(".BlocCarrousel").show();
+		    }
+		});		
+	</script>
+	<link href="/styles/GabAccueil.min.css" rel="stylesheet" type="text/css" media="screen" />
+    
+
+    <style type="text/css">
+        .NonVisible { display:none; }
+    </style>
+
+    
+    
+        
+        <meta property="og:title" content="Accueil - Assemblée nationale du Québec" />
+        <meta property="og:image" content="http://www.assnat.qc.ca/images/vignette-partage-FB.jpg" />
+        <meta property="og:description" content="" />
+    
+</head>
+<body id="Accueil">
+    <form method="post" action="/fr/index.html" id="aspnetForm">
+<div>
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTQ5Mjk2Mzk0D2QWAmYPZBYCAgQQZGQWAgIBD2QWBAIBD2QWAmYPZBYCZg8VAg4vZW4vaW5kZXguaHRtbAdFbmdsaXNoZAIEDxYCHgRocmVmBScvZnIvYWlkZS9haWRlLXJlY2hlcmNoZS5odG1sI2phdmFzY3JpcHRkZFqQvENxS1j6lNsom/xraCzm52of" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CC3BF167" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAQC37jV0jmH9zZLliO51WGx3hH/puXvwl4FGZa6rYP8j1mVEZ4vf9ptYWo57zpKTt6lEMKQhIoeAaAd1Tau8/yutpw/SfXv56ivUOLX290yJTcpjZg=" />
+</div>
+    <div id="Wrap">
+        
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="http://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien">Suivez-nous</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            
+            <li><a href="/en/index.html">English</a></li>
+            
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle" />
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher"/>
+                </div>
+            </li>
+            <li>
+                <a href="/fr/aide/aide-recherche.html#javascript" onclick="LancerRechercheAvancee();return false;">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?mcl=' + encodeURIComponent(mot.val());
+        }
+    }
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        var zoneCourante = 0 + 
+                           0 +
+                           0 +
+                           0 +
+                           0 +
+                           0 +
+                           0 +
+                           0 +
+                           0 +
+                           0 +
+                           0 +
+                           0;
+
+        window.location = urlRechercheAvancee + "?zn=" + zoneCourante;
+    }
+
+
+
+    $(document).ready(
+
+		function() {
+		    // Masquer le bouton Envoyer a un ami dans certaines pages
+
+		    var Recherche = '';
+		    var EnvoyerAmi = '';
+
+		    if (Recherche + EnvoyerAmi != '')
+		        $("#EnvoyerAmi").addClass("cacherUnElement");
+		}
+	);				
+		
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+<div id="Banniere">
+	
+<h1>Assemblée nationale du Québec</h1>
+
+</div>        
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil menuActif">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li class='menuHoverParent btnDeputes'><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes">
+                Députés</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10006.html">Le président</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1792</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li class='menuHoverParent btnTravaux'>
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires">
+                    Travaux parlementaires</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="http://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="http://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li class='menuHoverParent btnExprimez'>
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion">
+                    Exprimez votre opinion !</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><strong><a href="http://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="http://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/10995.html">Participer à une consultation en ligne</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="http://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="http://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li class='menuHoverParent btnVideoAudio'>
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio">
+                    Vidéo</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12551.html">Députés </a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="http://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class='' id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class='' id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class='' id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class='' id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class='' id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class='' id="lienEducatives">
+                <a href="/fr/education/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class='' id="lienInternational">
+                <a href="/fr/associations/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    International</a></li>
+            <li class='' id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+        <div class="ColGauche colonne">
+            
+    
+<div id="ZoneActualites" class="ZoneActualites">
+    <ul class="TabZoneActualites">
+        <li class="Premier"><a href="#Onglet-01">
+            <br>Actualités</a></li>
+        <li class="Second"><a href="#Onglet-02">
+            Projets de loi</a></li>
+        <li class="Troisieme"><a href="#Onglet-03">
+            Consultations publiques</a></li>
+    </ul>
+    <div class="clear">
+    </div>
+    <div id="Onglet-01" class="Onglets">
+        <div class="OngletsInterne">
+            <ul class="ListeLien">
+                <li><a href="/fr/actualites-salle-presse/index.html">
+                    Toutes les actualités</a></li>
+            </ul>
+            <div class="hr">
+                <hr />
+            </div>
+            
+            
+                    <ul class="listeActualites">
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                10 mars 2016</span>
+                            <br />
+                            <a href='/fr/travaux-parlementaires/mandats/Mandat-34873/index.html'>La Commission des institutions entreprend un nouveau mandat intitulé : Consultations particulières et auditions publiques sur le projet de loi n° 64, Loi sur l’immatriculation des armes à feu&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                10 mars 2016</span>
+                            <br />
+                            <a href='/fr/travaux-parlementaires/mandats/Mandat-34869/index.html'>La Commission de l'aménagement du territoire entreprend un nouveau mandat intitulé : Interpellation du député de Gaspé à la ministre responsable des Petites et Moyennes Entreprises, de l’Allègement réglementaire et du Développement économique régional sur le sujet suivant : Le manque de vision du gouvernement en matière de développement des régions&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                10 mars 2016</span>
+                            <br />
+                            <a href='/fr/travaux-parlementaires/mandats/Mandat-34875/index.html'>La Commission de l'économie et du travail entreprend un nouveau mandat intitulé : Étude détaillée du projet de loi n° 70, Loi visant à permettre une meilleure adéquation entre la formation et l’emploi ainsi qu’à favoriser l’intégration en emploi&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                4 mars 2016</span>
+                            <br />
+                            <a href='/fr/travaux-parlementaires/mandats/Mandat-34817/index.html'>La Commission de l'agriculture, des pêcheries, de l'énergie et des ressources naturelles entreprend un nouveau mandat intitulé : Consultations particulières et auditions publiques dans le cadre de l’étude du Livre vert intitulé Orientations du ministère de l'Énergie et des Ressources naturelles en matière d'acceptabilité sociale&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                25 février 2016</span>
+                            <br />
+                            <a href='/fr/travaux-parlementaires/mandats/Mandat-34791/index.html'>La Commission des finances publiques entreprend un nouveau mandat intitulé : Interpellation du député de Granby au ministre des Finances sur le sujet suivant : La nécessité d'une baisse du fardeau fiscal des citoyens et d'un plan de relance économique dans le contexte pré-budgétaire&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    </ul>
+                
+        </div>
+    </div>
+    <div id="Onglet-02" class="Onglets">
+        <div class="OngletsInterne">
+            <ul class="ListeLien">
+                <li><a href="/fr/travaux-parlementaires/projets-loi/index.html">
+                    Tous les projets de loi</a></li>
+            </ul>
+            <div class="hr">
+                <hr />
+            </div>
+            
+            
+                
+            
+                    <ul class="listeActualites">
+                        <li>
+                            <p>
+                                <span class="dateActualite">
+                                    Projets de loi présentés récemment&nbsp;:</span></p>
+                        </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                9 mars 2016</span>
+                            <br />
+                            <span>
+                                N°
+                                592&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-592-41-1.html">Loi concernant la sélection des sénateurs représentant le Québec<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                9 mars 2016</span>
+                            <br />
+                            <span>
+                                N°
+                                590&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-590-41-1.html">Loi modifiant la Loi sur le vérificateur général<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                25 février 2016</span>
+                            <br />
+                            <span>
+                                N°
+                                594&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-594-41-1.html">Loi modifiant la Loi sur les élections et les référendums dans les municipalités<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                25 février 2016</span>
+                            <br />
+                            <span>
+                                N°
+                                591&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-591-41-1.html">Loi affirmant la participation du Québec au processus de nomination des juges de la Cour suprême du Canada pour le Québec<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                24 février 2016</span>
+                            <br />
+                            <span>
+                                N°
+                                595&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-595-41-1.html">Loi visant à protéger l'accès aux établissements où se pratiquent des interruptions volontaires de grossesse<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    </ul>
+                
+        </div>
+    </div>
+    <div id="Onglet-03" class="Onglets">
+        <div class="OngletsInterne">
+            <ul class="ListeLien">
+                <li><a href="/fr/travaux-parlementaires/commissions/mandats-encours-commissions.html">
+                    Tous les mandats des <br/> commissions en cours</a> </li>
+            </ul>
+            <div class="hr">
+                <hr />
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+        </div>
+        <div class="ColCentre colonne Contenu">
+            
+    
+    <div class="BlocCarrousel">
+        
+			        
+
+<div class="carrouselBase"> 
+    <div class="carrouselPrincipal">
+                     
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                <div class="carrouselPage" data-date="9999-12-31T23:59:59"><a href="/fr/lien/10126.html"><img alt="Consultez la section des travaux des commissions parlementaires" title="Consultez la section des travaux des commissions parlementaires" src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_3425&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz" /></a></div>
+                         
+                <div class="carrouselPage" data-date="2016-03-14T00:00:00"><a href="/fr/video-audio/emissions-capsules-promotionnelles/capsules-promotionnelles/audiovideo-63427.html"><img alt="Conférence disponible en ligne et présentée le dimanche, 13 mars à 20 h, sur le canal de l’Assemblée" title="Conférence disponible en ligne et présentée le dimanche, 13 mars à 20 h, sur le canal de l’Assemblée" src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_17911&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz" /></a></div>
+                         
+                <div class="carrouselPage" data-date="9999-12-31T23:59:59"><a href="/fr/visiteurs/expositions.html"><img alt="Une exposition à découvrir à la Bibliothèque!" title="Une exposition à découvrir à la Bibliothèque!" src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_15701&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz" /></a></div>
+                         
+                <div class="carrouselPage" data-date="9999-12-31T23:59:59"><a href="/fr/bibliotheque/publications/bulletin/index.html"><img alt="Le Bulletin de la Bibliothèque - L'héritage mythique de la Magna Carta" title="Le Bulletin de la Bibliothèque - L'héritage mythique de la Magna Carta" src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_17501&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz" /></a></div>
+                         
+                <div class="carrouselPage" data-date="9999-12-31T23:59:59"><a href="/fr/actualites-salle-presse/nouvelle/actualite-33009.html"><img alt="Approbation du projet d’amélioration des infrastructures - Pour un parlement plus sécuritaire et encore plus accessible" title="Approbation du projet d’amélioration des infrastructures - Pour un parlement plus sécuritaire et encore plus accessible" src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_16391&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz" /></a></div>
+                         
+                <div class="carrouselPage" data-date="9999-12-31T23:59:59"><a href="/fr/lien/10048.html"><img alt="Participez à une visite guidée de l'hôtel du Parlement" title="Participez à une visite guidée de l'hôtel du Parlement" src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_3757&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz" /></a></div>
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+            
+    </div>
+    <div class="carrouselNavigation">
+    </div>
+    <div class="carrouselNumPage"></div>
+    <div class="carrouselNumPageNavigation">0</div>
+    <div class="carrouselVitesseDefilement">
+        
+                4000
+            
+    </div>
+</div>	
+		        
+    </div>    
+    
+    <div class="BlocInfo">
+        
+
+<h2>
+    Députés
+</h2>
+
+<div class="champsRecherche champsDeputes">
+
+	
+			<ul class="ListeLien">
+<li><a id="lienListeDeputes" href="http://www.assnat.qc.ca/fr/lien/10002.html">Liste des députés en fonction</a></li>
+<!--
+<li><a href="http://www.assnat.qc.ca/fr/lien/10006.html" mce_href="http://www.assnat.qc.ca/fr/lien/10006.html">Le président de l’Assemblée nationale</a></li>
+-->
+<li><a href="http://www.assnat.qc.ca/fr/deputes/president-assemblee.html">Le président de l’Assemblée nationale</a></li>
+</ul>
+<p>&nbsp;</p>			
+		
+
+    <div  style="width:90%;">
+        <p><label for="ctl00_ColCentre_TrouverUnDepute1_inputRechercheDeputes">Trouver un député par code postal, par nom ou par circonscription :</label></p>
+        <input name="ctl00$ColCentre$TrouverUnDepute1$inputRechercheDeputes" type="text" id="ctl00_ColCentre_TrouverUnDepute1_inputRechercheDeputes" class="inputRecherche RechercheDeputes BulleInfo" title="Pour savoir qui est votre député, saisissez votre code postal ou le nom de votre circonscription (comté). Pour accéder à la fiche biographique d’un député, saisissez le nom du député ou le nom de sa circonscription." />
+    </div>
+    <input onclick="RechercherDepute()" type="button" value="Rechercher" class="btnSoumettre"/>        
+</div>
+<script type="text/javascript">
+    function RechercherDepute() {
+    
+        var mot = 'ctl00_ColCentre_TrouverUnDepute1_inputRechercheDeputes';
+        mot = '#' + mot;
+        var objetjq = $(mot);
+        if (objetjq.val() != "") {
+            window.location = '/fr/recherche/recherche-avancee.html?rch=Depute&zn=1&tdp=' + encodeURIComponent(objetjq.val());
+        }
+    }
+
+    //Ajouter l'ancre au lien menant à la liste des députés.
+    var hrefOriginal = $("a#lienListeDeputes").attr('href');
+    $("a#lienListeDeputes").attr('href', hrefOriginal + '#listeDeputes');
+    var b = 1;
+    
+</script>
+        
+    </div>
+    <div class="BlocInfo BlocInfoDroite">
+        
+<h2>Accès rapides</h2>
+    
+                <ul class="ListeLien">
+<li><a href="http://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/index.html">Pétitions </a></li>
+<li><a href="http://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats </a></li>
+<li><a href="http://www.assnat.qc.ca/fr/patrimoine/lexique/index.html">Encyclopédie du parlementarisme québécois</a></li>
+<li><a href="http://www.assnat.qc.ca/fr/actualites-salle-presse/nouvelle/actualite-33009.html">Projet d’amélioration des infrastructures</a></li>
+</ul>
+<!--
+<p style="text-align: center;" mce_style="text-align: center;"><a class="sanssouligne" href="http://www.assnat.qc.ca/fr/lien/12563.html" mce_href="http://www.assnat.qc.ca/fr/lien/12563.html"><img src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_14727&amp;process=Original&amp;params=&amp;token=ZyMoxNwUn8ikQ%2bTRKYwPCjWrKwg%2bvIv9rjij7p3xLGTZDmLVSmJLoqe%2fvG7%2fYWzz&amp;version=0" mce_src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_14727&amp;process=Original&amp;params=&amp;token=ZyMoxNwUn8ikQ%2bTRKYwPCjWrKwg%2bvIv9rjij7p3xLGTZDmLVSmJLoqe%2fvG7%2fYWzz&amp;version=0" alt="Registre officiel de condoléances - Jacques Parizeau" title="Registre officiel de condoléances - Jacques Parizeau" /></a></p>
+-->
+<p><a class="sanssouligne" href="http://www.assnat.qc.ca/fr/lien/10210.html"><img src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_9333&amp;process=Original&amp;params=&amp;token=ZyMoxNwUn8ikQ%2bTRKYwPCjWrKwg%2bvIv9rjij7p3xLGTZDmLVSmJLoqe%2fvG7%2fYWzz&amp;version=0" alt="Par ici la démocratie" title="Par ici la démocratie" /></a></p>
+        
+    </div>
+    <div class="clear"></div>
+    <div class="hr"><hr /></div>
+    <h2>Découvrir et participer</h2>
+    
+    
+	
+            <div class="NouvellesBreves">
+                <div class="ImgAlignementGauche">
+                    <p><img src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_5319&amp;process=Original&amp;params=&amp;token=ZyMoxNwUn8ikQ%2bTRKYwPCjWrKwg%2bvIv9rjij7p3xLGTZDmLVSmJLoqe%2fvG7%2fYWzz&amp;version=0" alt="" title="" /></p>
+                </div>
+        
+	
+			    <div class="texteAlignementDroit">
+                    <h3>Restaurants</h3>
+				    <p>Le restaurant&nbsp;<a href="http://www.assnat.qc.ca/fr/lien/10054.html">Le Parlementaire</a> et le&nbsp;<a href="http://www.assnat.qc.ca/fr/lien/10064.html">Café du Parlement</a>&nbsp;sont ouverts à tous.</p>
+			    </div>
+            </div>
+		
+
+    
+	
+	
+
+
+    
+	
+            <div class="NouvellesBreves">
+                <div class="ImgAlignementGauche">
+                    <p><img src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_15549&amp;process=Original&amp;params=&amp;token=ZyMoxNwUn8ikQ%2bTRKYwPCjWrKwg%2bvIv9rjij7p3xLGTZDmLVSmJLoqe%2fvG7%2fYWzz&amp;version=0" alt="Expositions en cours - Entre savoir et pouvoir, l’édifice Pamphile-Le May et la Bibliothèque de l’Assemblée nationale" title="Expositions en cours - Entre savoir et pouvoir, l’édifice Pamphile-Le May et la Bibliothèque de l’Assemblée nationale" /></p>
+                </div>
+        
+	
+			    <div class="texteAlignementDroit">
+                    <h3>Expositions en cours</h3>
+				    <p>La nouvelle exposition, <a href="http://www.assnat.qc.ca/fr/visiteurs/expositions.html"><em>Entre savoir et pouvoir, l'édifice Pamphile-Le May et la Bibliothèque de l'Assemblée nationale</em></a>, relate les 100 ans d’histoire de la Bibliothèque et de l’édifice qui l’abrite depuis 1915. Découvrez cette exposition où savoir et pouvoir sont conjugués en un même lieu&nbsp;!</p>
+			    </div>
+            </div>
+		
+
+
+    
+	
+	
+
+
+    
+	
+            <div class="NouvellesBreves">
+                <div class="ImgAlignementGauche">
+                    <p><img src="http://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_3857&amp;process=Original&amp;params=&amp;token=ZyMoxNwUn8ikQ%2bTRKYwPCjWrKwg%2bvIv9rjij7p3xLGTZDmLVSmJLoqe%2fvG7%2fYWzz&amp;version=0" alt="" /></p>
+                </div>
+        
+	
+			    <div class="texteAlignementDroit">
+                    <h3>Carrières et stages</h3>
+				    <p><strong>Vos compétences s'expriment ici !<br /></strong>Soyez témoin et acteur d'événements marquants de l'actualité politique, sociale et culturelle du Québec en travaillant à l'Assemblée nationale. Visitez notre section&nbsp;<a href="http://www.assnat.qc.ca/fr/abc-assemblee/carrieres-et-stages.html">Carrières et stages</a>.</p>
+			    </div>
+            </div>
+		
+
+        </div>
+        <div class="ColDroite colonne">
+            <!-- Ancre pour le "skiplink atteindreContenu" -->
+            <div id="divAncreContenuPrincipal" class="skipLinks">
+                <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+            </div>
+            
+    
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_ColDroite_CalendrierSommaire_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="display: none">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours"
+                        title="Chargement en cours" />
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href='/fr/calendrier-detaille.html'>
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup"></span>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br />
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br />
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br />
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br />
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br />
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br />
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br />
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href=''>
+                    Aujourd'hui</a></span>
+            </div>
+            <hr />
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_ColDroite_CalendrierSommaire_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="my-skinnable-select">
+                    <select name="ctl00$ColDroite$CalendrierSommaire$selectFiltreCategorieActivite" id="ctl00_ColDroite_CalendrierSommaire_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite">
+	<option selected="selected" value="*"></option>
+
+</select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br />
+            <a href='/fr/aide/aide-recherche.html#javascript'>
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+
+        </div>
+        <div class="clear" id="ClearPiedPage"></div>
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        <li><a href="/fr/lien/10214.html">Portail Québec</a></li>     
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+    </ul><br />
+    <ul>
+        <li class="Premier">
+            <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxPied">
+                <span class="styleHyperlien">Suivez-nous</span>
+            </a>
+        </li>
+        <li><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+		<li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">© Assemblée nationale du Québec</a></li>
+		<li><a href="http://m.assnat.qc.ca">Mobile</a></li>
+    </ul>
+    <br />
+    <span class="NonVisible">
+        
+    </span>
+</div>
+               
+
+<script type="text/javascript">
+    var isPiwikActiver = 'True';
+    var PiwikIdSite = '3';
+    if (isPiwikActiver == "True") {
+        var u = (("https:" == document.location.protocol) ? "https" : "http") + "://stats.assnat.qc.ca/piwik/";
+        var _paq = _paq || [];
+        _paq.push(["trackPageView"]);
+        _paq.push(["enableLinkTracking"]);
+
+        (function () {
+            _paq.push(["setTrackerUrl", u + "piwik.php"]);
+            _paq.push(["setSiteId", PiwikIdSite]);
+            var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0]; g.type = "text/javascript";
+            g.defer = true; g.async = true; g.src = u + "piwik.js"; s.parentNode.insertBefore(g, s);
+        })();
+    }
+</script>   
+    </div>    
+    </form>
+</body>
+</html>
+

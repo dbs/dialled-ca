@@ -1,0 +1,631 @@
+
+
+<html>
+<head><title>
+	Huron Perth Healthcare Alliance - Seaforth Community Hospital Site
+</title><meta name="Keywords" content="" /><meta name="Description" content="" /></head>
+<script language="javascript" type="text/javascript">
+
+function changeFontSize(curForm){
+  
+  document.forms.item(0).procType.value = "Font"
+  document.forms.item(0).submit();
+}
+
+function printPage(printPage){
+	document.forms.item(0).page_data.value = mainPrint.innerHTML.replace(/<!--START_REM-->(.|\r\n)*?<!--END_REM-->/gi,"");
+	document.forms.item(0).target='_blank';
+	document.forms.item(0).action="print.aspx";
+	document.forms.item(0).submit();
+	
+	document.forms.item(0).target = "";
+	document.forms.item(0).action = "";
+	document.forms.item(0).page_data.value = "";
+}
+function clearSearchBox(textbox)
+{
+    if(textbox.value == "search" || textbox.value == "Search" ||textbox.value == "SEARCH"){
+      textbox.value = "";
+    }
+}
+</script>
+<!--body -->
+<body bgcolor="#E4E6D1">
+   <script type="text/javascript" language="JavaScript1.2">dqm__codebase = "javascript/" //script folder location</script>
+   <script type="text/javascript" language="JavaScript1.2" src="javascript/navdata.aspx"></script>
+   <script type="text/javascript" language="JavaScript1.2" src="javascript/dqm_loader.js"></script>
+   <link rel="stylesheet" type="text/css" href="../StyleSheet/styles.css" />
+   <link rel="StyleSheet" href="StyleSheet/StylesN.css" type="text/css" />
+   <form name="aspnetForm" method="post" action="default.aspx?cid=48&amp;lang=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE3NzAzOTA0NzgPZBYCZg9kFgICAQ9kFgwCAQ9kFgICAQ9kFgJmDw8WAh4EVGV4dAW7A1lvdSBhcmUgSGVyZSA6IDxhIGhyZWY9ImhvbWUuYXNweCIgY2xhc3M9ImJyZWFkIj5Ib21lPC9hPiZuYnNwOyZuYnNwOzxpbWcgc3JjPSIuLi9pbWdzL2JyZWFkX2Fycm93LmdpZiIgLz4mbmJzcDsmbmJzcDs8YSBocmVmPSJkZWZhdWx0LmFzcHg/Y2lkPTQ0Jmxhbmc9MSIgY2xhc3M9ImJyZWFkIj5TaXRlcywgUHJvZ3JhbXMgJiBTZXJ2aWNlczwvYT4mbmJzcDsmbmJzcDs8aW1nIHNyYz0iLi4vaW1ncy9icmVhZF9hcnJvdy5naWYiIC8+Jm5ic3A7Jm5ic3A7PGEgaHJlZj0iZGVmYXVsdC5hc3B4P2NpZD00NCZsYW5nPTEiIGNsYXNzPSJicmVhZCI+U2l0ZXM8L2E+Jm5ic3A7Jm5ic3A7PGltZyBzcmM9Ii4uL2ltZ3MvYnJlYWRfYXJyb3cuZ2lmIiAvPiZuYnNwOyZuYnNwOzxzcGFuIGNsYXNzPSJicmVhZEN1ciI+U2VhZm9ydGggQ29tbXVuaXR5IEhvc3BpdGFsIFNpdGU8L3NwYW4+ZGQCAg8PZBYEHgdvbmZvY3VzBRVjbGVhclNlYXJjaEJveCh0aGlzKTseCW9ua2V5ZG93bgWpAWlmKGV2ZW50LndoaWNoIHx8IGV2ZW50LmtleUNvZGUpe2lmICgoZXZlbnQud2hpY2ggPT0gMTMpIHx8IChldmVudC5rZXlDb2RlID09IDEzKSkge2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjdGwwMCRzQnV0dG9uJykuY2xpY2soKTtyZXR1cm4gZmFsc2U7fX0gZWxzZSB7cmV0dXJuIHRydWV9OyBkAgYPZBYCAgMPFgIeC18hSXRlbUNvdW50AgIWBGYPZBYCZg8VBQoxMi8wMy8yMDE2H1ZpZXdFdmVudHMuYXNweD9jaWQ9NDE3OSZsYW5nPTEAH0Jsb29kIERvbm9yIENsaW5pYyAtIFN0cmF0Zm9yZCAlOTowMCBhbSB0byAxMjowMCBwbSAvIFJvdGFyeSBDb21wbGV4IGQCAQ9kFgJmDxUFCjE1LzAzLzIwMTYfVmlld0V2ZW50cy5hc3B4P2NpZD00MTY5Jmxhbmc9MQAfQmxvb2QgRG9ub3IgQ2xpbmljIC0gTWlsdmVydG9uICwzOjAwIHBtIHRvIDg6MDAgcG0gLyBQZXJ0aCBFYXN0IFJlYyBDb21wbGV4IGQCBw9kFgJmDw8WAh8ABZQBVG9kYXksIGhlYXJ0IGRpc2Vhc2UgYW5kIHN0cm9rZSB0YWtlIG9uZSBsaWZlIGV2ZXJ5IDcgbWludXRlcyBhbmQgOTAlIG9mIENhbmFkaWFucyBoYXZlIGF0IGxlYXN0IG9uZSByaXNrIGZhY3Rvci4gIFNvdXJjZTogSGVhcnQgJiBTdHJva2UgRm91bmRhdGlvbmRkAggPZBYGAgEPDxYCHwAFGlNpdGVzLCBQcm9ncmFtcyAmIFNlcnZpY2VzZGQCAw9kFgICAQ8WAh8DAgIWBAIBD2QWBGYPFQQaZGVmYXVsdC5hc3B4P2NpZD00NCZsYW5nPTEAAVMFU2l0ZXNkAgEPFgIfAwIEFghmD2QWBGYPFQQaZGVmYXVsdC5hc3B4P2NpZD00NiZsYW5nPTEAABxDbGludG9uIFB1YmxpYyBIb3NwaXRhbCBTaXRlZAIBDxYCHwMC/////w9kAgIPZBYEZg8VBBpkZWZhdWx0LmFzcHg/Y2lkPTQ3Jmxhbmc9MQAAH1N0IE1hcnlzIE1lbW9yaWFsIEhvc3BpdGFsIFNpdGVkAgEPFgIfAwL/////D2QCBA9kFgRmDxUEGmRlZmF1bHQuYXNweD9jaWQ9NDgmbGFuZz0xAAFTIFNlYWZvcnRoIENvbW11bml0eSBIb3NwaXRhbCBTaXRlZAIBDxYCHwMC/////w9kAgYPZBYEZg8VBBpkZWZhdWx0LmFzcHg/Y2lkPTQ5Jmxhbmc9MQAAH1N0cmF0Zm9yZCBHZW5lcmFsIEhvc3BpdGFsIFNpdGVkAgEPFgIfAwL/////D2QCAg9kFgRmDxUEGmRlZmF1bHQuYXNweD9jaWQ9NDUmbGFuZz0xAAASUHJvZ3JhbSAmIFNlcnZpY2VzZAIBDxYCHwMC/////w9kAgUPZBYCAgEPFgIfAwIKFhQCAQ9kFgJmDxUCLmh0dHA6Ly93d3cuaHBoYS5jYS9EZWZhdWx0LmFzcHg/Y2lkPTE3NyZsYW5nPTEYMjAxNC0yMDE1IEFubnVhbCBSZXBvcnQgZAICD2QWAmYPFQItaHR0cDovL3d3dy5ocGhhLmNhL2RlZmF1bHQuYXNweD9jaWQ9NjMmbGFuZz0xC0RvbmF0ZSBOb3chZAIDD2QWAmYPFQIbZGVmYXVsdC5hc3B4P2NpZD0yNDkmbGFuZz0xCkkuVC4gTGlua3NkAgQPZBYCZg8VAhNkZWZhdWx0LmFzcHg/Y2lkPTU5EUpvYiBPcHBvcnR1bml0aWVzZAIFD2QWAmYPFQIUZGVmYXVsdC5hc3B4P2NpZD0zNDgQTWFwcy8gRGlyZWN0aW9uc2QCBg9kFgJmDxUCL2h0dHA6Ly93d3cuaHBoYS5jYS9kZWZhdWx0LmFzcHg/Y2lkPTIxMDUmbGFuZz0xGlBhdGllbnQgJiBGYW1pbHkgSGFuZGJvb2tzZAIHD2QWAmYPFQIxaHR0cDovL3d3dy5ocGhhLmNhL2RlZmF1bHQuYXNweD9jaWQ9MjA5NiZwcmU9dmlldyVQYXRpZW50ICYgRmFtaWx5IEV4cGVyaWVuY2UgRmVlZGJhY2sgZAIID2QWAmYPFQIxaHR0cDovL3d3dy5ocGhhLmNhL0RlZmF1bHQuYXNweD9jaWQ9MTYxMyZwcmU9dmlldxxUcmFuc3BhcmVuY3kgYW5kIFBlcmZvcm1hbmNlZAIJD2QWAmYPFQIwaHR0cHM6Ly93d3cuc3VydmV5bW9ua2V5LmNvbS9yL2hwaGF3ZWJzaXRlc3VydmV5EFdlYnNpdGUgRmVlZGJhY2tkAgoPZBYCZg8VAhxEZWZhdWx0LmFzcHg/Y2lkPTExOTImbGFuZz0xDldoaXN0bGUgQmxvd2VyZAIJD2QWAgIBDw8WAh4HVmlzaWJsZWdkFgQCAQ8PFgIfAAUgU2VhZm9ydGggQ29tbXVuaXR5IEhvc3BpdGFsIFNpdGVkZAIDDw8WAh8ABfwfDQoNCjxwPg0KCTxpbWcgc3R5bGU9IldJRFRIOiA2MjFweDsgSEVJR0hUOiAyNDBweCIgdGl0bGU9IiIgYm9yZGVyPSIwIiBhbHQ9IiIgc3JjPSJpbWFnZS5hc3B4P2lkPTI1OSIgd2lkdGg9Ijc0NSIgaGVpZ2h0PSIzMzYiIC8+PC9wPg0KDQo8cD48c3Ryb25nPjxzcGFuIHN0eWxlPSJURVhULURFQ09SQVRJT046IHVuZGVybGluZSI+R2V0dGluZyBBcm91bmQgU2VhZm9ydGggQ29tbXVuaXR5IEhvc3BpdGFsPC9zcGFuPjwvc3Ryb25nPjwvcD4NCg0KPHA+PHN0cm9uZz4yNCBDZW50ZW5uaWFsIERyLiwgU2VhZm9ydGgsIE9OJm5ic3A7IE4wSyAxVzAmbmJzcDsmbmJzcDsgPC9zdHJvbmc+PC9wPg0KDQo8cD48c3Ryb25nPjUxOS01MjctMTY1MCBvciA8c3Ryb25nPlRvbGwgRnJlZTogMS04ODgtMjc1LTExMDI8YnIgLz4NCgkJCTwvc3Ryb25nPjwvc3Ryb25nPjwvcD4NCg0KPHA+PHN0cm9uZz48c3BhbiBzdHlsZT0iQ09MT1I6ICNmZjAwMDAiPkhQSEEgaXMgYTwvc3Bhbj4gPC9zdHJvbmc+PGEgaHJlZj0iL2RlZmF1bHQuYXNweD9jaWQ9MjAwNSZhbXA7bGFuZz0xIj48c3Ryb25nPlNtb2tlLUZyZWUgQWxsaWFuY2U8L3N0cm9uZz48L2E+PHN0cm9uZz4uIDxzcGFuIHN0eWxlPSJDT0xPUjogI2ZmMDAwMCI+U21va2luZyBpcyBwcm9oaWJpdGVkIGluIGFsbCBhcmVhcyBvZiBhbGwgSG9zcGl0YWwgU2l0ZXMsIGluY2x1ZGluZyBncm91bmRzLCBwYXJraW5nIGxvdHMgYW5kIHBlcnNvbmFsIHZlaGljbGVzLjwvc3Bhbj48L3N0cm9uZz48L3A+DQoNCjxwPjxzdHJvbmc+UGFya2luZzwvc3Ryb25nPjwvcD4NCg0KPHA+UGFya2luZyBpcyBhdmFpbGFibGUgaW4gdGhlIGhvc3BpdGFsIHBhcmtpbmcgbG90cyBsb2NhdGVkIGF0IHRoZSBmcm9udCBhbmQgcmVhciBvZiB0aGUgaG9zcGl0YWwsIGFuZCBuZWFyIHRoZSZuYnNwO01haW4gRW50cmFuY2UuJm5ic3A7Jm5ic3A7UGFya2luZyBpcyBmcmVlIG9mIGNoYXJnZS4mbmJzcDsgUGxlYXNlIHRha2Ugbm90ZSBvZiB0aGUgcmVzZXJ2ZWQmbmJzcDtoYW5kaWNhcHBlZCBhbmQgcmVoYWJpbGl0YXRpb24gcGFya2luZyBzcGFjZXMuPC9wPg0KDQo8cD5QYXRpZW50cywgZmFtaWxpZXMgYW5kIHZpc2l0b3JzIHRvIFNlYWZvcnRoIENvbW11bml0eSBIb3NwaXRhbCAoU0NIKSBzaG91bGQgZW50ZXIgdGhlIGZhY2lsaXR5IHVzaW5nIHRoZSBNYWluIEVudHJhbmNlIG9mZiBDZW50ZW5uaWFsIERyaXZlLiZuYnNwOzwvcD4NCg0KPHA+PHN0cm9uZz5JbiB0aGUgSG9zcGl0YWw8L3N0cm9uZz48L3A+DQoNCjxwPkFsbCBwYXRpZW50cyBhcmUgdG8gcmVnaXN0ZXIgYXQgUGF0aWVudCBSZWdpc3RyYXRpb24uPC9wPg0KDQo8cD48c3Ryb25nPlNpdGUgRGlyZWN0b3J5PC9zdHJvbmc+PC9wPg0KDQo8cD4NCgkNCjx0YWJsZSBzdHlsZT0iV0lEVEg6IDEwMCU7IEJPUkRFUi1DT0xMQVBTRTogY29sbGFwc2UiPg0KCQkNCjx0Ym9keT4NCgkJCQ0KPHRyPg0KCQkJCQ0KPHRkPjxzdHJvbmc+PHNwYW4gc3R5bGU9IkJBQ0tHUk9VTkQtQ09MT1I6ICNkY2RjZGMiPk1haW4gTGV2ZWw8L3NwYW4+PC9zdHJvbmc+PC90ZD4NCgkJCQkNCjx0ZD48c3Ryb25nPjxzcGFuIHN0eWxlPSJCQUNLR1JPVU5ELUNPTE9SOiAjZGNkY2RjIj5Mb3dlciBMZXZlbDwvc3Bhbj48L3N0cm9uZz48L3RkPg0KCQkJPC90cj4NCgkJCQ0KPHRyPg0KCQkJCQ0KPHRkPkFkbWluaXN0cmF0aW9uIE9mZmljZTwvdGQ+DQoJCQkJDQo8dGQ+Q2FmZXRlcmlhPC90ZD4NCgkJCTwvdHI+DQoJCQkNCjx0cj4NCgkJCQkNCjx0ZD5Cb2FyZCBSb29tPC90ZD4NCgkJCQkNCjx0ZD5Db21tdW5pdHkgU3Ryb2tlIFJlaGFiaWxpdGF0aW9uIFRlYW08L3RkPg0KCQkJPC90cj4NCgkJCQ0KPHRyPg0KCQkJCQ0KPHRkPkJ1c2luZXNzIE9mZmljZTwvdGQ+DQoJCQkJDQo8dGQ+Q29uZmVyZW5jZSBSb29tPC90ZD4NCgkJCTwvdHI+DQoJCQkNCjx0cj4NCgkJCQkNCjx0ZD5EaWFiZXRlcyBFZHVjYXRpb248L3RkPg0KCQkJCQ0KPHRkPg0KCQkJCQkNCjxwPkVudmlyb25tZW50YWwgU2VydmljZXM8L3A+PC90ZD4NCgkJCTwvdHI+DQoJCQkNCjx0cj4NCgkJCQkNCjx0ZD5EaWV0aXRpYW48L3RkPg0KCQkJCQ0KPHRkPg0KCQkJCQkNCjxwPkZhY2lsaXRpZXMgTWFuYWdlbWVudDwvcD48L3RkPg0KCQkJPC90cj4NCgkJCQ0KPHRyPg0KCQkJCQ0KPHRkPjxzcGFuIHN0eWxlPSJDT0xPUjogI2ZmMDAwMCI+RW1lcmdlbmN5PC9zcGFuPjwvdGQ+DQoJCQkJDQo8dGQ+SVQ8L3RkPg0KCQkJPC90cj4NCgkJCQ0KPHRyPg0KCQkJCQ0KPHRkPkdpZnQgU2hvcDwvdGQ+DQoJCQkJDQo8dGQ+TWF0ZXJpYWxzIE1hbmFnZW1lbnQ8L3RkPg0KCQkJPC90cj4NCgkJCQ0KPHRyPg0KCQkJCQ0KPHRkPkhlYWx0aCBSZWNvcmRzPC90ZD4NCgkJCQkNCjx0ZD48L3RkPg0KCQkJPC90cj4NCgkJCQ0KPHRyPg0KCQkJCQ0KPHRkPklucGF0aWVudCBVbml0PC90ZD4NCgkJCQkNCjx0ZD48L3RkPg0KCQkJPC90cj4NCgkJCQ0KPHRyPg0KCQkJCQ0KPHRkPkxhYm9yYXRvcnkgU2VydmljZXM8L3RkPg0KCQkJCQ0KPHRkPjwvdGQ+DQoJCQk8L3RyPg0KCQkJDQo8dHI+DQoJCQkJDQo8dGQ+T2NjdXBhdGlvbmFsIFRoZXJhcHk8L3RkPg0KCQkJCQ0KPHRkPjwvdGQ+DQoJCQk8L3RyPg0KCQkJDQo8dHI+DQoJCQkJDQo8dGQ+UGF0aWVudCBSZWdpc3RyYXRpb248L3RkPg0KCQkJCQ0KPHRkPjwvdGQ+DQoJCQk8L3RyPg0KCQkJDQo8dHI+DQoJCQkJDQo8dGQ+UGh5c2lvdGhlcmFweTwvdGQ+DQoJCQkJDQo8dGQ+PC90ZD4NCgkJCTwvdHI+DQoJCQkNCjx0cj4NCgkJCQkNCjx0ZD5zbWFsbFRBTEs8L3RkPg0KCQkJCQ0KPHRkPjwvdGQ+DQoJCQk8L3RyPg0KCQkJDQo8dHI+DQoJCQkJDQo8dGQ+U3BlY2lhbGlzdCBDbGluaWNzIC0gPHNwYW4gc3R5bGU9IkNPTE9SOiAjZmYwMDAwIj5FbWVyZ2VuY3kgRGVwYXJ0bWVudDwvc3Bhbj48L3RkPg0KCQkJCQ0KPHRkPjwvdGQ+DQoJCQk8L3RyPg0KCQkJDQo8dHI+DQoJCQkJDQo8dGQ+VWx0cmFzb3VuZDwvdGQ+DQoJCQkJDQo8dGQ+PC90ZD4NCgkJCTwvdHI+DQoJCQkNCjx0cj4NCgkJCQkNCjx0ZD5YLVJheTwvdGQ+DQoJCQkJDQo8dGQ+PC90ZD4NCgkJCTwvdHI+DQoJCTwvdGJvZHk+DQoJPC90YWJsZT48L3A+DQoNCjxwPjxzdHJvbmc+PHNwYW4gc3R5bGU9IlRFWFQtREVDT1JBVElPTjogdW5kZXJsaW5lIj5QYXRpZW50IEhhbmRib29rIGZvciBTZWFmb3J0aCBDb21tdW5pdHkgSG9zcGl0YWw8L3NwYW4+PC9zdHJvbmc+PC9wPjxzdHJvbmc+PHNwYW4gc3R5bGU9IlRFWFQtREVDT1JBVElPTjogdW5kZXJsaW5lIj4NCgkJDQo8cD48YSBocmVmPSJodHRwOi8vaXNzdXUuY29tL3dpbGxvd29ubGluZS9kb2NzL3NlYWZvcnRoP2U9MTI3MzkzMi8zNjAxMDU4Ij5QYXRpZW50ICZhbXA7IEZhbWlseSBIYW5kYm9vazombmJzcDsgU2VhZm9ydGggU2l0ZTwvYT48L3A+DQoJCQ0KPHA+UmVjcnVpdG1lbnQ8L3A+PC9zcGFuPjwvc3Ryb25nPg0KDQo8cD4mbmJzcDs8L3A+DQoNCjxwPg0KCTxpbWcgc3R5bGU9IldJRFRIOiAyMzFweDsgSEVJR0hUOiAxNjBweCIgdGl0bGU9IiIgYm9yZGVyPSIwIiBhbHQ9IiIgc3JjPSJpbWFnZS5hc3B4P2lkPTI2NiIgd2lkdGg9IjExMDYiIGhlaWdodD0iNzY0IiAvPjwvcD4NCg0KPHVsPg0KCQ0KPGxpPjxhIGhyZWY9Ii9kZWZhdWx0LmFzcHg/Y2lkPTU4JmFtcDtsYW5nPTEiPlBoeXNpY2lhbiBPcHBvcnR1bml0aWVzPC9hPiA8L2xpPg0KCQ0KPGxpPjxhIGhyZWY9Ii9kZWZhdWx0LmFzcHg/Y2lkPTU5JmFtcDtsYW5nPTEiPlN0YWZmIE9wcG9ydHVuaXRpZXM8L2E+IDwvbGk+DQo8L3VsPg0KDQo8cD4mbmJzcDs8L3A+DQoNCjxwPjxlbT48c3BhbiBzdHlsZT0iQ09MT1I6ICNmZjAwMDAiPjxzdHJvbmc+V2UgbmVlZCB5b3VyIGhlbHA8L3N0cm9uZz48L3NwYW4+ISBXb3VsZCB5b3UgYmUgd2lsbGluZyB0byBjb21wbGV0ZSBhIHF1aWNrIHN1cnZleSBhYm91dCB5b3VyIHZpc2l0IHRvIG91ciB3ZWJzaXRlIHRvZGF5PyBJZiBzbyBwbGVhc2UgPC9lbT48YSBocmVmPSIvRGVmYXVsdC5hc3B4P2NpZD0yNTUyJmFtcDtsYW5nPTEiPjxlbT5jbGljayBoZXJlITwvZW0+PC9hPjwvcD4NCg0KPHA+Jm5ic3A7PC9wPg0KDQo8cD4mbmJzcDs8L3A+ZGRkH3AI2AxYrGnFxklqCuluNCzlfhQ=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=zU2hjNJXukhQgTHnA506lOExwxIaowe1cwWL4herErq5ouSYtmKHe3avZMjL8gz6VL2Eb6iZRG_B34Ju19VYuwOg2gs1&amp;t=635649120478316896" type="text/javascript"></script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="2IYGUL5ysB9dUQsZgcQuNz5oKcjpBi0VxW_bnPMU5IHGNbC-26sPSO4zqrDNtZLFoSaSUX34MNN4BgwnbWIhsIocFPM1" />
+</div>
+    <table cellpadding="0" cellspacing="0" border="0" width="970px" align="center" bgcolor="white">
+        <tr>
+            <td><img src="../imgs/top_left.gif" width="10px" height = "40px" /></td>
+            <td style="background-image:url('imgs/top_new.gif');background-repeat:no-repeat;" valign="bottom" width="950px">
+                <table cellpadding="0" cellspacing="0" border="0" >
+                    <tr valign="bottom">
+                        <td><img src="../imgs/spacer.gif" width="40px" height="1px" /></td>
+                        <td><a href="home.aspx"  class="topNav">Home</a> <img src="../imgs/spacer.gif" width="12px" height="1px" /></td>
+                        <td><a href="Sitemap.aspx"  class="topNav">Site Map</a><img src="../imgs/spacer.gif" width="12px" height="1px" /></td>
+                        <td><a href=""  class="topNav">HPHA Intranet</a><img src="../imgs/spacer.gif" width="12px" height="1px" /></td>
+                        <td><a class="topNav" href="http://www.hpha.ca/Default.aspx?cid=21&lang=1">Contact Us</a><img src="../imgs/spacer.gif" width="12px" height="1px" /></td>
+                        <td><a class="topNav" href="http://www.hpha.ca/Default.aspx?cid=69&lang=1">Privacy Policy</a><img src="../imgs/spacer.gif" width="44px" height="1px" /></td>
+                        <td><img src= "../imgs/clinton.gif" width="116px" height="21px" name="menu6" id="menu6" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" /></td>
+                        <td><img src= "../imgs/stmarys.gif" width="120px" height="21px" name="menu7" id="menu7" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" /></td>                  
+                        <td><img src= "../imgs/seaforth.gif" width="120px" height="21px" name="menu8" id="menu8" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" /></td>
+                        <td><img src= "../imgs/stratford.gif" width="116px" height="21px" name="menu9" id="menu9" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" /></td>
+                    </tr>
+                </table>
+            </td>
+            <td><img src="../imgs/top_right.gif" width="10px" height = "40px" /></td>
+        </tr>  
+        <tr>
+            <td rowspan="100%" style="background-image:url('imgs/left_shadow.gif');background-repeat:repeat-y;"><img  src="../imgs/left_shadow.gif" width="10px" height = "1px" /></td>
+            <td>
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td><a href="home.aspx"><img src="../imgs/sec_logo.gif" height="171px" width="201px" border="0"/></a></td>
+            <td width="100%" align="right"><img src ="../imgs/sec_banner.jpg" /></td>
+        </tr>
+    </table>
+</td>
+            <td rowspan="100%" style="background-image:url('imgs/right_shadow.gif');background-position:left;background-repeat:repeat-y;"><img  src="../imgs/right_shadow.gif" width="10px" height = "1px" /></td>
+        </tr> 
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td><img src="../imgs/about.gif" width="132px" height="27"  name="menu0" id="menu0" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" alt="" /></td>
+                        <td><img src="../imgs/sites_selected.gif" width="177px" height="27"  name="menu1" id="menu1" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" alt="" /></td>
+                        <td><img src="../imgs/patients.gif" width="133px" height="27"  name="menu2" id="menu2" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" alt="" /></td>
+                        <td><img src="../imgs/physican.gif" width="126px" height="27"  name="menu3" id="menu3" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" alt="" /></td>
+                        <td><img src="../imgs/volunteers.gif" width="170px" height="27"  name="menu4" id="menu4" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" alt="" /></td>
+                        <td><img src="../imgs/news.gif" width="212px" height="27"  name="menu5" id="menu5" onmouseover="showMenu(event)" onMouseOut="hideMenu(event)" alt="" /></td>
+                    </tr>
+
+            </table>
+            </td>
+        </tr>
+        <tr>   
+            <td><!-- This is the table for the content Area -->
+                <table cellpadding="0" cellspacing="0" border="0" style="background-image:url('../imgs/watermark_leftside.gif');background-position:bottom;background-repeat:no-repeat;">
+                    <tr style="background-image:url('../imgs/content_top_shadow.gif');background-repeat:repeat-x;background-position:top;">
+                        <td colspan="3" style="padding-left:20px;" valign="top" >
+    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+    <tr>
+        <td style="width:100%;" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr><td><img src="../imgs/spacer.gif" width="1px" height="10px" alt=""/></td></tr>
+    <tr>
+        <td style="width:100%;" valign="top" class="bread"><span id="ctl00_breadCrumb_bread_breadCrumb">You are Here : <a href="home.aspx" class="bread">Home</a>&nbsp;&nbsp;<img src="../imgs/bread_arrow.gif" />&nbsp;&nbsp;<a href="default.aspx?cid=44&lang=1" class="bread">Sites, Programs & Services</a>&nbsp;&nbsp;<img src="../imgs/bread_arrow.gif" />&nbsp;&nbsp;<a href="default.aspx?cid=44&lang=1" class="bread">Sites</a>&nbsp;&nbsp;<img src="../imgs/bread_arrow.gif" />&nbsp;&nbsp;<span class="breadCur">Seaforth Community Hospital Site</span></span></td>
+        <td><img src="../imgs/spacer.gif" width="10" height="1" alt=""/></td>
+        <!--START_REM--><td><img src="imgs/printer_icon.gif" onclick="javascript:printPage();" style="cursor:pointer;" alt=""/></td>
+        <td><img src="../imgs/spacer.gif" width="10" height="1" alt=""/></td>
+        <td><img src="../imgs/textsize_icon.gif" onclick="javascript:changeFontSize(this.form);" style="cursor:pointer;" alt=""/></td><!--END_REM-->
+        <td><img src="../imgs/spacer.gif" width="2" height="10" alt=""/></td>
+    </tr>
+    <tr><td><img src="../imgs/spacer.gif" width="1px" height="10px" alt=""/></td></tr>    
+</table>
+<input type="hidden" name="page_title" value="Seaforth Community Hospital Site"/>
+<input type="hidden" name="page_data" value=""/></td>
+        <td><img src="imgs/spacer.gif" width="20" height="1" alt=""/></td>
+    </tr>
+</table>
+</td>
+                        <td></td>
+                        <td width= "230px" class="rightColTable" rowspan="2" valign="top" >
+                                <table cellpadding="0" cellspacing="0" border="0" class="rightColTable" width="230px" height="108px">
+                                    <tr><td colspan="100%" style="background-image:url('../imgs/shadow_rightedge.gif');background-repeat:no-repeat;"><img src="../imgs/spacer.gif" width="10px" height="15px" /></td></tr>
+                                    <tr>
+                                        <td rowspan="100%"><img src="../imgs/spacer.gif" width="30px" /></td>
+                                        <td width="100%"><input name="ctl00$searchBox" type="text" value="Search" id="ctl00_searchBox" class="searchBox" onfocus="clearSearchBox(this);" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById('ctl00$sButton').click();return false;}} else {return true}; " />&nbsp;<input type="submit" name="ctl00$sButton" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$sButton&quot;, &quot;&quot;, false, &quot;&quot;, &quot;PageSearch.aspx&quot;, false, false))" id="ctl00_sButton" class="goButton" /></td>
+                                        <td rowspan="100%"><img src="../imgs/spacer.gif"width="10px" /></td>
+                                    </tr>
+                                    <tr><td><img src="../imgs/spacer.gif" width="1px" height="10px" alt""/></td></tr> 
+                                    <tr><td><a id="ctl00_alertImage" class="alertButton" href="Default.aspx?cid=36" target="_parent"><img src="../imgs/alert_in_effect.gif" style="border-width:0px;" /></a></td></tr>
+                                    <tr><td><img src="../imgs/spacer.gif" width="1px" height="10px" /></td></tr> 
+                                 </table>
+                                 <table cellpadding="0" cellspacing="0" border="0">   
+                                    <tr><td colspan="100%">
+                                        
+                                    </td></tr> 
+                                 </table>  
+                                 <table cellpadding="0" cellspacing="0" border="0" height="100%"  class="rightColTable" width="230px">
+                                    <tr><td colspan="100%"><img src="../imgs/spacer.jpg" width="1px" height="10px" /></td></tr> 
+                                    <tr>
+                                        <td rowspan="100%"><img src="../imgs/spacer.gif" width="30px" /></td>
+                                        <td><img src="../imgs/events_calendar.gif" width="103px" height="8px"</td>
+                                        <td rowspan="100%"><img src="../imgs/spacer.gif"width="10px" /></td>
+                                    </tr>
+                                    <tr><td><img src="../imgs/spacer.jpg" width="1px" height="10px" /></td></tr> 
+                                    <tr><td>
+<table cellpadding="0" cellspacing="0" border="0" style="width:180;height:100%;">
+    <tr><td>
+        <table cellpadding="0" cellspacing="0" border="0" >
+            <tr><td><img src="imgs/spacer.gif" width="1" height="5" alt=""/></td></tr>
+            <tr>
+              <td>
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td align="center">
+                        <table id="ctl00_theCalender_eventCalendar" cellspacing="1" cellpadding="2" title="Calendar" border="0" style="border-color:#F6F3E3;border-width:1px;border-style:solid;font-family:Verdana;font-size:8.5pt;height:100px;width:160px;">
+	<tr><td colspan="7" style="background-color:#F6F3E3;"><table cellspacing="0" border="0" style="font-family:Verdana;font-size:8.5pt;font-weight:bold;width:100%;border-collapse:collapse;">
+		<tr><td style="width:15%;"><a href="javascript:__doPostBack('ctl00$theCalender$eventCalendar','V5875')" style="color:Black" title="Go to the previous month">&lt;</a></td><td align="center" style="width:70%;">March 2016</td><td align="right" style="width:15%;"><a href="javascript:__doPostBack('ctl00$theCalender$eventCalendar','V5935')" style="color:Black" title="Go to the next month">&gt;</a></td></tr>
+	</table></td></tr><tr><th align="center" abbr="Sunday" scope="col">S</th><th align="center" abbr="Monday" scope="col">M</th><th align="center" abbr="Tuesday" scope="col">T</th><th align="center" abbr="Wednesday" scope="col">W</th><th align="center" abbr="Thursday" scope="col">T</th><th align="center" abbr="Friday" scope="col">F</th><th align="center" abbr="Saturday" scope="col">S</th></tr><tr><td align="center" style="width:14%;"></td><td align="center" style="width:14%;"></td><td class="otherDays" align="center" style="width:14%;">1</td><td class="otherDays" align="center" style="width:14%;">2</td><td class="otherDays" align="center" style="width:14%;">3</td><td class="otherDays" align="center" style="width:14%;">4</td><td class="otherDays" align="center" style="width:14%;">5</td></tr><tr><td class="otherDays" align="center" style="width:14%;">6</td><td class="otherDays" align="center" style="width:14%;">7</td><td class="otherDays" align="center" style="width:14%;">8</td><td class="otherDays" align="center" style="width:14%;">9</td><td class="otherDays" align="center" style="width:14%;">10</td><td class="calToday" align="center" style="border-color:#8AB936;border-width:1px;border-style:solid;width:14%;">11</td><td class="eventDate" align="center" style="text-decoration:none;width:14%;"><a href="javascript:__doPostBack('ctl00$theCalender$eventCalendar','5915')" style="color:Black" title="March 12">12</a></td></tr><tr><td class="otherDays" align="center" style="width:14%;">13</td><td class="otherDays" align="center" style="width:14%;">14</td><td class="eventDate" align="center" style="text-decoration:none;width:14%;"><a href="javascript:__doPostBack('ctl00$theCalender$eventCalendar','5918')" style="color:Black" title="March 15">15</a></td><td class="otherDays" align="center" style="width:14%;">16</td><td class="otherDays" align="center" style="width:14%;">17</td><td class="eventDate" align="center" style="text-decoration:none;width:14%;"><a href="javascript:__doPostBack('ctl00$theCalender$eventCalendar','5921')" style="color:Black" title="March 18">18</a></td><td class="otherDays" align="center" style="width:14%;">19</td></tr><tr><td class="otherDays" align="center" style="width:14%;">20</td><td class="otherDays" align="center" style="width:14%;">21</td><td class="otherDays" align="center" style="width:14%;">22</td><td class="eventDate" align="center" style="text-decoration:none;width:14%;"><a href="javascript:__doPostBack('ctl00$theCalender$eventCalendar','5926')" style="color:Black" title="March 23">23</a></td><td class="otherDays" align="center" style="width:14%;">24</td><td class="otherDays" align="center" style="width:14%;">25</td><td class="eventDate" align="center" style="text-decoration:none;width:14%;"><a href="javascript:__doPostBack('ctl00$theCalender$eventCalendar','5929')" style="color:Black" title="March 26">26</a></td></tr><tr><td class="otherDays" align="center" style="width:14%;">27</td><td class="otherDays" align="center" style="width:14%;">28</td><td class="eventDate" align="center" style="text-decoration:none;width:14%;"><a href="javascript:__doPostBack('ctl00$theCalender$eventCalendar','5932')" style="color:Black" title="March 29">29</a></td><td class="otherDays" align="center" style="width:14%;">30</td><td class="otherDays" align="center" style="width:14%;">31</td><td align="center" style="width:14%;"></td><td align="center" style="width:14%;"></td></tr><tr><td align="center" style="width:14%;"></td><td align="center" style="width:14%;"></td><td align="center" style="width:14%;"></td><td align="center" style="width:14%;"></td><td align="center" style="width:14%;"></td><td align="center" style="width:14%;"></td><td align="center" style="width:14%;"></td></tr>
+</table>
+                        <input type="hidden" name="selectMonth" />
+                      </td>
+                    </tr>
+                </table>
+              </td>
+            </tr>
+        </table>
+    </td></tr>
+    
+            <tr><td style="width:100%;">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+                        <tr>
+                            <td rowspan="4"><img src="../imgs/spacer.gif" width="3" height="1" alt=""/></td>
+                            <td><img src="../imgs/spacer.gif" width="1" height="12" alt=""/></td>
+                        </tr>
+                        <tr><td class="calDateHeader"><b>12/03/2016</b></td></tr>
+                        <tr><td style="width:100%;"><a href="ViewEvents.aspx?cid=4179&lang=1" target="" class="calHeading">Blood Donor Clinic - Stratford </b></a></td></tr> 
+                        <tr><td style="width:100%;" class="calDescription">9:00 am to 12:00 pm / Rotary Complex </td></tr> 
+                    </table>
+            </td></tr>
+        
+            <tr><td style="width:100%;">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+                        <tr>
+                            <td rowspan="4"><img src="../imgs/spacer.gif" width="3" height="1" alt=""/></td>
+                            <td><img src="../imgs/spacer.gif" width="1" height="12" alt=""/></td>
+                        </tr>
+                        <tr><td class="calDateHeader"><b>15/03/2016</b></td></tr>
+                        <tr><td style="width:100%;"><a href="ViewEvents.aspx?cid=4169&lang=1" target="" class="calHeading">Blood Donor Clinic - Milverton </b></a></td></tr> 
+                        <tr><td style="width:100%;" class="calDescription">3:00 pm to 8:00 pm / Perth East Rec Complex </td></tr> 
+                    </table>
+            </td></tr>
+        
+</table></td></tr>
+                                    <tr><td><img src="../imgs/spacer.jpg" width="1px" height="15px" /></td></tr> 
+                                    <tr><td>
+<img src="../imgs/white_strip.gif" alt="" />
+<table cellpadding="0" cellspacing="0" border="0" width="143px" style="background-image:url('imgs/didyouknow_sec_bg.gif');background-repeat:repeat-y;" >
+    <tr><td><img src="../imgs/did_you_know_section.gif" width="143px" height="24px" alt="" /></td></tr>
+    <tr><td><img src="../imgs/spacer.gif" width="1px" height="8px" alt="" /></td></tr>
+    <tr><td class="didyouKnowSec"> <span id="ctl00_didYouKnow_didUKnow">Today, heart disease and stroke take one life every 7 minutes and 90% of Canadians have at least one risk factor.  Source: Heart & Stroke Foundation</span></td></tr>
+    <tr><td><img src="../imgs/spacer.gif" width="1px" height="3px" alt="" /></td></tr>
+    <tr><td class="didyouKnowSec"><a href="http://www.hpha.ca/Default.aspx?cid=4&lang=1"><img src="../imgs/more_facts.gif" width="64px" height="14px" border="0" alt="" /></a></td></tr>
+    <tr><td><img src="../imgs/spacer.gif" width="1px" height="8px" alt="" /></td></tr>
+
+</table>
+<img src="../imgs/spacer.gif" height="10px" width="1px" alt="" />
+</td></tr>
+                               </table>              
+                        </td>
+                    </tr>
+                    <tr valign= "top" >
+                        <td  valign="top">  
+    <table cellpadding="0" class="data" cellspacing="0" border="0" height="100%">
+       <tr>
+            <td rowspan="100%"><img src="../imgs/spacer.gif" width="25px"/></td>
+            <td class="navTitle"><span id="ctl00_leftNav_navTitle">Sites, Programs & Services</span></td>
+            <td rowspan="100%"><img src="../imgs/spacer.gif"width="5px" /></td>
+        </tr>
+        <tr><td><img src="../imgs/spacer.gif" width="1px" height="10px" /></td></tr> 
+        <tr><td>
+<table border="0" cellpadding="0" cellspacing="0" width="150px">
+    
+                  
+	    
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><img src="imgs/arrow.gif" alt=""/></td>
+                            <td><img src="imgs/spacer.gif" width="8" height="1" alt=""/></td>
+                            <td><a href="default.aspx?cid=44&lang=1" target="" class="leftNavS">Sites</a></td>
+                            <td><img src="imgs/spacer.gif" width="4" height="1" alt=""/></td>
+                            <td><img src="imgs/spacer.gif" width="1" height="20" alt=""/></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+                    <tr><td style="width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="width:150px;">
+                            <tr>
+                                <td><img src="imgs/spacer.gif" width="15" height="1" alt=""/></td>
+                                <td><img src="imgs/arrow.gif" alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="8" height="1" alt=""/></td>
+                                <td style="width:100%;"><a href="default.aspx?cid=46&lang=1" target="" class="leftNav">Clinton Public Hospital Site</a></td>
+                                <td><img src="imgs/spacer.gif" width="4" height="1" alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="1" height="20" alt=""/></td>
+                            </tr>
+                            </table>
+                    </td></tr>
+                    
+                
+                    <tr><td style="width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="width:150px;">
+                            <tr>
+                                <td><img src="imgs/spacer.gif" width="20" height="1" alt=""/></td>
+                            </tr>
+                            </table>
+                    </td></tr>
+                
+                    <tr><td style="width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="width:150px;">
+                            <tr>
+                                <td><img src="imgs/spacer.gif" width="15" height="1" alt=""/></td>
+                                <td><img src="imgs/arrow.gif" alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="8" height="1" alt=""/></td>
+                                <td style="width:100%;"><a href="default.aspx?cid=47&lang=1" target="" class="leftNav">St Marys Memorial Hospital Site</a></td>
+                                <td><img src="imgs/spacer.gif" width="4" height="1" alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="1" height="20" alt=""/></td>
+                            </tr>
+                            </table>
+                    </td></tr>
+                    
+                
+                    <tr><td style="width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="width:150px;">
+                            <tr>
+                                <td><img src="imgs/spacer.gif" width="20" height="1" alt=""/></td>
+                            </tr>
+                            </table>
+                    </td></tr>
+                
+                    <tr><td style="width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="width:150px;">
+                            <tr>
+                                <td><img src="imgs/spacer.gif" width="15" height="1" alt=""/></td>
+                                <td><img src="imgs/arrow.gif" alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="8" height="1" alt=""/></td>
+                                <td style="width:100%;"><a href="default.aspx?cid=48&lang=1" target="" class="leftNavS">Seaforth Community Hospital Site</a></td>
+                                <td><img src="imgs/spacer.gif" width="4" height="1" alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="1" height="20" alt=""/></td>
+                            </tr>
+                            </table>
+                    </td></tr>
+                    
+                
+                    <tr><td style="width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="width:150px;">
+                            <tr>
+                                <td><img src="imgs/spacer.gif" width="20" height="1" alt=""/></td>
+                            </tr>
+                            </table>
+                    </td></tr>
+                
+                    <tr><td style="width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="width:150px;">
+                            <tr>
+                                <td><img src="imgs/spacer.gif" width="15" height="1" alt=""/></td>
+                                <td><img src="imgs/arrow.gif" alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="8" height="1" alt=""/></td>
+                                <td style="width:100%;"><a href="default.aspx?cid=49&lang=1" target="" class="leftNav">Stratford General Hospital Site</a></td>
+                                <td><img src="imgs/spacer.gif" width="4" height="1" alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="1" height="20" alt=""/></td>
+                            </tr>
+                            </table>
+                    </td></tr>
+                    
+                
+        
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><img src="imgs/arrow.gif" alt=""/></td>
+                            <td><img src="imgs/spacer.gif" width="8" height="1" alt=""/></td>
+                            <td><a href="default.aspx?cid=45&lang=1" target="" class="leftNav">Program & Services</a></td>
+                            <td><img src="imgs/spacer.gif" width="4" height="1" alt=""/></td>
+                            <td><img src="imgs/spacer.gif" width="1" height="20" alt=""/></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+        
+</table></td></tr>
+        <tr><td><img src="../imgs/spacer.gif" width="10px" height="30px" /></td></tr> 
+        <tr><td width="100%"><img src="../imgs/quicklinks.gif" width="70px" height ="10px" /></td></tr>
+        <tr><td><img src="../imgs/spacer.gif" width="1px" height="10px" /></td></tr> 
+        <tr align="left"><td height="100%">
+<table style="text-align: left; padding: 0px; margin: 0px; width: 180px;" border="0" cellpadding="0" cellspacing="0">
+<tr>
+    <td align="left" valign="top" style="padding-top: 3px;">
+        
+                <select name="quicklinks" style="width: 155px;" class="data" onchange="if(this.selectedIndex > 0){ window.location = this[this.selectedIndex].value; }">
+                <option value="">Quick Links</option>
+            
+                <option value="http://www.hpha.ca/Default.aspx?cid=177&lang=1">2014-2015 Annual Report </option>
+            
+                <option value="http://www.hpha.ca/default.aspx?cid=63&lang=1">Donate Now!</option>
+            
+                <option value="default.aspx?cid=249&lang=1">I.T. Links</option>
+            
+                <option value="default.aspx?cid=59">Job Opportunities</option>
+            
+                <option value="default.aspx?cid=348">Maps/ Directions</option>
+            
+                <option value="http://www.hpha.ca/default.aspx?cid=2105&lang=1">Patient & Family Handbooks</option>
+            
+                <option value="http://www.hpha.ca/default.aspx?cid=2096&pre=view">Patient & Family Experience Feedback </option>
+            
+                <option value="http://www.hpha.ca/Default.aspx?cid=1613&pre=view">Transparency and Performance</option>
+            
+                <option value="https://www.surveymonkey.com/r/hphawebsitesurvey">Website Feedback</option>
+            
+                <option value="Default.aspx?cid=1192&lang=1">Whistle Blower</option>
+            
+                </select>
+            
+    </td>
+</tr>
+</table></td></tr>
+        <tr><td><img src="../imgs/spacer.gif" width="1px" height="100%" /></td></tr> 
+  
+    </table>                                
+</td>
+                        <td><img src="../imgs/spacer.jpg" width="1px" height="500px" /></td>   
+                        <td valign="top" width="100%"  align="right" ><div id="mainPrint">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%"  height="100%">
+            <tr>
+                <td rowspan="100%"><img src="../imgs/spacer.gif" width="1px"/></td>
+                <td><img src="../imgs/spacer.gif" width="1px" height="1px" /></td>
+                <td rowspan="100%"><img src="../imgs/spacer.gif" width="10px" /></td>
+            </tr>
+            <tr>
+                <td valign="top" style="width:100%;height:100%;padding-right:10px;" colspan="3">
+                    <div id="ctl00_mainContent_theContentPanel">
+	
+                        <table border="0" cellpadding="0" cellspacing="0" style="width:100%; height:100%;">
+                            <tr><td class="pageTitle"><span id="ctl00_mainContent_pageTitle">Seaforth Community Hospital Site</span></td></tr>
+                            <tr><td><img src="../imgs/spacer.gif" width="10px" height="20px" /></td></tr>
+                            <tr><td class="data"><span id="ctl00_mainContent_pageContent">
+
+<p>
+	<img style="WIDTH: 621px; HEIGHT: 240px" title="" border="0" alt="" src="image.aspx?id=259" width="745" height="336" /></p>
+
+<p><strong><span style="TEXT-DECORATION: underline">Getting Around Seaforth Community Hospital</span></strong></p>
+
+<p><strong>24 Centennial Dr., Seaforth, ON&nbsp; N0K 1W0&nbsp;&nbsp; </strong></p>
+
+<p><strong>519-527-1650 or <strong>Toll Free: 1-888-275-1102<br />
+			</strong></strong></p>
+
+<p><strong><span style="COLOR: #ff0000">HPHA is a</span> </strong><a href="/default.aspx?cid=2005&amp;lang=1"><strong>Smoke-Free Alliance</strong></a><strong>. <span style="COLOR: #ff0000">Smoking is prohibited in all areas of all Hospital Sites, including grounds, parking lots and personal vehicles.</span></strong></p>
+
+<p><strong>Parking</strong></p>
+
+<p>Parking is available in the hospital parking lots located at the front and rear of the hospital, and near the&nbsp;Main Entrance.&nbsp;&nbsp;Parking is free of charge.&nbsp; Please take note of the reserved&nbsp;handicapped and rehabilitation parking spaces.</p>
+
+<p>Patients, families and visitors to Seaforth Community Hospital (SCH) should enter the facility using the Main Entrance off Centennial Drive.&nbsp;</p>
+
+<p><strong>In the Hospital</strong></p>
+
+<p>All patients are to register at Patient Registration.</p>
+
+<p><strong>Site Directory</strong></p>
+
+<p>
+	
+<table style="WIDTH: 100%; BORDER-COLLAPSE: collapse">
+		
+<tbody>
+			
+<tr>
+				
+<td><strong><span style="BACKGROUND-COLOR: #dcdcdc">Main Level</span></strong></td>
+				
+<td><strong><span style="BACKGROUND-COLOR: #dcdcdc">Lower Level</span></strong></td>
+			</tr>
+			
+<tr>
+				
+<td>Administration Office</td>
+				
+<td>Cafeteria</td>
+			</tr>
+			
+<tr>
+				
+<td>Board Room</td>
+				
+<td>Community Stroke Rehabilitation Team</td>
+			</tr>
+			
+<tr>
+				
+<td>Business Office</td>
+				
+<td>Conference Room</td>
+			</tr>
+			
+<tr>
+				
+<td>Diabetes Education</td>
+				
+<td>
+					
+<p>Environmental Services</p></td>
+			</tr>
+			
+<tr>
+				
+<td>Dietitian</td>
+				
+<td>
+					
+<p>Facilities Management</p></td>
+			</tr>
+			
+<tr>
+				
+<td><span style="COLOR: #ff0000">Emergency</span></td>
+				
+<td>IT</td>
+			</tr>
+			
+<tr>
+				
+<td>Gift Shop</td>
+				
+<td>Materials Management</td>
+			</tr>
+			
+<tr>
+				
+<td>Health Records</td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>Inpatient Unit</td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>Laboratory Services</td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>Occupational Therapy</td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>Patient Registration</td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>Physiotherapy</td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>smallTALK</td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>Specialist Clinics - <span style="COLOR: #ff0000">Emergency Department</span></td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>Ultrasound</td>
+				
+<td></td>
+			</tr>
+			
+<tr>
+				
+<td>X-Ray</td>
+				
+<td></td>
+			</tr>
+		</tbody>
+	</table></p>
+
+<p><strong><span style="TEXT-DECORATION: underline">Patient Handbook for Seaforth Community Hospital</span></strong></p><strong><span style="TEXT-DECORATION: underline">
+		
+<p><a href="http://issuu.com/willowonline/docs/seaforth?e=1273932/3601058">Patient &amp; Family Handbook:&nbsp; Seaforth Site</a></p>
+		
+<p>Recruitment</p></span></strong>
+
+<p>&nbsp;</p>
+
+<p>
+	<img style="WIDTH: 231px; HEIGHT: 160px" title="" border="0" alt="" src="image.aspx?id=266" width="1106" height="764" /></p>
+
+<ul>
+	
+<li><a href="/default.aspx?cid=58&amp;lang=1">Physician Opportunities</a> </li>
+	
+<li><a href="/default.aspx?cid=59&amp;lang=1">Staff Opportunities</a> </li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><em><span style="COLOR: #ff0000"><strong>We need your help</strong></span>! Would you be willing to complete a quick survey about your visit to our website today? If so please </em><a href="/Default.aspx?cid=2552&amp;lang=1"><em>click here!</em></a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p></span></td></tr>
+                            <tr><td></td></tr>
+                            <tr><td><img src="../imgs/spacer.gif" width="10px" height="15px" /></td></tr>
+                        </table>    
+                    
+</div>
+                    
+                    
+                </td>
+            </tr>
+            
+        </table> 
+</div></td>
+                    </tr>    
+                </table>
+ 
+            </td>
+        </tr>
+    </table>
+    <table cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr>
+            <td><img src="../imgs/bottom.gif" width="970px" height="41px"/></td>
+        </tr>
+    </table>
+    <input type="hidden" name="procType" value="" />
+    </form>
+</body>
+</html>

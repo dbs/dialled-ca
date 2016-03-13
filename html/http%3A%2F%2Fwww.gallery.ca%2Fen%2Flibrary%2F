@@ -1,0 +1,810 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-ca" xml:lang="en-ca">
+  <head>
+    <!-- PageID 47 - published by Open Text Web Solutions 10.1 - 10.1.2.358 - 32469 -->
+    <title>
+      Library &amp; Archives | National Gallery of Canada
+    </title><!-- METADATA BEGINS | DEBUT DES METADONNEES -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+    <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+    <meta name="dcterms.created" scheme="W3CDTF" content="2011-01-31" />
+    <meta name="dcterms.modified" scheme="W3CDTF" content="2011-08-26" /><!-- METADATA ENDS | FIN DES METADONNEES -->
+    <!-- TEMPLATE SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS DU GABARIT -->
+
+    <script src="/scripts/jquery.min.js" type="text/javascript" charset="utf-8">
+</script>
+    <script src="/scripts/jquery-ui-1.8.11.custom.min.js" type="text/javascript" charset="utf-8">
+</script>
+    <script src="/scripts/ngcscroll.js" type="text/javascript" charset="utf-8">
+</script>
+    <script src="/scripts/tooltip.min.js" type="text/javascript" charset="utf-8">
+</script>
+    <script src="/scripts/main.js" type="text/javascript" charset="utf-8">
+</script>
+    <link rel="stylesheet" type="text/css" href="/css/base.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" charset="utf-8" />
+    <script type="text/javascript">
+//<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26437005-1']);
+    _gaq.push(['_gat._anonymizeIp']);
+    if (document.documentElement.getAttribute('lang')=='en-ca') {
+    _gaq.push(['_setDomainName', '.gallery.ca']);
+    } else {
+    _gaq.push(['_setDomainName', '.beaux-arts.ca']);
+    }
+    _gaq.push(['_setAllowLinker', true]);
+    var clean_title = "Library &amp; Archives";
+    clean_title = clean_title.replace("'","\'")
+    if (document.documentElement.getAttribute('lang')=='en-ca') {
+    var curr_uri = '/en/library/index.php';
+    if ( curr_uri.indexOf("/visit/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Visit', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/see/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'See', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/learn/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Learn', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/shop/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Shop', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/give/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Give', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/join/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Join', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/library/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Library', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/resources/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Library - Resources', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/projects/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Projects', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/publications/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Pubs', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/image-reproduction/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Image Reproduction', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/about/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'About', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/secure/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Secure', clean_title, 3]);
+    }
+    } else {
+    var curr_uri = '/fr/bibliotheque/index.php';
+    if ( curr_uri.indexOf("/visiter/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Visiter', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/voir/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Voir', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/apprendre/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Apprendre', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/acheter/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Acheter', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/donner/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Donner', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/adherer/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Adherer', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/bibliotheque/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Bibliotheque', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/ressources/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Bibliotheque - Ressources', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/projets/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Projets', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/publications/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Publications', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/reproduction-dimages/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Reproduction d\'Images', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/apropos/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'A propos', clean_title, 3]);
+    } else if ( curr_uri.indexOf("/secure/") >= 0 ) {
+        _gaq.push(['_setCustomVar', 3, 'Securise', clean_title, 3]);
+    }
+    }
+    var ga_custvar = "";
+    if(ga_custvar!=''){ 
+    _gaq.push(['_setCustomVar']);
+    }
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    //]]>
+    </script><!-- TEMPLATE SCRIPTS/CSS END | FIN DES SCRIPTS/CSS DU GABARIT -->
+  </head>
+  <body class="no-js">
+    <!--
+
+        
+    <div style="height:25px; background-color:#c90505; text-align:center; padding:8px 0px 4px 0px;">
+      <img alt="" src="http://www.gallery.ca/images/design/alert.png" width="20" height="19">&nbsp;&nbsp;<a href=http://www.gallery.ca/en/visit/getting-here.php?utm_campaign=sussextraffic&utm_medium=web&utm_source=galleryca&utm_content=home style="color:#FFF; text-decoration: none; font-family:Verdana, Geneva, sans-serif; font-size: 14px;">The Gallery is open during <span style="text-decoration:underline;">road work on Sussex Drive</span>.</a>
+    </div>        
+        
+
+-->
+    <div id="page" class="grid-row">
+      <div id="head" class="grid-12">
+        <!--googleoff:all-->
+        <h1>
+          <a href="/en/index.php">National Gallery of Canada</a>
+        </h1>
+        <form class="search" name="sitesearch" method="post" onsubmit="return OnSubmitForm('en-ca','global');" id="sitesearch">
+          <div>
+            <input id="q" name="q" type="text" class="search-query" value="" /> <input class="search-submit" type="submit" value="Search" /> <a class="advanced" href="/en/search?advanced">Advanced Search</a>
+          </div>
+        </form><!-- begin #quick-links-->
+        <div id="quick-links">
+          <a href="/en/index.php">Home</a><a href="/en/about/space-rentals.php">Space Rentals</a><a href="/en/about/volunteers.php">Volunteer</a><a href="/en/secure/login.php">Login</a><a href="/en/about/contact-form.php">Contact Us</a> <a href="http://www.beaux-arts.ca/fr/bibliotheque/index.php">Français</a>
+          <div class="font-size">
+            <a href=""><small>A-</small></a> <a href=""><big>A+</big></a>
+          </div>
+        </div><!-- end #quick-links-->
+        <ul class="nav clearfix">
+          <li class="item current">
+            <a href="/en/library/index.php" class="tab"><b>Library &amp; Archives</b></a><i class="sep">|</i>
+            <div class="dropdown">
+              <div class="inner clearfix">
+                <div class="box x-big">
+                  <ul>
+                    <li>
+                      <a title="Access and Hours" href="/en/library/access-and-hours.php">Access and Hours</a>
+                    </li>
+                    <li>
+                      <a title="Exhibitions" href="/en/library/exhibitions.php">Exhibitions</a>
+                    </li>
+                    <li>
+                      <a title="Collections" href="/en/library/collections.php">Collections</a>
+                    </li>
+                    <li>
+                      <a title="Services" href="/en/library/services.php">Services</a>
+                    </li>
+                    <li>
+                      <a title="Search the Catalogue" href="/en/library/search-the-catalogue.php">Search the catalogue</a>
+                    </li>
+                    <li>
+                      <a title="History" href="/en/library/history.php">History</a>
+                    </li>
+                    <li>
+                      <a title="Volunteers &amp; Interns" href="/en/library/volunteers-and-interns.php">Volunteers &amp; Interns</a>
+                    </li>
+                    <li>
+                      <a title="Research Fellowships Program" href="/en/library/research-fellowships-program.php">Research Fellowships Program</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box about last">
+                  <h2>
+                    Access &amp; Hours
+                  </h2>
+                  <h4>
+                    The Library is open to the public Wednesday to Friday 10 am to 4:45 pm. Closed statutory holidays.<br />
+                    Inquiries: (613) 998-8949.<br />
+                    <br />
+                    Upon arrival at the Library, researchers must <a href="/en/library/access-and-hours.php">register</a>.
+                  </h4>
+                </div>
+              </div>
+            </div><!-- end .dropdown -->
+          </li>
+          <li class="item">
+            <a href="/en/resources/index.php" class="tab"><b>Resources</b></a><i class="sep">|</i>
+            <div class="dropdown">
+              <div class="inner clearfix">
+                <div class="box big">
+                  <h2>
+                    <a href="/en/resources/archives.php">Archives</a>
+                  </h2>
+                  <ul>
+                    <li>
+                      <a title="Gallery Archival Records" href="/en/library/archival-records.php">Gallery Archival Records</a>
+                    </li>
+                    <li>
+                      <a title="Gallery Exhibition History" href="/en/library/exhibition-history.php">Gallery Exhibition History</a>
+                    </li>
+                    <li>
+                      <a title="Other Archival Holdings" href="/en/library/other-archival-holdings.php">Other Archival Holdings</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box x-big">
+                  <h2>
+                    <a href="/en/resources/databases.php#56">Databases</a>
+                  </h2>
+                  <ul>
+                    <li>
+                      <a title="Library and Archives Catalogue" href="/en/resources/databases.php#1">Library and Archives Catalogue</a>
+                    </li>
+                    <li>
+                      <a title="Archives Database" href="/en/resources/databases.php#2">Archives Database</a>
+                    </li>
+                    <li>
+                      <a title="Index to Art in Canada to 1930" href="/en/resources/databases.php#4">Index to Art in Canada to 1930</a>
+                    </li>
+                    <li>
+                      <a title="Inuit Artists' Print Database" href="/en/resources/databases.php#5">Inuit Artists' Print Database</a>
+                    </li>
+                    <li>
+                      <a title="Art Metropole Collection" href="/en/resources/databases.php#6">Art Metropole Collection</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box now">
+                  <h2>
+                    <a href="/en/resources/online-features.php">Online Features</a>
+                  </h2>
+                  <div class="image">
+                    <img width="214" height="143" alt="Joe Fafard" src="/images/content/joe-fafard.jpg" />
+                    <div class="info">
+                      <p>
+                        Joe Fafard<br />
+                        <a class="learn-more" href="http://cybermuse.gallery.ca/cybermuse/showcases/fafard/english/index_e.jsp">Learn more</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="box now last">
+                  <h2>
+                    <a href="/en/resources/at-the-library.php">At the Library</a>
+                  </h2>
+                  <ul>
+                    <li>
+                      <a title="Documentation" href="/en/library/documentation.php">Documentation</a>
+                    </li>
+                    <li>
+                      <a title="Visual Resources" href="/en/library/visual-resources.php">Visual Resources</a>
+                    </li>
+                  </ul>
+                  <h2>
+                    <a title="Digital and Electronic Resources" href="/en/resources/digital-and-electronic-resources.php">Digital and Electronic Resources</a>
+                  </h2>
+                  <h2>
+                    <a title="Prints, Drawings and Photographs Study Room" href="/en/resources/prints-drawings-and-photographs-study-room.php">Prints, Drawings and Photographs Study Room</a>
+                  </h2>
+                </div>
+              </div>
+            </div><!-- end .dropdown -->
+          </li>
+          <li class="item learn">
+            <a href="/en/projects/index.php" class="tab"><b>Projects</b></a><i class="sep">|</i>
+            <div class="dropdown">
+              <div class="inner clearfix">
+                <div class="box now">
+                  <h2>
+                    <a href="/en/projects/provenance-research.php">Provenance Research</a>
+                  </h2>
+                  <div class="image">
+                    <img width="214" height="176" alt="Andre Derain" src="/images/artwork/andre-derain.jpg" />
+                    <div class="info">
+                      <p>
+                        © Estate of André Derain /ADAGP (Paris) / SODRAC (Montreal)
+                      </p>
+                    </div>
+                  </div>DERAIN, André (1880-1954) French<br />
+                  <em>Landscape by the Sea: The Côte d'Azur near Agay</em> 1905<br />
+                </div>
+                <div class="box now">
+                  <h2>
+                    <a href="/en/projects/veronese-project.php">Veronese Project</a>
+                  </h2>
+                  <div class="image">
+                    <img width="214" height="176" alt="Andre Derain" src="/images/artwork/veronese.jpg" />
+                    <div class="info">
+                      <p>
+                        National Gallery of Canada (no. 3336)
+                      </p>
+                    </div>
+                  </div>Fragment of the Petrobelli Altarpiece:<br />
+                  <em>The Dead Christ with Angels</em>(1565)
+                </div>
+                <div class="box now last">
+                  <h2>
+                    <a target="_blank" href="http://cybermuse.gallery.ca/cybermuse/enthusiast/thirties/index_e.jsp">Canadian Painting in the 30s</a>
+                  </h2>
+                  <div class="image">
+                    <img width="214" height="176" alt="Myself 1933" src="/images/artwork/30s.jpg" />
+                    <div class="info">
+                      <p>
+                        © Clive and Benedict Clark
+                      </p>
+                    </div>
+                  </div>Detail: <em>Myself 1933</em><br />
+                  Paraskeva Clark<br />
+                </div>
+              </div>
+            </div><!-- end .dropdown -->
+          </li>
+          <li class="item">
+            <a href="/en/publications/index.php" class="no-tab"><b>Publications</b></a><i class="sep">|</i>
+          </li>
+          <li class="item">
+            <a href="/en/image-reproduction/index.php" class="tab"><b>Image Reproduction</b></a>
+            <div class="dropdown">
+              <div class="inner clearfix">
+                <div class="box big">
+                  <ul>
+                    <li>
+                      <a title="Top Requested Images" href="/en/image-reproduction/top-requested-images.php">Top Requested Images</a>
+                    </li>
+                    <li>
+                      <a title="On-line Order Form" href="/en/image-reproduction/order-form.php">On-line Order Form</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box now">
+                  <h2>
+                    Featured
+                  </h2>
+                  <div class="image">
+                    <img width="214" height="141" alt="Alex Colville" src="/images/artwork/colville_14954.jpg" />
+                    <div class="info">
+                      <p>
+                        Photo © NGC (no. 14954)
+                      </p>
+                    </div>
+                  </div>Alex Colville<br />
+                  <a href="#"><em>To Prince Edward Island</em></a>, 1965
+                </div>
+                <div class="box about last" style="width: 420px;">
+                  <h2>
+                    &nbsp;
+                  </h2>
+                  <h4>
+                    The National Gallery of Canada (NGC) offers a wealth of images to researchers, publishers and others seeking to visually enhance their projects and products.<br />
+                    <br />
+                    Photographic reproductions of many works of art in the permanent collection are available for use in books, journals, newspapers, theses, on websites, cards, posters, CDs, and other merchandise.<br />
+                    <a href="/en/image-reproduction/index.php">Learn more</a>
+                  </h4>
+                </div>
+              </div>
+            </div><!-- end .dropdown -->
+          </li>
+          <li class="item right gallery">
+            <a href="/en/index.php" class="tab"><b>The Gallery</b></a>
+            <div class="dropdown">
+              <div class="inner clearfix">
+                <div class="inner clearfix">
+                  <div class="box visit medium">
+                    <h2>
+                      <a href="/en/visit/index.php">Visit</a>
+                    </h2>
+                    <ul>
+                      <li>
+                        <a href="/en/visit/hours.php" title="Hours">Hours</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/admission.php" title="Admission">Admission</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/groups.php" title="Groups">Groups</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/getting-here.php" title="Getting Here">Getting Here</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/hotel-packages.php" title="Where to Stay">Where to Stay</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/floorplan.php" title="Floor plan">Floor plan</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/visit-amenities.php" title="Amenities">Amenities</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/dining.php" title="Dining">Dining</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/shopping.php" title="Shopping">Shopping</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/accessibility.php" title="Accessibility">Accessibility</a>
+                      </li>
+                      <li>
+                        <a href="/en/visit/visiting-faq.php" title="Visiting FAQ">Visiting FAQ</a>
+                      </li>
+                      <li>
+                        <a href="/en/library/index.php" title="Library and Archives">Library and Archives</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="box medium">
+                    <h2>
+                      <a href="/en/see/index.php">See</a>
+                    </h2>
+                    <ul>
+                      <li>
+                        <a href="/en/see/collections/category_index.php">Collections</a>
+                      </li>
+                      <li>
+                        <a href="/en/see/exhibitions/current" title="Exhibitions">Exhibitions</a>
+                      </li>
+                      <li>
+                        <a href="/en/see/online-showcases.php" title="Online Showcases">Online Showcases</a>
+                      </li>
+                      <li>
+                        <a href="/en/see/building-and-grounds.php" title="Building and Grounds">Building and Grounds</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="box x-big">
+                    <h2>
+                      <a href="/en/learn/index.php">Learn</a>
+                    </h2>
+                    <ul>
+                      <li>
+                        <a href="/en/learn/activities.php" title="Activities">Activities</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/tours.php" title="Tours">Tours</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/events.php" title="Events">Events</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/school-programs.php" title="School Programs">School Programs</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/presentations.php" title="Presentations">Presentations</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/lesson-plans.php" title="Lesson Plans">Lesson Plans</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/resources-and-demonstrations.php" title="Resources and Demonstrations">Resources and Demonstrations</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/../podcasts/index.php" title="Podcasts">Podcasts</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/features-for.php" title="Features For...">Features For...</a>
+                      </li>
+                      <li>
+                        <a href="/en/learn/learn_online-exhibitions.php" title="Online Exhibitions">Online Exhibitions</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="box x-big last">
+                    <h2>
+                      <a href="/en/give/index.php">Give</a>
+                    </h2>
+                    <ul>
+                      <li>
+                        <a href="/en/give/membership-and-annual-giving.php" title="Give to the Gallery">Give to the Gallery</a>
+                      </li>
+                      <li>
+                        <a href="/en/give/sponsorship-at-the-gallery.php" title="Sponsorship at the Gallery">Sponsorship at the Gallery</a>
+                      </li>
+                      <li>
+                        <a href="/en/give/foundation.php" title="The Fondation">The Fondation</a>
+                      </li>
+                    </ul>
+                    <h2 class="space-top">
+                      <a href="/en/join/index.php">Join</a>
+                    </h2>
+                    <ul>
+                      <li>
+                        <a href="/en/join/index.php" title="Membership">Membership</a>
+                      </li>
+                      <li>
+                        <a href="/en/buy-now.php" title="Buy Now">Buy Now</a>
+                      </li>
+                      <li>
+                        <a href="/en/levels-and-benefits.php" title="Levels and Benefits">Levels and Benefits</a>
+                      </li>
+                      <li>
+                        <a href="/en/join/for-current-members.php" title="For Current Members">For Current Members</a>
+                      </li>
+                      <li>
+                        <a href="/en/contact-us.php" title="Contact Us">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div><br class="clear" />
+                  <p class="buttons">
+                    <a href="http://www.shopngc.ca/boutique/en/?lc=1" class="button view blue"><span>Shop Online</span></a> <a href="/en/calendar/" class="button view red"><span>View Event Calendar</span></a><a href="http://www.ngcmagazine.ca" class="button view red" target="_blank"><span>NGC Magazine</span></a>
+                  </p>
+                </div>
+              </div><!-- end .dropdown -->
+            </div>
+          </li>
+        </ul>
+      </div><!-- end #head -->
+      <div id="main" class="clearfix">
+        <div class="grid-3 content-header text-align-right">
+          <div class="bottom">
+            <h2>
+              Library <b>&amp;</b> Research
+            </h2><a href="/en/index.php" class="back">← Back to gallery home</a>
+          </div>
+        </div>
+        <div class="grid-9 content-header text-align-left">
+          <div class="image no-border">
+            <img src="/images/marketing/image001.jpg" width="700" height="217" />
+          </div>
+        </div>
+        <div id="left-menu" class="grid-3">
+          <ul id="sub-nav">
+            <li>
+              <a href="/en/library/access-and-hours.php">Access and Hours</a>
+            </li>
+            <li>
+              <a href="/en/library/exhibitions.php">Exhibitions</a>
+            </li>
+            <li>
+              <a href="/en/library/collections.php">Collections</a>
+            </li>
+            <li>
+              <a href="/en/library/services.php">Services</a>
+            </li>
+            <li>
+              <a href="/en/library/search-the-catalogue.php">Search the catalogue</a>
+            </li>
+            <li>
+              <a href="/en/library/history.php">History</a>
+            </li>
+            <li>
+              <a href="/en/library/volunteers-and-interns.php">Volunteers and Interns</a>
+            </li>
+            <li>
+              <a href="/en/library/research-fellowships-program.php">Research Fellowships Program</a>
+            </li>
+          </ul>
+        </div>
+        <div class="grid-9">
+          <!-- Middle column display -->
+          <div class="right">
+            <a href="javascript:window.print();" class="icon print" onclick="_gaq.push(['_trackEvent', 'Print', 'Library &amp; Archives', '/en/library/index.php']);">Print this page</a> <a href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=xa-4d6d10d125a61c3b" class="icon link addthis_button" onmouseover="_gaq.push(['_trackEvent', 'Share', 'addthisshow', '/en/library/index.php']);">Share this page</a> <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4d6d10d125a61c3b">
+</script>
+          </div><!--googleon:all-->
+          <!--googleoff:snippet-->
+          <ul class="breadcrumb clearfix">
+            <li>
+              <a href="/en/research.php" title="Research">Research</a> /
+            </li>
+            <li>Library &amp; Archives
+            </li>
+          </ul><!--googleon:snippet-->
+          <h2 class="title">
+            Library &amp; Archives
+          </h2>
+          <div class="grid-9">
+            <div id="framed-box-grid">
+              <div class="grid-3 first">
+                <h4>
+                  <span>Access and hours</span>
+                </h4>
+                <div>
+                  &nbsp;<img alt="" src="/images/photos/library-archives-access.jpg" />
+                  <ul>
+                    <li>
+                      <a href="/en/library/access-and-hours.php">Learn more</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- grid-3 -->
+              <div class="grid-3">
+                <h4>
+                  <span>Exhibitions</span>
+                </h4>
+                <div>
+                  &nbsp;<img alt="" src="/images/photos/library-exhibitions.jpg" />
+                  <ul>
+                    <li>
+                      <a href="/en/library/exhibitions.php">Learn more</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- grid-3 -->
+              <div class="grid-3 last">
+                <h4>
+                  <span>Collections</span>
+                </h4>
+                <div>
+                  <img alt="Collections" width="214" height="246" src="/images/content/lib_arch_colls.jpg" />
+                  <ul>
+                    <li>
+                      <a href="/en/library/collections.php">Learn more</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- grid-3 -->
+              <div class="grid-3 first">
+                <h4>
+                  <span>Services</span>
+                </h4>
+                <div>
+                  <img alt="Services" width="214" height="246" src="/images/content/library-archives-services.jpg" />
+                  <ul>
+                    <li>
+                      <a href="/en/library/services.php">Learn more</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- grid-3 -->
+              <div class="grid-3">
+                <h4>
+                  <span>Search the Catalogue</span>
+                </h4>
+                <div>
+                  <img alt="Search the Catalogue" width="214" height="246" src="/images/content/library-archives-search-catalogue.jpg" />
+                  <ul>
+                    <li>
+                      <a href="/en/library/search-the-catalogue.php">Learn more</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- grid-3 -->
+              <div class="grid-3 last">
+                <h4>
+                  <span>History</span>
+                </h4>
+                <div>
+                  <img alt="History" width="214" height="246" src="/images/content/library-archives-history.jpg" />
+                  <ul>
+                    <li>
+                      <a href="/en/library/history.php">Learn more</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- grid-3 -->
+              <div class="grid-3 first">
+                <h4>
+                  <span>Volunteers &amp; Interns</span>
+                </h4>
+                <div>
+                  <img alt="Volunteers &amp; Interns" width="214" height="246" src="/images/content/library-archives-volunteers-interns.jpg" />
+                  <ul>
+                    <li>
+                      <a href="/en/library/volunteers-and-interns.php">Learn more</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- grid-3 -->
+            </div><!-- end #framed-box-grid -->
+          </div>
+        </div><!-- Right column is visible -->
+      </div><!-- end #columns -->
+    </div><!-- end #main --><!--googleoff:all-->
+    <div id="foot">
+      <div class="grid-row clearfix">
+        <div class="grid-12">
+          <a href="#main" class="top"><img src="/images/design/top.gif" alt="Top" width="51" height="47" /></a>
+          <div class="clearfix">
+            <form action="/en/search" class="search left" method="post">
+              <div>
+                <input id="q" name="q" type="text" class="search-query" value="" /> <input class="search-submit" type="submit" value="Search" /> <a class="advanced" href="/en/search?advanced">Advanced Search</a>
+              </div>
+            </form>
+            <div class="connect right">
+              <a target="_blank" href="http://www.facebook.com/nationalgallerycanada"><img src="/images/design/icon-facebook.gif" width="24" height="24" alt="Facebook" /> Facebook</a> <a target="_blank" href="http://twitter.com/gallerydotca"><img src="/images/design/icon-twitter.gif" width="24" height="24" alt="Twitter" /> Twitter</a> <a target="_blank" href="http://www.youtube.com/user/ngcmedia"><img src="/images/design/icon-youtube.gif" width="24" height="24" alt="Youtube" /> YouTube</a> <a target="_blank" href="http://pinterest.com/ngcmbac/"><img src="/images/design/icon-pinterest.gif" width="24" height="24" alt="Pinterest" /> Pinterest</a> <a target="_blank" href="http://instagram.com/ngc_mbac/"><img src="/images/design/icon-instagram.gif" width="24" height="24" alt="Instagram" /> Instagram</a> <a target="_blank" href="http://www.tripadvisor.ca/Attraction_Review-g155004-d155448-Reviews-National_Gallery_of_Canada-Ottawa_Ontario.html"><img src="/images/design/icon-tripadvisor.gif" width="24" height="24" alt="Youtube" /> TripAdvisor</a>
+            </div>
+          </div>
+          <div class="box about">
+            <h2>
+              About
+            </h2>
+            <ul>
+              <li>
+                <a href="/en/about/director.php">From the Director</a>
+              </li>
+              <li>
+                <a href="/en/about/mission-statement.php">Mission Statement</a>
+              </li>
+              <li>
+                <a href="/en/about/history.php">Our History</a>
+              </li>
+              <li>
+                <a href="/en/about/corporate-governance.php">Governance</a>
+              </li>
+              <li>
+                <a href="http://www.gallery.ca/en/about/corporate-reports.php#atip">Completed Access to Information Requests</a>
+              </li>
+              <li>
+                <a href="/en/about/press-releases.php">Press Releases</a>
+              </li>
+              <li>
+                <a href="http://clients.njoyn.com/CL2/xweb/xweb.asp?page=joblisting&amp;CLID=51300">Careers</a>
+              </li>
+              <li>
+                <a href="/en/about/volunteers.php">Volunteer</a>
+              </li>
+              <li class="last">
+                <a href="/en/about/space-rentals.php">Space Rentals</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/en/about/media.php">For The Media</a>
+              </li>
+              <li>
+                <a href="/en/about/tourism-professionals.php">For Tourism Professionals</a>
+              </li>
+              <li>
+                <a href="/en/about/museums.php">For Museums</a>
+              </li>
+              <li>
+                <a href="/en/about/for-board-members.php">For Board Members</a>
+              </li>
+              <li>
+                <a href="/en/about/marketing-materials.php">Marketing Materials</a>
+              </li>
+              <li>
+                <a href="/en/about/about_faq.php">FAQ</a>
+              </li>
+              <li>
+                <a href="/en/about/site-map.php">Site Map</a>
+              </li>
+              <li class="last">
+                <a href="/en/about/contact-form.php">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="box library">
+            <h2>
+              The Gallery
+            </h2>
+            <ul>
+              <li>
+                <a href="/en/visit/index.php">Visit</a>
+              </li>
+              <li>
+                <a href="/en/see/index.php">See</a>
+              </li>
+              <li>
+                <a href="/en/learn/index.php">Learn</a>
+              </li>
+              <li>
+                <a href="/en/shop/index.php">Shop</a>
+              </li>
+              <li>
+                <a href="/en/give/index.php">Give</a>
+              </li>
+              <li>
+                <a href="/en/join/index.php">Join</a>
+              </li>
+              <li class="last">
+                <a href="/en/magazine/index.php">Magazine</a>
+              </li>
+            </ul>
+          </div>
+          <div class="box location">
+            <a target="_blank" href="http://www.gallery.ca/documents/policies/SM_Guide_EN.pdf">Social Media Guidelines</a><br />
+            <br />
+            <div class="image left">
+              <a target="_blank" href="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=national+gallery+of+canada&amp;aq=&amp;sll=49.891235,-97.15369&amp;sspn=33.333812,79.013672&amp;ie=UTF8&amp;hq=national+gallery+of+canada&amp;hnear=&amp;ll=45.431527,-75.693569&amp;spn=0.035296,0.077162&amp;z=14&amp;iwloc=A&amp;ved=0CDwQpQY&amp;sa=X&amp;ei=ndiTTcPmJYjMNf7_xKgM"><img src="/images/design/foot/google-map-off.jpg" class="roll" width="220" height="222" alt="Google Map" /><br />
+              <span>Open Map</span></a>
+            </div>
+            <div class="right">
+              <p>
+                <b>LOCATION</b><br />
+                National Gallery of Canada<br />
+                380 Sussex Drive,<br />
+                P.O. Box 427,<br />
+                Station A, Ottawa, Ontario,<br />
+                Canada, K1N 9N4
+              </p>
+              <p>
+                <b>CONTACT</b><br />
+                613-990-1985 or<br />
+                1-800-319-ARTS<br />
+                Fax : 613-993-4385<br />
+                TDD : 613-990-0777<br />
+                <a href="mailto:info@gallery.ca">info@gallery.ca</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- end #foot -->
+    <div id="copyright">
+      <div class="grid-row clearfix">
+        <div class="grid-12">
+          <img class="left" src="/images/design/national-gallery-of-canada_musee-des-beaux-arts-du-canada.gif" width="284" height="45" alt="National Gallery Of Canada Musee Des Beaux Arts Du Canada" /> <img class="right" src="/images/design/canada.gif" width="81" height="19" alt="Canada" />
+          <div class="clear"></div>
+          <p class="clearfix">
+            <span class="left">© 2016 The National Gallery of Canada. All Rights Reserved</span> <span class="right"><a href="/en/privacy-policy.php">Privacy Policy</a> <a href="/en/terms-of-use.php">Terms of Use</a></span>
+          </p>
+        </div>
+      </div>
+    </div><!-- end #copyright -->
+    <!-- Google Analytics -->
+    <script type="text/javascript" src="/scripts/gatag_async.js">
+</script><!--<a href="/en/library/research-fellowships-program.php">Research Fellowships Program</a><a href="/en/library/volunteers-and-interns.php">Volunteers and Interns</a><a href="/en/library/history.php">History</a><a href="/en/library/search-the-catalogue.php">Search the catalogue</a><a href="/en/library/services.php">Services</a><a href="/en/library/collections.php">Collections</a><a href="/en/library/exhibitions.php">Exhibitions</a><a href="/en/library/access-and-hours.php">Access and Hours</a>-->
+  </body>
+</html>

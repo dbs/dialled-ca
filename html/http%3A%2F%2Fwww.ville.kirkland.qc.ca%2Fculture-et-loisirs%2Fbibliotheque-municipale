@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+<title>Ville de Kirkland - Bibliothèque municipale</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1;" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel='alternate' type='application/rss+xml' title='Kirkland RSS' href='http://www.ville.kirkland.qc.ca/notif_fluxrss.xml' /><link rel="shortcut icon" type="image/ico" href="/favicon.ico?id=1853176086000" /><link href="/client_file/themes/default/css/album_photos.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/blocdynamique.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/calendrier.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/catalog.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/colorbox.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/cssDinamique.php" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/map.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/modalWindows.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/module.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/organigramme.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/tinymce.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript">
+/* By Pass of Console.log */
+if(typeof(console)=="undefined"){
+   function Console(){}
+   console = new Console();
+   Console.prototype.log = function(param){};
+   Console.prototype.render = function(){};
+}
+
+//<![CDATA[
+
+var Login_Timeout = "";
+function set_timer(){
+	Login_Timeout = setTimeout("deconnection_login()",900000);
+}
+function trimString (str) 
+{
+  str = this != window? this : str;
+  return str.replace(/\s+/g, '').replace(/\s+$/g, '');
+}
+
+//String.prototype.trim = trimString;
+
+// REDIRECTION VERS UN AUTRE URL
+function Redirection(theUrl){
+	window.location.href=(theUrl);
+}
+
+//OUVERTURE D'UN POPUP
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+	window.open(theURL,winName,features);
+}
+
+var win=null;
+function openfenetre(mypage,myname,w,h,scroll,pos){
+	if(pos=="random"){LeftPosition=(screen.width)?Math.floor(Math.random()*(screen.width-w)):100;TopPosition=(screen.height)?Math.floor(Math.random()*((screen.height-h)-75)):100;}
+	if(pos=="center"){LeftPosition=(screen.width)?(screen.width-w)/2:100;TopPosition=(screen.height)?(screen.height-h)/2:100;}
+	else if((pos!="center" && pos!="random") || pos==null){LeftPosition=0;TopPosition=20}
+	settings='width='+w+',height='+h+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=no';
+	win=window.open(mypage,myname,settings);
+}
+
+function datepicker(champ){
+	var newWindow;
+	var urlstring = '/admin/inc/libs/ext/datepicker/calendar.php?champ='+champ;
+	openfenetre(urlstring,'date','232','200','no','center');
+}
+
+function validate(current_form) 
+{  
+  var missing_fields = new Array()
+  var total_missing = 0;
+ 
+  
+  // Loop through all the form elements
+  for (counter = 0; counter < current_form.length; counter++) 
+  {  
+  /*
+  	if (current_form[counter].type == "radio")
+	{
+		chosen = "";
+		len = document.getElementsByName(current_form[counter].name).length;
+		
+		for (i = 0; i <len; i++) 
+		{
+			if (current_form[counter].checked) 
+			{
+				chosen = current_form[counter].value;
+				break;
+			}
+		}
+		
+		if (chosen == "") 
+		{
+	        missing_fields[total_missing] = current_form[counter]
+    	    total_missing++
+		}				
+	}
+*/
+	
+    // Is this a visible text field that's mandatory?
+    if (current_form[counter].type == "text" || current_form[counter].type == "textarea" || current_form[counter].type == "password")  
+	{
+            // Is it empty?
+      if (its_empty(current_form[counter].value)) 
+	  {       
+        // If so, add the field to the array of missing fields
+        missing_fields[total_missing] = current_form[counter]
+        total_missing++
+      }
+    }
+  }
+
+  // Were there any fields missing?
+  if (total_missing > 0) 
+  {  
+    // Start the message
+    var missing_message = "Veuillez remplir les champs manquants suivants " +
+               "\n______________________________\n\n"
+    
+    // Loop through the missing fields
+    for (counter = 0; counter < missing_fields.length; counter++) {
+      missing_message += missing_fields[counter].name + "\n"
+    }
+  
+    // Finish up and display the message
+    missing_message += "\n______________________________\n\n";
+    alert(missing_message)
+    
+    // For emphasis, put the focus on the first missing field
+    missing_fields[0].focus()
+	return false;
+  }
+  else 
+  {
+  
+    // Otherwise, go ahead and submit
+    return true;
+  }
+}
+
+function attribVal1ToVal2(id1,id2) 
+{
+    //alert(document.getElementById(''+id1+'').value);
+    document.getElementById(''+id2+'').value = document.getElementById(''+id1+'').value;
+}
+
+function toggleBlock(id) 
+{
+	if (document.getElementById)
+	{
+		if (document.getElementById(''+id+'').style.display == "block")	
+			document.getElementById(''+id+'').style.display = "none";
+		else
+			document.getElementById(''+id+'').style.display = "block";
+	}
+	else if (document.layers) 
+	{
+		if (document.layers[''+id+''].visibility == "show")	
+			document.layers[''+id+''].visibility = "hide";
+		else
+			document.layers[''+id+''].visibility = "show";	
+	}
+}
+
+//Get cookie routine by Shelley Powers 
+function get_cookie(Name) 
+{
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    // if cookie exists
+    if (offset != -1) { 
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1) end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function FormSendMail(form)
+{
+//	alert(form.name);
+	//alert("yotri");
+	//alert(window.document.getElementById('tblForm').outerHTML);
+	var valeur = "";
+	
+	form.Submit.style.visibility = "hidden";
+/*
+	if (!(typeof(window.tblTexte) == "undefined"))
+		valeur += window.tblTexte.outerHTML;
+
+	if (!(typeof(window.tblForm) == "undefined"))
+		valeur += window.tblForm.outerHTML;
+		*/
+	
+	if (window.document.getElementById('tblForm').outerHTML != "")
+		form1.FormValues.value  = window.document.getElementById('tblForm').innerHTML;
+		
+	alert(form1.FormValues.value);
+	return true;
+}
+
+function FormSendMail_byGenerator(TFID)
+{
+	//valeur = document.getElementById(TFID).innerHTML;
+	//		alert(valeur);
+	e = window.document.form1.elements;
+	
+	for (i=0; i < e.length ; i++) 
+	{
+		e[i].setAttribute('value',e[i].value);
+		//alert(e[i].type);
+		
+		if (e[i].type == "button" || e[i].type == "submit")
+		{
+			e[i].style.visibility = "hidden";
+		}
+		else if (e[i].type == "radio" || e[i].type == "checkbox")
+		{
+			if (e[i].checked == true)
+			{
+				e[i].setAttribute('checked',true);
+				//e[i].checked = "on";
+				//alert("tri" + e[i].value);
+			}
+			else
+			{
+				e[i].removeAttribute('checked','');
+			}			
+		}		
+		else if (e[i].type == "select-one")
+		{	
+			//alert(e[i].selectedIndex);			
+			//e[i].options[e[i].selectedIndex].selected = true;
+			
+			for (j=0;j<e[i].length;j++)
+			{
+				e[i].options[j].removeAttribute('selected','');
+			}
+			
+			e[i].options[e[i].selectedIndex].setAttribute('selected',true);
+		}
+		else if (e[i].type == "textarea")
+		{
+//			alert(e[i].type + " = " + e[i].value);
+//			e[i].setAttribute('value',e[i].value);
+			e[i].innerHTML = e[i].value;
+		}
+	}	
+
+	var valeur = "";
+	var TFORM = document.getElementById(TFID);
+	if (TFORM.Reset) TFORM.Reset.style.visibility = "hidden";
+	if (TFORM.Submit) TFORM.Submit.style.visibility = "hidden";
+
+/*
+	if (!(typeof(window.tblForm) == "undefined"))
+		valeur += window.tblForm.outerHTML;
+*/
+	if ((!valeur || valeur == "undefined") && document.getElementById(TFID).innerHTML)
+		valeur = document.getElementById(TFID).innerHTML;
+		
+	if (valeur)
+	{
+		document.getElementById('FormValues').value  = valeur;
+		//window.document.form1.FormValues.value = valeur;
+		return true;
+	}
+	else 
+		return false;
+}
+
+function formTelephoneAutoFormatField(e, phoneFieldId, phoneValueNew){
+     var key;     
+     if(window.event) key = window.event.keyCode; //IE
+     else key = e.which; //firefox     
+
+    var keyNumbers = new Array();
+        keyNumbers[48]='0';keyNumbers[49]='1';keyNumbers[50]='2';keyNumbers[51]='3';keyNumbers[52]='4';keyNumbers[53]='5';keyNumbers[54]='6';keyNumbers[55]='7';keyNumbers[56]='8';keyNumbers[57]='9';
+        keyNumbers[96]='0';keyNumbers[97]='1';keyNumbers[98]='2';keyNumbers[99]='3';keyNumbers[100]='4';keyNumbers[101]='5';keyNumbers[102]='6';keyNumbers[103]='7';keyNumbers[104]='8';keyNumbers[105]='9';
+    phoneValue = String(phoneValueNew) + String(keyNumbers[key]);
+
+    // 0-9 keypad = 96-105 , 0-9 board = 48-57
+    if((key >= 48 && key <= 57) || (key >= 96 && key <= 105)){
+        // Check if the value IS a number. If not, warn the user to input only numbers.
+        phoneValue = phoneValue.replace(/-/g, '');
+        phoneValue = phoneValue.replace(/e/g, '');
+        phoneValue = phoneValue.replace(/x/g, '');
+        phoneValue = phoneValue.replace(/t/g, '');
+        phoneValue = phoneValue.replace(/:/g, '');
+        phoneValue = phoneValue.replace(/ /g, '');
+        var sLen = String(phoneValue).length;
+
+        if(phoneValue.substring(0, 1) == 1){
+            if (sLen == 1) newPhoneValue = phoneValue;
+            else if (sLen >= 2 && sLen <= 4) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1);
+            else if (sLen >= 5 && sLen <= 7) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4);
+            else if (sLen >= 7 && sLen <= 11) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4, 7) + '-' + phoneValue.substring(7);
+            else if (sLen >= 11) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4, 7) + '-' + phoneValue.substring(7, 11) + ' ext:' + phoneValue.substring(11, sLen);
+        }
+        else{
+            if (sLen <= 3) newPhoneValue = phoneValue;
+            else if (sLen >= 3 && sLen <= 6) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3);
+            else if (sLen >= 6 && sLen <= 10) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3, 6) + '-' + phoneValue.substring(6);
+            else if (sLen >= 10) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3, 6) + '-' + phoneValue.substring(6, 10) + ' ext:' + phoneValue.substring(10, sLen);
+        }
+        document.getElementById(phoneFieldId).setAttribute('maxlength', 30);
+        document.getElementById(phoneFieldId).value = newPhoneValue;
+
+        return (key != key);
+    }
+   else if ((key != 8) && (key !=9))
+	 return (key != key);
+}
+
+var firstCall = true;
+var TITREONCE = 0, STYLE5ONCE = 0, SOUSTITREONCE = 0, TITRE_f_ONCE = 0;
+
+
+function SecureLevel(response) {
+	max_val = parseInt(document.getElementById('secure_level').style.width);
+	response = parseFloat(response)
+	if (response < 0.5) color = '#ff0000';
+	else if (response < 0.8) color = '#ffff00';
+	else color = '#00ff00';
+	document.getElementById('secure_level_value').style.backgroundColor = color;
+	document.getElementById('secure_level_value').style.width = Math.round(max_val * response) + 'px';
+}
+//]]>
+</script>
+
+
+
+	
+</head>
+<body id="ContentLayout" class="ContentLayoutPage">
+<link href="/js/jquery_tools/UI_css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<style type="text/css">
+
+.ui-widget-overlay { opacity: .70;filter:Alpha(Opacity=70); }    
+
+</style>
+<script>
+    $(function() {
+        
+        if( $.cookie('annonce_popup_displayed_cookie') != '1' ){
+            var expires = new Date();
+            expires.setMinutes( expires.getMinutes() + 300 );
+           $.cookie('annonce_popup_displayed_cookie', '1', { expires: expires }); 
+            $( "#AnnonceGeneral" ).dialog({
+              resizable: true,
+              maxHeight:800,
+              maxWidth:500,
+              width: 500,
+              modal: true,
+              buttons: {
+                "OK": function() {
+                  $( this ).dialog( "close" );
+                  //Écrire un cookie pour affichage seulement une fois
+                  //$.cookie('annonce_popup_displayed', '1', { expires: 300 }); 
+                  //$.cookie('annonce_popup_displayed', '1', { expires: 300 });
+                  
+                  //Augmenter le nombre de vue
+                  $.ajax({
+                    type: "POST",
+                    url: "http://www.ville.kirkland.qc.ca/update_nb_vues_annonce.php",
+                    data: { popup_displayed: "true", security_salt : "464683dfdfgdfgnidfsgsdgsd4584625dsd749"}
+                  })
+                },
+              }
+            }); 
+        }
+    });
+</script>
+
+<script type="text/javascript" src="/client_file/themes/default/javascript/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="/client_file/themes/default/javascript/jquery.imagemapster.min.js"></script>
+<script type="text/javascript" src="/client_file/themes/default/javascript/javascript.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" media="print" href="/client_file/themes/default/print-test.css" />
+
+
+
+<div id="HeaderWrapper">
+	<div id="Header">
+        <a id="Logo" href="/">Ville de Kirkland</a>
+    	<div id="HeaderContent">
+            <ul id="SiteWideNavigation">
+				<li><a href='http://www.ville.kirkland.qc.ca/'>Accueil</a></li><li><a href='http://www.ville.kirkland.qc.ca/pour-nous-joindre'>Nous joindre</a></li><li><a href='?action=change_langue&langue=EN'>English</a></li>            </ul>
+            <a href="#"  onClick="window.print();" id="Print">Imprimer cette page</a>            
+            <ul id="TextTransform">
+            	<li><a href="#" id="SmallText">Reduire la taille du texte</a></li>
+                <li><a href="#" id="BigText">Augmenter la taille du texte</a></li>
+            </ul>
+            <ul id="SocialLinks" style="">
+                <li id="Facebook"><a target="_blank" href="https://www.facebook.com/pages/Kirkland-Québec/318035365035543">Facebook</a></li>
+                <!--<li id="Twitter"><a href="#">Twitter</a></li>
+                <li id="Pinterest"><a href="#">Pinterest</a></li>-->
+            </ul>
+            <div id="Search">
+
+<form id="SearchForm" action="http://www.ville.kirkland.qc.ca/rechercher.php" method="get"> 
+   <input id="search_txt" name="rechercher" type="text" class="hideText" placeholder="Rechercher"  value="" />  
+   <input id="BtnSearch" name="search_btn" type="submit" value="" />  
+   <input value="2" name="rechercher_type" type="hidden">
+   <input value="menu" name="search_from" type="hidden">
+   <input value="all" name="rechercheparF" type="hidden">
+   <input value="null" name="change_section" type="hidden">
+</form>
+            
+            
+            </div>
+        </div>
+        <div id="SecondaryContentNavigationWrapper">
+        	<ul id="SecondaryContentNavigation">           	
+                <li><a id="SecondaryContentNavigationLien" href="#">Services en ligne</a>
+                    <div id="system_page_FR_1477" onmousedown="afficheadmin(event, 'page_system', 1477);go_afficheadmin=false"><ul>
+<li><a href="https://mon.accescite.net/66102/fr-ca/Home/Index" target="_blank">Inscriptions aux activit&eacute;s</a></li>
+<li><a href="https://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation/compteurs-d-eau-et-tarification">Lecture du compteur d'eau</a></li>
+<li><a href="http://evalweb.ville.montreal.qc.ca">R&ocirc;le d'&eacute;valuation</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation/taxes-municipales ">Paiement des taxes</a></li>
+<li><a href="https://servicesenligne2.ville.montreal.qc.ca/sel/constats/accueil.do?request_locale=fr">Paiement d'un constat d'infraction</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/requetes-en-ligne">Requ&ecirc;tes en ligne</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/requetes-en-ligne">Demande de permis</a></li>
+<li><a href="https://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/stationnement-temporaire">Demande de permis de stationnement</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/livres-numeriques">Livres num&eacute;riques</a></li>
+<li><a href="http://biblioweb.ville.kirkland.qc.ca" target="_blank">Biblio en ligne</a></li>
+</ul></div>            
+                </li>
+                <li><a id="SecondaryContentNavigationService" href="#">Accès rapide</a>
+                	<div id="system_page_FR_1478" onmousedown="afficheadmin(event, 'page_system', 1478);go_afficheadmin=false"><ul>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale">Biblioth&egrave;que</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/bases-de-donnees ">Bases de donn&eacute;es &agrave; la Biblioth&egrave;que</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation/taxes-municipales">Taxes municipales</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/reglementation-municipale">R&egrave;glements et permis</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles">Collectes des mati&egrave;res r&eacute;siduelles</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/offres-d-emploi">Offres d'emploi</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/avis-publics-2016">Avis publics</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/portrait-municipal/gestion-contractuelle/liste-des-contrats-octroyes">Liste des contrats</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/evenements">Calendrier</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/terrasses-commerciales">Nouvelle r&eacute;glementation - Terrasses commerciales</a></li>
+</ul></div>                </li>
+            </ul>
+        </div>
+       	<div id="MainNavigationWrapper">
+    	   <ul id="MainNavigation"><li><a href="#" class="FirstLevel">Portrait municipal</a><span class="MobileLevel">&nbsp;</span><div class="MainSubNavigationWrapper"><div class="MainSubNavigation"><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/bienvenue-a-kirkland' class="">Bienvenue à Kirkland</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/bienvenue-a-kirkland/mot-du-maire' class="">Mot du maire</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/bienvenue-a-kirkland/nouveaux-residents' class="">Nouveaux résidents</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/kirkland-en-bref' class="">Kirkland en bref</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/kirkland-en-bref/profil-socio-economique' class="">Profil socio-économique</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/kirkland-en-bref/carte_territoire' class="">Carte du territoire</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/kirkland-en-bref/historique' class="">Historique</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/kirkland-en-bref/armoiries-et-logo' class="">Armoiries et logo</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/conseil-municipal' class="">Conseil municipal</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/conseil-municipal/elus-municipaux' class="">Élus municipaux</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/conseil-municipal/seances-du-conseil' class="">Séances du conseil</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/conseil-municipal/districts-electoraux' class="">Districts électoraux</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/conseil-municipal/ordres-du-jour-et-proces-verbaux' class="">Ordres du jour et Procès verbaux</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/comites-consultatifs' class="">Comités consultatifs</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/comites-consultatifs/urbanisme' class="">Urbanisme</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/comites-consultatifs/securite-publique-et-circulation' class="">Sécurité publique et circulation</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/comites-consultatifs/environnement' class="">Environnement</a></li></ul></div><div class="Clearer ClearMenuIpad" style="clear:both;"></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/gestion-contractuelle' class="">Gestion contractuelle</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/gestion-contractuelle/politique-de-gestion-contractuelle-' class="">Politique de gestion contractuelle </a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/gestion-contractuelle/inscription-au-fichier-des-fournisseurs' class="">Inscription au Fichier des fournisseurs</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/gestion-contractuelle/liste-des-contrats-octroyes' class="">Liste des contrats octroyés</a></li></ul></div><div class="Clearer ClearMenu" style="clear:both;"></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/profil-financier' class="">Profil financier</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/profil-financier/budget' class="">Budget</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/profil-financier/rapport-du-maire-sur-la-situation-financiere-de-la-municipalite' class="">Rapport du maire sur la situation financière</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/services-municipaux' class="">Services municipaux</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/services-municipaux/direction-generale' class="">Direction générale</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/services-municipaux/finances-et-services-administratifs' class="">Finances et services administratifs</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/services-municipaux/greffe-et-affaires-juridiques' class="">Greffe et affaires juridiques</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/services-municipaux/communications-et-relations-publiques' class="">Communications et relations publiques</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/services-municipaux/ingenierie-et-amenagement-urbain' class="">Ingénierie et aménagement urbain</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/services-municipaux/travaux-publics' class="">Travaux publics</a></li><li><a href='http://www.ville.kirkland.qc.ca/portrait-municipal/services-municipaux/loisirs-et-bibliotheque' class="">Loisirs et bibliothèque</a></li></ul></div></div></div></li><li><a href="#" class="FirstLevel">Services aux citoyens</a><span class="MobileLevel">&nbsp;</span><div class="MainSubNavigationWrapper"><div class="MainSubNavigation"><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques' class="">Affaires juridiques</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/acces-a-l-information' class="">Accès à l'information</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/documents-d-archives' class="">Documents d'archives</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/avis-publics-2016' class="">Avis publics 2016</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/avis-publics-2015' class="">Avis publics 2015</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/documents-civils' class="">Documents civils</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/constats-d-infraction' class="">Constats d'infraction</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/reclamations' class="">Réclamations</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/animaux' class="">Animaux</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/animaux/chiens-' class="">Chiens</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/animaux/chats' class="">Chats</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/animaux/animaux-de-la-faune' class="">Animaux de la faune</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/animaux/controle-animalier' class="">Contrôle animalier</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles' class="">Collectes de matières résiduelles</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/ordures-menageres' class="">Ordures ménagères</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/recyclage' class="">Recyclage</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/matieres-organiques' class="">Matières organiques</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/gros-rebuts' class="">Gros rebuts</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/branches' class="">Branches</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/feuilles-mortes' class="">Feuilles et résidus verts</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/residus-domestiques-dangereux' class="">Résidus Domestiques Dangereux</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/arbres-de-noel' class="">Arbres de Noël</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/dechetterie-municipale' class="">Déchetterie municipale</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/equipement-electronique' class="">Équipement électronique</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles/appareils-refrigerants' class="">Appareils réfrigérants</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation' class="">Taxation</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation/evaluation-fonciere' class="">Évaluation foncière</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation/taxes-municipales' class="">Taxes municipales</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation/compteurs-d-eau-et-tarification' class="">Compteurs d'eau et tarification</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation/taxes-scolaires' class="">Taxes scolaires</a></li></ul></div><div class="Clearer ClearMenuIpad" style="clear:both;"></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats' class="">Permis et certificats</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/map_interactive' class="">Autour de la maison</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/arbres' class="">Arbres</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/demolition' class="">Démolition</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/ventes-de-garage' class="">Ventes de garage</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/fetes-de-quartier' class="">Fêtes de quartier</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/stationnement-temporaire' class="">Stationnement temporaire</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/entrepreneurs' class="">Entrepreneurs</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/permis-et-certificats/renovations-domiciliaires' class="">Rénovations domiciliaires</a></li></ul></div><div class="Clearer ClearMenu" style="clear:both;"></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/location-et-reservations' class="">Location et réservations</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/location-et-reservations/salles-et-chalets-de-parcs' class="">Salles et chalets de parcs</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/location-et-reservations/terrains-de-sports-' class="">Terrains de sports </a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/securite-publique' class="">Sécurité publique</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/securite-publique/codered' class="">CodeRED</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/securite-publique/urgences-environnementales' class="">Urgences environnementales</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/securite-publique/patrouille-municipale' class="">Patrouille municipale</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/securite-publique/conseils-de-prevention' class="">Conseils de prévention</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/securite-publique/poste-de-quartier-1' class="">Poste de quartier 1</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/gestion-des--infrastructures' class="">Gestion des <br> infrastructures</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/gestion-des--infrastructures/info-travaux' class="">Info-Travaux</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/gestion-des--infrastructures/qualite-de-l-eau-potable' class="">Qualité de l'eau potable</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/gestion-des--infrastructures/voirie--egouts-et-aqueducs' class="">Voirie, égouts et aqueducs</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/gestion-des--infrastructures/entretien-des-parcs-et--br--espaces-verts' class="">Entretien des parcs et <br> espaces verts</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/gestion-des--infrastructures/deneigement' class="">Déneigement</a></li></ul></div><div class="Clearer ClearMenuIpad" style="clear:both;"></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/publications' class="">Publications</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/publications/info-kirkland' class="">Info-Kirkland</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/publications/brochure-des-activites' class="">Brochure des activités</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/publications/info-flash' class="">Info-Flash</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/publications/calendrier-municipal' class="">Calendrier municipal</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/publications/communiques' class="">Communiqués</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/reglementation-municipale' class="">Réglementation municipale</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/reglementation-municipale/map_interactive' class="">Autour de la maison</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/reglementation-municipale/reglements-les-plus-en-demande' class="">Règlements les plus en demande</a></li></ul></div><div class="Clearer ClearMenu" style="clear:both;"></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/offres-d-emploi' class="">Offres d'emploi</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/offres-d-emploi/postes-disponibles' class="">Postes disponibles</a></li><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/offres-d-emploi/emplois-etudiants' class="">Emplois étudiants</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/bourses-d-etudes' class="">Bourses d'études</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/services-aux-citoyens/bourses-d-etudes/faire-une-demande' class="">Faire une demande</a></li></ul></div><div class="Clearer ClearMenuIpad" style="clear:both;"></div></div></div></li><li><a href="#" class="FirstLevel Active">Culture et loisirs</a><span class="MobileLevel">&nbsp;</span><div class="MainSubNavigationWrapper"><div class="MainSubNavigation"><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale' class=" Active">Bibliothèque municipale</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/plus-que-des-livres' class="">Plus que des livres...</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/heures-d-ouverture' class="">Heures d'ouverture</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/abonnement' class="">Abonnement</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/livres-numeriques' class="">Livres numériques</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/bases-de-donnees' class="">Bases de données</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/clubs-de-lecture' class="">Clubs de lecture</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/club-accro-des-livres' class="">Club ACCRO des Livres</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/rendez-vous-surprise--avec-un-livre-' class="">Rendez-vous surprise... avec un livre!</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/coin-jeunesse' class="">Coin Jeunesse</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/expositions-d-art' class="">Expositions d'art</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/conferences' class="">Conférences</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/benevolat' class="">Bénévolat</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/programmation-des-activites' class="">Programmation des activités</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/programmation-des-activites/camps-de-jour' class="">Camps de jour</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/programmation-des-activites/printemps' class="">Printemps</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/programmation-des-activites/ete' class="">Été</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/programmation-des-activites/automne' class="">Automne</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/programmation-des-activites/hiver' class="">Hiver</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/programmation-des-activites/inscriptions' class="">Inscriptions</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/activites-libres' class="">Activités libres</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/activites-libres/arena' class="">Aréna</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/activites-libres/gymnase' class="">Gymnase</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/grands-evenements' class="">Grands événements</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/grands-evenements/journee-kirkland' class="">Journée Kirkland</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/grands-evenements/carnaval-d-hiver' class="">Carnaval d'hiver</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/grands-evenements/mini-olympiques' class="">Mini Olympiques</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/grands-evenements/semaine-de-relache' class="">Semaine de relâche</a></li></ul></div><div class="Clearer ClearMenuIpad" style="clear:both;"></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/spectacles' class="">Spectacles</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/spectacles/theatre-bonbon' class="">Théâtre Bonbon</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/spectacles/soirees-en-plein-air' class="">Soirées en plein air</a></li></ul></div><div class="Clearer ClearMenu" style="clear:both;"></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/parcs-et-espaces-verts' class="">Parcs et espaces verts</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/parcs-et-espaces-verts/repertoire' class="">Répertoire</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/parcs-et-espaces-verts/plateaux-sportifs' class="">Plateaux sportifs</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/parcs-et-espaces-verts/jeux-d--eau-et-piscines-communautaires' class="">Jeux d'eau et piscines communautaires</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/parcs-et-espaces-verts/patinoires-exterieures' class="">Patinoires extérieures</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/parcs-et-espaces-verts/piste-cyclable' class="">Piste cyclable</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/repertoire-des-associations' class="">Répertoire des associations</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/repertoire-des-associations/organismes-communautaires' class="">Organismes communautaires</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/repertoire-des-associations/associations-sportives-et-culturelles' class="">Associations sportives et culturelles</a></li><li><a href='http://www.ville.kirkland.qc.ca/culture-et-loisirs/repertoire-des-associations/groupes-sociaux-pour-aines' class="">Groupes sociaux pour aînés</a></li></ul></div></div></div></li><li><a href="#" class="FirstLevel">Développement durable</a><span class="MobileLevel">&nbsp;</span><div class="MainSubNavigationWrapper"><div class="MainSubNavigation"><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux' class="">Programmes environnementaux</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/plan-local-de-developpement-durable' class="">Plan local de développement durable</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/gestion-des-matieres-residuelles' class="">Gestion des matières résiduelles </a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/une-naissance--un-arbre' class="">Une naissance, un arbre</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/ligne-verte' class="">Ligne verte</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/patrouilles-environnementales' class="">Patrouilles environnementales</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/assainissement-de-l-air-et-de-l-eau' class="">Assainissement de l'air et de l'eau</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/produits-economiseurs-d-eau-et-d-energie' class="">Produits économiseurs deau et dénergie</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/programme-reno-climat' class="">Programme RÉNO-CLIMAT</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/programme-roulez--lectrique' class="">Programme Roulez Électrique</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/programmes-environnementaux/arbres-a-20-' class="">Arbres à 20$</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/developpement-durable/evenem-ecolo' class="">Événements écolo</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/evenem-ecolo/une-heure-pour-la-terre' class="">Une heure pour la terre</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/evenem-ecolo/vente-de-garage-communautaire' class="">Vente de garage communautaire</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/evenem-ecolo/journee-de-l-environnement' class="">Journée de l'environnement</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/evenem-ecolo/nettoyage-printanier' class="">Nettoyage printanier</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes' class="">Éco-gestes</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes/arrosage-et-utilisation-de-l-eau' class="">Arrosage et utilisation de l'eau</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes/barils-de-pluie' class="">Barils de pluie</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes/entretien-de-la-pelouse' class="">Entretien de la pelouse</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes/efficacite-energetique' class="">Efficacité énergétique</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes/compost-et-copeaux-de-bois' class="">Compost et copeaux de bois</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes/composteurs-domestiques' class="">Composteurs domestiques</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes/marche-au-ralenti' class="">Marche au ralenti</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/eco-gestes/chauffage-au-bois' class="">Chauffage au bois</a></li></ul></div><div class="MainSubLevel"><h5><a href='http://www.ville.kirkland.qc.ca/developpement-durable/les-indesirables-' class="">Les indésirables...</a><span class="MobileLevel">&nbsp;</span></h5><ul><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/les-indesirables-/agrile-du-frene' class="">Agrile du frêne</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/les-indesirables-/guepes-de-sable' class="">Guêpes de sable</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/les-indesirables-/vers-blancs' class="">Vers blancs</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/les-indesirables-/berce-du-caucase' class="">Berce du Caucase</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/les-indesirables-/herbe-a-poux-ou-herbe-a-la-puce' class="">Herbe à poux ou herbe à la puce?</a></li><li><a href='http://www.ville.kirkland.qc.ca/developpement-durable/les-indesirables-/pesticides' class="">Pesticides</a></li></ul></div><div class="Clearer ClearMenuIpad" style="clear:both;"></div></div></div></li></ul>        </div>
+       	
+	</div><div class="Clearer"></div>
+</div>
+
+<div id="MainWrapper">
+    <div id="Wrapper">
+        <div id="ContentWrapper">
+            <div id="MainColumn">
+                <div id="ContentImageWrapper">
+                    <h6>
+                    Culture et loisirs</h6>
+                                        <img src="http://www.ville.kirkland.qc.ca/client_file/upload/image_page/fonds-ecran-paysages-scene-hivernale-1920-big.jpg" />
+                </div>
+                                <h1>Bibliothèque municipale</h1>  
+                
+                
+                             
+                <div id="MainContent" class="FullWidth">
+                    <div id="PageContent">
+                        <div>Dans cette section :</div>
+<div> </div>
+<ul>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/plus-que-des-livres">Plus que des livres...</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/heures-d-ouverture">Heures d'ouverture</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/abonnement">Abonnement</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/livres-numeriques">Livres numériques</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/clubs-de-lecture">Clubs de lecture</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/coin-jeunesse">Coin Jeunesse</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/conferences">Conférences</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/expositions-d-art">Expositions d'art</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/bases-de-donnees">Bases de données</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/benevolat">Bénévolat</a></li>
+</ul>		                    
+                </div>
+            </div>
+            
+            <div id="SecondaryContent">
+
+                                
+                            </div>
+        </div>
+        <div id="SecondaryColumn">        
+        	<div id="RelatedLinks" class="RelatedLinksContentLayout">
+                <h6 id="RelatedLinks_open" class="onglet">Accès rapide</h6>
+                <div id="RelatedLinksTexte" class="SecondaryTexte">
+        <div id="system_page_FR_1478" onmousedown="afficheadmin(event, 'page_system', 1478);go_afficheadmin=false"><ul>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale">Biblioth&egrave;que</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/culture-et-loisirs/bibliotheque-municipale/bases-de-donnees ">Bases de donn&eacute;es &agrave; la Biblioth&egrave;que</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/taxation/taxes-municipales">Taxes municipales</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/reglementation-municipale">R&egrave;glements et permis</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/collectes-de-matieres-residuelles">Collectes des mati&egrave;res r&eacute;siduelles</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/offres-d-emploi">Offres d'emploi</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/services-aux-citoyens/affaires-juridiques/avis-publics-2016">Avis publics</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/portrait-municipal/gestion-contractuelle/liste-des-contrats-octroyes">Liste des contrats</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/evenements">Calendrier</a></li>
+<li><a href="http://www.ville.kirkland.qc.ca/terrasses-commerciales">Nouvelle r&eacute;glementation - Terrasses commerciales</a></li>
+</ul></div>                </div>
+        	</div>
+            <div class="SecondaryColumnOnglet" id="InfoAlert">
+                <a href="/services-aux-citoyens/securite-publique/codered">            	<img src="http://www.ville.kirkland.qc.ca/client_file/themes/default//interface/picto_alert.png" />
+                <h6>Code<strong>RED</strong></h6>
+                <p>Recevez les avis en situation d&#039;urgence</p>
+                </a>
+            </div>
+            <div class="SecondaryColumnOnglet" id="iCare">
+            	<a href="/requetes-en-ligne">            	<img src="http://www.ville.kirkland.qc.ca/client_file/themes/default//interface/picto_icare.png" />
+                <h6>Requêtes en Ligne</h6>
+                <p>Je remplace iCARE!</p>
+                </a>
+            </div>
+            <div class="SecondaryColumnOnglet" id="biblio">
+                <a target="_blank" href="http://biblioweb.ville.kirkland.qc.ca">
+            	<img src="http://www.ville.kirkland.qc.ca/client_file/themes/default//interface/picto_biblio.png" />
+                <h6>BIBLIO en ligne</h6>
+                <p>Tous nos titres en un seul clic!</p>
+                </a>
+            </div>
+            <div class="SecondaryColumnOnglet" id="Reglements">
+                <a href="/services-aux-citoyens/permis-et-certificats/map_interactive">            	<img src="http://www.ville.kirkland.qc.ca/client_file/themes/default//interface/picto_reglements.png" />
+                <h6>Règlements en un clic</h6>
+                <p>Autour de la maison</p>
+                </a>
+            </div>         
+            <div class="SecondaryColumnOnglet" id="Infolettre">
+                <a href="/infolettre">            	<img src="http://www.ville.kirkland.qc.ca/client_file/themes/default//interface/picto_infolettre.png" />
+                <h6>Infolettre</h6>
+                <p>Toutes les nouvelles par courriel</p></a>
+            </div>
+            <div class="SecondaryColumnOnglet" id="InfoTravaux">
+                <a href="/services-aux-citoyens/gestion-des--infrastructures/info-travaux">                <img src="http://www.ville.kirkland.qc.ca/client_file/themes/default//interface/picto_travaux.png" />
+                <h6>Info-Travaux</h6>
+                <p>Toute linfo sur les travaux locaux</p></a>
+            </div>
+            <div class="SecondaryColumnOnglet" id="Publications">
+                <a href="/services-aux-citoyens/publications">            	<img src="http://www.ville.kirkland.qc.ca/client_file/themes/default//interface/picto_publi.png" />
+                <h6>Publications</h6>
+                <p>Ressources documentaires</p>
+                </a>
+            </div>                
+        </div>
+        <div class="Clearer"></div>
+	</div>
+</div>
+</div>
+<div id="FooterWrapper">    
+    <div id="Footer">
+    	2016 &copy; Ville de Kirkland. Tous droits réservés. | <a href="plan_site">Plan du site</a>
+    </div>
+</div>    
+
+
+<script>
+/*ajax calendrier + event dans le home*/
+    $(function(){
+      $('#Month').bind('change', function () {
+          var url = $(this).val() + $('#Category').val();
+          if (url) {
+                $("#CalendarDetails").innerHTML = "";
+                $("#CalendarDetails").load('_cal' + url);
+          }
+          return false;
+      });
+    });
+    
+    $(function(){
+      $('#Category').bind('change', function () {
+          var url = $('#Month').val() + $(this).val();
+          if (url) {
+                $("#CalendarDetails").innerHTML = "";
+                $("#CalendarDetails").load('_cal' + url);
+          }
+          return false;
+      });
+    });
+</script>
+
+
+
+</body><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-42887144-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" src="/js/ajax_fd.js"></script>
+<script type="text/javascript" src="http://www.ville.kirkland.qc.ca/js/modal_fd.js"></script>
+<script type="text/javascript" src="http://www.ville.kirkland.qc.ca/js/dimension_fd.js"></script>
+<script type="text/javascript" src="http://www.ville.kirkland.qc.ca/js/toggle_fd.js"></script>
+<script type="text/javascript">
+    var ajax = new ajaxObject();
+</script>
+<script type="text/javascript">
+//<![CDATA[
+
+function replace2(fullString,text,by) {
+// Replaces text with by in string
+    var strLength = fullString.length, txtLength = text.length;
+    if ((strLength == 0) || (txtLength == 0)) return fullString;
+
+    var i = fullString.indexOf(text);
+    if ((!i) && (text != fullString.substring(0,txtLength))) return fullString;
+    if (i == -1) return fullString;
+
+    var newstr = fullString.substring(0,i) + by;
+
+    if (i+txtLength < strLength)
+        newstr += replace2(fullString.substring(i+txtLength,strLength),text,by);
+
+    return newstr;
+}
+//]]>
+
+//script pour l'edition rapide (nouvelle version)
+
+var go_afficheadmin = true;
+
+$(document).keydown(function(e){
+	//CTRL + Q keydown combo
+	if(e.ctrlKey && e.keyCode == 81)
+	{
+		page = "Array";
+		if (page == "")
+		{
+			alert("Vous ne pouvez pas utiliser l'édition rapide dans cette page");
+		}
+		else
+		{
+			//alert('test de saisie');
+	
+			site_url = "http://www.ville.kirkland.qc.ca/";
+			
+			window.open(site_url + "admin/views/plan_site/edition_rapide.php?type_action=afficher&action=modifier&langue=FR&id=Array","ed_r","width=620, height=350, scrollbars=no,status=no,menubar=no,toolbar=no,resizable=1,location=no,directories=no, top=30px,left=100px");
+		}
+	}
+});
+
+</script>
+
+
+
+</html>

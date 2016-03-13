@@ -1,0 +1,1388 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	Home
+</title><link rel="stylesheet" type="text/css" href="/css/default.css" /><link media="screen" rel="stylesheet" href="/js/cbox/colorbox.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	   
+	<script type="text/javascript" src="http://malsup.github.io/jquery.cycle.all.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+
+        $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+        });
+    });
+    </script>
+    <script type="text/javascript" src="/js/date.js"></script>
+    <script type="text/javascript" src="/js/scrollable/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/cbox/jquery.colorbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/scrollable/css/scrollable-horizontal.css" />
+    <script type="text/javascript" src="/js/jquery.dropdownPlain.js"></script>
+    <script type="text/javascript" src="/js/supersized.3.1.3.core.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+    <script type="text/javascript">
+        $(function($) {
+            var bgImages = new Array();
+            bgImages[0] = "/images/bg-1.jpg";
+            bgImages[1] = "/images/bg-2.jpg";
+            bgImages[2] = "/images/bg-3.jpg";
+            bgImages[3] = "/images/bg-4.jpg";
+            var rndNum = Math.floor(Math.random() * 3);
+            $.supersized({
+                //Background image
+                slides: [{ image: bgImages[rndNum]}]
+            });
+            $("#accordion").accordion({ header: "h2", autoHeight: false, collapsible: false, active: true });
+        });
+
+        $(document).ready(function() {
+            $(".section-content").fitVids();        
+            $("#loginLink").click(function () {
+                $("#loginEmailAddress").parent().find('span').hide();
+                $("#loginPassword").parent().find('span').hide();
+                $("#loginPopupMessageText").hide();
+                $('.loginPopup').toggle("slide");
+            });
+
+            $(".login-close a").click(function () {
+                $("#loginEmailAddress").parent().find('span').hide();
+                $("#loginPassword").parent().find('span').hide();
+                $("#loginPopupMessageText").hide();
+                $('.loginPopup').hide();
+            });
+            $(".utilityBoxToggle a").click(function() {
+                $(".utilityBox").fadeIn();
+            });
+        });
+
+        
+        function validateLogin() {
+            var username = $("#ctl00_loginEmailAddress").val();
+            var password = $("#ctl00_loginPassword").val();
+            $("#ctl00_msg_Email").html("");
+            $("#msg_Password").html("");
+            var isValid = true;
+            if (username == "") {
+                $("#ctl00_msg_Email").html("Required");
+                isValid = false;
+            }
+            if (password == "") {
+                $("#msg_Password").html("Required");
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function validateEmail(emailAddr) {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if (reg.test(emailAddr) == false) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <!-- Google Analytics Code -->
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-17790659-1");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0;" /></head>
+<body>
+    <form name="aspnetForm" method="post" action="Index.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTMyMzQ4NDU0MQ9kFgJmD2QWAgIDD2QWBAIDD2QWDGYPFgIeBFRleHQF4gM8dWwgY2xhc3M9InN1Yl9uYXYiPg0KPGxpPjxhIGhyZWY9Ii93d2EvU3RhZmYgRGlyZWN0b3J5LmFzcHgiPlN0YWZmIERpcmVjdG9yeTwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii93d2EvQm9hcmQgb2YgRGlyZWN0b3JzLmFzcHgiPkJvYXJkIG9mIERpcmVjdG9yczwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii93d2EvQm9hcmQgb2YgR292ZXJub3JzLmFzcHgiPkJvYXJkIG9mIEdvdmVybm9yczwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii93d2EvZmljYS5hc3B4Ij5GZWxsb3dzIG9mIHRoZSBJQ0E8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvd3dhL01lbWJlciBBZ2VuY2llcyBMaXN0LmFzcHgiPk1lbWJlciBBZ2VuY2llcyBMaXN0PC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL3d3YS9Db21taXR0ZWVzLmFzcHgiPkNvbW1pdHRlZXM8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvd3dhLy4uL2NvbnRhY3QuYXNweCI+Q29udGFjdDwvYT48L2xpPg0KPC91bD4NCmQCAQ8WAh8ABbsCPHVsIGNsYXNzPSJzdWJfbmF2Ij4NCjxsaT48YSBocmVmPSIvYmFtL0JlbmVmaXRzIG9mIE1lbWJlcnNoaXAuYXNweCI+QmVuZWZpdHMgb2YgTWVtYmVyc2hpcDwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii9iYW0vV2h5IEpvaW4gdGhlIElDQS5hc3B4Ij5XaHkgSm9pbiB0aGUgSUNBPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL2JhbS9Ib3cgdG8gSm9pbiB0aGUgSUNBLmFzcHgiPkhvdyB0byBKb2luIHRoZSBJQ0E8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvYmFtL0NvZGUgb2YgRXRoaWNzLmFzcHgiPkNvZGUgb2YgRXRoaWNzPC9hPjwvbGk+DQo8L3VsPg0KZAICDxYCHwAFtwI8dWwgY2xhc3M9InN1Yl9uYXYiPg0KPGxpPjxhIGhyZWY9Ii9hYXJjL0FnZW5jeSBTZWFyY2ggU2VydmljZS5hc3B4Ij5BZ2VuY3kgU2VhcmNoIFNlcnZpY2U8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvYWFyYy9QdWJsaWNhdGlvbnMgYW5kIFN0dWRpZXMuYXNweCI+UHVibGljYXRpb25zICYgU3R1ZGllczwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii9hYXJjL0ZBUS5hc3B4Ij5QdWJsaWNhdGlvbnMgRkFRPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL2FhcmMvQXNzZXQgTGlzdC5hc3B4Ij5QdWJsaWNhdGlvbnMgTGlzdDwvYT48L2xpPg0KPC91bD4NCmQCAw8WAh8ABekCPHVsIGNsYXNzPSJzdWJfbmF2Ij4NCjxsaT48YSBocmVmPSIvcGQvQ2VydGlmaWNhdGlvbnMuYXNweCI+Q2VydGlmaWNhdGlvbnM8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvcGQvV29ya3Nob3BzLmFzcHgiPldvcmtzaG9wcyAmIFdlYmluYXJzPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL3BkL1N0dWRlbnQgYW5kIEFsdW1uaSBSZXNvdXJjZXMuYXNweCI+U3R1ZGVudCAmIEFsdW1uaSBSZXNvdXJjZXM8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvcGQvTXkgQmlnIEZ1dHVyZS5hc3B4Ij5NeSBCaWcgRnV0dXJlPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL3BkL0xlYWRlcnNoaXAuYXNweCI+TGVhZGVyc2hpcDwvYT48L2xpPg0KPC91bD4NCmQCBA8WAh8ABbgBPHVsIGNsYXNzPSJzdWJfbmF2Ij4NCjxsaT48YSBocmVmPSIvbmUvTmV3cyBMaXN0aW5nLmFzcHgiPk5ld3MgTGlzdGluZzwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii9uZS9DYWxlbmRhci5hc3B4Ij5DYWxlbmRhcjwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii9uZS9NZWRpYS5hc3B4Ij5NZWRpYTwvYT48L2xpPg0KPC91bD4NCmQCBQ8WAh8ABR08dWwgY2xhc3M9InN1Yl9uYXYiPg0KPC91bD4NCmQCBA9kFggCAQ8WAh4L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ZWQuZAIDD2QWAmYPFQIDMTgzMUNhbm5lcyBMaW9ucyBJbnRlcm5hdGlvbmFsIEZlc3RpdmFsIG9mIENyZWF0aXZpdHlkAgUPFgIfAQIEFghmD2QWAmYPFQQDMTI5U0lDQSB1bnZlaWxzIHdvcmxkIGNsYXNzIGdsb2JhbCBpbmZsdWVuY2VycyBmb3IgRnV0dXJlRmxhc2ggMjAxNjogIFN0b3JpZXMgJiBTeXN0ZW1zhQFUaG91Z2h0IGxlYWRlcnNoaXAgY29uZmVyZW5jZSBzaG93Y2FzZXMgbm90LXRvLWJlLW1pc3NlZCBrZXlub3RlcyB0byBleHBsb3JlIGludGVycGxheSBvZiANCnN0b3JpZXMgYW5kIHN5c3RlbXMgdG8gcmVib290IGNyZWF0aXZpdHkuC0ZlYiAyNCAyMDE2ZAIBD2QWAmYPFQQDMTI4RUlDQSBhbm5vdW5jZXMgc2Vjb25kIGFubnVhbCBDbGllbnQgb2YgdGhlIFllYXIgQXdhcmQgdG8gTmlzc2FuIENhbmFkYV1TaWx2ZXIgYXdhcmRlZCB0byBDSUJDIGFuZCBicm9uemUgdG8gTW9uZGVsZXogZm9yIGV4ZW1wbGFyeSBwYXJ0bmVyc2hpcHMgd2l0aCB0aGVpciBhZ2VuY2llcy4LRmViIDIyIDIwMTZkAgIPZBYCZg8VBAMxMjdeQ2FuYWRh4oCZcyBUb3AgQnVzaW5lc3MtQnVpbGRpbmcgQ29tbXVuaWNhdGlvbnMgQ2FtcGFpZ25zIEhvbm91cmVkICBBdCBUaGUgMjAxNiBDQVNTSUVTIEF3YXJkc5sBR3JleSBDYW5hZGHigJlzIOKAnEdyb2NlcmllcyBOb3QgR3Vuc+KAnSBwcm9ncmFtIGZvciBNb21zIERlbWFuZCBBY3Rpb24gRm9yIEd1biBTZW5zZSBpbiBBbWVyaWNhIGFuZCANCkxlbyBCdXJuZXR04oCZcyDigJwjTElrZUFHaXJs4oCdIGNhbXBhaWduIGZvciBQcm8uLi4LRmViIDE5IDIwMTZkAgMPZBYCZg8VBAMxMjZAV2hhdCBNYWtlcyBTdXBlciBCb3dsIEFkdmVydGlzaW5nIFdvcnRoIHRoZSBNdWx0aS1NaWxsaW9uIFNwZW5kP48BUGF5aW5nIGEgZm9ydHVuZSBmb3IgYSAzMC1zZWNvbmQgY29tbWVyY2lhbCBjYW4gc3RpbGwgbWFrZSBidXNpbmVzcyBzZW5zZSBmb3IgYnJhbmRzLCBidXQgb25seSBpZiBhZHZlcnRpc2luZyBnb2VzIHdheSBiZXlvbmQgdGhlIGdhbWUsIHNheSAuLi4LRmViIDAzIDIwMTZkAgcPFgIfAQIEFggCAQ9kFgJmDxUEAzI0MQMyNDENZGlzcGxheTpub25lO2RBQ1RSQSDigJMgSUNBIC8gQUNBIEpvaW50IEludGVycHJldGF0aW9uIEJ1bGxldGluIE5vLjcgLSBFbGVjdHJvbmljIFJlLUNvbnRyYWN0aW5nIGZvciBOZXcgTWVkaWEgVXNlZAICD2QWAmYPFQQDMjM5AzIzOQ1kaXNwbGF5Om5vbmU7N0J1bGxldGluIE5vLiA3IC0gQ29tbWVyY2lhbHMgUHJvZHVjZWQgRm9yIFUuUy4gVXNlIE9ubHlkAgMPZBYCZg8VBAMyMzgDMjM4DWRpc3BsYXk6bm9uZTtGQUNUUkEgLyBJQ0EgLSBBQ0EgTmV3IExvY2FsIGFuZCBSZWdpb25hbCBBZGRlbmR1bSBXZWJpbmFyIFByZXNlbnRhdGlvbmQCBA9kFgJmDxUEAzIzNwMyMzcNZGlzcGxheTpub25lO0pBQ1RSQSBCdWxsZXRpbiAtIENvbW1lcmNpYWxzIFByb2R1Y2VkIGluIENhbmFkYSBmb3IgVW5pdGVkIFN0YXRlcyBVc2UgT25seWRkMPMOf7aFdXlgR+tcX1ldL7QtqV0=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBALKp7mRBgLR2fDJBALUmdjdCgLa65SQCa5t8kHHeKe/z6viy6pzAgafGx7u" />
+</div>
+    <div id="dotted">&nbsp;</div>
+	<div class="wrapper">
+        <div class="header">
+            <div class="utility clearfix">
+                <div class="logo">
+                    <a href="/index.aspx">
+                        <img src="/images/logo.gif" alt="ICA" width="312" height="75" /></a>
+                </div>
+                <div class="utilityBoxToggle">
+                <a href="javascript:void(0);">Search</a>
+                </div>
+                <div class="utilityBox">
+                    <!-- <input type="text" value="Search" />-->
+                    <div id="cse-search-form" style="width: 250px;">Loading</div>
+                    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+                    
+                        <script type="text/javascript">
+                            google.load('search', '1', { language: 'en', style: google.loader.themes.MINIMALIST });
+                            google.setOnLoadCallback(function() {
+                                var customSearchControl = new google.search.CustomSearchControl(
+                              '014111403909206376693:ne__3eguy-e');
+
+                                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                                var options = new google.search.DrawOptions();
+                                options.enableSearchboxOnly("http://icacanada.ca//search.aspx");
+                                customSearchControl.draw('cse-search-form', options);
+                            }, true);
+                        </script>
+                    <div id="ctl00_div_LoginBefore">
+                        <a href="#" id="loginLink">Members' Sign In</a>
+                    </div>
+                    
+                    <div id="ctl00_loginWindow" class="loginPopup" style="display: none;">
+                        <div class="login-arrow">
+                            <img src="/images/login-arrow.png" class="login-arrow-img" alt="" /></div>
+                        <div class="login-close">
+                            <a href="#">
+                                <img src="/images/close-login-button.gif" alt="close" name="close" /></a></div>
+                        <p>
+                            <label>
+                                * UserName:</label>
+                            <span id="ctl00_msg_Email" class="loginError"></span>
+                            <br />
+                            <input name="ctl00$loginEmailAddress" type="text" id="ctl00_loginEmailAddress" class="loginInput" />
+                        </p>
+                        <p>
+                            <label>
+                                * Password:</label>
+                            <span id="msg_Password" class="loginError"></span>
+                            <br />
+                            <input name="ctl00$loginPassword" type="password" id="ctl00_loginPassword" class="loginInput" /></p>
+                        <p>
+                            <a href="\forgotPassword.aspx" style="display: none;">Forgot your password?</a></p>
+                        <p id="loginPopupMessageText" class="formValidation" style="border-left: none; white-space: normal;
+                            width: 215px;">
+                        </p>
+                        <div>
+                            <a onclick="return validateLogin();" id="ctl00_loginButton" class="telusButton" href="javascript:__doPostBack('ctl00$loginButton','')">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
+<script>
+$(document).ready(function() {
+    $(".menuToggle").click(function() {
+        $(".menuBox").slideToggle();
+        $(".section-nav").fadeToggle();
+		$(".utilityBox").hide("fade");
+    });
+});
+</script>
+<div class="clearfix">
+<div class="menuToggle"></div>
+</div>
+<div class="clearfix menuBox">
+     
+    <ul class="dropdown">
+        <li><a href="/wwa/index.aspx" class="navBorder-purple first-child "><span class="ulNavLeft">&nbsp;</span>Who
+            We Are</a><ul class="sub_nav">
+<li><a href="/wwa/Staff Directory.aspx">Staff Directory</a></li>
+<li><a href="/wwa/Board of Directors.aspx">Board of Directors</a></li>
+<li><a href="/wwa/Board of Governors.aspx">Board of Governors</a></li>
+<li><a href="/wwa/fica.aspx">Fellows of the ICA</a></li>
+<li><a href="/wwa/Member Agencies List.aspx">Member Agencies List</a></li>
+<li><a href="/wwa/Committees.aspx">Committees</a></li>
+<li><a href="/wwa/../contact.aspx">Contact</a></li>
+</ul>
+</li>
+        <li><a href="/bam/index.aspx" class="navBorder-blue ">Become A Member</a><ul class="sub_nav">
+<li><a href="/bam/Benefits of Membership.aspx">Benefits of Membership</a></li>
+<li><a href="/bam/Why Join the ICA.aspx">Why Join the ICA</a></li>
+<li><a href="/bam/How to Join the ICA.aspx">How to Join the ICA</a></li>
+<li><a href="/bam/Code of Ethics.aspx">Code of Ethics</a></li>
+</ul>
+</li>
+        <li><a href="/aarc/index.aspx" class="navBorder-sky ">Resource Centre</a><ul class="sub_nav">
+<li><a href="/aarc/Agency Search Service.aspx">Agency Search Service</a></li>
+<li><a href="/aarc/Publications and Studies.aspx">Publications & Studies</a></li>
+<li><a href="/aarc/FAQ.aspx">Publications FAQ</a></li>
+<li><a href="/aarc/Asset List.aspx">Publications List</a></li>
+</ul>
+
+        </li>
+        <li><a href="/pd/index.aspx" class="navBorder-gray ">Talent<br />
+            Development</a><ul class="sub_nav">
+<li><a href="/pd/Certifications.aspx">Certifications</a></li>
+<li><a href="/pd/Workshops.aspx">Workshops & Webinars</a></li>
+<li><a href="/pd/Student and Alumni Resources.aspx">Student & Alumni Resources</a></li>
+<li><a href="/pd/My Big Future.aspx">My Big Future</a></li>
+<li><a href="/pd/Leadership.aspx">Leadership</a></li>
+</ul>
+</li>
+        <li><a href="/ne/index.aspx" class="navBorder-purple ">News, Events &amp; Media</a><ul class="sub_nav">
+<li><a href="/ne/News Listing.aspx">News Listing</a></li>
+<li><a href="/ne/Calendar.aspx">Calendar</a></li>
+<li><a href="/ne/Media.aspx">Media</a></li>
+</ul>
+</li>
+        <li><a href="/showcase/index.aspx" class="navBorder-blue last-child ">Member Showcase<span class="ulNavRight">&nbsp;</span></a><ul class="sub_nav">
+</ul>
+</li>
+    </ul>
+     
+</div>
+
+            <div class="template">
+                <!-- content -->
+                
+<style>
+body{display:none}</style>
+    <!--<script type="text/javascript" src="js/jquery.cycle.all.js"></script>-->
+    <script type="text/javascript" src="js/twitterFetcher_v9_min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+         $(function() { $('body').hide().show(); });
+            $('.slideshow').cycle({
+                fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+            });
+        });
+        twitterFetcher.fetch('352174485652246528', '', 4, true, false, false, '', false, handleTweets);
+        function handleTweets(tweets) {
+            var x = tweets.length;
+            var n = 0;
+            var element = document.getElementById('tweet');
+            var html = '<ul id="twitter_update_list">';
+            while (n < x) {
+                html += '<li>' + tweets[n] + '</li>';
+                n++;
+            }
+            html += '</ul>';
+            element.innerHTML = html;
+        }
+    </script>                  
+    <div class="home-template clearfix">
+        <div class="section-left section">
+            <h1>
+                About the ICA</h1>
+            <h2>
+                Welcome</h2>
+            <div class="sectionFixedBox1">
+                <div>
+                    <h3>
+                        Welcome to the Institute of Communication Agencies</h3>
+                    <p>
+                        ICA is the not-for-profit association for Canadian communication agencies, representing 75&#37;&#43; of all national advertising. Our mission is to champion commercial creativity, amplify the industry’s economic impact, and to embrace and drive change. ICA promotes higher standards and best practices, and serves as the largest source of information, advice and training for the industry.
+                    </p>
+                    <!--<p>
+                        <a class="small" href="#">more [+]</a></p> Which link should I use? -->
+                </div>
+            </div>
+           
+
+	<h3>&nbsp;Other ICA Websites</h3> 
+			
+			
+			
+            <div class="slideshow">
+
+
+					<a href="http://www.agencysearch.ca/" class="sponsor" target="_blank">
+                        <img src="images/AgencySearch.png" alt="Agency Search" width="262" height="100" />
+                    </a>
+			
+					
+					<a href="http://agencydiver.ca/" class="sponsor" target="_blank">
+                        <img src="images/Agency_Diving_Society_262x100.png" alt="Agency Diving Society" width="262" height="100" />
+                    </a>
+					
+					
+					 <a href="http://ica-map.ca/login.php" class="sponsor" target="_blank">
+                        <img src="images/map.jpg" alt="MEMBERS' ADVANTAGE PROGRAMME" width="262" height="100" />
+                    </a>
+					
+                    <a href="http://www.caapcanada.ca/" class="sponsor" target="_blank">
+                        <img src="images/CAAP.jpg" alt="Communications and Advertising Accredited Professional Certification" width="262" height="100" />
+                    </a>
+								
+                    <a href="http://www.cassies.ca/" class="sponsor" target="_blank">
+                        <img src="images/CASSIES.png" alt="CASSIES" width="262" height="100" />
+                    </a>
+					
+				    <a href="http://www.adwomentoronto.ca/" class="sponsor" target="_blank">
+                        <img src="images/AWoT.jpg" alt="Ad Women of Toronto" width="262" height="100" />
+                    </a>
+					
+
+			
+				
+            </div> 
+			
+        </div>
+        <div class="section-middle section">
+            <h1>
+                Showcase</h1>
+            <h2>
+                Member Spotlight</h2>
+            <div class="carousel-container">
+                <!-- wrapper for navigator elements -->
+                <div class="navi" style="display: none;">
+                </div>
+                <!-- "previous page" action -->
+                <a class="prev browse left"></a>
+                <!-- root element for scrollable -->
+                <div class="scrollable" id="browsable">
+                    <!-- root element for the items -->
+                    
+                            <div class="items">
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=21&objId=143"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=143&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=21">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=21&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=21&objId=143">
+                                        <div class="carouselCompanyCopy">
+                                            WestJet Path
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=21&objId=52"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=52&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=21">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=21&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=21&objId=52">
+                                        <div class="carouselCompanyCopy">
+                                            Bombardier - Igniting a Nation
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=33&objId=116"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=116&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=33">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=33&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=33&objId=116">
+                                        <div class="carouselCompanyCopy">
+                                            Preventable - Pavement Patty
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=38&objId=140"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=140&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=38">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=38&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=38&objId=140">
+                                        <div class="carouselCompanyCopy">
+                                            ‘Screme Eggs’ for Cadbury Creme Eggs, Modelez
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=35&objId=123"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=123&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=35">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=35&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=35&objId=123">
+                                        <div class="carouselCompanyCopy">
+                                            Kia Drive Change Day: August 21, 2011 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=21&objId=53"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=53&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=21">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=21&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=21&objId=53">
+                                        <div class="carouselCompanyCopy">
+                                            MINI Canada - Interactive Vending Machine
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=32&objId=113"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=113&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=32">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=32&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=32&objId=113">
+                                        <div class="carouselCompanyCopy">
+                                            Scotiabank – Let the Savings Begin
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=36&objId=132"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=132&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=36">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=36&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=36&objId=132">
+                                        <div class="carouselCompanyCopy">
+                                            DAY Communications – Agency Reel
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=36&objId=128"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=128&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=36">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=36&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=36&objId=128">
+                                        <div class="carouselCompanyCopy">
+                                            Ivanhoe Cambridge – Employee Engagement
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=20&objId=124"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=124&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=20">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=20&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=20&objId=124">
+                                        <div class="carouselCompanyCopy">
+                                            CAMH – It’s All In Your Head
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=21&objId=144"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=144&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=21">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=21&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=21&objId=144">
+                                        <div class="carouselCompanyCopy">
+                                            ALDO - London
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=17&objId=49"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=49&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=17">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=17&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=17&objId=49">
+                                        <div class="carouselCompanyCopy">
+                                            Band-Aid Hopscotch
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=38&objId=138"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=138&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=38">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=38&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=38&objId=138">
+                                        <div class="carouselCompanyCopy">
+                                            Make Your Face a Maynards - Maynards, Mondel
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=25&objId=87"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=87&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=25">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=25&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=25&objId=87">
+                                        <div class="carouselCompanyCopy">
+                                            Agency59 Reel
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=8&objId=61"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=61&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=8">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=8&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=8&objId=61">
+                                        <div class="carouselCompanyCopy">
+                                            BMW 1 Series M Coupé vs concrete walls 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=20&objId=127"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=127&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=20">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=20&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=20&objId=127">
+                                        <div class="carouselCompanyCopy">
+                                            Lexus - Recalculating
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=21&objId=142"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=142&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=21">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=21&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=21&objId=142">
+                                        <div class="carouselCompanyCopy">
+                                            BMW - Sharp Magazine
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=20&objId=125"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=125&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=20">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=20&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=20&objId=125">
+                                        <div class="carouselCompanyCopy">
+                                             Jean Coutu – Écran Solaire Extrême 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=33&objId=112"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=112&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=33">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=33&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=33&objId=112">
+                                        <div class="carouselCompanyCopy">
+                                            Encorp - Conform No Passing
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=34&objId=118"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=118&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=34">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=34&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=34&objId=118">
+                                        <div class="carouselCompanyCopy">
+                                            Government of Ontario - Summer Company
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=8&objId=62"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=62&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=8">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=8&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=8&objId=62">
+                                        <div class="carouselCompanyCopy">
+                                             BMW 1 Series M Coupé vs the world's highest helip
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=36&objId=133"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=133&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=36">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=36&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=36&objId=133">
+                                        <div class="carouselCompanyCopy">
+                                            Yukon Government – Employer Branding
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=25&objId=85"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=85&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=25">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=25&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=25&objId=85">
+                                        <div class="carouselCompanyCopy">
+                                            Amnesty International
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=38&objId=141"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=141&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=38">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=38&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=38&objId=141">
+                                        <div class="carouselCompanyCopy">
+                                            ‘Reebok A.i.9’ for Reebok Hockey
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=29&objId=167"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=167&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=29">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=29&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=29&objId=167">
+                                        <div class="carouselCompanyCopy">
+                                            Visa PayWave Fastest Face-Offs
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=29&objId=166"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=166&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=29">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=29&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=29&objId=166">
+                                        <div class="carouselCompanyCopy">
+                                            Excel critters show that bad breath isn’t sexy
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=38&objId=139"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=139&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=38">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=38&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=38&objId=139">
+                                        <div class="carouselCompanyCopy">
+                                            ‘The Bicycle Factory’ for Cadbury (now Mondelez)
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=33&objId=115"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=115&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=33">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=33&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=33&objId=115">
+                                        <div class="carouselCompanyCopy">
+                                            Vancity. Make Good Money.
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=36&objId=129"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=129&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=36">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=36&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=36&objId=129">
+                                        <div class="carouselCompanyCopy">
+                                            North York General Hospital – Branding/Engagement
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=29&objId=165"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=165&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=29">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=29&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=29&objId=165">
+                                        <div class="carouselCompanyCopy">
+                                            The Hold Out, mobile game for Doritos Ketchup fans
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=34&objId=119"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=119&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=34">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=34&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=34&objId=119">
+                                        <div class="carouselCompanyCopy">
+                                            Boost for Kids Foundation - Make the Call Now
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=34&objId=121"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=121&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=34">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=34&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=34&objId=121">
+                                        <div class="carouselCompanyCopy">
+                                            Green Shield Canada - Friends With Benefits
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=18&objId=74"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=74&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=18">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=18&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=18&objId=74">
+                                        <div class="carouselCompanyCopy">
+                                            Rethink Breast Cancer Presents: Your Man Reminder
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=27&objId=93"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=93&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=27">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=27&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=27&objId=93">
+                                        <div class="carouselCompanyCopy">
+                                            LCBO - Grand Expressions
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=18&objId=66"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=66&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=18">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=18&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=18&objId=66">
+                                        <div class="carouselCompanyCopy">
+                                            Wiser's - Purse
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=17&objId=69"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=69&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=17">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=17&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=17&objId=69">
+                                        <div class="carouselCompanyCopy">
+                                            Tim Horton's - Arena
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=32&objId=114"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=114&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=32">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=32&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=32&objId=114">
+                                        <div class="carouselCompanyCopy">
+                                            Peroni - Summer Style
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=29&objId=168"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=168&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=29">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=29&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=29&objId=168">
+                                        <div class="carouselCompanyCopy">
+                                            There’s a Harlequin book for whatever you’re into
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=32&objId=111"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=111&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=32">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=32&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=32&objId=111">
+                                        <div class="carouselCompanyCopy">
+                                            FPLQ - Milk a Natural Source of Comfort
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=25&objId=86"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=86&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=25">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=25&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=25&objId=86">
+                                        <div class="carouselCompanyCopy">
+                                            Nordica Cottage Cheese
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=33&objId=117"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=117&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=33">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=33&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=33&objId=117">
+                                        <div class="carouselCompanyCopy">
+                                            ICBC Designated Driver TV Commercial
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=42&objId=152"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=152&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=42">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=42&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=42&objId=152">
+                                        <div class="carouselCompanyCopy">
+                                            Sid Lee Demo Reel
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=40&objId=146"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=146&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=40">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=40&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=40&objId=146">
+                                        <div class="carouselCompanyCopy">
+                                            Black Rock Marketing Group - Mott's Clamato Promo
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=17&objId=34"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=34&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=17">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=17&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=17&objId=34">
+                                        <div class="carouselCompanyCopy">
+                                            Walmart Toy Flyer
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=27&objId=92"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=92&type=image"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=27">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=27&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=27&objId=92">
+                                        <div class="carouselCompanyCopy">
+                                            Manulife Centre
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <a href="/showcase/agency.aspx?id=32&objId=110"><span>
+                                    <img src="/handlers/generateFile.ashx?command=workItem&objId=110&type=thumb"
+                                        alt="" height="247" /></span></a>
+                                <div class="carouselCompany clearfix">
+                                    <div class="carouselCompanyImg">
+                                        <a href="/showcase/agency.aspx?id=32">
+                                            <img alt="" src="/handlers/generateFile.ashx?command=agency&objId=32&type=image"
+                                                width="60"></a>
+                                    </div>
+                                    <a href="/showcase/agency.aspx?id=32&objId=110">
+                                        <div class="carouselCompanyCopy">
+                                            Canac – Renovations made easy
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            </div>
+                </div>
+                <!-- "next page" action -->
+                <a class="next browse right"></a>
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $("#browsable").scrollable({ circular: true, mousewheel: true,touch:false }).navigator().autoscroll({
+                            interval: 9000
+                        });
+                    });				
+                </script>
+
+            </div>
+        </div>
+        <div class="section-right section">
+            <div class="sm-icon2Wrap clearfix">
+                <h1>
+                    Media</h1>
+                <ul class="sm-icon2">
+                    <li><a class="sm-icon2-twitter" target="_blank" href="https://twitter.com/icacanada">
+                    </a></li>
+                    <li><a class="sm-icon2-youtube" target="_blank" href="http://www.youtube.com/user/TheICAcanada">
+                    </a></li>
+                    <li><a class="sm-icon2-linkedin" target="_blank" href="http://www.linkedin.com/company/institute-of-communication-agencies">
+                    </a></li>
+                    <li><a class="sm-icon2-googleplus" target="_blank" href="https://plus.google.com/b/110920297845043497269/110920297845043497269/">
+                    </a></li>
+                </ul>
+            </div>
+            <h2>
+                Twitter
+                <div class="homeTwitter">
+                    <a href="https://twitter.com/ICACanada" class="twitter-follow-button" data-show-count="false">
+                        Follow @ICACanada</a><script>                                                                                                                                                                !function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } } (document, 'script', 'twitter-wjs');</script></div>
+            </h2>
+            <div class="sectionFixedBox1">
+                <div class="section-right-twitter">
+                    <div id="tweet"></div>
+                </div>
+            </div>
+	
+	
+		
+            <div class="sectionFixedBox2b">
+                <div class="translucent-bg">
+                    &nbsp;</div>
+				
+					 <a href="http://www.icacanada.ca/futureflash/" class="sponsor" target="_blank">
+                        <img src="images/2016_Flash_Forward.png" alt="FutureFlash 2016" width="262" height="120" />
+                     </a>
+			
+            </div>
+
+		
+			
+        </div>
+    </div>
+    <div class="home-template clearfix">
+        <div class="section-left section">
+            <h2>
+                Calendar of Events<a href="/ne/Calendar.aspx" class="view-all">view all</a></h2>
+            <div class="sectionFixedBox3">
+                <div>
+                    
+                            <ul class="nolist">
+                        
+                            <li><a href="/ne/eventDetail.aspx?id=179" class="indexListText">
+                                Building the Coaching Habit - How to get  high performance every day </a></li>
+                        
+                            <li><a href="/ne/eventDetail.aspx?id=180" class="indexListText">
+                                Writing to Win - How to write business cases & award submissions that get noticed.</a></li>
+                        
+                            <li><a href="/ne/eventDetail.aspx?id=183" class="indexListText">
+                                Cannes Lions International Festival of Creativity</a></li>
+                        
+                            </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section-middle section">
+            <h2>
+                News<a href="/ne/News Listing.aspx" class="view-all">view all</a></h2>
+            <div class="section-middle-news-pannel-container">
+                
+                        <div class="section-middle-news-pannel">
+                            <h1>
+                                <a href="/ne/newsDetail.aspx?id=129" class="indexListText">
+                                    ICA unveils world class global influencers for FutureFlash 2016:  Stories & Systems</a></h1>
+                            <p>
+                                Thought leadership conference showcases not-to-be-missed keynotes to explore interplay of 
+stories and systems to reboot creativity.<br />
+                                Feb 24 2016</p>
+                        </div>
+                    
+                        <div class="section-middle-news-pannel">
+                            <h1>
+                                <a href="/ne/newsDetail.aspx?id=128" class="indexListText">
+                                    ICA announces second annual Client of the Year Award to Nissan Canada</a></h1>
+                            <p>
+                                Silver awarded to CIBC and bronze to Mondelez for exemplary partnerships with their agencies.<br />
+                                Feb 22 2016</p>
+                        </div>
+                    
+                        <div class="section-middle-news-pannel">
+                            <h1>
+                                <a href="/ne/newsDetail.aspx?id=127" class="indexListText">
+                                    Canada’s Top Business-Building Communications Campaigns Honoured  At The 2016 CASSIES Awards</a></h1>
+                            <p>
+                                Grey Canada’s “Groceries Not Guns” program for Moms Demand Action For Gun Sense in America and 
+Leo Burnett’s “#LIkeAGirl” campaign for Pro...<br />
+                                Feb 19 2016</p>
+                        </div>
+                    
+                        <div class="section-middle-news-pannel">
+                            <h1>
+                                <a href="/ne/newsDetail.aspx?id=126" class="indexListText">
+                                    What Makes Super Bowl Advertising Worth the Multi-Million Spend?</a></h1>
+                            <p>
+                                Paying a fortune for a 30-second commercial can still make business sense for brands, but only if advertising goes way beyond the game, say ...<br />
+                                Feb 03 2016</p>
+                        </div>
+                    
+            </div>
+        </div>
+        <div class="section-right section">
+            <h2>
+                Featured Resources<a href="/aarc/Asset List.aspx" class="view-all">view all</a></h2>
+            <div class="sectionFixedBox3">
+                
+                        <div>
+                    
+                        <div class="section-3b-fr-list clearfix">
+                            <a href="/aarc/assetDetail.aspx?id=241" class="indexListText">
+                                <img src="/handlers/generateFile.ashx?command=asset&objId=241&type=image"
+                                    style="display:none;" />
+                                <p>
+                                    ACTRA – ICA / ACA Joint Interpretation Bulletin No.7 - Electronic Re-Contracting for New Media Use</p>
+                            </a>
+                        </div>
+                    
+                        <div class="section-3b-fr-list clearfix">
+                            <a href="/aarc/assetDetail.aspx?id=239" class="indexListText">
+                                <img src="/handlers/generateFile.ashx?command=asset&objId=239&type=image"
+                                    style="display:none;" />
+                                <p>
+                                    Bulletin No. 7 - Commercials Produced For U.S. Use Only</p>
+                            </a>
+                        </div>
+                    
+                        <div class="section-3b-fr-list clearfix">
+                            <a href="/aarc/assetDetail.aspx?id=238" class="indexListText">
+                                <img src="/handlers/generateFile.ashx?command=asset&objId=238&type=image"
+                                    style="display:none;" />
+                                <p>
+                                    ACTRA / ICA - ACA New Local and Regional Addendum Webinar Presentation</p>
+                            </a>
+                        </div>
+                    
+                        <div class="section-3b-fr-list clearfix">
+                            <a href="/aarc/assetDetail.aspx?id=237" class="indexListText">
+                                <img src="/handlers/generateFile.ashx?command=asset&objId=237&type=image"
+                                    style="display:none;" />
+                                <p>
+                                    ACTRA Bulletin - Commercials Produced in Canada for United States Use Only</p>
+                            </a>
+                        </div>
+                    
+                        </div> 
+            </div>
+        </div>
+    </div>
+
+                <!-- content -->
+            </div>
+        </div>
+                          
+        <div class="footer">
+            <div class="footer-container clearfix">
+                <div class="footer-nav">
+                    <a class="footer-icon-home" href="/"><img src="/images/icon-home.gif" alt="home" /></a>/<a href="/contact.aspx">Contact</a>/<a href="/links.aspx">Links</a>/<a href="faqs.aspx">FAQs</a>/<a
+                        href="/sitemap.aspx">Site Map</a>/<a href="/privacy policy.aspx">Privacy Policy</a>
+                        <span id="ctl00_bottom_Login">/<a href="/memberLogin.aspx" >Members' Sign In</a></span>
+                        
+                </div>
+                <div class="footer-links">
+                    Other ICA websites:&nbsp;<a target="_blank" href="http://www.agencysearch.ca/">AGENCYSearch.ca</a><a
+                        target="_blank" href="http://ica-map.ca/">Members' Advantage Programme</a><a target="_blank" href="http://www.caapcanada.ca/">CAAP</a><a
+                            target="_blank" href="http://www.adwomentoronto.ca/">Adwomen of Toronto</a><a target="_blank" href="http://advertisingweek.ca">Advertisingweek.ca</a><a
+                                target="_blank" href="http://www.cassies.ca/">CASSIES</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

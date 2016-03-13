@@ -1,0 +1,651 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-15"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="revisit-after" content="15 days"/>
+<meta name="robots" content="index, follow"/>
+<meta name="DC.Language" scheme="iso639-2" content="fr"/>
+<meta name= "DC.Subject" content= "S&ucirc;ret&eacute; du Qu&eacute;bec" xml:lang="fr" lang= "fr"/>
+<meta name= "DC.Keywords"  content='accueil, SQ, Sûreté du Québec, police'/>
+<meta name= "DC.Description" content='Page d'accueil du site Internet de la Sûreté du Québec'/>
+<meta name="DC.Date.Created" scheme="W3CDTF" content="2003-06-01"/>
+<meta name="DC.Date.Modified" scheme="W3CDTF"  content="2007-10-17"/>
+<meta name="DC.Date.Expires" scheme="W3CDTF" content=""/>
+<meta name="DC.Identifier.URL" content="http://www.surete.qc.ca"/>
+<meta name="DC.Category" content="Canada, Qu&eacute;bec, Montr&eacute;al"/>
+<meta name="DC.Distribution" content="global"/>
+<meta name="DC.Author" content="&Eacute;quipe Web"/>
+<meta name="DC.Rights" content="S&ucirc;ret&eacute; du Qu&eacute;bec &copy; Gouvernement du Qu&eacute;bec"/>
+<title>Accueil - Sûreté du Québec</title>
+<script type="text/javascript" src="/js/general.js"></script>
+<script type="text/javascript">
+
+var vNbrePersonneMax = 9; //Nombre de personnes dans les Array - 1
+
+//************* DISPARUS *************
+var vNumDisparuCourant = 0;	//Index dans le tableau du disparu affiché
+var nombreDisparus = 92; //Nombre total de disparus sur le site de la SQ
+var lstSrcImageDisparus = new Array("/personnes-disparues/christian-alix_min.jpg", "/personnes-disparues/jean-claude-legresley_min.jpg", "/personnes-disparues/hector-manuel-garcia-tupas_min.jpg", "/personnes-disparues/shannon-alexander_min.jpg", "/personnes-disparues/maisy-odjick_min.jpg", "/personnes-disparues/benoit-desrosiers_min.jpg", "/personnes-disparues/marc-verville_min.jpg", "/personnes-disparues/isabelle-lehouiller_min.jpg", "/personnes-disparues/richard-desnoyers_min.jpg", "/personnes-disparues/jean-louis-hebert_min.jpg"); //URLs des miniatures des disparus
+var lstAltImageDisparus = new Array("photo Christian Alixe", "Jean-Claude Legresley", "Hector Manuel Garcia Tupas", "Shannon Alexander", "Maisy Odjick", "Benoit Desrosiers", "Marc Verville", "photo Isabelle Lehouiller", "photo Richard Desnoyers", "photo Jean-Louis Hébert"); //ALTs des disparus
+var lstTitleImageDisparus = new Array("photo Christian Alix", "Jean-Claude Legresley", "Hector Manuel Garcia Tupas", "Shannon Alexander", "Maisy Odjick", "Benoit Desrosiers", "Marc Verville", "photo Isabelle Lehouiller", "photo Richard Desnoyers", "photo Jean-Louis Hébert"); //TITLEs des disparus
+var listeNomsDisparus = new Array("Alix,Christian", "Legresley, Jean-Claude", "Garcia Tupas, Hector Manuel", "Alexander, Shannon", "Odjick, Maisy", "Desrosiers, Benoit", "Verville, Marc", "Lehouiller, Isabelle", "Desnoyers, Richard", "Hébert, Jean-Louis"); //Noms des disparus
+var listeUrlPageDisparus = new Array("/personnes-disparues/christian-alix.jsp", "/personnes-disparues/jean-claude-legresley.jsp", "/personnes-disparues/hector-manuel-garcia-tupas.jsp", "/personnes-disparues/shannon-alexander.jsp", "/personnes-disparues/maisy-odjick.jsp", "/personnes-disparues/benoit-desrosiers.jsp", "/personnes-disparues/marc-verville.jsp", "/personnes-disparues/isabelle-lehouiller.jsp", "/personnes-disparues/richard-desnoyers.jsp", "/personnes-disparues/jean-louis-hebert.jsp"); //URLs des pages des disparus
+var listeResumeDisparus = new Array("Christian Alix, disparu depuis le 4 mars dernier. ", "La SQ demande l'aide du public pour retrouver Jean-Claude Legresley", "Disparition de Hector Manuel Garcia Tupas", "La Sûreté du Québec fait de nouveau appel à la population pour Shannon Alexander, de Maniwaki.", "La Sûreté du Québec fait de nouveau appel à la population pour Maisy Odjick, de Maniwaki.", "35 ans, disparu de Notre-Dame-des-Prairies", "La SQ fait de nouveau appel à la population dans le but de retrouver Marc Verville.", "Collaboration du public demandée afin de retrouver une femme de Rouyn-Noranda.", "La Sûreté du Québec sollicite laide de la population afin de retrouver un homme porté disparu", "La Sûreté du Québec fait appel à la population dans le but de retrouver un homme dAmherst."); //Resume des Disparus 
+// alert(listeResumeDisparus);
+// Fonction changeDisparu - Sert à changer les informations affichées des disparus
+function changeDisparu(){
+	vImg = $("jDisparuImage"); // Modification de l'image
+	vImg.src = lstSrcImageDisparus[vNumDisparuCourant];
+	vImg.alt = lstAltImageDisparus[vNumDisparuCourant];
+	vImg.title = lstTitleImageDisparus[vNumDisparuCourant];
+	vLienImg = document.getElementById("jDisparuLienImg"); // Modification du lien de l'image
+	vLienImg.href = listeUrlPageDisparus[vNumDisparuCourant];
+
+	vLien = $("jDisparuLien"); // Modification de l'url
+	vLien.innerHTML = listeNomsDisparus[vNumDisparuCourant];
+	vLien.title = listeNomsDisparus[vNumDisparuCourant];
+	vLien.href = listeUrlPageDisparus[vNumDisparuCourant];
+
+	vResume = $("jDisparuResume"); // Modification du Resume (Teaser)
+        vResume.innerHTML = listeResumeDisparus[vNumDisparuCourant];
+        vResume.title = listeNomsDisparus[vNumDisparuCourant];
+        vResume.href = listeUrlPageDisparus[vNumDisparuCourant];
+        
+        vPlus = $("jDisparuPlus"); // Modification du lien +
+        vPlus.title = listeNomsDisparus[vNumDisparuCourant];
+        vPlus.href = listeUrlPageDisparus[vNumDisparuCourant];
+        
+	vNum = $("jDisparuNumero"); // Modification du numéro
+	vNum.innerHTML = vNumDisparuCourant+1 + " de 10 sur " + nombreDisparus;
+}
+
+// Fonction disparuSuivant - Sert à passer au prochain disparu
+function disparuSuivant(){
+	if (vNumDisparuCourant < vNbrePersonneMax) { vNumDisparuCourant++; }
+	else {vNumDisparuCourant = 0;};
+	changeDisparu();
+}
+
+// Fonction disparuPrecedent - Sert à passer au disparu précédent
+function disparuPrecedent(){
+	if (vNumDisparuCourant == 0) { vNumDisparuCourant = vNbrePersonneMax; }
+	else {vNumDisparuCourant--;};
+	changeDisparu();
+}
+
+//************* RECHERCHES *************
+var vNumRechercheCourant = 0;	//Index dans le tableau du recherché affiché
+var nombreRecherches = 92; //Nombre total de recherchés sur le site de la SQ
+var lstSrcImageRecherches = new Array("/suspect-recherches/2016-vol-qualifie-rimouski_min.jpg", "/suspect-recherches/2016-femme-recherche-vol-identite_min.jpg", "/suspect-recherches/nicolas-gosselin_min.jpg", "/suspect-recherches/erwin-bermudez_min.jpg", "/suspect-recherches/2016-vol-sainte-adele_min.jpg", "/suspect-recherches/2016-vol-qualifie-shawinigan_min.jpg", "/suspect-recherches/christian-dionne_min.jpg", "/suspect-recherches/2016-tentative-meurtre-pincourt_min.jpg", "/suspect-recherches/2015-notre-dame-de-l-ile-perrot_min.jpg", "/suspect-recherches/2015-fraude-victoriaville_min.jpg"
+); //URLs des miniatures des recherchés
+var lstAltImageRecherches = new Array("Suspect recherché", "Suspect recherché", "Nicolas Gosselin", "Suspect recherché", "Suspect recherché", "Suspect recherché", "Christian Dionne", "Portrait-robot du suspect", "Suspect recherché", "Suspect recherché"
+); //ALTs des recherchés
+var lstTitleImageRecherches = new Array("Suspect recherché", "Suspect recherché", "Nicolas Gosselin", "Suspect recherché", "Suspect recherché", "Suspect recherché", "Christian Dionne", "Portrait-robot du suspect", "Suspect recherché", "Suspect recherché"
+); //TITLEs des recherchés
+var listeNomsRecherches =  new Array("Suspect", "Suspecte", "Gosselin, Nicolas", "Bermudez, Erwin", "Suspect", "Suspects à identifier", "Dionne, Christian", "Suspect", "Deux suspects recherchés", "Suspect"); //Noms des recherchés
+var listeUrlPageRecherches = new Array("/suspect-recherches/2016-vol-qualifie-rimouski.jsp", "/suspect-recherches/2016-femme-recherche-vol-identite.jsp", "/suspect-recherches/nicolas-gosselin.jsp", "/suspect-recherches/erwin-bermudez.jsp", "/suspect-recherches/2016-vol-sainte-adele.jsp", "/suspect-recherches/2016-vol-qualifie-shawinigan.jsp", "/suspect-recherches/christian-dionne.jsp", "/suspect-recherches/2016-tentative-meurtre-pincourt.jsp", "/suspect-recherches/2015-notre-dame-de-l-ile-perrot.jsp", "/suspect-recherches/2015-fraude-victoriaville.jsp"); //URLs des pages des recherchés
+var listeResumeRecherches = new Array("Individu recherché en lien avec un vol qualifié à Rimouski", "Suspecte recherchée relativement à des fraudes et un vol didentité", "La SQ recherche Nicolas Gosselin, de Ste-Christine-dAuvergne", "La Sûreté du Québec demande laide du public afin de retracer Erwin Bermudez", "Suspect à identifier pour un vol à Sainte-Adèle", "La Sûreté du Québec demande laide de la population afin didentifier deux suspects ", "Christian Dionne, 31 ans, de Québec est recherché.", "Appel à la population pour retracer les suspects dune tentative de meurtre", "Introduction par effraction à Notre-Dame-de-l'Île-Perrot", "Recherché pour fraude envers des personnes âgées"); //Resume "Teaser" des Recherches 
+// alert(listeResumeRecherches);
+// Fonction changeRecherche - Sert à changer les informations affichées des recherchés
+function changeRecherche(){
+	vImg = $("jRechercheImage"); // Modification de l'image
+	vImg.src = lstSrcImageRecherches[vNumRechercheCourant];
+	vImg.alt = lstAltImageRecherches[vNumRechercheCourant];
+	vImg.title = lstTitleImageRecherches[vNumRechercheCourant];
+
+        vLienImgr = document.getElementById("jRechercheLienImg"); // Modification du lien de l'image
+	vLienImgr.href = listeUrlPageRecherches[vNumRechercheCourant];
+
+	vLien = $("jRechercheLien"); // Modification de l'url
+	vLien.innerHTML = listeNomsRecherches[vNumRechercheCourant]; //Affiche le nom du suspect
+	vLien.title = listeNomsRecherches[vNumRechercheCourant];
+	vLien.href = listeUrlPageRecherches[vNumRechercheCourant];
+
+	vResume = $("jRechercheResume"); // Modification du Resume (Teaser)
+        vResume.innerHTML = listeResumeRecherches[vNumRechercheCourant];
+        vResume.title = listeNomsRecherches[vNumRechercheCourant];
+//      vResume.href = listeUrlPageRecherches[vNumRechercheCourant];
+
+        vPlus = $("jRecherchePlus"); // Modification du Lien +
+        vPlus.title = listeNomsRecherches[vNumRechercheCourant];
+        vPlus.href = listeUrlPageRecherches[vNumRechercheCourant];
+        
+        vNum = $("jRechercheNumero"); // Modification du numéro
+        vNum.innerHTML = vNumRechercheCourant+1 + " de 10 sur " + nombreRecherches;
+
+
+}
+
+//Fonction rechercheSuivant - Sert à passer au prochain recherché
+function rechercheSuivant(){
+	if (vNumRechercheCourant < vNbrePersonneMax) { vNumRechercheCourant++; }
+	else {vNumRechercheCourant = 0;};
+	changeRecherche();
+}
+
+
+//Fonction recherchePrecedent - Sert à passer au recherché précédent
+function recherchePrecedent(){
+	if (vNumRechercheCourant == 0) { vNumRechercheCourant = vNbrePersonneMax; }
+	else {vNumRechercheCourant--;};
+	changeRecherche();
+}
+//-->
+//]]>
+</script>  
+<script type="text/javascript" src="/js/swfobject.js"></script>
+<link href="/css/structure_utile.css" rel="stylesheet" type="text/css" />
+<link href="/css/import_statique.css" rel="stylesheet" type="text/css" />
+<link href="/css/import_accueil.css" rel="stylesheet" type="text/css" />
+<link href="/css/print.css" rel="stylesheet"  type="text/css" media="print"/>
+
+</head>
+<body id="sectionAccueil" onload="preloadInit();">
+<div id="structurePage">
+
+
+
+   <!--Entete de page -->
+    <div id="structureEntete">
+    <div id="entete"><a name="haut" id="haut"></a>
+       <div id="navigation-utile">
+	<ul id="menu-navigation-utile">
+    <li id="plan-du-site">
+    	<a href="/informations/plan-du-site/plan-du-site.jsp" title="Plan du site"><img src="/images/structure/general/pixel.gif" width="100%" height="21" />Plan du site</a>
+    </li>
+    <li id="pour-nous-joindre">
+    	<a href="/informations/nous-joindre-surete-du-quebec.jsp" title="Pour nous joindre"><img src="/images/structure/general/pixel.gif" width="100%" height="21" />Pour nous joindre</a>
+    </li>
+    <li id="english">
+    	<a href="/english/english-national-police-sq.jsp" title="English"><img src="/images/structure/general/pixel.gif" width="100%" height="21" />English</a>
+    </li>
+		<li id="version-imprimable">
+   		<a href="imprimer.html" title="Version imprimable" onclick="imprimer(); return false;"><img src="/images/structure/general/pixel.gif" width="100%" height="21" />Version imprimable</a>
+		</li>
+    <li id="recrutement">
+    	<a href="http://recrutement-suretequebec.gouv.qc.ca/" title="Recrutement-Police nationale-S&ucirc;ret&eacute; du Qu&eacute;bec" target="_blank"><img src="/images/structure/general/pixel.gif" width="100%" height="21" />Recrutement</a>
+    </li>
+  </ul>          
+</div>
+       <div id="titreSQ">
+
+  		<h1>Police Nationale du Québec Sûreté du Québec</h1>
+  </div> 
+<div id="logoUrgence">
+        <img src="/images/structure/entete/urgence.gif" title="310-4141 dans les municipalités o&ugrave; le 9-1-1 n'est pas disponible" alt="310-4141 dans les municipalités o&ugrave; le 9-1-1 n'est pas disponible" />
+      </div> 
+      <div id="navPrincipale">
+      <div id="compoRecherche">
+     <form name="RechercheForm" 
+     	   id="formCompoRecherche"  
+           action="/composantes/LanceRecherche.do" 
+           method="get">
+     <input name="nrq" 
+     	    type="text" 
+            id="inputRecherche" 
+            value="" />
+     <input name="tri" 
+            type="hidden" 
+            id="champCache" 
+            value="2" />
+     <input name="opt"
+           type="hidden"
+           id="champCache"
+           value="and" />
+     <input name="bouton_recherche" 
+            type="button" 
+            id="inputBoutonRecherche" 
+            value="" 
+            onclick="form.submit()"/>
+     </form>
+ </div>
+
+           
+
+
+
+
+
+
+
+
+ 
+       <div id="menuPrincipal">
+          <ul id="menu_principal">
+            <li id="panel1b"><a href="/index.jsp" title="Accueil national"><img src="/images/structure/general/pixel.gif" width="100%" height="25" alt="" />Accueil</a></li>
+            <li id="panel2b"><a href="/mission-et-services/mission-service-surete-du-quebec.jsp" title="Mission et services"><img src="/images/structure/general/pixel.gif" width="100%" height="25" alt="" />Mission et services</a></li>
+            <li id="panel3b"><a href="/informations/conseils-securite-surete-du-quebec.jsp" title="Conseils de s&eacute;curit&eacute;"><img src="/images/structure/general/pixel.gif" width="100%" height="25" alt="" />Conseils de s&eacute;curit&eacute;</a></li>
+            <li id="panel7b"><a href="/services-en-ligne/services-en-ligne-surete-du-quebec.jsp" title="Services en ligne"><img src="/images/structure/general/pixel.gif" width="100%" height="25" alt="" />Services en ligne</a></li>
+            <li id="panel4b"><a href="/salle-de-presse/salle-presse-surete-du-quebec.jsp" title="Salle de presse"><img src="/images/structure/general/pixel.gif" width="100%" height="25" alt="" />Salle de presse</a></li>
+            <li id="panel5b"><a href="/foire-aux-questions/foire-aux-questions.jsp" title="Foire aux questions"><img src="/images/structure/general/pixel.gif" width="100%" height="25" alt=""/>FAQ</a></li>
+            <li id="panel6b"><a href="/fondation/fondation-communautaire-surete-du-quebec.jsp" title="Fondation communautaire de la S&ucirc;ret&eacute; du Qu&eacute;bec"><img src="/images/structure/general/pixel.gif" width="100%" height="25" alt="" />Fondation</a></li>
+          </ul>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+    
+    <div id="structureContenu">
+    
+      <div id="contenu" class="clearfix">
+      
+        <div id="sectionHaut">
+            <div id="colGauche">
+                <!--Menu de navigation -->
+                
+<div id="menu">          
+	
+  	<dl id="menudynamique"><dt onclick="javascript:affiche();"><a href="/prevenir-la-criminalite/programmes/alerte-amber.jsp">Alerte AMBER</a></dt></dl>
+	
+</div>          
+                <!--section gauche haut -->
+                
+<a href="/informations/carte-interactive-police-nationale-surete-du-quebec.jsp" id="posteLocal" title="Carte interactive" alt=""></a>
+
+
+<div id="emploi">
+
+
+<!--<a href="/services-en-ligne/verification-casier-judiciaire/verification-casier-judiciaire.jsp"><img src="/images/accueil/bannieres/verification-casier-judiciaire.jpg" title="Section vérification de casier judiciaire" alt="Image pour vérification casier judiciaire" /></a></a>-->
+
+<a href="/cybercriminalite/pornographie-juvenile/pornographie-juvenile.jsp"><img src="/images/accueil/bannieres/pornographie-juvenile.jpg" title="Section pornographie juvénile" alt="Image pour section pornographie juvénile" /></a></a>
+
+<a href="http://www.sqbilan.com/index.html?a=Inter"><img src="/images/accueil/bannieres/sqbilan.jpg" title="Bilan des activités de la Sûreté du Québec" alt="Bilan des activités de la Sûreté du Québec pour l'année 2014-2015" /></a>
+
+<!--
+<a href="http://www.sq.gouv.qc.ca/prevenir-la-criminalite/programmes/alerte-amber.jsp"><img src="/images/accueil/bannieres/alerte-amber.jpg" title="Alerte AMBER" alt="Image Alerte AMBER" /></a>-->
+
+<!--<a href="http://roulonsavecclasse.com/?a=sq" target="_blank"><img src="/images/accueil/bannieres/roulons-avec-classe.jpg" title="Joignez-vous au mouvement!" alt="Joignez-vous au mouvement!" /></a>-->
+
+<!--<a href="http://crimesnonresolus.com/index.html?en?a=inter" target="_blank"><img src="/images/accueil/bannieres/crimes-non-resolus-bandeau.jpg" title="Crimes non r&eacute;solus" alt="Bouton Crimes non r&eacute;solus" /></a>-->
+
+</div>
+
+            </div>  
+      
+            <div id="colCentre">
+                <!--Contenu Haut-->
+                
+<div id="alerteAmber">
+  
+  <div id="flashcontent">&laquo; Cette section requiert le logiciel Adobe Flash Player version 8 (ou sup&eacute;rieure) pour &ecirc;tre visualis&eacute;e correctement. <a href="http://www.adobe.com" title="T&eacute;l&eacute;chargez" target="_blank">T&eacute;l&eacute;chargez</a> ce logiciel gratuitement d&egrave;s maintenant. &raquo;</div>
+  <script type="text/javascript"> 
+  // <![CDATA[ 
+  //  alert("'0'");
+  //  alert("'0'");
+
+  var so = new SWFObject("/alertes/texteDefilant.swf", "texteDefilant", "379", "35", "8", "#FFFFFF");
+  //juste information pas d'hyperlien
+  //so.addVariable("argAmberGeneral", "0");
+  //so.addVariable("argAmberAlert", "0");
+  
+  //ajout hyperlien vers une page (mettre en commentaire // le lien le so.addVariable correspondant plus haut)
+  //so.addVariable("argAmberGeneral", "<a href='https://www.cyberaide.ca/app/fr/report' target='_blank'>"+"0"+"< />");
+  //so.addVariable("argAmberAlert", "<a href='/alertes/crise-verglas.jsp'>"+"0"+"</>");
+  
+  so.write("flashcontent");
+  // ]]> 
+  </script>
+</div>
+
+                
+
+
+
+<div id="titreActualite">
+<a onmouseover="pathImgActualite('national');" id="lienImgActualite" href="pathImgActualite('national');"><img src="/images/titres/accueil/actualites-nationales.gif" alt="Actualit&eacute;s nationales" name="h1ActualitesNat" id="h1ActualitesNat" onmouseover="MM_swapImage('h1ActualitesNat','','/images/titres/accueil/actualites-nationales_over.gif',1)" onmouseout="MM_swapImgRestore()"/></a>
+</div> 
+  
+<!--
+DDC :: 2011-08-12
+ 
+
+-->
+
+ 
+<div id="actualites">
+  <dl>
+    <dt>
+      <a class="aTitre" href="/actualites/2016/2016-03-10_001.jsp" title="Bilan de lopération à Portneuf en lien avec le trafic de stupéfiants">Bilan de lopération à Portneuf en lien avec le trafic de stupéfiants</a>
+    </dt>
+    <dd>
+    <b>
+	   10 mars 2016&nbsp;-&nbsp;</b>
+	   La Sûreté du Québec a procédé hier à 13 arrestations et 10 perquisitions à Portneuf en lien avec le trafic de stupéfiants&nbsp;<a class="plus-vert" href="/actualites/2016/2016-03-10_001.jsp" title="Bilan de lopération à Portneuf en lien avec le trafic de stupéfiants">+</a> </dd>
+  </dl>
+ 
+    <!-- Si est local -->
+<!--
+
+-->
+
+  <dl>
+    <dt class="alt">
+       <a class="aTitre" href="/actualites/2016/2016-03-09_001.jsp" title="Arrestations et perquisitions en lien avec la production et le trafic de stupéfiants">Arrestations et perquisitions en lien avec la production et le trafic de stupéfiants</a>
+    </dt>
+    
+   <dd> 
+        <b>     
+        09 mars 2016&nbsp;-&nbsp;</b>Série darrestations et une perquisition en lien avec les stupéfiants&nbsp;<a class="plus-vert" href="/actualites/2016/2016-03-09_001.jsp" title="Arrestations et perquisitions en lien avec la production et le trafic de stupéfiants">+</a>
+   </dd>
+
+  </dl>
+</div>
+
+<!--
+          
+
+
+      
+   
+   <p id="nationales_lien">Toutes les <a href="/actualites-sq.jsp#pageDemandee=1" title="Actualit&eacute;s nationales"><strong>Actualit&eacute;s nationales</strong></a></p>
+-->    
+
+<!-- actualites -->
+
+<img src="/images/boutons-utilitaires/aaa.gif" alt="Formatage des Characteres"
+     longdesc="Bouton permettant d'ajuster les polices" name="bouton_utilitaire"
+     border="0" usemap="#bouton_utilitaireMap" id="bouton_utilitaire" class="actu"/ >
+
+
+
+    <div id="disparusContenu">
+      <div id="disparus">
+        <h2 id="h2Disparus"><a href="/personnes-disparues/personnes-disparues-surete-du-quebec.jsp"><img title="Disparus" id="disparusTitreImg" src="/images/titres/accueil/disparus.gif" onmouseover="MM_swapImage('disparusTitreImg','','/images/titres/accueil/disparus_over.gif',1)" onmouseout="MM_swapImgRestore()"/></a></h2>
+        <div class="compteur">
+            <a class="precsuivGauche" href="/precedent.html" onclick="disparuPrecedent();return false;"><a class="precsuivGauche" href="/precedent.html" onclick="disparuPrecedent();return false;"><img class="flecheGauche" src="/images/structure/accueil/fleche-gauche-rech-disp.gif" alt="Pr&eacute;c&eacute;dent" width="14" height="14" longdesc="Disparus pr&eacute;c&eacute;dent" /></a>
+            <div class="precsuivCentre" id="jDisparuNumero">1 de 3337</div>
+            <a class="precsuivDroite" href="/suivant.html" onclick="disparuSuivant();return false;"><img src="/images/structure/accueil/fleche-droite-rech-disp.gif" alt="Suivant" width="14" height="14" class="flecheDroite" longdesc="Disparus suivant" /></a> 
+        </div>
+        <a id="jDisparuLienImg" href="#"><img id="jDisparuImage" src="/images/accueil/personne-recherche-disparu.gif" alt="Personne disparue" /></a><a id="jDisparuLien" href="#" title="">&nbsp;</a><br /><br />
+      <div id="dispRechResume">
+        <span id="jDisparuResume" title="" >&nbsp;</span><a id="jDisparuPlus" class="plus-vert" href="#" title="">+</a>
+      </div>
+      </div>
+     <p id="disparus_lien">Toutes les <a href="/personnes-disparues/personnes-disparues-surete-du-quebec.jsp" title="Personnes disparues"><strong>Personnes disparues</strong></a></p>
+    </div>
+
+    <div id="recherchesContenu">
+        <div id="recherches">
+            <h2 id="h2Recherches">
+                <a href="/suspect-recherches/suspects-recherches-sq.jsp">
+                <img title="Recherch&eacute;s" id="rechercheTitreImg" src="/images/titres/accueil/recherches.gif" onmouseover="MM_swapImage('rechercheTitreImg','','/images/titres/accueil/recherches_over.gif',1)" onmouseout="MM_swapImgRestore()"/>
+                </a>
+            </h2>
+            <div class="compteur">
+                <a class="precsuivGauche" href="/precedent.html" onclick="recherchePrecedent();return false;"><img class="flecheGauche" src="/images/structure/accueil/fleche-gauche-rech-disp.gif" alt="Pr&eacute;c&eacute;dent" width="14" height="14" longdesc="Disparus pr&eacute;c&eacute;dent" /></a>
+                <div class="precsuivCentre" id="jRechercheNumero">1 de 3337</div>
+                <a class="precsuivDroite" href="/suivant.html" onclick="rechercheSuivant();return false;"><img class="flecheDroite" src="/images/structure/accueil/fleche-droite-rech-disp.gif" alt="Suivant" width="14" height="14" longdesc="Disparus suivant" /></a>
+            </div>
+          <a id="jRechercheLienImg" href="#"><img id="jRechercheImage" src="/images/accueil/personne-recherche-disparu.gif" alt="personne recherch&eacute;s"/></a><a id="jRechercheLien" href="#" title="">&nbsp;</a><br /><br />
+          <div id="dispRechResume">
+                  <span id="jRechercheResume" title="" style="text-align:left" >&nbsp;</span><a id="jRecherchePlus" class="plus-vert" href="#" title="">+</a>  
+          </div>
+        </div>
+      <p id="recherches_lien">Tous les <a href="/suspect-recherches/suspects-recherches-sq.jsp" title="Personnes recherch&eacute;es"><strong>Suspects recherch&eacute;s</strong></a></p>
+    </div>
+
+<script language="javascript" type="text/javascript">changeDisparu();changeRecherche();</script>
+
+<!-- recherchesContenu -->
+
+            </div>
+        </div> <!-- sectionHaut -->
+        
+        <div id="sectionBas">
+                <!--section gauche bas -->
+                      
+        <div id="colGaucheBas">
+          <div id="conseilSecurite">
+    <a href="/informations/conseils-securite-surete-du-quebec.jsp"><img src="/images/structure/boutons/porte-entree-conseils-de-securite.gif" title="Conseils de sécurité" alt="Conseils de sécurité" width="200" height="50" id="imageConseil" onmouseover="MM_swapImage('imageConseil','','/images/structure/boutons/porte-entree-conseils-de-securite_over.gif',1)" onmouseout="MM_swapImgRestore()" />
+ </a>
+</div>
+
+           <div id="galerieMultimediaGauche" onmouseout="changeImageSrc('galerieMultimedia','/images/structure/boutons/galerie-multimedia.gif')">
+ <img src="/images/structure/boutons/galerie-multimedia.gif" alt="Galerie multimédia" name="galerieMultimedia" usemap="#galerieMap" id="galerieMultimedia" title="Galerie multim&eacute;dia" />
+ </div>  <!-- map est dans le fichier foncBoutonUtilitaire.jsp -->
+        </div>
+          
+        
+      
+                <!--Contenu Bas Gauche-->
+                <div id="conseilsExpertises">
+            <h2 id="h2ConseilExpert"><img id="h2ConseilExpertImg" src="/images/titres/conseils-expertises/conseils-expertises.gif" alt="Conseils selon les expertises"></h2>
+             <a href="/conduire-securite/conduire-securite-surete-du-quebec.jsp"><img id="h3ConduireSecurite" src="/images/titres/conseils-expertises/conduire-en-securite.gif" alt="Conduire en sécurité" title="Conduire en sécurité" onmouseover="MM_swapImage('h3ConduireSecurite','','/images/titres/conseils-expertises/conduire-en-securite_over.gif',1)" onmouseout="MM_swapImgRestore()"></a>
+           <h4></h4>
+              <p>Quelques faits ou statistiques importants à savoir en navigation de plaisance.&nbsp;<a class="plus-rouge" title="Voir la section Conduire en sécurité" href="/conduire-securite/la-surete-vous-conseille/securite-nautique/saviez-vous-que-surete-du-quebec.jsp">+</a></p>
+              <p class="lienSection">Voir la section <a href="/conduire-securite/conduire-securite-surete-du-quebec.jsp" title="Conduire en sécurité"><strong>Conduire en sécurité</strong></a></p>
+              <a href="/cybercriminalite/cybercriminalite-surete-du-quebec.jsp"><img id="h3Cybersurv" src="/images/titres/conseils-expertises/cybercriminalite.gif" alt="Cybercriminalité" title="Cybercriminalité" onmouseover="MM_swapImage('h3Cybersurv','','/images/titres/conseils-expertises/cybercriminalite_over.gif',1)" onmouseout="MM_swapImgRestore()"></a>
+    <h4></h4>
+              <p>La pornographie juvénile sur Internet vous inquiète? Que faire si vous en êtes victime?&nbsp;<a class="plus-rouge" title="Voir la section Cybercriminalité" href="/cybercriminalite/la-surete-vous-conseille/pornographie-juvenile-sq.jsp">+</a></p>
+              <p class="lienSection">Voir la section <a href="/cybercriminalite/cybercriminalite-surete-du-quebec.jsp" title="Cybercriminalité"><strong>Cybercriminalité</strong></a></p>
+            
+<a href="/prevenir-la-criminalite/prevenir-criminalite-securite.jsp"> <img id="h3PrevenirCrim" src="/images/titres/conseils-expertises/prevenir-la-criminalite.gif" alt="Prévenir la criminalité" title="Prévenir la criminalité" onmouseover="MM_swapImage('h3PrevenirCrim','','/images/titres/conseils-expertises/prevenir-la-criminalite_over.gif',1)" onmouseout="MM_swapImgRestore()"></a>
+              <h4></h4>
+              <p>Ce texte présente le rôle et l'expertise de l'équipe spécialisée dans les crimes reliés aux uvres d'art.&nbsp;<a class="plus-rouge" title="Voir la section Prévenir la criminalité" href="/prevenir-la-criminalite/la-surete-vous-conseille/fraude-vol-oeuvre-d-art/crimes-plus-importants.jsp">+</a></p>
+              <p class="lienSection">Voir la section <a href="/prevenir-la-criminalite/prevenir-criminalite-securite.jsp" title="Prévenir la criminalité"><strong>Prévenir la criminalité</strong></a></p>
+    </div>
+        <div id="conseilsClienteles">
+            <h2 id="h2ConseilClientele">
+                <img id="h2ConseilClienteleImg" src="/images/titres/conseils-clienteles/conseils-client.gif" alt="Conseils selon les client&egrave;les" />
+            </h2>
+            <a href="/enfants/enfants-surete-du-quebec.jsp"><img src="/images/titres/conseils-clienteles/enfants.gif" id="h3Enfants" alt="Enfants" title="Enfants" onMouseOver="MM_swapImage('h3Enfants','','/images/titres/conseils-clienteles/enfants_over.gif',1)" onMouseOut="MM_swapImgRestore()" /></a>
+            <a href="/adolescents/adolescents-conseils-sq.jsp"><img src="/images/titres/conseils-clienteles/adolescents.gif" id="h3Adolescents" alt="Adolescents" title="Adolescents" onMouseOver="MM_swapImage('h3Adolescents','','/images/titres/conseils-clienteles/adolescents_over.gif',1)" onMouseOut="MM_swapImgRestore()" /></a>
+            <a href="/aines/aines-surete-du-quebec.jsp"><img src="/images/titres/conseils-clienteles/aines.gif" id="h3Aines" alt="A&icirc;n&eacute;s" title="A&icirc;n&eacute;s" onMouseOver="MM_swapImage('h3Aines','','/images/titres/conseils-clienteles/aines_over.gif',1)" onMouseOut="MM_swapImgRestore()"/></a>
+            <a href="/femmes/femmes-securite-sq.jsp"><img src="/images/titres/conseils-clienteles/femmes.gif" id="h3Femmes" alt="Femmes" title="Femmes" onMouseOver="MM_swapImage('h3Femmes','','/images/titres/conseils-clienteles/femmes_over.gif',1)" onMouseOut="MM_swapImgRestore()"/></a>
+            <a href="/gens-affaires/gens-affaires-securite.jsp"><img src="/images/titres/conseils-clienteles/gens-d-affaires.gif" id="h3GensAff" alt="Gens d'affaires" title="Gens d'affaires" onMouseOver="MM_swapImage('h3GensAff','','/images/titres/conseils-clienteles/gens-d-affaires_over.gif',1)" onMouseOut="MM_swapImgRestore()"/></a>
+            <a href="/parent-et-enseignants/parents-enseignants-surete-du-quebec.jsp"><img src="/images/titres/conseils-clienteles/parents-et-enseignants.gif" id="h3ParEns" alt="Parents et enseignants" title="Parents et enseignants" onMouseOver="MM_swapImage('h3ParEns','','/images/titres/conseils-clienteles/parents-et-enseignants_over.gif',1)" onMouseOut="MM_swapImgRestore()"/></a>
+            <div class="clearboth">
+             </div>
+          </div>
+
+        </div> <!-- sectionBas -->
+        
+      </div> <!-- Contenu -->
+
+      <div id="colDroite">
+         <!--Section droite haut -->
+         
+         <!--section droite bas-->
+                   <!--<a href="http://recrutement-suretequebec.gouv.qc.ca/conventionnels-sans-formation-recrutement-sq.jsp" target="_blank"><img src="../../images/accueil/bannieres/recrutement-policier.jpg" alt="Recrutement policier" title="Recrutement policier" /></a>-->
+
+<!--<a href="/mission-et-services/publications/agir-ensemble-septembre-2013.pdf" target="_blank"><img src="/images/accueil/bannieres/agir-ensemble.gif" alt="Agir ensemble &ndash; septembre 2013" title="Agir ensemble &ndash; septembre 2013" /></a>-->
+
+<!--<a href="http://recrutement-suretequebec.gouv.qc.ca/programme-cadets.jsp" target="_blank"><img src="/images/accueil/bannieres/cadet.jpg" alt="Programme de cadets 2014" title="Programme de cadets 2014" /></a>-->
+<!--<a href="http://www.sq.gouv.qc.ca/actualites/2016/2016-02-17_001.jsp"><img src="/images/accueil/bannieres/ruban-mortuaire-lac-simon.jpg" alt="&Agrave; la m&eacute;moire de Thierry LeRoux" title="&Agrave; la m&eacute;moire de Thierry LeRoux" /></a>-->
+
+<!--<a href="/informations/prevenir-radicalisation.jsp?a=btn"><img src="/images/accueil/bannieres/prevenir-radicalisation.jpg" alt="Comportement suspect reli&eacute; &agrave; la radicalisation" title="Comportement suspect reli&eacute; &agrave; la radicalisation" /></a>-->
+
+<a href="/conduire-securite/la-surete-vous-conseille/securite-nautique-police-nationale-surete-du-quebec.jsp"><img src="/images/accueil/bannieres-droite/securite-nautique.jpg" alt="Section S&eacute;curit&eacute; nautique" title="Section S&eacute;curit&eacute; nautique" /></a>
+
+<a class="twitter-timeline" href="https://twitter.com/sureteduquebec" data-widget-id="345269024600510464" width="195" height="600" lang="FR">Tweets de @sureteduquebec</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>          
+
+      </div>
+        
+
+      <div id="sallePresse">
+         <!--section salle presse-->
+         
+<div id="presseSectionGauche">
+  <a href="/salle-de-presse/salle-presse-surete-du-quebec.jsp"><img src="/images/structure/salle-de-presse/salle-de-presse.gif" alt="Salle de presse" name="h2SalleDePresse" id="h2SalleDePresse" onmouseover="MM_swapImage('h2SalleDePresse','','/images/structure/salle-de-presse/salle-de-presse-over.gif',1)" onmouseout="MM_swapImgRestore()" /></a>
+  <ul>
+    <li><a href="/salle-de-presse/communiques/communiques-sq.jsp" title="Communiqués">Communiqués</a></li>
+    <li><a href="/salle-de-presse/dossiers-de-presse/dossiers-presse-sq.jsp" title="Dossiers de presse">Dossiers de presse</a></li>
+  </ul>
+</div>
+<div id="presseSectionCentre">
+<h2>Communiqu&eacute; - 10 mars 2016</h2><h3 id='communiquePresse'><a href="/salle-de-presse/communiques/002-10-mars-2016.jsp" title="Arrestations et perquisitions à Mont-Laurier">Arrestations et perquisitions à Mont-Laurier<span class='plus-blanc'>&nbsp;</span></a></h3>
+  <p>Tous les <a href="/salle-de-presse/communiques/communiques-sq.jsp" title="Communiqués de la SQ">Communiqués</a></p>
+</div>
+<div id="presseSectionDroite">
+<h2>Communiqu&eacute; - 10 mars 2016</h2><h3 id='communiquePresse'><a href="/salle-de-presse/communiques/001-10-mars-2016.jsp" title="La Sûreté du Québec au Salon du bateau de Québec">La Sûreté du Québec au Salon du bateau de Québec<span class='plus-blanc'>&nbsp;</span></a></h3>
+  <p>Tous les <a href="/salle-de-presse/communiques/communiques-sq.jsp" title="Communiqués de la Sûreté du Québec">Communiqués</a></p>
+</div>
+
+      </div>
+
+      <div id="bannieres">
+         <!--section salle presse-->
+         <div align="center">
+
+<!--<a href="http://www.toutesnosorigines.gouv.qc.ca/" title="10e Semaine qu&eacute;b&eacute;coise des rencontres interculturelles" target="_blank"><img src="/images/accueil/bannieres/ban_sqri_2012_120x60.gif" alt="10e Semaine qu&eacute;b&eacute;coise des rencontres interculturelles" width="120" /></a>-->
+<a href="http://www.dossiersnonresolus.com" title="Dossiers non résolus" target="_blank"><img src="/images/accueil/bannieres/dossiers-non-resolus.jpg" alt="Les dossiers non résolus de la Sûreté du Qu&eacute;bec" width="120" /></a>
+<a href="http://www.10criminelsrecherches.qc.ca/" title="Les 10 criminels les plus recherch&eacute;s du Qu&eacute;bec" target="_blank"><img src="/images/accueil/bannieres/10-criminels-recherches.jpg" alt="Les 10 criminels les plus recherch&eacute;s du Qu&eacute;bec" width="120" /></a>
+<!--<a href="http://www.gouv.qc.ca/portail/quebec/pgs/commun/urgence-quebec/" target="_blank"><img src="../../images/accueil/bannieres/urgence-quebec.gif" alt="Urgence Québec" width="120" /></a>-->
+
+<!--<a href="http://www.objectifsecurite.gouv.qc.ca/fr/" target="_blank"><img src="/images/accueil/bannieres/radars-photo.jpg" alt="Radars photo" width="120" /></a> -->
+  
+<a href="https://www.upac.gouv.qc.ca/" title="UPAC" target="_blank"><img src="/images/accueil/bannieres/upac.gif" alt="UPAC" width="120" /></a>
+
+
+<!--<a href="http://www.pandemiequebec.gouv.qc.ca" title="carrieres.gouv.qc.ca" target="_blank"><img src="/images/accueil/bannieres/pandemie-influenza.jpg" alt="Pand&eacute;mie influenza" width="120" height="60" /></a> -->
+
+<!-- <a href="http://www.mtq.gouv.qc.ca/portal/page/portal/5511576280795209E04400144F0104BD" title="carrieres.gouv.qc.ca" target="_blank"><img src="/images/accueil/bannieres/hiver-evitez-de-patiner.gif" alt="&Eacute;vitez de patiner!" width="120" height="60" /></a> -->
+
+<a href="http://www.sq.gouv.qc.ca/mission-et-services/sites-web-a-consulter/centrale-information-criminelle.jsp" title="Centrale de Renseignement Criminelle"><img src="/images/accueil/bannieres/centrale-information-criminelle.gif" alt="Centrale information criminelle" width="120" height="60" /></a>
+
+<a href="/informations/legendes-urbaines/legendes-urbaines.jsp" title="L&eacute;gendes urbaines"><img src="/images/accueil/bannieres/legendes-urbaines.jpg" alt="L&eacute;gendes urbaines" width="120" height="56" /></a>
+<!--
+<a href="http://communiques.gouv.qc.ca/gouvqc/communiques/GPQF/Juin2012/18/c9909.html" title="Op&eacute;ration Orange" target="_blank"><img src="../../images/accueil/bannieres/120x60-operation-orange.gif" alt="Op&eacute;ration Orange" width="120" height="60" /></a>
+-->
+</div>
+
+      </div>
+      
+    </div>  <!--structureContenu-->
+    
+    <div id="structureBasPage">
+		 <div id="basPage">
+			<div id="dateModification"> Derni&egrave;re modification : 2016-03-11 </div>
+			 <!-- null -->
+			      <div id="liensUtiles">
+        <ul>
+          <li><a href="/informations/acces-information-surete-du-quebec.jsp" title="Acc&egrave;s &agrave; l'information">Acc&egrave;s &agrave; l'information</a>|</li>
+          <li><a href="/informations/aide.jsp" title="Aide">Aide</a>|</li>
+          <li><a href="/informations/nous-joindre-surete-du-quebec.jsp" title="Pour nous joindre">Pour nous joindre</a>|</li>
+          <li><a href="/informations/envoyer-ce-lien-a-un-ami.jsp" title="Envoyer ce lien &agrave; un ami">Envoyer ce lien &agrave; un ami</a>|</li>
+          <li><a href="/informations/declaration-de-services-aux-citoyens.jsp" title="D&eacute;claration de services aux citoyens">D&eacute;claration de services aux citoyens</a>|</li>
+          <li><a href="/informations/politique-de-confidentialite.jsp" title="Politique de confidentialit&eacute;">Politique de confidentialit&eacute;</a>|</li>
+          <li><a href="/informations/netiquette-medias-sociaux-sq.jsp" title="N&eacute;tiquette des m&eacute;dias sociaux">N&eacute;tiquette des m&eacute;dias sociaux</a>|</li>
+          <li><a href="/informations/accessibilite.jsp" title="Accessibilit&eacute;">Accessibilit&eacute;</a></li>
+        </ul>
+      </div>
+      <!--<div style="clear:both">
+        <hr />-->
+        <hr class="hrVertFonce" />
+        <a href="http://www.gouv.qc.ca" target="_blank"><img src="/images/structure/logo-gouvernement-quebec.gif" alt="Logo du gouvernement du Qu&eacute;bec" name="logoQuebec" id="logoQuebec" /></a>
+        <p><a href="http://www.droitauteur.gouv.qc.ca/copyright.php" title="&copy; Gouvernement du Qu&eacute;bec, 2016" target="_blank">&copy; Gouvernement du Qu&eacute;bec, 2016</a></p>
+
+<p class='basPageContenu'>La S&ucirc;ret&eacute; du Qu&eacute;bec, corps de police national, agit sous l'autorit&eacute; du ministre de la S&eacute;curit&eacute; publique et a comp&eacute;tence pour pr&eacute;venir et r&eacute;primer les infractions aux lois sur l'ensemble du territoire du Qu&eacute;bec.</p>    
+</div>  
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18973138-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		</div>
+    </div>
+  
+ </div><!--structurePage-->
+ 
+
+<script language="javascript">
+
+var tabImgBoutonUtil=new Array("/images/boutons-utilitaires/aaa-envoyer-a-un-ami.gif","/images/boutons-utilitaires/aaa-envoyer-a-un-ami-moyen.gif","/images/boutons-utilitaires/aaa-envoyer-a-un-ami-grand.gif");
+var tabImgBoutonUtilAAA=new Array("/images/boutons-utilitaires/aaa.gif","/images/boutons-utilitaires/aaa-moyen.gif","/images/boutons-utilitaires/aaa-grand.gif");
+var tabImgTemp = new Array();
+var idBouton = '';
+
+
+if (document.getElementById("bouton_utilitaire") != null){
+	idBouton = 'bouton_utilitaire';
+	tabImgTemp = tabImgBoutonUtil;
+}else if(document.getElementById("bouton-utilitaire-aaa") != null){
+	idBouton = 'bouton-utilitaire-aaa';
+	tabImgTemp = tabImgBoutonUtilAAA;
+}
+//script pour ajuster le grosseur de la police
+
+	if (idBouton == 'bouton_utilitaire'){
+		$(idBouton).src = "/images/boutons-utilitaires/aaa-envoyer-a-un-ami.gif";
+	}else{
+		$(idBouton).src = "/images/boutons-utilitaires/aaa.gif";
+	}
+	document.body.style.fontSize = "70%";
+
+</script>
+<!-- map pour la fonctionalite du bouton utilitaire agrandir polices et envoi de courriel-->
+<map name="bouton_utilitaireMap" id="bouton_utilitaireMap">
+        <area shape="rect" coords="2,0,15,16" href="javascript:ajusterPolice('petit');" title="Modifier la taille du texte au format standard" alt="Taille du texte petite"/>
+        <area shape="rect" coords="17,0,32,16" href="javascript:ajusterPolice('moyen');" title="Modifier la taille du texte au format moyen" alt="Taille du texte moyenne" />
+        <area shape="rect" coords="35,0,53,16" href="javascript:ajusterPolice('grand');" title="Modifier la taille du texte au format grand" alt="Taille du texte grande"/>
+        <area shape="rect" coords="66,0,84,16" href="/informations/envoyer-ce-lien-a-un-ami.jsp" title="Envoyer ce lien &agrave; un ami" alt="Envoyer ce lien &agrave; un ami" />
+        <area shape="rect" coords="94,0,111,18" href="http://twitter.com/sureteduquebec" title="Suivez la S&ucirc;ret&eacute; du Qu&eacute;bec sur Twitter" alt="Suivez la S&ucirc;ret&eacute; du Qu&eacute;bec sur Twitter" />
+        <area shape="rect" coords="113,0,131,18" href="http://www.youtube.com/sureteduquebecvideo" title="Les vid&eacute;os de la S&ucirc;ret&eacute; du Qu&eacute;bec sur YouTube" alt="Les vid&eacute;os de la S&ucirc;ret&eacute; du Qu&eacute;bec sur YouTube" />
+        <area shape="rect" coords="133,0,146,18" href="http://www.tagtele.com/videos/voir/54584/" title="Les vid&eacute;os de la S&ucirc;ret&eacute; du Qu&eacute;bec sur TagT&eacute;l&eacute;" alt="Les vid&eacute;os de la S&ucirc;ret&eacute; du Qu&eacute;bec sur TagT&eacute;l&eacute;" />
+        <area shape="rect" coords="149,0,165,18" href="http://www.facebook.com/pages/S%C3%BBret%C3%A9-du-Qu%C3%A9bec-page-officielle/231840506883227" title="Page Facebook de la S&ucirc;ret&eacute; du Qu&eacute;bec" alt="Page Facebook de la S&ucirc;ret&eacute; du Qu&eacute;bec" />
+</map>
+<map name="bouton_utilitaireMap2" id="bouton_utilitaireMap2">
+        <area shape="rect" coords="2,0,15,16" href="javascript:ajusterPolice('petit');" title="Modifier la taille du texte au format standard" alt="Taille du texte petite"/>
+        <area shape="rect" coords="17,0,32,16" href="javascript:ajusterPolice('moyen');" title="Modifier la taille du texte au format moyen" alt="Taille du texte moyenne" />
+        <area shape="rect" coords="35,0,53,16" href="javascript:ajusterPolice('grand');" title="Modifier la taille du texte au format grand" alt="Taille du texte grande"/>
+
+        <area shape="rect" coords="94,0,111,18" href="http://twitter.com/sureteduquebec" title="Suivez la S&ucirc;ret&eacute; du Qu&eacute;bec sur Twitter" alt="Suivez la S&ucirc;ret&eacute; du Qu&eacute;bec sur Twitter" />
+        <area shape="rect" coords="113,0,131,18" href="http://www.youtube.com/sureteduquebecvideo" title="Les vid&eacute;os de la S&ucirc;ret&eacute; du Qu&eacute;bec sur YouTube" alt="Les vid&eacute;os de la S&ucirc;ret&eacute; du Qu&eacute;bec sur YouTube" />
+        <area shape="rect" coords="133,0,146,18" href="http://www.tagtele.com/videos/voir/54584/" title="Les vid&eacute;os de la S&ucirc;ret&eacute; du Qu&eacute;bec sur TagT&eacute;l&eacute;" alt="Les vid&eacute;os de la S&ucirc;ret&eacute; du Qu&eacute;bec sur TagT&eacute;l&eacute;" />
+        <area shape="rect" coords="149,0,165,18" href="http://www.facebook.com/pages/S%C3%BBret%C3%A9-du-Qu%C3%A9bec-page-officielle/231840506883227" title="Page Facebook de la S&ucirc;ret&eacute; du Qu&eacute;bec" alt="Page Facebook de la S&ucirc;ret&eacute; du Qu&eacute;bec" />
+</map>
+
+<!-- map pour la fonctionalite de navigation sur du logo de l'entete-->
+<map name="accueilnationale" id="accueilnationale" title="Page d'accueil nationale du site de la S&ucirc;ret&eacute; du Qu&eacute;bec">
+  <area shape="rect" coords="47,57,131,149" href="/index.jsp" alt="Accueil national" />
+  <area shape="rect" coords="-2,3,188,28" href="/index.jsp" alt="Accueil national" />
+</map> 
+
+ <!-- map pour la fonctionalite de navigation sur du logo de la galerie multimedia-->
+<map name="galerieMap" id="galerieMap">
+  <area shape="rect" coords="10,69,76,108" href="/salle-de-presse/galerie-multimedia/video-services.jsp" target="_self" alt="Vid&eacute;os" title="Vid&eacute;os" onmouseover="changeImageSrc('galerieMultimedia','/images/structure/boutons/galerie-multimedia-videos.gif')"/>
+  
+  <area shape="poly" coords="181,79,194,88,181,98" href="/salle-de-presse/galerie-multimedia/video-services.jsp" target="_self" alt="Vid&eacute;os" title="Vid&eacute;os"  onmouseover="changeImageSrc('galerieMultimedia','/images/structure/boutons/galerie-multimedia-videos.gif')"/>
+               
+  <area shape="rect" coords="84,150,176,169" href="/salle-de-presse/galerie-multimedia/album-photos.jsp" alt="Album photos" title="Album photos" target="_self" onmouseover="changeImageSrc('galerieMultimedia','/images/structure/boutons/galerie-multimedia-album.gif')"/>
+  
+  <area shape="poly" coords="181,149,192,160,181,170" href="/salle-de-presse/galerie-multimedia/album-photos.jsp" target="_self" alt="Album photos" title="Album photos" onmouseover="changeImageSrc('galerieMultimedia','/images/structure/boutons/galerie-multimedia-album.gif')"/>
+              
+  <area shape="rect" coords="117,185,176,223" href="/salle-de-presse/galerie-multimedia/galerie-multimedia-sq.jsp" alt="Toute la galerie multim&eacute;dia" title="Toute la galerie multim&eacute;dia" target="_self" onmouseover="changeImageSrc('galerieMultimedia','/images/structure/boutons/galerie-multimedia-toute.gif')"/>
+              
+  <area shape="rect" coords="1,7,196,51" href="/salle-de-presse/galerie-multimedia/galerie-multimedia-sq.jsp" alt="Visitez notre galerie multim&eacute;dia" title="Visitez notre galerie multim&eacute;dia" target="_self" onmouseover="changeImageSrc('galerieMultimedia','/images/structure/boutons/galerie-multimedia-visitez.gif')"/>
+            
+  <area shape="poly" coords="181,192,192,202,181,215" href="/salle-de-presse/galerie-multimedia/galerie-multimedia-sq.jsp" target="_self" alt="Toute la galerie multim&eacute;dia" title="Toute la galerie multim&eacute;dia" onmouseover="changeImageSrc('galerieMultimedia','/images/structure/boutons/galerie-multimedia-toute.gif')"/>
+</map>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

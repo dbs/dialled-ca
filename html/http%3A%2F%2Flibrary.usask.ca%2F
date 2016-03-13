@@ -1,0 +1,754 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<link href="images/UofS_favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<title>University Library | University of Saskatchewan Library</title>
+
+
+<meta content="Wed, 17 Feb 2016 15:47:28 -0440" name="date" />
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+
+
+
+<script src="includes/jquery/jquery-1.5.1.min.js" type="text/javascript" xml:space="preserve" ></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript" xml:space="preserve" ></script> -->
+<script src="includes/jquery/jquery-ui-1.8.custom.min.js" type="text/javascript" xml:space="preserve" ></script>
+<!--<script src="/library/includes/jquery/smartTab.js" type="text/javascript" xml:space="preserve"></script>-->
+<script src="includes/standard_151.js" type="text/javascript" xml:space="preserve" ></script>
+<!--<script type="text/javascript">
+$(document).ready(function(){
+    // Smart Tab        
+    $('#tabs').smartTab({autoProgress: false,stopOnFocus:true,transitionEffect:'slide'});
+});
+</script>-->
+<script src="includes/jquery/tabcontent.js" type="text/javascript" ></script>
+<link href="includes/standard.css" rel="stylesheet" type="text/css" />
+<link href="includes/homepage_2012.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]>
+<style>
+#font_reg, #font_med, #font_lrg {
+   bottom:10px;
+}
+
+#masthead #primary {
+   top:0px;
+   text-align:left;
+}
+
+.stContainer ul li a {
+   display:block;
+   line-height:100%;
+   padding-top:16px;
+   padding-bottom:10px;
+}
+.stContainer ul li a.sel {
+   display:block;
+   line-height:120%;
+   padding-top:12px;
+}
+
+.stContainer ul li a.selected {
+   display:block;
+   line-height:120%;
+   padding-top:15px;
+}
+
+#hp_lm_other a:link, #hp_lm_other a:visited {
+   display:block;
+   padding-top:10px;
+   height:30px;
+}
+
+.vertical_align {
+   float:left;
+   margin-top:10px;
+}
+.footer_location, .footer_holiday_schedule, .footer_contact {
+   display:block;
+}
+#fixed_shadow {
+margin: -12px auto 0;
+padding-top: 12px;
+}
+.articleDescription p {
+    margin-top:.8em;
+}
+</style>
+<![endif]-->
+
+
+<script type="text/javascript">
+font_size = 80;
+</script>
+<style type="text/css">
+
+body {
+  font-size:80%;
+}
+#hp_views_content, #hp_views_bottom {
+  display:block;
+}
+#hp_views {
+  background-position:0 -43px;
+}
+</style>
+
+
+ <style type="text/css">
+            body {background:url('images/layout/university_back_main.jpg') bottom center no-repeat;}
+            #fixed {background:url('images/layout/university_back_main.jpg') bottom left no-repeat;}
+            </style><script type="text/javascript">
+            var footer_open = '';
+            var slide_open  = 'hp_login';
+            var slide_open1 = 'hp_main';
+            var slide_open2 = 'hp_tools';
+            var slide_open3 = 'hp_partners';
+            
+            var slide_open4 = 'hp_views';
+            var slide_open5 = 'hp_calendar';
+            
+            var slide_open6 = 'hp_askus_hours';
+            var slide_open7 = 'hp_How_Do_I';
+            var slide_open8 = 'hp_main';
+            var slide_open9 = 'hp_main';
+
+            var slide_close = 'hp_ask_us';
+            </script>
+
+
+<link href="slides_style.css" rel="stylesheet" type="text/css" />
+<script src="http://library.usask.ca/includes/slides/slides.min.jquery.js" type="text/javascript" ></script>
+
+
+<script type="text/javascript">
+	$(function(){
+		$('#slides').slides({
+slideSpeed: 999,
+			preload: true,
+preloadImage: 'http://library.usask.ca/includes/slides/loading.gif',
+			play: 15000,
+			pause: 15000,
+			hoverPause: true,
+			animationStart: function(current){
+				$('.caption').animate({
+					bottom:-55
+				},100);
+			},
+			animationComplete: function(current){
+				$('.caption').animate({
+					bottom:0
+				},200);
+			},
+			slidesLoaded: function() {
+				$('.caption').animate({
+					bottom:0
+				},200);
+			}
+		});
+	});
+
+</script>
+
+<script type='text/javascript' src='http://library.usask.ca/external/autocomplete/jquery.autocomplete.js'></script>
+<link rel="stylesheet" type="text/css" href="http://library.usask.ca/external/autocomplete/jquery.autocomplete.css" />
+
+<script type="text/javascript">
+$().ready(function() {
+	$("#database").autocomplete("http://library.usask.ca/external/autocomplete/auto_database.php", {
+		width: 300,
+		selectFirst: false,
+                matchContains: true
+	});
+	$("#database").result(function(event, data, formatted) {
+		if (data)
+			$(this).parent().next().find("input").val(data[1]);
+	});
+       $("#journal").autocomplete("http://library.usask.ca/external/autocomplete/auto_ejournal.php", {
+		width: 300
+	});
+	$("#journal").result(function(event, data, formatted) {
+		if (data)
+			$(this).parent().next().find("input").val(data[1]);
+	});
+	$("#clear").click(function() {
+		$(":input").unautocomplete();
+	});
+});
+
+</script>
+
+
+<link href="includes/print.css" media="print" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="init();">
+  <div align="center" id="topbanner">
+  <img alt="Engage, enlighten, explore - at your library" border="0" height="40" id="topbanner_image" src="homepage/images/icons/UofSLib.png" usemap="#topbannerlinks" width="180" /> 
+  <span id="searchSpan">
+    <span class="go_home">
+      <a href="http://library.usask.ca/">Library</a>
+    </span>
+    <span class="ask_us">
+      <a href="http://library.usask.ca/askus/"><img alt="Ask Us" src="images/icons/bubbles_small.png" /> Ask Us</a>
+    </span>
+    <span class="paws-login">
+      <a href="https://paws.usask.ca/">PAWS</a>
+    </span>
+<form action="/search.php" id="cse-search-box" method="get" style="padding-top: 0;">
+  <fieldset>
+    <legend class="hidden">Search</legend>
+    <label class="hidden" for="search">Search:</label>
+    <input class="search-box" id="query" name="query" onfocus="this.value = '';" size="20" type="text" value="Search the Library website…" />
+  <input name="called_from" type="hidden" value="sitesearch_home" />
+<input class="hidden" name="Search" title="Search" type="submit" value="Search" />
+      <button class="submit" type="submit">Search
+    </button>
+  </fieldset>
+</form>
+  </span>
+</div>
+<map id="topbannerlinks" name="topbannerlinks">
+  <area alt="http://www.usask.ca/" coords="0,0,180,40" href="http://www.usask.ca/" shape="rect" />
+</map>
+
+<div id="masthead">
+  <h1><a href="index.php">University Library</a></h1>  
+<div id="breadcrumbs">&#160;</div>
+<div id="tagline">
+<img src="/images/tagline_homepage_2012.png" class="tagline_image" top="0" />&nbsp;
+</div>
+<div id="branding-graphic">&nbsp;</div>
+
+
+</div>
+<div id="fixed_shadow">
+  <div id="fixed">
+    <div class="leftMenu nocontent" id="menu-20-80">
+      <div class="hp_left_item">
+<h1 id="hp_login" onclick="left_nav_slide(this)"> </h1>
+<div class="hp_left_content" id="hp_login_content">
+
+
+<a href="/login.php?destination=%2F"><b>Login using your NSID</b></a>
+
+</div>
+<div class="hp_menu_bottom" id="hp_login_bottom" ></div>
+</div>
+      <div class="hp_left_item"><h1 id="hp_main" onclick="left_nav_slide(this)">&#160;</h1><div class="hp_left_content" id="hp_main_content"><ul><li><a href="findit_getit.php">Find It - Get It</a></li><li><a href="hours.php">Hours &amp; Safe Study</a></li><li><a href="branches/index.php">Locations &amp; Special Units</a></li><li><a href="http://library.usask.ca/info/services/study-rooms.php">Book a Study Room</a></li><li><a href="http://library.usask.ca/lsit/home.php#AvailableTechnology">Computers &amp; Printing</a></li></ul></div><div class="hp_menu_bottom" id="hp_main_bottom">&#160;</div></div>
+      <div class="hp_left_item"><h1 id="hp_tools" onclick="left_nav_slide(this)">&#160;</h1><div class="hp_left_content" id="hp_tools_content"><ul><li><a href="askus">Questions? Ask Us</a></li><li><a href="http://libguides.usask.ca/howdoi">How Do I?</a></li><li><a href="http://libguides.usask.ca">Research Guides</a></li><li><a href="http://libguides.usask.ca/citation">Cite Sources</a></li><li class="here">Student Learning </li><li class="menuCell"><ul><li><a href="http://library.usask.ca/studentlearning/academic-help/writing-help.php">Writing Help</a></li><li><a href="http://library.usask.ca/studentlearning/academic-help/math-stats-help.php">   Math Help</a></li><li><a href="http://library.usask.ca/studentlearning/academic-help/study-skills-help.php">Study Skills Help</a></li><li><a href="http://library.usask.ca/studentlearning/workshops/all-upcoming-events.php">Workshops</a></li></ul></li></ul></div><div class="hp_menu_bottom" id="hp_tools_bottom" ></div></div>
+      <div class="hp_left_item"><h1 id="hp_partners" onclick="left_nav_slide(this)">&#160;</h1><div class="hp_left_content" id="hp_partners_content"><ul><li><a href="info/index.php">Our Organization</a></li><li><a href="employment/index.php">Job Opportunities</a></li><li><a href="info/donors/index.php">Giving to the Library</a></li><li><a href="contactus/tellus.php">Comments? Tell Us</a></li><li><a href="contactus/index.php">Contact Us</a></li></ul></div><div class="hp_menu_bottom" id="hp_partners_bottom" ></div></div>
+      
+      
+      
+      <div id="hp_lm_other"><div id="hp_share" onclick="window.location='#'" ></div></div>
+    </div>
+
+    <div id="content-20-80">
+      <!-- <div id="hp_banner"> -->
+
+
+<div id="slide_container">
+  <div id="example">
+    <div id="slides">
+      <div class="slides_container" style="display: none;" >
+                  <div class="slide">
+            <a href="http://library.usask.ca/courtneymilne/wallpapers" target="_blank">
+              <img src="images/features/milnewallpaper.jpg" height="250" width="774" />
+            </a>
+            <div class="caption" style="bottom: 0">
+              <p>Visit the website and check out all the great options.</p>
+            </div>
+          </div>
+                  <div class="slide">
+            <a href="http://words.usask.ca/news/2016/02/09/u-of-s-partners-with-national-centre-for-truth-and-reconciliation/" target="_blank">
+              <img src="images/features/mou-signing-09022016" height="250" width="774" />
+            </a>
+            <div class="caption" style="bottom: 0">
+              <p>Ry Moran delivered the 2016 Dean's Research Lecture as part of the NCTR MOU signing.</p>
+            </div>
+          </div>
+                  <div class="slide">
+            <a href="http://library.usask.ca/archives/exhibitions-digital/exhibitions/60-years-of-educational-publishing-in-saskatchewan.php" target="_blank">
+              <img src="images/features/website banner2.jpg" height="250" width="774" />
+            </a>
+            <div class="caption" style="bottom: 0">
+              <p>Link Gallery Exhibit: February - April 2016</p>
+            </div>
+          </div>
+                  <div class="slide">
+            <a href="http://library.usask.ca/news/2016/university-library-aboriginal-internship.php" target="_blank">
+              <img src="images/features/AboriginalInternBanner.jpg" height="250" width="774" />
+            </a>
+            <div class="caption" style="bottom: 0">
+              <p>Applications accepted until April 30, 2016</p>
+            </div>
+          </div>
+                  <div class="slide">
+            <a href="http://libguides.usask.ca/LibraryResearcherSeries" target="_blank">
+              <img src="images/features/library_research_series.jpg" height="250" width="774" />
+            </a>
+            <div class="caption" style="bottom: 0">
+              <p>Free graduate research workshops offered in 2016!</p>
+            </div>
+          </div>
+              </div>
+      <a href="#" class="prev"><img src="images/arrow-prev.png" width="43" height="43" alt="Arrow Prev" /></a>
+      <a href="#" class="next"><img src="images/arrow-next.png" width="43" height="43" alt="Arrow Next" /></a>
+    </div>
+  </div>
+</div>
+
+
+<!-- </div> -->
+
+      <div id="content-3-menu">
+        
+        
+        
+        <div style="clear:both;" ></div>
+      </div>
+      
+      <div id="content-left">
+        <div class="hp_search stContainer" id="tabs">
+    <ul class="hp_search stContainer" id="tabs">
+    <li><a class="selected" href="#tabs-4" onClick="pageTracker._trackPageview('/homepage#tabs-4'); return false" rel="tabs-4">USearch</a></li>
+    <li><a href="#tabs-1" onClick="pageTracker._trackPageview('/homepage#tabs-1'); return false" rel="tabs-1">Catalogue</a></li>
+    <li><a href="#tabs-3" onClick="pageTracker._trackPageview('/homepage#tabs-3'); return false" rel="tabs-3">Articles &amp;   Databases</a></li>
+    <li><a href="#tabs-2" onClick="pageTracker._trackPageview('/homepage#tabs-2'); return false" rel="tabs-2">Research Guides</a></li>
+    </ul>
+    <span class="tabs_top"> </span>
+    <div class="tabcontent" id="tabs-1">
+        <form action="http://sundog.usask.ca/search/a?a" class="unpadded" id="search" method="get" name="search">
+        <strong>Search: </strong>
+        <select id="searchtype" name="searchtype">
+        <option selected="selected" value="Y">Word</option>
+        <option value="t"> Title</option>
+        <option value="a"> Author</option>
+        <option value="d"> Subject</option>
+        <option value="i"> ISBN/ISSN</option>
+        <option value="c"> LC Call Number</option>
+        <option value="m"> Dewey Call Number</option>
+        <option value="f"> Local Call Number</option>
+        </select>
+        <input name="SORT" type="hidden" value="D" />
+        <input maxlength="75" name="searcharg" size="40" style="background: #fff url(../images/icons/search_small.gif) no-repeat 3px 3px; ;padding-left: 16px;" />
+        <select name="searchscope">
+        <option value="2"> Electronic Resources</option>
+        <option value="3"> All Journal Titles</option>
+        <option value="4"> Music Recordings and Scores</option>
+        <option value="5"> Theses Collection</option>
+        <option value="7"> Audio Visual Collection</option>
+        <option selected="selected" value="8"> Entire Collection</option>
+        </select>
+        <input name="called_from" type="hidden" value="catalogue_home_tab" />
+        <input class="go_btn" onClick="pageTracker._trackPageview('/homepage#go');" type="submit" value="" />
+        </form>
+        <p class="see_also" style="margin-top:0em; margin-bottom: 0em;">
+        <a href="http://sundog.usask.ca/search/r">Course Reserves</a>
+        | <a href="http://sundog.usask.ca/search/X">Advanced Search</a>
+        | <a href="/new_resources/index.php">New Resources</a>
+        </p>
+    </div>
+
+<!-- Research Guides Tab: subject search for research guides -->
+
+     <div class="tabcontent" id="tabs-2">
+       <p style="margin-top:0em; margin-bottom: 1em;"><strong>Find guides for your topic:</strong></p>
+	 <!--  <br/> -->
+		<p style="text-indent: 2em; margin-top:1em; margin-bottom: 1em;"><strong> <a href="http://libguides.usask.ca">→ By Subject</a></strong> <i>(Agriculture, Anthropology... Veterinary Medicine)</i></p>
+		<p style="text-indent: 2em; margin-top:1em; margin-bottom: 1em;"><strong> <a href="http://libguides.usask.ca/#topics">→ By Topic</a></strong> <i>(Copyright, Data &amp; Statistics, Open Access, Patents...)</i> </p>
+    </div>
+
+    
+<!-- Articles and Databases Tab: database name search, link to A to Z, link to search journal title page -->
+    <div class="tabcontent" id="tabs-3">
+       <p style="margin-top:0em; margin-bottom: 0.5em;"><strong>A. Need Articles?</strong></p>
+
+<p style="text-indent: 2em; margin-top:0.5em; margin-bottom: 0.5em; float: left;"><strong>→ Enter database name</strong></p>
+<!-- SpringShare JS search -->
+ <script>
+springshare_widget_config_1441061681360 = {  };
+</script>
+<div id="s-lg-widget-1441061681360"></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=864&widget_type=7&widget_embed_type=1&output_format=1&search_box_type=2&placeholder_text=Search+by+database+name&button_text=Go&widget_height=&widget_width=250&config_id=1441061681360";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1441061681360");</script>
+	
+
+<!-- end SpringShare JS search -->
+	<p style="text-indent: 2em; margin-top:0.5em; margin-bottom: 0.5em;"><strong><a href="http://libguides.usask.ca/az.php">→ Find a database recommended for your subject </a></strong></p>
+	<hr />
+	<p style="margin-top:0.5em; margin-bottom: 0em;"><strong>B.   <a href="http://library.usask.ca/find/ejournals/index.php"> → Find journals &amp; e-journals</a></strong></p>
+    </div>
+<!-- USearch Tab -->
+    <div class="tabcontent" id="tabs-4">
+
+        <style media="screen" type="text/css">
+            .defaultText { width: 400px; }
+            .default { color: #a1a1a1; font-style: italic; }
+        </style>
+
+        <script src="/includes/usearch.js" type="text/javascript" ></script>
+
+        <a alt="USearch" href="http://library.usask.ca/usearch" title="USearch"><img src="/images/usearch.png" style="padding-bottom:7px;" /></a>
+
+        <form accept-charset="utf-8" action="http://usl-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/search.do?" method="get" name="USearch">
+
+            <input name="fn" type="hidden" value="search" />
+            <input name="dscnt" type="hidden" value="0" />  
+            <input name="frbg" type="hidden" value="" />  
+            <input name="ct" type="hidden" value="search" /> 
+            <input name="vid" type="hidden" value="USASK" /> 
+            <input name="indx" type="hidden" value="1" /> 
+            <input name="dum" type="hidden" value="true" /> 
+
+            <input name="srt" type="hidden" value="rank" /> 
+
+            <input name="tab" type="hidden" value="default_tab" /> 
+            <input name="mode" type="hidden" value="Basic" /> 
+            <input name="scp.scps" type="hidden" value="scope:(USASKGRP),primo_central_multiple_fe" /> 
+            <input accept-charset="utf-8" class="defaultText" name="vl(freeText0)" size="50" style="background: #fff url(../images/icons/search_small.gif) no-repeat 3px 3px; padding-left: 16px;" title="USearch for articles, journals, books, theses, images..." type="text" value="" /> 
+            <input name="called_from" type="hidden" value="usearch_home_tab" />
+
+            <input name="Search" onClick="pageTracker._trackPageview('/homepage#usearch');" title="Search" type="submit" value="Search" />
+
+        </form>
+        <p style="padding-bottom:5px;">
+
+        <a href="http://usl-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/search.do?mode=Advanced&amp;vid=USASK" style="float:left;font-size: 90% !important;padding: 0 5px 5px 5px !important;text-align: left !important;margin-top:0em; margin-bottom: 0em;">Advanced Search</a>
+
+
+ <!--       <span style="float:right;font-size: 90% !important;padding: 0 5px 5px 5px !important;text-align: right !important;margin-top:0em; margin-bottom: 0em;"><a href="http://sundog.usask.ca/search/r">Course Reserves</a> | 
+      <a href="/collections.php">Other Collections and Catalogues</a> 
+        </span> -->
+        </p>
+    </div>
+
+    <span class="tabs_bottom"> </span>
+</div>
+
+<script type="text/javascript">
+    var countries=new ddtabcontent("tabs")
+    countries.setpersist(true)
+    countries.setselectedClassTarget("link") //"link" or "linkparent"
+    countries.init()
+</script>
+
+        <div class="hp_center_item">
+        <h1 id="hp_news"> </h1>
+        <div class="hp_center_content" id="news_events">
+            
+<div class="articleEntry"><div class="ArticleTitle"><a href="http://library.usask.ca/news/2016/university-library-aboriginal-internship.php" target="_blank">University Library Aboriginal Internship</a></div><div class="articleDescription" id="ad_1"><p>The University of Saskatchewan envisions our university to be one of Canada&#8217;s most distinguished, with a global impact in selected areas of academic pre-eminence. The university&#8217;s Third Integrated Plan, Promise and Potential, describes the university-wide strategies we will follow over the next four years to advance our academic priorities. This Plan articulates four areas of focus; knowledge creation, Aboriginal engagement, culture and community, and innovation in academic programs and services. Pervasive throughout the Plan is the impetus to promote, develop and enhance our institutional strengths in Aboriginal outreach and engagement.</p>
+<p>To support the university&#8217;s strategic directions, the University Library in its Strategic Plan has identified several strategies to engage with and support the Aboriginal community, one of which is centered on growing the pool of Aboriginal people qualified as information / knowledge managers in the province.</p>
+<p>The University Library Aboriginal Internship is envisioned to provide a unique educational and experiential opportunity for an Aboriginal person (First Nations, M&#233;tis, or Inuit) in the field of knowledge management, broadly understood as the process of strategically and critically defining, protecting, classifying and disseminating information within an organization to facilitate richer understanding and decision-making.</p>
+<p>An Aboriginal university graduate will have the opportunity to work at, and learn about the complexities of, an academic library WHILE pursuing a fully-funded Master&#8217;s degree in Library and Information Science (MLIS) or a Masters in Knowledge Management (MKM).*</p>
+<p>Features of this three year internship include:</p>
+<p style="margin-left: 30px;">&#8226; a part-time salaried position, undertaking various duties within the University Library including research and relevant project work<br />&#8226; tuition paid for an online Master&#8217;s degree program<br />&#8226; mentorship by selected librarians and library employees<br />&#8226; the opportunity to learn about the work, culture, and complexities of information management in an academic library<br />&#8226; opportunities to engage the wider community in research and experiential activities<br />&#8226; a return-of-service is not required at the completion of the internship</p>
+<p>Outcomes of the University Library Aboriginal Internship include:</p>
+<p style="margin-left: 30px;">&#8226; the intern will acquire a Master&#8217;s degree**, as well as valuable professional experience, positioning him/her to be successful in obtaining work in the field of information management<br />&#8226; the intern will build and enhance their own competencies through mentorship provided by the University Library<br />&#8226; through their work and studies, the intern will engage the wider university and Aboriginal communities in conversations about librarianship and information management<br />&#8226; the internship will raise the profile of Aboriginal programming on campus</p>
+<p>The University Library Aboriginal Internship is anticipated to commence on July 1, 2016, however this date is negotiable.</p>
+<p><strong>Expressions of Interest:</strong></p>
+<p><br />For more information or to express interest in this internship, contact Jill Mierke, Director of Human Resources, University Library &#8211; <a href="mailto:jill.mierke@usask.ca">jill.mierke@usask.ca</a> or 306-966-5930. Expressions of interest will be accepted until April 30, 2016 and must include:</p>
+<p style="margin-left: 30px;">&#8226; a two-page (maximum) essay highlighting why the internship would be of benefit to the intern and the aboriginal community<br />&#8226; a resume<br />&#8226; official post-secondary transcripts***</p>
+<hr style="width: 85%;" width="85%" />
+<div style="text-align: center;" ></div>
+<p style="margin-left: 30px;" ></p>
+<p><em>* Knowledge Management (KM) comprises a range of strategies and practices used in an organization to identify, create, represent, distribute, and enable adoption of insights and experiences. Knowledge management efforts typically focus on organizational objectives such as improved performance, competitive advantage, innovation, the sharing of lessons learned, integration and continuous improvement of the organization.</em></p>
+<p><em>KM includes courses taught in the fields of business administration, information systems, management, and library and information sciences. More recently, other fields have started contributing to KM research, including information and media, computer science, public health, and public policy. Many large companies and non-profit organizations have resources dedicated to internal KM efforts, often as a part of their business strategy, information technology, or human resource management departments.</em></p>
+<p><em>**There are several accredited North American universities offering MLIS studies at a distance; the Masters program will be selected by the Dean of the University Library and the intern.</em></p>
+<p><em>***GPA is a criteria for admission to all library schools and will be a factor taken into account when selecting an intern.</em></p></div><div class='articleReadMore' id=rm_1 onclick='expand_news_item(this)'>Read More</div><div class='articleReadLess' onclick='contract_news_item(this)'>&#160;</div><script type="text/javascript">check_news_size('ad_1','rm_1');</script></div><div class="articleHeader">Posted in <a href="/news/education.php">Education and Music</a>, <a href="/news/engineering.php">Engineering</a>, <a href="/news/hsl.php">Health Sciences</a>, <a href="/news/law.php">Law</a>, <a href="/news/murray.php">Murray</a>, <a href="/news/science.php">Science</a>, <a href="/news/vetmed.php">Veterinary Medicine</a> on March 3</div><br/><div class="articleEntry"><div class="ArticleTitle"><a href="http://library.usask.ca/news/2016/high-school-art-on-display.php" target="_blank">High School Art on Display</a></div><div class="articleDescription" id="ad_2"><div class="articleImage"><img src="http://library.usask.ca/images/news/murray/High_school_art/oskayak4.jpg" alt="High School Art on Display" /></div><p>Have you noticed the new works of art hanging on the walls and pillars of the first floor of the Murray Library? These art pieces are being displayed as part of a new partnership between the University Library, SESD Undergraduate Recruitment, and local Saskatoon high schools.</p>
+<p>Students from the visual arts program at Oskayak High School were the first ones invited to produce artwork for the library. Each of their 14 pieces has been framed, and the artists' profiles were written by the students themselves. These art pieces will remain in the library until the end of December 2016. The expectation is that next Fall, another high school art department will be approached and invited to submit art for the same time next year. &#160;</p>
+<p>Congratulations to the Oskayak students for all their hard work! Their art helps to make the Murray Library a more beautiful and welcoming place.&#160;</p>
+<p style="text-align: center;"><img alt="" height="174" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak1.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="500" />Artists: Trey Seessquasis (L) and Maggie Eastman (R)</p>
+<p style="text-align: center;"><img alt="" height="374" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak2.jpg" width="500" /><br />Artist: Shaenah Lee Montgrand</p>
+<p style="text-align: center;"><img alt="" height="434" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak3.jpg" width="500" /><br />Artist: Lucy McGillivary</p>
+<p style="text-align: center;"><img alt="" height="230" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak4.jpg" width="500" /><br />Artists: Kionna Nicotine (L), Caitlyn Ahenakew (C), and Anonymous (L)</p>
+<p style="text-align: center;"><img alt="" height="306" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak5.jpg" width="500" /><br />Artists: Keshaun Kiskotagan (L) and Robyn Sugar (R)</p>
+<p style="text-align: center;"><img alt="" height="500" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak6.jpg" width="500" /><br />Artists: Kaylene Whitstone (L) and Rochelle Cote Crookedneck (R)</p>
+<p style="text-align: center;"><img alt="" height="570" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak7.jpg" width="500" /><br />Artist: Octavia Bree McKay</p>
+<p style="text-align: center;"><img alt="" height="555" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak8.jpg" width="500" /><br />Artist: Samantha Cameron</p>
+<p style="text-align: center;"><img alt="" height="578" src="http://library.usask.ca/images/news/murray/High_school_art/oskayak9.jpg" width="500" /><br />Artist: Raquel Robillard</p></div><div class='articleReadMore' id=rm_2 onclick='expand_news_item(this)'>Read More</div><div class='articleReadLess' onclick='contract_news_item(this)'>&#160;</div><script type="text/javascript">check_news_size('ad_2','rm_2');</script></div><div class="articleHeader">Posted in <a href="/news/murray.php">Murray</a> on March 2</div><br/><div class="articleEntry"><div class="ArticleTitle"><a href="http://library.usask.ca/news/2016/freedom-to-read-at-the-library.php" target="_blank">Freedom to Read at the Library</a></div><div class="articleDescription" id="ad_3"><div class="articleImage"><img src="http://library.usask.ca/images/news/murray/FTRW2016-banner-EN-155x300.jpg" alt="Freedom to Read at the Library" /></div><p>Throughout our country's history, Canadians have tried to ban books and magazines that they believe are offensive or inappropriate. These challenges to our intellectual freedom have sometimes been successful and sometimes not.</p>
+<p>February 21st to 27th 2016 is<strong> Freedom to Read Week</strong> in Canada.&#160;"Freedom to Read Week is an annual event that encourages Canadians to think about and reaffirm their commitment to intellectual freedom, which is guaranteed to them under the Charter of Rights and Freedoms."&#160;</p>
+<p>Visit the 1st floor of the Murray Library (by the Research Help Desk) to see our&#160;display showcasing books from our collection that have been banned or challenged in Canada. There are a multitude of reasons why these books have been challenged, such as claims of nudity and sexual content, political content, racist or insensitive language, feminist ideas, obscene language,&#160;depictions of graphic violence, or biased views. Even if these claims may be valid, there are also a multitude of reasons why these books should remain available to the public. E<span>xposing people to a wide spectrum of opinions and values, and providing them with the tools to think critically about divisive issues, allows them to make informed decisions about their own systems of beliefs.&#160;</span><span><br /></span></p>
+<p>We will also be sharing articles and examples of challenged books every day during Freedom to Read Week on the&#160;<a href="https://www.facebook.com/Murray.Library.UofS">Murray Library Facebook page</a>.</p>
+<p>Content for this news post has been taken from the&#160;<a href="http://www.freedomtoread.ca/">Freedom to Read website</a>. Visit the site&#160;for more information, including in-depth articles, resources, and to view their very long&#160;<a href="http://www.freedomtoread.ca/censorship-in-canada/challenged-works-list/#.VOdZZHzF9I4">list of works that have been challenged in Canadian libraries.</a></p></div><div class='articleReadMore' id=rm_3 onclick='expand_news_item(this)'>Read More</div><div class='articleReadLess' onclick='contract_news_item(this)'>&#160;</div><script type="text/javascript">check_news_size('ad_3','rm_3');</script></div><div class="articleHeader">Posted in <a href="/news/education.php">Education and Music</a>, <a href="/news/engineering.php">Engineering</a>, <a href="/news/hsl.php">Health Sciences</a>, <a href="/news/law.php">Law</a>, <a href="/news/murray.php">Murray</a>, <a href="/news/science.php">Science</a>, <a href="/news/vetmed.php">Veterinary Medicine</a> on February 19</div><br/><a class="subscribe" href="/news/featured.xml"></a><a class="more_news_btn" href="/news/"></a>
+
+        </div>
+        <div class="hp_center_bottom" ></div>
+    </div>
+      </div>
+      <div id="content-right">
+        <div class="hp_right_item nocontent"><h1 id="hp_views" onclick="left_nav_slide(this)">&#160;</h1><div class="hp_right_content" id="hp_views_content"><select id="ql_select" name="ql_select" style="width:97%; margin-bottom: 5px;"><option value="">Choose...</option><option value="Undergraduate_Students">Undergraduate Students</option><option value="Graduate_Students">Graduate Students</option><option value="Off-Campus_Students">Distance Learners</option><option value="Faculty_and_Staff">Faculty and Staff</option><option value="Patrons_with_Disabilities">Students with Disabilities</option><option value="Alumni">Alumni</option></select><br clear="all" /><div class="leftMenu" id="Undergraduate_Students_ql" style="display:none;"><ul><li><a href="http://libguides.usask.ca/howdoi">How Do I?</a></li><li><a href="http://www.usask.ca/learningcommons/planner.php">Research Paper Planner</a></li><li><a href="http://libguides.usask.ca/citation">Cite Sources</a></li><li><a href="info/services/borrowing/student.php">Borrowing Information</a></li><li><a href="http://library.usask.ca/info/services/borrowing/respol.php">Course Reserves</a></li><li><a href="http://library.usask.ca/interlibrary-loan/index.php">Interlibrary Loan</a></li><li><a href="info/services/study-rooms.php">Group Study Rooms</a></li><li><a href="info/services/borrowing/laptop.php">Laptop Lending</a></li><li><a href="http://library.usask.ca/studentlearning/academic-help/writing-help.php">Writing Help</a></li><li><a href="http://library.usask.ca/studentlearning/academic-help/math-stats-help.php">Math &amp; Stats Help</a></li><li><a href="http://libguides.usask.ca/tours">Library Tours</a></li></ul></div><div class="leftMenu" id="Graduate_Students_ql" style="display:none;"><ul><li><a href="http://library.usask.ca/liaisons_temp.php">Librarians by College &amp; School</a></li><li><a href="http://libguides.usask.ca/citation/managing_references">Managing References</a></li><li><a href="research.php">Supporting Research</a></li><li><a href="http://libguides.usask.ca/FindingTheses">Find Theses &amp; Dissertation</a></li><li><a href="http://www.usask.ca/cgsr/for_students/thesis.php">Preparing Theses &amp; Dissertations</a></li><li><a href="http://libguides.usask.ca/copyright">Copyright</a></li><li><a href="info/services/borrowing/faculty.php">Borrowing Information</a></li><li><a href="http://library.usask.ca/interlibrary-loan/index.php">Interlibrary Loan</a></li><li><a href="recommend_purchase.php">Request a Purchase</a></li><li><a href="http://library.usask.ca/info/services/borrowing/respol.php">Put Items On Reserve</a></li><li><a href="http://libguides.usask.ca/gradhelp">Grad Help Guide </a></li></ul></div><div class="leftMenu" id="Off-Campus_Students_ql" style="display:none;"><ul><li><a href="offcampus/index.php">Distance &amp; Distributed Library Services</a></li><li><a href="offcampus/registerForDDLS.php">Register for DDLS</a></li><li><a href="murray/offcampus/materialReqForm.php">Request Articles</a></li><li><a href="murray/offcampus/index.php">Murray DDLS</a></li><li><a href="http://libguides.usask.ca/content.php?pid=410510">Education DDLS</a></li><li><a href="hsl/offcampus.php">Health Sciences DDLS</a></li><li><a href="murray/offcampus/faq.php">Frequently Asked Questions</a></li><li><a href="http://www.usask.ca/learningcommons/planner.php">Research Paper Planner</a></li><li><a href="http://libguides.usask.ca/howdoi">Research Guides</a></li><li><a href="http://library.usask.ca/interlibrary-loan/index.php">Interlibrary Loan</a></li><li><a href="info/services/borrowing/reciprocal.php">Reciprocal Borrowing</a></li></ul></div><div class="leftMenu" id="Faculty_and_Staff_ql" style="display:none;"><ul><li><a href="info/services/borrowing/respol.php#Instructors">Put Items on Reserve</a></li><li><a href="http://library.usask.ca/liaisons_temp.php">Librarians by College &amp; School</a></li><li><a href="research.php">Supporting Research</a></li><li><a href="new_resources">New Resources</a></li><li><a href="http://library.usask.ca/interlibrary-loan/index.php">Interlibrary Loan</a></li><li><a href="recommend_purchase.php">Request a Purchase</a></li><li><a href="http://libguides.usask.ca/FindingTheses">Find Theses &amp; Dissertations</a></li><li><a href="http://libguides.usask.ca/citation/managing_references">Managing References</a></li><li><a href="http://libguides.usask.ca/copyright">Copyright </a></li><li><a href="info/services/borrowing/faculty.php">Borrowing Information</a></li></ul></div><div class="leftMenu" id="Patrons_with_Disabilities_ql" style="display:none;"><ul><li><a href="http://library.usask.ca/dss">Services for Students with Disabilities</a></li></ul></div><div class="leftMenu" id="Alumni_ql" style="display:none;"><ul><li><a href="http://alumni.usask.ca/benefits/alumni_card.php">Alumni Card</a></li><li><a href="http://library.usask.ca/alumni/borrowing.php">Borrowing Privileges</a></li><li><a href="http://library.usask.ca/alumni/offcampus.php">Access to E-Resources</a></li><li><a href="info/donors/index.php">Gifts &amp; Donations</a></li><li><a href="http://alumni.usask.ca/association">Alumni Association</a></li><li><a href="http://www.usask.ca/100/alumni/index.php">Alumni of Influence</a></li></ul></div></div><div class="hp_menu_bottom" id="hp_views_bottom" ></div></div>
+        <div class="hp_right_item">
+<h1 id="hp_calendar" onclick="left_nav_slide(this)"> </h1>
+<div class="hp_right_content" id="hp_calendar_content">
+
+<div class="hours-events-date">Wednesday, March 16</div>
+<div class="hours-event">
+<div class="hours-events-event">Ovid MEDLINE</div>
+<div class="hours-events-location">Health Sciences Library</div>
+<div class="hours-events-time">1pm - 2pm</div>
+</div>
+<div class="hours-events-date">Friday, March 18</div>
+<div class="hours-event">
+<div class="hours-events-event">Introduction to NVIVO </div>
+<div class="hours-events-location">Room 161, Murray LIbrary</div>
+<div class="hours-events-time">1pm - 3pm</div>
+</div>
+<div class="hours-events-full"><a href="/calendar.php"><img src="/images/silk/icons/calendar_view_day.png" alt="" /> Full calendar...</a></div>
+</div>
+<div class="hp_menu_bottom" id="hp_calendar_bottom" ></div>
+</div>
+        
+<script type="text/javascript">document.getElementById("ql_select").options[1].selected=true;</script><script type="text/javascript">document.getElementById("Undergraduate_Students_ql").style.display="block";</script>
+
+
+        
+        
+        
+      </div>
+    </div>
+    <br clear="all" />
+    <div class="hp_right_item" style="bottom: 0; right:0; position: absolute; width: 205px; margin-bottom: -8px;">
+<h1 id="hp_ask_us" onclick="left_nav_slide(this)"> </h1>
+<div class="hp_right_content" id="hp_ask_us_content">
+<iframe src="https://us.libraryh3lp.com/chat/askus_im@chat.libraryh3lp.com?sounds=true&amp;skin=15840" frameborder="1" style="border: 1px solid #999999; width: 180px; height: 350px;"></iframe>
+</div>
+<div class="hp_menu_bottom" id="hp_ask_us_bottom" ></div>
+</div> 
+  </div>
+</div>
+<div id="footer">
+  
+  <div id="info_footer"><div id="info_footer_content"><div class="info_footer_slider" id="info_footer_left"><img align="middle" height="68" id="info_footer_title_img" src="images/layout/footer/footer_image.png" width="176" /></div>
+
+<div class="info_footer_slider" id="info_footer_mid">
+  <table id="info_footer_table">
+    <tr>
+      <td valign="middle" width="48%">
+  <p><a class="info_footer_link" href="#" id="if1">Education &amp; Music</a></p>
+    <p><a class="info_footer_link" href="#" id="if2">Engineering</a></p>
+    <p><a class="info_footer_link" href="#" id="if3">Health Sciences</a></p>
+    <p><a class="info_footer_link" href="#" id="if4">Interlibrary Loan</a></p>
+    <p><a class="info_footer_link" href="#" id="if5">Law</a></p>
+  </td><td>
+  <p><a class="info_footer_link" href="#" id="if6">Murray</a></p>
+    <p><a class="info_footer_link" href="#" id="if7">Science</a></p>
+    <p><a class="info_footer_link" href="#" id="if8">Student Learning Services</a></p>
+    <p><a class="info_footer_link" href="#" id="if9">University Archives & Special Collections</a></p>
+    <p><a class="info_footer_link" href="#" id="if10">Vet Med</a></p>
+        </td>
+    </tr>
+  </table>
+</div>
+
+<div class="info_footer_slider" id="info_footer_right">
+  <div class="info_footer_text" id="if1-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Thursday:&nbsp;</td><td align="center">8:00am - 8:00pm</td></tr>
+<tr><td>Friday:&nbsp;</td><td align="center">8:00am - 5:00pm</td></tr>
+<tr><td>Saturday:&nbsp;</td><td align="center">10:00am - 5:00pm</td></tr>
+<tr><td>Sunday:&nbsp;</td><td>Closed</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c5495c1480e9c1d4466a372860c2c304">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c5495c1480e9c1d4466a372860c2c304">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=educ">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:uaskeduc@library.usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if2-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Thursday:&nbsp;</td><td align="center">8:30am - 8:00pm</td></tr>
+<tr><td>Friday:&nbsp;</td><td align="center">8:30am - 6:00pm</td></tr>
+<tr><td>Saturday:&nbsp;</td><td align="center">Closed</td></tr>
+<tr><td>Sunday:&nbsp;</td><td>12:00pm - 6:00pm</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c53cc19b80e9c1d4466a3728d204dd4a">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c53cc19b80e9c1d4466a3728d204dd4a">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=engin">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:uaskengi@library.usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if3-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Thursday:&nbsp;</td><td align="center">8:00am - 10:00pm</td></tr>
+<tr><td>Friday:&nbsp;</td><td align="center">8:00am - 6:00pm</td></tr>
+<tr><td>Saturday:&nbsp;</td><td align="center">10:00am - 6:00pm</td></tr>
+<tr><td>Sunday:&nbsp;</td><td>12:00pm - 8:00pm</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c543a9af80e9c1d4466a372893cf1371">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c543a9af80e9c1d4466a372893cf1371">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=hsl">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:uaskhsl@library.usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if4-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday:&nbsp;</td><td align="center">8:00am - 4:30pm</td></tr>
+<tr><td>Tuesday - Sunday:&nbsp;</td><td>Closed</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c532912980e9c1d4466a37285051c6cf">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c532912980e9c1d4466a37285051c6cf">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:illquery@library.usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if5-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Thursday:&nbsp;</td><td align="center">8:00am - 10:00pm</td></tr>
+<tr><td>Friday:&nbsp;</td><td align="center">8:00am - 5:00pm</td></tr>
+<tr><td>Saturday:&nbsp;</td><td align="center">10:00am - 5:00pm</td></tr>
+<tr><td>Sunday:&nbsp;</td><td>12:00pm - 8:00pm</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c536e35a80e9c1d4466a37282430a2f1">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c536e35a80e9c1d4466a37282430a2f1">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=law">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:uasklaw@library.usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if6-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Thursday:&nbsp;</td><td align="center">8:00am - 11:00pm</td></tr>
+<tr><td>Friday:&nbsp;</td><td align="center">8:00am - 9:00pm</td></tr>
+<tr><td>Saturday:&nbsp;</td><td align="center">10:00am - 9:00pm</td></tr>
+<tr><td>Sunday:&nbsp;</td><td>10:00am - 11:00pm</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c532912980e9c1d4466a37285051c6cf">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c532912980e9c1d4466a37285051c6cf">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=murray">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:uaskref@library.usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if7-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Thursday:&nbsp;</td><td align="center">8:00am - 8:00pm</td></tr>
+<tr><td>Friday:&nbsp;</td><td align="center">8:00am - 5:00pm</td></tr>
+<tr><td>Saturday:&nbsp;</td><td align="center">Closed</td></tr>
+<tr><td>Sunday:&nbsp;</td><td>12:00pm - 5:00pm</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c546ccaa80e9c1d4466a37286f198ff9">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c546ccaa80e9c1d4466a37286f198ff9">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=science">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:uasksci@library.usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if8-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Friday:&nbsp;</td><td align="center">9:00am - 4:30pm</td></tr>
+<tr><td>Saturday - Sunday:&nbsp;</td><td>Closed</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c532912980e9c1d4466a37285051c6cf">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c532912980e9c1d4466a37285051c6cf">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=murray">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:studentlearning@usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if9-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Tuesday:&nbsp;</td><td align="center">8:30am - 4:30pm</td></tr>
+<tr><td>Wednesday:&nbsp;</td><td align="center">Closed</td></tr>
+<tr><td>Thursday - Friday:&nbsp;</td><td align="center">8:30am - 4:30pm</td></tr>
+<tr><td>Saturday - Sunday:&nbsp;</td><td>Closed</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c532912980e9c1d4466a37285051c6cf">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c532912980e9c1d4466a37285051c6cf">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=murray">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:ua.sc@usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+    <div class="info_footer_text" id="if10-p">
+    <div class="vertical_align">
+     <table cellpadding="0" cellspacing="0">
+       <tr><td>Monday - Thursday:&nbsp;</td><td align="center">8:00am - 7:00pm</td></tr>
+<tr><td>Friday:&nbsp;</td><td align="center">8:00am - 4:00pm</td></tr>
+<tr><td>Saturday - Sunday:&nbsp;</td><td>Closed</td></tr>
+     </table>
+    </div>
+    <div class="vertical_align">
+      <table cellpadding="0" cellspacing="0">
+        <!--<tr><td class="footer_location" valign="middle"><a href="/maps/?id=c541729580e9c1d4466a37287d4e8ee2">Maps and Directions</a></td></tr>-->
+        <tr><td class="footer_location" valign="middle"><a href="http://www.usask.ca/maps/?id=c541729580e9c1d4466a37287d4e8ee2">Map and Address</a></td></tr>
+        <tr><td class="footer_holiday_schedule" valign="middle"><a href="/hours.php?branch=vetmed">View Detailed Hours</a></td></tr>
+        <tr><td class="footer_contact" valign="middle"><a href="mailto:vetlib@library.usask.ca">Contact</a></td></tr>
+      </table>
+    </div>
+  </div>
+  </div>
+
+</div></div><div id="info_footer_lower"><div id="info_footer_address"><h1>University Library<br /></h1>
+<p>Room 156 Murray Building<br />
+			3 Campus Drive<br />
+			Saskatoon SK S7N 5A4<br />
+			CANADA</p></div><div id="info_footer_quote"><div id="left_quote">&#160;</div><div id="right_quote">&#160;</div>
+<p class="footer_quote">Literature adds to reality, it does not simply describe it. It enriches the necessary competencies that daily life requires and provides; and in this respect, it irrigates the deserts that our lives have already become.</p><p class="footer_quote_author">- C. S. LEWIS (1898-1963)</p></div><div id="footer_uofs"><div class="wrapper"><div id="footer-uofs"><a href="http://www.usask.ca" title="University of Saskatchewan"><img alt="University of Saskatchewan" src="//library.usask.ca/homepage/images/icons/uofs-logo-grey.png" /></a><p>105 Administration Place<br />
+Saskatoon, SK, Canada</p></div><ul id="footer-nav"><li class="footer-maps"><a href="http://www.usask.ca/maps/">Maps</a></li><li><a href="http://www.usask.ca/disclaimer.php">Disclaimer</a></li><li><a href="http://www.usask.ca/privacy.php">Privacy</a></li>
+</ul><p id="copyright">&#169; University of Saskatchewan</p></div></div></div><script type="text/javascript">
+    var _gaq = _gaq || [];
+    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    _gaq.push(['_setAccount', 'UA-9373084-7']);
+    _gaq.push(['_setDomainName', 'usask.ca']);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript"> 
+  (function() {
+    var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
+    x.src = "https://us.libraryh3lp.com/js/libraryh3lp.js?multi";
+    var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
+  })();
+</script>
+</div>
+</body>
+</html>

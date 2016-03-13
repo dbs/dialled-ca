@@ -1,0 +1,1763 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <title>Bibliothèque du Jardin botanique de Montréal </title>
+                <meta property="og:title" content="Bibliothèque du Jardin botanique de Montréal" /><meta property="og:description" content="..." />
+            <link rel="icon" href="./img/fav.ico" type="image/x-icon" />
+            <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" href="/in/wro/base.css" />
+        <link rel="stylesheet" href="/in/assets/plugins/select2/select2_metro.css" />
+
+        <script type="text/javascript" src="/in/wro/jq.js"></script>
+
+        <script type="text/javascript" src="/in/js/jq/rating2/jquery.ui.stars.js"></script>
+
+
+        <script type="text/javascript" src="/in/js/app/body.js"></script>
+
+        <script type="text/javascript" src="/in/js/jq/jquery.modernizr.js"></script>
+        <script type="text/javascript" src="/in/js/jq/alertify/alertify.min.js"></script>
+        <script type="text/javascript" src="/in/assets/plugins/select2/select2.min.js"></script>
+
+        <script type="text/javascript" src="/in/resources/js/controls/annotationDisplay.js"></script>
+
+        <script type="text/javascript" src="/in/js/app/bizLogic.js"></script>
+        <script type="text/javascript" src="/in/js/app/mjuc.js"></script>
+        <script type="text/javascript" src="/in/js/app/mjuc_ext_cc.js"></script>
+        <script type="text/javascript" src="/in/js/app/mjuc_ext_jquery.js"></script>
+        <script type="text/javascript" src="/in/js/app/playlistbar_share.js"></script>
+
+        <script type="text/javascript" src="/in/js/app/body.js"></script>
+
+    <script type="text/javascript" src="/in/js/app/crumbtrail.js"></script>
+    
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        var serviceRoot = "/in/rest/";
+            crumbManager.treetop = "skin";
+            crumbManager.locale = "fr";
+        //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="/in/rest/skin/types.css" />
+
+        <script type="text/javascript">
+            //<![CDATA[
+            locale = "fr";
+            var contextPath = "/in";
+            //]]>
+        </script>
+
+                    <script type="text/javascript" src="/in/js/jq/jquery.s3Slider.js"></script>
+                    
+                    <script type="text/javascript">
+                        //<![CDATA[
+                            $(function() {
+                                var serviceRoot = "/in/rest/";
+                                var serviceUrl = document.location.protocol + "//" + document.location.host
+                                    + serviceRoot + "TreeSVC/JSONPTreeLevel/?callback=?";
+                                var locale = "fr";
+                                //hard coded for now
+                                var namedInstance = "HomePage";
+
+                                jQuery.getJSON(
+                                    serviceUrl,
+                                    { name: namedInstance,depth:1, locale:locale },
+                                    function(data) {
+                                        if(data == null || data.children == null) return;
+
+                                        var width = data.summary.properties.width;
+                                        var height = data.summary.properties.height;
+                                        var timer = data.summary.properties.timer;
+                                        var htmlcontent= data.summary.properties.htmlcontent;
+
+                                        var title = data.title;
+
+                                        $("#slider").css("width", width).css("height", height);
+                                        $("#sliderContent").css("width", width);
+
+                                        $('#title').html(title);
+                                        $('#htmlcontent').html(htmlcontent);
+
+                                        jQuery.each(data.children, function(i,item){
+
+                                            var thmbUrl = serviceRoot + "Thumb/thumb_"+item.id+".jpg";
+                                            var thmbTitle = item.title;
+                                            var legend = item.summary.properties.ImageLegend;
+                                            var orientation = item.summary.properties.LegendOrientation;
+
+                                            $('<li class="sliderImage"><img src="'
+                                                + thmbUrl + '" width="' + width + '" height="'
+                                                + height + '" alt="' + thmbTitle
+                                                + '" /><span class="' + orientation + '">'
+                                                + legend + '</span></li>').appendTo($('#sliderContent'));
+                                        });
+
+                                        $(".sliderImage > .left, .sliderImage >  .right")
+                                            .css("height", height);
+                                        $(".sliderImage > .top, .sliderImage >  .bottom")
+                                            .css("width", width);
+
+                                        $('#slider').s3Slider({
+                                            timeOut: timer
+                                        });
+                                    });
+                            });
+                        //]]>
+                    </script>
+                    <style type="text/css">
+                        div.menuItem { font-weight:bold; }
+                        div.menuItem div { width: 158px; height: 159px; cursor:pointer; }
+                        div.logo { width:100%; height:100%; padding:5px; /*border:1px solid #000;*/}
+                        div#crumbtrail { display:none; }
+                        div#content { margin-top:10px; }
+
+                        #slider { position: relative; overflow: hidden; }
+                        #sliderContent { position: absolute; top: 0; margin-left: 0; }
+                        .sliderImage { float: left; position: relative; display: none; }
+                        .sliderImage span { position: absolute; font-size: 14px; font-weight: bold; padding: 10px 13px; background-color: #000; filter: alpha(opacity=70); -moz-opacity: 0.7; -khtml-opacity: 0.7; opacity: 0.7; color: #fff; display: none; }
+                        .sliderImage .top { top: 0; left: 0; }
+                        .sliderImage .bottom { bottom: 0; left: 0; }
+                        .sliderImage .left { top: 0; left: 0; width: 110px !important; }
+                        .sliderImage .right { right: 0; top: 0; width: 110px !important; }
+                    </style>
+                    <style type="text/css">
+                        div#crumbtrail { display:none; }
+                    </style>
+
+        <script type="text/javascript" src="/in/js/mondoinPageApi.js"></script>
+        <script type="text/javascript">
+        //<![CDATA[
+            var formatDateSiteOptions = "dd/MM/yyyy".toLowerCase().replace('yyyy', 'yy');
+
+            var add_panier_label = "Ajouter";
+            var del_panier_label = "Effacer";
+            var jsCheckEnabled = ("false" == "true");
+            
+            (function(a){
+                var firstName = "";
+                var lastName = "";
+                a.currentUserCookie = "";
+                if(firstName != "") {
+                    a.currentUserCookie = firstName;
+                }
+                if(lastName != "") {
+                    a.currentUserCookie += "@" + lastName;
+                }
+                a.sessionBasedSkin = "false";
+                a.currentUserDisplay = " ";
+                a.currentUser = "";
+                a.currentBasket = "default";
+                a.currentLocale = "fr";
+                a.registerPage = "register.xhtml";
+                a.redirectAfterChangeBasket = "false";
+                a.userLogged = "false";
+                a.useManagePlayList = "false";
+                a.doAutoComplete = "true";
+                a.useEnterToMakeSearch = "true";
+                a.rights = {"allowManagePolitics":null,"allowManageWowzaContent":null,"allowMakeComments":null,"allowAnnotateItem":null,"allowManageSignAge":null,"advancedSearchFormFields":"","suppressedProperties":null,"allowViewHistoricalVersions":null,"allowReloadConfig":null,"allowManageUserProfile":null,"sendNewAssignmentNotifications":null,"acceptedAssignmentNotifications":null,"searchFacetSectionList":"","allowManageCatalogConfigurator":null,"allowIPadRemote":null,"groupMembership":["GROUP_ANON"],"allowViewSearchHistory":null,"allowViewFines":null,"allowViewHistory":null,"allowEstimateLateFees":null,"allowEditUserProfile":null,"contentTypesForCreate":"","allowViewLostAccount":null,"rejectedAssignmentsNotifications":null,"allowFormation":null,"allowResourceReservation":null,"allowViewTraps":null,"allowViewMessages":null,"allowDeleteContent":null,"reviewAssignmentNotifications":null,"allowPublishContent":null,"allowManagei18":null,"allowViewLoans":null,"topOfTree":"skin","allowViewPurchaseSuggest":null,"allowManageContent":null,"allowViewChangeContact":null,"newContentRoot":"","completedAssignmentNotifications":null,"allowEditConfiguration":null,"allowModerateComments":null,"allowEditContentTypes":null,"allowCreateContent":null,"allowAssignContent":null,"allowManageAllContent":null,"allowChangePassword":null,"allowFlagContent":null,"activeCollection":"","sendEmailNotifications":null,"allowViewRenewAccount":null,"allowViewSettings":null,"allowDeleteComments":null,"contentTypesToExcludeForCreate":"","allowViewHistoryLoans":null,"allowRateItems":null,"suppressedIndexes":"","allowViewReservations":null,"allowPublishPlayList":null,"playListReviewer":"","allowManageHarvest":null,"allowDefineGlobalVideoSettings":null,"allowComputerReservation":null,"allowViewSuggestions":null,"manageTreeRoot":"","advancedSearchIndexChoices":"","manageUsers":null,"allowEditContent":null,"homeTreeRoot":"","searchFacetDefaultSection":"","searchRestrictions":"-TypeOfDocumentFacet:contentBox,-TypeOfDocumentFacet:fichier,-TypeOfDocumentFacet:Category,-TypeOfDocumentFacet:Crosswalk,-TypeOfDocumentFacet:PlayList,-TypeOfDocumentFacet:carousel,-TypeOfDocumentFacet:navigation_menu,-TypeOfDocumentFacet:favorite,-TypeOfDocumentFacet:HTMLSource,-TypeOfDocumentFacet:KnowledgeGroup","allowViewUnmoderatedComments":null};
+            })(mondoInPageApi||{});
+            
+            if(jsCheckEnabled) {
+                checkJavascriptSupport();
+            }
+
+            //]]>
+        </script>
+            <!-- BEGIN SKIN CSS --><style type="text/css">
+  
+  #crumbtrail{display:none;}
+  
+  /* fixes
+  ***************/
+  #yt-admin-sidebar a.selected, #yt-admin-sidebar .selected a{ background:transparent; }
+  #yt-admin-content{ width:830px; }
+  .CodeMirror {
+    width: 587px;
+    border-right: 1px solid black;
+  }
+  ul.thumb_view li div.item-title, ul.thumb_view_xslt li div.item-title 
+  {
+    height: 45px!important;
+  }
+  
+  .isNovelty_fr { background-image:url("http://bibliojardin.espacepourlavie.ca/in/rest/annotationSVC/Attachment/attach_upload_40892d11-f1ce-4ac9-934b-f2faf94823a5?fileName=%22ribon_fr.png%22"); background-repeat:no-repeat; background-position:100% 100%; padding: 0; }
+  .isNovelty_en { background-image:url("http://bibliojardin.espacepourlavie.ca/in/rest/annotationSVC/Attachment/attach_upload_7a1d8a9a-9cf1-473f-b7ee-cecbf31fa6d0?fileName=%22ribon_en.png%22"); background-repeat:no-repeat; background-position:100% 100%; padding: 0; }
+  .isNovelty_es { background-image:url("../img/ribon_es.png"); background-repeat:no-repeat; background-position:100% 100%; padding: 0; }
+  
+  /* overrides
+  ***************/
+  html body{
+  	/*background:url(/in/rest/annotationSVC/Attachment/attach_null_80f9b286-4eb5-48fa-82f0-c9519673ee27?fileName=xv.png);*/
+  }
+  
+  .loggedIn.account {
+    top:-3px;
+    right: 0px;
+    position: relative;
+  }
+  
+  #yt-admin-content .panel-left{width:1024px !important;}
+  
+  
+  div.item-container div.item
+  {
+    width: 742px !important;
+  }
+  
+  .leftPanelContainer
+  {
+    width : 608px !important ;
+  }
+  
+  .limitSep
+  {
+    border-bottom: 2px solid #57B885 !important ;
+  }
+  
+  #results>form>hr
+  {
+    border-top: 2px solid #57B885 !important ;
+  }
+  
+  
+  .pressMe.btn.btn-primary
+  {
+    background-color: #88D1AB ;
+    background-image: -moz-linear-gradient(top, #88D1AB, #57B885) ;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#88D1AB), to(#57B885)) ;
+    background-image: -webkit-linear-gradient(top, #88D1AB, #57B885) ;
+    background-image: -o-linear-gradient(top, #88D1AB, #57B885) ;
+    background-image: linear-gradient(to bottom, #88D1AB, #57B885) ;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88D1AB', endColorstr='#57B885', GradientType=0) ;
+    border-color: #57B885 #57B885 #57B885 ;
+  }
+  
+  .btn:hover, .btn:focus
+  {
+    background-position: 0 -30px;
+    -webkit-transition: background-position 0.07s linear;
+    -moz-transition: background-position 0.07s linear;
+    -o-transition: background-position 0.07s linear;
+    transition: background-position 0.07s linear;
+  }
+  
+  .panel-left>#body-column>#results
+  {
+    width : 580px !important ;
+    /*margin-right : 14px ;*/
+    margin-right : 38px ;
+  }
+  
+  table>tbody>tr>td>div>div.cntbx
+  {
+    margin : 0px !important ;
+  }
+  
+  #page #body-column{
+  	width:810px;
+  }
+  
+  #page .refineCrumb{ width:100% }
+  #page #mapCanvas{ width:742px; }
+  
+  
+  
+  #page div.facetHeader{ width:initial;  }
+  
+  #page #searchform_q,#searchform_q2{
+    border: none;
+    font:12px Arial,Helvetica,sans-serif;
+    width:155px;
+    padding:6px 0;
+  }
+  
+  #page #belowSearchInsert {
+    color: #999;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 144px;
+    width: 500px;
+    right: 29px;
+    text-align: right;
+  }
+  
+  /*geoSearch*/
+  
+  #page .result {
+    margin: 10px 0;
+    padding: 0 8px 0 0;
+  }
+  #page .resultTitle {
+    margin: 0 0 5px 0
+  }
+  #page .resultParentTitle {
+    padding: 5px 0;
+  }
+  #page .resultData {
+	width: 596px;
+  }
+  
+  #page #resultsContainer{height:810px;}
+  #page #facetCrumb{ margin:0 0 0 0; }
+  
+  #page {
+    width: 1020px;
+    margin: 10px auto 0; 
+    /*box-shadow: 0 0 4px 1px gray;
+    -moz-box-shadow: 0 0 4px 1px gray;
+    -webkit-box-shadow: 0 0 4px 1px gray;*/
+    background:white;
+  }
+  #content {
+    width: 1020px !important;
+    margin: 10px auto 0;
+    /*min-height:530px;*/
+    /*padding:0 10px;*/
+  }
+  /*#body-column{ width:791px; }*/
+  #divCollapsable #wgt-search{ width:254px; margin-left:8px; float:none; }
+  .col2 { width:auto; }
+  .metaFieldMore { display:none; }
+  #yt-admin .leftPanelContainer { width:620px; }
+  
+  #flags { 
+    position: relative; 
+    top:5px; right:16px; 
+    height:25px; text-align:right;
+    width:50px; margin:0 0 0 99%;
+  }
+  #flags ul{}
+  #flags li{ 
+    display:none; flaot:left; height:16px; width:22px;
+    background-repeat:no-repeat; padding-right:5px; 
+  }
+  #flags .ger.current{ display:none }
+  #flags .fr.current{ display:none }
+  #flags .en.current{ display:none }
+  #flags .ger {  }
+  #flags .fr { display:block; }
+  #flags .en { display:block; }
+  
+  
+  .do_footer{margin-top:5px !important;}
+  
+  #footer-container{ 
+    min-height:15px;
+  }
+  .skin-lnkLogin {
+    position: relative;
+    left: 8px;
+  }
+  #skin-header-container .btn {
+	margin: 0;
+	padding: 6px 12px;
+    /*
+	background: #150;
+	border: 1px solid #BCB;
+	color: white;
+    */
+	outline-width: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font: 13px "Lucida Grande",Arial,Sans-serif;
+	font-style: normal;
+  }
+  /* Fil d'ariane */
+  .crumbtrail {
+ 	border: none;
+  }
+  
+  /* Cloud Carousel
+  ****************************/
+  .ccrsl-loader{ position:relative; top:65px; left:120px; width:50px;height:50px; background:url('/images/preloader.gif');}
+  .ccrsl-controls{ position: relative;top: -30px; display:none; } 
+  .ccrsl-controls .left{ position:absolute; left:0;}
+  .ccrsl-controls .right{ position:absolute; right:0; top:0px;}
+  
+  ul.gd li:before{ 
+    content:"?"; 
+    margin-right:5px; 
+    position:relative;
+    font-size:18px;
+    color:#150;
+  }
+  
+  #skin-header-container  { font:13px nomal Arial, sans-serif; position:relative; z-index: 200; }
+  #skin-header-container span.currentUser { text-decoration: none; color:black; }
+  #skin-header-container a { color:555; }
+  /*#skin-header-container .right { right:26px; top:0px; position:absolute; z-index: 1000; }*/
+  #skin-header-container .right {right: 0px; top: -25px; position: absolute; z-index: 1000; }
+  #skin-header-container .right ul { display: block; height: 30px; list-style: none; margin: 0; padding: 0; }
+  #skin-header-container .right ul li { display: inline; white-space: nowrap; }
+  #skin-header-container .right a { 
+    text-decoration: none; line-height: 30px; 
+    color: #4482B3; padding: 8px 5px;
+  }
+  .loggedOut .skin-lnkLogin{  position:relative; left:24px; top:-3px; }
+  #skin-header-container .right a:hover { text-decoration: none;}
+  
+  /*fieldset#fsLogin{ left: -139px;top:auto;/*border-color:#bcb;*/ }*/
+  fieldset#fsLogin {
+    color: red;
+    position: absolute;
+    top: 28px !important;
+    right: -46px !important;
+    margin-right: 0px !important;
+    z-index:1000;
+  }
+  #skin-login-container {
+    position:absolute !important;
+    
+    width:130px;
+    right: -5px;
+    top: -1px;
+    -webkit-border-top-left-radius: 0px!important;
+    -moz-border-radius-topleft: 0px!important;
+  }
+  
+  #skin-lnkLogin a{ color:#555; }
+  #nm-lnks{ position:relative; right:0; top:20px; text-align:right; }
+  
+  #customTopnav a.skin-lnkLogin span, span.more {
+    background-repeat: no-repeat;
+    background-position: 76px 2px;
+    padding: 0px 22px 0px 0;
+  }
+  
+  #fsLogin label, #fsLogin input{ display:block; }
+  
+  #customLogo{ 
+    display: block;
+    width:260px; 
+    height:90px; 
+    position:absolute; 
+    left:10px; 
+    top:20px;
+    background-color: black;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /*background:url('../rest/annotationSVC/Attachment/attach_null_d3830fc2-c6a9-46ad-9317-645cec2bb011?fileName=sprite.png') -28px 0 no-repeat; */
+  }
+  
+  #manitobaLogo{ 
+    display: block;
+    width:220px; 
+    height:60px; 
+    position:absolute; 
+    left:812px; 
+    top:20px;
+    background-color: black;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  
+  #banner{ width: 1024px;margin: 0 auto;display: block; }
+  
+  #im-nav>ul{ 
+    background:#fff;
+	z-index:550;
+    list-style-type:none; margin:0;padding:0; position:relative; left:-1px; 
+	/*border-bottom: 1px solid #CACACA;
+    border-top:1px solid #CACACA;*/
+    height:44px;
+  }
+  
+  #im-nav a,
+  #im-nav a:visited {  text-decoration:none; color:black; }
+  
+  #im-nav>ul>li{ display:inline-block; position:relative; 
+    text-transform:uppercase; 
+    margin:0; min-width:140px; width:164px;  
+    font:14px normal arial,sans-serif; 
+    text-align:center; zoom:1; border-radius : 3px 3px 0 0;
+    height:37px;line-height:37px;
+    border:1px solid transparent;
+    border-bottom:none;*display:inline;
+    color:black;top:-3px;
+    
+    font-weight:bold;
+  }
+  
+  #im-nav .nav-lvl-1>.nav-item-0 { min-width: 114px;}
+  
+  #im-nav>ul>li:hover{ }
+  #im-nav>ul>li:hover>a{ color:#acdcc2; height:12px; }
+  #im-nav>ul>li:hover>ul { 
+    display:block;
+    border-radius:0 0 3px 3px;
+    background:#FCFCFC;
+    border-top:none;
+    border-bottom: 1px solid #C1CCD6;
+    z-index: 1000;
+    zoom: 1;
+  }
+  #im-nav .ml{top:5px; line-height:18px;}
+  #im-nav>ul li.last{ margin: 0 0px 0 5px; }
+  #im-nav>ul >li div>div{ text-align:left; }
+  
+  
+  #im-nav>ul li:hover{
+    background-color:#acdcc2;
+  }
+  
+  #im-nav>ul>li>ul {
+    display:none;
+    position:absolute;
+    font-size:12px; 
+    border:1px solid transparent; 
+	border-left:1px solid #EEEEEE;
+	border-bottom:2px solid #EEEEEE;
+	border-right:1px solid #EEEEEE;
+    border-radius: 0 0 5px 5px;width: 164px; 
+    /*background:url('/images/Menu_active_bg.jpg') -1px 0px; */
+    z-index:500;
+    top:37px;
+    left:-1px;
+  }
+  #im-nav>ul>li>ul li{
+    text-align: left;
+    padding:  0 0 0 10px;
+    width: 87%;
+    position: relative;
+    line-height:18px;
+    left:5px;
+    line-height:23px;
+    margin: 8px 0;
+    color:black;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight`normal;
+    background-color:#FCFCFC !important;
+  }
+  
+  #im-nav>ul>li>ul>li:hover{}
+  #im-nav>ul>li>ul>li:hover>a {color:#1d7743;}
+  
+  
+  #pwrpr{}
+  #pwrpr .cnt{ width:760px; float:left; min-height:460px; }
+  #pwrpr .aside{ width:240px; float:left; }
+  #pwrpr .cntbx{ margin-right:0px }
+  
+  /*content box*/
+  .cntbx{ 
+    float:left;
+    zoom:1; 
+    border-radius:3px; 
+    height:165px;
+    margin: 0 7px 10px;
+    overflow: hidden;
+    position: relative;
+    border:1px solid #333;
+  }
+  
+  .cntbx.gray{ background:#ccc; border:1px solid transparent; }
+  
+  .cntbx .header{ 
+    display:block; padding:10px;
+    font-size:16px; font-weight:bold; color:#35aa6c; 
+    text-align:center; text-transform:uppercase;
+  }
+  
+  .cntbx .body{ padding-left:10px }
+  .cntbx.b1{ width:190px;}
+  .cntbx.b2{ width:575px;}
+  .cntbx.b3{ width:190px; min-height:50px;}
+  .cntbx.b4{ width:575px; height:260px;}
+  .cntbx.b1 img.fav {
+    position: relative;
+    left: 28%;
+  }
+  
+  .cntbx .body table{ margin-left:-10px; }
+  .cntbx .body td p{ padding:3px 8px;  }
+  
+  .tickercontainer{ width:1024px; height:30px; overflow:hidden;}
+  .tickercontainer .mask{ position:relative;}
+  .nwstkr{position:relative;list-style-type: none; }
+  .nwstkr li{ 
+    display:block; 
+    line-height:30px;float:left; margin-right:120px;
+    white-space: nowrap;
+  }
+  
+  
+  #wgt-crsl-novelties .header{ text-align:left; color:#35aa6c; }
+  
+  /*widget search*/
+  
+  #wgt-search .input, #wgt-site-search .input  {border-radius: 5px;background: white;	margin: 0 auto;	width: 96%;}
+  #wgt-search .links {
+    margin: 0 auto;
+	width: 96%;
+	position: relative;
+	top: -3px;
+  }
+  #wgt-search .links li {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	top: 0px;
+	zoom: 1;
+	padding: 4px;
+	border-radius: 5px;*display:inline;
+  }
+  #wgt-search .links li:hover {background: white;}
+  
+  #wgt-search .links li a:hover {color: #263;}
+  #wgt-search .links li a {color: black;font-weight: bold;text-decoration: none;cursor: pointer;}
+  
+  .input span.icon {
+	padding: 6px 13px;
+	background-image: url('/in/rest/annotationSVC/Attachment/attach_null_2fe2a8e3-2980-4447-a170-3b28d7835afe?fileName=searchicon.png');
+    background-repeat:no-repeat;
+	background-position: 5px 7px;
+  }
+  
+  #wgt-search .advice {
+    margin: 10px auto;
+	width: 89%;
+	border-radius: 5px;
+	background: #81c09f;
+	color: white;
+	font-weight: bold;
+	padding: 9px;
+  }
+  
+  #wgt-search .advice a {
+  	color: white;
+  }
+  
+  #wgt-site-search{
+  	background-color:black;
+  }
+  
+  #wgt-site-search .header{
+  	color:white;
+    font-size: 12px;
+    padding: 4px 0 ;
+  }
+  
+  #wgt-site-search .body{
+  
+  }
+  
+  
+  /* Site Map */
+  .page-title {
+    font-size: 1.58em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .sm-lvl {
+    font-weight: normal;
+    font-size: 0.8em;
+  }
+  
+  .sm-lvl-1 {
+   	margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.4em;
+    overflow: hidden;
+  }
+  
+  .sm-lvl-1 > .sm-name {
+    display: block;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+  }
+  
+  .sm-lvl-2 {
+    float: left;
+    width: 30%;
+   	margin-bottom: 8px;
+  }
+  
+  .sm-lvl-3 {
+    padding-left: 30px;
+  }
+  
+  .sitemap a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .sitemap a:hover {
+    color:#263;
+  }
+  
+  
+  /* Overrides rightPanel
+  ****************************/
+  #rightPanel #wgt-search,
+  #divCollapsable #wgt-search{
+    width: 100%;
+  }
+  
+  #rightPanel #searchform_q,
+  #divCollapsable #searchform_q{
+   	width: 78%; 
+  }
+  
+  /* search bar */
+  #searchContainerBox { position:relative;width:960px;margin:0 auto; }
+  #searchContainer { position: absolute; right: 8px; height: 40px; top: -56px; }
+  #searchContainer  fieldset { margin:0;padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+  /*#searchContainer { width:320px; height:100%; margin:0 auto; position:relative; }*/
+  #searchContainer  #searchForm fieldset { width:320px; position:relative; display:block; }
+  #searchContainer div.input {
+    width:240px;
+    padding:5px 15px 7px 15px;
+    border:1px solid #c6d2db;
+    border-top:1px solid #b4c1cb;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.08);
+    float:right;
+    background:white url(/in/rest/annotationSVC/Attachment/attach_null_2fe2a8e3-2980-4447-a170-3b28d7835afe?fileName=searchicon.png) 3px 6px no-repeat;
+  }
+  #searchContainer div.input.focus { border:1px solid #9ecbe2; box-shadow:0 0 6px #abdcff, inset 0 1px 2px rgba(0,0,0,0.08); }
+  #searchContainer input#searchform_q { padding-left:6px; width:100%; border:0;  background:transparent; height:16px; color:#b4bdc4; text-shadow:0 1px 1px #fff; }
+  #searchContainer input#searchform_q:focus { outline:none; }
+  #searchContainer input#searchSubmit {
+    width:19px;
+    height:19px;
+    text-indent:-9999px;
+    overflow:hidden;
+    border:0;
+    position:absolute;
+    top:7px; right:0;
+    z-index:5;
+    display:none;
+    cursor:pointer;
+  }
+  /*addthis*/
+  #page .addthis_default_style.addthis_32x32_style.poc{
+  	position: absolute;
+    top: 24px;
+    right: 266px;
+    width: 120px;
+  }
+  
+  #page .addthis_default_style.poc{
+  	position: absolute;
+    top: 38px;
+    right: 348px;
+  }
+  
+  .addthis_default_style.poc a{
+  	margin-right:3px;
+  }
+  
+  
+  /* icones X dans advancedSearch.xhmtl */
+  .searchTermCell img{width:16px; height:16px;}
+  
+  .searchTermCell {
+    background-color: #d1d1d1
+  }
+  .searchTabSep {
+    border-color: #d1d1d1
+  }
+  .banner {
+    margin-top: 25px;
+    border-top: 0px solid #BBB;
+  }
+  
+  A.titre  {background:none;  text-decoration:none; color: #3b3b3b; }
+  A.titre:hover {  color: black; font-style: bold; text-decoration: underline;}
+  
+  A.titre2  {background:none;  text-decoration:none; color: #3b3b3b; }
+  A.titre2:hover {  color: black; font-style: bold; text-decoration: none;}
+  
+  
+  
+  /* plan du site */
+  .sitemap .sm-lvl-2 a {
+    font-size: 12px !important;
+  }
+  .sitemap .sm-lvl-1 > a {
+    font-size: 14px !important;
+  }
+  .statBlock {
+    max-width: 425px !important;
+  }
+  
+  
+  /* right pane */
+  #divCollapsable{position:relative; right:26px; float:right !important}
+  div.item-container div.rightBar{width: 190px !important;}
+  
+  
+  
+  /* crumbtrail green bar */
+  div#crumbtrail.crumbtrail{/*display: block;*/ height: 30px; margin: 0 auto; margin-bottom: 5px;
+    background: url('/in/rest/annotationSVC/DownloadAttachment/attach_upload_3b215dba-370f-4e9a-953b-daa64c045873?fileName=gradient.png') repeat-y !important;
+  }
+  .crumbtrail ul li a {background: transparent !important;}
+  
+  
+  
+  
+  /* caroussel wysiwyg sur accueil */
+  .csel-item {
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin-left: 10px;
+  }
+  .da-dots {
+    display: inline-block;
+  	position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 15px;
+  }
+  .da-dots > span {
+   	position: relative;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #CCC;
+    border-radius: 7px;
+    margin: 0 2px;
+  }
+  .da-dots > span.da-dots-current {
+    border: 2px solid #35aa6c;
+  }
+  .csel-item table {
+    margin-left: 0px !important;
+  }
+  
+  
+  
+</style>
+<!--[if lt IE 8]>
+<style type="text/css">
+#im-nav>ul>li{display:inline;} #wgt-search .links{top:-10px; }#wgt-search .advice{padding:4px 9px;} 
+#wgt-search .header{ padding:5px 10px; } 
+</style>
+<![endif]-->
+
+
+
+            <!-- END SKIN CSS -->
+            <!-- BEGIN SKIN JS --><meta content="Bibliothèque du Jardin botanique de Montréal" about="/jardiner-sans-pesticides" property="dc:title" />
+<meta http-equiv="Content-Language" content="fr" />
+<meta name="description" content="L'information verte à votre portée ! Le monde des plantes à pleines pages, voilà ce que vous offre la bibliothèque du Jardin botanique avec des collections documentaires (livres, brochures, revues, images, archives)  sur la botanique, l'horticulture et l'aménagement paysager."/>
+<meta property='og:locale' content='fr_FR'/>
+<meta property='og:title' content='→ Bibliothèque du Jardin botanique de Montréal | Espace pour la vie Montréal'/>
+<meta name="type" CONTENT="home page">
+<meta property="og:description" content="L'information verte à votre portée ! Le monde des plantes à pleines pages, voilà ce que vous offre la bibliothèque du Jardin botanique avec des collections documentaires (livres, brochures, revues, images, archives) sur la botanique, l'horticulture et l'aménagement paysager."/>
+<meta property="og:url" content=""/>
+<meta property="og:site_name" content="Bibliothèque du Jardin botanique de Montréal"/>
+<meta property="og:type" content="library" />
+<meta name="Robots" CONTENT="index, follow">
+<meta name="revisit-after" content="7 days" />
+<meta name="keywords" LANG="fr" CONTENT="bibliothèque du Jardin botanique de Montréal, plantes, plantes médicinales, plantes alimentaires, jardinage, jardins, histoire des jardins, potager, aménagement paysager, médiathèque, livres, botanique, horticulture, écologie, plantes d’intérieur, plantes utiles, plantes indigènes, Québec, Canada" />
+<meta name="keywords" LANG="en" CONTENT="Montreal Botanical Garden Library, plants, medicinal plants, images, books, gardens, botany, horticulture, ecology, landscaping, garden architecture, garden history, gardening, useful plants, food plants, tropical plants, indoor plants, floras, native plants, Quebec, Canada" />
+<meta property="og:url" content="http://bibliojardin.espacepourlavie.ca/"/>
+
+<!-- code rajouté pour Céline Arsenault -- Google Analytics -->
+<meta name="google-site-verification" content="8dvlUdbkChoNX3BIWUTQhAW4iuMzVWZxOzcx3LtGhtQ" />
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+    ga('create', 'UA-41586810-1', 'espacepourlavie.ca'); 
+    ga('send', 'pageview'); 
+</script>
+<!-- fin du code -->
+
+
+
+<script type="text/javascript">
+  //<![CDATA[
+  var LanguageManager = (function(options){
+	if(mondoInPageApi === 'undefined'){console.log("mondoInPageApi is required!"); return;}
+    
+    var mgr = this;
+    mgr.$links = $("#flags li");
+    mgr.init = function(){
+      mgr.$links.closest("."+mondoInPageApi.currentLocale).addClass("current");
+    };
+    
+    mgr.$links.click(function(e){
+      mgr.$links.removeClass("current");
+      var newLocale = $(this).attr("class");
+      $(this).addClass("current");
+      mondoInPageApi.changeLocale(newLocale);
+      e.preventDefault();
+    });
+    
+  });
+  
+  function doLogin(){
+    var user = $("#loginUserName").val();
+    var password = $("#loginUserPassword").val();
+    mondoInPageApi.login(user,password);
+  };
+  $(function() {
+    var lmgr = new LanguageManager();
+    lmgr.init();
+    
+    var bsi = $("#belowSearchInsert");
+    if(bsi.exists()&&false){
+      var belowSearch = $('#belowSearchInsertSource').html(); 
+      bsi.html(belowSearch);
+      bsi.fadeIn('fast');
+    };
+    
+    
+  	$("#im-nav>ul>li>a").each(function(idx,itm){
+      if(document.location.href.indexOf(itm.href)>-1){
+        $(itm).parent().addClass("active");
+      	return false;
+    	};
+  	});
+    
+    //logout
+    $("#logOffLink").click(function () {
+      mondoInPageApi.endSession();
+    });
+    
+    //dropdown_login
+    $("a.skin-lnkLogin").click(function(){
+      var form = $("#skin-login-container fieldset");
+      var input = $("#loginUserName");
+      var password = $("#loginUserPassword");
+      if(form .is(":visible")){
+        form .hide("slide", { direction: "up" },function(){
+          $("a.skin-lnkLogin").removeClass("menu-open");  
+        });
+        
+      }else{
+        $("a.skin-lnkLogin").addClass("menu-open");
+        form .show("slide", { direction: "up" },function(){
+          if(input.value !="") input.focus();
+          else if (password.value !="") password.focus(); 
+        });
+      };
+    });//END dropdown_login
+    
+    $("#dot-fslogin-submit").click(function(e){
+      e.preventDefault();
+      doLogin();
+    });
+    
+    $("#dot-fslogin").keyup(function(e){ 
+      if(e.keyCode == 13){
+        doLogin();
+      } 
+    });
+    
+    
+  	// Basket
+    $('.lnkBasket').click( function () {
+  	  document.location.href="browse.xhtml?queryid=basket:"+ mondoInPageApi.currentBasket;
+      });
+  });  
+  //]]>
+</script>
+<script type="text/javascript" src="/in/rest/annotationSVC/Attachment/attach_null_89ec59ed-3233-4255-9526-7b2679b5de38?fileName=cloud-carousel.1.0.5.js"></script>
+
+
+<script>
+  /* Rempalcer icone X dans advanced search */
+  jQuery(document).ready(function($){
+    
+    var newImg = "/in/rest/annotationSVC/Attachment/attach_upload_cf6ed5f1-527a-4307-a1dc-9de55a17e6e9?fileName=greencross.png";
+    $("td.searchTermCell>img").each(function(){
+      $(this).attr("src", newImg);
+    });
+    
+    var fullPath = document.URL;
+    if(fullPath.indexOf("details.xhtml") !== -1){
+      $("#yt-admin-content").attr("style","width:1024px !important;");
+    };
+    
+    //supprimer wiki auteur sur page notice //
+    if( $("#wikiAuthorLinks").length > 0 ){
+      var wiki = $("#wikiAuthorLinks").parent().parent().parent().remove();
+    };
+    
+    //format fil d'ariane
+    if( $("#crumbtrail").length > 0 ){
+      $("#crumbtrail").hide();
+      setTimeout(function(){
+        $("#crumbtrail > ul > li").each(function(){
+          var val = $(this).find("a").html();
+          console.log(val);
+          if(val.indexOf("restore") > -1){$(this).remove();};
+          if(val.indexOf("CMS") > -1){$(this).remove();};
+          if(val.indexOf("cms") > -1){$(this).remove();};
+          if(val.indexOf("Menu prin") > -1){$(this).remove();};
+          if($(this).next().length > 0){if(val.indexOf("Notice détaillée") > -1){$(this).remove();};};
+        });
+        if( $("#crumbtrail li").length > 0 ){
+          $("#crumbtrail").show();
+        }else{
+          $("#crumbtrail").show();
+        };
+      },800);
+    };
+    
+    
+  });
+</script>
+
+
+
+            <!-- END SKIN JS -->
+
+        <noscript>
+            <style type="text/css">
+                .withScript {display:none}
+            </style>
+        </noscript><script type="text/javascript" src="/in/faces/javax.faces.resource/jsf.js;jsessionid=78f22ad65155470cf53f6e2a253e?ln=javax.faces"></script></head><body>
+        <div id="page">
+            <div class="masterHeader">
+
+                <form id="searchForm" action="./browse.xhtml" method="get" style="display:none;">
+                    <input type="hidden" name="query" />
+                    <input type="hidden" name="sf" />
+                </form>
+<form id="defaultHomePage:loginForm" name="defaultHomePage:loginForm" method="post" action="/in/faces/homeInBook.xhtml;jsessionid=78f22ad65155470cf53f6e2a253e" enctype="application/x-www-form-urlencoded" style="display:none;">
+<input type="hidden" name="defaultHomePage:loginForm" value="defaultHomePage:loginForm" />
+<input type="hidden" name="defaultHomePage:j_idt35" /><input type="hidden" name="defaultHomePage:j_idt36" /><input type="text" name="defaultHomePage:j_idt37" class="loginFormUserName" /><input type="text" name="defaultHomePage:j_idt38" class="loginFormUserPassword" /><input type="text" name="defaultHomePage:j_idt39" class="loginFormBackUrl" /><a href="#" onclick="mojarra.jsfcljs(document.getElementById('defaultHomePage:loginForm'),{'defaultHomePage:j_idt40':'defaultHomePage:j_idt40'},'');return false" class="loginFormSubmit">Se connecter</a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="3176637873744561912:-2409131202649516395" autocomplete="off" />
+</form>
+<form id="defaultHomePage:basketSelectForm" name="defaultHomePage:basketSelectForm" method="post" action="/in/faces/homeInBook.xhtml;jsessionid=78f22ad65155470cf53f6e2a253e" enctype="application/x-www-form-urlencoded" style="display:none;">
+<input type="hidden" name="defaultHomePage:basketSelectForm" value="defaultHomePage:basketSelectForm" />
+<input id="defaultHomePage:basketSelectInput" type="text" name="defaultHomePage:basketSelectInput" value="default" class="classFlagForBasketManagement" /><select id="defaultHomePage:basketSelectModel" name="defaultHomePage:basketSelectModel" size="1">	<option value="">(nouveau)</option>
+	<option value="default">défaut</option>
+</select><a href="#" onclick="mojarra.jsfcljs(document.getElementById('defaultHomePage:basketSelectForm'),{'defaultHomePage:j_idt42':'defaultHomePage:j_idt42'},'');return false" class="basketSelectFormSubmit">Switch Basket</a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="3176637873744561912:-2409131202649516395" autocomplete="off" />
+</form>
+<form id="defaultHomePage:localeSelectForm" name="defaultHomePage:localeSelectForm" method="post" action="/in/faces/homeInBook.xhtml;jsessionid=78f22ad65155470cf53f6e2a253e" enctype="application/x-www-form-urlencoded" style="display:none;">
+<input type="hidden" name="defaultHomePage:localeSelectForm" value="defaultHomePage:localeSelectForm" />
+<select name="defaultHomePage:j_idt43" class="selLanguage" size="1">	<option value="fr" selected="selected">fr</option>
+	<option value="en">en</option>
+	<option value="es">es</option>
+</select><a href="#" onclick="mojarra.jsfcljs(document.getElementById('defaultHomePage:localeSelectForm'),{'defaultHomePage:j_idt45':'defaultHomePage:j_idt45'},'');return false" class="switchLocale">Switch Locale</a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="3176637873744561912:-2409131202649516395" autocomplete="off" />
+</form>
+
+                <div id="searchHeaderInsertSource" style="display:none;">
+                </div>
+
+                <div id="belowSearchInsertSource" style="display:none;">
+                </div>
+                    <div id="skin-header-container">
+                        <!-- BEGIN SKIN HEADER -->
+
+
+
+
+
+<div class="banner"><map name="bandeau"> 
+<area shape="rect" coords="3,5,133,101" href="http://espacepourlavie.ca/jardin-botanique" target="_blank" />
+ 
+<area shape="rect" coords="565,6,1000,105" href="homeInBook.xhtml" />
+ </map><img style="display: block; margin-left: auto; margin-right: auto;" src="../rest/annotationSVC/Attachment/attach_null_9bae7faa-d5fc-46b5-8a25-1f493f41028c?fileName=banner.jpg" alt="Bienvenue &agrave; la biblioth&egrave;que du Jardin botanique de Montr&eacute;al" width="985" height="105" usemap="#bandeau" /></div>
+<p><div class="right">
+  
+  <div id="optionslang">
+    <a href="#" id="langFr">Français</a>
+    <a href="#" id="langEn">English</a> | 
+  </div>
+  
+  <div class="loggedIn account" style="display: none; ">
+    <a style="border-style:none;padding:0.1em 0;" href="#" onclick="return mondoInPageApi.gotoAccount()" id="lang_monDossier">Mon dossier</a> |
+    <span class="currentUser"></span>
+    | <a style="border-style:none;padding:0.1em 0;" href="#endSession" onclick="return mondoInPageApi.endSession()" id="lang_deconnexion">Déconnexion</a> 
+  </div>
+  
+  <div id="skin-login-container" class="loggedOut" style="position:relative; display:inline-block; ">
+    <div id="customTopnav">
+      <a href="#" class="skin-lnkLogin"><span><b id="lang_seConnecter">Se connecter</b></span></a>
+    </div>
+    <fieldset id="fsLogin">
+      <label for="loginUserName" class="loginUserName" id="lang_numeroAbonne">Numéro d'abonné</label>
+      <input type="text" id="loginUserName">
+      <label for="loginUserPassword" id="lang_motDePasse">Mot de passe</label>
+      <input type="password" id="loginUserPassword">
+      <p class="remember">
+        <button id="btnLoginSubmit" class="btn" onclick="mondoInPageApi.login($('#loginUserName').val(), $('#loginUserPassword').val())">Se connecter</button>
+        
+        <span style="display:inline">
+          <!--<a href="#register" onclick="return mondoInPageApi.register()" style="padding:0 5px;">Créer un dossier</a>
+          <a href="#forgotPin" onclick="return mondoInPageApi.forgotPin()" style="display:block; border:none;padding:0;">Mot de passe oublié?</a>-->
+        </span>
+      </p>
+    </fieldset>
+  </div><!--END #skin-login-container-->
+</div>
+<div class="clear"></div>
+
+
+<style type="text/css">
+  #optionslang{display:inline-block; top:-3px; right: 0px; position: relative;}
+  #optionslang a{padding:0 !important;}
+</style>
+
+<script type="text/javascript">
+  //if(mondoInPageApi.currentUser == "admin"){$("#optionslang").css("display","inline-block");};
+  if(mondoInPageApi.currentLocale == "fr"){$("#optionslang a#langFr").hide();}else{$("#optionslang a#langEn").hide();};
+  $("#optionslang a#langFr").click(function(){mondoInPageApi.changeLocale("fr");});
+  $("#optionslang a#langEn").click(function(){mondoInPageApi.changeLocale("en");});
+</script>
+
+<script type="text/javascript">
+  // langue static
+  if(mondoInPageApi.currentLocale == "en"){
+    $("#lang_monDossier").html("My account");
+    $("#lang_deconnexion").html("End session");
+    $("#lang_seConnecter").html("Login");
+    $("#btnLoginSubmit").html("Login");
+    $("#lang_numeroAbonne").html("Subscriber number");
+    $("#lang_motDePasse").html("Password");
+  };
+  
+  if(mondoInPageApi.userLogged == "false"){
+    $("#optionslang").attr("style","right: 110px;");
+  };
+  
+</script>
+
+
+</p>
+<p>
+<div id="im-nav">
+<ul class="a nav-lvl-1">
+  
+  <li class='nav-item-0 ml'>
+Présentation<br>de la bibliothèque    
+    <ul class="nav-lvl-2">
+    	<li class="nav-item-0"><a href="details.xhtml?id=3bf68d6d-46f4-4add-b63e-dc86ad63c234">Mission</a>
+    	<li class="nav-item-1"><a href="details.xhtml?id=3f27634e-66ed-4b0e-b9b1-59cd42111910">Collections</a>
+    	<li class="nav-item-2"><a href="details.xhtml?id=72f57a95-6a6c-4784-a4a9-64236c6b06c7">Équipe</a>
+    	<li class="nav-item-3"><a href="details.xhtml?id=9f712370-4ca9-4edb-adb2-3d650daf971e">Publications de la bibliothèque</a>
+    </ul>
+  </li>
+  
+  <li class='nav-item-1 ml'>
+Catalogue<br>Millefolium    
+    <ul class="nav-lvl-2">
+    	<li class="nav-item-0"><a href="http://bibliojardin.espacepourlavie.ca/in/faces/advancedSearch.xhtml">Recherche avancée</a>
+    	<li class="nav-item-1"><a href="http://bibliojardin.espacepourlavie.ca/in/faces/account.xhtml">Mon dossier</a>
+    	<li class="nav-item-2"><a href="browse.xhtml?query=novelty_start_date%3E-2m&facetClause=-ZMATFacet%3ATEXT_DOCUMENT%3B">Nouveautés</a>
+    </ul>
+  </li>
+  
+  <li class='nav-item-2 ml'>
+Images &<br> archives    
+    <ul class="nav-lvl-2">
+    	<li class="nav-item-0"><a href="details.xhtml?id=419c1136-055c-483a-81b2-6c01bc00dcf5">Images</a>
+    	<li class="nav-item-1"><a href="details.xhtml?id=317220da-b683-4df1-9318-12649b44df1e">Archives</a>
+    </ul>
+  </li>
+  
+  <li class='nav-item-3 ml'>
+Expositions<br>virtuelles    
+    <ul class="nav-lvl-2">
+    	<li class="nav-item-0"><a href="details.xhtml?id=6c214f3e-6dc1-4263-933b-91f6cf2f2434">80 ans d'histoire et d'archives au Jardin botanique</a>
+    	<li class="nav-item-1"><a href="details.xhtml?id=05a46765-e563-4b2b-8aa9-254f12ecfdac">Jacques Rousseau : Paysages et autochtones du nord du Québec et d'ailleurs</a>
+    	<li class="nav-item-2"><a href="details.xhtml?id=4e7efcd1-35ca-40da-ae76-a17707a3b450">Sous le soleil de Cuba, avec Marie-Victorin</a>
+    	<li class="nav-item-3"><a href="details.xhtml?id=ec0b2f49-c8bc-406b-a366-319127a8966d">Souvenirs de famille au Jardin botanique</a>
+    	<li class="nav-item-4"><a href="details.xhtml?id=3bc08951-7255-4b2a-b997-2c9f9aa55655">Au coeur de l'arbre</a>
+    	<li class="nav-item-5"><a href="details.xhtml?id=a93dec8c-cab0-442c-85e2-8f3100a144fa">L'olivier</a>
+    	<li class="nav-item-6"><a href="details.xhtml?id=b880d528-c0a2-48f7-88e9-9de21672942e">Felicitas Svejda : Scientifique et rosiériste</a>
+    </ul>
+  </li>
+  
+  <li class='nav-item-4 ml'>
+Ressources numériques    
+    <ul class="nav-lvl-2">
+    	<li class="nav-item-0"><a href="details.xhtml?id=40682606-c140-44ad-a386-3ba5b895a63c">Documentation numérique sur le Jardin botanique</a>
+    	<li class="nav-item-1"><a href="details.xhtml?id=6867d736-ebe2-4592-9185-b318526c1304">Liens utiles</a>
+    	<li class="nav-item-2"><a href="details.xhtml?id=068160f5-6cda-4dec-8c29-73ebd1c64880">Découvertes 2.0</a>
+    	<li class="nav-item-3"><a href="details.xhtml?id=9e0525f9-766e-4edf-8f3e-a27d6804f8bc">Autres bibliothèques</a>
+    	<li class="nav-item-4"><a href="details.xhtml?id=0fa9bd4a-fa58-4e2c-928a-f23b1bc95db1">Mon Millefolium</a>
+    </ul>
+  </li>
+  
+  <li class='nav-item-5 ml'>
+Informations pratiques    
+    <ul class="nav-lvl-2">
+    	<li class="nav-item-0"><a href="details.xhtml?id=0c0063fe-2a04-4f0d-b63c-7020f2301236">Horaire</a>
+    	<li class="nav-item-1"><a href="details.xhtml?id=a4801869-11c8-40cd-968e-16d6e34f6975">Accès</a>
+    	<li class="nav-item-2"><a href="details.xhtml?id=292efd9d-3ead-4c7f-a915-663b3cd48df6">Services</a>
+    	<li class="nav-item-3"><a href="details.xhtml?id=64bac726-00ce-4018-b831-e58910b965fd">Prêt</a>
+    	<li class="nav-item-4"><a href="details.xhtml?id=b6c2a395-f64a-4f69-b897-dabb1795c7ca">Nous joindre</a>
+    </ul>
+  </li>
+ </ul>
+</div>
+
+
+<div id="skinNewsTicker" style="display:none;">
+
+  <ul class="ticker newsticker" id="newsTicker_9afc6b8f-5fdb-434a-9c7e-dff45528694d" style="display:none;">
+          <li>    <span style=""></span>
+    <span> Nouvel horaire de la bibliothèque : Mardi au vendredi de 9h à 16h30 - Samedi de 10h à 14h</span>
+</li>
+  </ul>
+
+<script type="text/javascript" src="../rest/annotationSVC/Attachment/attach_upload_b6a9529f-7bc7-49d9-9021-34f28eced92a?fileName=attach_upload_b6a9529f-7bc7-49d9-9021-34f28eced92a.js"></script>
+<script type="text/javascript">
+  function setNewsTicker(){
+    if( $("#newsTicker_9afc6b8f-5fdb-434a-9c7e-dff45528694d li").length > 0 ){
+      $("#newsTicker_9afc6b8f-5fdb-434a-9c7e-dff45528694d").show();
+      $("#newsTicker_9afc6b8f-5fdb-434a-9c7e-dff45528694d").liScroll({travelocity: 0.05});
+      $("#newsTicker_9afc6b8f-5fdb-434a-9c7e-dff45528694d").parent().parent().append("<div class='tick-hide-left'></div>").append("<div class='tick-hide-right'></div>");
+    };
+  };
+  if(typeof gridReady !== 'undefined'){ //init for HTML Grille
+    $.when(gridReady).done(function(e){ setNewsTicker(); });
+  }else{ //init for standard page
+    setNewsTicker();
+  };
+</script>
+<style type="text/css">
+  .tick-hide-left, .tick-hide-right{position: absolute; height: 100%; width: 150px; z-index: 30; top: 0; }
+  .tick-hide-left{background-image: url('../rest/annotationSVC/Attachment/attach_upload_c755998f-6f4a-41b6-87bd-ef193e4fc0aa?fileName=attach_upload_c755998f-6f4a-41b6-87bd-ef193e4fc0aa.png'); left: 0;}
+  .tick-hide-right{background-image: url('../rest/annotationSVC/Attachment/attach_upload_278bb22f-1b59-47e5-9498-2bd8ed7ef4b3?fileName=attach_upload_278bb22f-1b59-47e5-9498-2bd8ed7ef4b3.png'); right: 0;}
+  .tickercontainer {width: 100%;  height: 24px; overflow: hidden; position: relative; margin-bottom: 5px;}
+  .tickercontainer .mask {position: relative; line-height: 24px; overflow: hidden;}
+  ul.newsticker {position: relative; margin-left: 20px; list-style-type: none; list-style:none !important; margin: 0; padding: 0; height:24px; white-space: nowrap;}
+  ul.newsticker li{float: left; margin: 0; padding-right: 15px;}
+  .ticker-hide{display: none;}
+  ul.newsticker, ul.newsticker a{padding: 0; color: #000; font-size: 12px; margin: 0 50px 0 0;}
+  ul.newsticker span{font-weight: bold; margin-right: 4px; margin-left: 18px; color: #52BA51;}
+</style>
+
+</div>
+<script type="text/javascript">
+  $(function(){$("#skinNewsTicker").insertAfter("#crumbtrail").show();});
+</script>
+</p>
+<!-- Bibliothèque du Jardin botanique de Montréal-->
+
+
+
+
+
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    
+ 
+  });
+</script>
+
+                        <!-- END SKIN HEADER -->
+                    </div>
+                <div class="divClear"></div>
+            </div>
+
+            <div id="content">
+                <div id="crumbtrail" class="crumbtrail"></div>
+
+
+
+
+
+<div style="width: 1024px !important;">
+<p><br /><div id="cnt-c9221565-f15b-4bff-992b-e1ade2b3eb7b" class="cntbx b1"style="height:180px;">
+ <span class="header">En vedette</span>
+    <div class='body'><table style="width: 190px; height: 78px;" border="0">
+<tbody>
+<tr>
+<td style="text-align: center;"><a title="NOUVEAU! Vers la notice bibliographique de La fine fleur du savoir, 40 ans Les Amis du Jardin botanique de Montr&eacute;al" href="details.xhtml?id=p::usmarcdef_0000108807"><img style="border: 1px solid black;" title="40 ans, les Amis du Jardin botanique de Montr&eacute;al: la fine fleur du savoir " src="../rest/annotationSVC/Attachment/attach_null_4aade0bc-5d0a-4400-894f-30b042fdc37f?fileName=amis_40_ans_p.jpg" alt="Page couverture du livre La fine fleur du savoir: 40 ans, les Amis du Jardin botanique de Montr&eacute;al" width="95" height="136" /></a></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p></div> </div>
+
+<style>
+  .urlCarrousel{position: relative; bottom: -125px; width: 95%; margin: auto; text-align: right; height: 15px; }
+  #novelty_link{color: #808080; font-weight: bold; text-decoration:none;}
+  /*fix for home page box on top*/
+  .resizerCarrouselBox{height:180px!important;}
+</style>
+
+<script type="text/javascript">
+	function initCloudCarousel(){
+      if(navigator.userAgent.indexOf("Firefox") > -1){
+      $("#wgt-crsl-novelties").css({"top":"0px"});
+      $(".ccrsl-controls").css({"top":"-35px"});
+      $(".ccrsl-controls .right").css({"right":"-7px"});
+    }
+    $("#wgt-crsl-novelties").CloudCarousel({
+      xPos: 320,
+      yPos: 17,
+      xRadius:0.34 * $("#wgt-crsl-novelties").width(),
+      yRadius:0 * $("#wgt-crsl-novelties").width(),
+      reflHeight:12,
+      reflGap:0,
+      minScale:0.50,
+      buttonLeft: $("#left-wgt-crsl-novelties"),
+      buttonRight: $("#right-wgt-crsl-novelties"),
+      autoRotate:"left",
+      speed:0.7,
+      autoRotateDelay:3800
+      },function (){ $("#wgt-crsl-novelties>div").fadeIn('1800') });
+  }
+</script>
+   
+  
+  	<script type="text/javascript">
+      (function(){
+        function checkImages(){
+          $("#wgt-crsl-novelties a img").each(function(i,item){
+            if(item.clientHeight<2){
+              item.src="../rest/Thumb/ISBN/0?mat=BOOK";
+            }
+            $(item).attr("width","83").attr("height","110");
+          });
+        }
+        
+        var request = {query: "ISBN:9782841386994 ISBN:9782841386451 ISBN:9781604694086 ISBN:9782841387571 ISBN:	 9780226076447 ISBN:9782603018958 ISBN:9780643107847 ISBN:9782841386154 ISBN:9782841387571 ISBN:9781444798234"};
+      	var url = "/in/rest/searchSVC/jsonp/briefquery?callback=?";
+		$(function(){
+        jQuery.getJSON(url,request,function(data) {
+        	if(data.results!=null){
+              $.each(data.results, function(i,item){
+                var link = $("<a/>")
+                .attr("href", "/in/faces/details.xhtml?id="+item.id)
+			    .appendTo("#wgt-crsl-novelties");
+                       
+                var image = $("<img/>")
+                   .attr("src", item.thumbnail)
+                   .addClass("ccrsl-thb");
+        		if(navigator.userAgent.indexOf("MSIE")==-1){
+					 image.attr("width","82px").attr("height","110px");
+				}
+                image.attr("title",$("<div>").html(item.title).text())
+                  .addClass("cloudcarousel").appendTo(link);
+               });//END $.each()
+              $('#wgt-crsl-novelties img').load(function(){
+                var height = $(this).height();
+				 $(this).data("oHeight",height);
+				 if(navigator.userAgent.indexOf("MSIE")==-1){
+				   
+				   if (this.naturalHeight < 2 ){
+					 $(this).attr("src",item.thumbnail);
+				   }
+				 }
+                var rank = $('#wgt-crsl-novelties img').index(this)+1;
+                var total = $('#wgt-crsl-novelties img').length;
+                
+                if(rank == total){
+                  if(navigator.userAgent.indexOf("MSIE")>-1){ checkImages() }
+                 initCloudCarousel();
+                }
+              });
+            }//END data.results?
+        });//END $.getJSON
+      });
+      })();
+	</script>
+<div id="wgt-crsl-novelties" class='cntbx b2 resizerCarrouselBox'>
+  <span class="header">
+    Nouveautés
+  </span>
+  <div class="urlCarrousel"><a id="novelty_link" href="browse.xhtml?query=novelty_start_date%3E-2m&facetClause=-ZMATFacet%3ATEXT_DOCUMENT%3B">Voir toutes les nouveautés</a></div>
+</div>
+<div>
+	<div id="wgt-search" class="cntbx b1 gray">
+  		<span class="header" id="lang_rechercheTitre">Recherche rapide catalogue</span>
+  		<form action="/in/faces/browse.xhtml">
+          <div class="input"><!--<span class="icon"></span>--><div class="tableau"><span class="col1"><input id="searchform_q" type="text" name="query" size="10"></span>
+			<span class="col2">
+				<input id="lang_btnsumbitTitle" class="btn_rech" type="submit" title="Chercher" value=""/></span></div>
+  			</div><br />
+          <div class="advice">
+      			<a href="#advancedSearch" onclick="return mondoInPageApi.advancedSearch()" id="lang_rechercheRapide">Recherche avancée</a></div>
+  				<input type="hidden" value="?" name="mozQuirk">
+  		</form>
+	</div>
+<div class="container_link">
+  	<ul class="links others_links">
+    	<li><a href="#SearchHIstory" onclick="return mondoInPageApi.navigate('SearchHistory.xhtml')" id="lang_rechercheHistorique">Historique</a></li>
+    	<li><a class="lnkBasket" href="#basket" id="lang_panier">Panier</a></li>
+  	</ul>
+</div>
+  
+  <div style="clear: both;"></div>
+</div>
+
+<style>
+.others_links li {
+float: right;
+margin-left: 18px;
+    margin-top: 5px;
+font-weight: bold;
+  }
+ .others_links li a {
+    color:#808080;
+  }
+  .cntbx.gray {
+background:url('/in/rest/annotationSVC/Attachment/attach_null_5dd88bf8-8768-4466-827c-a61a814aebf5?fileName=pix_vert2.jpg');
+border: 1px solid transparent;
+height: 145px;
+}
+#wgt-search .advice {
+border-radius: 5px;
+background: #81c09f;
+color: white;
+font-weight: bold;
+padding: 9px;
+margin: 0px 10px 10px 63px;
+}
+#wgt-search{
+    margin-bottom: 0px;
+}
+#page   {
+width:70px
+margin: 0px 0px 0px 10px;
+}
+ #searchform_q, #searchform_q2{
+width:60px
+margin: 0px 0px 0px 10px;
+}
+  
+  .input span.icon {
+    padding:0px
+}
+  .input  {
+    width=75%;
+}
+  #divCollapsable .container_link
+  {
+    margin-right:6px!important;
+  }
+  #content .container_link
+  {
+    margin-right:18px;
+    width: 97%;
+  }
+.btn_rech {
+margin: 3px 0px 3px 0px;
+    float:right;
+width: 23px;
+height: 23px;
+    background-image:url('http://bibliojardin.espacepourlavie.ca/in/rest/annotationSVC/DownloadAttachment/attach_upload_0eb080e7-0d7a-4b17-b82f-9d49e42796fe?fileName=btnRech.png');
+    background-repeat:none;
+    background-color:transparent;
+    padding:0px;
+    border:0;
+}
+  #divCollapsable #wgt-search {
+    margin:0;
+}
+  #divCollapsable 
+  {
+	width: 190px;
+	float: right;
+  }
+  div#results
+  {
+    width:809px!important;
+  }
+  #body-column #results 
+  {
+	width: 599px!important;
+  }
+  
+   .tableau span {
+   width:95%;
+  }
+.tableau span.col1 {text-align:left; }
+
+.tableau span.col2 {width:25px ; text-align:right;}
+</style>
+
+
+<script type="text/javascript">
+  if(mondoInPageApi.currentLocale == "en"){
+    $("#lang_rechercheTitre").html("Quick catalog search");
+    $("#lang_rechercheRapide").html("Advanced search");
+    $("#lang_rechercheHistorique").html("Search history");
+    $("#lang_panier").html("My basket");
+    $("#lang_btnsumbitTitle").attr("title","Search");
+  };
+</script>
+
+
+<div id="cnt-4be930a9-738b-421a-a44c-0b2e28992eb6" class="cntbx b1"style="height:260px;">
+ <span class="header">Coordonnées</span>
+    <div class='body'><p style="text-align: center;"><span style="font-size: x-small;">4101, rue Sherbrooke Est</span><br /><span style="font-size: x-small;"><span style="font-family: arial,helvetica,sans-serif;">Montr&eacute;al, QC, Canada</span></span></p>
+<p style="text-align: center;"><span style="font-size: x-small;"><span style="font-family: arial,helvetica,sans-serif;">H1X 2B2</span></span></p>
+<p style="text-align: center;"><strong><span style="font-family: arial, helvetica, sans-serif; font-size: small;">514 872-1824<br /></span></strong></p>
+<h2 style="text-align: center;"><strong><span style="color: #35aa6c;">HORAIRE</span></strong></h2>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: #000000; font-family: arial, helvetica, sans-serif;">Mar au ven 9h &agrave; 16h30</span></span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: #000000; font-family: arial, helvetica, sans-serif;">Sam 10h &agrave; 14h</span></span></p>
+<p><span>&nbsp;</span></p>
+<p style="text-align: center;"><strong style="font-size: 1.5em;"><span style="color: #35aa6c;">COURRIEL</span></strong></p>
+<p style="text-align: center;"><a title="Vers le formulaire de courriel" href="details.xhtml?id=b6c2a395-f64a-4f69-b897-dabb1795c7ca"><img title="Vers le formulaire de courrier" src="../rest/annotationSVC/Attachment/attach_null_621e7562-ac9c-4f53-aae8-ed6b95a6a9d1?fileName=courrier_3_blanc.jpg" alt="Ic&ocirc;ne" width="33" height="29" /></a></p></div> </div>
+<div class="cntbx b4">
+  
+  <div class="body">
+    <div class='csel-body' id="c-a03d9a27-a402-4f38-9b0d-914759da9b85">
+      <div class="csel-item da-slide">
+        
+          <table border="0">
+<tbody>
+<tr>
+<td>
+<p>&nbsp;</p>
+<p><a class="titre" title="Lien externe vers Felicitas Svejda : Scientifique et rosi&eacute;riste" href="http://www2.ville.montreal.qc.ca/jardin/archives/svejda/accueil.php" target="_blank"><img title="L'hybridation des rosiers" src="../rest/annotationSVC/Attachment/attach_null_38e82b83-51e0-4ff8-98a8-cd0b35ebfaa3?fileName=hybridation.jpg" alt="Fruits des rosiers" width="200" height="196" /></a></p>
+<p>&nbsp;</p>
+</td>
+<td style="width: 260px; text-align: center; background-color: white;" align="center" valign="top">
+<h3><span style="color: #339966;"><strong><span style="color: #339966;">&nbsp;Nouveau</span></strong></span></h3>
+<p><span style="color: #339966;"><strong><span style="color: #339966;">&nbsp;</span></strong></span></p>
+<h3 style="text-align: center;"><span style="color: #ff00ff; background-color: #ffffff;">Felicitas Svejda :<br /> Scientifique et rosi&eacute;riste</span></h3>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span>Gr&acirc;ce aux archives de cette chercheuse, cr&eacute;atrice des rosiers Explorateur, d&eacute;couvrez les &eacute;tapes de l'hybridation des rosiers et de l'enregistrement des nouveaux hybrides.</span></strong></p>
+<p style="text-align: center;">&nbsp;</p>
+[ <a class="titre" title="Lien externe vers Felicitas Svejda : Scientifique et rosi&eacute;riste" href="http://www2.ville.montreal.qc.ca/jardin/archives/svejda/accueil.php" target="_blank">Visitez l'exposition virtuelle</a> ]</td>
+</tr>
+</tbody>
+</table>
+        
+      </div>
+      <div class="csel-item da-slide" style="left: 100%;">
+        
+          <table style="width: 550px; height: 110px;" border="0">
+<tbody>
+<tr>
+<td style="width: 270px;" align="center" valign="top">
+<h2 style="text-align: center;"><strong><span style="color: #008000;">&nbsp;</span></strong></h2>
+<p><strong><span style="color: #008000;">&nbsp;</span></strong></p>
+<h2 style="text-align: center;"><strong><span style="color: #008000;">Nouvelles ressources num&eacute;riques</span></strong></h2>
+<p><strong><span style="color: #008000;">&nbsp;</span></strong></p>
+<h3 style="text-align: center;">plus de 100 sites web index&eacute;s&nbsp;!</h3>
+<p>&nbsp;</p>
+<p style="text-align: center;">[ <a title="Vers la recension de ce site dans les liens utiles" href="details.xhtml?id=3d0ef0a1-8ded-4212-8a3a-718d3143bda6">Consultez cette recension parmi nos liens utiles</a> ]</p>
+</td>
+<td style="text-align: center; width: 200px;" valign="top">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a title="Vers la recension de ce site dans les liens utiles" href="details.xhtml?id=3d0ef0a1-8ded-4212-8a3a-718d3143bda6"><img title="Les arbres de la ville de Montr&eacute;al dans les liens utiles" src="../rest/annotationSVC/Attachment/attach_null_3847517c-5790-4d1a-9980-bdc25af28254?fileName=arbres_ville_montreal_p.jpg" alt="Image &eacute;cran du site Les arbres de la ville de Montr&eacute;al" width="320" height="160" /></a><strong style="color: #3b3b3b;">&nbsp;</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+        
+      </div>
+      <div class="csel-item da-slide" style="left: 100%;">
+        
+          <table border="0">
+<tbody>
+<tr>
+<td>
+<p>&nbsp;</p>
+<p><a class="titre" title="Lien externe vers 80 ans d'histoire et d'archives" href="http://www2.ville.montreal.qc.ca/jardin/archives/histoire/histoire_accueil.php" target="_blank"><img title="Documents de l'exposition virtuelle" src="../rest/annotationSVC/Attachment/attach_null_9694c59b-053d-43db-ac74-893850308a97?fileName=puits2.jpg" alt="Affiche et d&eacute;tails du puits du Jardin du Monast&egrave;re" width="260" height="240" /></a></p>
+<p>&nbsp;</p>
+</td>
+<td style="width: 200px; text-align: center; background-color: white;" align="center" valign="top">
+<h3><span style="color: #339966;"><strong><span style="color: #339966;">&nbsp;</span></strong></span></h3>
+<h3><span style="color: #339966;"><strong><span style="color: #339966;">&nbsp;</span></strong></span></h3>
+<h3 style="text-align: center;"><span style="color: #339966;"><strong><span style="color: #339966;">80 ans<br /> d'histoire et d'archives<br /> au Jardin botanique de Montr&eacute;al</span></strong></span></h3>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span>Des centaines de documents originaux num&eacute;ris&eacute;s&nbsp;: photos n&amp;b, plans, publications, et plus encore...</span></strong></p>
+<p style="text-align: center;">&nbsp;</p>
+[ <a class="titre" title="Lien externe vers 80 ans d'histoire et d'archives" href="http://www2.ville.montreal.qc.ca/jardin/archives/histoire/histoire_accueil.php" target="_blank">Visitez l'exposition virtuelle</a> ]</td>
+</tr>
+</tbody>
+</table>
+        
+      </div>
+      <div class="csel-item da-slide" style="left: 100%;">
+        
+          <table style="width: 530px; height: 175px;" border="0" cellspacing="2" cellpadding="7">
+<tbody>
+<tr>
+<td style="width: 270px;" align="center" valign="top">
+<h2 style="text-align: center;"><span style="color: #339966;"><strong style="font-size: 10px;"><span style="font-size: medium;">D&eacute;couvertes 2.0</span></strong></span><span style="font-family: arial,helvetica,sans-serif; font-size: small;"> <br /></span></h2>
+<p style="text-align: center;"><span style="font-family: arial,helvetica,sans-serif; font-size: x-small;">D&eacute;couvrez au fil du temps qui passe une s&eacute;lection de sites web 2.0 sur les th&egrave;mes de l'horticulture, de la botanique et de l'am&eacute;nagement paysager.</span></p>
+<p style="text-align: center;"><strong style="font-size: x-small;"><span style="color: #339966;">Notre suggestion :&nbsp;</span></strong><br /> <strong style="font-size: x-small;"><span style="color: #339966;">&nbsp;<span style="color: #000000;"><em>Landscape Architects Network</em></span></span></strong><br /> <span style="color: #000000;">un site web avec des articles th&eacute;matiques de style blogue sur l'architecture du paysage</span></p>
+<p style="text-align: center;"><strong><span style="font-size: x-small;">[&nbsp;<a title="Vers le site landarchs.com" href="http://landarchs.com/" target="_blank">Explorez landarchs.com</a>&nbsp;]</span></strong><br /> <span style="font-size: x-small;">&nbsp;</span><br /> <strong><span style="font-size: x-small;">[&nbsp;<a title="Vers la page de D&eacute;couvertes 2.0" href="details.xhtml?id=068160f5-6cda-4dec-8c29-73ebd1c64880">Voyez toutes nos suggestions</a>&nbsp;]</span></strong></p>
+</td>
+<td style="text-align: center; width: 200px;" valign="middle">
+<p>&nbsp;</p>
+<p><a title="Vers le site Landscape Architecture Network" href="http://landarchs.com/" target="_blank"><img style="vertical-align: middle; margin-top: 10px; margin-bottom: 10px;" title="Landscape Architecture Network" src="../rest/annotationSVC/Attachment/attach_null_3ec628ae-5e15-46e2-8bf6-e25869fdc429?fileName=landarchs.jpg" alt="Saisie d'&eacute;cran blogue Landarchs.com" width="279" height="171" /></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+        
+      </div>
+      <div class="csel-item da-slide" style="left: 100%;">
+        
+          <table border="0" cellspacing="10">
+<tbody>
+<tr>
+<td><object width="293" height="220" align="top" vspace="25" bgcolor="#6cb54a" data="../js/tiny_mce_3.5_jquery/plugins/media/moxieplayer.swf" type="application/x-shockwave-flash"><param name="src" value="../js/tiny_mce_3.5_jquery/plugins/media/moxieplayer.swf" /><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="true" /><param name="swliveconnect" value="true" /><param name="flashvars" value="url=http%3A//www.aucoeurdelarbre.ca/upload/videos/2.2.2a_eng.flv&amp;poster=/in/faces/" /></object></td>
+<td style="text-align: right; width: 250px; background-color: white;" align="center" valign="top">
+<h3><span style="color: #339966;"><strong><span style="color: #339966;">&nbsp;</span></strong></span></h3>
+<h3><span style="color: #339966;"><strong><span style="color: #339966;">&nbsp;</span></strong></span></h3>
+<h3 style="text-align: center;"><span style="color: #339966;"><strong><span style="color: #339966;">L'arbre, une pompe vivante</span></strong></span></h3>
+<p style="text-align: center;"><span style="color: #339966;"><strong><span style="color: #339966;">Une des nombreuses animations de l'exposition virtuelle</span></strong></span></p>
+<p style="text-align: center;"><span style="color: #339966;"><strong><span style="color: #339966;">Au coeur de l'arbre</span></strong></span></p>
+<p style="text-align: center;"><span style="color: #339966;"><strong><span style="color: #339966;">&nbsp;</span></strong></span></p>
+<p style="text-align: center;">[ <a href="http://www.aucoeurdelarbre.ca/fr/arbre-et-son-milieu/adaptation-aux-conditions-hydriques.php">Visitez le site</a> ]&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+        
+      </div>
+      <div class="csel-item da-slide" style="left: 100%;">
+        
+          <table style="width: 690px; height: 110px;" border="0" cellspacing="4" cellpadding="4">
+<tbody>
+<tr>
+<td style="width: 200px; text-align: center;" align="center" valign="top">
+<h3><span style="font-size: small; color: #5caa55;"><span style="font-size: small;"><span style="font-size: 10pt; font-family: Arial;"><span style="font-size: small;"><span style="font-size: 10pt; font-family: Arial;">&nbsp;</span></span></span></span></span></h3>
+<p><span style="font-size: small; color: #5caa55;"><span style="font-size: small;"><span style="font-size: 10pt; font-family: Arial;"><span style="font-size: small;"><span style="font-size: 10pt; font-family: Arial;">&nbsp;</span></span></span></span></span></p>
+<h3><span style="font-size: small; color: #5caa55;"><span style="font-size: small;"><span style="font-size: 10pt; font-family: Arial;"><span style="font-size: small;"><span style="font-size: 10pt; font-family: Arial;">Suggestion Vid&eacute;o</span></span></span></span></span></h3>
+<p>&nbsp;</p>
+<h2><em>Les Floralies internationales de Montr&eacute;al - le film (1980)</em></h2>
+<h2><em>&nbsp;</em></h2>
+<p id="watch-headline-title" class="yt"><a title="Vers partie 2 du film Les Floralies internationales de Montr&eacute;al" href="details.xhtml?id=73cb8486-7e68-4dad-b776-94748a5a7f8f">Voir les parties 2 et 3</a><br /> dans Mon Millefolium</p>
+</td>
+<td style="width: 390px; text-align: left;" colspan="3" valign="top"><br /><br /><object width="290" height="218" hspace="8" vspace="8" bgcolor="#827d80" data="../js/tiny_mce_3.5_jquery/plugins/media/moxieplayer.swf" type="application/x-shockwave-flash"><param name="src" value="../js/tiny_mce_3.5_jquery/plugins/media/moxieplayer.swf" /><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="true" /><param name="flashvars" value="url=/in/rest/annotationSVC/Attachment/attach_null_79da4974-7560-4c10-a165-788b5f79716b%3FfileName%3Dfloralies_1.flv&amp;poster=/in/faces/" /></object></td>
+</tr>
+</tbody>
+</table>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  jQuery(function(){
+  	jQuery('#c-a03d9a27-a402-4f38-9b0d-914759da9b85').cslider({autoplay: true, interval: 30000, navigation: true});
+  });
+</script>
+<div id="cnt-34b98b9a-b3fa-48c2-a676-4310bfd381d8" class="cntbx b3"style="height:78px;">
+ 
+    <div class='body'><table style="width: 190px; height: 78px; background-color: #ffffff;" border="0">
+<tbody>
+<tr style="background-color: #dadbdb;" align="left" valign="middle">
+<td style="width: 198px; height: 78px; background-color: #ffffff;" colspan="3" align="left" valign="middle"><a title="Vers mon dossier" href="account.xhtml"><img style="float: left; margin-left: 10px; margin-right: 10px;" title="Ic&ocirc;ne Dossier" src="../rest/annotationSVC/Attachment/attach_null_b02465ca-6bd8-4de2-bc14-42ac7a2cc71a?fileName=dossier1_b.jpg" alt="Vers mon dossier" width="35" height="35" /></a>
+<h2><a title="Vers mon dossier" href="account.xhtml"><span style="color: #339966;"><strong><strong><strong>Mon dossier</strong></strong></strong></span></a></h2>
+</td>
+</tr>
+</tbody>
+</table></div> </div>
+<div id="cnt-3d35b1c9-7d51-44d8-b72b-2b4f979b4a94" class="cntbx b1"style="height:78px;">
+ 
+    <div class='body'><table style="width: 180px; height: 78px; background-color: #ffffff;" border="0" cellpadding="12" align="left">
+<tbody>
+<tr>
+<td style="text-align: left;" align="center" valign="middle">
+<h2 style="text-align: center;"><a title="Aide pour la recherche" href="details.xhtml?id=9915912d-1877-4506-86f3-db809fd230ae"><span style="color: #339966;">Besoin d'aide&nbsp;?</span></a></h2>
+<a title="Aide pour la recherche" href="details.xhtml?id=9915912d-1877-4506-86f3-db809fd230ae"><img style="display: block; margin-left: auto; margin-right: auto;" title="Vers la page d'aide" src="../rest/annotationSVC/Attachment/attach_null_8e445d31-9aba-4923-abfc-240777c92625?fileName=aide_b.jpg" alt="Ic&ocirc;ne d'aide" width="30" height="30" /></a></td>
+</tr>
+</tbody>
+</table></div> </div>
+<div id="cnt-1287d26c-636e-47ad-b342-cf4bd8515e7f" class="cntbx b1"style="height:78px;">
+ 
+    <div class='body'><table style="width: 190px; height: 78px;" border="0">
+<tbody>
+<tr>
+<td style="text-align: center;"><a title="Lien externe vers le Carnet horticole" href="http://espacepourlavie.ca/carnet-horticole-et-botanique" target="_blank"><img src="../rest/annotationSVC/Attachment/attach_null_cffa482a-87f6-4948-ae66-1983979b4534?fileName=carnet2.jpg" alt="Carnet horticole" width="169" height="56" /></a></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p></div> </div>
+</p>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+            <!-- BEGIN SKIN FOOTER --><div class="do_footerBefore" style="clear: both;">
+  <div class="do_footer" style="clear: both;">
+    <div class="icons">
+      <!-- AddThis FB TWTR RSS -->
+      <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+		<a class="addthis_button_facebook"></a>
+        <a class="addthis_button_twitter"></a>
+      </div>
+      <!-- AddThis FB TWTR RSS END -->
+    </div>
+    <div class="lien">
+      <div class="liens"><a href="details.xhtml?id=705c784e-1cac-456b-bf93-10065d0c3585"><img style="margin: 3px 1px 3px;  vertical-align: top;" title="Plan du site web" src="/in/rest/annotationSVC/Attachment/attach_null_d7e9ff3d-728e-4714-8ff9-919e66f04237?fileName=icone_siteweb5_b_p.jpg"alt="Plan du site" width="25" height="25" id="lang_planDuSite" /></a><span></span></div>
+      <div class="liens"><a href="details.xhtml?id=2346ab51-7635-4523-890e-a4ec59800c3b"><img style="margin: 3px 1px 3px; vertical-align: top;" title="Copyright" src="/in/rest/annotationSVC/Attachment/attach_null_0a52e1c3-0703-4969-b3ce-fee083a06167?fileName=copyright_b_p.jpg" alt="Copyright" width="25" height="25" id="lang_copyright" /></a><span></span></div>
+      <div class="liens"><a href="details.xhtml?id=b6c2a395-f64a-4f69-b897-dabb1795c7ca"><img style="margin: 3px 1px 3px; vertical-align: top;" title="Nous joindre" src="/in/rest/annotationSVC/Attachment/attach_null_18dba514-a455-40e1-9c59-9f1b98b57065?fileName=courrier_b_r.jpg"alt="Nous joindre" width="25" height="25" id="lang_nousJoindre" /></a><span></span></div>
+      <div class="liens"><a href="details.xhtml?id=9915912d-1877-4506-86f3-db809fd230ae"><img style="margin: 3px 1px 3px; vertical-align: top;" title="Page d'aide" src="/in/rest/annotationSVC/Attachment/attach_null_4d56aff5-1494-4a12-9be2-db12ed7752d7?fileName=aide_b_r.jpg"alt="Page d'aide" width="25" height="25" id="lang_pageAide" /></a><span></span></div>
+      <div class="liens"><a href="account.xhtml"><img style="margin: 3px 1px 3px; vertical-align: top;" title="Mon dossier" src="/in/rest/annotationSVC/Attachment/attach_null_a9fa4df6-b7e0-4039-af2e-0f6c1d5e3354?fileName=dossier_b_r.jpg" alt="Mon dossier" width="25" height="25" id="lang_monDossierIcon" /></a><span></span></div>
+    </div>
+    <div class="siteWeb"><a href="http://bibliojardin.espacepourlavie.ca/in"><img style="margin: 1px 5px; vertical-align: middle;" title="Page d'accueil" src="/in/rest/annotationSVC/Attachment/attach_null_09fca1da-06f3-4874-8bd1-7e6f0a397818?fileName=maison_b_p.jpg"alt="Page d'accueil" width="25" height="25" id="lang_pageAccueilIcon" />bibliojardin.espacepourlavie.ca</a>
+    </div>
+  </div>
+
+
+  
+  
+  <style>
+    .do_footerBefore {width: 1010px; height: 66px; margin: 0 auto; background-color: transparent; padding: 0px 0px 0px 0px; position: relative;}
+    .do_footer {width: 994px; height: 100%; background-color: white; position: relative;}
+    .do_footer div.lien{height:30px; float: right; position: relative; display: inline-block; margin:5px 0px 0px 0px;}
+    .do_footer div.liens{float:right;}
+    .do_footer div.lien a{margin:0px;}
+    .do_footer div.lien span {margin: 0px 5px 0px 5px;}
+    .do_footer div.icons {position: relative; display: inline-block; margin: 20px 0px 0px 5px; padding-top: 0px; float: left;}
+    .do_footer div.siteWeb { position: absolute; right: 5px; bottom: 5px; height:30px;}
+    .do_footer div.siteWeb a{color: #1d7743; font-weight: bold;}
+  </style>
+  <script> 
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+    ga('create', 'UA-41586810-1', 'espacepourlavie.ca'); 
+    ga('send', 'pageview'); 
+  </script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51c44ba51547038c">
+  </script>
+  
+  <script type="text/javascript">
+    if(mondoInPageApi.currentLocale == "en"){
+      $("#lang_planDuSite").attr("title","Sitemap");
+      $("#lang_copyright").attr("title","Copyright");
+      $("#lang_nousJoindre").attr("title","Contact us");
+      $("#lang_pageAide").attr("title","Help page");
+      $("#lang_monDossierIcon").attr("title","My account");
+      $("#lang_pageAccueilIcon").attr("title","Home page");
+    };
+  </script>
+  
+<!-- fix for the history search box in Search history.xhtml -->
+<script>
+  if(window.location.pathname == '/in/faces/SearchHistory.xhtml'){
+    $('#searchHistory').attr('style', 'width: 775px !important;');
+    $('#results').attr('style', 'width: 100% !important');
+    $('#divCollapsable').css('float', 'right');
+    $('#masthead-subnav').css('float', 'left');
+    $('#masthead-subnav').css('width', '100%');
+  }
+</script>
+
+
+
+            <!-- END SKIN FOOTER -->
+        <div id="backtotop" style="display: none;"><a href="#"></a></div></body>
+</html>

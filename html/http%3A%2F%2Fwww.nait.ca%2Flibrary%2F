@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><!-- PageID 4786 - published by Open Text Web Solutions 10.1 - 10.1.2.353 - 32528 -->
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>NAIT | Library Services</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="https://www.nait.ca/includes/library/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://www.nait.ca/includes/library/css/custom.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body id="home">
+
+    <!-- Navigation -->
+    <nav id="mainNavigation" class="navbar navbar-inverse navbar-fixed-top scroll-hide" role="navigation">
+<div id="search-pulldown">
+    <div class="container">
+        <div class="bigSearch">
+            <form name="searchFormBig" method="get" action="http://nait-primo.hosted.exlibrisgroup.com:1701/primo_library/libweb/action/dlSearch.do?" class="EXLSearchForm" enctype="application/x-www-form-urlencoded; charset=utf-8" id="searchFormBig" onsubmit="return validateFormBig();">
+                <input type="hidden" id="institution" name="institution" value="NAIT"> <input type="hidden" id="vidBig" name="vid" value="NAIT"> <input type="hidden" id="search_scope" name="search_scope" value="NAIT_Everything"> <input type="hidden" id="tab" name="tab" value="default_tab"> <input type="hidden" id="onCampus" name="onCampus" value="false"> <input type="hidden" id="indx" name="indx" value="1"> <input type="hidden" id="bulkSize" name="bulkSize" value="10"> <input type="hidden" id="dym" name="dym" value="true"> <input type="hidden" id="highlight" name="highlight" value="true"> <input type="hidden" id="displayField" name="displayField" value="title"> <input type="hidden" id="search_field" name="query" value=""> <input type="text" size="50" id="search_field_fill" name="filler" value="" placeholder="Search for Books, Articles, Media &amp; More"> <img src="/includes/library/img/bx_loader.gif" class="search-loader"> <input type="submit" alt="Search" title="Search" class="searchsubmit btn btn-primary" id="Search" value="Search" name="submit">
+            </form>
+        </div>
+        <div id="search-closer"></div>
+    </div>
+</div>
+<div class="starburst-wrapper"></div>
+<div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button id="nav-icon4" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a class="navbar-brand" href="http://www.nait.ca/library/">Library Services</a>
+    </div>
+    <div id="search-toggle" class="closed" role="button"></div><!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse yamm" id="mainNavBar">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Find Resources</a>
+                <div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" aria-label="submenu" id="nav-FindResources">
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+                <div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" aria-label="submenu" id="nav-Services">
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Assignment Help</a>
+                <div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" aria-label="submenu" id="nav-AssignmentHelp">
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                <div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>                                    
+                </div>
+                <ul class="dropdown-menu one-col" aria-label="submenu" id="nav-ContactUs">
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="http://chipri05lsnr.hosted.exlibrisgroup.com:1701/primo_library/libweb/action/myAccountMenu.do?vid=NAIT&amp;fromLink=gotoMyAccountUI" role="button" aria-haspopup="false"><span class="hidden-sm">My Library</span> Account</a>
+            </li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</div>
+    </nav>
+    <!-- Navigation -->
+        <!-- Image Background Page Header -->
+<header class="library-header">
+    <div id="arrowBottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"> 
+                <!-- Nav tabs -->
+                <h3 class="list-head">Find Resources</h3>
+                <ul class="nav mainTabList" role="tablist">
+                    <li role="presentation" class="active"><a href="#bookstab" aria-controls="bookstab" role="tab" data-toggle="tab">Books, Articles & More</a><div class="arrow"></div></li>
+                    <li role="presentation"><a href="#resourcetab" aria-controls="resourcetab" role="tab" data-toggle="tab">Resources for Your Program</a><div class="arrow"></div></li>
+                    <li role="presentation"><a href="#journaltab" aria-controls="journaltab" role="tab" data-toggle="tab">Resource Collections & Databases</a><div class="arrow"></div></li>
+                    <li role="presentation"><a href="#videotab" aria-controls="videotab" role="tab" data-toggle="tab">Videos & Streaming Media</a><div class="arrow"></div></li>
+                </ul>
+            </div>
+            <div class="col-md-6"> 
+                <!-- Tab panes -->
+                <div class="tab-content" id="mainTabs">
+                    <div role="tabpanel" class="tab-pane active fade in" id="bookstab">
+                        <!--<p><span class="lead">Search for:</span> books, articles, journals, audio and video</p>-->
+                        <div id="mainSearch" class="bigSearch">
+                            <form name="searchFormMiddle" method="get" action="http://nait-primo.hosted.exlibrisgroup.com:1701/primo_library/libweb/action/dlSearch.do?" class="EXLSearchForm" enctype="application/x-www-form-urlencoded; charset=utf-8" id="searchForm" onsubmit="return validateFormMiddle()"> 
+                                <input type="hidden" id="institution" name="institution" value="NAIT"/> 
+                                <input type="hidden" id="vidMiddle" name="vid" value="NAIT"/> 
+                                <input type="hidden" id="search_scope" name="search_scope" value="NAIT_Everything"/> 
+                                <input type="hidden" id="tab" name="tab" value="default_tab"/> 
+                                <input type="hidden" id="onCampus" name="onCampus" value="false"/> 
+                                <input type="hidden" id="indx" name="indx" value="1"/> 
+                                <input type="hidden" id="bulkSize" name="bulkSize" value="10"/> 
+                                <input type="hidden" id="dym" name="dym" value="true"/> 
+                                <input type="hidden" id="highlight" name="highlight" value="true"/> 
+                                <input type="hidden" id="displayField" name="displayField" value="title"/> 
+                                <input type="hidden" id="search_field" name="query" value="">
+                                <input type="text" size="50" id="search_field_fill" name="filler" value=""  placeholder="Search for Books, Articles, Media & More"> 
+                                <img src="/includes/library/img/bx_loader.gif" class="search-loader">
+                                <input type="submit" alt="Search" title="Search" class="searchsubmit btn btn-primary" id="Search" value="Search" name="submit"/> 
+                            </form>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li><a href="http://nait.libguides.com/c.php?g=408513&p=2783061">Borrowing From Other Libraries</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=258655&p=1733587">Items Reserved for Your Course</a></li>
+                                    <li><a href="http://nait.libguides.com/lynda">lynda.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li><a href="http://libezproxy.nait.ca/login?url=http://trades.exambank.com/index.html">ExamBank</a></li>
+                                    <li><a href="http://nait.libguides.com/onlinecodes">Codes & Standards</a></li>
+                                    <li><a href="http://sfx-01noaltech.hosted.exlibrisgroup.com/01noaltech/az">Journals by Title</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><a href="http://nait.libguides.com/primo">Library Search Tool Tips</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="resourcetab">
+                        <p class="lead-in">Program Guides</p>
+                        <p>Contain articles, ebooks, videos, and images. They are a great place to discover resources specific to your program.</p>
+                        <div class="row">
+                            <div class="col-xs-6 col-xxs-12">
+                                <ul>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2687827">Health Sciences</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2691821">Business</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2703230">Engineering Technologies</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2703231">Construction</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2703235">Environment & Natural Resources</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 col-xxs-12">
+                                <ul>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2703237">Trades & Apprenticeship</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2703240">Computers & IT</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2703245">Hospitality & Culinary</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2703249">Design & Communication</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=395581&p=2703250">Upgrading & ESL</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><a href="http://nait.libguides.com/c.php?g=395581&p=2687825">Alphabetical list of all guides</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="journaltab">
+                        <p class="lead-in">Resource Collections & Databases</p>
+                        <p>Collections of electronic articles, eBooks, streaming videos and images.</p>
+                        <div class="row">
+                            <div class="col-xs-6 col-xxs-12">
+                                <ul>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711441">Architecture, Design &amp; Woodworking</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711443">Automotives &amp; Trades</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711439">Business &amp; Economics</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711446">Canadian Coverage</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711475">Education Research &amp; Practice</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711442">Environment &amp; Life Sciences</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 col-xxs-12">
+                                <ul>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711438">Health &amp; Medical</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711444">Information Technology</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711479">Literature &amp; Language</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711489">Multi-Subject</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711490">News</a></li>
+                                    <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711440">Science, Engineering &amp; Technology</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><a href="http://nait.libguides.com/c.php?g=399016&p=2711437">Alphabetical List of all Databases</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="videotab">
+                        <!--<p class="lead">Search for: Videos & Streaming Media</p>-->
+                        <div id="videoSearch" class="bigSearch">
+                            <form name="searchFormMedia" method="get" action="http://nait-primo.hosted.exlibrisgroup.com:1701/primo_library/libweb/action/dlSearch.do?" class="EXLSearchForm" enctype="application/x-www-form-urlencoded; charset=utf-8" id="searchForm" onsubmit="return validateFormMedia()"> 
+                                <input type="hidden" id="institution" name="institution" value="NAIT"> 
+                                <input type="hidden" id="vidMedia" name="vid" value="NAIT"> 
+                                <input type="hidden" id="search_scope" name="search_scope" value="01NOALTECH_MEDIA"> 
+                                <input type="hidden" id="tab" name="tab" value="default_tab"> 
+                                <input type="hidden" id="onCampus" name="onCampus" value="false"> 
+                                <input type="hidden" id="indx" name="indx" value="1"> 
+                                <input type="hidden" id="bulkSize" name="bulkSize" value="10"> 
+                                <input type="hidden" id="dym" name="dym" value="true"> 
+                                <input type="hidden" id="highlight" name="highlight" value="true"> 
+                                <input type="hidden" id="displayField" name="displayField" value="title"> 
+                                <input type="hidden" id="search_field" name="query" value="">
+                                <input type="text" size="50" id="search_field_fill" name="filler" value="" placeholder="Search for NAIT Videos & Streaming Media"> 
+                                <input type="submit" alt="Search" title="Search" class="searchsubmit btn btn-primary" id="Search" value="Search" name="submit"> 
+                            </form>
+                        </div>
+                        <ul>
+                            <li><a href="http://nait.libguides.com/c.php?g=265553&p=1775480">Streaming Video Collections</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="http://nait.libguides.com/c.php?g=265553&p=2784976">Free Online Video Collections</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href=http://nait.libguides.com/c.php?g=265553&p=2784987>DVD Reservations (for showing in class)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                 
+                <h3 class="list-head">Ask Us</h3>
+                <div class="contact-wrap">
+                    <div class="contact-box phone-box">
+                        <strong>Phone</strong> 780.471.8777<br>
+                        <strong>Toll Free</strong> 1.877.222.1722
+                        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="contact-wrap">
+                    <div class="contact-box chat-box">
+                        <a href="#" onclick="window.open('https://libraryh3lp.com/chat/nait_help_desk@chat.libraryh3lp.com?skin=25450', 'AskUs', 'resizable=1,width=275,height=300'); return false;"><strong>Chat</strong></a>
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="clearfix visible-xs-block visible-sm-block visible-md-block"></div>
+                <div class="contact-wrap">
+                    <div class="contact-box email-box">
+                        <strong>Email</strong> <a style="color:#fff;" href="mailto:library@nait.ca">library@nait.ca</a>
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="contact-wrap">
+                    <div class="contact-box text-box">
+                        <strong>Text</strong> 780.666.3553
+                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><section id="fourColCopy">
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-6 col-xxs-12">
+                <h3>
+                    Service Highlights
+                </h3>
+                <ul class="box-link-list">
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=387082&p=2625797">Loanable Technology</a>
+                    </li>
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=408569&p=2783468">Makerspace, Creating & Printing</a>
+                    </li>
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=299189&p=1998274">Suggest an Item for Purchase</a>
+                    </li>
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=258655&p=1727301">Borrowing from NAIT</a>
+                    </li>
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=408829&p=2784973">Booking Collaboration Rooms</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-xs-6 col-xxs-12">
+                <h3>
+                    Assignment Help
+                </h3>
+                <ul class="box-link-list">
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=239983&p=1595823">Citations &amp; Style Guides</a>
+                    </li>
+                    <li>
+                        <a href="http://www.nait.ca/libresources/library_tutorial/LibraryTutorialPlayer.html">Starting Assignments (iNAIT)</a>
+                    </li>
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=332577&p=2606062">Business Information Sources</a>
+                    </li>
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=245439&p=1634300">Open Educational Resources</a>
+                    </li>
+                    <li>
+                        <a href="http://nait.libguides.com/c.php?g=318923&p=2130444">Online Library Classes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-md-3 col-xs-6 col-xxs-12">
+                <h3>
+                    Learning About Copyright
+                </h3>
+                <div class="box-content">
+                    <p>
+                        NAIT respects the rights of both copyright owners and copyright users as provided by the Copyright Act.
+                    </p>
+                    <p>
+                        <strong>Staff and Students:</strong><br>
+                        <a href="http://nait.libguides.com/c.php?g=237726&p=1580580">Learn More</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 col-xxs-12">
+                 
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills contact-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#tab-hours" aria-controls="tab-hours" role="tab" data-toggle="tab">Hours</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#tab-location" aria-controls="tab-location" role="tab" data-toggle="tab">Location</a>
+                    </li>
+                </ul><!-- Tab panes -->
+                <div class="tab-content contact-panels">
+                    <div role="tabpanel" class="tab-pane active fade in" id="tab-hours">
+                        <table class="table table-striped">
+                            <tr>
+                                <td>
+                                    Winter Term
+                                </td>
+                                <td>
+                                    Jan. 4 - Apr. 23
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Mon.-Thurs.
+                                </td>
+                                <td>
+                                    7:45 am to 9 pm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Friday
+                                </td>
+                                <td>
+                                    7:45 am to 5 pm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Saturday
+                                </td>
+                                <td>
+                                    12 pm to 5 pm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Sunday
+                                </td>
+                                <td>
+                                    12 pm to 5 pm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Closed
+                                </td>
+                                <td>
+                                    Mar. 25
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tab-location">
+                        <p>
+                            <a href="https://www.google.com/maps/place/McNally+Library/@53.5699282,-113.5045456,17z/data=!3m1!4b1!4m2!3m1!1s0x53a023a443a281cf:0x3f40e42618b0cb94"><img src="/includes/library/img/map.png" class="img-responsive" alt="Map"></a>
+                        </p>
+                        <p>
+                            <strong>Library</strong> - <a href="https://www.google.com/maps/place/McNally+Library/@53.5699282,-113.5045456,17z/data=!3m1!4b1!4m2!3m1!1s0x53a023a443a281cf:0x3f40e42618b0cb94">View Map</a><br>
+                            Room U310<br>
+                            Learning & Teaching Commons<br>
+                            106 Street and 118 Avenue
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.row -->
+        <hr>
+        <div class="row announcements">
+            <div class="col-sm-8">
+                 
+                <ul class="bxslider">
+                    <li>
+    
+
+    <a href="http://www.nait.ca/library/">
+        <img src="images/crop_Books.jpg">
+    </a>
+</li><li>
+    
+
+    
+                    <h3>
+                        Pride Week 2016
+                    </h3>
+                
+    <p>
+        
+        <span style="font-size: 11pt; line-height: 107%;"><span style="font-size: 11pt; line-height: 107%;"><span style="font-size: 11pt; line-height: 107%;"><span style="font-size: 11pt; line-height: 107%;"><span style="font-size: 11pt; line-height: 107%;"><span style="font-family: calibri;">
+        <p style="margin: 0in -0.5in 8pt 0in;"><span style="font-family: calibri;"><span style="font-family: times new roman;"><span style="font-family: arial;">Celebrate diversity at NAIT.</span></span></span></p>
+        <p style="margin: 0in -0.5in 8pt 0in;"><span style="font-family: calibri;"><span style="font-family: times new roman;"><span style="font-family: arial;">Check out the library’s collection of LGBTQ literature, including <i>The Glass Closet</i> by John Browne <br />
+        (former CEO of BP).</span></span></span></p>
+        <p style="margin: 0in -0.5in 8pt 0in;"><span style="font-size: 11pt; line-height: 107%;"><span style="font-family: times new roman;"><span style="font-family: arial;">For more about Pride Week events, click </span></span><a href="http://www.nait.ca/docs/4989_Pride_Week_Poster_with_Schedulev3.pdf" target="_blank"><span style="font-family: times new roman;"><span style="font-family: arial;">here</span></span></a><span style="font-family: times new roman;"><span style="font-family: arial;">.</span></span></span></p>
+        <p style="margin: 0in -0.5in 8pt 0in;"><span style="font-size: 11pt; line-height: 107%;"></span><span style="font-family: calibri;"><span style="font-family: times new roman;"><span style="font-family: arial;">Image courtesy of NAIT</span>.</span></span></p>
+        </span></span></span></span></span></span>
+    
+    </p>
+    
+</li><li>
+    
+
+    <a href="http://www.nait.ca/library/">
+        <img src="images/crop_NAITBinding.jpg" alt="Need your reports bound?">
+    </a>
+</li><li>
+    
+
+    
+                    <h3>
+                        Need Reports Bound?
+                    </h3>
+                
+    <p>
+        
+        <span style="font-size: 11pt; line-height: 107%;"><span style="font-size: 11pt; line-height: 107%;"><span style="font-size: 12pt; line-height: 107%;"><span style="font-size: 12pt; line-height: 107%;">
+        <p style="margin: 0in 0in 8pt;"><span style="font-size: 11pt; line-height: 107%;"><span style="font-size: 11pt; line-height: 107%;">Students: To add some oomph to your project work, come to the Help Desk in the library and have your reports professionally bound. Price varies; see link below for details of services and supplies</span>. </span></p>
+        <p style="margin: 0in 0in 8pt;"><span style="font-size: 11pt; line-height: 107%;">Image courtesy of NAIT.</span></p>
+        </span></span></span></span>
+    
+    </p>
+    
+                    <a href="http://nait.libguides.com/c.php?g=408569&amp;p=2805504">Learn more »</a>
+                
+</li><li>
+    
+
+    <a href="http://www.nait.ca/library/">
+        <img src="images/crop_OEWeekPostcad.jpg">
+    </a>
+</li><li>
+    
+
+    
+                    <h3>
+                        Open Education Week
+                    </h3>
+                
+    <p>
+        
+        <span style="font-size: 11pt; line-height: 107%;">March 7-11, 2016</span>
+        <p><span style="font-size: 11pt; line-height: 107%;"><span style="font-size: 11pt; line-height: 107%;">Faculty: Would you like to learn more about Open Education Resources? (Your students will thank you.) Click <a href="http://nait.libguides.com/c.php?g=245439&p=1634300" target="_blank">here</a> for an introduction to OER, and <a href="https://www.nait.ca/portal/server.pt/gateway/PTARGS_0_0_6094_0_0_43/http;/portletsrv/naitusermessageweb/ViewMessages.aspx?id=53948" target="_blank">here</a> for details about next week’s events</span>.</span></p>
+        <p>Image courtesy of OpenEducationWeek.org.</p>
+    
+    </p>
+    
+</li><li>
+    
+
+    <a href="">
+        <img src="images/BirchTrees2.JPG" alt="Quote of the Day">
+    </a>
+</li><li>
+    
+
+    
+                    <h3>
+                        Quote of the Day
+                    </h3>
+                
+    <p>
+        
+        <span style="font-family: georgia;"><span style="font-family: arial;">A long habit of not thinking a thing wrong gives it a superficial appearance of being right.</span></span>
+        <p><span style="font-family: arial;">by Thomas Paine</span></p>
+        <p><span style="font-family: arial;">Image courtesy of  NAIT.</span></p>
+    
+    </p>
+    
+</li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+            <a class="twitter-timeline"  href="https://twitter.com/NAITLibrary" data-widget-id="313705644882530305">Tweets by @NAITLibrary</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>          
+            </div>
+        </div>
+    </div><!-- /.container -->
+</section>
+    <footer id="footerNav">
+    </footer>
+        <!-- jQuery -->
+        <script src="https://www.nait.ca/includes/library/js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="https://www.nait.ca/includes/library/js/bootstrap.min.js"></script>
+        <script src="https://www.nait.ca/includes/library/js/jquery.bxslider.min.js"></script>
+        <script src="https://www.nait.ca/includes/library/js/scripts.js"></script>
+        <!--<script type="text/javascript" src="//libraryh3lp.com/js/libraryh3lp.js?multi,poll,popup"></script>-->
+        
+        <!-- Place this script as near to the end of your BODY as possible. -->
+        <script type="text/javascript">
+          (function() {
+            var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
+            x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "libraryh3lp.com/js/libraryh3lp.js?9576";
+            var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
+          })();
+        </script>
+
+
+
+        
+        <!-- GOOGLE ANALYTICS START -->
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-22688207-1'],['_setDomainName', '.nait.ca'],['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        <!-- GOOGLE ANALYTICS END -->
+        
+    </body>
+</html>

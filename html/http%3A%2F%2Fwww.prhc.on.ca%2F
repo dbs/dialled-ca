@@ -1,0 +1,1405 @@
+
+
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=us-ascii" /><meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" /><link rel="shortcut icon" type="image/ico" href="favicon.ico" /> 
+    <script language="javascript" type="text/javascript">
+        function setCookie(cookieName, cookieValue, expiredays)
+        {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + expiredays);
+            document.cookie = cookieName + "=" + escape(cookieValue) + ((expiredays == null) ? "" : ";expires=" + exdate.toUTCString());
+        }
+
+        function getCookie(cookieName)
+        {
+            if (document.cookie.length > 0)
+            {
+                cookieStart = document.cookie.indexOf(cookieName + "=");
+                if (cookieStart != -1)
+                {
+                    cookieStart = cookieStart + cookieName.length + 1;
+                    cookieEnd = document.cookie.indexOf(";", cookieStart);
+                    if (cookieEnd == -1) cookieEnd = document.cookie.length;
+                    return unescape(document.cookie.substring(cookieStart, cookieEnd));
+                }
+            }
+            return "";
+        }
+
+        function getUtcOffset()
+        {
+            return (new Date()).getTimezoneOffset();
+        }
+
+        function checkCookie()
+        {
+            var timeOffset = getCookie('Communifire_ClientTimeZoneOffset');
+            if (timeOffset == null || timeOffset == "")
+            {
+                setCookie("Communifire_ClientTimeZoneOffset", getUtcOffset(), 1);
+                window.location.reload();
+
+            }
+
+        }
+        checkCookie();
+    </script>
+  
+<script type="text/javascript">
+    var CF_VD = '', CF_LOCALE = '', CF_THEME = 'default',
+        CF_USERID = '0',
+        CF_USER_DISPLAY_NAME = '';
+</script>
+    <link href="/Themes/default/jquery-ui/css/smoothness/jquery-ui-1.8.16.custom.css?v=3.0.0.20384" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />    
+    <link href="/Themes/default/jquery-ui/css/axero-jquery-ui-custom-theme/jquery-ui-custom.css?v=3.0.0.20384" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />    
+    <link href="/Themes/default/jquery-ui/css/aristo/aristo.css?v=3.0.0.20384" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />    
+    <link href="/Themes/default/css/styles.css?v=3.0.0.20384" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />
+    <link href="/assets/css/custom-override.css?v=3.0.0.20384" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />  
+    <script src="/assets/scripts/jquery/jquery.min.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/main.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/facebox/facebox.js?v=3.0.0.20384" type="text/javascript"></script>    
+    <script src="/assets/scripts/json2.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/cf-enums.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/validate/jquery.validate.js?v=3.0.0.20384" type="text/javascript"></script>
+	<script src="/assets/scripts/jquery.watermark.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery-binddefer.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/qtip/jquery.qtip-1.0.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/qtip/jquery-qtooltip-initializer.js?v=3.0.0.20384" type="text/javascript"></script> 	    
+    <script src="/assets/scripts/micro-template.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery.tools.min.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/custom-plugins/jquery-showmessagebar.js?v=3.0.0.20384" type="text/javascript"></script>    
+    <script src="/assets/scripts/jquery/custom-plugins/jquery-checkall.js?v=3.0.0.20384" type="text/javascript"></script>    
+    <script src="/assets/scripts/jquery/custom-plugins/jquery-validateGrid.js?v=3.0.0.20384" type="text/javascript"></script>        
+    <script src="/assets/scripts/jquery/custom-plugins/jquery-cfAjax.js?v=3.0.0.20384" type="text/javascript"></script>        
+    <script src="/assets/scripts/jquery/custom-plugins/jquery-validatePluginOptions.js?v=3.0.0.20384" type="text/javascript"></script>        
+    <script src="/assets/scripts/jquery/custom-plugins/jquery-rating.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/DTO/Rating.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/jquery.raty/js/jquery.raty.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/scrollTo-min.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery.selectboxes.min.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/Communifire.Modals.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/loopj-jquery-tokeninput/src/jquery.tokeninput.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/autogrow/jquery.autogrowtextarea.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/custom-plugins/jquery-cfcaptcha.js?v=3.0.0.20384" type="text/javascript"></script>
+   <script src="/assets/scripts/jquery/custom-plugins/jquery-cfSendPrivateMessage.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/Communifire.Utilities.Activity.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/Publisher.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/jquery.cookie.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/custom-plugins/jquery-autoresize.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/jquery.linkify.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/Communifire.Helpers.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery/jquery.custom-extensions.js?v=3.0.0.20384" type="text/javascript"></script>
+    <script src="/assets/scripts/DTO/Message.js?v=3.0.0.20384" type="text/javascript"></script>
+    
+<script type="text/javascript">
+    var ratingSuccessMessage = 'Rated';
+    $(function() {
+        $('div[data-initialrating]').rating({ ratedSuccessMessage: ratingSuccessMessage });
+    });
+
+
+    $.setCFQTipResources({
+        globalCloseText: 'Close'
+    });
+</script>
+<link title="RSS" href="/rss-recent-activity.ashx" type="application/rss+xml" rel="alternate" />
+    
+    <!-- header scripts start -->     
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35126122-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>  
+    <!-- header scripts end -->
+<meta name="description" content="Peterborough Regional Health Centre (PRHC) is a state-of-the-art regional hospital with a proud local history extending back over a century.
+
+We are located in Peterborough, Ontario, Canada. Peterborough is about 90 minutes drive north-east of Toronto. Funded by the Province of Ontario through the Central East Local Health Integration Network (CELHIN), PRHC has a capacity of 494 beds, one of the busiest Emergency Departments in Ontario, and an extensive range of hospital programs and services." /><title>
+	Peterborough Regional Health Centre
+</title></head>
+<body id="ctl00_MasterPageBodyTag">
+
+    <div id="axero-indicator">
+        <div class="axero-indicator-content">
+            <span><strong>Loading ...</strong></span>
+        </div>
+    </div>
+
+<form name="aspnetForm" method="post" action="" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTMwMDQyNjYzNmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFJmN0bDAwJEhlYWRlcjEkU2VhcmNoQm94MSR0eHRTZWFyY2hNYWluORnCzwb7aqEiZ83l151/lEiGVF6fd8Q4G3kzfp/LpHE=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=qLcuw8JDtDdoK354Kfw7CVT8irYQwc9zKxCi4ctTjYT_Cr4m_OJ5di0KOruuAFar6niqZr-2iPQvaQAaA-oXtehGxLFL15rAE50InM9xl2I1&amp;t=635145392180000000" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=7KaS9gHoxu8zVFQTVhKg4tvSH80whtdf8XgB7yMOcbydnhTKgLia1qp3jHdRpoo3rcHB5G4SiJ3Rx6Pi5-cAqpgiUXk5KWDTuanoZKPSZvkQDKD_rg8JEDGWNIFEE21HOXvTPL5JFUgAyIL7H4ZlpdF4KzPKugEN31-laWXEhkk8kazOxSf2USaN80WJUIwlhe1exNPp4tMrfg67Vx4I8SqJv1aRYsPXpWhDSfGUiwk1&amp;t=634993787793406083" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=O3jTLG2Yy9QJek8nv2awfH8Z8wJ0wUIzRk5eKxJTtAyro5zCFOHYjkmj1y9HEsugoGx3VMbnrvJztUOf9PpRUbv34hN7pTlKDQXBnDZayeb1p4iuWvQ-TyCc6wTRDroGcIo0R_tPdnTjrexbat3t6VEObhU9Um2egaKKcoPqHn81&amp;t=ca758f3" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=qQlUorW_Md_VhtZiRsrEMM4do-uS45wy8x8Oyh0X48smHTjiLLivgUlQpxZX3fxXF3UcqjPK0p08Td_aAvMcKFOe5FZOoOIs99TrgBvvikTTlcqAiSoaldukFptpKZX-_teVi0nRusGdCE_f-gA5Xis7QCEM4ovGLSuS6dJFL9mpNsiIOKrjToMbrCY-dt1n0&amp;t=ca758f3" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAU7fpxHip2rMmsTnFTnWf2ni0f0lT1isMw3cGHPGV8EwGw0qOjJwfdfyVk20wk783LOZrR+Z2zYLPWl7dMv+8BfokJwMXesRLMzoM4a3SQhRqOn58wUGnkMpIuGmxbdCGMg6sPAiznOblk3gbBO8VjS" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+    <!-- start h1 tag -->
+    <h1 class="axero-header-standard-h1">Peterborough Regional Health Centre</h1>
+    <!-- end h1 tag -->
+
+    <!-- start community wrapper -->
+    <div id="axero-community-wrapper">
+
+        <!-- start header -->
+        
+
+<!-- start header -->
+<div id="axero-header">
+
+    
+
+<!-- 
+    if the logo is uploaded, hide the ID=H1Tag, and set the ID=imgLogo src value =
+    to the path of the logo, also set the alt = HeaderH1SpanText.    
+    if the logo is NOT uploaded, hide the ID=imgLogo    
+    -->
+
+
+
+<div class="axero-header-standard-logo">
+   <a href="/home" title="PRHC" > PRHC    
+    </a>
+</div>
+
+
+    <div id="axero-header-right">
+        
+        <!-- start who's online -->
+        <div class="axero-whos-online">
+            <span id="ctl00_Header1_WhoIsOnline1"><span>
+                    <a href="/people/online-users" id="ctl00_Header1_WhoIsOnline1_ctl00_aOnline">Who is online?</a> &nbsp;<strong>0</strong> guests and <strong>0</strong> members
+                </span></span>
+        </div>
+        <!-- end who's online -->
+        
+        
+        
+        <div id="ctl00_Header1_pnlAnonymous" class="axero-anon-login">
+	
+                <a href="/login" id="ctl00_Header1_aLogin" text="Login" title="Login" class="">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/register" id="ctl00_Header1_aRegister" text="Register" title="Register">Register</a>
+        
+</div>
+       
+               
+       
+        
+        
+<div class="axero-main-search-container">
+
+   <input name="ctl00$Header1$SearchBox1$txtSearchMain" type="text" id="ctl00_Header1_SearchBox1_txtSearchMain" class="search-textbox" onkeydown="return fire_ctl00_Header1_SearchBox1_btnSearch_Click(event);" />
+    <a id="ctl00_Header1_SearchBox1_btnSearch" href="javascript:__doPostBack(&#39;ctl00$Header1$SearchBox1$btnSearch&#39;,&#39;&#39;)"><span class="cf-icon-misc cf-icon-misc-search"></span></a>
+    
+</div>
+    
+ 
+
+
+
+        
+    </div>
+  
+</div>
+<!-- end header -->
+
+<!-- start navigation -->
+
+
+<!-- start navigation -->
+<div id="axero-navigation">
+    <ul>
+        <li id="ctl00_Header1_NavigationDefault1_liHome" class="axero-stnav-home active"><a id="ctl00_Header1_NavigationDefault1_hplHome" accesskey="h" title="LearnFlex Connect Community" class="active" href="/home">home</a></li>
+        <li id="ctl00_Header1_NavigationDefault1_liArticles" class="axero-stnav-articles"><a id="ctl00_Header1_NavigationDefault1_hplArticles" accesskey="a" title="News" href="/articles">news</a></li>
+        
+        <li id="ctl00_Header1_NavigationDefault1_liBlogs" class="axero-stnav-blogs"><a id="ctl00_Header1_NavigationDefault1_hplBlogs" accesskey="b" title="Blogs" href="/blogs">blogs</a></li>
+        
+        
+        <li id="ctl00_Header1_NavigationDefault1_liJobs" class="axero-stnav-jobs"><a id="ctl00_Header1_NavigationDefault1_hplJobs" accesskey="j" title="Physician Jobs" href="/jobs">physician jobs</a></li>
+        
+        
+        
+        
+        <li id="ctl00_Header1_NavigationDefault1_liSpace" class="axero-stnav-space"><a id="ctl00_Header1_NavigationDefault1_hplSpace" accesskey="s" title="LearnFlex Connect Spaces" href="/spaces">spaces</a></li>
+        <li id="ctl00_Header1_NavigationDefault1_liPeople" class="axero-stnav-people"><a id="ctl00_Header1_NavigationDefault1_hplPeople" accesskey="P" title="LearnFlex Connect People" href="/people/pages">people</a></li>
+        
+        
+        
+        <li id="ctl00_Header1_NavigationDefault1_liLogin" class="axero-stnav-login"><a id="ctl00_Header1_NavigationDefault1_hplLogin" accesskey="l" title="login" class="" href="/login">login</a></li>
+        <li id="ctl00_Header1_NavigationDefault1_liRegister" class="axero-stnav-register"><a id="ctl00_Header1_NavigationDefault1_hplRegister" accesskey="r" title="register" class="last" href="/register">register</a></li>
+        <li id="ctl00_Header1_NavigationDefault1_liControlPanel" class="axero-stnav-admin"></li>
+    </ul>
+</div>
+<!-- end navigation -->
+
+<!-- end navigation -->
+
+        
+
+        
+        <!-- end header -->
+
+        <!-- start wrapper -->
+        <div id="axero-wrapper">
+        
+            <!-- start content -->
+            
+<style type="text/css">
+    ul.axero-space-list li {
+    display: inline-block;
+width: 100%;
+    
+    }
+  
+</style>
+
+        <div class="axero-announcement">
+	<div class="axero-announcement-icon">
+		<span class="cf-icon cf-icon-announcement"></span>
+	</div><div class="axero-announcement-content">
+		<span class="bold">Announcement</span>&nbsp;<table style="width: 935px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="2" align="middle">
+<table style="width: 785px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="menuItem"><a href="/default-category/about-prhc">About PRHC</a></td>
+<td class="menuItem"><a href="/default-category/patients">Patients</a></td>
+<td class="menuItem"><a href="/default-category/visitors">Visitors</a></td>
+<td class="menuItem"><a href="/default-category/regional-programs">Regional Programs</a></td>
+<td class="menuItem"><a href="/default-category/news-information">News &amp; Info</a></td>
+<td class="menuItem"><a href="/default-category/volunteers">Volunteers</a></td>
+<td class="menuItem"><a href="https://bc.tbe.taleo.net/BC11/ats/careers/jobSearch.jsp?org=PRHC&amp;cws=1" target="_blank">Careers</a></td>
+<td class="menuItem"><a href="/default-category/contact-us">Contact</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="743" height="278"><object id="/Assets/images/prhcwelcome" width="743" height="278" align="middle" data="/Assets/images/prhcwelcome.swf" type="application/x-shockwave-flash"><param name="quality" value="high" /><param name="play" value="true" /><param name="loop" value="true" /><param name="wmode" value="window" /><param name="scale" value="showall" /><param name="menu" value="true" /><param name="devicefont" value="false" /><param name="salign" value="" /><param name="allowScriptAccess" value="sameDomain" /><param name="src" value="/Assets/images/prhcwelcome.swf" /><!--[if !IE]>--> <img src="http://www.prhc.on.ca/assets/scripts/tiny_mce/themes/advanced/img/trans.gif" class="mceItemMedia mceItemFlash" width="743" height="278" data-mce-json="{'video':{},'params':{'quality':'high','play':'true','loop':'true','wmode':'window','scale':'showall','menu':'true','devicefont':'false','salign':'','allowScriptAccess':'sameDomain','src':'/Assets/images/prhcwelcome.swf'},'name':null,'object_html':'&lt;!--&lt;![endif]--&gt; &lt;a href=\&quot;http://www.adobe.com/go/getflash\&quot;&gt; &lt;img src=\&quot;http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\&quot; alt=\&quot;Get Adobe Flash player\&quot; /&gt; &lt;/a&gt; &lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" alt="" /> <!--<![endif]--> </object></td>
+<td><a href="/default-category/send-best-wishes"><img src="/Assets/images/bestwishes.png" alt="" border="none" /></a></td>
+</tr>
+<tr>
+<td><a href="https://secure2.convio.net/prhcf/site/Donation2?1400.donation=landing&amp;df_id=1400"><img src="/Assets/images/donate.png" alt="" border="none" /></a></td>
+</tr>
+<tr>
+<td class="clearPad" colspan="2">
+<table style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Follow us&nbsp; <a href="https://twitter.com/PRHC1"><img src="http://www.prhc.on.ca/Assets/Uploaded-CMS-Files/twitter-7aee252d-c2d8-45c1-b4a5-3bb563694b38.png" alt="" width="50" height="41" /></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td>
+<td>
+<script charset="utf-8" type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script type="text/javascript">// <![CDATA[
+new TWTR.Widget({
+												  version: 2,
+												  type: 'profile',
+												  rpp: 4,
+												  interval: 30000,
+												  width: 860,
+												  height: 40,
+												  theme: {
+												    shell: {
+												      background: '#76a0cc',
+												      color: '#ffffff'
+												    },
+												    tweets: {
+												      background: '#76a0cc',
+												      color: '#ffffff',
+												      links: '#ffffff'
+												    }
+												  },
+																  features: {
+																	scrollbar: false,
+																	loop: true,
+																	live: true,
+																	behavior: 'default'
+																  }
+																}).render().setUser('PRHC1').start();
+// ]]></script>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<table style="width: 935px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="buttons" align="middle"><a href="/default-category/our-performance"><img src="/Assets/images/tims.png" alt="" border="none" /></a></td>
+<td class="buttons" align="middle"><a href="http://www.prhc.on.ca/cms/patients-patient-relations"><img src="/Assets/images/share.png" alt="" border="none" /></a></td>
+<td class="buttons" align="middle"><a href="/blogs/"><img src="/Assets/images/kensblog.png" alt="" border="none" /></a></td>
+<td class="buttons" align="middle"><a href="https://bc.tbe.taleo.net/BC11/ats/careers/jobSearch.jsp?org=PRHC&amp;cws=1" target="_blank"><img src="/Assets/images/careers.png" alt="" border="none" /></a></td>
+<td class="buttons" align="middle"><a href="https://www.e-comunity.ca/unp/UNPFrontControllerServlet?LANG=en&amp;OPCODE=FormInfo&amp;APP_ID=100044&amp;BRAND=site"><img src="/Assets/images/paybill.png" alt="" border="none" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+	</div>
+</div>
+        <!-- start left column -->
+        <div id="axero-two-col-sidebar-right-leftcol">
+            <div id="axero-two-col-sidebar-right-leftcol-inner">
+                
+                 <!-- start featured articles -->
+                        
+        <!--  end featured articles -->
+                
+        <!-- start featured blog posts -->
+        
+                    
+                    <div class="axero-section">
+                    
+                        <h3 class="axero-section-header">Featured Blogs</h3>
+                        
+                
+                
+                <div class="list">
+                    <ul style="margin:10px 0px 0px 0px; padding:0px;">
+                        <li>
+                        <div class="axero-section-list-avatar">
+                                        <a href="/people/PRHC" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl01_hrefUserProfile"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl01_userImage" /></a>
+                                    </div>
+                         
+                        <div class="axero-section-list-content">
+                                    
+                                        <div class="axero-section-list-content-title">
+                                            <a href="/blogs/PRHC/default-category/88/ceo-blog-physician-assisted-dying-and-our-ethical-obligations-to-our-patients" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl01_hrefBlogUrl" class="bold" title="CEO Blog: Physician-assisted dying and our ethical obligations to our patients">CEO Blog: Physician-assisted dying and our ethical obligations to our patients</a>
+                                        </div>
+                                        
+                                        <div class="axero-section-list-content-date">
+                                            3/10/2016 2:53 PM&nbsp;by&nbsp;<a title="PRHC" href="/people/PRHC">PRHC</a>
+                                            &nbsp;-&nbsp;Views:&nbsp;61&nbsp;-&nbsp;Comments:&nbsp;0</div>
+                                        <div class="axero-section-list-content-summary">
+                                            The subject of physician-assisted dying has sparked a great deal of discussion and debate in recent months as our patients and healthcare professionals await new provincial legislation later this year... 
+                                        </div>
+
+                                    </div>
+                        </li>
+                    </ul>
+                </div>   
+                
+                
+                <div class="list">
+                    <ul style="margin:10px 0px 0px 0px; padding:0px;">
+                        <li>
+                        <div class="axero-section-list-avatar">
+                                        <a href="/people/PRHC" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl02_hrefUserProfile"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl02_userImage" /></a>
+                                    </div>
+                         
+                        <div class="axero-section-list-content">
+                                    
+                                        <div class="axero-section-list-content-title">
+                                            <a href="/blogs/PRHC/default-category/87/ceo-blog-an-important-reminder-as-flu-season-sets-in-flu-shots-save-lives" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl02_hrefBlogUrl" class="bold" title="CEO Blog: An important reminder as flu season sets in: Flu shots save lives">CEO Blog: An important reminder as flu season sets in: Flu shots save lives</a>
+                                        </div>
+                                        
+                                        <div class="axero-section-list-content-date">
+                                            2/3/2016 2:26 PM&nbsp;by&nbsp;<a title="PRHC" href="/people/PRHC">PRHC</a>
+                                            &nbsp;-&nbsp;Views:&nbsp;932&nbsp;-&nbsp;Comments:&nbsp;0</div>
+                                        <div class="axero-section-list-content-summary">
+                                            Two weeks ago, Alberta Health Services (AHS) reported five flu-related deaths in a single week &ndash; including a child &ndash; and a significant increase in flu-related hospitalizations, with patien... 
+                                        </div>
+
+                                    </div>
+                        </li>
+                    </ul>
+                </div>   
+                
+                
+                <div class="list">
+                    <ul style="margin:10px 0px 0px 0px; padding:0px;">
+                        <li>
+                        <div class="axero-section-list-avatar">
+                                        <a href="/people/PRHC" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl03_hrefUserProfile"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl03_userImage" /></a>
+                                    </div>
+                         
+                        <div class="axero-section-list-content">
+                                    
+                                        <div class="axero-section-list-content-title">
+                                            <a href="/blogs/PRHC/default-category/86/ceo-blog-peterborough-stands-together" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl03_hrefBlogUrl" class="bold" title="CEO Blog: Peterborough stands together">CEO Blog: Peterborough stands together</a>
+                                        </div>
+                                        
+                                        <div class="axero-section-list-content-date">
+                                            11/25/2015 6:53 PM&nbsp;by&nbsp;<a title="PRHC" href="/people/PRHC">PRHC</a>
+                                            &nbsp;-&nbsp;Views:&nbsp;2950&nbsp;-&nbsp;Comments:&nbsp;0</div>
+                                        <div class="axero-section-list-content-summary">
+                                            It was with heavy heart that I read a front-page news report last week about an attack on Peterborough&rsquo;s only mosque &ndash; a story that made national headlines following the violent events tha... 
+                                        </div>
+
+                                    </div>
+                        </li>
+                    </ul>
+                </div>   
+                
+                
+                <div class="list">
+                    <ul style="margin:10px 0px 0px 0px; padding:0px;">
+                        <li>
+                        <div class="axero-section-list-avatar">
+                                        <a href="/people/PRHC" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl04_hrefUserProfile"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl04_userImage" /></a>
+                                    </div>
+                         
+                        <div class="axero-section-list-content">
+                                    
+                                        <div class="axero-section-list-content-title">
+                                            <a href="/blogs/PRHC/default-category/85/ceo-blog-working-together-toward-a-positive-patient-experience" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl04_hrefBlogUrl" class="bold" title="CEO Blog: Working together toward a positive patient experience">CEO Blog: Working together toward a positive patient experience</a>
+                                        </div>
+                                        
+                                        <div class="axero-section-list-content-date">
+                                            11/3/2015 3:24 PM&nbsp;by&nbsp;<a title="PRHC" href="/people/PRHC">PRHC</a>
+                                            &nbsp;-&nbsp;Views:&nbsp;1692&nbsp;-&nbsp;Comments:&nbsp;0</div>
+                                        <div class="axero-section-list-content-summary">
+                                            The Beryl Institute defines the patient experience as "the sum of all interactions, shaped by an organization's culture, that influence patient perceptions across the continuum of care.&rdquo; At Pete... 
+                                        </div>
+
+                                    </div>
+                        </li>
+                    </ul>
+                </div>   
+                
+                
+                <div class="list">
+                    <ul style="margin:10px 0px 0px 0px; padding:0px;">
+                        <li>
+                        <div class="axero-section-list-avatar">
+                                        <a href="/people/PRHC" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl05_hrefUserProfile"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl05_userImage" /></a>
+                                    </div>
+                         
+                        <div class="axero-section-list-content">
+                                    
+                                        <div class="axero-section-list-content-title">
+                                            <a href="/blogs/PRHC/default-category/84/ceo-blog-patients-across-our-region-benefit-as-cardiac-care-services-continue-to-expand" id="ctl00_ContentPlaceHolder1_FeaturedBlogList_ctl05_hrefBlogUrl" class="bold" title="CEO Blog: Patients across our region benefit as Cardiac Care services continue to expand">CEO Blog: Patients across our region benefit as Cardiac Care services continue to expand</a>
+                                        </div>
+                                        
+                                        <div class="axero-section-list-content-date">
+                                            9/22/2015 1:35 PM&nbsp;by&nbsp;<a title="PRHC" href="/people/PRHC">PRHC</a>
+                                            &nbsp;-&nbsp;Views:&nbsp;2747&nbsp;-&nbsp;Comments:&nbsp;0</div>
+                                        <div class="axero-section-list-content-summary">
+                                            Ten years ago, in 2005, Peterborough Regional Health Centre (PRHC) established a comprehensive, regional program for patients who have experienced a stroke. In 2014, we expanded the hospital&rsquo;s e... 
+                                        </div>
+
+                                    </div>
+                        </li>
+                    </ul>
+                </div>   
+                
+                    
+                    
+                    </div>
+                        
+        <!-- end  featured blog posts -->
+        
+        <!-- start featured events -->
+          
+        <!-- end featured events -->
+
+        <!-- start featured users -->
+        
+        <!-- end featured users -->   
+          
+        <!-- start featured spaces -->
+        
+        <!-- end featured spaces -->
+
+        <!-- start featured topics list -->
+        
+        <!-- end featured topics list -->
+    
+        <!-- start featured wiki topic list -->         
+        
+        <!-- end featured wiki topic list -->
+        
+        <!-- start featured videos -->
+        
+        <!-- end featured videos -->
+
+
+
+                <!-- start what's new section -->
+                <script src="/assets/scripts/jquery/initializers/defaultpage-tabs-initializer.js?v=3.0.0.20384" type="text/javascript"></script> 
+<script type="text/javascript" >
+
+    $.setDefaultPageTabsResources({
+        globalLoadingText: 'Loading ...',
+        globalNoActivitiesToShowText: 'There are no more activities to show right now.'
+    });
+
+</script>
+<div class="axero-section with-pager">
+                    <a href="rss-recent-activity.ashx" id="ctl00_ContentPlaceHolder1_WhatsNewSection1_hypRSS" class="axero-rss-link cf-icon cf-icon-rss right" title="Recent Activity RSS Feed"></a>
+                    <h3 class="axero-section-header">What's New</h3>
+                   <div class="axero-space-tabs">
+                    
+                       <!-- start tabs -->
+                        <ul class="tabs">                            
+                            <li><a>Activity</a></li>
+                            <li id="ctl00_ContentPlaceHolder1_WhatsNewSection1_liLatestBlog"><a href="#1">Blogs</a></li><li id="ctl00_ContentPlaceHolder1_WhatsNewSection1_liLatestArticle"><a href="#3">News</a></li><li id="ctl00_ContentPlaceHolder1_WhatsNewSection1_liLatestJob"><a href="#5">Physician Jobs</a></li>
+                        </ul> 
+                        <!-- end tabs -->
+                    <!-- start tab "panes" --> 
+                    <div class="panes"> 
+                        <div>
+                        
+                                <div id="recentactivity" class="list"> 
+                                <ul>
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;posted a blog entry: <a href="/blogs/PRHC/default-category/88/ceo-blog-physician-assisted-dying-and-our-ethical-obligations-to-our-patients" target="_self">CEO Blog: Physician-assisted dying and our ethical obligations to our patients</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            3/11/2016 6:35 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated an article: <a href="/articles/default-category/150/automated-lab-launches-at-peterborough-regional-health-centre" target="_self">Automated lab launches at Peterborough Regional Health Centre</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            3/10/2016 9:25 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/jtataryn" id="hypUserProfile" class="" title="jtataryn"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="jtataryn" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="jtataryn" href="/people/jtataryn">jtataryn</a>&nbsp;created a job post: <a href="/jobs/127/physician-opportunities/general-pathologist" target="_self">General Pathologist</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            3/3/2016 3:34 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;posted an article: <a href="/articles/default-category/151/first-2016-leap-year-baby-born-at-prhc" target="_self">First 2016 Leap Year baby born at PRHC</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/29/2016 5:50 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/jtataryn" id="hypUserProfile" class="" title="jtataryn"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="jtataryn" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="jtataryn" href="/people/jtataryn">jtataryn</a>&nbsp;created a job post: <a href="/jobs/126/physician-opportunities/general-adult-psychiatrist-geriatric-psychiatrist-amp-child-and-adolescent-psychiatrist-3-positions" target="_self">General Adult Psychiatrist, Geriatric Psychiatrist &amp; Child and Adolescent Psychiatrist (3 Positions)</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/19/2016 7:04 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/jtataryn" id="hypUserProfile" class="" title="jtataryn"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="jtataryn" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="jtataryn" href="/people/jtataryn">jtataryn</a>&nbsp;created a job post: <a href="/jobs/125/physician-opportunities/urologist" target="_self">Urologist</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/16/2016 2:49 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated an article: <a href="/articles/default-category/150/automated-lab-launches-at-peterborough-regional-health-centre" target="_self">Automated lab launches at Peterborough Regional Health Centre</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/11/2016 5:59 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated an article: <a href="/articles/default-category/150/automated-lab-launches-at-peterborough-regional-health-centre" target="_self">Automated lab launches at Peterborough Regional Health Centre</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/11/2016 4:09 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated an article: <a href="/articles/default-category/150/automated-lab-launches-at-peterborough-regional-health-centre" target="_self">Automated lab launches at Peterborough Regional Health Centre</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/11/2016 4:09 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;posted an article: <a href="/articles/default-category/150/automated-lab-launches-at-peterborough-regional-health-centre" target="_self">Automated lab launches at Peterborough Regional Health Centre</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/11/2016 4:09 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated a blog entry: <a href="/blogs/PRHC/default-category/87/ceo-blog-an-important-reminder-as-flu-season-sets-in-flu-shots-save-lives" target="_self">CEO Blog: An important reminder as flu season sets in: Flu shots save lives</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/4/2016 11:52 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated a blog entry: <a href="/blogs/PRHC/default-category/87/ceo-blog-an-important-reminder-as-flu-season-sets-in-flu-shots-save-lives" target="_self">CEO Blog: An important reminder as flu season sets in: Flu shots save lives</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/4/2016 11:52 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated an article: <a href="/articles/default-category/149/world-cancer-day-learn-how-to-reduce-cancer-risk-with-mycanceriq" target="_self">World Cancer Day: Learn how to reduce cancer risk with MyCancerIQ</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/4/2016 5:49 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated an article: <a href="/articles/default-category/149/world-cancer-day-learn-how-to-reduce-cancer-risk-with-mycanceriq" target="_self">World Cancer Day: Learn how to reduce cancer risk with MyCancerIQ</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/4/2016 5:49 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;posted an article: <a href="/articles/default-category/149/world-cancer-day-learn-how-to-reduce-cancer-risk-with-mycanceriq" target="_self">World Cancer Day: Learn how to reduce cancer risk with MyCancerIQ</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/4/2016 5:41 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;posted a blog entry: <a href="/blogs/PRHC/default-category/87/ceo-blog-an-important-reminder-as-flu-season-sets-in-flu-shots-save-lives" target="_self">CEO Blog: An important reminder as flu season sets in: Flu shots save lives</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            2/3/2016 2:26 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated an article: <a href="/articles/default-category/148/donate-blood-for-families-like-harrison%E2%80%99s" target="_self">Donate blood for families like Harrison’s</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            1/27/2016 4:23 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;updated an article: <a href="/articles/default-category/148/donate-blood-for-families-like-harrison%E2%80%99s" target="_self">Donate blood for families like Harrison’s</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            1/27/2016 4:22 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/PRHC" id="hypUserProfile" class="" title="PRHC"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/52d85820-cd83-4fe9-8344-68667ed277c2.JPG" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="PRHC" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="PRHC" href="/people/PRHC">PRHC</a>&nbsp;posted an article: <a href="/articles/default-category/148/donate-blood-for-families-like-harrison%E2%80%99s" target="_self">Donate blood for families like Harrison’s</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            1/27/2016 4:21 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">                                         
+                                         <a href="/people/jtataryn" id="hypUserProfile" class="" title="jtataryn"><img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgUser" class="axero-avatar-wall" id="imgUser" alt="jtataryn" /></a>                                         
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="jtataryn" href="/people/jtataryn">jtataryn</a>&nbsp;created a job post: <a href="/jobs/124/physician-opportunities/gastroenterologist" target="_self">Gastroenterologist</a>                                          
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+                                            1/25/2016 6:36 PM 
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                </ul>
+                                
+                                <div id="WhatsNewMoreRecentActivityDiv" class="axero-profile-content-section-more">
+                                    <a href="#">View More</a>
+                                </div>
+                                </div>
+                                                        
+                         </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>                    
+                        <div></div>                    
+                        <div></div>                    
+                        <div></div>                    
+                        <div></div> 
+                        <div></div>
+                    </div>
+                </div>
+                <!-- end featured section -->                
+  </div>
+
+                <!-- end what's new  section -->              
+            </div>
+        </div>
+        <!-- end left column -->        
+        <!-- start right column -->
+        <div id="axero-two-col-sidebar-right-rightcol">  
+            <!-- start poll -->
+            
+            <!-- end poll --> 
+                             
+        <!-- start top members container -->
+        <div  class="axero-section">
+            <h3 class="axero-section-header">Top Members</h3> 
+            
+            
+
+                    <div id="ctl00_ContentPlaceHolder1_TopContributors1_divToggleLinksContainer" class="axero-top-contributors-toggle">
+                        <ul>
+                            <li id="ctl00_ContentPlaceHolder1_TopContributors1_liAllTimeContributors"><a href="#" class="active" >All time</a><span style="display:none;">4</span></li>
+                            <li id="ctl00_ContentPlaceHolder1_TopContributors1_liLastThirtyDaysContributors"><a href="#" >Last 30 days</a><span style="display:none;">3</span></li>
+                            <li id="ctl00_ContentPlaceHolder1_TopContributors1_liThisWeekContributors"><a href="#" >This week</a><span style="display:none;">2</span></li>
+                            <li id="ctl00_ContentPlaceHolder1_TopContributors1_liTodayContributors"><a  href="#">Today</a><span style="display:none;">1</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="list">
+                        <ul id="ctl00_ContentPlaceHolder1_TopContributors1_divTopContributorsContent" class="axero-top-contributors">
+           
+                        </ul>
+                    </div>
+
+                    <div class="nopad nomargin right"><a id="ctl00_ContentPlaceHolder1_TopContributors1_lnkPeopleList" title="More People" class="sidebarLink" href="/people/pages">More People</a></div>
+             
+         
+        </div>
+        <!-- end top members container -->            
+        <!-- start recently joined members section -->
+        <div class="axero-section"  >
+                <h3 class="axero-section-header">New People</h3>
+                    
+                                <div id="recentactivity" class="list" style="margin-top:10px"> 
+                                <ul>
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/kmshall" id="hrefUserProfile" title="kmshall">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="kmshall" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="kmshall" href="/people/kmshall">kmshall</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            3/9/2016 2:27 PM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/jenners46" id="hrefUserProfile" title="jenners46">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="jenners46" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="jenners46" href="/people/jenners46">jenners46</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            3/9/2016 1:50 AM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/patriciaschier" id="hrefUserProfile" title="patriciaschier">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="patriciaschier" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="patriciaschier" href="/people/patriciaschier">patriciaschier</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            3/7/2016 1:17 PM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/aljadidi" id="hrefUserProfile" title="aljadidi">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="aljadidi" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="aljadidi" href="/people/aljadidi">aljadidi</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            3/3/2016 10:28 AM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/spetersen" id="hrefUserProfile" title="spetersen">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="spetersen" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="spetersen" href="/people/spetersen">spetersen</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            3/3/2016 1:12 AM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/JonesKC" id="hrefUserProfile" title="JonesKC">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="JonesKC" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="JonesKC" href="/people/JonesKC">JonesKC</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            3/2/2016 4:22 PM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/jenniferharrington" id="hrefUserProfile" title="jenniferharrington">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="jenniferharrington" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="jenniferharrington" href="/people/jenniferharrington">jenniferharrington</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            3/2/2016 1:11 AM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/TamaraMarois" id="hrefUserProfile" title="TamaraMarois">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="TamaraMarois" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="TamaraMarois" href="/people/TamaraMarois">TamaraMarois</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            3/1/2016 3:45 PM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/samalgar" id="hrefUserProfile" title="samalgar">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="samalgar" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="samalgar" href="/people/samalgar">samalgar</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            2/29/2016 4:22 PM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                <li>   
+                                    <div class="axero-section-list-avatar">
+                                               
+                                        <a href="/people/ahope" id="hrefUserProfile" title="ahope">
+                                            <img src="http://www.prhc.on.ca/Assets/Uploaded-Photos/avatar-default.jpg" id="imgAvatar" class="axero-avatar-wall" alt="ahope" />
+                                        </a>
+                                        
+                                    </div>
+                                    <div  class="axero-section-list-content">
+
+                                        <div class="axero-section-list-content-title">
+
+                                            <a id="UserProfileHyperLink" title="ahope" href="/people/ahope">ahope</a>
+                                            has joined the community
+                                            
+
+                                        </div>
+                                        <div class="axero-section-list-content-date">
+
+                                            2/29/2016 3:12 PM
+
+                                        </div>
+                                    </div>
+                                </li>                                                     
+                            
+                                </ul>
+                                <div class="nopad nomargin right" ><a id="lnkMoreMembers" title="More" class="sidebarLink" href="/people/recently-joined-members">More</a></div>
+                                </div>
+                                            
+            </div>
+        <!-- end recently joined members section -->                      
+        </div>
+        <!-- end right column -->        
+
+            <!-- end content -->
+    	    
+        </div>
+        <!-- end wrapper -->
+        
+
+
+        <!-- start footer -->
+        
+
+<!-- start footer -->
+<div id="axero-footer">
+    <div class="axero-footer-left">
+        <div class="axero-copyright">Copyright &copy; 2016 Operitel Corporation.</div>
+        <div class="axero-contact"><a href="/contactus" id="ctl00_Footer1_aContactus">Contact Us</a></div>
+        <div class="axero-powered">SERVER NAME: PTBOWEB12 <BR>PRHC powered by <a href="http://www.operitel.com/" title="Social Networking Software">LearnFlex Connect</a> ® Version 3.0.0.20384</div>
+    </div>
+    <div class="axero-footer-right">
+        <div class="axero-language">Choose your language:&nbsp;&nbsp;<a id="ctl00_Footer1_LanguageSelector1_lnkEnglish" href="javascript:__doPostBack(&#39;ctl00$Footer1$LanguageSelector1$lnkEnglish&#39;,&#39;&#39;)">English</a>&nbsp;&nbsp;
+<a id="ctl00_Footer1_LanguageSelector1_lnkFrench" href="javascript:__doPostBack(&#39;ctl00$Footer1$LanguageSelector1$lnkFrench&#39;,&#39;&#39;)">Français</a>
+
+
+
+ 
+
+ </div>
+    </div>
+</div>
+<!-- end footer -->
+
+
+
+        <!-- end footer -->	
+
+
+           
+    </div>
+    <!-- end community wrapper -->
+    
+
+<script type="text/javascript">
+//<![CDATA[
+var TopContributors =  new Array({ 'selectedtopContributorsRange':'4','topContributorsCount':'10','divTopContributorsContentClientID':'ctl00_ContentPlaceHolder1_TopContributors1_divTopContributorsContent',divToggleLinksContainerClientID:'ctl00_ContentPlaceHolder1_TopContributors1_divToggleLinksContainer'});
+//]]>
+</script>
+
+<script type="text/javascript">function fire_ctl00_Header1_SearchBox1_btnSearch_Click(event){ if (event.keyCode == 13){event.returnValue = false;event.cancel = true;__doPostBack('ctl00$Header1$SearchBox1$btnSearch','');return false;}}</script><script type="text/javascript">$('#ctl00_Header1_SearchBox1_txtSearchMain').Watermark('-- search');$('#ctl00_Header1_SearchBox1_btnSearch').click(function(e){if ($.trim($('#ctl00_Header1_SearchBox1_txtSearchMain').val()) == '-- search'){$('#ctl00_Header1_SearchBox1_txtSearchMain').val('');}});</script><script language='javascript' type='text/javascript' >
+<!--
+ TopContributors_Init(); 
+//-->
+</script></form>
+
+<!-- footer scripts start -->     
+<table class="footer">
+	<tr>
+		<td class="footerText" valign="top">
+			<a href="/cms/about-prhc">About PRHC</a>
+			<p><a href="/cms/directions-maps">Directions & Maps</a><br />
+			<a href="/cms/contact-us">Contact Us</a><br />
+			<a href="/cms/board-of-directors">Board of Directors</a><br />
+			<a href="/cms/prhc-senior-team">PRHC Senior Team</a><br />
+			        
+                  	<a href="/cms/our-performance">Our Performance</a><br />
+			<a href="/cms/accountability">Accountability</a><br />
+			<a href="/cms/donate-to-prhc">Give Now</a><br />
+			<a href="/cms/prhc-history">PRHC History</a><br />
+			<a href="/cms/strategic-plan-2014-2017">Strategic Plan 2014-2017</a><br/>
+<a href="https://mail.prhc.on.ca">Staff Login</a><br />
+<a href= "https://prhc.learnflex.net"> LearnFlex</a> <br />
+<a href= "https://mytime.prhc.on.ca/wfc/navigator/logon"> Staff Schedules</a>
+
+
+
+  		</td>
+		<td class="footerText" valign="top">
+			<a href="/cms/patients">Patients</a>
+			<p><a href="/cms/patient-care-services">Patient Care Services</a><br />
+			<a href="/cms/your-hospital-stay">Your Hospital Stay</a><br />
+			<a href="/cms/infection-prevention-and-control">Infection Prevention & Control</a><br />
+			<a href="/cms/patients-information-resources">Patient Resources</a><br />
+			<a href="/cms/patients-shops-services">Shops & Services</a><br />
+			<a href="/cms/preparing-to-leave">Preparing to Leave</a><br />
+<a href="https://www.e-comunity.ca/unp/UNPFrontControllerServlet?LANG=en&OPCODE=FormInfo&APP_ID=100044&BRAND=site">Pay Your Bill Now</a><br />
+						<a href="/cms/patients-protecting-patient-privacy">Patient Privacy</a><br /><a href="/cms/patients-patient-relations">Patient Relations</a><br />
+
+			<a href="/cms/health-information">Health Information</a><br />
+			<a href="/cms/the-patient-experience">The Patient Experience</a><br />
+
+		</td>
+		<td class="footerText" valign="top">
+			<a href="/cms/visitors">Visitors</a>
+			<p><a href="/cms/visitor-guidelines">Visitor Guidelines</a><br />
+			<a href="/cms/directions-maps">Directions & Maps</a><br />
+			<a href="/cms/parking">Parking</a><br />
+			<a href="/cms/patients-shops-services">Shops & Services</a><br />
+			<a href="/cms/send-best-wishes">Send Best Wishes</a><br />
+			<a href="/cms//smoke-free-and-scent-free-environment">Smoke-Free & <br />Scent-Free</a><br />
+			<a href="/cms/places-to-stay-in-peterborough">Places to Stay</a><br />
+		</td>
+		<td class="footerText" valign="top">
+			<a href="/cms/regional-programs">Regional Programs</a>
+			<p>
+			
+<a href="/cms/regional-cancer-care">Regional Cancer Care</a><br />
+<a href="/cms/regional-cardiac-care">Regional Cardiac Care</a><br />
+<a href="/cms/district-stroke-centre">District Stroke Centre</a><br />
+<a href="/cms/regional-maternal-child">Maternal Child</a><br />
+<a href="/cms/regional-mental-health">Mental Health</a><br />
+<a href="/cms/regional-renal-program">Regional Renal Program</a><br />
+<a href="/cms/regional-vascular-surgery">Vascular Surgery</a><br />
+		</td>
+		<td class="footerText" valign="top">
+			<a href="/cms/news-information">News & Information</a>
+			<p><a href="/articles">Our Latest News</a><br />
+			<a href="/cms/publications">Publications</a><br />
+			<a href="/cms/fast-facts">Fast Facts</a><br />
+			<a href="/cms/media-contacts">Media Contacts</a>
+		</td>
+		<td class="footerText" valign="top">
+			<a href="/cms/volunteers">Volunteers</a>
+			<p><a href="/cms/volunteering-at-PRHC">Volunteering at PRHC</a><br />
+			<a href="/cms/student-volunteers">Student Volunteers</a><br />
+			<a href="/cms/faqs">FAQs</a><br />
+<a href= "https://www.volgistics.com/ex/portal.dll/?from=28959"> Volunteer Schedules</a><br />
+		</td>
+		<td class="footerText" valign="top">
+			<a href="/cms/careers">Careers</a>
+			<p><a href="/cms/working-at-prhc">Working at PRHC</a><br />
+			<a href="/cms/current-opportunities">Current Opportunities</a><br />
+			<a href="/cms/physician-recruitment">Physician Recruitment</a><br />
+<a href="/cms/prhc-internal-job-opportunities-prhc-employees-only">Internal Job Opportunities - PRHC Employees Only</a><br />
+
+		</td>
+	</tr>
+</table>
+<!-- footer scripts end -->   
+<script src="/assets/scripts/jquery/jquery.prevent-duplicate-submission.js?v=3.0.0.20384" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $('a[class=loginCss]').unbind('click').facebox({});
+    $('form').prevent_double_submission();
+    $.setDoubleSubmissionResources({
+        globalSubmittingText: 'Submitting...'
+
+    });
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,72 @@
+<!doctype html>
+<html ng-app="avalancheCanadaApp">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>Avalanche Canada</title>
+    <meta name="description" content="Avalanche Canada is a non-government, not-for-profit organization dedicated to public avalanche safety. We issue daily avalanche forecasts throughout the winter for much of the mountainous regions of western Canada, providing this free information via our website and our app, Avalanche Canada Mobile. We also coordinate and deliver avalanche awareness and education programs, provide curriculum and support to instructors of Avalanche Canada training programs, act as a central point-of-contact for avalanche information, and work closely with many different avalanche research projects, both at home and abroad.">
+    <meta name="keywords" content="avalanche, canada, public, safety, forecast, mountain, snow, backcountry, conditions">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Facebook meta data -->
+    <meta property="og:site_name" content="Avalanche Canada"/>
+
+    <meta ng-repeat= 'prop in ogTags' property="og:{{prop.type}}" content="{{prop.value}}" />
+
+    <!-- tell bots that this is a javascript site -->
+    <meta name="fragment" content="!">
+    <meta ng-repeat="tag in metatags" name="{{tag.name}}" content="{{tag.content}}" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" type="image/png" href="http://avalanche.ca/assets/Avalanche_Canada_logo32x32.png" />
+    <link rel="apple-itouch-icon" href="http://avalanche.ca/assets/Avalanche_Canada_logo32x32.png" >
+
+      <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+      <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+    <!-- generated -->
+    <link rel="stylesheet" href="app/5fc12323.vendor.css"/>
+    <link rel="stylesheet" href="app/8405f537.app.css"/>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view="" autoscroll='true'></div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56758486-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- generated grunt bowerInstall -->
+    <script src="app/b11a03b9.vendor.js"></script>
+    <script src="bower_components/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <!-- some of the i18n modules in the lock.js lib break the set build process, package seperatly. -->
+      <script src="//cdn.auth0.com/js/lock-7.12.min.js"></script>
+      <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+      <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+      <script src="//cdn.auth0.com/w2/auth0-angular-4.js"> </script>
+
+
+
+    <script src="app/4691dfe4.app.js"></script>
+  </body>
+</html>

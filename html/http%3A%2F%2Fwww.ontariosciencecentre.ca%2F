@@ -1,0 +1,898 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>
+        
+Ontario Science Centre: Home
+
+    </title>
+    <meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
+    
+    <meta name="keywords" content="Home: Ontario Science Centre" />
+    <meta name="description"  content="The Ontario Science Centre's mission is to delight, inform and challenge visitors through engaging and thought-provoking experiences in science and technology. " />
+     
+    
+    <link rel="stylesheet" href='/scripts/colorbox/colorbox.css' type="text/css" />
+    <link rel="stylesheet" href='/skins/OSCSKin/styles/style.css' type="text/css" />
+   
+   
+    <link rel="stylesheet" href='/skins/OSCSKin/styles/homepage.css' type="text/css" />
+    
+    
+    <link rel="stylesheet" href='/skins/OSCSKin/styles/copy.css' type="text/css" />
+   <link rel="stylesheet" href='/skins/OSCSKin/styles/donation.css' type="text/css" />
+   
+   
+   <link rel="stylesheet" href='/scripts/jQuery/css/auto_slider.css' type="text/css" />
+   <link rel="stylesheet" href='/scripts/jQuery/css/nivo-slider.css' type="text/css" />
+     <link type="text/css" href="/scripts/jQuery/css/ui-darkness/jquery-ui-1.8.2.custom.css" rel="stylesheet"  /> 
+
+   
+       
+    <script type="text/javascript" src="/scripts/email-protector.js"></script>
+    <script type="text/javascript" src="/scripts/MicrosoftAjax.js"></script>
+    <script type="text/javascript" src="/scripts/MicrosoftMvcAjax.js"></script>
+    
+     <script type="text/javascript" src="/scripts/jQuery/js/jquery-1.7.1.min.js"></script>
+      <!--
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1"></script>
+     -->
+       
+    <script type="text/javascript" src="/scripts/jQuery/plugins/jquery.cycle.all.js?v2.23"></script>
+    
+    <script type="text/javascript" src="/scripts/SocialComputing.js"></script>
+    
+    <!--
+    <script type="text/javascript" src="/scripts/rotator.js"></script>
+    -->
+    <script type="text/javascript" src="/scripts/imagePreview/main.js"></script>
+   <script type="text/javascript" src="/scripts/jQuery/js/auto_slider.js"></script>
+   <script type="text/javascript" src="/scripts/jQuery/js/jquery.nivo.slider.pack.js"></script>
+   <script type="text/javascript" src="/scripts/adopt_a_class/functions.js"></script>
+   <script type="text/javascript" src="/scripts/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.validate.min.js"></script>
+   <script type="text/javascript" src="/scripts/jQuery/js/jquery-ui-1.8.2.custom.min.js"></script>
+   
+   <!-----------Menu ----------------------------------------------------------------------------------->
+   
+	<!-- -->
+   <script type="text/javascript" src="/scripts/Menu/combined_menu.js"></script>
+ 
+   <!----End Of Menu-------------------------------------------------------------------------------------->
+   
+
+     
+   
+   
+      <script type="text/javascript">
+          $(document).ready(function() {
+              // MM - this calls the JQuery SocialComputing.js draws social links on the page
+              // July 2010
+              drawSocialLinks($('#socialMediaContainer'));
+
+              $("#lblSearch").click(function() {
+                  $("#idSearchBtn").click();
+              });
+          });
+          $(document).ready(function() {
+
+              
+              var liItem = $('#mainlevel-nav > li a');
+              var liItem2 = $('#SecondaryMenu > li a');
+              var liItem3 = $('#TertiaryMenu > li a');
+
+              var currentSelection = $('#CurrentSelection').val();
+              var currentSelectionFrench = $('#CurrentSelectionFrench').val();
+              var parentOfCurrentSelection = $('#ParentOfCurrentSelection').val();
+              var parentOfCurrentSelectionFrench = $('#ParentOfCurrentSelectionFrench').val();
+              var level1Parent = $('#Level1Parent').val();
+              var level1ParentFrench = $('#Level1ParentFrench').val();
+              var level0Parent = $('#Level0Parent').val();
+              var level0ParentFrench = $('#Level0ParentFrench').val();
+
+              var subMenuForTertiary = $('#SubMenuForTertiary').val();
+              var subMenuForTertiaryFrench = $('#SubMenuForTertiaryFrench').val();
+
+              for (var i = 0; i < liItem.length; i++) {
+
+                  if (liItem[i].title == currentSelection) {
+                      $(liItem[i]).addClass('selectedMenu');
+                      //i = liItem.length; //exit the loop
+                  }
+                  else if (liItem[i].title == currentSelectionFrench) {
+                      $(liItem[i]).addClass('selectedMenu');
+                      //i = liItem.length; //exit the loop
+                  }
+                  else if (liItem[i].title == parentOfCurrentSelection) {
+                      $(liItem[i]).addClass('selectedMenu');
+                      //i = liItem.length; //exit the loop
+                  }
+                  else if (liItem[i].title == parentOfCurrentSelectionFrench) {
+                      $(liItem[i]).addClass('selectedMenu');
+                      //i = liItem.length; //exit the loop
+                  }
+                  else if (liItem[i].title == level1Parent) {
+                      $(liItem[i]).addClass('selectedMenu');
+                      //i = liItem.length;
+                  }
+                  else if (liItem[i].title == level1ParentFrench) {
+                      $(liItem[i]).addClass('selectedMenu');
+                      //i = liItem.length;
+                  }
+                  else if (liItem[i].title == level0Parent) {
+                      $(liItem[i]).addClass('selectedMenu');
+                      //i = liItem.length;
+                  }
+                  else if (liItem[i].title == level0ParentFrench) {
+                      $(liItem[i]).addClass('selectedMenu');
+                      //i = liItem.length;
+                  }
+              }
+
+              for (var i = 0; i < liItem2.length; i++) {
+                  //alert("" + liItem2[i] + "=" + subMenuForTertiary);
+
+                  if (liItem2[i].title == currentSelection) {
+                      $(liItem2[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                      break;
+                  }
+                  else if (liItem2[i].title == currentSelectionFrench) {
+                      $(liItem2[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                      break;
+                  }
+                  else if (liItem2[i].title == level1Parent) {
+                      $(liItem2[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                      break;
+                  }
+                  else if (liItem2[i].title == level1ParentFrench) {
+                      $(liItem2[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                      break;
+                  }
+                  else if (liItem2[i].title == level0Parent) {
+                      $(liItem2[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                      break;
+                  }
+                  else if (liItem2[i].title == level0ParentFrench) {
+                      $(liItem2[i]).addClass('selectedMenu');
+                      // i = liItem2.length;
+                      break;
+                  }
+                  else if (liItem2[i].title == subMenuForTertiary) {
+                      $(liItem2[i]).addClass('selectedMenu');
+                      // i = liItem2.length;
+                      break;
+                  }
+                  else if (liItem2[i].title == subMenuForTertiaryFrench) {
+                      $(liItem2[i]).addClass('selectedMenu');
+                      // i = liItem2.length;
+                      break;
+                  }
+              }
+
+              for (var i = 0; i < liItem3.length; i++) {
+                  if (liItem3[i].title == currentSelection) {
+                      $(liItem3[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                  }
+                  else if (liItem3[i].title == currentSelectionFrench) {
+                      $(liItem3[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                  }
+                  else if (liItem3[i].title == level1Parent) {
+                      $(liItem3[i]).addClass('selectedMenu');
+                      // i = liItem2.length;
+                  }
+                  else if (liItem3[i].title == level1ParentFrench) {
+                      $(liItem3[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                  }
+                  else if (liItem3[i].title == level0Parent) {
+                      $(liItem3[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                  }
+                  else if (liItem3[i].title == level0ParentFrench) {
+                      $(liItem3[i]).addClass('selectedMenu');
+                      //i = liItem2.length;
+                  }
+              }
+
+//              $('#mainlevel-nav').mouseover(function() {
+
+//                   $("#SubMenu").show(1000);
+//                })
+//               .mouseout(function() {
+//                $("#SubMenu").hide(1000);
+//             }); 
+
+
+
+              //sleepover auto sliders
+              loadAutoSlider();
+
+              try {
+                  //color box
+                  //$(".video-osc").colorbox({ iframe: true, innerWidth: "58.5%", innerHeight: "75%" });
+                  $(".video-osc").colorbox({ iframe: true, innerWidth: "642", innerHeight: "465" });
+              } catch (err) {
+              }
+              $(window).resize(function() {
+                  try {
+                      //$.fn.colorbox.resize({ width: "642", height: "465" });
+                      $(".video-osc").colorbox({ iframe: true, innerWidth: "642", innerHeight: "465" });
+                  }
+                  catch (err) {
+                  }
+              });
+
+
+
+
+          });
+</script>
+
+
+ 
+    <script language="javascript" type="text/javascript" src="/scripts/home.js">
+    </script>   
+   
+        <script type="text/javascript">
+            $(function() {
+                $('#slideshow').cycle({
+
+                    fx: 'fade',
+                    speed: 500,
+                    timeout: 6000,
+                    //delay:  2000,	
+                    pager: '#nav',
+                    pagerEvent: 'mouseover',
+                    pauseOnPagerHover: true,
+
+                    pagerAnchorBuilder: function(idx, slide) {
+
+                        // return selector string for existing anchor
+                        return '#nav li:eq(' + idx + ') a';
+                    }
+                });
+            });
+          </script>         
+        
+     
+     <script type="text/javascript" src="/scripts/skip/skipNav.js"></script>
+     
+     <!--[if lte IE 6]>     
+<style type="text/css">     
+body {height:100%; overflow-y:auto;}     
+html {overflow-x:auto; overflow-y:hidden;}     
+* html .footbanner {position:absolute;}     
+</style>     
+<![endif]--> 
+
+ <style type="text/css">
+.ui-widget { font-family: Segoe UI, Arial, sans-serif; font-size: 0.7em; }
+#ui-datepicker-div
+{
+    top:495px !important;
+    z-index:100;
+}
+</style>
+      
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3008662-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    
+</head>
+<body>
+    
+    
+    
+
+    
+        
+       <a href="#content" class="skip">Go to main content</a>
+        <div id="wrapper">
+                <div id="holder">               
+                    <div id="top">
+                        <div id="logo">
+                            <img src='/skins/OSCSkin/images/OSC-logo.en.gif' alt="Ontario Science Centre" />
+                        </div>
+                        <div id="searchFormContainer">
+                             <div id="formDisplay">
+                                <form action="/OSCSearch/Results" id="searchForm" method="get"><input id="q" name="q" type="text" value="" />
+                                    <label id="lblSearch" for="q" class="searchBtn" style="cursor:pointer" >SEARCH</label>
+                                    <input id="idSearchBtn" type="submit" value="SEARCH" class="searchBtn" style="display:none" />                                    
+                                </form>
+
+                            </div>
+                            <div id="logindisplay">
+                            
+                            <a href="/French">Français</a>                             
+                                <a href="/ContactUs">Contact Us</a>
+                                <a href="/FAQ">FAQs</a>
+                                                        
+                        </div>
+                       </div>
+                    </div>
+                    <div id="top_menu">
+                        
+<div role="navigation" aria-label="Main menu" tabindex="-1">
+	<ul id="mainlevel_nav" class="menubar root-level" role="menubar">
+
+           <li  class="menu-parent" role="menuitem" tabindex="-1" aria-haspopup="true" title="Home" >
+            <a  class="selectedMenuItem" title="Home" tabindex="0"  href="/">Home</a>
+            
+        </li>    
+           
+           <li  class="menu-parent" role="menuitem" tabindex="-1" aria-haspopup="true" title="Visit Us" >
+            <a   title="Visit Us" tabindex="0"  href="/VisitUs">Visit Us</a>
+                        
+        <ul role="menu" class="menu" aria-hidden="true">
+        
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Hours & Prices" href="/Prices">
+                Hours & Prices</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Directions" href="/Directions ">
+                Directions</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Accessibility" href=" /Accessibility">
+                Accessibility</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Food Services" href="/Services/Dining">
+                Food Services</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Group & School Discounts" href="/groupdiscounts/">
+                Group & School Discounts</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Hotel Packages" href="/Hotels">
+                Hotel Packages</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Community Access" href="/CommunityAccess">
+                Community Access</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Contact Us" href="/ContactUs">
+                Contact Us</a>
+               </li>
+                
+                 
+        </ul>
+        
+        </li>    
+           
+           <li  class="menu-parent" role="menuitem" tabindex="-1" aria-haspopup="true" title="What's On" >
+            <a   title="What's On" tabindex="0"  href="/WhatsOn ">What's On</a>
+                        
+        <ul role="menu" class="menu" aria-hidden="true">
+        
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Calendar" href="/Calendar">
+                Calendar</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="IMAX® Dome Films" href="/Imax">
+                IMAX® Dome Films</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Virtual Tour" href="/Tour">
+                Virtual Tour</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Birthday Parties" href="/BirthdayParties">
+                Birthday Parties</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Sleepovers" href="/Sleepovers">
+                Sleepovers</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Day Camps" href="/Camp">
+                Day Camps</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Team Building" href="/TeamBuilding">
+                Team Building</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Research Live!" href="/ResearchLive">
+                Research Live!</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Science Now" href="/ScienceNow">
+                Science Now</a>
+               </li>
+                
+                 
+        </ul>
+        
+        </li>    
+           
+           <li  class="menu-parent" role="menuitem" tabindex="-1" aria-haspopup="true" title="Teachers & Students" >
+            <a   title="Teachers & Students" tabindex="0"  href="/TeachersStudents">Teachers & Students</a>
+                        
+        <ul role="menu" class="menu" aria-hidden="true">
+        
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="School Trips" href="/School/Curriculum">
+                School Trips</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Science School" href="/OSCSchool">
+                Science School</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Resources for Students" href="/Resources">
+                Resources for Students</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Resources for Teachers" href="/School/Resources/Teacher">
+                Resources for Teachers</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Curriculum Connections" href="/School/Resources/Teacher/#curriculum">
+                Curriculum Connections</a>
+               </li>
+                
+                 
+        </ul>
+        
+        </li>    
+           
+           <li  class="menu-parent" role="menuitem" tabindex="-1" aria-haspopup="true" title="Members & Supporters" >
+            <a   title="Members & Supporters" tabindex="0"  href="/MembersDonors">Members & Supporters</a>
+                        
+        <ul role="menu" class="menu" aria-hidden="true">
+        
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Become a Member" href="/Members/Join/">
+                Become a Member</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Stuff for Current Members" href="/Members/Current/">
+                Stuff for Current Members</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Make a Donation" href="/Donation">
+                Make a Donation</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Sponsorship and Corporate Membership" href="/sponsor/">
+                Sponsorship and Corporate Membership</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Sponsor Gallery" href="/Sponsor/Gallery/">
+                Sponsor Gallery</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="RBC Innovators’ Ball" href="/innovatorsball/">
+                RBC Innovators’ Ball</a>
+               </li>
+                
+                 
+        </ul>
+        
+        </li>    
+           
+           <li  class="menu-parent" role="menuitem" tabindex="-1" aria-haspopup="true" title="About Us" >
+            <a   title="About Us" tabindex="0"  href="/AboutUs">About Us</a>
+                        
+        <ul role="menu" class="menu" aria-hidden="true">
+        
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Who We Are" href="/WhoWeAre">
+                Who We Are</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Board & Staff" href="/WhoWeAre/Staff">
+                Board & Staff</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Careers Section" href="/Careers">
+                Careers Section</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Volunteering" href="/Volunteers/">
+                Volunteering</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Private Events" href="/Private">
+                Private Events</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Travelling Exhibitions" href="/Rentals">
+                Travelling Exhibitions</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Exhibit Sales" href="/Sales">
+                Exhibit Sales</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="2016 Weston Youth Innovation Award" href="/InnovationAward">
+                2016 Weston Youth Innovation Award</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Media Room" href="/Media">
+                Media Room</a>
+               </li>
+                
+               <li role="menuitem" class="menu-item" tabindex="-1" >
+                <a  tabindex="0" title="Accessibility Plan" href="/Uploads/VisitUs/documents/OSC-Multi-Year-Plan.en.pdf">
+                Accessibility Plan</a>
+               </li>
+                
+                 
+        </ul>
+        
+        </li>    
+           
+           <li  class="menu-parent" role="menuitem" tabindex="-1" aria-haspopup="true" title="Buy Online" >
+            <a   title="Buy Online" tabindex="0"  href="https://www.ontariosciencecentre.ca/boxoffice/">Buy Online</a>
+            
+        </li>    
+           
+
+
+
+</ul>
+
+</div>
+
+<input id="CurrentSelection" name="CurrentSelection" type="hidden" value="Home" />
+                        <input id="CurrentSelectionFrench" name="CurrentSelectionFrench" type="hidden" value="Accueil" />
+                        <input id="ParentOfCurrentSelection" name="ParentOfCurrentSelection" type="hidden" value="None" />
+                        <input id="ParentOfCurrentSelectionFrench" name="ParentOfCurrentSelectionFrench" type="hidden" value="" />
+                        <input id="Level1Parent" name="Level1Parent" type="hidden" value="" />
+                        <input id="Level1ParentFrench" name="Level1ParentFrench" type="hidden" value="" />
+                        <input id="Level0Parent" name="Level0Parent" type="hidden" value="" />  
+                        <input id="Level0ParentFrench" name="Level0ParentFrench" type="hidden" value="" />  
+                        <input id="SubMenuForTertiary" name="SubMenuForTertiary" type="hidden" value="None" />  
+                        <input id="SubMenuForTertiaryFrench" name="SubMenuForTertiaryFrench" type="hidden" value="" />  
+                        <br />
+                    </div>
+                     
+                     
+                     
+                    <div id="content">
+                        
+                        <div id="main">
+                         
+                            <div class="blog" >
+                            
+                                    
+                                    <div class="leftblogFullPage">
+                                                
+<style type="text/css"><!--
+#secondaryNav li {
+            font-size: 11px;
+            line-height: 12px;
+            margin-bottom: 15px;
+        }
+
+        #idPremierPartner {
+            DISPLAY: none;
+        }
+
+        #segments {
+            MARGIN-BOTTOM: 20px;
+        }
+
+        #twitter-widget-0 {
+            HEIGHT: 385px;
+        }
+--></style>
+<div id="rotator" class="span-8" style="padding-bottom: 0;"><!--Main Rotator Container-->
+<div id="slideshow" class="pics" style="position: relative; width: 300px; height: 400px;"><!--Top Section of the Rotator Container-->
+<div style="position: absolute; top: 0pt; left: 0pt; display: none; z-index: 4; opacity: 0; width: 300px; height: 405px;"><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/IMAX/Humpback-Whales']);" href="/imax/film/45" target="_self"> <img style="width: 300px; height: 320px; border: 0;" src="/uploads/home/images/rotator-IMAXHWhales.jpg" alt="Humpback Whales IMAX Film" /></a>
+<h3><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/IMAX/Humpback-Whales']);" href="/imax/film/45" target="_self"> <span style="text-decoration: underline;">IMAX&reg; film: <span style="font-style: italic;">Humpback Whales</span></span> </a></h3>
+<p>Get an up-close look at humpback whales and explore how these marine mammals communicate, sing, feed, play and take care of their young. <span style="padding-left: 0px;"><a style="background: url('/skins/OSCSKin/images/link_arrows.gif') right -2px no-repeat; padding-right: 20px;" onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/IMAX/Humpback-Whales']);" href="/imax/film/45" target="_self">more</a></span></p>
+</div>
+<div style="position: absolute; top: 0pt; left: 0pt; display: none; z-index: 4; opacity: 0; width: 300px; height: 400px;"><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Mammoths']);" href="/Mammoths" target="_self"> <img style="width: 300px; height: 320px; border: 0;" src="/uploads/home/images/rotator-Mammoths.en.jpg" alt="Mammoths and Mastodons: Titans of the Ice Age" /></a>
+<h3><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Mammoths']);" href="/Mammoths" target="_self"><span style="text-decoration: underline;">Mammoths and Mastodons: Titans of the Ice Age</span></a></h3>
+<p>Journey back through the Ice Age to view some of Earth&rsquo;s largest and most awe-inspiring mammals.</p>
+<h6><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Mammoths']);" href="/Mammoths" target="_self">more</a></h6>
+</div>
+<div style="position: absolute; top: 0pt; left: 0pt; display: none; z-index: 4; opacity: 0; width: 300px; height: 400px;"><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Camp']);" href="/Camp" target="_self"><img src="/Uploads/home/images/rotator-CampPAHol.en.png" alt="PA Day, March Break and Summer Day Camps" width="300" height="320" border="0" /></a>
+<h3><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Camp']);" href="/Camp" target="_self"><span style="text-decoration: underline;">Day Camps</span></a></h3>
+<p>Book a science adventure for your 4-14 year olds!</p>
+<h6><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Camp']);" href="/Camp" target="_self">more</a></h6>
+</div>
+<div style="position: absolute; top: 0pt; left: 0pt; display: none; z-index: 4; opacity: 0; width: 300px; height: 400px;"><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Calendar/72']);" href="/Calendar/72" target="_self"> <img style="width: 300px; height: 320px; border: 0;" src="/Uploads/home/images/rotator-Circus.en.jpg" alt="Circus! The Exhibition" /></a>
+<h3><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Calendar/72']);" href="/Calendar/72" target="_self"><span style="text-decoration: underline;">Circus! The Exhibition</span></a></h3>
+<p>Explore the magic of "the greatest show on earth" through a scientist's eyes.</p>
+<h6><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Calendar/72']);" href="/Calendar/72" target="_self">more</a></h6>
+</div>
+<div style="position: absolute; top: 0pt; left: 0pt; display: none; z-index: 4; opacity: 0; width: 300px; height: 400px;"><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Membership']);" href="/Members/Join/" target="_self"><img src="/Uploads/home/images/rotator-Membership.jpg" alt="Membership is the BEST way to visit." width="300" height="320" border="0" /></a>
+<h3><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Membership']);" href="/Members/Join/" target="_self"><span style="text-decoration: underline;">Membership is the BEST way to visit</span></a></h3>
+<p>Free admission, discounts on parking, films and programs, and more ways to enjoy the Science Centre experience.</p>
+<h6><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Membership']);" href="/Members/Join/" target="_self">more</a></h6>
+</div>
+<div style="position: absolute; top: 0pt; left: 0pt; display: none; z-index: 4; opacity: 0; width: 300px; height: 400px;"><a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/CityPASS']);" href="http://www.citypass.com/toronto?mv_source=ontariosciencecentre&amp;campaign=home-rotator" target="_blank"> <img src="/Uploads/home/images/rotator-CityPass-2016.en.jpg" alt="TORONTO CityPASS. SAVE 42% OR MORE ON THE TOP ATTRACTIONS INCLUDING ONTARIO SCIENCE CENTRE." width="300" height="320" border="0" /></a>
+<h3><a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/CityPASS']);" href="http://www.citypass.com/toronto?mv_source=ontariosciencecentre&amp;campaign=home-rotator" target="_blank"><span style="text-decoration: underline;">See Toronto and SAVE with CityPASS</span></a></h3>
+<p>Planning to visit several Toronto attractions? Purchase a CityPASS and visit five famous Toronto attractions for one low price!</p>
+<h6><a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/CityPASS']);" href="http://www.citypass.com/toronto?mv_source=ontariosciencecentre&amp;campaign=home-rotator" target="_blank">more</a></h6>
+</div>
+</div>
+<!--End Of Top Section of the Rotator Container-->
+<ul id="nav"><!--Bottom Section of the Rotator Container-->
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/IMAX/Humpback-Whales']);" href="/imax/film/45" target="_self"><span style="text-decoration: underline;">IMAX Film</span></a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Mammoths']);" href="/Mammoths" target="_self"><span style="text-decoration: underline;">Special Exhibition</span></a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Camp']);" href="/Camp" target="_self"><span style="text-decoration: underline;">Day Camps</span></a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Calendar/72']);" href="/Calendar/72" target="_self"><span style="text-decoration: underline;">Special Exhibition</span></a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Membership']);" href="/Members/Join/" target="_self"><span style="text-decoration: underline;">Membership</span></a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/CityPASS']);" href="http://www.citypass.com/toronto?mv_source=ontariosciencecentre&amp;campaign=home-rotator" target="_blank"><span style="text-decoration: underline;">CityPASS</span></a></li>
+</ul>
+<!--End Of Bottom Section of the Rotator Container-->
+<div style="padding: 0; float: left; margin: 15px 0 15px 0;"><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/eNews']);" href="/enews"><img style="border: 0px;" title="Subscribe to: Ontario Science Centre e-news" src="/Uploads/home/images/subscribe.gif" alt="Subscribe to: Ontario Science Centre e-news" width="300" height="108" /></a></div>
+<div style="width: 298px; float: left; padding-left: 1px;"><a class="twitter-timeline" onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/twitter.com/OntScienceCtr']);" href="https://twitter.com/OntScienceCtr" data-widget-id="408981764908929024">Tweets by @OntScienceCtr</a>
+<script type="text/javascript">// <![CDATA[
+!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
+// ]]></script>
+</div>
+</div>
+<div id="mainbody" class="span-12"><!--
+        <div style="float: left; width: 460px; height: 110px; margin-bottom: 2px;">
+        <div style="float: left; width: 460px; margin-bottom: 2px; cursor: pointer;" title="HOV Lanes" onclick="location.href='/Directions'; _gaq.push(['_trackPageview', 'Home/EN/InboundLinks/HOV']);"><img style="width: 100%;" src="/Uploads/home/images/MainA-HOV-E.png" alt="High Occupancy Vehicles" width="460" height="110" /></div>
+        </div>
+        -->
+<div style="float: left; width: 460px; height: 315px; margin-bottom: 10px;"><!--
+            <div style="float: left; width: 460px; cursor: pointer;" title="KidSpark ...just for kids 8 and under!"" onclick="location.href='/Tour/KidSpark/'; _gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Tour/KidSpark/']);">
+            <img id="idMainImg" style="width: 100%;" src="/Uploads/home/images/mainBlock-KidSpark.en.jpg" alt="KidSpark ...just for kids 8 and under!" width="460" height="380" />
+            </div>
+            -->
+<div style="float: left; width: 460px; text-align: center; cursor: pointer;" title="MARCH BREAK. March 12 - 20. 10am - 6pm. Special programs. IMAX films. Live demonstrations." onclick="location.href='/March-Break-Programs'; _gaq.push(['_trackPageview', 'Home/EN/InboundLinks/March-Break-Programs']);"><img id="idMainImg" src="/Uploads/home/images/mainblock-MarchBreak-2016.en.jpg" alt="MARCH BREAK. March 12 - 20. 10am - 6pm. Special programs. IMAX films. Live demonstrations." /></div>
+</div>
+<div style="float: left; width: 400px; margin-bottom: 2px; margin-top: 40px; padding: 0 28px;"><iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fontariosciencecentre&amp;width=400&amp;height=565&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=175817082476162" width="400" height="565"></iframe></div>
+</div>
+<div id="secondaryNav" class="span-4 last" style="margin-top: -4px;">
+<p style="margin-bottom: 15px;"><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/donate-online-now']);" href="/donate-oneline-now"><img title="Poster: donate online now" src="/uploads/home/images/donatenow.en.gif" alt="Poster: donate online now" width="150" height="66" align="top" /></a></p>
+<!--
+        <h2><a class="colorbox-youtube" onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/ONE-WORD-Video']);" href="https://www.youtube.com/embed/zkfRpnbbY_E"><span style="font-size: 0.85em; margin-bottom: 15px; font-weight: bold;">45th Anniversary Greetings!</span></a></h2>
+        <a class="colorbox-youtube" onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/45-Anniversary-Video']);" href="https://www.youtube.com/embed/zkfRpnbbY_E"><img src="/Uploads/home/images/45anniversary-cake-Maurice-150.jpg" alt="Ontario Science Centre CEO Maurice Bitran and friend cut the cake to celebrate the 45th anniversary." width="150" height="85" /></a>
+        -->
+<h2><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Prices']);" href="/Prices/">Hours &amp; Prices</a></h2>
+<p style="margin-bottom: 15px;">We're open 364 days a year, seven days a week...</p>
+<h2><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Directions']);" href="/Directions/">Location</a></h2>
+<p style="margin-bottom: 15px;">Get maps and directions.</p>
+<h2><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Media']);" href="/Media/">Media Room</a></h2>
+<p style="margin-bottom: 15px;">Press releases, expert profiles and photos.</p>
+<h2><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Hotels']);" href="/Hotels/">Out of Towners</a></h2>
+<p style="margin-bottom: 15px;">Hotel packages and deals.</p>
+<h2><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Private']);" href="/Private/">Private Events</a></h2>
+<p style="margin-bottom: 15px;">Planning a party? We can help.</p>
+<h2><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/ScienceNow']);" href="/ScienceNow/">Science Centre Online</a></h2>
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/ScienceNow/TheKidSparkExplorer']);" href="/ScienceNow/TheKidSparkExplorer"><span style="text-decoration: underline;">The KidSpark Explorer: An interactive online resource with videos, experiments, learning guides and info for you and your little ones!</span></a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Report']);" href="/Report">Podcasts</a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/ScienceNow/InsideOut']);" href="/ScienceNow/InsideOut/">"Inside Out": Go behind the scenes at the Science Centre</a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/ScienceNow/Games']);" href="/ScienceNow/Games/">Games, activities and more...</a></li>
+</ul>
+<p><a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/CityPASS']);" href="http://www.citypass.com/toronto?mv_source=ontariosciencecentre&amp;campaign=home" target="_blank"><img style="border: 0px; width: 150px;" src="/Uploads/VisitUs/images/CityPass-2016.en.jpg" alt="TORONTO CityPASS. SAVE 42% OR MORE ON THE TOP ATTRACTIONS." /></a></p>
+<!--
+        <p><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/donate-online-now']);" href="/donate-oneline-now"><img title="Poster: donate online now" src="/uploads/home/images/donatenow.en.gif" alt="Poster: donate online now" width="150" height="66" align="top" /></a></p>
+        -->
+<p>You can also join us on these social media sites.</p>
+<ul>
+<ul class="social">
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/www.facebook.com/pages/Toronto-ON/Ontario-Science-Centre/38291872927']);" href="http://www.facebook.com/pages/Toronto-ON/Ontario-Science-Centre/38291872927" target="_blank"><img id="Facbook" title="Icons linking to: Facebook, You tube, Flicker, Twitter" src="/skins/OSCSkin/images/social_icon_FaceBook.png" alt="Facebook" width="32" height="32" /></a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/www.youtube.com/user/OntarioScienceCentre']);" href="http://www.youtube.com/user/OntarioScienceCentre" target="_blank"><img id="YouTube" title="Icons linking to: Facebook, You tube, Flicker, Twitter" src="/skins/OSCSkin/images/social_icon_YouTube.png" alt="Icons linking to: Facebook, You tube, Flicker, Twitter" width="32" height="32" /></a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/twitter.com/ontsciencectr']);" href="http://twitter.com/ontsciencectr" target="_blank"><img id="twitter" title="Icons linking to: Facebook, You tube, Flicker, Twitter" src="/skins/OSCSkin/images/social_icon_Twitter.png" alt="Icons linking to: Facebook You tube Flicker Twitter" width="32" height="32" /></a></li>
+</ul>
+</ul>
+</div>
+<div id="segments" style="margin-top: 10px;">
+<div class="prepend-2 span-6">
+<h3>Families</h3>
+<p>Are you planning to visit with children? We've got lots for them to see and do.</p>
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Tour/KidSpark']);" href="/Tour/KidSpark">KidSpark</a> (8 years old and under)</li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/IMAX']);" href="/Imax">IMAX<sup>&reg;</sup> Films</a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/BirthdayParties']);" href="/BirthdayParties/">Children's Birthday Parties</a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Sleepovers']);" href="/sleepovers/">Sleepovers</a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Calendar']);" href="/Calendar/">What else is on?</a></li>
+</ul>
+</div>
+<div class="prepend-2 span-6">
+<h3>Teens</h3>
+<p>Explore your creative side, get involved or just chill out.</p>
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Tour/WFIC']);" href="/Tour/WFIC/">The Weston Family Innovation Centre</a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Innovationaward']);" href="/innovationaward/">The Weston Youth Innovation Award</a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/Tour/WFIC']);" href="/Tour/WFIC/">Challenge Zone</a></li>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/OSCSchool']);" href="/OSCSchool/">Ontario Science Centre Science School</a></li>
+</ul>
+</div>
+<div class="prepend-2 span-6 last">
+<h3>Adults</h3>
+<p>The Science Centre's more than a great place for kids! There's a variety of experiences for every age.</p>
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview', 'Home/EN/InboundLinks/IMAX']);" href="/Imax/">IMAX<sup>&reg;</sup> Films</a></li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">// <![CDATA[
+$(document).ready(function () {
+
+            var newSrc10 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-10days.jpg";
+            var date10 = new Date(2015, 8, 4);
+
+            var newSrc9 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-9days.jpg";
+            var date9 = new Date(2015, 8, 5);
+
+            var newSrc8 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-8days.jpg";
+            var date8 = new Date(2015, 8, 6);
+
+            var newSrc7 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-7days.jpg";
+            var date7 = new Date(2015, 8, 7);
+
+            var newSrc6 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-6days.jpg";
+            var date6 = new Date(2015, 8, 8);
+
+            var newSrc5 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-5days.jpg";
+            var date5 = new Date(2015, 8, 9);
+
+            var newSrc4 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-4days.jpg";
+            var date4 = new Date(2015, 8, 10);
+
+            var newSrc3 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-3days.jpg";
+            var date3 = new Date(2015, 8, 11);
+
+            var newSrc2 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-2days.jpg";
+            var date2 = new Date(2015, 8, 12);
+
+            var newSrc1 = "/Uploads/home/images/mainBlock-MB-Web-MainBlock-1day.jpg";
+            var date1 = new Date(2015, 8, 13);
+
+            var currDate = new Date();
+
+            //        if (compareDates(currDate, date10)) {
+
+            //            $("#idMainImg").attr('src', newSrc10);
+            //        }
+            //        else if (compareDates(currDate,date9)) {
+
+            //            $("#idMainImg").attr('src', newSrc9);
+            //        }
+            //        else if (compareDates(currDate, date8)) {
+
+            //            $("#idMainImg").attr('src', newSrc8);
+            //        }
+            //        else if (compareDates(currDate, date7)) {
+
+            //            $("#idMainImg").attr('src', newSrc7);
+            //        }
+            //        else if (compareDates(currDate, date6)) {
+
+            //            $("#idMainImg").attr('src', newSrc6);
+            //        }
+            //        else if (compareDates(currDate, date5)) {
+
+            //            $("#idMainImg").attr('src', newSrc5);
+            //        }
+            //        else if (compareDates(currDate, date4)) {
+
+            //            $("#idMainImg").attr('src', newSrc4);
+            //        }
+            //        else if (compareDates(currDate, date3)) {
+
+            //            $("#idMainImg").attr('src', newSrc3);
+            //        }
+            //        else if (compareDates(currDate, date2)) {
+
+            //            $("#idMainImg").attr('src', newSrc2);
+            //        }
+            //        else if (compareDates(currDate, date1)) {
+
+            //            $("#idMainImg").attr('src', newSrc1);
+            //        }
+
+
+        });
+
+        function compareDates(date1, date2) {
+
+            return (date1.getDate() == date2.getDate() &&
+                date1.getMonth() == date2.getMonth() &&
+                date1.getFullYear() == date2.getFullYear());
+        }
+// ]]></script> 
+                                                        
+                                             
+                                    </div>
+                                     
+                                      
+                            </div><!--End of blog-->
+                    
+                     
+                                         
+                                                 
+                         
+                          
+                        </div><!--End Of Main -->
+                        
+                        <div class="clr">
+                        </div>
+                    </div>
+                    <div id="footer">
+                        <div class="copyright"><br />
+                            <div id="idPremierPartner" style="float:left; margin:-40px 0 50px 0; width:920px; text-align:left; padding:20px 20px 20px 0">
+<img src="/Uploads/Global/images/Premier-Partners.en.jpg" alt="Our Premier Partners: CISCO, HONDA, TELUS"  style=""/>
+</div>
+<div style="float:left; margin:-40px 0 0 0; width:920px; color:#666 ">
+Copyright © 2015, Ontario Science Centre, an agency of the Government of Ontario. All rights reserved. <a href="/sitemap">Site Map</a>  <a onclick="_gaq.push(['_trackPageview', 'Home/EN/OutboundLinks/www.ontario.ca/government/privacy-statement']);"  href="http://www.ontario.ca/government/privacy-statement" target="_blank">Privacy Statement</a>
+</div> 
+        
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        
+    
+    
+    
+    
+        <div style="text-align:center;"></div>
+    
+     
+    
+</body>
+</html>

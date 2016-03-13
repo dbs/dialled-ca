@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+   <title>Cégep Saint-Jean-sur-Richelieu  -- Bibliothèque</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+	<meta name="description" content="">
+
+	<meta name="keywords" content="TDAH
+handicap
+dyslexie
+trouble auditif">
+
+        <meta http-equiv="content-language" content="fr-CA">
+
+        <meta name="resource-type" content="document">
+
+        <meta name="distribution" content="global">
+
+        <meta name="rating" content="general">
+
+        <meta name="location" content="Canada, Quebec, Montreal">
+
+        <meta name ="copyright" content="&copy; 2008 Cégep Saint-Jean-sur-Richelieu ">
+
+        <meta name="author" content="Cégep Saint-Jean-sur-Richelieu ">
+
+	<meta http-equiv="cache-control" content="no-cache">
+
+	<meta http-equiv="pragma" content="no-cache">
+
+	<meta http-equiv="Expires" content="Tue, 01 Jan 2000 12:12:12 GMT">	
+
+	<link rel="stylesheet" type="text/css" href="/templates/573EAF8B-0B67-4A0B-A8F7-2E1AA8B8168C/css/general.css">
+
+
+	<script Language="javascript" src="/templates/573EAF8B-0B67-4A0B-A8F7-2E1AA8B8168C/javascript/search.js"></script>
+
+	<script Language="javascript" src="/kadmin/core/Id3ObjectDefinition.js"></script>
+
+	<script Language="javascript" src="/kadmin/core/KJS.asp"></script>
+
+	<script Language="javascript" src="/js/65EA2BC4-166B-4136-A916-C2B8F639C6AA/F56E9D93-B8CE-4145-BC18-782B557A696B_FR.js"></script>
+
+	<script type="text/javascript" src="/templates/573EAF8B-0B67-4A0B-A8F7-2E1AA8B8168C/gr/abiss/js/sarissa/sarissa.js"> </script>
+
+	<script Language="javascript">
+
+		<!--
+
+		function lf_MouseOver(obj, newSrc){
+
+			obj.oldSrc = obj.src;
+
+			obj.src = newSrc;
+
+		}
+
+
+
+		function lf_MouseOut(obj){
+
+			obj.src = obj.oldSrc;
+
+		}
+
+
+
+		function lf_swapImage(oElem, sNewImg){
+
+			oElem.srcOLD = oElem.src;
+
+			oElem.src = sNewImg;
+
+		}
+
+
+
+		function lf_restoreImage(oElem){
+
+			oElem.src = oElem.srcOLD;
+
+		}
+
+		
+
+		var cssZone = "" + "";
+
+		
+
+		function LoadCss()
+
+		{
+
+			if(cssZone.length == 0)
+
+				return;
+
+				
+
+			cssZone = "/templates/573EAF8B-0B67-4A0B-A8F7-2E1AA8B8168C/css/zone_" + cssZone + ".css";
+
+			
+
+			var fileref=document.createElement("link")
+
+			fileref.setAttribute("rel", "stylesheet")
+
+			fileref.setAttribute("type", "text/css")
+
+			fileref.setAttribute("href", cssZone)
+
+		 
+
+			if (typeof fileref!="undefined")
+
+				document.getElementsByTagName("head")[0].appendChild(fileref);
+
+			
+
+			
+
+
+
+		}
+
+		LoadCss();/*custom css*/
+
+		
+
+		var imagePath = "/public/65ea2bc4-166b-4136-a916-c2b8f639c6aa/RotationImages/";
+
+		var folderCurrent = "" + "Biblio";
+
+		
+
+		function RandomImage()
+
+		{
+
+			if(folderCurrent.length == 0)
+
+				return;		
+
+			if(folderCurrent.indexOf("/") == -1)
+
+			{			
+
+				LoadXMLHeader("/Modules/KModThumbnails/galleries.asp?site=65ea2bc4-166b-4136-a916-c2b8f639c6aa&path=RotationImages/"+folderCurrent,"imgRd");
+
+			}
+
+			else
+
+			{
+
+				var div = document.getElementById("imgRd");
+
+				var lpath = "http://"+window.location.host+imagePath+folderCurrent;
+
+				var img = new Image();
+
+				img.src = lpath;
+
+				div.appendChild(img);
+
+			}
+
+		}
+
+		
+
+		var xmld= null;
+
+		function LoadXMLHeader(url,idInsertIn)
+
+		{
+
+			var arrValid = new Array();
+
+			var xmlhttp = new XMLHttpRequest();  
+
+			xmlhttp.open("GET", url, false);  
+
+			xmlhttp.send('');
+
+			xmld = xmlhttp.responseXML;
+
+			arrValid = xmlhttp.responseXML.getElementsByTagName('photo');
+
+			var rd = Math.floor(Math.random() * arrValid.length);
+
+			var path = arrValid[rd].childNodes[2].lastChild.nodeValue;
+
+			var wrap=document.getElementById(idInsertIn);
+
+			var mg = new Image();
+
+			mg.src=path;
+
+			wrap.appendChild(mg);
+
+		}
+
+
+
+		
+
+		
+
+		
+
+	//-->
+
+	</script>
+
+</head>
+
+<body onLoad="KMenu.init();RandomImage()"  class="bodyback">
+
+<div id="mainWrapper">
+
+	<div id="header">
+
+		<a href="/"><img src="/templates/573EAF8B-0B67-4A0B-A8F7-2E1AA8B8168C/images/logo.jpg" alt=""></a>
+
+		<div class="posrel">
+
+
+			<div id="searchField">			
+				<form>
+    			<input id="localSearch" onfocus="focusSearch()" onblur="blurSearch()" value="Je cherche" type="text" name="q" style="width:140px" onkeypress="return onEnter(event,this.form, 'local');" />
+				</form>
+
+			</div>
+
+
+			<div id="topSearchLnks"><a href="javascript:;" ID="mnu_8753D90C-0D8A-4B13-A46C-079E08DF5063" onmouseover="KMenu.showMenu('8753D90C-0D8A-4B13-A46C-079E08DF5063','Kgrp_6F59AA81-4EE6-493A-B862-D2C02C533CDB',this,4);" onmouseout="KMenu.hideMenu('8753D90C-0D8A-4B13-A46C-079E08DF5063');"><img src="/templates/573EAF8B-0B67-4A0B-A8F7-2E1AA8B8168C/images/lienRapide.gif" alt="" /></a></div></div>
+
+	</div>
+
+	
+
+	<div id="subheader"> 
+
+		<img src="/templates/573EAF8B-0B67-4A0B-A8F7-2E1AA8B8168C/images/sub_header_left.jpg" alt=""> 
+
+		<span 	id="pAccueilHozMnu">
+
+			 <DIV class='KMenu_Accueil_MenuHorizontal'> 
+
+		<TABLE 	cellpadding=0 cellspacing=0 border=0>
+
+			<TD>
+
+				<DIV class='KMenuItem' 	onMouseOver='this.className="KMenuItemOver";'onMouseOut='this.className="KMenuItem";' >
+
+					 <a href='http://cstjean.omnivox.ca' target='_blank' class='KLabel'>Mon Portail Saint-Jean</a>
+
+					 </DIV>
+
+					 </TD>
+
+			<TD>
+
+				<DIV class='KMenuItem' 	onMouseOver='this.className="KMenuItemOver";'onMouseOut='this.className="KMenuItem";' >
+
+					 <a href='/?79CF1504-BA3F-4175-A920-214EBD99E9F9' 	class='KLabel'>Nous joindre</a>
+
+					 </DIV>
+
+					 </TD>
+
+					 <TD>
+
+					 	<DIV class='KMenuItem' 	onMouseOver='this.className="KMenuItemOver";'onMouseOut='this.className="KMenuItem";' >
+
+					 		<a href='/?AF6E6E9B-0D34-4FA8-8C9F-02B019D6129F' 	class='KLabel'>Bibliothèque</a>
+
+					 		</DIV>
+
+					 		</TD>
+
+<TD>
+
+					 			<DIV class='KMenuItem' 	onMouseOver='this.className="KMenuItemOver";'onMouseOut='this.className="KMenuItem";' >
+
+					 				<a href='/?D90813E2-715F-4250-9626-41C27CEFB79F' class='KLabel'>Recherche et innovation</a>
+
+					 				</DIV>
+
+					 				</TD>
+
+					 		<TD>
+
+					 			<DIV class='KMenuItem' 	onMouseOver='this.className="KMenuItemOver";'onMouseOut='this.className="KMenuItem";' >
+
+					 				<a href='/?1C78CB46-2E28-4C44-B2CD-2669790E79C6' class='KLabel'>Le Cégep</a>
+
+					 				</DIV>
+
+					 				</TD>
+
+					 				<TD>
+
+					 					<DIV class='KMenuItem' 	onMouseOver='this.className="KMenuItemOver";'onMouseOut='this.className="KMenuItem";' >
+
+					 						<a href='/?585589B1-F926-477B-84BB-652A2AC9460F'  class='KLabel'>La Fondation</a>
+
+					 						</DIV>
+
+					 						</TD>
+
+					 						</TABLE>
+
+
+
+			</div>	
+
+			
+
+		</span>
+
+	</div>
+
+	<div id="contentArea">
+
+		<div id="genMenu">
+
+			<a href="/programmes" id="g01">Programmes et<br />Admission </a>
+
+			<a href="/services" id="g02">SERVICES et<br />vie ÉTUDIANTe</a>
+
+			<a href="/fcontinue" id="g03">FORMATION CONTINUE<br />SERVICES AUX entreprises</a>
+
+			<a href="/population" id="g04">SERVICES À LA<br />POPULATION</a>
+
+			<a href="/international" id="g05">International<br />&nbsp;</a>
+
+			<br class="c" />
+
+		</div>
+
+		<div class="sub_menu_sep">&nbsp;</div>
+
+		<div id="contentPad">
+
+			<div id="outerMenu"><div id="innerMenu"><DIV class='KMenu_Menu_ParSection'>
+<TABLE width='100%' cellpadding=0 cellspacing=0 border=0><TR><TD><DIV ID='head_069B10D7-51EC-4173-9DE5-4E15D14240D1' menu='59FA3664-BD13-4E82-911E-D5B7E781C12F' style='position:relative;width:100%' class='KPanelHeader0'   open='false'  onMouseOver="this.className='KPanelHeaderOver0';KMenu.hideMenu('59FA3664-BD13-4E82-911E-D5B7E781C12F')"  onMouseOut="this.className='KPanelHeader0';"><TABLE cellpadding=0 cellspacing=0 border=0 width='100%'><TR><TD><DIV><TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?069B10D7-51EC-4173-9DE5-4E15D14240D1"'><TD style='cursor:pointer'><SPAN class='KLabel'>Prêts et règlements</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE></DIV></TD><TD width='10'></TD></TR></TABLE></DIV></TD></TR><TR><TD><DIV ID='div_069B10D7-51EC-4173-9DE5-4E15D14240D1' class='KPanelDivider'><IMG src='./images/spacer.gif' width=1 height=1></DIV></TD></TR></TABLE><TABLE width='100%' cellpadding=0 cellspacing=0 border=0><TR><TD><DIV ID='head_BE9C1E40-6124-451A-A7ED-3BD994D216D4' menu='59FA3664-BD13-4E82-911E-D5B7E781C12F' style='position:relative;width:100%' class='KPanelHeader0'   open='false'  onMouseOver="this.className='KPanelHeaderOver0';KMenu.hideMenu('59FA3664-BD13-4E82-911E-D5B7E781C12F')"  onMouseOut="this.className='KPanelHeader0';"><TABLE cellpadding=0 cellspacing=0 border=0 width='100%'><TR><TD><DIV><TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?BE9C1E40-6124-451A-A7ED-3BD994D216D4"'><TD style='cursor:pointer'><SPAN class='KLabel'>Services</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE></DIV></TD><TD width='10'></TD></TR></TABLE></DIV></TD></TR><TR><TD><DIV ID='div_BE9C1E40-6124-451A-A7ED-3BD994D216D4' class='KPanelDivider'><IMG src='./images/spacer.gif' width=1 height=1></DIV></TD></TR></TABLE><TABLE width='100%' cellpadding=0 cellspacing=0 border=0><TR><TD><DIV ID='head_B4F2B77F-AC3A-4738-9A33-8D3EE997BE87' menu='59FA3664-BD13-4E82-911E-D5B7E781C12F' style='position:relative;width:100%' class='KPanelHeader0'   open='false'  onMouseOver="this.className='KPanelHeaderOver0';KMenu.hideMenu('59FA3664-BD13-4E82-911E-D5B7E781C12F')"  onMouseOut="this.className='KPanelHeader0';"><TABLE cellpadding=0 cellspacing=0 border=0 width='100%'><TR><TD><DIV><TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?B4F2B77F-AC3A-4738-9A33-8D3EE997BE87"'><TD style='cursor:pointer'><SPAN class='KLabel'>Nous joindre</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE></DIV></TD><TD width='10'></TD></TR></TABLE></DIV></TD></TR><TR><TD><DIV ID='div_B4F2B77F-AC3A-4738-9A33-8D3EE997BE87' class='KPanelDivider'><IMG src='./images/spacer.gif' width=1 height=1></DIV></TD></TR></TABLE><TABLE width='100%' cellpadding=0 cellspacing=0 border=0><TR><TD><DIV ID='head_F9493574-803C-4397-A555-7C6A5FFF5B41' menu='59FA3664-BD13-4E82-911E-D5B7E781C12F' style='position:relative;width:100%' class='KPanelHeader0'   open='false'  onMouseOver="this.className='KPanelHeaderOver0';KMenu.hideMenu('59FA3664-BD13-4E82-911E-D5B7E781C12F')"  onMouseOut="this.className='KPanelHeader0';"><TABLE cellpadding=0 cellspacing=0 border=0 width='100%'><TR><TD><DIV><TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?F9493574-803C-4397-A555-7C6A5FFF5B41"'><TD style='cursor:pointer'><SPAN class='KLabel'>Patrimoine</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE></DIV></TD><TD width='10'><DIV ID='button_F9493574-803C-4397-A555-7C6A5FFF5B41' class='KPanelButtonPlus' onClick="KMenu.togglePanel('F9493574-803C-4397-A555-7C6A5FFF5B41','59FA3664-BD13-4E82-911E-D5B7E781C12F')"></DIV></TD></TR></TABLE></DIV></TD></TR><TR><TD><DIV ID='div_F9493574-803C-4397-A555-7C6A5FFF5B41' class='KPanelDivider'><IMG src='./images/spacer.gif' width=1 height=1></DIV></TD></TR><TR><TD><DIV ID='panel_F9493574-803C-4397-A555-7C6A5FFF5B41' class='KPanel0'  style='display:none'><DIV class='KItem' onMouseOver='this.className="KItemOver"' onMouseOut='this.className="KItem"'><TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?80D176BF-3D57-4938-B00D-24BC9F236B45"'><TD style='cursor:pointer'><SPAN class='KLabel'>Livres de la collection Patrimoine</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE></DIV><DIV class='KItem' onMouseOver='this.className="KItemOver"' onMouseOut='this.className="KItem"'><TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?5E6DDD65-2966-40C5-BABB-1AC64D8CE905"'><TD style='cursor:pointer'><SPAN class='KLabel'>D'hier à aujourd'hui</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE></DIV><DIV class='KItem' onMouseOver='this.className="KItemOver"' onMouseOut='this.className="KItem"'><TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?B94CBBC7-5A4D-4988-BBBE-0BBE3B124637"'><TD style='cursor:pointer'><SPAN class='KLabel'>Armoiries</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE></DIV></DIV></TD></TR></TABLE></DIV></div></div>
+
+			<div id="innerContent">
+
+			<div id="imgRd"></div>
+
+			<a class="lienAccueil" href="/">Accueil</a><span class="KPathDivider2"></span><DIV class='KPagePath'><SPAN class='KCurrentPage'>Bibliothèque</SPAN></DIV><br />
+
+			<h1>Bibliothèque</h1>
+
+			<strong>
+<h2 align="left">
+<table class="''" style="HEIGHT: 198px; WIDTH: 676px" align="center" border="0" cellpadding="1" cellspacing="2" width="676">
+<tbody>
+<tr>
+<td width="100%">
+<p>Bienvenue à la bibliothèque du Cégep Saint-Jean-sur-Richelieu. La bibliothèque offre aux étudiantes et étudiants, aux membres du&nbsp;personnel et à la population environnante des espaces de travail accueillants et des ressources documentaires diversifiées et de qualité développées en fonction des besoins de nos programmes d'étude. </p>
+<p>&nbsp;</p>
+<p>
+<table style="HEIGHT: 86px; WIDTH: 656px" align="center" border="1" cellpadding="2" cellspacing="2" width="656">
+<tbody>
+<tr>
+<td>
+<p align="center">&nbsp;</p>
+<p align="center">Pour consulter le <strong><strong>nouveau site Web de la bibliothèque</strong></strong>, cliquez ici : </p>
+<h2 align="center"><font color="blue"><a href="http://bibliotheque.cstjean.qc.ca/" name="Link" target="_blank">Bibliothèque</a><a href="http://bibliotheque.cstjean.qc.ca/bibliotheque/" name="Link" target="_blank"></a></font></h2>
+<p>&nbsp;</p></td></tr></tbody></table></p></td></tr></tbody></table></h2></strong>
+<p align="left"><br></p>&nbsp; <a href="http://regard.cstjean.qc.ca/" target="_blank">Consultation du catalogue</a> 
+<p align="left"><br></p>
+<p align="left">N.B. L'accès aux bases de données de la bibliothèque doit se faire à partir de <em>Mon Portail Saint-Jean</em>. Elle est réservée à la population étudiante et au personnel du Cégep.</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">
+<table class="''" style="HEIGHT: 110px; WIDTH: 676px" align="center" border="0" bordercolor="#000000" cellpadding="1" cellspacing="1">
+<tbody>
+<tr style="BACKGROUND-COLOR: orange" align="center" bgcolor="#ffcc66" valign="middle">
+<td style="BORDER-TOP-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<p><strong>Heures d'ouverture </strong></p></td>
+<td width="33%">
+<p><strong>Information</strong></p></td>
+<td width="33%">
+<p><strong>Adresse</strong></p></td></tr>
+<tr align="left" bgcolor="lemonchiffon" valign="top">
+<td><strong><strong><strong>
+<p align="center"><br></p><p align="center"><strong>Lundi au jeudi :<strong> </strong></strong>7 h 45 à 18 h 30</p></strong></strong></strong><strong><strong><strong>
+<p align="center"><span style="FONT-WEIGHT: bold">Vendredi :</span> 7 h 45 à 17 h<strong><br></strong></p>
+<p align="center"><strong>Samedi-Dimanche :</strong> FERMÉ</p></strong></strong>
+<h3><br></h3>
+<p align="center"><b>N.B. Pendant les semaines de lecture, la bibliothèque maintient son horaire régulier.</b> </p>
+<p align="center">&nbsp;</p></strong></td>
+<td>
+<p align="center">&nbsp;</p>
+<p align="center">Téléphone,&nbsp;comptoir du prêt :</p>
+<p align="center"><strong>450 347-5301, poste 2283</strong></p>
+<p align="center">&nbsp;<a href="mailto:bibliotheque@cstjean.qc.ca" name="undefined" target="_self">bibliotheque@cstjean.qc.ca</a></p>
+<p align="center">&nbsp;</p></td>
+<td>
+<p align="center">&nbsp;</p>
+<p align="center">30, boulevard du Séminaire</p>
+<p align="center">Cégep Saint-Jean-sur-Richelieu,Québec&nbsp;&nbsp;&nbsp; J3B 5J4<br></p>
+<p align="center">Local E-120</p>
+<p align="center">(face à la salle des Pas-perdus)</p></td></tr></tbody></table></p>
+<p>
+<table class="''" style="HEIGHT: 15px; WIDTH: 675px" align="center" border="0" cellpadding="2" cellspacing="2" width="675">
+<tbody>
+<tr>
+<td width="100%">
+<p>&nbsp;</p>
+<h2>&nbsp;</h2></td></tr></tbody></table></p>
+
+			</div>
+
+			<br class="c" />
+
+		</div>
+
+		<br class="c" />
+
+	</div>
+
+	
+
+	<br class="c">
+
+	<div id="lastFooterIn">
+
+		<div id="right"><a href="/?6B1EE271-BA3D-4E88-8857-6F70A9835A1C">Plan de site</a></div>
+
+		<div id="left">&copy; Cégep Saint-Jean-sur-Richelieu. Tous droits réservés.<br />30, boulevard du Séminaire Nord, Saint-Jean-sur-Richelieu, Québec, Canada J3B 5J4&nbsp;&nbsp;&nbsp;&nbsp;Tél.: 450 347-5301</div>
+
+		
+
+	</div>
+
+			
+
+</div>
+
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+var pageTracker = _gat._getTracker("UA-5592851-1");
+
+pageTracker._trackPageview();
+
+</script>
+
+</body>
+
+</html><!-- Contenu: 0,0234375 sec --><!-- Avec rewrite: 00,046 sec -->

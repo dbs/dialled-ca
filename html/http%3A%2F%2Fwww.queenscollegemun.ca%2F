@@ -1,0 +1,788 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Queen's College Anglican Theological St Johns NL</title>
+<meta name="description" content="Anglican Theological Colleges, Queen's College Newfoundland, Anglican Church in Newfoundland, Anglican Colleges in Canada, Christian Theological Colleges, Memorial University Theology"/>
+<meta name="keywords" content="Anglican Theological Colleges, Queen's College Newfoundland, Anglican Church in Newfoundland, Anglican Colleges in Canada, Christian Theological Colleges, Memorial University Theology" />
+<link href="http://www.queenscollegemun.ca/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table id="wrapper" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table align="center" width="1002" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><table width="1002" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="129" align="right"><a href="http://www.queenscollegemun.ca/"><img src="http://www.queenscollegemun.ca/images/logo.png" alt=""  border="0" /></a></td>
+            <td width="745" align="center"><a href="http://www.queenscollegemun.ca/"><img src="http://www.queenscollegemun.ca/images/name.png" alt=""  border="0" /></a></td>
+            <td valign="middle" width="128" align="left"><a href="http://www.mun.ca/" target="_blank"><img src="http://www.queenscollegemun.ca/images/logo2.png" alt="" border="0" /></a></td>
+          </tr>
+        </table></td>
+        </tr>
+        <tr>
+          <td id="navi"><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.queenscollegemun.ca/includes/ddsmoothmenu.css"/>
+<script type="text/javascript">
+//** Smooth Navigational Menu- By Dynamic Drive DHTML code library: http://www.dynamicdrive.com
+//** Script Download/ instructions page: http://www.dynamicdrive.com/dynamicindex1/ddlevelsmenu/
+//** Menu created: Nov 12, 2008
+
+//** Dec 12th, 08" (v1.01): Fixed Shadow issue when multiple LIs within the same UL (level) contain sub menus: http://www.dynamicdrive.com/forums/showthread.php?t=39177&highlight=smooth
+
+//** Feb 11th, 09" (v1.02): The currently active main menu item (LI A) now gets a CSS class of ".selected", including sub menu items.
+
+//** May 1st, 09" (v1.3):
+//** 1) Now supports vertical (side bar) menu mode- set "orientation" to 'v'
+//** 2) In IE6, shadows are now always disabled
+
+//** July 27th, 09" (v1.31): Fixed bug so shadows can be disabled if desired.
+//** Feb 2nd, 10" (v1.4): Adds ability to specify delay before sub menus appear and disappear, respectively. See showhidedelay variable below
+
+//** Dec 17th, 10" (v1.5): Updated menu shadow to use CSS3 box shadows when the browser is FF3.5+, IE9+, Opera9.5+, or Safari3+/Chrome. Only .js file changed.
+
+var ddsmoothmenu={
+
+//Specify full URL to down and right arrow images (23 is padding-right added to top level LIs with drop downs):
+arrowimages: {down:['downarrowclass', 'http://www.queenscollegemun.ca/images/down.gif',18], right:['rightarrowclass', 'http://www.queenscollegemun.ca/images/right.gif',18]},
+transition: {overtime:300, outtime:300}, //duration of slide in/ out animation, in milliseconds
+shadow: {enable:false, offsetx:5, offsety:5}, //enable shadow?
+showhidedelay: {showdelay: 100, hidedelay: 200}, //set delay in milliseconds before sub menus appear and disappear, respectively
+
+///////Stop configuring beyond here///////////////////////////
+
+detectwebkit: navigator.userAgent.toLowerCase().indexOf("applewebkit")!=-1, //detect WebKit browsers (Safari, Chrome etc)
+detectie6: document.all && !window.XMLHttpRequest,
+css3support: window.msPerformance || (!document.all && document.querySelector), //detect browsers that support CSS3 box shadows (ie9+ or FF3.5+, Safari3+, Chrome etc)
+
+getajaxmenu:function($, setting){ //function to fetch external page containing the panel DIVs
+	var $menucontainer=$('#'+setting.contentsource[0]) //reference empty div on page that will hold menu
+	$menucontainer.html("Loading Menu...")
+	$.ajax({
+		url: setting.contentsource[1], //path to external menu file
+		async: true,
+		error:function(ajaxrequest){
+			$menucontainer.html('Error fetching content. Server Response: '+ajaxrequest.responseText)
+		},
+		success:function(content){
+			$menucontainer.html(content)
+			ddsmoothmenu.buildmenu($, setting)
+		}
+	})
+},
+
+
+buildmenu:function($, setting){
+	var smoothmenu=ddsmoothmenu
+	var $mainmenu=$("#"+setting.mainmenuid+">ul") //reference main menu UL
+	$mainmenu.parent().get(0).className=setting.classname || "ddsmoothmenu"
+	var $headers=$mainmenu.find("ul").parent()
+	$headers.hover(
+		function(e){
+			$(this).children('a:eq(0)').addClass('selected')
+		},
+		function(e){
+			$(this).children('a:eq(0)').removeClass('selected')
+		}
+	)
+	$headers.each(function(i){ //loop through each LI header
+		var $curobj=$(this).css({zIndex: 100-i}) //reference current LI header
+		var $subul=$(this).find('ul:eq(0)').css({display:'block'})
+		$subul.data('timers', {})
+		this._dimensions={w:this.offsetWidth, h:this.offsetHeight, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()}
+		this.istopheader=$curobj.parents("ul").length==1? true : false //is top level header?
+		$subul.css({top:this.istopheader && setting.orientation!='v'? this._dimensions.h+"px" : 0})
+		$curobj.children("a:eq(0)").css(this.istopheader? {paddingRight: smoothmenu.arrowimages.down[2]} : {}).append( //add arrow images
+			'<img src="'+ (this.istopheader && setting.orientation!='v'? smoothmenu.arrowimages.down[1] : smoothmenu.arrowimages.right[1])
+			+'" class="' + (this.istopheader && setting.orientation!='v'? smoothmenu.arrowimages.down[0] : smoothmenu.arrowimages.right[0])
+			+ '" style="border:0;" />'
+		)
+		if (smoothmenu.shadow.enable && !smoothmenu.css3support){ //if shadows enabled and browser doesn't support CSS3 box shadows
+			this._shadowoffset={x:(this.istopheader?$subul.offset().left+smoothmenu.shadow.offsetx : this._dimensions.w), y:(this.istopheader? $subul.offset().top+smoothmenu.shadow.offsety : $curobj.position().top)} //store this shadow's offsets
+			if (this.istopheader)
+				$parentshadow=$(document.body)
+			else{
+				var $parentLi=$curobj.parents("li:eq(0)")
+				$parentshadow=$parentLi.get(0).$shadow
+			}
+			this.$shadow=$('<div class="ddshadow'+(this.istopheader? ' toplevelshadow' : '')+'"></div>').prependTo($parentshadow).css({left:this._shadowoffset.x+'px', top:this._shadowoffset.y+'px'})  //insert shadow DIV and set it to parent node for the next shadow div
+		}
+		$curobj.hover(
+			function(e){
+				var $targetul=$subul //reference UL to reveal
+				var header=$curobj.get(0) //reference header LI as DOM object
+				clearTimeout($targetul.data('timers').hidetimer)
+				$targetul.data('timers').showtimer=setTimeout(function(){
+					header._offsets={left:$curobj.offset().left, top:$curobj.offset().top}
+					var menuleft=header.istopheader && setting.orientation!='v'? 0 : header._dimensions.w
+					menuleft=(header._offsets.left+menuleft+header._dimensions.subulw>$(window).width())? (header.istopheader && setting.orientation!='v'? -header._dimensions.subulw+header._dimensions.w : -header._dimensions.w) : menuleft //calculate this sub menu's offsets from its parent
+					if ($targetul.queue().length<=1){ //if 1 or less queued animations
+						$targetul.css({left:menuleft+"px", width:header._dimensions.subulw+'px'}).animate({height:'show',opacity:'show'}, ddsmoothmenu.transition.overtime)
+						if (smoothmenu.shadow.enable && !smoothmenu.css3support){
+							var shadowleft=header.istopheader? $targetul.offset().left+ddsmoothmenu.shadow.offsetx : menuleft
+							var shadowtop=header.istopheader?$targetul.offset().top+smoothmenu.shadow.offsety : header._shadowoffset.y
+							if (!header.istopheader && ddsmoothmenu.detectwebkit){ //in WebKit browsers, restore shadow's opacity to full
+								header.$shadow.css({opacity:1})
+							}
+							header.$shadow.css({overflow:'', width:header._dimensions.subulw+'px', left:shadowleft+'px', top:shadowtop+'px'}).animate({height:header._dimensions.subulh+'px'}, ddsmoothmenu.transition.overtime)
+						}
+					}
+				}, ddsmoothmenu.showhidedelay.showdelay)
+			},
+			function(e){
+				var $targetul=$subul
+				var header=$curobj.get(0)
+				clearTimeout($targetul.data('timers').showtimer)
+				$targetul.data('timers').hidetimer=setTimeout(function(){
+					$targetul.animate({height:'hide', opacity:'hide'}, ddsmoothmenu.transition.outtime)
+					if (smoothmenu.shadow.enable && !smoothmenu.css3support){
+						if (ddsmoothmenu.detectwebkit){ //in WebKit browsers, set first child shadow's opacity to 0, as "overflow:hidden" doesn't work in them
+							header.$shadow.children('div:eq(0)').css({opacity:0})
+						}
+						header.$shadow.css({overflow:'hidden'}).animate({height:0}, ddsmoothmenu.transition.outtime)
+					}
+				}, ddsmoothmenu.showhidedelay.hidedelay)
+			}
+		) //end hover
+	}) //end $headers.each()
+	if (smoothmenu.shadow.enable && smoothmenu.css3support){ //if shadows enabled and browser supports CSS3 shadows
+		var $toplevelul=$('#'+setting.mainmenuid+' ul li ul')
+		var css3shadow=parseInt(smoothmenu.shadow.offsetx)+"px "+parseInt(smoothmenu.shadow.offsety)+"px 5px #aaa" //construct CSS3 box-shadow value
+		var shadowprop=["boxShadow", "MozBoxShadow", "WebkitBoxShadow", "MsBoxShadow"] //possible vendor specific CSS3 shadow properties
+		for (var i=0; i<shadowprop.length; i++){
+			$toplevelul.css(shadowprop[i], css3shadow)
+		}
+	}
+	$mainmenu.find("ul").css({display:'none', visibility:'visible'})
+},
+
+init:function(setting){
+	if (typeof setting.customtheme=="object" && setting.customtheme.length==2){ //override default menu colors (default/hover) with custom set?
+		var mainmenuid='#'+setting.mainmenuid
+		var mainselector=(setting.orientation=="v")? mainmenuid : mainmenuid+', '+mainmenuid
+		document.write('<style type="text/css">\n'
+			+mainselector+' ul li a {background:'+setting.customtheme[0]+';}\n'
+			+mainmenuid+' ul li a:hover {background:'+setting.customtheme[1]+';}\n'
+		+'</style>')
+	}
+	this.shadow.enable=(document.all && !window.XMLHttpRequest)? false : this.shadow.enable //in IE6, always disable shadow
+	jQuery(document).ready(function($){ //ajax menu?
+		if (typeof setting.contentsource=="object"){ //if external ajax menu
+			ddsmoothmenu.getajaxmenu($, setting)
+		}
+		else{ //else if markup menu
+			ddsmoothmenu.buildmenu($, setting)
+		}
+	})
+}
+
+} //end ddsmoothmenu variable
+
+</script><script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script> 
+
+<table align="center" width="931"  border="0" cellspacing="0" cellpadding="0" >
+      <tr>
+	  
+	    
+      
+        <td><div id="smoothmenu1" class="ddsmoothmenu">
+   <ul>
+     <li><span><a style="text-decoration:none;" href="http://www.queenscollegemun.ca/">Home</a></span>
+	 </li>
+	    </ul>
+  </div></td>		<td><img src="http://www.queenscollegemun.ca/images/navi-stick.jpg" alt="" width="3" height="17" border="0" /></td>
+		 
+      
+        <td><div id="smoothmenu1" class="ddsmoothmenu">
+   <ul>
+     <li><span><a style="text-decoration:none;" href="#">About Us</a></span>
+	 	 <ul>
+	   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Anglican-Church-In-Newfoundland-Canada.html">Our History </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Anglican-Colleges-in-Newfoundland-Canada.html">Our Philosophy </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Christian-Theological-Colleges-St-Johns.html">Our Statement of Mission </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Memorial-University-Theology-Newfoundland.html">Our Affiliations </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Anglican-Theological-Colleges-NL.html">Governance </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Queens-College-NL.html">Reference Library </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Anglican-Church-In-St-Johns-Newfoundland.html">Our Chapel </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Anglican-Colleges-in-St-Johns-Newfoundland.html">Photo Gallery </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Christian-Theological-Colleges-NL.html">Student Association </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/alumni.html">Alumni Association  </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Anglican-Theological-Colleges-Canada.html">Our Apartment </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Anglican-Colleges-In-Canada-St-Johns-Newfoundland/Queens-College-St-Johns-NL.html">Our Mural by Jordi Bonet </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  </ul>
+		  
+		  
+	    </li>
+	    </ul>
+  </div></td>		<td><img src="http://www.queenscollegemun.ca/images/navi-stick.jpg" alt="" width="3" height="17" border="0" /></td>
+		 
+      
+        <td><div id="smoothmenu1" class="ddsmoothmenu">
+   <ul>
+     <li><span><a style="text-decoration:none;" href="#">Programs</a></span>
+	 	 <ul>
+	   		  <li><span ><a style=" text-decoration:none;" href="#">Degree Programs </a></span>
+		   <ul>
+	   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Master-of-Divinity.html">Master of Divinity </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Master-of-Theological-Studies.html">Master of Theological Studies </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Master-of-Theological-Studies---Thesis-Option.html">Master of Theological Studies - Thesis Option </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Bachelor-of-Theology.html">Bachelor of Theology </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Bachelor-of-Theology-by-Distance.html">Bachelor of Theology by Distance </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Honorary-Degrees.html">Honorary Degrees </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Admission-Requirements.html">Admission Requirements </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Academic-Regulations-and-Policies.html">Academic Regulations and Policies </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Scholarships-and-Awards.html">Scholarships and Awards </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="#">Course Descriptions </a></span>
+		  
+		   <ul>
+	   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Course-Descriptions/Vocational-Development-Seminars.html">Vocational Development Seminars </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Course-Descriptions/Degree-Program-Biblical-Studies.html">Biblical Studies </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Course-Descriptions/Degree-Program-Pastoral-Studies.html">Pastoral Studies </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Course-Descriptions/Degree-Program-Moral-Theology.html">Moral Theology </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Course-Descriptions/Degree-Program-Church-History.html">Church History </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Course-Descriptions/Degree-Program-Theological-Studies.html">Theological Studies </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges--St-Johns/Course-Descriptions/Degree-Program-Liturgical-Studies.html">Liturgical Studies </a></span></li>
+		   		  </ul>
+		  
+		  
+		 </li>
+		 		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="#">Associate in Theology Program </a></span>
+		   <ul>
+	   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/General-Information.html">General Information </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Frequently-Asked-Questions.html">Frequently Asked Questions </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Academic-Regulations.html">Academic Regulations </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Exam-Invigilation-Policy.html">Exam Invigilation Policy </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Invigilator-Responsibility.html">Invigilator Responsibility </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Associate-in-Theology-Youth-Ministry-Major.html">Associate in Theology Youth Ministry Major </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="#">Course Descriptions </a></span>
+		  
+		   <ul>
+	   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Course-Descriptions/Associate-Program-Biblical-Studies.html">Biblical Studies </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Course-Descriptions/Associate-Program-Church-History.html">Church History </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Course-Descriptions/Associate-Program-Pastoral-Studies.html">Pastoral Studies </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Course-Descriptions/Associate-Program-Theological-Studies.html">Theological Studies </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Course-Descriptions/Associate-Program-Moral-Theology.html">Moral Theology </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Course-Descriptions/Associate-Program-Liturgical-Studies.html">Liturgical Studies </a></span></li>
+		   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Course-Descriptions/Associate-Program-Youth-Ministry-Studies.html">Youth Ministry Studies </a></span></li>
+		   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland/Course-Offering----Fall-Semester-2015.html">Course Offering  Fall Semester 2015 </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="#">Diploma in Theology and Ministry Program </a></span>
+		   <ul>
+	   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Colleges-in-Canada/Diploma-General-Information.html">General Information </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Colleges-in-Canada/Entrance-Requirements.html">Entrance Requirements </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Colleges-in-Canada/Evaluation-Criteria.html">Evaluation Criteria </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Colleges-in-Canada/Diploma-in-Theology-and-Ministry---2015---Clarenvile---Brochure.html">Diploma in Theology and Ministry 2015 - Clarenvile - Brochure </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Colleges-in-Canada/Diploma-in-Theology-and-Ministry-Roman-Catholic-Stream-2015-Brochure.html">Diploma in Theology and Ministry  Roman Catholic Stream  2015 Brochure   </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="#">Youth Ministry Program </a></span>
+		   <ul>
+	   		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Christian-Theological-Colleges-Newfoundland/Youth-Ministry-Program.html">Youth Ministry Program </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Christian-Theological-Colleges-Newfoundland/Course-Descriptions.html">Course Descriptions </a></span>
+		  
+		   <ul>
+	   		  </ul>
+		  
+		  
+		 </li>
+		 		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Memorial-University-Theology-Newfoundland-Canada.html">Terms & Definitions </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Anglican-Theological-Colleges-St-Johns.html">Forms </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Queens-College-Newfoundland-Canada.html">Fees & Charges </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  <li><span ><a style=" text-decoration:none;" href="http://www.queenscollegemun.ca/Christian-Theological-Colleges-Newfoundland-Mt-Pearl/Calendar-Dates-Fall-2015.html">Calendar Dates Fall 2015 </a></span>
+		   <ul>
+	   		  </ul>
+		  
+		 </li>
+		 		  </ul>
+		  
+		  
+	    </li>
+	    </ul>
+  </div></td>		<td><img src="http://www.queenscollegemun.ca/images/navi-stick.jpg" alt="" width="3" height="17" border="0" /></td>
+		 
+      
+        <td><div id="smoothmenu1" class="ddsmoothmenu">
+   <ul>
+     <li><span><a style="text-decoration:none;" href="http://www.queenscollegemun.ca/page/Memorial-University-Theology-Anglican--St-Johns-NL.html">News & Events</a></span>
+	 </li>
+	    </ul>
+  </div></td>		<td><img src="http://www.queenscollegemun.ca/images/navi-stick.jpg" alt="" width="3" height="17" border="0" /></td>
+		 
+      
+        <td><div id="smoothmenu1" class="ddsmoothmenu">
+   <ul>
+     <li><span><a style="text-decoration:none;" href="http://www.queenscollegemun.ca/page/Anglican-Theological-Colleges-St-Johns-NL.html">Faculty & Staff</a></span>
+	 </li>
+	    </ul>
+  </div></td>		<td><img src="http://www.queenscollegemun.ca/images/navi-stick.jpg" alt="" width="3" height="17" border="0" /></td>
+		 
+      
+        <td><div id="smoothmenu1" class="ddsmoothmenu">
+   <ul>
+     <li><span><a style="text-decoration:none;" href="http://www.queenscollegemun.ca/page/Anglican-Church-In-Newfoundland-Links.html">Links</a></span>
+	 </li>
+	    </ul>
+  </div></td>		<td><img src="http://www.queenscollegemun.ca/images/navi-stick.jpg" alt="" width="3" height="17" border="0" /></td>
+		 
+      
+        <td><div id="smoothmenu1" class="ddsmoothmenu">
+   <ul>
+     <li><span><a style="text-decoration:none;" href="http://www.queenscollegemun.ca/page/Memorial-University-Theology-Christian-St-Johns-NL.html">Contact Us </a></span>
+	 </li>
+	    </ul>
+  </div></td>		<td><img src="http://www.queenscollegemun.ca/images/navi-stick.jpg" alt="" width="3" height="17" border="0" /></td>
+		 
+      
+        <td><div id="smoothmenu1" class="ddsmoothmenu">
+   <ul>
+     <li><span><a style="text-decoration:none;" href="http://www.queenscollegemun.ca/page/Christian-Anglican-Theological-College-St-Johns-Newfoundland-NL.html">How to Help</a></span>
+	 </li>
+	    </ul>
+  </div></td>		</tr></table>
+      </td>
+        </tr>
+        <tr>
+          <td height="3"></td>
+        </tr>
+        <tr>
+          <td align="center"><!--<img src="http://www.queenscollegemun.ca/images/banner.png" alt="" width="998" height="414" />-->
+
+<script type="text/javascript" src="http://www.queenscollegemun.ca/js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript">
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+    $active.addClass('last-active');
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 4000 );
+});
+
+</script>
+
+<style type="text/css">
+#slideshow {
+    position:relative;
+    height:270px;
+	width:600px;
+	/*margin-left:5px;*/
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+</style>
+
+
+<table width="600" height="270" border="0" >
+<tr>
+
+  <td valign="top">
+    <div id="slideshow">
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/52834a4f20998queens1.jpg" alt="new1"class="active"/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/547488f057c232014-11-06 Queens College 015.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/54749571313b32014-11-06 Queens College 044.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/547489806f1ca2014-11-06 Queens College 024.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/52834a6611d7aqueens4.jpg" alt="new4"/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/547489aeed8a42014-11-06 Queens College 029.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/547489e4082642014-11-06 Queens College 35.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/54748a5d5b2d62014-11-06 Queens College 040.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/52834a5a23d42queens2.jpg" alt="new2"/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/54748ae28b0542014-11-06 Queens College 046.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/54748a9f5a3b72014-11-06 Queens College 054.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/54748ba9345f92014-11-06 Queens College 058.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/54748bd8bcae52014-11-06 Queens College 060.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/5283638562168queens3.jpg" alt="new3"/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/54748c29ce24e2014-11-06 Queens College 097.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/54748c427bec62014-11-06 Queens College 099.gif" alt=""/>
+      <img width="600" height="270" src="http://www.queenscollegemun.ca/slide/547f090736599close up - Anglican Foundation Recipients.jpg" alt=""/>
+    </div>
+    </td>
+</tr>
+ 
+</table></td>
+        </tr>
+        <tr>
+          <td height="21"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td><table width="1002" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="http://www.queenscollegemun.ca/images/top-white.png" alt="" width="1002" height="35" /></td>
+        </tr>
+        <tr>
+          <td id="content-bg"><table align="left" border="0" cellspacing="0" cellpadding="0" >
+              <tr>
+                <td class="heading">Welcome to Queens College</td>
+              </tr>
+              <tr>
+                <td height="50"></td>
+              </tr>
+              <tr>
+                <td align="center"  class="content"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="left"><div>
+	<img align="right" alt="" src="http://www.queenscollegemun.ca/ckfinder/userfiles/images/Dr_-Alex-Faseruk.jpg" style="width: 225px; height: 300px; padding-left:10px;" />It is with great pleasure that I welcome you to the website of Queen&rsquo;s College, an institution founded in 1841. Our college is dedicated to providing a high quality theological education to men and women of faith, for not only ordained ministry, but also to those who wish to enhance their baptismal ministry.</div>
+<div>
+	&nbsp;</div>
+<div>
+	Whether you are visiting the website for the first time or as a regular guest, I pray that your visit will be a blessing to you. Please take some time to explore our website and to see what our college community can offer to you.</div>
+<div>
+	&nbsp;</div>
+<div>
+	We are a theological college of the Anglican Church of Canada located on the campus of Memorial University. The college is jointly governed by the three Anglican dioceses of the province of Newfoundland and Labrador.</div>
+<div>
+	&nbsp;</div>
+<div>
+	The most important part of our mission is to offer both full-time and part-time theological programs in theology to individuals preparing for ordination. In recent years, we have offered programs to people not seeking ordination. While we were founded as a theological institute for Anglican ministry, we now welcome people of all faith who wish to become educated in theology.</div>
+<div>
+	&nbsp;</div>
+<div>
+	If you have any questions about our degree, associate and diploma programs, please contact us at 709-753-0116.</div>
+<div>
+	&nbsp;</div>
+<div>
+	With every blessing,</div>
+<div>
+	&nbsp;</div>
+<div>
+	The Rev. Dr. Alex Faseruk</div>
+<div>
+	Provost and Vice-Chancellor</div>
+<div>
+	<img alt="" src="/ckfinder/userfiles/images/AFC-logo-wordmark-tag-rgb.gif" style="width: 360px; height: 144px; float: right;" /></div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<p>
+		&nbsp;</p>
+	<p>
+		&nbsp;</p>
+	<p>
+		<strong>Statement of Institutional Effectiveness</strong></p>
+	<div>
+		The Board of Commissioners of the Association of Theological Schools in the United States and Canada requires schools publish a statement regarding the school&rsquo;s educational effectiveness.&nbsp; Queen&rsquo;s College notes that we have graduates of the following programs who are engaged in active ministry in not only Newfoundland and Labrador, but in the Canadian Armed Forces, the United States and several foreign countries: &nbsp;</div>
+	<ul>
+		<li>
+			<div>
+				Master of Divinity</div>
+		</li>
+		<li>
+			<div>
+				Master of Theological Studies&nbsp;</div>
+		</li>
+		<li>
+			<div>
+				Bachelor of Theology</div>
+		</li>
+		<li>
+			<div>
+				Bachelor of Theology by Distance</div>
+		</li>
+		<li>
+			<div>
+				Associate in Theology</div>
+		</li>
+		<li>
+			<div>
+				Diploma in Theology and Ministry</div>
+		</li>
+		<li>
+			<div>
+				Certificate and Continuing Education programs.</div>
+		</li>
+	</ul>
+</div>
+<p>
+	&nbsp;</p>
+</td>
+                    </tr>
+                    <tr>
+                      <td height="65"></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td align="left"><img src="http://www.queenscollegemun.ca/images/bottom-white.png" alt="" width="1002" height="35" /></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="39"></td>
+        </tr>
+        <tr>
+          <td id="footer">	   
+	  <strong> <span><a href="http://www.queenscollegemun.ca/page/Queens-College-Newfoundland-Anglican-Christian-Theology-St-Johns.html">Home</a> |
+           </span></strong>	   
+	  <strong> <span><a href="http://www.queenscollegemun.ca/page/Anglican-Colleges-In-Canada-St-Johns-Newfoundland.html">About Us</a> |
+           </span></strong>	   
+	  <strong> <span><a href="http://www.queenscollegemun.ca/page/Christian-Theological-Colleges-Newfoundland-Mt-Pearl.html">Programs</a> |
+           </span></strong>	   
+	  <strong> <span><a href="http://www.queenscollegemun.ca/page/Memorial-University-Theology-Anglican--St-Johns-NL.html">News & Events</a> |
+           </span></strong>	   
+	  <strong> <span><a href="http://www.queenscollegemun.ca/page/Anglican-Theological-Colleges-St-Johns-NL.html">Faculty & Staff</a> |
+           </span></strong>	   
+	  <strong> <span><a href="http://www.queenscollegemun.ca/page/Anglican-Church-In-Newfoundland-Links.html">Links</a> |
+           </span></strong>	   
+	  <strong> <span><a href="http://www.queenscollegemun.ca/page/Memorial-University-Theology-Christian-St-Johns-NL.html">Contact Us </a> |
+           </span></strong>	   
+	  <strong> <span><a href="http://www.queenscollegemun.ca/page/Christian-Anglican-Theological-College-St-Johns-Newfoundland-NL.html">How to Help</a></span></strong><br />
+
+   <span class="footer1"> All Rights Reserved &copy; 2016 Queen&rsquo;s College</span>&nbsp;&nbsp;<a href="http://www.queenscollegemun.ca/sitemap.html">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Site Designed and hosted by&nbsp;<a href="http://www.zirconplace.com/" target="_blank">Zircon Web Design Inc.</a></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+       
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <title>Grand Manan Museum</title>
+    <style type="text/css">
+#dropmenudiv{border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; border-bottom:0px solid black; position:absolute;
+line-height:18px;
+z-index:100; font-style:normal; font-variant:normal; font-weight:normal; font-size:12px; font-family:Calibri}
+#dropmenudiv a{width: 100%;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid black;
+padding: 1px 0;
+text-decoration: none;
+font-weight: bold;}
+#dropmenudiv a:hover{background-color: white;}
+a:link {color: #000000;
+	text-decoration: none;}
+a:visited {text-decoration: none;
+	color: #000000;}
+a:hover {text-decoration: none;
+	color: #666666;}
+a:active {text-decoration: none;
+	color: #333333;}
+<!--
+body, td, th {
+	font-family: Calibri, Candara, Segoe UI, Arial, sans-serif;
+	font-size: 14px;
+	color: #333333;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #CCCCCC;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style28 {font-size: 12px}
+.style42 {font-size: 16px}
+.style43 {
+	font-size: 36px;
+	color: #003300;
+}
+.style44 {font-weight: bold}
+-->
+    </style>
+    <script type="text/javascript">
+
+/***********************************************
+* AnyLink Drop Down Menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+//Contents for menu 1, and so on
+var menu1=new Array()
+menu1[0]='<a href="MUSEUM_Mandate_History.html">Mandate & History </a>'
+menu1[1]='<a href="MUSEUM_Board.html">Board of Directors & Committees </a>'
+menu1[2]='<a href="MUSEUM_Staff.html">Staff</a>'
+menu1[3]='<a href="MUSEUM_Hours_Location.html">Hours & Location</a>'
+menu1[4]='<a href="MUSEUM_DonorWall.html">Benefactors & Donors</a>'
+menu1[5]='<a href="MUSEUM_GiftShop.html">Gift Shop</a>'
+menu1[6]='<a href="MUSEUM_Archives_Collections.html">Archives & Collections</a>'
+menu1[7]='<a href="MUSEUM_ContactUs.html">Contact Us</a>'
+
+//Contents for menu 2
+var menu2=new Array()
+menu2[0]='<a href="Membership.html">Membership</a>'
+menu2[1]='<a href="Donations.html">Make a Donation</a>'
+menu2[2]='<a href="EndowmentFund.html">Endowment Fund</a>'
+
+//Contents for menu 3
+var menu3=new Array()
+menu3[0]='<a href="PERMANENTEXHIBIT_MosesBird.html">Allan Moses Bird Collection</a>'
+menu3[1]='<a href="PERMANENTEXHIBIT_McLaughlinMarine.html">Walter B McLaughlin Marine Gallery</a>'
+menu3[2]='<a href="PERMANENTEXHIBIT_Geology.html">Geology of the Island</a>'
+menu3[3]='<a href="PERMANENTEXHIBIT_Cather_Hermits.html">Willa Cather/Dark Harbour Hermits</a>'
+menu3[4]='<a href="PERMANENTEXHIBIT_FishermensShed.html">Fishermens Shed Exhibit</a>'
+menu3[5]='<a href="PERMANENTEXHIBIT_ShipWreck.html">Ship Wreck Exhibit</a>'
+menu3[6]='<a href="PERMANENTEXHIBIT_DealingWithDeath.html">Dealing with Death</a>'
+menu3[7]='<a href="PERMANENTEXHIBIT_1929IslandKitchen.html">1929 Island Kitchen</a>'
+menu3[8]='<a href="PERMANENTEXHIBIT_IngersollWing.html">L. Keith Ingersoll Wing</a>'
+
+
+//Contents for menu 4
+var menu4=new Array()
+menu4[0]='<a href="TEMPORARYEXHIBIT_War1812.html">Grand Manan in the War of 1812</a>'
+menu4[1]='<a href="TEMPORARYEXHIBIT_GrandMananatWar.html">Grand Manan in Times of War</a>'
+menu4[2]='<a href="TEMPORARYEXHIBIT_CabinetofCuriousities.html">Cabinet of Curiosities</a>'
+
+//Contents for menu 5
+var menu5=new Array()
+menu5[0]='<a href="EVENTS_ScheduleOverview.html">Schedule Overview</a>'
+menu5[1]='<a href="EVENTS_UpcomingEvents.html">Events This Week & Next</a>'
+menu5[2]='<a href="EVENTS_Photobox.html">Island Stories Through Elder Eyes</a>'
+menu5[3]='<a href="EVENTS_Fundraising.html">Fundraising Events</a>'
+menu5[4]='<a href="EVENTS_ArtExhibition.html">Art Exhibition</a>'
+menu5[5]='<a href="EVENTS_PhotoPage.html">Events Photo Page</a>'
+
+	
+var menuwidth='180px' //default menu width
+var menubgcolor='#EFF3F6'  //menu bgcolor
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+/////No further editting needed
+
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+if (ie4||ns6)
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+if (ie4||ns6)
+dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+if (menuwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=menuwidth
+}
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+obj.visibility=visible
+else if (e.type=="click")
+obj.visibility=hidden
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=0
+if (whichedge=="rightedge"){
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+}
+else{
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+}
+}
+return edgeoffset
+}
+
+function populatemenu(what){
+if (ie4||ns6)
+dropmenuobj.innerHTML=what.join("")
+}
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+if (window.event) event.cancelBubble=true
+else if (e.stopPropagation) e.stopPropagation()
+clearhidemenu()
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+populatemenu(menucontents)
+
+if (ie4||ns6){
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+}
+
+return clickreturnvalue()
+}
+
+function clickreturnvalue(){
+if (ie4||ns6) return false
+else return true
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function dynamichide(e){
+if (ie4&&!dropmenuobj.contains(e.toElement))
+delayhidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhidemenu()
+}
+
+function hidemenu(e){
+if (typeof dropmenuobj!="undefined"){
+if (ie4||ns6)
+dropmenuobj.style.visibility="hidden"
+}
+}
+
+function delayhidemenu(){
+if (ie4||ns6)
+delayhide=setTimeout("hidemenu()",disappeardelay)
+}
+
+function clearhidemenu(){
+if (typeof delayhide!="undefined")
+clearTimeout(delayhide)
+}
+
+if (hidemenu_onclick=="yes")
+document.onclick=hidemenu
+
+    </script>
+  </head>
+  <body>
+    <table width="1000" align="center" height="800" bgcolor="#FFFFFF"
+      border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td valign="top">
+            <div align="right">
+              <table width="1004" height="1034" border="0"
+                cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="style43" align="center">WELCOME TO /
+                        BIENVENUE </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="graphics/COLOURBAR.png" width="1000"
+                        height="20"> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div align="center">
+                        <table width="100%" height="400"
+                          background="images/GRAND_MANAN_MUSEUM_entrypage.jpg"
+                          border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td width="500">&nbsp;</td>
+                              <td width="500"><img
+                                  src="logos/GMMuseum_logoweb-000001.png"
+                                  alt="Grand Manan Museum" width="300"
+                                  height="100"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      <div align="center">
+                        <table width="200" border="0" cellpadding="5"
+                          cellspacing="5">
+                          <tbody>
+                            <tr>
+                              <td width="50%" bgcolor="#8BC6C4">
+                                <div align="center"><a
+                                    href="index-e.html">English</a></div>
+                              </td>
+                              <td width="50%" bgcolor="#8BC6C4">
+                                <div align="center"><a
+                                    href="francais/index-f.html">Français</a></div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      <div align="center">
+                        <table width="600" border="0" cellpadding="5"
+                          cellspacing="5">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div align="center"><span
+                                    class="style42">1141, Route 776,
+                                    Grand Manan, New Brunswick E5G 4E9
+                                    Canada </span><br>
+                                  Tel/Tél. : (506) 662-3524 |
+                                  Email/Courriel : <a
+                                    href="mailto:gmadmin@grandmananmuseum.ca">gmadmin@grandmananmuseum.ca</a></div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div align="center">
+                                  <table width="500" border="0"
+                                    cellpadding="5" cellspacing="5">
+                                    <tbody>
+                                      <tr>
+                                        <td colspan="2">
+                                          <div align="center"><font
+                                              size="2">Website and
+                                              Museum are supported by T<span
+                                                class="style28">ourism,
+                                                Heritage &amp; Culture,
+                                                <br>
+                                                and by our other <span
+                                                  class="style44"><a
+                                                    href="MUSEUM_DonorWall.html">corporate
+
+
+
+
+
+
+
+                                                    &amp; </a></span></span><strong><a
+href="MUSEUM_DonorWall.html">individual donors </a></strong>. <br>
+                                              <span class="style28">Le
+                                                Musée et son site Web
+                                                sont financés par le
+                                                ministère du Tourisme,
+                                                du Patrimoine <br>
+                                                et de la Culture ainsi
+                                                que par <a
+                                                  href="francais/MUSEE_Murs_Bienfaiteurs.html"><strong>des
+
+
+
+
+
+
+
+                                                    dons provenant
+                                                    d'entreprises et de
+                                                    particuliers. </strong></a>.</span></font></div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td width="50%">
+                                          <div align="right"> 
+                                            <img
+                                              src="logos/fundyculturelogo_sm.jpg"
+                                              alt="Fundy Culture" width="138" height="57"></div>
+                                        </td>
+                                        <td width="50%">
+                                          <div align="left"> 
+                                            <img
+                                              src="logos/NB_Colour_sm.jpg"
+                                              alt="Tourism, Heritage
+                                              &amp; Culture" width="138" height="51"></div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      <div class="style28" align="center">
+                        <p>Reproduction of material from any of these
+                          pages without written permission is strictly
+                          prohibited. <br>
+                          La reproduction de contenu extrait de l'une ou
+                          l'autre de ces pages sans autorisation écrite
+                          est strictement interdite. <br>
+                          Copyright © 2005-2014 All rights reserved. ©
+                          2005-2014. Tous droits réservés. </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p align="center"> <!-- Start of StatCounter Code for Frontpage 2002 -->
+<script type="text/javascript">
+var sc_project=9112375; 
+var sc_invisible=0; 
+var sc_security="b7340623"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics ecommerce" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/9112375/0/b7340623/0/"
+alt="shopify analytics ecommerce"></a></div></noscript>
+<!-- End of StatCounter Code for Frontpage 2002 --><br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

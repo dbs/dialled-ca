@@ -1,0 +1,438 @@
+
+
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+<title>Markstay-Warren Public Library</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type="text/javascript" src="js/fancydropdown.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'http://www.google.com/calendar/feeds/ami4h2ao0g8brkj6d80v8acd94@group.calendar.google.com/public/full',
+                  maxresults: 1
+		        });
+		    });
+		
+		
+</script>
+
+<!-- facebook script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<script>
+$(document).ready(function() {
+    $('.search').keydown(function(event) {
+        if (event.keyCode == 13) {
+search_cat();
+            return false;
+         }
+    });
+});
+</script>
+
+
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	    $("#eventlist").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true
+
+    });
+
+		//Load main content
+		$(".topContent").load("home.asp");
+		
+		$(".events").load("calendar.html");
+		
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+
+
+    
+});
+//Enterprise Search
+function search_cat()
+{
+search = document.getElementById('search').value
+document.location.href = 'https://olsn.ent.sirsidynix.net/client/markstay/search/results?qu='+ search +'&te=ILS';	 //IMPORTANT - change the library
+}
+</script>
+<script type="text/javascript">
+   google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+
+
+     
+    <body>
+    
+    <section class="hide" id="sizer"></section>
+    <section class="hide" id="button-bar">
+    <a href="https://www.facebook.com/MarkstayWarrenLibrary"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/facebook.png" alt="facebook"></a>
+	
+	
+    <!--Email automatically pulled as long as it's in OPLD-->
+    <a href="mailto:library@markstay-warren.ca?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a>      
+    </section>
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+               <img src="img/full.png" class="full" alt="Full Public Library Logo">
+               <img src="img/landscape.png" class="tablet" alt="Landscape Public Library Logo">
+               <img src="img/portrait.png" class="mobile" alt="portrait Public Library Logo">
+               
+            
+            
+                  
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>
+                               
+                <li><a href="?id=home.asp&label=Home" alt="home">Home</a></li>
+                
+          
+                
+                <li><a alt="Programs">Programs</a>
+                	<ul>
+                    	<li><a href="?id=bookclub.asp&label=bookclub" alt="Book Club">Book Club</a></li>
+                        <li><a href="?id=bearblanket.asp&label=BearBlanket" alt="BearBlanket">Bear Blanket Book</a></li>                                                                                       
+                    </ul>                
+                </li>
+                <li><a>Library</a>
+                	<ul>
+                    	<li><a href="?id=contact.asp&label=Contact" alt="Contact Us">Contact us</a></li>
+                        <li><a href="?id=board.asp&label=Board" alt="Board">Board</a></li>
+                        <li><a href="?id=volunteer.asp&label=volunteer" alt="Volunteer">Volunteer</a></li>
+                        <li><a href="?id=policies.asp&label=policies" alt="policies">Policies</a></li>
+                        <li><a href="?id=donations.asp&label=Donations" alt="Donations">Donations</a></li>                                                                        
+                    </ul>
+                </li>
+                <li><a alt="Community">Community</a>
+                	<ul>
+                    	<li><a href="?id=local.asp&label=local" alt="local">Local Links</a></li>
+                        <li><a href="?id=municipal.asp&label=Municipal" alt="Municipal">Municipal Information</a></li>                                                                                       
+                    </ul>                
+                </li>
+                 <li><a href="?id=eresource.asp&label=eresource" alt="eresource">EResources</a></li>     
+               
+                <!--<li><a href="http://www.olsn.ca/e-resource/search.asp?library=markstaywarren#" alt="Eresources">EResources</a></li>-->
+                
+            </ul>
+         </nav>    
+        <!-- end of NAV -->
+     
+          <section class="hoursContent">
+              <article><span class="tdhourstxt">Today's hours:&nbsp; </span>   
+                <ul id="hours-slider">
+                       
+                        
+                        <li>
+                        <!-- alter's display name as "Markstay-Warren" is not a branch name -->
+						Markstay Branch   closed/fermÃ©</li>
+                        
+                        <!-- end alter -->
+                    
+                                    
+                        
+                        <li>
+                        <!-- alter's display name as "Markstay-Warren" is not a branch name -->
+						Warren Branch  closed/fermÃ©
+</li>
+                        
+                        <!-- end alter -->
+                    
+                             
+                        </ul> 
+                            
+                            
+              </article>
+         </section>
+        
+    </header>
+        <!-- End of HEADER -->
+        
+        
+      
+        
+    <!-- MAIN CONTENT. This is used only for the articles. -->
+          <section class="searchContent">
+          
+                <article><span class="hide">Search</span>
+               
+                <input type="text"  title="find material at your library search button" name="search" class="search" id="search" placeholder=" find materials @ your library"/> 
+                <input type="image" title="find material at your library search button" class="search" alt="find material at your library search button" src="img/search button.png" onClick="search_cat()" />
+               
+                </article>  
+             
+         </section> 
+         <p align="center" >
+         <a href="http://downloadcentre.library.on.ca/747A1A09-D993-46F2-BF1D-892C9D178C48/10/50/en/Kids"><img src="img/overdrivekids.png" width="150" height="80"></a>
+         &nbsp; 
+         <a href="http://downloadcentre.library.on.ca/747A1A09-D993-46F2-BF1D-892C9D178C48/10/50/en/Teens"><img src="img/overdriveteens.png" width="150" height="80"></a>
+         &nbsp;
+         <a href="http://downloadcentre.library.on.ca/"><img src="img/Overdrive.jpg" width="150" height="120"> </a>
+         &nbsp; 
+         <a href="http://www.tumblebooklibrary.com/autologin.aspx?userid=rSqXCwFYShMXvLk%2f2v5cWA%3d%3d"><img src="img/TBC.png" width="150" height="80"></a>
+	 &nbsp;</p>
+   		
+       <section class="full"> 
+         <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>  
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+  
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="topSidebar">
+                <article>
+                           <h2>Hours & Locations</h2>
+                        <ul>  
+                            
+								<h3>Markstay Branch</h3>
+							7 Pioneer Street East<br>
+                                Markstay,&nbsp;ON<br>
+                          P0M 2G0<br>
+                                <a href="tel:(705) 599-3009">(705) 599-3009</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+							  Mon/lun 11:00-8:00<BR>
+Tues/mar closed/fermÃ©<BR>
+Wed/mer 11:00-8:00<BR>
+Thurs/jeu closed/fermÃ©<BR>
+Fri/ven closed/fermÃ©<BR>
+Sat/sam 10:00-12:00<BR>
+Sun/dim closed/fermÃ©
+                              </details>
+
+                               
+                            <h3>Warren Branch</h3>
+                            39 Lafontaine<br>
+                                Warren,&nbsp;ON<br>
+                          P0H 2N0<br>
+                                <a href="tel:(705) 599-2665">(705) 599-2665</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+							  Mon/lun closed/fermÃ©
+<br>Tues/mar 1:00-8:00
+<br>Wed/mer closed/fermÃ©
+<br>Thurs/jeu 1:00-8:00
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam 1:00-4:00
+<br>Sun/dim closed/fermÃ©
+                              </details>
+
+                               
+                      </ul>  
+          </article>
+    </aside>
+     
+    
+            
+<aside class="middleSidebar">
+       
+        <iframe src="http://www.fanrx.com/facebook/events.php?theme=zuck&page=MarkstayWarrenLibrary&bgcolor=ffffff&textcolor=000000&linkcolor=555555&max=5" width="95%" height="320" frameborder="no" scrolling="auto"></iframe>
+    </aside> 
+        
+    <aside class="bottomSidebar">
+        
+         <article>
+            <h2>Social Feed</h2>
+                <p> 
+                
+          
+                <hr>
+                
+                <div class="fb-page" data-href="https://www.facebook.com/MarkstayWarrenLibrary" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/MarkstayWarrenLibrary"><a href="https://www.facebook.com/MarkstayWarrenLibrary">Markstay-Warren Public Library</a></blockquote></div></div>
+                <br><hr><br>
+                
+
+
+
+                </p>
+                
+        </article>    
+    </aside>
+    </section>
+    
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Home</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Locations</summary>
+                        <ul>  
+                            
+                            <h3>Markstay-Warren </h3>
+                          		7 Pioneer Street East<br>
+                                Markstay,&nbsp;ON<br>
+                                P0M 2G0<br>
+                                <a href="tel:(705) 599-3009">(705) 599-3009</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 11:00-8:00<BR>
+Tues/mar closed/fermÃ©<BR>
+Wed/mer 11:00-8:00<BR>
+Thurs/jeu closed/fermÃ©<BR>
+Fri/ven closed/fermÃ©<BR>
+Sat/sam 10:00-12:00<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                            <h3>Warren Branch</h3>
+                          		39 Lafontaine<br>
+                                Warren,&nbsp;ON<br>
+                                P0H 2N0<br>
+                                <a href="tel:(705) 599-2665">(705) 599-2665</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun closed/fermÃ©
+<br>Tues/mar 1:00-8:00
+<br>Wed/mer closed/fermÃ©
+<br>Thurs/jeu 1:00-8:00
+<br>Fri/ven closed/fermÃ©
+<br>Sat/sam 1:00-4:00
+<br>Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  </details>
+         
+    </div>
+     
+    
+            
+    <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+    </div>   
+     
+        
+
+    
+    </section> 
+    
+    
+    <!-- end of SIDEBARS -->
+    
+    
+    
+        
+     <!-- Enterprise New Books Scroller placeholder 
+      <footer class="mainBookScroller">
+        <p>Enterprise Book Scroller container</p>
+      </footer>   --> 
+        
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Markstay-Warren Public Library&nbsp;2016<br>
+        This website meets WCAG 2.0 (Level AA) Compliance</p> 
+    </footer>
+    
+<!-- end of FOOTER -->   
+
+</body>
+
+</html>

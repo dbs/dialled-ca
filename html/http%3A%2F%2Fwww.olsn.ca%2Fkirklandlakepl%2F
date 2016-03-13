@@ -1,0 +1,375 @@
+<!--
+INSTRUCTIONS
+
+1.To crop images use this code:    
+  		 <div class="focal-point left-5 down-3">
+ 				<div><img src="img/header.png" alt="logo"></div>
+           </div>
+2. Add cushycms class to areas you want clients to edit and add editor account to cushyCMS for client. 
+3. Change the OPLD library ID in the variable
+4. JASI libraries: change the enterprise search string library name and enable the new book scroller.
+
+-->  
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+<title>Kirkland Lake Public Library</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
+
+
+<!--Google analytics tracking. Copy/paste this line into each page to be tracked -->
+<script type="text/javascript" src="includes/analytics.js"></script>
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type="text/javascript" src="js/fancydropdown.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'https://www.google.com/calendar/ical/ami4h2ao0g8brkj6d80v8acd94%40group.calendar.google.com/public/basic.ics',
+                  maxresults: 1
+		        });
+		    });
+		
+		
+</script>
+
+<!-- facebook script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	   
+		//Load main content
+		$(".topContent").load("home.asp");
+		
+	
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+
+
+    
+});
+//Enterprise Search
+function search_cat()
+{
+search = document.getElementById('search').value
+document.location.href = 'http://olsn.ent.sirsidynix.net/client/kirklandlake/search/results?qu='+ search +'&te=ILS';	 //IMPORTANT - change the library
+}
+</script>
+
+
+     
+    <body>
+    
+    <section class="hide" id="sizer"></section>
+    
+    <section class="hide" id="button-bar">
+  <a href="https://www.facebook.com/TeckCentennialLibrary"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/facebook.png" alt="facebook"></a>
+  <a href="https://twitter.com/"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/twitter.png" alt="twitter"></a>
+    <!--IMPORTANT - change the email address to the libary's your -->
+    <a href="mailto:library@tkl.ca?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a> 
+    </section>
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+               <img src="img/full_1000.png" class="full" alt="Full Public Library Logo">
+               <img src="img/landscape.png" class="tablet" alt="Landscape Public Library Logo">
+               <img src="img/portrait.png" class="mobile" alt="portrait Public Library Logo">
+               
+            
+            
+                  
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>
+                               
+            	<li><a href="index.asp" alt="home">Home</a></li>
+           		<li><a href="#" alt="libinfo">Library Information</a>
+        			<ul>                
+                		<li><a href="?id=about.asp&label=about" alt="about">About the library</a></li>
+               		 	<li><a href="?id=community.asp&label=community" alt="community">Community</a></li>
+                		<li><a href="?id=services.asp&label=services" alt="services">Services</a></li>
+                		<li><a href="?id=donations.asp&label=donations" alt="donations">Donations</a></li>
+                		<li><a href="?id=eres.asp&label=eres" alt="resources">E-Resources</a></li>
+						<li><a href="?id=information.asp&label=information" alt="information">Library Information</a></li>     				</ul>
+             	</li>
+				<li><a href="?id=eres.asp&label=eres" alt="electronic resources">Online Resources</a></li>
+                <li><a href="?id=policies.asp&label=policies" alt="policies">Policies</a></li>
+                <li><a href="https://olsn.ent.sirsidynix.net/client/kirklandlake" alt="electronic resources">Online Catalog</a></li>
+			</ul>
+         </nav>    
+        <!-- end of NAV -->
+        
+  
+        
+     
+          <section class="hoursContent">
+              <article><span class="tdhourstxt">Today's hours:&nbsp; </span>   
+                <ul id="hours-slider">
+                       
+                        
+                        <li>
+                        <!-- alter's display name as "Markstay-Warren" is not a branch name -->
+						Kirkland Lake   10:00-7:00</li>
+                        
+                        <!-- end alter -->
+                    
+                             
+                        </ul> 
+                            
+                            
+              </article>
+         </section>
+        
+    </header>
+        <!-- End of HEADER -->
+        
+        
+      
+        
+    <!-- MAIN CONTENT. This is used only for the articles. -->
+          <section class="searchContent">
+        
+                <span class="hide">Search Our Catalog </span>
+                <input type="text"  title=" material at your library search button" name="search" class="search" id="search" placeholder="Search the Tech Centenial Public Library's online catalog"/>
+                  <input type="submit" value="Search" alt="search" src="img/search-button.png"  onClick="search_cat()" />
+               
+                
+           
+         </section>
+         
+   		
+       <section class="full"> 
+         <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>  
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="topSidebar">
+                
+                           <h2>Hours & Location</h2>
+                         
+                            
+
+                           
+                            <ul> 
+                          		10 Kirkland Street East<br>
+                                Kirkland Lake,&nbsp;ON<br>
+                                P2N 1P1<br>
+                                <a href="tel:(705) 567-7966">(705) 567-7966</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+							Mon/lun closed/fermÃ©<BR>
+Tues/mar 10:00-7:00<BR>
+Wed/mer 10:00-7:00<BR>
+Thurs/jeu 10:00-7:00<BR>
+Fri/ven 10:00-7:00<BR>
+Sat/sam 9:00-3:00<BR>
+Sun/dim closed/fermÃ©
+                            
+                            </details>
+                            
+                               
+                      </ul>  
+         
+    </aside>
+     
+    <aside class="bottomSidebar">
+        
+         <article>
+            <h2>Social Feed</h2>
+                <p> 
+                
+            <div class="fb-like-box" data-href="https://www.facebook.com/TeckCentennialLibrary" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true">
+            
+            </div>
+            
+    
+                
+
+
+                </p>
+                
+        </article>    
+    </aside>    
+            
+
+   
+    </section>
+    
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Home</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Locations</summary>
+                        <ul>  
+                            
+                            <h3>Kirkland Lake </h3>
+                          		10 Kirkland Street East<br>
+                                Kirkland Lake,&nbsp;ON<br>
+                                P2N 1P1<br>
+                                <a href="tel:(705) 567-7966">(705) 567-7966</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun closed/fermÃ©<BR>
+Tues/mar 10:00-7:00<BR>
+Wed/mer 10:00-7:00<BR>
+Thurs/jeu 10:00-7:00<BR>
+Fri/ven 10:00-7:00<BR>
+Sat/sam 9:00-3:00<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  </details>
+         
+    </div>
+     
+    
+            
+    <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+    </div>   
+     
+        
+
+    
+    </section> 
+    
+    
+    <!-- end of SIDEBARS -->
+    
+    
+    
+        
+     <!-- Enterprise New Books Scroller placeholder 
+      <footer class="mainBookScroller">
+        <p>Enterprise Book Scroller container</p>
+      </footer>   --> 
+        
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Kirkland Lake Public Library&nbsp;2016<br>
+        This website meets WCAG 2.0 (Level AA) Compliance. <br>
+        <strong>Developed by Ontario Library Service North</strong></p> 
+    </footer>
+    
+<!-- end of FOOTER -->   
+
+</body>
+
+</html>

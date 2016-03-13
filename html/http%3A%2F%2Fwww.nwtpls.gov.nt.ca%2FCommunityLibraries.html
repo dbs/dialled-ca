@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>NWT Community Libraries</title>
+<link rel="stylesheet" href="images/emx_nav_left.css" type="text/css" />
+<script type="text/javascript">
+<!--
+var time = 3000;
+var numofitems = 7;
+
+//menu constructor
+function menu(allitems,thisitem,startstate){ 
+  callname= "gl"+thisitem;
+  divname="subglobal"+thisitem;  
+  this.numberofmenuitems = allitems;
+  this.caller = document.getElementById(callname);
+  this.thediv = document.getElementById(divname);
+  this.thediv.style.visibility = startstate;
+}
+
+//menu methods
+function ehandler(event,theobj){
+  for (var i=1; i<= theobj.numberofmenuitems; i++){
+    var shutdiv =eval( "menuitem"+i+".thediv");
+    shutdiv.style.visibility="hidden";
+  }
+  theobj.thediv.style.visibility="visible";
+}
+				
+function closesubnav(event){
+  if ((event.clientY <48)||(event.clientY > 107)){
+    for (var i=1; i<= numofitems; i++){
+      var shutdiv =eval('menuitem'+i+'.thediv');
+      shutdiv.style.visibility='hidden';
+    }
+  }
+}
+// -->
+</script>
+<style type="text/css">
+<!--
+body {
+	background-image: url("../test/Main%20Images/bg_grad2.png");
+	background-color: #FFF;
+	background-image: url();
+}
+.style2 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style3 {
+	color: #000099;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium;
+}
+.style4 {
+	font-family: Arial;
+}
+.style5 {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: medium;
+}
+.style6 {
+	font-family: Arial;
+	font-size: medium;
+}
+.style8 {
+	border: 2px solid #2E6398;
+}
+.style9 {
+	color: #005FA9;
+	text-decoration: none;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: medium;
+}
+.style10 {
+	color: #005FA9;
+	font-family: Arial;
+	font-size: medium;
+}
+-->
+</style></head>
+<body onmousemove="closesubnav(event);">
+<div class="skipLinks">skip to: <a href="#content">page content</a> | <a href="#pageNav">links on this page</a> | <a href="#globalNav">site navigation</a> | <a href="#siteInfo">footer (site information)</a> </div>
+<div id="masthead">
+  <h1 id="siteName"><img src="images/Lib_Header3.png" width="801" height="91" /></h1>
+  <div id="globalNav">
+    <div id="globalLink"><a href="http://www.gov.nt.ca/" id="gl2" class="glink" onmouseover="ehandler(event,menuitem2);"> GNWT Home Page </a><a href="http://www.ece.gov.nt.ca/test/ece2/index.html" id="gl3" class="glink" onmouseover="ehandler(event,menuitem3);">ECE Home</a></div>
+    <!--end globalLinks-->
+  </div>
+  <!-- end globalNav -->
+  <div id="subglobal1" class="subglobalNav"> <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> </div>
+  <div id="subglobal2" class="subglobalNav"> <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> </div>
+  <div id="subglobal3" class="subglobalNav"> <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> </div>
+  <div id="subglobal4" class="subglobalNav"> <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> </div>
+  <div id="subglobal5" class="subglobalNav"> <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> </div>
+  <div id="subglobal6" class="subglobalNav"> <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> </div>
+  <div id="subglobal7" class="subglobalNav"> <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> </div>
+  <div id="subglobal8" class="subglobalNav"> <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> </div>
+</div>
+<!-- end masthead -->
+<div id="pagecell1" style="left: 25px; right: 3%; top: 153px; width: 804px; height: 484px;">
+  <!--pagecell1-->
+  <div id="breadCrumb"> <a href="index.html"><strong>NWT Public Library Services </strong></a> 
+	  /<strong> Community Libraries</strong></div>
+  <div id="pageName">
+    <h2><strong>Community Libraries</strong></h2>
+  </div>
+  <div id="pageNav">
+    <div id="sectionLinks">
+      <div id="div">
+        <div id="div2"><a href="index.html"><strong>NWT Public Library Services</strong></a> <a href="About_NWT_PublicLibraryServices.html" class="style2">
+			About NWT Public Library Services</a><a href="CommunityLibraries.html"><strong>Community 
+			Libraries</strong></a> <a href="NWT_PLS_OnlineCatalogue.html"><strong>
+			Look for Books/Library Catalogues</strong></a><a href="Look_Articles.html">Look 
+			for Articles</a><a href="BorrowByMail.html">Borrow by Mail </a>
+			<a href="Contact Us.html">Contact Us</a></div>
+      </div>
+    </div>
+    <div class="relatedLinks">
+      <p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  <div id="content">
+    <div class="story">
+        <table cellpadding="5" class="style8" style="width: 604px; height: 0">
+			<tr>
+				<td colspan="2"><b style="mso-bidi-font-weight:
+normal"><span class="style4" style="font-size: 12.0pt;">Click on the community 
+				name for information regarding their <br />
+				community library</span></b></td>
+			</tr>
+			<tr>
+				<td style="width: 299px"><b><span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #2E6398">
+				<a href="Community%20Libraries/Aklavik/Aklavik.html">
+				<span class="style5" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9; text-decoration: none; text-underline: none">
+				Aklavik</span></a></span></b></td>
+				<td style="width: 299px"><b>
+		<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9">
+				<a href="Community%20Libraries/FortSimpson/FortSimpson.html">
+				Fort Simpson</a></span></b></td>
+			</tr>
+			<tr>
+				<td style="width: 299px"><b>
+				<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9">
+				<a href="Community%20Libraries/Behchoko.html">Behchoko</a></span></b></td>
+				<td style="width: 299px">
+		<b>
+		<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9; text-decoration: none; text-underline: none">
+		<a href="http://marykaeserlibrary.atspace.com/">Fort Smith</a></span></b></td>
+			</tr>
+			<tr>
+				<td style="width: 299px"><b>
+				<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9">
+				<a href="Community%20Libraries/Deline/Deline.html">Deline</a></span></b><span class="style6"><a href="http://www.inuvik.ca/townhall/library.html"></a></span></td>
+				<td class="style10" style="mso-fareast-font-family: &quot;Times New Roman&quot;; width: 299px">
+				<b>
+				<a href="Community%20Libraries/Gameti.html">Gameti</a></b></td>
+			</tr>
+			<tr>
+				<td style="width: 299px"><b>
+				<a href="Community%20Libraries/Good%20Hope/Fort%20Good%20Hope.html">
+		<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9; text-decoration: none; text-underline: none">
+				Fort Good Hope</span></a></b></td>
+				<td style="width: 299px"><b>
+				<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9">
+				<a href="Community%20Libraries/Hay%20River/HayRiver.html" target="_self">
+				Hay River</a></span></b></td>
+			</tr>
+			<tr>
+				<td style="width: 299px"><b>
+		<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9">
+				<a href="Community%20Libraries/Fort%20Liard.html">Fort Liard</a></span></b></td>
+				<td style="width: 299px">
+				<a href="Community%20Libraries/Hay%20River/HayRiverDene.html">
+		<span class="style5" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9; text-decoration: none; text-underline: none">
+				Hay River Dene Reserve</span></a></td>
+			</tr>
+			<tr>
+				<td class="style9" style="width: 299px; mso-fareast-font-family: &quot;Times New Roman&quot;; text-underline: none">
+				<a href="Community%20Libraries/McPherson/Fort%20McPherson.html">
+				Fort McPherson</a></td>
+				<td class="style9" style="mso-fareast-font-family: &quot;Times New Roman&quot;; text-underline: none; width: 299px">
+				<a href="http://inuvik.ca/town-hall/library-services/">Inuvik				</a>				</td>
+			</tr>
+			<tr>
+				<td class="style9" style="width: 299px; mso-fareast-font-family: &quot;Times New Roman&quot;; text-underline: none">
+				<a href="Community%20Libraries/FortProvidence/FortProvidence.html">
+				Fort Providence</a></td>
+				<td class="style9" style="mso-fareast-font-family: &quot;Times New Roman&quot;; text-underline: none; width: 299px">
+				<a href="Community%20Libraries/NormanWells/NormanWells.html">
+				Norman Wells </a></td>
+			</tr>
+			<tr>
+				<td style="width: 299px; height: 30px">
+		<span class="style5" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9; text-decoration: none; text-underline: none">
+				<a href="Community%20Libraries/FtResolution1/Fort%20Resolution.html">
+				Fort Resolution</a></span></a></td>
+				<td style="width: 299px; height: 30px"><b>
+		<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9">
+				<a href="Community%20Libraries/Tuktoyaktok.html">Tuktoyaktok</a></span></b></td>
+			</tr>
+			<tr>
+				<td class="style10" style="width: 299px; mso-fareast-font-family: &quot;Times New Roman&quot;">
+				<b>
+				<a href="Community%20Libraries/Wha%20Ti/Wha%20Ti.html" target="_self">
+				Whati</a></b></td>
+				<td class="style9" style="mso-fareast-font-family: &quot;Times New Roman&quot;; text-underline: none; width: 299px">
+				<a href="Community%20Libraries/Tulita/Tulita.html">Tulita</a></td>
+			</tr>
+			<tr>
+				<td style="height: 19px; width: 299px"><b>
+				<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9">
+				<a href="http://www.yellowknife.ca/en/living-here/public-library.asp" target="_blank">Yellowknife</a></span></b></td>
+				<td style="height: 19px; width: 299px">
+		<b>
+		<span class="style6" style="mso-fareast-font-family: &quot;Times New Roman&quot;; color: #005FA9; text-decoration: none; text-underline: none">
+				<a href="Community%20Libraries/Ulukhaktok/Ulukhaktok.html">
+				Ulukhaktok </a></span>				</b></td>
+			</tr>
+		</table>
+      <h3 class="style3">&nbsp;	  </h3>
+		<h3 class="style3"><br />
+      </h3>
+    </div>
+    <div class="story"></div>
+  </div>
+  <div id="siteInfo"><a href="#">About Us</a> | <a href="#">Site Map</a> | <a href="#">
+	  Privacy Policy</a> | <a href="#">Contact Us</a> |</div>
+</div>
+<!--end pagecell1-->
+<br />
+<script type="text/javascript">
+    <!--
+      var menuitem1 = new menu(7,1,"hidden");
+			var menuitem2 = new menu(7,2,"hidden");
+			var menuitem3 = new menu(7,3,"hidden");
+			var menuitem4 = new menu(7,4,"hidden");
+			var menuitem5 = new menu(7,5,"hidden");
+			var menuitem6 = new menu(7,6,"hidden");
+			var menuitem7 = new menu(7,7,"hidden");
+    // -->
+    </script>
+</body>
+</html>

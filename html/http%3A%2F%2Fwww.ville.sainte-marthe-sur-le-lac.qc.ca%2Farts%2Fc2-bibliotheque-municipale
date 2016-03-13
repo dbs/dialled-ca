@@ -1,0 +1,408 @@
+		 <!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="icon" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/favicon.ico" />
+<title></title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/css/font-router.css' rel='stylesheet' type='text/css'>
+<link href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/css/tablesorter/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/css/tooltipster.css">
+<link rel="stylesheet" type="text/css" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/css/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/css/style.css">
+<link rel="stylesheet" type="text/css" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/css/animate.css">
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery-1.8.2.min.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery.easing.1.3.js" type="text/javascript"></script> 
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery.tablesorter.js" type="text/javascript"></script>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/bootstrap.js" type="text/javascript"></script> 
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/affix.js" type="text/javascript"></script>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery.tooltipster.min.js" type="text/javascript"></script>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/functions.js" type="text/javascript"></script>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery.placeholder.js"></script>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/viewportchecker.js"></script>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery.blockUI.1.33.js"></script>
+<script>
+$(function() {
+	$(window).resize(function() {
+		$("#alerte.collapse").css({"left": $('.container').offset().left});
+	});
+	
+	$("#alerte.collapse").css({"left": $('.container').offset().left});
+	
+	$("#alerte.collapse").collapse({
+	  toggle: true,
+	  direction: "up"
+	});
+});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63922766-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('input, textarea').placeholder();
+	});
+	jQuery(document).ready(function() {
+		jQuery('.gallery').addClass("cache").viewportChecker({
+			classToAdd: 'montre animated fadeIn',
+			classToRemove: 'cache animated fadeOut',
+			offset: 100
+		});
+	});
+</script>
+
+<link rel="stylesheet" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/css/liquid-slider.css">
+
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery.touchSwipe.min.js"></script>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/jquery.liquid-slider.js"></script>
+<script>
+/* If installing in the footer, you won't need $(function() {} */
+$(function(){
+     $('#slider-id').liquidSlider({
+		 	autoSlide: true,
+			pauseOnHover: true,
+		 	autoSlideInterval: 4000
+	  });
+});
+$(function(){
+	$("#tablecalendar").tablesorter(
+	{
+	sortList: [[0,0]],
+	cssAsc : 'down',
+	cssDesc : 'up'
+	});
+});
+</script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<!-- FancyBox debut -->
+   
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/plugins/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/plugins/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+    
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/plugins/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/plugins/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/plugins/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/plugins/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/plugins/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var padding = "";
+		if ( $(window).width() < 768 ) {
+			padding = 5;
+		} else {
+			padding = 60;
+		}
+		
+		$(".fancybox").fancybox({
+			nextEffect		:	'fade',
+			prevEffect		:	'fade',
+		//	padding			:	padding,
+			zIndex			: 	'111103',
+			helpers : {
+				title : {
+					type : 'over'
+				},
+			tpl: {
+				wrap: '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin myGradient"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+			}
+    	}
+		});
+	});
+</script>
+<!-- FancyBox fin -->
+<!-- Youtube API -->
+
+
+<!-- Youtube API fin -->
+
+
+
+
+<!--	Agile carousel	-->
+<link rel="stylesheet" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/agile_carousel/agile_carousel.css" type='text/css'>
+<script src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/agile_carousel/agile_carousel.alpha.js"></script>
+<script>
+    $.getJSON("http://www.ville.sainte-marthe-sur-le-lac.qc.ca/js/agile_carousel/agile_carousel_data.php?lang=fr", function(data) {
+        $(document).ready(function(){
+            $("#multiple_slides_visible").agile_carousel({
+                carousel_data: data,
+                carousel_outer_height: 125,
+                carousel_height: 125,
+                slide_height: 200,
+                carousel_outer_width: 700,
+                slide_width: 700,
+                number_slides_visible: 1,
+                transition_time: 330,
+                control_set_1: "previous_button,next_button",
+                //control_set_2: "group_numbered_buttons",
+                persistent_content: "<div class='box_gray' style='height:28px;'><p class='link_box_gray'>À surveiller dans votre communauté</p></div>"      
+            });
+        });
+		
+    });
+</script>
+<script>
+    $(function() {
+		//$('body').addClass('bg_accueil').fadeTo(4500, 1)
+				//$('#footer .navbar-collapse.collapse').css({"padding": "50px")});
+						
+		
+				
+		 	});
+</script>
+<!--	Fin agile carousel	-->
+
+<style type="text/css">
+#background{
+	background-image:url(http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/bg.jpg);
+}
+</style>
+	<style>
+	body {	
+		background:url(http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/background/TexturesPapillons.jpg) no-repeat top center ;
+		background-attachment:fixed;
+		background-size:cover;
+	}
+	</style>
+</head>
+
+<body class="arts">
+	<!--<div id="background"></div>-->
+    <input type="hidden" value="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/" id="getbaseurl" name="getbaseurl">
+    <input type="hidden" value="5" id="day" name="day">
+    <div id="bg" class="bg_accueil"></div>
+    <div id="overlay">
+    	<div class="container">
+        	<div class="row">	
+                <div class="submenu">
+                    <table align='center'><tr><td class="text-center"><a href="/loisirs"><img src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_loisir.jpg" onmouseover="this.src='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_loisir_ovr.jpg'" onmouseout="this.src='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_loisir.jpg'" alt="Loisirs" /></a><td class="text-center"><a href="/communautaire"><img src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_communautaire.jpg" onmouseover="this.src='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_communautaire_ovr.jpg'" onmouseout="this.src='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_communautaire.jpg'" alt="Communautaire" /></a><td class="text-center"><a href="/culture"><img src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_culture.jpg" onmouseover="this.src='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_culture_ovr.jpg'" onmouseout="this.src='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_culture.jpg'" alt="Culture" /></a><td class="text-center"><a href="/bibliotheque"><img src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_biblio.jpg" onmouseover="this.src='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_biblio_ovr.jpg'" onmouseout="this.src='http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/sections/sec_biblio.jpg'" alt="Bibliothèque" /></a></tr></table>      
+                </div>
+      		</div>
+        </div>	
+    </div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                	<div id="logo_complet">
+                    	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        	<a href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/accueil"><img src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/icones/logo.png" alt="Ville de Sainte-Marthe-sur-le-Lac"/></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        	<a style="text-decoration:none !important;" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/accueil"><h1><span class="router-light-reg fsize-md black">Ville de</span><br /><span class="router-medium-reg fsize-lg black uppercase">Sainte-Marthe-Sur-Le-Lac</span></h1></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                	<div id="top" class="pull-right">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                     <ul class="nav navbar-nav">
+                     	<li><a class="header_link" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/accueil"><i class="ico home hidden-xs"></i><span class="hidden-sm hidden-md hidden-lg">Accueil</span></a></li>
+                        <li class="hidden-xs"><i class="ico ico-oblique"></i></li>
+                     	<li><a class="header_link" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/coordonnees/">Coordonnées</a></li>
+                        <li class="hidden-xs"><i class="ico ico-oblique"></i></li>
+                     	<li><a class="header_link" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/documentation/">Zone documents</a></li>
+                        <li class="hidden-xs"><i class="ico ico-oblique"></i></li>
+                     	<li><a class="header_link" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/photos/">Photos</a></li>
+                        <li class="hidden-xs"><i class="ico ico-oblique"></i></li>
+                     	<li><a class="header_link" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/ressources-humaines/">Emploi</a> &nbsp; </li>
+                        <li class="hidden-xs hide"><i class="ico ico-oblique"></i></li>
+                     <div class="popover-markup pull-right"> 
+                     	<a href="#" class="trigger"><i class="ico ico-loupe"></i></a>
+                        <div class="content hide">
+                        	<div id="search" class="input-group">
+                            	<form class="form-inline" action="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/recherche/" method="post" enctype="multipart/form-data">
+                                	<div class="form-group">
+                                    	<div class="input-group">
+                                            <input name="keyword" value="" placeholder="Recherche" class="form-control input" type="text">
+                                            <span class="input-group-btn"><button type="submit" class="btn btn-search"><i class="ico ico-loupe"></i></button></span>
+                                       	</div>
+                                   	</div>
+                                </form>
+                         	</div>
+   						</div>
+                    </div>
+                    </ul>
+                   </div>
+                </div> 
+            </div>
+       	</div>
+    </header>
+   <div id="content">
+    <div class="container">
+        <div class="row">
+        	<div class="hidden-xs hidden-sm col-xs-12 col-sm-12 col-md-2 col-lg-2">
+           		<div id="calendrier">
+                    
+<input type="hidden" id="filtre" name="filtre" value="">
+<div id="calendrier">
+    <h2 style="color:#002857;padding-bottom:10px; margin-bottom:0px; " class="fix-margin-top router-light-reg dblue fsize-xl uppercase">Cette semaine</h2>
+    <h3 style="color:#002857; margin-top:0px; margin-bottom:0px;" class="router-bold-reg dblue fsize-sm uppercase">dans ma ville</h3>
+    <br />
+    <div id="calendar">
+         <div id="calendarCalendar">	
+                                    <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12" border="0" align="center" cellpadding="0" cellspacing="0" style="width:100%;">
+                      <tr>
+                        <td  class="day_calendrier" >
+                            <div id="7" class="bg-dblue rond fsize-sm white router-book-reg">D</div>
+                        </td>
+                        <td  class="day_calendrier" >
+                            <div id="1" class="bg-dblue rond fsize-sm white router-book-reg">L</div>
+                        </td>
+                        <td  class="day_calendrier">
+                            <div id="2" class="bg-dblue rond fsize-sm white router-book-reg">M</div>
+                        </td>
+                        <td  class="day_calendrier">
+                            <div id="3" class="bg-dblue rond fsize-sm white router-book-reg">M</div>
+                        </td>
+                        <td  class="day_calendrier" >
+                            <div id="4" class="bg-dblue rond fsize-sm white router-book-reg">J</div>
+                        </td>
+                        <td  class="day_calendrier">
+                            <div id="5" class="bg-lblue rond fsize-sm white router-book-reg">V</div>
+                        </td>
+                        <td  class="day_calendrier">
+                            <div id="6" class="bg-dblue rond fsize-sm white router-book-reg">S</div>
+                        </td>
+                      </tr>
+                       <tr>
+                        <td colspan="7"><div class="clear5"></div></td>
+                       </tr>
+                      <tr>
+                        <td class="day_event" colspan="7">
+                      <h1 style='margin-top:0px; margin-bottom:0px;font-size:16px; color:#002857; text-transform: none;' class='router-bold-reg dblue fsize-ms'>Vendredi&nbsp;11&nbsp;Mars</h1><span class="router-book-reg black fsize-sm">Aucun évènement</span><br /><i style="margin:10px 0px;" class="ico ico-line"></i>                        </td>
+                      </tr>
+                  </table>
+         </div>
+         <br />
+        <div id="calendarSelection">
+            <a class='dblue' href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/calendrier" target="_self"> 
+            <i class='ico ico-fleche-db'></i><br />Consulter le<br />calendrier complet</a>
+    </div>
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+            	
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"><br>
+            	<h1 class="fsize-xl lblue router-medium-reg uppercase">Erreur 404</h1>
+                <p><b>La page que vous recherchez n'existe pas. Veuillez continuer à <a style="text-decoration:none;" class="lblue" href="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/accueil/">page d'accueil</a>.</b></p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            	<img class="img-responsive img-center" src="http://www.ville.sainte-marthe-sur-le-lac.qc.ca/images/erreur404.jpg" alt="Erreur 404" />
+            </div> 
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div id="footer">
+<div class="row">
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation"><div class="container-fluid">
+     <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs" href="#">Menu</a>
+        </div>
+      
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li id="145" class="dropdown">
+                    <a class='menu dropdown-toggle' data-toggle='dropdown' href="/#" target="_self">Vie Marthelacquoise</a>                    <ul class='menu dropdown-menu dropdown-menu-footer' role='menu'><li class=""><a href="/loisirs">Loisirs</a></li><li class=""><a href="/communautaire">Communautaire</a></li><li class=""><a href="/culture">Culture</a></li><li class=""><a href="/bibliotheque">Bibliothèque</a></li></ul>                    
+                </li>
+                <li><i class="hidden-xs ico ico-oblique"></i></li>
+                <li id="146" class=""><a href="/presentation-de-la-ville">À propos</a></li>
+                <li><i class="hidden-xs ico ico-oblique"></i></li>
+                <li id="147" class=""><a href="/mot-de-la-mairesse">Mairie</a></li>
+                <li><i class="hidden-xs ico ico-oblique"></i></li>
+                <!--<li><a href="#contact">Votre dossier citoyen</a></li>-->
+                <li id="148" class="">
+                	<div class="popover-citoyen"> 
+                     	<a href="#" class="trigger-citoyen">Votre dossier citoyen</a> 
+                        <div class="content hide">
+                        	<div id="head">
+                            	<h2>Numéro de citoyen&nbsp;<button type="button" id="ask" data-toggle="tooltip" data-placement="left" title="Numéro sur votre carte citoyenne"><i class="ico ico-tooltip"></i></button></h2>
+                            	<div id="compte-express" class="input-group">
+                                    <form class="form-inline" id="form_express" name="form_express">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input id="no_citoyen" name="no_citoyen" value="" placeholder="No. citoyen" class="form-control input" type="text">
+                                                <span class="input-group-btn"><button id="subexpress" onclick="sendExpress();" type="button" class="btn hide"><i class="ico ico-submit-dg"></i></button></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="body">
+                            	<div id="contenu">
+                                
+                                </div>                          
+                                <div id="connexion">
+                                    <div id="compte-complet" class="input-group">
+                                        <form class="form-inline" id="form_complet" name="form_complet">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input id="password" name="password" value="" placeholder="Mot de passe" class="form-control input" type="password">
+                                                    <span class="input-group-btn"><button onclick="sendComplet();" type="button" class="btn"><i class="ico ico-submit-white"></i></button></span>
+                                            </div>
+                                            <a style="color:#E3F2DA;" href="/mot-de-passe">Mot de passe oublié</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="foot"><h3>Dossier citoyen express</h3></div>
+                        </div>
+                    </div>
+               	</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</nav>
+</div>
+</div>
+
+<script>
+$('#form-inline').on("keyup keypress", function(e) {
+  var code = e.keyCode || e.which; 
+  if (code  == 13) {               
+    e.preventDefault();
+    return false;
+  }
+});
+</script>
+
+</body>
+</html>

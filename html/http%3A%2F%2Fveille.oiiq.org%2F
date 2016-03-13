@@ -1,0 +1,937 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>influx : savoir pour mieux agir</title>
+<link href="http://veille.oiiq.org/css/css.css?v=20120827" rel="stylesheet" type="text/css" />
+<link href="http://veille.oiiq.org/javascript/tooltips/tipTip.css" rel="stylesheet" type="text/css" />
+<link href="http://veille.oiiq.org/javascript/chosen/chosen.css" type="text/css" rel="stylesheet" media="all" />
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/tooltips/jquery.tipTip.minified.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/svrd.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/pagination/jquery.pajinate.min.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/superfish.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/jquery.treeview.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/chosen/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="http://veille.oiiq.org/javascript/shadowbox/shadowbox.js"></script>
+<link href="http://veille.oiiq.org/javascript/shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+
+      $('#go').bind('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+
+
+	$("#navigation").treeview({
+		persist: "location",
+		collapsed: true,
+		unique: true
+	});
+	$('#pagination').pajinate({
+		nav_label_first : '<<',
+		nav_label_last : '>>',
+		nav_label_prev : '<',
+		nav_label_next : '>',
+		num_page_links_to_display : 10,
+		items_per_page : 10,
+		wrap_around: false,
+		show_first_last: true
+	});
+
+	// ** pour correctif de Mantis 0000104 ****
+	$('#pagination a').click(function() {
+		$('html,body').animate({scrollTop: '300px'},'slow');
+	});
+
+	$(".chzn-select").chosen();
+
+});
+jQuery(function(){
+	jQuery('ul.menuPrincipal').superfish();
+});
+//]]>
+</script>
+
+
+
+
+
+
+
+<!-- DataLeyer datalayer Recherche sur le site-->
+<script>
+ var dataLayer = dataLayer || [];
+dataLayer.push({
+	'searchTerm': '','pays': ''
+});
+
+</script>
+
+
+
+
+</head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T5PHDW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5PHDW');</script>
+<!-- End Google Tag Manager -->
+
+<a name="top"></a>
+<div id="page">
+	<div id="tete">
+		<h1 id="slogan"><span class="txt_orange">Savoir</span> <span class="txt_vert">pour mieux agir</span></h1>
+ 		<div id="introduction">
+			<p>Le PORTAIL DE VEILLE ET DE RESSOURCES DOCUMENTAIRES EN SOINS INFIRMIERS<em> <strong>inFlux</strong></em> est une vitrine Web qui facilite l'acc&egrave;s aux connaissances cliniques.</p>
+<p style="text-align: right;"><strong>Abonnez-vous</strong> au <strong><a href="infolettre.php">bulletin de veille</a></strong> et aux <strong><a href="rss.php">flux&nbsp; RSS</a>!</strong></p>		</div>
+			<div id="logo">
+				<a href="http://veille.oiiq.org"><img src="images/logo.png" width="399" height="284" alt="InFlux" /></a>
+			</div>
+		<img src="images/logoOIIQ.png" width="112" height="44" id="oiiq" alt="Ordre des infirmi&egrave;res et infirmiers du Qu&eacute;bec" />
+		<ul id="utilitaires">
+		 <li><a href="http://www.oiiq.org" class="tiptip" title="Visiter le site de l'Ordre des infirmi&egrave;res et infirmiers du Qu&eacute;bec">OIIQ</a></li>
+		 <li>|</li>
+		 <li><a id="ouvrirNiouzeletter" class="tiptip" title="Incrivez-vous &agrave; notre bulletin de veille" href="http://www.oiiq.org/infolettres">Bulletin de veille</a></li>
+		 <li>|</li>
+		 <li><a href="mailto:influx@oiiq.org" class="tiptip" title="Contactez l'&eacute;quipe du l'influx">Contactez-nous</a></li>
+		</ul>
+		 <a href="rss.php" id="ouvrirrss" href="#"><img width="49" height="42" src="images/rss.png" id="rssbtn" alt="RSS" /></a>
+		<script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script><a href="http://www.facebook.com/share.php?u=<url>" onclick="return fbs_click()" target="_blank"><img width="49" height="42" src="images/facebook.png" id="facebook" alt="Facebook" /></a>
+		  <a href="https://twitter.com/influxOIIQ" title="Twitter"><img width="49" height="42" src="images/twitter.png" id="twitter" alt="Twitter" /></a>
+	</div>
+
+<ul class="menuPrincipal">
+<li><a href="contenu.php?page=1">Ã propos</a><ul><li><a href="contenu.php?page=4">SVRD</a></li><li><a href="contenu.php?page=5">Services offerts aux bibliothÃ¨ques</a></li><li><a href="contenu.php?page=6">Catalogue Florence</a></li><li><a href="contenu.php?page=19">PÃ©riodiques du SVRD</a></li><li><a href="contenu.php?page=9">Ãquipe</a></li></ul></li><li><a href="contenu.php?page=2">RÃ©pertoires gÃ©nÃ©raux</a><ul><li><a href="contenu.php?page=10">ActualitÃ©s et bulletins</a></li><li><a href="contenu.php?page=11">Bases de donnÃ©es bibliographiques</a></li><li><a href="contenu.php?page=12">Bases de donnÃ©es textuelles</a></li><li><a href="contenu.php?page=13">Dictionnaires et lexiques</a></li><li><a href="contenu.php?page=14">Images et banques d'images</a></li><li><a href="contenu.php?page=15">Pratique fondÃ©e sur les preuves</a></li><li><a href="contenu.php?page=7">PÃ©riodiques Ã  accÃ¨s gratuit</a></li><li><a href="contenu.php?page=8">Lois et rÃ¨glements</a></li><li><a href="contenu.php?page=16">Statistiques</a></li><li><a href="contenu.php?page=17">Techniques et mÃ©thodes de soins</a></li><li><a href="contenu.php?page=18">ThÃ¨ses, mÃ©moires et rapports de recherche</a></li></ul></li><li><a href="contenu.php?page=3">RÃ©pertoires thÃ©matiques</a><ul><li><a href="contenu.php?page=20">Plaies de pression</a></li><li><a href="contenu.php?page=30">Chutes</a></li></ul></li></ul>
+
+<div style="clear: both;"><!-- OIIQ --></div>
+
+
+<div id="gauche">
+	<div id="nav_recherche">
+		<form method="post" action="trouver.php">
+			<input type="text" id="inp_recherche" name="inp_recherche" value="Recherche" /><input class="inp_image" type="image" src="http://veille.oiiq.org/images/loupe_recherche.png" onclick="this.form.submit();" />
+			<br /><a id="lnkRecherche" href="recherche_avancee.php" class="tiptip" title="Effectuer une recherche avanc&eacute;e">recherche avanc&eacute;e</a>
+		</form>
+	</div>
+	<h3 class="txt_orange">Th&eacute;matiques</h3>
+	<ul id="navigation">
+<li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=87" />ActivitÃ©s cliniques</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=88" />Documentation</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=121" />CompÃ©tences cliniques</a></span><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=7" />Droit de la santÃ©</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=48" />Ãthique</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=14" />Formation</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=51" />Enseignement</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=52" />Formation continue</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=56" />TÃ©lÃ©apprentissage</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=16" />Main-d'oeuvre</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=59" />Conditions de travail</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=60" />MobilitÃ© et migration</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=61" />PÃ©nurie</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=17" />Organisation des soins et services</a></span><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=89" />Outils cliniques et clinico-administratifs</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=45" />Ordonnance collective</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=91" />RÃ¨gle de soins</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=9" />Pharmacologie</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=92" />AnalgÃ©sie et sÃ©dation</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=93" />AnticoagulothÃ©rapie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=94" />Pharmacovigilance</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=95" />Physiopathologie et manifestations cliniques</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=96" />Douleur</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=10" />Pratique avancÃ©e</a></span><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=97" />ProcÃ©dures diagnostiques et thÃ©rapeutiques</a></span><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=13" />Profession</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=98" />Collaboration professionnelle</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=99" />RÃ´les infirmiers</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=100" />SpÃ©cialisation</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=101" />QualitÃ© et sÃ©curitÃ© des soins</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=106" />Contention et isolement</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=107" />PrÃ©vention des chutes</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=18" />Recherche</a></span><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=85" />Secteurs cliniques</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=1" />Cardiologie</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=70" />Hypertension</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=103" />Dermatologie</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=110" />Soins de plaies</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=8" />Endocrinologie</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=116" />DiabÃ¨te</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=117" />DyslipidÃ©mie</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=22" />GastroentÃ©rologie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=23" />NÃ©phrologie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=24" />Neurologie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=25" />Nutrition</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=26" />ObstÃ©trique-gynÃ©cologie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=27" />Oncologie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=112" />OrthopÃ©die</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=28" />PÃ©rinatalitÃ© et pÃ©diatrie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=29" />Pneumologie</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=113" />Asthme</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=114" />Maladie pulmonaire obstructive chronique</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=108" />RÃ©adaptation</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=124" />Rhumatalogie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=30" />SantÃ© mentale</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=73" />DÃ©pression</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=76" />Suicide</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=120" />Toxicomanie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=72" />Troubles cognitifs</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=75" />Troubles mentaux de l'enfant</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=31" />SantÃ© publique</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=77" />Maladies infectieuses et immunisation</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=78" />PrÃ©vention et promotion de la santÃ©</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=79" />SantÃ© au travail</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=32" />Soins Ã  domicile</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=33" />Soins aux personnes Ã¢gÃ©es</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=34" />Soins critiques</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=81" />NÃ©onatalogie</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=37" />Soins de fin de vie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=36" />Soins de premiÃ¨re ligne</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=35" />Soins des maladies chroniques</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=123" />Soins des maladies vasculaires</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=38" />Soins pÃ©riopÃ©ratoires</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=82" />AnesthÃ©siologie</a></span></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=83" />Assistance chirurgicale</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=39" />Urgence</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=84" />Triage</a></span></li></ul></li><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=122" />Urologie</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=19" />SystÃ¨mes de santÃ©</a></span><ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=65" />Ãconomie de la santÃ©</a></span></li></ul><li><span class="folder"><a href="trouver.php?biais=thematiques&thematique=21" />Technologies de la santÃ©</a></span></li></ul>	<h3 class="txt_orange">Fiches les plus consult&eacute;es dans les 30 derniers jours</h3>
+<div style="font-size: 11px; margin: 0 0 15px 0;"><a href="consulter.php?fiche=3106">Bridging the generational divide: Nurses united in providing quality patient care</a><br /><span style="color: #c0c0c0;">(3576 consultations)</span></div><div style="font-size: 11px; margin: 0 0 15px 0;"><a href="consulter.php?fiche=3105">Ãthique dans les milieux de vie : quelles valeurs pour quelles pratiques? (L')</a><br /><span style="color: #c0c0c0;">(1214 consultations)</span></div><div style="font-size: 11px; margin: 0 0 15px 0;"><a href="consulter.php?fiche=3144">Utilisation d'antipsychotiques chez les personnes Ã¢gÃ©es rÃ©sidant dans les Ã©tablissements de soins de longue durÃ©e, 2014</a><br /><span style="color: #c0c0c0;">(698 consultations)</span></div><div style="font-size: 11px; margin: 0 0 15px 0;"><a href="consulter.php?fiche=3127">Guide de rÃ©flexion, d'autoÃ©valuation et de rÃ©vision des politiques/procÃ©dures pour contrer la maltraitance envers les personnes aÃ®nÃ©es en CHSLD</a><br /><span style="color: #c0c0c0;">(482 consultations)</span></div><div style="font-size: 11px; margin: 0 0 15px 0;"><a href="consulter.php?fiche=3102">StratÃ©gie mondiale de l'OMS sur les ressources humaines pour la santÃ© Ã  l'Ã¨re des objectifs du dÃ©veloppement durable aprÃ¨s 2015 : la contribution essentielle de la profession infirmiÃ¨re (La)</a><br /><span style="color: #c0c0c0;">(271 consultations)</span></div>
+	<h3 class="txt_orange">Archives du bulletin</h3>
+	
+
+<form>
+<select id="go" name="go" style="border: 1px solid #c0c0c0; width: 200px;">
+<option value="index.php">S&eacute;lectionnez un num&eacute;ro</option>
+<option value="http://veille.oiiq.org/infolettre/198027352256df724d652931.65016872.html">10 mars 2016</option><option value="http://veille.oiiq.org/infolettre/102974062356cdcec087c521.30499410.html">25 fÃ©vrier 2016</option><option value="http://veille.oiiq.org/infolettre/87458328256bb34d72b37a2.84554917.html">11 fÃ©vrier 2016</option><option value="http://veille.oiiq.org/infolettre/97875836356a7f13aa2a988.67102625.html">28 janvier 2015</option><option value="http://veille.oiiq.org/infolettre/357741525569576edbfb511.63337760.html">14 janvier 2016</option><option value="http://veille.oiiq.org/infolettre/5515943845671352b505441.10540145.html">17 dÃ©cembre 2015</option><option value="http://veille.oiiq.org/infolettre/1321105687565f12e18a7107.10311668.html">3 dÃ©cembre 2015</option><option value="http://veille.oiiq.org/infolettre/340070283564c7b259242b7.42806266.html">19 novembre 2015</option><option value="http://veille.oiiq.org/infolettre/16453449765638f5a221ba68.01439089.html">5 novembre 2015</option><option value="http://veille.oiiq.org/infolettre/195148899556275a74d10ff1.08305957.html">22 octobre 2015</option><option value="http://veille.oiiq.org/infolettre/685950535614d6da92f168.98406753.html">8 octobre 2015</option><option value="http://veille.oiiq.org/infolettre/169477968056019d81d2b562.28210305.html">24 septembre 2015</option><option value="http://veille.oiiq.org/infolettre/14797087955f0fb4f56d764.40597711.html">10 septembre 2015</option><option value="http://veille.oiiq.org/infolettre/6567205155581158f938824.24276874.html">18 juin 2015</option><option value="http://veille.oiiq.org/infolettre/976713815556eaac5100794.11791829.html">4 juin 2015</option><option value="http://veille.oiiq.org/infolettre/463963376555d0838f39042.82113564.html">21 mai 2015</option><option value="http://veille.oiiq.org/infolettre/12730749605549ee7d619aa8.84542152.html">7 mai 2015</option><option value="http://veille.oiiq.org/infolettre/856222675537944ba99916.87760329.html">23 avril 2015</option><option value="http://veille.oiiq.org/infolettre/20934017155260a6844e968.70658892.html">9 avril 2015</option><option value="http://veille.oiiq.org/infolettre/95480401855131104298ce7.98331316.html">26 mars 2015</option><option value="http://veille.oiiq.org/infolettre/117011924755008199d96ad8.55058307.html">12 mars 2015</option><option value="http://veille.oiiq.org/infolettre/3630699854eddc87ee1cc7.84540365.html">26 fÃ©vrier 2015</option><option value="http://veille.oiiq.org/infolettre/88996860154da6a03923109.09267919.html">12 fÃ©vrier 2015</option><option value="http://veille.oiiq.org/infolettre/167642721754c8cc3d293794.08218756.html">29 janvier 2015</option><option value="http://veille.oiiq.org/infolettre/74153758454b6501f5220f9.77508132.html">15 janvier 2015</option><option value="http://veille.oiiq.org/infolettre/96546920954913b5ca26e47.64998952.html">18 dÃ©cembre 2014</option><option value="http://veille.oiiq.org/infolettre/1346182628547f19a98d30e1.30055390.html">4 dÃ©cembre 2014</option><option value="http://veille.oiiq.org/infolettre/220936561546c8b4be37734.88825155.html">20 novembre 2014</option><option value="http://veille.oiiq.org/infolettre/1450951713545a54782f3e71.83827756.html">6 novembre 2014</option><option value="http://veille.oiiq.org/infolettre/30728240754478d761ad7e8.63930032.html">23 octobre 2014</option><option value="http://veille.oiiq.org/infolettre/986504979543538432071f2.26250816.html"> 9 octobre 2014</option><option value="http://veille.oiiq.org/infolettre/3391060815421727edac496.87350450.html">25 septembre 2014</option><option value="http://veille.oiiq.org/infolettre/7666823515410b29632ea92.97970924.html">11 septembre 2014</option><option value="http://veille.oiiq.org/infolettre/163555930653fe3de924dbf5.93203158.html">28 aoÃ»t 2014</option><option value="http://veille.oiiq.org/infolettre/41135078953a07bba2f86f4.54522800.html">19 juin 2014</option><option value="http://veille.oiiq.org/infolettre/869060014538e16f4a1e5c8.41615058.html">5 juin 2014</option><option value="http://veille.oiiq.org/infolettre/938878595537cc24733a018.59990402.html">22 mai 2014</option><option value="http://veille.oiiq.org/infolettre/1784273205536a2bb370cd27.04352278.html">8 mai 2014</option><option value="http://veille.oiiq.org/infolettre/10290834305357e92cc15f69.23460338.html">24 avril 2014</option><option value="http://veille.oiiq.org/infolettre/214279159853458e3ab57d98.66417862.html">10 avril 2014</option><option value="http://veille.oiiq.org/infolettre/104391425533321dd51a224.67039414.html">27 mars 2014</option><option value="http://veille.oiiq.org/infolettre/859622647531f627aaedff0.09883909.html">13 mars 2014</option><option value="http://veille.oiiq.org/infolettre/1723245160530e17c4824f97.45617270.html">27 fÃ©vrier 2014</option><option value="http://veille.oiiq.org/infolettre/1675640752fbdcb323cba1.43448673.html">13 fÃ©vrier 2014</option><option value="http://veille.oiiq.org/infolettre/46768206352e9603b6ab476.05637427.html">30 janvier 2014</option><option value="http://veille.oiiq.org/infolettre/40179512552d6f54948b7a8.96439128.html">16 janvier 2014</option><option value="http://veille.oiiq.org/infolettre/57635745452b1d026b58019.93764891.html">19 dÃ©cembre 2013</option><option value="http://veille.oiiq.org/infolettre/880511003529f9262c19023.08639232.html">5 dÃ©cembre 2013</option><option value="http://veille.oiiq.org/infolettre/759344276528d1e15d7ca20.58585576.html">21 novembre 2013</option><option value="http://veille.oiiq.org/infolettre/1868484463527aaf46c95f63.57019363.html">7 novembre 2013</option><option value="http://veille.oiiq.org/infolettre/144265702952682bcd96deb1.06094650.html">24 octobre 2013</option><option value="http://veille.oiiq.org/infolettre/21043695185255ade04c0bf4.06051979.html">10 octobre 2013</option><option value="http://veille.oiiq.org/infolettre/12868255165243415bd222d7.69421600.html">26 septembre 2013</option><option value="http://veille.oiiq.org/infolettre/21198327795230c3c1e82570.43046441.html">12 septembre 2013</option><option value="http://veille.oiiq.org/infolettre/1077838870521e58e77001c6.23093967.html">29 aoÃ»t 2013</option><option value="http://veille.oiiq.org/infolettre/142597437951c1ffb27c5a31.96063966.html">20 juin 2013</option><option value="http://veille.oiiq.org/infolettre/122392133551af982d593ac9.75141960.html">6 juin 2013</option><option value="http://veille.oiiq.org/infolettre/80679657519d160cb9bc37.11744804.html">23 mai 2013</option><option value="http://veille.oiiq.org/infolettre/884305391518a9e98ae7bb2.88090990.html">9 mai 2013</option><option value="http://veille.oiiq.org/infolettre/127403644251782fd8933534.75550797.html">25 avril 2013</option><option value="http://veille.oiiq.org/infolettre/16053746875165c39fce0cc4.65922222.html">11 avril 2013</option><option value="http://veille.oiiq.org/infolettre/35417416551533e043d7516.49041976.html">28 mars 2013</option><option value="http://veille.oiiq.org/infolettre/18966719565140d8c30c34c7.23206373.html">14 mars 2013</option><option value="http://veille.oiiq.org/infolettre/2006121932512e6fc2c42701.09259209.html">28 fÃ©vrier 2013</option><option value="http://veille.oiiq.org/infolettre/156872569512ce9863b0879.24975829.html">14 fÃ©vrier 2013</option><option value="http://veille.oiiq.org/infolettre/51245465051095095489576.71343082.html">31 janvier 2013</option><option value="http://veille.oiiq.org/infolettre/207503395350f6dc679c5277.24002601.html">17 janvier 2013</option><option value="http://veille.oiiq.org/infolettre/27506818950d1d315aab7b3.23498617.html">3 janvier 2013</option><option value="http://veille.oiiq.org/infolettre/72278561750d0882dacf303.51681984.html">20 dÃ©cembre 2012</option><option value="http://veille.oiiq.org/infolettre/17854080350be6747646df1.68555441.html">6 dÃ©cembre 2012</option><option value="http://veille.oiiq.org/infolettre/77806656050ad1de726e472.91841589.html">22 novembre 2012</option><option value="http://veille.oiiq.org/infolettre/1226524322509ab4ace73950.14712257.html">8 novembre 2012</option><option value="http://veille.oiiq.org/infolettre/15011115325088324f1f78f5.16107732.html">25 octobre 2012</option><option value="http://veille.oiiq.org/infolettre/20964897775075ce7d2f1242.80772548.html">11 octobre 2012</option><option value="http://veille.oiiq.org/infolettre/1660293795063563542a9c5.60794626.html">27 septembre 2012</option><option value="http://veille.oiiq.org/infolettre/11285797885051e14c6f6022.68719891.html">13 septembre 2012</option><option value="http://veille.oiiq.org/infolettre/12344984995050cb5eef0c08.68647537.html">30 aoÃ»t 2012</option></select>
+</form>
+
+
+
+<h3 class="txt_orange" style="margin-top: 40px;">Bulletin de veille</h3>
+<p style="font-size:12px;">Inscrivez-vous &agrave; notre Bulletin de veille!</p>
+<a href="http://www.oiiq.org/infolettres" style="font-size: 12px; color:#A1B927;" title="Abonnement aux infolettres">Abonnement aux infolettres</a>
+
+
+</div>
+<div id="droite">
+<div style="width: 175px; float: right;color: #c0c0c0;font-size: 12px; fonct-weight: bold;">
+<img src="http://veille.oiiq.org/images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="margin-right: 5px;" />Donn&eacute;es probantes
+</div><h2>Nouvelles ressources</h2>
+
+
+			<div id="pagination" class="container">
+				<ul class="content">
+					<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Cancer de la prostate localisÃ© : efficacitÃ© et innocuitÃ© des options thÃ©rapeutiques" href="consulter.php?fiche=3134">Cancer de la prostate localisÃ© : efficacitÃ© et innocuitÃ© des options thÃ©rapeutiques</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;Oncologie<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Ãvaluation des Ententes de collaboration visant Ã  encadrer les trajectoires de services en santÃ© mentale et en dÃ©pendances pour les communautÃ©s autochtones non conventionnÃ©es du QuÃ©bec" href="consulter.php?fiche=3135">Ãvaluation des Ententes de collaboration visant Ã  encadrer les trajectoires de services en santÃ© mentale et en dÃ©pendances pour les communautÃ©s autochtones non conventionnÃ©es du QuÃ©bec</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;SantÃ© mentale<br />&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;Toxicomanie<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Loi concernant les soins de fin de vie [Brochures]" href="consulter.php?fiche=3136">Loi concernant les soins de fin de vie [Brochures]</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de fin de vie<br />&nbsp;Droit de la santÃ©<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Ãvaluation des cathÃ©ters veineux centraux rÃ©sistant Ã  des pressions Ã©levÃ©es (L')" href="consulter.php?fiche=3137">Ãvaluation des cathÃ©ters veineux centraux rÃ©sistant Ã  des pressions Ã©levÃ©es (L')</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;ProcÃ©dures diagnostiques et thÃ©rapeutiques<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Formation Intervenir auprÃ¨s des hommes dans le rÃ©seau de santÃ© en MontÃ©rÃ©gie : une perspective organisationnelle (La)" href="consulter.php?fiche=3138">Formation Intervenir auprÃ¨s des hommes dans le rÃ©seau de santÃ© en MontÃ©rÃ©gie : une perspective organisationnelle (La)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;Soins de premiÃ¨re ligne<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Consommation d'alcool au Canada (La)" href="consulter.php?fiche=3139">Consommation d'alcool au Canada (La)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Nutrition<br />&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;Toxicomanie<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Sunlight exposure: Risks and benefits" href="consulter.php?fiche=3140">Sunlight exposure: Risks and benefits</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Dermatologie<br />&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;Soins de premiÃ¨re ligne<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter devenirinfirmiÃ¨re.org" href="consulter.php?fiche=3141">devenirinfirmiÃ¨re.org</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Enseignement<br />&nbsp;Formation<br />&nbsp;Profession<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Rapport du ComitÃ© consultatif sur la dÃ©marche d'amÃ©lioration et de maintien de la performance du Programme national de cancÃ©rologie" href="consulter.php?fiche=3142">Rapport du ComitÃ© consultatif sur la dÃ©marche d'amÃ©lioration et de maintien de la performance du Programme national de cancÃ©rologie</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Oncologie<br />&nbsp;Organisation des soins et services<br />&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Formation des infirmiÃ¨res praticiennes sur la prescription de certaines drogues et autres substances : compÃ©tences requises" href="consulter.php?fiche=3143">Formation des infirmiÃ¨res praticiennes sur la prescription de certaines drogues et autres substances : compÃ©tences requises</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Formation<br />&nbsp;Pharmacologie<br />&nbsp;Pratique avancÃ©e<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Utilisation d'antipsychotiques chez les personnes Ã¢gÃ©es rÃ©sidant dans les Ã©tablissements de soins de longue durÃ©e, 2014" href="consulter.php?fiche=3144">Utilisation d'antipsychotiques chez les personnes Ã¢gÃ©es rÃ©sidant dans les Ã©tablissements de soins de longue durÃ©e, 2014</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins aux personnes Ã¢gÃ©es<br />&nbsp;SantÃ© mentale<br />&nbsp;Pharmacologie<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Exploring interprofessional collaboration during the integration of diabetes teams into primary care" href="consulter.php?fiche=3145">Exploring interprofessional collaboration during the integration of diabetes teams into primary care</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Collaboration professionnelle<br />&nbsp;DiabÃ¨te<br />&nbsp;Soins de premiÃ¨re ligne<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Interprofessional teamwork innovations for primary health care practices and practitioners: Evidence from a comparison of reform in three countries" href="consulter.php?fiche=3146">Interprofessional teamwork innovations for primary health care practices and practitioners: Evidence from a comparison of reform in three countries</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Collaboration professionnelle<br />&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;Soins des maladies chroniques<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Practice analysis study of nurse practitioners" href="consulter.php?fiche=3147">Practice analysis study of nurse practitioners</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Pratique avancÃ©e<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Collaboration in practice: Implementing team-based care: Executive summary" href="consulter.php?fiche=3148">Collaboration in practice: Implementing team-based care: Executive summary</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Collaboration professionnelle<br />&nbsp;ObstÃ©trique-gynÃ©cologie<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Competencies and recommendations for educating undergraduate nursing students preparing nurses to care for the seriously ill and their families" href="consulter.php?fiche=3149">Competencies and recommendations for educating undergraduate nursing students preparing nurses to care for the seriously ill and their families</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;CompÃ©tences cliniques<br />&nbsp;Formation<br />&nbsp;Soins de fin de vie<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Health system quality improvement: Impact of prompt nutrition care on patient outcomes and health care costs" href="consulter.php?fiche=3150">Health system quality improvement: Impact of prompt nutrition care on patient outcomes and health care costs</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Nutrition<br />&nbsp;Documentation<br />&nbsp;ActivitÃ©s cliniques<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Home-based primary care interventions" href="consulter.php?fiche=3151">Home-based primary care interventions</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins Ã  domicile<br />&nbsp;Soins des maladies chroniques<br />&nbsp;Soins de premiÃ¨re ligne<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Approche de collaboration Ã  un problÃ¨me de soins chroniques : histoires Ã  succÃ¨s de la Collaboration des organismes de la santÃ© de l'Atlantique (Une)" href="consulter.php?fiche=3152">Approche de collaboration Ã  un problÃ¨me de soins chroniques : histoires Ã  succÃ¨s de la Collaboration des organismes de la santÃ© de l'Atlantique (Une)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;DiabÃ¨te<br />&nbsp;Maladie pulmonaire obstructive chronique<br />&nbsp;Organisation des soins et services<br />&nbsp;SantÃ© mentale<br />&nbsp;Soins des maladies chroniques<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Implementation of an interdisciplinary, team-based complex care support health care model at an academic medical center: Impact on health care utilization and quality of life" href="consulter.php?fiche=3153">Implementation of an interdisciplinary, team-based complex care support health care model at an academic medical center: Impact on health care utilization and quality of life</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Collaboration professionnelle<br />&nbsp;Pratique avancÃ©e<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Improving antibiotic prescribing for uncomplicated acute respiratory tract infections" href="consulter.php?fiche=3154">Improving antibiotic prescribing for uncomplicated acute respiratory tract infections</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br />&nbsp;Pharmacologie<br />&nbsp;Pneumologie<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Measuring nursing care value" href="consulter.php?fiche=3155">Measuring nursing care value</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Profession<br />&nbsp;Ãconomie de la santÃ©<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Check-list SÃ©curitÃ© du patient au bloc opÃ©ratoire" href="consulter.php?fiche=3156">Check-list SÃ©curitÃ© du patient au bloc opÃ©ratoire</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins pÃ©riopÃ©ratoires<br />&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Outils cliniques et clinico-administratifs<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Evidence from NHS Improvement on clinical staff shortages: A workforce analysis" href="consulter.php?fiche=3157">Evidence from NHS Improvement on clinical staff shortages: A workforce analysis</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Main-d'oeuvre<br />&nbsp;Organisation des soins et services<br />&nbsp;PÃ©nurie<br /></td></tr></table></li>
+<li><span class="resPays"></span><h3><a class="tiptip" title="Consulter Low stimulus environments: Reducing noise levels in continuing care" href="consulter.php?fiche=3158">Low stimulus environments: Reducing noise levels in continuing care</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;ActivitÃ©s cliniques<br />&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)" href="consulter.php?fiche=3159">Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br />&nbsp;Soins critiques<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Menopause and work: Guidance for RCN representatives" href="consulter.php?fiche=3160">Menopause and work: Guidance for RCN representatives</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Endocrinologie<br />&nbsp;ObstÃ©trique-gynÃ©cologie<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Integrating long-term care into a community-based continuum: Shifting from "beds" to "places"" href="consulter.php?fiche=3161">Integrating long-term care into a community-based continuum: Shifting from "beds" to "places"</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Quel est le meilleur mode d'organisation de la vaccination des enfants de 0-5 ans au QuÃ©bec?" href="consulter.php?fiche=3162">Quel est le meilleur mode d'organisation de la vaccination des enfants de 0-5 ans au QuÃ©bec?</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br />&nbsp;PÃ©rinatalitÃ© et pÃ©diatrie<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Agir en vue de soins optimaux communautaires et de longue durÃ©e de l'AVC : une ressource pour les dispensateurs de soins de santÃ©" href="consulter.php?fiche=3163">Agir en vue de soins optimaux communautaires et de longue durÃ©e de l'AVC : une ressource pour les dispensateurs de soins de santÃ©</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Cardiologie<br />&nbsp;Neurologie<br />&nbsp;RÃ©adaptation<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Recommendations on screening for colorectal cancer in primary care" href="consulter.php?fiche=3164">Recommendations on screening for colorectal cancer in primary care</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Oncologie<br />&nbsp;ProcÃ©dures diagnostiques et thÃ©rapeutiques<br />&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;Soins de premiÃ¨re ligne<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Infection prevention and control commissioning toolkit: Guidance and information for nursing and commissioning staff in England" href="consulter.php?fiche=3123">Infection prevention and control commissioning toolkit: Guidance and information for nursing and commissioning staff in England</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Update: Stroke guidelines" href="consulter.php?fiche=3119">Update: Stroke guidelines</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Neurologie<br />&nbsp;Cardiologie<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Demand management for planned care: A realist synthesis" href="consulter.php?fiche=3121">Demand management for planned care: A realist synthesis</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Influence of empowerment, authentic leadership, and professional practice environments on nurses' perceived interprofessional collaboration (The)" href="consulter.php?fiche=3112">Influence of empowerment, authentic leadership, and professional practice environments on nurses' perceived interprofessional collaboration (The)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Conditions de travail<br />&nbsp;Collaboration professionnelle<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Contraintes vÃ©cues, idÃ©al normatif et actions dÃ©ployÃ©es en vue de transformer l'exercice de la profession infirmiÃ¨re en centre hospitalier : une Ã©tude exploratoire auprÃ¨s d'infirmiÃ¨res quÃ©bÃ©coises politiquement engagÃ©es" href="consulter.php?fiche=3110">Contraintes vÃ©cues, idÃ©al normatif et actions dÃ©ployÃ©es en vue de transformer l'exercice de la profession infirmiÃ¨re en centre hospitalier : une Ã©tude exploratoire auprÃ¨s d'infirmiÃ¨res quÃ©bÃ©coises politiquement engagÃ©es</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Profession<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Violence vÃ©cue par les QuÃ©bÃ©cois avant l'Ã¢ge de 16 ans et la santÃ© Ã  l'Ã¢ge adulte : quels sont les liens? (La)" href="consulter.php?fiche=3111">Violence vÃ©cue par les QuÃ©bÃ©cois avant l'Ã¢ge de 16 ans et la santÃ© Ã  l'Ã¢ge adulte : quels sont les liens? (La)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;PÃ©rinatalitÃ© et pÃ©diatrie<br />&nbsp;SantÃ© mentale<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Management of acne: Canadian clinical practice guideline" href="consulter.php?fiche=3113">Management of acne: Canadian clinical practice guideline</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Dermatologie<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Acute myocardial infarction in women: A scientific statement from the American Heart Association" href="consulter.php?fiche=3114">Acute myocardial infarction in women: A scientific statement from the American Heart Association</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Cardiologie<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Food-drug interactions: Putting evidence into practice" href="consulter.php?fiche=3115">Food-drug interactions: Putting evidence into practice</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;Pharmacologie<br />&nbsp;Nutrition<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Screening for depression in adults: US Preventive Services Task Force recommendation statement" href="consulter.php?fiche=3116">Screening for depression in adults: US Preventive Services Task Force recommendation statement</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;DÃ©pression<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Screening for depression in children and adolescents: U.S. Preventive Services Task Force recommendation statement" href="consulter.php?fiche=3117">Screening for depression in children and adolescents: U.S. Preventive Services Task Force recommendation statement</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;PÃ©rinatalitÃ© et pÃ©diatrie<br />&nbsp;DÃ©pression<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Treating co-occurring chronic low back pain & generalized anxiety disorder" href="consulter.php?fiche=3118">Treating co-occurring chronic low back pain & generalized anxiety disorder</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins des maladies chroniques<br />&nbsp;SantÃ© mentale<br />&nbsp;Pratique avancÃ©e<br />&nbsp;Douleur<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Capturing judgement strategies in risk assessments with improved quality of clinical information: How nurses' strategies differ from the ecological model" href="consulter.php?fiche=3120">Capturing judgement strategies in risk assessments with improved quality of clinical information: How nurses' strategies differ from the ecological model</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Enseignement<br />&nbsp;CompÃ©tences cliniques<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Effective board governance of safe care: A (theoretically underpinned) cross-sectioned examination of the breadth and depth of relationships through national  quantitative surveys and in-depth qualitative case studies" href="consulter.php?fiche=3122">Effective board governance of safe care: A (theoretically underpinned) cross-sectioned examination of the breadth and depth of relationships through national  quantitative surveys and in-depth qualitative case studies</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Organisation des soins et services<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Interim report and recommendations by the Taskforce on Staffing and Skill Mix for Nursing on a framework for safe nurse staffing and skill mix in general  and specialist medical and surgical care settings in adult hospitals in Ireland" href="consulter.php?fiche=3124">Interim report and recommendations by the Taskforce on Staffing and Skill Mix for Nursing on a framework for safe nurse staffing and skill mix in general  and specialist medical and surgical care settings in adult hospitals in Ireland</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Organisation des soins et services<br />&nbsp;Main-d'oeuvre<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Patient safety's missing link: Using clinical expertise to recognize, respond to and reduce risks at a population level" href="consulter.php?fiche=3125">Patient safety's missing link: Using clinical expertise to recognize, respond to and reduce risks at a population level</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;CompÃ©tences cliniques<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter RCN Mentorship Project 2015: From today's support in practice to tomorrow's vision for excellence" href="consulter.php?fiche=3126">RCN Mentorship Project 2015: From today's support in practice to tomorrow's vision for excellence</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Formation<br />&nbsp;Collaboration professionnelle<br />&nbsp;ActivitÃ©s cliniques<br />&nbsp;Organisation des soins et services<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Guide de rÃ©flexion, d'autoÃ©valuation et de rÃ©vision des politiques/procÃ©dures pour contrer la maltraitance envers les personnes aÃ®nÃ©es en CHSLD" href="consulter.php?fiche=3127">Guide de rÃ©flexion, d'autoÃ©valuation et de rÃ©vision des politiques/procÃ©dures pour contrer la maltraitance envers les personnes aÃ®nÃ©es en CHSLD</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins aux personnes Ã¢gÃ©es<br />&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter PremiÃ¨re ligne forte de l'expertise du mÃ©decin de famille : Ã©noncÃ© de position (Une)" href="consulter.php?fiche=3128">PremiÃ¨re ligne forte de l'expertise du mÃ©decin de famille : Ã©noncÃ© de position (Une)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter PremiÃ¨re ligne forte de l'expertise du mÃ©decin de famille : Ã©noncÃ© de position (Une)" href="consulter.php?fiche=3129">PremiÃ¨re ligne forte de l'expertise du mÃ©decin de famille : Ã©noncÃ© de position (Une)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Analyses de laboratoire recommandÃ©es pour le dÃ©pistage de l'infection par le virus de l'hÃ©patite B" href="consulter.php?fiche=3130">Analyses de laboratoire recommandÃ©es pour le dÃ©pistage de l'infection par le virus de l'hÃ©patite B</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Cadre de rÃ©fÃ©rence sur le dÃ©veloppement des compÃ©tences en soins palliatifs et de fin de vie" href="consulter.php?fiche=3131">Cadre de rÃ©fÃ©rence sur le dÃ©veloppement des compÃ©tences en soins palliatifs et de fin de vie</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;CompÃ©tences cliniques<br />&nbsp;Formation continue<br />&nbsp;Soins de fin de vie<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Fardeau de l'insuffisance cardiaque (Le)" href="consulter.php?fiche=3132">Fardeau de l'insuffisance cardiaque (Le)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Cardiologie<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Plateforme du RRISIQ pour le transfert des connaissances" href="consulter.php?fiche=3133">Plateforme du RRISIQ pour le transfert des connaissances</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Recherche<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Systematic reviews: Making them policy relevant" href="consulter.php?fiche=3109">Systematic reviews: Making them policy relevant</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Recherche<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter RÃ©duction des maladies cardiovasculaires et dÃ©penses de santÃ© au QuÃ©bec Ã  l'horizon 2050" href="consulter.php?fiche=3100">RÃ©duction des maladies cardiovasculaires et dÃ©penses de santÃ© au QuÃ©bec Ã  l'horizon 2050</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Ãconomie de la santÃ©<br />&nbsp;Cardiologie<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Health promotion for sexual and reproductive health and HIV: Strategic action plan, 2016 to 2019" href="consulter.php?fiche=3095">Health promotion for sexual and reproductive health and HIV: Strategic action plan, 2016 to 2019</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;SantÃ© publique<br />&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;ObstÃ©trique-gynÃ©cologie<br />&nbsp;Maladies infectieuses et immunisation<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Best start in life and beyond: Improving public health outcomes for children, young people and families. Guidance to support the commissioning of the Healthy Child Programme 0-19: Health visiting and school nursing services" href="consulter.php?fiche=3092">Best start in life and beyond: Improving public health outcomes for children, young people and families. Guidance to support the commissioning of the Healthy Child Programme 0-19: Health visiting and school nursing services</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;PÃ©rinatalitÃ© et pÃ©diatrie<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter General practice nursing in the 21st century: A time of opportunity" href="consulter.php?fiche=3094">General practice nursing in the 21st century: A time of opportunity</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;RÃ´les infirmiers<br />&nbsp;CompÃ©tences cliniques<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Improving the effectiveness of medication review: Guidance from the Health Literacy Universal Precautions Toolkit" href="consulter.php?fiche=3089">Improving the effectiveness of medication review: Guidance from the Health Literacy Universal Precautions Toolkit</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Pharmacologie<br />&nbsp;ActivitÃ©s cliniques<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Brief treatment for substance use disorders: A guide for behavioral health providers" href="consulter.php?fiche=3087">Brief treatment for substance use disorders: A guide for behavioral health providers</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Toxicomanie<br />&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;SantÃ© mentale<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Conceptualizing clinical nurse leader practice: An interpretive synthesis" href="consulter.php?fiche=3088">Conceptualizing clinical nurse leader practice: An interpretive synthesis</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;RÃ´les infirmiers<br />&nbsp;Pratique avancÃ©e<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Increasing the value of health care: The role of nurses" href="consulter.php?fiche=3090">Increasing the value of health care: The role of nurses</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Ãconomie de la santÃ©<br />&nbsp;SystÃ¨mes de santÃ©<br />&nbsp;Profession<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Distribution de matÃ©riel d'injection stÃ©rile pour prÃ©venir la transmission du VIH et des hÃ©patites B et C au QuÃ©bec : avril 2013 Ã  mars 2014 (La)" href="consulter.php?fiche=3079">Distribution de matÃ©riel d'injection stÃ©rile pour prÃ©venir la transmission du VIH et des hÃ©patites B et C au QuÃ©bec : avril 2013 Ã  mars 2014 (La)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br />&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;Toxicomanie<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Virus Zika" href="consulter.php?fiche=3108">Virus Zika</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Perceptions et expÃ©riences des mÃ©decins de premiÃ¨re ligne : le QuÃ©bec comparÃ© - RÃ©sultats de l'enquÃªte internationale sur les politiques de santÃ© du Commonwealth Fund de 2015" href="consulter.php?fiche=3080">Perceptions et expÃ©riences des mÃ©decins de premiÃ¨re ligne : le QuÃ©bec comparÃ© - RÃ©sultats de l'enquÃªte internationale sur les politiques de santÃ© du Commonwealth Fund de 2015</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;SystÃ¨mes de santÃ©<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter CompÃ©tences en santÃ© mentale et en toxicomanie pour accÃ©der Ã  la pratique dans le cadre de la formation de premier cycle en sciences infirmiÃ¨res au Canada" href="consulter.php?fiche=3081">CompÃ©tences en santÃ© mentale et en toxicomanie pour accÃ©der Ã  la pratique dans le cadre de la formation de premier cycle en sciences infirmiÃ¨res au Canada</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Formation<br />&nbsp;SantÃ© mentale<br />&nbsp;Toxicomanie<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Respect des choix en matiÃ¨re de soins de fin de vie : les enjeux et les possibilitÃ©s pour les infirmiÃ¨res et infirmiers" href="consulter.php?fiche=3082">Respect des choix en matiÃ¨re de soins de fin de vie : les enjeux et les possibilitÃ©s pour les infirmiÃ¨res et infirmiers</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Ãthique<br />&nbsp;Soins de fin de vie<br />&nbsp;Droit de la santÃ©<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Violence et les mesures Ã  prendre (La)" href="consulter.php?fiche=3083">Violence et les mesures Ã  prendre (La)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Ãthique<br />&nbsp;Droit de la santÃ©<br />&nbsp;Conditions de travail<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Post-seclusion and/or restraint review in psychiatry: A scoping review" href="consulter.php?fiche=3084">Post-seclusion and/or restraint review in psychiatry: A scoping review</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Contention et isolement<br />&nbsp;SantÃ© mentale<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Lean interventions in healthcare: Do they actually work? A systematic literature review" href="consulter.php?fiche=3085">Lean interventions in healthcare: Do they actually work? A systematic literature review</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Quality-based procedures in Ontario: Exploring health-care leaders' responses" href="consulter.php?fiche=3086">Quality-based procedures in Ontario: Exploring health-care leaders' responses</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Organisation des soins et services<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Million Hearts initiative: Guidelines and best practices (The)" href="consulter.php?fiche=3091">Million Hearts initiative: Guidelines and best practices (The)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;Cardiologie<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Beyond clinical engagement: A pragmatic model for quality improvement interventions, aligning clinical and managerial priorities" href="consulter.php?fiche=3093">Beyond clinical engagement: A pragmatic model for quality improvement interventions, aligning clinical and managerial priorities</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Improving outcomes for patients with sepsis: A cross-system action plan" href="consulter.php?fiche=3096">Improving outcomes for patients with sepsis: A cross-system action plan</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br />&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Soins critiques<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Improving outcomes for people in mental health crisis: A rapid synthesis of the evidence for available models of care" href="consulter.php?fiche=3097">Improving outcomes for people in mental health crisis: A rapid synthesis of the evidence for available models of care</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;SantÃ© mentale<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Action planning tool for the AHRQ Surveys on Patient Safety Culture" href="consulter.php?fiche=3098">Action planning tool for the AHRQ Surveys on Patient Safety Culture</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Outils cliniques et clinico-administratifs<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Soins de santÃ© primaires : Ã©noncÃ© de position" href="consulter.php?fiche=3099">Soins de santÃ© primaires : Ã©noncÃ© de position</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;RÃ´les infirmiers<br />&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;SystÃ¨mes de santÃ©<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter DÃ©cÃ¨s associÃ©s Ã  une sepsie au Canada (Les)" href="consulter.php?fiche=3101">DÃ©cÃ¨s associÃ©s Ã  une sepsie au Canada (Les)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br />&nbsp;Soins critiques<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter StratÃ©gie mondiale de l'OMS sur les ressources humaines pour la santÃ© Ã  l'Ã¨re des objectifs du dÃ©veloppement durable aprÃ¨s 2015 : la contribution essentielle de la profession infirmiÃ¨re (La)" href="consulter.php?fiche=3102">StratÃ©gie mondiale de l'OMS sur les ressources humaines pour la santÃ© Ã  l'Ã¨re des objectifs du dÃ©veloppement durable aprÃ¨s 2015 : la contribution essentielle de la profession infirmiÃ¨re (La)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;SystÃ¨mes de santÃ©<br />&nbsp;RÃ´les infirmiers<br />&nbsp;Profession<br />&nbsp;Main-d'oeuvre<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter HypercholestÃ©rolÃ©mie familiale : rÃ©vision du diagnostic, du dÃ©pistage et du traitement" href="consulter.php?fiche=3103">HypercholestÃ©rolÃ©mie familiale : rÃ©vision du diagnostic, du dÃ©pistage et du traitement</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;DyslipidÃ©mie<br />&nbsp;Cardiologie<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Autogestion des maladies chroniques, l'Ã©tat de santÃ© et l'utilisation des services hospitaliers : exploration de donnÃ©es d'enquÃªtes populationnelles (L')" href="consulter.php?fiche=3104">Autogestion des maladies chroniques, l'Ã©tat de santÃ© et l'utilisation des services hospitaliers : exploration de donnÃ©es d'enquÃªtes populationnelles (L')</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;Soins des maladies chroniques<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Ãthique dans les milieux de vie : quelles valeurs pour quelles pratiques? (L')" href="consulter.php?fiche=3105">Ãthique dans les milieux de vie : quelles valeurs pour quelles pratiques? (L')</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Ãthique<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Bridging the generational divide: Nurses united in providing quality patient care" href="consulter.php?fiche=3106">Bridging the generational divide: Nurses united in providing quality patient care</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Organisation des soins et services<br />&nbsp;Conditions de travail<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Avis sur la pertinence de mettre en place la vaccination contre la coqueluche chez toutes les femmes enceintes au QuÃ©bec" href="consulter.php?fiche=3107">Avis sur la pertinence de mettre en place la vaccination contre la coqueluche chez toutes les femmes enceintes au QuÃ©bec</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br />&nbsp;PÃ©rinatalitÃ© et pÃ©diatrie<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Adherence to oral antihyperglycemic agents among older adults with mental disorders and its effect on health care costs, Quebec, Canada, 2005-2008" href="consulter.php?fiche=3055">Adherence to oral antihyperglycemic agents among older adults with mental disorders and its effect on health care costs, Quebec, Canada, 2005-2008</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Ãconomie de la santÃ©<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br />&nbsp;SantÃ© mentale<br />&nbsp;DyslipidÃ©mie<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Factors influencing home discharge after inpatient rehabilitation of older patients: A systematic review" href="consulter.php?fiche=3066">Factors influencing home discharge after inpatient rehabilitation of older patients: A systematic review</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;RÃ©adaptation<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter 101 nursing tips from the experts" href="consulter.php?fiche=3069">101 nursing tips from the experts</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Formation<br />&nbsp;ActivitÃ©s cliniques<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Politique concernant la prÃ©vention, la promotion et les pratiques organisationnelles favorables Ã  la santÃ© et au mieux-Ãªtre des personnes au travail" href="consulter.php?fiche=3072">Politique concernant la prÃ©vention, la promotion et les pratiques organisationnelles favorables Ã  la santÃ© et au mieux-Ãªtre des personnes au travail</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Conditions de travail<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter International profiles of health care systems, 2015" href="consulter.php?fiche=1731">International profiles of health care systems, 2015</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Ãconomie de la santÃ©<br />&nbsp;SystÃ¨mes de santÃ©<br />&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Organisation des soins et services<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Surveillance provinciale des infections nosocomiales : faits saillants, discussions et orientations" href="consulter.php?fiche=2390">Surveillance provinciale des infections nosocomiales : faits saillants, discussions et orientations</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Niveaux de soins : normes et standards de qualitÃ© (Les)" href="consulter.php?fiche=3052">Niveaux de soins : normes et standards de qualitÃ© (Les)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de fin de vie<br />&nbsp;Outils cliniques et clinico-administratifs<br />&nbsp;ActivitÃ©s cliniques<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Conduites suicidaires : Ã©valuation, facteurs de risque et interventions auprÃ¨s de personnes prÃ©sentant un trouble psychotique, bipolaire ou de la personnalitÃ©" href="consulter.php?fiche=3053">Conduites suicidaires : Ã©valuation, facteurs de risque et interventions auprÃ¨s de personnes prÃ©sentant un trouble psychotique, bipolaire ou de la personnalitÃ©</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Suicide<br />&nbsp;SantÃ© mentale<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Gestion de la douleur chronique par les infirmiÃ¨res des groupes de mÃ©decine de famille" href="consulter.php?fiche=3054">Gestion de la douleur chronique par les infirmiÃ¨res des groupes de mÃ©decine de famille</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins des maladies chroniques<br />&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;RÃ´les infirmiers<br />&nbsp;Douleur<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Medication incidents that increase the risk of falls: A multi-incident analysis" href="consulter.php?fiche=3056">Medication incidents that increase the risk of falls: A multi-incident analysis</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;PrÃ©vention des chutes<br />&nbsp;Pharmacologie<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Elaborating on theory with middle managers' experience implementing healthcare innovations in practice" href="consulter.php?fiche=3057">Elaborating on theory with middle managers' experience implementing healthcare innovations in practice</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Conditions de travail<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Impact of state scope of practice laws and other factors on the practice and supply of primary care nurse practitioners" href="consulter.php?fiche=3058">Impact of state scope of practice laws and other factors on the practice and supply of primary care nurse practitioners</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;Pratique avancÃ©e<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Oncology Nurse Navigator Competency Project: Providing novice navigators with a GPS for role development" href="consulter.php?fiche=3059">Oncology Nurse Navigator Competency Project: Providing novice navigators with a GPS for role development</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;RÃ´les infirmiers<br />&nbsp;Oncologie<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Patient and family engagement resource compendium" href="consulter.php?fiche=3061">Patient and family engagement resource compendium</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;ActivitÃ©s cliniques<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Concept of care complexity: A qualitative study (The)" href="consulter.php?fiche=3064">Concept of care complexity: A qualitative study (The)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;ActivitÃ©s cliniques<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Evidence based guidelines for nursing and social care on ehealth services" href="consulter.php?fiche=3065">Evidence based guidelines for nursing and social care on ehealth services</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Technologies de la santÃ©<br />&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;Pratique avancÃ©e<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Transforming end of life care in acute hospitals: The route to success 'how to' guide" href="consulter.php?fiche=3067">Transforming end of life care in acute hospitals: The route to success 'how to' guide</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de fin de vie<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Tuberculosis" href="consulter.php?fiche=3068">Tuberculosis</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Facteurs favorables Ã  la santÃ© et problÃ¨mes de santÃ© chroniques chez les aÃ®nÃ©s quÃ©bÃ©cois" href="consulter.php?fiche=3070">Facteurs favorables Ã  la santÃ© et problÃ¨mes de santÃ© chroniques chez les aÃ®nÃ©s quÃ©bÃ©cois</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;PrÃ©vention et promotion de la santÃ©<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br />&nbsp;Soins des maladies chroniques<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Droit aux soins : des soins palliatifs pour tous les Canadiens" href="consulter.php?fiche=3071">Droit aux soins : des soins palliatifs pour tous les Canadiens</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de fin de vie<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Protocole de contraception du QuÃ©bec" href="consulter.php?fiche=3073">Protocole de contraception du QuÃ©bec</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;PÃ©rinatalitÃ© et pÃ©diatrie<br />&nbsp;Pharmacologie<br />&nbsp;ObstÃ©trique-gynÃ©cologie<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Cadres de rÃ©fÃ©rence pour l'Ã©thique en santÃ© publique : rÃ©pertoire" href="consulter.php?fiche=3075">Cadres de rÃ©fÃ©rence pour l'Ã©thique en santÃ© publique : rÃ©pertoire</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;SantÃ© publique<br />&nbsp;Ãthique<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Mini-guide Palli-Science" href="consulter.php?fiche=3076">Mini-guide Palli-Science</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Douleur<br />&nbsp;Pharmacologie<br />&nbsp;Physiopathologie et manifestations cliniques<br />&nbsp;Soins de fin de vie<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Signification accordÃ©e Ã  l'approche oncogÃ©riatrique intÃ©grÃ©e par des personnes Ã¢gÃ©es atteintes de cancer" href="consulter.php?fiche=3077">Signification accordÃ©e Ã  l'approche oncogÃ©riatrique intÃ©grÃ©e par des personnes Ã¢gÃ©es atteintes de cancer</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Oncologie<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Optimal perioperative management of the geriatric patient: Best practices guideline from ACS NSQIP/American Geriatrics Society" href="consulter.php?fiche=3060">Optimal perioperative management of the geriatric patient: Best practices guideline from ACS NSQIP/American Geriatrics Society</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins pÃ©riopÃ©ratoires<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Care of dying adults in the last days of life" href="consulter.php?fiche=3063">Care of dying adults in the last days of life</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Physiopathologie et manifestations cliniques<br />&nbsp;Soins de fin de vie<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Screening for breast cancer: U.S. Preventive Services Task Force recommendation statement" href="consulter.php?fiche=3062">Screening for breast cancer: U.S. Preventive Services Task Force recommendation statement</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;Oncologie<br />&nbsp;ObstÃ©trique-gynÃ©cologie<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Rapport de surveillance d'incidents et d'accidents en retraitement des dispositifs mÃ©dicaux" href="consulter.php?fiche=3074">Rapport de surveillance d'incidents et d'accidents en retraitement des dispositifs mÃ©dicaux</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Maladies infectieuses et immunisation<br />&nbsp;ProcÃ©dures diagnostiques et thÃ©rapeutiques<br />&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Tale of two sites: Lessons on leadership from the implementation of a long-term care delivery model (CDM) in Western Canada (A)" href="consulter.php?fiche=3078">Tale of two sites: Lessons on leadership from the implementation of a long-term care delivery model (CDM) in Western Canada (A)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Evidence-based safe nurse staffing toolkit" href="consulter.php?fiche=3040">Evidence-based safe nurse staffing toolkit</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Organisation des soins et services<br />&nbsp;Main-d'oeuvre<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Competency model and tools created for rehabilitation nursing" href="consulter.php?fiche=3025">Competency model and tools created for rehabilitation nursing</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;RÃ©adaptation<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Free from harm: Accelerating patient safety improvement fifteen years after To Err Is Human" href="consulter.php?fiche=3011">Free from harm: Accelerating patient safety improvement fifteen years after To Err Is Human</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Good Beginnings: Getting it right in the early years" href="consulter.php?fiche=3015">Good Beginnings: Getting it right in the early years</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;PÃ©rinatalitÃ© et pÃ©diatrie<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Predictive validity of a two-step tool to map frailty in primary care" href="consulter.php?fiche=3020">Predictive validity of a two-step tool to map frailty in primary care</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br />&nbsp;Outils cliniques et clinico-administratifs<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Health information exchange" href="consulter.php?fiche=3032">Health information exchange</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Technologies de la santÃ©<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Postoperative delirium assessed by post anesthesia care unit staff utilizing the Nursing Delirium Screening Scale: A prospective observational study of 1000 patients in a single Swiss institution" href="consulter.php?fiche=3038">Postoperative delirium assessed by post anesthesia care unit staff utilizing the Nursing Delirium Screening Scale: A prospective observational study of 1000 patients in a single Swiss institution</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Troubles cognitifs<br />&nbsp;Soins pÃ©riopÃ©ratoires<br />&nbsp;Physiopathologie et manifestations cliniques<br />&nbsp;AnesthÃ©siologie<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Te Ara Whakapiri: Principles and guidance for the last days of life" href="consulter.php?fiche=3039">Te Ara Whakapiri: Principles and guidance for the last days of life</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de fin de vie<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Clinical decision support for nurses: A fall risk and prevention example" href="consulter.php?fiche=3031">Clinical decision support for nurses: A fall risk and prevention example</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Technologies de la santÃ©<br />&nbsp;PrÃ©vention des chutes<br />&nbsp;Outils cliniques et clinico-administratifs<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Open carpal tunnel decompression by specialist versus nurse practitioner" href="consulter.php?fiche=3037">Open carpal tunnel decompression by specialist versus nurse practitioner</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;ProcÃ©dures diagnostiques et thÃ©rapeutiques<br />&nbsp;Pratique avancÃ©e<br />&nbsp;OrthopÃ©die<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Nonpharmacological versus pharmacological treatments for adult patients with major depressive disorder" href="consulter.php?fiche=3012">Nonpharmacological versus pharmacological treatments for adult patients with major depressive disorder</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Pharmacologie<br />&nbsp;DÃ©pression<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Before and after study of a nurse led comprehensive delirium management programme (DemDel) for older acute care inpatients with cognitive impairment (A)" href="consulter.php?fiche=3013">Before and after study of a nurse led comprehensive delirium management programme (DemDel) for older acute care inpatients with cognitive impairment (A)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Troubles cognitifs<br />&nbsp;Soins aux personnes Ã¢gÃ©es<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Intravenous fluid therapy in children and young people in hospital" href="consulter.php?fiche=3016">Intravenous fluid therapy in children and young people in hospital</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;PÃ©rinatalitÃ© et pÃ©diatrie<br />&nbsp;ProcÃ©dures diagnostiques et thÃ©rapeutiques<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter National informatics standards for nurses and midwives" href="consulter.php?fiche=3017">National informatics standards for nurses and midwives</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Technologies de la santÃ©<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Practical guide to self-management support: Key components for successful implementation (A)" href="consulter.php?fiche=3019">Practical guide to self-management support: Key components for successful implementation (A)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;ActivitÃ©s cliniques<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Safe staffing for nursing in emergency departments: Evidence review" href="consulter.php?fiche=3021">Safe staffing for nursing in emergency departments: Evidence review</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Urgence<br />&nbsp;Main-d'oeuvre<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Writing it out can save a life: Let's stop the use of abbreviations in healthcare" href="consulter.php?fiche=3024">Writing it out can save a life: Let's stop the use of abbreviations in healthcare</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Documentation<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter PNSP : guide pÃ©dagogique pour la sÃ©curitÃ© des patients" href="consulter.php?fiche=3026">PNSP : guide pÃ©dagogique pour la sÃ©curitÃ© des patients</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Integrated Primary Care Teams (IPCT) pilot project in Quebec: A protocol paper" href="consulter.php?fiche=3027">Integrated Primary Care Teams (IPCT) pilot project in Quebec: A protocol paper</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;RÃ´les infirmiers<br />&nbsp;Pratique avancÃ©e<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter De l'Ã©conomie de la santÃ© publique Ã  la bioÃ©conomie : analyse critique de l'usage des DALYs et QALYs" href="consulter.php?fiche=3028">De l'Ã©conomie de la santÃ© publique Ã  la bioÃ©conomie : analyse critique de l'usage des DALYs et QALYs</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Ãconomie de la santÃ©<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Knowledge and monitoring deficits contribute to hospital-acquired hyponatremia" href="consulter.php?fiche=3029">Knowledge and monitoring deficits contribute to hospital-acquired hyponatremia</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;ProcÃ©dures diagnostiques et thÃ©rapeutiques<br />&nbsp;Physiopathologie et manifestations cliniques<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Art of dressing selection: A consensus statement on skin tears and best practice (The)" href="consulter.php?fiche=3030">Art of dressing selection: A consensus statement on skin tears and best practice (The)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de plaies<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Improving cultural competence in end-of-life pain management" href="consulter.php?fiche=3033">Improving cultural competence in end-of-life pain management</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de fin de vie<br />&nbsp;Douleur<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Nurse Practitioner Care Model: Meeting the health care challenges with a collaborative team" href="consulter.php?fiche=3034">Nurse Practitioner Care Model: Meeting the health care challenges with a collaborative team</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Pratique avancÃ©e<br />&nbsp;Collaboration professionnelle<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Optimal nurse staffing to improve quality of care and patient outcomes" href="consulter.php?fiche=3035">Optimal nurse staffing to improve quality of care and patient outcomes</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br />&nbsp;Organisation des soins et services<br />&nbsp;Main-d'oeuvre<br /></td></tr></table></li>
+<li><img src="images/donneesprobantes.png" alt="Donn&eacute;es probantes" style="width:21px; height:21px; float:left;margin: 0 10px 0 0;padding: 3px 0 0 0;" /><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter Approaches to improving the contribution of the nursing and midwifery workforce to increasing universal access to primary health care for vulnerable populations: A systematic review" href="consulter.php?fiche=3036">Approaches to improving the contribution of the nursing and midwifery workforce to increasing universal access to primary health care for vulnerable populations: A systematic review</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Soins de premiÃ¨re ligne<br />&nbsp;RÃ´les infirmiers<br />&nbsp;Collaboration professionnelle<br /></td></tr></table></li>
+<li><span class="resPays">E.U.</span><h3><a class="tiptip" title="Consulter Measuring the impact of interprofessional education on collaborative practice and patient outcomes" href="consulter.php?fiche=3041">Measuring the impact of interprofessional education on collaborative practice and patient outcomes</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Formation<br />&nbsp;Collaboration professionnelle<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Oser faire autrement : pour mieux travailler ensemble dans la lutte contre les infections transmissibles sexuellement et par le sang : guide pratique Ã  l'intention des gestionnaires" href="consulter.php?fiche=3042">Oser faire autrement : pour mieux travailler ensemble dans la lutte contre les infections transmissibles sexuellement et par le sang : guide pratique Ã  l'intention des gestionnaires</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Maladies infectieuses et immunisation<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Guide de validation des listes d'attente pour un examen primaire de coloscopie longue" href="consulter.php?fiche=3043">Guide de validation des listes d'attente pour un examen primaire de coloscopie longue</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;GastroentÃ©rologie<br />&nbsp;Oncologie<br />&nbsp;Organisation des soins et services<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Rapport sur les incidents et accidents survenus lors de la prestation des soins et services de santÃ© au QuÃ©bec, 2014-2015" href="consulter.php?fiche=3044">Rapport sur les incidents et accidents survenus lors de la prestation des soins et services de santÃ© au QuÃ©bec, 2014-2015</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;QualitÃ© et sÃ©curitÃ© des soins<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter Formation interculturelle dans le rÃ©seau quÃ©bÃ©cois de la santÃ© et des services sociaux : constats et pistes d'action (La)" href="consulter.php?fiche=3045">Formation interculturelle dans le rÃ©seau quÃ©bÃ©cois de la santÃ© et des services sociaux : constats et pistes d'action (La)</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br />&nbsp;Formation continue<br />&nbsp;Formation<br /></td></tr></table></li>
+<li><span class="resPays">INT</span><h3><a class="tiptip" title="Consulter LiSSa : base de donnÃ©es de la LittÃ©rature Scientifique en SantÃ©" href="consulter.php?fiche=3046">LiSSa : base de donnÃ©es de la LittÃ©rature Scientifique en SantÃ©</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Ressources d'intÃ©rÃªt</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Recherche<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Cadre de pratique des infirmiÃ¨res et infirmiers au Canada" href="consulter.php?fiche=3047">Cadre de pratique des infirmiÃ¨res et infirmiers au Canada</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;RÃ´les infirmiers<br />&nbsp;Profession<br /></td></tr></table></li>
+<li><span class="resPays">QC</span><h3><a class="tiptip" title="Consulter SantÃ© et compÃ©tences en traitement de l'information : des liens rÃ©vÃ©lateurs" href="consulter.php?fiche=3048">SantÃ© et compÃ©tences en traitement de l'information : des liens rÃ©vÃ©lateurs</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;ActivitÃ©s cliniques<br />&nbsp;PrÃ©vention et promotion de la santÃ©<br /></td></tr></table></li>
+<li><span class="resPays">CA</span><h3><a class="tiptip" title="Consulter Mapping the journey: Success and failure with Lean" href="consulter.php?fiche=3049">Mapping the journey: Success and failure with Lean</a></h3>
+<table style="margin: 20px 0 10px 0; border-top: 1px solid #dedede; width: 100%;">
+<tr>
+<td class="resCat"><h4>Cat&eacute;gories</h4>&nbsp;Publications</td>
+<td class="tabThe"><h4>Th&eacute;matiques</h4>&nbsp;Organisation des soins et services<br /></td></tr></table></li>
+				</ul>
+				<div class="page_navigation"></div>
+			</div>
+</div>
+<div style="clear: both;"><!-- OIIQ --></div>
+	<div id="footer">
+		<ul id="menufooter">
+		 <li><a href="http://www.oiiq.org">&copy; OIIQ 2016</a></li>
+		 <li>|</li>
+		 <li><a href="plan.php">plan du site</a></li>
+		 <li>|</li>
+		 <li><a href="contenu.php?page=125">aide &agrave; la navigation</a></li>
+		 <li>|</li>
+		 <li><a href="rss.php">flux rss</a></li>
+		 <li>|</li>
+		 <li><a href="http://mistral.oiiq.org">mistral</a></li>
+		 <li>|</li>
+		 <li><a href="http://www.fondationoiiq.org">fondation oiiq</a></li>
+		 <li>|</li>
+		 <li><a href="http://emplois.oiiq.org">banque d'emploi</a></li>
+		</ul>
+	<p><a href="http://www.oiiq.org/confidentialite/index.htm" target="_blank" style="font-size: 10px;">Confidentialit&eacute;</a></p>
+	</div>
+</div>
+</body>
+</html>

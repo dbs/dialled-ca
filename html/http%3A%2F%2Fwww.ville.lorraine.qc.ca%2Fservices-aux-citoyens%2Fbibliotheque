@@ -1,0 +1,1059 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' ' http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+<title>Ville Lorraine - Bibliothèque</title>
+
+<meta name="keywords" content="Bibliotheque, catalogue, bibliovente" />
+<meta name="description" content="Lorraine est une ville jeune et moderne. Fondée en 1960, elle possède une vocation exclusivement résidentielle. Ses caractéristiques sont la tranquillité, la qualité de vie ainsi que la proximité de grands centres urbains et touristiques." />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1;" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel='image_src' href='http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/default_sharethis.jpg' />
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico?id=938003209000" /><link href="/client_file/themes/default/css/album_photos.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/blocdynamique.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/calendrier.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/catalog.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/colorbox.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/cssDinamique.php" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/modalWindows.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/module.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/organigramme.css" rel="stylesheet" type="text/css" />
+<link href="/client_file/themes/default/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript">
+/* By Pass of Console.log */
+if(typeof(console)=="undefined"){
+   function Console(){}
+   console = new Console();
+   Console.prototype.log = function(param){};
+   Console.prototype.render = function(){};
+}
+
+//<![CDATA[
+
+var Login_Timeout = "";
+function set_timer(){
+	Login_Timeout = setTimeout("deconnection_login()",900000);
+}
+function trimString (str) 
+{
+  str = this != window? this : str;
+  return str.replace(/\s+/g, '').replace(/\s+$/g, '');
+}
+
+//String.prototype.trim = trimString;
+
+// REDIRECTION VERS UN AUTRE URL
+function Redirection(theUrl){
+	window.location.href=(theUrl);
+}
+
+//OUVERTURE D'UN POPUP
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+	window.open(theURL,winName,features);
+}
+
+var win=null;
+function openfenetre(mypage,myname,w,h,scroll,pos){
+	if(pos=="random"){LeftPosition=(screen.width)?Math.floor(Math.random()*(screen.width-w)):100;TopPosition=(screen.height)?Math.floor(Math.random()*((screen.height-h)-75)):100;}
+	if(pos=="center"){LeftPosition=(screen.width)?(screen.width-w)/2:100;TopPosition=(screen.height)?(screen.height-h)/2:100;}
+	else if((pos!="center" && pos!="random") || pos==null){LeftPosition=0;TopPosition=20}
+	settings='width='+w+',height='+h+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=no';
+	win=window.open(mypage,myname,settings);
+}
+
+function datepicker(champ){
+	var newWindow;
+	var urlstring = '/admin/inc/libs/ext/datepicker/calendar.php?champ='+champ;
+	openfenetre(urlstring,'date','232','200','no','center');
+}
+
+function validate(current_form) 
+{  
+  var missing_fields = new Array()
+  var total_missing = 0;
+ 
+  
+  // Loop through all the form elements
+  for (counter = 0; counter < current_form.length; counter++) 
+  {  
+  /*
+  	if (current_form[counter].type == "radio")
+	{
+		chosen = "";
+		len = document.getElementsByName(current_form[counter].name).length;
+		
+		for (i = 0; i <len; i++) 
+		{
+			if (current_form[counter].checked) 
+			{
+				chosen = current_form[counter].value;
+				break;
+			}
+		}
+		
+		if (chosen == "") 
+		{
+	        missing_fields[total_missing] = current_form[counter]
+    	    total_missing++
+		}				
+	}
+*/
+	
+    // Is this a visible text field that's mandatory?
+    if (current_form[counter].type == "text" || current_form[counter].type == "textarea" || current_form[counter].type == "password")  
+	{
+            // Is it empty?
+      if (its_empty(current_form[counter].value)) 
+	  {       
+        // If so, add the field to the array of missing fields
+        missing_fields[total_missing] = current_form[counter]
+        total_missing++
+      }
+    }
+  }
+
+  // Were there any fields missing?
+  if (total_missing > 0) 
+  {  
+    // Start the message
+    var missing_message = "[430] " +
+               "\n______________________________\n\n"
+    
+    // Loop through the missing fields
+    for (counter = 0; counter < missing_fields.length; counter++) {
+      missing_message += missing_fields[counter].name + "\n"
+    }
+  
+    // Finish up and display the message
+    missing_message += "\n______________________________\n\n";
+    alert(missing_message)
+    
+    // For emphasis, put the focus on the first missing field
+    missing_fields[0].focus()
+	return false;
+  }
+  else 
+  {
+  
+    // Otherwise, go ahead and submit
+    return true;
+  }
+}
+
+function attribVal1ToVal2(id1,id2) 
+{
+    //alert(document.getElementById(''+id1+'').value);
+    document.getElementById(''+id2+'').value = document.getElementById(''+id1+'').value;
+}
+
+function toggleBlock(id) 
+{
+	if (document.getElementById)
+	{
+		if (document.getElementById(''+id+'').style.display == "block")	
+			document.getElementById(''+id+'').style.display = "none";
+		else
+			document.getElementById(''+id+'').style.display = "block";
+	}
+	else if (document.layers) 
+	{
+		if (document.layers[''+id+''].visibility == "show")	
+			document.layers[''+id+''].visibility = "hide";
+		else
+			document.layers[''+id+''].visibility = "show";	
+	}
+}
+
+//Get cookie routine by Shelley Powers 
+function get_cookie(Name) 
+{
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    // if cookie exists
+    if (offset != -1) { 
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1) end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function FormSendMail(form)
+{
+	var valeur = "";
+	
+	form.Submit.style.visibility = "hidden";
+
+	if (!(typeof(window.tblTexte) == "undefined"))
+		valeur += window.tblTexte.outerHTML;
+
+	if (!(typeof(window.tblForm) == "undefined"))
+		valeur += window.tblForm.outerHTML;
+		
+	form.FormValues.value  = valeur;
+	//alert(form.FormValues.value);
+	return true;
+}
+
+function FormSendMail_byGenerator(TFID)
+{
+	e = window.document.form1.elements;
+	
+	for (i=0; i < e.length ; i++) 
+	{
+		e[i].setAttribute('value',e[i].value);
+		//alert(e[i].type);
+		
+		if (e[i].type == "button" || e[i].type == "submit")
+		{
+			e[i].style.visibility = "hidden";
+		}
+		else if (e[i].type == "radio" || e[i].type == "checkbox")
+		{
+			if (e[i].checked == true)
+			{
+				e[i].setAttribute('checked',true);
+				//e[i].checked = "on";
+				//alert("tri" + e[i].value);
+			}
+			else
+			{
+				e[i].removeAttribute('checked','');
+			}			
+		}		
+		else if (e[i].type == "select-one")
+		{	
+			//alert(e[i].selectedIndex);			
+			//e[i].options[e[i].selectedIndex].selected = true;
+			
+			for (j=0;j<e[i].length;j++)
+			{
+				e[i].options[j].removeAttribute('selected','');
+			}
+			
+			e[i].options[e[i].selectedIndex].setAttribute('selected',true);
+		}
+		else if (e[i].type == "textarea")
+		{
+//			alert(e[i].type + " = " + e[i].value);
+//			e[i].setAttribute('value',e[i].value);
+			e[i].innerHTML = e[i].value;
+		}
+	}	
+
+	var valeur = "";
+	var TFORM = document.getElementById(TFID);
+	if (TFORM.Reset) TFORM.Reset.style.visibility = "hidden";
+	if (TFORM.Submit) TFORM.Submit.style.visibility = "hidden";
+
+	if (!(typeof(window.tblForm) == "undefined"))
+		valeur += window.tblForm.outerHTML;
+
+	if ((!valeur || valeur == "undefined") && document.getElementById(TFID).innerHTML)
+		valeur = document.getElementById(TFID).innerHTML;
+
+	if (valeur)
+	{
+		document.getElementById('FormValues').value  = valeur;
+		//window.document.form1.FormValues.value = valeur;
+		return true;
+	}
+	else return false;
+}
+
+function formTelephoneAutoFormatField(e, phoneFieldId, phoneValueNew){
+     var key;     
+     if(window.event) key = window.event.keyCode; //IE
+     else key = e.which; //firefox     
+
+    var keyNumbers = new Array();
+        keyNumbers[48]='0';keyNumbers[49]='1';keyNumbers[50]='2';keyNumbers[51]='3';keyNumbers[52]='4';keyNumbers[53]='5';keyNumbers[54]='6';keyNumbers[55]='7';keyNumbers[56]='8';keyNumbers[57]='9';
+        keyNumbers[96]='0';keyNumbers[97]='1';keyNumbers[98]='2';keyNumbers[99]='3';keyNumbers[100]='4';keyNumbers[101]='5';keyNumbers[102]='6';keyNumbers[103]='7';keyNumbers[104]='8';keyNumbers[105]='9';
+    phoneValue = String(phoneValueNew) + String(keyNumbers[key]);
+
+    // 0-9 keypad = 96-105 , 0-9 board = 48-57
+    if((key >= 48 && key <= 57) || (key >= 96 && key <= 105)){
+        // Check if the value IS a number. If not, warn the user to input only numbers.
+        phoneValue = phoneValue.replace(/-/g, '');
+        phoneValue = phoneValue.replace(/e/g, '');
+        phoneValue = phoneValue.replace(/x/g, '');
+        phoneValue = phoneValue.replace(/t/g, '');
+        phoneValue = phoneValue.replace(/:/g, '');
+        phoneValue = phoneValue.replace(/ /g, '');
+        var sLen = String(phoneValue).length;
+
+        if(phoneValue.substring(0, 1) == 1){
+            if (sLen == 1) newPhoneValue = phoneValue;
+            else if (sLen >= 2 && sLen <= 4) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1);
+            else if (sLen >= 5 && sLen <= 7) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4);
+            else if (sLen >= 7 && sLen <= 11) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4, 7) + '-' + phoneValue.substring(7);
+            else if (sLen >= 11) newPhoneValue = phoneValue.substring(0, 1) + '-' + phoneValue.substring(1, 4) + '-' + phoneValue.substring(4, 7) + '-' + phoneValue.substring(7, 11) + ' ext:' + phoneValue.substring(11, sLen);
+        }
+        else{
+            if (sLen <= 3) newPhoneValue = phoneValue;
+            else if (sLen >= 3 && sLen <= 6) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3);
+            else if (sLen >= 6 && sLen <= 10) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3, 6) + '-' + phoneValue.substring(6);
+            else if (sLen >= 10) newPhoneValue = phoneValue.substring(0, 3) + '-' + phoneValue.substring(3, 6) + '-' + phoneValue.substring(6, 10) + ' ext:' + phoneValue.substring(10, sLen);
+        }
+        document.getElementById(phoneFieldId).setAttribute('maxlength', 30);
+        document.getElementById(phoneFieldId).value = newPhoneValue;
+
+        return (key != key);
+    }
+   else if ((key != 8) && (key !=9))
+	 return (key != key);
+}
+
+var firstCall = true;
+var TITREONCE = 0, STYLE5ONCE = 0, SOUSTITREONCE = 0, TITRE_f_ONCE = 0;
+
+
+function SecureLevel(response) {
+	max_val = parseInt(document.getElementById('secure_level').style.width);
+	response = parseFloat(response)
+	if (response < 0.5) color = '#ff0000';
+	else if (response < 0.8) color = '#ffff00';
+	else color = '#00ff00';
+	document.getElementById('secure_level_value').style.backgroundColor = color;
+	document.getElementById('secure_level_value').style.width = Math.round(max_val * response) + 'px';
+}
+//]]>
+</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="http://www.ville.lorraine.qc.ca/client_file/themes/default/print.css" media="print" />
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-ui-1.8.9.custom.min.js"></script>
+<script type="text/javascript" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/javascript/colorbox.js"></script>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/javascript/javascript.js"></script>
+
+<body id="ContentPage" style="background-image: url('http://www.ville.lorraine.qc.ca/client_file/upload/image_page/34.jpg'); font-size: 100%;">
+
+<div id="Wrapper">
+	<div id="Header">
+		<ul id="SitewideNavigation">
+         <li id="M12"><a href='http://www.ville.lorraine.qc.ca/'>Accueil</a></li>
+                  <li id="M11"><a href='http://www.ville.lorraine.qc.ca/pour-nous-joindre'>Nous joindre</a></li>
+                  <li id="M1003"><a href='http://www.ville.lorraine.qc.ca/infolettre'>Infolettre</a></li>
+         </ul>        <div id="SiteTools">
+            <ul id="SocialLinks">
+            	<div id="system_page_FR_ps_client_media_sociaux" onmousedown="afficheadmin(event, 'page_system', ps_client_media_sociaux);go_afficheadmin=false"><ul>
+<li id="Rss"><a href="http://www.ville.lorraine.qc.ca/notif_fluxrss.xml">RSS</a></li>
+<li id="Facebook"><a href="http://www.facebook.com/VilleLorraine">Facebook</a></li>
+<li id="Twitter"><a href="http://twitter.com/#!/Ville_Lorraine">Twitter</a></li>
+</ul></div>            </ul>
+            <ul id="TextTransform">
+            	<li style="padding: 9px 0 0 16px;"><a href="#" id="SmallText">A</a></li>
+                <li style="padding: 2px 0 0 0;"><a href="#" id="BigText">A</a></li>
+            </ul> 
+            <a href="#" id="Print" onClick="window.print();"></a> 
+            <div id="Search">
+            	<script type="text/javascript">
+	function SearchSubmit() {
+		document.getElementById("SearchForm").submit();
+	}
+</script>
+
+
+<form id="SearchForm" action="http://www.ville.lorraine.qc.ca/rechercher.php" method="get"> 
+   <input id="search_txt" name="rechercher" type="text" class="hideText" value="Recherche">
+   
+   <a href="#" onclick="SearchSubmit()" id="BtnSearch">Rechercher</a>
+   <input value="2" name="rechercher_type" type="hidden">
+   <input value="all" name="rechercheparF" type="hidden">
+   <input value="null" name="change_section" type="hidden">
+</form>
+            </div>
+        </div>
+    </div>
+    <div id="MastHead">
+    	<a href="/" id="Logo">Ville de Lorraine</a>
+    </div>
+    <div id="Content">
+    <div id="logo_print"><img src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/logo_print.png" /></div>
+    	<div id="MainNavigation">
+        	<a id="BtnMobileNavigation" href="#">Navigation</a>
+    		<ul>
+            <li id="MenuItem1">
+               <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville' class=""><span>Regard sur notre ville</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                  <ul class="SecondLevelNavigation">
+                                          <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/carte-de-la-ville' ><span>Carte de la ville</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/commissions-et-comites' ><span>Commissions et comités</span></a>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/conseil-municipal' class="Sublevel "><span>Conseil municipal</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/conseil-municipal/seances-publiques' class=""><span>Séances publiques</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/conseil-municipal/maire-suppleant' class=""><span>Maire suppléant</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/conseil-municipal/membres-du-conseil' class=""><span>Membres du conseil</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/education-et-services-regionaux' class="Sublevel "><span>Éducation et services régionaux</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/education-et-services-regionaux/education' class=""><span>Éducation</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/education-et-services-regionaux/services-de-sante-et-communautaires' class=""><span>Services de santé et communautaires</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/histoire' class="Sublevel "><span>Histoire </span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/histoire/domaine-garth' class=""><span>Domaine Garth</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/histoire/toponymie' class=""><span>Toponymie</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/offres-d-emploi' ><span>Offres d'emploi</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/projets-domiciliaires' ><span>Projets domiciliaires</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/portrait-de-la-ville' ><span>Portrait de la ville</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/territoire' ><span>Territoire</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/ville-jumelle' ><span>Ville jumelle</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/mot-du-maire' ><span>Mot du maire suppléant</span></a>
+                                                      </li>
+                         
+                  </ul>
+                              </li>
+                        <li id="MenuItem2">
+               <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens' class="Active"><span>Services aux citoyens</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                  <ul class="SecondLevelNavigation">
+                                          <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/aines' ><span>Aînés</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/avis-publics' ><span>Avis publics</span></a>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque' class="Sublevel Active"><span>Bibliothèque</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/abonnement-et-catalogue-en-ligne' class="Active"><span>Abonnement et catalogue en ligne</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/activites-adultes' class="Active"><span>Activités pour adultes</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/activites-pour-enfants-et-ados' class="Active"><span>Activités pour enfants et ados</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/coordonnees-et-heures-douverture' class="Active"><span>Coordonnées et heures d'ouverture</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/services-offerts' class="Active"><span>Services offerts</span></a>
+                                       </li>
+                                    
+                                        <li>
+                                            <a id="" class="auth cboxElement Active" title="Authentification" href="/client_file/themes/default/auth_box.php"><span>Prêt pour livre numérique</span></a>
+                                        </li>    
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/budget-et-rapports-financiers' ><span>Budget et rapports financiers</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/centre-culturel-laurent-g-belley' ><span>Centre culturel Laurent G. Belley</span></a>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/communications' class="Sublevel "><span>Communications</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/communications/bulletins-municipaux' class=""><span>Bulletins municipaux</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/communications/logo-et-identite-visuelle' class=""><span>Logo et identité visuelle</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/communications/nouveaux-residents' class=""><span>Nouveaux résidents</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/communications/tournages-cinematographiques' class=""><span>Tournages cinématographiques</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/election-partielle-municipale-2016' ><span>Élection partielle municipale 2016</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/index-des-reglements' ><span>Index des règlements</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/info-travaux' ><span>Info-travaux</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/nouveaux-residents' ><span>Nouveaux résidents</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/politiques-municipales' ><span>Politiques municipales</span></a>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique' class="Sublevel "><span>Sécurité publique</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/constats-d-infraction' class=""><span>Constats d'infraction</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/controle-animalier' class=""><span>Contrôle animalier</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/corridors-scolaires-securises' class=""><span>Corridors scolaires sécurisés</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/defibrillateurs-externes-automatises' class=""><span>Défibrillateurs externes automatisés</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/programme-distinction' class=""><span>Programme Distinction</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/projet-qualite-de-vie' class=""><span>Projet qualité de vie</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/service-de-police' class=""><span>Service de police</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/service-des-incendies' class=""><span>Service de prévention des  incendies</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/surveillance-dans-les-parcs' class=""><span>Surveillance dans les parcs</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/securite-publique/systeme-d-appels-automatises' class=""><span>Système d'appels automatises</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-communautaires' class="Sublevel "><span>Services communautaires</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-communautaires/associations-et-organismes-reconnus' class=""><span>Associations et organismes reconnus</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-communautaires/covoiturage-rive-nord' class=""><span>Covoiturage Rive-Nord</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-communautaires/politique-de-reconnaissance-des-organismes' class=""><span>Politique de reconnaissance des organismes</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-juridiques-et-greffe' class="Sublevel "><span>Services juridiques et greffe</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-juridiques-et-greffe/contrats-et-appels-d-offres' class=""><span>Contrats et appels d'offres</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-juridiques-et-greffe/cour-municipale' class=""><span>Cour municipale</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-juridiques-et-greffe/demande-dacces-a-l-information' class=""><span>Demande d'accès à l'information</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-juridiques-et-greffe/demande-de-reclamation-' class=""><span>Demande de réclamation </span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-juridiques-et-greffe/mariage-civil' class=""><span>Mariage civil</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-municipaux' class="Sublevel "><span>Services municipaux</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-municipaux/communications' class=""><span>Communications</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-municipaux/developpement-durable' class=""><span>Développement durable</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-municipaux/direction-generale' class=""><span>Direction générale</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-municipaux/finances-et-tresorerie' class=""><span>Finances et trésorerie</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-municipaux/service-des-loisirs-et-de-la-culture' class=""><span>Service des loisirs et de la culture</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-municipaux/services-juridiques-et-greffe' class=""><span>Services juridiques et greffe</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-municipaux/travaux-publics-' class=""><span>Travaux publics </span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/systeme-d-appels-automatises' ><span>Système d'appels automatises</span></a>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/taxes-et-evaluation-fonciere' class="Sublevel "><span>Taxes et évaluation foncière</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/taxes-et-evaluation-fonciere/droits-de-mutation' class=""><span>Droits de mutation</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/taxes-et-evaluation-fonciere/evaluation-fonciere-' class=""><span>Évaluation foncière </span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/taxes-et-evaluation-fonciere/autolecture-des-compteurs-d-eau-' class=""><span>Lecture des compteurs d'eau </span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/taxes-et-evaluation-fonciere/taxes-et-modalites' class=""><span>Taxes foncières et modalités de paiement</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens/transport-en-commun-et-covoiturage' ><span>Transport en commun et covoiturage</span></a>
+                                                      </li>
+                         
+                  </ul>
+                              </li>
+                        <li id="MenuItem3">
+               <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture' class=""><span>Loisirs et culture</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                  <ul class="SecondLevelNavigation">
+                                          <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/activites-dans-les-parcs' ><span>Activités dans les parcs</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/activites-pour-ados' ><span>Activités pour ados</span></a>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/arts-et-culture' class="Sublevel "><span>Arts et culture</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/arts-et-culture/expositions' class=""><span>Expositions</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/arts-et-culture/les-journees-de-la-culture' class=""><span>Les journées de la culture</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/arts-et-culture/partenaires-des-arts-et-de-la-culture' class=""><span>Partenaires des arts et de la culture</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/arts-et-culture/salon-des-metiers-d-art' class=""><span>Salon des métiers d'art</span></a>
+                                       </li>
+                                                                           <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/arts-et-culture/spectacles' class=""><span>Spectacles</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/camp-de-jour' ><span>Camp de jour</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/associations-et-organismes' ><span>Associations et organismes</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/carte-citoyen' ><span>Carte Citoyen</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/fetes-et-evenements' ><span>Fêtes et événements</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/inscription-aux-activites' ><span>Inscription aux activités</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/patinage-glissade' ><span>Patinage et glissade</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/piscine-publique' ><span>Piscine et jeux d'eau</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/loisirs-et-culture/politique-de-reconnaissance-des-organismes' ><span>Politique de reconnaissance des individus et des organismes</span></a>
+                                                      </li>
+                         
+                  </ul>
+                              </li>
+                        <li id="MenuItem4">
+               <a href='http://www.ville.lorraine.qc.ca/developpement-durable' class=""><span>Développement durable</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                  <ul class="SecondLevelNavigation">
+                                          <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/collectes' ><span>Collectes des matières résiduelles</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/eau-potable-et-recuperation-de-l-eau' ><span>Eau potable et récupération de l'eau</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/ecocentre' ><span>Ecocentre</span></a>
+                                                      </li>
+                                             <li>
+                                                            <a href='http://www.ville.lorraine.qc.ca/developpement-durable/ecocitoyen' class="Sublevel "><span>Ecocitoyen</span></a>
+                                 <span class="MenuToggle">&rsaquo;</span>
+                                 <ul class="ThirdLevelNavigation">
+                                                                        <li>
+                                          <a href='http://www.ville.lorraine.qc.ca/developpement-durable/ecocitoyen/abc-du-recyclage' class=""><span>ABC du recyclage</span></a>
+                                       </li>
+                                        
+                                 </ul>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/environnement' ><span>Environnement</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/foret-du-grand-coteau' ><span>Forêt du Grand Coteau</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/herbicyclage' ><span>Herbicyclage</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/info-travaux' ><span>Info-travaux</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/inspection-et-permis' ><span>Inspection et permis</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/lorraine-en-beaute' ><span>Lorraine en beauté</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/projet-qualite-de-vie' ><span>Projet qualité de vie</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/reglements-municipaux' ><span>Règlements municipaux</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/subventions' ><span>Subventions</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/talus-antibruit' ><span>Talus antibruit</span></a>
+                                                      </li>
+                                             <li>
+                                                
+                              <a href='http://www.ville.lorraine.qc.ca/developpement-durable/vente-debarras' ><span>Vente-débarras</span></a>
+                                                      </li>
+                         
+                  </ul>
+                              </li>
+            </ul>            <div class="Clearer"></div>
+        </div>
+    	<div id="MainColumn">
+        	<div id="SectionTitle" class="Section4">
+	<h6>Bibliothèque</h6>    
+    <span id="Section">Services aux citoyens</span>
+</div>
+<div id="Breadcrumb" class="Section4">
+	<p>
+    	<a href="/">Accueil</a>
+		         /         <a href='http://www.ville.lorraine.qc.ca/services-aux-citoyens'>Services aux citoyens</a>
+               /         <span class="active">Bibliothèque</span>
+          </p>
+	<span id="SectionBreadcrumb">&nbsp;</span>
+</div>
+			<div id="MainContent">
+                        	<h1>Bibliothèque</h1>
+                <script>
+function display_icon_title(titre)
+{
+	if (titre == '')
+	{
+	 	document.getElementById('icon_title').innerHTML = '';
+	}
+	else
+	{
+	 	document.getElementById('icon_title').innerHTML = titre;
+	}
+}
+</script><p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">La bibliothèque est au coeur de la vie culturelle de Lorraine. Plus de 3600 abonnés profitent des quelque 36 000 documents disponibles et chaque semaine des nouveautés sont disponibles.</span></p>
+<p><span style="color: #000000;"><img style="margin-right: 8px;" title="regard seul.jpg" border="0" alt="regard seul.jpg" align="left" src="http://www.ville.lorraine.qc.ca//client_file/upload/image/regard seul.jpg" width="70" height="48" /></span></p>
+<p></p>
+<p></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;"><strong>Notez que si vous utilisez une tablette, vous devez choisir le navigateur approprié pour accéder à notre catalogue en ligne :</strong></span><br /><span style="font-family: arial, helvetica, sans-serif; font-size: small;">- Tablette Apple : Safari</span><br /><span style="font-family: arial, helvetica, sans-serif; font-size: small;">- Tablette Android : Firefox</span><br /><br /><span style="color: #ff0000; font-family: arial, helvetica, sans-serif; font-size: small;">Si vous éprouvez tout de même des difficultés à accéder au catalogue en ligne, assurez-vous que toutes les mises à jour de votre tablette ont été faites.</span><br /><br /><span style="font-size: small; font-family: arial, helvetica, sans-serif;"><a href="http://biblio.ville.lorraine.qc.ca/Regard/Pages/Front/Accueil/Accueil.aspx">Consultez le catalogue en ligne en cliquant ici.</a></span><br /><br /></p>
+<hr />
+<table style="width: 100%; border-collapse: collapse;">
+<tbody>
+<tr>
+<td>
+<p><span style="color: #ff0000; font-size: small; font-family: arial, helvetica, sans-serif;"><strong>DES NOUVELLES DE VOTRE BIBLIOTHÈQUE</strong></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><strong>Bibliothèque mobile : service de prêt à domicile  pour les personnes à mobilité réduite</strong></span></p>
+<p>La bibliothèque vient à vous ! Profitez de ce service pour recevoir à votre résidence les ouvrages que vous aurez sélectionnés en fonction de vos goûts. Ce service est soutenu par une équipe de bénévoles. Si vous souhaitez collaborer à cette offre de service aux aînés, contactez-nous au 450 621-8550, poste 262.</p>
+<hr />
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><strong>Emprunt de livres numériques</strong></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><strong></strong>Vous pouvez désormais emprunter des livres numériques à la bibliothèque de Lorraine via la <a href="https://www.youtube.com/watch?v=Tw-FD2st9E0">plateforme PRETNUMERIQUE.CA</a>., qui offre l'accès au contenu d'éditeur québécois et de quelques éditeurs français. <br /><span style="font-family: arial, helvetica, sans-serif; font-size: small;"></span></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><span style="font-family: arial, helvetica, sans-serif; font-size: small;">La collection de livres offerts sera continuellement en développement.</span></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">Obtenez votre identifiant et votre mot de passe en appelant au 450 621-1071 ou en écrivant à <a href="mailto:bibliotheque@ville.lorraine.qc.ca"><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">bibliotheque@ville.lorraine.qc.ca</span></a>. Notez que vous devez être membre de la bibliothèque pour accéder à ce service.</span><br /><br /><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">Des formations seront offertes dès le mois de mars pour expliquer comment télécharger le logiciel permettant d'utiliser la plateforme et comment réserver ou emprunter des ouvrages. Le nombre d'emprunts maximal est de 5 livres pour une durée de 3 semaines. </span><br /><br /><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">Vous pouvez également <a href="http://www.ville.lorraine.qc.ca/client_file/upload/document/loisirs-et-culture/Emprunt%20avec%20PRETNUMERIQUE%20-%20Janvier%202014.pdf"><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">cliquer ici </span></a>pour télécharger le guide d'emprunt de livres numériques.</span><br /><br /><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">Pour toute question ou commentaire, contactez-nous!<br /><br /><a href="http://www.ville.lorraine.qc.ca/client_file/themes/default/auth_box.php"><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><strong>Cliquez ici pour accéder au service de prêt numérique.</strong></span></a></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">Cliquez sur les liens ci-dessous pour accéder aux pages de cette section :</span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">» <a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/abonnement-et-catalogue-en-ligne"><span style="color: #000000;">Abonnement et catalogue en ligne</span></a></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">» <a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/activites-adultes"><span style="color: #000000;">Activités pour adultes</span></a></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">» <a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/activites-pour-enfants-et-ados"><span style="color: #000000;">Activités pour enfants et ados</span></a></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">» <a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/coordonnees-et-heures-douverture"><span style="color: #000000;">Coordonnées et heures d'ouverture</span></a></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">» <a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque/services-offerts"><span style="color: #000000;">Services offerts</span></a></span></p>
+<div><hr />
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;"><strong>Programme Biblio-Aidants</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;">Ce programme propose 15 cahiers thématiques qui renseignent les proches aidants sur les maladies et les sujets auxquels ils sont confrontés. Demandez conseil à une bibliothécaire !<br /><br /><a href="http://www.ville.lorraine.qc.ca/client_file/upload/document/Bibliotheque/Programme/BiblioAidants.pdf">Consultez la liste des cahiers</a></span></p>
+<span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><a href="http://www.ville.lorraine.qc.ca/save_doc.php?document=http://www.ville.lorraine.qc.ca/client_file/upload/document/reflet/Bibliotheque_aout2013.pdf"><span style="color: #000000;"></span></a></span></span><hr /><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><a href="http://www.ville.lorraine.qc.ca/save_doc.php?document=http://www.ville.lorraine.qc.ca/client_file/upload/document/reflet/Bibliotheque_aout2013.pdf"><span style="color: #000000;"><br /></span></a></span></div>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><strong>Partenaire culturel</strong></span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;">Le projet de développement de la collection de la bibliothèque est rendu possible grâce à une contribution du ministère de la Culture et des Communications. </span></p>
+<p><span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: small;"><img src="http://www.ville.lorraine.qc.ca//client_file/upload/document/communication/logo%20ministere%20Culture%20et%20Communications.gif" width="158" height="61" /></span></p>
+<div></div>
+<div></div>								<div align="left"><span style="font-size: 10pt; font-family: Trebuchet MS;"><strong> </strong></span></div>
+<p></p> 
+            </div>
+		</div>
+        <div id="SecondaryColumn">
+        	<div id="PrimaryRow">
+            	<div id="FastLinks" class="AsideBlock">
+                	<h6><span>Liens rapides </span><span id="icon_title"></span></h6>                    
+					<div id="system_page_FR_ps_client_lien_rapide" onmousedown="afficheadmin(event, 'page_system', ps_client_lien_rapide);go_afficheadmin=false"><ul>
+<li><a href="http://www.ville.lorraine.qc.ca/loisirs-et-culture/inscription-aux-activites" title="Programme des loisirs et de la culture" onmouseover="display_icon_title(this.title);" onmouseout="display_icon_title('');"><img alt="Programme des loisirs et de la culture" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/site/ico_loisirs.png" /><span>Programme des loisirs et de la culture</span></a></li>
+<li><a href="http://www.ville.lorraine.qc.ca/loisirs-et-culture/carte-citoyen" title="Carte Citoyen" onmouseover="display_icon_title(this.title);" onmouseout="display_icon_title('');"><img alt="Carte Citoyen" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/site/ico_carte_citoyen.png" /><span>Carte Citoyen</span></a></li>
+<li><a href="http://www.ville.lorraine.qc.ca/developpement-durable/collecte-des-matieres-residuelles" title="Collectes des mati&egrave;res r&eacute;siduelles" onmouseover="display_icon_title(this.title);" onmouseout="display_icon_title('');"><img alt="Collectes des mati&egrave;res r&eacute;siduelles" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/site/ico_collecte_mat.png" /></a><a href="http://www.ville.lorraine.qc.ca/client_file/upload/document/developpement-durable/Depliant/Collectes2016_Final.pdf"><span>Collectes des mati&egrave;res r&eacute;siduelles</span></a></li>
+<li><a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/taxes-et-evaluation-fonciere/taxes-et-modalites" title="Taxes municipales" onmouseover="display_icon_title(this.title);" onmouseout="display_icon_title('');"><img alt="Taxes municipales" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/site/ico_taxes.png" /><span>Taxes municipales</span></a></li>
+<li><a href="http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/offres-d-emploi" title="Offres d'emploi" onmouseover="display_icon_title(this.title);" onmouseout="display_icon_title('');"><img alt="Offres d'emploi" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/site/ico_emploi.png" /><span>Offres d'emploi</span></a></li>
+<li><a href="http://www.ville.lorraine.qc.ca/loisirs-et-culture/associations-et-organismes" title="Associations et organismes" onmouseover="display_icon_title(this.title);" onmouseout="display_icon_title('');"><img alt="Associations et organismes" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/site/ico_associations.png" /><span>Associations et organismes</span></a></li>
+<li><a href="http://www.ville.lorraine.qc.ca/index-des-reglements" title="R&egrave;glements municipaux" onmouseover="display_icon_title(this.title);" onmouseout="display_icon_title('');"><img alt="R&egrave;glements municipaux" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/site/ico_regle_munic.png" /><span>R&egrave;glements municipaux</span></a></li>
+<li><a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/services-juridiques-et-greffe/contrats-et-appels-d-offres" title="Gestion de contrats" onmouseover="display_icon_title(this.title);" onmouseout="display_icon_title('');"><img alt="Gestion de contrats" src="http://www.ville.lorraine.qc.ca/client_file/themes/default/interface/site/ico_gestion_contrat.png" /><span>Gestion de contrats</span></a></li>
+</ul></div>                </div>
+                <div id="OnlineServices" class="AsideBlock">
+                	<h6><span>Services en ligne</span></h6>
+                	   <ul>
+         <li><a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/aines">Ainés</a></li>
+            <li><a href="/developpement-durable/inspection-et-permis">Demande de permis</a></li>
+            <li><a href="/services-aux-citoyens/taxes-et-evaluation-fonciere/evaluation-fonciere-">Évaluation foncière</a></li>
+            <li><a href="/loisirs-et-culture/inscription-aux-activites">Inscriptions aux activités des loisirs et de la culture</a></li>
+            <li><a href="/services-aux-citoyens/taxes-et-evaluation-fonciere/autolecture-des-compteurs-d-eau-">Lecture des compteurs d'eau</a></li>
+            <li><a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/taxes-et-evaluation-fonciere/taxes-et-modalites">Paiement de taxes</a></li>
+         </ul>
+                   </div>
+                <div id="Calendar" class="AsideBlock">
+                	<a href="/evenements"><h6><span>Calendrier d'activités</span></h6></a>
+                	   	<ul>
+        <li>
+            <a href="http://www.ville.lorraine.qc.ca/client_file/upload/document/calendriers-des-collectes/Calendrier_final_Web.pdf" target="_blank">Calendrier annuel des collectes</a>
+        </li>
+                         <li>
+                     <a href="/evenements/id/920">
+                        <span class="Date">29</span>
+                        Concours Gagne ton chocolat                     </a>
+                 </li>
+                                  <li>
+                     <a href="/evenements/id/926">
+                        <span class="Date">07</span>
+                        Printemps des revues                     </a>
+                 </li>
+                                  <li>
+                     <a href="/evenements/id/908">
+                        <span class="Date">12</span>
+                        Heure du conte                     </a>
+                 </li>
+                                  <li>
+                     <a href="/evenements/id/918">
+                        <span class="Date">18</span>
+                        Bébé conte                     </a>
+                 </li>
+                 	</ul>
+	                </div>                     
+         	</div>
+            <div id="SecondaryRow">
+                <div id="Mayor" class="AsideBlock">
+                	<a href="/regard-sur-notre-ville/mot-du-maire"><h6><span>Mot du maire suppléant</span></h6></a>
+                	<div id="system_page_FR_ps_client_mot_maire" onmousedown="afficheadmin(event, 'page_system', ps_client_mot_maire);go_afficheadmin=false"><p><a href="http://www.ville.lorraine.qc.ca/regard-sur-notre-ville/mot-du-maire"><img src="http://www.ville.lorraine.qc.ca/client_file/upload/image/photos-conseillers/jean_comptois.jpg" /></a></p></div>                </div>
+                <div id="Collecte" class="AsideBlock">
+                	<a href="/developpement-durable/collectes"><img src="http://www.ville.lorraine.qc.ca/client_file/upload/image/bouton_collecte.png"></a>
+                </div>
+                <div id="Newsletter" class="AsideBlock">
+                	<script type="text/javascript">
+	function NewsletterSubmit() {
+		document.getElementById("NewsletterForm").submit();
+	}
+</script>
+
+<form id="NewsletterForm" action="/infolettre" method="POST">   
+   <input type="hidden" name="step" value="2" />   
+   <input type="text" name="email" class="hideText" value="Votre courriel" />
+   <a href="#" onclick="NewsletterSubmit()"><h6><span>Inscription infolettre</span></h6></a>
+</form>
+                </div>
+                <div id="Biblio" class="AsideBlock">
+                	<div id="system_page_FR_ps_client_biblio" onmousedown="afficheadmin(event, 'page_system', ps_client_biblio);go_afficheadmin=false"><a href="http://www.ville.lorraine.qc.ca/services-aux-citoyens/bibliotheque"><h6><span>Ma biblio</span></h6></a></div>                </div>
+                <div id="Brochure" class="AsideBlock">
+					<div id="system_page_FR_ps_client_brochure_reflet" onmousedown="afficheadmin(event, 'page_system', ps_client_brochure_reflet);go_afficheadmin=false"><h6><span style="font-size: small;"><em>Reflet</em>&nbsp;f&eacute;vrier 2016<br /><br /></span></h6>
+<p><a href="http://www.ville.lorraine.qc.ca/client_file/upload/document/Reflet_2016/Fevrier/RefletFinalWebComplet.pdf"><img src="http://www.ville.lorraine.qc.ca/client_file/upload/document/Reflet_2016/Fevrier/PageCouverture.jpg" width="142" height="184" /></a></p>
+<p></p></div>                </div>             
+            </div>
+        </div>
+        <div id="Footer">
+            <p id="Copyright">
+                <a href="/avis-legal">Avis Légal</a>&nbsp;|&nbsp;
+                Copyright &copy; 2016. Tous droits réservés&nbsp;|&nbsp;
+                Conception : <a href="http://www.viglob.com">Viglob</a>.
+            </p>
+        </div>
+    </div>
+	
+</div>
+
+</body><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8359743-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" src="/js/ajax_fd.js"></script>
+<script type="text/javascript" src="http://www.ville.lorraine.qc.ca/js/modal_fd.js"></script>
+<script type="text/javascript" src="http://www.ville.lorraine.qc.ca/js/dimension_fd.js"></script>
+<script type="text/javascript" src="http://www.ville.lorraine.qc.ca/js/toggle_fd.js"></script>
+<script type="text/javascript">
+    var ajax = new ajaxObject();
+</script>
+<script type="text/javascript">
+//<![CDATA[
+
+function replace2(fullString,text,by) {
+// Replaces text with by in string
+    var strLength = fullString.length, txtLength = text.length;
+    if ((strLength == 0) || (txtLength == 0)) return fullString;
+
+    var i = fullString.indexOf(text);
+    if ((!i) && (text != fullString.substring(0,txtLength))) return fullString;
+    if (i == -1) return fullString;
+
+    var newstr = fullString.substring(0,i) + by;
+
+    if (i+txtLength < strLength)
+        newstr += replace2(fullString.substring(i+txtLength,strLength),text,by);
+
+    return newstr;
+}
+//]]>
+
+//script pour l'edition rapide (nouvelle version)
+
+var go_afficheadmin = true;
+
+$(document).keydown(function(e){
+	//CTRL + Q keydown combo
+	if(e.ctrlKey && e.keyCode == 81)
+	{
+		page = "34";
+		if (page == "")
+		{
+			alert("Vous ne pouvez pas utiliser l'édition rapide dans cette page");
+		}
+		else
+		{
+			//alert('test de saisie');
+	
+			site_url = "http://www.ville.lorraine.qc.ca/";
+			
+			window.open(site_url + "admin/views/plan_site/edition_rapide.php?type_action=afficher&action=modifier&langue=FR&id=34","ed_r","width=620, height=350, scrollbars=no,status=no,menubar=no,toolbar=no,resizable=1,location=no,directories=no, top=30px,left=100px");
+		}
+	}
+});
+
+</script>
+
+
+
+</html>

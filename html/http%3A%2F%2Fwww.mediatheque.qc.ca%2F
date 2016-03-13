@@ -1,0 +1,958 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script type="text/javascript" src="/wslib/js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="/template/base/1/item_list_tpl_rows.css" media="screen" /><script type="text/javascript" src="/js/lang.js"></script>
+
+<script type="text/javascript">
+	var ws_lang = "fr";
+//	var lang = "fr"; // this is overriding the lang() function
+	var ws_live = true;
+	var store_url = "http://www.mediatheque.qc.ca/";
+	var store_email = "communications//mediatheque.qc.ca";
+	var logon_domain = "";
+	var screen_size = "";
+	var mobile = false;
+	
+	
+	var item_order = "";
+	var item_order_desc = "";
+	
+	$(function() {
+		try{
+			
+			////////////////////
+			// screen size
+			////////////////////
+			function check_screen_size() {
+				if( $("#check_screen_size").css("z-index") == 3 ) {
+					
+						window.location.href = store_url+"?mobile=1";
+						
+				} else if( $("#check_screen_size").css("z-index") == 2 ) {
+					$("body").removeClass("small_screen");
+					$("body").addClass("medium_screen");
+					screen_size = "medium";
+					if( mobile ) {
+						$.get(store_url,{ ax:true, action: "unset_mobile" });
+					}
+					mobile = false;
+				} else {
+					$("body").removeClass("small_screen");
+					$("body").removeClass("medium_screen");
+					screen_size = "big";
+					if( mobile ) {
+						$.get(store_url,{ ax:true, action: "unset_mobile" });
+					}
+					mobile = false;
+				}
+			}
+			$("body").append('<div id="check_screen_size"></div>');
+			$(window).load(check_screen_size).resize(check_screen_size);
+			check_screen_size();
+	
+			////////////////////
+			// auto fill form fields
+			////////////////////
+			if( window.posted ) {
+				if( ! $.isEmptyObject(posted) ) {
+					//console.log( posted );
+					for(var e in posted) {
+						// only for input text and textarea
+						var $iel = $(":input[name="+e+"]");
+						if( $iel.length && $iel.attr("type") != "hidden" ) {
+							$iel.val( posted[e] );
+						}
+					}
+				}
+			}
+	
+			////////////////////
+			// contact form
+			////////////////////
+			// find form
+			var $contact_form;
+			$("form").each(function() {
+				var url = $(this).attr("action");
+				if( url && url.indexOf("form2mail.php") > -1 ) {
+					$contact_form = $(this);
+				}
+			});
+			//console.log( $contact_form );
+			// process
+			if( $contact_form.length ) {
+				// add user creds
+				var url = $contact_form.attr("action");
+				$contact_form.attr("action",url+"?user=1496");
+				// manage requirements
+				$contact_form.submit(function() {
+					var missing = false;
+					var $req = $(this).find("[name=required]");
+					if( ! $req.val() ) { return true }
+					var r=$req.val().split(",");
+					if( ! r || ! r.length ) { return true }
+					for( var e in r ) {
+						var f = r[e];
+						var $f = $(this).find("[name="+f+"]");
+						if($f.length && ! $f.val()) {;
+							missing = true;
+							$f.css({border: "2px solid #FFA100"});
+						}
+					}
+					if(missing) {
+						alert("Veuillez remplir les champs manquants");
+						return false;
+					} else { return true }
+				})
+			}
+		} catch(e){ /*alert(e);*/ }
+	});
+</script>
+
+
+<style type="text/css">
+#check_screen_size {
+	position: relative;
+	z-index: 1;
+}
+
+@media (max-device-width: 960px) {
+	#check_screen_size {
+		z-index: 2;
+	}	
+}
+@media (max-width: 960px) {
+	#check_screen_size {
+		z-index: 2;
+	}
+}
+
+@media (max-device-width: 650px) {
+	#check_screen_size {
+		z-index: 3;
+	}	
+}
+@media (max-width: 650px) {
+	#check_screen_size {
+		z-index: 3;
+	}
+}
+</style>
+
+
+	<meta name="bouticc-template-process" content="1" data-version="1" data-datetime="2015-10-21 11:30:34"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>M&eacute;diath&egrave;que maskoutaine</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="description" content="La M&eacute;diath&egrave;que maskoutaine est un OSBL qui offre un service de lecture publique sur le territoire de la Ville de Saint-Hyacinthe en fournissant des activit&eacute;s et des ressources documentaires disponibles sous diff&eacute;rents formats. Elle poss&egrave;de deux biblioth&egrave;ques, soit la biblioth&egrave;que T.-A.-St-Germain et la biblioth&egrave;que Sainte-Rosalie. Les orientations de la M&eacute;diath&egrave;que maskoutaine sont d&eacute;cid&eacute;es par un conseil d'administration.">
+	<meta name="keywords" content="M&eacute;diath&egrave;que, maskoutaine, m&eacute;diath&egrave;que, maskoutaine,, biblioth&egrave;que,, Sainte-Rosalie,, Ste-Rosalie,, T.-A.-St-Germain,, St-Germain,, Saint-Germain,, St-Hyacinthe,, Saint-Hyacinthe,, livre,, livres,, 2720, Dessaulles, Saint-Hyacinthe, Qu&eacute;bec, 773-1830">
+	<link rel="shortcut icon" href="/user/1496/template/files/favicon.png" />
+	
+	<!-- use basic stylesheet -->
+	<link rel="stylesheet" type="text/css" href="http://bouti.cc/template/base/1/base.css" media="screen" />
+	<script type="text/javascript" src="http://bouti.cc/js/page_menu_dropdown.js"></script>	
+	
+	<!-- override styles with your own -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/user/1496/template/files/style.css" media="screen" />
+	
+	<script type="text/javascript">
+	var $item_menu_pop;
+	var item_menu_tm;
+	$(function(){
+		// setup menu html
+		var $m = $('.layout_item_popmenu .item_menu');
+		$item_menu_pop = $m;
+		$m.find('#item_menu_group_0').children('.categ').each(function() {
+			var $group = $('<div class="main_group"></div>');
+			$group.append($(this).clone());
+			$group.append($(this).next().clone());
+			$group.appendTo($m);
+		});
+		$m.find('#item_menu_group_0').remove();
+		//$m.find('.group_level_2,.categ_level_2').remove();
+		// setup menu hover
+		$('.layout_menu .page_menu .page_menu_item.type_categ_default').hover(item_menu_show,item_menu_close);
+		$item_menu_pop.hover(item_menu_show,item_menu_close);
+		
+	});
+	function item_menu_show() {
+		//console.log( 'show' );
+		clearTimeout( item_menu_tm );
+		$item_menu_pop.show();
+	}
+	function item_menu_close() {
+		//console.log( 'close delay' );
+		clearTimeout( item_menu_tm );
+		item_menu_tm = setTimeout( function() {
+			console.log( 'close' );
+			$item_menu_pop.hide();
+		},700 );
+	}
+	</script>
+	<script>
+	 $(function(){
+		// set promo tag
+		$('.item_list .item_price_base').each(function() {
+		var $el = $(this).closest('.item');
+		var url = $el.find('.item_link:first').attr('href');
+		$el.prepend( '<div class="promo"><a href="'+url+'"><img src="/user/1496/template/files/promo.png" /></a></div>' );
+		});
+	 	});
+	</script>
+	
+	<script type="text/javascript">
+		 var font_size = 1;
+		 function font_toggle() {
+		  // reset
+		  $('.font_zoom *').css('font-size','');
+		  $('.font_zoom p, .font_zoom div, .font_zoom td').css('font-size','inherit');
+		  $('.font_zoom').removeClass('font_size'+font_size);
+		  
+		  font_size++;
+		  if( font_size > 3 ) {
+		   font_size = 1;
+		  }
+		  
+		  $('.font_zoom').addClass('font_size'+font_size);
+		 }
+	 
+	 </script>
+<link rel="stylesheet" type="text/css" href="/apps/banner/cycle2/style.css" media="screen" /><script type="text/javascript" src="/apps/banner/cycle2/jquery.cycle2.js"></script>
+<link rel="stylesheet" type="text/css" href="/apps/calendar/display.css" media="screen" />
+<style>
+body { background-color: #FFFFFF;
+}
+
+</style>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-45333612-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<link rel="stylesheet" type="text/css" href="/apps/news/display.css" media="screen" />
+</head>
+
+<body><a name="top"></a>
+	
+	<div class="layout">
+	
+				<div class="layout_width">
+			<div class="layout_header">
+			
+				<table>
+					<tr>
+						<td class="left_col">
+							<a href="http://www.mediatheque.qc.ca/"><img src="/user/1496/template/files/logo.jpg" width="412" height="121" alt=""/></a>
+						</td>
+						<td class="right_col">
+							<table>
+								<tr>
+									<td class="menu_header" colspan="2">
+										<a href="http://www.mediatheque.qc.ca/">Accueil</a><a href="http://www.mediatheque.qc.ca/content/4903/Nous_joindre/">Nous joindre</a><a href="http://www.mediatheque.qc.ca/content/7411">Aide</a><a href="#fontsize" onclick="font_toggle()"><img src="/user/1496/template/files/icon_A_.png" width="45" height="20" alt=""/></a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<!--<a href="panier" target="_blank"><div class="cart"></div></a>-->
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="search_field">
+											 <form method="post" action="http://mediatheque.crsbp.qc.ca/uhtbin/cgisirsi/x/0/0/57/5" target="_blank">
+												<input type="text" class="search" name="searchdata1" value="" placeholder="Recherche dans le catalogue">
+												<input type="hidden" name="srchfield1" value="GENERAL^SUBJECT^RVM^^Tous les champs">
+												<input type="hidden" name="sort_by" value="-PBYR">
+												<input type="hidden" name="user_id" value="WEBSERVER">
+												<input type="hidden" name="password" value="">
+												<input type="image" class="submit" src="/user/1496/template/files/loupe.png" width="45" height="43" alt=""/>
+											 </form>
+											<!--<form name="searchform" method="post" action="http://mediatheque.crsbp.qc.ca/uhtbin/cgisirsi/?ps=gRiOUsdfk7/TASG/41340005/123" id="searchform" target="_blank">
+											<input type="text" class="search" placeholder="Recherche dans le catalogue" name="the_search"/>
+											<input type="image" class="submit" src="/user/1496/template/files/loupe.png" width="45" height="43" alt=""/>
+											</form>-->
+										</div>
+									</td>
+									<td>
+										<div class="btn_account">
+											<a href="http://mediatheque.crsbp.qc.ca/uhtbin/cgisirsi/?ps=wR7S7thGG4/TASG/0/57/49" target="_blank"><img src="/user/1496/template/files/btn_mon_dossier.png" width="139" height="43" alt=""/></a>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="layout_width">
+			<div class="layout_menu">
+				<div class="bg_menu">
+					<div class="layout_width_menu"><div class="page_menu"><ul id="page_menu_list" class="page_menu_list level_0 parent_0">
+	<li class="page_menu_item _3733 type_page  odd" data-id="3733" wsid="3733" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3733/Informations/" class="page_menu_item_link">Informations</a>
+	<ul class="page_menu_sub submenu level_1 parent_3733" style="display:none;">
+		<li class="page_menu_item _3734 type_page  odd" data-id="3734" wsid="3734" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3734/Coordonnees_et_heures_d_ouverture/" class="page_menu_item_link">Coordonnées et heures d'ouverture</a>	</li>
+		<li class="page_menu_item _7681 type_page  even" data-id="7681" wsid="7681" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7681/Direction_et_services_administratifs/" class="page_menu_item_link">Direction et services administratifs</a>	</li>
+		<li class="page_menu_item _4874 type_page  odd" data-id="4874" wsid="4874" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/4874/Bref_historique/" class="page_menu_item_link">Bref historique</a>	</li>
+		<li class="page_menu_item _3736 type_page  even" data-id="3736" wsid="3736" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3736/Abonnement_pret_et_frais_de_retard/" class="page_menu_item_link">Abonnement, prêt et frais de retard</a>
+		<ul class="page_menu_sub submenu level_2 parent_3736" style="display:none;">
+			<li class="page_menu_item _7771 type_page  odd" data-id="7771" wsid="7771" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7771/Abonnement/" class="page_menu_item_link">Abonnement</a>		</li>
+			<li class="page_menu_item _7772 type_page  even" data-id="7772" wsid="7772" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7772/Pret/" class="page_menu_item_link">Prêt</a>		</li>
+			<li class="page_menu_item _7773 type_page  odd" data-id="7773" wsid="7773" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7773/Retards_et_autres_frais/" class="page_menu_item_link">Retards et autres frais</a>		</li>
+		</ul>
+	</li>
+	</ul>
+</li>
+	<li class="page_menu_item _3732 type_url  even" data-id="3732" wsid="3732" data-type-value=""><a href="http://mediatheque.crsbp.qc.ca/uhtbin/cgisirsi/x/x/0/49/" class="page_menu_item_link" target="_blank">Catalogue</a></li>
+	<li class="page_menu_item _3747 type_page  odd" data-id="3747" wsid="3747" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3747/Activites/" class="page_menu_item_link">Activités</a>
+	<ul class="page_menu_sub submenu level_1 parent_3747" style="display:none;">
+		<li class="page_menu_item _3749 type_url  odd" data-id="3749" wsid="3749" data-type-value=""><a href="http://www.leclairon.qc.ca/cahiers_speciaux/2016-01-mediatheque/index.html" class="page_menu_item_link" target="_blank">Programmation en cours</a>	</li>
+		<li class="page_menu_item _3751 type_page  even" data-id="3751" wsid="3751" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3751/Expositions/" class="page_menu_item_link">Expositions</a>	</li>
+		<li class="page_menu_item _3752 type_page  odd" data-id="3752" wsid="3752" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3752/Programme_d_activites_educatives/" class="page_menu_item_link">Programme d'activités éducatives</a>	</li>
+		<li class="page_menu_item _8653 type_page  even" data-id="8653" wsid="8653" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/8653/Colloque_2016/" class="page_menu_item_link">Colloque 2016</a>	</li>
+		<li class="page_menu_item selected _3750 type_url  odd" data-selected="true" wsselected="true" data-id="3750" wsid="3750" data-type-value=""><a href="http://festivalmemoria.net/" class="page_menu_item_link" target="_blank">Memoria : Festival des oeuvres historiques</a>	</li>
+	</ul>
+</li>
+	<li class="page_menu_item _7121 type_page  even" data-id="7121" wsid="7121" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7121/Collections/" class="page_menu_item_link">Collections</a></li>
+	<li class="page_menu_item _3753 type_page  odd" data-id="3753" wsid="3753" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3753/Services/" class="page_menu_item_link">Services</a>
+	<ul class="page_menu_sub submenu level_1 parent_3753" style="display:none;">
+		<li class="page_menu_item _3754 type_page  odd" data-id="3754" wsid="3754" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3754/Services_sur_place/" class="page_menu_item_link">Services sur place</a>
+		<ul class="page_menu_sub submenu level_2 parent_3754" style="display:none;">
+			<li class="page_menu_item _7948 type_page  odd" data-id="7948" wsid="7948" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7948/Aide_au_lecteur/" class="page_menu_item_link">Aide au lecteur</a>		</li>
+			<li class="page_menu_item _7949 type_page  even" data-id="7949" wsid="7949" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7949/Acces_Internet/" class="page_menu_item_link">Accès Internet </a>		</li>
+			<li class="page_menu_item _4890 type_page  odd" data-id="4890" wsid="4890" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/4890/Mise_de_cote/" class="page_menu_item_link">Mise de côté</a>		</li>
+			<li class="page_menu_item _7950 type_page  even" data-id="7950" wsid="7950" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7950/Services_automatises/" class="page_menu_item_link">Services automatisés</a>		</li>
+			<li class="page_menu_item _7951 type_page  odd" data-id="7951" wsid="7951" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7951/Location_de_salle/" class="page_menu_item_link">Location de salle</a>		</li>
+			<li class="page_menu_item _7952 type_page  even" data-id="7952" wsid="7952" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7952/Transfert_intersuccursale/" class="page_menu_item_link">Transfert intersuccursale</a>		</li>
+			<li class="page_menu_item _7953 type_page  odd" data-id="7953" wsid="7953" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7953/Photocopieur_et_telecopieur/" class="page_menu_item_link">Photocopieur et télécopieur</a>		</li>
+		</ul>
+	</li>
+		<li class="page_menu_item _3755 type_page  even" data-id="3755" wsid="3755" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3755/Services_en_ligne/" class="page_menu_item_link">Services en ligne</a>
+		<ul class="page_menu_sub submenu level_2 parent_3755" style="display:none;">
+			<li class="page_menu_item _4897 type_page  odd" data-id="4897" wsid="4897" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/4897/Consultation_du_catalogue/" class="page_menu_item_link">Consultation du catalogue</a>		</li>
+			<li class="page_menu_item _4898 type_page  even" data-id="4898" wsid="4898" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/4898/Dossier_en_ligne/" class="page_menu_item_link">Dossier en ligne</a>		</li>
+			<li class="page_menu_item _4899 type_page  odd" data-id="4899" wsid="4899" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/4899/Reservation_de_documents/" class="page_menu_item_link">Réservation de documents</a>		</li>
+			<li class="page_menu_item _7973 type_page  even" data-id="7973" wsid="7973" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/7973/Suggestion_d_achat/" class="page_menu_item_link">Suggestion d'achat</a>		</li>
+			<li class="page_menu_item _8836 type_page  odd" data-id="8836" wsid="8836" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/8836/Formations_informatiques/" class="page_menu_item_link">Formations informatiques</a>
+			<ul class="page_menu_sub submenu level_3 parent_8836" style="display:none;">
+				<li class="page_menu_item _8837 type_page  odd" data-id="8837" wsid="8837" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/8837/Formations_proposees/" class="page_menu_item_link">Formations proposées</a>			</li>
+				<li class="page_menu_item _8838 type_page  even" data-id="8838" wsid="8838" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/8838/Formations_a_telecharger/" class="page_menu_item_link">Formations à télécharger</a>			</li>
+			</ul>
+		</li>
+		</ul>
+	</li>
+	</ul>
+</li>
+	<li class="page_menu_item _3739 type_url  even" data-id="3739" wsid="3739" data-type-value=""><a href="http://www.lecourrierzoneweb.com/user/1496/files/politique_2015.pdf" class="page_menu_item_link" target="_blank">Abonnement et règlements</a></li>
+	<li class="page_menu_item _3756 type_page  odd" data-id="3756" wsid="3756" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3756/Ressources_en_ligne/" class="page_menu_item_link">Ressources en ligne</a>
+	<ul class="page_menu_sub submenu level_1 parent_3756" style="display:none;">
+		<li class="page_menu_item _3758 type_page  odd" data-id="3758" wsid="3758" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3758/Apprentissage/" class="page_menu_item_link">Apprentissage</a>	</li>
+		<li class="page_menu_item _3759 type_page  even" data-id="3759" wsid="3759" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3759/Dictionnaires_et_encyclopedies/" class="page_menu_item_link">Dictionnaires et encyclopédies</a>	</li>
+		<li class="page_menu_item _3760 type_page  odd" data-id="3760" wsid="3760" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3760/Revues_et_journaux/" class="page_menu_item_link">Revues et journaux</a>	</li>
+	</ul>
+</li>
+	<li class="page_menu_item _3761 type_page  even" data-id="3761" wsid="3761" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/3761/Livres_numeriques/" class="page_menu_item_link">Livres numériques</a></li>
+	<li class="page_menu_item _8444 type_page  odd" data-id="8444" wsid="8444" data-type-value=""><a href="http://www.mediatheque.qc.ca/content/8444/Liens_utiles/" class="page_menu_item_link">Liens utiles</a></li>
+</ul>
+<script type="text/javascript">var page_menu_items = {"_3733":{"id":"3733","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Informations","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"3","url":"http:\/\/www.mediatheque.qc.ca\/content\/3733\/Informations\/","_odd":"odd","_oddeven":"odd","_num":"0","_level":"0","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3733\/Informations\/","_selected":""},"_3732":{"id":"3732","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Catalogue","type":"url","type_value":"http:\/\/mediatheque.crsbp.qc.ca\/uhtbin\/cgisirsi\/x\/x\/0\/49\/","online":"1","new_window":"1","bg_image":"","bg_color":"","order":"4","url":"http:\/\/mediatheque.crsbp.qc.ca\/uhtbin\/cgisirsi\/x\/x\/0\/49\/","_even":"even","_oddeven":"even","_num":"1","_level":"0","_link":"http:\/\/mediatheque.crsbp.qc.ca\/uhtbin\/cgisirsi\/x\/x\/0\/49\/","_selected":""},"_3747":{"id":"3747","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Activit\u00e9s","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"5","url":"http:\/\/www.mediatheque.qc.ca\/content\/3747\/Activites\/","_odd":"odd","_oddeven":"odd","_num":"2","_level":"0","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3747\/Activites\/","_selected":""},"_7121":{"id":"7121","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Collections","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"6","url":"http:\/\/www.mediatheque.qc.ca\/content\/7121\/Collections\/","_even":"even","_oddeven":"even","_num":"3","_level":"0","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7121\/Collections\/","_selected":""},"_3753":{"id":"3753","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Services","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"7","url":"http:\/\/www.mediatheque.qc.ca\/content\/3753\/Services\/","_odd":"odd","_oddeven":"odd","_num":"4","_level":"0","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3753\/Services\/","_selected":""},"_3739":{"id":"3739","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Abonnement et r\u00e8glements","type":"url","type_value":"http:\/\/www.lecourrierzoneweb.com\/user\/1496\/files\/politique_2015.pdf","online":"1","new_window":"1","bg_image":"","bg_color":"","order":"8","url":"http:\/\/www.lecourrierzoneweb.com\/user\/1496\/files\/politique_2015.pdf","_even":"even","_oddeven":"even","_num":"5","_level":"0","_link":"http:\/\/www.lecourrierzoneweb.com\/user\/1496\/files\/politique_2015.pdf","_selected":""},"_3756":{"id":"3756","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Ressources en ligne","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"9","url":"http:\/\/www.mediatheque.qc.ca\/content\/3756\/Ressources_en_ligne\/","_odd":"odd","_oddeven":"odd","_num":"6","_level":"0","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3756\/Ressources_en_ligne\/","_selected":""},"_3761":{"id":"3761","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Livres num\u00e9riques","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"10","url":"http:\/\/www.mediatheque.qc.ca\/content\/3761\/Livres_numeriques\/","_even":"even","_oddeven":"even","_num":"7","_level":"0","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3761\/Livres_numeriques\/","_selected":""},"_8444":{"id":"8444","id_user":"1496","menu":"page_menu","lang":"fr","parent":"0","tag":"","title":"Liens utiles","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"19","url":"http:\/\/www.mediatheque.qc.ca\/content\/8444\/Liens_utiles\/","_odd":"odd","_oddeven":"odd","_num":"8","_level":"0","_link":"http:\/\/www.mediatheque.qc.ca\/content\/8444\/Liens_utiles\/","_selected":""},"_3734":{"id":"3734","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3733","tag":"","title":"Coordonn\u00e9es et heures d'ouverture","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"1","url":"http:\/\/www.mediatheque.qc.ca\/content\/3734\/Coordonnees_et_heures_d_ouverture\/","_odd":"odd","_oddeven":"odd","_num":"0","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3734\/Coordonnees_et_heures_d_ouverture\/","_selected":""},"_7681":{"id":"7681","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3733","tag":"","title":"Direction et services administratifs","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2","url":"http:\/\/www.mediatheque.qc.ca\/content\/7681\/Direction_et_services_administratifs\/","_even":"even","_oddeven":"even","_num":"1","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7681\/Direction_et_services_administratifs\/","_selected":""},"_4874":{"id":"4874","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3733","tag":"","title":"Bref historique","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"3","url":"http:\/\/www.mediatheque.qc.ca\/content\/4874\/Bref_historique\/","_odd":"odd","_oddeven":"odd","_num":"2","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/4874\/Bref_historique\/","_selected":""},"_3736":{"id":"3736","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3733","tag":"","title":"Abonnement, pr\u00eat et frais de retard","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"4","url":"http:\/\/www.mediatheque.qc.ca\/content\/3736\/Abonnement_pret_et_frais_de_retard\/","_even":"even","_oddeven":"even","_num":"3","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3736\/Abonnement_pret_et_frais_de_retard\/","_selected":""},"_7771":{"id":"7771","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3736","tag":"","title":"Abonnement","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"5","url":"http:\/\/www.mediatheque.qc.ca\/content\/7771\/Abonnement\/","_odd":"odd","_oddeven":"odd","_num":"0","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7771\/Abonnement\/","_selected":""},"_7772":{"id":"7772","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3736","tag":"","title":"Pr\u00eat","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"6","url":"http:\/\/www.mediatheque.qc.ca\/content\/7772\/Pret\/","_even":"even","_oddeven":"even","_num":"1","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7772\/Pret\/","_selected":""},"_7773":{"id":"7773","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3736","tag":"","title":"Retards et autres frais","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"7","url":"http:\/\/www.mediatheque.qc.ca\/content\/7773\/Retards_et_autres_frais\/","_odd":"odd","_oddeven":"odd","_num":"2","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7773\/Retards_et_autres_frais\/","_selected":""},"_4881":{"id":"4881","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3742","tag":"","title":"Vous \u00eates Maskoutain","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"1"},"_4882":{"id":"4882","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3742","tag":"","title":"Vous n'\u00eates pas Maskoutain","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2"},"_4883":{"id":"4883","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3744","tag":"","title":"Amendes","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"1"},"_4884":{"id":"4884","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3744","tag":"","title":"Autres frais","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2"},"_4885":{"id":"4885","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3744","tag":"","title":"Comportements dans les biblioth\u00e8ques","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"3"},"_4886":{"id":"4886","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3744","tag":"","title":"Vol","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"4"},"_3749":{"id":"3749","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3747","tag":"","title":"Programmation en cours","type":"url","type_value":"http:\/\/www.leclairon.qc.ca\/cahiers_speciaux\/2016-01-mediatheque\/index.html","online":"1","new_window":"1","bg_image":"","bg_color":"","order":"2","url":"http:\/\/www.leclairon.qc.ca\/cahiers_speciaux\/2016-01-mediatheque\/index.html","_odd":"odd","_oddeven":"odd","_num":"0","_level":"1","_link":"http:\/\/www.leclairon.qc.ca\/cahiers_speciaux\/2016-01-mediatheque\/index.html","_selected":""},"_3751":{"id":"3751","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3747","tag":"","title":"Expositions","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"3","url":"http:\/\/www.mediatheque.qc.ca\/content\/3751\/Expositions\/","_even":"even","_oddeven":"even","_num":"1","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3751\/Expositions\/","_selected":""},"_3752":{"id":"3752","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3747","tag":"","title":"Programme d'activit\u00e9s \u00e9ducatives","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"4","url":"http:\/\/www.mediatheque.qc.ca\/content\/3752\/Programme_d_activites_educatives\/","_odd":"odd","_oddeven":"odd","_num":"2","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3752\/Programme_d_activites_educatives\/","_selected":""},"_8653":{"id":"8653","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3747","tag":"","title":"Colloque 2016","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"5","url":"http:\/\/www.mediatheque.qc.ca\/content\/8653\/Colloque_2016\/","_even":"even","_oddeven":"even","_num":"3","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/8653\/Colloque_2016\/","_selected":""},"_3750":{"id":"3750","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3747","tag":"","title":"Memoria : Festival des oeuvres historiques","type":"url","type_value":"http:\/\/festivalmemoria.net\/","online":"1","new_window":"1","bg_image":"","bg_color":"","order":"6","url":"http:\/\/festivalmemoria.net\/","_odd":"odd","_oddeven":"odd","_num":"4","_level":"1","_link":"http:\/\/festivalmemoria.net\/","_selected":"selected"},"_3754":{"id":"3754","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3753","tag":"","title":"Services sur place","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"1","url":"http:\/\/www.mediatheque.qc.ca\/content\/3754\/Services_sur_place\/","_odd":"odd","_oddeven":"odd","_num":"0","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3754\/Services_sur_place\/","_selected":""},"_3755":{"id":"3755","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3753","tag":"","title":"Services en ligne","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2","url":"http:\/\/www.mediatheque.qc.ca\/content\/3755\/Services_en_ligne\/","_even":"even","_oddeven":"even","_num":"1","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3755\/Services_en_ligne\/","_selected":""},"_7948":{"id":"7948","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3754","tag":"","title":"Aide au lecteur","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"10","url":"http:\/\/www.mediatheque.qc.ca\/content\/7948\/Aide_au_lecteur\/","_odd":"odd","_oddeven":"odd","_num":"0","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7948\/Aide_au_lecteur\/","_selected":""},"_7949":{"id":"7949","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3754","tag":"","title":"Acc\u00e8s Internet ","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"11","url":"http:\/\/www.mediatheque.qc.ca\/content\/7949\/Acces_Internet\/","_even":"even","_oddeven":"even","_num":"1","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7949\/Acces_Internet\/","_selected":""},"_4890":{"id":"4890","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3754","tag":"","title":"Mise de c\u00f4t\u00e9","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"12","url":"http:\/\/www.mediatheque.qc.ca\/content\/4890\/Mise_de_cote\/","_odd":"odd","_oddeven":"odd","_num":"2","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/4890\/Mise_de_cote\/","_selected":""},"_7950":{"id":"7950","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3754","tag":"","title":"Services automatis\u00e9s","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"13","url":"http:\/\/www.mediatheque.qc.ca\/content\/7950\/Services_automatises\/","_even":"even","_oddeven":"even","_num":"3","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7950\/Services_automatises\/","_selected":""},"_7951":{"id":"7951","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3754","tag":"","title":"Location de salle","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"14","url":"http:\/\/www.mediatheque.qc.ca\/content\/7951\/Location_de_salle\/","_odd":"odd","_oddeven":"odd","_num":"4","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7951\/Location_de_salle\/","_selected":""},"_7952":{"id":"7952","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3754","tag":"","title":"Transfert intersuccursale","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"15","url":"http:\/\/www.mediatheque.qc.ca\/content\/7952\/Transfert_intersuccursale\/","_even":"even","_oddeven":"even","_num":"5","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7952\/Transfert_intersuccursale\/","_selected":""},"_7953":{"id":"7953","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3754","tag":"","title":"Photocopieur et t\u00e9l\u00e9copieur","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"16","url":"http:\/\/www.mediatheque.qc.ca\/content\/7953\/Photocopieur_et_telecopieur\/","_odd":"odd","_oddeven":"odd","_num":"6","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7953\/Photocopieur_et_telecopieur\/","_selected":""},"_4897":{"id":"4897","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3755","tag":"","title":"Consultation du catalogue","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"1","url":"http:\/\/www.mediatheque.qc.ca\/content\/4897\/Consultation_du_catalogue\/","_odd":"odd","_oddeven":"odd","_num":"0","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/4897\/Consultation_du_catalogue\/","_selected":""},"_4898":{"id":"4898","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3755","tag":"","title":"Dossier en ligne","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2","url":"http:\/\/www.mediatheque.qc.ca\/content\/4898\/Dossier_en_ligne\/","_even":"even","_oddeven":"even","_num":"1","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/4898\/Dossier_en_ligne\/","_selected":""},"_4899":{"id":"4899","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3755","tag":"","title":"R\u00e9servation de documents","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"3","url":"http:\/\/www.mediatheque.qc.ca\/content\/4899\/Reservation_de_documents\/","_odd":"odd","_oddeven":"odd","_num":"2","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/4899\/Reservation_de_documents\/","_selected":""},"_7973":{"id":"7973","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3755","tag":"","title":"Suggestion d'achat","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"4","url":"http:\/\/www.mediatheque.qc.ca\/content\/7973\/Suggestion_d_achat\/","_even":"even","_oddeven":"even","_num":"3","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/7973\/Suggestion_d_achat\/","_selected":""},"_8836":{"id":"8836","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3755","tag":"","title":"Formations informatiques","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"5","url":"http:\/\/www.mediatheque.qc.ca\/content\/8836\/Formations_informatiques\/","_odd":"odd","_oddeven":"odd","_num":"4","_level":"2","_link":"http:\/\/www.mediatheque.qc.ca\/content\/8836\/Formations_informatiques\/","_selected":""},"_3758":{"id":"3758","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3756","tag":"","title":"Apprentissage","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2","url":"http:\/\/www.mediatheque.qc.ca\/content\/3758\/Apprentissage\/","_odd":"odd","_oddeven":"odd","_num":"0","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3758\/Apprentissage\/","_selected":""},"_3759":{"id":"3759","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3756","tag":"","title":"Dictionnaires et encyclop\u00e9dies","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"3","url":"http:\/\/www.mediatheque.qc.ca\/content\/3759\/Dictionnaires_et_encyclopedies\/","_even":"even","_oddeven":"even","_num":"1","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3759\/Dictionnaires_et_encyclopedies\/","_selected":""},"_3760":{"id":"3760","id_user":"1496","menu":"page_menu","lang":"fr","parent":"3756","tag":"","title":"Revues et journaux","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"4","url":"http:\/\/www.mediatheque.qc.ca\/content\/3760\/Revues_et_journaux\/","_odd":"odd","_oddeven":"odd","_num":"2","_level":"1","_link":"http:\/\/www.mediatheque.qc.ca\/content\/3760\/Revues_et_journaux\/","_selected":""},"_4904":{"id":"4904","id_user":"1496","menu":"page_menu","lang":"fr","parent":"4881","tag":"","title":"Adultes","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"1"},"_4905":{"id":"4905","id_user":"1496","menu":"page_menu","lang":"fr","parent":"4881","tag":"","title":"Adolescents","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2"},"_4906":{"id":"4906","id_user":"1496","menu":"page_menu","lang":"fr","parent":"4881","tag":"","title":"Jeunes","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"3"},"_4907":{"id":"4907","id_user":"1496","menu":"page_menu","lang":"fr","parent":"4881","tag":"","title":"Institutions","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"4"},"_7183":{"id":"7183","id_user":"1496","menu":"page_menu","lang":"fr","parent":"7182","tag":"","title":"horaire 1","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"1"},"_7184":{"id":"7184","id_user":"1496","menu":"page_menu","lang":"fr","parent":"7182","tag":"","title":"horaire 2","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2"},"_7185":{"id":"7185","id_user":"1496","menu":"page_menu","lang":"fr","parent":"7182","tag":"","title":"horaire 3","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"transparent","order":"3"},"_8837":{"id":"8837","id_user":"1496","menu":"page_menu","lang":"fr","parent":"8836","tag":"","title":"Formations propos\u00e9es","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"1","url":"http:\/\/www.mediatheque.qc.ca\/content\/8837\/Formations_proposees\/","_odd":"odd","_oddeven":"odd","_num":"0","_level":"3","_link":"http:\/\/www.mediatheque.qc.ca\/content\/8837\/Formations_proposees\/","_selected":""},"_8838":{"id":"8838","id_user":"1496","menu":"page_menu","lang":"fr","parent":"8836","tag":"","title":"Formations \u00e0 t\u00e9l\u00e9charger","type":"page","type_value":"","online":"1","new_window":"0","bg_image":"","bg_color":"","order":"2","url":"http:\/\/www.mediatheque.qc.ca\/content\/8838\/Formations_a_telecharger\/","_even":"even","_oddeven":"even","_num":"1","_level":"3","_link":"http:\/\/www.mediatheque.qc.ca\/content\/8838\/Formations_a_telecharger\/","_selected":""}}</script></div></div>
+					<div class="layout_item_popmenu layout_width_menu">
+		<script type="text/javascript">
+		var item_menu_items = {"2022":{"id":"2022","id_user":"1496","online":"1","parent":"0","title":"Nos suggestions","code":"","desc":"","image":"","order":"0","_tag":"Nos_suggestions","url":"http:\/\/www.mediatheque.qc.ca\/categ\/2022\/Nos_suggestions\/","image_url":""},"4721":{"id":"4721","id_user":"1496","online":"1","parent":"2022","title":"Livres jeunes","code":"","desc":"","image":"","order":"9999","_tag":"Livres_jeunes","url":"http:\/\/www.mediatheque.qc.ca\/categ\/4721\/Livres_jeunes\/","image_url":""},"4720":{"id":"4720","id_user":"1496","online":"1","parent":"2022","title":"Livres","code":"","desc":"","image":"","order":"9999","_tag":"Livres","url":"http:\/\/www.mediatheque.qc.ca\/categ\/4720\/Livres\/","image_url":""},"4722":{"id":"4722","id_user":"1496","online":"1","parent":"2022","title":"Livres num\u00e9riques","code":"","desc":"","image":"","order":"9999","_tag":"Livres_numeriques","url":"http:\/\/www.mediatheque.qc.ca\/categ\/4722\/Livres_numeriques\/","image_url":""},"4724":{"id":"4724","id_user":"1496","online":"1","parent":"2022","title":"DVD - Jeunes","code":"","desc":"","image":"","order":"9999","_tag":"DVD___Jeunes","url":"http:\/\/www.mediatheque.qc.ca\/categ\/4724\/DVD___Jeunes\/","image_url":""},"4718":{"id":"4718","id_user":"1496","online":"1","parent":"2022","title":"Disques compacts","code":"","desc":"","image":"","order":"9999","_tag":"Disques_compacts","url":"http:\/\/www.mediatheque.qc.ca\/categ\/4718\/Disques_compacts\/","image_url":""},"4719":{"id":"4719","id_user":"1496","online":"1","parent":"2022","title":"DVD - Adultes","code":"","desc":"","image":"","order":"9999","_tag":"DVD___Adultes","url":"http:\/\/www.mediatheque.qc.ca\/categ\/4719\/DVD___Adultes\/","image_url":""}};
+		</script>
+		<div class="item_menu"><div id="item_menu_group_0" class="group open base_group group_level_0" wsparent="0"><div id="item_menu_categ_2022" data-id="2022" data-code="" wsid="2022" wslevel="0" class="categ categ_level_0" ><a class="link" href="http://www.mediatheque.qc.ca/categ/2022/Nos_suggestions/" wsid="2022">Nos suggestions</a></div><div id="item_menu_group_2022" class="group close sub_group group_level_1" wsparent="2022"><div id="item_menu_categ_4721" data-id="4721" data-code="" wsid="4721" wslevel="1" class="categ categ_level_1" ><a class="link" href="http://www.mediatheque.qc.ca/categ/4721/Livres_jeunes/" wsid="4721">Livres jeunes</a></div><div id="item_menu_categ_4720" data-id="4720" data-code="" wsid="4720" wslevel="1" class="categ categ_level_1" ><a class="link" href="http://www.mediatheque.qc.ca/categ/4720/Livres/" wsid="4720">Livres</a></div><div id="item_menu_categ_4722" data-id="4722" data-code="" wsid="4722" wslevel="1" class="categ categ_level_1" ><a class="link" href="http://www.mediatheque.qc.ca/categ/4722/Livres_numeriques/" wsid="4722">Livres numériques</a></div><div id="item_menu_categ_4724" data-id="4724" data-code="" wsid="4724" wslevel="1" class="categ categ_level_1" ><a class="link" href="http://www.mediatheque.qc.ca/categ/4724/DVD___Jeunes/" wsid="4724">DVD - Jeunes</a></div><div id="item_menu_categ_4718" data-id="4718" data-code="" wsid="4718" wslevel="1" class="categ categ_level_1" ><a class="link" href="http://www.mediatheque.qc.ca/categ/4718/Disques_compacts/" wsid="4718">Disques compacts</a></div><div id="item_menu_categ_4719" data-id="4719" data-code="" wsid="4719" wslevel="1" class="categ categ_level_1" ><a class="link" href="http://www.mediatheque.qc.ca/categ/4719/DVD___Adultes/" wsid="4719">DVD - Adultes</a></div></div></div></div></div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="layout_content layout_width">
+				<table class="layout_content_table">
+					<tr>
+						<td class="layout_left layout_col">
+							
+			
+
+		
+		
+			<div class="layout_banner1_width">
+				<div class="app app_banner cycle-slideshow" id="app_banner_1" style="width:700px;height:257px;overflow: hidden;" data-cycle-auto-height="calc" data-cycle-pause-on-hover="true" data-cycle-fx="fade" data-cycle-timeout="4000" data-cycle-pager="#cycle_pager_1" data-cycle-pager-template="<a>&bull;</a>" data-cycle-slides=".banner"><div id="cycle_pager_1" class="cycle-pager bottom_center cycle_pager_dft"></div><div id="cycle_prev_1" class="cycle-prev cycle_pn_dft"></div><div id="cycle_next_1" class="cycle-next cycle_pn_dft"></div>			<div class="banner" id="app_banner_id_2759" style="
+				width: 100%;
+								"><a class="banner_link" href="https://login.mediatheque.idm.oclc.org/login?qurl=https%3a%2f%2flogin.mediatheque.idm.oclc.org%2fsso%2fpretnumerique" target="" data-id="2759"><img class="banner_image" src="/user/1496/files/apps/banner/livre_numerique.png" style="
+					width:700px; height:257px; 				" /></a></div>
+						<div class="banner" id="app_banner_id_2973" style="
+				width: 100%;
+				display: none;				"><a class="banner_link" href="http://www.mediatheque.qc.ca/user/1496/files/colloque_2016.pdf" target="" data-id="2973"><img class="banner_image" src="/user/1496/files/apps/banner/Colloque_2016.jpg" style="
+					width:700px; height:257px; 				" /></a></div>
+						<div class="banner" id="app_banner_id_2663" style="
+				width: 100%;
+				display: none;				"><img class="banner_image" src="/user/1496/files/apps/banner/Soiree_pyjama.png" style="
+					width:700px; height:257px; 				" /></div>
+						<div class="banner" id="app_banner_id_3034" style="
+				width: 100%;
+				display: none;				"><a class="banner_link" href="http://www.mediatheque.qc.ca/user/1496/files/Printemps_des_revues_2016.pdf" target="" data-id="3034"><img class="banner_image" src="/user/1496/files/apps/banner/printemps_des_revues.jpg" style="
+					width:700px; height:257px; 				" /></a></div>
+						<div class="banner" id="app_banner_id_2648" style="
+				width: 100%;
+				display: none;				"><img class="banner_image" src="/user/1496/files/apps/banner/pub_cd_rom.jpg" style="
+					width:700px; height:257px; 				" /></div>
+					</div>
+		<script type="text/javascript">
+		$(function(){
+			$.get('http://www.mediatheque.qc.ca/app/banner/?ax=1&app=banner',{action:'lv',banner:"2759-2973-2663-3034-2648"});
+			$('#app_banner_1 .banner_link').each(function() {
+				$(this).attr('data-url', $(this).attr('href') ).click(function(event) {
+					$.get('http://www.mediatheque.qc.ca/app/banner/?ax=1&app=banner',{action:'lc',banner:$(this).attr('data-id')});
+				});
+			});
+		});
+		</script>
+		
+			</div>
+		
+		
+		<div class="font_zoom">
+			<table class="layout_content_default">
+				<tr>
+					<td class="col_left_content_default">
+					<a href="http://www.mediatheque.qc.ca/app/news/" class="title"><h1>Communiqu&eacute;s</h1></a>
+						<div class="news_default">
+							
+							
+								<a href="http://www.mediatheque.qc.ca/app/news/3035/" class="title_news"><h1>Émission La Médiathèque</h1></a>
+								<!--<p><img src="" width="619" /></p>-->
+								<a href="http://www.mediatheque.qc.ca/app/news/3035/" class="summary"><p>Découvrez la toute nouvelle et première émission La Médiathèque diffusée sur les ondes de TVCogeco Saint-Hyacinthe et animée par Fabienne Cortes...</p></a>
+								<p class="home_btn"><a href="http://www.mediatheque.qc.ca/app/news/3035/">Plus</a></p>
+							
+								<a href="http://www.mediatheque.qc.ca/app/news/3005/" class="title_news"><h1>MEMORIA - Projet créatif</h1></a>
+								<!--<p><img src="" width="619" /></p>-->
+								<a href="http://www.mediatheque.qc.ca/app/news/3005/" class="summary"><p>Le Projet créatif est le fruit dune rencontre avec François Gravel, dun travail de recherche assidu avec Audrey Lasalle et de la création dun magnifique livre numérique avec Alexandra Houle...</p></a>
+								<p class="home_btn"><a href="http://www.mediatheque.qc.ca/app/news/3005/">Plus</a></p>
+							
+								<a href="http://www.mediatheque.qc.ca/app/news/2986/" class="title_news"><h1>Mise à jour du système informatique terminé</h1></a>
+								<!--<p><img src="/user/1496/files/apps/news/Travaux.jpg" width="619" /></p>-->
+								<a href="http://www.mediatheque.qc.ca/app/news/2986/" class="summary"><p>LE CATALOGUE EST ACCESSIBLE À NOUVEAU</p></a>
+								<p class="home_btn"><a href="http://www.mediatheque.qc.ca/app/news/2986/">Plus</a></p>
+							
+								<a href="http://www.mediatheque.qc.ca/app/news/2979/" class="title_news"><h1>Formations informatiques individuelles</h1></a>
+								<!--<p><img src="/user/1496/files/apps/news/Formation_informatique_logo_3.jpg" width="619" /></p>-->
+								<a href="http://www.mediatheque.qc.ca/app/news/2979/" class="summary"><p>La Médiathèque maskoutaine offre à nouveau jusqu'au 31 mars 2016 des formations informatiques individuelles...</p></a>
+								<p class="home_btn"><a href="http://www.mediatheque.qc.ca/app/news/2979/">Plus</a></p>
+							
+								<a href="http://www.mediatheque.qc.ca/app/news/2888/" class="title_news"><h1>Dons de livres pour la vente de livres usagés</h1></a>
+								<!--<p><img src="/user/1496/files/apps/news/201063454_B975464551Z1_20150506102614_000_G7Q4EHV501_0.jpg" width="619" /></p>-->
+								<a href="http://www.mediatheque.qc.ca/app/news/2888/" class="summary"><p>Vous avez des livres à donner? La Médiathèque maskoutaine reçoit des dons de documents des citoyens afin d'offrir un grand choix lors des ventes de livres usagers qu'elle tient trois fois par année...</p></a>
+								<p class="home_btn"><a href="http://www.mediatheque.qc.ca/app/news/2888/">Plus</a></p>
+							
+								<a href="http://www.mediatheque.qc.ca/app/news/2887/" class="title_news"><h1>Club de lecture pour adultes</h1></a>
+								<!--<p><img src="/user/1496/files/apps/news/book_club.png" width="619" /></p>-->
+								<a href="http://www.mediatheque.qc.ca/app/news/2887/" class="summary"><p>NOUVEAU!
+La Médiathèque maskoutaine est heureuse de vous inviter au Club de lecture pour adultes. Vous êtes un(e) passionné(e) de littérature et aimeriez partager cette passion avec d'autres lecteurs et lectrices? Le Club de lecture s'adresse à vous!</p></a>
+								<p class="home_btn"><a href="http://www.mediatheque.qc.ca/app/news/2887/">Plus</a></p>
+							
+							<a href="http://www.mediatheque.qc.ca/app/news/">Voir tous les communiqu&eacute;s</a>
+						</div>
+					</td>
+					<td class="col_right_content_default">
+					<div class="app app_calendar" id="app_calendar"><div class="calendar_home">		<h1 class="title">Activités à venir</h1>
+				
+		<div class="list event_list">
+					<div class="item" id="calendar_event_193">
+				<h2 class="title">Dix bonnes habitudes de gestion financière</h2>
+				<div class="date">15 mars 2016</div>
+									<div class="time">19h00</div>
+														<div class="image"><img src="/user/1496/files/apps/calendar/MdA_2_16.jpg" /></div>
+										<div class="desc"><div><span style="font-family:lucida sans unicode,lucida grande,sans-serif;">Avec un comptable membre de Comptables Professionnels Agr&eacute;es (CPA) Canada.</span></div>
+
+<div>&nbsp;</div>
+
+<div><span style="font-family:lucida sans unicode,lucida grande,sans-serif;">&Agrave; la Biblioth&egrave;que Sainte-Rosalie.</span></div>
+
+<hr />
+<p>&nbsp;</p></div>
+								</div>
+						<div class="item" id="calendar_event_238">
+				<h2 class="title">Soirées pyjama</h2>
+				<div class="date">17 mars 2016</div>
+									<div class="time">18h30</div>
+														<div class="image"><img src="/user/1496/files/apps/calendar/Sp_17_mars_2.jpg" /></div>
+										<div class="desc"><div style="font-family: Arial, Gotham, 'Helvetica Neue', sans-serif; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif;">Mars : Bon dodo, mon ami(e)!</span></div>
+
+<div style="font-family: Arial, Gotham, 'Helvetica Neue', sans-serif; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; text-align: justify;">Mets ton pyjama et viens &eacute;couter une histoire avec nous!</span></div>
+
+<div style="font-family: Arial, Gotham, 'Helvetica Neue', sans-serif; margin: 0px; padding: 0px; text-align: justify; background-color: rgb(255, 255, 255);">&nbsp;</div>
+
+<div style="font-family: Arial, Gotham, 'Helvetica Neue', sans-serif; margin: 0px; padding: 0px; text-align: justify; background-color: rgb(255, 255, 255);"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif;">&Agrave; la Biblioth&egrave;que Sainte-Rosalie</span></div>
+
+<div style="font-family: Arial, Gotham, 'Helvetica Neue', sans-serif; margin: 0px; padding: 0px; text-align: justify; background-color: rgb(255, 255, 255);">
+<hr /></div></div>
+								</div>
+						<div class="item" id="calendar_event_207">
+				<h2 class="title">Cours informatiques - Cours 1</h2>
+				<div class="date">18 mars 2016</div>
+									<div class="time">10h00</div>
+														<div class="image"><img src="/user/1496/files/apps/calendar/Formation_informatique_6.jpg" /></div>
+										<div class="desc"><div style="text-align: justify;"><span style="font-family:lucida sans unicode,lucida grande,sans-serif;">La M&eacute;diath&egrave;que maskoutaine offre des formations de groupe sp&eacute;cialement con&ccedil;ues pour les d&eacute;butants. Le cours est offert en deux sessions de deux heures.</span></div>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<div style="text-align: justify;"><span style="font-family:lucida sans unicode,lucida grande,sans-serif;">&Agrave; la Biblioth&egrave;que Sainte-Rosalie</span></div>
+
+<div>
+<hr /></div></div>
+								</div>
+					</div>
+		</div></div>
+					<a href="http://www.mediatheque.qc.ca/app/calendar/" class="see_all">Voir toutes les activit&eacute;s</a>
+					</td>
+				</tr>
+			</table>
+			
+			<!--<div class="layout_list_home item_list">
+		
+			<h1><a href="http://www.mediatheque.qc.ca/categ/">Suggestions</a><a href="http://www.mediatheque.qc.ca/categ/" class="see_all_sugg">Voir tout</a></h1> 	
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457924/Voici_le_printemps/"><img src="/user/1496/item/1687981_gf_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457924/Voici_le_printemps/" class="title"><h2>Voici le printemps</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457924/Voici_le_printemps/" class="a_txt"><div class="txt">Auteure : Maryann Cocca-Leffler<br />
+<br />
+Matériel : Livre</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457924/Voici_le_printemps/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457920/Le_labyrinthe_du_bout_du_monde/"><img src="/user/1496/item/1782276_gf_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457920/Le_labyrinthe_du_bout_du_monde/" class="title"><h2>Le labyrinthe du bout du monde</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457920/Le_labyrinthe_du_bout_du_monde/" class="a_txt"><div class="txt">Auteur : Marcello Simoni<br />
+<br />
+Matériel : Livre</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457920/Le_labyrinthe_du_bout_du_monde/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457925/Nous_autres/"><img src="/user/1496/item/ACH0036579351429242922580x580_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457925/Nous_autres/" class="title"><h2>Nous autres</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457925/Nous_autres/" class="a_txt"><div class="txt">Auteurs : 2frères<br />
+<br />
+Matériel : Disque compact</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457925/Nous_autres/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457923/Le_miroir_magique/"><img src="/user/1496/item/1055211_gf_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457923/Le_miroir_magique/" class="title"><h2>Le miroir magique</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457923/Le_miroir_magique/" class="a_txt"><div class="txt">Auteur : Paul Roux<br />
+<br />
+Matériel : Livre numérique</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457923/Le_miroir_magique/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457927/Collection_de_courts_metrages/"><img src="/user/1496/item/ACH0036955191438055707580x580_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457927/Collection_de_courts_metrages/" class="title"><h2>Collection de courts métrages</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457927/Collection_de_courts_metrages/" class="a_txt"><div class="txt">Matériel : DVD</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457927/Collection_de_courts_metrages/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457926/Seul_sur_mars/"><img src="/user/1496/item/ACH0037909721449204917580x580_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457926/Seul_sur_mars/" class="title"><h2>Seul sur mars</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457926/Seul_sur_mars/" class="a_txt"><div class="txt">Réalisateur : Ridley Scott<br />
+<br />
+Matériel : DVD</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457926/Seul_sur_mars/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+		</div>-->
+					
+				
+	</div>
+		</div>
+				</td>
+<td class="layout_right layout_col">
+			<div class="layout_share">
+				<a href="https://www.facebook.com/mediathequemaskoutaine?ref=ts&fref=ts" target="_blank"><img src="/user/1496/template/files/btn_facebook.png" width="40" height="39" alt=""/></a>
+				&nbsp;
+				<a href="https://twitter.com/mediamaskoutain" target="_blank"><img src="/user/1496/template/files/btn_twitter.png" width="39" height="39" alt=""/></a>
+				&nbsp;
+				<a href="https://www.youtube.com/channel/UCUIa6m_CLOmq7lCxQcxjWLA" target="_blank"><img src="/user/1496/template/files/btn_you_tube.png" width="40" height="40" alt=""/></a>
+		</div>
+			<div class="layout_logo_top">
+				<a href="http://www.mediatheque.qc.ca/content/7190/" target="_self"><img src="/user/1496/template/files/logo_fond_amis_mediatheque.jpg" width="220" height="45" alt=""/></a>
+				<a href="https://www.canadahelps.org/fr/dn/7106" target="_blank"><img src="/user/1496/template/files/logo_canadon.jpg" width="220" height="78" alt=""/></a>
+			
+			</div>
+			
+			<div class="layout_calendar">
+				<div class="title_aside">Calendrier</div>
+				<script>
+				$(function(){ 
+				  $('th.date a:first').html('<img src="/user/1496/template/files/arrow_left_cal.png" width="23" height="24" alt=""/>');
+				  $('th.date a:last').html('<img src="/user/1496/template/files/arrow_right_cal.png" width="23" height="24" alt=""/>');
+				});
+				</script>
+				<div class="app app_calendar" id="app_calendar"><div class="calendar"><a name="accf"></a><a name="app_calendar_calf"></a><div id="app_calendar_cal" class="app_calendar_cal"><table><tr><th colspan="7" class="date"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_month&date=2016-02">&lt;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_month&date=2016-03">Mars&nbsp;2016</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_month&date=2016-04">&gt;</a></th></tr><tr><th class="weekday weekday_weekend">Dim</th><th class="weekday">Lun</th><th class="weekday">Mar</th><th class="weekday">Mer</th><th class="weekday">Jeu</th><th class="weekday">Ven</th><th class="weekday weekday_weekend">Sam</th></tr><tr><td class="square">&nbsp;</td><td class="square">&nbsp;</td><td class="square day day_past event has_image has_icon" data-date="2016-03-01" date="2016-03-01" data-image="/user/1496/files/apps/calendar/Manon_Marchand_2.jpg" data-icon="/user/1496/files/apps/calendar/Manon_Marchand.jpg" title="Voyage vers les sommets de l'imaginaire"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-01">1</a></div></div></div></td><td class="square day day_past event has_image has_icon" data-date="2016-03-02" date="2016-03-02" data-image="/user/1496/files/apps/calendar/Diane_et_Solange_2.jpg" data-icon="/user/1496/files/apps/calendar/Diane_et_Solange.jpg" title="Mère et fille, artistes complices"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-02">2</a></div></div></div></td><td class="square day day_past event has_icon" data-date="2016-03-03" date="2016-03-03" data-image="" data-icon="/user/1496/files/apps/calendar/Francois_5.jpg" title="C'est la relâche! - Petits héros"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-03">3</a></div></div></div></td><td class="square day day_past event has_image has_icon" data-date="2016-03-04" date="2016-03-04" data-image="/user/1496/files/apps/calendar/Logo_Sciences_en_Folies1_2.png" data-icon="/user/1496/files/apps/calendar/Logo_Sciences_en_Folies1.png" title="C'est la relâche! - Le goût"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-04">4</a></div></div></div></td><td class="square day day_past empty" data-date="2016-03-05" date="2016-03-05"><div class="day_block"><div class="day_num">5</div></div></td></tr><tr><td class="square day day_past empty" data-date="2016-03-06" date="2016-03-06"><div class="day_block"><div class="day_num">6</div></div></td><td class="square day day_past empty" data-date="2016-03-07" date="2016-03-07"><div class="day_block"><div class="day_num">7</div></div></td><td class="square day day_past event has_image has_icon" data-date="2016-03-08" date="2016-03-08" data-image="/user/1496/files/apps/calendar/MdA_2_15.jpg" data-icon="/user/1496/files/apps/calendar/0308_Livre_Changer_vie.jpg" title="Le pouvoir de changer sa vie"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-08">8</a></div></div></div></td><td class="square day day_past event has_image has_icon" data-date="2016-03-09" date="2016-03-09" data-image="/user/1496/files/apps/calendar/Sp_9_mars_2.jpg" data-icon="/user/1496/files/apps/calendar/Sp_9_mars.jpg" title="Soirées pyjama"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-09">9</a></div></div></div></td><td class="square day day_past empty" data-date="2016-03-10" date="2016-03-10"><div class="day_block"><div class="day_num">10</div></div></td><td class="square day day_today empty" data-date="2016-03-11" date="2016-03-11"><div class="day_block"><div class="day_num">11</div></div></td><td class="square day day_weekend empty" data-date="2016-03-12" date="2016-03-12"><div class="day_block"><div class="day_num">12</div></div></td></tr><tr><td class="square day day_weekend empty" data-date="2016-03-13" date="2016-03-13"><div class="day_block"><div class="day_num">13</div></div></td><td class="square day empty" data-date="2016-03-14" date="2016-03-14"><div class="day_block"><div class="day_num">14</div></div></td><td class="square day event has_image has_icon" data-date="2016-03-15" date="2016-03-15" data-image="/user/1496/files/apps/calendar/MdA_2_16.jpg" data-icon="/user/1496/files/apps/calendar/0315_1Logo_CPA.jpg" title="Dix bonnes habitudes de gestion financière"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-15">15</a></div></div></div></td><td class="square day empty" data-date="2016-03-16" date="2016-03-16"><div class="day_block"><div class="day_num">16</div></div></td><td class="square day event has_image has_icon" data-date="2016-03-17" date="2016-03-17" data-image="/user/1496/files/apps/calendar/Sp_17_mars_2.jpg" data-icon="/user/1496/files/apps/calendar/Sp_17_mars.jpg" title="Soirées pyjama"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-17">17</a></div></div></div></td><td class="square day event has_image has_icon" data-date="2016-03-18" date="2016-03-18" data-image="/user/1496/files/apps/calendar/Formation_informatique_6.jpg" data-icon="/user/1496/files/apps/calendar/Formation_informatique_5.jpg" title="Cours informatiques - Cours 1"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-18">18</a></div></div></div></td><td class="square day day_weekend empty" data-date="2016-03-19" date="2016-03-19"><div class="day_block"><div class="day_num">19</div></div></td></tr><tr><td class="square day day_weekend empty" data-date="2016-03-20" date="2016-03-20"><div class="day_block"><div class="day_num">20</div></div></td><td class="square day empty" data-date="2016-03-21" date="2016-03-21"><div class="day_block"><div class="day_num">21</div></div></td><td class="square day empty" data-date="2016-03-22" date="2016-03-22"><div class="day_block"><div class="day_num">22</div></div></td><td class="square day event has_image has_icon" data-date="2016-03-23" date="2016-03-23" data-image="/user/1496/files/apps/calendar/Sp_23_mars_2.jpg" data-icon="/user/1496/files/apps/calendar/Sp_23_mars.jpg" title="Soirées pyjama"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-23">23</a></div></div></div></td><td class="square day empty" data-date="2016-03-24" date="2016-03-24"><div class="day_block"><div class="day_num">24</div></div></td><td class="square day event has_image has_icon" data-date="2016-03-25" date="2016-03-25" data-image="/user/1496/files/apps/calendar/Formation_informatique_8.jpg" data-icon="/user/1496/files/apps/calendar/Formation_informatique_7.jpg" title="Formations informatiques - Cours 2"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-25">25</a></div></div></div></td><td class="square day day_weekend empty" data-date="2016-03-26" date="2016-03-26"><div class="day_block"><div class="day_num">26</div></div></td></tr><tr><td class="square day day_weekend empty" data-date="2016-03-27" date="2016-03-27"><div class="day_block"><div class="day_num">27</div></div></td><td class="square day empty" data-date="2016-03-28" date="2016-03-28"><div class="day_block"><div class="day_num">28</div></div></td><td class="square day event has_image has_icon" data-date="2016-03-29" date="2016-03-29" data-image="/user/1496/files/apps/calendar/MdA_2_17.jpg" data-icon="/user/1496/files/apps/calendar/0329_Livre_J_aime_pas.jpg" title="J'aime pas ça! J'en veux encore!"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-29">29</a></div></div></div></td><td class="square day event has_image has_icon" data-date="2016-03-30" date="2016-03-30" data-image="/user/1496/files/apps/calendar/Sp_30_mars_2.jpg" data-icon="/user/1496/files/apps/calendar/Sp_30_mars.jpg" title="Soirée pyjama"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-30">30</a></div></div></div></td><td class="square day event has_image has_icon" data-date="2016-03-31" date="2016-03-31" data-image="/user/1496/files/apps/calendar/Jeudis_cinema_10.jpg" data-icon="/user/1496/files/apps/calendar/Jeudis_cinema_9.jpg" title="Prix du Gouverneur général pour les arts du spectacle"><div class="day_block"><div class="data"><div class="day_num"><a href="http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date=2016-03-31">31</a></div></div></div></td><td class="square">&nbsp;</td><td class="square">&nbsp;</td></tr></table></div></div>		<script type="text/javascript">
+		$(function(){
+			
+			// process calendars 
+			// and events
+			$('.app_calendar').each(function() {
+				
+				// set calendar day square
+				var day_w = $(this).find('.square').outerWidth();
+				$(this).find('.square').height( day_w );
+				
+				// events
+				var $events = $(this).find('.event');
+				// on click
+				$events.click(function() {
+					var datestr = $(this).attr('data-date');
+					window.location.href = 'http://www.mediatheque.qc.ca/app/calendar/?app_action=display_day&date='+datestr;
+				});
+				// images & icons
+				$events.each(function() {
+					var $e = $(this);
+					var show_image = '';
+					if( $e.hasClass('has_icon') ) {
+						// user icon file
+						show_image = $e.attr('data-icon');
+					} else {
+						if( $e.hasClass('has_image') ) {
+							// show image
+							show_image = $e.attr('data-image');
+						}
+					}
+					
+					if( show_image ) {
+						var $icon_canvas = $('<div/>')
+							.addClass("icon_canvas")
+							.width( $e.outerWidth() )
+							.height( $e.outerHeight() );
+							
+						var $i = $('<img/>');
+						$i
+							.load(function() {
+								// icon must not be larget thant the whole
+								// day square
+								var w = $(this).width();
+								var h = $(this).height();
+								// base longuer size
+								if( w < h ) {
+									
+									// base on width
+									// make sure icon is not larger
+									// thant container
+									if( w > $e.width() ) {
+										
+										// to resize to max x% of its container
+										$(this)
+											.width( $e.width() )
+											.css('height','auto');
+											
+									}
+									
+								} else {
+										
+									// base on height
+									if( w > $e.height() ) {
+										
+										// to resize to max x% of its container
+										$(this)
+											.height( $e.height() )
+											.css('width','auto');
+											
+									}
+								}
+							})
+							.attr('src',show_image)
+							.addClass('icon')
+							.prependTo( $icon_canvas );
+							$icon_canvas.prependTo( $e );
+					}
+					
+				});
+				
+			});
+			
+		});
+		</script>
+		</div>
+			</div>
+			
+			<div class="layout_schedule">
+				<div class="title_aside">Horaire</div>
+				<div class="bloc_schedule"><h1>Biblioth&egrave;que T.-A.-St-Germain</h1>
+
+<table border="0" cellpadding="1" cellspacing="0" style="width: 210px;">
+	<tbody>
+		<tr>
+			<td style="width: 129px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Lundi au jeudi :</span></td>
+			<td style="width: 94px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">12&nbsp;h&nbsp;&agrave; 21&nbsp;h</span></td>
+		</tr>
+		<tr>
+			<td style="width: 129px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Vendredi :&nbsp;</span></td>
+			<td style="width: 94px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">10&nbsp;h&nbsp;&agrave; 21&nbsp;h&nbsp;</span></td>
+		</tr>
+		<tr>
+			<td style="width: 129px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Samedi :</span></td>
+			<td style="width: 94px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">10&nbsp;h&nbsp;&agrave;&nbsp;17&nbsp;h</span></td>
+		</tr>
+		<tr>
+			<td style="width: 129px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Dimanche :</span></td>
+			<td style="width: 94px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">10&nbsp;h&nbsp;&agrave;&nbsp;17&nbsp;h</span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+				<div class="bloc_schedule"><h1>Biblioth&egrave;que Sainte-Rosalie</h1>
+
+<table border="0" cellpadding="1" cellspacing="0" style="width: 210px;">
+	<tbody>
+		<tr>
+			<td style="width: 122px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Lundi et mardi:</span></td>
+			<td style="width: 83px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">13h&nbsp;&agrave; 20h30</span></td>
+		</tr>
+		<tr>
+			<td style="width: 122px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Mercredi :</span></td>
+			<td style="width: 83px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">Ferm&eacute;e</span></td>
+		</tr>
+		<tr>
+			<td style="width: 122px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Jeudi et vendredi :</span></td>
+			<td style="width: 83px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">13h&nbsp;&agrave; 20h30</span></td>
+		</tr>
+		<tr>
+			<td style="width: 122px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Samedi:&nbsp;</span></td>
+			<td style="width: 83px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">12h &agrave; 17h</span></td>
+		</tr>
+		<tr>
+			<td style="width: 122px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;Dimanche:</span></td>
+			<td style="width: 83px;"><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">Ferm&eacute;e</span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+				<div class="bloc_schedule"><h1>Prochaine fermeture</h1>
+
+<div><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;27 mars (P&acirc;ques)</span><!--/div-->
+
+<div><span style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 13px;">&nbsp;28&nbsp;mars&nbsp;(Lundi de P&acirc;ques)</span></div>
+
+<div>&nbsp;</div>
+</div>
+</div>
+			</div>
+			
+			<div class="layout_logo_bottom">
+				<a href="http://www.ville.st-hyacinthe.qc.ca/" target="_blank"><img src="/user/1496/template/files/logo_ville_st-hyacinthe.jpg" width="220" height="60" alt=""/></a>
+				<a href="http://www.mcc.gouv.qc.ca/" target="_blank"><img src="/user/1496/template/files/logo-quebec.jpg" width="220" height="68" alt=""/></a>
+				<a href="http://www.abpq.ca/" target="_blank"><img src="/user/1496/template/files/logo-biblio.jpg" width="220" height="101" alt=""/></a>
+			</div>
+			
+			
+		</td>
+		</tr>
+		</table> <!-- fermeture grand tableau-->
+		
+		<!--<div class="layout_width layout_bottom">
+			
+		</div>-->
+		
+		
+		
+		<div class="layout_list_home item_list">
+		
+			<h1><a href="http://www.mediatheque.qc.ca/categ/">Suggestions</a><a href="http://www.mediatheque.qc.ca/categ/" class="see_all_sugg">Voir tout</a></h1> 	
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457924/Voici_le_printemps/"><img src="/user/1496/item/1687981_gf_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457924/Voici_le_printemps/" class="title"><h2>Voici le printemps</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457924/Voici_le_printemps/" class="a_txt"><div class="txt">Auteure : Maryann Cocca-Leffler<br />
+<br />
+Matériel : Livre</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457924/Voici_le_printemps/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457920/Le_labyrinthe_du_bout_du_monde/"><img src="/user/1496/item/1782276_gf_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457920/Le_labyrinthe_du_bout_du_monde/" class="title"><h2>Le labyrinthe du bout du monde</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457920/Le_labyrinthe_du_bout_du_monde/" class="a_txt"><div class="txt">Auteur : Marcello Simoni<br />
+<br />
+Matériel : Livre</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457920/Le_labyrinthe_du_bout_du_monde/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457925/Nous_autres/"><img src="/user/1496/item/ACH0036579351429242922580x580_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457925/Nous_autres/" class="title"><h2>Nous autres</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457925/Nous_autres/" class="a_txt"><div class="txt">Auteurs : 2frères<br />
+<br />
+Matériel : Disque compact</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457925/Nous_autres/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457923/Le_miroir_magique/"><img src="/user/1496/item/1055211_gf_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457923/Le_miroir_magique/" class="title"><h2>Le miroir magique</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457923/Le_miroir_magique/" class="a_txt"><div class="txt">Auteur : Paul Roux<br />
+<br />
+Matériel : Livre numérique</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457923/Le_miroir_magique/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457927/Collection_de_courts_metrages/"><img src="/user/1496/item/ACH0036955191438055707580x580_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457927/Collection_de_courts_metrages/" class="title"><h2>Collection de courts métrages</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457927/Collection_de_courts_metrages/" class="a_txt"><div class="txt">Matériel : DVD</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457927/Collection_de_courts_metrages/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="item">
+					<table>
+						<tr>
+							<td>
+							<div class="photo"><a href="http://www.mediatheque.qc.ca/item/457926/Seul_sur_mars/"><img src="/user/1496/item/ACH0037909721449204917580x580_2.jpg" class="image_gallery" width="117" height="190" alt=""/></a></div>
+							</td>
+							<td class="details">
+							<a href="http://www.mediatheque.qc.ca/item/457926/Seul_sur_mars/" class="title"><h2>Seul sur mars</h2></a>
+							<a href="http://www.mediatheque.qc.ca/item/457926/Seul_sur_mars/" class="a_txt"><div class="txt">Réalisateur : Ridley Scott<br />
+<br />
+Matériel : DVD</div></a>
+							<a href="http://www.mediatheque.qc.ca/item/457926/Seul_sur_mars/" class="more"><div class="button_details">Plus</div></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+		</div>
+		
+		
+		
+
+		<div class="layout_bottom_line">
+			<div class="layout_width">
+				<table class="layout_bottom_line_table">
+					<tr>
+						<td class="layout_left layout_col">
+							© 2016 Médiathèque maskoutaine <img src="/user/1496/template/files/puce.png" width="7" height="7" alt=""/> <a href="http://www.mediatheque.qc.ca/content/4903/Nous_joindre/">Communiquez avec nous</a></td>
+						<td class="layout_right layout_col">
+							<span class="copyright">
+								<a href="#top">Retour en haut de page<img src="/user/1496/template/files/arrow_top.png" width="25" height="18" alt=""/>
+								</div></a>
+							</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="layout_bottom_line2">
+			<div class="layout_width">
+				Propulsé par <a href="http://www.lecourrierzoneweb.com" target="_blank">Le Courrier Zone Web</a> 
+			</div>
+		</div>
+		
+		
+
+		
+	
+	</div>
+</body>
+</html>

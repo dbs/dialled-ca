@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<HEAD>
+
+	<title>Santa Cabrini -- Centre de documentation</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+	<meta name="description" content="Hopital, Santa Cabrini, Centre d'accueil Dante, Fondation Santa Cabrini, Montreal, St-Leonard, hopital italien Quebec, hopital italien Canada, urgence, cliniques externes, traumatologie, oncologie, italian hospital Quebec, italian hospital Canada">
+
+	<meta name="keywords" content="Hopital, Santa Cabrini, Centre d'accueil Dante, Fondation Santa Cabrini, Montreal, St-Leonard, hopital italien Québec, hopital italien Canada, urgence, cliniques externes, traumatologie, oncologie, italian hospital Quebec, italian hospital Canada">
+
+	<link rel="stylesheet" type="text/css" href="/templates/24541E11-626C-4098-88D5-BA22567651C5/css/general.css">
+
+
+
+	<script Language="javascript" src="/kadmin/core/Id3ObjectDefinition.js"></script>
+
+	<script Language="javascript" src="/kadmin/core/KJS.asp"></script>
+
+	<script Language="javascript" src="/js/3D27B30B-9285-4A51-9C3A-EF41B14BFDB4/DA25DDDE-520E-4C09-B64A-AE423066779B_FR.js"></script>
+
+
+
+	<script Language="javascript">	
+
+		function ID3_findObj(n, d) {
+
+			var p,i,x;
+
+			if(!d) d=document;
+
+			if((p=n.indexOf("?"))>0&&parent.frames.length)
+
+			{
+
+				d=parent.frames[n.substring(p+1)].document;
+
+				n=n.substring(0,p);
+
+			}
+
+	
+
+			if(!(x=d[n])&&d.all) x=d.all[n];
+
+	
+
+			for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+
+	
+
+			for(i=0;!x&&d.layers&&i<d.layers.length;i++)
+
+				x=ID3_findObj(n,d.layers[i].document);
+
+	
+
+			if(!x && d.getElementById)
+
+				x=d.getElementById(n);
+
+	
+
+			return x;
+
+		}
+
+		function lf_ChangeLanguage(sLang)  {
+
+		
+
+			var sLangCh;
+
+			if (sLang=='FR') {
+
+				sLangCh = 'IT';
+
+			} else {
+
+				sLangCh = 'FR'
+
+			}
+
+			KScript.SetLanguage(sLangCh,"FR|IT");
+
+		}
+
+		function ImprimerContenu(){
+
+			if (window.print) {
+
+			  winId = window.open('','newwin');
+
+			  with (winId.document) {
+
+				write('<script language=javascript>function lf_print(){var oTmr;window.focus();window.print();oTmr = window.setTimeout ("window.close();",1000);}<\/script>');
+
+				write('<body onLoad="lf_print();" style="background-image:none;"><B>SRAM</B><br>'+ID3_findObj("PageContent","").innerHTML+'<\/body>');
+
+				write('<link rel="stylesheet" type="text/css" href="/templates/24541E11-626C-4098-88D5-BA22567651C5/css/accueil.css">');
+
+				close();
+
+			  }
+
+			}
+
+		}
+
+		function preloadImages(){
+
+		//onLoad="preloadImages('chemin/img.ext')"
+
+			var d=document;
+
+			if(d.images){
+
+				if(!d.MM_p)d.MM_p=new Array();
+
+				var i,j=d.MM_p.length,a=MM_preloadImages.arguments;
+
+				for(i=0; i<a.length; i++)
+
+					if(a[i].indexOf("#")!=0){d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}
+
+			}
+
+		}
+
+		function lf_SwapImg(img,newsrc){
+
+			img.oldsrc = img.src;
+
+			img.src = newsrc;
+
+		}
+
+		function lf_RestoreImg(img){
+
+			img.src = img.oldsrc;
+
+		}
+
+		
+
+		function menuRapide(lang,type){
+
+			var retour;
+
+			if(type=='img'){
+
+				if (lang=='FR') {
+
+					retour = '<map name="img11">';
+
+					retour += '<AREA SHAPE="circle" COORDS="27,17,15" HREF="/liens" alt="Liens utiles">';
+
+					retour += '<AREA SHAPE="circle" COORDS="67,17,15" HREF="/plansite" alt="Plan de site">';
+
+					retour += '<AREA SHAPE="circle" COORDS="108,17,15" HREF="/contact" alt="Nous joindre">';
+
+					retour += '<AREA SHAPE="circle" COORDS="148,17,15" HREF="/accueil" alt="Accueil">';
+
+					retour += '</map>';
+
+				} else {
+
+					retour = '<map name="img11">';
+
+					retour += '<AREA SHAPE="circle" COORDS="27,17,15" HREF="/liens" alt="Link utili">';
+
+					retour += '<AREA SHAPE="circle" COORDS="67,17,15" HREF="/plansite" alt="Mappa del sito">';
+
+					retour += '<AREA SHAPE="circle" COORDS="108,17,15" HREF="/contact" alt="Contattarci">';
+
+					retour += '<AREA SHAPE="circle" COORDS="148,17,15" HREF="/accueil" alt="Accoglienza">';
+
+					retour += '</map>';
+
+				}
+
+			}else{
+
+				if (lang=='FR') {
+
+					retour = '<div class="Menu_Haut"><a href="/liens">Liens utiles</a> | <a href="/plansite">Plan de site</a> | <a href="/contact">Nous joindre</a> | <a href="/fr">Nouvelles</a> | <a href="/recrutement">Recrutement <img src="/templates/24541E11-626C-4098-88D5-BA22567651C5/images/recruitement.jpg" width="21" height="25" border="0" align="absmiddle"></a></div>';
+
+				} else {
+
+					retour = '<div class="Menu_Haut"><a href="/liens">Link utili</a> | <a href="/plansite">Mappa del sito</a> | <a href="/contact">Contattarci</a> | <a href="/it">Notizie</a> | <a href="/recrutement">Reclutamento <img src="/templates/24541E11-626C-4098-88D5-BA22567651C5/images/recruitement.jpg" width="21" height="25" border="0" align="absmiddle"></a></div>';
+
+				}
+
+			}
+
+			return retour;
+
+		}
+
+
+
+		function lf_Load(){
+
+			var objet1 = new ID3FlaObj("/templates/24541E11-626C-4098-88D5-BA22567651C5/general.swf", "general", "859", "174", "7", "#ffffff");
+
+			objet1.addParam("menu","false");
+
+			objet1.addVar("langue","FR");
+
+			objet1.addVar("xmlURL","/templates/24541E11-626C-4098-88D5-BA22567651C5/xml.xml");
+
+			objet1.addVar("currentPage","<!-- K.Params.Section -->");
+
+			objet1.code("zoneGeneral");
+
+		}
+
+	</script>
+
+</HEAD>
+
+
+
+<body bgcolor="#a1b2c0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="KMenu.init();lf_Load();">
+
+<table width=100% border="0" cellpadding="0" cellspacing="0" style="background-image:url(/templates/24541E11-626C-4098-88D5-BA22567651C5/images/bg_general.jpg);background-repeat:repeat-x;">
+
+<tr>
+
+			<td width=1%></td>
+
+			<td align=center width="98%">
+
+								<table width="860" height="768" border="0" cellpadding="0" cellspacing="0">
+
+									<tr>
+
+										<td  valign=top colspan="2" width="860" height="80">
+
+											<table cellpadding=0 cellspacing=0 border=0 width=100% style="background:url(/templates/24541E11-626C-4098-88D5-BA22567651C5/images/General_Haut_back.jpg) repeat-x;">
+
+											  <tr>
+
+											    <td width="300" rowspan=2><a href=accueil><img src="/templates/24541E11-626C-4098-88D5-BA22567651C5/images/General_Haut_01.png" alt="" width="300" height="80" border=0 usemap="#Map"></a></td>
+
+												<td align="right" style="background-image:url(/templates/24541E11-626C-4098-88D5-BA22567651C5/images/bg_Menu_langue.jpg);background-repeat:no-repeat;"><div class="Menu_Lang"><a href=# onClick="javascript:lf_ChangeLanguage('FR');">Italiano</a> &nbsp;&nbsp;  -  &nbsp;&nbsp; <a href=# onClick="javascript:lf_ChangeLanguage('FR');">Français</a></div></td>
+
+											  </tr>
+
+											   <tr>
+
+											     <td align="right" height="26" style="background-image:url(/templates/24541E11-626C-4098-88D5-BA22567651C5/images/bg_Menu_Haut.jpg);background-repeat:no-repeat;background-position:bottom;"><script>document.write(menuRapide("FR","text"));</script></td>
+
+											  </tr>
+
+											</table>
+
+											    
+
+									    </td>
+
+									</tr>
+
+									<tr>
+
+										<td colspan="2" valign=top height="174"><div id="zoneGeneral"></div></td>
+
+									</tr>
+
+									<tr>
+
+										<td valign=top style="background:url(./templates/24541E11-626C-4098-88D5-BA22567651C5/images/bg_menu.jpg) repeat-y bottom;"><DIV class='KMenu_RootMenu'>
+<TABLE cellpadding=0 cellspacing=0 border=0 width='100%'><TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_6BF1FB96-8BF6-42E6-B480-87249221D77A",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?6BF1FB96-8BF6-42E6-B480-87249221D77A"'><TD style='cursor:pointer'><SPAN class='KLabel'>Message de la Direction générale</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_EFB171DB-054E-4DBA-BA71-AB7F60FAE098",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?EFB171DB-054E-4DBA-BA71-AB7F60FAE098"'><TD style='cursor:pointer'><SPAN class='KLabel'>Conseil d'administration</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_27375339-1736-425C-A0D0-256E5C8F52B6",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?27375339-1736-425C-A0D0-256E5C8F52B6"'><TD style='cursor:pointer'><SPAN class='KLabel'>La Mission</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_5513C747-2FD6-443C-876B-BA598A67AEFC",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?5513C747-2FD6-443C-876B-BA598A67AEFC"'><TD style='cursor:pointer'><SPAN class='KLabel'>Démarche d'Agrément</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_45A387AB-07B3-4FD7-A185-EDB8189A6909",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?45A387AB-07B3-4FD7-A185-EDB8189A6909"'><TD style='cursor:pointer'><SPAN class='KLabel'>Comité des usagers</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_E7237BE4-D08C-4E00-A864-F80EA212B9C3",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?E7237BE4-D08C-4E00-A864-F80EA212B9C3"'><TD style='cursor:pointer'><SPAN class='KLabel'>Qualité des services</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_47B7B1DF-43A4-448A-98BE-647EEFB84826",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?47B7B1DF-43A4-448A-98BE-647EEFB84826"'><TD style='cursor:pointer'><SPAN class='KLabel'>Départements et services</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_D7E03794-521B-42CE-9B14-135BA14C619B",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?D7E03794-521B-42CE-9B14-135BA14C619B"'><TD style='cursor:pointer'><SPAN class='KLabel'>Votre hospitalisation</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD><DIV 
+class='KMenuItemSelected' 
+onMouseOver='KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_DA25DDDE-520E-4C09-B64A-AE423066779B",this,1)' 
+onMouseOut='KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?DA25DDDE-520E-4C09-B64A-AE423066779B"'><TD style='cursor:pointer'><SPAN class='KLabel'>Centre de documentation</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_745D9AD1-F7E3-4EB8-9356-EBF1772A24BD",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?745D9AD1-F7E3-4EB8-9356-EBF1772A24BD"'><TD style='cursor:pointer'><SPAN class='KLabel'>Dossier clinique informatisé (DCI)</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+
+
+
+
+
+<TR>
+<TD><DIV 
+class='KMenuItem'  
+onMouseOver='this.className="KMenuItemOver";KMenu.showMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59","Kgrp_3FA98E2D-9D6E-4A1B-ABAE-FC47F67CD8D4",this,1)' 
+onMouseOut='this.className="KMenuItem";KMenu.hideMenu("4F2CDF65-8DD5-440E-B5A4-0AA944DE1F59");'
+>
+<TABLE cellpadding=0 cellspacing=0 border=0 width=100%><TR onClick='window.location = "/?3FA98E2D-9D6E-4A1B-ABAE-FC47F67CD8D4"'><TD style='cursor:pointer'><SPAN class='KLabel'>Projets multicentriques</SPAN></TD><TD width="3" class="KArrowCell"><SPAN class='KNoArrow'>&nbsp;</SPAN></TD></TR></TABLE>
+</DIV>
+</TD>
+</TR>
+
+</TABLE></DIV>
+<div style="margin-top:10px;margin-right:4px;width:220px;float:right;overflow:hidden;display:none;">
+<P align=right><A href="/?F5427B92-7C54-442A-93CD-69936F6C496F" name=ID3Path target=_self><IMG border=0 name=ID3Path hspace=0 src="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/mes_images/icones/fr/don.jpg" width=118 height=59 NAME="ID3PATH"></A></P>
+</div></td>
+
+										<td valign=top style="background:url(./templates/24541E11-626C-4098-88D5-BA22567651C5/images/bg_contenu.jpg) repeat-y bottom;">
+
+											 <table cellpadding=0 cellspacing=0 border=0 width=100% >
+
+												    <tr> 
+
+												      <td valign=top><div class="titre" name="PageTitle">Centre de documentation<DIV class='KPagePath'><a href="./?E44504FB-84FD-4D4E-85ED-36CE0F12F48F">Hôpital Santa Cabrini </a><SPAN class='KPathDivider'></SPAN><SPAN class='KCurrentPage'>Centre de documentation</SPAN></DIV></div></td>
+
+												    </tr>
+
+												    <tr>
+
+												      <td valign=top><div class="contenu" name="PageContent"><H3><STRONG><STRONG>Informations générales</STRONG></STRONG></H3>
+<P>  </P>
+<UL>
+<LI><STRONG>Adresse :</STRONG> D2-129, 2<SUP>e</SUP> étage, près de lauditorium</LI></UL>
+<P><?xml:namespace prefix = "o" ns = "urn:schemas-microsoft-com:office:office" /><o:p> </o:p></P>
+<UL>
+<LI><STRONG>Heures douverture :</STRONG> du lundi au vendredi de 8 h 00 à 16 h 00</LI></UL>
+<P><o:p> </o:p></P>
+<UL>
+<LI><STRONG>Personnes ressources :</STRONG> Josée Berthelette, technicienne en documentation</LI></UL>
+<P><o:p> </o:p></P>
+<UL>
+<LI><STRONG>Coordonnées : </STRONG></LI></UL>
+<P>     - Téléphone :   514 252-4897</P>
+<P>     - Télécopieur : 514 252-6432</P>
+<P>     - <A href="mailto:dseguin@ssss.gouv.qc.ca" name=undefined target=_self>Courriel</A>:  <A href="mailto:centrededoc.santc@ssss.gouv.qc.ca" target=_blank><U><FONT color=#0000ff size=2 face="Default Sans Serif">centrededoc.santc@ssss.gouv.qc.ca</FONT></U></A></P>
+<P> </P>
+<P> </P>
+<H3>
+<H3>
+<H3>
+<H5>
+<H5>
+<H5>La clientèle<o:p><o:p><STRONG> </STRONG></o:p></o:p></H5></H5></H5></H3><o:p></H3></H3>
+<P> </P>
+<P>Le Centre de documentation est accessible à tous les professionnels de la santé, les usagers et leurs familles, les étudiants, les stagiaires, les bénévoles et tous les employés de lHôpital Santa Cabrini et du Centre daccueil Dante.</P>
+<H5>
+<P> </P>
+<H3>Les services</H3></H5>
+<UL>
+<LI>Référence</LI>
+<LI>Veille documentaire</LI>
+<LI>Prêt et réservation de documentation</LI>
+<LI>Prêt entre bibliothèques</LI>
+<LI>Formation documentaire<o:p> </o:p></LI></UL>
+<P></o:p> </P>
+<H3>Les ressources</H3>
+<UL>
+<LI><A href="http://catalogue.santacabrini.qc.ca/" name=Link target=_blank><STRONG>Catalogue Biblio-Pronto</STRONG></A><A href="http://www.http//catalogue.santacabrini.qc.ca/" name=Link target=_blank></A></LI></UL>
+<P> <o:p>  </o:p></P>
+<UL>
+<LI><o:p>Lien RUIS: <A href="http://www.ruis.umontreal.ca/ressources-%C3%A9lectroniques-disponibles/" target=_blank><U><FONT color=#0000ff size=2 face="Default Sans Serif">http://www.ruis.umontreal.ca/ressources-%C3%A9lectroniques-disponibles/</FONT></U></A><BR></o:p></LI></UL>
+<P><o:p></o:p> </P>
+<UL>
+<LI><o:p>Bases de données</o:p></LI></UL>
+<P><o:p>     - UpToDate</o:p></P>
+<P><o:p>     - Medline</o:p></P>
+<P><o:p>     - Cinahl</o:p></P>
+<P><o:p>     - Embase</o:p></P>
+<P><o:p>     - EBM reviews</o:p></P>
+<P><o:p>     - Pepid online</o:p></P>
+<P><o:p></o:p> </P>
+<UL>
+<LI><o:p><A href="http://www.ministerosalute.it/ipocm/ipocm.jsp?language=francaise" name=Link target=_blank>IPOCM</A> (Partenariat avec le Ministère de la Santé Italien)</LI></UL>
+<P class=MsoNormal><o:p></o:p></P>
+<P class=MsoNormal><o:p> </o:p></P><o:p>
+<H3><o:p>
+<H5><o:p>Les publications de l'institution</o:p></H5></o:p></H3></o:p></o:p>
+<P> </P>
+<P>Vous pouvez également consulter certaines de nos publications en ligne:</P>
+<P> </P>
+<UL>
+<LI><A href="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/new_depliant_fr.pdf" name=ID3Path target=_blank>Orientations stratégiques 2010-2013 </A></LI></UL>
+<P> </P>
+<UL>
+<LI>Rapport annuel:</LI></UL>
+<P> </P>
+<P>     - <A href="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/rapport_annuel_2013-2014_v7.pdf" name=ID3Path target=_blank>2013-2014</A>     </P>
+<P>     - <A href="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/rapport_annuel_2012-2013hsc-versionweb.pdf" name=ID3Path target=_blank>2012-2013</A>     </P>
+<P>     - <STRONG><A href="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/rapport_annuel_2011-2012_webfr.pdf" name=ID3Path target=_blank>2011-2012</A></STRONG>    </P>
+<P>     - <A href="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/rapport_fr.pdf" name=ID3Path target=_blank>2010-2011</A></P>
+<P>     - <A href="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/rapport_annuel_hopital_santa_cabrini_2008-2009-2010_-_fr.pdf" name=ID3Path target=_blank>2008-2009-2010</A></P>
+<P><STRONG>     </STRONG> </P>
+<P> </P>
+<P>     <A href="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/1242-0774_as-471_-.pdf" name=ID3Path target=_blank>Rapport AS-471 pour 2013-2014</A> </P>
+<P>     <A href="/public/3d27b30b-9285-4a51-9c3a-ef41b14bfdb4/rapport_annuel_financier_as-471_-.pdf" name=ID3Path target=_blank>Rapport AS-471 pour 2012-2013</A>   </P>
+<P> </P>
+<P>   </P>
+<P>     </P></div></td>
+
+												    </tr>
+
+											</table>
+
+										 </td>
+
+									</tr>
+
+								</table>
+
+				</td>
+
+				<td></td>
+
+		</tr>
+
+		<tr>
+
+				<td width=1% style="background-image:url(/templates/24541E11-626C-4098-88D5-BA22567651C5/images/bg_bas.jpg);background-repeat:repeat-x;"></td>
+
+				<td  width=98% align=center style="background-image:url(/templates/24541E11-626C-4098-88D5-BA22567651C5/images/bg_bas.jpg);background-repeat:repeat-x;height:84;">	
+
+					   <table cellpadding=0 cellspacing=0 border=0 width=860 height=84>
+
+						  <tr> 
+
+						    <td width=40%><a href=ConditionUtilisation><img src="/templates/24541E11-626C-4098-88D5-BA22567651C5/images/Condition_Utilisation_FR.jpg" width=133 height=15 border=0></a><br>
+
+						        <a href="http://www.id-3.net" target=_blank><img src="/templates/24541E11-626C-4098-88D5-BA22567651C5/images/ID-3.jpg" width=172 height=14 border=0></a>
+
+						    </td>
+
+						    <td><img src="/templates/24541E11-626C-4098-88D5-BA22567651C5/images/optimise.jpg" width=170 height=28></td>
+
+						    <td align=right width=40%><img src="/templates/24541E11-626C-4098-88D5-BA22567651C5/images/accreditation.jpg" border=0></td>
+
+						  </tr>
+
+						</table>
+
+				</td>	
+
+				<td  width=1% style="background-image:url(/templates/24541E11-626C-4098-88D5-BA22567651C5/images/bg_bas.jpg);background-repeat:repeat-x;"></td>
+
+			</tr>
+
+	</table>
+
+<map name="Map">
+
+<area shape="rect" coords="-85,2,198,77" href="/accueil">
+
+</map>
+
+
+<script type='text/javascript'>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type='text/javascript'>
+try {
+var pageTracker;
+pageTracker = _gat._getTracker('UA-10987329-4');
+pageTracker._setSampleRate(100);
+
+pageTracker._initData();
+pageTracker._trackPageview('/Hôpital-Santa-Cabrini-/Centre-de-documentation.kfx?DA25DDDE-520E-4C09-B64A-AE423066779B');
+} catch(err) {};</script>
+</body>
+
+</html>

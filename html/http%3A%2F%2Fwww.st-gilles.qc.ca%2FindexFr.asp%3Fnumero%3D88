@@ -1,0 +1,457 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54466129-11', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<html>
+<head>
+
+	<title>Municipalit&eacute; de Saint-Gilles</title>
+ 	<META NAME="description" lang="fr" CONTENT="Municipalit&eacute; de Saint-Gilles">
+ 	<META NAME="keywords" lang="fr" CONTENT="municipalite, Saint, Gilles , quebec, canada">
+ 	<META NAME="revisit-after" CONTENT="14 days">
+ 	<META NAME="robots" CONTENT="index,follow">
+
+
+
+		<style type="text/css">
+		#csstopmenu, #csstopmenu ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		}
+		#csstopmenu li{
+		float: left;
+		position: relative;
+		}
+		#csstopmenu a{
+		text-decoration: none;
+		}
+		.mainitems{
+		border: 0px solid  #373e96;
+		border-left-width: 0px;
+		font:11px verdana;
+		padding:5px 0px;
+		background-color: #373e96;
+		width: 193;
+		z-index: 1;
+		}
+		.headerlinks a{
+		margin: auto 0px;
+		color: #f6f6e7;
+		}
+		.submenus{
+		display: none;
+		width: 192;
+		position: absolute;
+		top: 2.1em;
+		left: 0;
+		background-color: #848539;
+		border: 1px solid #848539;
+		}
+		.submenus li{
+		width: 100%;
+		padding:0px 0px;
+		font:11px verdana;
+		}
+		.submenus li a{
+		display: block;
+		width: 100%;
+		padding:5px 0px;
+		color: #f6f6e7;
+		text-indent: 1px;
+		}
+		html>body .submenus li a{ /* non IE browsers */
+		width: auto;
+		}
+		.submenus li a:hover{
+		background-color: #373e96;
+		color: #f6f6e7;
+		}
+		#csstopmenu li>ul {/* non IE browsers */
+		top: auto;
+		left: auto;
+		}
+		#csstopmenu li:hover ul, li.over ul {
+		display: block;
+		filter:alpha(opacity=95);
+		-moz-opacity:95%;
+		}
+		html>body #clearmenu{ /* non IE browsers */
+		height: 3px;
+		}
+		</style>
+		<script type="text/javascript">
+		startMenu = function() {
+		if (document.all&&document.getElementById) {
+		cssmenu = document.getElementById("csstopmenu");
+		for (i=0; i<cssmenu.childNodes.length; i++) {
+		node = cssmenu.childNodes[i];
+		if (node.nodeName=="LI") {
+		node.onmouseover=function() {
+		this.className+=" over";
+		}
+		node.onmouseout=function(){
+		this.className=this.className.replace(" over", "")
+		}
+		}
+		}
+		}
+		}
+		if (window.attachEvent)
+		window.attachEvent("onload", startMenu)
+		else
+		window.onload=startMenu;
+	</script>
+
+<script type="text/javascript">
+
+function changement1()
+{
+
+	document.recherche.numeroMat.value = ""
+}
+
+function changement2()
+{
+	document.recherche.numeroMat.value = ""
+}
+function changement3()
+{
+	document.recherche.rue.value = ""
+	document.recherche.numeroCivique.value = ""
+}
+</script>
+<script language="JavaScript">
+<!-- start Javascript
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    return false
+		 }
+
+		 if (str.indexOf(" ")!=-1){
+		    return false
+		 }
+
+ 		 return true
+	}
+
+
+function  validation1() {
+
+	if (document.formulaire.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.formulaire.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	var emailID=document.formulaire.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+return true;
+}
+
+function  validation2() {
+
+	if (document.courriel.nom.value =="")
+	{
+		alert("Vous devez inscrire votre nom.")
+		return false;
+	}
+
+	if (document.courriel.email.value =="")
+	{
+		alert("Vous devez inscrire votre courriel.")
+		return false;
+	}
+
+	if (document.courriel.commentaire.value =="")
+	{
+		alert("Vous devez inscrire votre commentaire.")
+		return false;
+	}
+
+	var emailID=document.courriel.email
+
+
+	if (echeck(emailID.value)==false){
+		alert("Votre courriel est invalide.")
+		return false
+	}
+
+
+
+return true;
+}
+
+
+// end JavaScript -->
+</script>
+
+
+	<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<style type="text/css">a#vlb{display:none}</style>
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+
+
+</head>
+	<body  bgcolor='ffffff' text='232323' link='232323' alink='232323' vlink='232323' topmargin='0'  ><table cellspacing=0 cellpadding=0 align='center' > <tr><td valign=middle align='center' width='970' colspan=10 height=46 ><marquee direction='left'  scrollamount='3' scrolldelay='0' onmouseover='javascript:this.scrollAmount=0' onmouseout='javascript:this.scrollAmount=3' style="font-weight: normal; color:ffffff ; font-family: verdana;font-size: 13; "><div valign=middle  style="font-weight: normal; color:ffffff ; font-family: verdana;font-size: 13; "><p></p></div></marquee></td></tr><tr><td colspan=2><img src='img/hautsite.jpg'></td></tr><tr><td colspan=2><img src='img/blanc9792.jpg'></td></tr><tr><td colspan='2' align=center align=middle>
+
+	<!-- Start WOWSlider.com BODY section -->
+	<div id="wowslider-container1">
+	<div class="ws_images">
+<span><img src="data1/images/1.jpg" alt="" title="" id="wows0"/></span>
+<span><img src="data1/images/2.jpg" alt="" title="" id="wows1"/></span>
+<span><img src="data1/images/3.jpg" alt="" title="" id="wows2"/></span>
+<span><img src="data1/images/4.jpg" alt="" title="" id="wows3"/></span>
+<span><img src="data1/images/5.jpg" alt="" title="" id="wows4"/></span>
+<span><img src="data1/images/6.jpg" alt="" title="" id="wows5"/></span>
+<span><img src="data1/images/7.jpg" alt="" title="" id="wows6"/></span>
+<span><img src="data1/images/8.jpg" alt="" title="" id="wows7"/></span>
+<span><img src="data1/images/9.jpg" alt="" title="" id="wows8"/></span>
+<span><img src="data1/images/10.jpg" alt="" title="" id="wows9"/></span>
+<span><img src="data1/images/11.jpg" alt="" title="" id="wows10"/></span>
+<span><img src="data1/images/12.jpg" alt="" title="" id="wows11"/></span>
+</div>
+<div class="ws_bullets"><div>
+<a href="#wows0" title=""><img src="data1/tooltips/1.jpg" alt=""/>1</a>
+<a href="#wows1" title=""><img src="data1/tooltips/2.jpg" alt=""/>2</a>
+<a href="#wows2" title=""><img src="data1/tooltips/3.jpg" alt=""/>3</a>
+<a href="#wows3" title=""><img src="data1/tooltips/4.jpg" alt=""/>4</a>
+<a href="#wows4" title=""><img src="data1/tooltips/5.jpg" alt=""/>5</a>
+<a href="#wows5" title=""><img src="data1/tooltips/6.jpg" alt=""/>6</a>
+<a href="#wows6" title=""><img src="data1/tooltips/7.jpg" alt=""/>7</a>
+<a href="#wows7" title=""><img src="data1/tooltips/8.jpg" alt=""/>8</a>
+<a href="#wows8" title=""><img src="data1/tooltips/9.jpg" alt=""/>9</a>
+<a href="#wows9" title=""><img src="data1/tooltips/10.jpg" alt=""/>10</a>
+<a href="#wows10" title=""><img src="data1/tooltips/11.jpg" alt=""/>11</a>
+<a href="#wows11" title=""><img src="data1/tooltips/12.jpg" alt=""/>12</a>
+</div></div>
+<a style="display:none" href="http://wowslider.com">Wordpress Lightbox Gallery by WOWSlider.com v2.0</a>
+	</div>
+	<script type="text/javascript" src="engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
+
+
+
+
+	</td></tr><tr><td colspan=2><img src='img/blanc9792.jpg'></td></tr><tr><td colspan='2' bgcolor="373e96">
+<ul id="csstopmenu">
+
+  <li class="mainitems">
+    <div class="headerlinks"><a href="#">LA MUNICIPALIT&Eacute;</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=6"><span>Mot du maire</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=9"><span>Organisation municipale</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=29"><span>Horaires et services</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=7"><span>Proc&egrave;s verbaux</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=23"><span>Recyclage et d&eacute;chets</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=28"><span>Taxes municipales</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=4"><span>S&eacute;curit&eacute; publique</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=44"><span>Contrats municipaux</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=30"><span>R&egrave;glements municipaux</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=97"><span>Publications et rapports</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=69"><span>Droits de Mutation</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=106"><span>Quoi de neuf ?</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=26"><span>Emplois</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+  <li class="mainitems">
+    <div class="headerlinks"><a href="#">R&Eacute;SIDENTS</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=79"><span>Calendrier</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=67"><span>Calendrier en format PDF</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=93"><span>JournaL Le Courant et communiqu&eacute;s</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=104"><span>Bottin de ressources</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=43"><span>&Eacute;valuation en ligne</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=107"><span>Demande de permis</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=64"><span>D&eacute;veloppements r&eacute;sidentiels</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=74"><span>Activit&eacute;s de No&euml;l 2015</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=77"><span>Comit&eacute; Action Familles-A&icirc;n&eacute;s</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=34"><span>Maison des ain&eacute;s</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=18"><span>Commerces et services</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=16"><span>Organismes locaux</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=73"><span>Un d&eacute;m&eacute;nagement ?</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=70"><span>Contr&ocirc;le d&rsquo;animaux</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=112"><span>Constructions & R&eacute;novations (Fiches informatives)</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=113"><span>Nouveaux Gillois/Gilloises</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+  <li class="mainitems">
+    <div class="headerlinks"><a href="#">SERVICE DES LOISIRS</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=68"><span>Terrain de Jeux 2016</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=8"><span>Tournoi Inter-Industries</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=45"><span>Tournoi junior</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=96"><span>Tournoi provincial</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=76"><span>Performance C2 - Entrainement</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=75"><span>Patinoire ext&eacute;rieure</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=71"><span>Pr&eacute;au - Jeux d&rsquo;eau</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=103"><span>Soccer</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=110"><span>Centre r&eacute;cr&eacute;atif</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=111"><span>Cours danse enfants (MOVE)</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=114"><span>Maison des jeunes - L&rsquo;Abordage</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=88"><span>Biblioth&egrave;que Le Signet</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+  <li class="mainitems">
+    <div class="headerlinks"><a href="#">TOURISME & CULTURE</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=91"><span>Attraits touristique</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=66"><span>Course en canots</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=38"><span>Saint-Gilles en f&ecirc;te</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=27"><span>&Eacute;v&eacute;nements</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=42"><span>Troupe dans le Temps</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=63"><span>St-Gilles en image</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+  <li class="mainitems">
+    <div class="headerlinks"><a href="#">LA CORPORATION</a></div>
+	
+ 	   <ul class="submenus">
+		
+		      <li><a href="indexFr.asp?numero=35"><span>Les membres</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=36"><span>La mission</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=32"><span>Programme Subvention r&eacute;sidentielle - Corporation</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=108"><span>Historique</span></a></li>
+			
+		      <li><a href="indexFr.asp?numero=109"><span>Les Projets</span></a></li>
+			
+	    </ul>
+ 	 </li>
+ 
+</ul>
+</td></tr><tr><td colspan='1' valign='top' bgcolor='ffffff'><table  width='200'  border='0' align='center' cellspacing='0' cellpadding='0' ><tr><td height='65' background='img/f5a.jpg'></td></tr><tr><td align='center' background='img/f6a.jpg'><marquee direction='up' width=198 height='266' scrollamount='3' scrolldelay='0' onmouseover='javascript:this.scrollAmount=0' onmouseout='javascript:this.scrollAmount=3' style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 12; "><div align='center' style="font-weight: bold; color:373e96 ; font-family: verdana;font-size: 18; "><p>En bref...</p></div><div align='center' style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 12; "><p><p>Vous vendez ou achetez une propri&eacute;t&eacute;?&nbsp; Consultez le r&egrave;glement 444-12 sur la mise aux normes des fosses septiques.</p>
+<p><a href="http://www.st-gilles.qc.ca/doc/Arrosage.docx">Arrosage d&rsquo;&eacute;t&eacute;</a></p>
+<p>Programme de subvention offert par la Corporation de d&eacute;veloppement de St-Gilles&nbsp;&nbsp;pour construction neuve, jusqu&rsquo;&agrave; 5000 $.&nbsp;&nbsp;Informez-vous!</p></p></div><div align='center'><p>&nbsp;</p></div></marquee></td></tr><tr><td height='15' background='img/f7a.jpg'></td></tr><tr><td >&nbsp;</td></tr>
+
+
+
+				<script type="text/javascript" src="http://www.sopfeu.qc.ca/widget/javascript/widget_min.js"></script>
+
+				<tr><td align='center'><div data-sopfeu-client="Saint-Gilles" data-sopfeu-lng="fr_CA" data-sopfeu-media="28" data-sopfeu-media-bar="0" id="sopfeu-widget-container"></div></td></tr>
+
+
+
+	<tr><td >&nbsp;</td></tr><tr><td valign='top' ><table  width='200' border='0' align='center' cellspacing='0' cellpadding='0' ><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=65';">&nbsp;Terrains &agrave; vendre&nbsp;</td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=41';">&nbsp;Commentaires&nbsp;</td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=5';">&nbsp;Coordonn&eacute;es&nbsp;</td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=39';">&nbsp;Cartes des rues&nbsp;</td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=17';">&nbsp;Carte d&rsquo;acc&egrave;s&nbsp;</td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=40';">&nbsp;Google Streetview&nbsp;</td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=3';">&nbsp;Liens utiles&nbsp;</td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=22';">&nbsp;Plan du site&nbsp;</td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td bgcolor="ffffff" onmouseover="this.style.background='#373e96'; this.style.color='#f6f6e7'" onmouseout="this.style.background='#ffffff'; this.style.color='#232323'" style="font-weight: normal; color:232323 ; font-family: verdana;font-size: 11; text-align: left;cursor: pointer;" height=22 width=200 onclick="window.location.href='indexFr.asp?numero=105';">&nbsp;Carte interactive&nbsp;</td></tr></table></td></tr><tr><td  height='1' bgcolor='232323'></td></tr><tr><td >&nbsp;</td></tr></table></td><td valign='top'  width='770' height='500' ><table  width='770' height='100%' cellspacing='0' cellpadding='0' bgcolor='ffffff'	 align='center'><tr><td valign='top'  height='300'><table width='100%' cellspacing='0' cellpadding='0' align='left'><tr><td width='10' valign='top'></td><td valign='top' height='100%'><table width='100%' cellspacing='0' cellpadding='0' ><tr><td align='right'><a href='javascript:window.history.go(-1)'><img src='administration/images/prec.gif' alt='Page pr&eacute;c&eacute;dente' border='0'></a></td></tr><tr><td valign='middle' height='60' style="color:373e96 ; font-family: verdana; font-size:14;"><b>Biblioth&egrave;que Le Signet </b></td></tr><tr><td valign='top' height='20' style="font-weight: normal; color:232323 ; font-family: verdana; font-size:12; "><p align="center"><a href="http://www.crsbp-qca.qc.ca/web2/tramp2.exe/goto/guest?setting_key=French&setting_key=CRSBP&screen=MyAccount.html" target="_blank">Acc&eacute;dez au catalogue</a> <br />(r&eacute;serv&eacute;e aux abonn&eacute;s)</p><p align="center"><img hspace="0" src="/img/biblio52.jpg" align="baseline" border="2" /></p><p align="center">1540, rue du Couvent<br />Saint-Gilles (Qu&eacute;bec)<br />G0S 2P0</p><p align="center">T&eacute;l : (418) 888-5178   <br />T&eacute;lec : (418) 888-5486<br /><a href="mailto:bibliosg@globetrotter.qc.ca">bibliosg@globetrotter.qc.ca</a><br />Site Internet : <a href="http://www.reseaubiblioduquebec.qc.ca/saint-gilles">www.reseaubiblioduquebec.qc.ca/saint-gilles</a></p><p align="center"><strong>Emplacement :</strong> &Eacute;cole &Eacute;tienne-Chartier<br /> <br /> <br /><strong>Horaire :  <br /></strong>Mardi de 18:30 &agrave; 20:00 <br /></p><p align="center" /><hr style="WIDTH: 318px" size="2" /><p align="center"><br /><strong>&Eacute;quipe de la biblioth&egrave;que <br /></strong> <br />Responsable :  Mme Pascale B&eacute;langer <br /> <br />Adjoint(e) :  Mme Nicole Aubert <br /> <br />B&eacute;n&eacute;vole(s) :</p><p align="center">Mme C&eacute;line Desruisseaux</p><p align="center">Mme Rose-Anne Marois </p><p align="center">Mme Gis&egrave;le Martineau</p><p align="center">Mme Francine Mercier </p><p align="center">Mme Huguette Morin</p><p align="center">Mme No&euml;lla Parent </p><p align="center">Mme Pauline Turmel <br /> <br />Nombre de b&eacute;n&eacute;voles non-mentionn&eacute;s : 14 b&eacute;n&eacute;voles </p></td></tr><tr><td align='left'>&nbsp;</td></tr></table></td><td width='10' valign='top'></td>
+<script>
+
+function lightup(imageobject, opacity){
+if (navigator.appName.indexOf("Netscape")!=-1&&parseInt(navigator.appVersion)>=5)
+imageobject.style.MozOpacity=opacity/100
+else if (navigator.appName.indexOf("Microsoft")!=-1&&parseInt(navigator.appVersion)>=4)
+imageobject.filters.alpha.opacity=opacity
+}
+
+</script>
+<td width='100' valign='top'><table cellspacing='1' cellpadding='0' width='100'  bgcolor='ffffff'><tr><td width='100' align='left'><a href='http://mrclotbiniere.org/site.asp?page=element&nIDElement=2118' target='blank' ><img src='administration/MenuImage_Photo_bv.asp?noId=15' width='100' alt='Carte interactive'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='left'><a href='http://www.cclotbiniere.com/' target='blank' ><img src='administration/MenuImage_Photo_bv.asp?noId=13' width='100' alt='Chambre de commerce Lotbinière'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='left'><a href='http://www.cjelotbiniere.qc.ca/' target='blank' ><img src='administration/MenuImage_Photo_bv.asp?noId=12' width='100' alt='Carrefour Jeunesse Emploi'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='left'><a href='http://st-gilles.qc.ca/doc/LeCourant_Fevrier2016 (003).pdf' target='blank' ><img src='administration/MenuImage_Photo_bv.asp?noId=18' width='100' alt='Nouveaux Gillois et Gilloises 2015'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='left'><a href='https://portail.accescite.net/ProfileGovern/UEL/WEB_UEL_HOMEPAGE.aspx' target='blank' ><img src='administration/MenuImage_Photo_bv.asp?noId=17' width='100' alt='ÉVALUATION EN LIGNE PROFESSIONNELS'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='left'><a href='https://portail.accescite.net/ProfileGovern/UEL/WEB_UEL_CITY.aspx?action=styleselection&CityId=33035&language=fr' target='blank' ><img src='administration/MenuImage_Photo_bv.asp?noId=16' width='100' alt='ÉVALUATION EN LIGNE GRAND PUBLIC'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='left'><a href='http://st-gilles.qc.ca/doc/CALENDRIER 2015 11X17-sans_préparatoire.pdf' False ><img src='administration/MenuImage_Photo_bv.asp?noId=5' width='100' alt='Calendrier'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='left'><a href='indexFr.asp?numero=32' False ><img src='administration/MenuImage_Photo_bv.asp?noId=3' width='100' alt='Programme de subvention résidentiel'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td width='100' align='left'><a href='indexFr.asp?numero=33' False ><img src='administration/MenuImage_Photo_bv.asp?noId=4' width='100' alt='Subvention industries et vente de terrain'  border='0' style='filter:alpha(opacity=100); -moz-opacity:1' onMouseover='lightup(this, 60)' onMouseout='lightup(this, 100)'></a></td></tr><tr><td >&nbsp;</td></tr></table></td></tr></table></td></tr></table></td></table></td></tr></table></td></tr><div align=center  width=970  ><img src=img/bassite.jpg width='970' border='0'></div></table></body></html>
