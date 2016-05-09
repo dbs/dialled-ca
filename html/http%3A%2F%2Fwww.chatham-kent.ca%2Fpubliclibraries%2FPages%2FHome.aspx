@@ -99,7 +99,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x2C5A36A15D04441269DF4ADCA5490962D61FD0CC3FB96A621F45650833287D8EF47090274294C5F4E3698376D48416101643C943862DA1124D16C5FFF05A6CA5,11 Mar 2016 19:50:20 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xCA2C79AC74D5CE92C3DC97B12A03F95E9478CAEF6A9D622C59E2368B96A83A8CD34E63E4897FE40470C6B6621461BC314CD14D7ADB1AC168A2313BF582026EA8,09 May 2016 13:42:12 -0000" />
 <input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
 <input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
@@ -128,8 +128,6 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="/WebResource.axd?d=nkjCvm5Rq8lbpf2aRF_Fhu14yfeSUj7mPvTgPlIIJGYPQMiZLZ6l4xlu9srfeATUjgj3xG7AoPCE80GT1SA1yW1JoE01&amp;t=635588444026805809" type="text/javascript"></script>
-
 <script> var MSOWebPartPageFormName = 'aspnetForm';</script><script type="text/JavaScript" language="JavaScript">
 <!--
 var L_Menu_BaseUrl="/PublicLibraries";
@@ -140,8 +138,6 @@ var L_Menu_SiteTheme="";
 <div>
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
-	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
-	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
 </div>
 	<div class="console" style="width:960px; margin:auto;">
 		
@@ -1002,7 +998,7 @@ var L_Menu_SiteTheme="";
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_2_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_3_2','CKFootprint_1_2_2_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_3_2','CKFootprint_1_2_2_2','2');" onclick="window.location=&quot;/CustomerServices/Pages/CustomerService.aspx&quot;;"><a id="a_CKFootprint_1_2_2_2" href="/CustomerServices/Pages/CustomerService.aspx">Customer Service</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_3_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_4_2','CKFootprint_1_2_3_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_4_2','CKFootprint_1_2_3_2','2');" onclick="window.location=&quot;/EmergencyServices/Pages/EmergencyServices.aspx&quot;;"><a id="a_CKFootprint_1_2_3_2" href="/EmergencyServices/Pages/EmergencyServices.aspx">Emergency Services</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_4_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_5_2','CKFootprint_1_2_4_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_5_2','CKFootprint_1_2_4_2','2');" onclick="window.location=&quot;/FireDepartment/Pages/Default.aspx&quot;;"><a id="a_CKFootprint_1_2_4_2" href="/FireDepartment/Pages/Default.aspx">Fire Department</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_5_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_6_2','CKFootprint_1_2_5_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_6_2','CKFootprint_1_2_5_2','2');" onclick="window.location=&quot;/GarbageandRecycling/Pages/GarbageRecycling.aspx&quot;;"><a id="a_CKFootprint_1_2_5_2" href="/GarbageandRecycling/Pages/GarbageRecycling.aspx">Garbage &amp; Recycling</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_5_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_6_2','CKFootprint_1_2_5_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_6_2','CKFootprint_1_2_5_2','2');" onclick="window.location=&quot;/GarbageandRecycling/Pages/default.aspx&quot;;"><a id="a_CKFootprint_1_2_5_2" href="/GarbageandRecycling/Pages/default.aspx">Garbage &amp; Recycling</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_6_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_7_2','CKFootprint_1_2_6_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_7_2','CKFootprint_1_2_6_2','2');" onclick="window.location=&quot;/Jobs/Pages/chathamkentjobs.aspx&quot;;"><a id="a_CKFootprint_1_2_6_2" href="/Jobs/Pages/chathamkentjobs.aspx">Jobs</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_7_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_8_2','CKFootprint_1_2_7_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_8_2','CKFootprint_1_2_7_2','2');" onclick="window.location=&quot;/Licensing/Pages/Licensing.aspx&quot;;"><a id="a_CKFootprint_1_2_7_2" href="/Licensing/Pages/Licensing.aspx">Licensing</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_8_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_9_2','CKFootprint_1_2_8_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_9_2','CKFootprint_1_2_8_2','2');" onclick="window.location=&quot;/Permits/Pages/Permits.aspx&quot;;"><a id="a_CKFootprint_1_2_8_2" href="/Permits/Pages/Permits.aspx">Permits</a></li>
@@ -1456,10 +1452,18 @@ var L_Menu_SiteTheme="";
             </tr>
           </table>
         </li>
-        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/HoursandLocations/Pages/BranchClosures.aspx">Branch Closures</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/HoursandLocations/Pages/interruption.aspx">Service Interruption</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1631,7 +1635,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/TechtrainingiOS.aspx">iPad iOS8 Tips and Tricks</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/GetGardening.aspx">Gardening Month at CKPL</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1639,7 +1643,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/winterreadingprogram.aspx">All that Glitters Winter Library Program</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/HealthyEating.aspx">Healthy Eating Starts at CKPL!</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1647,7 +1651,15 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/MarchBreakProgram.aspx">March Break Program</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/TheLiteraryClassicsOnlineBookClub.aspx">The Literary Classics Online Book Club</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/FightFraudWorkshop.aspx">Fight Fraud!</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1655,7 +1667,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/TheLiteraryClassicsOnlineBookClub.aspx">The Literary Classics Online Book Club</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/MentalHealth.aspx">Mental Health Awareness Month</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1753,23 +1765,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/ForestofReading.aspx">Forest of Reading</a></td>
-              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
-            </tr>
-          </table>
-        </li>
-        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
-          <table cellpadding="0" cellspacing="0" width="100%">
-            <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Hoopla.aspx">Hoopla</a></td>
-              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
-            </tr>
-          </table>
-        </li>
-        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
-          <table cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Prize Awards and Best Sellers Lists.aspx">Prize Awards and Best Sellers Lists</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1777,7 +1773,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Archambault.aspx">Archambault French eBook Collection</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Prize Awards and Best Sellers Lists.aspx">Prize Awards and Best Sellers Lists</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2087,7 +2083,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/eReaders.aspx">eReaders</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/eReadersandDevices.aspx">eReaders</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2151,6 +2147,14 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/RoomEquipmentRentals.aspx">Room and Equipment Rentals</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/ServiceOntario for Businesses.aspx">ServiceOntario for Businesses</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
@@ -2172,10 +2176,18 @@ var L_Menu_SiteTheme="";
             </tr>
           </table>
         </li>
-        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/VirtualLibraryCard.aspx">Virtual Library Card</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/CKPLGrowsSeedLibrary.aspx">CKPL Grows Seed Library</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2501,12 +2513,12 @@ var L_Menu_SiteTheme="";
 <div id="Div_Spotlight_middle" xmlns:z="#RowsetSchema" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:SharePoint="Microsoft.Sharepoint.WebControls" xmlns:js="http://mycompany.com/mynamespace">
   <div id="div_leftnav"><img src="/_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/spotlight_left.gif" id="img_button_prev"></div>
   <div class="SpotLightmask">
-    <div id="SpotLightbox"><span><a href="/PublicLibraries/UsingYourLibrary/Pages/3DPrinting.aspx" title="3D Printing"><img src="/news/sitegovernnewsimages/20160224/450 x 300_134556_3d printing.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span><span><a href="/publiclibraries/programsandevents/pages/rayrobertsonshometown.aspx" title="Ray Robertson Hometown Launch"><img src="/news/sitegovernnewsimages/20160303/450 x 300_165945_livesofthepoets cover.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span><span><a href="/publiclibraries/research/pages/research resources.aspx" title="Research Resources"><img src="/news/sitegovernnewsimages/20160303/450 x 300_114137_flipster poster.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span></div>
+    <div id="SpotLightbox"><span><a href="/PublicLibraries/ProgramsandEvents/Pages/Gluten.aspx" title="Gluten Sensitivity Workshop"><img src="/news/sitegovernnewsimages/20151010/450 x 300_120720_glutensensitivity_blogpost_title.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span><span><a href="/PublicLibraries/ProgramsandEvents/Pages/MentalHealth.aspx" title="Mental Health Awareness Month"><img src="/news/sitegovernnewsimages/20160504/450 x 300_145440_friends.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span><span><a href="/PublicLibraries/ProgramsandEvents/Pages/GetGardening.aspx" title="Gardening Month at CKPL"><img src="/news/sitegovernnewsimages/20150304/450 x 300_141503_mesmerizing-flower-garden-basics.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span><span><a href="/PublicLibraries/ProgramsandEvents/Pages/FightFraudWorkshop.aspx" title="Fight Fraud!"><img src="/news/sitegovernnewsimages/20160504/450 x 300_155532_anti fraud.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span><span><a href="/PublicLibraries/UsingYourLibrary/Pages/CKPLGrowsSeedLibrary.aspx" title="CKPL Grows Seed Library"><img src="/news/sitegovernnewsimages/20160428/450 x 300_101532_seed library logo.png" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span><span><a href="/PublicLibraries/ProgramsandEvents/Pages/HealthyEating.aspx" title="Healthy Eating Starts at CKPL!"><img src="/news/sitegovernnewsimages/20160111/450 x 300_164156_kitchen-cutting-board-cooking-bell-pepper.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKSpotlight/Images/news_default_image.jpg';&#xA;                                        "></a></span></div>
     <div id="spotlightinfo"></div>
   </div>
   <div id="div_rightnav"><img src="/_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/spotlight_right.gif" id="img_button_next"></div>
 </div>
-<div id="Div_Spotlight_bottom" xmlns:z="#RowsetSchema" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:SharePoint="Microsoft.Sharepoint.WebControls" xmlns:js="http://mycompany.com/mynamespace"><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="3D Printing"></span><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="Ray Robertson Hometown Launch"></span><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="Research Resources"></span></div><script type="text/javascript" xmlns:z="#RowsetSchema" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:SharePoint="Microsoft.Sharepoint.WebControls" xmlns:js="http://mycompany.com/mynamespace">
+<div id="Div_Spotlight_bottom" xmlns:z="#RowsetSchema" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:SharePoint="Microsoft.Sharepoint.WebControls" xmlns:js="http://mycompany.com/mynamespace"><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="Gluten Sensitivity Workshop"></span><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="Mental Health Awareness Month"></span><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="Gardening Month at CKPL"></span><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="Fight Fraud!"></span><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="CKPL Grows Seed Library"></span><span><img src="&#xA;                                /_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/story_off.gif&#xA;                            " alt="Healthy Eating Starts at CKPL!"></span></div><script type="text/javascript" xmlns:z="#RowsetSchema" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:SharePoint="Microsoft.Sharepoint.WebControls" xmlns:js="http://mycompany.com/mynamespace">
             window.addEvent('domready', function(){
             $("img_button_next").addEvent('mouseenter', function() {this.src='/_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/spotlight_right_RL.gif';});
             $("img_button_next").addEvent('mouseleave', function() {this.src='/_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/spotlight_right.gif';});
@@ -2514,15 +2526,27 @@ var L_Menu_SiteTheme="";
             $("img_button_prev").addEvent('mouseleave', function() {this.src='/_layouts/ConceptInc/CKSpotlight/Images/Spotlight_Small/spotlight_left.gif';});
             
              
-                   var slideitem1={title:'3D%20Printing',modifieddate:'Feb 24, 2016',modified:'Jenny Zhou',link:'/PublicLibraries/UsingYourLibrary/Pages/3DPrinting.aspx',imagelink:'/news/sitegovernnewsimages/20160224/450 x 300_134556_3d printing.jpg',description:'CKPL%20is%20now%20offering%203D%20printing%20as%20a%20service%21%20Join%20us%20for%20the%20training%20session%20to%20get%20certified%20and%20start%20printing%21',itemindex:0};
+                   var slideitem1={title:'Gluten%20Sensitivity%20Workshop',modifieddate:'Apr 08, 2016',modified:'Arlene Maris',link:'/PublicLibraries/ProgramsandEvents/Pages/Gluten.aspx',imagelink:'/news/sitegovernnewsimages/20151010/450 x 300_120720_glutensensitivity_blogpost_title.jpg',description:'Carmel%20Marentette%2C%20pharmacist%20and%20nutritional%20consultant%2C%20will%20discuss%20the%20basis%20of%20the%20gluten%20free%20diet.%20Join%20us%20at%20the...',itemindex:0};
                
             
              
-                   var slideitem2={title:'Ray%20Robertson%20Hometown%20Launch',modifieddate:'Mar 03, 2016',modified:'Heidi Wyma',link:'/publiclibraries/programsandevents/pages/rayrobertsonshometown.aspx',imagelink:'/news/sitegovernnewsimages/20160303/450 x 300_165945_livesofthepoets cover.jpg',description:'Chatham-Kent%20Public%20Library%20and%20Biblioasis%20are%20pleased%20to%20welcome%20local%20author%20Ray%20Robertson%20to%20the%20library%20in%20celebrati...',itemindex:1};
+                   var slideitem2={title:'Mental%20Health%20Awareness%20Month',modifieddate:'May 04, 2016',modified:'Stefanie Lawson',link:'/PublicLibraries/ProgramsandEvents/Pages/MentalHealth.aspx',imagelink:'/news/sitegovernnewsimages/20160504/450 x 300_145440_friends.jpg',description:'Is%20someone%20in%20your%20life%20struggling%20with%20a%20mental%20illness%3F%20Speakers%20from%20the%20Mental%20Health%20Network%20of%20Chatham-Kent%20will%20s...',itemindex:1};
                
             
              
-                   var slideitem3={title:'Research%20Resources',modifieddate:'Mar 03, 2016',modified:'Jenny Zhou',link:'/publiclibraries/research/pages/research resources.aspx',imagelink:'/news/sitegovernnewsimages/20160303/450 x 300_114137_flipster poster.jpg',description:'Patrons%20of%20Chatham-Kent%20Public%20Library%20can%20now%20access%20their%20favorite%20digital%20magazines%20using%20Flipster%20from%20EBSCO%20Informa...',itemindex:2};
+                   var slideitem3={title:'Gardening%20Month%20at%20CKPL',modifieddate:'Apr 22, 2016',modified:'Heidi Wyma',link:'/PublicLibraries/ProgramsandEvents/Pages/GetGardening.aspx',imagelink:'/news/sitegovernnewsimages/20150304/450 x 300_141503_mesmerizing-flower-garden-basics.jpg',description:'Join%20us%20in%20May%20for%20Gardening%20Month%20at%20CKPL%21%20Learn%20about%20container%20gardens%20and%20rain%20gardens%20at%20free%20workshops%20at%20the%20Chat...',itemindex:2};
+               
+            
+             
+                   var slideitem4={title:'Fight%20Fraud%21',modifieddate:'May 04, 2016',modified:'Megan Cowan',link:'/PublicLibraries/ProgramsandEvents/Pages/FightFraudWorkshop.aspx',imagelink:'/news/sitegovernnewsimages/20160504/450 x 300_155532_anti fraud.jpg',description:'Join%20us%20at%20the%20Chatham%20Branch%20June%206th%20to%20learn%20how%20to%20protect%20yourself%20and%20your%20money%0D%0Awith%20RCMP%20Sgt.%20John%20Mecher.',itemindex:3};
+               
+            
+             
+                   var slideitem5={title:'CKPL%20Grows%20Seed%20Library',modifieddate:'May 02, 2016',modified:'Chelsie Abraham',link:'/PublicLibraries/UsingYourLibrary/Pages/CKPLGrowsSeedLibrary.aspx',imagelink:'/news/sitegovernnewsimages/20160428/450 x 300_101532_seed library logo.png',description:'Chatham-Kent%20Public%20Library%20members%20can%20borrow%20seeds%20for%20free%2C%20save%20the%20seeds%20they%20grow%2C%20and%20return%20some%20of%20the%20seeds%20ba...',itemindex:4};
+               
+            
+             
+                   var slideitem6={title:'Healthy%20Eating%20Starts%20at%20CKPL%21',modifieddate:'Apr 25, 2016',modified:'Heidi Wyma',link:'/PublicLibraries/ProgramsandEvents/Pages/HealthyEating.aspx',imagelink:'/news/sitegovernnewsimages/20160111/450 x 300_164156_kitchen-cutting-board-cooking-bell-pepper.jpg',description:'Join%20registered%20dietitians%20from%20CK%20Public%20Health%20at%20Chatham-Kent%20Public%20Library%20for%20tips%20and%20tricks%20to%20make%20your%20healthy...',itemindex:5};
                
             
             var SlideObjectItems=new Array();
@@ -2537,6 +2561,18 @@ var L_Menu_SiteTheme="";
             
              
                     SlideObjectItems[2]=slideitem3;
+             
+            
+             
+                    SlideObjectItems[3]=slideitem4;
+             
+            
+             
+                    SlideObjectItems[4]=slideitem5;
+             
+            
+             
+                    SlideObjectItems[5]=slideitem6;
              
             
             var spotlightinfo = $('spotlightinfo').setOpacity(0.8);
@@ -2600,27 +2636,25 @@ function other_story_tags_item_click(tag,id)
       <table cellPadding="0" cellSpacing="0">
         <tr>
           <td class="td_news_content">
-            <p class="p_content_img"><a href="/PublicLibraries/HoursandLocations/Pages/BranchClosures.aspx" title="Branch Closures"><img src="/news/sitegovernnewsimages/20160208/150 x 95_172251_closed.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKNews/Images/news_default_image.jpg';&#xA;                                          "></a></p>
-            <p class="p_content_title">Branch Closures</p>
-            <p class="p_content_date">Mar 04, 2016</p>
-            <p class="p_content_note">All branches of Chatham-Kent Public Library will be closed Friday, March 25 and Monday, March 28. Branches are open regular hours Saturday, March 26.... 
+            <p class="p_content_img"><a href="/publiclibraries/usingyourlibrary/pages/roomequipmentrentals.aspx" title="Room and Equipment Rentals"><img src="/news/sitegovernnewsimages/20160428/150 x 95_162902_equipment rentals.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKNews/Images/news_default_image.jpg';&#xA;                                          "></a></p>
+            <p class="p_content_title">Room and Equipment Rentals</p>
+            <p class="p_content_date">Apr 01, 2016</p>
+            <p class="p_content_note">Did you know Chatham-Kent Public Library offers meeting room and equipment rentals including projectors, screens and portable PA systems with a wireless microphone?... 
 									  </p>
           </td>
           <td class="td_news_content" style="padding-left:30px;">
-            <p class="p_content_img"><a href="/PublicLibraries/Research/Pages/OnlineLearning.aspx" title="Online Learning"><img src="/news/sitegovernnewsimages/20151203/150 x 95_164434_learn4life people.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKNews/Images/news_default_image.jpg';&#xA;                                          "></a></p>
-            <p class="p_content_title">Online Learning</p>
-            <p class="p_content_date">Feb 22, 2016</p>
-            <p class="p_content_note">Develop your professional and personal skills with online courses from Chatham-Kent Public Library. Discover MOOCs and more! ... 
+            <p class="p_content_img"><a href="/PublicLibraries/ProgramsandEvents/Pages/BookSale.aspx" title="Spring Book Sale"><img src="/news/sitegovernnewsimages/20160414/150 x 95_173007_springbooksale2015.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKNews/Images/news_default_image.jpg';&#xA;                                          "></a></p>
+            <p class="p_content_title">Spring Book Sale</p>
+            <p class="p_content_date">Apr 14, 2016</p>
+            <p class="p_content_note">Chatham-Kent Public Library's Chatham Branch is holding its annual Spring Used Book Sale from May 11 to May 14. ... 
 									  </p>
           </td>
           <td class="td_news_content" style="padding-left:30px;">
-            <p class="p_content_img"><a href="/PublicLibraries/ProgramsandEvents/Pages/winterreadingprogram.aspx" title="All that Glitters Winter Library Program"><img src="/news/sitegovernnewsimages/20160107/150 x 95_140627_winter reading image 2016.jpg" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKNews/Images/news_default_image.jpg';&#xA;                                          "></a></p>
-            <p class="p_content_title">All that Glitters Winter Library Program</p>
-            <p class="p_content_date">Jan 07, 2016</p>
-            <p class="p_content_note">Don’t let “Old Man Winter” get you down; escape the winter blues by enjoying a library book, magazine, or movie and earn ballots to win an iPad mini or Kobo ereader.
- ... 
+            <p class="p_content_img"><a href="/publiclibraries/usingyourlibrary/pages/virtuallibrarycard.aspx" title="Virtual Library Card"><img src="/news/sitegovernnewsimages/20160121/150 x 95_113725_virtual_library_card.png" onerror="&#xA;                                            this.src='/_layouts/ConceptInc/CKNews/Images/news_default_image.jpg';&#xA;                                          "></a></p>
+            <p class="p_content_title">Virtual Library Card</p>
+            <p class="p_content_date">Apr 04, 2016</p>
+            <p class="p_content_note">Don’t have a library card? Only want to use the library’s virtual resources? Sign up for a virtual library card with CKPL!... 
 									  </p>
-            <p class="p_content_tags"><span class="span_sub_sites_content_tags_title">Tags:</span><span class="span_sub_sites_tags_item" onclick="other_story_tags_item_click('Library','18')">Library</span></p>
           </td>
         </tr>
       </table>
@@ -2787,7 +2821,7 @@ function other_story_tags_item_click(tag,id)
 	</tr><tr>
 		<td id="MSOZoneCell_WebPartWPQ4" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
-				<td valign="top"><div WebPartID="5e60fbd8-0b20-4794-8de1-623017d645bf" HasPers="false" id="WebPartWPQ4" width="100%" class="ms-WPBody" allowDelete="false" style="" ><div class="vpanel"><div class="vpanel_top"><div class="icon"><div class="sprite-home-wide s-cal_icon"></div></div><div class="title_container"><div class="title">Calendar</div><div class="subtitle"><!--<a class="rss-link" href="http://www.chatham-kent.ca/pages/portalrss.aspx" title="Subscribe to this News">RSS<img border="0" src="/_layouts/ConceptInc/CKNews/Images/Homepage_News_Announcements/rss_icon.gif"></a>-->Upcoming Events</div></div></div> <!--/vpanel_top--><div class="calendar"><div itemscope itemtype="http://data-vocabulary.org/Event" class="cal-event even"><div class="cal-date cal-datearrow"><div class="cal-weekday">Friday</div><div class="cal-month">MAR</div><div class="cal-day">11</div><div class="cal-year">2016</div></div> <!-- /cal-date --><div class="cal-desc"><a href="#" onclick="launchEvent('http://www.chatham-kent.ca/calendar/','eventDetail.aspx?eventid=6C7C25AB-7E3E-4846-A30C-853AB5B71E4C')"><span itemprop="summary" class="cal-title">“All that Glitters” Adult and Teen Winter Library Contest</span></a><div class="cal-dateonly"><time itemprop="startDate" datetime="2016-03-11T09:30:00">March 11, 2016</time></div><div class="cal-datetime">9:30 AM - 5:00 PM</div><div class="cal-hide"><span itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization"><span itemprop="name">Chatham-Kent</span><span itemprop="address"></span></span><span itemprop="description">Earn a ballot for every 3 items you check out from CKPL’s teen and adult collections from January 11...</span><a target="_blank" href="http://www.chatham-kent.ca/calendar/eventDetail.aspx?eventid=6C7C25AB-7E3E-4846-A30C-853AB5B71E4C" itemprop="url">“All that Glitters” Adult and Teen Winter Library Contest</a></div></div> <!-- /cal-desc --></div> <!-- /cal-event --><div itemscope itemtype="http://data-vocabulary.org/Event" class="cal-event odd"><div class="cal-date cal-datearrow"><div class="cal-weekday">Saturday</div><div class="cal-month">MAR</div><div class="cal-day">12</div><div class="cal-year">2016</div></div> <!-- /cal-date --><div class="cal-desc"><a href="#" onclick="launchEvent('http://www.chatham-kent.ca/calendar/','eventDetail.aspx?eventid=6EB42214-3683-4B06-8ECA-A214B580F438')"><span itemprop="summary" class="cal-title">“All that Glitters” Adult and Teen Winter Library Contest</span></a><div class="cal-dateonly"><time itemprop="startDate" datetime="2016-03-12T09:30:00">March 12, 2016</time></div><div class="cal-datetime">9:30 AM - 5:00 PM</div><div class="cal-hide"><span itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization"><span itemprop="name">Chatham-Kent</span><span itemprop="address"></span></span><span itemprop="description">Earn a ballot for every 3 items you check out from CKPL’s teen and adult collections from January 11...</span><a target="_blank" href="http://www.chatham-kent.ca/calendar/eventDetail.aspx?eventid=6EB42214-3683-4B06-8ECA-A214B580F438" itemprop="url">“All that Glitters” Adult and Teen Winter Library Contest</a></div></div> <!-- /cal-desc --></div> <!-- /cal-event --><div itemscope itemtype="http://data-vocabulary.org/Event" class="cal-event even"><div class="cal-date cal-datearrow"><div class="cal-weekday">Monday</div><div class="cal-month">MAR</div><div class="cal-day">14</div><div class="cal-year">2016</div></div> <!-- /cal-date --><div class="cal-desc"><a href="#" onclick="launchEvent('http://www.chatham-kent.ca/calendar/','eventDetail.aspx?eventid=09A48192-1DB1-4AC3-A184-92210D3B5C14')"><span itemprop="summary" class="cal-title">Intro to 3D Printing- Tilbury Branch</span></a><div class="cal-dateonly"><time itemprop="startDate" datetime="2016-03-14T12:00:00">March 14, 2016</time></div><div class="cal-datetime">12:00 PM - 1:30 PM</div><div class="cal-hide"><span itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization"><span itemprop="name">Tilbury Branch</span><span itemprop="address">2 Queen Street</span></span><span itemprop="description">Explore the thrilling world of 3D printing and design with the library’s new 3D Printer! Learn how t...</span><a target="_blank" href="http://www.chatham-kent.ca/calendar/eventDetail.aspx?eventid=09A48192-1DB1-4AC3-A184-92210D3B5C14" itemprop="url">Intro to 3D Printing- Tilbury Branch</a></div></div> <!-- /cal-desc --></div> <!-- /cal-event --></div> <!--/calendar--><div class="vpanel_calendar_link"><a href="http://www.chatham-kent.ca/calendar/createEvent.aspx" target="_blank" title="Add Event"><div class="sprite-home-wide s-add_event_RL"></div></a> <a href="http://www.chatham-kent.ca/calendar/default.aspx" target="_blank" title="View All Events"><div class="sprite-home-wide s-view_all_RL"></div></a></div> <!--/vpanel_link--></div> <!--/vpanel--></div></td>
+				<td valign="top"><div WebPartID="5e60fbd8-0b20-4794-8de1-623017d645bf" HasPers="false" id="WebPartWPQ4" width="100%" class="ms-WPBody" allowDelete="false" style="" ><div class="vpanel"><div class="vpanel_top"><div class="icon"><div class="sprite-home-wide s-cal_icon"></div></div><div class="title_container"><div class="title">Calendar</div><div class="subtitle"><!--<a class="rss-link" href="http://www.chatham-kent.ca/pages/portalrss.aspx" title="Subscribe to this News">RSS<img border="0" src="/_layouts/ConceptInc/CKNews/Images/Homepage_News_Announcements/rss_icon.gif"></a>-->Upcoming Events</div></div></div> <!--/vpanel_top--><div class="calendar"><div itemscope itemtype="http://data-vocabulary.org/Event" class="cal-event even"><div class="cal-date cal-datearrow"><div class="cal-weekday">Monday</div><div class="cal-month">MAY</div><div class="cal-day">9</div><div class="cal-year">2016</div></div> <!-- /cal-date --><div class="cal-desc"><a href="#" onclick="launchEvent('http://www.chatham-kent.ca/calendar/','eventDetail.aspx?eventid=945B1C5A-F025-4324-97A4-08AEB7B21CB4')"><span itemprop="summary" class="cal-title">Mother Goose-On-The-Loose</span></a><div class="cal-dateonly"><time itemprop="startDate" datetime="2016-05-09T10:15:00">May 9, 2016</time></div><div class="cal-datetime">10:15 AM - 10:45 AM</div><div class="cal-hide"><span itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization"><span itemprop="name">Wallaceburg Branch, Chatham-Kent Public Library</span><span itemprop="address">209 James St. Wallaceburg</span></span><span itemprop="description">Join us for stories, songs, crafts and fingerplays.  Ages 0-24 mos. Registration is required.</span><a target="_blank" href="http://www.chatham-kent.ca/calendar/eventDetail.aspx?eventid=945B1C5A-F025-4324-97A4-08AEB7B21CB4" itemprop="url">Mother Goose-On-The-Loose</a></div></div> <!-- /cal-desc --></div> <!-- /cal-event --><div itemscope itemtype="http://data-vocabulary.org/Event" class="cal-event odd"><div class="cal-date cal-datearrow"><div class="cal-weekday">Wednesday</div><div class="cal-month">MAY</div><div class="cal-day">11</div><div class="cal-year">2016</div></div> <!-- /cal-date --><div class="cal-desc"><a href="#" onclick="launchEvent('http://www.chatham-kent.ca/calendar/','eventDetail.aspx?eventid=1B7882F4-BFB1-4FF8-98C7-EF84460DAC79')"><span itemprop="summary" class="cal-title">Spring Used Book Sale</span></a><div class="cal-dateonly"><time itemprop="startDate" datetime="2016-05-11T18:00:00">May 11, 2016</time></div><div class="cal-datetime">6:00 PM - 8:00 PM</div><div class="cal-hide"><span itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization"><span itemprop="name">Meeting Room</span><span itemprop="address">120 Queen Street</span></span><span itemprop="description">Special $5 Preview Night. Stock up on summer reading! Books for Adults, Young Adults and Children! F...</span><a target="_blank" href="http://www.chatham-kent.ca/calendar/eventDetail.aspx?eventid=1B7882F4-BFB1-4FF8-98C7-EF84460DAC79" itemprop="url">Spring Used Book Sale</a></div></div> <!-- /cal-desc --></div> <!-- /cal-event --><div itemscope itemtype="http://data-vocabulary.org/Event" class="cal-event even"><div class="cal-date cal-datearrow"><div class="cal-weekday">Thursday</div><div class="cal-month">MAY</div><div class="cal-day">12</div><div class="cal-year">2016</div></div> <!-- /cal-date --><div class="cal-desc"><a href="#" onclick="launchEvent('http://www.chatham-kent.ca/calendar/','eventDetail.aspx?eventid=8DC64A43-28ED-4E1D-857B-DC0A24AED95E')"><span itemprop="summary" class="cal-title">Humanitarian Emily Hime</span></a><div class="cal-dateonly"><time itemprop="startDate" datetime="2016-05-12T18:00:00">May 12, 2016</time></div><div class="cal-datetime">6:00 PM - 7:00 PM</div><div class="cal-hide"><span itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization"><span itemprop="name">Tilbury Branch, Chatham-Kent Public Library </span><span itemprop="address">2 Queen St., Tilbury </span></span><span itemprop="description">Chatham-Kent Public Library is proud to present guest speaker Emily Hime, founder of Hime for Help, ...</span><a target="_blank" href="http://www.chatham-kent.ca/calendar/eventDetail.aspx?eventid=8DC64A43-28ED-4E1D-857B-DC0A24AED95E" itemprop="url">Humanitarian Emily Hime</a></div></div> <!-- /cal-desc --></div> <!-- /cal-event --></div> <!--/calendar--><div class="vpanel_calendar_link"><a href="http://www.chatham-kent.ca/calendar/createEvent.aspx" target="_blank" title="Add Event"><div class="sprite-home-wide s-add_event_RL"></div></a> <a href="http://www.chatham-kent.ca/calendar/default.aspx" target="_blank" title="View All Events"><div class="sprite-home-wide s-view_all_RL"></div></a></div> <!--/vpanel_link--></div> <!--/vpanel--></div></td>
 			</tr>
 		</table><div class="ms-PartSpacingVertical"></div></td>
 	</tr><tr>
@@ -3134,17 +3168,6 @@ Municipality of Chatham-Kent. All Rights Reserved. <br /><br />
 var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
 </script>
 <script type="text/javascript" language="javascript" src="/_layouts/1033/core.js?rev=mHKsOQ0iU3Q5jdm9OZNDdg%3D%3D"></script>
-
-<script type="text/javascript">
-//<![CDATA[
-
-theForm.oldSubmit = theForm.submit;
-theForm.submit = WebForm_SaveScrollPositionSubmit;
-
-theForm.oldOnSubmit = theForm.onsubmit;
-theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
-//]]>
-</script>
 </form>
  </body>
-</html><!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-03-11T14:50:27 -->
+</html><!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-05-09T09:42:16 -->

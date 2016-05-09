@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-						<title>Jean-LÃ©on Allie, Library - Home</title>
-									<meta name="description" content="Jean-LÃ©on Allie, O.M.I. Library - Home" />
-									<meta name="keywords" content="Jean-LÃ©on Allie, O.M.I. Library - Home" />
+						<title>Jean-Léon Allie, Library - Home</title>
+									<meta name="description" content="Jean-Léon Allie, O.M.I. Library - Home" />
+									<meta name="keywords" content="Jean-Léon Allie, O.M.I. Library - Home" />
 						<meta name="robots" content="index, follow"/>
 			<link type="text/css" href="/css/style.css?v6" rel="stylesheet" media="screen" />
 	<!--[if lte IE 7 ]>
@@ -453,6 +453,21 @@ Remarketing tags may not be associated with personally identifiable information 
 												</ul>
 	                </li>
      
+									            <li><a href="/en/financial-services-home_367_127.htm">Financial Services</a>
+	        				<ul>
+									            <li><a href="/en/financial-services-university-fees-and-regulations_471_267.htm">University Fees and Regulations</a></li>
+     
+									            <li><a href="/en/financial-services-tuition-fees_472_268.htm">Tuition Fees</a></li>
+     
+									            <li><a href="/en/sessional-dates_37_269.htm">University Calendar</a></li>
+     
+									            <li><a href="/en/uhip_472_127.htm#InternationalStudents">UHIP</a></li>
+     
+									            <li><a href="/en/return-to-cts-main-menu_472_268.htm#Insurance">Accident, Dental and Medical Insurance</a></li>
+     
+												</ul>
+	                </li>
+     
 									            <li><a href="/en/food-and-conference-services-home_1695_137.htm">Food and Conference Services</a>
 	        				<ul>
 									            <li><a href="/en/food-and-conference-services-home_1695_818.htm">Home</a></li>
@@ -512,7 +527,7 @@ Remarketing tags may not be associated with personally identifiable information 
 												</ul>
 	                </li>
      
-									            <li><a href="/en/cafe-urban-home_1512_907.htm">CafÃ© Urban</a></li>
+									            <li><a href="/en/cafe-urban-home_1512_907.htm">Café Urban</a></li>
      
 									            <li><a href="/en/food-and-conference-services-our-team_1715_821.htm">Our Team</a></li>
      
@@ -521,24 +536,9 @@ Remarketing tags may not be associated with personally identifiable information 
 												</ul>
 	                </li>
      
-									            <li><a href="/en/financial-services-home_367_127.htm">Financial Services</a>
-	        				<ul>
-									            <li><a href="/en/financial-services-university-fees-and-regulations_471_267.htm">University Fees and Regulations</a></li>
-     
-									            <li><a href="/en/financial-services-tuition-fees_472_268.htm">Tuition Fees</a></li>
-     
-									            <li><a href="/en/sessional-dates_37_269.htm">University Calendar</a></li>
-     
-									            <li><a href="/en/uhip_472_127.htm#InternationalStudents">UHIP</a></li>
-     
-									            <li><a href="/en/return-to-cts-main-menu_472_268.htm#Insurance">Accident, Dental and Medical Insurance</a></li>
-     
-												</ul>
-	                </li>
-     
 									            <li><a href="/en/international-services-home_368_163.htm">International Office</a></li>
      
-									            <li><a href="http://ustpaul.ca/jean-leon-allie-omi-library.php" >Jean-LÃ©on Allie, O.M.I. Library</a>
+									            <li><a href="http://ustpaul.ca/jean-leon-allie-omi-library.php" >Jean-Léon Allie, O.M.I. Library</a>
 	        				<ul>
 									            <li><a href="/jean-leon-allie-omi-library.php">Search</a></li>
      
@@ -555,25 +555,6 @@ Remarketing tags may not be associated with personally identifiable information 
 									            <li><a href="/en/jean-leon-allie-library-our-team_2153_894.htm">Our Team</a></li>
      
 									            <li><a href="/en/jean-leon-allie-omi-library-contact-us_478_278.htm">Contact Us</a></li>
-     
-												</ul>
-	                </li>
-     
-									            <li><a href="/en/recruitment-and-communications-services-home_698_132.htm">Recruitment and Communications </a>
-	        				<ul>
-									            <li><a href="/en/recruitment-and-communications-services-communications_372_532.htm">Communications </a></li>
-     
-									            <li><a href="/en/recruitment-office_464_661.htm">Recruitment Office</a></li>
-     
-									            <li><a href="/en/the-society-of-st-vincent-de-paul-award_2242_17.htm">The Society of St. Vincent de Paul Award</a></li>
-     
-									            <li><a href="/en/student-for-a-day_545_533.htm">Student for a day</a></li>
-     
-									            <li><a href="/en/campus-tour_544_534.htm">Campus Tour</a></li>
-     
-									            <li><a href="/en/recruitment-office-calendar-of-events_549_535.htm">School Visits</a></li>
-     
-									            <li><a href="/en/prospective-students-housing_393_536.htm">Housing</a></li>
      
 												</ul>
 	                </li>
@@ -604,6 +585,25 @@ Remarketing tags may not be associated with personally identifiable information 
 									            <li><a href="/en/pastoral-services-our-team_448_239.htm">Our Team</a></li>
      
 									            <li><a href="/en/pastoral-services-contact_601_404.htm">Contact Us</a></li>
+     
+												</ul>
+	                </li>
+     
+									            <li><a href="/en/recruitment-and-communications-services-home_698_132.htm">Recruitment and Communications </a>
+	        				<ul>
+									            <li><a href="/en/recruitment-and-communications-services-communications_372_532.htm">Communications </a></li>
+     
+									            <li><a href="/en/recruitment-office_464_661.htm">Recruitment Office</a></li>
+     
+									            <li><a href="/en/the-society-of-st-vincent-de-paul-award_2242_17.htm">The Society of St. Vincent de Paul Award</a></li>
+     
+									            <li><a href="/en/student-for-a-day_545_533.htm">Student for a day</a></li>
+     
+									            <li><a href="/en/campus-tour_544_534.htm">Campus Tour</a></li>
+     
+									            <li><a href="/en/recruitment-office-calendar-of-events_549_535.htm">School Visits</a></li>
+     
+									            <li><a href="/en/prospective-students-housing_393_536.htm">Housing</a></li>
      
 												</ul>
 	                </li>
@@ -695,30 +695,63 @@ Remarketing tags may not be associated with personally identifiable information 
 												</ul>
 	                </li>
      
-                        <li><a href="/en/about-spu-coordinates_2_14.htm">About Us</a>
+                        <li><a href="/en/about-spu-home_2335_14.htm">About Us</a>
 	        				<ul>
-									            <li><a href="/en/about-spu-home_492_361.htm">Home</a></li>
+									            <li><a href="/en/about-spu-home_2335_910.htm">About SPU</a>
+	        				<ul>
+									            <li><a href="/en/about-spu-home_492_913.htm">Home</a></li>
      
-									            <li><a href="/en/about-spu-history_493_360.htm">History</a></li>
+									            <li><a href="/en/about-spu-history_493_914.htm">History</a></li>
      
-									            <li><a href="/en/about-spu-mission_494_362.htm">Our Mission</a></li>
+									            <li><a href="/en/about-spu-mission_494_915.htm">Mission</a></li>
      
-									            <li><a href="/en/about-spu-vision_1793_856.htm">Our Vision</a></li>
+									            <li><a href="/en/about-spu-vision_1793_916.htm">Vision</a></li>
      
-									            <li><a href="/en/about-spu-values_1794_857.htm">Our Values</a></li>
+									            <li><a href="/en/about-spu-values_1794_917.htm">Values</a></li>
      
-									            <li><a href="/en/about-spu-our-action-plan_495_363.htm">Our Action Plan</a></li>
+									            <li><a href="/en/about-spu-about-spu-s-catholic-mission_2322_918.htm">SPU’s Catholic Mission</a></li>
      
-									            <li><a href="/en/about-spu-financial-statements_1963_870.htm">Financial Statements</a></li>
+									            <li><a href="/en/about-spu-our-action-plan_495_919.htm">Strategic Plan 2014-2019</a></li>
      
-									            <li><a href="/en/common-university-data-ontario-cudo_1694_780.htm">Common University Data Ontario</a></li>
+									            <li><a href="/en/partnerships-home_373_920.htm">Partnerships</a></li>
      
-									            <li><a href="/en/about-spu-coordinates_2_364.htm">Coordinates</a></li>
-     
-									            <li><a href="/en/partnerships-home_373_812.htm">Partnerships</a></li>
+									            <li><a href="/en/about-spu-coordinates_2_921.htm">Coordinates</a></li>
      
 												</ul>
 	                </li>
+     
+									            <li><a href="/en/about-spu-governance-legislative-governance-framework-of-saint-paul-university_2326_911.htm">Governance</a>
+	        				<ul>
+									            <li><a href="/en/about-spu-governance-legislative-governance-framework-of-saint-paul-university_2326_922.htm">Legislative Governance Framework of Saint Paul University</a></li>
+     
+									            <li><a href="/en/about-spu-governance-council-of-administration_2327_923.htm">Council of Administration</a></li>
+     
+									            <li><a href="/en/about-spu-governance-senate_2331_924.htm">Senate</a></li>
+     
+									            <li><a href="/en/about-spu-governance-chancellor_2330_925.htm">Chancellor</a></li>
+     
+									            <li><a href="/en/about-spu-governance-rector_2328_926.htm">Rector</a></li>
+     
+									            <li><a href="/en/about-spu-governance-vice-rectors_2329_927.htm">Vice-Rectors and Secretary General</a></li>
+     
+									            <li><a href="/about-spu-coordinates-organizational-chart.php">Organizational Chart</a></li>
+     
+												</ul>
+	                </li>
+     
+									            <li><a href="/en/about-spu-financial-statements_1963_912.htm">Institutional data</a>
+	        				<ul>
+									            <li><a href="/en/about-spu-financial-statements_1963_929.htm">Financial Statements</a></li>
+     
+									            <li><a href="/en/common-university-data-ontario-cudo_1694_930.htm">Common University Data Ontario</a></li>
+     
+												</ul>
+	                </li>
+     
+												</ul>
+	                </li>
+     
+                        <li><a href="http://ustpaul.ca/blog/home">Blog</a></li>
      
         </ul>
 		<br style="clear: left" />
@@ -812,7 +845,7 @@ Ext. 2357
 	</div>
 <div id="colum-l-int" >
 		<div id="content" class="content">
-		<p></p>
+		<br>
 	<script language="javascript">
 
 		function searchPrimo() {
@@ -827,7 +860,7 @@ Ext. 2357
 
 
 
-	<form action="http://primo-standard-lb.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?" enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm" name="primoSearchForm" role="search" target="_self"  onsubmit="searchPrimo()">
+	<form action="http://uottawa-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?" enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm" name="primoSearchForm" role="search" target="_self"  onsubmit="searchPrimo()">
 
 		<input type="hidden" name="institution" value="UOTTAWA" />
 
@@ -876,41 +909,16 @@ Ext. 2357
     <h1 class="txttitle"><a href="https://orbis.uottawa.ca/search"><strong>Classic Catalogue</strong></a></h1>
 <h1 class="txttitle">News and Events</h1>
 <p><strong>Follow us on <a href="https://www.facebook.com/Biblioth%C3%A8que-Jean-L%C3%A9on-Allie-Library-Universit%C3%A9-Saint-Paul-University-44038755882/info?tab=overview">Facebook</a> and <a href="https://twitter.com/bibliospu">Twitter</a>.</strong></p>
-<p><strong>Events</strong></p>
-<p><strong>Lunch &amp; Learn</strong></p>
-<p><strong>Brown bag lunch series at the Library</strong></p>
-<p>12:15&ndash;1:15 p.m.<ins cite="mailto:Diana%20Tyndale" datetime="2016-01-05T12:08"></ins></p>
-<p>Monday or Wednesday</p>
-<table border="0" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="244">
-<p>Digital Literacy</p>
-</td>
-<td valign="top" width="150">
-<p>March 14 or 16</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p><br /><strong>If&nbsp;these dates don&rsquo;t fit your schedule, contact us to&nbsp;<a href="/fr/bibliotheque-jean-leon-allie-contactez-nous_478_278.htm">set up a one-on-one meeting</a>! If you are a distance education student, <a href="/fr/bibliotheque-jean-leon-allie-contactez-nous_478_278.htm">contact us</a> to attend one of our sessions online.</strong></p>
-<p class="txttitle"><strong><span>Special Events</span></strong></p>
-<p><strong>Presentation by professor Stephen</strong> <strong>Stuart: "Omniscience in the Digital Era: To Share or Not to Share, That is the Question".</strong></p>
-<p>Thursday, March 31, 12:15 - 1:15 p.m. at the Library</p>
-<p><strong>Mental Health Day at the Library</strong></p>
-<ul>
-<li>Stressed, tired, need a boost? Free coffee, tea and hot chocolate in the Library.</li>
-<li>Presentations on mental health and stress.</li>
-<li>Pet therapy with Therapeutic Paws Canada.</li>
-</ul>
-<p>Wednesday, April 6, at the Library.</p>
-<p><strong>New Book Display: Month of La Francophonie&nbsp;</strong></p>
-<p>The Library creates thematic displays to highlight some of its collections. This week, come see our display of books to underline the Month of La Francophonie.</p>
-<p><strong>Exhibit:&nbsp;<em>The Knights Templar and the</em><em>&nbsp;Inquisition</em></strong></p>
-<p>The Jean-L&eacute;on Allie Library and Archives presents the exhibit &ldquo;<a href="/fr/les-templiers-et-l-inquisition_2302_719.htm">The Knights Templar and the Inquisition</a>.&rdquo; Showcasing rare books and facsimiles, the exhibit brings attention to these historical figures and the period of the Inquisition.&nbsp;</p>
-<p>February 25 &ndash; April 4, 2016</p>
-<p><strong>Exhibit:&nbsp;</strong><strong><em>200 Years of Oblates: &ldquo;Embracing the vast expanse of the whole world&rdquo;</em></strong></p>
-<p>The Jean-L&eacute;on Allie Library and Archives presents&nbsp;<em>200 Years of Oblates: "Embracing the vast expanse of the whole world"</em><em>.&nbsp;</em>Showcasing documents, items and photos related to the history and mission of the Congregation of the Oblates of Mary Immaculate in Canada.</p>
+<p class="txttitle">Good luck with your exams and final assignments!</p>
+<p><a href="http://ustpaul.us12.list-manage.com/track/click?u=d3db24439d550286303e4d7ed&amp;id=708775230f&amp;e=4949306546" target="_blank">Consult the Library hours.</a><br /> <br /> <strong>The Library offers the following services:&nbsp;</strong><br /> <br /> &bull;&nbsp;&nbsp; &nbsp;Group study rooms<br /> &bull;&nbsp;&nbsp; &nbsp;Silent study spaces<br /> &bull;&nbsp;&nbsp; &nbsp;Research help<br /> <br /> <a href="http://ustpaul.us12.list-manage.com/track/click?u=d3db24439d550286303e4d7ed&amp;id=66719838c5&amp;e=4949306546" target="_blank"><strong>Discover our online videos</strong></a>.<br /> <br /> If you have forgotten how to use a tool or resource,<a href="http://ustpaul.us12.list-manage.com/track/click?u=d3db24439d550286303e4d7ed&amp;id=9fe6b77b64&amp;e=4949306546" target="_blank"> our training videos</a> can help you.&nbsp;</p>
+<p><strong>Professors' Showcase</strong></p>
+<p>Curious about your professors? Come see our book display of publications by Professor John Anthony Renken.</p>
+<p><strong>Exhibit: <em>The Roman Rota and Canon Law Books</em>&nbsp;</strong></p>
+<p>The Jean-L&eacute;on Allie Library and Archives presents the exhibit&nbsp;&ldquo;The Roman Rota and Canon Law Books&rdquo;. Showcasing volumes of the complete Roman Rota, the exhibit aims to bring attention to these historical documents published by the Vatican.</p>
+<p>April 28 to June 10, 2016</p>
+<p><strong>Exhibit:&nbsp;<em>The Saint-Joseph Scholasticate: An Institution with a Rich History</em></strong>&nbsp;</p>
+<p>The Jean-L&eacute;on Allie Library and Archives presents <em>The Saint-Joseph Scholasticate: An Institution with a Rich History. </em>Showcasing documents, items and photos related to the history and mission of the Congregation of the Oblates of Mary Immaculate at the scholasticate since 1885.</p>
+<p>May 2 to August 31, 2016</p>
 <p><strong>The Library Offers Students the Opportunity to Borrow Books</strong></p>
 <p>As of September 7, 2015, students are able to borrow books from the Library. For more information,&nbsp;<a href="http://ustpaul.ca/en/the-library-offers-students-the-opportunity-to-borrow-books_2117_17.htm">click here</a>.</p>
 	<br class="cb"/>

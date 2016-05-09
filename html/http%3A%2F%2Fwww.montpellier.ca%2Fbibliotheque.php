@@ -847,7 +847,7 @@ function AC_GetArgs(args, ext, srcParamName, classid, mimeType){
                     
                     <div onclick='window.location.href="webmasters.php";' style="cursor:pointer; color: #666;">
                     <br /><br />
-                    <strong>DerniÃ¨re mise Ã  jour : <strong></strong>16 novembre 2015<br /> <br /></strong>
+                    <strong>DerniÃ¨re mise Ã  jour : <strong></strong>26 avril 2016<br /> <br /></strong>
                    <br /></a>  <br />
                     </div>
 

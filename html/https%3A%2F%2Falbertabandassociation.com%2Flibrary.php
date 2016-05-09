@@ -70,7 +70,7 @@
         <ul class="dropdown">
           <li class="show-for-small"><a href="/programs.php">Programs &amp; Services </a></li>
           <li><a href="/festival_bands_2016.php"> ABA Provincial Festival of Bands</a></li>
-          <li><a href="/ahb.php">Alberta Honour Band</a></li>
+          <li><a href="/wind_symphony.php">ABA Wind Symphony</a></li>
           <li><a href="/jr_sr_honour_bands.php">ABA Junior Honour Bands</a></li>
           <li><a href="/cba.php">Canadian Band Association</a></li>
           <li><a href="/library.php">Music Lending Library</a></li>

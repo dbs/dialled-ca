@@ -58,6 +58,13 @@ h1{margin-top:0px;margin-bottom:0px;font-size:160%;font-weight:bold;}
 	border-width: 0px;
 }
 
+    .auto-style3 {
+	color: #000000;
+}
+.auto-style4 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
     </style>
   </head>
   <body>
@@ -136,33 +143,40 @@ h1{margin-top:0px;margin-bottom:0px;font-size:160%;font-weight:bold;}
             <div style="BORDER-RIGHT-WIDTH: medium; BORDER-TOP-WIDTH: medium; BORDER-BOTTOM-WIDTH: medium; MARGIN-LEFT: 10px; BORDER-LEFT-WIDTH: medium">
              <span style="FONT-SIZE: 8pt" lang="FR-CA">&nbsp;</span></div>
             <div style="BORDER-RIGHT-WIDTH: medium; BORDER-TOP-WIDTH: medium; BORDER-BOTTOM-WIDTH: medium; MARGIN-LEFT: 10px; BORDER-LEFT-WIDTH: medium" align="justify">
-             <span class="style10">La bibliothèque, qui compte plus de 900 abonnés, est affiliée au 
+             <span class="style10"><span class="auto-style4">La bibliothèque, qui compte plus de 900 abonnés, est affiliée au 
             Centre Régionnal des Services des Bibliothèques Publiques des 
             Laurentides depuis 1985. L&#39;organisation à vocation informative, 
-            éducative et culturelle offre divers services :<br />
-             <br />
-             <strong>Prêt et location de documents:</strong><br />
-             <br />
-             - Consultation et lecture sur place<br />
-             - Consultation du logiciel contenant tous les titres de la 
-             collection (livres, <br />
-&nbsp;&nbsp; journaux, revues,&nbsp;publications officiellles, documents historiques) <br />
-             - Utilisation de l&#39;Internet<br />
-				<span lang="fr-ca">- WIFI disponible</span><br />
-             <br />
-             <strong>Pour information :<br />
-             <br />
-             </strong>Bibliothèque municipale Ferme-Neuve<br />
-             144, 12ième rue<strong><br />
-             </strong>Ferme-Neuve, J0W 1C0<br />
-             <br />
-                Téléphone :&nbsp;&nbsp; (819) 587-<span lang="fr-ca">3102 poste 3</span><br />
+            éducative et culturelle offre divers services :</span><br class="auto-style4" />
+             <br class="auto-style4" />
+                <span class="auto-style4">
+             <strong>Prêt et location de documents:</strong></span><br class="auto-style4" />
+             <br class="auto-style4" />
+                <span class="auto-style4">- Consultation et lecture sur place</span><br class="auto-style4" />
+                <span class="auto-style4">- Consultation du logiciel contenant tous les titres de la 
+             collection (livres, </span> <br class="auto-style4" />
+				<span class="auto-style4">&nbsp;&nbsp;journaux, revues,&nbsp;publications officiellles, documents historiques)
+				</span> <br class="auto-style4" />
+                <span class="auto-style4">- Utilisation de l&#39;Internet</span><br class="auto-style4" />
+				<span lang="fr-ca" class="auto-style4">- WIFI disponible</span><br class="auto-style4" />
+             <br class="auto-style4" />
+             <strong><span class="auto-style4">Pour information :</span><br />
+             <br class="auto-style4" />
+             </strong><span class="auto-style4">Bibliothèque municipale Ferme-Neuve</span><br class="auto-style4" />
+                <span class="auto-style4">144, 12ième rue</span><strong><br class="auto-style4" />
+             </strong><span class="auto-style4">Ferme-Neuve, J0W 1C0</span><br class="auto-style4" />
+             <br class="auto-style4" />
+                <span class="auto-style4">Téléphone :&nbsp;&nbsp; (819) 587-</span><span lang="fr-ca"><span class="auto-style4">3400 
+				poste 405</span><br class="auto-style4" />
+				<br class="auto-style4" />
+				<span class="auto-style4">
+				<a class="auto-style3" href="mailto:bibliotheque@munfn.ca">
+				bibliotheque@munfn.ca</a></span> </span><br />
              <br />
                 <span lang="fr-ca"><strong>Pour en savoir davantage:</strong>&nbsp;
 				<a href="http://www.mabibliotheque.ca/laurentides/fr/bibliotheques-horaire-et-localisation/B707-ferme-neuve/index.aspx">
 				<img alt="Horaire_activités_prets_catalogue" class="auto-style2" height="66" longdesc="Horaire_activités_prets_catalogue bibliothèque Ferme-Neuve" src="images/cliques.jpg" width="75" /></a></span><br />
              <br />
-                <img alt="Bibliothèque municipale" height="15" longdesc="Bibliothèque municipale" src="images/Bandeaux/Bandeaux3/bibliotheque@municipalite.ferme-neuve.qc.ca.gif" width="265" /></span><br />
+                </span><br />
             </div>
           </div>
         </div>

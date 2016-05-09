@@ -94,67 +94,6 @@ a2a_config.templates = {
 };
 //--></script>
 
-
-<!-- Plugin: Open external links a new window. Plugin by Kristian Risager Larsen, http://kristianrisagerlarsen.dk . Download it at http://wordpress.org/extend/plugins/open-external-links-in-a-new-window/ -->
-<script type="text/javascript">//<![CDATA[
-	function external_links_in_new_windows_loop() {
-		if (!document.links) {
-			document.links = document.getElementsByTagName('a');
-		}
-		var change_link = false;
-		var force = '.pdf';
-		var ignore = '*.redeemer.ca';
-
-		for (var t=0; t<document.links.length; t++) {
-			var all_links = document.links[t];
-			change_link = false;
-			
-			if(document.links[t].hasAttribute('onClick') == false) {
-				// forced if the address starts with http (or also https), but does not link to the current domain
-				if(all_links.href.search(/^http/) != -1 && all_links.href.search('www.redeemer.ca') == -1) {
-					// alert('Changeda '+all_links.href);
-					change_link = true;
-				}
-					
-				if(force != '' && all_links.href.search(force) != -1) {
-					// forced
-					// alert('force '+all_links.href);
-					change_link = true;
-				}
-				
-				if(ignore != '' && all_links.href.search(ignore) != -1) {
-					// alert('ignore '+all_links.href);
-					// ignored
-					change_link = false;
-				}
-
-				if(change_link == true) {
-					// alert('Changed '+all_links.href);
-					document.links[t].setAttribute('onClick', 'javascript:window.open(\''+all_links.href+'\'); return false;');
-					document.links[t].removeAttribute('target');
-				}
-			}
-		}
-	}
-	
-	// Load
-	function external_links_in_new_windows_load(func)
-	{	
-		var oldonload = window.onload;
-		if (typeof window.onload != 'function'){
-			window.onload = func;
-		} else {
-			window.onload = function(){
-				oldonload();
-				func();
-			}
-		}
-	}
-
-	external_links_in_new_windows_load(external_links_in_new_windows_loop);
-	//]]></script>
-
-
 <link rel="alternate" type="application/rss+xml" title="Podcast RSS feed" href="https://www.redeemer.ca/feed/podcast" />
 
 <script type="text/javascript">var ajaxurl = "https://www.redeemer.ca/wp-admin/admin-ajax.php"</script>		<script>
@@ -217,10 +156,10 @@ a2a_config.templates = {
 						<span>Popular search terms:</span>
 						<!-- <a>Programs</a><a>Tuition</a><a>Admissions</a><a>Costs</a> -->
 						<a href="https://www.redeemer.ca/?s="></a>
-<a href="https://www.redeemer.ca/?s=library">library</a>
+<a href="https://www.redeemer.ca/?s=Dash">Dash</a>
+<a href="https://www.redeemer.ca/?s=academic+calendar">academic calendar</a>
 <a href="https://www.redeemer.ca/?s=current+students">current students</a>
-<a href="https://www.redeemer.ca/?s=dash">dash</a>
-<a href="https://www.redeemer.ca/?s=textbook+list">textbook list</a>
+<a href="https://www.redeemer.ca/?s=Library">Library</a>
 					</div>
 				</div>
 			</div>
@@ -383,7 +322,7 @@ Sunday, closed</p>
 Monday to Friday, 8 a.m. to 12 midnight<br />
 Saturday, 10 a.m. to 8 p.m.</p>
 <p><strong>Summer (May-August) Hours:</strong><br />
-Monday to Friday, 8:30 a.m. to 4:30 p.m.</p>
+Monday to Friday, 10:00 a.m. to 4:30 p.m.</p>
 <h2>Contact Us</h2>
 <p><a title="Map and Directions" href="https://www.redeemer.ca/contact/map-and-directions/"><strong>Peter Turkstra Library</strong></a><strong><br />
 </strong>Contact the Circulation Desk by phone 905-648-2139 ext. 4266 or by email <a href="mailto:library@redeemer.ca" target="_blank">library@redeemer.ca</a></p>
@@ -471,16 +410,16 @@ Monday to Friday, 8:30 a.m. to 4:30 p.m.</p>
                 <div class="row">
                     <div id="instagram">
                         <div class="row">
-                                                               <div class="col-33 sm-col-33"><a href="https://www.instagram.com/p/BCylStENI29/" target="_blank"><img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12822516_1063964796978559_412543395_n.jpg?ig_cache_key=MTIwMzE4ODA2MzUyMTc3MDk0MQ%3D%3D.2.l" alt="instagram" /></a></div>
-                                                                <div class="col-33 sm-col-33"><a href="https://www.instagram.com/p/BCqMgsPtIxT/" target="_blank"><img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12105009_1748820215337026_230712959_n.jpg?ig_cache_key=MTIwMDgyNzI3MzczNzE3ODE5NQ%3D%3D.2" alt="instagram" /></a></div>
-                                                                <div class="col-33 sm-col-33"><a href="https://www.instagram.com/p/BCl9NZ_yUNp/" target="_blank"><img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12822492_1564645903827688_1238366530_n.jpg?ig_cache_key=MTE5OTYzNDA3Nzg2ODE4MDMyOQ%3D%3D.2.l" alt="instagram" /></a></div>
+                                                               <div class="col-33 sm-col-33"><a href="https://www.instagram.com/p/BFHibUstI2_/" target="_blank"><img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13129272_564634607031555_139211902_n.jpg?ig_cache_key=MTI0NTExNTIzMzIyMzM0NzY0Nw%3D%3D.2" alt="instagram" /></a></div>
+                                                                <div class="col-33 sm-col-33"><a href="https://www.instagram.com/p/BFBvnoINIx-/" target="_blank"><img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13092400_974194122648703_602495194_n.jpg?ig_cache_key=MTI0MzQ4NDQwMzQ2MzkxNjY3MA%3D%3D.2" alt="instagram" /></a></div>
+                                                                <div class="col-33 sm-col-33"><a href="https://www.instagram.com/p/BDoYs-GSUK1/" target="_blank"><img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12917946_890771494354742_1682121928_n.jpg?ig_cache_key=MTIxODMzMjM0MjY1NDQxOTYzNw%3D%3D.2.l" alt="instagram" /></a></div>
                                                     </div>
                         <div class="social-link">via <a href="https://instagram.com/redeemeruc/" target="_blank">Instagram</a></div>
                     </div>
                     <div id="twitter">
-                        <div id="twitterUC"><p><strong><a href="https://twitter.com/RedeemerUC" target="_blank">@RedeemerUC</a>: </strong>RT @developingmusic: @RedeemerUC bubble soccer in the dome right now! <a href=https://t.co/l2DSrgBRCK target="_blank">https://t.co/l2DSrgBRCK</a></p></div>
-                        <div id="twitterRoyals" style="display: none"><p><strong><a href="https://twitter.com/RedeemerRoyals" target="_blank">@RedeemerRoyals</a>: </strong>#tbt The last time Redeemer Men's Indoor Soccer make the Provincial Championship, THIS happened. Be there next... <a href=https://t.co/ckug3C1IYb target="_blank">https://t.co/ckug3C1IYb</a></p></div>
-                        <div id="twitterAdm" style="display: none"><p><strong><a href="https://twitter.com/RedeemerAdm" target="_blank">@RedeemerAdm</a>: </strong>Come experience campus during your March Break! ALL high school grades welcome. <a href=https://t.co/LKAtgz4c75 target="_blank">https://t.co/LKAtgz4c75</a> <a href=https://t.co/4BvaJIHmDG target="_blank">https://t.co/4BvaJIHmDG</a></p></div>
+                        <div id="twitterUC"><p><strong><a href="https://twitter.com/RedeemerUC" target="_blank">@RedeemerUC</a>: </strong>“Judges is not a book of dusty stories. It casts light on questions important to Christians today.” @davidbeldman: <a href=https://t.co/Pw7h8i5XGP target="_blank">https://t.co/Pw7h8i5XGP</a></p></div>
+                        <div id="twitterRoyals" style="display: none"><p><strong><a href="https://twitter.com/RedeemerRoyals" target="_blank">@RedeemerRoyals</a>: </strong>RT @CCAAsportsACSC: We're excited to unveil our first two CCAA 2016 Hall of Fame inductees tomorrow morning! <a href=https://t.co/vsKt4kKanR target="_blank">https://t.co/vsKt4kKanR</a> <a href=https://t.co/I8YZjuQ8CH target="_blank">https://t.co/I8YZjuQ8CH</a></p></div>
+                        <div id="twitterAdm" style="display: none"><p><strong><a href="https://twitter.com/RedeemerAdm" target="_blank">@RedeemerAdm</a>: </strong>Did you know? Incoming students can already start planning and sign-up for a course registration appointment at <a href=https://t.co/nsggBDVChN. target="_blank">https://t.co/nsggBDVChN.</a></p></div>
 
                         <ul id="twitter-toggle">
                             <li class="active"><a id="@RedeemerUC" class="twitterToggle" href="javascript:void(0);">@RedeemerUC</a></li>

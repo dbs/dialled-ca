@@ -4,7 +4,7 @@
 	
     ICBC Home    
 
-</title><meta name="icbc.version.publishing" content="1.0.8.16054 build 181" />
+</title><meta name="icbc.version.publishing" content="1.0.8.16111 build 195" />
 <link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=5vnvqGmlkKiZE7lIH7ENng%3D%3D"/>
 <link id="CSSHomepageLayout" rel="stylesheet" type="text/css" href="/_layouts/15/ICBC.Internet.Branding/Styles/layouts/layout-homepage.css"/>
 <link id="CSSScreenRegistration" rel="stylesheet" type="text/css" href="/_layouts/15/ICBC.Internet.Branding/Styles/screen.css"/>
@@ -125,7 +125,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xB09AD7B4D62D3BE19F46E53DA8F88C16E6EF581626B4A5D6C787109DE0AD24BD2978799F8A34DF9B9E7311EE7FC9DBB51B5D60A52DA9C6598E5CA80537FDFA91,11 Mar 2016 20:29:13 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x0977642F84AB2E32E682F9E1E93D5B661CCD32A65B4E2399E9F19D761FA4134D0E42BFDA640A8BC7CEAA7F86DE835101F46FA836F67B5ECBDFDDA8436A724844,09 May 2016 13:26:31 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -136,7 +136,7 @@
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPBSpWU0tleTpmNjQ5MmEwZC1lMzNhLTRhYTAtYmExZC0xYThjNjM5ZjJiMjBknl3sECa+NFfO345SRcZM3vO8ylGvYAS0hrGJBNI3Bkg=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPBSpWU0tleTpkMmFlOTI5Yy1lZWZmLTRlZDktODljNy1lZjgzY2I2MmM1NTlkHkclY2xdj9tuIprhwsap3BFqaiP3/q9k+fAjqhHd5Mo=" />
 </div>
 
 <script type="text/javascript">
@@ -169,7 +169,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'ICBCINTERNETROOT#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.icbc.com", siteAbsoluteUrl: "http:\u002f\u002fwww.icbc.com", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Home", webTemplate: "11002", tenantAppVersion: "0", webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-03-11T20:29:13.6483895Z") - new Date(), siteClientTag: "32767$$15.0.4551.1508", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{38d7a80f-bf65-45bc-a8a5-6265add0f73a}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.icbc.com", siteAbsoluteUrl: "http:\u002f\u002fwww.icbc.com", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Home", webTemplate: "11002", tenantAppVersion: "0", webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T13:26:31.0200296Z") - new Date(), siteClientTag: "32767$$15.0.4551.1508", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{38d7a80f-bf65-45bc-a8a5-6265add0f73a}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var _spWebPartComponents = new Object();//]]>
@@ -279,7 +279,7 @@ return true;
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAJXhNZhLPKG8SZ47FhakThwYE4chcfzoSkVu5/oiESvlX5gfZ1OB4/wvOJFYEp12ZSRz5fi8kCrxCGlHtagVRJW" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAIU3tewPbabxwpatWwDWeETYE4chcfzoSkVu5/oiESvleiQ9w9O8gYcYFyfufbEnDwpdXKHjrkBg1FPQMqrpHJP" />
 </div>
             <script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
             <span>
@@ -598,6 +598,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                 
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/driver-licensing/visit-dl-office/Pages/Book-a-road-test.aspx" title="Book a road test">Book a road test</a></li>
                 
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/driver-licensing/visit-dl-office/Pages/Prepare-road-test-appointment.aspx" title="Prepare for your road test appointment">Prepare for your road test appointment</a></li>
+                
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/driver-licensing/visit-dl-office/Pages/Accepted-ID.aspx" title="Accepted ID">Accepted ID</a></li>
                 
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/driver-licensing/visit-dl-office/Pages/Fees.aspx" title="Fees">Fees</a></li>
@@ -777,6 +779,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                 
         </div>
     
+        <div class="megamenu-item">
+            <a class="megamenu-item-link" href="http://www.icbc.com/claims/Pages/estimate-impact-claims-premiums.aspx" title="Premium impact estimator">
+                <img src="/PublishingImages/MegaMenu%20Icons/premium-impact-estimator.png" alt="" />
+                <span class="megamenu-item-text">Estimate the impact of a claim on your premiums</span>
+            </a>
+            <a class="megamenu-item-handle">Toggle Navigation Term</a>
+
+            
+        </div>
+    
         </li>
     
 
@@ -851,15 +863,27 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             
                     <ul class="megamenu-list">
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/Choose-what-matters-to-you.aspx" title="Coverage for you">Coverage for you</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/extended-liability.aspx" title="Extended third party liability">Extended third party liability</a></li>
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/Coverage-for-your-vehicle.aspx" title="Coverage for your vehicle">Coverage for your vehicle</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/underinsured-protection.aspx" title="Excess underinsured motorist protection">Excess underinsured motorist protection</a></li>
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/Great-value-packages.aspx?ga34" title="Great value packages">Great value packages</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/loss-of-use.aspx" title="Loss of use">Loss of use</a></li>
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/Specialized-coverage.aspx?ga35" title="Specialized coverages">Specialized coverages</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/collision-coverage.aspx" title="Collision">Collision</a></li>
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/Autoplan-Optional-Policy.aspx" title="Autoplan optional policy">Autoplan optional policy</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/comprehensive-coverage.aspx" title="Comprehensive">Comprehensive</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/specified-perils.aspx" title="Specified perils">Specified perils</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/rental-vehicle.aspx" title="Rental vehicle coverage">Rental vehicle coverage</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/new-vehicle-protection.aspx" title="New vehicle protection">New vehicle protection</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/Great-value-packages.aspx" title="Optional insurance packages">Optional insurance packages</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/Specialized-coverage.aspx" title="Specialized coverage">Specialized coverage</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/optional/Pages/Autoplan-Optional-Policy.aspx" title="ICBC Autoplan optional policy">ICBC Autoplan optional policy</a></li>
                 
                     </ul>
                 
@@ -1254,11 +1278,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             
                     <ul class="megamenu-list">
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/road-safety/sharing/Pages/Motorcycle-riders-protecting-yourself-better.aspx" title="Motorcycle safety">Motorcycle safety</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/road-safety/sharing/motorcycle-safety/Pages/Default.aspx" title="Motorcycle safety">Motorcycle safety</a></li>
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/road-safety/sharing/Pages/pedestrian-safety.aspx" title="Pedestrians at risk">Pedestrians at risk</a></li>
-                
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/road-safety/sharing/Pages/pedestrian-infographic.aspx" title="Facts behind pedestrian crashes in B.C. Infographic">Facts behind pedestrian crashes in B.C. Infographic</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/road-safety/sharing/pedestrian-safety/Pages/Default.aspx" title="Pedestrians at risk">Pedestrians at risk</a></li>
                 
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/road-safety/sharing/Pages/cycling-safety.aspx" title="Cyling safety">Cycling safety</a></li>
                 
@@ -1526,7 +1548,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/autoplan/Pages/Default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Autoplan insurance</span></span></a><ul class="dynamic">
 			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/autoplan/Pages/Cancel-your-insurance.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Cancel insurance</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/autoplan/Pages/Driving-outside-of-B-C.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Driving outside B.C.</span></span></a></li>
 		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/claims/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Claims</span></span></a><ul class="dynamic">
-			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/claims/Pages/Report-a-claim-online.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Report a claim</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/claims/Pages/claim-steps.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Steps of your claim</span></span></a></li>
+			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/claims/Pages/Report-a-claim-online.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Report a claim</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/claims/Pages/claim-steps.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Steps of your claim</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/claims/Pages/estimate-impact-claims-premiums.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">​​Estimate the impact of a claim on your premiums</span></span></a></li>
 		</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/driver-licensing/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Driver licensing</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/FAQ/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">FAQs</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/road-safety/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Road safety</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/vehicle-registration/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Vehicle registration</span></span></a></li>
 	</ul>
 </div>
@@ -1623,25 +1645,25 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             
                     <li>
                         <div class="slider-item-container">
-                            <div class="slider-image-container"><a href="http://www.icbc.com/road-safety/crashes-happen/Distracted-driving/Pages/Default.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/distracted-driving-2016.jpg'/></a></div>
+                            <div class="slider-image-container"><a href="http://www.icbc.com/road-safety/crashes-happen/Pages/Speed.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/high-risk-2016.png'/></a></div>
                         </div>
                     </li>
                 
                     <li>
                         <div class="slider-item-container">
-                            <div class="slider-image-container"><a href="http://www.icbc.com/about-icbc/contact-us/Pages/language-services.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/LangLine-eng.jpg'/></a></div>
+                            <div class="slider-image-container"><a href="http://www.icbc.com/driver-licensing/getting-licensed/Pages/Your-driving-record.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/driving-record-homepage.jpg'/></a></div>
+                        </div>
+                    </li>
+                
+                    <li>
+                        <div class="slider-item-container">
+                            <div class="slider-image-container"><a href="http://www.icbc.com/autoplan/optional/Pages/extended-liability.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/TPL.jpg'/></a></div>
                         </div>
                     </li>
                 
                     <li>
                         <div class="slider-item-container">
                             <div class="slider-image-container"><a href="http://www.icbc.com/about-icbc/Pages/fraud.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/icbc-fraud.jpg'/></a></div>
-                        </div>
-                    </li>
-                
-                    <li>
-                        <div class="slider-item-container">
-                            <div class="slider-image-container"><a href="http://practicetest.icbc.com/#/"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/OPKT-banner.png'/></a></div>
                         </div>
                     </li>
                 
@@ -1653,19 +1675,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         <ul id="second-carousel" class="jcarousel-skin-tango2">
             
                     <li>
-                        <img src="/Lists/SliderImagesDesktop/distracted-driving-2016.jpg" />
+                        <img src="/Lists/SliderImagesDesktop/high-risk-2016.png" />
                     </li>
                 
                     <li>
-                        <img src="/Lists/SliderImagesDesktop/LangLine-eng.jpg" />
+                        <img src="/Lists/SliderImagesDesktop/driving-record-homepage.jpg" />
+                    </li>
+                
+                    <li>
+                        <img src="/Lists/SliderImagesDesktop/TPL.jpg" />
                     </li>
                 
                     <li>
                         <img src="/Lists/SliderImagesDesktop/icbc-fraud.jpg" />
-                    </li>
-                
-                    <li>
-                        <img src="/Lists/SliderImagesDesktop/OPKT-banner.png" />
                     </li>
                 
         </ul>
@@ -1749,7 +1771,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 <div class="personaBox-action-content"><a href="/autoplan/moving-insurance/Pages/Insurance-discount-for-new-residents.aspx">Get a discount if you're claim-free</a></div>
 </li>
 <li class="personaBox-action">
-<div class="personaBox-action-content"><a href="http&#58;//www2.gov.bc.ca/gov/topic.page?id=87EEAD6D19974459950AA7FF7F60AD54&amp;WT.mc_id=BCSC_ref_ICBC" target="_blank">Learn about the B.C. Services Card</a></div>
+<div class="personaBox-action-content"><a target="_blank" href="http&#58;//www.gov.bc.ca/bcservicescard">Learn about the B.C. Services Card</a></div>
 </li>
 <li class="personaBox-action">
 <div class="personaBox-action-content"><a href="/vehicle-registration/buy-vehicle/Pages/Importing-a-vehicle-into-B-C.aspx">Import a vehicle to B.C.</a></div>
@@ -2345,7 +2367,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0x8ABA807ADA46503D049675AD9F290F9F4CA914CC2350798CD1F98364094E2DFC1AAF0BB0A465ECBEBAE9EE68AA2E44C0DBB3848DBEC1014B601E486B784F1D13,11 Mar 2016 20:29:14 -0000';
+            formDigestElement.value = '0x0977642F84AB2E32E682F9E1E93D5B661CCD32A65B4E2399E9F19D761FA4134D0E42BFDA640A8BC7CEAA7F86DE835101F46FA836F67B5ECBDFDDA8436A724844,09 May 2016 13:26:31 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>

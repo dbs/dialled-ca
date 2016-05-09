@@ -12,21 +12,21 @@
 <meta name="DC.Language" content="en" />
 <meta name="DC.Identifier" scheme="URI" content="http://uottawa.libguides.com/c.php?g=265223&p=1774098" />
 <meta name="DC.Date.Created" scheme="ISO8601" content="Mar 3, 2011" />
-<meta name="DC.Date.Modified" scheme="ISO8601" content="Dec 8, 2015" />
+<meta name="DC.Date.Modified" scheme="ISO8601" content="Apr 15, 2016" />
 
 		<link rel="stylesheet" href="/web/jquery/css/1.8.24_themes_base_jquery-ui.css" /><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/web/bootstrap-accessibility-plugin/css/bootstrap-accessibility_1.0.3.css" />
-		<link rel="stylesheet" href="/web/css1.11.7/springshare.public.min.css" />
-		<!--[if lt IE 9]> 
-				<link rel="stylesheet" href="/web/css1.11.7/springshare.public.ie8hacks.css" /> 
+		<link rel="stylesheet" href="/web/css1.12.21/springshare.public.min.css" />
+		<!--[if lt IE 9]>
+				<link rel="stylesheet" href="/web/css1.12.21/springshare.public.ie8hacks.css" />
 		<![endif]-->
-		<link rel="stylesheet" href="/web/css1.11.7/springshare.common.min.css" />
+		<link rel="stylesheet" href="/web/css1.12.21/springshare.common.min.css" />
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 		<script type="text/javascript" src="/web/jquery/js/1.12.1_jquery.min.js"></script>
 		<script type="text/javascript" src="/web/jquery/js/1.9.2_jquery-ui.min.js"></script><script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 			<script type="text/javascript" src="/web/bootstrap-accessibility-plugin/js/bootstrap-accessibility_1.0.3.min.js"></script>
-		<script type="text/javascript" src="/web/js1.11.7/springshare.public.min.js"></script>
-		<script type="text/javascript" src="/web/js1.11.7/springshare.common.min.js"></script>
+		<script type="text/javascript" src="/web/js1.12.21/springshare.public.min.js"></script>
+		<script type="text/javascript" src="/web/js1.12.21/springshare.common.min.js"></script>
 		<style>/* =========================================== */
                         /* bootstrap overrides */
                         /* =========================================== */
@@ -173,7 +173,60 @@
 ul.s-lg-link-list > li {
   margin-bottom: 10px;
 }
+.uos--link--grey,
+.link-grey-button {
+  background:#2f2f2f;
+  padding: 4px 15px;
+  cursor: pointer;
+  color: #fff;
+  margin: 1em;
+  border:none;
+  text-decoration: none;
+  display: inline-block;
+}
+.uos--link--grey:hover,
+.link-grey-button:hover {
+  background: #8f001a;
+}
+.uos--link--grey:visited,
+.link-grey-button:visited {
+  color: #fff;
+}
+</style><style>
+.language-toggle {
+  background: none;
+  border: none;
+  position: relative;
+}
+.changer {
+  height: 30px;
+  padding: 10px;
+  line-height: 30px;
+  background: #fafafa;
+  background: -moz-linear-gradient(top, rgba(250,250,250,1) 59%, rgba(224,224,224,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(59%,rgba(250,250,250,1)), color-stop(100%,rgba(224,224,224,1)));
+  background: -webkit-linear-gradient(top, rgba(250,250,250,1) 59%,rgba(224,224,224,1) 100%);
+  background: -ms-linear-gradient(top, rgba(250,250,250,1) 59%,rgba(224,224,224,1) 100%);
+  background: linear-gradient(to bottom, rgba(250,250,250,1) 59%,rgba(224,224,224,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e0e0e0',GradientType=0 );
+  border-radius: 3px;
+  z-index: 10000;
+  font-size: 13px;
+  text-decoration: none;
+}
 </style>
+
+<script>
+$( document ).ready(function() {
+  $(".s-lib-box").find("h2:contains('Changer')").each(function(){
+    var div=$(this).parent();
+    div.addClass("language-toggle");
+    div.removeClass("s-lib-box");
+    $('h2:contains("Changer")').detach();
+    div.detach().appendTo('#toggle-button');
+  })
+});
+</script>
 		<!-- END: CUSTOM HEAD SYSTEM JS/CSS -->
 		<!-- BEGIN: CUSTOM HEAD GUIDE JS/CSS -->
 		
@@ -182,7 +235,7 @@ ul.s-lg-link-list > li {
 		<script src="http://uottawa.libguides.com/sa.php?site_id=472"></script>
 		<script>
 			springSpace.Common = springSpace.Common || { };
-			
+
 			springSpace.Common.constant = {
 					PROCESSING: {
 						ACTION_DISPLAY_POLL: 159
@@ -196,7 +249,7 @@ ul.s-lg-link-list > li {
 				page_id: 1774098,
 				constant: {
 					PROCESSING: {
-						
+
 					},
 					CONTENT: {
 						CONTENT_BOOKS: 5
@@ -209,11 +262,11 @@ ul.s-lg-link-list > li {
 				//jQuery("#s-lg-guide-header-subjects").hide();
 				//jQuery("#s-lg-guide-header-tags").hide();
 			});
-			
+
 			handleScroll=function() {
 				var target_elt = "";
 				var anchor = window.location.hash.substring(1);
-				
+
 				if (jQuery.isNumeric(anchor)) {
 					xhr = jQuery.ajax({
 						async: false,
@@ -221,7 +274,7 @@ ul.s-lg-link-list > li {
 						type: "POST",
 						dataType: "json",
 						data: {
-							action: 562, 
+							action: 562,
 							anchor: anchor
 						},
 						success: function(response, textStatus, jqXHR) {
@@ -229,15 +282,15 @@ ul.s-lg-link-list > li {
 								target_elt = "#s-lg-box-" + response.data.box_id;
 							}
 						},
-						error: function (jqXHR, textStatus, errorThrown) { 
-						
+						error: function (jqXHR, textStatus, errorThrown) {
+
 						}
 					});
 				}
 				else if (false) {
 					target_elt = "#s-lg-page-section-1774098";
 				}
-				
+
 				if (target_elt != "") {
 					jQuery("html, body").animate({ scrollTop: jQuery(target_elt).offset().top }, 750);
 					if (jQuery(this).scrollTop() > 220) {
@@ -268,25 +321,8 @@ ul.s-lg-link-list > li {
           <div id="global-header" class="container">
             <div id="uottawa-global-header">
 
-<!--
-<div id="uottawa-global-search" class="uojs--no-js pull-right">
-<form action="http://primo-standard-lb.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?" enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm" name="primoSearchForm" role="search" target="_self"  onsubmit="searchPrimo()">
-  <input type="hidden" name="institution" value="UOTTAWA" />
-  <input type="hidden" name="vid" value="UOTTAWA" />
-  <input type="hidden" name="group" value="GUEST" />
-  <input type="hidden" name="mode" value="Basic" />
-  <input type="hidden" name="onCampus" value="true" />
-  <input type="hidden" name="displayMode" value="full" />
-  <input type="hidden" name="prefLang" value="en_US" />
-  <input type="hidden" name="search_scope" value="default" />
-  <input type="hidden" id="primoQuery" name="query" />
-  <label for="primoQueryTemp" class="uos--invisible">Enter a search term</label>
-  <input type="text" id="primoQueryTemp" name="queryTemp" placeholder="Search the library" size="25" />
-  <label for="goButton" class="uos--invisible">Search</label>
-  <input type="button" id="goButton" value="Search+" onclick="searchPrimo()" />
-</form>
-</div>
--->
+<div id="toggle-button" class="pull-right"></div>
+
               <div id="uottawa-logo">
                 <a href="http://www.uottawa.ca/en" rel="home" title="Home"></a>
               </div>
@@ -429,8 +465,9 @@ ul.s-lg-link-list > li {
 								<div class="s-lib-box-content">
 									
 			<div id="s-lg-content-10651697" class="  clearfix">
-				<p><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;">The "Women's Archives" area consists of various archival fonds and collections related to the women's history in Canada and more closely to the feminist movement since the 1960s.</span></span></p>
-<p><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;"><strong></strong>They comprise many non-governmental organizations and individuals archival fonds who worked for the improvement of the political, social and economical condition of Canadian women. The <span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;"><em>Canadian Women's Movement Archives (CWMA) Collection</em> and the <span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;">Canadian Women's Movement Archives (CWMA) fonds </span></span></span></span> are two major ressources for research on contemporary women's movement in Canada.</span></span><br /></span></span></p>
+				<p><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;">The Women&#39;s Archives contain&nbsp;more than 170&nbsp;archival fonds and collections related to the history of women in Canada, with particular emphasis on the&nbsp;feminist movement since the 1960s.</span></span></p>
+
+<p><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;">Included are the documents&nbsp;of many grassroots organizations and individuals&nbsp;who worked to&nbsp;improve the social, political&nbsp;and economic&nbsp;conditions of&nbsp;women in Canada. The <span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;"><em>Canadian Women&#39;s Movement&nbsp;Collection</em>&nbsp;(10-001) and the <span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;">Canadian Women&#39;s Movement Archives (CWMA) fonds (10-002)&nbsp;</span></span></span></span>are two major contemporary&nbsp;resources for research on the women&#39;s movement.</span></span></span></span></p>
 		   </div>
 								</div>
 								
@@ -438,88 +475,17 @@ ul.s-lg-link-list > li {
 						</div>
 					</div>
 							</div>
-							<div id="s-lg-box-wrapper-6374205" class="s-lg-box-wrapper-6374205">
-					<div id="s-lg-box-5413267-container" class="s-lib-box-container">
-						<div id="s-lg-box-5413267" class="s-lib-box s-lib-box-std">
-							<h2 class="s-lib-box-title">Related Research Guides
+							<div id="s-lg-box-wrapper-12004880" class="s-lg-box-wrapper-12004880">
+					<div id="s-lg-box-10183020-container" class="s-lib-box-container">
+						<div id="s-lg-box-10183020" class="s-lib-box s-lib-box-std">
+							<h2 class="s-lib-box-title">Changer
                                 </h2>
-							<div id="s-lg-box-collapse-5413267" >
+							<div id="s-lg-box-collapse-10183020" >
 								<div class="s-lib-box-content">
-									<div class="">
-                            <ul id="s-lg-link-list-12041935" class="s-lg-link-list s-lg-link-list-2"><li class="">
-                            
-			<div id="s-lg-content-10673656" class="">
-				<span><a href="http://uottawa.libguides.com/CanadianStudies-en" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673656'});">Canadian Studies</a> 
-				</span>
-			</div></li>
-                            <li class="">
-                            
-			<div id="s-lg-content-10665176" class="">
-				<span><a href="http://uottawa.libguides.com/History-en" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10665176'});">History</a> 
-				</span>
-			</div></li>
-                            <li class="">
-                            
-			<div id="s-lg-content-10673657" class="">
-				<span><a href="http://uottawa.libguides.com/HumanRights-en" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673657'});">Human Rights</a> 
-				</span>
-			</div></li>
-                            <li class="">
-                            
-			<div id="s-lg-content-10673655" class="">
-				<span><a href="http://uottawa.libguides.com/WomensStudies-en" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673655'});">Feminist and Gender Studies</a> 
-				</span>
-			</div></li>
-                            
-                                </ul>
-                                </div>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-							</div>
-							<div id="s-lg-box-wrapper-6374206" class="s-lg-box-wrapper-6374206">
-					<div id="s-lg-box-5413268-container" class="s-lib-box-container">
-						<div id="s-lg-box-5413268" class="s-lib-box s-lib-box-std">
-							<h2 class="s-lib-box-title">Useful Links
-                                </h2>
-							<div id="s-lg-box-collapse-5413268" >
-								<div class="s-lib-box-content">
-									<div class="">
-                            <ul id="s-lg-link-list-12041938" class="s-lg-link-list s-lg-link-list-2"><li class="">
-                            
-			<div id="s-lg-content-10673658" class="">
-				<span><a href="http://primo-standard-lb.hosted.exlibrisgroup.com/primo_library/libweb/action/search.do?vid=UOTTAWA&dstmp=1378997235661&vid=UOTTAWA&prefLang=en_US&fn=change_lang&fromLogin=true&backFromPreferences=true" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673658'});">Catalogue</a> 
-				</span>
-			</div></li>
-                            <li class="">
-                            
-			<div id="s-lg-content-10673659" class="">
-				<span><a href="http://orbis.uottawa.ca/search/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673659'});">Classic Catalogue</a> 
-				</span>
-			</div></li>
-                            <li class="">
-                            
-			<div id="s-lg-content-10673660" class="">
-				<span><a href="http://www.socialsciences.uottawa.ca/fem/joint-chair" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673660'});">Joint Chair in Women's Studies, University of Ottawa and Carleton University</a> 
-				</span>
-			</div></li>
-                            <li class="">
-                            
-			<div id="s-lg-content-10673661" class="">
-				<span><a href="http://www1.carleton.ca/womensstudies/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673661'});">Pauline Jewett Institute of Women's and Gender Studies</a> 
-				</span>
-			</div></li>
-                            <li class="">
-                            
-			<div id="s-lg-content-10685229" class="">
-				<span><a href="http://socialsciences.uottawa.ca/fem" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10685229'});">Institute of Feminist and Gender Studies</a> 
-				</span>
-			</div></li>
-                            
-                                </ul>
-                                </div>
+									
+			<div id="s-lg-content-20943182" class="  clearfix">
+				<a href="http://uottawa.libguides.com/c.php?g=265218&p=1774094" class="changer">FranÃ§ais</a>
+		   </div>
 								</div>
 								
 							</div>
@@ -533,172 +499,53 @@ ul.s-lg-link-list > li {
 							<div id="s-lg-box-wrapper-6374207" class="s-lg-box-wrapper-6374207">
 					<div id="s-lg-box-5413266-container" class="s-lib-box-container">
 						<div id="s-lg-box-5413266" class="s-lib-box s-lib-box-std">
-							<h2 class="s-lib-box-title">Women's Archives-Finding Aids
+							<h2 class="s-lib-box-title">Women's Archives Finding Aids
                                 </h2>
 							<div id="s-lg-box-collapse-5413266" >
 								<div class="s-lib-box-content">
 									
 			<div id="s-lg-content-10651698" class="  clearfix">
 				<p>When an archival fonds has been processed and described, a detailed finding aid is available and provides specific information on the documents and the context.</p>
-<p>Some archival fonds and collection are not fully described yet. In some cases a preliminary inventory is available and provides a general overview of the content. </p>
+
+<p>Some archival fonds and collections are not yet fully described. In these cases a preliminary inventory is available and provides a general overview of the content.</p>
 		   </div><div class="">
-                            <ul id="s-lg-link-list-12022028" class="s-lg-link-list s-lg-link-list-4"><li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658263" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658263" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658263'});">Durham International Women's Day Committee (X10-79) - textual documents and Graphic material
-					</a>
-				</span><div id="s-lg-file-desc-10658263" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658265" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658265" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658265'});">Table fÃ©ministe francophone de concertation provinciale de l'Ontario - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658265" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658266" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658266" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658266'});">Table fÃ©ministe francophone de concertation provinciale de l'Ontario - graphic material
-					</a>
-				</span><div id="s-lg-file-desc-10658266" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658267" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658267" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658267'});">Wages for Housework, Wages Due Lesbians, Lesbian Mother Defense Fund (X10-8) - graphic material
-					</a>
-				</span><div id="s-lg-file-desc-10658267" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658268" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658268" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658268'});">Recovered Memory Task Group (X10-101) - graphic material
-					</a>
-				</span><div id="s-lg-file-desc-10658268" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658269" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658269" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658269'});">Recovered Memory Task Group (X10-101) - object
-					</a>
-				</span><div id="s-lg-file-desc-10658269" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658299" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658299" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658299'});">Recovered Memory Task Group (X10-101) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658299" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658304" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658304" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658304'});">Andrews, Pamela (X10-67) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658304" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
+                            <ul id="s-lg-link-list-12022070" class="s-lg-link-list s-lg-link-list-4"><li class=" pad-bottom-sm">
                             
 			<div id="s-lg-content-10658305" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10658305" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658305'});">Andrews, Pamela (X10-67) - objects
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658305'});">Andrews, Pamela (10-067) - objects
 					</a>
 				</span><div id="s-lg-file-desc-10658305" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
+			<div id="s-lg-content-10658304" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658304" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658304'});">Andrews, Pamela (10-067) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658304" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
 			<div id="s-lg-content-10658306" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10658306" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658306'});">Backhouse, Constance (X10-107) - textual records
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658306'});">Backhouse, Constance (10-107) - textual records
 					</a>
 				</span><div id="s-lg-file-desc-10658306" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
-			<div id="s-lg-content-10658307" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658307" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658307'});">Royal Commission on the Status of Women (X10-108) - textual records
-					</a>
-				</span><div id="s-lg-file-desc-10658307" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658311" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658311" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658311'});">Healthsharing Magazine and Collective (X10-3) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658311" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658312" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658312" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658312'});">MontrÃ©al Women's Network (X10-5) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658312" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658316" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658316" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658316'});">Women's Resource Centre of the University of Ottawa (X10-7) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658316" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658320" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658320" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658320'});">Midwifery Task Force of Ontario (MTF) : Mothers Are Women (MAW) (X10-13) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658320" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658346" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658346" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658346'});">Wood, Myrna (X10-17) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658346" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
 			<div id="s-lg-content-10658347" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10658347" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658347'});">Bold Print (X10-19) - Textual documents
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658347'});">Bold Print (10-019) - textual records
 					</a>
 				</span><div id="s-lg-file-desc-10658347" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
-			<div id="s-lg-content-10658191" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658191" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658191'});">Dewolf, Theresa (X10-83) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10658191" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658192" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658192" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658192'});">Dewolf, Theresa (X10-83) - graphic material
-					</a>
-				</span><div id="s-lg-file-desc-10658192" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
 			<div id="s-lg-content-10657977" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657977" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657977'});">Business and Professional Women's Club of Ottawa (X10-28) - textual documents
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657977'});">Business and Professional Women's Club of Ottawa (10-028) - textual records
 					</a>
 				</span><div id="s-lg-file-desc-10657977" class="s-lg-file-desc"></div>
 			</div></li>
@@ -706,31 +553,31 @@ ul.s-lg-link-list > li {
                             
 			<div id="s-lg-content-10657978" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657978" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657978'});">Canadian Journal of Women and the Law (X10-74) - textual documents
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657978'});">Canadian Journal of Women and the Law (10-074) - textual records
 					</a>
 				</span><div id="s-lg-file-desc-10657978" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
-			<div id="s-lg-content-10657980" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10657980" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657980'});">Canadian Women's Movement Archives (X10-1) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10657980" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
 			<div id="s-lg-content-10657981" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657981" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657981'});">Canadian Women's Movement Archives (X10-1) - photographs
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657981'});">Canadian Women's Movement Archives (10-001) - photographs
 					</a>
 				</span><div id="s-lg-file-desc-10657981" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
+			<div id="s-lg-content-10657980" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10657980" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657980'});">Canadian Women's Movement Archives (10-001) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10657980" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
 			<div id="s-lg-content-10657983" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657983" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657983'});">Collection of Documents on the Canadian Women's Movement (10-2) - objects
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657983'});">Canadian Women's Movement Collection (10-002) - objects
 					</a>
 				</span><div id="s-lg-file-desc-10657983" class="s-lg-file-desc"></div>
 			</div></li>
@@ -738,15 +585,63 @@ ul.s-lg-link-list > li {
                             
 			<div id="s-lg-content-10657984" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657984" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657984'});">Collection of Documents on the Canadian Women's Movement (X10-2) - fabric
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657984'});">Canadian Women's Movement Collection (10-002) - textile
 					</a>
 				</span><div id="s-lg-file-desc-10657984" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
+			<div id="s-lg-content-10658192" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658192" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658192'});">Dewolf, Theresa (10-083) - graphic material
+					</a>
+				</span><div id="s-lg-file-desc-10658192" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658191" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658191" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658191'});">Dewolf, Theresa (10-083) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658191" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658263" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658263" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658263'});">Durham International Women's Day Committee (10-079) - textual records and graphic material
+					</a>
+				</span><div id="s-lg-file-desc-10658263" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658311" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658311" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658311'});">Healthsharing Magazine and Collective (10-003) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658311" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658320" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658320" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658320'});">Midwifery Task Force of Ontario (MTF) : Mothers Are Women (MAW) (10-013) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658320" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658312" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658312" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658312'});">MontrÃ©al Women's Network (10-005) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658312" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
 			<div id="s-lg-content-10657986" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657986" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657986'});">National Action Committee on the Status of Women (X10-24) - textual documents
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657986'});">National Action Committee on the Status of Women (10-024) - textual records
 					</a>
 				</span><div id="s-lg-file-desc-10657986" class="s-lg-file-desc"></div>
 			</div></li>
@@ -754,23 +649,15 @@ ul.s-lg-link-list > li {
                             
 			<div id="s-lg-content-10657987" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657987" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657987'});">National Association of Women and the Law (X10-36) - textual documents
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657987'});">National Association of Women and the Law (10-036) - textual records
 					</a>
 				</span><div id="s-lg-file-desc-10657987" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
-			<div id="s-lg-content-10657989" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10657989" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657989'});">Nelson, Lou (X10-34) - textual documents
-					</a>
-				</span><div id="s-lg-file-desc-10657989" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
 			<div id="s-lg-content-10657991" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657991" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657991'});">Nelson, Lou (X10-34 - graphic material
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657991'});">Nelson, Lou (10-034) - graphic material
 					</a>
 				</span><div id="s-lg-file-desc-10657991" class="s-lg-file-desc"></div>
 			</div></li>
@@ -778,25 +665,105 @@ ul.s-lg-link-list > li {
                             
 			<div id="s-lg-content-10657993" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657993" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657993'});">Nelson, Lou (X10-34) - objects
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657993'});">Nelson, Lou (10-034) - objects
 					</a>
 				</span><div id="s-lg-file-desc-10657993" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
+			<div id="s-lg-content-10657989" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10657989" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657989'});">Nelson, Lou (10-034) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10657989" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
 			<div id="s-lg-content-10657995" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657995" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657995'});">Ottawa Women's Place (X10-20) - textual documents
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657995'});">Ottawa Women's Place (10-020) - textual records
 					</a>
 				</span><div id="s-lg-file-desc-10657995" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
+			<div id="s-lg-content-10658268" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658268" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658268'});">Recovered Memory Task Group (10-101) - graphic material
+					</a>
+				</span><div id="s-lg-file-desc-10658268" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658269" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658269" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658269'});">Recovered Memory Task Group (10-101) - object
+					</a>
+				</span><div id="s-lg-file-desc-10658269" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658299" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658299" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658299'});">Recovered Memory Task Group (10-101) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658299" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658307" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658307" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658307'});">Royal Commission on the Status of Women (10-108) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658307" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658266" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658266" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658266'});">Table fÃ©ministe francophone de concertation provinciale de l'Ontario (10-099) - graphic material
+					</a>
+				</span><div id="s-lg-file-desc-10658266" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658265" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658265" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658265'});">Table fÃ©ministe francophone de concertation provinciale de l'Ontario (10-099) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658265" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658267" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658267" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658267'});">Wages for Housework, Wages Due Lesbians, Lesbian Mother Defense Fund (10-008) - graphic material
+					</a>
+				</span><div id="s-lg-file-desc-10658267" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
 			<div id="s-lg-content-10657997" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10657997" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657997'});">Wages for Housework, Wages Due Lesbians, Lesbian Mother Defense Fund (X10-8) - textual documents
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10657997'});">Wages for Housework, Wages Due Lesbians, Lesbian Mother Defense Fund (10-008) - textual records
 					</a>
 				</span><div id="s-lg-file-desc-10657997" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658316" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658316" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658316'});">Women's Resource Centre of the University of Ottawa (10-007) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658316" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658346" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658346" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658346'});">Wood, Myrna (10-017) - textual records
+					</a>
+				</span><div id="s-lg-file-desc-10658346" class="s-lg-file-desc"></div>
 			</div></li>
                             
                                 </ul>
@@ -820,25 +787,9 @@ ul.s-lg-link-list > li {
 								<div class="s-lib-box-content">
 									
 			<div id="s-lg-content-10652440" class="  clearfix">
-				<p style="margin: 0cm 0cm 0pt;" class="MsoNormal"><span style="mso-ansi-language: EN-CA;" lang="EN-CA"><font size="3"><font face="Arial"><span style="font-size: small;">These guides were primarily conceived to index approximately 2,000 women&rsquo;s groups and events that are part of the <em>Canadian Women&rsquo;s Movement Archives Collection </em>(X10-01). However, they also cross reference other fonds relating to the theme.</span><o:p></o:p></font></font></span></p>
+				<p class="MsoNormal" style="margin: 0cm 0cm 0pt;"><span lang="EN-CA" style="mso-ansi-language: EN-CA;"><font size="3"><font face="Arial"><span style="font-size: small;">These guides&nbsp;index approximately 2,000 women&rsquo;s groups and events that are documented in the <em>Canadian Women&rsquo;s Movement Archives Collection </em>(10-001). They also cross-reference other fonds relating to each particular&nbsp;theme.</span><o:p></o:p></font></font></span></p>
 		   </div><div class="">
-                            <ul id="s-lg-link-list-12022041" class="s-lg-link-list s-lg-link-list-4"><li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658276" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658276" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658276'});">Spirituality
-					</a>
-				</span><div id="s-lg-file-desc-10658276" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658277" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658277" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658277'});">Violence
-					</a>
-				</span><div id="s-lg-file-desc-10658277" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
+                            <ul id="s-lg-link-list-12021859" class="s-lg-link-list s-lg-link-list-4"><li class=" pad-bottom-sm">
                             
 			<div id="s-lg-content-10658095" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10658095" target="_blank" 
@@ -888,6 +839,14 @@ ul.s-lg-link-list > li {
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
+			<div id="s-lg-content-10658122" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658122" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658122'});">Demonstrations
+					</a>
+				</span><div id="s-lg-file-desc-10658122" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
 			<div id="s-lg-content-10658101" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10658101" target="_blank" 
 					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658101'});">Education
@@ -901,6 +860,14 @@ ul.s-lg-link-list > li {
 					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658102'});">Ethnic Groups
 					</a>
 				</span><div id="s-lg-file-desc-10658102" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
+			<div id="s-lg-content-10658116" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658116" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658116'});">Feminist Press
+					</a>
+				</span><div id="s-lg-file-desc-10658116" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
@@ -962,7 +929,7 @@ ul.s-lg-link-list > li {
                             
 			<div id="s-lg-content-10658110" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10658110" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658110'});">Medias
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658110'});">Media
 					</a>
 				</span><div id="s-lg-file-desc-10658110" class="s-lg-file-desc"></div>
 			</div></li>
@@ -986,7 +953,7 @@ ul.s-lg-link-list > li {
                             
 			<div id="s-lg-content-10658113" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10658113" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658113'});">Politic
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658113'});">Politics
 					</a>
 				</span><div id="s-lg-file-desc-10658113" class="s-lg-file-desc"></div>
 			</div></li>
@@ -1005,14 +972,6 @@ ul.s-lg-link-list > li {
 					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658115'});">Poverty
 					</a>
 				</span><div id="s-lg-file-desc-10658115" class="s-lg-file-desc"></div>
-			</div></li>
-                            <li class=" pad-bottom-sm">
-                            
-			<div id="s-lg-content-10658116" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658116" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658116'});">Feminist Press
-					</a>
-				</span><div id="s-lg-file-desc-10658116" class="s-lg-file-desc"></div>
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
@@ -1048,6 +1007,14 @@ ul.s-lg-link-list > li {
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
+			<div id="s-lg-content-10658276" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658276" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658276'});">Spirituality
+					</a>
+				</span><div id="s-lg-file-desc-10658276" class="s-lg-file-desc"></div>
+			</div></li>
+                            <li class=" pad-bottom-sm">
+                            
 			<div id="s-lg-content-10658121" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
 					<a href="http://uottawa.libguides.com/ld.php?content_id=10658121" target="_blank" 
 					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658121'});">Sport
@@ -1056,11 +1023,93 @@ ul.s-lg-link-list > li {
 			</div></li>
                             <li class=" pad-bottom-sm">
                             
-			<div id="s-lg-content-10658122" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
-					<a href="http://uottawa.libguides.com/ld.php?content_id=10658122" target="_blank" 
-					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658122'});">Demonstrations
+			<div id="s-lg-content-10658277" class=""><i class="s-lg-file-icon fa fa-file-pdf-o" style="font-size:1.5em; margin-right:5px;"></i><span>
+					<a href="http://uottawa.libguides.com/ld.php?content_id=10658277" target="_blank" 
+					onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '5',_st_content_id: '10658277'});">Violence
 					</a>
-				</span><div id="s-lg-file-desc-10658122" class="s-lg-file-desc"></div>
+				</span><div id="s-lg-file-desc-10658277" class="s-lg-file-desc"></div>
+			</div></li>
+                            
+                                </ul>
+                                </div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+							</div>
+							<div id="s-lg-box-wrapper-6374205" class="s-lg-box-wrapper-6374205">
+					<div id="s-lg-box-5413267-container" class="s-lib-box-container">
+						<div id="s-lg-box-5413267" class="s-lib-box s-lib-box-std">
+							<h2 class="s-lib-box-title">Related Research Guides
+                                </h2>
+							<div id="s-lg-box-collapse-5413267" >
+								<div class="s-lib-box-content">
+									<div class="">
+                            <ul id="s-lg-link-list-12041935" class="s-lg-link-list s-lg-link-list-2"><li class="">
+                            
+			<div id="s-lg-content-10673656" class="">
+				<span><a href="http://uottawa.libguides.com/CanadianStudies-en" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673656'});">Canadian Studies</a> 
+				</span>
+			</div></li>
+                            <li class="">
+                            
+			<div id="s-lg-content-10673655" class="">
+				<span><a href="http://uottawa.libguides.com/WomensStudies-en" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673655'});">Feminist and Gender Studies</a> 
+				</span>
+			</div></li>
+                            <li class="">
+                            
+			<div id="s-lg-content-10665176" class="">
+				<span><a href="http://uottawa.libguides.com/History-en" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10665176'});">History</a> 
+				</span>
+			</div></li>
+                            <li class="">
+                            
+			<div id="s-lg-content-10673657" class="">
+				<span><a href="http://uottawa.libguides.com/HumanRights-en" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673657'});">Human Rights</a> 
+				</span>
+			</div></li>
+                            
+                                </ul>
+                                </div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+							</div>
+							<div id="s-lg-box-wrapper-6374206" class="s-lg-box-wrapper-6374206">
+					<div id="s-lg-box-5413268-container" class="s-lib-box-container">
+						<div id="s-lg-box-5413268" class="s-lib-box s-lib-box-std">
+							<h2 class="s-lib-box-title">Useful Links
+                                </h2>
+							<div id="s-lg-box-collapse-5413268" >
+								<div class="s-lib-box-content">
+									<div class="">
+                            <ul id="s-lg-link-list-12061857" class="s-lg-link-list s-lg-link-list-2"><li class="">
+                            
+			<div id="s-lg-content-10685229" class="">
+				<span><a href="http://socialsciences.uottawa.ca/fem" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10685229'});">Institute of Feminist and Gender Studies</a> 
+				</span>
+			</div></li>
+                            <li class="">
+                            
+			<div id="s-lg-content-10673660" class="">
+				<span><a href="http://www.socialsciences.uottawa.ca/fem/joint-chair" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673660'});">Joint Chair in Women's Studies, University of Ottawa and Carleton University</a> 
+				</span>
+			</div></li>
+                            <li class="">
+                            
+			<div id="s-lg-content-10673661" class="">
+				<span><a href="http://www1.carleton.ca/womensstudies/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '10673661'});">Pauline Jewett Institute of Women's and Gender Studies</a> 
+				</span>
+			</div></li>
+                            <li class="">
+                            
+			<div id="s-lg-content-20741393" class="">
+				<span><a href="http://socialsciences.uottawa.ca/feminist-gender-studies/programs#financeyourstudies" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '20741393'});">uOttawa Women's Studies Scholarships</a> 
+				</span>
 			</div></li>
                             
                                 </ul>

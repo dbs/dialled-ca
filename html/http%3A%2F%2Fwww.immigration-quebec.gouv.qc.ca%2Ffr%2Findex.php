@@ -86,7 +86,7 @@ a_alt = 'Diminuer le texte'
 aa_alt = 'Grossir le texte'
 ss_html = '';
 
-ss_html += '<a name="' + a_lien_nom + '" href="javascript:swapStyle()" title="' + aa_title + '">';
+ss_html += '<a class="ie7trick" name="' + a_lien_nom + '" href="javascript:swapStyle()" title="' + aa_title + '">';
 ss_html += '<img name="' + a_img_nom + '" src="' + a_img_src + '" alt="' + aa_alt + '" />';
 ss_html += '</a>';
 
@@ -194,7 +194,7 @@ function genererPub () {
 		
 	}
 	.menudiv ul li#en{
-		margin-left:190px;
+		margin-left:180px;
 		
 	}
 	.menudiv ul li a{
@@ -211,10 +211,67 @@ function genererPub () {
 		text-decoration:underline;
 		}
 </style>
+<!--[if IE 7]> 
+<style>
+	#medias_sociaux_barre{
+		position:absolute;
+		top:-30px;
+		right:0;
+	}
+	#taille img#officiel{
+		display:block;
+		float:left;
+	}
+	#taille #btTaille2{		
+		display:block;
+		float:left;		
+		margin:0;
+		padding:0;
+	}
+	INPUT[name='submit']{
+		top:0px;
+		left:-5px;
+	}
+	#advancedform{
+		top:3px;	
+	}
+	#entete2{
+		background:none;
+	}
+	.ie7trick{
+		position:relative;
+		top:-30px;
+		left:590px;
+	}
+	#recherche{
+		position:relative;
+		left:-90px;
+		top:6px;
+		height:32px;
+	}
+</style>
+<![endif]-->
+
+<!-- Recensement 2016 -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/css/dialogue-recensement.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/dialogue-recensement.js"></script>
+<!-- Fin Recensement 2016 --> 
 
 </head>
 
 <body id="fr_accueil">
+
+<!-- Recensement 2016 -->
+<div id="dialog-confirm" title="" style="display:none;">
+	<p style="font-size:16px;font-weight:bold;margin-top:0;">Recensement 2016</p>
+	<p style="font-size:14px;line-height:18px;">Vous Ãªtes un nouvel arrivant au QuÃ©bec ou un citoyen de longue date? Participez au Recensement 2016. Vos rÃ©ponses demeureront confidentielles tout en permettant de tracer un portrait statistique fidÃ¨le des QuÃ©bÃ©cois et de leur rÃ©gion. Ces donnÃ©es sont essentielles pour mieux planifier les services offerts Ã  la population.</p>
+</div>
+<!-- Fin Recensement 2016 --> 
+
 <div id="wrapper">
 	<a id="hautdepage"></a>
 	<!--header-->
@@ -330,10 +387,10 @@ function genererPub () {
 		<div id="aLaUne">
 		<p class="titre">Ã la une</p>
 			<ul class="liens">
-            			  <li class="lien"><a href="http://www.midi.gouv.qc.ca/fr/presse/communiques/com20160307.html">La ministre Kathleen Weil dÃ©voile la nouvelle politique en matiÃ¨re dâimmigration, de participation et dâinclusion</a></li>
-            			  <li class="lien"><a href="http://www.immigration-quebec.gouv.qc.ca/fr/informations/actualites/actualites-2016/evaluation-comparative.html"> Questions ou commentaires sur le rÃ©sultat de votre Ã©valuation comparative? </a></li>
-			  <li class="lien"><a href="http://www.immigration-quebec.gouv.qc.ca/fr/informations/actualites/actualites-2016/etat-situation-mpq.html">DerniÃ¨re heure â Mon projet QuÃ©bec : Nouvelles dates de rÃ©ception des demandes des travailleurs qualifiÃ©s</a></li>
-			  <ul  id="toutesNouvelles">
+            			  <li class="lien"><a href="http://www.immigration-quebec.gouv.qc.ca/fr/informations/actualites/actualites-2016/gestion-demande.html"> ModalitÃ©s de gestion de la demande pour la catÃ©gorie des gens dâaffaires en vigueur depuis le 1<sup>er</sup>&nbsp;avril&nbsp;2016 </a></li>
+            			  <li class="lien"><a href="http://www.midi.gouv.qc.ca/fr/presse/communiques/com20160407.html">Adoption de la Loi sur lâimmigration au QuÃ©bec - Le QuÃ©bec en route vers un systÃ¨me dâimmigration moderne et efficace</a></li>
+            			  <li class="lien"><a href="http://www.midi.gouv.qc.ca/fr/presse/communiques/com20160324.html">Budget 2016-2017 - La ministre Kathleen Weil salue lâoctroi de sommes supplÃ©mentaires destinÃ©es Ã  la francisation et Ã  lâintÃ©gration en emploi des personnes immigrantes</a></li>
+   			  <ul  id="toutesNouvelles">
 			<li class="lien"><a href="http://www.immigration-quebec.gouv.qc.ca/fr/informations/actualites/actualites-2016/index.html">Toutes les nouvelles</a></li>
                 
 			</ul>
@@ -495,7 +552,7 @@ Jeunes</a></li>
 			</div>
 			</div>
 			<!--Section 4 vert-->
-			<div id="bv3">
+		  <div id="bv3">
 			<div class="hg">
 			<div class="hd">
 			<div class="bd">
@@ -512,17 +569,18 @@ Jeunes</a></li>
 			</div>
 			</div>
 			
-			
-			 <!--Debut alerte Mon Projet Quebec 
-			<div class="monprojetqcMiseAjour" style="width: 292px;height: 180px;position: relative;top: 35px;left: 0px;border: 2px solid #c1c1c1;padding: 20px;text-align:center;">			
+						 <!--Debut alerte Mon Projet Quebec -->
+
+			<div class="monprojetqcMiseAjour" style="width: 292px;height: 150px;position: relative;top: 35px;left: 0px;border: 2px solid #c1c1c1;padding: 20px;text-align:center;">			
 			  <div>
 				<div style="">
 						<img src="../images/IMA_Avertissement_Grand.png" id="Maintenance Mon Projet QuÃ©bec" alt="Maintenance Mon Projet QuÃ©bec" style="margin-bottom: 20px;"/>
 			    </div>
-				  <p style="color:#666666;font-size: small;font-weight: normal;line-height: 22px;">En raison d&rsquo;un entretien technique, Mon projet Qu&eacute;bec sera hors service le 7&nbsp;mars&nbsp;2016, de 8&nbsp;h &agrave; 13&nbsp;h (heure de Montr&eacute;al).</p>
+				  <p style="color:#666666;font-size: small;font-weight: normal;line-height: 22px;">En raison dâun entretien technique, Mon projet QuÃ©bec sera hors service entre le 9&nbsp;mai&nbsp;2016 Ã &nbsp;7&nbsp;h et le 12&nbsp;mai 2016 Ã &nbsp;8&nbsp;h&nbsp;30 (heure de MontrÃ©al).<br />
+				  </p>
 			  </div>							
-			</div>
-			<!-- fin  alerte Mon Projet Quebec -->
+			</div>			<!-- fin  alerte Mon Projet Quebec --> 
+
 			
 			
 			
@@ -589,7 +647,7 @@ Jeunes</a></li>
   		<a href="./informations/politique-confidentialite.html">Politique de confidentialit&eacute;</a> | <a href="http://www.midi.gouv.qc.ca/fr/informations/medias-sociaux.html">MÃ©dias sociaux</a> | <a href="http://www.midi.gouv.qc.ca/fr/ministere/acces-protection-info/index.html">Acc&egrave;s &agrave; l'information</a> | <a href="http://www.midi.gouv.qc.ca/fr/ministere/declaration-services/index.html">D&eacute;claration de services &agrave; la client&egrave;le</a> | <a href="./informations/accessibilite.html">Accessibilit&eacute;</a>	</div>
 	<!--pp-modification-->
 	<div id="pp-modification">
-  		Derni&egrave;re modification&nbsp;:&nbsp;<!-- #BeginDate format:IS1 -->2016-03-11<!-- #EndDate -->
+  		Derni&egrave;re modification&nbsp;:&nbsp;<!-- #BeginDate format:IS1 -->2016-05-09<!-- #EndDate -->
 	</div>
 	<!--pp-signature-->
 	<div id="pp-signature">

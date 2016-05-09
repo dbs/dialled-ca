@@ -1,5 +1,4 @@
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -17,14 +16,14 @@
 <link rel='stylesheet' type='text/css' href='/theme/opals/css/equipment.css' />
 <link rel='stylesheet' type='text/css' href='/theme/opals/css/chromestyle.css' />
 <link rel='stylesheet' type='text/css' href='/js/tinybox/style.css' />
-<link rel="stylesheet" type='text/css' href='/theme/opals/css/portal.css' />
+<link rel="stylesheet" type='text/css' href='/theme/opals/css/portal.css?dd=20160412' />
 <link rel="stylesheet" id='cssPortalColor' type='text/css' href='/theme/opals/css/blueTheme.css' />
 <link rel="stylesheet" id='cssPortalFont'  type='text/css' href='/theme/opals/css/defaultFont.css' />
  <script type="text/javascript">
 
 var  opalsApp= null;
 </script>
-<script type="text/javascript" src="/js/angularjs/locale/msg_en.js"></script>
+<script type="text/javascript" src="/js/angularjs/locale/msg_en.js?t=2016041501"></script>
 <script type="text/javascript" src="/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript" src="/js/tinymce/plugins/media/plugin.min.js"></script>
 
@@ -41,7 +40,7 @@ var  opalsApp= null;
 
 <script type="text/javascript" src='/js/bibliography.js?sss=20131031'></script>
 
-  <link rel="stylesheet" href="/js/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="/js/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css" />
   <script src="/js/jquery/jquery-1.12.0.js"></script>
   <script src="/js/jquery/ui/1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="/js/jquery/jquery.rss.js"></script>
@@ -59,10 +58,10 @@ var  opalsApp= null;
 
 <link rel="stylesheet" type="text/css"  href="/js/angularjs/user/opl_userDirective.css?dd=20160309"/>
 <script type="text/javascript" src="/js/angularjs/user/opl_userDirective.js?dd=20160309"></script>
-<script type="text/javascript" src="/js/angularjs/datePickerDirectives.js?dd=20160309"></script>
+<script type="text/javascript" src="/js/angularjs/datePickerDirectives.js?dd=20160317"></script>
 
-<link rel="stylesheet" type="text/css" href="/js/angularjs/fullcalendar.css"></link>
-<link rel="stylesheet" type="text/css" href="/js/angularjs/oplDirectives.css?dd=20160309"></link>
+<link rel="stylesheet" type="text/css" href="/js/angularjs/fullcalendar.css"/>
+<link rel="stylesheet" type="text/css" href="/js/angularjs/oplDirectives.css?dd=20160412"/>
 
  <script type="text/javascript" src='/js/lib/moment.min.js'></script>
     <link  rel="stylesheet" type="text/css" href='/js/lib/jquery.qtip.min.css' rel='stylesheet' />
@@ -70,14 +69,18 @@ var  opalsApp= null;
 
 <script type="text/javascript" src="/js/angularjs/fullcalendar.min.js"></script>
 <script type="text/javascript" src="/js/angularjs/lang-all.js"></script>
-<script type="text/javascript" src="/js/angularjs/oplDirectives.js?dd=20160309"></script>
+<script type="text/javascript" src="/js/angularjs/oplDirectives.js?dd=20160412"></script>
 
 <script type="text/javascript" src='/theme/opals/locale/en/js/msg.js?dd=20160302001'></script>
 
 
 <!-- script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script -->
-<link rel="stylesheet" href="/js/bootstrap/css/bootstrap_opl.css">
+<link rel="stylesheet" href="/js/bootstrap/css/bootstrap_opl.css"/>
 
+
+   <script type="text/javascript" src="/js/QZtray/dependencies/rsvp-3.1.0.min.js"></script>
+   <script type="text/javascript" src="/js/QZtray/dependencies/sha-256.min.js"></script>
+   <script type="text/javascript" src="/js/QZtray/qz-tray.js"></script>
 
 <script type="text/javascript">
 
@@ -90,7 +93,7 @@ var  opalsApp= null;
         };
 
     if(!opalsApp)
-        opalsApp =angular.module("opalsApp",['ngSanitize','ngResource','ngRoute','oplUI','oplUser']);
+        opalsApp =angular.module("opalsApp",['ngSanitize','ngResource','ngRoute','q','oplUI','oplUser']);
    //------------------------------------------------------------------------------------------------
      opalsApp.service('pageService',['$http', function($http) {
          var menuItemList=[
@@ -401,7 +404,7 @@ timeClear = convertTmClearMillisec('10m') ;
         
 //---------------------------------------------------------
 
-var curDateTime= new Date("2016/03/11 16:15:14");
+var curDateTime= new Date("2016/05/09 10:26:38");
 
 var myWidth = 0, myHeight = 0;
 function getWindowSize() {
@@ -507,7 +510,7 @@ $(document).ready(function(){
  
 
  </script>
-
+</head>
 
 <body onkeydown="keyPressHandler(event);"  style="min-height:1200px" class="yui-skin-sam" ng-app="opalsApp" ng-cloak >
 <script type="text/ng-template" id="menu.html">
@@ -554,7 +557,7 @@ $(document).ready(function(){
           
         </td>
         <td align="right" valign="top" nowrap  style="border:1px;padding-right:5px;">
-                        <span>Friday, March 11 2016</span><br>
+                        <span>Monday, May 09 2016</span><br>
           <span>
 
     <br />
@@ -587,7 +590,7 @@ $(document).ready(function(){
                     <td colorTheme="blueTheme.css"  
                         style="width:27px;height:15px;background:url('/theme/opals/image/advance/bluePattern.png')"  onclick="setColorPage(this)"></td>    
                     <td colorTheme="greenTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/greenPattern.png')" onclick="setColorPage(this)"></td>    
-                    <td colorTheme="orangeTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/orangePattern.png')"onclick="setColorPage(this)" ></td>    
+                    <td colorTheme="orangeTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/orangePattern.png')" onclick="setColorPage(this)" ></td>    
                     <td colorTheme="redTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/redPattern.png')"   onclick="setColorPage(this)"></td>
                     <td colorTheme="tealTheme.css" style="width:27px;height:15px;background:url('/theme/opals/image/advance/tealPattern.png')"  onclick="setColorPage(this)"></td>    
                 </tr></table>
@@ -612,13 +615,13 @@ $(document).ready(function(){
     </table>
 
 
-    <div id='qrCode' style='float:right; margin-top:-94px;margin-right: 250px;font-size:8pt;color:#E0E0E0;text-align:center'>
+    <div id='qrCode' style='float:right; margin-top:-94px;margin-right: 160px;font-size:8pt;color:#E0E0E0;text-align:center'>
 
         <img  style='width:80px' src='/bin/util/image/qrcode?ecc=m&text=http://jac.cegep.opalsinfo.net'><br>Scan to access this Catalog</div>
 
-      <!--  end of opals_header_bg:-->
+      <!--  end of opals_header_bg -->
     </div>
-<!--  end of wicket:id=header div:-->
+<!--  end of wicket:id=header div -->
 </div>
 
 <div style="clear:both;" ng-controller="menuCtrl"  >
@@ -1749,6 +1752,304 @@ addOnload(reminderPan.init);
 
 
 <style>
+
+.ratingBib {
+    border-collapse:collapse;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+.ratingBib td,th {
+    vertical-align:top;
+    border-width: 1px;
+    border-style: solid;
+    font-size:9pt;
+}
+
+.ratingInfo{
+    margin-top:15px;padding-left:2em;
+    font-style:italic;font-size:120%;
+}
+</style>
+<script language='javascript'>
+    
+    var displayReviewsPanel={
+        curRid:0,
+        curFilter:'',
+        curPage:1,
+        numOfRating:0,
+        displayReviewDlg:null,
+        
+        show:function(){
+            $("#displayReviews").dialog({modal:true,autoResize:true});
+            $("#displayReviews").dialog("option", "height", 430 );
+            $("#displayReviews").dialog("option", "width",  850 );
+            $("#displayReviews").dialog("option", "position","center" );
+            //if(opt.titleBar == "hide")
+           //     $(".ui-dialog-titlebar").hide();
+             // if(!this.displayReviewDlg)this.displayReviewDlg=new Opals_DialogBox("displayReviews");
+             //   this.displayReviewDlg.showModal();
+            //dijit.byId('displayReviews').show();
+        },
+        //----------------------------------------------------
+        hide:function(){
+            $("#displayReviews").dialog('close');
+           // if(this.displayReviewDlg)
+           //     this.displayReviewDlg.close();
+            //dijit.byId('displayReviews').hide();
+        },
+        //--------------------------------------------------------------
+        editCallback:function(){
+        },
+        setEditCallbackFn:function(f){
+            this.editCallback=f;
+        },
+
+        //--------------------------------------------------------------
+        showCmntRating:function(rid,filter,page,pSize){
+            if(!page) page=1;
+            if(!pSize) pSize=10;
+            this.curRid=rid;
+            this.curFilter=filter;
+            this.curPage=page;
+            Ajax.getRequest({
+                url:"/bin/ajax/rating/cmntList?rid=" +rid +"&filter=" + filter 
+                    + "&pageNum=" + page + "&pSize=" + pSize + "&ts=?" +getDateTime(),
+                load:function(responseObject, ioArgs){
+                    displayReviewsPanel.listCmntRating(responseObject,true);
+                },
+                error: function(response, ioArgs){
+                  document.getElementById("toBeReplaced").innerHTML = 
+                   "An error occurred, with response: " + response;
+
+                  return response;
+                },
+
+                
+             handleAs: "json"
+            });
+            
+        },
+        //--------------------------------------------------------------
+        showCmntRatingWOAction:function(rid,filter,page,pSize){
+            if(!page) page=1;
+            if(!pSize) pSize=10;
+            this.curRid=rid;
+            this.curFilter=filter;
+            this.curPage=page;
+            Ajax.getRequest({
+                url:"/bin/ajax/rating/cmntList?rid=" +rid +"&filter=" + filter 
+                    + "&pageNum=" + page + "&pSize=" + pSize + "&ts=?" +getDateTime(),
+                load:function(responseObject, ioArgs){
+                    displayReviewsPanel.listCmntRating(responseObject,false);
+                },
+                error: function(response, ioArgs){
+                  document.getElementById("toBeReplaced").innerHTML = 
+                   "An error occurred, with response: " + response;
+
+                  return response;
+                },
+
+                
+             handleAs: "json"
+            });
+            
+        },
+        //--------------------------------------------------------------
+        listCmntRating:function(cmntList,delEditCmd){
+            var bib="";
+            if(cmntList.bibInfo.author !="")
+                bib=cmntList.bibInfo.author +". ";
+            if(cmntList.bibInfo.title) 
+                bib +="<u> " + cmntList.bibInfo.title + "</u>.";   
+            if(cmntList.bibInfo.pubName) 
+                bib +=cmntList.bibInfo.pubName + ": ";   
+            if(cmntList.bibInfo.pubPlace) 
+                bib +=cmntList.bibInfo.pubPlace + ", ";   
+            if(cmntList.bibInfo.pubDate) 
+                bib +=cmntList.bibInfo.pubDate + ". ";   
+            document.getElementById("ratingBib.bib").innerHTML=bib;
+
+            
+            document.getElementById("ratingBib.avgRating").innerHTML=(cmntList.avgRating)?cmntList.avgRating:0;
+            var starImg="shim.png";
+            if (cmntList.avgRating)
+                starImg = this.getRatingStars(cmntList.avgRating) + "stars.gif";
+            
+            document.getElementById("ratingBib.starsImg").src="/theme/opals/image/" + starImg;
+            
+                    
+            document.getElementById("ratingBib.noRating").innerHTML=cmntList.totalAccepted;
+            this.createCmntTbl(cmntList.commentList,delEditCmd);
+            if(this.curFilter=='accepted')
+                this.numOfRating=cmntList.totalAccepted;
+            else if(this.curFilter=='rejected')
+                this.numOfRating=cmntList.totalRejected;
+            else if(this.curFilter=='reviewed')
+                this.numOfRating=cmntList.totalReviewed;
+            else if(this.curFilter=='notReviewed')
+                this.numOfRating=cmntList.totalNotReview;
+            else
+                this.numOfRating =cmntList.totalRating
+            if(delEditCmd)    
+                document.getElementById("rating.paging").innerHTML =createPageNav(this.numOfRating,this.curPage,10,5,"displayReviewsPanel.gotoPage");
+            else    
+                document.getElementById("rating.paging").innerHTML =createPageNav(this.numOfRating,this.curPage,10,5,"displayReviewsPanel.gotoPageWOAction");
+            this.show();
+
+        },
+        //--------------------------------------------------------------
+        createCmntTbl:function(cmntArr,delEditCmd){
+            this.clearRatingTbl();
+            var tbl=document.getElementById('ratingBib.tbl');
+            for(var i=0;i< cmntArr.length;i++){
+                var row =tbl.insertRow(i);
+                row.setAttribute('valign','middle');
+                row.setAttribute('cid',cmntArr[i].id);
+                row.setAttribute('style','vertical-align:middle');
+                var td = row.insertCell(0);
+                td.innerHTML =  "<span style='padding-left:1em'><img src='/theme/opals/image/" + cmntArr[i].rate + "stars.gif'></span><br>"
+                                +  "<span style='padding-left:1em'><i>" +   cmntArr[i].cmntDate +"</i></span><br>";
+               
+
+                if( cmntArr[i].name !=""){
+                    var attName = 'commentor_' + cmntArr[i].id ; 
+                    if(delEditCmd)
+                        td.innerHTML +="<span style='padding-left:2em;' cmntorid= '" + attName + "'>by <b style='color:#006E6E'>" + cmntArr[i].fullName + "</b></span>";
+                    else    
+                        td.innerHTML +="<span style='padding-left:2em;' cmntorid= '" + attName + "'>by <b style='color:#006E6E'>" + cmntArr[i].name + "</b></span>";
+                        
+                }
+
+                if( cmntArr[i].teacher !=""){
+                    td.innerHTML +=" / Teacher:<b cmntTeacher=cmntTeacher_"+ cmntArr[i].id+">" + cmntArr[i].teacher + "</b><br>";
+                    td.innerHTML +=" <span style='display:none' id='cmnt_tFirstname_"+ cmntArr[i].id+"'>" + cmntArr[i].t_firstname + "</span>";
+                    td.innerHTML +=" <span style='display:none' id='cmnt_tLastname_" + cmntArr[i].id+"'>" + cmntArr[i].t_lastname + "</span>";
+                }
+
+                if(cmntArr[i].comment !=""){
+                    var attName = 'comment_' + cmntArr[i].id ; 
+                    td.innerHTML += "<div class='ratingInfo' cmntid= '" + attName + "'>" + cmntArr[i].comment.replace(/\n/g,"<br>") + "</div>";   
+                }
+                
+                if(delEditCmd){
+                    var td0 = row.insertCell(1);
+                    td0.setAttribute('style','text-align:center;width:50px');
+
+                    var newlink;
+                    newlink = document.createElement('a');
+                    newlink.setAttribute('title', 'Click here to correct spelling'); 
+                    newlink.setAttribute('href', 'javascript:void(0)');
+                    newlink.setAttribute('onclick', 'displayReviewsPanel.editCallback('+ cmntArr[i].id  + ')');
+                    val = document.createTextNode(opalsMsg.getMsg("rating.editTxt"));
+                    newlink.appendChild(val);
+                    td0.appendChild(newlink);
+                
+                    var td1 = row.insertCell(2);
+                    td1.setAttribute('style','width:50px;text-align:center;');
+                    td1.setAttribute('valign','middle');
+                    td1.innerHTML   = '<img src ="/theme/opals/image/cross.gif"  '
+                                    + ' title ="Click to delete this comment."'
+                                    + ' onclick="displayReviewsPanel.deleteComment('+ cmntArr[i].id + ')">';
+                }
+            }
+        },
+      
+       //--------------------------------------------------------------
+        clearRatingTbl: function (){
+            var tbl=document.getElementById('ratingBib.tbl');
+
+            for(var i=tbl.getElementsByTagName("tr").length -1; i>=0; i--){
+                tbl.deleteRow(i);
+            }
+        },
+        //--------------------------------------------------------------
+        removeComment: function (cid){
+            var tbl=document.getElementById('ratingBib.tbl');
+            var tr=tbl.getElementsByTagName("tr");
+            for(var i=tr.length -1; i>=0; i--){
+                if(tr[i].getAttribute('cid') == cid){
+                    tbl.deleteRow(i);
+                    return;
+                }
+            }
+        },
+        //--------------------------------------------------------------
+        deleteComment:function(cid){
+            if(!confirm(" ")) return;
+            Ajax.getRequest({
+                url:"/bin/ajax/rating/delComment?cid=" + cid,
+                load:function(responseObject){
+                    if(responseObject.status==1){
+                        displayReviewsPanel.removeComment(responseObject.cid);
+                    }
+                },
+                error: function(response){
+                  document.getElementById("toBeReplaced").innerHTML = 
+                   "An error occurred, with response: " + response;
+
+                  return response;
+                },
+
+                
+             handleAs: "json"
+            });           
+        },
+        //--------------------------------------------------------------
+        getRatingStars:function(avgRating){
+            var stars=Math.floor(avgRating);
+            var fraction = avgRating - stars;
+            if(fraction>0.25 && fraction<0.75)
+                stars +=0.5;
+            else if(fraction> 0.75)
+                stars +=1;
+            
+            return stars;
+        },
+        //--------------------------------------------------------------
+        gotoPage:function(p){
+            this.showCmntRating(this.curRid,this.curFilter,p,10);
+        },
+        //--------------------------------------------------------------
+        gotoPageWOAction:function(p){
+            this.showCmntRatingWOAction(this.curRid,this.curFilter,p,10);
+        }
+
+
+            
+    }
+</script>
+
+<div id='displayReviews' style='display:none;'  title="">
+        <!-- Item Info -->
+      <table  class='ratingBib'  cols=3 cellspacing=0 cellpadding=0  style='border:none'>
+        <tr style='background:#458584;height:30px'>
+            <td colspan=3 align=center style='border:none;vertical-align:middle'>
+                <span style='color:white;font-size:12pt' id="ratingBib.bib"></span></td>
+        </tr>
+        <tr style='background:#D0E2EA;height:26px'>
+            <td colspan=3 align=center style='border:none;vertical-align:middle'>
+                <span style='float:right'>&nbsp;<b><span id="ratingBib.avgRating"></span></b>&nbsp;&nbsp;
+                <img id="ratingBib.starsImg" src="">&nbsp;&nbsp;</span> <b><span id="ratingBib.noRating"></span></b></td>
+        </tr> 
+        </table>
+           
+        <!-- Review Info -->
+       <div  style='width:100%;overflow: auto'>
+        <table class='ratingBib' id="ratingBib.tbl" cols=3   >
+        </table>   
+       </div> 
+           
+       <div style='background:gray;color:white; padding:5px;font-size:130%'>
+       <div id='rating.paging' style='text-align:center' ></div>
+       </div>
+
+</div>
+
+
+  
+
+<style>
  .homeEditIcon{
         width:36px;height:36px;
         border:none;
@@ -2070,7 +2371,7 @@ opalsApp.controller('portalCtrl', ['$scope','$sce','$compile','$resource','$http
     //-----------------------------------------------------------------  
     $scope.initPortlet=function(){
          $("#myTabs").tabs();
-         console.log("scope.initPortlet");
+        // console.log("scope.initPortlet");
 
          $( ".column" ).sortable({
                         connectWith: ".column",
@@ -2443,7 +2744,12 @@ opalsApp.controller('portalCtrl', ['$scope','$sce','$compile','$resource','$http
     $scope.removeFromBib=function(rid){
         delFromSession({'value':rid},'bibliography');
     }
-    //-----------------------------------------------------------------  
+    //----------------------------------------------------------------- 
+     $scope.viewReaderReview=function(rec){
+            displayReviewsPanel.showCmntRatingWOAction(rec.rid,"accepted");
+     }
+    //-----------------------------------------------------------------
+     
     $scope.oplMsg=oplMsg;
     $scope.portletCtrlPanItems=[
     {"type":"rss","icon":"/theme/opals/image/advance/rss.png","caption":" RSS"},
@@ -2552,7 +2858,8 @@ opalsApp.controller('portalCtrl', ['$scope','$sce','$compile','$resource','$http
                                                                                          book-on-click="viewBookDetail_reviews(range,recPos,rid)"
                                                                                          book-on-select="addToBib(rid)"
                                                                                          has-no-content="p.hasNoContent"
-                                                                                         book-on-unselect="removeFromBib(rid)"/>  </div>
+                                                                                         book-on-unselect="removeFromBib(rid)"
+                                                                                         view-reader-review-fn="viewReaderReview(rec)"/>  </div>
                                     <div ng-switch-when="newsevent"><opl-portlet-news-event n-item-show="p.params.nItemShow" 
                                                                                          editable="editMode"
                                                                                          has-no-content="p.hasNoContent"
@@ -2634,7 +2941,6 @@ opalsApp.controller('portalCtrl', ['$scope','$sce','$compile','$resource','$http
     </form>
 </div>
 </div>
-
 
 
 

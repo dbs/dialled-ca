@@ -270,24 +270,58 @@ pour d'autres évènements de la région de l’Outaouais :  s’informer à la 
 </ul>
 <img src="images/seperator_horz_250.gif" width="360" height="21"> 
 
-	<a href="documents_temp/concours_paques_biblio.pdf" target="_blank"><img src="images_temp/concours_paques.jpg" width="328" height="215" alt="" border="0"></a>								
-										
-<img src="images/seperator_horz_250.gif" width="360" height="21"> 
-										
+
+<!-- Généalogie  -->
+<img src="../images/biblio_genealogie.jpg" width="360" height="283" alt="" border="0">
+<p class="title_small">Généalogie Québec maintenant disponible aux abonnés de la bibliothèque</p>
+<p>La ressource numérique Généalogie Québec est maintenant disponible aux abonnés des bibliothèques membres du Réseau BIBLIO de l'Outaouais.  Généalogie Québec c'est : plus de 42 000 000 images et fiches à consulter à l'aide des grands outils de recherche de l'Institut gémnéalogique Drouin de l'origine de la Nouvelle-France à aujourd'hui...</p>
+<ul class="liste">		
+<li>Pour plus de détails : <a href="documents_temp/biblio_genealogie.pdf" target="_blank">cliquez ici >></a></li>
+</ul>	
+<img src="images/seperator_horz_250.gif" width="360" height="21"> 		
+
+
+
+
+<!-- Journée autochtones  -->
+<p class="title_small">Des films pour la Journée nationale des autochtones</p>
+<p>En vue de la Journée nationale des Autochtones le 21 juin prochain, l'ONF offre l'opportunité de visionner une série de films pour grand public pouvant être visionnés en bibliothèque ou dans un autre lieu de la municipalité ou encore en plein air !</p>
+<ul class="liste">		
+<li>Pour tous les détails : <a href="documents_temp/journee_autochtones.pdf" target="_blank">cliquez ici >></a></li>
+</ul>	
+<img src="images/seperator_horz_250.gif" width="360" height="21"> 		
+
+
+<!-- Zinio -->
+<img src="http://lepostier.ca/hub/zinio.jpg" width="328" height="186"> 
+<p>Une nouvelle plateforme qui vous donne accès sans frais à plusieurs des meilleures revues québécoises, canadiennes et américaines.</p>
+<ul class="liste">		
+<li>Connexion : <a href="http://www.reseaubiblioduquebec.qc.ca/portail/index.aspx?page=2&module=101&RID=8&MenuID=1440&cr=1&CPage=1" target="_blank">cliquez ici >></a></li>
+<li>Lire le communiqué : <a href="http://lepostier.ca/hub/zinio_communique.pdf" target="_blank">cliquez ici >></a></li>
+</ul>	
+<img src="images/seperator_horz_250.gif" width="360" height="21"> 		
+
+<p class="title_small">Pour une douzième année, le Réseau BIBLIO de l’Outaouais fait la promotion d’attraits culturels</p>
+<ul class="liste">		
+<li>Plus de détails : <a href="documents_temp/biblio_attraits_culturels_2016.pdf" target="_blank">cliquez ici >></a></li>
+</ul>	
+								
 
 <!-- Super héros -->
 <a href="documents_temp/biblio_super_heros.pdf" target="_blank"><img src="images_temp/biblio_super_heros.jpg" width="360" height="174" alt="" border="0"></a>
 
 <img src="images/seperator_horz_250.gif" width="360" height="21"> 
+
+
 <!-- Coup de coeur -->
-<img src="images_temp/biblio_coup_coeur_250.jpg" width="250" height="100" alt="" border="0" style="margin-left:55px;">
+<!-- <img src="images_temp/biblio_coup_coeur_250.jpg" width="250" height="100" alt="" border="0" style="margin-left:55px;">
 <div class="title_small">Concours Coup de coeur</div>
 <p>Jusqu'au 29 février, chaque visite à votre bibliothèque vous donne le droit de participer au concours.
 </p>
 <ul class="liste">
 <li>Pour tous les détails : <a href="documents_temp/biblio_coup_de_coeur_fr.pdf" target="_blank">cliquez ici >></a></li>
 </ul>
-<img src="images/seperator_horz_250.gif" width="360" height="21"> 
+<img src="images/seperator_horz_250.gif" width="360" height="21">  -->
 
 
 
@@ -321,12 +355,7 @@ pour d'autres évènements de la région de l’Outaouais :  s’informer à la 
 <ul class="liste">		
 <li>Plus de détails : <a href="documents/pret_numerique.pdf"  target="_blank">cliquez ici >></a></li>
 </ul>
-<img src="images/seperator_horz_250.gif" width="360" height="21"> 
 
-<p class="title_small">Pour une douzième année, le Réseau BIBLIO de l’Outaouais fait la promotion d’attraits culturels</p>
-<ul class="liste">		
-<li>Plus de détails : <a href="documents_temp/biblio_attraits_culturels.pdf" target="_blank">cliquez ici >></a></li>
-</ul>
 
 <!-- <p class="title_small">Heures d'ouverture ( écoliers seulement )</p>
 <ul class="liste">	

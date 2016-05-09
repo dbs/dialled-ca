@@ -33,7 +33,7 @@
         
         <div class="header-container">
             <div id="headerSlide">
-                                        <div id="headerBkg" style="background-image:url('/images/header3.jpg');"></div>
+                                        <div id="headerBkg" style="background-image:url('/images/header8.jpg');"></div>
 
             </div>
             <div id="topTrans"></div>
@@ -361,6 +361,9 @@ et organismes        </li>
  <span> &#8226; </span>                                 <a href="/liens-rapides/entreprises-et-organismes/organismes.aspx#contentAnchor">Organismes</a>
             </li>
         <li class="mainMenuSub1 ">
+ <span> > </span>                                         <a href="/liens-rapides/politique-familiale.aspx#contentAnchor">Politique familiale</a>
+        </li>
+        <li class="mainMenuSub1 ">
  <span> > </span>                                         <a href="/liens-rapides/municipalit&#233;-amie-des-a&#238;n&#233;s-(mada).aspx#contentAnchor">Municipalité amie des aînés (MADA)</a>
         </li>
         <li class="mainMenuSub1 ">
@@ -500,6 +503,12 @@ et organismes            <ul class="">
         </li>
         <li class="mainMenuSub1 notcurrent">
             <span> > </span>
+                <a href="/liens-rapides/politique-familiale.aspx#contentAnchor">Politique familiale</a>
+            <ul class="">
+            </ul>
+        </li>
+        <li class="mainMenuSub1 notcurrent">
+            <span> > </span>
                 <a href="/liens-rapides/municipalit&#233;-amie-des-a&#238;n&#233;s-(mada).aspx#contentAnchor">Municipalité amie des aînés (MADA)</a>
             <ul class="">
             </ul>
@@ -595,7 +604,7 @@ Bibliothèque            <ul class="currentUL">
                     </div>
                     <div id="marquee">
                         
-                            La patinoire municipale est officiellement ferm&#233;e pour la saison 2016. &#192; l&#39;an prochain!
+                            
                     </div>
                     <div class="clr"></div>
                     <a name="contentAnchor" id="contentAnchor"></a>
@@ -614,7 +623,7 @@ Bibliothèque            <ul class="currentUL">
         <!--a href="http://forum.saintirenee.ca/forum/viewforum.php?f=3" target="_blank"><img src="/images/icoForum.gif" /></a-->
     </div>
     <div id="coordo"><p class="sousTitre">Coordonnées</p>
-<p>400, rue Principale<br />Saint-Irénée (Québec)<br />G0T 1V0<br />Tél : 418 620-5015 poste 3<br />bibliotheque@saintirenee.ca</p>
+<p>400, rue Principale<br />Saint-Irénée (Québec)<br />G0T 1V0<br />Tél : 418 620-5015 poste 3<br /><a href="mailto:bibliotheque@saintirenee.ca" title="Nous écrire">bibliotheque@saintirenee.ca</a></p>
 <p class="sousTitre">Périodes d'ouverture</p>
 <p><span style="text-decoration: underline;">Horaire normal</span></p>
 <p>Grâce à la disponibilité des bénévoles, nous pouvons continuer de vous offrir 2 périodes d'ouverture :</p>
@@ -623,9 +632,26 @@ Bibliothèque            <ul class="currentUL">
 <li><strong>le samedi de 10 h à midi</strong></li>
 </ul>
 <p class="sousTitre"><strong>Événements</strong></p>
-<p>Exposition de photos de Jeanne Brochu du 15 janvier 2016 au 14 avril 2016.</p>
+<p><strong>Du 15 avril au 14 juillet 2016 :</strong></p>
+<p style="padding-left: 30px;">Exposition de photos de <span style="text-decoration: underline;">François Rivard</span>.</p>
 <p style="padding-left: 30px;"><em>En collaboration avec la CLIC (Corporation Lumière Image de Charlevoix)</em></p>
-<p><em><br /></em>L'exposition est accessible aux heures normales d'ouverture de la bibliothèque.</p>
+<p style="padding-left: 30px;">L'exposition est accessible aux heures normales d'ouverture de la bibliothèque.</p>
+<p><strong>Le 24 juin 2016 :</strong></p>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Le bazar annuel de la bibliothèque.</span></p>
+<p style="padding-left: 30px;">Lieu :         Stationnement de l'église ou à la salle municipale s'il pleuvait.<br />Heures :     De 10 heures à 15 heures.<br />Coût :        Gratuit<br />Animation : Normand Chouinard</p>
+<p style="padding-left: 30px;">Les profits de cet événement aideront la bibliothèque à étoffer sa collection.</p>
+<p style="padding-left: 30px;">Marché aux puces :</p>
+<p style="padding-left: 60px;">Après un bon ménage du printemps, venez vendre les objets<br />dont vous n'avez plus besoin.<br />Nous fournissons les tables au coût de 10 $ l'unité.<br />Si vous désirez quand même apporter vos tables,<br />elles vous seront facturées au coût de 10 $ chacune.<br /><span style="text-decoration: underline;">Appelez au 418-452-1146 ou au 418-452-9251 pour réserver une table.</span></p>
+<p style="padding-left: 30px;">Vente de livres :</p>
+<p style="padding-left: 60px;">Nous aurons un bon choix de livres usagés en vente à bas prix.<br /><br />Vous avez des livres en trop?<br /><span style="text-decoration: underline;">Venez nous les porter à la bibliothèque, au 400 rue Principale,<br />les mardis et les samedis pendant les heures normales d'ouverture (voir ci-haut).</span><br />Nous acceptons tout avec plaisir. Ce que nous ne vendrons pas sera donné<br />à des organismes de charité pour être expédié dans des pays en voie de développement.</p>
+<p style="padding-left: 30px;">Kiosque des fermières :</p>
+<p style="padding-left: 60px;">Cette année encore, les fermières de Saint-Irénée offriront en vente leurs magnifiques<br />produits faits main, tels que : catalognes, coussins, linges à vaisselle, etc.</p>
+<p style="padding-left: 30px;">Tirage : </p>
+<p style="padding-left: 60px;">Vous pourrez remporter un des nombreux prix offerts par des institutions<br />et des commerçants de la région, en achetant des billets de notre tirage :</p>
+<p style="padding-left: 90px;">1 billet  - 2$<br />3 billets - 5$<br />8 billets - 10$</p>
+<p style="padding-left: 60px;">Il y aura plusieurs tirages au cours de la journée.</p>
+<p style="padding-left: 30px;">En-cas et rafraîchissements :</p>
+<p style="padding-left: 60px;">De la nourriture et des boissons seront disponibles sur place.</p>
 <p class="sousTitre">Liens utiles</p>
 <p style="padding-left: 30px;"><strong>Bibliothèque et Archives nationales du Québec : </strong><a href="http://www.banq.qc.ca/accueil/" title="Lien BAnQ">http://www.banq.qc.ca/accueil/</a></p>
 <p style="padding-left: 30px;"><strong>Les libraires </strong>: <a href="http://www.leslibraires.ca/" title="LesLibraires">http://www.leslibraires.ca/</a></p>
@@ -713,6 +739,9 @@ et organismes                        <ul>
                     </li>
             </ul>
         </li>
+        <li>
+                            <a href="/liens-rapides/politique-familiale.aspx">Politique familiale</a>
+                    </li>
         <li>
                             <a href="/liens-rapides/municipalit&#233;-amie-des-a&#238;n&#233;s-(mada).aspx">Municipalité amie des aînés (MADA)</a>
                     </li>

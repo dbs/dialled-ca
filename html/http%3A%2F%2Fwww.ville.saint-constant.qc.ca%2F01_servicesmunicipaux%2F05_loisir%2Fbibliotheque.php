@@ -83,13 +83,13 @@ $(document).ready(function(){
 <li><a href="http://www.seao.ca/Reports/Rapport_Adjudication.aspx" target="_blank">SÃAO</a></li>
 <br />
 <li><a href="http://ville.saint-constant.qc.ca/abonnements/" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_infolettre.jpg" height="43" width="171"></a></li>
-<li><a href="https://www.facebook.com/villedesaintconstant" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_facebook.jpg"height="43" width="171"></a></li>
-<li><a href="https://e-services.acceo.com/gsel/controller/ConstatPub/U3131/find?fourn_const_seq=322" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_constatsexpress.jpg" height="43" width="171"></a></li>
+<li><a href="https://www.facebook.com/villedesaintconstant" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_facebook2.jpg"height="43" width="172"></a></li>
+<li><a href="https://e-services.acceo.com/gsel/controller/ConstatPub/U3131/find?fourn_const_seq=322" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_constatsexpress2.jpg" height="40" width="172"></a></li>
 
 <li><a href="https://alertes.saint-constant.ca/fr/" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_alertescitoyennes.jpg" height="41" width="172"></a></li>
 <li><a href="http://batir.saint-constant.ca/" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_batirsaintconstant.jpg"height="40" width="172"></a></li>
 <li><a href="https://del.accescite.net/demandes/Pages/ReqWiz.aspx?CityCode=67035" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_demandesenligne.jpg" height="42" width="172"></a></li>
-<li><a href="http://www.appvoila.com/fr/#signaler" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_voila.jpg" height="42" width="172"></a></li>
+<li><a href="http://www.appvoila.com/fr/signalement/" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/Bouton_voila2.jpg" height="42" width="172"></a></li>
 
 	
 <p><img src="../../imgs/ligne_menu.png" alt="menu ville St-Constant" width="150" height="1" hspace="0" vspace="0" border="0" /></p>
@@ -182,6 +182,8 @@ $(document).ready(function(){
       <div class="col_1">
       <h3><a href="../../01_servicesmunicipaux/05_loisir/index.php">Loisirs</a></h3>
             <ul>
+            <li><a href="http://www.ville.saint-constant.qc.ca/01_servicesmunicipaux/05_loisir/activites-loisirs-en-cours.php">ActivitÃ©s loisirs en cours
+</a></li>
             <li><a href="../../01_servicesmunicipaux/05_loisir/arena.php">ArÃ©na</a></li>
       		<li><a href="../../01_servicesmunicipaux/05_loisir/bibliotheque.php">BibliothÃ¨que</a></li>
       		<li><a href="../../01_servicesmunicipaux/03_communications/publications.php#cahiersloisirs">Cahiers loisirs</a></li>
@@ -228,12 +230,12 @@ $(document).ready(function(){
             <div class="col_1">
                 <ul>
                   <li><h3><a href="http://www.ville.saint-constant.qc.ca/abonnements/">Sâabonner Ã  lâinfolettre</a></h3></li>
-                  <li><h3><a href="https://inscriptions.stcenligne.com/LudikIC2Prod_enligne/Pages/Anonyme/Recherche/Page.fr.aspx?m=1">Sâabonner aux activitÃ©s Loisirs</a></h3></li>
+                  <li><h3><a href="http://st-constant.zoneinscriptions.ca/">Sâabonner aux activitÃ©s Loisirs</a></h3></li>
                   <li><h3><a href="https://e-services.acceo.com/gsel/controller/ConstatPub/U3131/find?fourn_const_seq=322">Payer votre constat en ligne</a></h3></li>
                   <li><h3><a href="https://alertes.saint-constant.ca/fr/" target="_blank">Alertes citoyennes</a></h3></li>
                   <li><h3><a href="http://batir.saint-constant.ca/" target="_blank">Plateforme de consultation citoyenne</a></h3></li>
                   <li><h3><a href="https://del.accescite.net/demandes/Pages/ReqWiz.aspx?CityCode=67035" target="_blank">Demandes en ligne</a></h3></li>
-                  <li><h3><a href="http://www.appvoila.com/fr/#signaler" target="_blank">VoilÃ </a></h3></li>
+                  <li><h3><a href="http://www.appvoila.com/fr/signalement/" target="_blank">VoilÃ </a></h3></li>
                 </ul>
             </div>
             <div class="col_1">
@@ -430,16 +432,16 @@ Non rÃ©sident</strong><strong><br>
 <hr>
 <h2><strong>DÃ©couvrir, se divertir et rÃªver!</strong></h2>
 <p><br>
-  Pour connaitre les dÃ©tails et les dates de notre programmation, cliquez <a href="pdf/Affichette_V5_Final.pdf" target="_blank">ici</a>&nbsp;<br>
+  Pour connaitre les dÃ©tails et les dates de notre programmation, cliquez <a href="pdf/xxx_Stconstant_V4_LR.pdf" target="_blank">ici</a>&nbsp;<br>
   </p>
   
 <br>
-<img src="imgs/affichettep1.jpg" width="475">
-<img src="imgs/affichettep2.jpg" width="475">
+<img src="imgs/affichette1_040416.jpg" width="475">
+<img src="imgs/affichette2_040416.jpg" width="475">
 
 <br>
 
-  <p style="margin-top:40px;">Pour en savoir davantage sur les prochaines activitÃ©s Ã  la biblio, <a target="_blank" href="pdf/Affichette_V5_Final.pdf">cliquez ici.</a></p>
+  <p style="margin-top:40px;">Pour en savoir davantage sur les prochaines activitÃ©s Ã  la biblio, <a target="_blank" href="pdf/xxx_Stconstant_V4_LR.pdf">cliquez ici.</a></p>
  <br>
  <hr>
  <h2><strong>Semaine de relÃ¢che !</strong></h2>

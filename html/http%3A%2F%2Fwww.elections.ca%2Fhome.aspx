@@ -6,7 +6,7 @@
 	<meta charset="iso-8859-1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <meta name="dcterms.modified" content="March-07-2016" />
+    <meta name="dcterms.modified" content="April-25-2016" />
     <meta name="dcterms.language" content="en" /> 
 	<meta name="dcterms.creator" content="Elections Canada" /> 
     <link href="/templates/styles/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -97,7 +97,7 @@
         <li><a href="/content.aspx?section=res&amp;document=index&amp;lang=e">Resource Centre<br />
             <span class="small">Legislation, Research,<br />
                 Publications...</span></a></li>
-        <li><a href="/content.aspx?section=med&amp;document=index&amp;lang=e">Newsroom<br />
+        <li><a href="/content.aspx?section=med&amp;document=index&amp;lang=e">Media<br />
             <span class="small">News Releases &amp; Media Info</span></a></li>
         <li><a href="/content.aspx?section=emp&amp;document=index&amp;lang=e">Employment<br />
             <span class="small">Forms, Rules, Returning Officers Info...</span></a></li>
@@ -152,8 +152,8 @@
     October 19, 2015 Election</a></p>
     </div>
     
-    <div class="boxhome2a blueboxtax">
-    <p><a class="noback blueboxtaxa" href="/content.aspx?section=vot&amp;dir=reg/cra&amp;document=index&amp;lang=e"><span class="largetext">Filing your taxes? Check the boxes.</span></a></p>
+    <div class="boxhome2a blueboxa">
+    <p><a class="noback" href="/content.aspx?section=res&amp;dir=cir/maps2&amp;document=index&amp;lang=e"><span class="largetext">Maps Corner</span></a></p>
     </div>
     
     
@@ -182,16 +182,13 @@
 
 <ul class="col4">
 
-<li><a href="/content.aspx?section=med&amp;document=mar0716&amp;dir=pre&amp;lang=e">March&nbsp;7, 2016: <span class="allcaps">News Release:</span></a><br />
+<li><a href="/content.aspx?section=med&amp;document=may0316&amp;dir=pre&amp;lang=e">May&nbsp;3, 2016: <span class="allcaps">News Release:</span></a><br />
 
-    <div class="text">Chief Electoral Officer of Canada Reappoints Broadcasting Arbitrator</div></li>
-
-
-<li><a href="/content.aspx?section=med&amp;document=feb2916&amp;dir=pre&amp;lang=e">February&nbsp;29, 2016: <span class="allcaps">News Release:</span></a><br />
-
-    <div class="text">The Official Voting Results for the 42nd General Election Are Now Available</div></li>
+    <div class="text">Registered Political Parties' First Quarter Financial Returns for 2016 Now Online</div></li>
 
 </ul>
+
+<br />
 
 <p class="alignLeft"><a href="/content.aspx?section=new&amp;lang=e&amp;document=index" class="check check2">Go to the What's New section &gt;</a></p>
 
@@ -233,12 +230,12 @@
 <div class="col4ge shortcol"> 
 <h2 class="other">Useful Information</h2>
 <ul class="col4">
-    <li><a href="/content.aspx?section=pol&amp;document=index&amp;dir=dis/tfa&amp;lang=e">Training for Financial Agents of Electoral District Associations</a></li>
+ <!--   <li><a href="/content.aspx?section=pol&amp;document=index&amp;dir=dis/tfa&amp;lang=e">Training for Financial Agents of Electoral District Associations</a></li> -->
     <li><a href="/content.aspx?section=emp&amp;dir=pay&amp;document=index&amp;lang=e">Information for Election Workers</a></li>
     <li><a href="/content.aspx?section=vot&amp;dir=reg&amp;document=index&amp;lang=e">Check your voter registration</a></li>
     <li><a href="https://secure.elections.ca/Complaints.aspx?lang=e">Complaint form</a></li>
     <li><a class="ui-link" rel="external" href="https://www.cef-cce.gc.ca/content.asp?document=home&amp;lang=e">Commissioner of Canada Elections</a></li>
-    <li><a href="/content.aspx?section=res&amp;dir=cir/maps2&amp;document=index&amp;lang=e">Maps Corner</a></li>
+    <!--<li><a href="/content.aspx?section=res&amp;dir=cir/maps2&amp;document=index&amp;lang=e">Maps Corner</a></li> -->
 </ul>
 
 </div>
@@ -375,7 +372,7 @@
   <!--BEGIN - Page Bottom -->
   <!--BEGIN - Page Bottom -->
   <div id="footerwrap3">
-    <div class="column1">Date Modified: March 07, 2016</div>
+    <div class="column1">Date Modified: April 25, 2016</div>
     <div class="column2"><a href="/content.aspx?section=pri&amp;lang=e&amp;document=index">Terms and Conditions</a></div>
     <br />
   </div><!--END div footerwrap3--> 

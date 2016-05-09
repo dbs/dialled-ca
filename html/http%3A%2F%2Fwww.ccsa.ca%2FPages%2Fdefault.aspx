@@ -3,7 +3,7 @@
 <html dir="ltr" lang="en-US">
     <head><meta http-equiv="X-UA-Compatible" content="IE=10" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><title>
 	
-	Home
+	CCSA | CCLT
 
 </title>
         <link rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/pagelayouts15.css"/>
@@ -75,6 +75,7 @@ function MM_swapImage() { //v3.0
         
         
         
+        
         //]]></script>
         
         <!--custom css-->
@@ -95,7 +96,7 @@ function MM_swapImage() { //v3.0
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x6B1D70E43B2ECE24CBCC527932E5F906DD5A632713330019A74B137AC78DE0C5B1D149C58855552AEC9E705A42F99CBF056576D80D38FDF06C223E487D82B59A,11 Mar 2016 20:54:33 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xA80B3B158FFDF4F7DAF4A1FDA499E462DFD29E71A161018F5FC6FF63DDD15EAE06D3A3964B1E5A66A0AB740D0AEFCA290F6D2AA1207A319C4339471041801EB8,09 May 2016 14:05:16 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -139,7 +140,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'BLANKINTERNET#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.ccsa.ca", siteAbsoluteUrl: "http:\u002f\u002fwww.ccsa.ca", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Home", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-03-11T20:54:33.0750788Z") - new Date(), siteClientTag: "8257$$15.0.4675.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{b113de06-ffd7-4e97-9a62-77298fe56c0e}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.ccsa.ca", siteAbsoluteUrl: "http:\u002f\u002fwww.ccsa.ca", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Home", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T14:05:16.5272485Z") - new Date(), siteClientTag: "8278$$15.0.4675.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{b113de06-ffd7-4e97-9a62-77298fe56c0e}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};//]]>
@@ -259,8 +260,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             <script type="text/javascript">//<![CDATA[
 			function ProcessImn(){}
 			function ProcessImnMarkers(){}	
-		//]]></script>
-			<div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
+		
+            //]]></script>
+            <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
                 <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
                     Turn on more accessible mode
                 </a>
@@ -288,42 +290,45 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             <div id="s4-bodyContainer" class="BodyContainer" style="background-color:#f0f0f0;">
                 <div class="centeredPageSplash" style="display:block;">
                     <div class="top-splash">
-                        <img src="/Style Library/Images/CCSA/splash-logo.jpg" />
+                        <img src="/Style Library/Images/CCSA/splash-logo.jpg" alt="Canadian Centre on Substance Abuse | Centre canadien de lutte contre les toxicomanies" />
                     </div>
                     <div class="main-splash">
                         <div class="eng-content">
                             <div>
-                                <p class="desc">
+                                <p lang="en" class="desc">
 	                				The Canadian Centre on Substance Abuse changes lives by bringing people and knowledge together to reduce the harm of alcohol and other drugs on society
 	                			
+                                
                                 </p>
-                                <p class="moto">
+                                <p lang="en" class="moto">
 	                				Partnership. Knowledge. Change.
 	                			
+                                
                                 </p>
                                 <a href="/Eng" target="_self" class="splash-btn">
-                                    <p>
-                                        <!--<img src="/Style Library/Images/CCSA/btn-arrow.png" align="top" alt="" width="14" height="15" id="Rollover" border="0" style="margin-left:10px;margin-top:7px;padding-right:8px;"/>-->
-
-	                                    English
-	                                                                    </p>
+                                    <p lang="en">
+                                        English
+	                                </p>
                                 </a>
                             </div>
                         </div>
                         <div class="fra-content">
                             <div>
-                                <p class="desc">
+                                <p lang="fr" class="desc">
 	                				Le Centre canadien de lutte contre les toxicomanies transforme des vies en mobilisant les gens et les connaissances afin de réduire les méfaits de l’alcool et des drogues sur la société
 	                			
+                                
                                 </p>
-                                <p class="moto">
+                                <p lang="fr" class="moto">
 	                				Collaboration. Connaissance. Changement.
 	                			
+                                
                                 </p>
                                 <a href="/Fra" target="_self" class="splash-btn">
-                                    <p>	                                    
+                                    <p lang="fr">	                                    
 	                                    Français
 	                                
+                                    
                                     </p>
                                 </a>
                             </div>
@@ -396,7 +401,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0x6B1D70E43B2ECE24CBCC527932E5F906DD5A632713330019A74B137AC78DE0C5B1D149C58855552AEC9E705A42F99CBF056576D80D38FDF06C223E487D82B59A,11 Mar 2016 20:54:33 -0000';
+            formDigestElement.value = '0xA80B3B158FFDF4F7DAF4A1FDA499E462DFD29E71A161018F5FC6FF63DDD15EAE06D3A3964B1E5A66A0AB740D0AEFCA290F6D2AA1207A319C4339471041801EB8,09 May 2016 14:05:16 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>

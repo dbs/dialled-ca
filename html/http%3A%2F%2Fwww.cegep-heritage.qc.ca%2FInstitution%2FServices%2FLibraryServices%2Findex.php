@@ -137,7 +137,6 @@ function Go(){return}
             <tr>
               <td width="482" height="650" valign="top"><!-- InstanceBeginEditable name="Page Content" -->
 			  <p align="center"><a href="http://cegep-heritage.libguides.com/home"><img src="../../../Images/LibraryServices/lib_button_2.jpg" width="347" height="44" border="0"></a></p>
-			  <p align="center"><img src="./images/freedom_to_read_2016.jpg" width="450" height="193" border="0"></p>   
 			  <p align="center"><a href="http://hero.cegep-heritage.qc.ca/4dcgi/gen_2002/Lang=Def"><img src="../../../Images/LibraryServices/lib_button_1.jpg" width="347" height="44" border="0"></a></p>   
               <h4>What's in the Library?</h4>
 			  <p class="f25 centered">

@@ -121,10 +121,8 @@
 			<div id="pageColumn1">
 			<!-- pageColumn1 start here -->
 				<div id="Biblio">
-					<h3><span class="hide"></span></h3>
-					
-
-<!-- pageMenu start here -->
+					<h3><span class="hide">BibliothÃ¨que publique</span></h3>
+					<!-- pageMenu start here -->
 		<div id="left_linklist">
 		<ul>
 			<li><a href="/fr/bibliotheque.php" class="selected">Accueil</a></li>
@@ -149,20 +147,20 @@
 		<ul>
 					<li>
 				<div class="couverturePrimeur">
-					                                    <a href="/fr/primeur-detail.php?id=956"><img src="/upload/images/thumbs/imgctrlthb_w50_h79_q100_rocha_u160308105509.jpg" alt="rocha_u160308105509.jpg" /></a>
+					                                    <a href="/fr/primeur-detail.php?id=996"><img src="/upload/images/thumbs/imgctrlthb_w50_h80_q100_rollins_u160426111410.jpg" alt="rollins_u160426111410.jpg" /></a>
 											</div>
 				<div class="resumePrimeur">
-					<span class="primeurTitle">Complot au Vatican vol. 1 - Le dernier pape</span>
-					<div>De Luis-Miguel Rocha					<a href="/fr/primeur-detail.php?id=956" class="primeurMore">[...]</a></div>
+					<span class="primeurTitle">L'ordre des sanguinistes 2 - La derniÃ¨re tentation</span>
+					<div>De James Rollins					<a href="/fr/primeur-detail.php?id=996" class="primeurMore">[...]</a></div>
 				</div>
 			</li>
 						<li>
 				<div class="couverturePrimeur">
-					                                    <a href="/fr/primeur-detail.php?id=957"><img src="/upload/images/thumbs/imgctrlthb_w50_h80_q100_dechus_u160308105758.jpg" alt="dechus_u160308105758.jpg" /></a>
+					                                    <a href="/fr/primeur-detail.php?id=995"><img src="/upload/images/thumbs/imgctrlthb_w50_h82_q100_bizien_u160426111014.jpg" alt="bizien_u160426111014.jpg" /></a>
 											</div>
 				<div class="resumePrimeur">
-					<span class="primeurTitle">Ennemis vol. 5 - Les dÃ©chus</span>
-					<div>De Charlie Higson					<a href="/fr/primeur-detail.php?id=957" class="primeurMore">[...]</a></div>
+					<span class="primeurTitle">La trilogie des tÃ©nÃ¨bres 3 - Le berceau des tÃ©nÃ¨bres</span>
+					<div>De Jean-Luc Bizien					<a href="/fr/primeur-detail.php?id=995" class="primeurMore">[...]</a></div>
 				</div>
 			</li>
 			
@@ -188,7 +186,7 @@
 						<div class="latest-twit">
 								<blockquote class="twitter-tweet">
 								<p>
-																	<a href="https://twitter.com/BiblioSADP/status/702223995073122309" target="_blank">Biblio-Aidants ressource documentaire 15 cahiers thÃ©matiques pour vous aider https://t.co/hrXr0zbzMj https://t.co/ErvW8MAoVq</a>
+																	<a href="https://twitter.com/BiblioSADP/status/725115527547510785" target="_blank">Atelier pour enfants de 5 Ã  12 ans:  Les mains dans la nature.  CrÃ©e ton propre terrarium le 8 juin Ã  18:30h https://t.co/d6POfgmJoV</a>
 								 								</p>
 								</blockquote>
 								<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

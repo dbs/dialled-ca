@@ -120,7 +120,7 @@ $(document).ready(function () {
                 <input id="btn-search" type="submit" value=""/>
             </form>
         </div>
-				<div id="date_ajd">Vendredi, 11 mars 2016</div>
+				<div id="date_ajd">Lundi, 09 mai 2016</div>
 
 		<a href="/index.php"><div id="logo"></div></a>
 		<a href="/index.php"><div id="t_logo"></div></a>
@@ -271,33 +271,25 @@ $(document).ready(function () {
 				<!-- -->
 					<div id="aff_actu">
 										<div id="carou_news">
-																																																																																																								
+																																																																														
 															
-															<div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/actualites.php?info=voir&id=219"">Programme RénoRégion</a></span>
+															<div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/actualites.php?info=voir&id=224"">NETTOYAGE DE TERRAINS</a></span>
 																
-																<br /><span class="date_even">18 février 2016</span>
+																<br /><span class="date_even">03 mai 2016</span>
 																
-																<p style="padding-bottom:0px;">La Société d'habitation  du Québec pourrait vous a&nbsp;&nbsp;<a href="/actualites.php?info=voir&id=219"">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/uploads/nouvelles/215.jpg"">Recrutement de personnel au corps de cad</a></span>
+																<p style="padding-bottom:0px;">Les résidus provenant du nettoyage printanier ne d&nbsp;&nbsp;<a href="/actualites.php?info=voir&id=224"">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="http://www.papineauville.ca/services-municipaux/matieres-residuelles.php" target="_blank">Tricentris express</a></span>
 																
-																<br /><span class="date_even">12 janvier 2016</span>
+																<br /><span class="date_even">27 avril 2016</span>
 																
-																<p style="padding-bottom:0px;">Message du commandant du corps de cadets 1786 LJP.&nbsp;&nbsp;<a href="/uploads/nouvelles/215.jpg"">[&hellip;]</a></p></div></div><div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="http://www.papineauville.ca/loisirs-culture/arts.php" target="_blank">Rendez-Vous des Arts 2016</a></span>
+																<p style="padding-bottom:0px;">L'édition du mois d'avril est disponible dans la s&nbsp;&nbsp;<a href="http://www.papineauville.ca/services-municipaux/matieres-residuelles.php" target="_blank">[&hellip;]</a></p></div></div><div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/actualites.php?info=voir&id=222"">DU NOUVEAU: ordures et recyclage</a></span>
+																
+																<br /><span class="date_even">21 avril 2016</span>
+																
+																<p style="padding-bottom:0px;">Que  mettez- vous dans  vos bacs à ordures et recy&nbsp;&nbsp;<a href="/actualites.php?info=voir&id=222"">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="http://www.papineauville.ca/loisirs-culture/arts.php" target="_blank">Rendez-Vous des Arts 2016</a></span>
 																
 																<br /><span class="date_even">11 janvier 2016</span>
 																
-																<p style="padding-bottom:0px;">C'est le 20e anniversaire de cet évènement culture&nbsp;&nbsp;<a href="http://www.papineauville.ca/loisirs-culture/arts.php" target="_blank">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/uploads/nouvelles/212.pdf"">Livre de Denis-Benjamin Papineau</a></span>
-																
-																<br /><span class="date_even">07 janvier 2016</span>
-																
-																<p style="padding-bottom:0px;">Il est possible dès maintenant de réserver votre c&nbsp;&nbsp;<a href="/uploads/nouvelles/212.pdf"">[&hellip;]</a></p></div></div><div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/uploads/nouvelles/198.pdf"">Programmation loisirs automne 2015</a></span>
-																
-																<br /><span class="date_even">26 août 2015</span>
-																
-																<p style="padding-bottom:0px;">Des activités pour tous les âges et tous les goûts&nbsp;&nbsp;<a href="/uploads/nouvelles/198.pdf"">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/actualites.php?info=voir&id=216"">Ordures et recyclage</a></span>
-																
-																<br /><span class="date_even">13 janvier 2015</span>
-																
-																<p style="padding-bottom:0px;">Beaucoup d'appels sur la collecte des  ordures et &nbsp;&nbsp;<a href="/actualites.php?info=voir&id=216"">[&hellip;]</a></p></div></div>																
+																<p style="padding-bottom:0px;">C'est le 20e anniversaire de cet évènement culture&nbsp;&nbsp;<a href="http://www.papineauville.ca/loisirs-culture/arts.php" target="_blank">[&hellip;]</a></p></div></div>																
 																						</div>
 				</div>
 								<!-- -->
@@ -314,6 +306,11 @@ $(document).ready(function () {
 				
 			
 			</div>
+			<div class="cb"></div>
+			<br/>
+			<a href="/spap.php">
+				<img src="/images/salon_animaux.jpg" style="width: 100%;" />
+			</a>
 																	
 			<div style="position:relative; float:left; margin-left:40px; margin-top:20px;"><a href="http://www.facebook.com/pages/Municipalit%C3%A9-de-Papineauville/453593511353075"><img src="../images/btn_facebook.png"></a></div>
             <div style="position:relative; float:left; margin-left:25px; margin-top:20px;"><a href="https://twitter.com/Papineauville_"><img src="../images/btn_twitter.png"></a></div>

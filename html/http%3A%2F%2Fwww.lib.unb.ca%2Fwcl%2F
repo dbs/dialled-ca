@@ -1,340 +1,526 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNB Libraries - Hans W. Klohn Commons</title>
+	<meta name="description" content="University of New Brunswick Libraries serving the UNB Fredericton, UNB Saint John and St. Thomas University research and academic communities." />
+	<meta property="og:title" content="University of New Brunswick Libraries">
+	<meta property="og:description" content="University of New Brunswick Libraries serving the UNB Fredericton, UNB Saint John and St. Thomas University research and academic communities.">
+	    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/core/css-2015/fhmm.css" rel="stylesheet" />
+    <link href="/core/css-2015/unb-lib.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+    <style type="text/css">
+		#image-hours {background: transparent url("//media.lib.unb.ca/core/img-2015/homeBanner/front-2.jpg") 0 0 no-repeat;}
+	</style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" href="//media.lib.unb.ca/core/img-2015/apple-mobile-57px.png">
+    <link rel="apple-touch-icon-precomposed" href="//media.lib.unb.ca/core/img-2015/apple-mobile-72px.png">
+    <link rel="apple-touch-icon-precomposed" href="//media.lib.unb.ca/core/img-2015/apple-mobile-114px.png">
+    <link rel="apple-touch-icon-precomposed" href="//media.lib.unb.ca/core/img-2015/apple-mobile-144px.png">
+	<link rel="icon" href="/favicon.png" />
+	<!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+	<script>
+	  var _gaq = _gaq || [];
+	  var pluginUrl =
+	  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	  //_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+	  _gaq.push(['_setAccount', 'UA-9333082-2']);
+	  _gaq.push(['_trackPageview']);
 
-<head>
-	<title>UNB Libraries - Ward Chipman Library Website</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(e,t){function n(){}function r(e){function t(e){return e&&e instanceof n?e:e?a(e,i,o):o()}function s(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,f=0;u>f;f++)a[f].apply(i,r);var s=c[w[n]];return s&&s.push([h,n,r,i]),i}function p(e,t){g[e]=l(e).concat(t)}function l(e){return g[e]||[]}function d(e){return f[e]=f[e]||r(s)}function v(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in c||(c[t]=[])})}var g={},w={},h={on:p,emit:s,get:d,listeners:l,context:t,buffer:v};return h}function o(){return new n}var i="nr@context",a=e("gos"),u=e(1),c={},f={},s=t.exports=r();s.backlog=c},{1:12,gos:"7eSDFh"}],ee:[function(e,t){t.exports=e("QJf3ax")},{}],3:[function(e,t){function n(e,t){return function(){r(e,[(new Date).getTime()].concat(i(arguments)),null,t)}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],u=["addPageAction"],c="api-";o(a,function(e,t){newrelic[t]=n(c+t,"api")}),o(u,function(e,t){newrelic[t]=n(c+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),r("err",[e,(new Date).getTime()])}},{1:12,2:13,handle:"D5DuLP"}],gos:[function(e,t){t.exports=e("7eSDFh")},{}],"7eSDFh":[function(e,t){function n(e,t,n){if(r.call(e,t))return e[t];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[t]=o,o}var r=Object.prototype.hasOwnProperty;t.exports=n},{}],handle:[function(e,t){t.exports=e("D5DuLP")},{}],D5DuLP:[function(e,t){function n(e,t,n,o){r.buffer([e],o),r.emit(e,t,n)}var r=e("ee").get("handle");t.exports=n,n.ee=r},{ee:"QJf3ax"}],XL7HBI:[function(e,t){function n(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");t.exports=n},{gos:"7eSDFh"}],id:[function(e,t){t.exports=e("XL7HBI")},{}],G9z0Bl:[function(e,t){function n(){if(!v++){var e=d.info=NREUM.info,t=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){u(p,function(t,n){e[t]||(e[t]=n)});var n="https"===s.split(":")[0]||e.sslForHttp;d.proto=n?"https://":"http://",a("mark",["onload",i()],null,"api");var r=f.createElement("script");r.src=d.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()],null,"api")}function i(){return(new Date).getTime()}var a=e("handle"),u=e(1),c=window,f=c.document;NREUM.o={ST:setTimeout,XHR:c.XMLHttpRequest,REQ:c.Request,EV:c.Event,PR:c.Promise,MO:c.MutationObserver},e(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-885.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),d=t.exports={offset:i(),origin:s,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()],null,"api");var v=0},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,t){t.exports=e("G9z0Bl")},{}],12:[function(e,t){function n(e,t){var n=[],o="",i=0;for(o in e)r.call(e,o)&&(n[i]=t(o,e[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;t.exports=n},{}],13:[function(e,t){function n(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=n},{}]},{},["G9z0Bl"]);</script>
-	<meta name="description" content="University of New Brunswick Libraries website serving the UNB Fredericton, UNB Saint John and St. Thomas University research and academic communities." />
-	<meta name="keywords" content="library,journals,databases,ebooks,government documents,indexes,abstracts,books,maps,catalogue,research,Harriet Irving Library,Science and Forestry Library,Engineering Library" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
-        <link rel="stylesheet" href="/core/css/unb.lib.css" type="text/css" media="screen, projection" />
-        <link rel="stylesheet" href="/core/css/print.css" type="text/css" media="print" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="/core/js/unb.lib.js"></script>
-	<script type="text/javascript">
-	// <![CDATA[
-	$(document).ready(function()
-	{ 
-		$("ul.sf-menu").superfish({
-				animation:   {opacity:'show',height:'show'},
-				delay: 600, 
-				speed: 'fast', 
-				autoArrows:  false
-			})
-				});
-	// ]]>
-	</script> 
-	<!--Array
-(
-    [firefox] => 43.0
-)
--->     <script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-9333082-2']);
-	_gaq.push(['_trackPageview']);
-	(function() {
-	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-	</script></head>
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>  </head>
 
-<body class="oneCol">
+  <body class="">
+  	<h3 class="sr-only">Same page jump links</h3>
+	<ul class="skiplist">
+		<li class="skip"><a href="#main">Skip to main content</a></li>
+		<!--li class="skip skipSidebar"><a href="#sidebar">Skip to sidebar</a></li-->
+	</ul>
+	
+	  <div class="darkbkgd" id="wrapper">
+	  <div class="container">
+	    <div class="row">
+        <div class="col-md-12" id="utilities">
+			<ul class="utilities">
+				<li><a href="http://unb.ca"><i class="icon-unb"></i> UNB</a></li>
+				<li class="visible-desktop"><a href="/help/ask.php"><i class="fa fa-question-circle"></i> Ask Us</a></li>
+				<li><a href="/requests/suggestions.php"><i class="fa fa-comments"></i> Feedback</a></li>
+				<li class="last"><a href="/search.php"><i class="fa fa-search"></i> Search</a></li>
+			</ul>
+        </div>
+	    </div>
+	  </div>
+	  </div>
 
-	<div id="wrapper">
-<div id="header"><div class="innertube">
-<ul class="skiplist">
-	<li class="skip"><a href="#contentcolumn">Skip to main content</a></li>
-    <li class="skip siderbarSkip"><a href="#rightcolumn">Skip to sidebar</a></li>
-</ul>
-    <div id="subNav">
-        <p id="search">        
-        <span><a href="/search.php">Search this website</a></span> <span class="last"><a href="/sitemap/">Libraries A to Z</a></span></p>
-        <h3 class="hide">Libraries at UNB</h3>
-        <ul id="libraries">
-            <li><a href="/help/ask.php">Ask Us</a></li>
-            <li><a href="/requests/suggestions.php">Tell Us</a></li>
-	    <li><a href="/about/hours.php">Hours</a></li> 
-	    <li class="last"><a href="/about/findus.php">Floor Plans</a></li>
-        </ul>
-    </div><!-- end subNav -->
-    <div id="mainNav">
-    	<ul id="utilities">
-        <li><a href="/about/harrietirving.php">Harriet Irving <span class="hide">Library</span></a></li>
-        <li><a href="/about/science.php">Science &amp; Forestry <span class="hide">Library</span></a></li>
-        <li><a href="/about/engineering.php">Engineering <span class="hide">Library</span></a></li>
-        <li><a href="/about/saintjohn.php">Saint John <span class="hide">Library</span></a></li>
-        <li class="last"><a href="http://law.unb.ca/library/">Law <span class="hide">Library</span></a></li>
-        </ul>
-        <p id="UNB"><a href="http://www.unb.ca">University of New Brunswick</a></p>
-        <p id="UNBLib"><a href="http://lib.unb.ca/">University of New Brunswick Libraries</a></p>        <div id="menus">
-<h2 class="hide">Site Navigation Menus (use tab and down arrow)</h2>
-<ul class="sf-menu">
-      <li class="bar-item"><h3><a href="/about/" class="bar-link">About</a></h3>
-        <ul class="megamenu" id="about-menu">
-          <li>
-            <div class="megawrapper">
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>General</h4>
-                  <ul>
-                    <li><a href="/about/contacts.html">Contact Us</a></li>
-                    <li><a href="/about/findus.php">Find Us</a></li>
-                    <li><a href="/about/staff.php">Staff and Departments</a></li>
-                    <li><a href="/about/hours.php">Hours</a></li>
-                    <li><a href="/about/policies/">Policies</a></li>
-                    <li><a href="/about/student.php">Student Employment</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Libraries</h4>
-                  <ul>
-                    <li><a href="/about/harrietirving.php">Harriet Irving Library</a></li>
-                    <li><a href="/about/science.php">Science &amp; Forestry Library</a></li>
-                    <li><a href="/about/engineering.php">Engineering Library</a></li>
-                    <li><a href="/about/saintjohn.php">Hans W. Klohn Commons</a></li>
-                    <li><a href="http://law.unb.ca/library/">Gerard V. La Forest Law Library</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megafooter clearfloat">&nbsp;</div>
-            </div>
-          </li>
-        </ul>
-      </li>
+	<div class="container">
 
-      <li class="bar-item"><h3><a href="/eresources/res-coll.php" class="bar-link">Resources / Collections</a></h3>
-        <ul class="megamenu" id="reso-menu">
-          <li>
-            <div class="megawrapper">
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Resources</h4>
-                  <ul>
-                    <li><a href="/eresources/index.php">e-Resources</a></li>
-                    <li><a href="/eresources/index.php?sub=indexes">&nbsp; &#8212; Article &amp; Research Databases</a></li>
-                    <li><a href="/eresources/index.php?sub=refmat">&nbsp; &#8212; Reference Materials</a></li>
-                    <li><a href="/eresources/index.php?sub=journals">&nbsp; &#8212; Journals &amp; Newspapers</a></li>
-                    <li><a href="/eresources/index.php?sub=ebooks">e-Books</a></li>
-                    <li><a href="/eresources/index.php?sub=trials">Current Trials</a></li>
-                    <li style="margin-bottom:20px;"><a href="/guides/view/index.php/533">RefWorks</a></li>
-                  </ul>
-                  <h4>Subject &amp; Course Guides</h4>
-                  <ul><li><a href="/guides/">Research by subject, topic or course.</a></li></ul>
-                </div>
-              </div>
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-				  <h4>Catalogues</h4>
-                  <ul>
-                    <li><a href="/worldcat/">UNB WorldCat</a></li>
-                    <li><a href="https://login.proxy.hil.unb.ca/login?url=http://firstsearch.oclc.org/fsip?dbname=WorldCat&amp;done=http://www.lib.unb.ca/exitRedirect.php">WorldCat FirstSearch</a></li>
-                    <li><a href="http://lib.unb.ca/souls">SOULS</a></li>
-                    <li><a href="http://www.collectionscanada.gc.ca/amicus/index-e.html">Library and Archives Canada</a></li>
-                    <li><a href="http://cat.cisti.nrc.ca/search/">CISTI</a></li>
-                    <li><a href="http://www.gnb.ca/0003/index-e.asp">New Brunswick Public Library</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Notable Collections</h4>
-                  <ul>
-                    <li><a href="/archives/">Archives &amp; Special Collections</a></li>
-                    <li><a href="/collections/clc/">Eileen Wallace Children's Literature</a></li>
-                    <li><a href="http://etc.lib.unb.ca/projects">Electronic Text Centre Projects</a></li>
-                    <li><a href="/filmResources/">Film &amp; Video Collection</a></li>
-                    <li><a href="/gddm/">Government Documents, Data &amp; Maps</a></li>
-                    <li><a href="http://loyalist.lib.unb.ca">Loyalist Collection</a></li>
-                    <li><a href="/collections/sff.php">Science Fiction &amp; Fantasy Collection</a></li>
-                    <li><a href="/eresources/theses.php">UNB Theses &amp; Dissertations</a></li>
-                    <li><a href="/collections/notable.php#other"><strong>More <span class="hide">Collections</span></strong></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megafooter clearfloat">&nbsp;</div>
-            </div>
-          </li>
-        </ul>
-      </li>
+		<nav class="navbar navbar-default fhmm" aria-label="Banner and Global Navigation" data-spy="affix" data-offset-top="50" >
+			<div class="row">
+				<div class="col-md-4 col-sm-12 UNBLib-logo">
+				<h1><a href="/" style="border: none;background:none;"><img src="//media.lib.unb.ca/core/img-2015/UNB_Lib_Black_Red.png" alt="UNB Libraries" /></a></h1>				</div>
 
-      <li class="bar-item"><h3><a href="/services/" class="bar-link">Services</a></h3>
-        <ul class="megamenu" id="serv-menu">
-          <li>
-            <div class="megawrapper">
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Help with...</h4>
-                  <ul>
-                    <li><a href="/research/">Research</a></li>
-                    <li><a href="/services/writing.php">Writing</a></li>
-                    <li style="margin-bottom:20px;"><a href="/help/technical.php">Technical Issues</a></li>
-                  </ul>
-                  <h4>Information about...</h4>
-                  <ul>
-                    <li><a href="/services/photocopying.php">Photocopying, Printing &amp; Scanning</a></li>
-                    <li><a href="/services/group_study.php">Group Study Rooms</a></li>
-                    <li><a href="/gddm/maps/">GIS</a></li>
-                    <li><a href="/gddm/data/">Data Services</a></li>
-                    <li><a href="/about/commons.php">McNair Learning Commons</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Request Forms</h4>
-                  <ul>
-                    <li><a href="/requests/docdel/">Document Delivery</a></li>
-                    <li><a href="/requests/itemretrieval.php">Material Retrieval Form - UNBF</a></li>
-                    <li style="margin-bottom:20px;"><a href="/requests/holds.php">Holds (Request Item)</a></li>
-                  </ul>
-                  <h4>Services for...</h4>
-                  <ul>
-                    <li><a href="/services/access.html">Persons with Disabilities</a></li>
-                    <li><a href="/disted/">Distance Education</a></li>
-                    <li><a href="/faculty/">Faculty</a></li>
-                    <li><a href="/services/gradstudents.php">Graduate Students</a></li>
-                    <li><a href="/services/alumni.php">Alumni</a></li>
-                    <li><a href="/services/public.php">Public</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megafooter clearfloat">&nbsp;</div>
-            </div>
-          </li>
-        </ul>
-      </li>
+				<div class="navbar-header">
+				    <div class="row navbar-mobile">
+			        <div class="col-xs-4"><button type="button" data-toggle="collapse" data-target="#defaultmenu" class="navbar-toggle">Menu <i class="fa fa-bars fa-lg fa-wh"></i> </button></div>
+			        			        <div class="col-xs-4 text-center"><button type="button" data-toggle="collapse" data-target="#image-hours" class="navbar-toggle hours-nomenu">Hours <i class="fa fa-clock-o fa-lg fa-wh"></i> </button></div>
+			        <div class="col-xs-4"><a class="askus-nomenu navbar-toggle" href="/help/ask.php">AskUs <i class="fa fa-comments fa-lg fa-wh"></i></a></div>
+					</div>
+				</div>
+
+			<div id="defaultmenu" role="navigation" aria-label="Navigation Menus" class="navbar-collapse collapse col-md-8 col-sm-12">
+    <ul class="nav navbar-nav nav-justified">
+        <!-- Mega Menu -->
+        <li class="dropdown fhmm-fw"><a href="/about/" data-toggle="dropdown" class="dropdown-toggle">About</a>
+            <ul class="dropdown-menu fullwidth">
+                <li class="fhmm-content withoutdesc">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 class="title">General</h3>
+                            <ul>
+								<li><a href="/about/contacts.php">Contact Us</a></li>
+								<li><a href="/about/findus.php">Find Us</a></li>
+								<li><a href="/about/staff.php">Staff and Departments</a></li>
+								<li><a href="/about/hours.php">Hours</a></li>
+								<li><a href="/about/policies/">Policies</a></li>
+								<li><a href="/about/student.php">Student Employment</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 class="title">Libraries</h3>
+                            <ul>
+								<li><a href="/about/harrietirving.php">Harriet Irving</a></li>
+								<li><a href="/about/science.php">Science &amp; Forestry</a></li>
+								<li><a href="/about/engineering.php">Engineering &amp; Computer Science</a></li>
+								<li><a href="/about/saintjohn.php">Hans W. Klohn Commons</a></li>
+								<li><a href="http://www.unb.ca/fredericton/law/library/">Gerard V. La Forest Law</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 class="title">Departments</h3>
+                            <ul>
+								<li><a href="/archives/">Archives &amp; Special Collections</a></li>
+								<li><a href="https://digitalscholarship.lib.unb.ca/">Centre for Digital Scholarship</a></li>
+								<li><a href="/microforms/">Microforms</a></li>
+								<li><a href="/gddm/">Government Documents, Data &amp; Maps</a></li>
+								<li><a href="/about/staff.php"><!--i class="fa fa-plus fa-wh"></i-->... more <span class="hide">Departments</span></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- end row -->
+                </li><!-- end grid demo -->
+            </ul><!-- end drop down menu -->
+        </li>
+        <li class="dropdown fhmm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Resources</a>
+            <ul class="dropdown-menu fullwidth">
+                <li class="fhmm-content withoutdesc">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 class="title">Resources</h3>
+                            <ul><li><a href="/eresources/index.php">e-Resources</a></li>
+								<li><a href="/eresources/index.php?sub=indexes" class="subsection-menu-item">Article Databases</a></li>
+								<li><a href="/eresources/index.php?sub=refmat" class="subsection-menu-item">e-Encyclopedias, etc.</a></li>
+								<li><a href="/eresources/index.php?sub=journals" class="subsection-menu-item">Journals &amp; Newspapers</a></li>
+								<li><a href="/eresources/index.php?sub=ebooks">e-Books</a></li>
+								<li><a href="/eresources/index.php?sub=video">Videos</a></li>
+																<li><a href="/guides/view/index.php/533">RefWorks</a></li>
+								<li><a href="/guides/view/index.php/592">Mobile Resources for Academics</a></li>
+                  			</ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 class="title">Catalogues</h3>
+                            <ul>
+								<li><a href="/worldcat/">UNB WorldCat</a></li>
+								<li><a href="https://login.proxy.hil.unb.ca/login?url=http://firstsearch.oclc.org/fsip?dbname=WorldCat&amp;done=http://www.lib.unb.ca/exitRedirect.php">WorldCat FirstSearch</a></li>
+								<li><a href="http://lib.unb.ca/souls">SOULS</a></li>
+								<!--li><a href="http://www.collectionscanada.gc.ca/amicus/index-e.html">Library and Archives Canada</a></li>
+								<li><a href="http://cat.cisti.nrc.ca/search/">CISTI</a></li-->
+								<li><a href="http://www.gnb.ca/0003/index-e.asp">New Brunswick Public Library</a></li>
+                  			</ul>
+				  			<h3 class="title">Reserves</h3>
+				  			<ul>
+					  			<li><a href="/reserves/index.php">Search for Course reserves.</a></li>
+                            </ul>
+                           <h3 class="title">Subject &amp; Course Guides</h3>
+						   <ul>
+							   	<li><a href="/guides/">Research by subject or course.</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 class="title">Notable Collections</h3>
+                            <ul>
+								<li><a href="/archives/">Archives &amp; Special Collections</a></li>
+								<li><a href="/collections/clc/">Eileen Wallace Children's Literature</a></li>
+								<li><a href="https://digitalscholarship.lib.unb.ca/projects">Centre for Digital Scholarships Projects</a></li>
+								<li><a href="/guides/view/?s=577">Film/Sound/Image Collections</a></li>
+								<li><a href="/gddm/">Government Documents, Data &amp; Maps</a></li>
+								<li><a href="https://loyalist.lib.unb.ca/">Loyalist Collection</a></li>
+								<li><a href="/collections/sff.php">Science Fiction &amp; Fantasy Collection</a></li>
+								<li><a href="/eresources/theses.php">UNB Theses &amp; Dissertations</a></li>
+								<li><a href="/collections/notable.php#other"><!--i class="fa fa-plus fa-wh"></i-->... more <span class="hide">Collections</span></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- end row -->
+                </li><!-- end grid demo -->
+            </ul><!-- end drop down menu -->
+        </li>
+        <li class="dropdown fhmm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services</a>
+            <ul class="dropdown-menu fullwidth">
+                <li class="fhmm-content withoutdesc">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 class="title">Help with...</h3>
+							<ul>
+								<li><a href="/research/">Research</a></li>
+								<li><a href="/services/writing.php">Writing</a></li>
+								<li style="margin-bottom:20px;"><a href="/help/technical.php">Technical Issues</a></li>
+                  			</ul>
+                            <h3 class="title">Request Forms</h3>
+							<ul>
+								<li><a href="/requests/docdel/">Document Delivery</a></li>
+								<li style="margin-bottom:20px;"><a href="/requests/itemretrieval.php">Material Retrieval Form</a></li>
+                  			</ul>
+                        </div>
+                        <div class="col-sm-4">
+				  			<h3 class="title">Information about...</h3>
+				  			<ul>
+				  				<li><a href="/services/photocopying.php">Photocopying, Printing &amp; Scanning</a></li>
+				  				<li><a href="/services/group_study.php">Group Study Rooms</a></li>
+				  				<li><a href="/gddm/maps/">GIS</a></li>
+				  				<li><a href="/gddm/data/">Data Services</a></li>
+				  				<li><a href="/about/commons.php">McNair Learning Commons</a></li>
+                            </ul>
+                        </div>
+                        <!--div class="col-sm-3">
+                        </div-->
+                        <div class="col-sm-4">
+				  			<h3 class="title">Services for...</h3>
+				  			<ul>
+				  				<li><a href="/services/access.php">Persons with Disabilities</a></li>
+				  				<li><a href="/disted/">Distance Education</a></li>
+				  				<li><a href="/faculty/">Faculty</a></li>
+				  				<li><a href="/services/gradstudents.php">Graduate Students</a></li>
+				  				<li><a href="/services/alumni.php">Alumni</a></li>
+				  				<li><a href="/services/community.php">Community</a></li>
+				  				<li><a href="/guides/view/index.php/640">STU Students</a></li>
+                            </ul>
+                        </div>
+                     </div><!-- end row -->
+                </li><!-- end grid demo -->
+            </ul><!-- end drop down menu -->
+        </li>
+        <li class="dropdown fhmm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Faculty</a>
+            <ul class="dropdown-menu fullwidth">
+                <li class="fhmm-content withoutdesc">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 class="title">Teaching</h3>
+							<ul>
+								<li class="mglsTp"><a href="/faculty/reserves.php">Manage Course Reserves</a></li>
+								<li><a href="/faculty/class.php">Class Instruction</a></li>
+								<li><a href="/copyright/">Copyright</a></li>
+								<li><a href="/faculty/liaison.php">Contact Liaison Librarian</a></li>
+								<li><a href="/faculty/ebooks.php">e-Books in the Classroom</a></li>
+								<li><a href="/about/facilities/">Instruction Facilities</a></li>
+								<li class=""><a href="/faculty/libraryLMS.php">Library Desire2Learn / Moodle</a></li>
+                   			</ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 class="title">Scholarly Communication</h3>
+							<ul>
+								<li><a href="/guides/view/index.php/511">Making Citations Count</a></li>
+								<li><a href="https://digitalscholarship.lib.unb.ca/publishing-services">Digital Publishing Services</a></li>
+								<li><a href="/openaccess/">Open Access</a></li>
+								<!--li><a href="http://dspace.hil.unb.ca:8080/">RiverRun Digital Repository</a></li-->
+                  			</ul>
+                        </div>
+                        <div class="col-sm-4">
+				  			<h3 class="title">Collections</h3>
+				  			<ul>
+				  				<li><a href="/collections/">Collections Development</a></li>
+				  				<li><a href="/requests/film_booking_form.php">Reserve A Video/DVD</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- end row -->
+                </li><!-- end grid demo -->
+            </ul><!-- end drop down menu -->
+        </li>
+        <li class="dropdown fhmm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Help</a>
+            <ul class="dropdown-menu fullwidth">
+                <li class="fhmm-content withoutdesc">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="title">Research &amp; Writing</h3>
+                            <ul>
+                                <li><a href="/help/ask.php">Ask Us</a></li>
+                                <li><a href="/research/">Research Help</a></li>
+								<li><a href="/services/writing.php">Writing Help</a></li>
+								<li><a href="/guides/">Guides &amp; Workshops</a></li>
+								<li><a href="/research/video.php">Video Quick Tips</a></li>
+								<li><a href="http://www.unb.ca/fredericton/studentservices/academics/writing-centre/writing-answers.html">Citing Your Sources</a></li>
+								<li><a href="/services/access.php">Accessibility Support</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3 class="title">Technical Support</h3>
+                            <ul>
+                                <li><a href="/help/proxy.php">Off-campus (Proxy) Access</a></li>
+								<li><a href="/help/status.php">Systems and Services Status</a></li>
+								<li><a href="/help/troubleticket.php">Submit a Trouble Ticket</a></li>
+								<li><a href="/help/technical.php#wireless">Wireless Connectivity / Loaner Laptops</a></li>
+								<li><a href="/help/ITS.php">ITS Help Desk Support</a></li>
+								<li><a href="/help/accessibility.php">Website Accessibility</a></li>
+								<li><a href="/help/technical.php"><!--i class="fa fa-plus fa-wh"></i-->... more <span class="hide">Technical Support</span></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- end row -->
+                </li><!-- end grid demo -->
+            </ul><!-- end drop down menu -->
+        </li>
+        <!-- end list elements -->
+
+        </ul><!-- end dropdown-menu -->
+        <!-- </li> end dropdown fhmm-fw -->
+    <!-- </ul> end nav navbar-nav -->
+</div><!-- end #navbar-collapse-1 -->
+
+<!-- end navbar navbar-default fhmm -->
+			</div>
+		</nav>
+
+		<div class="row" id="image-hours">
+		  <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6 col-xs-12" id="hours">
+			<p>Monday, May 9, 2016</p>
+		  	<ul class="">
+						<li><a href="/about/harrietirving.php">Harriet Irving</a> <span>7:30am - 7pm</span></li>
+			<li><a href="/about/science.php">Science &amp; Forestry</a> <span>8am - 4pm</span></li>
+			<li><a href="/about/engineering.php">Engineering &amp; CS</a> <span>8am - 4pm</span></li>
+			<li><a href="/about/saintjohn.php">Saint John</a> <span>8am - 7pm</span></li>
+			<li><a href="http://www.unb.ca/fredericton/law/library/">Law</a> <span>8am - 4pm</span></li>
+			<li><a href="/about/hours.php"><i class="fa fa-clock-o fa-wh"></i> Complete Hours</a> <!--span><a href="/about/hours.php?term=summer" class="upcoming" style="color:#fc0"><i class="fa fa-star"></i> Summer Hours</a></span--></li>
+			</ul>
+		  </div>
+		</div>
+
+	</div>
 
 
-      <li class="bar-item"><h3><a href="/services/" class="bar-link">Faculty Support</a></h3>
-        <ul class="megamenu" id="faculty-menu">
-          <li>
-            <div class="megawrapper">
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Teaching</h4>
-                  <ul>
-                   <li class="mglsTp"><a href="/faculty/reserves.php">Manage Course Reserves</a></li>
-                   <li><a href="/faculty/class.php">Class Instruction</a></li>
-                  	<li><a href="/copyright/">Copyright</a></li>
-                   <li><a href="/faculty/liaison.php">Contact Liaison Librarian</a></li>
-                   <li><a href="/faculty/ebooks.php">e-Books in the Classroom</a></li>
-                   <li><a href="/about/facilities/">Instruction Facilities</a></li>
-                   <li class=""><a href="/faculty/libraryLMS.php">Library Desire2Learn / Moodle</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Scholarly Communication</h4>
-                  <ul>
-                   <li><a href="/guides/view/index.php/511">Making Citations Count</a></li>
-                   <li><a href="http://etc.lib.unb.ca/services">Digital Publishing Services</a></li>
-                   <li><a href="/openaccess/">Open Access <strong>[NEW!]</strong></a></li>
-                   <li><a href="http://dspace.hil.unb.ca:8080/">RiverRun Digital Repository</a></li>
-                  </ul>
-                  <h4>Collections</h4>
-                  <ul>
-                   <li><a href="/collections/">Collections Development</a></li>
-                   <li><a href="/requests/film_booking_form.php">Reserve A Video/DVD</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megafooter clearfloat">&nbsp;</div>
-            </div>
-          </li>
-        </ul>
-      </li>
+	<div class="container">
+		<div class="row">
+			<ol class="breadcrumb">
+			  <li><a href="/">Home</a></li>
+			  <li><a href="/about/">About</a></li>
+			  <li class="active">Hans W. Klohn Commons</li>
+			</ol>
+		</div>
+	</div>
 
-      <li class="bar-item"><h3><a href="/help/" class="bar-link">Help</a></h3>
-        <ul class="megamenu" id="help-menu">
-          <li>
-            <div class="megawrapper">
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Research &amp; Writing</h4>
-                  <ul>
-                    <li><a href="/help/ask.php">Ask Us</a></li>
-                    <li><a href="/research/">Research Help</a></li>
-                    <li><a href="/services/writing.php">Writing Help</a></li>
-                    <li><a href="/guides/">Guides &amp; Workshops</a></li>
-                    <li><a href="/research/video.php">Video Quick Tips</a></li>
-                    <li><a href="/research/citing.php">Citing Your Sources</a></li>
-                    <li><a href="/services/access.html">Accessibility Support</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megacolumn">
-                <div class="megacolumn-content">
-                  <h4>Technical Support</h4>
-                  <ul>
-                    <li><a href="/help/proxy.html">Off-campus Access</a></li>
-                    <li><a href="/help/view_current.php">Status of Online Resources</a></li>
-                    <li><a href="/help/troubleticket.php">Submit a Trouble Ticket</a></li>
-                    <li><a href="/help/technical.php#wireless">Personal and Loaner Laptops</a></li>
-                    <li><a href="/help/ITS.php">ITS Help Desk Support</a></li>
-					<li><a href="/help/accessibility.php">Website Accessibility</a></li>
-                    <li><a href="/help/technical.php"><strong>More <span class="hide">Technical Support</span></strong></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="megafooter clearfloat">&nbsp;</div>
-            </div>
-          </li>
-        </ul>
-      </li>
+<div role="main" id="main" class="container">
 
-    </ul>
-</div>
-    </div><!-- end mainNav -->
-</div></div><!-- end header + innertube -->
+<div class="row">
 
-<div id="contentwrapper">
-<div id="contentcolumn">
-    <div class="innertube">
-    
-    <div id="breadcrumb"><h3 class="hide">Breadcrumb</h3>
-    <a href="/">Home</a> <span>|</span> <a href="/about/">About UNB Libraries </a> <span>|</span> Ward Chipman Library Website</div> 
-    
-    <h1>Ward Chipman Library Website Redesign</h1>
-    
-    <p>You have stumbled upon a page that is <strong>no longer supported</strong>. As part of the website redesign, most all UNB Libraries's online presence is now a combined effort between the Fredericton and Saint John campuses. As such most of Ward Chipman pages have moved to combine with the main UNB Libraries website.</p>
-    
-    <p>Feel free to <a href="/about/wardchipman.php">contact our staff</a> if you have any questions or concerns about this new collaborative website.</p>
-    
-    <h2>Some key pages or sections of the old website you may be looking for:</h2>
-    
-    <ul>
-    	<li>e-Resources - <a href="/eresources/">http://www.lib.unb.ca/eresources/</a></li>
-    	<li>Reference - <a href="/research/">http://www.lib.unb.ca/research/</a></li>
-    	<li>Services - <a href="/services/">http://www.lib.unb.ca/services/</a></li>
-    	<li>Requests - <a href="/services/">http://www.lib.unb.ca/services/</a> or <a href="/faculty/">http://www.lib.unb.ca/faculty/</a></li>
-    	<li>Help - <a href="/help/">http://www.lib.unb.ca/help/</a></li>
-    	<li>Information about the Ward Chipman Library - <a href="http://www.lib.unb.ca/about/wardchipman.php">http://www.lib.unb.ca/about/wardchipman.php</a></li>
-    	<!-- <li><a href="/http://www.lib.unb.ca/">http://www.lib.unb.ca/</a></li> 
-    	<li><a href="/http://www.lib.unb.ca/">http://www.lib.unb.ca/</a></li>
-    	<li><a href="/http://www.lib.unb.ca/">http://www.lib.unb.ca/</a></li>
-    	<li><a href="/http://www.lib.unb.ca/">http://www.lib.unb.ca/</a></li>
-    	<li><a href="/http://www.lib.unb.ca/">http://www.lib.unb.ca/</a></li> -->
-    </ul>
+        <div class="col-md-8 col-xs-12">
 
-    </div><!-- end innertube -->
-</div><!-- end contentcolumn -->
-</div><!-- end contentwrapper -->
 
-    <div id="footer">
-<div class="innertube">
-<p id="copy"><a href="http://www.unb.ca/copyright/">&copy; University of New Brunswick</a></p>
-    <ul id="footLinks">
-	  <li><a href="/help/accessibility.php">Accessibility</a></li>
-  	  <li><a href="http://www.unb.ca/privacy/">Privacy</a></li>
-	  <li class="last"><a href="/libmail/webadmin.php">Contact Website Manager</a></li>
-    </ul>
-</div><!-- end innertube -->
-</div><!-- end footer -->
-</div><!-- end wrapper -->
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5c770520a9","applicationID":"6823344","transactionName":"blVUZURUDUoCBRAPDVcfY0NfGhRaD0kNCAZcSBhBXkU=","queueTime":0,"applicationTime":2,"atts":"QhJXEwxOHkQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <h1>Hans W. Klohn Commons</h1>
+
+    <img src="//media.lib.unb.ca/core/photos/HWKCommons.jpg" alt="Photo: Hans W. Klohn Commons" class="pull-right" />
+
+	<p>The Hans W. Klohn Commons is home to the UNB Saint John campus library and to many other important resources and services as noted below. At the Commons, you can:</p>
+
+    <dl class="tightList">
+    <dt>Access research materials</dt>
+    <dd>Borrow books, journals, DVDs, and other materials available at the Commons. If we don't have something you need, fill out a <a href="/requests/docdel/">Document Delivery request form</a> and we'll try to get it for you as quickly as possible. </dd>
+
+    <dt>Book a meeting room</dt>
+    <dd>The Commons has 9 group study rooms that can be <a href="https://studyroom.unbsj.ca/" class="external">booked online</a>. <a href="http://lib.unb.ca/services/group_study.php">More information<span class="hide"> on group study rooms</span></a></dd>
+
+    <dt>Get research help</dt>
+    <dd>See the librarians and staff at the Help Centre to learn how to use the library's resources to find the information you need. <a href="/research">More information<span class="hide"> on Research</span></a> | <a href="/about/hours.php?loc=rhdsj">Hours</a></dd>
+
+    <dt>Get IT help/technical support</dt>
+    <dd>The Student Technology Centre can help with many technological needs including basic hardware setup and maintenance, software support, etc. <a href="http://www.unb.ca/saintjohn/iss/get-help.html" class="external">More information<span class="hide"> on IT Help</span></a></dd>
+
+    <dt>Get writing help</dt>
+    <dd>Consultants at the Writing Centre help students improve their writing abilities through tutoring sessions that focus on academic assignments. <a href="http://www.unb.ca/saintjohn/studentservices/academics/writingcentre/index.html" class="external">More information<span class="hide"> on Writing Help</span></a> | <a href="/about/hours.php?loc=writesj">Hours</a> | <a href="http://www.unbsj.mywconline.com/" class="external">Book an appointment</a></dd>
+
+    <dt>Get Math and Science help</dt>
+    <dd>The Math and Science Help Centre helps students with first-year mathematics, statistics, and science courses, and with some upper-level business math courses. <a href="http://www.unb.ca/saintjohn/sase/current/mathhelpcentre/" class="external">More information<span class="hide"> for Math and Science Help</span></a></dd>
+
+    <dt>And more …</dt>
+    <dd>Enjoy comfortable collaborative or quiet study spaces throughout the building; use the Commons computers or access wireless Internet on your own device; photocopy, print, and scan at the Repro Stations on each floor; and purchase a treat (including JavaMoose coffee) at the Commons Café.</dd>
+	<dd>The library and Student Technology Centre are part of the <a href="http://www.unb.ca/saintjohn/iss/" class="external">Information Services and Systems department</a>.</dd>
+    </dl>
+
+	<p class="libAddresses"><strong>Postal Address:</strong> Hans W. Klohn Library, University of New Brunswick, P.O. Box 5050, Saint John, NB, E2L 4L5<br />
+            <strong>Physical Address:</strong> Hans W. Klohn Library, University of New Brunswick, 100 Tucker Park, Saint John, NB, E2L 4L5</p>
+
+        </div> <!-- end .col-md-8 -->
+
+        <div class="col-md-4 col-xs-12" id="sidebar">
+
+		<h3>Instant Message</h3>
+                <div class="chatWidget" style="position:relative;z-index:0;">
+            <iframe src="//ca.libraryh3lp.com/chat/askus@chat.ca.libraryh3lp.com?title=Ask+Us&amp;theme=gota&amp;css=http://lib.unb.ca/core/css/libraryh3lp.unb.lib.css" frameborder="0" style=""></iframe>
+        </div>
+			<h3>Hours</h3>
+        	<dl class="hoursList dl-horizontal">
+            <dt>Today</dt><dd><strong>8am - 7pm</strong></dd>
+            <dt>Tomorrow</dt><dd>8am - 7pm</dd>
+            <dt>Wednesday</dt><dd>8am - 7pm</dd>
+            <dt>Thursday</dt><dd>8am - 7pm</dd>
+            <dt>Friday</dt><dd>8am - 5pm</dd>
+            <dt>Saturday</dt><dd>1pm - 5pm</dd>
+            <dt>Sunday</dt><dd>CLOSED</dd>
+            <dt class="more"><a href="/about/hours.php?loc=wcl"><i class="fa fa-clock-o"></i> Complete hours</a></dt>
+    		</dl>
+
+	 <!--h3>Information Services and Systems News</h3>
+	 <ul>
+				<li><a href=""></a></li>
+				<li><a href="http://blogs.unb.ca/iss/" class="external">more news</a></li>
+	 </ul-->
+
+
+     <h3>Contact Us</h3>
+     <ul>
+     	<li>(506) 648-5710</li>
+     	<li><a href="mailto:hwkcommons@unb.ca">hwkcommons@unb.ca</a></li>
+     	<li><a href="/about/staff.php#hwk">Staff Directory</a></li>
+     </ul>
+     <h3>Maps and Floor Plans</h3>
+     <ul>
+        <li><a href="/about/loc_call/hwk_ground.php">Ground Floor</a></li>
+     	<li><a href="/about/loc_call/hwk_first.php">1st Floor</a></li>
+     	<li><a href="/about/loc_call/hwk_second.php">2nd Floor</a></li>
+     	<li><a href="http://es.unb.ca/apps/map/?map=2" class="external">Campus Map</a></li>
+     </ul>
+     <p class="static-google-map"><a href="http://bit.ly/hwk-library"><img src="http://maps.google.com/maps/api/staticmap?center=45.305459,-66.084137&zoom=16&markers=color:red|label:L|45.305561,-66.083236&path=color:0x0000FF80|weight:5|45.27242,-66.06594|45.27242,-66.06594|45.27291,-66.06388&path=color:0x0000FF80|weight:5|45.29750,-66.08791&size=344x344&sensor=false" alt="Find the Hans W. Klohn Commons on Google Maps"></a></p>
+
+        </div> <!-- end .col-md-4 -->
+</div> <!-- end .row -->
+
+</div> <!-- end #main -->
+
+	      <!-- Site footer -->
+      <footer id="footer" class="darkbkgd" aria-label="Footer Navigation">
+	      <div class="container">
+	        <div class="row" id="bigFooter">
+        	<div class="col-md-2 col-sm-2 col-xs-6">
+        		<h4>General</h4>
+				<ul>
+					<li><a href="/about/contacts.php">Contact Us</a></li>
+					<li><a href="/about/findus.php">Find Us</a></li>
+					<li><a href="/news/">Library News</a></li>
+					<li><a href="/about/hours.php">Hours</a></li>
+					<li><a href="/about/policies/">Policies</a></li>
+				</ul>
+        	</div>
+        	<div class="col-md-3 col-sm-3 col-xs-6">
+        		<h4>Libraries</h4>
+	        	<ul>
+					<li><a href="/about/harrietirving.php">Harriet Irving</a></li>
+					<li><a href="/about/science.php">Science & Forestry</a></li>
+					<li><a href="/about/engineering.php">Engineering & Computer Science</a></li>
+					<li><a href="/about/saintjohn.php">Hans W. Klohn Commons</a></li>
+					<li><a href="http://www.unb.ca/fredericton/law/library/">Gerard V. La Forest Law</a></li>
+	        	</ul>
+        	</div>
+        	<div class="col-md-4 col-sm-4 col-xs-6">
+        		<h4>Departments</h4>
+	        	<ul>
+					<li><a href="/archives/">Archives & Special Collections</a></li>
+					<li><a href="https://digitalscholarship.lib.unb.ca/">Centre for Digital Scholarship</a></li>
+					<li><a href="/microforms/">Microforms</a></li>
+					<li><a href="/gddm/">Government Documents, Data & Maps</a></li>
+					<li><a href="/about/staff.php">&hellip; more</a></li>
+	        	</ul>
+        	</div>
+        	<div class="col-md-3 col-sm-3 col-xs-6 UNB-logo">
+        		<a href="http://unb.ca"><img src="//media.lib.unb.ca/core/img-2015/UNB-logo-2015.png" alt="University of New Brunswick" /></a>
+        	</div>
+        </div>
+
+        <div class="row joinConver">
+        	<div class="col-sm-12">
+        	<h4>Join the conversation:</h4>
+	        <ul>
+				<li><a href="https://www.facebook.com/pages/UNB-Libraries/23444751122"><i class="fa fa-facebook fa-sm" style="color: #fff"></i> Facebook</a></li>
+				<li><a href="https://twitter.com/UNB_LIB"><i class="fa fa-twitter fa-sm" style="color: #fff"></i> Twitter</a></li>
+				<!--li><a><i class="fa fa-youtube fa-sm" style="color: #fff"></i> YouTube</a></li-->
+				<li><a href="https://instagram.com/UNB_Lib/"><i class="fa fa-instagram fa-sm" style="color: #fff"></i> Instagram</a></li>
+			</ul>
+        	</div>
+        </div>
+	    </div>
+
+	<div id="subBigFooter" class="darkbkgd">
+		<div class="container">
+        <div class="row">
+        	<div class="col-md-6 col-sm-12">
+	        	<ul>
+		        	<li><a href="//www.unb.ca/copyright/">&copy; Copyright</a></li>
+		        	<li><a href="//unb.ca/privacy/index.html">Privacy</a></li>
+		        	<li><a href="/help/accessibility.php">Accessibility</a></li>
+		        	<li><a href="/libmail/webadmin.php">Web Feedback</a></li>
+	        	</ul>
+        	</div>
+        	<div class="col-md-6 col-sm-12" id="pushRight">
+	        	<ul class="utilities">
+		        	<li><a href="//unb.ca"><i class="icon-unb"></i> UNB</a></li>
+		        	<li><a href="/help/ask.php"><i class="fa fa-question-circle"></i> Ask Us</a></li>
+		        	<li><a href="//lib.unb.ca/news/comment"><i class="fa fa-comments"></i> Feedback</a></li>
+		        	<li class="last"><a href="/search.php"><i class="fa fa-search"></i> Search</a></li>
+				</ul>
+        	</div>
+        </div>
+		</div>
+	</div>
+
+      </footer>
+
+		<a href="#mainPage" class="cd-top">Back to Top</a>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/core/js-2015/fhmm.js"></script>
+	<script src="/core/js-2015/hoverintent.min.js"></script>
+	<script src="/core/js-2015/back-to-top.js"></script>
+	<script src="/core/js-2015/responsive-tabs-new.js"></script>
+    <script src="/core/js-2015/bootstrap-accessibility.min.js"></script>
+    <script>
+		// Menu drop down effect
+		$('.dropdown-toggle').dropdownHover().dropdown();
+		$(document).on('click', '.fhmm .dropdown-menu', function(e) {
+		  e.stopPropagation()
+		})
+	</script>
+	<script>
+	  (function($) {
+		  $('html,body').animate({scrollTop:0},0);
+		  $("#askPopUp").click(function(event){var url=$(this).attr("href");var windowName="AskUs";var windowAttributes="location=url,status=yes,copyhistory=no,menubar=no,toolbar=no,scrollbars=yes,resizable=yes,width=280,height=420,modal=yes,alwaysRaised=yes";window.open(url,windowName,windowAttributes);event.preventDefault();event.stopPropagation();return false;});
+	      $('#eresTabs a').click(function (e) {
+				e.preventDefault()
+				$(this).tab('show')
+				})
+			fakewaffle.responsiveTabs(['xs', 'sm']);
+            $("#catalogue a.toggle").click( function(e) { e.preventDefault(); $('.search-toggle').toggleClass('hidden'); } );
+	  })(jQuery);
+	</script>
+    <script src="/core/js-2015/unb.lib.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/core/js-2015/ie10-viewport-bug-workaround.js"></script>  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5c770520a9","applicationID":"6823344","transactionName":"blVUZURUDUoCBRAPDVcfY0NfGgJbDBMQSRFYWVhFXFoLV00WDBY=","queueTime":0,"applicationTime":550,"atts":"QhJXEwxOHkQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

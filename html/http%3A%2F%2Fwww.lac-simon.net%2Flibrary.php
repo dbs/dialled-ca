@@ -195,6 +195,7 @@
 					<li><a href="/en/citizens-services-fire-and-security.htm">Fire &amp; Security</a></li>
 					<li><a href="/en/citizens-services-public-works.htm">Public Works</a></li>
 					<li><a href="/en/citizens-services-waste.htm">Residual Materials</a></li>
+					<li><a href="/en/ecocentre.htm">Ecocentre</a></li>
 					<li><a href="/en/library.htm">Library</a></li>
 					<li><a href="/en/citizens-services-beach-and-public-dock.htm">Beach &amp; public dock</a></li>
 				</ul>
@@ -267,7 +268,7 @@ Fax: 819-428-4838<br />
 				<p>
 					849, chemin du Tour-du-Lac<br />
 					C.P. 3550<br />
-					Lac-Simon, Chénéville (Québec)<br />
+					Lac-Simon, (Québec)<br />
 					J0V 1E0<br />
 					<br />
 					Telephone: (819) 428-3906<br />
@@ -304,6 +305,7 @@ Fax: 819-428-4838<br />
 					<li><a href="/en/citizens-services-fire-and-security.htm">Fire &amp; Security</a></li>
 					<li><a href="/en/citizens-services-public-works.htm">Public Works</a></li>
 					<li><a href="/en/citizens-services-waste.htm">Residual materials</a></li>
+					<li><a href="/en/ecocentre.htm">Ecocentre</a></li>
 					<li><a href="/en/citizens-services-reports-and-bulletins.htm">Reports &amp; bulletins</a></li>
 					<li><a href="/en/citizens-services-management-policy.htm">Management policy</a></li>
 					<li><a href="/en/library.htm">Library</a></li>

@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head id="Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="format-detection" content="telephone=no" /><meta name="keywords" content="college of the north atlantic, cona,cna,cna.nl.ca,collage of the north atlantic,www.cna.nl.ca,north atlantic college ,cona nl ,college of the north atlantic st. john&#39;s,college north atlantic,cna nl,cona newfoundland ,campus closures,College, North, Qatar, Atlantic, Newfoundland, Labrador, Public, College, public college, post-secondary, education, Atlantic, Canada, Canada, 100+, full-time, programs, 300+, part-time, course, programs, Applied, Arts, Business, Studies, Information, Technology, Engineering, Technology, Health, Sciences, Natural, Resources, Industrial, Trades, Continuing, Education, International, Students, student, College, Transfer, Distributed, Learning , Baie Verte, Bay St. George, Bonavista, Burin, Carbonear, Clarenville,Corner Brook, Gander, Grand Falls-Windsor, Happy Valley-Goose Bay, Labrador West, Placentia, Port aux Basque, Prince Philip Dr.,Ride Road, Seal Cove, St. Anthony, Distributed Learning Services, Contract, Training,campus,work,atlantic,prerequisite,semester,application,north,system,engineer,skill,business,graduate,design,education,learn" /><meta name="description" content="We are Newfoundland and Labrador&#39;s public college - one of the largest post-secondary educational and skills training centres in Atlantic Canada." /><link rel="shortcut icon" href="http://www.cna.nl.ca/favicon.ico" /><link media="all" rel="stylesheet" type="text/css" href="/css/all.css" /><link media="all" rel="stylesheet" type="text/css" href="/css/legacy.css" /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<head id="Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="format-detection" content="telephone=no" /><meta name="keywords" content="college of the north atlantic, cona,cna,cna.nl.ca,collage of the north atlantic,www.cna.nl.ca,north atlantic college ,cona nl ,college of the north atlantic st. john&#39;s,college north atlantic,cna nl,cona newfoundland ,campus closures,College, North, Qatar, Atlantic, Newfoundland, Labrador, Public, College, public college, post-secondary, education, Atlantic, Canada, Canada, 100+, full-time, programs, 300+, part-time, course, programs, Applied, Arts, Business, Studies, Information, Technology, Engineering, Technology, Health, Sciences, Natural, Resources, Industrial, Trades, Continuing, Education, International, Students, student, College, Transfer, Distributed, Learning , Baie Verte, Bay St. George, Bonavista, Burin, Carbonear, Clarenville,Corner Brook, Gander, Grand Falls-Windsor, Happy Valley-Goose Bay, Labrador West, Placentia, Port aux Basque, Prince Philip Dr.,Ride Road, Seal Cove, St. Anthony, Distributed Learning Services, Contract, Training,campus,work,atlantic,prerequisite,semester,application,north,system,engineer,skill,business,graduate,design,education,learn" /><meta name="description" content="We are Newfoundland and Labrador&#39;s public college - one of the largest post-secondary educational and skills training centres in Atlantic Canada." /><link rel="shortcut icon" href="http://www.cna.nl.ca/favicon.ico" /><link media="all" rel="stylesheet" type="text/css" href="/css/all.css" /><link media="all" rel="stylesheet" type="text/css" href="/css/legacy.css" /><link media="all" rel="stylesheet" type="text/css" href="/css/target.css" /><link media="all" rel="stylesheet" type="text/css" href="/fonts/mp.css" /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 	
 	<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
 	<!--[if IE]><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
@@ -70,7 +70,7 @@
 
     
     <script type='text/javascript'>
-        var ebSession = 'crdebmgxonwuwa4l0i1d5mdl';
+        var ebSession = '2sn10bkwiakvvx1qglphhsfz';
         var ebRand = Math.random() + '';
         ebRand = ebRand * 1000000;
         //<![CDATA[ 
@@ -78,7 +78,7 @@
         //]]>
     </script>
     <noscript>
-    <img width="1" height="1" style="border:0" src="HTTP://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=735275&amp;Session=crdebmgxonwuwa4l0i1d5mdl&amp;ns=1"/>
+    <img width="1" height="1" style="border:0" src="HTTP://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=735275&amp;Session=2sn10bkwiakvvx1qglphhsfz&amp;ns=1"/>
     </noscript>
     
     
@@ -123,6 +123,7 @@
 					</div>
 					<a href="/Search/" class="btn-search">search</a>
 					<a href="/application" class="btn-apply">Apply Now</a>
+                   
 				</div>
 				<div class="text-size">
                     <span class="size">Talk</span>
@@ -142,17 +143,15 @@
 
 <a href="#" class="opener">menu</a>
 <nav id="nav" class="slide">
-	<a href="/Application/" class="apply-block">Apply Now</a>
+<a href="/Application/" class="apply-block">Apply Now</a>
 	<ul>
-		<li><a href="/Programs-Courses/"><span>Programs & courses</span></a></li>
-		<li><a href="/Admissions/"><span>Admissions</span></a></li>
-		<li><a href="/Research-And-Innovation/"><span>Research & Innovation</span></a></li>
-		<li><a href="/Student-Support/"><span>Student SUPPORT</span></a></li>
-		<li><a href="/About/"><span>About</span></a></li>
+		<li><a class="programs" href="/Programs-Courses/"><span>Programs &amp; Courses</span></a></li>
+		<li><a class="admissions" href="/Admissions/"><span>Admissions</span></a></li>
+		<li><a class="research" href="/Research-And-Innovation/"><span>Research & Innovation</span></a></li>
+		<li><a class="studentsupport" href="/Student-Support/"><span>Student Support</span></a></li>
+		<li><a class="about" href="/About/"><span>About</span></a></li>
 	</ul>
 </nav>
-
-
                     <!--TOP MENU -->
 				</div>
 			</div>
@@ -160,9 +159,37 @@
         <div class="slideshow">		
 			<!--TOP SIDE MENU -->
 	        
+<style>
+    .inner .opener01 span {
+        background: url(../images/bg-prev-next.png) no-repeat;
+        text-indent: -9999px;
+        overflow: hidden;
+        display: block;
+        height: 13px;
+        position: relative;
+        z-index: 5;
+        background-position: 0 -14px;
+        float:right;
+        padding-right:10px;
+    }
 
+    @media only screen and (max-width: 1023px) {
+        .home .opener01 span {
+            background: url(../images/bg-prev-next.png) no-repeat;
+            text-indent: -9999px;
+            overflow: hidden;
+            display: block;
+            height: 13px;
+            position: relative;
+            z-index: 5;
+            background-position: 0 -14px;
+            float:right;
+            padding-right:10px;
+        }
+    }
+</style>
 <div class="menu open-close01">
-	<a href="#" class="opener01"><span></span>explore</a>
+	<a href="#" class="opener01">Explore<span></span></a>
 	<div class="slide01">
 		<ul class="menu-list">
 			<li><a href="/Future-Students/">Future Students</a></li>
@@ -244,42 +271,56 @@
     <div class="holder bottom">
         
 
+<style>
+
+</style>
+
 <!--Start Links -->
-<div class="related-wrap">
+<div class="news-wrap">
     
     
-            <a href="/news/Default.aspx?label=Showing%20all%20news%20articles%20since%20the%20begining%20of%20time..." class="h1StyleHeading"><h2>In the News</h2></a>
+            <a href="/news/Default.aspx?label=Showing%20all%20news%20articles%20since%20the%20begining%20of%20time..." class="h1StyleHeading"><h2>News</h2></a>
             <div class="carousel four-cols">
 		        <div class="mask">
 			        <div class="slideset">
         
             <article class="col slide">
 				<div class="img-wrap">
+					<a href='/news/News-Article.aspx?MessageID=1070&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_419201614744618.jpg' alt='CNA students contributing to Global Village build'></a>
+				</div>
+				<div class="info" style="min-height:60px;">
+					
+                    <p>Students help&nbsp;with Global Village Build</p>
+				</div>
+			</article>
+        
+            <article class="col slide">
+				<div class="img-wrap">
+					<a href='/news/News-Article.aspx?MessageID=1069&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_414201611501813.jpg' alt='CNA students win record number of medals at Skills NL provincial competition'></a>
+				</div>
+				<div class="info" style="min-height:60px;">
+					
+                    <p>Students win&nbsp;record number of medals</p>
+				</div>
+			</article>
+        
+            <article class="col slide">
+				<div class="img-wrap">
+					<a href='/news/News-Article.aspx?MessageID=1068&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_482016133222577.jpg' alt='New CNA program to reward Skills Canada competition medalists'></a>
+				</div>
+				<div class="info" style="min-height:60px;">
+					
+                    <p>CNA announces&nbsp;new awards program</p>
+				</div>
+			</article>
+        
+            <article class="col slide">
+				<div class="img-wrap">
 					<a href='/news/News-Article.aspx?MessageID=1067&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_342016152937205.jpg' alt='Student entrepreneur continues to impress'></a>
 				</div>
 				<div class="info" style="min-height:60px;">
-					<h2><a href="/news/News-Article.aspx?MessageID=1067&amp;newstype=REG">Student</a></h2>
-                    <p>continues to impress</p>
-				</div>
-			</article>
-        
-            <article class="col slide">
-				<div class="img-wrap">
-					<a href='/news/News-Article.aspx?MessageID=1066&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_372016134127897.jpg' alt='College of the North Atlantic presented with Employer of Distinction award'></a>
-				</div>
-				<div class="info" style="min-height:60px;">
-					<h2><a href="/news/News-Article.aspx?MessageID=1066&amp;newstype=REG">CNA presented</a></h2>
-                    <p>Employer of Distinction award</p>
-				</div>
-			</article>
-        
-            <article class="col slide">
-				<div class="img-wrap">
-					<a href='/news/News-Article.aspx?MessageID=1065&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_282016101515838.jpg' alt='Bird’s eye view'></a>
-				</div>
-				<div class="info" style="min-height:60px;">
-					<h2><a href="/news/News-Article.aspx?MessageID=1065&amp;newstype=REG">Bird’s eye</a></h2>
-                    <p>view</p>
+					
+                    <p>Student&nbsp;continues to impress</p>
 				</div>
 			</article>
         
@@ -309,6 +350,7 @@
 	<li class="linkedin"><a href="https://plus.google.com/u/0/b/101069396840039699247/101069396840039699247/posts">linkedin</a></li>
     <li class="instagram"><a href="http://instagram.com/cna_news/">Instagram</a></li>
 </ul>
+<br style="clear:both;" />
 <div class="three-col">
 	<div class="col">
 		<ul>
@@ -346,6 +388,8 @@
 		<li><a href="/Legal/">Privacy Policy</a></li>
 		<li><a href="/sitemap/">A-Z Site Map</a></li>
 	</ul>
+
+
     <span class="copyright">
         <span id="Footer1_dblblAddress">432 Massachusetts Dr.  Stephenville, NL, A2N 2Z6</span>
 

@@ -29,7 +29,7 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->   
 
-<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<!-- This site is optimized with the Yoast SEO plugin v3.1.1 - https://yoast.com/wordpress/plugins/seo/ -->
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="La page est introuvable - Municipalité de Saint-Polycarpe" />
@@ -133,7 +133,7 @@ var ko_calendar_loc = {"all_day":"All Day","all_day_event":"All Day Event"};
 	for (var i = 0; i < evts.length; i++) {
 		addEvent(evts[i], logHuman);
 	}
-})('//munstpolycarpe.qc.ca/?wordfence_logHuman=1&hid=23813E3EA10685DBC44B809E94115435');
+})('//munstpolycarpe.qc.ca/?wordfence_logHuman=1&hid=3525A7890627CDE39660DB373C68D676');
 </script>
 <!-- BEGIN GADWP v4.9.2 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
 <script>
@@ -237,14 +237,14 @@ var ko_calendar_loc = {"all_day":"All Day","all_day_event":"All Day Event"};
 <li id="menu-item-2254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2254"><a href="http://munstpolycarpe.qc.ca/hotel-de-ville/">Hôtel de ville</a>
 <ul class="sub-menu">
 	<li id="menu-item-2255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2255"><a href="http://munstpolycarpe.qc.ca/hotel-de-ville/coordonnees/">Coordonnées</a></li>
-	<li id="menu-item-2257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2257"><a href="http://munstpolycarpe.qc.ca/hotel-de-ville/reglementation-politiques/">Règlements &#038; politiques</a></li>
+	<li id="menu-item-2257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2257"><a href="http://munstpolycarpe.qc.ca/conseil-municipal/reglementation-politiques/">Règlements &#038; politiques</a></li>
 </ul>
 </li>
 <li id="menu-item-2250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2250"><a href="http://munstpolycarpe.qc.ca/conseil-municipal/">Conseil municipal</a>
 <ul class="sub-menu">
 	<li id="menu-item-2253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2253"><a href="http://munstpolycarpe.qc.ca/conseil-municipal/mot-du-maire/">Mot du maire</a></li>
 	<li id="menu-item-2252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2252"><a href="http://munstpolycarpe.qc.ca/conseil-municipal/maire-et-conseillers/">Maire et conseillers</a></li>
-	<li id="menu-item-2251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2251"><a href="http://munstpolycarpe.qc.ca/conseil-municipal/calendrier-des-sceances/">Calendrier des séances</a></li>
+	<li id="menu-item-2251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2251"><a href="http://munstpolycarpe.qc.ca/conseil-municipal/calendrier-des-seances-proces-verbaux/">Calendrier des séances et procès-verbaux</a></li>
 </ul>
 </li>
 <li id="menu-item-2266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2266"><a href="http://munstpolycarpe.qc.ca/services-municipaux/">Services municipaux</a>
@@ -261,7 +261,7 @@ var ko_calendar_loc = {"all_day":"All Day","all_day_event":"All Day Event"};
 	</ul>
 </li>
 	<li id="menu-item-2270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2270"><a href="http://munstpolycarpe.qc.ca/services-municipaux/securite-publique/">Sécurité publique</a></li>
-	<li id="menu-item-2271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2271"><a href="http://munstpolycarpe.qc.ca/services-municipaux/travaux-publics-voirie/">Travaux publics &#038; Voirie</a></li>
+	<li id="menu-item-2271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2271"><a href="http://munstpolycarpe.qc.ca/services-municipaux/travaux-publics-voirie/">Services urbains</a></li>
 	<li id="menu-item-2272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2272"><a href="http://munstpolycarpe.qc.ca/services-municipaux/urbanisme/">Urbanisme</a></li>
 </ul>
 </li>

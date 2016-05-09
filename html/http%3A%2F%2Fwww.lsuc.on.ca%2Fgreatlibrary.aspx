@@ -23,7 +23,7 @@
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
 <input type="hidden" name="EktronClientManager" id="EktronClientManager" value="-1759591071,1338359439,-569449246,-1939951303,-1080527330,-1687560804,-1388997516,2009761168,27274999,1979897163,-422906301,-1818005853,-1793043690,646986939,1628691364" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTQxMjQ5OTg1D2QWAmYPZBYCAgMQZGQWJgIDDw8WBB4EVGV4dAUORm9yIHRoZSBQdWJsaWMeB1Rvb2xUaXAFDkZvciB0aGUgUHVibGljZGQCCQ8PFgQfAAULRm9yIExhd3llcnMfAQULRm9yIExhd3llcnNkZAIPDw8WBB8ABQ5Gb3IgUGFyYWxlZ2Fscx8BBQ5Gb3IgUGFyYWxlZ2Fsc2RkAhUPZBYEAgMPDxYCHwEFE1NlYXJjaCB0aGUgd2ViIHNpdGVkZAIFDw8WBB8ABQZTZWFyY2gfAQUGU2VhcmNoZGQCFw8PFgIfAQUPU21hbGwgVGV4dCBJY29uZBYCZg8PFgIeDUFsdGVybmF0ZVRleHQFD1NtYWxsIFRleHQgSWNvbmRkAhkPDxYCHwEFEE1lZGl1bSBUZXh0IEljb25kFgJmDw8WAh8CBRBNZWRpdW0gVGV4dCBJY29uZGQCGw8PFgIfAQUPTGFyZ2UgVGV4dCBJY29uZBYCZg8PFgIfAgUPTGFyZ2UgVGV4dCBJY29uZGQCHQ8PFgQfAAUESG9tZR8BBQRIb21lZGQCHw8PFgQfAAULTFNVQyBQb3J0YWwfAQULTFNVQyBQb3J0YWxkZAIhDw8WBB8ABQlGcmFuw6dhaXMfAQUJRnJhbsOnYWlzZGQCJQ9kFgICAQ9kFgICAQ9kFgQCAQ8PFgIfAAUWRnJpZGF5LCBNYXJjaCAxMSwgMjAxNmRkAgMPDxYCHwAFEzk6MDAgQU0gdG8gMTA6MDAgUE1kZAInDw8WBB8ABQlNb3JlIEluZm8fAQUJTW9yZSBJbmZvZGQCKQ8PFgQfAAUGUGhvdG9zHwEFBlBob3Rvc2RkAisPDxYEHwAFFEV4cGxvcmUgT3Nnb29kZSBIYWxsHwEFFEV4cGxvcmUgT3Nnb29kZSBIYWxsZGQCLw8PFgIfAQUIU2VydmljZXNkFgJmDxYCHwAFCFNlcnZpY2VzZAIzDw8WAh8BBRVQcm90ZWN0aW5nIHRoZSBQdWJsaWNkFgJmDxYCHwAFFVByb3RlY3RpbmcgdGhlIFB1YmxpY2QCNw8PFgIfAQUETmV3c2QWAmYPFgIfAAUETmV3c2QCOw8PFgIfAQUGRXZlbnRzZBYCZg8WAh8ABQZFdmVudHNkAj8PDxYCHwEFEUFib3V0IHRoZSBTb2NpZXR5ZBYCZg8WAh8ABRFBYm91dCB0aGUgU29jaWV0eWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFKWN0bDAwJEJvZHlQbGFjZUhvbGRlciRidG5TZWFyY2hJbmZvTG9jYXRlBSljdGwwMCRCb2R5UGxhY2VIb2xkZXIkYnRuU2VhcmNoQ2xhc3NpY0NBVAUoY3RsMDAkQm9keVBsYWNlSG9sZGVyJGJ0blNlYXJjaEFjY2Vzc0NMRQUnY3RsMDAkQm9keVBsYWNlSG9sZGVyJGJ0blNlYXJjaGVKb3VybmFsa6UQeZh+EIIXIHEmsaBkDe2D23IeO/SzekDH8Ki/tq0=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTQxMjQ5OTg1D2QWAmYPZBYCAgMQZGQWJgIDDw8WBB4EVGV4dAUORm9yIHRoZSBQdWJsaWMeB1Rvb2xUaXAFDkZvciB0aGUgUHVibGljZGQCCQ8PFgQfAAULRm9yIExhd3llcnMfAQULRm9yIExhd3llcnNkZAIPDw8WBB8ABQ5Gb3IgUGFyYWxlZ2Fscx8BBQ5Gb3IgUGFyYWxlZ2Fsc2RkAhUPZBYEAgMPDxYCHwEFE1NlYXJjaCB0aGUgd2ViIHNpdGVkZAIFDw8WBB8ABQZTZWFyY2gfAQUGU2VhcmNoZGQCFw8PFgIfAQUPU21hbGwgVGV4dCBJY29uZBYCZg8PFgIeDUFsdGVybmF0ZVRleHQFD1NtYWxsIFRleHQgSWNvbmRkAhkPDxYCHwEFEE1lZGl1bSBUZXh0IEljb25kFgJmDw8WAh8CBRBNZWRpdW0gVGV4dCBJY29uZGQCGw8PFgIfAQUPTGFyZ2UgVGV4dCBJY29uZBYCZg8PFgIfAgUPTGFyZ2UgVGV4dCBJY29uZGQCHQ8PFgQfAAUESG9tZR8BBQRIb21lZGQCHw8PFgQfAAULTFNVQyBQb3J0YWwfAQULTFNVQyBQb3J0YWxkZAIhDw8WBB8ABQlGcmFuw6dhaXMfAQUJRnJhbsOnYWlzZGQCJQ9kFgICAQ9kFgICAQ9kFgQCAQ8PFgIfAAUUTW9uZGF5LCBNYXkgMDksIDIwMTZkZAIDDw8WAh8ABRM5OjAwIEFNIHRvIDEwOjAwIFBNZGQCJw8PFgQfAAUJTW9yZSBJbmZvHwEFCU1vcmUgSW5mb2RkAikPDxYEHwAFBlBob3Rvcx8BBQZQaG90b3NkZAIrDw8WBB8ABRRFeHBsb3JlIE9zZ29vZGUgSGFsbB8BBRRFeHBsb3JlIE9zZ29vZGUgSGFsbGRkAi8PDxYCHwEFCFNlcnZpY2VzZBYCZg8WAh8ABQhTZXJ2aWNlc2QCMw8PFgIfAQUVUHJvdGVjdGluZyB0aGUgUHVibGljZBYCZg8WAh8ABRVQcm90ZWN0aW5nIHRoZSBQdWJsaWNkAjcPDxYCHwEFBE5ld3NkFgJmDxYCHwAFBE5ld3NkAjsPDxYCHwEFBkV2ZW50c2QWAmYPFgIfAAUGRXZlbnRzZAI/Dw8WAh8BBRFBYm91dCB0aGUgU29jaWV0eWQWAmYPFgIfAAURQWJvdXQgdGhlIFNvY2lldHlkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYEBSljdGwwMCRCb2R5UGxhY2VIb2xkZXIkYnRuU2VhcmNoSW5mb0xvY2F0ZQUpY3RsMDAkQm9keVBsYWNlSG9sZGVyJGJ0blNlYXJjaENsYXNzaWNDQVQFKGN0bDAwJEJvZHlQbGFjZUhvbGRlciRidG5TZWFyY2hBY2Nlc3NDTEUFJ2N0bDAwJEJvZHlQbGFjZUhvbGRlciRidG5TZWFyY2hlSm91cm5hbM92G8EHG/IGHmGM5j5yBW/RMVIYdSfdWRqzHgaD9t+v" />
 </div>
 
 <script type="text/javascript">
@@ -52,7 +52,7 @@ __$BubbleCloseIconPath='/WorkArea/';//]]>
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AA1A7A41" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAy36+ZkBEWHl9aaHc/uye154+3WpZQNb82rzs2KnT3rh43JAH+fv5m7AuIzxqoA2p9YrlW03wnzKftQmDXEz+CYfFccjOQ4WGfGHj9ABbxqdh7ZOlxGHj9kxZiWNp+qxYAlX1L0eTAA0+qYPWw2YQ/gtXkxfP79uQikbN7VyH9qKpvkuDP+HXwDYAJTkSjnf6e2SQZ6HH7PuKrYjSZuZPXxoXK3rxBLLdWF+2bmFMsKn8hG9kz4QCpBvrAYYiIXLlTSflFfsjW3TyA+mkWl0yfd9e5620sdLHHXppUmhLDy1g==" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAzT/D8Xs8qEYI4OTGGg2GFL4+3WpZQNb82rzs2KnT3rh43JAH+fv5m7AuIzxqoA2p9YrlW03wnzKftQmDXEz+CYfFccjOQ4WGfGHj9ABbxqdh7ZOlxGHj9kxZiWNp+qxYAlX1L0eTAA0+qYPWw2YQ/gtXkxfP79uQikbN7VyH9qKpvkuDP+HXwDYAJTkSjnf6e2SQZ6HH7PuKrYjSZuZPXxoXK3rxBLLdWF+2bmFMsKn8hG9kz4QCpBvrAYYiIXLlQe2PkppkN82Caz7KJ+dfCU4bXhLytk42ZVUED0uYCtVA==" />
 </div>
     <span id="ctl00_Label1"></span>
     <div id="header">
@@ -312,7 +312,7 @@ function ektLocalizeDate(date, id) {
 <p class="todaysHours">
     <div id="ctl00_BodyPlaceHolder_TodaysHours_pnlRegularHours">
 	
-        <span id="ctl00_BodyPlaceHolder_TodaysHours_lblDate">Friday, March 11, 2016</span><br />
+        <span id="ctl00_BodyPlaceHolder_TodaysHours_lblDate">Monday, May 09, 2016</span><br />
     
         <span id="ctl00_BodyPlaceHolder_TodaysHours_lblHours">9:00 AM to 10:00 PM</span>
     
@@ -421,7 +421,7 @@ function ektLocalizeDate(date, id) {
                 <div id="libraryBlogPosts" class="clearfix">
                     <h2>Latest Blog Posts</h2>
                     <div class="clearfix">
-                    <span id="ctl00_BodyPlaceHolder_ListSummary2"><ul><li><h3><a href="/For-Paralegals/Manage-Your-Practice/Research/HeinOnline-password-update/"><strong>HeinOnline password update</strong></a></h3><div class="summary">A password re-set.</div></li><li><h3><a href="/For-Paralegals/Manage-Your-Practice/Research/Look-up,-way-up!/"><strong>Look up, way up!</strong></a></h3><div class="summary">Great Library ceilings to be inspected.</div></li><li><h3><a href="/For-Paralegals/Manage-Your-Practice/Research/Treatise-Finders/"><strong>Treatise Finders</strong></a></h3><div class="summary">Research tip for identifying leading American law texts.</div></li></ul></span>
+                    <span id="ctl00_BodyPlaceHolder_ListSummary2"><ul><li><h3><a href="/For-Paralegals/Manage-Your-Practice/Research/Library-Tours---2016/"><strong>Library Tours - 2016</strong></a></h3><div class="summary">Orientation tours for summer, articling and LPP students. </div></li><li><h3><a href="/For-Paralegals/Manage-Your-Practice/Research/Finding-Recent-Law-Society-Discipline-Decisions/"><strong>Finding Recent Law Society Discipline Decisions</strong></a></h3><div class="summary">For the record – the Great Library doesn’t have them.</div></li><li><h3><a href="/For-Paralegals/Manage-Your-Practice/Research/Where-to-find-proposed-regulations/"><strong>Where to find proposed regulations</strong></a></h3><div class="summary">Tips for legislative research   </div></li></ul></span>
                     </div>
                     <a href="/blog.aspx?blogid=2147485006" class="moreInfo">View All</a>
                 </div>

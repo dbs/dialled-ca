@@ -191,7 +191,8 @@
 			<div id="text-content">
 
 				<a name="top"></a>
-			  <h1>Online Lending Library			  </h1>
+			  <h1>Online Lending Library			  <br>
+			  </h1>
 			  <div class="call-action">
 			    <p align="center"><strong>Have you used OCTC's Online Lending Library before?<br />
                 <a href="http://www.lendinglibrary.octc.ca/4dcgi/gen_2002/Lang=Def" target="_blank">Welcome to the Library!</a></strong></p>

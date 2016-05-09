@@ -157,9 +157,9 @@
 
 <script language="javascript" type="text/javascript">
 
-			var images = [repSingleQuote("/en/rotatingimages/homepagebackground/chapleau-bg-winter.jpg.jpg"),repSingleQuote("/en/rotatingimages/homepagebackground/chapleau-bg-fall.jpg"),repSingleQuote("/en/rotatingimages/homepagebackground/background-image.jpg"),repSingleQuote("/en/rotatingimages/homepagebackground/chapleau-bg-spring.jpg")];
+			var images = [repSingleQuote("/en/rotatingimages/homepagebackground/chapleau-bg-spring.jpg"),repSingleQuote("/en/rotatingimages/homepagebackground/chapleau-bg-fall.jpg"),repSingleQuote("/en/rotatingimages/homepagebackground/background-image.jpg"),repSingleQuote("/en/rotatingimages/homepagebackground/chapleau-bg-winter.jpg.jpg")];
 			var links = [repSingleQuote(""),repSingleQuote(""),repSingleQuote(""),repSingleQuote("")];
-			var titles = [repSingleQuote("Winter"),repSingleQuote("Background Fall"),repSingleQuote(""),repSingleQuote("backgroundspring")];
+			var titles = [repSingleQuote("backgroundspring"),repSingleQuote("Background Fall"),repSingleQuote(""),repSingleQuote("Winter")];
 			var targets = [repSingleQuote("false"),repSingleQuote("false"),repSingleQuote("false"),repSingleQuote("false")];
 
 			if ( images.length != 0 ) {

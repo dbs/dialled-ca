@@ -51,7 +51,10 @@ max-width:inherit;
 </style>	
 <link media="print" href="http://cdn.yourwebdepartment.com/css/printerfriendly-min.css" rel="stylesheet" type="text/css" />
 <link href="None" rel="stylesheet" type="text/css" />
+<link href="/site/ywd_artsandlettersclub/library/css/designer-custom1.css" rel="stylesheet" type="text/css" />
+<link href="/site/ywd_artsandlettersclub/library/css/designer-custom2.css" rel="stylesheet" type="text/css" />
 <link href="/site/ywd_artsandlettersclub/library/css/designer-custom3.css" rel="stylesheet" type="text/css" />
+<link href="/site/ywd_artsandlettersclub/library/css/designer-custom4.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript1.1" type="text/javascript">
 <!--
 //-->
@@ -79,6 +82,15 @@ max-width:inherit;
 <td id="shadowvertleft">&nbsp;</td>
 <td class="layoutleft">
 <div class="banner" style='cursor:default;'>
+<div id="bannerOverlayContent"></div>
+<script>BANNEROVERLAYCONTENT='';</script>
+<script src="/site/ywd_artsandlettersclub/library/scripts/banneroverlaycontent.js"></script>
+<script>	
+if (BANNEROVERLAYCONTENT != '')	{
+BANNEROVERLAYCONTENT = '<div id="ywdbanneroverlay">'+BANNEROVERLAYCONTENT +'</div>';
+document.getElementById("bannerOverlayContent").innerHTML = BANNEROVERLAYCONTENT; 
+}
+</script> 
 <div id="flashcontent"
 >
 <table style="width:100%;height:100%;" border="0" cellspacing="0" cellpadding="0">
@@ -297,7 +309,7 @@ site/ywd_artsandlettersclub/assets/images/red_logo_bottom.jpg" alt="Top image" /
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="188"><a href="/site/ywd_artsandlettersclub/assets/pdf/lampsletters_201603-e.pdf" target="_blank"><img alt="" src="/site/arts_and_letters_club_v2/assets/images/lampletter_button.jpg" style="width: 188px; height: 65px; margin-top: 10px; margin-bottom: 10px; float: right;" /></a>
+<td valign="top" width="188"><a href="/site/ywd_artsandlettersclub/assets/pdf/lampsletter.pdf" target="_blank"><img alt="" src="/site/arts_and_letters_club_v2/assets/images/lampletter_button.jpg" style="width: 188px; height: 65px; margin-top: 10px; margin-bottom: 10px; float: right;" /></a>
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -334,13 +346,11 @@ site/ywd_artsandlettersclub/assets/images/red_logo_bottom.jpg" alt="Top image" /
 <div style="clear:both;"></div>
 <div class="maincolbox" style='clear:both;' controller="1">
 <div class="maincolcblock ywdblock_stacked">
-<div class="wp"><div class="ywdblockcontent"><h5>&nbsp;</h5>
-<h2>THE CLUB CELEBRATES! &nbsp;&nbsp;<a href="/index.cfm?pagePath=What_s_On/Explorers_Film_Festival&amp;id=74542"><img alt="" src="/site/ywd_artsandlettersclub/assets/images/ff_button.gif" style="width: 100px; height: 78px;" /></a></h2>
-<h4><strong>8th Annual Explorers Club Flm Festival:</strong></h4>
-<h4><strong><a href="/index.cfm?pagePath=What_s_On/Explorers_Film_Festival&amp;id=74542">DOCUMENTING THE ART OF EXPLORATION </a>&bull; MARCH 18 and 19</strong><br />
-&nbsp;</h4>
-<h4>THE ANNUAL SPRING REVUE: AN AIR OF MYSTERY:</h4>
-<p>May 5, 6, 7</p></div></div><div style="margin:0px;padding:0px;height:0px;clear:both;"></div>	
+<div class="wp"><div class="ywdblockcontent"><h2>SHAKESPEARE 400 CELEBRATION!</h2>
+<p>Monday, April 23, 6:30 p.m.<br />
+&nbsp;</p>
+<h2>THE ANNUAL SPRING REVUE: <em>AN AIR OF MYSTERY</em></h2>
+<p>Thursday &ndash; Saturday, &nbsp;May 5, 6, 7, dinner 7:00 p.m.; show at 8:30 p.m.</p></div></div><div style="margin:0px;padding:0px;height:0px;clear:both;"></div>	
 </div>
 </div>
 </div>
@@ -422,8 +432,12 @@ max-width:970px;
 <tr><td colspan="2" id="footertext_copyright" class="footertext" style="width:100%;"><p>&copy;&nbsp;Arts & Letters Club 2015</p></td></tr>
 <tr style="height:0px;">
 <td colspan="2" id="footertext_footnotes" class="footertext" valign="top">
-<div></div>	
-<div></div>	
+<div id="FOOTNOTE"></div>
+<script src="/site/ywd_artsandlettersclub/library/scripts/footnote.js"></script>
+<script>document.getElementById("FOOTNOTE").innerHTML = FOOTNOTE;</script> 
+<div id="FOOTNOTE2"></div>
+<script src="/site/ywd_artsandlettersclub/library/scripts/footnote2.js"></script>
+<script>document.getElementById("FOOTNOTE2").innerHTML = FOOTNOTE2;</script> 
 </td>
 </tr>
 <tr>

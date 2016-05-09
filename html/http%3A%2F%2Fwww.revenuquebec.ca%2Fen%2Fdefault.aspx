@@ -115,20 +115,20 @@
 	    <!-- Carousel items -->
 	    <ul class="carousel-inner">
 
-<li class="item active bcgClavier" id="caroulax-slide-0" aria-hidden="false" tabindex="-1">
+<li class="item active bcgCubes" id="caroulax-slide-0" aria-hidden="false" tabindex="-1">
     <div class="layer-background"></div>
     
     <div class="layer-image left">
-	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_MicrositePedro.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
+	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_Philippe_ordi.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
     </div>
     
     <div class="layer-text">
 	<span class="align-middle"></span><!--
      --><div class="layer-text-content" data-animate="slideRightToLeft" data-delay="100" data-length="300">
-	    <div class="title">It's now even easier to file your income tax return!</div>
+	    <div class="title"><em>Attestation de Revenu Québec</em>: <br />Do the New Obligations Affect You?</div>
 	    
 	    <div class="link" data-animate="slideRightToLeft" data-delay="600" data-length="300">
-		<a href="http://eveneasier.ca/?Promoactumicrositepedro2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">It's now even easier to file your income tax return!.</span> eveneasier.ca</a>
+		<a href="/en/salle-de-presse/actualites/2016/2016-04-19.aspx?Promoactu19avril=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran"><em>Attestation de Revenu Québec</em>: <br />Do the New Obligations Affect You?.</span> Learn more</a>
 	    </div>
 	    
 	</div>
@@ -138,58 +138,58 @@
     <div class="layer-background"></div>
     
     <div class="layer-image left">
-	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_2-May.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
+	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_RenoVert.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
     </div>
     
     <div class="layer-text">
 	<span class="align-middle"></span><!--
      --><div class="layer-text-content" data-animate="slideRightToLeft" data-delay="100" data-length="300">
-	    <div class="title">Deadline for filing your income tax return!</div>
+	    <div class="title">New RénoVert Tax Credit</div>
 	    
 	    <div class="link" data-animate="slideRightToLeft" data-delay="600" data-length="300">
-		<a href="/en/salle-de-presse/actualites/2016/2016-03-01(2).aspx?Promoactu29fev2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Deadline for filing your income tax return!.</span> Learn more</a>
+		<a href="/en/citoyen/credits/renovert/default.aspx?PromoactuBudgetRenovert=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">New RénoVert Tax Credit.</span> Learn more!</a>
 	    </div>
 	    
 	</div>
     </div>
 </li>
-<li class="item bcgEngrenages" id="caroulax-slide-2" aria-hidden="false" tabindex="-1">
+<li class="item bcgPieceVide" id="caroulax-slide-2" aria-hidden="false" tabindex="-1">
     <div class="layer-background"></div>
     
     <div class="layer-image left">
-	<span class="align-middle"></span><img src="/aa__images/carroulax/emplois/imgBandeau_Camille.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
+	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_CIS_citoyen.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
     </div>
     
     <div class="layer-text">
 	<span class="align-middle"></span><!--
      --><div class="layer-text-content" data-animate="slideRightToLeft" data-delay="100" data-length="300">
-	    <div class="title">Do you have a balance due? <br />Discover the various ways of paying it.</div>
+	    <div class="title">Tenants: <br />Have you received your RL-31 slips?</div>
 	    
 	    <div class="link" data-animate="slideRightToLeft" data-delay="600" data-length="300">
-		<a href="/en/salle-de-presse/actualites/2016/2016-03-04.aspx?Promoactu4mars2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Do you have a balance due? <br />Discover the various ways of paying it..</span> Learn more!</a>
+		<a href="/en/citoyen/credits/solidarite/calcul_credit.aspx?PromoActu24mars2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Tenants: <br />Have you received your RL-31 slips?.</span> Learn more</a>
 	    </div>
 	    
 	</div>
     </div>
 </li>
-<li class="item bcgPieceVide" id="caroulax-slide-3" aria-hidden="false" tabindex="-1">
+<li class="item bcgSalon" id="caroulax-slide-3" aria-hidden="false" tabindex="-1">
     <div class="layer-background"></div>
     
     <div class="layer-image left">
-	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_Zak.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
+	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_Julia.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
     </div>
     
     <div class="layer-text">
 	<span class="align-middle"></span><!--
      --><div class="layer-text-content" data-animate="slideRightToLeft" data-delay="100" data-length="300">
-	    <div class="title">Parents: Get the financial assistance you are entitled to!</div>
+	    <div class="title">Subsidized Childcare</div>
 	    
 	    <div class="sub">
-		Remember to report your income on time.
+		50% reduction in the additional contribution for a second child
 	    </div>
 	    
 	    <div class="link" data-animate="slideRightToLeft" data-delay="600" data-length="300">
-		<a href="/en/salle-de-presse/actualites/2016/2016-03-01(1).aspx?Promoactu1mars2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Parents: Get the financial assistance you are entitled to!.</span> Learn more!</a>
+		<a href="/en/salle-de-presse/nouvelles-fiscales/2016/2016-03-17.aspx?PromoactuBudgetContribution17mars2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Subsidized Childcare.</span> Learn more!</a>
 	    </div>
 	    
 	</div>
@@ -390,6 +390,11 @@
 --><li>
 
     <a href="http://eveneasier.ca" class="plusfacile" ><span>EvenEasier</span></a>
+
+</li><!--
+--><li>
+
+    <a href="http://www.budget.finances.gouv.qc.ca/budget/2016-2017/index_en.asp" class="budget1617" ><span>budget1617</span></a>
 
 </li></ul>
 </div>

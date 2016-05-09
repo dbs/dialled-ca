@@ -19,7 +19,7 @@
 <meta name="rating" content="general" />
 <meta name="expires" content="never" />
 <meta name="Date-creation-yyyymmdd" content="20070914" />
-<meta name="Date-revision-yyyymmdd" content="20160311" />
+<meta name="Date-revision-yyyymmdd" content="20160509" />
 <meta name="distribution" content="global" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="/css/master.css" media="screen" />
@@ -247,7 +247,7 @@
 <div>
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7302EA1A" />
-</div><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4NDYzNDI5NThkZGgXZx1nyuW8VEJVhgAs2fBhu2J1yblytT5NML6wlSDs" /></form>
+</div><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4NDYzNDI5NThkZMK/3V4feI9spxghKKuqwUboZ5XyE9KhSu5xbALRSijl" /></form>
 <!--<a href="/municipalite/index.aspx" id="ctl00_aLinkLanguage"></a></a>-->
 
 

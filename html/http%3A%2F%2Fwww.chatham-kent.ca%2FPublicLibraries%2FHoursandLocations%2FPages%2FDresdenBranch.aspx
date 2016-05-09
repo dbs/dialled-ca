@@ -116,7 +116,7 @@ The Dresden branch is located at 187 Brown Street in Dresden, Ontario.
 
 </style></head>
 <body class="body" onload="javascript:_spBodyOnLoadWrapper();">
-	<form name="aspnetForm" method="post" action="dresdenbranch.aspx" id="aspnetForm" onsubmit="return _spFormOnSubmitWrapper();">
+	<form name="aspnetForm" method="post" action="DresdenBranch.aspx" id="aspnetForm" onsubmit="return _spFormOnSubmitWrapper();">
 <div>
 <input type="hidden" name="__SPSCEditMenu" id="__SPSCEditMenu" value="true" />
 <input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
@@ -128,7 +128,7 @@ The Dresden branch is located at 187 Brown Street in Dresden, Ontario.
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xA3307B1CAFE858C60C751D8437301910A4D1F8E45DC38CA2B81925009E3C9C9EB86E1C949EACD9D8AF3E55659FDFC1B337941E7184AB6D2103339D9E9549B834,11 Mar 2016 19:42:47 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x4397E69B68700CB88EA95C1359A5CDA68E5E82C5989B7069D78A4ABB1A1319F01E1842929DFD44A1CBBF4D6C819E47CB693D5490BE16264498658EACD7D5A155,09 May 2016 13:49:41 -0000" />
 <input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
 <input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
@@ -157,6 +157,8 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
+<script src="/WebResource.axd?d=nkjCvm5Rq8lbpf2aRF_Fhu14yfeSUj7mPvTgPlIIJGYPQMiZLZ6l4xlu9srfeATUjgj3xG7AoPCE80GT1SA1yW1JoE01&amp;t=635588444026805809" type="text/javascript"></script>
+
 <script> var MSOWebPartPageFormName = 'aspnetForm';</script><script type="text/JavaScript" language="JavaScript">
 <!--
 var L_Menu_BaseUrl="/PublicLibraries/HoursandLocations";
@@ -167,6 +169,8 @@ var L_Menu_SiteTheme="";
 <div>
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8DDBB1CF" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
 </div>
 	<div class="console" style="width:960px; margin:auto;">
 		
@@ -726,7 +730,7 @@ var L_Menu_SiteTheme="";
           window.open(query,'newwindow','height=790,width=620,top=320,left=400,toolbar=no,menubar=no,scrollbars=no,resizable=yes,location=no,status=no');
         }
          </SCRIPT>
-<a title="Page Feedback" style="float:left;" class="sprite-icons s-feedback_icon" onclick="feedback('&lt;![CDATA[http://www.chatham-kent.ca]]&gt;/_layouts/ConceptInc/CK/PageFeedback/Pages/Feedback.aspx', 'http%3a%2f%2fwww.chatham-kent.ca%2fpubliclibraries%2fhoursandlocations%2fpages%2fdresdenbranch.aspx', 'http%3a%2f%2fwww.chatham-kent.ca%2fLists%2fPage%2520Feedback%2fAllItems.aspx')" />            
+<a title="Page Feedback" style="float:left;" class="sprite-icons s-feedback_icon" onclick="feedback('&lt;![CDATA[http://www.chatham-kent.ca]]&gt;/_layouts/ConceptInc/CK/PageFeedback/Pages/Feedback.aspx', 'http%3a%2f%2fwww.chatham-kent.ca%2fPublicLibraries%2fHoursandLocations%2fPages%2fDresdenBranch.aspx', 'http%3a%2f%2fwww.chatham-kent.ca%2fLists%2fPage%2520Feedback%2fAllItems.aspx')" />            
     <a title="Email Page" id="emailPage" href="javascript:emailPage('Hours & Locations');">
         <!--<img src="/_layouts/IMAGES/ConceptInc/CK/email_icon.gif" alt="Email Page" />-->
 		<div class="sprite-icons s-email_icon"></div>
@@ -1027,7 +1031,7 @@ var L_Menu_SiteTheme="";
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_2_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_3_2','CKFootprint_1_2_2_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_3_2','CKFootprint_1_2_2_2','2');" onclick="window.location=&quot;/CustomerServices/Pages/CustomerService.aspx&quot;;"><a id="a_CKFootprint_1_2_2_2" href="/CustomerServices/Pages/CustomerService.aspx">Customer Service</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_3_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_4_2','CKFootprint_1_2_3_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_4_2','CKFootprint_1_2_3_2','2');" onclick="window.location=&quot;/EmergencyServices/Pages/EmergencyServices.aspx&quot;;"><a id="a_CKFootprint_1_2_3_2" href="/EmergencyServices/Pages/EmergencyServices.aspx">Emergency Services</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_4_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_5_2','CKFootprint_1_2_4_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_5_2','CKFootprint_1_2_4_2','2');" onclick="window.location=&quot;/FireDepartment/Pages/Default.aspx&quot;;"><a id="a_CKFootprint_1_2_4_2" href="/FireDepartment/Pages/Default.aspx">Fire Department</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_5_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_6_2','CKFootprint_1_2_5_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_6_2','CKFootprint_1_2_5_2','2');" onclick="window.location=&quot;/GarbageandRecycling/Pages/GarbageRecycling.aspx&quot;;"><a id="a_CKFootprint_1_2_5_2" href="/GarbageandRecycling/Pages/GarbageRecycling.aspx">Garbage &amp; Recycling</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_5_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_6_2','CKFootprint_1_2_5_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_6_2','CKFootprint_1_2_5_2','2');" onclick="window.location=&quot;/GarbageandRecycling/Pages/default.aspx&quot;;"><a id="a_CKFootprint_1_2_5_2" href="/GarbageandRecycling/Pages/default.aspx">Garbage &amp; Recycling</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_6_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_7_2','CKFootprint_1_2_6_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_7_2','CKFootprint_1_2_6_2','2');" onclick="window.location=&quot;/Jobs/Pages/chathamkentjobs.aspx&quot;;"><a id="a_CKFootprint_1_2_6_2" href="/Jobs/Pages/chathamkentjobs.aspx">Jobs</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_7_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_8_2','CKFootprint_1_2_7_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_8_2','CKFootprint_1_2_7_2','2');" onclick="window.location=&quot;/Licensing/Pages/Licensing.aspx&quot;;"><a id="a_CKFootprint_1_2_7_2" href="/Licensing/Pages/Licensing.aspx">Licensing</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_2_8_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_2_9_2','CKFootprint_1_2_8_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_2_9_2','CKFootprint_1_2_8_2','2');" onclick="window.location=&quot;/Permits/Pages/Permits.aspx&quot;;"><a id="a_CKFootprint_1_2_8_2" href="/Permits/Pages/Permits.aspx">Permits</a></li>
@@ -1125,7 +1129,7 @@ var L_Menu_SiteTheme="";
 </td>
 									<td class="ms-globallinks">
 									
-<a id="ctl00_explitLogout_ExplicitLogin" href="http://www.chatham-kent.ca/PublicLibraries/HoursandLocations/_layouts/Authenticate.aspx?Source=%2Fpubliclibraries%2Fhoursandlocations%2Fpages%2Fdresdenbranch%2Easpx" style="display:block;">Sign In</a>
+<a id="ctl00_explitLogout_ExplicitLogin" href="http://www.chatham-kent.ca/PublicLibraries/HoursandLocations/_layouts/Authenticate.aspx?Source=%2FPublicLibraries%2FHoursandLocations%2FPages%2FDresdenBranch%2Easpx" style="display:block;">Sign In</a>
 </td>
 								</tr>
 							</table>
@@ -1481,10 +1485,18 @@ var L_Menu_SiteTheme="";
             </tr>
           </table>
         </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/HoursandLocations/Pages/BranchClosures.aspx">Branch Closures</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/HoursandLocations/Pages/interruption.aspx">Service Interruption</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1656,7 +1668,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/TechtrainingiOS.aspx">iPad iOS8 Tips and Tricks</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/GetGardening.aspx">Gardening Month at CKPL</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1664,7 +1676,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/winterreadingprogram.aspx">All that Glitters Winter Library Program</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/HealthyEating.aspx">Healthy Eating Starts at CKPL!</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1672,7 +1684,15 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/MarchBreakProgram.aspx">March Break Program</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/TheLiteraryClassicsOnlineBookClub.aspx">The Literary Classics Online Book Club</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/FightFraudWorkshop.aspx">Fight Fraud!</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1680,7 +1700,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/TheLiteraryClassicsOnlineBookClub.aspx">The Literary Classics Online Book Club</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/MentalHealth.aspx">Mental Health Awareness Month</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1778,23 +1798,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/ForestofReading.aspx">Forest of Reading</a></td>
-              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
-            </tr>
-          </table>
-        </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
-          <table cellpadding="0" cellspacing="0" width="100%">
-            <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Hoopla.aspx">Hoopla</a></td>
-              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
-            </tr>
-          </table>
-        </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
-          <table cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Prize Awards and Best Sellers Lists.aspx">Prize Awards and Best Sellers Lists</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1802,7 +1806,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Archambault.aspx">Archambault French eBook Collection</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Prize Awards and Best Sellers Lists.aspx">Prize Awards and Best Sellers Lists</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2112,7 +2116,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/eReaders.aspx">eReaders</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/eReadersandDevices.aspx">eReaders</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2176,6 +2180,14 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/RoomEquipmentRentals.aspx">Room and Equipment Rentals</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/ServiceOntario for Businesses.aspx">ServiceOntario for Businesses</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
@@ -2197,10 +2209,18 @@ var L_Menu_SiteTheme="";
             </tr>
           </table>
         </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/VirtualLibraryCard.aspx">Virtual Library Card</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/CKPLGrowsSeedLibrary.aspx">CKPL Grows Seed Library</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2423,8 +2443,8 @@ var L_Menu_SiteTheme="";
   <div class="div_plan_itinerary_bottom_line">&nbsp;</div>
   <div class="div_plan_itinerary_content" id="div_plan_itinerary_content"></div>
   <div class="div_plan_itinerary_bottom_line">&nbsp;</div>
-  <div class="div_plan_itinerary_button" id="div_plan_itinerary_button_black"><img title="Print" src="/_LAYOUTS/ConceptInc/Publishing.WebPart.PlanItinerary/Images/print.gif" border="0" onclick="plan_itinerary_print('http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/dresdenbranch.aspx');" onmouseover="img_plan_itinerary_print_mouse_over(this);" onmouseout="img_plan_itinerary_print_mouse_out(this);"><img title="Send to Email" src="/_LAYOUTS/ConceptInc/Publishing.WebPart.PlanItinerary/Images/send_to_email.gif" border="0" onclick="plan_itinerary_send_to_email('http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/dresdenbranch.aspx');" style="margin-left:10px;" onmouseover="img_plan_itinerary_send_to_email_mouse_over(this);" onmouseout="img_plan_itinerary_send_to_email_mouse_out(this);"></div>
-  <div class="div_plan_itinerary_button" id="div_plan_itinerary_button_white"><img title="Print" src="/_LAYOUTS/ConceptInc/Publishing.WebPart.PlanItinerary/Images/print_w.gif" border="0" onclick="plan_itinerary_print('http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/dresdenbranch.aspx');" onmouseover="img_plan_itinerary_print_w_mouse_over(this);" onmouseout="img_plan_itinerary_print_w_mouse_out(this);"><img title="Send to Email" src="/_LAYOUTS/ConceptInc/Publishing.WebPart.PlanItinerary/Images/send_to_email_w.gif" border="0" onclick="plan_itinerary_send_to_email('http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/dresdenbranch.aspx');" style="margin-left:10px;" onmouseover="img_plan_itinerary_send_to_email_w_mouse_over(this);" onmouseout="img_plan_itinerary_send_to_email_w_mouse_out(this);"></div>
+  <div class="div_plan_itinerary_button" id="div_plan_itinerary_button_black"><img title="Print" src="/_LAYOUTS/ConceptInc/Publishing.WebPart.PlanItinerary/Images/print.gif" border="0" onclick="plan_itinerary_print('http://www.chatham-kent.ca/PublicLibraries/HoursandLocations/Pages/DresdenBranch.aspx');" onmouseover="img_plan_itinerary_print_mouse_over(this);" onmouseout="img_plan_itinerary_print_mouse_out(this);"><img title="Send to Email" src="/_LAYOUTS/ConceptInc/Publishing.WebPart.PlanItinerary/Images/send_to_email.gif" border="0" onclick="plan_itinerary_send_to_email('http://www.chatham-kent.ca/PublicLibraries/HoursandLocations/Pages/DresdenBranch.aspx');" style="margin-left:10px;" onmouseover="img_plan_itinerary_send_to_email_mouse_over(this);" onmouseout="img_plan_itinerary_send_to_email_mouse_out(this);"></div>
+  <div class="div_plan_itinerary_button" id="div_plan_itinerary_button_white"><img title="Print" src="/_LAYOUTS/ConceptInc/Publishing.WebPart.PlanItinerary/Images/print_w.gif" border="0" onclick="plan_itinerary_print('http://www.chatham-kent.ca/PublicLibraries/HoursandLocations/Pages/DresdenBranch.aspx');" onmouseover="img_plan_itinerary_print_w_mouse_over(this);" onmouseout="img_plan_itinerary_print_w_mouse_out(this);"><img title="Send to Email" src="/_LAYOUTS/ConceptInc/Publishing.WebPart.PlanItinerary/Images/send_to_email_w.gif" border="0" onclick="plan_itinerary_send_to_email('http://www.chatham-kent.ca/PublicLibraries/HoursandLocations/Pages/DresdenBranch.aspx');" style="margin-left:10px;" onmouseover="img_plan_itinerary_send_to_email_w_mouse_over(this);" onmouseout="img_plan_itinerary_send_to_email_w_mouse_out(this);"></div>
 </div><script type="text/javascript" src="/_layouts/ConceptInc/Publishing.WebPart.PlanItinerary/Js/PlanItinerary.js"></script>
 
 <div id='div_UserfulLinks'></div>
@@ -2520,6 +2540,17 @@ Municipality of Chatham-Kent. All Rights Reserved. <br /><br />
 var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
 </script>
 <script type="text/javascript" language="javascript" src="/_layouts/1033/core.js?rev=mHKsOQ0iU3Q5jdm9OZNDdg%3D%3D"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
 </form>
  </body>
-</html><!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-03-11T14:42:52 -->
+</html><!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-05-09T09:49:44 -->

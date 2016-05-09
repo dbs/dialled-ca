@@ -73,7 +73,7 @@
 <link type="text/xml" rel="alternate" href="/_vti_bin/spsdisco.aspx" />
 		
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.min.js?sha1=2439711705752FAC5DD1A6A8D6B1BE63FFCBC76D"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.flexslider.min.js?sha1=C372DDBB2FCD84A31E411126B95A0BE004940A02"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.flexslider.min.js?sha1=55973533EB2F6C1E65FDFA5B9B1D447676511E85"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.cycle2.min.js?sha1=A3DE9AF2595FA644D2EF62FF622E7035A7DAA593"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.lightbox.min.js?sha1=864063D2D0AB92BB6B62F01D8609DDE8D97300EE"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.magnific-popup.min.js?sha1=F85BE68DAD2A9934783C2216BE858F04287DCEA9"></script>
@@ -81,15 +81,97 @@
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.masonry.min.js?sha1=4EFC58E52FED3DA8C6504511D680A322BCE2D4E3"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/bootstrap/bootstrap.min.js?sha1=7ABDF3D60ADAB756D9B8D84022E5C9A6B59877EE"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/selectivizr.min.js?sha1=65DE9F570BF7FDFF1B496CA80AB5FD90599D9E39"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/lodash-fp.min.js?sha1=1435A231A2C9F50F7E131450CF7C2AED957138BC"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/lodash-fp.min.js?sha1=BB369F268163101BC64663ECDED1414BE9CD756F"></script>
 		
 <!--[if lt IE 9]><script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/html5shiv.min.js?sha1=3C9649A10A16AD02EC92F1C020C3F9D1A9E6A0E6"></script><![endif]-->
        
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/respond.js&sha1=895E4FD36E4CF0F7BBF71E93E4BAFBAC2952A549"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/shared.core.js&sha1=6F14F740634E07FD1AE3B50E1099AC7937FDF4B4"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.core.js&sha1=FC77DA34BD671E56ACAD43CB9584FB6342388B46"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.custom.js&sha1=1C25688F9457B029DC98FE5046E100D95D2A8381"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/respond.js&sha1=3B53A8C6C6BE06E58422EA386724156C42481649"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/shared.core.js&sha1=A8BA823BB1863BAED42A7700958C3E4BF4A21D78"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.core.js&sha1=E4F0E53BA4D2D430F75A9D4DBF1128E9D3C5E229"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.custom.js&sha1=975FC15179C4A94DA437D8472E8EA506EDFEBEC8"></script>
 <script type="text/javascript">function ProcessImn() { };function ProcessImnMarkers() { }</script>
+
+
+
+
+<script type="text/javascript">
+
+    // we need $(window).load for... reasons
+    // see http://paulryan.com.au/2014/running-addstatus-on-page-load/ and come find me if
+    // you want to cry together
+    $(window).load(function () {
+
+        var noticeTypeClasses = {
+            Information: 'ms-status-blue',
+            Warning: 'ms-status-yellow'
+        };
+
+        var cookieKey = 'slNoticesDismissed';
+
+        var getDismissedIds = function () {
+
+            var cookieContent = SL.Util.GetCookie(cookieKey, window);
+            var dismissedIds = [];
+
+            if (cookieContent) {
+                try {
+                    dismissedIds = JSON.parse(cookieContent);
+                } catch (e) {
+                    // this is okay, it'll default to the empty array
+                    console.log("Failed to parse slNoticesDismissed cookie content: " + cookieContent);
+                }
+            }
+
+            return dismissedIds;
+        };
+
+        SP.SOD.loadMultiple(['sp.js', 'clienttemplates.js'], function () {
+
+            var dismissedIds = getDismissedIds();
+
+            _([])
+                .filter(function (notice) {
+                    return !_.contains(notice.id, dismissedIds);
+                })
+                .forEach(function (notice) {
+
+                    var statusId = SL.Widget.Status.add({
+                        message: '<a href="" class="sl-Dismiss"></a>' +
+                            (notice.title ? '<span class="sl-Title">' + notice.title + '</span>' : '') +
+                            '<span class="sl-Message">' + notice.message + '</span>',
+                        classes: 'sl-Notice ' + (noticeTypeClasses[notice.type] || 'ms-status-blue'),
+                        animate: false
+                    });
+
+                    $('#' + statusId + ' .sl-Dismiss').click(function (event) {
+
+                        event.preventDefault();
+
+                        var dismiss = function (noticeId) {
+
+                            var dismissedIds = getDismissedIds();
+                            dismissedIds.push(noticeId);
+
+                            SL.Util.SetCookie(cookieKey, JSON.stringify(dismissedIds), true, window);
+
+                            SL.Widget.Status.remove(statusId);
+                        };
+
+                        try {
+                            dismiss(notice.id);
+                        } catch (e) {
+                            console.log('Error dismissing notification. Recreating cookie.');
+                            // there's probably something wrong with the cookie if dismiss failed
+                            SL.Util.DeleteCookie(cookieKey, true, window);
+                            // try again with a clean slate
+                            dismiss(notice.id);
+                        } 
+                    });
+                });
+        });
+    });
+</script>
+
 
 
 <script async src='//www.google-analytics.com/analytics.js'></script>
@@ -102,8 +184,8 @@
 </title><link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=OqAycmyMLoQIDkAlzHdMhQ%3D%3D"/>
 <link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/searchv15.css?rev=qarmmE3eURu3ZS2Wsbpf2w%3D%3D"/>
 
-            <link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.core.less&sha1=E38956C2BF752CD4D2F92B28CD3833BDE8572757&theme=web.District"></link>
-            <!--[if IE]><link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.ie.less&sha1=6E905648358FB63B090C39E15DBE0B3EB875ACDB&theme=web.District"></link><![endif]-->
+            <link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.core.less&sha1=7DD83D27801E3A59A40FB194E15061EB16E89D0E&theme=web.District"></link>
+            <!--[if IE]><link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.ie.less&sha1=C72D9281612A69CF3D695AF36B006904ADA7B633&theme=web.District"></link><![endif]-->
         <link rel="canonical" href="http://www.sunrisesd.ca:80/Pages/default.aspx" /><meta name="google-translate-customization" content="90021730356aa057-022d103a2d0b4fcf-g538839fe68dd9635-20" /></meta>
     </head>
 
@@ -143,7 +225,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xC24548DB2383B64CCC196230882DDF24D0FAF3C624306BA69AE77A628DB870678CE79E9D46F070E48ED2519667BCE78CB81505758EED641121D56D86DFD3CAC5,11 Mar 2016 20:30:08 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x0482A3D91BC4563210E9B8C9CCCF7AD2EA26B752B69D4676C2F2C144AC64C3704D51BF44CF3616E9130FF0399DE1D55454AAD38B27BCD57AE07380F6F9FEC846,09 May 2016 13:34:29 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -154,7 +236,7 @@
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM4MTE0ODUyNg9kFgJmD2QWAgIDD2QWBAIBD2QWCAIBD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgYPZBYCZg9kFgJmDzwrAAYAZAIHDw8WAh4HVmlzaWJsZWhkZAIIDw8WAh8BaGRkAhkPZBYGAgEPZBYEBSZnX2Q4MWZkM2E0X2QyN2NfNDZjYl9iMDY5XzgxODAwYWUzMGJiZg9kFgJmD2QWAgICDxYCHwFnFgYCAQ8WAh8BaGQCAg8WAh4LXyFJdGVtQ291bnRmZAIDDxYCHwFoZAUmZ19lM2U4YWJlZV9kOGI4XzQ1NTlfYThkZl9hMTdkOTA0ODQ0NDgPZBYCZg9kFgYCAw8PFgIeDEVycm9yTWVzc2FnZQUYUGxlYXNlIGVudGVyIHlvdXIgZW1haWwuZGQCBA8PFgIfAwUbUGxlYXNlIGVudGVyIGEgdmFsaWQgZW1haWwuZGQCBg8PFgIeBFRleHQFAkdvZGQCBQ9kFgICAg9kFgICAQ9kFgICAw9kFgICAQ9kFgICFQ9kFgICAQ8WAh8BaBYCZg9kFgQCAg9kFgQCAQ8WAh8BaGQCAw8WAh8BaGQCAw8PFgIeCUFjY2Vzc0tleQUBL2RkAh8PZBYCAgIPDxYCHwFoZGQYAQUpY3RsMDAkUGxhY2VIb2xkZXJUb3BOYXYkVG9wTmF2aWdhdGlvbk1lbnUPD2QFBEhvbWVkXt0adsj2lixrGFulXiNzQHhrVliHrmpzHmPTqhI01qw=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM4MTE0ODUyNg9kFgJmD2QWAgIDD2QWBAIBD2QWCAIBD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgYPZBYCZg9kFgJmDzwrAAYAZAIHDw8WAh4HVmlzaWJsZWhkZAIIDw8WAh8BaGRkAhkPZBYGAgEPZBYEBSZnX2Q4MWZkM2E0X2QyN2NfNDZjYl9iMDY5XzgxODAwYWUzMGJiZg9kFgJmD2QWAgICDxYCHwFnFgYCAQ8WAh8BaGQCAg8WAh4LXyFJdGVtQ291bnQCARYCZg9kFgICAQ8WAh4FY2xhc3MFEGZlYXR1cmVkLWFydGljbGUWCAIBDw8WBB4LTmF2aWdhdGVVcmwFbmh0dHA6Ly93d3cuc3VucmlzZXNkLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9e2E3MDhhYmNiLTdiZjUtNDBkNS1iNTdhLTZmYjU3N2Q5YjZmZH0mSUQ9MTA0HwFoFgIeB29uY2xpY2sFkAFOZXdJdGVtMihldmVudCwgJ2h0dHA6Ly93d3cuc3VucmlzZXNkLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9e2E3MDhhYmNiLTdiZjUtNDBkNS1iNTdhLTZmYjU3N2Q5YjZmZH0mSUQ9MTA0Jyk7IHJldHVybiBmYWxzZTtkAgMPFgIeBnNyY3NldAVCaHR0cDovL3d3dy5zdW5yaXNlc2QuY2EvRmVhdHVyZWRTdG9yaWVzL193L0NvbmdyYXR1bGF0aW9uc19qcGcuanBnZAIFDxYEHgNzcmMFO2h0dHA6Ly93d3cuc3VucmlzZXNkLmNhL0ZlYXR1cmVkU3Rvcmllcy9Db25ncmF0dWxhdGlvbnMuanBnHgNhbHQFD0NvbmdyYXR1bGF0aW9uc2QCBw8WAh8DBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIeCWlubmVyaHRtbAUPQ29uZ3JhdHVsYXRpb25zZAIFDxYCHwMFFmVudHJ5LXN1bW1hcnkgY29tcGxldGUWAgIBDxYCHwkF3QMgPHA+4oCLQ29uZ3JhdHVsYXRpb25zIHRvIHRoZSB3aW5uZXJzIG9mIHRoZSwgQ2hhdHRlciBIaWdoLCBhbiBvbmxpbmUgY2FyZWVyIGNvbXBldGl0aW9uIHRpdGxlZCYjNTg7JiMxNjA7ICZxdW90O01hbml0b2JhJ3MgTW9zdCBJbmZvcm1lZCBTY2hvb2wmcXVvdDsuJiMxNjA7PC9wPjxwPiYjMTYwOzwvcD48cD5FZHdhcmQgU2NocmV5ZXIgU2Nob29sIOKAkyAxIHN0ICBwbGFjZSBmb3IgQUFBQTwvcD48cD5TcHJpbmdmaWVsZCBDb2xsZWdpYXRlIOKAkyAyIG5kICBwbGFjZSBmb3IgQUFBPC9wPjxwPkxhYyBkdSBCb25uZXQgU2VuaW9yIOKAkyAxIHN0ICBwbGFjZSBmb3IgQUE8L3A+PHA+JiMxNjA7PC9wPjxwPjxhIGhyZWY9Imh0dHAmIzU4Oy8vY2hhdHRlcmhpZ2guY29tL2VuLyNtZW1iZXJzaGlwLWluZm8iIHRhcmdldD0iX2JsYW5rIj4gaHR0cCYjNTg7Ly9jaGF0dGVyaGlnaC5jb20vZW4vI21lbWJlcnNoaXAtaW5mbyA8L2E+PC9wPiBkAgcPFgIfAWhkAgMPFgIfAWhkBSZnX2UzZThhYmVlX2Q4YjhfNDU1OV9hOGRmX2ExN2Q5MDQ4NDQ0OA9kFgJmD2QWBgIDDw8WAh4MRXJyb3JNZXNzYWdlBRhQbGVhc2UgZW50ZXIgeW91ciBlbWFpbC5kZAIEDw8WAh8KBRtQbGVhc2UgZW50ZXIgYSB2YWxpZCBlbWFpbC5kZAIGDw8WAh4EVGV4dAUCR29kZAIFD2QWAgICD2QWAgIBD2QWAgIDD2QWAgIBD2QWAgIVD2QWAgIBDxYCHwFoFgJmD2QWBAICD2QWBAIBDxYCHwFoZAIDDxYCHwFoZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCHw9kFgICAg8PFgIfAWhkZBgBBSljdGwwMCRQbGFjZUhvbGRlclRvcE5hdiRUb3BOYXZpZ2F0aW9uTWVudQ8PZAUESG9tZWTGIehYs0v8MG9efwQH2pOMK3+VEfITw1Dh2iqj2blytw==" />
 </div>
 
 <script type="text/javascript">
@@ -187,7 +269,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'SCHOLANTISPUBLISHING#10';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.sunrisesd.ca", siteAbsoluteUrl: "http:\u002f\u002fwww.sunrisesd.ca", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Sunrise School Division", webTemplate: "2010", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-03-11T20:30:08.0268207Z") - new Date(), siteClientTag: "8$$15.0.4719.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:200801},pageListId:"{2536bd32-b481-4ca1-afff-eff2352a200c}",pageItemId:1, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.sunrisesd.ca", siteAbsoluteUrl: "http:\u002f\u002fwww.sunrisesd.ca", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Sunrise School Division", webTemplate: "2010", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T13:34:29.1951499Z") - new Date(), siteClientTag: "8$$15.0.4719.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:200801},pageListId:"{2536bd32-b481-4ca1-afff-eff2352a200c}",pageItemId:1, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var _spWebPartComponents = new Object();//]]>
@@ -288,7 +370,7 @@ document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){remo
             registerOverride(101);
             registerOverride(700);
         });
-    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 2, 11),showWeeks:0,timeZone:'-06:00:00.0004410',timeZoneInHours:-6,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
+    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 4, 9),showWeeks:0,timeZone:'-05:00:00.0002659',timeZoneInHours:-5,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
 UpdateFormDigest('\u002f', 1440000);if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;};
 return true;
 }
@@ -298,7 +380,7 @@ return true;
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="45635DF1" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAP6rs7oh892NbJmpuaaBbGUDJUp0wZMVMeAPRETQ6+b8KXkt5bhXPU/so1Qs3s1y5Ho+yt525MSVtTp7JiR/3k0S4gCtWSKUBDWmNwWQtbB/g==" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAMLbqBv1PxeJld9OJpISkurDJUp0wZMVMeAPRETQ6+b8KXkt5bhXPU/so1Qs3s1y5Gqow3Gv2HrPrzx2KYESi7LxU3pHp2FJ8a0nGsvX19g4A==" />
 </div>
 
                 
@@ -383,7 +465,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 <a class="sl-TopNavSearchIcon"></a>
                                         
                                 <div class="sl-TopNavSearch">                              
-                                    <nav class="sl-Search ms-dialogHidden">                   
+                                    <div class="sl-Search ms-dialogHidden">                   
 								        
 									        
 										        
@@ -395,7 +477,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 										        
 									        
 								                                        
-                                    </nav>
+                                    </div>
                                 </div>
                                 		
 
@@ -434,7 +516,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Services &amp; Programs" href="/ServicesPrograms/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Programs</span></span></a><ul class="static">
 			<li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/school/studentsupport/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Student Support Services</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/AlternativeLearning/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Alternative Learning</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Artspeak" href="/ServicesPrograms/Artspeak/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Artspeak</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="French Immersion" href="/ServicesPrograms/FrenchImmersion/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">French Immersion</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="English Ukrainian Bilingual Program" href="/ServicesPrograms/UkrainianImmersion/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">English Ukrainian Bilingual Program</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/health/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Workplace Safety and Health</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="http://sunriseisp.com"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">International Student Program</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/ALK12/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Active Learning K-12</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/LLK12/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Literacy and Languages K-12</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/NTK12/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Numeracy and Technology K-12</span></span></a></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Music" href="/ServicesPrograms/Music/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Music K-12</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/Music/music_programs/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Programs</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/Music/music.curriculum/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Curriculum</span></span></a></li>
-			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/SRCK12/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Socially Responsible Citizenship K-12</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="The section of our website is dedicated to resources related to the implementation of the new Provincial Report Card." href="/ServicesPrograms/reportcard/SitePages/Provincial Report Card Resources.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Provincial Report Card Resources</span></span></a></li>
+			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/SRCK12/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Socially Responsible Citizenship K-12</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="The section of our website is dedicated to resources related to the implementation of the new Provincial Report Card." href="/ServicesPrograms/reportcard/SitePages/Provincial Report Card Resources.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Provincial Report Card Resources</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/ServicesPrograms/HSAP/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">High School Apprenticeship Program</span></span></a></li>
 		</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Staff" href="/Staff/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Staff</span></span></a><ul class="static">
 			<li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Concern Protocol" href="/Staff/ConcernProtocol/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Concern Protocol</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Forms" href="/Staff/Forms/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Forms</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/OperationalDepartments/HR/Jobs/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Jobs</span></span></a></li>
 		</ul></li>
@@ -506,9 +588,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			
 			<div class="modalOverlay" id="74afc12c-2355-41cf-aecc-c9614d0c131578">
 				<a class="modalCancel" href="#"></a>
-				<div class="modalPopup">
-								
-					<a class="modalClose" href="#">×</a>
+				<div class="modalPopup">					
+					<a class="modalClose" href="#"></a>
+					<a class="modalFullScreen" onclick="SL.Util.toggleFullScreen('.modalOverlay:target')"></a>
+												
 					<div class="sl-Title sl-sa-Transport"><div class="sl-contentContainer">School Bus Information</div></div>					
 					<div class="sl-Body"><span class="summary "><div class="ExternalClass0DA07E9E664240678DEF77602103CFB9"><p>You may get details on bus status and delays on the <a href="/OperationalDepartments/Transportation/Notices/Pages/default.aspx">Transportation Notices&#160;page​</a> of the Sunrise Web Site. <br><br>For more information on school closures due to adverse weather conditions please see the <a href="/weather" target="_blank">Sunrise Weather Page </a>.<a href="/" target="_blank"></a></p></div></span><span class="details"></span></div>					
 					<div class="sl-Share" data-title="School Bus Information" data-url="//www.sunrisesd.ca/Pages/spnewsitem.aspx?ItemID=78&ListID=74afc12c-2355-41cf-aecc-c9614d0c1315&TemplateID=Announcement_Item">
@@ -517,7 +600,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 						<a class="sl-Icon email" title="email"></a>                        
 						<a class="sl-Icon print" onclick="SL.Util.printContents('.modalOverlay:target')" ></a>
 						<a class="sl-Icon sl-IconRss" href="//www.sunrisesd.ca/_layouts/listfeed.aspx?List=74afc12c-2355-41cf-aecc-c9614d0c1315"></a>
-						<a class="sl-Icon sl-IconAlert"href="//www.sunrisesd.ca/_layouts/SubNew.aspx?List=74afc12c-2355-41cf-aecc-c9614d0c1315&Source=http://www.sunrisesd.ca/Pages/default.aspx"></a>          
+						<a class="sl-Icon sl-IconAlert"href="//www.sunrisesd.ca/_layouts/SubNew.aspx?List=74afc12c-2355-41cf-aecc-c9614d0c1315&Source=http%3a%2f%2fwww.sunrisesd.ca%2fPages%2fdefault.aspx"></a>          
 					</div>
 					  
 				</div>
@@ -561,6 +644,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
    <script type="text/javascript">
        $(document).ready(function () {
+           var hasControlNav = true;
+           if (5 > 5) {
+               hasControlNav = false;
+           }
+
             $('.featured-slideshowContainer').flexslider({
                reverse: false,
                pauseOnAction: true,
@@ -568,6 +656,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                multipleKeyboard: true,
                selector: ".slideshow_ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf > .featured-item",
                controlsContainer: "#ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf .featured-controls",
+               controlNav: hasControlNav,
 
                animation: "slide",
                animationLoop: true,
@@ -598,6 +687,35 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         <ul class="featured-slideshow slideshow_ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf">
 
             
+                    <li class="featured-item"> 
+                        <div id="ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf_ctl00_FeaturedRepeater_ctl00_featureDiv" class="featured-article">
+                            
+                            <div class="featuredImgContainer">
+                                <picture>
+                                    <source id="ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf_ctl00_FeaturedRepeater_ctl00_itemImgSmall" srcset="http://www.sunrisesd.ca/FeaturedStories/_w/Congratulations_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.sunrisesd.ca/FeaturedStories/Congratulations.jpg" id="ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf_ctl00_FeaturedRepeater_ctl00_itemImg" alt="Congratulations" /> 
+                                </picture>       
+                            </div>                         
+
+                            <div id="ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf_ctl00_FeaturedRepeater_ctl00_entryDiv" class="featured-entry">
+                                <div class="entry-title-container">
+                                <h2 id="ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf_ctl00_FeaturedRepeater_ctl00_entryHeader" class="entry-title">Congratulations</h2>
+                                
+                                <a href="javascript:" id="ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf_ctl00_FeaturedRepeater_ctl00_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
+
+                                </div>
+
+                                <div id="ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf_ctl00_FeaturedRepeater_ctl00_summaryDiv" class="entry-summary complete" tabindex="-1">
+                                    <span id="ctl00_SPWebPartManager1_g_d81fd3a4_d27c_46cb_b069_81800ae30bbf_ctl00_FeaturedRepeater_ctl00_summarySpan" class="entry-summary-body"> <p>​Congratulations to the winners of the, Chatter High, an online career competition titled&#58;&#160; &quot;Manitoba's Most Informed School&quot;.&#160;</p><p>&#160;</p><p>Edward Schreyer School – 1 st  place for AAAA</p><p>Springfield Collegiate – 2 nd  place for AAA</p><p>Lac du Bonnet Senior – 1 st  place for AA</p><p>&#160;</p><p><a href="http&#58;//chatterhigh.com/en/#membership-info" target="_blank"> http&#58;//chatterhigh.com/en/#membership-info </a></p> </span>                         
+                                </div>
+
+                                  
+                            </div>  
+                        
+                            <div class="entry-title-bg"></div>     
+                        </div>                                            
+                    </li>
+                
         </ul>
 
     </div>
@@ -623,7 +741,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<div WebPartID="8cb6d2b4-6f1b-4f84-a9d2-9c7a8fa79dbe" HasPers="false" id="WebPartWPQ6" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{0fd6ea61-703f-4578-aa45-fde607a91bfd}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_0fd6ea61-703f-4578-aa45-fde607a91bfd'] = ctx;</script><div class="sl-EventsSummary sl-CLVSummary" id="g_8cb6d2b4_6f1b_4f84_a9d2_9c7a8fa79dbe">   
    <script type="text/javascript">
         $(document).ready(function () {       
-            $('.sl-EventsSummary .sl-ItemsContainer').flexslider({
+            $('#g_8cb6d2b4_6f1b_4f84_a9d2_9c7a8fa79dbe.sl-EventsSummary .sl-ItemsContainer').flexslider({
                 animation: "slide",
                 animationLoop: false,
 				slideshow: false,
@@ -632,11 +750,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			    itemMargin: 0,
 			    minItems: 2,
 			    maxItems: 4,
-				controlNav: false,                                     			
-				prevText: "", nextText: "",
+				controlNav: false,              
 				selector: ".EventsSummary_g_8cb6d2b4_6f1b_4f84_a9d2_9c7a8fa79dbe > .sl-Item",
 				controlsContainer: "#g_8cb6d2b4_6f1b_4f84_a9d2_9c7a8fa79dbe .sl-SliderControl",
-            });
+            }).find('.sl-Items').magnificPopup({  
+				type:'inline',
+				midClick: true,
+				mainClass: 'mfp-fade',
+				delegate: '.sl-Item', 
+				removalDelay: 300,
+				gallery:{
+					enabled:true
+				  }		
+			});
         });
     </script>
         
@@ -647,12 +773,232 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
  
 		  <div class="sl-ItemsContainer">
           <div class="sl-Items EventsSummary_g_8cb6d2b4_6f1b_4f84_a9d2_9c7a8fa79dbe">
-          <a class="sl-Item" href="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=345&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Event_Item" data-event-start="March 15, 2016 19:00:00 -500" data-event-end="March 15, 2016 21:30:00 -500" data-event-type="single">
+          <a class="sl-Item" href="#0fd6ea61-703f-4578-aa45-fde607a91bfd381" data-event-start="May 13, 2016 0:00:00 -500" data-event-end="May 13, 2016 23:59:00 -500" data-event-type="allday">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/13/2016 12:00:00 AM");
+			var endDate = new Date("5/13/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#0fd6ea61-703f-4578-aa45-fde607a91bfd381 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Goal+Setting+%2f+ES+PD+(choice)+%2f+Colony+teaching+day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
    <div class="sl-Eventdateicon">
 		<span class="CalendarTop left"></span>
 		<span class="CalendarTop right"></span>
-		<div class="sl-dateiconDate">15</div>
-		<div class="sl-dateiconMonth">Mar</div>
+		<div class="sl-dateiconDate">13</div>
+		<div class="sl-dateiconMonth">May</div>
+	</div>
+	
+	<div class="sl-EventBody">
+		<div class="sl-Title">Goal Setting / ES PD (choice) / Colony teaching day</div>
+		<div class="sl-EventTimeicon">
+			<div class='sl-EventType'>All Day</div>
+		</div>
+	</div>
+	<div class="mfp-hide modalPopup" id="0fd6ea61-703f-4578-aa45-fde607a91bfd381">
+					
+	
+		<div class="sl-Title">Goal Setting / ES PD (choice) / Colony teaching day</div>	 
+		<div class="sl-Date">May 13, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> PD Day</div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Goal Setting / ES PD (choice) / Colony teaching day" data-url="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=381&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.sunrisesd.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=0fd6ea61-703f-4578-aa45-fde607a91bfd&CacheControl=1&ID=381&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Goal Setting / ES PD (choice) / Colony teaching day&Body=Goal Setting / ES PD (choice) / Colony teaching day http://www.sunrisesd.ca/Pages/newsitem.aspx?ItemID=381&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#0fd6ea61-703f-4578-aa45-fde607a91bfd334" data-event-start="May 13, 2016 9:00:00 -500" data-event-end="May 13, 2016 15:30:00 -500" data-event-type="single">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/13/2016 9:00:00 AM");
+			var endDate = new Date("5/13/2016 3:30:00 PM");
+			var type = "time";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#0fd6ea61-703f-4578-aa45-fde607a91bfd334 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Clinician%27s+Meeting&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=SEC-MPR&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<span class="CalendarTop left"></span>
+		<span class="CalendarTop right"></span>
+		<div class="sl-dateiconDate">13</div>
+		<div class="sl-dateiconMonth">May</div>
+	</div>
+	
+	<div class="sl-EventBody">
+		<div class="sl-Title">Clinician's Meeting</div>
+		<div class="sl-EventTimeicon">
+			<div class="sl-EventType">9:00 AM-  3:30 PM</div>
+		</div>
+	</div>
+	<div class="mfp-hide modalPopup" id="0fd6ea61-703f-4578-aa45-fde607a91bfd334">
+					
+	
+		<div class="sl-Title">Clinician's Meeting</div>	 
+		<div class="sl-Date">May 13, 2016 </div>	
+		<div class="sl-Time"><div class="sl-EventType">09:00 AM -  03:30 PM</div>
+		</div>		
+		<div class="sl-Location">SEC-MPR Meeting</div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Clinician's Meeting" data-url="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=334&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.sunrisesd.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=0fd6ea61-703f-4578-aa45-fde607a91bfd&CacheControl=1&ID=334&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Clinician's Meeting&Body=Clinician's Meeting http://www.sunrisesd.ca/Pages/newsitem.aspx?ItemID=334&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#0fd6ea61-703f-4578-aa45-fde607a91bfd382" data-event-start="May 16, 2016 0:00:00 -500" data-event-end="May 16, 2016 23:59:00 -500" data-event-type="allday">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/16/2016 12:00:00 AM");
+			var endDate = new Date("5/16/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#0fd6ea61-703f-4578-aa45-fde607a91bfd382 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Colony+Admin+Day+(Goal+setting)&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<span class="CalendarTop left"></span>
+		<span class="CalendarTop right"></span>
+		<div class="sl-dateiconDate">16</div>
+		<div class="sl-dateiconMonth">May</div>
+	</div>
+	
+	<div class="sl-EventBody">
+		<div class="sl-Title">Colony Admin Day (Goal setting)</div>
+		<div class="sl-EventTimeicon">
+			<div class='sl-EventType'>All Day</div>
+		</div>
+	</div>
+	<div class="mfp-hide modalPopup" id="0fd6ea61-703f-4578-aa45-fde607a91bfd382">
+					
+	
+		<div class="sl-Title">Colony Admin Day (Goal setting)</div>	 
+		<div class="sl-Date">May 16, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Colony Admin Day (Goal setting)" data-url="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=382&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.sunrisesd.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=0fd6ea61-703f-4578-aa45-fde607a91bfd&CacheControl=1&ID=382&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Colony Admin Day (Goal setting)&Body=Colony Admin Day (Goal setting) http://www.sunrisesd.ca/Pages/newsitem.aspx?ItemID=382&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#0fd6ea61-703f-4578-aa45-fde607a91bfd383" data-event-start="May 17, 2016 0:00:00 -500" data-event-end="May 17, 2016 23:59:00 -500" data-event-type="allday">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/17/2016 12:00:00 AM");
+			var endDate = new Date("5/17/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#0fd6ea61-703f-4578-aa45-fde607a91bfd383 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Colony+PD+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<span class="CalendarTop left"></span>
+		<span class="CalendarTop right"></span>
+		<div class="sl-dateiconDate">17</div>
+		<div class="sl-dateiconMonth">May</div>
+	</div>
+	
+	<div class="sl-EventBody">
+		<div class="sl-Title">Colony PD Day</div>
+		<div class="sl-EventTimeicon">
+			<div class='sl-EventType'>All Day</div>
+		</div>
+	</div>
+	<div class="mfp-hide modalPopup" id="0fd6ea61-703f-4578-aa45-fde607a91bfd383">
+					
+	
+		<div class="sl-Title">Colony PD Day</div>	 
+		<div class="sl-Date">May 17, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Colony PD Day" data-url="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=383&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.sunrisesd.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=0fd6ea61-703f-4578-aa45-fde607a91bfd&CacheControl=1&ID=383&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Colony PD Day&Body=Colony PD Day http://www.sunrisesd.ca/Pages/newsitem.aspx?ItemID=383&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#0fd6ea61-703f-4578-aa45-fde607a91bfd349" data-event-start="May 17, 2016 19:00:00 -500" data-event-end="May 17, 2016 21:30:00 -500" data-event-type="single">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/17/2016 7:00:00 PM");
+			var endDate = new Date("5/17/2016 9:30:00 PM");
+			var type = "time";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#0fd6ea61-703f-4578-aa45-fde607a91bfd349 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Board+Meeting&dates="+ startDate +"/"+ endDate +"&details=&location=SEC+-+MPR&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<span class="CalendarTop left"></span>
+		<span class="CalendarTop right"></span>
+		<div class="sl-dateiconDate">17</div>
+		<div class="sl-dateiconMonth">May</div>
 	</div>
 	
 	<div class="sl-EventBody">
@@ -661,62 +1007,27 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<div class="sl-EventType">7:00 PM-  9:30 PM</div>
 		</div>
 	</div>
-</a><a class="sl-Item" href="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=376&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Event_Item" data-event-start="March 18, 2016 0:00:00 -500" data-event-end="March 18, 2016 23:59:00 -500" data-event-type="allday">
-   <div class="sl-Eventdateicon">
-		<span class="CalendarTop left"></span>
-		<span class="CalendarTop right"></span>
-		<div class="sl-dateiconDate">18</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
+	<div class="mfp-hide modalPopup" id="0fd6ea61-703f-4578-aa45-fde607a91bfd349">
+					
 	
-	<div class="sl-EventBody">
-		<div class="sl-Title">Admin/Parent teacher / K-8 / PD 9-12 / Including Colony schools</div>
-		<div class="sl-EventTimeicon">
-			<div class='sl-EventType'>All Day</div>
-		</div>
-	</div>
-</a><a class="sl-Item" href="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=361&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Event_Item" data-event-start="March 21, 2016 13:00:00 -500" data-event-end="March 21, 2016 15:30:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<span class="CalendarTop left"></span>
-		<span class="CalendarTop right"></span>
-		<div class="sl-dateiconDate">21</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
+		<div class="sl-Title">Board Meeting</div>	 
+		<div class="sl-Date">May 17, 2016 </div>	
+		<div class="sl-Time"><div class="sl-EventType">07:00 PM -  09:30 PM</div>
+		</div>		
+		<div class="sl-Location">SEC - MPR </div>				
+		<div class="sl-Body"></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Board Meeting" data-url="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=349&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.sunrisesd.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=0fd6ea61-703f-4578-aa45-fde607a91bfd&CacheControl=1&ID=349&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Board Meeting&Body=Board Meeting http://www.sunrisesd.ca/Pages/newsitem.aspx?ItemID=349&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
 	
-	<div class="sl-EventBody">
-		<div class="sl-Title">Healthy Schools Team Meeting</div>
-		<div class="sl-EventTimeicon">
-			<div class="sl-EventType">1:00 PM-  3:30 PM</div>
-		</div>
-	</div>
-</a><a class="sl-Item" href="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=377&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Event_Item" data-event-start="March 25, 2016 0:00:00 -500" data-event-end="March 25, 2016 23:59:00 -500" data-event-type="allday">
-   <div class="sl-Eventdateicon">
-		<span class="CalendarTop left"></span>
-		<span class="CalendarTop right"></span>
-		<div class="sl-dateiconDate">25</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	
-	<div class="sl-EventBody">
-		<div class="sl-Title">Good Friday</div>
-		<div class="sl-EventTimeicon">
-			<div class='sl-EventType'>All Day</div>
-		</div>
-	</div>
-</a><a class="sl-Item" href="//www.sunrisesd.ca/Pages/eventitem.aspx?ItemID=378&ListID=0fd6ea61-703f-4578-aa45-fde607a91bfd&TemplateID=Event_Item" data-event-start="March 28, 2016 0:00:00 -500" data-event-end="April 01, 2016 23:59:00 -500" data-event-type="multiday">
-   <div class="sl-Eventdateicon">
-		<span class="CalendarTop left"></span>
-		<span class="CalendarTop right"></span>
-		<div class="sl-dateiconDate">28</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	
-	<div class="sl-EventBody">
-		<div class="sl-Title">Spring Break</div>
-		<div class="sl-EventTimeicon">
-			<div class='sl-EventType'>All Day</div>
-		</div>
-	</div>
 </a></div><span class="sl-GradientTransition"></span>
         <div class="sl-SliderControl">​</div>
 
@@ -745,15 +1056,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<h2><a href="/Documents/Forms/AllItems.aspx">Publications</a></h2>
 			
             <a class="sl-Icon sl-IconRss" href="//www.sunrisesd.ca/_layouts/listfeed.aspx?List=e0f37c0e-a28e-4096-8209-b9d0f9978c4b"></a>
-			<a class="sl-Icon sl-IconAlert"href="//www.sunrisesd.ca/_layouts/SubNew.aspx?List=e0f37c0e-a28e-4096-8209-b9d0f9978c4b&Source=http://www.sunrisesd.ca/Pages/default.aspx"></a>
+			<a class="sl-Icon sl-IconAlert" href="//www.sunrisesd.ca/_layouts/SubNew.aspx?List=e0f37c0e-a28e-4096-8209-b9d0f9978c4b&Source=http%3a%2f%2fwww.sunrisesd.ca%2fPages%2fdefault.aspx"></a>
 			<a class="sl-More top" href="/Documents/Forms/AllItems.aspx">See all <span class="screen-tablet-hide">publications</span></a>
             
 		</div>                                              
 		
 		
 		<div class="sl-Items">
-			<div class="sl-Item sl-Icon-gen sl-Icon-pdf"><a href="//www.sunrisesd.ca/_layouts/15/download.aspx?SourceUrl=/Documents/Budget Highlighter 2016-2017.pdf"><img width="16" height="16" border="0" alt="Budget Highlighter 2016-2017.pdf" title="Budget Highlighter 2016-2017.pdf" src="/_LAYOUTS/15/Images/icpdf.png" />
-<span class="sl-DocTitle"><span class="sl-DocName display">Budget Highlighter 2016-2017</span></span><span class="sl-DocDownload"></span>
+			<div class="sl-Item sl-Icon-gen sl-Icon-pdf"><a href="//www.sunrisesd.ca/_layouts/15/download.aspx?SourceUrl=/Documents/Five Year Capital Plan.pdf"><img width="16" height="16" border="0" alt="Five Year Capital Plan.pdf" title="Five Year Capital Plan.pdf" src="/_LAYOUTS/15/Images/icpdf.png" />
+<span class="sl-DocTitle"><span class="sl-DocName display">Five Year Capital Plan</span></span><span class="sl-DocDownload"></span>
+</a></div><div class="sl-Item sl-Icon-gen sl-Icon-pdf"><a href="//www.sunrisesd.ca/_layouts/15/download.aspx?SourceUrl=/Documents/Min. of Ed. Letter Mar 3 2016 - MNP  External Review Concluded.pdf"><img width="16" height="16" border="0" alt="Min. of Ed. Letter Mar 3 2016 - MNP  External Review Concluded.pdf" title="Min. of Ed. Letter Mar 3 2016 - MNP  External Review Concluded.pdf" src="/_LAYOUTS/15/Images/icpdf.png" />
+<span class="sl-DocTitle"><span class="sl-DocName display">Min. of Ed. Letter Mar 3 2016 - MNP  External Review Concluded</span></span><span class="sl-DocDownload"></span>
 </a></div><div class="sl-Item sl-Icon-gen sl-Icon-pdf"><a href="//www.sunrisesd.ca/_layouts/15/download.aspx?SourceUrl=/Documents/Letter to the Minister of Education - MNP External Review January 2016 Update.pdf"><img width="16" height="16" border="0" alt="Letter to the Minister of Education - MNP External Review January 2016 Update.pdf" title="Letter to the Minister of Education - MNP External Review January 2016 Update.pdf" src="/_LAYOUTS/15/Images/icpdf.png" />
 <span class="sl-DocTitle"><span class="sl-DocName display">Letter to the Minister of Education - MNP External Review January 2016 Update</span></span><span class="sl-DocDownload"></span>
 </a></div><div class="sl-Item sl-Icon-gen sl-Icon-pdf"><a href="//www.sunrisesd.ca/_layouts/15/download.aspx?SourceUrl=/Documents/January 2016 Update Re the MNP External Review Report.pdf"><img width="16" height="16" border="0" alt="January 2016 Update Re the MNP External Review Report.pdf" title="January 2016 Update Re the MNP External Review Report.pdf" src="/_LAYOUTS/15/Images/icpdf.png" />
@@ -784,7 +1097,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	    <h2><a href="//www.sunrisesd.ca/Pages/newsarchive.aspx?ListID=b750574f-dec6-464f-8c6a-ea3bb67c6109&TemplateID=Announcement_Archive">Division News</a></h2>
 		
         <a class="sl-Icon sl-IconRss" href="//www.sunrisesd.ca/_layouts/listfeed.aspx?List=b750574f-dec6-464f-8c6a-ea3bb67c6109"></a>
-		<a class="sl-Icon sl-IconAlert"href="//www.sunrisesd.ca/_layouts/SubNew.aspx?List=b750574f-dec6-464f-8c6a-ea3bb67c6109&Source=http://www.sunrisesd.ca/Pages/default.aspx"></a>	
+		<a class="sl-Icon sl-IconAlert" href="//www.sunrisesd.ca/_layouts/SubNew.aspx?List=b750574f-dec6-464f-8c6a-ea3bb67c6109&Source=http%3a%2f%2fwww.sunrisesd.ca%2fPages%2fdefault.aspx"></a>	
 		<a class="sl-More top" href="//www.sunrisesd.ca/Pages/newsarchive.aspx?ListID=b750574f-dec6-464f-8c6a-ea3bb67c6109&TemplateID=Announcement_Archive">View all <span class="screen-tablet-hide">announcements</span></a>
                 
 	</div>
@@ -792,6 +1105,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 	<div class="sl-Items">
 	<li class="sl-Item">
+	<a href="//www.sunrisesd.ca/Pages/newsitem.aspx?ItemID=121&ListID=b750574f-dec6-464f-8c6a-ea3bb67c6109&TemplateID=Announcement_Item">
+          <div class="sl-imgFrame">
+            
+            <span class="show"><img class="sl-CLVFieldImage default" src="_layouts/15/Images/Scholantis/Shared/wave%204/SunRiseAnnouncementsImgStock.png" alt="SunRiseAnnouncementsImgStock.png"/></span>
+          </div>
+          <div class="sl-Title">Budget Highlighter 2016-2017<span class="sl-AttachmentIcon"></span></div>
+		  <div class="sl-Date">March 21, 2016</div>
+          <div class="sl-Body"></div>
+	</a>
+</li><li class="sl-Item">
 	<a href="//www.sunrisesd.ca/Pages/newsitem.aspx?ItemID=118&ListID=b750574f-dec6-464f-8c6a-ea3bb67c6109&TemplateID=Announcement_Item">
           <div class="sl-imgFrame">
             
@@ -820,7 +1143,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<div WebPartID="b388e242-6bdd-49ee-89c3-e1145613b886" HasPers="false" id="WebPartWPQ8" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{21f44ccf-c94f-4fb5-aacf-bc002a046a67}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_21f44ccf-c94f-4fb5-aacf-bc002a046a67'] = ctx;</script><div class="sl-FeaturedLinksSummary sl-CLVSummary">
     <div class="sl-WPHeader">    
 		 <h2>Featured Links</h2>		 <a class="sl-Icon sl-IconRss" href="//www.sunrisesd.ca/_layouts/listfeed.aspx?List=21f44ccf-c94f-4fb5-aacf-bc002a046a67"></a>
-		 <a class="sl-Icon sl-IconAlert" href="//www.sunrisesd.ca/_layouts/SubNew.aspx?List=21f44ccf-c94f-4fb5-aacf-bc002a046a67&Source=http://www.sunrisesd.ca/Pages/default.aspx"></a>
+		 <a class="sl-Icon sl-IconAlert" href="//www.sunrisesd.ca/_layouts/SubNew.aspx?List=21f44ccf-c94f-4fb5-aacf-bc002a046a67&Source=http%3a%2f%2fwww.sunrisesd.ca%2fPages%2fdefault.aspx"></a>
 	</div>	  
 	 
 			  <div class="sl-FeaturedLinksWrapper"><div class="display sl-FeaturedLinks ">
@@ -867,6 +1190,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		
 	<a href="http://www.sunrisesd.ca/weather/Pages/default.aspx" target="">
 		The Weather Page at Sunrise School Division
+	</a>
+</div><div class="display sl-FeaturedLinks ">
+		
+	<a href="http://www.sunrisesd.ca/Publications/2016%20-%202017%20%20School%20Calendar.pdf" target="">
+		2016-17 Calendar
 	</a>
 </div></div>
            <div class="sl-WPFooter"><a class="sl-More bottom" href="/Lists/FeaturedLinks/AllItems.aspx">View links</a>
@@ -916,7 +1244,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                 <input name="ctl00$SPWebPartManager1$g_e3e8abee_d8b8_4559_a8df_a17d90484448$ctl00$emailTextBox" type="text" value="Your Email" id="ctl00_SPWebPartManager1_g_e3e8abee_d8b8_4559_a8df_a17d90484448_ctl00_emailTextBox" class="text-input sl-DefaultValue" title="Newsletter Subscription" />
             </div>           
             <div class="sl-Submit">
-                <input type="submit" name="ctl00$SPWebPartManager1$g_e3e8abee_d8b8_4559_a8df_a17d90484448$ctl00$submitButton" value="Go" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SPWebPartManager1$g_e3e8abee_d8b8_4559_a8df_a17d90484448$ctl00$submitButton&quot;, &quot;&quot;, true, &quot;SubscriptionWebPart&quot;, &quot;&quot;, false, false))" id="ctl00_SPWebPartManager1_g_e3e8abee_d8b8_4559_a8df_a17d90484448_ctl00_submitButton" tabindex="-1" />
+                <input type="submit" name="ctl00$SPWebPartManager1$g_e3e8abee_d8b8_4559_a8df_a17d90484448$ctl00$submitButton" value="Go" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SPWebPartManager1$g_e3e8abee_d8b8_4559_a8df_a17d90484448$ctl00$submitButton&quot;, &quot;&quot;, true, &quot;SubscriptionWebPart&quot;, &quot;&quot;, false, false))" id="ctl00_SPWebPartManager1_g_e3e8abee_d8b8_4559_a8df_a17d90484448_ctl00_submitButton" tabindex="-1" Title="Sign up for newsletter" />
             </div>
             
         </div>
@@ -947,7 +1275,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 
                                     <div class="sl-FooterRightColumn col-md-5 col-xs-12">
                                                                                     
-                                        <nav class="sl-Search ms-dialogHidden">        
+                                        <div class="sl-Search ms-dialogHidden">        
                                             <h2 class="sl-SearchTitle">Can't find what you're looking for?</h2>              
 								            
 									            
@@ -960,7 +1288,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 										            
 									            
 								                                            
-                                        </nav>                                        
+                                        </div>                                        
 							            
                                         <a href="/" class="sl-DistrictLink"><img src="/_layouts/15/Images/Scholantis/Web/Wave 4/Icons/footer_district_logo.png" alt="Logo" style=""></a>
                                     </div>
@@ -981,10 +1309,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                         MB, 
                                         R0E 0C0</span><span class='sl-ContactSeparator'></span>    
                                             
-                                        <span class='sl-ContactPhone'><label>Phone: </label><a href='tel:(204) 268.6500'>
+                                        <span class='sl-ContactPhone'><span>Phone: </span><a href='tel:(204) 268.6500'>
                                         (204) 268.6500</a></span>
                         
-                                        <span class='sl-ContactSeparator'>|</span><span class='sl-ContactFax'><label>Fax: </label>(204) 268-6545</span>    
+                                        <span class='sl-ContactSeparator'>|</span><span class='sl-ContactFax'><span>Fax: </span>(204) 268-6545</span>    
                                                                                 
                                         
                                         
@@ -1012,7 +1340,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                         
                                         <a class="sl-utilityMail" href="https://webmail.sunrisesd.ca/owa">Web Mail</a><a href="/Contact/Pages/default.aspx">Contact Us</a>
 							            
-                                                <a class="sl-SignIn" href="http://www.sunrisesd.ca/_LAYOUTS/15/Authenticate.aspx?Source=http%3A%2F%2Fwww%2Esunrisesd%2Eca%2FPages%2Fdefault%2Easpx%3Flogin%3D%2D1387208272">Sign In</a>
+                                                <a class="sl-SignIn" href="http://www.sunrisesd.ca/_LAYOUTS/15/Authenticate.aspx?Source=http%3A%2F%2Fwww%2Esunrisesd%2Eca%2FPages%2Fdefault%2Easpx%3Flogin%3D%2D1271028486">Sign In</a>
                                                                             
                                     </div> 
 
@@ -1034,7 +1362,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0xC24548DB2383B64CCC196230882DDF24D0FAF3C624306BA69AE77A628DB870678CE79E9D46F070E48ED2519667BCE78CB81505758EED641121D56D86DFD3CAC5,11 Mar 2016 20:30:08 -0000';
+            formDigestElement.value = '0x0482A3D91BC4563210E9B8C9CCCF7AD2EA26B752B69D4676C2F2C144AC64C3704D51BF44CF3616E9130FF0399DE1D55454AAD38B27BCD57AE07380F6F9FEC846,09 May 2016 13:34:29 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>

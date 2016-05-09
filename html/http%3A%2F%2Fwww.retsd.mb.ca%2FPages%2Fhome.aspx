@@ -73,7 +73,7 @@
 <link type="text/xml" rel="alternate" href="/_vti_bin/spsdisco.aspx" />
 		
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.min.js?sha1=2439711705752FAC5DD1A6A8D6B1BE63FFCBC76D"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.flexslider.min.js?sha1=C372DDBB2FCD84A31E411126B95A0BE004940A02"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.flexslider.min.js?sha1=55973533EB2F6C1E65FDFA5B9B1D447676511E85"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.cycle2.min.js?sha1=A3DE9AF2595FA644D2EF62FF622E7035A7DAA593"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.lightbox.min.js?sha1=864063D2D0AB92BB6B62F01D8609DDE8D97300EE"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.magnific-popup.min.js?sha1=F85BE68DAD2A9934783C2216BE858F04287DCEA9"></script>
@@ -81,15 +81,97 @@
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.masonry.min.js?sha1=4EFC58E52FED3DA8C6504511D680A322BCE2D4E3"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/bootstrap/bootstrap.min.js?sha1=7ABDF3D60ADAB756D9B8D84022E5C9A6B59877EE"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/selectivizr.min.js?sha1=65DE9F570BF7FDFF1B496CA80AB5FD90599D9E39"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/lodash-fp.min.js?sha1=1435A231A2C9F50F7E131450CF7C2AED957138BC"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/lodash-fp.min.js?sha1=BB369F268163101BC64663ECDED1414BE9CD756F"></script>
 		
 <!--[if lt IE 9]><script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/html5shiv.min.js?sha1=3C9649A10A16AD02EC92F1C020C3F9D1A9E6A0E6"></script><![endif]-->
        
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/respond.js&sha1=2F7558B8CF0EF1014226789457CC2C5D4EADA09F"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/shared.core.js&sha1=7B1DBC37803308A31A2586C58088A08D5AFE53B7"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.core.js&sha1=650D37F8A647BEA4880258CA9C28B8483B247969"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.custom.js&sha1=A9BBD9EDB6439BA8544D0DB06EFBFCBADC46DE90"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/respond.js&sha1=044C5AA968C66729BD2232D1DF5755E0D297022E"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/shared.core.js&sha1=1EE03F7D00EE3CA1CA28B7F29169C72C088B667C"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.core.js&sha1=975F0F9AC7F3B75228E71585C2DF4F0295DCEE05"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.custom.js&sha1=059CA992F5AA67DF9DA023A98A58BBF9BF1A187A"></script>
 <script type="text/javascript">function ProcessImn() { };function ProcessImnMarkers() { }</script>
+
+
+
+
+<script type="text/javascript">
+
+    // we need $(window).load for... reasons
+    // see http://paulryan.com.au/2014/running-addstatus-on-page-load/ and come find me if
+    // you want to cry together
+    $(window).load(function () {
+
+        var noticeTypeClasses = {
+            Information: 'ms-status-blue',
+            Warning: 'ms-status-yellow'
+        };
+
+        var cookieKey = 'slNoticesDismissed';
+
+        var getDismissedIds = function () {
+
+            var cookieContent = SL.Util.GetCookie(cookieKey, window);
+            var dismissedIds = [];
+
+            if (cookieContent) {
+                try {
+                    dismissedIds = JSON.parse(cookieContent);
+                } catch (e) {
+                    // this is okay, it'll default to the empty array
+                    console.log("Failed to parse slNoticesDismissed cookie content: " + cookieContent);
+                }
+            }
+
+            return dismissedIds;
+        };
+
+        SP.SOD.loadMultiple(['sp.js', 'clienttemplates.js'], function () {
+
+            var dismissedIds = getDismissedIds();
+
+            _([])
+                .filter(function (notice) {
+                    return !_.contains(notice.id, dismissedIds);
+                })
+                .forEach(function (notice) {
+
+                    var statusId = SL.Widget.Status.add({
+                        message: '<a href="" class="sl-Dismiss"></a>' +
+                            (notice.title ? '<span class="sl-Title">' + notice.title + '</span>' : '') +
+                            '<span class="sl-Message">' + notice.message + '</span>',
+                        classes: 'sl-Notice ' + (noticeTypeClasses[notice.type] || 'ms-status-blue'),
+                        animate: false
+                    });
+
+                    $('#' + statusId + ' .sl-Dismiss').click(function (event) {
+
+                        event.preventDefault();
+
+                        var dismiss = function (noticeId) {
+
+                            var dismissedIds = getDismissedIds();
+                            dismissedIds.push(noticeId);
+
+                            SL.Util.SetCookie(cookieKey, JSON.stringify(dismissedIds), true, window);
+
+                            SL.Widget.Status.remove(statusId);
+                        };
+
+                        try {
+                            dismiss(notice.id);
+                        } catch (e) {
+                            console.log('Error dismissing notification. Recreating cookie.');
+                            // there's probably something wrong with the cookie if dismiss failed
+                            SL.Util.DeleteCookie(cookieKey, true, window);
+                            // try again with a clean slate
+                            dismiss(notice.id);
+                        } 
+                    });
+                });
+        });
+    });
+</script>
+
 
 
 <script async src='//www.google-analytics.com/analytics.js'></script>
@@ -102,8 +184,8 @@
 </title><link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=OqAycmyMLoQIDkAlzHdMhQ%3D%3D"/>
 <link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/searchv15.css?rev=qarmmE3eURu3ZS2Wsbpf2w%3D%3D"/>
 
-            <link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.core.less&sha1=BFA1B28B0D8E1258780D260DE55BA74ACECA82E3&theme=web.District"></link>
-            <!--[if IE]><link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.ie.less&sha1=31958EDB79B1A7256EEE0C5D63B45FF944427C2A&theme=web.District"></link><![endif]-->
+            <link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.core.less&sha1=953A6BC1F1C2559DD7381D53A5763224357E6E63&theme=web.District"></link>
+            <!--[if IE]><link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.ie.less&sha1=A696BC19FC753AF68A465B82840D22B5D69B4C4B&theme=web.District"></link><![endif]-->
         <link rel="canonical" href="http://www.retsd.mb.ca:80/Pages/home.aspx" /></head>
 
     <body class="
@@ -116,7 +198,7 @@
     sl-SiteTemplateSts
     sl-LayoutScholantisHome
     sl-NoNav
-    sl-HideSiteSettings">
+    ">
 
         <div class="sl-Tile">
 
@@ -142,7 +224,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x7D1E4D4956552BCD4CE93C22D0D28D45A4391003E94800C69B9D798CEC9179B290793BA7EC8F5F7355EB7967C96B72481E07F0F280FD6F2EBC1251CCF286D152,11 Mar 2016 20:33:19 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x4BB57FE0E88E6D11E29155E5703AE2A7B11DD1AF68CA33C38FD6F6D92617108A848DB4068A7C6ED92F88B5DDDE1D46BBE8771CF1F0BD4D137A0900CB16E37299,09 May 2016 13:34:23 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -153,7 +235,7 @@
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzc1NDg3MTg4D2QWAmYPZBYCAgMPZBYEAgEPZBYIAgEPZBYCZg9kFgICAQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAWQCBg9kFgJmD2QWAmYPPCsABgBkAgcPDxYCHgdWaXNpYmxlaGRkAggPDxYCHwFoZGQCGQ9kFgYCAQ9kFggFJmdfYmM0MmJlMDhfOTU3Nl80OGIxXzhhNjNfOTRkOWM2YjcxMGMwD2QWAmYPZBYCAgIPFgQeBWNsYXNzBRpzbC1GZWF0dXJlZFN0b3JpZXNEaXN0cmljdB8BZxYEAgEPFgIfAWhkAgIPFgIeC18hSXRlbUNvdW50AgUWCmYPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHgtOYXZpZ2F0ZVVybAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTcfAWgWAh4Hb25jbGljawWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTcnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh4Gc3Jjc2V0BTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy81X2pwZy5qcGdkAgUPFgQeA3NyYwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvNS5qcGceA2FsdAUNV2UgYmVsaWV2ZSBpbmQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIeCWlubmVyaHRtbAUNV2UgYmVsaWV2ZSBpbmQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBSwgPHA+U2VydmluZyBzdHVkZW50cyAmYW1wOyBjb21tdW5pdHnigIs8L3A+IGQCBw8WAh8BaGQCAQ9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTUfAWgWAh8FBY0BTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NScpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHwYFM2h0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzL193LzNfanBnLmpwZ2QCBQ8WBB8HBSxodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy8zLmpwZx8IBQpXZSBiZWxpZXZlZAIHDxYCHwIFDmZlYXR1cmVkLWVudHJ5FgYCAQ8WAh8JBQpXZSBiZWxpZXZlZAIFDxYCHwIFFmVudHJ5LXN1bW1hcnkgY29tcGxldGUWAgIBDxYCHwkFHiA8cD5FdmVyeW9uZSBpcyB1bmlxdWXigIs8L3A+IGQCBw8WAh8BaGQCAg9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTYfAWgWAh8FBY0BTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NicpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHwYFM2h0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzL193LzRfanBnLmpwZ2QCBQ8WBB8HBSxodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy80LmpwZx8IBQ1XZSBiZWxpZXZlIGluZAIHDxYCHwIFDmZlYXR1cmVkLWVudHJ5FgYCAQ8WAh8JBQ1XZSBiZWxpZXZlIGluZAIFDxYCHwIFFmVudHJ5LXN1bW1hcnkgY29tcGxldGUWAgIBDxYCHwkFLyA8cD5TYWZlJiMxNjA7JmFtcDsgY2FyaW5nIGVudmlyb25tZW50c+KAizwvcD4gZAIHDxYCHwFoZAIDD2QWAgIBDxYCHwIFEGZlYXR1cmVkLWFydGljbGUWCAIBDw8WBB8EBWtodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NB8BaBYCHwUFjQFOZXdJdGVtMihldmVudCwgJ2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD00Jyk7IHJldHVybiBmYWxzZTtkAgMPFgIfBgUzaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvX3cvMl9qcGcuanBnZAIFDxYEHwcFLGh0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzLzIuanBnHwgFDVdlIGJlbGlldmUgd2VkAgcPFgIfAgUOZmVhdHVyZWQtZW50cnkWBgIBDxYCHwkFDVdlIGJlbGlldmUgd2VkAgUPFgIfAgUWZW50cnktc3VtbWFyeSBjb21wbGV0ZRYCAgEPFgIfCQU2IDxwPuKAi0luc3BpcmUgc2tpbGxlZCAmYW1wOyByZXNwb25zaWJsZSBjaXRpemVuczwvcD4gZAIHDxYCHwFoZAIED2QWAgIBDxYCHwIFEGZlYXR1cmVkLWFydGljbGUWCAIBDw8WBB8EBWtodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9Mx8BaBYCHwUFjQFOZXdJdGVtMihldmVudCwgJ2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD0zJyk7IHJldHVybiBmYWxzZTtkAgMPFgIfBgUzaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvX3cvMV9qcGcuanBnZAIFDxYEHwcFLGh0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzLzEuanBnHwgFDVdlIGJlbGlldmUgaW5kAgcPFgIfAgUOZmVhdHVyZWQtZW50cnkWBgIBDxYCHwkFDVdlIGJlbGlldmUgaW5kAgUPFgIfAgUWZW50cnktc3VtbWFyeSBjb21wbGV0ZRYCAgEPFgIfCQUeIDxwPlJlc3BlY3QgJmFtcDsgZGlnbml0eTwvcD4gZAIHDxYCHwFoZAUmZ185MGViYjM1Nl9jZGE1XzRlYTNfYTI0Zl85MmZlNjg1MmI5M2IPZBYEZg8WAh8BaGQCAQ8WAh8BaGQFJmdfNmQyNGQ0NDZfODVlMF80NTZmX2I2YzVfMWQ5OWNiMzYxZjc3D2QWBGYPFgIfAWhkAgEPFgIfAWhkBSZnX2FjODVjNDc0X2ZlYzFfNGY5ZV9iYmEyX2Y4Yjg0M2Y1MzQ2Yw9kFgRmDxYCHwFoZAIBDxYCHwFoZAIFD2QWAgICD2QWAgIBD2QWAgIDD2QWAgIBD2QWAgIVD2QWAgIBDxYCHwFoFgJmD2QWBAICD2QWAgIBDxYCHwFoZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCIw9kFgICAg8PFgIfAWhkZBgBBSljdGwwMCRQbGFjZUhvbGRlclRvcE5hdiRUb3BOYXZpZ2F0aW9uTWVudQ8PZAUESG9tZWTGFD5AM2noLyeoLjk3UDlfkj9Lbt2Fe/lnjZyLNAKaHA==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzc1NDg3MTg4D2QWAmYPZBYCAgMPZBYEAgEPZBYIAgEPZBYCZg9kFgICAQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAWQCBg9kFgJmD2QWAmYPPCsABgBkAgcPDxYCHgdWaXNpYmxlaGRkAggPDxYCHwFoZGQCGQ9kFgYCAQ9kFggFJmdfYmM0MmJlMDhfOTU3Nl80OGIxXzhhNjNfOTRkOWM2YjcxMGMwD2QWAmYPZBYCAgIPFgQeBWNsYXNzBRpzbC1GZWF0dXJlZFN0b3JpZXNEaXN0cmljdB8BZxYEAgEPFgIfAWhkAgIPFgIeC18hSXRlbUNvdW50AgUWCmYPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHgtOYXZpZ2F0ZVVybAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTQfAWgWAh4Hb25jbGljawWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTQnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh4Gc3Jjc2V0BTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy8yX2pwZy5qcGdkAgUPFgQeA3NyYwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvMi5qcGceA2FsdAUNV2UgYmVsaWV2ZSB3ZWQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIeCWlubmVyaHRtbAUNV2UgYmVsaWV2ZSB3ZWQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBTYgPHA+4oCLSW5zcGlyZSBza2lsbGVkICZhbXA7IHJlc3BvbnNpYmxlIGNpdGl6ZW5zPC9wPiBkAgcPFgIfAWhkAgEPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHwQFa2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD0zHwFoFgIfBQWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTMnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh8GBTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy8xX2pwZy5qcGdkAgUPFgQfBwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvMS5qcGcfCAUNV2UgYmVsaWV2ZSBpbmQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIfCQUNV2UgYmVsaWV2ZSBpbmQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBR4gPHA+UmVzcGVjdCAmYW1wOyBkaWduaXR5PC9wPiBkAgcPFgIfAWhkAgIPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHwQFa2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD03HwFoFgIfBQWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTcnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh8GBTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy81X2pwZy5qcGdkAgUPFgQfBwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvNS5qcGcfCAUNV2UgYmVsaWV2ZSBpbmQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIfCQUNV2UgYmVsaWV2ZSBpbmQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBSwgPHA+U2VydmluZyBzdHVkZW50cyAmYW1wOyBjb21tdW5pdHnigIs8L3A+IGQCBw8WAh8BaGQCAw9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTUfAWgWAh8FBY0BTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NScpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHwYFM2h0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzL193LzNfanBnLmpwZ2QCBQ8WBB8HBSxodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy8zLmpwZx8IBQpXZSBiZWxpZXZlZAIHDxYCHwIFDmZlYXR1cmVkLWVudHJ5FgYCAQ8WAh8JBQpXZSBiZWxpZXZlZAIFDxYCHwIFFmVudHJ5LXN1bW1hcnkgY29tcGxldGUWAgIBDxYCHwkFHiA8cD5FdmVyeW9uZSBpcyB1bmlxdWXigIs8L3A+IGQCBw8WAh8BaGQCBA9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTYfAWgWAh8FBY0BTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NicpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHwYFM2h0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzL193LzRfanBnLmpwZ2QCBQ8WBB8HBSxodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy80LmpwZx8IBQ1XZSBiZWxpZXZlIGluZAIHDxYCHwIFDmZlYXR1cmVkLWVudHJ5FgYCAQ8WAh8JBQ1XZSBiZWxpZXZlIGluZAIFDxYCHwIFFmVudHJ5LXN1bW1hcnkgY29tcGxldGUWAgIBDxYCHwkFLyA8cD5TYWZlJiMxNjA7JmFtcDsgY2FyaW5nIGVudmlyb25tZW50c+KAizwvcD4gZAIHDxYCHwFoZAUmZ185MGViYjM1Nl9jZGE1XzRlYTNfYTI0Zl85MmZlNjg1MmI5M2IPZBYEZg8WAh8BaGQCAQ8WAh8BaGQFJmdfNmQyNGQ0NDZfODVlMF80NTZmX2I2YzVfMWQ5OWNiMzYxZjc3D2QWBGYPFgIfAWhkAgEPFgIfAWhkBSZnX2FjODVjNDc0X2ZlYzFfNGY5ZV9iYmEyX2Y4Yjg0M2Y1MzQ2Yw9kFgRmDxYCHwFoZAIBDxYCHwFoZAIFD2QWAgICD2QWAgIBD2QWAgIDD2QWAgIBD2QWAgIVD2QWAgIBDxYCHwFoFgJmD2QWBAICD2QWAgIBDxYCHwFoZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCIw9kFgICAg8PFgIfAWhkZBgBBSljdGwwMCRQbGFjZUhvbGRlclRvcE5hdiRUb3BOYXZpZ2F0aW9uTWVudQ8PZAUESG9tZWRrDHzC1HsXw00Xh5K4L7bYDoQoJ/n1+TKns9hslugCuA==" />
 </div>
 
 <script type="text/javascript">
@@ -186,7 +268,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.retsd.mb.ca", siteAbsoluteUrl: "http:\u002f\u002fwww.retsd.mb.ca", serverRequestPath: "\u002fPages\u002fhome.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "River East Transcona School Division", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-03-11T20:33:19.3274822Z") - new Date(), siteClientTag: "15$$15.0.4719.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:200801},pageListId:"{7d682e8a-1b1e-422f-9275-8a1eda0d3eb3}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.retsd.mb.ca", siteAbsoluteUrl: "http:\u002f\u002fwww.retsd.mb.ca", serverRequestPath: "\u002fPages\u002fhome.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "River East Transcona School Division", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T13:34:23.2642770Z") - new Date(), siteClientTag: "15$$15.0.4719.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:200801},pageListId:"{7d682e8a-1b1e-422f-9275-8a1eda0d3eb3}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var _spWebPartComponents = new Object();//]]>
@@ -286,7 +368,7 @@ document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){remo
             registerOverride(101);
             registerOverride(700);
         });
-    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 2, 11),showWeeks:0,timeZone:'-06:00:00.0003812',timeZoneInHours:-6,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
+    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 4, 9),showWeeks:0,timeZone:'-05:00:00.0008973',timeZoneInHours:-5,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
 UpdateFormDigest('\u002f', 1440000);if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;};
 return true;
 }
@@ -367,7 +449,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 							   
                                 <div class="sl-SchoolDay">
                                     <div class="sl-SocialMedia">
-                                        <label></label><a class='sl-twitter' target="_blank" href='http://www.twitter.com/RETSDschools'></a><a class='sl-facebook'  target="_blank" href='http://www.facebook.com/retsd'></a><a class='sl-vimeo'  target="_blank" href='http://www.vimeo.com/retsdvideo'></a><br>
+                                        <span></span><a class='sl-twitter' target="_blank" href='http://www.twitter.com/RETSDschools'></a><a class='sl-facebook'  target="_blank" href='http://www.facebook.com/retsd'></a><a class='sl-vimeo'  target="_blank" href='http://www.vimeo.com/retsdvideo'></a><br>
                                     </div>
                                     <span class="sl-SchoolDayContent"></span>
                                     <div id="sl-TopShadow"></div>
@@ -386,13 +468,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/SeniorAdministration/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Senior Administration</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/SeniorAdministration/SuperintendentMessage/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Superintendent's Message</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Board of Trustees</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/rept15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Annual Report</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Board meeting dates 2015-16.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Meeting Dates</span></span></a></li><li class="dynamic dynamic-children"><a class="dynamic dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/BoardMinutes/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Board Minutes</span></span></a><ul class="dynamic">
-					<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board of Trustees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annrepor13-14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Annual Report</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Documents/Board meeting dates 2014-15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Meeting Dates 2014-15</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.mbschoolboards.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">MB School Boards Association</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Public Presentations to the Board 103014.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Presentations to the Board</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.schoolboardswork.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">School Boards Work</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan</span></span></a></li>
-				</ul></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/BoardStandingCommittees/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Standing Committees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Budget/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/code_conduct.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.mbschoolboards.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Manitoba School Board Association</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Public Presentations to the Board 103014.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Presentations to the Board</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://web2.gov.mb.ca/laws/statutes/ccsm/p250e.php" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Schools Act</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/rept15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Annual Report</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Board meeting dates 2015-16.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Meeting Dates</span></span></a></li><li class="dynamic dynamic-children"><a class="dynamic dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/BoardMinutes/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Board Minutes</span></span></a><ul class="dynamic">
+					<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board of Trustees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annrepor13-14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Annual Report</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Documents/Board meeting dates 2014-15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Meeting Dates 2014-15</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.mbschoolboards.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">MB School Boards Association</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.schoolboardswork.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">School Boards Work</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan</span></span></a></li>
+				</ul></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/BoardStandingCommittees/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Standing Committees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Budget/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Public presentations to the board of trustees041316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Presentations to the Board</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/code_conduct.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.mbschoolboards.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Manitoba School Board Association</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://web2.gov.mb.ca/laws/statutes/ccsm/p250e.php" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Schools Act</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/DivisionFacts/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Division Facts</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/info_booklet.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Information Book</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan 2011-16</span></span></a></li>
 			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Our History/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Our History</span></span></a></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Policies</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/CodeofConduct/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/PolicyDocuments/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Policy Documents</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Introduction to Policies A to K.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Introduction to Policies A–K</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/code_conduct.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/Documents/Cross Index 012016.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Cross Index A–K</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Gender Identity Guidelines - Employees 1215.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gender Identity Guidelines - Employees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Gender Identity Guidelines - Students 0316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gender Identity Guidelines - Students</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/CodeofConduct/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/PolicyDocuments/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Policy Documents</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Introduction to Policies A to K.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Introduction to Policies A–K</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/Documents/Cross Index Alphabetical 031516.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Cross Index Alphabetical</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/code_conduct.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Gender Identity Guidelines - Employees 1215.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gender Identity Guidelines - Employees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Gender Identity Guidelines - Students 0316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gender Identity Guidelines - Students</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/ExternalResearch/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">External Research</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/yourretsd/ExternalResearch/Documents/RETSD External Research Guidelines v9.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Research Guidelines</span></span></a></li>
 			</ul></li>
@@ -426,7 +508,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/newsarchive/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">News Archive</span></span></a></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/OtherPublications/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Other Publications</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_medication.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Administering Medication</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/attendance_bro.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Attendance Brochure</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_countKinderBroch.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Countdown to Kindergarten</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/ey_brochureFINAL.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Early Years Brochure</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_iepBooklet.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">IEP Booklet</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/info_booklet.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Information Book</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_lunchProgPar.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Lunch Supervision Guide</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/mid_yrs_book12FINAL.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Middle Years Booklet</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_sen_yrs_book.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Senior Years Booklet</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/torch/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">The Torch</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_2_2_16w.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">February 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_12_07_15W.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">December 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_10_15_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">October 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_05_25_15web.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">June 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_04_09_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">April 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Budget_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_02_09_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">February 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_12_12_14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">December 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_10_23_14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">October 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_su14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Summer 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_s14W.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Spring 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_w14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Winter 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_su13.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Summer 2013</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_s13.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Spring 2013</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_ap16.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">April 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/budget16.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_2_2_16w.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">February 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_12_07_15W.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">December 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_10_15_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">October 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_05_25_15web.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">June 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_04_09_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">April 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Budget_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_02_09_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">February 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_12_12_14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">December 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_10_23_14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">October 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_su14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Summer 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_s14W.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Spring 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_w14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Winter 2014</span></span></a></li>
 			</ul></li>
 		</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Contact/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Contact Us</span></span></a></li>
 	</ul>
@@ -525,6 +607,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
    <script type="text/javascript">
        $(document).ready(function () {
+           var hasControlNav = true;
+           if (5 > 5) {
+               hasControlNav = false;
+           }
+
             $('.featured-slideshowContainer').flexslider({
                reverse: false,
                pauseOnAction: true,
@@ -532,6 +619,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                multipleKeyboard: true,
                selector: ".slideshow_ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0 > .featured-item",
                controlsContainer: "#ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0 .featured-controls",
+               controlNav: hasControlNav,
 
                animation: "slide",
                animationLoop: true,
@@ -567,21 +655,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/5_jpg.jpg" media="(max-width: 768px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/5.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_itemImg" alt="We believe in" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/2_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/2.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_itemImg" alt="We believe we" /> 
                                 </picture>       
                             </div>                         
 
                             <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_entryDiv" class="featured-entry">
                                 <div class="entry-title-container">
-                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_entryHeader" class="entry-title">We believe in</h2>
+                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_entryHeader" class="entry-title">We believe we</h2>
                                 
                                 <a href="javascript:" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
 
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_summarySpan" class="entry-summary-body"> <p>Serving students &amp; community​</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_summarySpan" class="entry-summary-body"> <p>​Inspire skilled &amp; responsible citizens</p> </span>                         
                                 </div>
 
                                   
@@ -596,21 +684,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/3_jpg.jpg" media="(max-width: 768px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/3.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_itemImg" alt="We believe" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/1_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/1.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_itemImg" alt="We believe in" /> 
                                 </picture>       
                             </div>                         
 
                             <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_entryDiv" class="featured-entry">
                                 <div class="entry-title-container">
-                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_entryHeader" class="entry-title">We believe</h2>
+                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_entryHeader" class="entry-title">We believe in</h2>
                                 
                                 <a href="javascript:" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
 
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_summarySpan" class="entry-summary-body"> <p>Everyone is unique​</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_summarySpan" class="entry-summary-body"> <p>Respect &amp; dignity</p> </span>                         
                                 </div>
 
                                   
@@ -625,8 +713,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl02_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/4_jpg.jpg" media="(max-width: 768px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/4.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl02_itemImg" alt="We believe in" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl02_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/5_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/5.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl02_itemImg" alt="We believe in" /> 
                                 </picture>       
                             </div>                         
 
@@ -639,7 +727,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl02_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl02_summarySpan" class="entry-summary-body"> <p>Safe&#160;&amp; caring environments​</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl02_summarySpan" class="entry-summary-body"> <p>Serving students &amp; community​</p> </span>                         
                                 </div>
 
                                   
@@ -654,21 +742,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/2_jpg.jpg" media="(max-width: 768px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/2.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_itemImg" alt="We believe we" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/3_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/3.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_itemImg" alt="We believe" /> 
                                 </picture>       
                             </div>                         
 
                             <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_entryDiv" class="featured-entry">
                                 <div class="entry-title-container">
-                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_entryHeader" class="entry-title">We believe we</h2>
+                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_entryHeader" class="entry-title">We believe</h2>
                                 
                                 <a href="javascript:" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
 
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_summarySpan" class="entry-summary-body"> <p>​Inspire skilled &amp; responsible citizens</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_summarySpan" class="entry-summary-body"> <p>Everyone is unique​</p> </span>                         
                                 </div>
 
                                   
@@ -683,8 +771,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/1_jpg.jpg" media="(max-width: 768px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/1.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_itemImg" alt="We believe in" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/4_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/4.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_itemImg" alt="We believe in" /> 
                                 </picture>       
                             </div>                         
 
@@ -697,7 +785,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_summarySpan" class="entry-summary-body"> <p>Respect &amp; dignity</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_summarySpan" class="entry-summary-body"> <p>Safe&#160;&amp; caring environments​</p> </span>                         
                                 </div>
 
                                   
@@ -711,7 +799,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
     </div>
 
-    <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_Div2" class="featured-controls">
+    <div class="featured-controls">
    
     </div>
 
@@ -772,32 +860,46 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	
 			  <div class="sl-Items">
 			  <li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=132&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=148&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
           <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/news/PublishingImages/retsd_logo-large.jpg" alt="retsd_logo-large.jpg"/></div>
-          <div class="sl-Title">Human rights case regarding transgender student settled </div>
-		  <div class="sl-Date">March 11, 2016</div>
-          <div class="sl-Body">   Elizabeth Burgos and the River East Transcona School Division have reached a voluntary resolution...</div>
+          <div class="sl-Title">Learn more about our trustees</div>
+		  <div class="sl-Date">May 05, 2016</div>
+          <div class="sl-Body">   The members of the RETSD Board of Trustees are a varied and dedicated group...</div>
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=130&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=147&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
           <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/news/PublishingImages/retsd_logo-large.jpg" alt="retsd_logo-large.jpg"/></div>
-          <div class="sl-Title">Gender Identity Guidelines revised</div>
-		  <div class="sl-Date">March 10, 2016</div>
-          <div class="sl-Body">   River East Transcona School Division has revised its gender identity guidelines. The guidelines now...</div>
+          <div class="sl-Title">Making the Move work continues</div>
+		  <div class="sl-Date">May 05, 2016</div>
+          <div class="sl-Body">  ​ The work is continuing in preparation for moving Grade 9 students into Miles...</div>
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=129&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/JT-Tumbling.JPG" alt="JT-Tumbling.JPG"/></div>
-          <div class="sl-Title">RETSD Elementary Schools’ Tumbling Rallies</div>
-		  <div class="sl-Date">March 10, 2016</div>
-          <div class="sl-Body">  ​ The always-popular RETSD Elementary Schools' Tumbling Rallies are just around the bend. Don't...</div>
-	</a>
-</li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=128&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=146&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
           <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/spring16.jpg" alt="spring16.jpg"/></div>
-          <div class="sl-Title">RETSD offers Spring Break Camp</div>
-		  <div class="sl-Date">March 08, 2016</div>
-          <div class="sl-Body">  ​ Parents who are looking for a fun, safe way to keep their kids...</div>
+          <div class="sl-Title">Spring concerts in RETSD</div>
+		  <div class="sl-Date">April 27, 2016</div>
+          <div class="sl-Body">  ​ The warm weather of spring is just about upon us and many of...</div>
+	</a>
+</li><li class="sl-Item">
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=145&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/retsd_logo.jpg" alt="retsd_logo.jpg"/></div>
+          <div class="sl-Title">Byelection for RETSD trustee</div>
+		  <div class="sl-Date">April 27, 2016</div>
+          <div class="sl-Body">   Are you considering running for school trustee in RETSD? Click   here   for more information.​...</div>
+	</a>
+</li><li class="sl-Item">
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=143&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/torch_ap16_Page_1.jpg" alt="torch_ap16_Page_1.jpg"/></div>
+          <div class="sl-Title">April Torch online</div>
+		  <div class="sl-Date">April 13, 2016</div>
+          <div class="sl-Body">  ​ The April issue of the RETSD newsletter,  The Torch , was distributed throughout...</div>
+	</a>
+</li><li class="sl-Item">
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=137&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/EditForm/summer.jpg" alt="summer.jpg"/></div>
+          <div class="sl-Title">Summer school registration</div>
+		  <div class="sl-Date">March 23, 2016</div>
+          <div class="sl-Body">   &#160;  River East Transcona will once again offer a summer school program administered by...</div>
 	</a>
 </li></div>                                                                                                                                                                                           <div class="sl-WPFooter"><a class="sl-More bottom" href="//www.retsd.mb.ca/Pages/newsarchive.aspx">View Announcements</a>          
    </div>
@@ -815,20 +917,28 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<div WebPartID="f9edebdd-9261-40e3-8ce4-2fc11f959f05" HasPers="false" id="WebPartWPQ6" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{6dd55b38-0883-478c-a90c-9d3dabf4da00}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_6dd55b38-0883-478c-a90c-9d3dabf4da00'] = ctx;</script><div class="sl-EventsSummary sl-CLVSummary" id="g_f9edebdd_9261_40e3_8ce4_2fc11f959f05"> 
    <script type="text/javascript">
         $(document).ready(function () {       
-            $('.sl-EventsSummary .sl-ItemsContainer').flexslider({
+            $('#g_f9edebdd_9261_40e3_8ce4_2fc11f959f05.sl-EventsSummary .sl-ItemsContainer').flexslider({
                 animation: "slide",
                 animationLoop: false,
 				slideshow: false,
 				touch: true,
 				itemWidth: 250,
-			    itemMargin: 0,
+			    itemMargin: 10,
 			    minItems: 2,
 			    maxItems: 6,
 				controlNav: false,                                     			
-				prevText: "", nextText: "",
 				selector: ".EventsSummary_g_f9edebdd_9261_40e3_8ce4_2fc11f959f05 > .sl-Item",
 				controlsContainer: "#g_f9edebdd_9261_40e3_8ce4_2fc11f959f05 .sl-SliderControl",
-            });
+            }).find('.sl-Items').magnificPopup({  
+			type:'inline',
+			midClick: true,
+			mainClass: 'mfp-fade',
+			delegate: '.sl-Item', 
+			removalDelay: 300,
+			gallery:{
+				enabled:true
+			  }		
+		});
         });
     </script>
         
@@ -839,142 +949,23 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
  
 		  <div class="sl-ItemsContainer">
 	      <div class="sl-Items EventsSummary_g_f9edebdd_9261_40e3_8ce4_2fc11f959f05">
-          <a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=293&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="March 14, 2016 19:00:00 -500" data-event-end="March 14, 2016 20:30:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">14</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	<div class="sl-Title">Drug & Alcohol Information Evening</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">07</div><div class="sl-Minutes">00</div><div class="sl-AMPM">PM</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=286&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="March 15, 2016 18:30:00 -500" data-event-end="March 15, 2016 20:00:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">15</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	<div class="sl-Title">Board Meeting</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=257&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="March 18, 2016 0:00:00 -500" data-event-end="March 18, 2016 23:59:00 -500" data-event-type="allday">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">18</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	<div class="sl-Title">Co-ordinated Day</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=294&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="March 19, 2016 9:30:00 -500" data-event-end="March 19, 2016 14:00:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">19</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	<div class="sl-Title">Kinder Links Program Registration</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">09</div><div class="sl-Minutes">30</div><div class="sl-AMPM">AM</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=258&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="March 24, 2016 0:00:00 -500" data-event-end="March 24, 2016 23:59:00 -500" data-event-type="allday">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">24</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	<div class="sl-Title">Last Day of Classes Before Spring Break</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=259&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="March 25, 2016 0:00:00 -500" data-event-end="March 25, 2016 23:59:00 -500" data-event-type="allday">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">25</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	<div class="sl-Title">Good Friday</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=260&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="March 26, 2016 8:00:00 -500" data-event-end="April 03, 2016 16:00:00 -500" data-event-type="multiday">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">26</div>
-		<div class="sl-dateiconMonth">Mar</div>
-	</div>
-	<div class="sl-Title">Spring Break!</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=261&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="April 04, 2016 0:00:00 -500" data-event-end="April 04, 2016 23:59:00 -500" data-event-type="allday">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">04</div>
-		<div class="sl-dateiconMonth">Apr</div>
-	</div>
-	<div class="sl-Title">Spring Break Ends</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=287&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="April 05, 2016 18:30:00 -500" data-event-end="April 05, 2016 20:00:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">05</div>
-		<div class="sl-dateiconMonth">Apr</div>
-	</div>
-	<div class="sl-Title">Board Meeting</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=262&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="April 06, 2016 0:00:00 -500" data-event-end="April 06, 2016 23:59:00 -500" data-event-type="allday">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">06</div>
-		<div class="sl-dateiconMonth">Apr</div>
-	</div>
-	<div class="sl-Title">Early Dismissal</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=271&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="April 18, 2016 18:30:00 -500" data-event-end="April 18, 2016 21:30:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">18</div>
-		<div class="sl-dateiconMonth">Apr</div>
-	</div>
-	<div class="sl-Title">Addictions Foundation Parent Intervention Program</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=288&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="April 19, 2016 18:30:00 -500" data-event-end="April 19, 2016 20:00:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">19</div>
-		<div class="sl-dateiconMonth">Apr</div>
-	</div>
-	<div class="sl-Title">Board Meeting</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=263&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="April 22, 2016 0:00:00 -500" data-event-end="April 22, 2016 23:59:00 -500" data-event-type="allday">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">22</div>
-		<div class="sl-dateiconMonth">Apr</div>
-	</div>
-	<div class="sl-Title">Co-ordinated Day</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=272&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="April 22, 2016 18:30:00 -500" data-event-end="April 22, 2016 21:30:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">22</div>
-		<div class="sl-dateiconMonth">Apr</div>
-	</div>
-	<div class="sl-Title">Addictions Foundation Parent Intervention Program</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=289&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="May 03, 2016 18:30:00 -500" data-event-end="May 03, 2016 20:00:00 -500" data-event-type="single">
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">03</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-Title">Board Meeting</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=264&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="May 11, 2016 0:00:00 -500" data-event-end="May 11, 2016 23:59:00 -500" data-event-type="allday">
+          <a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00264" data-event-start="May 11, 2016 0:00:00 -500" data-event-end="May 11, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/11/2016 12:00:00 AM");
+			var endDate = new Date("5/11/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00264 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eAll+schools+dismiss+45+minutes+early.%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
    <div class="sl-Eventdateicon">
 		<div class="sl-dateiconDate">11</div>
 		<div class="sl-dateiconMonth">May</div>
@@ -983,7 +974,44 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div class="sl-EventTimeicon">		
 		<div class='sl-EventType'>All Day</div>
 	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=290&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="May 17, 2016 18:30:00 -500" data-event-end="May 17, 2016 20:00:00 -500" data-event-type="single">
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00264">
+		  			
+	
+		<div class="sl-Title">Early Dismissal</div>	 
+		<div class="sl-Date">May 11, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>All schools dismiss 45 minutes early.</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Early Dismissal" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=264&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=264&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal&Body=Early Dismissal http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=264&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00290" data-event-start="May 17, 2016 18:30:00 -500" data-event-end="May 17, 2016 20:00:00 -500" data-event-type="single">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/17/2016 6:30:00 PM");
+			var endDate = new Date("5/17/2016 8:00:00 PM");
+			var type = "time";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00290 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Board+Meeting&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e*+8%26%2358%3b00+p.m.+is+the+estimated+time+of+the+meeting%27s+conclusion.+This+time+may+vary+depending+on+the+content+of+the+meeting.%3c%2fdiv%3e&location=RETSD+Administration+Offices%2c+589+Roch+St.&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
    <div class="sl-Eventdateicon">
 		<div class="sl-dateiconDate">17</div>
 		<div class="sl-dateiconMonth">May</div>
@@ -992,7 +1020,44 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div class="sl-EventTimeicon">		
 		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
 	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=265&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="May 23, 2016 0:00:00 -500" data-event-end="May 23, 2016 23:59:00 -500" data-event-type="allday">
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00290">
+		  			
+	
+		<div class="sl-Title">Board Meeting</div>	 
+		<div class="sl-Date">May 17, 2016 </div>	
+		<div class="sl-Time"><div class="sl-EventType">06:30 PM -  08:00 PM</div>
+		</div>		
+		<div class="sl-Location">RETSD Administration Offices, 589 Roch St. </div>				
+		<div class="sl-Body"><div>* 8&#58;00 p.m. is the estimated time of the meeting's conclusion. This time may vary depending on the content of the meeting.</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Board Meeting" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=290&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=290&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Board Meeting&Body=Board Meeting http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=290&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00265" data-event-start="May 23, 2016 0:00:00 -500" data-event-end="May 23, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/23/2016 12:00:00 AM");
+			var endDate = new Date("5/23/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00265 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Victoria+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+classes.%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
    <div class="sl-Eventdateicon">
 		<div class="sl-dateiconDate">23</div>
 		<div class="sl-dateiconMonth">May</div>
@@ -1001,7 +1066,44 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div class="sl-EventTimeicon">		
 		<div class='sl-EventType'>All Day</div>
 	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=291&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="June 07, 2016 18:30:00 -500" data-event-end="June 07, 2016 20:00:00 -500" data-event-type="single">
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00265">
+		  			
+	
+		<div class="sl-Title">Victoria Day</div>	 
+		<div class="sl-Date">May 23, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No classes.</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Victoria Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=265&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=265&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Victoria Day&Body=Victoria Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=265&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00291" data-event-start="June 07, 2016 18:30:00 -500" data-event-end="June 07, 2016 20:00:00 -500" data-event-type="single">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("6/7/2016 6:30:00 PM");
+			var endDate = new Date("6/7/2016 8:00:00 PM");
+			var type = "time";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00291 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Board+Meeting&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e*+8%26%2358%3b00+p.m.+is+the+estimated+time+of+the+meeting%27s+conclusion.+This+time+may+vary+depending+on+the+content+of+the+meeting.%3c%2fdiv%3e&location=RETSD+Administration+Offices%2c+589+Roch+St.&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
    <div class="sl-Eventdateicon">
 		<div class="sl-dateiconDate">07</div>
 		<div class="sl-dateiconMonth">Jun</div>
@@ -1010,7 +1112,44 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div class="sl-EventTimeicon">		
 		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
 	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=292&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="June 21, 2016 18:30:00 -500" data-event-end="June 21, 2016 20:00:00 -500" data-event-type="single">
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00291">
+		  			
+	
+		<div class="sl-Title">Board Meeting</div>	 
+		<div class="sl-Date">Jun 07, 2016 </div>	
+		<div class="sl-Time"><div class="sl-EventType">06:30 PM -  08:00 PM</div>
+		</div>		
+		<div class="sl-Location">RETSD Administration Offices, 589 Roch St. </div>				
+		<div class="sl-Body"><div>* 8&#58;00 p.m. is the estimated time of the meeting's conclusion. This time may vary depending on the content of the meeting.</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Board Meeting" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=291&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=291&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Board Meeting&Body=Board Meeting http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=291&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00292" data-event-start="June 21, 2016 18:30:00 -500" data-event-end="June 21, 2016 20:00:00 -500" data-event-type="single">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("6/21/2016 6:30:00 PM");
+			var endDate = new Date("6/21/2016 8:00:00 PM");
+			var type = "time";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00292 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Board+Meeting&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e*+8%26%2358%3b00+p.m.+is+the+estimated+time+of+the+meeting%27s+conclusion.+This+time+may+vary+depending+on+the+content+of+the+meeting.%3c%2fdiv%3e&location=RETSD+Administration+Offices%2c+589+Roch+St.&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
    <div class="sl-Eventdateicon">
 		<div class="sl-dateiconDate">21</div>
 		<div class="sl-dateiconMonth">Jun</div>
@@ -1019,7 +1158,44 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div class="sl-EventTimeicon">		
 		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
 	</div>	
-</a><a class="sl-Item" href="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=266&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Event_Item" data-event-start="June 30, 2016 0:00:00 -500" data-event-end="June 30, 2016 23:59:00 -500" data-event-type="allday">
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00292">
+		  			
+	
+		<div class="sl-Title">Board Meeting</div>	 
+		<div class="sl-Date">Jun 21, 2016 </div>	
+		<div class="sl-Time"><div class="sl-EventType">06:30 PM -  08:00 PM</div>
+		</div>		
+		<div class="sl-Location">RETSD Administration Offices, 589 Roch St. </div>				
+		<div class="sl-Body"><div>* 8&#58;00 p.m. is the estimated time of the meeting's conclusion. This time may vary depending on the content of the meeting.</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Board Meeting" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=292&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=292&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Board Meeting&Body=Board Meeting http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=292&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00266" data-event-start="June 30, 2016 0:00:00 -500" data-event-end="June 30, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("6/30/2016 12:00:00 AM");
+			var endDate = new Date("6/30/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00266 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Last+Day+of+School!+(Early+Dismissal)&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eAll+schools+dismiss+one+hour+early.%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
    <div class="sl-Eventdateicon">
 		<div class="sl-dateiconDate">30</div>
 		<div class="sl-dateiconMonth">Jun</div>
@@ -1028,6 +1204,1315 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div class="sl-EventTimeicon">		
 		<div class='sl-EventType'>All Day</div>
 	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00266">
+		  			
+	
+		<div class="sl-Title">Last Day of School! (Early Dismissal)</div>	 
+		<div class="sl-Date">Jun 30, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>All schools dismiss one hour early.</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Last Day of School! (Early Dismissal)" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=266&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=266&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Last Day of School! (Early Dismissal)&Body=Last Day of School! (Early Dismissal) http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=266&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00295" data-event-start="September 05, 2016 0:00:00 -500" data-event-end="September 05, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("9/5/2016 12:00:00 AM");
+			var endDate = new Date("9/5/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00295 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Labour+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">05</div>
+		<div class="sl-dateiconMonth">Sep</div>
+	</div>
+	<div class="sl-Title">Labour Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00295">
+		  			
+	
+		<div class="sl-Title">Labour Day</div>	 
+		<div class="sl-Date">Sep 05, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Labour Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=295&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=295&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Labour Day&Body=Labour Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=295&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00296" data-event-start="September 06, 2016 0:00:00 -500" data-event-end="September 06, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("9/6/2016 12:00:00 AM");
+			var endDate = new Date("9/6/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00296 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Co-ordinated+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">06</div>
+		<div class="sl-dateiconMonth">Sep</div>
+	</div>
+	<div class="sl-Title">Co-ordinated Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00296">
+		  			
+	
+		<div class="sl-Title">Co-ordinated Day</div>	 
+		<div class="sl-Date">Sep 06, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Co-ordinated Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=296&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=296&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Co-ordinated Day&Body=Co-ordinated Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=296&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00297" data-event-start="September 07, 2016 0:00:00 -500" data-event-end="September 07, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("9/7/2016 12:00:00 AM");
+			var endDate = new Date("9/7/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00297 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=First+Day+Of+Classes&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">07</div>
+		<div class="sl-dateiconMonth">Sep</div>
+	</div>
+	<div class="sl-Title">First Day Of Classes</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00297">
+		  			
+	
+		<div class="sl-Title">First Day Of Classes</div>	 
+		<div class="sl-Date">Sep 07, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="First Day Of Classes" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=297&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=297&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=First Day Of Classes&Body=First Day Of Classes http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=297&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00298" data-event-start="October 05, 2016 0:00:00 -500" data-event-end="October 05, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("10/5/2016 12:00:00 AM");
+			var endDate = new Date("10/5/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00298 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eDismiss+45+minutes+early.%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">05</div>
+		<div class="sl-dateiconMonth">Oct</div>
+	</div>
+	<div class="sl-Title">Early Dismissal</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00298">
+		  			
+	
+		<div class="sl-Title">Early Dismissal</div>	 
+		<div class="sl-Date">Oct 05, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Dismiss 45 minutes early.</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Early Dismissal" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=298&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=298&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal&Body=Early Dismissal http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=298&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00299" data-event-start="October 07, 2016 0:00:00 -500" data-event-end="October 07, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("10/7/2016 12:00:00 AM");
+			var endDate = new Date("10/7/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00299 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Co-ordinated+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">07</div>
+		<div class="sl-dateiconMonth">Oct</div>
+	</div>
+	<div class="sl-Title">Co-ordinated Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00299">
+		  			
+	
+		<div class="sl-Title">Co-ordinated Day</div>	 
+		<div class="sl-Date">Oct 07, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Co-ordinated Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=299&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=299&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Co-ordinated Day&Body=Co-ordinated Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=299&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00300" data-event-start="October 10, 2016 0:00:00 -500" data-event-end="October 10, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("10/10/2016 12:00:00 AM");
+			var endDate = new Date("10/10/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00300 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Thanksgiving&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">10</div>
+		<div class="sl-dateiconMonth">Oct</div>
+	</div>
+	<div class="sl-Title">Thanksgiving</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00300">
+		  			
+	
+		<div class="sl-Title">Thanksgiving</div>	 
+		<div class="sl-Date">Oct 10, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Thanksgiving" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=300&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=300&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Thanksgiving&Body=Thanksgiving http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=300&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00301" data-event-start="October 21, 2016 0:00:00 -500" data-event-end="October 21, 2016 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("10/21/2016 12:00:00 AM");
+			var endDate = new Date("10/21/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00301 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Co-ordinated+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">21</div>
+		<div class="sl-dateiconMonth">Oct</div>
+	</div>
+	<div class="sl-Title">Co-ordinated Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00301">
+		  			
+	
+		<div class="sl-Title">Co-ordinated Day</div>	 
+		<div class="sl-Date">Oct 21, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Co-ordinated Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=301&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=301&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Co-ordinated Day&Body=Co-ordinated Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=301&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00302" data-event-start="November 11, 2016 0:00:00 -600" data-event-end="November 11, 2016 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("11/11/2016 12:00:00 AM");
+			var endDate = new Date("11/11/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00302 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Remembrance+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">11</div>
+		<div class="sl-dateiconMonth">Nov</div>
+	</div>
+	<div class="sl-Title">Remembrance Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00302">
+		  			
+	
+		<div class="sl-Title">Remembrance Day</div>	 
+		<div class="sl-Date">Nov 11, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Remembrance Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=302&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=302&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Remembrance Day&Body=Remembrance Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=302&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00303" data-event-start="November 14, 2016 0:00:00 -600" data-event-end="November 14, 2016 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("11/14/2016 12:00:00 AM");
+			var endDate = new Date("11/14/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00303 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Co-ordinated+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">14</div>
+		<div class="sl-dateiconMonth">Nov</div>
+	</div>
+	<div class="sl-Title">Co-ordinated Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00303">
+		  			
+	
+		<div class="sl-Title">Co-ordinated Day</div>	 
+		<div class="sl-Date">Nov 14, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Co-ordinated Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=303&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=303&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Co-ordinated Day&Body=Co-ordinated Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=303&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00304" data-event-start="November 23, 2016 0:00:00 -600" data-event-end="November 23, 2016 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("11/23/2016 12:00:00 AM");
+			var endDate = new Date("11/23/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00304 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eDismiss+45+minutes+early.%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">23</div>
+		<div class="sl-dateiconMonth">Nov</div>
+	</div>
+	<div class="sl-Title">Early Dismissal</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00304">
+		  			
+	
+		<div class="sl-Title">Early Dismissal</div>	 
+		<div class="sl-Date">Nov 23, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Dismiss 45 minutes early.</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Early Dismissal" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=304&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=304&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal&Body=Early Dismissal http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=304&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00305" data-event-start="December 22, 2016 0:00:00 -600" data-event-end="December 22, 2016 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("12/22/2016 12:00:00 AM");
+			var endDate = new Date("12/22/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00305 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Last+day+of+classes+before+Christmas+break&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eDismiss+1+hour+early.+%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">22</div>
+		<div class="sl-dateiconMonth">Dec</div>
+	</div>
+	<div class="sl-Title">Last day of classes before Christmas break</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00305">
+		  			
+	
+		<div class="sl-Title">Last day of classes before Christmas break</div>	 
+		<div class="sl-Date">Dec 22, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Dismiss 1 hour early. </div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Last day of classes before Christmas break" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=305&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=305&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Last day of classes before Christmas break&Body=Last day of classes before Christmas break http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=305&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00306" data-event-start="December 23, 2016 8:00:00 -600" data-event-end="January 08, 2017 17:00:00 -600" data-event-type="multiday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("12/23/2016 8:00:00 AM");
+			var endDate = new Date("1/8/2017 5:00:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00306 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Christmas+Break&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">23</div>
+		<div class="sl-dateiconMonth">Dec</div>
+	</div>
+	<div class="sl-Title">Christmas Break</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00306">
+		  			
+	
+		<div class="sl-Title">Christmas Break</div>	 
+		<div class="sl-Date">Dec 23, 2016 - Jan 08, 2017</div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Christmas Break" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=306&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=306&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Christmas Break&Body=Christmas Break http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=306&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00307" data-event-start="December 25, 2016 0:00:00 -600" data-event-end="December 25, 2016 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("12/25/2016 12:00:00 AM");
+			var endDate = new Date("12/25/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00307 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Christmas+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">25</div>
+		<div class="sl-dateiconMonth">Dec</div>
+	</div>
+	<div class="sl-Title">Christmas Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00307">
+		  			
+	
+		<div class="sl-Title">Christmas Day</div>	 
+		<div class="sl-Date">Dec 25, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Christmas Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=307&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=307&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Christmas Day&Body=Christmas Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=307&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00308" data-event-start="December 26, 2016 0:00:00 -600" data-event-end="December 26, 2016 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("12/26/2016 12:00:00 AM");
+			var endDate = new Date("12/26/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00308 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Boxing+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">26</div>
+		<div class="sl-dateiconMonth">Dec</div>
+	</div>
+	<div class="sl-Title">Boxing Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00308">
+		  			
+	
+		<div class="sl-Title">Boxing Day</div>	 
+		<div class="sl-Date">Dec 26, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Boxing Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=308&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=308&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Boxing Day&Body=Boxing Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=308&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00311" data-event-start="January 01, 2017 0:00:00 -600" data-event-end="January 01, 2017 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("1/1/2017 12:00:00 AM");
+			var endDate = new Date("1/1/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00311 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=New++Year%27s+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">01</div>
+		<div class="sl-dateiconMonth">Jan</div>
+	</div>
+	<div class="sl-Title">New  Year's Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00311">
+		  			
+	
+		<div class="sl-Title">New  Year's Day</div>	 
+		<div class="sl-Date">Jan 01, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="New  Year's Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=311&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=311&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=New  Year's Day&Body=New  Year's Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=311&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00309" data-event-start="January 09, 2017 0:00:00 -600" data-event-end="January 09, 2017 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("1/9/2017 12:00:00 AM");
+			var endDate = new Date("1/9/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00309 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=First+day+of+classes+after+break&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eSchools+Open%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">09</div>
+		<div class="sl-dateiconMonth">Jan</div>
+	</div>
+	<div class="sl-Title">First day of classes after break</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00309">
+		  			
+	
+		<div class="sl-Title">First day of classes after break</div>	 
+		<div class="sl-Date">Jan 09, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Schools Open</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="First day of classes after break" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=309&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=309&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=First day of classes after break&Body=First day of classes after break http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=309&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00310" data-event-start="January 18, 2017 0:00:00 -600" data-event-end="January 18, 2017 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("1/18/2017 12:00:00 AM");
+			var endDate = new Date("1/18/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00310 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal+&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eDismiss+45+min+early.+%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">18</div>
+		<div class="sl-dateiconMonth">Jan</div>
+	</div>
+	<div class="sl-Title">Early Dismissal </div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00310">
+		  			
+	
+		<div class="sl-Title">Early Dismissal </div>	 
+		<div class="sl-Date">Jan 18, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Dismiss 45 min early. </div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Early Dismissal " data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=310&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=310&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal &Body=Early Dismissal  http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=310&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00312" data-event-start="February 03, 2017 0:00:00 -600" data-event-end="February 03, 2017 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("2/3/2017 12:00:00 AM");
+			var endDate = new Date("2/3/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00312 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Co-ordinated+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">03</div>
+		<div class="sl-dateiconMonth">Feb</div>
+	</div>
+	<div class="sl-Title">Co-ordinated Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00312">
+		  			
+	
+		<div class="sl-Title">Co-ordinated Day</div>	 
+		<div class="sl-Date">Feb 03, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Co-ordinated Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=312&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=312&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Co-ordinated Day&Body=Co-ordinated Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=312&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00313" data-event-start="February 06, 2017 0:00:00 -600" data-event-end="February 06, 2017 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("2/6/2017 12:00:00 AM");
+			var endDate = new Date("2/6/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00313 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=High+Schools+2nd+Semester&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=All+High+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">06</div>
+		<div class="sl-dateiconMonth">Feb</div>
+	</div>
+	<div class="sl-Title">High Schools 2nd Semester</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00313">
+		  			
+	
+		<div class="sl-Title">High Schools 2nd Semester</div>	 
+		<div class="sl-Date">Feb 06, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All High Schools </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="High Schools 2nd Semester" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=313&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=313&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=High Schools 2nd Semester&Body=High Schools 2nd Semester http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=313&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00314" data-event-start="February 20, 2017 0:00:00 -600" data-event-end="February 20, 2017 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("2/20/2017 12:00:00 AM");
+			var endDate = new Date("2/20/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00314 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Louis+Riel+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">20</div>
+		<div class="sl-dateiconMonth">Feb</div>
+	</div>
+	<div class="sl-Title">Louis Riel Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00314">
+		  			
+	
+		<div class="sl-Title">Louis Riel Day</div>	 
+		<div class="sl-Date">Feb 20, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Louis Riel Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=314&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=314&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Louis Riel Day&Body=Louis Riel Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=314&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00315" data-event-start="February 22, 2017 0:00:00 -600" data-event-end="February 22, 2017 23:59:00 -600" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("2/22/2017 12:00:00 AM");
+			var endDate = new Date("2/22/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00315 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal+&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eDismiss+45+min+early.+%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">22</div>
+		<div class="sl-dateiconMonth">Feb</div>
+	</div>
+	<div class="sl-Title">Early Dismissal </div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00315">
+		  			
+	
+		<div class="sl-Title">Early Dismissal </div>	 
+		<div class="sl-Date">Feb 22, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Dismiss 45 min early. </div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Early Dismissal " data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=315&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=315&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal &Body=Early Dismissal  http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=315&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00316" data-event-start="March 17, 2017 0:00:00 -500" data-event-end="March 17, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("3/17/2017 12:00:00 AM");
+			var endDate = new Date("3/17/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00316 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Co-ordinated+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">17</div>
+		<div class="sl-dateiconMonth">Mar</div>
+	</div>
+	<div class="sl-Title">Co-ordinated Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00316">
+		  			
+	
+		<div class="sl-Title">Co-ordinated Day</div>	 
+		<div class="sl-Date">Mar 17, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Co-ordinated Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=316&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=316&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Co-ordinated Day&Body=Co-ordinated Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=316&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00317" data-event-start="March 24, 2017 0:00:00 -500" data-event-end="March 24, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("3/24/2017 12:00:00 AM");
+			var endDate = new Date("3/24/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00317 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Last+Day+before+Spring+Break&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">24</div>
+		<div class="sl-dateiconMonth">Mar</div>
+	</div>
+	<div class="sl-Title">Last Day before Spring Break</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00317">
+		  			
+	
+		<div class="sl-Title">Last Day before Spring Break</div>	 
+		<div class="sl-Date">Mar 24, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Last Day before Spring Break" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=317&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=317&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Last Day before Spring Break&Body=Last Day before Spring Break http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=317&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00318" data-event-start="March 25, 2017 8:00:00 -500" data-event-end="April 02, 2017 17:00:00 -500" data-event-type="multiday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("3/25/2017 8:00:00 AM");
+			var endDate = new Date("4/2/2017 5:00:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00318 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Spring+Break&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">25</div>
+		<div class="sl-dateiconMonth">Mar</div>
+	</div>
+	<div class="sl-Title">Spring Break</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00318">
+		  			
+	
+		<div class="sl-Title">Spring Break</div>	 
+		<div class="sl-Date">Mar 25, 2017 - Apr 02, 2017</div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Spring Break" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=318&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=318&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Spring Break&Body=Spring Break http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=318&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00319" data-event-start="April 03, 2017 0:00:00 -500" data-event-end="April 03, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("4/3/2017 12:00:00 AM");
+			var endDate = new Date("4/3/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00319 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Spring+Break+Ends&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eSchools+Open%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">03</div>
+		<div class="sl-dateiconMonth">Apr</div>
+	</div>
+	<div class="sl-Title">Spring Break Ends</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00319">
+		  			
+	
+		<div class="sl-Title">Spring Break Ends</div>	 
+		<div class="sl-Date">Apr 03, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Schools Open</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Spring Break Ends" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=319&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=319&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Spring Break Ends&Body=Spring Break Ends http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=319&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00320" data-event-start="April 05, 2017 0:00:00 -500" data-event-end="April 05, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("4/5/2017 12:00:00 AM");
+			var endDate = new Date("4/5/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00320 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eDismiss+45+min+early.+%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">05</div>
+		<div class="sl-dateiconMonth">Apr</div>
+	</div>
+	<div class="sl-Title">Early Dismissal</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00320">
+		  			
+	
+		<div class="sl-Title">Early Dismissal</div>	 
+		<div class="sl-Date">Apr 05, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Dismiss 45 min early. </div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Early Dismissal" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=320&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=320&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal&Body=Early Dismissal http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=320&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00321" data-event-start="April 14, 2017 0:00:00 -500" data-event-end="April 14, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("4/14/2017 12:00:00 AM");
+			var endDate = new Date("4/14/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00321 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Good+Friday&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">14</div>
+		<div class="sl-dateiconMonth">Apr</div>
+	</div>
+	<div class="sl-Title">Good Friday</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00321">
+		  			
+	
+		<div class="sl-Title">Good Friday</div>	 
+		<div class="sl-Date">Apr 14, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Good Friday" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=321&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=321&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Good Friday&Body=Good Friday http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=321&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00322" data-event-start="April 21, 2017 0:00:00 -500" data-event-end="April 21, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("4/21/2017 12:00:00 AM");
+			var endDate = new Date("4/21/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00322 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Co-ordinated+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">21</div>
+		<div class="sl-dateiconMonth">Apr</div>
+	</div>
+	<div class="sl-Title">Co-ordinated Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00322">
+		  			
+	
+		<div class="sl-Title">Co-ordinated Day</div>	 
+		<div class="sl-Date">Apr 21, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Co-ordinated Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=322&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=322&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Co-ordinated Day&Body=Co-ordinated Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=322&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
 </a></div><span class="sl-GradientTransition"></span>
         <div class="sl-SliderControl">​</div>
 
@@ -1109,47 +2594,69 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	
 			  <div class="sl-Items">
 			  <li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=145&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=176&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
           <div class="sl-imgFrame">
             
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/Scottie%202a.jpg" alt="Scottie%202a.jpg"/></span>
-          </div>
-          <div class="sl-SchoolName">Wayoata Elementary School</div>
-          <div class="sl-Title">Service dog joins Wayoata community	</div>      
-		  <div class="sl-Body">  ​ We'd like to introduce you to Scottie the service dog, a highly-trained companion...</div>
-	</a>		  
-	</a>
-</li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=144&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
-          <div class="sl-imgFrame">
-            
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/MilesTalent_jpg.jpg" alt="MilesTalent.jpg"/></span>
-          </div>
-          <div class="sl-SchoolName">Miles Macdonell Collegiate</div>
-          <div class="sl-Title">Miles Mac showcases impressive talents</div>      
-		  <div class="sl-Body">  ​ Miles Macdonell Collegiate put on an impressive display of talent on Feb. 26...</div>
-	</a>		  
-	</a>
-</li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=143&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
-          <div class="sl-imgFrame">
-            
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Broomball_jpg.jpg" alt="Broomball.jpg"/></span>
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Siloam_jpg.jpg" alt="Siloam.jpg"/></span>
           </div>
           <div class="sl-SchoolName">International Education Program</div>
-          <div class="sl-Title">International students sweep up at The Forks</div>      
-		  <div class="sl-Body">  ​ Students from around the world converged at the Scotiabank ice rink at The...</div>
+          <div class="sl-Title">International students volunteer at Siloam Mission</div>      
+		  <div class="sl-Body">   ​Students from the RETSD International Education Program, along with Kildonan-East Collegiate educational assistant Nelia...</div>
 	</a>		  
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=142&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=175&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
           <div class="sl-imgFrame">
             
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Donwood1_jpg.jpg" alt="Donwood1.jpg"/></span>
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/wedding_jpg.jpg" alt="wedding.jpg"/></span>
           </div>
-          <div class="sl-SchoolName">Donwood Elementary School</div>
-          <div class="sl-Title">Trustee ‘Loves to Read’ to students</div>      
-		  <div class="sl-Body">  ​ Trustee Peter Kotyk makes a point of visiting Donwood Elementary School every February...</div>
+          <div class="sl-SchoolName">Kildonan-East Collegiate</div>
+          <div class="sl-Title">KEC talents shine at mock wedding</div>      
+		  <div class="sl-Body">   ​Kildonan-East Collegiate students from a variety of programs got to show off their talents...</div>
+	</a>		  
+	</a>
+</li><li class="sl-Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=174&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+          <div class="sl-imgFrame">
+            
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Easter_jpg.jpg" alt="Easter.jpg"/></span>
+          </div>
+          <div class="sl-SchoolName">English-Ukrainian Bilingual Program</div>
+          <div class="sl-Title">Happy Ukrainian Easter! </div>      
+		  <div class="sl-Body">  ​ Staff, students and parents from the English-Ukrainian Bilingual Program, along with guests, celebrated...</div>
+	</a>		  
+	</a>
+</li><li class="sl-Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=173&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+          <div class="sl-imgFrame">
+            
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/Music%20Monday.jpg" alt="Music%20Monday.jpg"/></span>
+          </div>
+          <div class="sl-SchoolName">Transcona-areas schools</div>
+          <div class="sl-Title">Transcona schools celebrate Music Monday</div>      
+		  <div class="sl-Body">  ​ May 2 was Music Monday, a national celebration of music and school music...</div>
+	</a>		  
+	</a>
+</li><li class="sl-Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=172&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+          <div class="sl-imgFrame">
+            
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/IMG_3412_JPG.jpg" alt="IMG_3412.JPG"/></span>
+          </div>
+          <div class="sl-SchoolName">Miles Macdonell Collegiate</div>
+          <div class="sl-Title">Miles Mac students win eco-awards</div>      
+		  <div class="sl-Body">  ​ Congratulations to Miles Macdonell Collegiate students Marianna Pozdirca and Madeline Mann for placing...</div>
+	</a>		  
+	</a>
+</li><li class="sl-Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=171&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+          <div class="sl-imgFrame">
+            
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/20160428_130427_resized_jpg.jpg" alt="20160428_130427_resized.jpg"/></span>
+          </div>
+          <div class="sl-SchoolName">John Henderson Junior High School</div>
+          <div class="sl-Title">Local community activist makes big impression</div>      
+		  <div class="sl-Body">  ​ John Henderson Junior High School was visited by award-winning public speaker, published author...</div>
 	</a>		  
 	</a>
 </li></div>                                                                                                                                                                                           <div class="sl-WPFooter"><a class="sl-More bottom" href="//www.retsd.mb.ca/Pages/schoolnewsarchive.aspx">View Announcements</a>          
@@ -1182,12 +2689,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<div WebPartID="e209bf04-4487-481a-9a0e-aee9301f4e46" HasPers="false" id="WebPartWPQ9" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{98329f13-0164-4d40-8e66-8a85d26f881e}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_98329f13-0164-4d40-8e66-8a85d26f881e'] = ctx;</script><div class="sl-FeaturedLinksSummary sl-CLVSummary">
     <div class="sl-WPHeader">    
 		 <h2>Quick Links</h2>		 <a class="sl-Icon sl-IconRss" href="//www.retsd.mb.ca/_layouts/listfeed.aspx?List=98329f13-0164-4d40-8e66-8a85d26f881e"></a>
-		 <a class="sl-Icon sl-IconAlert" href="//www.retsd.mb.ca/_layouts/SubNew.aspx?List=98329f13-0164-4d40-8e66-8a85d26f881e&Source=http://www.retsd.mb.ca/Pages/home.aspx"></a>
+		 <a class="sl-Icon sl-IconAlert" href="//www.retsd.mb.ca/_layouts/SubNew.aspx?List=98329f13-0164-4d40-8e66-8a85d26f881e&Source=http%3a%2f%2fwww.retsd.mb.ca%2fPages%2fhome.aspx"></a>
 	</div>	  
 	 
 			  <div class="sl-FeaturedLinksWrapper"><div class="display sl-FeaturedLinks ">
 		
-	<a href="https://retsd.mb.ca/Lists/Publications/RETSD%20School%20List%202015-16.pdf" target="">
+	<a href="https://retsd.mb.ca/Lists/Publications/School%20List%202015-16%20v2.pdf" target="">
 		School List 2015-16
 	</a>
 </div><div class="display sl-FeaturedLinks sl-Highlight">
@@ -1202,13 +2709,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</a>
 </div><div class="display sl-FeaturedLinks ">
 		
-	<a href="https://retsd.mb.ca/Lists/Publications/4-Year%20School%20Calendar.pdf" target="_blank">
-		4-Year School Calendar
+	<a href="https://retsd.mb.ca/Lists/Publications/2016-17%20Division%20Calendar.pdf" target="">
+		2016-17 Division Calendar
 	</a>
 </div><div class="display sl-FeaturedLinks ">
 		
-	<a href="https://retsd.mb.ca/Lists/Publications/2016-17%20Division%20Calendar.pdf" target="">
-		2016-17 Division Calendar
+	<a href="https://retsd.mb.ca/Lists/Publications/4-Year%20School%20Calendar.pdf" target="_blank">
+		4-Year School Calendar
 	</a>
 </div><div class="display sl-FeaturedLinks ">
 		
@@ -1218,7 +2725,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 </div><div class="display sl-FeaturedLinks ">
 		
 	<a href="https://app.aesopcanada.com/login2.asp" target="_blank">
-		Aesop
+		AESOP
 	</a>
 </div><div class="display sl-FeaturedLinks ">
 		
@@ -1257,6 +2764,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</a>
 </div><div class="display sl-FeaturedLinks ">
 		
+	<a href="https://retsd.mb.ca/Lists/Publications/MentalHealthServices0416.pdf" target="_blank">
+		Mental Health Services
+	</a>
+</div><div class="display sl-FeaturedLinks ">
+		
 	<a href="/yourretsd/Policies/Pages/default.aspx" target="">
 		Policies
 	</a>
@@ -1269,6 +2781,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		
 	<a href="/WSH/Pages/Workplace-Safety-and-Health-Management-System.aspx" target="">
 		Safety and Health
+	</a>
+</div><div class="display sl-FeaturedLinks ">
+		
+	<a href="http://retsd.smarteru.com/remote-login/login.cfm?uid=VFrpar01YtxBLt92Gws526b393xwoZwnfAZA2krOS8sdh3p0qWXagi4n" target="_blank">
+		SmarterU
 	</a>
 </div></div>
            <div class="sl-WPFooter"><a class="sl-More bottom" href="/Lists/FeaturedLinks/AllItems.aspx">View links</a>
@@ -1297,7 +2814,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
                                     <div class="sl-FooterRightColumn col-md-6 col-xs-12">
                                                                                     
-                                        <nav class="sl-Search ms-dialogHidden">                                                
+                                        <div class="sl-Search ms-dialogHidden">                                                
                                             <h2 class="sl-SearchTitle">Can't find what you're looking for?</h2>              
 								            
 									            
@@ -1310,7 +2827,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 										            
 									            
 								                                                                              
-                                        </nav>
+                                        </div>
 							            
                                         <a href="http://www.retsd.mb.ca" class="sl-DistrictLink"><img src="/_layouts/15/Images/Scholantis/Web/Wave 4/Icons/footer_district_logo.png" alt="Logo" style=""></a>         
                                        
@@ -1329,10 +2846,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                         MB, 
                                         R2K 2P7</span><span class='sl-ContactSeparator'></span>    
                                             
-                                        <span class='sl-ContactPhone'><label>Phone: </label><a href='tel:204.667.7130'>
+                                        <span class='sl-ContactPhone'><span>Phone: </span><a href='tel:204.667.7130'>
                                         204.667.7130</a></span><span class='sl-ContactSeparator'></span>
                         
-                                        <span class='sl-ContactPhone'><label>Fax: </label>204.661.5618</span> <span class='sl-ContactSeparator'></span>    
+                                        <span class='sl-ContactPhone'><span>Fax: </span>204.661.5618</span> <span class='sl-ContactSeparator'></span>    
                                                                                 
                                         
                                         
@@ -1342,7 +2859,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 
                                         <div class="sl-SocialMedia">
-                                            <label></label><a class='sl-twitter' target="_blank" href='http://www.twitter.com/RETSDschools'></a><a class='sl-facebook'  target="_blank" href='http://www.facebook.com/retsd'></a><a class='sl-vimeo'  target="_blank" href='http://www.vimeo.com/retsdvideo'></a><br>
+                                            <span></span><a class='sl-twitter' target="_blank" href='http://www.twitter.com/RETSDschools'></a><a class='sl-facebook'  target="_blank" href='http://www.facebook.com/retsd'></a><a class='sl-vimeo'  target="_blank" href='http://www.vimeo.com/retsdvideo'></a><br>
                                         </div>
 
                                          <div class="sl-ContactWelcome"></div>
@@ -1384,7 +2901,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0x7D1E4D4956552BCD4CE93C22D0D28D45A4391003E94800C69B9D798CEC9179B290793BA7EC8F5F7355EB7967C96B72481E07F0F280FD6F2EBC1251CCF286D152,11 Mar 2016 20:33:19 -0000';
+            formDigestElement.value = '0x4BB57FE0E88E6D11E29155E5703AE2A7B11DD1AF68CA33C38FD6F6D92617108A848DB4068A7C6ED92F88B5DDDE1D46BBE8771CF1F0BD4D137A0900CB16E37299,09 May 2016 13:34:23 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>

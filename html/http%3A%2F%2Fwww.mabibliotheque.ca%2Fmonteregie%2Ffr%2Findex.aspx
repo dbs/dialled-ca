@@ -7,15 +7,16 @@
     <meta name="generator" content="LANEC Solutions Web 2012" />
     <meta name="revisit-after" content="14 days" /><meta http-equiv="Content-Language" content="fr_CA" />
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" /><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="/themes/style.css?v=2.240" rel='stylesheet' type='text/css' />
-    <link href="/themes/contenu.css?v=2.240" rel='stylesheet' type='text/css' />
+    <link href="/themes/style.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/contenu.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/style-new.css?v=2.245" rel='stylesheet' type='text/css' />
     <!--[if IE 9]>
-    <link href="/themes/style_IE9.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE9.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 8]>
-    <link href="/themes/style_IE8.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE8.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link href="/themes/print.css?v=2.240" rel='stylesheet' type='text/css' media="print" />
+    <link href="/themes/print.css?v=2.245" rel='stylesheet' type='text/css' media="print" />
     <link href="http://fonts.googleapis.com/css?family=Vollkorn|Lato:normal,bold|Amaranth|Actor|Open+Sans|Droid+Sans|Open+Sans|Days+One" rel="stylesheet" type="text/css" /><link href="/monteregie/fr/rss/nouvelles.aspx" rel="alternate" type="application/rss+xml" title="Réseau BIBLIO de la Montérégie" />
     <meta property="og:title" content="Réseau BIBLIO de la Montérégie" />
     <meta property="og:image" content="http://www.mabibliotheque.ca/images/partage/monteregie/img-partage.jpg" />
@@ -24,7 +25,7 @@
     <meta property="og:description" content="Le Réseau BIBLIO de la Montérégie : un accès direct et interactif aux divers services des bibliothèques membres : catalogue en ligne, livres et ressources numériques, prêt entre bibliothèques et plus encore." />
 
 <style type="text/css">
-  .imgEnteteContenu { background:#5785be url(/images/entete/entete_hiver.jpg) no-repeat center top; height:35px;}
+  .imgEnteteContenu { background:#D69038 url(/images/entete/entete_fleurs.jpg) no-repeat center top; height:35px;}
 </style>
 
 
@@ -125,6 +126,10 @@
     "Lng": 0.0,
     "Direction": 0.0
   },
+  "CalendrierDesFormations": "<b>Activités</b><br />du Réseau",
+  "CalendrierDesFormationsVoirLesActivites": "Voir les <b>activités</b><br /><b>du Réseau</b>",
+  "CalendrierDesFormationsGestionDesActivites": "Gestion des <br /><b>activités</b>",
+  "DocumentationReseau": "<b>Documentation</b><br />de mon Réseau",
   "RepertoireDesActivites": "<b>Répertoire</b><br />des activités culturelles",
   "RepertoireDesActivitesConsultation": "Consulter le <b>répertoire <br />des activités culturelles</b>",
   "RepertoireDesActivitesCulturellesH1": "Répertoire des activités culturelles",
@@ -151,6 +156,7 @@
   "UtiliserGrilleTarifaire": false,
   "AfficherGestionExtranetBiblio": false,
   "AfficherGestionDocumentation": false,
+  "AfficherGestionCalendrierFormationBiblio": false,
   "AfficherLienVDX": false,
   "RetirerPremièrePartieNomsDossiersDocumentation": false,
   "SéparateurNomsDossiersDocumentation": "",
@@ -182,7 +188,6 @@
   "PartageV2": true,
   "PermettreModifierActiviteRepertoire": true,
   "AccesCalendrierDesFormationsEtActivites": true,
-  "AccesCalendrierDesFormationsEtActivitesPourBiblios": true,
   "MessageFacturationFormation": "Les frais seront facturés après la formation et sont payables par chèque à l’ordre du Réseau BIBLIO Montérégie.",
   "SrcImgBasCourrielEnvoyerAmi": "/controles/envoyerAmi/courriel/piedpage/monteregie.jpg",
   "BoutonInfolettreEnHaut": true,
@@ -237,7 +242,14 @@
   "AfficherMessageOptimiserPourNavigateurs": true,
   "MessageOptimiserPourNavigateurs": "Optimisé pour Firefox, Chrome et Safari.",
   "NombreCommuniquesAccueil": 2,
-  "NombreActivitesAccueil": 2
+  "NombreActivitesAccueil": 2,
+  "FormationSingulier": "Activité",
+  "FormationPluriel": "Activités",
+  "NbJoursAvantFermetureInscriptionParDefaut": 2,
+  "CalendrierFormationsAccessibleHorsLigne": true,
+  "CalendrierFormationsLibelleBoutonInscription": "Consulter",
+  "FormationSingulierLower": "activité",
+  "FormationPlurielLower": "activités"
 };
 
         $(document).ready(function() {
@@ -257,7 +269,7 @@
     
     <script language="javascript" type="text/javascript" src="/scripts/jquery.cycle.all.min.js"></script>
     
-        <script language="javascript" type="text/javascript" src="/scripts/promo_accueil.js?v=2.240"></script>
+        <script language="javascript" type="text/javascript" src="/scripts/promo_accueil.js?v=2.245"></script>
     
     <style type="text/css">
         .btRSSInfolettre
@@ -266,6 +278,7 @@
         }
     </style>
 
+    
 
     <style type="text/css">
         #oeufPaques{
@@ -283,11 +296,22 @@
 </title></head>
 <body>
 <div class="pageMaster">
+    
+    <!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <form name="aspnetForm" method="post" action="/monteregie/fr/index.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjc2MDI0MjIwD2QWAmYPZBYCZg9kFgRmD2QWDgIBDxYCHgdjb250ZW50BdcBTGUgUsOpc2VhdSBCSUJMSU8gZGUgbGEgTW9udMOpcsOpZ2llIDogdW4gYWNjw6hzIGRpcmVjdCBldCBpbnRlcmFjdGlmIGF1eCBkaXZlcnMgc2VydmljZXMgZGVzIGJpYmxpb3Row6hxdWVzIG1lbWJyZXMgOiBjYXRhbG9ndWUgZW4gbGlnbmUsIGxpdnJlcyBldCByZXNzb3VyY2VzIG51bcOpcmlxdWVzLCBwcsOqdCBlbnRyZSBiaWJsaW90aMOocXVlcyBldCBwbHVzIGVuY29yZS5kAgIPFgQfAGQeB1Zpc2libGVoZAIDDxYCHwFoZAIFDxYCHgRUZXh0BTg8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LUxhbmd1YWdlIiBjb250ZW50PSJmcl9DQSIgLz4KDWQCCQ8WAh8CBYYBPGxpbmsgaHJlZj0iL21vbnRlcmVnaWUvZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIGRlIGxhIE1vbnTDqXLDqWdpZSIgLz5kAgoPFgIfAgX/BA0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp0aXRsZSIgY29udGVudD0iUsOpc2VhdSBCSUJMSU8gZGUgbGEgTW9udMOpcsOpZ2llIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzppbWFnZSIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9pbWFnZXMvcGFydGFnZS9tb250ZXJlZ2llL2ltZy1wYXJ0YWdlLmpwZyIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL21vbnRlcmVnaWUvZnIvaW5kZXguYXNweCIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkZSBsYSBNb250w6lyw6lnaWUiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSJMZSBSw6lzZWF1IEJJQkxJTyBkZSBsYSBNb250w6lyw6lnaWUgOiB1biBhY2PDqHMgZGlyZWN0IGV0IGludGVyYWN0aWYgYXV4IGRpdmVycyBzZXJ2aWNlcyBkZXMgYmlibGlvdGjDqHF1ZXMgbWVtYnJlcyA6IGNhdGFsb2d1ZSBlbiBsaWduZSwgbGl2cmVzIGV0IHJlc3NvdXJjZXMgbnVtw6lyaXF1ZXMsIHByw6p0IGVudHJlIGJpYmxpb3Row6hxdWVzIGV0IHBsdXMgZW5jb3JlLiIgLz4NCmQCCw8WAh8CBZQBCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CiAgLmltZ0VudGV0ZUNvbnRlbnUgeyBiYWNrZ3JvdW5kOiM1Nzg1YmUgdXJsKC9pbWFnZXMvZW50ZXRlL2VudGV0ZV9oaXZlci5qcGcpIG5vLXJlcGVhdCBjZW50ZXIgdG9wOyBoZWlnaHQ6MzVweDt9Cjwvc3R5bGU+CmQCAQ8WAh4GYWN0aW9uBRkvbW9udGVyZWdpZS9mci9pbmRleC5hc3B4FhwCAQ8PFgIeC05hdmlnYXRlVXJsBRkvbW9udGVyZWdpZS9mci9pbmRleC5hc3B4ZBYCZg8PFgIeCEltYWdlVXJsBSYvaW1hZ2VzL2VudGV0ZS9sb2dvL21vbnRlcmVnaWUucG5nP3Y9MmRkAgIPDxYCHwUFKC9pbWFnZXMvZW50ZXRlL2xvZ28vcHJpbnQvbW9udGVyZWdpZS5qcGdkZAIDDxYCHgtfIUl0ZW1Db3VudAIFFgoCAQ9kFgICAw8PFgYfAgUHQWNjdWVpbB4GVGFyZ2V0BQVfc2VsZh8EBRkvbW9udGVyZWdpZS9mci9pbmRleC5hc3B4ZGQCAg9kFgICAw8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBVQvbW9udGVyZWdpZS9mci9xdWktc29tbWVzLW5vdXMvb3JnYW5pc2F0aW9uLWNvcnBvcmF0aXZlL3BvbGl0aXF1ZS1xdWFsaXRlL2luZGV4LmFzcHhkZAIDD2QWAgIDDw8WBh8CBQNGQVEfBwUFX3NlbGYfBAUdL21vbnRlcmVnaWUvZnIvZmFxL2luZGV4LmFzcHhkZAIED2QWAgIDDw8WBh8CBQ1BY2PDqHMgcHJpdsOpHwcFBV9zZWxmHwQFJS9tb250ZXJlZ2llL2ZyL2FjY2VzLXByaXZlL2luZGV4LmFzcHhkZAIFD2QWBAIBDxYCHwIFEGlkPSJkZXJuaWVySXRlbSJkAgMPDxYGHwIFDE5vdXMgam9pbmRyZR8HBQVfc2VsZh8EBSYvbW9udGVyZWdpZS9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkAgQPDxYMHwcFBV9zZWxmHwIFC01vbiBkb3NzaWVyHgdUb29sVGlwBRRNb24gZG9zc2llciBkJ3VzYWdlch8EBcIBaHR0cDovL3NpbWJhMi5jcnNicC5xYy5jYS9jbGllbnQvZnJfQ0EvcmVzZWF1LWJpYmxpby1tb250ZXJlZ2llL3NlYXJjaC9wYXRyb25sb2dpbi9odHRwOiQwMDJmJDAwMmZzaW1iYTIuY3JzYnAucWMuY2EkMDAyZmNsaWVudCQwMDJmZnJfQ0EkMDAyZnJlc2VhdS1iaWJsaW8tbW9udGVyZWdpZSQwMDJmc2VhcmNoJDAwMmZhY2NvdW50JDAwM2YeCENzc0NsYXNzBRFidEFqb3V0ZXJDc3MgYmxldR4EXyFTQgICFgIeB29uY2xpY2sFUF9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ0VudMOqdGUnLCAnTW9uIGRvc3NpZXIgZCB1c2FnZXInXSk7ZAIGDxYCHwIF3gI8aWZyYW1lIHNyYz0iaHR0cDovL3d3dy5mYWNlYm9vay5jb20vcGx1Z2lucy9saWtlLnBocD9sb2NhbGU9ZnJfRlImaHJlZj1odHRwcyUzQSUyRiUyRnd3dy5mYWNlYm9vay5jb20lMkZSZXNlYXVCaWJsaW9Nb250ZXJlZ2llJmFtcDtsYXlvdXQ9YnV0dG9uX2NvdW50JmFtcDtjb2xvcnNjaGVtZT1kYXJrJmFtcDthY3Rpb249bGlrZSZ3aWR0aD0xMDAmaGVpZ2h0PTMwJmZvbnQ9YXJpYWwiIHNjcm9sbGluZz0ibm8iIGZyYW1lYm9yZGVyPSIwIiBzdHlsZT0iYm9yZGVyOm5vbmU7IG92ZXJmbG93OmhpZGRlbjsgd2lkdGg6MTAwcHg7IGhlaWdodDozMHB4OyIgYWxsb3dUcmFuc3BhcmVuY3k9InRydWUiPjwvaWZyYW1lPmQCCA8WAh8GAgUWCgIBD2QWBAIBDxYCHwIFEWNsYXNzPSJjYXRhbG9ndWUiZAIDDw8WBh8CBSU8ZGl2PjxzdHJvbmc+Q2F0YWxvZ3VlPC9zdHJvbmc+PC9kaXY+HwcFBV9zZWxmHwQFGmh0dHA6Ly9zaW1iYTIuY3JzYnAucWMuY2EvZGQCAg9kFgQCAQ8WAh8CBRhjbGFzcz0ibGl2cmVzUmVzc291cmNlcyJkAgMPDxYGHwIFQDxzdHJvbmc+TGl2cmVzICZhbXA7PGJyIC8+CnJlc3NvdXJjZXM8L3N0cm9uZz48YnIgLz4gbnVtw6lyaXF1ZXMfBwUFX3NlbGYfBAUZaHR0cDovL3NpbWJhMi5jcnNicC5xYy5jYWRkAgMPZBYEAgEPFgIfAgUMY2xhc3M9InByZXQiZAIDDw8WBh8CBTo8c3Ryb25nPlByJiMyMzQ7dCBlbnRyZTwvc3Ryb25nPjxiciAvPg0KYmlibGlvdGgmIzIzMjtxdWVzHwcFBV9zZWxmHwQFMi9tb250ZXJlZ2llL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4ZGQCBA9kFgQCAQ8WAh8CBRJjbGFzcz0iZXZlbmVtZW50cyJkAgMPDxYGHwIFPTxzdHJvbmc+QWN0aXZpdCYjMjMzO3M8L3N0cm9uZz48YnIgLz4NCmRlcyBiaWJsaW90aCYjMjMyO3F1ZXMfBwUFX3NlbGYfBAU1L21vbnRlcmVnaWUvZnIvYWN0aXZpdGVzLWRlcy1iaWJsaW90aGVxdWVzL2luZGV4LmFzcHhkZAIFD2QWBAIBDxYCHwIFFWNsYXNzPSJiaWJsaW90aGVxdWVzImQCAw8PFgYfAgVCPHN0cm9uZz5CaWJsaW90aCYjMjMyO3F1ZXM8L3N0cm9uZz48YnIgLz4NCkhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uHwcFBV9zZWxmHwQFPy9tb250ZXJlZ2llL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vaW5kZXguYXNweGRkAgkPZBYCAgEPZBYCAgEPFgIfBgIFFgoCAQ9kFgJmDxYCHwIFpgE8YSBocmVmPSJodHRwOi8vYml0Lmx5LzIxRWkweUoiIHRhcmdldD0iX3NlbGYiPjxpbWcgYWx0PSIiIHNyYz0iL0ZpY2hpZXJzL1dlYnNpdGVNYW5hZ2VyL21vbnRlcmVnaWUvSW1hZ2VzL2JpYmxpb2FpZGFudHNfcHJvbW8ucG5nIiBzdHlsZT0ibWFyZ2luLWxlZnQ6LTIwcHg7IiAvPjwvYT4NZAICD2QWAmYPFgIfAgXrATxhIGhyZWY9Imh0dHA6Ly9zaW1iYTIuY3JzYnAucWMuY2EvY2xpZW50L2ZyX0NBL3Jlc2VhdS1iaWJsaW8tbW9udGVyZWdpZS8/cm09RyVDMyU4OU4lQzMlODlBTE9HSUUrMCU3QyU3QyU3QzElN0MlN0MlN0MwJTdDJTdDJTdDdHJ1ZSZhbXA7ZHQ9bGlzdCI+PGltZyBhbHQ9IiIgc3JjPSIvRmljaGllcnMvV2Vic2l0ZU1hbmFnZXIvbW9udGVyZWdpZS9JbWFnZXMvZ2VuZWFsb2dpZV9wcm9tby5wbmciIC8+PC9hPg1kAgMPZBYCZg8WAh8CZWQCBA9kFgJmDxYCHwIFowE8ZGl2IGlkPSJwcm9tby1hYm9ubmVtZW50LWVuLWxpZ25lLW1vbnRlcmVnaWUiIGNsYXNzPSJ3aWRlIj4NCjxhIHN0eWxlPSJiYWNrZ3JvdW5kOm5vbmUiIGhyZWY9Ii9tb250ZXJlZ2llL2ZyL2Fib25uZW1lbnQtc2VydmljZS1hLWRpc3RhbmNlL2luZGV4LmFzcHgiPg08L2E+PC9kaXY+ZAIFD2QWAmYPFgIfAgW1ATxkaXYgaWQ9InByb21vLXppbmlvIiBjbGFzcz0id2lkZSI+CjxhIHN0eWxlPSJiYWNrZ3JvdW5kOm5vbmUiIGhyZWY9Imh0dHBzOi8vbG9naW4uc2ltYmEyLmlkbS5vY2xjLm9yZy9sb2dpbj9xdXJsPWh0dHBzOi8vd3d3LnJiZGlnaXRhbC5jb20vbW9udGVyZWdpZXFjIiB0YXJnZXQ9Il9ibGFuayI+CjwvYT48L2Rpdj5kAgoPDxYCHwFoZBYCAgEPDxYCHwIFB0FjY3VlaWxkZAILD2QWBGYPDxYCHwQFMi9tb250ZXJlZ2llL2ZyL2luc2NyaXB0aW9uLWEtaW5mb2xldHRyZS9pbmRleC5hc3B4FgIeCmRhdGEtdGl0bGUFI0Fib25uZW1lbnQgYXV4IG5vdXZlbGxlcyBkdSBSw6lzZWF1ZAIBD2QWAgIBDw8WAh8EBSEvbW9udGVyZWdpZS9mci9yc3Mvbm91dmVsbGVzLmFzcHhkZAIMD2QWAgIBD2QWEGYPFgIfAgUOUXVvaSBkZSBuZXVmID9kAgEPDxYCHwQFIS9tb250ZXJlZ2llL2ZyL3Jzcy9ub3V2ZWxsZXMuYXNweGRkAgIPDxYCHwQFMi9tb250ZXJlZ2llL2ZyL2luc2NyaXB0aW9uLWEtaW5mb2xldHRyZS9pbmRleC5hc3B4FgIfDAUjQWJvbm5lbWVudCBhdXggbm91dmVsbGVzIGR1IFLDqXNlYXVkAgMPFgIfBgICFgQCAQ9kFgJmDxUEDzggZsOpdnJpZXIgMjAxNnAvbW9udGVyZWdpZS9mci9xdW9pLWRlLW5ldWYvMjAxNi8wMi9pbnZpdGF0aW9uLWF1LWNvbGxvcXVlLWludGVncmVyLWxlcy1saXZyZXMtZC1pY2ktZW4tY2xhc3NlLWVkaXRpb24tMjAxNi5hc3B4S0ludml0YXRpb24gYXUgY29sbG9xdWUgSW50w6lncmVyIGxlcyBsaXZyZXMgZCdpY2kgZW4gY2xhc3NlIC0gw4lkaXRpb24gMjAxNgBkAgIPZBYCZg8VBA8yMSBqYW52aWVyIDIwMTZxL21vbnRlcmVnaWUvZnIvcXVvaS1kZS1uZXVmLzIwMTYvMDEvc2VtYWluZS1kZS1sYS1saXR0ZXJhdHVyZS1kYW5zLWxhLW1yYy1yb3Vzc2lsbG9uLWR1LTYtYXUtMTQtZmV2cmllci0yMDE2LmFzcHhLU2VtYWluZSBkZSBsYSBsaXR0w6lyYXR1cmUgZGFucyBsYSBNUkMgUm91c3NpbGxvbi4gRHUgNiBhdSAxNCBmw6l2cmllciAyMDE2AGQCBA8PFgQfBAUuL21vbnRlcmVnaWUvZnIvcXVvaS1kZS1uZXVmLzIwMTYvMDIvaW5kZXguYXNweB8CBRlWb2lyIHRvdXRlcyBsZXMgbm91dmVsbGVzZGQCBg8WAh8CBShQcm9jaGFpbmVzIGFjdGl2aXTDqXMgZGVzIGJpYmxpb3Row6hxdWVzZAIHDxYCHwYCARYCAgEPZBYCAgEPFgIfAgXBATxpZnJhbWUgc2Nyb2xsaW5nPSJubyIgZnJhbWVib3JkZXI9IjAiIGFsbG93dHJhbnNwYXJlbmN5PSJ0cnVlIiB0aXRsZT0iU29uZGFnZXMgUGl4dWxlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjM2NSJzcmM9Imh0dHA6Ly93d3cucGl4dWxlLmNvbS93aWRnZXQyODY5MjcxOTg4MjgiIGRhdGEta2V5PSIyODY5MjcxOTg4MjgiCj48L2lmcmFtZT5kAggPDxYEHwQFQi9tb250ZXJlZ2llL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvY3JvaXNhZGUvaW5kZXguYXNweB8BZ2RkAg0PDxYCHwFnZBYCAgEPDxYCHwQFL2h0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9SZXNlYXVCaWJsaW9Nb250ZXJlZ2llFgIfCwVJX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0ZhY2Vib29rJ10pO2QCDw8PFgIfAWdkFgICAQ8PFgIfBAUzaHR0cDovL3R3aXR0ZXIuY29tL2h0dHBzOi8vdHdpdHRlci5jb20vUkJNb250ZXJlZ2llFgIfCwVIX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ1R3aXR0ZXInXSk7ZAISDxYCHwYCAxYGZg9kFgICAQ8WAh8CBboDPGRpdiBzdHlsZT0ibGluZS1oZWlnaHQ6IDBweDsgd2lkdGg6IDIyMHB4OyBtYXJnaW46IDVweCAwIDAgMDsgIj4NCjxpbWcgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvbW9udGVyZWdpZS9mcmFuY2Fpcy9kb2N1bWVudHMvbWljX2JpYl9hdWRpby5wbmciIGFsdD0iIiAvPiA8YnIgLz4NCjxhdWRpbyBjb250cm9scz0iIiBzdHlsZT0id2lkdGg6MjIycHg7IiBvbmNsaWNrPSJfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMZWN0dXJlIEF1ZGlvJywgJ1BpZWQgZGUgcGFnZScsICdCaWJsaW90aGVxdWUgZHUgUXUmIzIzMztiZWMnXSk7InNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL21vbnRlcmVnaWUvZnJhbmNhaXMvZG9jdW1lbnRzL3JhZGlvX0JpYmxpb3RoZXF1ZVF1ZWJlYy5tcDMiPjwvYXVkaW8+DQo8L2Rpdj4NCmQCAQ9kFgICAQ8WAh8CBbMEPGEgb25jbGljaz0iX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0xvaSA1MSddKTsiIGhyZWY9Imh0dHA6Ly93d3cubWNjY2YuZ291di5xYy5jYS9pbmRleC5waHA/aWQ9NDQzNiIgdGFyZ2V0PSJfYmxhbmsiPg0KICA8aW1nIG9ubW91c2VvdmVyPSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTFfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTEuanBnJyIgYWx0PSJMb2kgNTEgLSBOdWwgbidlc3QgY2VucyYjMjMzOyBpZ25vcmVyIGxhIGxvaSBkdSBsaXZyZSIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9sb2k1MS5qcGciPg0KICA8L2ltZz4NCjwvYT5kAgIPZBYCAgEPFgIfAgWFBDxhIGhyZWY9Ii9tb250ZXJlZ2llL2ZyL3F1aS1zb21tZXMtbm91cy9wcml4LWQtZXhjZWxsZW5jZS1nZXJhcmQtZGVzcm9zaWVycy9pbmRleC5hc3B4Ij4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2dlcmFyZGRlc3Jvc2llcnNfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGcnIiBhbHQ9IlByaXggZCdleGNlbGxlbmNlIEcmIzIzMztyYXJkIERlc3Jvc2llcnMiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGciPg0KICA8L2ltZz4NCjwvYT5kAhUPZBYGAgEPFgIfAWhkAgMPZBYCZg8WCB4JaW5uZXJodG1sBRVBY2MmIzIzMjtzIHByaXYmIzIzMzseBXRpdGxlBQ1BY2PDqHMgcHJpdsOpHgRocmVmBSUvbW9udGVyZWdpZS9mci9hY2Nlcy1wcml2ZS9pbmRleC5hc3B4HwsFTl9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBY2PDqHMgcHJpdsOpJ10pO2QCBQ9kFgJmDxYCHwFoZGSMjG81CzcTLPSb41mnATjIgUHsWMIXPiWicHaM4KCHlg==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjc2MDI0MjIwD2QWAmYPZBYCZg9kFgRmD2QWDgIBDxYCHgdjb250ZW50BdcBTGUgUsOpc2VhdSBCSUJMSU8gZGUgbGEgTW9udMOpcsOpZ2llIDogdW4gYWNjw6hzIGRpcmVjdCBldCBpbnRlcmFjdGlmIGF1eCBkaXZlcnMgc2VydmljZXMgZGVzIGJpYmxpb3Row6hxdWVzIG1lbWJyZXMgOiBjYXRhbG9ndWUgZW4gbGlnbmUsIGxpdnJlcyBldCByZXNzb3VyY2VzIG51bcOpcmlxdWVzLCBwcsOqdCBlbnRyZSBiaWJsaW90aMOocXVlcyBldCBwbHVzIGVuY29yZS5kAgIPFgQfAGQeB1Zpc2libGVoZAIDDxYCHwFoZAIFDxYCHgRUZXh0BTg8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LUxhbmd1YWdlIiBjb250ZW50PSJmcl9DQSIgLz4KDWQCCQ8WAh8CBYYBPGxpbmsgaHJlZj0iL21vbnRlcmVnaWUvZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIGRlIGxhIE1vbnTDqXLDqWdpZSIgLz5kAgoPFgIfAgX/BA0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp0aXRsZSIgY29udGVudD0iUsOpc2VhdSBCSUJMSU8gZGUgbGEgTW9udMOpcsOpZ2llIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzppbWFnZSIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9pbWFnZXMvcGFydGFnZS9tb250ZXJlZ2llL2ltZy1wYXJ0YWdlLmpwZyIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL21vbnRlcmVnaWUvZnIvaW5kZXguYXNweCIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkZSBsYSBNb250w6lyw6lnaWUiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSJMZSBSw6lzZWF1IEJJQkxJTyBkZSBsYSBNb250w6lyw6lnaWUgOiB1biBhY2PDqHMgZGlyZWN0IGV0IGludGVyYWN0aWYgYXV4IGRpdmVycyBzZXJ2aWNlcyBkZXMgYmlibGlvdGjDqHF1ZXMgbWVtYnJlcyA6IGNhdGFsb2d1ZSBlbiBsaWduZSwgbGl2cmVzIGV0IHJlc3NvdXJjZXMgbnVtw6lyaXF1ZXMsIHByw6p0IGVudHJlIGJpYmxpb3Row6hxdWVzIGV0IHBsdXMgZW5jb3JlLiIgLz4NCmQCCw8WAh8CBZUBCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CiAgLmltZ0VudGV0ZUNvbnRlbnUgeyBiYWNrZ3JvdW5kOiNENjkwMzggdXJsKC9pbWFnZXMvZW50ZXRlL2VudGV0ZV9mbGV1cnMuanBnKSBuby1yZXBlYXQgY2VudGVyIHRvcDsgaGVpZ2h0OjM1cHg7fQo8L3N0eWxlPgpkAgEPFgIeBmFjdGlvbgUZL21vbnRlcmVnaWUvZnIvaW5kZXguYXNweBYcAgEPDxYCHgtOYXZpZ2F0ZVVybAUZL21vbnRlcmVnaWUvZnIvaW5kZXguYXNweGQWAmYPDxYCHghJbWFnZVVybAUmL2ltYWdlcy9lbnRldGUvbG9nby9tb250ZXJlZ2llLnBuZz92PTJkZAICDw8WAh8FBSgvaW1hZ2VzL2VudGV0ZS9sb2dvL3ByaW50L21vbnRlcmVnaWUuanBnZGQCAw8WAh4LXyFJdGVtQ291bnQCBRYKAgEPZBYCAgMPDxYGHwIFB0FjY3VlaWweBlRhcmdldAUFX3NlbGYfBAUZL21vbnRlcmVnaWUvZnIvaW5kZXguYXNweGRkAgIPZBYCAgMPDxYGHwIFEFF1aSBzb21tZXMtbm91cz8fBwUFX3NlbGYfBAVUL21vbnRlcmVnaWUvZnIvcXVpLXNvbW1lcy1ub3VzL29yZ2FuaXNhdGlvbi1jb3Jwb3JhdGl2ZS9wb2xpdGlxdWUtcXVhbGl0ZS9pbmRleC5hc3B4ZGQCAw9kFgICAw8PFgYfAgUDRkFRHwcFBV9zZWxmHwQFHS9tb250ZXJlZ2llL2ZyL2ZhcS9pbmRleC5hc3B4ZGQCBA9kFgICAw8PFgYfAgUNQWNjw6hzIHByaXbDqR8HBQVfc2VsZh8EBSUvbW9udGVyZWdpZS9mci9hY2Nlcy1wcml2ZS9pbmRleC5hc3B4ZGQCBQ9kFgQCAQ8WAh8CBRBpZD0iZGVybmllckl0ZW0iZAIDDw8WBh8CBQxOb3VzIGpvaW5kcmUfBwUFX3NlbGYfBAUmL21vbnRlcmVnaWUvZnIvbm91cy1qb2luZHJlL2luZGV4LmFzcHhkZAIEDw8WDB8HBQVfc2VsZh8CBQtNb24gZG9zc2llch4HVG9vbFRpcAUUTW9uIGRvc3NpZXIgZCd1c2FnZXIfBAXCAWh0dHA6Ly9zaW1iYTIuY3JzYnAucWMuY2EvY2xpZW50L2ZyX0NBL3Jlc2VhdS1iaWJsaW8tbW9udGVyZWdpZS9zZWFyY2gvcGF0cm9ubG9naW4vaHR0cDokMDAyZiQwMDJmc2ltYmEyLmNyc2JwLnFjLmNhJDAwMmZjbGllbnQkMDAyZmZyX0NBJDAwMmZyZXNlYXUtYmlibGlvLW1vbnRlcmVnaWUkMDAyZnNlYXJjaCQwMDJmYWNjb3VudCQwMDNmHghDc3NDbGFzcwURYnRBam91dGVyQ3NzIGJsZXUeBF8hU0ICAhYCHgdvbmNsaWNrBVBfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdFbnTDqnRlJywgJ01vbiBkb3NzaWVyIGQgdXNhZ2VyJ10pO2QCBg8WAh8CBbUBPGRpdiBjbGFzcz0iZmItbGlrZSIgZGF0YS1ocmVmPSJodHRwczovL3d3dy5mYWNlYm9vay5jb20vUmVzZWF1QmlibGlvTW9udGVyZWdpZSIgZGF0YS1sYXlvdXQ9ImJ1dHRvbl9jb3VudCIgZGF0YS1jb2xvcnNjaGVtZT0iZGFyayIgZGF0YS1zaG93LWZhY2VzPSJmYWxzZSIgZGF0YS1hY3Rpb249Imxpa2UiPjwvZGl2PmQCCA8WAh8GAgUWCgIBD2QWBAIBDxYCHwIFEWNsYXNzPSJjYXRhbG9ndWUiZAIDDw8WBh8CBSU8ZGl2PjxzdHJvbmc+Q2F0YWxvZ3VlPC9zdHJvbmc+PC9kaXY+HwcFBV9zZWxmHwQFGmh0dHA6Ly9zaW1iYTIuY3JzYnAucWMuY2EvZGQCAg9kFgQCAQ8WAh8CBRhjbGFzcz0ibGl2cmVzUmVzc291cmNlcyJkAgMPDxYGHwIFQDxzdHJvbmc+TGl2cmVzICZhbXA7PGJyIC8+CnJlc3NvdXJjZXM8L3N0cm9uZz48YnIgLz4gbnVtw6lyaXF1ZXMfBwUFX3NlbGYfBAUZaHR0cDovL3NpbWJhMi5jcnNicC5xYy5jYWRkAgMPZBYEAgEPFgIfAgUMY2xhc3M9InByZXQiZAIDDw8WBh8CBTo8c3Ryb25nPlByJiMyMzQ7dCBlbnRyZTwvc3Ryb25nPjxiciAvPg0KYmlibGlvdGgmIzIzMjtxdWVzHwcFBV9zZWxmHwQFMi9tb250ZXJlZ2llL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4ZGQCBA9kFgQCAQ8WAh8CBRJjbGFzcz0iZXZlbmVtZW50cyJkAgMPDxYGHwIFPTxzdHJvbmc+QWN0aXZpdCYjMjMzO3M8L3N0cm9uZz48YnIgLz4NCmRlcyBiaWJsaW90aCYjMjMyO3F1ZXMfBwUFX3NlbGYfBAU1L21vbnRlcmVnaWUvZnIvYWN0aXZpdGVzLWRlcy1iaWJsaW90aGVxdWVzL2luZGV4LmFzcHhkZAIFD2QWBAIBDxYCHwIFFWNsYXNzPSJiaWJsaW90aGVxdWVzImQCAw8PFgYfAgVCPHN0cm9uZz5CaWJsaW90aCYjMjMyO3F1ZXM8L3N0cm9uZz48YnIgLz4NCkhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uHwcFBV9zZWxmHwQFPy9tb250ZXJlZ2llL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vaW5kZXguYXNweGRkAgkPZBYCAgEPZBYCAgEPFgIfBgIEFggCAQ9kFgJmDxYCHwIFpgE8YSBocmVmPSJodHRwOi8vYml0Lmx5LzIxRWkweUoiIHRhcmdldD0iX3NlbGYiPjxpbWcgYWx0PSIiIHNyYz0iL0ZpY2hpZXJzL1dlYnNpdGVNYW5hZ2VyL21vbnRlcmVnaWUvSW1hZ2VzL2JpYmxpb2FpZGFudHNfcHJvbW8ucG5nIiBzdHlsZT0ibWFyZ2luLWxlZnQ6LTIwcHg7IiAvPjwvYT4NZAICD2QWAmYPFgIfAgXrATxhIGhyZWY9Imh0dHA6Ly9zaW1iYTIuY3JzYnAucWMuY2EvY2xpZW50L2ZyX0NBL3Jlc2VhdS1iaWJsaW8tbW9udGVyZWdpZS8/cm09RyVDMyU4OU4lQzMlODlBTE9HSUUrMCU3QyU3QyU3QzElN0MlN0MlN0MwJTdDJTdDJTdDdHJ1ZSZhbXA7ZHQ9bGlzdCI+PGltZyBhbHQ9IiIgc3JjPSIvRmljaGllcnMvV2Vic2l0ZU1hbmFnZXIvbW9udGVyZWdpZS9JbWFnZXMvZ2VuZWFsb2dpZV9wcm9tby5wbmciIC8+PC9hPg1kAgMPZBYCZg8WAh8CZWQCBA9kFgJmDxYCHwIFowE8ZGl2IGlkPSJwcm9tby1hYm9ubmVtZW50LWVuLWxpZ25lLW1vbnRlcmVnaWUiIGNsYXNzPSJ3aWRlIj4NCjxhIHN0eWxlPSJiYWNrZ3JvdW5kOm5vbmUiIGhyZWY9Ii9tb250ZXJlZ2llL2ZyL2Fib25uZW1lbnQtc2VydmljZS1hLWRpc3RhbmNlL2luZGV4LmFzcHgiPg08L2E+PC9kaXY+ZAIKDw8WAh8BaGQWAgIBDw8WAh8CBQdBY2N1ZWlsZGQCCw9kFgRmDw8WAh8EBTIvbW9udGVyZWdpZS9mci9pbnNjcmlwdGlvbi1hLWluZm9sZXR0cmUvaW5kZXguYXNweBYCHgpkYXRhLXRpdGxlBSNBYm9ubmVtZW50IGF1eCBub3V2ZWxsZXMgZHUgUsOpc2VhdWQCAQ9kFgICAQ8PFgIfBAUhL21vbnRlcmVnaWUvZnIvcnNzL25vdXZlbGxlcy5hc3B4ZGQCDA9kFgICAQ9kFhBmDxYCHwIFDlF1b2kgZGUgbmV1ZiA/ZAIBDw8WAh8EBSEvbW9udGVyZWdpZS9mci9yc3Mvbm91dmVsbGVzLmFzcHhkZAICDw8WAh8EBTIvbW9udGVyZWdpZS9mci9pbnNjcmlwdGlvbi1hLWluZm9sZXR0cmUvaW5kZXguYXNweBYCHwwFI0Fib25uZW1lbnQgYXV4IG5vdXZlbGxlcyBkdSBSw6lzZWF1ZAIDDxYCHwYCAhYEAgEPZBYCZg8VBA0yNyBhdnJpbCAyMDE2XC9tb250ZXJlZ2llL2ZyL3F1b2ktZGUtbmV1Zi8yMDE2LzA0L2RvY3VtZW50YWlyZS1sZS0zZS1saWV1LWxlcy1iaWJsaW90aGVxdWVzLXB1YmxpcXVlcy5hc3B4NkRvY3VtZW50YWlyZSBMZSAzZSBsaWV1IDogTGVzIGJpYmxpb3Row6hxdWVzIHB1YmxpcXVlcwBkAgIPZBYCZg8VBAw3IGF2cmlsIDIwMTZwL21vbnRlcmVnaWUvZnIvcXVvaS1kZS1uZXVmLzIwMTYvMDQvbGUtY29taXRlLWN1bHR1cmVsLWRlLWxhLW1yYy1kZS1yb3Vzc2lsbG9uLXJlY3J1dGUtZGVzLW5vdXZlYXV4LW1lbWJyZXMuYXNweEhMZSBjb21pdMOpIGN1bHR1cmVsIGRlIGxhIE1SQyBkZSBSb3Vzc2lsbG9uIHJlY3J1dGUgZGVzIG5vdXZlYXV4IG1lbWJyZXMAZAIEDw8WBB8EBS4vbW9udGVyZWdpZS9mci9xdW9pLWRlLW5ldWYvMjAxNi8wNC9pbmRleC5hc3B4HwIFGVZvaXIgdG91dGVzIGxlcyBub3V2ZWxsZXNkZAIGDxYCHwIFKFByb2NoYWluZXMgYWN0aXZpdMOpcyBkZXMgYmlibGlvdGjDqHF1ZXNkAgcPFgIfBgIBFgICAQ9kFgICAQ8WAh8CBcEBPGlmcmFtZSBzY3JvbGxpbmc9Im5vIiBmcmFtZWJvcmRlcj0iMCIgYWxsb3d0cmFuc3BhcmVuY3k9InRydWUiIHRpdGxlPSJTb25kYWdlcyBQaXh1bGUiIHdpZHRoPSI1MTIiIGhlaWdodD0iMzY1InNyYz0iaHR0cDovL3d3dy5waXh1bGUuY29tL3dpZGdldDI4NjkyNzE5ODgyOCIgZGF0YS1rZXk9IjI4NjkyNzE5ODgyOCIKPjwvaWZyYW1lPmQCCA8PFgQfBAVCL21vbnRlcmVnaWUvZnIvbGl2cmVzLWV0LXJlc3NvdXJjZXMtbnVtZXJpcXVlcy9jcm9pc2FkZS9pbmRleC5hc3B4HwFnZGQCDQ8PFgIfAWdkFgICAQ8PFgIfBAUvaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1Jlc2VhdUJpYmxpb01vbnRlcmVnaWUWAh8LBUlfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnRmFjZWJvb2snXSk7ZAIPDw8WAh8BZ2QWAgIBDw8WAh8EBTNodHRwOi8vdHdpdHRlci5jb20vaHR0cHM6Ly90d2l0dGVyLmNvbS9SQk1vbnRlcmVnaWUWAh8LBUhfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnVHdpdHRlciddKTtkAhIPFgIfBgIDFgZmD2QWAgIBDxYCHwIFugM8ZGl2IHN0eWxlPSJsaW5lLWhlaWdodDogMHB4OyB3aWR0aDogMjIwcHg7IG1hcmdpbjogNXB4IDAgMCAwOyAiPg0KPGltZyBzcmM9Ii9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9tb250ZXJlZ2llL2ZyYW5jYWlzL2RvY3VtZW50cy9taWNfYmliX2F1ZGlvLnBuZyIgYWx0PSIiIC8+IDxiciAvPg0KPGF1ZGlvIGNvbnRyb2xzPSIiIHN0eWxlPSJ3aWR0aDoyMjJweDsiIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xlY3R1cmUgQXVkaW8nLCAnUGllZCBkZSBwYWdlJywgJ0JpYmxpb3RoZXF1ZSBkdSBRdSYjMjMzO2JlYyddKTsic3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvbW9udGVyZWdpZS9mcmFuY2Fpcy9kb2N1bWVudHMvcmFkaW9fQmlibGlvdGhlcXVlUXVlYmVjLm1wMyI+PC9hdWRpbz4NCjwvZGl2Pg0KZAIBD2QWAgIBDxYCHwIFswQ8YSBvbmNsaWNrPSJfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnTG9pIDUxJ10pOyIgaHJlZj0iaHR0cDovL3d3dy5tY2NjZi5nb3V2LnFjLmNhL2luZGV4LnBocD9pZD00NDM2IiB0YXJnZXQ9Il9ibGFuayI+DQogIDxpbWcgb25tb3VzZW92ZXI9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9sb2k1MV9vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9sb2k1MS5qcGcnIiBhbHQ9IkxvaSA1MSAtIE51bCBuJ2VzdCBjZW5zJiMyMzM7IGlnbm9yZXIgbGEgbG9pIGR1IGxpdnJlIiBzcmM9Ii9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxLmpwZyI+DQogIDwvaW1nPg0KPC9hPmQCAg9kFgICAQ8WAh8CBY0EPGEgaHJlZj0iL21vbnRlcmVnaWUvZnIvcXVpLXNvbW1lcy1ub3VzL3BhcnRlbmFyaWF0L3ByaXgtZC1leGNlbGxlbmNlLWdlcmFyZC1kZXNyb3NpZXJzL2luZGV4LmFzcHgiPg0KICA8aW1nIG9ubW91c2VvdmVyPSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVyc19vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9nZXJhcmRkZXNyb3NpZXJzLmpwZyciIGFsdD0iUHJpeCBkJ2V4Y2VsbGVuY2UgRyYjMjMzO3JhcmQgRGVzcm9zaWVycyIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9nZXJhcmRkZXNyb3NpZXJzLmpwZyIgLz4NCiAgDQo8L2E+ZAIVD2QWBgIBDxYCHwFoZAIDD2QWAmYPFggeCWlubmVyaHRtbAUVQWNjJiMyMzI7cyBwcml2JiMyMzM7HgV0aXRsZQUNQWNjw6hzIHByaXbDqR4EaHJlZgUlL21vbnRlcmVnaWUvZnIvYWNjZXMtcHJpdmUvaW5kZXguYXNweB8LBU5fZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnQWNjw6hzIHByaXbDqSddKTtkAgUPZBYCZg8WAh8BaGRkCrq9Bvuc9WBE5MQWS/E/YnGGkOij3COR2H1rBF10jVA=" />
 </div>
 
 <script type="text/javascript">
@@ -432,7 +456,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspne
                                 </div>
                             </div>
                             <div id="facebook">
-                                <iframe src="http://www.facebook.com/plugins/like.php?locale=fr_FR&href=https%3A%2F%2Fwww.facebook.com%2FReseauBiblioMonteregie&amp;layout=button_count&amp;colorscheme=dark&amp;action=like&width=100&height=30&font=arial" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:30px;" allowTransparency="true"></iframe>
+                                <div class="fb-like" data-href="https://www.facebook.com/ReseauBiblioMonteregie" data-layout="button_count" data-colorscheme="dark" data-show-faces="false" data-action="like"></div>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -456,27 +480,15 @@ Horaire et localisation</a></li></ul>
    <div class="fondBlocPromo">
         <div class="corpsMaster">
             <div id="blocPromoBtn"><a href="http://bit.ly/21Ei0yJ" target="_self"><img alt="" src="/Fichiers/WebsiteManager/monteregie/Images/biblioaidants_promo.png" style="margin-left:-20px;" /></a><a href="http://simba2.crsbp.qc.ca/client/fr_CA/reseau-biblio-monteregie/?rm=G%C3%89N%C3%89ALOGIE+0%7C%7C%7C1%7C%7C%7C0%7C%7C%7Ctrue&amp;dt=list"><img alt="" src="/Fichiers/WebsiteManager/monteregie/Images/genealogie_promo.png" /></a><div id="promo-abonnement-en-ligne-monteregie" class="wide">
-<a style="background:none" href="/monteregie/fr/abonnement-service-a-distance/index.aspx"></a></div><div id="promo-zinio" class="wide">
-<a style="background:none" href="https://login.simba2.idm.oclc.org/login?qurl=https://www.rbdigital.com/monteregieqc" target="_blank">
-</a></div></div>
+<a style="background:none" href="/monteregie/fr/abonnement-service-a-distance/index.aspx"></a></div></div>
         </div>
     </div>
 
 
             <div class="corpsMaster">  
                 
-
                 
                     <div class="btRSSInfolettre">
-                        
-                            <div class="abonnementInfolettre new">
-                                <a id="hlAbonnementInfolettreSite" data-title="Abonnement aux nouvelles du Réseau" href="/monteregie/fr/inscription-a-infolettre/index.aspx"></a>
-                            </div>
-                        <div id="ctl00_ctl00_Rss_pnlRssSite" class="rss">
-	
-                                <a id="hlRssSite" data-title="Abonnement au fil RSS" href="/monteregie/fr/rss/nouvelles.aspx" target="_blank"></a>
-                            
-</div>
                         
                     </div>
                 
@@ -499,20 +511,20 @@ Horaire et localisation</a></li></ul>
         
             <ul>
                     <li>
-                        <div><b>8 février 2016</b></div>
-                        <div><a href="/monteregie/fr/quoi-de-neuf/2016/02/invitation-au-colloque-integrer-les-livres-d-ici-en-classe-edition-2016.aspx">Invitation au colloque Intégrer les livres d'ici en classe - Édition 2016</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
+                        <div><b>27 avril 2016</b></div>
+                        <div><a href="/monteregie/fr/quoi-de-neuf/2016/04/documentaire-le-3e-lieu-les-bibliotheques-publiques.aspx">Documentaire Le 3e lieu : Les bibliothèques publiques</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
                         <div class="description"></div>
                     </li>
                 
                     <li>
-                        <div><b>21 janvier 2016</b></div>
-                        <div><a href="/monteregie/fr/quoi-de-neuf/2016/01/semaine-de-la-litterature-dans-la-mrc-roussillon-du-6-au-14-fevrier-2016.aspx">Semaine de la littérature dans la MRC Roussillon. Du 6 au 14 février 2016</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
+                        <div><b>7 avril 2016</b></div>
+                        <div><a href="/monteregie/fr/quoi-de-neuf/2016/04/le-comite-culturel-de-la-mrc-de-roussillon-recrute-des-nouveaux-membres.aspx">Le comité culturel de la MRC de Roussillon recrute des nouveaux membres</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
                         <div class="description"></div>
                     </li>
                 </ul>
 
             <div class="voirToutes">
-                <a id="ctl00_ctl00_ContenuGlobal_Contenu_hlToutesNouvelles" href="/monteregie/fr/quoi-de-neuf/2016/02/index.aspx">Voir toutes les nouvelles</a>
+                <a id="ctl00_ctl00_ContenuGlobal_Contenu_hlToutesNouvelles" href="/monteregie/fr/quoi-de-neuf/2016/04/index.aspx">Voir toutes les nouvelles</a>
             </div>
         </div>
         
@@ -583,6 +595,7 @@ Horaire et localisation</a></li></ul>
 </div>
 
 
+    
 
             </div>        
         </div>
@@ -650,9 +663,9 @@ Horaire et localisation</a></li></ul>
 </div><div class="pub"><a onclick="_gaq.push(['_trackEvent', 'Liens sortants', 'Pied de page', 'Loi 51']);" href="http://www.mcccf.gouv.qc.ca/index.php?id=4436" target="_blank">
   <img onmouseover="this.src='/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/loi51_over.jpg'" onmouseout="this.src='/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/loi51.jpg'" alt="Loi 51 - Nul n'est cens&#233; ignorer la loi du livre" src="/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/loi51.jpg">
   </img>
-</a></div><div class="pub"><a href="/monteregie/fr/qui-sommes-nous/prix-d-excellence-gerard-desrosiers/index.aspx">
-  <img onmouseover="this.src='/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/gerarddesrosiers_over.jpg'" onmouseout="this.src='/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/gerarddesrosiers.jpg'" alt="Prix d'excellence G&#233;rard Desrosiers" src="/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/gerarddesrosiers.jpg">
-  </img>
+</a></div><div class="pub"><a href="/monteregie/fr/qui-sommes-nous/partenariat/prix-d-excellence-gerard-desrosiers/index.aspx">
+  <img onmouseover="this.src='/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/gerarddesrosiers_over.jpg'" onmouseout="this.src='/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/gerarddesrosiers.jpg'" alt="Prix d'excellence G&#233;rard Desrosiers" src="/doc_uploads/reseau_biblio_du_quebec/centre-du-quebec/francais/images/bandeau/gerarddesrosiers.jpg" />
+  
 </a></div>
                             <div class="participation">
                                 <a href="http://www.mcccf.gouv.qc.ca/" target="_blank" onclick="_gaq.push(['_trackEvent', 'Liens sortants', 'Pied de page', 'MCCCF']);"><img alt="Avec la participation du Ministère de la Culture et des Communications du Québec" src="/images/piedpage/logo_MCCQ.jpg" /></a>
@@ -711,8 +724,8 @@ Horaire et localisation</a></li></ul>
 </script>
 
 <script type="text/javascript" src="/scripts/jquery.inputmask/jquery.inputmask-3.1.js"></script>
-<script src="/scripts/hammer.min.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/css-accordeon.js?v=2.240" type="text/javascript"></script>
+<script src="/scripts/hammer.min.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/css-accordeon.js?v=2.245" type="text/javascript"></script>
 <script src="/scripts/json2.js" type="text/javascript"></script>
 <script src="/scripts/jquery.autosize-min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
@@ -722,8 +735,8 @@ Horaire et localisation</a></li></ul>
 <script src="/scripts/knockout-custom.js" type="text/javascript"></script>
 <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
 <script src="/scripts/jquery.cookie.js" type="text/javascript"></script>
-<script src="/scripts/knockout.grid.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/script_global.js?v=2.240" type="text/javascript"></script> 
+<script src="/scripts/knockout.grid.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/script_global.js?v=2.245" type="text/javascript"></script> 
     </form>
 </div>
 
@@ -746,21 +759,19 @@ Horaire et localisation</a></li></ul>
     });
 </script>
  
-<!-- Facebook async loading of JSAPI --> 
-<div id="fb-root"></div> 
         
 
     
     
     <script type="text/javascript">!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
-    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=7&count=2&BiblioId=0&apresAujourdhui=1&LastModified=635933069522200000&v=2.240' type='text/javascript'></script>
+    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=7&count=2&BiblioId=0&apresAujourdhui=1&LastModified=635983836476100000&v=2.245' type='text/javascript'></script>
 
-    <script src="/scripts/classes/Arrays.js?v=2.240" type="text/javascript"></script>
+    <script src="/scripts/classes/Arrays.js?v=2.245" type="text/javascript"></script>
     <script src="/scripts/jquery.cycle.all.min.js" type="text/javascript"></script>
     <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
-    <script src="/scripts/script_onglets.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/classes/Maths.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/classes/ActiviteViewModel.js?v=2.240" type="text/javascript"></script> 
+    <script src="/scripts/script_onglets.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/classes/Maths.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/classes/ActiviteViewModel.js?v=2.245" type="text/javascript"></script> 
 
     <script type="text/javascript">
 
@@ -790,32 +801,9 @@ Horaire et localisation</a></li></ul>
 
 
 
-
-
     
 
-<script type="text/javascript">
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '',
-            status: true,
-            cookie: true,
-            xfbml: true
-        });
-
-        _ga.trackFacebook(); //Google Analytics tracking
-    };
-
-    // Load the Facebook SDK Asynchronously
-    (function (d) {
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement('script'); js.id = id; js.async = true;
-        js.src = "//connect.facebook.net/fr_FR/all.js";
-        ref.parentNode.insertBefore(js, ref);
-    } (document));
-</script>
-
+    
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

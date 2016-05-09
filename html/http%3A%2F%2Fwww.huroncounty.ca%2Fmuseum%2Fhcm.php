@@ -77,7 +77,10 @@ function MM_swapImage() { //v3.0
 
 	<!--three buttons-->
 
-	<div id="toplinks"><a href="../misc/sitemap.php">Site Map</a> | <a href="../contact/index.php">Contacts</a> | <a href="../index.php">Home</a></div>
+	<div id="toplinks">
+		<a href="/misc/accessibility.php">Accessibility</a> | <a href="/misc/sitemap.php">Site Map</a> | <a
+		href="/contact/index.php">Contacts</a> | Home
+	</div>
 
 	<!--increase text size-->
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -181,7 +184,8 @@ function MM_swapImage() { //v3.0
 				<li><a href="facilities.php">Facilities</a></li>
 				<!--  <li><a href="downloads/2007 Flea Market Policy.pdf" target="_blank">Flea Market Policy</a></li>   -->
 				<li><a href="history.php">History</a></li>
-				<li><a href="stratplan.php">Strategic Plan</a> </li>
+				<li><a href="downloads/Museum-Business-Plan-2016.pdf">Business Plan</a></li>
+				<li><a href="stratplan.php">Strategic Plan</a></li>
 			</ul>
 		</li>
 		<li><a href="http://blog.huroncounty.ca/museum/" target="_blank">Blog</a></li> 
@@ -358,29 +362,32 @@ function MM_swapImage() { //v3.0
 				</tr>
 			</table>
 
-			<!--bottom bar with copyright info-->
-          
-          <div id="btmbar">
-			<div class="footercopyright">&copy; County of Huron 2016</div>
-            <div class="footerdisclaimer"><a href="../misc/copyright.php">Copyright &amp; Disclaimer Statement</a>&nbsp;&nbsp;</div>
-           </div>
-		    
-		  <!--right side grad-->
-          
-        </td>
-		<td valign="top" class="rightgrad"><div id="rightgradtop"></div></td>
-      </tr>
-    </table>
-	
-	<!--bottom border-->
-	
-<div id="btmbtmbar"></div>
+			
 
+<!--bottom bar with copyright info-->
+			<div class="footer">
+				
+
+				<div class="aoda">Alternative formats and communication supports are available by contacting the Huron County Clerk at 519.524.8394 ext. 3257</div>
+				<div class="footerdisclaimer"><a href="../misc/copyright.php">Copyright &amp; Disclaimer Statement</a>&nbsp;&nbsp;</div>
+				<div class="footercopyright">&copy; County of Huron 2016</div>
+				
+				
+			</div>
+
+	<!--right side grad-->
+
+		</td>
+		<td valign="top" class="rightgrad"><div id="rightgradtop"></div></td>
+	</tr>
+</table>
+
+<!--bottom border-->
 
 <script type="text/javascript" src="//us1.siteimprove.com/js/siteanalyze_advanced.js"></script>
-
 <noscript></noscript>
 
-</body>
 
+<p><br /></p>
+</body>
 </html>

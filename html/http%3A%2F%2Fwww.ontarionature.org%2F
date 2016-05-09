@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/home.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -17,6 +18,27 @@
 <![endif]-->
 
 
+
+<!-- Place somewhere in the <head> of your document -->
+<link rel="stylesheet" href="flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="homepage_alt/FlexSlider/jquery.flexslider.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.flexslider').flexslider({
+            animation: 'fade',
+            controlsContainer: '.flexslider'
+        });
+    });
+</script>
+
+<!-- Place in the <head>, after the three links -->
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
+
 <!-- InstanceBeginEditable name="head" -->
 <style type="text/css">
 <!--
@@ -25,6 +47,83 @@
 	font-size: 11px;
 }
 -->
+
+.flexslider .flex-control-nav {
+	z-index: 100;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin: 0 0 0 -10px;
+        z-index: 100;
+        bottom: -5px;
+        float: left;
+}
+
+.flex-control-nav li {
+	display: inline-block;
+	zoom: 1;
+        float: center;
+        
+        
+}
+
+.flex-control-paging li a {
+	display: block;
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 12px;
+	height: 12px;
+	margin: 0 3px;
+	background-color: #b6b6b6 9;
+        bottom: 20 px;
+        float: center;
+
+
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+
+	-webkit-box-shadow: inset 0 0 0 2px #b6b6b6;
+	-moz-box-shadow: inset 0 0 0 2px #b6b6b6;
+	box-shadow: inset 0 0 0 2px #b6b6b6;
+}
+
+.flex-control-paging li a.flex-active {
+	background-color: #bfab8b;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#bfab8b), to(#f5e2c1));
+	background-image: -webkit-linear-gradient(top, #bfab8b, #f5e2c1);
+	background-image: -moz-linear-gradient(top, #bfab8b, #f5e2c1);
+	background-image: -o-linear-gradient(top, #bfab8b, #f5e2c1);
+	background-image: linear-gradient(to bottom, #bfab8b, #f5e2c1);
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+        text-align: center;
+        float: center;
+}
+
+.slides {
+        width: 100%!important;
+        text-align: left;
+		float: left;
+  
+}
+.slides li {
+         display: inline-block!important; 
+        *display: inline!important;
+        text-align: left; 
+        float: left!important;
+		position: absolute;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    text-align: left;
+}
+
 </style>
 <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 <!-- InstanceEndEditable -->
@@ -75,7 +174,12 @@ input.gsc-input { font-size: 14px !important; }
     	<li><a href="discover/index.php" class="main_navigation discover">Discover</a>
         <ul>
     <li class="link01"><a href="/discover/index.php" class="link01">Mission and Strategic Goals</a></li>
-	<li class="link02"><a href="/discover/history.php" class="link02">History/Milestones</a></li>
+	<li class="link02"><a href="/discover/history.php" class="link02">History/Milestones</a>
+          <ul>
+        <li class="sublink01"><a href="/discover/85thanniversary.php" class="sublink01">85 Years</a>
+    </li>
+    </ul>
+    </li>
     <li class="link03"><a href="/discover/members.php" class="link03">Our Members</a>
       <ul>
         <li class="sublink01"><a href="/discover/annual_gathering.php" class="sublink01">Annual Gathering</a>
@@ -89,7 +193,7 @@ input.gsc-input { font-size: 14px !important; }
     	<ul>
         <li class="sublink01"><a href="/discover/member_groups/building_ONN.php" class="sublink01">Building our Nature Network</a> </li>
             <li class="sublink02"><a href="/discover/member_groups/regional_meetings.php" class="sublink02">Regional Meetings</a></li>
-            <li class="sublink03"><a href="/discover/member_groups/NN_calendar/" class="sublink03">Nature Network Calendar</a></li>
+            <li class="sublink03"><a href="/connect/blog/events/category/nature-network/" class="sublink03" target="_blank">Nature Network Calendar</a></li>
             <li class="sublink04"><a href="/discover/member_groups/member_groups.php" class="sublink04">Member Groups</a>
               <ul>
                 <li class="subsublink01"><a href="/discover/member_groups/member_groups_region.php" class="subsublink01">List by Region</a></li>
@@ -108,6 +212,7 @@ input.gsc-input { font-size: 14px !important; }
 <li class="link09"><a href="/discover/resources/resources.php" class="link09">Resources and Publications</a>
     	<ul>
             <li class="sublink01"><a href="/discover/resources/publications.php" class="sublink01">Publications to download</a></li>
+            <li class="sublink02"><a href="http://onnaturemagazine.com/" class="sublink02" target="_blank"><em>ON Nature</em> magazine</a></li>
 	  </ul>
   </li>
   <li class="link10"><a href="/discover/accessibility.php" class="link10">Accessible Customer Service Plan</a></li>
@@ -118,14 +223,14 @@ input.gsc-input { font-size: 14px !important; }
         <li><a href="connect/index.php" class="main_navigation connect">Connect</a>
         <ul>
   <li class="link01"><a href="/connect/index.php" class="link01">Connect with Nature</a>    
-	<li class="link03"><a href="/connect/nature_guardians/index.php" class="link03">Nature Guardians</a>
-	  <ul>
-        <li class="sublink02"><a href="/connect/nature_guardians/youth_summit.php" class="sublink02">Youth Summit</a></li>
-        <li class="sublink03"><a href="/connect/nature_guardians/activities_and_events.php" class="sublink03">Activities and Events</a></li>
-        <li class="sublink04"><a href="/connect/nature_guardians/youth_council.php" class="sublink04">Youth Council</a></li>         
-  </ul>    
-<li class="link04"><a href="/connect/events.php" class="link04">Events</a></li>
-     <li class="link06"><a href="http://www.ontarionature.org/connect/blog" class="link06">Blog</a></li>
+	<li class="link02"><a href="/connect/nature_guardians/index.php" class="link02">Nature Guardians</a>
+	    <ul>
+        <li class="sublink01"><a href="/connect/nature_guardians/youth_summit.php" class="sublink01">Youth Summit</a></li>
+        <li class="sublink02"><a href="/connect/nature_guardians/activities_and_events.php" class="sublink02">Activities and Events</a></li>
+        <li class="sublink03"><a href="/connect/nature_guardians/youth_council.php" class="sublink03">Youth Council</a></li>         
+        </ul>    
+  <li class="link03"><a href="/connect/blog/events/category/ontario-nature/" class="link03" target="_blank">Events</a></li>
+  <li class="link04"><a href="http://www.ontarionature.org/connect/blog" class="link04">Blog</a></li>
 </ul> 
 	  </li>
         <li><a href="protect/index.php" class="main_navigation protect">Protect</a>
@@ -243,7 +348,7 @@ input.gsc-input { font-size: 14px !important; }
 	 		<li class="sublink01"><a href="/give/other_ways_to_give/tribute.php" class="sublink01">In Tribute</a></li>
             <li class="sublink02"><a href="/give/other_ways_to_give/matching_gifts.php" class="sublink02">Matching Gifts</a></li>
             <li class="sublink03"><a href="/give/other_ways_to_give/workplace_gifts.php" class="sublink03">Workplace Gifts</a></li>
-            <li class="sublink04"><a href="/protect/habitat/trees_in_trust.php" class="sublink04">Trees in Trust</a></li>
+            
             <li class="sublink05"><a href="/give/other_ways_to_give/third_party_giving.php" class="sublink05">Third-Party Giving</a></li>
             <li class="sublink06"><a href="/give/other_ways_to_give/run.php" class="sublink06">Scotiabank Group Charity Challenge</a></li>
             <li class="sublink07"><a href="/give/other_ways_to_give/securities.php" class="sublink07">Gift of Securities</a></li>
@@ -262,28 +367,20 @@ input.gsc-input { font-size: 14px !important; }
 <!-- Upper navigation ends -->
 <!-- Flash movie starts -->
 <div id="flash_movie"><!-- InstanceBeginEditable name="Flash Movie" -->
-  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="920" height="370" id="FlashID" accesskey="0" tabindex="0" title="Ontario Nature">
-    <param name="quality" value="high" />
-    <param name="wmode" value="transparent" />
-    <param name="swfversion" value="100.0.0.0" />
-    <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don&rsquo;t want users to see the prompt. -->
-    <param name="expressinstall" value="Scripts/expressInstall.swf" />
-    <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
-    <!--[if !IE]>-->
-    <object type="application/x-shockwave-flash" width="920" height="370">
-      <!--<![endif]-->
-      <param name="quality" value="high" />
-      <param name="wmode" value="transparent" />
-      <param name="swfversion" value="100.0.0.0" />
-      <param name="expressinstall" value="Scripts/expressInstall.swf" />
-      <param name="SRC" value="flash/ONflash_home_Feb26_16.swf" />
-      <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
-      <div>
-        <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
-        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
-      </div>
-      <!--[if !IE]>-->
-    </object>
+  <!-- Place somewhere in the <body> of your page -->
+<div class="flexslider">
+  <ul class="slides">
+    <li> <a href="http://www.ontarionature.org/connect/nature_guardians/activities_and_events.php"><img src="homepage_alt/FlexSlider/images/homepage_index_May_6_2016_SpecialSpaces.gif" align="left"/></a>
+    </li>
+    <li> <a href="http://www.ontarionature.org/discover/85thanniversary.php"><img src="homepage_alt/FlexSlider/images/homepage_index_April-26_16_85years.jpg" align="left" /></a>
+    </li>
+    <li> <a href="http://www.ontarionature.org/discover/annual_gathering.php"><img src="images_new/homepage_index_AG_2016.jpg" align="left"/></a>
+    </li>
+<li>
+      <a href="http://www.ontarionature.org/connect/blog/conservation-conversation/"><img src="homepage_alt/FlexSlider/images/homepage_index_April-26_16_ConservationConversation.gif" align="left"/></a></li>
+  </ul>
+</div>
+
     <!--<![endif]-->
   </object>
 <!-- InstanceEndEditable --></div>
@@ -295,33 +392,33 @@ input.gsc-input { font-size: 14px !important; }
 		  <div class="main_column">
           <h2>What's New</h2>
           <!-- InstanceBeginEditable name="Whats New" -->
-          <p><strong>All talk little action:</strong><br />
-The road to you-know-where is paved with good intentions for pollinators.<strong><br />
-<a href="http://www.ontarionature.org/connect/blog/all-talk-little-action/" target="_blank">Learn more</a></strong></p>
-          <p><strong>Standards for forestry:</strong><br />
-            An introduction to Forest Stewardship Certification in Ontario.<strong><br />
-  <a href="http://www.ontarionature.org/connect/blog/an-introduction-to-the-forest-stewardship-council/" target="_blank">Learn more</a></strong><font face="Verdana, Helvetica, Arial"><font color="#444f47"><span style="FONT-SIZE: 11px"><br />
-          </span></font></font> </p>
+          <p><strong>Enter to win:</strong><br />
+            Submit a sighting to our reptile and amphibian photo contest!<br />
+          <a href="http://www.ontarionature.org/connect/blog/submitasightingcontest/" target="_parent">Learn more</a></strong></p>
+          
+          <p><strong>Secret worlds</strong><strong>:</strong><br />
+          Who's living under the monitoring boards at our Altberg Nature Reserve?<strong><br />
+<a href="http://www.ontarionature.org/connect/blog/sleuthing-for-salamanders/" target="_blank">Learn more</a></strong></p>
           <!-- InstanceEndEditable --></div>
           <div class="main_column">
           <h2>Take Action</h2>
           <!-- InstanceBeginEditable name="Member Groups" -->
-          <p><strong>Conservation heroes:</strong><br /> 
-          Nominate outstanding conservation leaders for our awards today.
-<br />
-<strong><a href="http://www.ontarionature.org/act/conservation_award/index.php" target="_blank">Learn more</a></strong></p>
-          <p><strong>Protect our pollinators:</strong><br/>
-Comment on Ontario&rsquo;s plan to protect pollinators by March 7.<strong><br />
-<a href="https://ontarionature.thankyou4caring.org/pollinatorplan">Learn more</a></strong></p>
+          <p><strong>Spring festivites:</strong><br />
+          Join us at one (or more!) of  our upcoming Doors Open to Nature events. <br />
+          <strong><a href="http://www.ontarionature.org/connect/blog/events/category/doors-open-to-nature/" target="_blank">Learn more</a></strong></p>
+          <p><strong>The Bruce beckons:</strong><br />
+Spend an unforgettable weekend exploring the South Bruce Peninsula.<br />
+<strong><a href="http://www.ontarionature.org/discover/annual_gathering.php" target="new">Learn more</a></strong></p>
           <!-- InstanceEndEditable --></div>
           <div style="margin-right:0;" class="main_column">
           <h2>Media</h2>
           <!-- InstanceBeginEditable name="Media" -->
-          <p><strong>Take the challenge:</strong><br />
-          Simple steps<br /> to keep cats safe and save bird lives.<br /> <strong><a href="http://www.ontarionature.org/media/news_template.php?n_code=828" target="_blank">Learn more</a></strong></p>
-          <p><strong>Green groundbreaker:</strong><br />
-Cornerstone  presents world's first responsible quarry certificate.<br/>
-<strong><a href="http://www.ontarionature.org/media/news_template.php?n_code=827" target="_blank">Learn  more</a></strong></p>
+          <p><strong>Calling citizen scientists:</strong><br />
+Help advance knowledge about amphibians and reptiles - report sightings.<br />
+<strong><a href="http://www.ontarionature.org/media/media_template.php?n_code=874">Learn more</a></strong></p>
+          <p><strong>In defense of wildlife:</strong><br />
+Ontario Court of Appeal to decide fate of  Ontario's species at risk.<br />
+<strong><a href="http://www.ontarionature.org/media/media_template.php?n_code=871">Learn more</a></strong></p>
           <!-- InstanceEndEditable --></div>
           
           
@@ -346,7 +443,7 @@ Cornerstone  presents world's first responsible quarry certificate.<br/>
         <li><a href="discover/contact.php">Contact Us</a></li>
         <!--<li><a href="../change_address.php" style="padding-right:40px">Change of Address</a></li>-->
       </ul>
-      <p id="copyright">© 2013-2015 Ontario Nature </p>
+      <p id="copyright">© Ontario Nature, 2010-2016  </p>
   </div>
   <!-- Lower navigation ends -->
     

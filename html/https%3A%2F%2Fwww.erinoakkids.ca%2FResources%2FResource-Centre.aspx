@@ -29,15 +29,14 @@
 <link href="/CMSPages/GetCSS.aspx?stylesheetname=ErinOakKidsPrint" type="text/css" rel="stylesheet" media="print" /> 
 <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/> 
 <link href="/favicon.ico" type="image/x-icon" rel="icon"/> 
-<link href="https://www.erinoakkids.ca/Resources/Resource-Centre.aspx?rss=Erin-Oak-Kids-Feed" type="application/rss+xml" rel="alternate" title="Erin Oak Kids"/> 
-<script type='text/javascript'>var jTweet = [{"created_at":"Friday, March 11, 2016","id_str":"708324067049414656","text":"#Movinforkids will take place at Lakeside Park in #Mississauga. A beautiful setting to raise money for our kids! <a href='https:\/\/t.co\/3S0wjeN03L' target='blank'>https:\/\/t.co\/3S0wjeN03L<\/a>"},{"created_at":"Wednesday, March 9, 2016","id_str":"707678845827223552","text":"This summer we're helping #teens learn #jobskills at “Taking Care of Business”.<a href='https:\/\/t.co\/4bZIMzL335' target='blank'>https:\/\/t.co\/4bZIMzL335<\/a> #disabilities <a href='https:\/\/t.co\/d9vQvZahyR' target='blank'>https:\/\/t.co\/d9vQvZahyR<\/a>"},{"created_at":"Tuesday, March 8, 2016","id_str":"707314632009113601","text":"Today as we remember Bob McKay, take a few minutes to listen to his inspiring remarks from a 2013 event: <a href='https:\/\/t.co\/eeBW4U1XPS' target='blank'>https:\/\/t.co\/eeBW4U1XPS<\/a>"},{"created_at":"Tuesday, March 8, 2016","id_str":"707312300181495808","text":"@ParkinArch He absolutely will be."},{"created_at":"Monday, March 7, 2016","id_str":"706966982587887618","text":"Some great tips from our friends at @CTNKids! <a href='https:\/\/t.co\/ndKUw0qWgW' target='blank'>https:\/\/t.co\/ndKUw0qWgW<\/a>"},{"created_at":"Monday, March 7, 2016","id_str":"706946248369152000","text":"It’s Social Work Week! Seven ErinoakKids Social Workers support 1500 families each year. #Weheartsocialworkers #SWweek"},{"created_at":"Monday, March 7, 2016","id_str":"706858647628996608","text":"Missed our Halton groundbreaking a few weeks ago? Here's a recap! <a href='https:\/\/t.co\/EAUKGRTv1e' target='blank'>https:\/\/t.co\/EAUKGRTv1e<\/a>"},{"created_at":"Monday, March 7, 2016","id_str":"706845678903934977","text":"@fcmckay We are so sorry for your loss and are grieving alongside you."},{"created_at":"Friday, March 4, 2016","id_str":"705754737677725697","text":"Funeral details for our friend Bob McKay: <a href='https:\/\/t.co\/FW22RPqPwq' target='blank'>https:\/\/t.co\/FW22RPqPwq<\/a>"},{"created_at":"Thursday, March 3, 2016","id_str":"705507179214798848","text":"@AutismNavigator Yes, he MC'ed our Oakville groundbreaking just two weeks ago. So sad."},{"created_at":"Thursday, March 3, 2016","id_str":"705470296107646977","text":"@GrandviewKids Thank you &lt;3"},{"created_at":"Thursday, March 3, 2016","id_str":"705470250624663552","text":"@danblocka He absolutely was!"},{"created_at":"Thursday, March 3, 2016","id_str":"705424213482590208","text":"Bob was a good friend of ErinoakKids and a tireless advocate. We will miss him dearly. <a href='https:\/\/t.co\/HbyOhDSlki' target='blank'>https:\/\/t.co\/HbyOhDSlki<\/a>"},{"created_at":"Thursday, March 3, 2016","id_str":"705423903863152640","text":"We're saddened to share that former client, current Board Director Bob McKay has passed away <a href='https:\/\/t.co\/HbyOhE9WbQ' target='blank'>https:\/\/t.co\/HbyOhE9WbQ<\/a> <a href='https:\/\/t.co\/zYChoX0iER' target='blank'>https:\/\/t.co\/zYChoX0iER<\/a>"},{"created_at":"Wednesday, March 2, 2016","id_str":"705028766964121601","text":"@TheAudman We are always honoured to have you at our events!"},{"created_at":"Wednesday, March 2, 2016","id_str":"705028598445514752","text":"RT @drama_way: Our Drama #Actors at @ErinoakKids Players are so excited for this Guy <a href='https:\/\/t.co\/GQ1rQEnurY' target='blank'>https:\/\/t.co\/GQ1rQEnurY<\/a>"},{"created_at":"Tuesday, March 1, 2016","id_str":"704707995943305216","text":"ALERT: All ErinoakKids sites will close at 4 pm today. All evening programs are cancelled. #onstorm #staysafe <a href='https:\/\/t.co\/98ELP0nEwC' target='blank'>https:\/\/t.co\/98ELP0nEwC<\/a>"},{"created_at":"Tuesday, March 1, 2016","id_str":"704689046795264001","text":"#EOKPrideandJoy is our premier #fundraising event. Be a part of this special night as a sponsor. <a href='https:\/\/t.co\/vXaeMrDfc7' target='blank'>https:\/\/t.co\/vXaeMrDfc7<\/a>"},{"created_at":"Monday, February 29, 2016","id_str":"704287659250884608","text":"Happy #leapday! Are you celebrating this extra day of 2016? #onceevery4years"},{"created_at":"Friday, February 26, 2016","id_str":"703371434593271808","text":"RT @EasterSealsON: ES kid Sydney proves that kids w\/ physical disabilities are like other kids. Watch this video by @ErinoakKids: https:\/\/t…"}];</script></head>
+<script type='text/javascript'>var jTweet = [{"created_at":"Friday, May 6, 2016","id_str":"728579233929297921","text":"Have you signed up for #MovinForKids yet? This exciting fundraiser takes place May 29 at Lakeside Park #Mississauga <a href='https:\/\/t.co\/3S0wjevoFb' target='blank'>https:\/\/t.co\/3S0wjevoFb<\/a>"},{"created_at":"Thursday, May 5, 2016","id_str":"728330549484527616","text":"RT @AmazonPrincessW: I am looking forward to attending this event on May 29th to support the @ErinoakKids #amazonprincessw #wonderwoman htt…"},{"created_at":"Wednesday, May 4, 2016","id_str":"727875619162329088","text":"We’re at Connections Resource #Fair today at @MCCMississauga. Come say hi! #Mississauga #disabilities <a href='https:\/\/t.co\/VLvjrCHUym' target='blank'>https:\/\/t.co\/VLvjrCHUym<\/a>"},{"created_at":"Tuesday, May 3, 2016","id_str":"727599351577628672","text":"@_sumansinha Hi there! Here's a link to the poster. Note that this is only open to ErinoakKids clients. <a href='https:\/\/t.co\/vPxMKfEmHI' target='blank'>https:\/\/t.co\/vPxMKfEmHI<\/a>"},{"created_at":"Tuesday, May 3, 2016","id_str":"727597960587038720","text":"ErinoakKids runs a #Park Day every spring. A chance for parents to learn how to build a preschooler’s skills in a natural setting."},{"created_at":"Monday, May 2, 2016","id_str":"727228444442906625","text":"No plans on May 30? We’d love to see you out for a night of #theatre! #kids #disabilities <a href='https:\/\/t.co\/MDt63uky7X' target='blank'>https:\/\/t.co\/MDt63uky7X<\/a> <a href='https:\/\/t.co\/oY7iHMqtME' target='blank'>https:\/\/t.co\/oY7iHMqtME<\/a>"},{"created_at":"Friday, April 29, 2016","id_str":"726054746210091008","text":"Just one month until #MovinForKids! Join us at Lakeside Park in #Mississauga. Register here: <a href='https:\/\/t.co\/gpn8LEsmGF' target='blank'>https:\/\/t.co\/gpn8LEsmGF<\/a>"},{"created_at":"Thursday, April 28, 2016","id_str":"725796312239738880","text":"We’ll be at Connections Resource Fair next Wednesday at @MCCMississauga. Come check it out! <a href='https:\/\/t.co\/JAPPFBXa5y' target='blank'>https:\/\/t.co\/JAPPFBXa5y<\/a>"},{"created_at":"Wednesday, April 27, 2016","id_str":"725424814324854785","text":"You can sign up, create a personal fundraising page and collect pledges for #MovinForKids all through our website! <a href='https:\/\/t.co\/3S0wjeN03L' target='blank'>https:\/\/t.co\/3S0wjeN03L<\/a>"},{"created_at":"Tuesday, April 26, 2016","id_str":"725053529015091200","text":"Thanks to the volunteers from @suncorenergy who helped out at our Bristol Circle site today! #volunteering <a href='https:\/\/t.co\/v9zYlhpu16' target='blank'>https:\/\/t.co\/v9zYlhpu16<\/a>"},{"created_at":"Tuesday, April 26, 2016","id_str":"724994859375841280","text":"We’re hosting a Home &amp; Vehicle Modification Fair on May 14 and it’s open to everyone! Details: <a href='https:\/\/t.co\/507YswcF2F' target='blank'>https:\/\/t.co\/507YswcF2F<\/a> #disibilities"},{"created_at":"Tuesday, April 26, 2016","id_str":"724937835095150593","text":"We are so excited! <a href='https:\/\/t.co\/M0i27Bhq0A' target='blank'>https:\/\/t.co\/M0i27Bhq0A<\/a>"},{"created_at":"Tuesday, April 26, 2016","id_str":"724937740639428609","text":"RT @drama_way: Looking forward to seeing her okay #Annie at the #RBCTheatre at the @LivingArtsCtr on May 30 with @ErinoakKids #act! https:\/…"},{"created_at":"Monday, April 25, 2016","id_str":"724627667199361024","text":"RT @AutismWR: Don't miss these upcoming: workshops by @KidsAbility &amp; @ErinoakKids: Behaviour, Feeding, and Toileting. <a href='https:\/\/t.co\/QTTerr9s' target='blank'>https:\/\/t.co\/QTTerr9s<\/a>…"},{"created_at":"Monday, April 25, 2016","id_str":"724609756825038848","text":"Want to help kids with disabilities learn to ride a bike this summer? #Volunteer with our #iCanBike program! <a href='https:\/\/t.co\/iFPfwerlyf' target='blank'>https:\/\/t.co\/iFPfwerlyf<\/a>"},{"created_at":"Friday, April 22, 2016","id_str":"723599570127691778","text":"And thanks to our #MovinForKids kilometre sponsors! @LittleKickersCa #AutoEdge #OriginsofHealth"},{"created_at":"Friday, April 22, 2016","id_str":"723599523889745923","text":"Thanks to our #MovinForKids sponsors! @RaymondJamesCDN @LongosMarkets @IAFF1212 #ChampionExpressLtd #HabibCanadianBank @MetrolandMedia"},{"created_at":"Thursday, April 21, 2016","id_str":"723177788920893444","text":"RT @HaltonCResFair: Bring the kids &amp; meet agencies that support children &amp; parents, such as @ErinoakKids <a href='https:\/\/t.co\/slj0SyFSPp' target='blank'>https:\/\/t.co\/slj0SyFSPp<\/a> https:\/\/t.…"},{"created_at":"Wednesday, April 20, 2016","id_str":"722821469491691521","text":"You can sign up, create a personal fundraising page and collect pledges for #MovinForKids all through our website! <a href='https:\/\/t.co\/3S0wjevoFb' target='blank'>https:\/\/t.co\/3S0wjevoFb<\/a>"},{"created_at":"Wednesday, April 20, 2016","id_str":"722821438193840128","text":"The #MovinForKids fundraiser is coming up quickly! Are you joining us on May 29? <a href='https:\/\/t.co\/3S0wjevoFb' target='blank'>https:\/\/t.co\/3S0wjevoFb<\/a>"}];</script></head>
 <body class="LTR Gecko Gecko43 ENUS ContentBody" >
     <form method="post" action="/Resources/Resource-Centre.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form">
 <div class="aspNetHidden">
 <input type="hidden" name="manScript_HiddenField" id="manScript_HiddenField" value="" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTYwODg0MzQ2Ng9kFgICARBkZBYCAgMPZBYCZg9kFgJmD2QWBAIBD2QWAmYPZBYIZg8WAh4EaHJlZgUjaHR0cDovL3d3dy5mYWNlYm9vay5jb20vRXJpbm9ha0tpZHNkAgIPFgIfAAUeaHR0cDovL3R3aXR0ZXIuY29tL0VyaW5vYWtLaWRzZAIEDxYCHwAFUGh0dHA6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvZXJpbm9ha2tpZHMtY2VudHJlLWZvci10cmVhdG1lbnQtYW5kLWRldmVsb3BtZW50ZAIGDxYCHwAFKGh0dHA6Ly93d3cueW91dHViZS5jb20vRXJpbm9ha0tpZHNDZW50cmVkAgsPZBYCZg9kFgICAg9kFgJmD2QWAmYPZBYKAgkPZBYCZg9kFgICAg9kFghmD2QWAmYPZBYCZg8VBj0vRXZlbnQtQ2FsZW5kYXIvMjAxNi9OZXctZG9jdW1lbnQvTW90aGVyLXMtU3VwcG9ydC1Hcm91cC5hc3B4Jk1vdGhlcidzIFN1cHBvcnQgR3JvdXAgKFNvdXRoIE1pbGx3YXkpZEEgZGlzY3Vzc2lvbiBncm91cCBmb3IgRXJpbm9ha0tpZHMgcGFyZW50cyB3aGljaCBwcm92aWRlcyBvcHBvcnR1bml0aWVzIHRvIGNvbm5lY3Qgd2l0aCBvbmUgYW5vdGhlci4OTWFyY2ggMTEsIDIwMTYNZGlzcGxheTpibG9jaz5iaS13ZWVrbHkgb24gRnJpZGF5IGJldHdlZW4gSmFudWFyeSAxNSwgMjAxNiBhbmQgSnVuZSAxNywgMjAxNmQCAQ9kFgJmD2QWAmYPFQYsL0V2ZW50LUNhbGVuZGFyLzIwMTYvTWFyY2gvQWR2b2NhY3ktKDIpLmFzcHgdU3RlcHMgVG93YXJkcyBQb3NpdGl2ZSBDaGFuZ2VCU3RyYXRlZ2llcyAgeW91IGNhbiB1c2UgdG8gdGVhY2ggeW91ciBjaGlsZCByZXBsYWNlbWVudCBiZWhhdmlvdXJzDk1hcmNoIDEyLCAyMDE2DGRpc3BsYXk6bm9uZTh3ZWVrbHkgb24gIGJldHdlZW4gSmFudWFyeSAxLCAxNzUzIGFuZCBEZWNlbWJlciAzMSwgOTk5OWQCAg9kFgJmD2QWAmYPFQYsL0V2ZW50LUNhbGVuZGFyLzIwMTYvTWFyY2gvQWR2b2NhY3ktKDYpLmFzcHgcVGVhY2hpbmcgRGFpbHkgTGl2aW5nIFNraWxscy1MZWFybiB0byB1c2UgQXBwbGllZCBCZWhhdmlvdXIgQW5hbHlzaXMgKEFCQSkOTWFyY2ggMTIsIDIwMTYMZGlzcGxheTpub25lOHdlZWtseSBvbiAgYmV0d2VlbiBKYW51YXJ5IDEsIDE3NTMgYW5kIERlY2VtYmVyIDMxLCA5OTk5ZAIDD2QWAmYPZBYCZg8VBkYvRXZlbnQtQ2FsZW5kYXIvMjAxNi9OZXctZG9jdW1lbnQvTW90aGVycy1TdXBwb3J0LUdyb3VwLShCdXJsb2FrKS5hc3B4IE1vdGhlcnMnIFN1cHBvcnQgR3JvdXAgKEJ1cmxvYWspIE1vdGhlcnMnIFN1cHBvcnQgR3JvdXAgKEJ1cmxvYWspDk1hcmNoIDE0LCAyMDE2DWRpc3BsYXk6YmxvY2s9Ymktd2Vla2x5IG9uIEZyaWRheSBiZXR3ZWVuIEphbnVhcnkgOCwgMjAxNiBhbmQgSnVuZSAyNCwgMjAxNmQCFQ8PFgIeBFRleHQFFDQvMjAvMjAxNSA4OjM5OjM2IEFNZGQCGQ9kFgJmD2QWAgICD2QWHGYPZBYCZg9kFgJmDxUCLi9TZXJ2aWNlcy9BY2Nlc3NpbmctU2VydmljZXMvQXBwb2ludG1lbnRzLmFzcHgMQXBwb2ludG1lbnRzZAIBD2QWAmYPZBYCZg8VAi9odHRwOi8vd3d3LmVyaW5vYWtraWRzLmNhL1Jlc291cmNlcy9BdXRpc20uYXNweA1BU0QgUmVzb3VyY2VzZAICD2QWAmYPZBYCZg8VAhN+L1BvcnRhbC9Mb2dpbi5hc3B4DEJvYXJkIFBvcnRhbGQCAw9kFgJmD2QWAmYPFQIUL0V2ZW50LUNhbGVuZGFyLmFzcHgSQ2FsZW5kYXIgb2YgRXZlbnRzZAIED2QWAmYPZBYCZg8VAhkvUmVzb3VyY2VzL0Zvci1TdGFmZi5hc3B4CUZvciBTdGFmZmQCBQ9kFgJmD2QWAmYPFQJFaHR0cDovL2VyaW5vYWtraWRzLmNhL1NlcnZpY2VzL0FjY2Vzc2luZy1TZXJ2aWNlcy9IZWFsdGgtUmVjb3Jkcy5hc3B4DkhlYWx0aCBSZWNvcmRzZAIGD2QWAmYPZBYCZg8VAiEvQWJvdXQtVXMvSG91cnMtb2YtT3BlcmF0aW9uLmFzcHgSSG91cnMgb2YgT3BlcmF0aW9uZAIHD2QWAmYPZBYCZg8VAh8vU2VydmljZXMvSG93LUFyZS1XZS1Eb2luZy5hc3B4EUhvdyBBcmUgV2UgRG9pbmc/ZAIID2QWAmYPZBYCZg8VAlJodHRwOi8vd3d3LmVyaW5vYWtraWRzLmNhL0Fib3V0LVVzL0FjY291bnRhYmlsaXR5L1ByaXZhY3ktYW5kLUNvbmZpZGVudGlhbGl0eS5hc3B4G1ByaXZhY3kgYW5kIENvbmZpZGVudGlhbGl0eWQCCQ9kFgJmD2QWAmYPFQI7L1NlcnZpY2VzL0FjY2Vzc2luZy1TZXJ2aWNlcy9TZXZlcmUtV2VhdGhlci1Qcm9jZWR1cmVzLmFzcHgYU2V2ZXJlIFdlYXRoZXIgUHJvY2VkdXJlZAIKD2QWAmYPZBYCZg8VAi5odHRwOi8vZXJpbm9ha2tpZHMuY2EvQWJvdXQtVXMvT3VyLUZ1dHVyZS5hc3B4FVJlZGV2ZWxvcG1lbnQgUHJvamVjdGQCCw9kFgJmD2QWAmYPFQIrL1NlcnZpY2VzL0FjY2Vzc2luZy1TZXJ2aWNlcy9SZWZlcnJhbHMuYXNweAlSZWZlcnJhbHNkAgwPZBYCZg9kFgJmDxUCDS9TaXRlbWFwLmFzcHgHU2l0ZW1hcGQCDQ9kFgJmD2QWAmYPFQItL0Fib3V0LVVzL0luZm8tQWJvdXQtRXJpbm9ha0tpZHMtV2Vic2l0ZS5hc3B4E1dlYnNpdGUgSW5mb3JtYXRpb25kAhsPZBYCAgEPZBYCAgEPDxYCHwEF2AE8c3Ryb25nPkRpZCB5b3Uga25vdyB0aGF0IDM3JSBvZiBjaGlsZHJlbiB3aXRoIG1pbmltYWwgaGVhcmluZyBsb3NzZXMgZmFpbCBhdCBsZWFzdCBvbmUgZ3JhZGU/PC9zdHJvbmc+PGJyIC8+DQo8YnIgLz4NClJlYWQgYWJvdXQgPGEgaHJlZj0ifi9TZXJ2aWNlcy9TZXJ2aWNlcy9JbmZhbnQtSGVhcmluZy1TZXJ2aWNlcy5hc3B4Ij5JbmZhbnQgSGVhcmluZyBTZXJ2aWNlczwvYT5kZAIdD2QWAmYPZBYCAgIPZBYCZg9kFgJmD2QWAmYPFQHKBDxoMT4NCglDb250YWN0IEluZm9ybWF0aW9uPC9oMT4NCjxkaXYgY2xhc3M9ImJhc2VUZXh0Ij4NCgk8aW1nIGFsdD0iIiBoZWlnaHQ9IjE2IiBzcmM9In4vaW1hZ2VzL2ljb24taG9tZS5wbmciIHdpZHRoPSIxOSIgLz4mbmJzcDsmbmJzcDs8YSBocmVmPSJ+L0Fib3V0LVVzL0xvY2F0aW9ucy5hc3B4Ij5Fcmlub2FrS2lkcyBMb2NhdGlvbnM8L2E+DQoJPGRpdiBjbGFzcz0iY2xlYXIiIHN0eWxlPSJoZWlnaHQ6IDE2cHgiPg0KCQkmbmJzcDs8L2Rpdj4NCgk8aW1nIGFsdD0iIiBoZWlnaHQ9IjE2IiBzcmM9In4vaW1hZ2VzL2ljb24tcGhvbmUucG5nIiB3aWR0aD0iMTkiIC8+Jm5ic3A7Jm5ic3A7KDkwNSkgODU1LjI2OTANCgk8ZGl2IGNsYXNzPSJjbGVhciIgc3R5bGU9ImhlaWdodDogMTZweCI+DQoJCSZuYnNwOzwvZGl2Pg0KCTxpbWcgYWx0PSIiIGhlaWdodD0iMTYiIHNyYz0ifi9pbWFnZXMvaWNvbi1waG9uZS5wbmciIHdpZHRoPSIxOSIgLz4mbmJzcDsmbmJzcDsxICg4NzcpIDM3NC42NjI1DQoJPGRpdiBjbGFzcz0iY2xlYXIiIHN0eWxlPSJoZWlnaHQ6IDE2cHgiPg0KCQkmbmJzcDs8L2Rpdj4NCjwvZGl2Pg0KPGJyIC8+DQpkZMePmqceHljBaEF+ClkHiHjF4kuj" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTYwODg0MzQ2Ng9kFgICARBkZBYCAgMPZBYCZg9kFgJmD2QWAgIJD2QWAmYPZBYCAgIPZBYCZg9kFgJmD2QWCgIJD2QWAmYPZBYCAgIPZBYIZg9kFgJmD2QWAmYPFQY7L0V2ZW50LUNhbGVuZGFyLzIwMTYvQXByaWwvQXV0aXNtLVBhcmVudC1TdXBwb3J0LUdyb3VwLmFzcHgbQXV0aXNtIFBhcmVudCBTdXBwb3J0IEdyb3VwLUNvbm5lY3Qgd2l0aCBvdGhlciBmYW1pbGllcyB0b3VjaGVkIGJ5IGF1dGlzbQxNYXkgMTEsIDIwMTYNZGlzcGxheTpibG9jazp3ZWVrbHkgb24gV2VkbmVzZGF5IGJldHdlZW4gQXByaWwgNiwgMjAxNiBhbmQgSnVuZSA4LCAyMDE2ZAIBD2QWAmYPZBYCZg8VBkkvRXZlbnQtQ2FsZW5kYXIvMjAxNi9NYXkvVGltZS10by1TbGVlcC0oUGFydC0xLW9mLWEtMi1wYXJ0LVdvcmtzaG9wKS5hc3B4D1NsZWVwIFNvbHV0aW9ucxxXb3Jrc2hvcCBvbiBzbGVlcCBzdHJhdGVnaWVzDE1heSAxMSwgMjAxNgxkaXNwbGF5Om5vbmU4d2Vla2x5IG9uICBiZXR3ZWVuIEphbnVhcnkgMSwgMTc1MyBhbmQgRGVjZW1iZXIgMzEsIDk5OTlkAgIPZBYCZg9kFgJmDxUGKi9FdmVudC1DYWxlbmRhci8yMDE2L01heS9BZHZvY2FjeS0oOCkuYXNweBxUZWFjaGluZyBEYWlseSBMaXZpbmcgU2tpbGxzLUxlYXJuIHRvIHVzZSBBcHBsaWVkIEJlaGF2aW91ciBBbmFseXNpcyAoQUJBKQxNYXkgMTEsIDIwMTYMZGlzcGxheTpub25lOHdlZWtseSBvbiAgYmV0d2VlbiBKYW51YXJ5IDEsIDE3NTMgYW5kIERlY2VtYmVyIDMxLCA5OTk5ZAIDD2QWAmYPZBYCZg8VBk8vRXZlbnQtQ2FsZW5kYXIvMjAxNi9OZXctZG9jdW1lbnQvTW90aGVyLXMtU3VwcG9ydC1Hcm91cC1Hci02LTEyLShUb3JicmFtKS5hc3B4KE1vdGhlcidzIFN1cHBvcnQgR3JvdXAgR3IgNi0xMiAoVG9yYnJhbSkxRm9yIG1vdGhlcnMgb2YgRXJpbm9ha0tpZHMgY2xpZW50cyBpbiBncmFkZXMgNi0xMgxNYXkgMTIsIDIwMTYNZGlzcGxheTpibG9ja0BiaS13ZWVrbHkgb24gVGh1cnNkYXkgYmV0d2VlbiBKYW51YXJ5IDE0LCAyMDE2IGFuZCBKdW5lIDE2LCAyMDE2ZAIVDw8WAh4EVGV4dAUUNC8yMC8yMDE1IDg6Mzk6MzYgQU1kZAIZD2QWAmYPZBYCAgIPZBYcZg9kFgJmD2QWAmYPFQIuL1NlcnZpY2VzL0FjY2Vzc2luZy1TZXJ2aWNlcy9BcHBvaW50bWVudHMuYXNweAxBcHBvaW50bWVudHNkAgEPZBYCZg9kFgJmDxUCL2h0dHA6Ly93d3cuZXJpbm9ha2tpZHMuY2EvUmVzb3VyY2VzL0F1dGlzbS5hc3B4DUFTRCBSZXNvdXJjZXNkAgIPZBYCZg9kFgJmDxUCE34vUG9ydGFsL0xvZ2luLmFzcHgMQm9hcmQgUG9ydGFsZAIDD2QWAmYPZBYCZg8VAhQvRXZlbnQtQ2FsZW5kYXIuYXNweBJDYWxlbmRhciBvZiBFdmVudHNkAgQPZBYCZg9kFgJmDxUCGS9SZXNvdXJjZXMvRm9yLVN0YWZmLmFzcHgJRm9yIFN0YWZmZAIFD2QWAmYPZBYCZg8VAkVodHRwOi8vZXJpbm9ha2tpZHMuY2EvU2VydmljZXMvQWNjZXNzaW5nLVNlcnZpY2VzL0hlYWx0aC1SZWNvcmRzLmFzcHgOSGVhbHRoIFJlY29yZHNkAgYPZBYCZg9kFgJmDxUCIS9BYm91dC1Vcy9Ib3Vycy1vZi1PcGVyYXRpb24uYXNweBJIb3VycyBvZiBPcGVyYXRpb25kAgcPZBYCZg9kFgJmDxUCHy9TZXJ2aWNlcy9Ib3ctQXJlLVdlLURvaW5nLmFzcHgRSG93IEFyZSBXZSBEb2luZz9kAggPZBYCZg9kFgJmDxUCUmh0dHA6Ly93d3cuZXJpbm9ha2tpZHMuY2EvQWJvdXQtVXMvQWNjb3VudGFiaWxpdHkvUHJpdmFjeS1hbmQtQ29uZmlkZW50aWFsaXR5LmFzcHgbUHJpdmFjeSBhbmQgQ29uZmlkZW50aWFsaXR5ZAIJD2QWAmYPZBYCZg8VAjsvU2VydmljZXMvQWNjZXNzaW5nLVNlcnZpY2VzL1NldmVyZS1XZWF0aGVyLVByb2NlZHVyZXMuYXNweBhTZXZlcmUgV2VhdGhlciBQcm9jZWR1cmVkAgoPZBYCZg9kFgJmDxUCLmh0dHA6Ly9lcmlub2Fra2lkcy5jYS9BYm91dC1Vcy9PdXItRnV0dXJlLmFzcHgVUmVkZXZlbG9wbWVudCBQcm9qZWN0ZAILD2QWAmYPZBYCZg8VAisvU2VydmljZXMvQWNjZXNzaW5nLVNlcnZpY2VzL1JlZmVycmFscy5hc3B4CVJlZmVycmFsc2QCDA9kFgJmD2QWAmYPFQINL1NpdGVtYXAuYXNweAdTaXRlbWFwZAIND2QWAmYPZBYCZg8VAi0vQWJvdXQtVXMvSW5mby1BYm91dC1Fcmlub2FrS2lkcy1XZWJzaXRlLmFzcHgTV2Vic2l0ZSBJbmZvcm1hdGlvbmQCGw9kFgICAQ9kFgICAQ8PFgIfAAXzAjxzdHJvbmc+RGlkIHlvdSBrbm93IHRoYXQgYXV0aXNtIHR5cGljYWxseSBwcmVzZW50cyB3aXRoaW4gdGhlIGZpcnN0IHRocmVlIHllYXJzIG9mIGxpZmU/PC9zdHJvbmc+PGJyIC8+DQo8YnIgLz4NClJlYWQgYWJvdXQgPGEgaHJlZj0ifi9TZXJ2aWNlcy9TZXJ2aWNlcy9BQkEtYmFzZWQtU2VydmljZXMtYW5kLVN1cHBvcnRzLmFzcHgiPkFCQS1iYXNlZCBTZXJ2aWNlcyBhbmQgU3VwcG9ydHM8L2E+IGFuZCA8YSBocmVmPSJ+L1NlcnZpY2VzL1NlcnZpY2VzL0ludGVuc2l2ZS1CZWhhdmlvdXJhbC1JbnRlcnZlbnRpb24tYW5kLUNvbm5lY3Rpb25zLmFzcHgiPkludGVuc2l2ZSBCZWhhdmlvdXJhbCBJbnRlcnZlbnRpb248L2E+IGF0IEVyaW5vYWtLaWRzZGQCHQ9kFgJmD2QWAgICD2QWAmYPZBYCZg9kFgJmDxUBygQ8aDE+DQoJQ29udGFjdCBJbmZvcm1hdGlvbjwvaDE+DQo8ZGl2IGNsYXNzPSJiYXNlVGV4dCI+DQoJPGltZyBhbHQ9IiIgaGVpZ2h0PSIxNiIgc3JjPSJ+L2ltYWdlcy9pY29uLWhvbWUucG5nIiB3aWR0aD0iMTkiIC8+Jm5ic3A7Jm5ic3A7PGEgaHJlZj0ifi9BYm91dC1Vcy9Mb2NhdGlvbnMuYXNweCI+RXJpbm9ha0tpZHMgTG9jYXRpb25zPC9hPg0KCTxkaXYgY2xhc3M9ImNsZWFyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4Ij4NCgkJJm5ic3A7PC9kaXY+DQoJPGltZyBhbHQ9IiIgaGVpZ2h0PSIxNiIgc3JjPSJ+L2ltYWdlcy9pY29uLXBob25lLnBuZyIgd2lkdGg9IjE5IiAvPiZuYnNwOyZuYnNwOyg5MDUpIDg1NS4yNjkwDQoJPGRpdiBjbGFzcz0iY2xlYXIiIHN0eWxlPSJoZWlnaHQ6IDE2cHgiPg0KCQkmbmJzcDs8L2Rpdj4NCgk8aW1nIGFsdD0iIiBoZWlnaHQ9IjE2IiBzcmM9In4vaW1hZ2VzL2ljb24tcGhvbmUucG5nIiB3aWR0aD0iMTkiIC8+Jm5ic3A7Jm5ic3A7MSAoODc3KSAzNzQuNjYyNQ0KCTxkaXYgY2xhc3M9ImNsZWFyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4Ij4NCgkJJm5ic3A7PC9kaXY+DQo8L2Rpdj4NCjxiciAvPg0KZGQIxftgi2UvtuG396Zp7G1gz7UAKw==" />
 </div>
 
 <script type="text/javascript">
@@ -88,34 +87,39 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
 </div>
      
 <a href="#contentWrap" class="skiptocontent">Skip to main content</a>
+<div class="header-wrapper">
+        <div class="header-main">
+            <div class="hm-top">
+                <!--topnav-->
+                <div class="google-search">
 
-<!-- headerwrap -->
-<div id="headerWrap">
 
-<!-- header -->
-<div id="header">
+<div id="google_translate_element"></div><script>
+                                             function googleTranslateElementInit() {
+                                                 new google.translate.TranslateElement({
+                                                     pageLanguage: 'en'
+                                                 }, 'google_translate_element');
+                                             }
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+                 <div id="TopNavMini">
+	<a href="/Careers.aspx"><strong>Careers</strong></a>&nbsp;&nbsp;<img height="8" src="/images/topNavMiniBullet.png" width="5" alt="" />&nbsp;&nbsp;<a href="/About-Us/Contact-Us.aspx">Contact Us</a>&nbsp;&nbsp;<img height="8" src="/images/topNavMiniBullet.png" width="5" alt="" />&nbsp;&nbsp;<a href="/About-Us/Locations.aspx">Locations</a></div>
 
-<!-- header social media icons -->
-<div id="topSocialMedia"><a href="http://www.facebook.com/ErinoakKids" id="p_lt_zoneTopSocialMedia_EOK_ConnectWithEOK_facebookLink" target="_blank"><img height="16" src="/images/topConnect-fb.png" alt="Facebook" width="16" /></a>
-<a href="http://twitter.com/ErinoakKids" id="p_lt_zoneTopSocialMedia_EOK_ConnectWithEOK_twitterLink" target="_blank"><img height="16" src="/images/topConnect-twitter.png" alt="Twitter" width="16" /></a>
-<a href="http://www.linkedin.com/company/erinoakkids-centre-for-treatment-and-development" id="p_lt_zoneTopSocialMedia_EOK_ConnectWithEOK_linkedInLink" target="_blank"><img height="16" src="/images/topConnect-linkedIn.png" alt="LinkedIn" width="16" /></a>
-
-<a href="http://www.youtube.com/ErinoakKidsCentre" id="p_lt_zoneTopSocialMedia_EOK_ConnectWithEOK_youTubeLink" target="_blank"><img height="16" src="/images/topConnect-youTube.png" width="16" alt="YouTube" /></a>
-
-<a id="p_lt_zoneTopSocialMedia_EOK_CmsRss_lnkFeedImg" class="FeedLink" href="https://www.erinoakkids.ca/Resources/Resource-Centre.aspx?rss=Erin-Oak-Kids-Feed"><img id="p_lt_zoneTopSocialMedia_EOK_CmsRss_imgFeed" class="FeedIcon" src="/App_Themes/Default/Images/Design/Controls/IconSelector/RSS/01_Orange/16.png" alt="Erin Oak Kids" /></a>
-</div>
-
- <div class="clear"></div>
- 
-<!-- logo -->
-<div id="topLogo"><a href="/home.aspx"><img alt="ErinOakKidsLogo" src="/images/spacer.png" width="276" height="58" /></a></div>
-
-<!-- donate button -->
-<div id="topDonate"><a href="https://erinoakkids.thankyou4caring.org/sslpage.aspx?pid=298" target="_blank"><img alt="donate now" height="95" src="/ErinoakKids/media/EOKImages/donate_now_v2.png" style="border: none;" width="250" /></a></div>
-
-<!-- search -->
-<div id="topSearch">
-	<div id="p_lt_zoneTopSearch_SearchBox_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;p_lt_zoneTopSearch_SearchBox_btnSearch&#39;)">
+                <!--google search-->
+            <!--end of hm-top-->   
+            </div>
+            <div class="hm-bottom">
+                <div class="hmb-left-wrapper">
+                    <!--logo-->
+                    <a href="/home.aspx" class="logo"><img src="/ErinoakKids/media/EOKImages/style%20images/siteLogo.png" alt="ERINOKIDS Logo" />
+                    </a>
+                </div>
+                <div class="hmb-right-wrapper">
+                    <!--Donate now -->
+                    <div class="donate-now"><a class="dn-link" href="https://erinoakkids.thankyou4caring.org/sslpage.aspx?pid=298" target="_blank" target="_blank">Donate Now</a>
+                    </div>
+                    <!--site search-->
+                    <div class="search"><div id="p_lt_zoneTopSearch_SearchBox_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;p_lt_zoneTopSearch_SearchBox_btnSearch&#39;)">
 	
     
     <div class="SearchField">
@@ -128,20 +132,17 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
     
 
 </div>    
-</div>
-
-
- <div class="clear"></div>
-
-
-<!-- top nav -->
-  <div id="TopNav"> 
-  
-   <div id="TopNavMini">
-	<a href="/Careers.aspx"><strong>Careers</strong></a>&nbsp;&nbsp;<img height="8" src="/images/topNavMiniBullet.png" width="5" alt="" />&nbsp;&nbsp;<a href="/About-Us/Contact-Us.aspx">Contact Us</a>&nbsp;&nbsp;<img height="8" src="/images/topNavMiniBullet.png" width="5" alt="" />&nbsp;&nbsp;<a href="/About-Us/Locations.aspx">Locations</a></div>
-
-   <div class="clear"></div>
-   
+                    </div>
+                </div>
+                <!--end of hm-bottom -->
+            </div>
+            <!--end of header-main -->
+        </div>
+        <!--end of header-wrapper -->
+    </div>
+     <div class="main-nav">
+     <div id="TopNav">
+	
 	<ul class="CMSListMenuUL" id="menuElem">
 		<li class="mServices" style=""><a href="/Services.aspx" class="CMSListMenuLink" style="" >Services</a></li>
 		<li class="mResources" style=""><a href="/Resources.aspx" class="CMSListMenuLinkHighlighted" style="" >Resources</a></li>
@@ -151,16 +152,8 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
 		<li class="mNewsroom" style=""><a href="/Newsroom.aspx" class="CMSListMenuLink" style="" >Newsroom</a></li>
 	</ul>
 
-
-  
-</div> 
-        <!-- end of top nav --> 
-        
-    </div>
-    <!-- end of header --> 
-    
 </div>
-<!-- end of header wrap -->
+    </div>
 
 
 <!-- start of page wrap -->
@@ -223,7 +216,6 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
     });
 
 </script>
-
 
 
 
@@ -327,46 +319,46 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
 
 
 	<li>
-		<div class="EventsColName"><a href='/Event-Calendar/2016/New-document/Mother-s-Support-Group.aspx'>Mother's Support Group (South Millway)</a></div>
+		<div class="EventsColName"><a href='/Event-Calendar/2016/April/Autism-Parent-Support-Group.aspx'>Autism Parent Support Group</a></div>
 		<div class="EventsColBrief">
-			A discussion group for ErinoakKids parents which provides opportunities to connect with one another.</div>
+			Connect with other families touched by autism</div>
                         
-   <div class="EventsColDate">March 11, 2016</div>
+   <div class="EventsColDate">May 11, 2016</div>
    <div class="recurring" style='display:block'>
- 	This event occurs bi-weekly on Friday between January 15, 2016 and June 17, 2016
+ 	This event occurs weekly on Wednesday between April 6, 2016 and June 8, 2016
    </div>
 	</li>
 
 	<li>
-		<div class="EventsColName"><a href='/Event-Calendar/2016/March/Advocacy-(2).aspx'>Steps Towards Positive Change</a></div>
+		<div class="EventsColName"><a href='/Event-Calendar/2016/May/Time-to-Sleep-(Part-1-of-a-2-part-Workshop).aspx'>Sleep Solutions</a></div>
 		<div class="EventsColBrief">
-			Strategies  you can use to teach your child replacement behaviours</div>
+			Workshop on sleep strategies</div>
                         
-   <div class="EventsColDate">March 12, 2016</div>
+   <div class="EventsColDate">May 11, 2016</div>
    <div class="recurring" style='display:none'>
  	This event occurs weekly on  between January 1, 1753 and December 31, 9999
    </div>
 	</li>
 
 	<li>
-		<div class="EventsColName"><a href='/Event-Calendar/2016/March/Advocacy-(6).aspx'>Teaching Daily Living Skills</a></div>
+		<div class="EventsColName"><a href='/Event-Calendar/2016/May/Advocacy-(8).aspx'>Teaching Daily Living Skills</a></div>
 		<div class="EventsColBrief">
 			Learn to use Applied Behaviour Analysis (ABA)</div>
                         
-   <div class="EventsColDate">March 12, 2016</div>
+   <div class="EventsColDate">May 11, 2016</div>
    <div class="recurring" style='display:none'>
  	This event occurs weekly on  between January 1, 1753 and December 31, 9999
    </div>
 	</li>
 
 	<li>
-		<div class="EventsColName"><a href='/Event-Calendar/2016/New-document/Mothers-Support-Group-(Burloak).aspx'>Mothers' Support Group (Burloak)</a></div>
+		<div class="EventsColName"><a href='/Event-Calendar/2016/New-document/Mother-s-Support-Group-Gr-6-12-(Torbram).aspx'>Mother's Support Group Gr 6-12 (Torbram)</a></div>
 		<div class="EventsColBrief">
-			Mothers' Support Group (Burloak)</div>
+			For mothers of ErinoakKids clients in grades 6-12</div>
                         
-   <div class="EventsColDate">March 14, 2016</div>
+   <div class="EventsColDate">May 12, 2016</div>
    <div class="recurring" style='display:block'>
- 	This event occurs bi-weekly on Friday between January 8, 2016 and June 24, 2016
+ 	This event occurs bi-weekly on Thursday between January 14, 2016 and June 16, 2016
    </div>
 	</li>
 
@@ -539,9 +531,9 @@ Hours of Operation: Tuesday &amp; Thursday 9:30 a.m. to 1:30 p.m.<br />
       
  <h1>Did you know?</h1>
 <div class="baseText">
-    <span id="p_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneBaseCol02_EOK_DidYouKnow_lblDidYouKnow"><strong>Did you know that 37% of children with minimal hearing losses fail at least one grade?</strong><br />
+    <span id="p_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneBaseCol02_EOK_DidYouKnow_lblDidYouKnow"><strong>Did you know that autism typically presents within the first three years of life?</strong><br />
 <br />
-Read about <a href="/Services/Services/Infant-Hearing-Services.aspx">Infant Hearing Services</a></span>
+Read about <a href="/Services/Services/ABA-based-Services-and-Supports.aspx">ABA-based Services and Supports</a> and <a href="/Services/Services/Intensive-Behavioural-Intervention-and-Connections.aspx">Intensive Behavioural Intervention</a> at ErinoakKids</span>
 </div>
       </div>
       

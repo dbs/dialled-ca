@@ -1,225 +1,380 @@
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Adobe GoLive" />
-        <meta name="google-site-verification" content="cwJiNo23ypjFgGJ46Yxgb1buArVhWYoWwyC8DHGd180" />
-
-		<title>Blind River Public Library</title>
-		<csscriptdict import>
-			<script type="text/javascript" src="file:///C:/Documents%20and%20Settings/rsonier/Application%20Data/Adobe/Adobe%20GoLive/Settings8/JScripts/GlobalScripts/CSScriptLib.js"></script>
-		</csscriptdict>
-		<csactiondict>
-			<script type="text/javascript">
 <!--
-var preloadFlag = false;
-function preloadImages() {
-	if (document.images) {
-		pre_Menu_History_Over = newImage('Images/Menu_History_Over.gif');
-		pre_Menu_Town_Of_Over = newImage('Images/Menu_Town_Of_Over.gif');
-		pre_Menu_Services_Over = newImage('Images/Menu_Services_Over.gif');
-		pre_Menu_Certificate_Over = newImage('Images/Menu_Certificate_Over.gif');
-		pre_Menu_Shut_In_Over = newImage('Images/Menu_Shut_In_Over.gif');
-		pre_Menu_Internet_Over = newImage('Images/Menu_Internet_Over.gif');
-		pre_Menu_Reference_Over = newImage('Images/Menu_Reference_Over.gif');
-		pre_Menu_Interloan_Over = newImage('Images/Menu_Interloan_Over.gif');
-		pre_Menu_Meeting_Area_Over = newImage('Images/Menu_Meeting_Area_Over.gif');
-		pre_Menu_Molly_Over = newImage('Images/Menu_Molly_Over.gif');
-		pre_Menu_Young_Adult_Over = newImage('Images/Menu_Young_Adult_Over.gif');
-		pre_Menu_Collections_Over = newImage('Images/Menu_Collections_Over.gif');
-		pre_Menu_Bilingual_Col_Over = newImage('Images/Menu_Bilingual_Col_Over.gif');
-		pre_Menu_Local_History_Over = newImage('Images/Menu_Local_History_Over.gif');
-		pre_Menu_Support_Over = newImage('Images/Menu_Support_Over.gif');
-		pre_Menu_Events_Over = newImage('Images/Menu_Events_Over.gif');
-		pre_Menu_Home_Over = newImage('Images/Menu_Home_Over.gif');
-		pre_Menu_Membership_Over = newImage('Images/Menu_Membership_Over.gif');
-		pre_Menu_Borrowing_over = newImage('Images/Menu_Borrowing_over.gif');
-		pre_Menu_Speakers_Over = newImage('Images/Menu_Speakers_Over.gif');
-		pre_Menu_Great_Lakes_2_Over = newImage('Images/Menu_Great_Lakes_2_Over.gif');
-		preloadFlag = true;
-	}
-}
+INSTRUCTIONS
+
+1.To crop images use this code:    
+  		 <div class="focal-point left-5 down-3">
+ 				<div><img src="img/header.png" alt="logo"></div>
+           </div>
+2. Add cushycms class to areas you want clients to edit and add editor account to cushyCMS for client. 
+3. Change the OPLD library ID in the variable
+4. JASI libraries: change the enterprise search string library name and enable the new book scroller.
+
+-->  
 
 
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
 
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
 
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-//-->
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+<!--<title>OLSN RWD- WCAG 2.0 (Level AA) Compliant</title>-->
+<title>Blind River Public Library</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type="text/javascript" src="js/fancydropdown.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'http://www.google.com/calendar/feeds/ami4h2ao0g8brkj6d80v8acd94@group.calendar.google.com/public/full',
+                  maxresults: 1
+		        });
+		    });
+		
+		
 </script>
-		</csactiondict>
-	</head>
-	<body onLoad="preloadImages();MM_preloadImages('Images/Menu_Links_Over.gif','Images/Menu_Library_Board_Over.gif')">
-<table background="Images/Background.gif" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" height="1002">
-			<tr height="130">
-				<td colspan="2" align="center" valign="middle" width="100%" height="130"><img src="Images/Logo_2.gif" alt="" height="199" width="400" border="0"></td>
-			</tr>
-			<tr>
-			<td align="left" valign="top" width="25%"><br>
-			  <a onMouseOver="changeImages('Menu_Home','Images/Menu_Home_Over.gif');return true" onMouseOut="changeImages('Menu_Home','Images/Menu_Home.gif');return true" href="#"><img id="Menu_Home" src="Images/Menu_Home.gif" alt="Home" name="Menu_Home" height="21" width="46" border="0"></a><br>
-			  <a onMouseOver="changeImages('Menu_Town_Of','Images/Menu_Town_Of_Over.gif');return true" onMouseOut="changeImages('Menu_Town_Of','Images/Menu_Town_Of.gif');return true" href="http://www.blindriver.ca"><img id="Menu_Town_Of" src="Images/Menu_Town_Of.gif" alt="Town of Blind River" name="Menu_Town_Of" height="21" width="150" border="0"></a><br>
-			  <a onMouseOver="changeImages('Menu_History','Images/Menu_History_Over.gif');return true" onMouseOut="changeImages('Menu_History','Images/Menu_History.gif');return true" href="History.html"><img id="Menu_History" src="Images/Menu_History.gif" alt="History of Our Library" name="Menu_History" height="21" width="168" border="0"></a><br>
-			  <a onMouseOver="changeImages('Menu_Membership','Images/Menu_Membership_Over.gif');return true" onMouseOut="changeImages('Menu_Membership','Images/Menu_Membership.gif');return true" href="Membership.html"><img id="Menu_Membership" src="Images/Menu_Membership.gif" alt="Membership" name="Menu_Membership" height="21" width="97" border="0"></a><br>
-			  <a href="library_board.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Library_Board','','Images/Menu_Library_Board_Over.gif',1)"><img src="Images/Menu_Library_Board.gif" alt="Library Board" name="Library_Board" width="106" height="21" border="0"></a><br>
-		      <a onMouseOver="changeImages('Menu_Borrowing','Images/Menu_Borrowing_over.gif');return true" onMouseOut="changeImages('Menu_Borrowing','Images/Menu_Borrowing.gif');return true" href="Borrowing.html"><img id="Menu_Borrowing" src="Images/Menu_Borrowing.gif" alt="Borrowing &amp; Fines" name="Menu_Borrowing" height="21" width="140" border="0"></a><br>
-		      <a onMouseOver="changeImages('Menu_Services','Images/Menu_Services_Over.gif');return true" onMouseOut="changeImages('Menu_Services','Images/Menu_Services.gif');return true" href="Services.html"><img id="Menu_Services" src="Images/Menu_Services.gif" alt="Services" name="Menu_Services" height="21" width="64" border="0"></a><br>
+<script>
+$(document).ready(function() {
+    $('.search').keydown(function(event) {
+        if (event.keyCode == 13) {
+search_cat();
+            return false;
+         }
+    });
+});
+</script>
 
-			  <table align="center">
-			<tr>
-			<td><a onMouseOver="changeImages('Menu_Certificate','Images/Menu_Certificate_Over.gif');return true" onMouseOut="changeImages('Menu_Certificate','Images/Menu_Certificate.gif');return true" href="Services.html#Certificate"><img id="Menu_Certificate" src="Images/Menu_Certificate.gif" alt="" name="Menu_Certificate" height="16" width="169" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Shut_In','Images/Menu_Shut_In_Over.gif');return true" onMouseOut="changeImages('Menu_Shut_In','Images/Menu_Shut_In.gif');return true" href="Services.html#Shut_In"><img id="Menu_Shut_In" src="Images/Menu_Shut_In.gif" alt="" name="Menu_Shut_In" height="16" width="127" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Internet','Images/Menu_Internet_Over.gif');return true" onMouseOut="changeImages('Menu_Internet','Images/Menu_Internet.gif');return true" href="Services.html#Internet"><img id="Menu_Internet" src="Images/Menu_Internet.gif" alt="" name="Menu_Internet" height="16" width="76" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Reference','Images/Menu_Reference_Over.gif');return true" onMouseOut="changeImages('Menu_Reference','Images/Menu_Reference.gif');return true" href="Services.html#Reference"><img id="Menu_Reference" src="Images/Menu_Reference.gif" alt="" name="Menu_Reference" height="16" width="58" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Interloan','Images/Menu_Interloan_Over.gif');return true" onMouseOut="changeImages('Menu_Interloan','Images/Menu_Interloan.gif');return true" href="Services.html#Interloan"><img id="Menu_Interloan" src="Images/Menu_Interloan.gif" alt="" name="Menu_Interloan" height="16" width="106" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Meeting_Area','Images/Menu_Meeting_Area_Over.gif');return true" onMouseOut="changeImages('Menu_Meeting_Area','Images/Menu_Meeting_Area.gif');return true" href="Services.html#Meeting_Area"><img id="Menu_Meeting_Area" src="Images/Menu_Meeting_Area.gif" alt="" name="Menu_Meeting_Area" height="16" width="81" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Molly','Images/Menu_Molly_Over.gif');return true" onMouseOut="changeImages('Menu_Molly','Images/Menu_Molly.gif');return true" href="Services.html#Molly"><img id="Menu_Molly" src="Images/Menu_Molly.gif" alt="" name="Menu_Molly" height="16" width="81" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Young_Adult','Images/Menu_Young_Adult_Over.gif');return true" onMouseOut="changeImages('Menu_Young_Adult','Images/Menu_Young_Adult.gif');return true" href="Services.html#Young_Adult"><img id="Menu_Young_Adult" src="Images/Menu_Young_Adult.gif" alt="" name="Menu_Young_Adult" height="16" width="110" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Speakers','Images/Menu_Speakers_Over.gif');return true" onMouseOut="changeImages('Menu_Speakers','Images/Menu_Speakers.gif');return true" href="Services.html#Speakers"><img id="Menu_Speakers" src="Images/Menu_Speakers.gif" alt="" name="Menu_Speakers" height="16" width="111" border="0"></a></td>
-			</tr>
-			</table>
-			  <a onMouseOver="changeImages('Menu_Collections','Images/Menu_Collections_Over.gif');return true" onMouseOut="changeImages('Menu_Collections','Images/Menu_Collections.gif');return true" href="Collections.html"><img id="Menu_Collections" src="Images/Menu_Collections.gif" alt="Collections" name="Menu_Collections" height="21" width="83" border="0"></a><br>
-				<table align="center">
-				<tr>
-				<td><a onMouseOver="changeImages('Menu_Bilingual_Col','Images/Menu_Bilingual_Col_Over.gif');return true" onMouseOut="changeImages('Menu_Bilingual_Col','Images/Menu_Bilingual_Col.gif');return true" href="Collections.html"><img id="Menu_Bilingual_Col" src="Images/Menu_Bilingual_Col.gif" alt="" name="Menu_Bilingual_Col" height="16" width="120" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Local_History','Images/Menu_Local_History_Over.gif');return true" onMouseOut="changeImages('Menu_Local_History','Images/Menu_Local_History.gif');return true" href="Collections.html#Local"><img id="Menu_Local_History" src="Images/Menu_Local_History.gif" alt="" name="Menu_Local_History" height="16" width="79" border="0"></a><br>
-				<a onMouseOver="changeImages('Menu_Great_Lakes','Images/Menu_Great_Lakes_2_Over.gif');return true" onMouseOut="changeImages('Menu_Great_Lakes','Images/Menu_Great_Lakes_2.gif');return true" href="Collections.html#Great_Lakes"><img id="Menu_Great_Lakes" src="Images/Menu_Great_Lakes_2.gif" alt="" name="Menu_Great_Lakes" height="16" width="130" border="0"></a></td>
-				</tr>
-				</table>
-				<a onMouseOver="changeImages('Menu_Support','Images/Menu_Support_Over.gif');return true" onMouseOut="changeImages('Menu_Support','Images/Menu_Support.gif');return true" href="Support.html"><img id="Menu_Support" src="Images/Menu_Support.gif" alt="Support Your Library" name="Menu_Support" height="21" width="161" border="0"></a><br>
-			  <a onMouseOver="changeImages('Menu_Events','Images/Menu_Events_Over.gif');return true" onMouseOut="changeImages('Menu_Events','Images/Menu_Events.gif');return true" href="News_Worthy.html"><img id="Menu_Events" src="Images/Menu_Events.gif" alt="News Worthy Events" name="Menu_Events" height="21" width="157" border="0"></a><br>
-          <a href="Links.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','Images/Menu_Links_Over.gif',1)"><img src="Images/Menu_Links.gif" alt="Links" name="Links" width="41" height="21" border="0"></a><br>
-				</td>
-			<td valign="top">
-			<table width="70%" background="" height="725">
-			<tr align="center" height="210">
-			<td valign="top" width="70" height="210"><br>
-			<table width="75">
-			<tr>
-			<td align="right"><a href="Index-fr.html"><img src="Images/En_Fran%c3%a7ais.gif" alt="" height="17" width="69" border="0"></a></td>
-			</tr>
-			<tr>
-			<td align="center">
-			<p><br>
-												<img src="Images/Blind_River_Library_3.gif" alt="" height="205" width="480" border="0"><br>
-												<br>
-			</p>
-			</td>
-			</tr>
-			</table>
-			</td>
-			</tr>
-			<tr align="center" height="130">
-			<td valign="top" width="666" height="130"><h2><a href="https://olsn.ent.sirsidynix.net/client/blindriver" target="_blank"><strong>Online Library Catalogue</strong></a></h2>
-			  <h3><font color="#FF0000"><strong><a href="e-resource.html" target="_blank">NEW! eResources</a></strong></font></h3>
-   			  <!--<h3><a href="downloads/UserNonuser2014Final.pdf" title="User / NonUser Survey" target="_blank">User / NonUser Survey</a></h3>-->
-   			  <!--<h3><a href="downloads/WRITING_CLUB.pdf" target="_blank">Writing Club</a></h3> -->
-			 <!-- <h3><a href="downloads/storytime.pdf" title="Story Time" target="_blank"> Story Time</a></h3>-->
-              
-              
-              <h3><a href="downloads/BOOKCLUBLIST20152016.pdf" title="New Books" target="_blank">New Books list</a></h3>
-	<p><strong><a href="downloads/storytime.pdf" target="_blank">Storytime</a></strong></p>
-	<p><a href="downloads/2016_snowking.pdf" target="_blank"><strong>Find the Snow King Contest</strong></a></p>
-	<p><strong><a href="downloads/Genealogy_Group.pdf" target="_blank">Genealogy Group</a></strong></p>
-	<p><a href="images/cook_book_don.pdf" target="_blank"><strong>Cook Book Donations</strong></a></p>
-	<p><a href="images/crochet_flyer.pdf" target="_blank"><strong>Crochet Class</strong></a></p>
-	<p><a href="images/soap_making_flyer.pdf" target="_blank"><strong>Soap Making Class</strong></a></p>
-    	<p><a href="images/snowking.pdf" target="_blank"><strong>Snow King Winner</strong></a></p>
-			  <h3><font color="#00673e"><u>Current Events</u>:</font><br>
-			  <!--  <a href="downloads/bag sale.pdf" target="_blank">Bag Sale!</a><br>
-		      <a href="downloads/Writing Group.pdf" target="_blank">Writing Group</a></h3>-->
-			  <!-- <h3><a href="downloads/EmbroideryStitchSamplerFeb14.pdf" target="_blank">Adult Program</a></h3> -->
 
-              <p><a href="http://www.tumblebooklibrary.com/autologin.aspx?userid=LEXivelRuZ4%2bK7f6U2tvcQ%3d%3d" target="_blank"><img src="Images/image002.png" width="400" height="126" alt "Tumbler Books"></a></p>
-              
-              <p><img src="downloads/ABC-0039_FLD_Banner_Dishes_728x90.jpg" width="728" height="90" alt="Family Literacy Day">
-              </p>
 
-			  <h3><a href="Calculator.html">Calculate the value of library services to you</a></h3>
-			  <p><font color="#00673e"><b>8 Woodward Avenue<br>P.O. Box 880<br>Blind River, Ontario<br>P0R 1B0<br>Tel: (705) 356-7616<br>
-		      </b></font></p></td>
-			</tr>
-			
-			<td align="center" valign="top" width="666">
-			
-			<table border="1">
-            
-			
-			<td align="center" colspan="2" width="299"><font color="#00673e"><b>Hours (Open Year Round)</b></font></td>
-			</tr>
-			<tr>
-			<td align="center" width="140"><font color="#00673e"><b>Monday To Thursday</b></font></td>
-			<td align="center" width="155"><font color="#00673e"><b>10:00 a.m. - 4:30 p.m.<br>6:00 p.m. - 8:00 p.m.</b></font></td>
-			</tr>
-			<tr>
-			<td align="center" width="140"><font color="#00673e"><b>Friday</b></font></td>
-			<td align="center" width="155"><font color="#00673e"><b>10:00 a.m. - 4:30 p.m.</b></font></td>
-			</tr>
-			<tr>
-			<td align="center" width="140"><font color="#00673e"><b>Saturday</b></font></td>
-			<td align="center" width="155"><font color="#00673e"><b>10:00 a.m. - 1:00 p.m.</b></font></td>
-			</tr>
 
-			</table></td>
+
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	    $("#eventlist").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true
+
+    });
+
+		//Load main content
+		$(".topContent").load("home.asp");
+		
+		$(".events").load("calendar.html");
+		
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+
+
+    
+});
+//Enterprise Search
+function search_cat()
+{
+search = document.getElementById('search').value
+document.location.href = 'https://olsn.ent.sirsidynix.net/client/blindriver/search/results?qu='+ search +'&te=ILS';	 //IMPORTANT - change the library
+}
+</script>
+<script type="text/javascript">
+   google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+
+     
+    <body>
+    
+<!--facebook script-->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- end facebook script-->
+    
+    <section class="hide" id="sizer"></section>
+    <section class="hide" id="button-bar">
+    <a href="https://www.facebook.com/Blind-River-Public-Library-651161694898656/"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/facebook.png" alt="facebook"></a>
+	<a href="http://www.twitter.com"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/twitter.png" alt="twitter"></a>    
+	
+    <!--Email automatically pulled as long as it's in OPLD-->
+    <a href="mailto:brpl@onlink.net?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a>      
+    </section>
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+               <img src="img/full.png" class="full" alt="Full Public Library Logo">
+               <img src="img/landscape.png" class="tablet" alt="Landscape Public Library Logo">
+               <img src="img/portrait.png" class="mobile" alt="portrait Public Library Logo">
                
-			</tr>
-            
-            <tr>
-              <td align="center"> 
             
             
-            
-            <!-- Site Meter -->
-<script type="text/javascript" src="http://s11.sitemeter.com/js/counter.js?site=s11blindriverpl">
-</script>
-<noscript>
-<a href="http://s11.sitemeter.com/stats.asp?site=s11blindriverpl" target="_top">
-<img src="http://s11.sitemeter.com/meter.asp?site=s11blindriverpl" alt="Site Meter" border="0"/></a>
-</noscript>
-<!-- Copyright (c)2009 Site Meter -->
-            
-                
-                  <!-- old counter -->
-                  <!-- <img style="border:0px;" src="http://www.hitcounterstats.com/count.php?page=52032" /><br />
-              <a href="
-" target="_blank" title="Visitor
-" style="font-family: Geneva, Arial, Helvetica, sans-serif; font-size:10px; text-decoration: none; color:#33cc66;">You are visitor
-</a><font style="font-family:Geneva, Arial, Helvetica, sans-serif; font-size:10px; text-decoration:none; color:#33cc66;"> </font> -->
                   
-              
-              <p>&nbsp;</p></td></tr>
-            
-			</table>
-            
-            
-            
-			</td>
-			</tr>
-            
-
-            
-			<tr>
-			<td width="233"></td>	
-			<td align="center" valign="top" width="652"></td>
-			</tr>
-            <tr><td colspan="5" align="center"><img src="Images/CELA.jpg" width="200" height="200"></td></tr>
-		</table>
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>                              
+                
+                <li><a href="?id=home.asp&label=Home" alt="home">Home</a></li>
+                <li><a  alt="library">Library</a>
+                	<ul>
+                           <li><a href="?id=history.asp&label=history" alt="history">History</a></li>
+                           <li><a href="?id=board.asp&label=board" alt="board">Board</a></li>
+                    </ul></li>
+                <li><a  alt="patrons">Patrons</a>
+                	<ul>
+                           <li><a href="?id=rules.asp&label=Rules" alt="rules">Rules</a></li>
+                           <li><a href="?id=membership.asp&label=membership" alt="membership">Membership</a></li>
+                    </ul></li>
+                <li><a href="?id=services.asp&label=Services" alt="services">Services</a></li>
+                <li><a href="https://olsn.ent.sirsidynix.net/client/blindriver" target="_blank" alt="catalogue">Catalogue</a></li>
+                <li><a href="?id=collections.asp&label=Collections" alt="collections">Collections</a></li>
+                <li><a href="?id=Support.asp&label=Support" alt="support">Support</a></li>
+                <li><a href="?id=eresources.asp" alt="eresources">E-Resources</a></li>
+            </ul>
+         </nav>    
+        <!-- end of NAV -->
         
-	</body>
+  
+        
+     
+          <section class="hoursContent">
+              <article><span class="tdhourstxt">Today's hours:&nbsp; </span>   
+                <ul id="hours-slider">
+                       
+                        
+                        <li>Blind River   10:00-4:30,6:00-8:00</li>
+                    
+                             
+                        </ul> 
+                            
+                            
+              </article>
+         </section>
+        
+    </header>
+        <!-- End of HEADER -->
+        
+        
+      
+        
+    <!-- MAIN CONTENT. This is used only for the articles. -->
+          <section class="searchContent">
+          
+                <article><span class="hide">Search</span>
+               
+                <input type="text"  title="find material at your library search button" name="search" class="search" id="search" placeholder="Search the Blind River Public Library's online catalog"/> 
+                <input type="submit" title="find material at your library search button" class="search" alt="find material at your library search button" src="img/search button.png" onClick="search_cat()" />
+               
+                </article>  
+              
+         </section>
+         
+   		
+       <section class="full"> 
+         <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>  
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="topSidebar">
+                <article>
+                           <h2>Hours & Locations</h2>
+                        <ul>  
+                            
+                            <h3>Blind River </h3>
+                          		8 Woodward Avenue<br>
+                                Blind River,&nbsp;ON<br>
+                                P0R 1B0<br>
+                                <a href="tel:(705) 356-7616">(705) 356-7616</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+							  Mon/lun 10:00-4:30,6:00-8:00<BR>
+Tues/mar 10:00-4:30,6:00-8:00<BR>
+Wed/mer 10:00-4:30,6:00-8:00<BR>
+Thurs/jeu 10:00-4:30,6:00-8:00<BR>
+Fri/ven 10:00-4:30<BR>
+Sat/sam 10:00-1:00<BR>
+Sun/dim closed/fermÃ©
+                              </details>
+
+                               
+                      </ul>  
+          </article>
+    </aside>
+     
+    
+            
+   
+     
+        
+    <aside class="bottomSidebar">
+        
+         <article>
+            <h2>Social Feed</h2>
+                <div class="fb-page" data-href="https://www.facebook.com/Blind-River-Public-Library-651161694898656/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>
+                
+        </article>    
+    </aside>
+    </section>
+    
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Home</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Locations</summary>
+                        <ul>  
+                            
+                            <h3>Blind River </h3>
+                          		8 Woodward Avenue<br>
+                                Blind River,&nbsp;ON<br>
+                                P0R 1B0<br>
+                                <a href="tel:(705) 356-7616">(705) 356-7616</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 10:00-4:30,6:00-8:00<BR>
+Tues/mar 10:00-4:30,6:00-8:00<BR>
+Wed/mer 10:00-4:30,6:00-8:00<BR>
+Thurs/jeu 10:00-4:30,6:00-8:00<BR>
+Fri/ven 10:00-4:30<BR>
+Sat/sam 10:00-1:00<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  </details>
+         
+    </div>
+     
+    
+            
+    <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+    </div>   
+     
+        
+
+    
+    </section> 
+    
+    
+    <!-- end of SIDEBARS -->
+    
+    
+    
+        
+     <!-- Enterprise New Books Scroller placeholder 
+      <footer class="mainBookScroller">
+        <p>Enterprise Book Scroller container</p>
+      </footer>   --> 
+        
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Blind River Public Library&nbsp;2016<br>
+        This website meets WCAG 2.0 (Level AA) Compliance</p> 
+    </footer>
+    
+<!-- end of FOOTER -->   
+
+</body>
 
 </html>

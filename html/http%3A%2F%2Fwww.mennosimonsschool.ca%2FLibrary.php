@@ -99,9 +99,9 @@
 		<ul>
 			<li><a class="green" href="index.php">Home</a></li>
 			<li><a class="ltgreen" href="About.php">About</a></li>
-			<li><a class="dkgreen" href="Newsletter.php">Newsletter</a></li>
+			<li><a class="dkgreen" href="view.php?action=documents&amp;id=37&amp;header=Newsletters">Newsletter</a></li>
 			<li><a class="black" href="School Council.php">School Council</a></li>
-			<li><a class="green" href="view.php?header=Athletics&action=activities&type=0">Athletics</a></li>
+			<li><a class="green" href="view.php?action=calendar&amp;id=149&amp;header=Bookings%20Calendar">Bookings</a></li>
 			<li><a class="ltgreen" href="view.php?action=documents&header=Documents">Documents</a></li>
 			<li><a class="dkgreen" href="view.php?action=staff-directory&header=Staff%20Directory">Our Staff</a></li>
 			<li><a class="black" href="Contact.php">Contact</a></li>
@@ -139,7 +139,7 @@ Fax: (780) 685-3665</strong></p>
 
 <p>Monday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CLOSED</p>
 
-<p>Tuesday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1:00 - 4:00, 7:00&nbsp;&ndash; 9:00</p>
+<p>Tuesday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1:00 - 9:00</p>
 
 <p>Wednesday &nbsp; &nbsp; &nbsp; &nbsp; 1:00 &ndash; 4:00</p>
 
@@ -163,9 +163,9 @@ Fax: (780) 685-3665</strong></p>
 		<ul>
 			<li><a class="green" href="index.php">Home</a></li>
 			<li><a class="ltgreen" href="About.php">About</a></li>
-			<li><a class="dkgreen" href="Newsletter.php">Newsletter</a></li>
+			<li><a class="dkgreen" href="view.php?action=documents&amp;id=37&amp;header=Newsletters">Newsletter</a></li>
 			<li><a class="black" href="School Council.php">School Council</a></li>
-			<li><a class="green" href="view.php?header=Athletics&action=activities&type=0">Athletics</a></li>
+			<li><a class="green" href="view.php?action=calendar&amp;id=149&amp;header=Bookings%20Calendar">Bookings</a></li>
 			<li><a class="ltgreen" href="view.php?action=documents&header=Documents">Documents</a></li>
 			<li><a class="dkgreen" href="view.php?action=staff-directory&header=Staff%20Directory">Our Staff</a></li>
 			<li><a class="black" href="Contact.php">Contact</a></li>

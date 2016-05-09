@@ -17,7 +17,7 @@
 	<meta name="description" content="Public Safety Canada was created in 2003 to ensure coordination across all federal departments and agencies responsible for national security and the safety of Canadians. Our mandate is to keep Canadians safe from a range of risks such as natural disasters, crime and terrorism." />
 	<meta name="dcterms.title" content="Public Safety Canada - Home" />
 	<meta name="dcterms.issued" content="2015-05-14" />
-	<meta name="dcterms.modified" content="2016-03-11" />
+	<meta name="dcterms.modified" content="2016-05-07" />
 	<meta name="keywords" content="Security" />
 	<meta name="dcterms.subject" content="Safety; Public safety; Emergency preparedness" />
 	<meta name="dcterms.language" title="ISO639-2" content="eng" />
@@ -270,22 +270,50 @@
 						<li class="active"><a href="#panel1">Tab 1</a></li>
 						<li><a href="#panel2">Tab 2</a></li>
 						<li><a href="#panel3">Tab 3</a></li>
+						<li><a href="#panel4">Tab 4</a></li>
+                        <li><a href="#panel5">Tab 5</a></li>
 					</ul>
 					<div class="tabpanels">
 						<div role="tabpanel" id="panel1" class="in fade">
-							<a href="/cnt/nws/pht-gllr/index-en.aspx#a1">
+							<a href="https://www.canada.ca/en/services/policing/alberta-wildfires.html">
 								<figure>
-									<img src="/cnt/nws/pht-gllr/2016/_mgs/20160310-1-bil.jpg" alt="Panel 1" />
+									<img src="/cnt/assets/carousel/Wildfires-NT_carousel-bil.jpg" alt="Panel 1" />
 									<figcaption>
-										<p>Joint Statement of Intent regarding Preclearance</p>
+										<p>Alberta Wildfires - Get the latest</p>
 									</figcaption>
 								</figure>
 							</a>
 						</div>
-						<div role="tabpanel" id="panel2" class="out fade">
+
+
+						<div role="tabpanel" id="panel2" class="in fade">
+							<a href="http://www.scics.gc.ca/english/Conferences.asp?a=viewdocument&id=2424">
+								<figure>
+									<img src="/cnt/nws/pht-gllr/2016/_mgs/20160506-01-sm-bil.jpg" alt="Panel 2" />
+									<figcaption>
+										<p>The Honourable Ralph Goodale, Minister of Public Safety and Emergency Preparedness, delivered remarks at the the FPT Ministers’ Emergency Management Meeting on May 6, 2016 in Toronto, Ontario.</p>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+
+
+						<div role="tabpanel" id="panel3" class="out fade">
+							<a href="http://www.getprepared.gc.ca/cnt/rsrcs/ep-wk/index-en.aspx">
+								<figure>
+									<img src="/cnt/assets/carousel/20160429-en.jpg" alt="Panel 3" />
+									<figcaption>
+										<p>
+											Emergency Preparedness Week
+										</p>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+						<div role="tabpanel" id="panel4" class="out fade">
 							<a href="http://www.getcybersafe.gc.ca/index-en.aspx">
 								<figure>
-									<img src="/cnt/assets/carousel/20151130-1-en.jpg" alt="Panel 2" />
+									<img src="/cnt/assets/carousel/20151130-1-en.jpg" alt="Panel 4" />
 									<figcaption>
 										<p>
 											Get Cyber Safe
@@ -294,10 +322,10 @@
 								</figure>
 							</a>
 						</div>
-						<div role="tabpanel" id="panel3" class="out fade">
+						<div role="tabpanel" id="panel5" class="out fade">
 							<a href="/cnt/rsrcs/cndn-dsstr-dtbs/index-en.aspx">
 								<figure>
-									<img src="/cnt/assets/carousel/20151130-2-bil.jpg" alt="Panel 3" />
+									<img src="/cnt/assets/carousel/20151130-2-bil.jpg" alt="Panel 5" />
 									<figcaption>
 										<p>
 											The Canadian Disaster Database (CDD) contains detailed disaster information on more than 1000 natural, technological and conflict events (excluding war) that have happened since 1900 at home or abroad and that have directly affected Canadians.
@@ -315,40 +343,38 @@
 						<h2>News</h2>
 						
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1039149">Government of Canada Introduces Legislation to Create a New RCMP Labour Relations Regime</a>
+            <a href="http://www.scics.gc.ca/english/Conferences.asp?a=viewdocument&id=2424">Federal-Provincial-Territorial Ministers Meet To Discuss Emergency Management</a>
             <br />
-            <small class="text-muted">March 9, 2016</small>
+            <small class="text-muted">May 6, 2016</small>
         </li>
     
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1038549">Statement From CSIS Director Following Senate Committee Appearance</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1062049">Public Safety Canada and the Canadian Red Cross sign Memorandum of Understanding</a>
             <br />
-            <small class="text-muted">March 7, 2016</small>
+            <small class="text-muted">May 6, 2016</small>
         </li>
     
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1035819">Statement on Review of Harassment in the RCMP</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1060779">Statement from Minister Goodale on Wildfire Situation in Fort McMurray</a>
             <br />
-            <small class="text-muted">February 23, 2016</small>
+            <small class="text-muted">May 3, 2016</small>
         </li>
     
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1035729">Minister Goodale encourages Canadians to stand up against bullying this National Pink Shirt Day</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1059789">The Government of Canada marks Emergency Preparedness Week 2016</a>
             <br />
-            <small class="text-muted">February 23, 2016</small>
+            <small class="text-muted">May 1, 2016</small>
         </li>
     
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1034729">The Government of Canada discontinues its bail appeal in Canada v. Khadr</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1046589">Statement by the Honourable Ralph Goodale, Minister of Public Safety and Emergency Preparedness, regarding the death of RCMP Constable Beckett</a>
             <br />
-            <small class="text-muted">February 18, 2016</small>
+            <small class="text-muted">April 5, 2016</small>
         </li>
     
 						
 						<!-- PUBLICATIONS --> 
 						<!-- Temporarily Commented out. Put News and Pubs in col-md-6 divs when reinstated. -->
-						<!-- <h2>Publications</h2> -->
-						
 					</div>
 				</div><!-- /row -->
 				
@@ -363,9 +389,9 @@
 							<li><a href="https://www.facebook.com/GetCyberSafe"><img src="/cnt/_mgs/icns/fcbk-smll-bil.jpg" alt="Facebook" /></a></li>
 							<li><a href="https://www.linkedin.com/company/get-cyber-safe-for-small-and-medium-businesses"><img src="/cnt/_mgs/icns/lnkdn-smll-bil.jpg" alt="LinkedIn" /></a></li>
 						</ul>
-          <p><img src="http://www.getcybersafe.gc.ca/cnt/blg/_mgs/pst-20160201-bil.jpg" alt="" class="img-responsive" /></p>
-          <h3><a href="http://www.getcybersafe.gc.ca/cnt/blg/pst-20160201-en.aspx">Take control of your passwords</a> </h3>
-          <p>Your passwords are the only thing standing between you and your personal information and online risks.</p>
+          <p><img src="http://www.getcybersafe.gc.ca/cnt/blg/_mgs/pst-20160421-bil.jpg" alt="" class="img-responsive" /></p>
+          <h3><a href="http://www.getcybersafe.gc.ca/cnt/blg/pst-20160421-en.aspx">Tips for Recycling and Repurposing your Devices</a></h3>
+          <p>Recycle or dispose of your mobile devices in an environmentally friendly way.</p>
 					</div>
 					<div class="col-md-6">
 					<!-- GET PREPARED CAMPAIGN -->
@@ -375,11 +401,12 @@
 							<li><a href="http://www.getprepared.gc.ca/cnt/hlp/rss-en.aspx"><img src="/cnt/_mgs/icns/rss-smll-bil.jpg" alt="Subscribe to the Safety Tip RSS feed" /></a></li>
 							<li><a href="http://www.youtube.com/channel/UCOY1X4VeHhjYe0V44hZowMQ"><img src="/cnt/_mgs/icns/ytb-smll-bil.jpg" alt="YouTube" /></a></li>
 						</ul>
-						<p><img src="/cnt/_mgs/cmpgns/gp-strms-bil.jpg" alt="" class="img-responsive" /></p>
-						<h3 class="margin-top-none"><a href="http://www.getprepared.gc.ca/cnt/hzd/svrstrms-en.aspx">Severe Storms</a></h3>
-						<p>Severe storms occur in all regions of Canada and in all seasons. They can develop quickly and threaten life and property.  Learn the facts and be prepared.</p>
+						<p><img src="/cnt/_mgs/cmpgns/gp-wldfr-bil.jpg" alt="" class="img-responsive" /></p>
+						<h3 class="margin-top-none"><a href="http://www.getprepared.gc.ca/cnt/hzd/wldfrs-en.aspx">Wildfires</a></h3>
+						<p>Forest and wildfires can cause extensive damage and put lives in danger.</p>
 					</div>
 				</div><!-- /row -->
+				
 			</section><!-- /main -->
 			
 			<aside class="col-md-4">
@@ -390,23 +417,16 @@
 					<li class="list-group-item"><a href="http://www.getprepared.gc.ca/cnt/kts/index-en.aspx">Prepare an emergency kit.</a></li>
 					<li class="list-group-item"><a href="/cnt/rsrcs/cndn-dsstr-dtbs/index-en.aspx">Access the Canadian Disaster Database.</a></li>
 				</ul>
-			
-				<!-- 
-				Welcome Refugees<br>
-				<a href="http://www.cic.gc.ca/english/refugees/welcome/index.asp?utm_source=publicsafetycanada-eng&amp;utm_medium=banner&amp;utm_campaign=refugees2015">
-					<img src="/cnt/_mgs/cmpgns/feature-irc_348x196_EN.JPG" alt="" class="">
-				</a>
-				-->
-					
+								
 				<h2>Priorities</h2>
 				
-		
-		<a href="http://www.fcac-acfc.gc.ca/Eng/forConsumers/Pages/it-pays-to-know.aspx?WT.mc_id=20160301-RR-pin-priorities-cdnsite" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/2016-pn-en.jpg" alt="" /> </a>
-		
-		<a href="http://www.forces.ca/en/jobexplorer/browsejobs-70" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/employment-banner-748x238-en.jpg" alt="Check out these in demand Canadian Armed Forces Jobs!" /> </a>
-		
-		<a href="http://www.canada.pch.gc.ca/eng/1449069450337" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/canada-day-challenge-en.jpg" alt="Canada Day Challenge" /> </a>
-	
+
+		<a href="http://canada.pch.gc.ca/eng/1460573328032" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/2016-cndn-cntnt-en.jpg" alt="Canadian Content in Digital World" /> </a>             
+
+		<a href="http://www.rcmpcareers.ca" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/2016-rcmp-bil.jpg" alt="Join the Royal Canadian Mounted Police" /> </a>
+
+		<a href="http://canada.ca/en/services/environment/weather/climatechange/climate-action.html" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/2016-climate-change-en.jpg" alt="Have your say on climate change today!" /> </a>
+
 	
 
 
@@ -430,7 +450,7 @@
 			<div class="clearfix"></div>
       <dl id="wb-dtmd">
 				<dt>Date modified: </dt>
-				<dd><time property="dateModified">2016-03-11</time></dd>
+				<dd><time property="dateModified">2016-05-07</time></dd>
 			</dl> 
         
          
@@ -523,7 +543,7 @@
                     <li><a href="http://travel.gc.ca"><span>Travel</span></a></li>
                     <li><a href="http://www.servicecanada.gc.ca/eng/home.shtml"><span>Service Canada</span></a></li>
                     <li><a href="http://www.jobbank.gc.ca"><span>Jobs</span></a></li>
-                    <li><a href="http://actionplan.gc.ca/en"><span>Economy</span></a></li>
+                    <li><a href="http://www.budget.gc.ca/"><span>Economy</span></a></li>
                     <li id="canada-ca"><a href="http://www.canada.ca/en/index.html">Canada.ca</a></li>
                 </ul>
             </nav>

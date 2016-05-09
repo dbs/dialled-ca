@@ -1,42 +1,26 @@
 <!DOCTYPE HTML>
 <html id="root" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-	<head><title>
-	Home
+	<head><link href="/App_Themes/Site/Site.css?v=-736034455" type="text/css" rel="stylesheet" /><title>
+	Atomic Energy Canada Limited (AECL)
 </title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en" />
+<meta name="description" content="Enabling nuclear science and technology.  Fulfilling Canada’s radioactive waste and decommissioning responsibilities." />
+<meta name="google-site-verification" content="JWgYpj5FTlOyJwf7ANRWWDRUiR7gs1L3dIQP5MpbXbc" />
 <meta name="GENERATOR" content="OneWeb™ CMS" />
-<meta name="HandheldFriendly" content="True"></meta><meta name="MobileOptimized" content="320"></meta><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"></meta><meta http-equiv="cleartype" content="on"></meta><link rel="shortcut icon" href="~/site/aecl/favicon.ico"></link><link rel="shortcut icon" href="~/site/aecl/favicon.png"></link><link rel="apple-touch-icon-precomposed" href="~/site/aecl/images/touch/apple-touch-icon-precomposed.png"></link><link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/site/aecl/images/touch/apple-touch-icon-72x72-precomposed.png"></link><link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/site/aecl/images/touch/apple-touch-icon-114x114-precomposed.png"></link><link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/site/aecl/images/touch/apple-touch-icon-144x144-precomposed.png"></link><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><link rel="stylesheet" type="text/css" media="screen" href="//fonts.googleapis.com/css?family=Rokkitt:400,700|Open+Sans:400,700" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/base.css?v=1178654102" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/grid.css?v=-689008782" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/core_controls.css?v=1339496807" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/common_table.css?v=-321975181" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/ow.css?v=-980135900" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/ow_custom.css?v=-911177525" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/flexslider.css?v=1959838402" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/theme.css?v=-1340574690" /><link rel="stylesheet" type="text/css" media="print" href="/site/aecl/styles/print.css?v=1880596872" /><!--[if (lt IE 9) & !(IEMobile)]><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/ie.css?v=2111902984" /><![endif]--><!--[if (lt IE 8) & !(IEMobile)]><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/ie7.css?v=-1332918885" /><![endif]--><link id="styJQueryUI" rel="stylesheet" type="text/css" href="/core/styles/jquery-ui.css?v=315453719" />
+<meta name="HandheldFriendly" content="True"></meta><meta name="MobileOptimized" content="320"></meta><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"></meta><meta http-equiv="cleartype" content="on"></meta><link rel="shortcut icon" href="~/site/aecl/favicon.ico"></link><link rel="shortcut icon" href="~/site/aecl/favicon.png"></link><link rel="apple-touch-icon-precomposed" href="~/site/aecl/images/touch/apple-touch-icon-precomposed.png"></link><link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/site/aecl/images/touch/apple-touch-icon-72x72-precomposed.png"></link><link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/site/aecl/images/touch/apple-touch-icon-114x114-precomposed.png"></link><link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/site/aecl/images/touch/apple-touch-icon-144x144-precomposed.png"></link><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><link rel="stylesheet" type="text/css" media="screen" href="//fonts.googleapis.com/css?family=Rokkitt:400,700|Open+Sans:400,700" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/base.css?v=1178654102" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/grid.css?v=-689008782" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/core_controls.css?v=1339496807" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/common_table.css?v=-321975181" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/ow.css?v=-980135900" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/ow_custom.css?v=-911177525" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/flexslider.css?v=1959838402" /><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/theme.css?v=-1340574690" /><link rel="stylesheet" type="text/css" media="print" href="/site/aecl/styles/print.css?v=1880596872" /><!--[if (lt IE 9) & !(IEMobile)]><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/ie.css?v=2111902984" /><![endif]--><!--[if (lt IE 8) & !(IEMobile)]><link rel="stylesheet" type="text/css" media="screen" href="/site/aecl/styles/ie7.css?v=-1332918885" /><![endif]--><link id="styJQueryUI" rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.min.css" />
 
 		<!-- SWFObject - replaced the IE ActiveX activation script -->
-		<script id="swfobject" type="text/javascript" src="/core/scripts/swfobject.js?v=231506617"></script><script id="f_util" type="text/javascript" src="/core/scripts/ow_util.js?v=1280225974"></script><script id="f_email" type="text/javascript" src="/core/scripts/ow_emails.js?v=1295494713"></script>
-
-        <!-- Universal Analytics -->
-        <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-44102330-1', 'aecl.ca');
-            ga('send', 'pageview');
-
-        </script>
-
-
-       
-	<script id="gainclude" type="text/javascript" async="async" defer="defer" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/site/aecl/js/modernizr-2.5.3-min.js?v=1775600548"></script></head>
+		<script id="swfobject" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script id="f_util" type="text/javascript" src="/core/scripts/ow_util.js?v=197074722"></script><script id="f_email" type="text/javascript" src="/core/scripts/ow_emails.js?v=-1903220554"></script><script id="uainclude" type="text/javascript" async="async" defer="defer" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/site/aecl/js/modernizr-2.5.3-min.js?v=1775600548"></script></head>
 	
 	
 	<body>
 
-		<form name="Form1" method="post" action="/en/home/default.aspx" id="Form1">
+		<form name="Form1" method="post" action="/en/home/default.aspx" class="site_lang_en" id="Form1">
 <div class="aspNetHidden">
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0OTY1NDExNDIPZBYCAgIPFgIeBGxhbmcFAmVuFgQCAQ9kFgICEA8WBh4ITG9jYXRpb24LKYcBSVNMLk9uZVdlYjQuVUkuV2ViQ29udHJvbHMuU2NyaXB0SW5jbHVkZUxvY2F0aW9uLCBJU0wuT25lV2ViNC5VSS5Db250cm9scywgVmVyc2lvbj03LjAuNTE3Mi4xMDU1OCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBB4EVGV4dAV/PHNjcmlwdCBpZD0iZ2FpbmNsdWRlIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGFzeW5jPSJhc3luYyIgZGVmZXI9ImRlZmVyIiBzcmM9Imh0dHA6Ly93d3cuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMiPjwvc2NyaXB0Ph4HVmlzaWJsZWdkAgUPZBYCAgcPZBYCZg9kFggCDA9kFgICAg8PZBYCHgpzdWdnZXN0aW9uBR8vY29yZS9zZXJ2aWNlcy9zZWFyY2guYXNoeC82L2VuZAImDw8WBB4IQ3NzQ2xhc3MFGW93X2Jsb2NrIHJvYm90cy1ub2NvbnRlbnQeBF8hU0ICAmRkAigPDxYEHwUFGW93X2Jsb2NrIHJvYm90cy1ub2NvbnRlbnQfBgICZGQCKg8PFgQfBQUZb3dfYmxvY2sgcm9ib3RzLW5vY29udGVudB8GAgJkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUbdG1wbCRTZWFyY2hCb3gkb3dfaW1nU2VhcmNoBSF0bXBsJFNlYXJjaEJveE1vYmlsZSRvd19pbWdTZWFyY2hAgTJfCrBslPv/3avD3QivsBvHZg==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0OTY1NDExNDIPZBYCAgIPFgIeBGxhbmcFAmVuFgQCAQ9kFgICEA8WBh4ITG9jYXRpb24LKYcBSVNMLk9uZVdlYjQuVUkuV2ViQ29udHJvbHMuU2NyaXB0SW5jbHVkZUxvY2F0aW9uLCBJU0wuT25lV2ViNC5VSS5Db250cm9scywgVmVyc2lvbj03LjIuNTc5OS4zNzUwMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBB4EVGV4dAWBATxzY3JpcHQgaWQ9InVhaW5jbHVkZSIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBhc3luYz0iYXN5bmMiIGRlZmVyPSJkZWZlciIgc3JjPSIvL3d3dy5nb29nbGUtYW5hbHl0aWNzLmNvbS9hbmFseXRpY3MuanMiPjwvc2NyaXB0Ph4HVmlzaWJsZWdkAgUPFgIeBWNsYXNzBQxzaXRlX2xhbmdfZW4WAgIHD2QWAmYPZBYIAgwPZBYCAgIPD2QWAh4Kc3VnZ2VzdGlvbgUfL2NvcmUvc2VydmljZXMvc2VhcmNoLmFzaHgvNi9lbmQCJg8PFgQeCENzc0NsYXNzBRlvd19ibG9jayByb2JvdHMtbm9jb250ZW50HgRfIVNCAgJkZAIoDw8WBB8GBRlvd19ibG9jayByb2JvdHMtbm9jb250ZW50HwcCAmRkAioPDxYEHwYFGW93X2Jsb2NrIHJvYm90cy1ub2NvbnRlbnQfBwICZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFG3RtcGwkU2VhcmNoQm94JG93X2ltZ1NlYXJjaAUhdG1wbCRTZWFyY2hCb3hNb2JpbGUkb3dfaW1nU2VhcmNoDi7nEcgMMKA/lqpbLPJCA2I3ubM=" />
 </div>
 
 <script type="text/javascript">
@@ -57,18 +41,18 @@ function __doPostBack(eventTarget, eventArgument) {
 
 
 
-<script src="/core/scripts/ow_analytics.js?v=149104226" type="text/javascript"></script>
-<script src="/core/scripts/ow_ga.js?v=-2094215978" type="text/javascript"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/4.0/4/MicrosoftAjax.js" type="text/javascript"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/4.0/4/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
-<script src="/core/scripts/ow_ajax.js?v=183202666" type="text/javascript"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/4.0/4/WebForms.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+<script src="/core/scripts/ow_analytics.js?v=-986602084" type="text/javascript"></script>
+<script src="/core/scripts/ow_ua.js?v=-1043242971" type="text/javascript"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/4.5.1/1/MicrosoftAjax.js" type="text/javascript"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/4.5.1/1/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script src="/core/scripts/ow_ajax.js?v=1928023106" type="text/javascript"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/4.5.1/1/WebForms.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
 typeof $telerik=="undefined"&&($telerik={})//]]></script>
-<script src="/ScriptResource.axd?d=kcrj2teMeNgr01p7oZ5epmpnF7VrY1P4wGc5tM0JoTYhpUyXgW68TJRSoB8Vpg-PLnsD30e5_H-3Vlw-eV5Pin3cyN5GmOdtber7bsrEi_naB5FkJaUytSBTaYyyvH-nY_WweA2&amp;t=4004e9e8" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=qQ17iRSqqUFImNJxynw_vVZuLDpxF-YQlKl_FPPHkYbWhtU9jZ-_QLKi1V3tD0uufQpUmZ4DdKjtTPsed6nIb0XGnp_6VpHrw0iI0_QR24XV6HWYxwTwUwbBMErxTDLMg0jRuA2&amp;t=4004e9e8" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=Fmu346wcGucmWSxf-wnM3IoroJeTY8iGX0VhM_7f3k6hmmvJeOQNV2dmV0tjGyv7Zo8s3jCU3Cl8UHTXscGlQdCmMpvIVoYTKQRy0JLljvPoX_Anj3lM1pUixfgibs2aGRau4g2&amp;t=4004e9e8" type="text/javascript"></script>
-<script src="http://www.aecl.ca/core/scripts/jquery-ui.js?v=126814250" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
-typeof $telerik!="undefined"&&typeof window.$j=="undefined"&&(window.$j=$telerik.$)//]]></script>
+<script src="http://aspnet-scripts.telerikstatic.com/ajaxz/2015.2.826/Common/jQuery.js" type="text/javascript"></script>
+<script src="http://aspnet-scripts.telerikstatic.com/ajaxz/2015.2.826/Common/jQueryInclude.js" type="text/javascript"></script>
+<script src="http://www.aecl.ca/core/scripts/jquery.easing.js?v=605066914" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+typeof $telerik!="undefined"&&typeof $j=="undefined"&&(window.$j=$telerik.$)//]]></script>
 <script type="text/javascript">
 //<![CDATA[
 var owForm=document.forms.Form1,f=function(n){if(document.getElementById&&document.getElementById("__EVENTVALIDATION")===null||document.all&&document.all.__EVENTVALIDATION===null)return window.setTimeout(function(){owForm.onsubmit?owForm.onsubmit()!==!1&&owForm.submit():owForm.submit()},200),n&&n.preventDefault(),!1};owForm.addEventListener?owForm.addEventListener("submit",f,!1):owForm.attachEvent&&owForm.attachEvent("onsubmit",f);//]]>
@@ -126,6 +110,7 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
 
 
 
+ 
 
 
 
@@ -170,6 +155,7 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
 
 
 
+ 
 
 
 
@@ -322,7 +308,7 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
 		    <div class="grid_12">
 			    <div class="intro">
 				    <div class="clearfix"><div id="tmpl_cbintro" class="ow_block">
-	<p style="display: none;">&nbsp;</p> <div style="width: 245px; height: 105px; float: right;"><a href="http://www.aecl.ca/en/home/contact-us/Job-opportunities/default.aspx" title="Job opportunities"><img src="/site/media/aecl/EmploymentOpportunities.png" alt="EmploymentOpportunities" /></a></div> <p>Atomic Energy of Canada Limited (AECL) is a federal Crown corporation responsible for the long-term, contractual arrangement with <a class="trackExternal" href="http://www.cnea.co/" target="_blank">Canadian National Energy Alliance (CNEA)</a> for the management and operation of <a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank">Canadian Nuclear Laboratories (CNL)</a> under a Government-owned, Contractor-operated (GoCo) model. This follows the announcement by the Government of Canada in June 2015 of the selection of CNEA through a competitive procurement process. AECL works to monitor performance under the GoCo arrangement to meet Government objectives. </p> <p> Under the GoCo model, AECL leverages its facilities, assets and intellectual property by bringing to bear private-sector rigour in the operation of the nuclear laboratories through the contract with CNEA, and fulfils its core mandate to: deliver on Canada’s radioactive waste and decommissioning responsibilities, provide nuclear expertise to support federal responsibilities, and offer services to users of the nuclear laboratories on commercial terms.  Details related to the work of CNL and the services it provides to AECL, industry and academia can be found on the <a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank">CNL website</a>. </p> <table style="width: 100%;"><tbody><tr><td style="text-align: center;"><a class="trackExternal" href="http://www.cnea.co/" target="_blank"><img style="vertical-align: middle;" alt="CNEA" src="/site/media/aecl/CNEA%20Large.png" /></a></td> <td style="text-align: center;"><a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank"><img style="vertical-align: middle;" alt="CNL Large" src="/site/media/aecl/CNL%20Large.png" /></a></td></tr></tbody></table></div></div>
+	<p style="display: none;">&nbsp;</p> <div style="width: 245px; height: 105px; float: right; display: none;"><a href="http://www.aecl.ca/en/home/contact-us/Job-opportunities/default.aspx" title="Job opportunities"><img src="/site/media/aecl/EmploymentOpportunities.png" alt="EmploymentOpportunities" /></a></div> <p>Atomic Energy of Canada Limited (AECL) is a federal Crown corporation responsible for the long-term, contractual arrangement with <a class="trackExternal" href="http://www.cnea.co/" target="_blank">Canadian National Energy Alliance (CNEA)</a> for the management and operation of <a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank">Canadian Nuclear Laboratories (CNL)</a> under a Government-owned, Contractor-operated (GoCo) model. This follows the announcement by the Government of Canada in June 2015 of the selection of CNEA through a competitive procurement process. AECL works to monitor performance under the GoCo arrangement to meet Government objectives. </p> <p> Under the GoCo model, AECL leverages its facilities, assets and intellectual property by bringing to bear private-sector rigour in the operation of the nuclear laboratories through the contract with CNEA, and fulfils its core mandate to: deliver on Canada’s radioactive waste and decommissioning responsibilities, provide nuclear expertise to support federal responsibilities, and offer services to users of the nuclear laboratories on commercial terms.  Details related to the work of CNL and the services it provides to AECL, industry and academia can be found on the <a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank">CNL website</a>. </p> <table style="width: 100%;"><tbody><tr><td style="text-align: center;"><a class="trackExternal" href="http://www.cnea.co/" target="_blank"><img style="vertical-align: middle;" alt="CNEA" src="/site/media/aecl/CNEA%20Large.png" /></a></td> <td style="text-align: center;"><a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank"><img style="vertical-align: middle;" alt="CNL Large" src="/site/media/aecl/CNL%20Large.png" /></a></td></tr></tbody></table></div></div>
                 </div>
 			    <div class="landing-nav">
 				    <div class="robots-nocontent">
@@ -363,7 +349,7 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
 		    <div class="grid_12">
 			    <div id="footer-copyright">
 				    <div id="tmpl_cbfooter_copyright" class="ow_block robots-nocontent">
-	<p><a title="Copyright and Trademark Notices" href="http://www.aecl.ca/en/copyright.aspx">2013-2015 © AECL All Rights Reserved</a></p></div>
+	<p><a title="Copyright and Trademark Notices" href="http://www.aecl.ca/en/copyright.aspx">2013-2016 © AECL All Rights Reserved</a></p></div>
 			    </div>
 			    <div id="footer-nav">
 				    <div id="tmpl_cbfooter_nav" class="ow_block robots-nocontent">
@@ -391,12 +377,12 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAYsUoZp/2eBg1ELITpFknxolvospGfzoMK7M1qEbNikOgG/yF7SMQ5O3Yw0MQzageLIcnnuzf8ZD+ZMlW0yvbqryTjTrlfixDoGOYDD1kk3LJBit0ooFJOmvbr7LKiNZlCKzX2b8m/LLA7xqBeosggmirGxqg==" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAYz86pzkXqtOeZiM9o4BpRklvospGfzoMK7M1qEbNikOgG/yF7SMQ5O3Yw0MQzageLIcnnuzf8ZD+ZMlW0yvbqryTjTrlfixDoGOYDD1kk3LJBit0ooFJOmvbr7LKiNZlDvYQlEZWmdhuockAayNS1I0as1Uw==" />
 </div>
 
 <script type="text/javascript">
 //<![CDATA[
-OneWeb.Analytics.addProvider(new OneWeb.Analytics.GoogleAnalytics.Provider("UA-44102330-5",{"async":true,"version":"current","perfSampleRate":1,"anonymize":false}));OneWeb.Analytics.settings={eventTracking:true,socialTracking:true,oneWebActionMethod:1}; OneWeb.Analytics.initialize();//]]>
+OneWeb.Analytics.addProvider(new OneWeb.Analytics.UniversalAnalytics.Provider("UA-77270576-1",{"version":"current"}));OneWeb.Analytics.settings={eventTracking:true,socialTracking:true,oneWebActionMethod:1}; OneWeb.Analytics.initialize();//]]>
 </script>
 </form>
 	</body>

@@ -33,7 +33,7 @@
         <meta name="rating" content="general" />
         <meta name="robots" content="index, follow" />
         
-        <meta name="published" content="Fri, 11 Mar 2016 09:53:24" />
+        <meta name="published" content="Mon, 09 May 2016 04:44:13" />
         <meta name="modified" content="Mon, 12 Aug 2013 10:44:13" />
         <meta name="guid" content="874C22934A5A4AD5AD5300234D6F6DCE" />
         <meta name="id" content="1272" />
@@ -79,7 +79,7 @@ dataLayer = [{}];
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMLTDN');</script>
 <!-- End Google Tag Manager -->
 
-        <link rel="stylesheet" href="/css/cov/layout.css?v201602" />
+        <link rel="stylesheet" href="/css/cov/layout.css?v201604" />
         <!--[if lte IE 8]><link rel="stylesheet" href="/css/cov/ieonly.css" /><![endif]-->
         <link rel="stylesheet" media="print" href="/css/cov/print.css" />
         <link rel="stylesheet" href="/css/cov/nivo-slider.css" />
@@ -120,74 +120,25 @@ dataLayer = [{}];
                 <div id="header">
                     <a id="logo" href="/default.aspx"><img src="/images/cov/ui/covLogo.png" alt="City Of Vancouver" title="City of Vancouver home" /></a>
                    
-<div id="meta">
-    <a id="neighbourhoodsDropDown" href="/news-calendar/10989.aspx" class="lnkDropdown">Areas of the city</a>
-    <img class="searchImg" src="/images/cov/ui/magnify-glass-icon-green-30px.png" title="Search" alt="Search" />    
-    <form id="search" method="get" action="http://vancouver.ca/search.aspx">
-        <input class="searchBox searchBoxEmpty" name="q" type="text" />
-        <input type="hidden" id="searchEngine" name="searchEngine" value="GSA" />
-        <input class="goSearch" alt="Search" type="image" src="/images/cov/ui/search_button3.png" title="Search" />
-    </form>
+<a id="neighbourhoodsDropDown" href="/news-calendar/10989.aspx" class="lnkDropdown" style="display:none;">Areas of the city</a>
+
+<div class="tools">
+    <div id="howdoi">
+    	<a id="howdoiheading" class="heading">How to ... <i class="fa fa-lg fa-angle-down"></i></a>
+    </div>
+    <div id="search">
+	    <form class="header-searchbox searchbox-open" method="get" action="//vancouver.ca/search.aspx">
+		<input type="search" placeholder="Search......" name="q" class="header-searchbox-input" onkeyup="headerSearchButtonUp();" required>
+		<input type="submit" class="searchbox-submit" value="Go">
+		<input type="hidden" id="searchEngine" name="searchEngine" value="GSA" />
+		<span title="Search" class="header-searchbox-icon"><i class="fa fa-search"></i></span>
+	    </form>
+	</div>
+	<a href="/your-government/contact-the-city-of-vancouver.aspx" rel="nofollow"><div id="phone"><i class="fa fa-phone"></i> 311</div></a>
+	<a href="/online-services.aspx" rel="nofollow" style="display: none;"><div id="apps"><i class="fa fa-cloud-download"></i> Apps</div></a>
 </div>
 
-<div id="background-image-data" style="display: none">
-    
-    
-    <div class="83B05EAE7905419981E4FC0BE75FA7D8">/images/cov/backgrounds/business_bkgd.jpg</div>
-    
-    
-    <div class="1B48E3BC89AD4680B2E902C48640C64A">/images/cov/backgrounds/transport_bkgd.jpg</div>
-    
-    
-    <div class="C2B4C2DC13D8429385393D092BE31D4A">/images/cov/backgrounds/enviro_bkgd.jpg</div>
-    
-    
-    <div class="95C37A60D9EF4577B6E4DAFDE81CD315">/images/cov/backgrounds/property_bkgd.jpg</div>
-    
-    
-    <div class="3D48BA295D9A4E8FAE0F95755D65318D">/images/cov/backgrounds/park_bkgd.jpg</div>
-    
-    
-    <div class="5785640C8B3C4775A3C50AC844695609">/images/cov/backgrounds/gov_bkgd.jpg</div>
-    
-    
-    <div class="Default">/images/cov/backgrounds/bkgd_00_3.jpg</div>
-    
-    
-    <div class="Default">/images/cov/backgrounds/bkgd_00_2.jpg</div>
-    
-    
-    <div class="Default">/images/cov/backgrounds/bkgd_00.jpg</div>
-    
-    
-    <div class="40817C78182C4DF6A38920F36FFA0369">/images/cov/backgrounds/news_bkgd.jpg</div>
-    
-    
-    <div class="5E53ECCF5AC443878F82677BA9E10A08">/images/cov/backgrounds/about_bkgd.jpg</div>
-    
-</div>
 <script type="text/javascript">
-    $(function () {
-        if ($(".searchBox").val()=='') {
-            $(".searchBox").addClass("searchBoxEmpty");
-        }
-        $(".searchBox").focus(function () {
-            //$(".searchBox").removeClass("searchBoxEmpty").select();
-            $(".searchBox").removeClass("searchBoxEmpty");
-        });
-        
-        $(".searchBox").blur(function () {
-            $(".searchBox").each(function() {
-                if ($(this).val()=='') {
-                        $(this).addClass("searchBoxEmpty");   
-                }
-            })
-//            if ($(".searchBox").val()=='') {
-//                $(".searchBox").addClass("searchBoxEmpty");   
-//            }
-        });
-    });
-
     function SetBackImage(SectionGuid)
     {
         if(SectionGuid == '')
@@ -243,8 +194,8 @@ dataLayer = [{}];
                 <div class="crumbNav">
                     <a href="/default.aspx">Home</a>&nbsp;&gt;&nbsp;<a href="/your-government.aspx">Your Government</a>&nbsp;&gt;&nbsp;<a href="/your-government/municipal-agencies.aspx">Municipal operations</a>&nbsp;&gt;&nbsp;City of Vancouver Archives
                 </div>
-                <div id="leftRail" class="rounded-corners">
-                    <a class="topmenulink" href="/your-government.aspx"><h3>Your Government</h3></a>
+                <div id="leftRail">
+                    <a class="topmenulink" href="/your-government.aspx"><h2>Your Government</h2></a>
 <ul>
     <li class="
 isParent 
@@ -642,8 +593,6 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
                     
                 </div>
 
-                <p class="lastModified">Last modified: Mon, 12 Aug 2013 10:44:13</p>
-
                 <!--googleoff: all-->
                 
 
@@ -656,10 +605,10 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
 453 West 12th Ave<br />
                 Vancouver, BC V5Y 1V4
             </p>
-                        <p class="footer-map-link"><a target="_blank" href="http://vancouver.ca/map.aspx?q=453+West+12th+Ave,+Vancouver,+BC+V5K+1V4,+Canada">View Map</a></p>
+                        <p class="footer-map-link"><a target="_blank" href="https://vancouver.ca/map.aspx?q=453+West+12th+Ave,+Vancouver,+BC+V5K+1V4,+Canada">View Map</a></p>
                 <p class="footer-311"><span><i class="fa fa-phone"></i> 3-1-1</span></p>
             </span>
-            <span class="footer-map"><a data-mobile-link="http://vancouver.ca/map.aspx?q=453+West+12th+Ave,+Vancouver,+BC+V5K+1V4,+Canada" href="/your-government/getting-to-city-hall.aspx"><img alt="City Hall is located on the corner of Cambie Street and West 12th Avenue." title="City Hall is located on the corner of Cambie Street and West 12th Avenue." class="footer-map-img" src="/images/cov/ui/map-city-hall-homepage.jpg" /></a></span>
+            <span class="footer-map"><a data-mobile-link="https://vancouver.ca/map.aspx?q=453+West+12th+Ave,+Vancouver,+BC+V5K+1V4,+Canada" href="/your-government/getting-to-city-hall.aspx"><img alt="City Hall is located on the corner of Cambie Street and West 12th Avenue." title="City Hall is located on the corner of Cambie Street and West 12th Avenue." class="footer-map-img" src="/images/cov/ui/map-city-hall-homepage.jpg" /></a></span>
         </div>
         <div>
             <h2>Apps</h2>
@@ -677,25 +626,26 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                 </a>
-                <a href="http://twitter.com/CityofVancouver" class="fa-stack fa-lg" target="_blank">
+                <a href="https://twitter.com/CityofVancouver" class="fa-stack fa-lg" target="_blank">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                 </a>
-                <a href="http://youtube.com/CityofVancouver" class="fa-stack fa-lg" target="_blank">
+                <a href="https://youtube.com/CityofVancouver" class="fa-stack fa-lg" target="_blank">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
                 </a>
-                <a href="http://instagram.com/cityofvancouver" class="fa-stack fa-lg" target="_blank">
+                <a href="https://instagram.com/cityofvancouver" class="fa-stack fa-lg" target="_blank">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                 </a>
-                <a href="http://www.linkedin.com/company/city-of-vancouver" class="fa-stack fa-lg" target="_blank">
+                <a href="https://www.linkedin.com/company/city-of-vancouver" class="fa-stack fa-lg" target="_blank">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                 </a>
             </p>
         </div>
     </div>
+    <div class="row seperator"><hr /></div>
     <div class="row bottom clearfix">
         <div class="lookingfor">
             <p><a href="http://vancouver.ca/police/" target="_blank" title="Vancouver Police Department"><img alt="Vancouver Police Department" src="/images/cov/ui/icon-footer-vpd.png" /></a> <a href="/your-government/vancouver-fire-and-rescue-services.aspx" title="Vancouver Fire and Rescue Services"><img alt="Vancouver Fire and Rescue Services" src="/images/cov/ui/icon-footer-vfd.png" /></a> <a href="/your-government/vancouver-board-of-parks-and-recreation.aspx" title="Vancouver Board of Parks and Recreation"><img alt="Vancouver Board of Parks and Recreation" src="/images/cov/ui/icon-footer-vpb.png" /></a> <a href="http://www.vpl.ca" target="_blank" title="Vancouver Public Library"><img alt="Vancouver Public Library" src="/images/cov/ui/icon-footer-vpl.png" /></a></p>
@@ -707,7 +657,6 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
     </div>
 </div>
 
-</div>
 <script type="text/javascript">
   $("#footer .bottom .copyright .footer-right-seperaor").last().hide();
 </script>

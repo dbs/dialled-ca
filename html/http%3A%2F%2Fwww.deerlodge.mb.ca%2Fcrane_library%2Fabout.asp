@@ -6,14 +6,14 @@
 <title>Deer Lodge Centre</title>
 <!-- InstanceEndEditable -->
 
-<link rel="shortcut icon" href="../images/favicon.ico" />
-<link rel="icon" type="image/ico" href="../images/favicon.ico" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="icon" type="image/ico" href="images/favicon.ico" />
 
-<link rel="stylesheet" type="text/css" href="../css/dlc.css" />
+<link rel="stylesheet" type="text/css" href="css/dlc.css" />
 
-<link rel="stylesheet" type="text/css" href="../css/ddsmoothmenu.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js"></script>
 
 <script type="text/javascript">
 
@@ -71,34 +71,34 @@ function MM_swapImage() { //v3.0
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 </head>
 
-<body leftmargin="0" topmargin="20" marginwidth="0" marginheight="0" onload="MM_preloadImages('../images/logoDLC_on.gif','../images/navEmergency_on.gif','../images/navFindDept_on.gif','../images/logoWRHA_on.gif','../images/addressDLC_on.gif','../images/logoDLF_on.gif','../images/navContactUs_on.gif','../images/navMapsDir_on.gif')">
+<body leftmargin="0" topmargin="20" marginwidth="0" marginheight="0" onload="MM_preloadImages('images/logoDLC_on.gif','images/navEmergency_on.gif','images/navFindDept_on.gif','images/logoWRHA_on.gif','images/addressDLC_on.gif','images/logoDLF_on.gif','images/navContactUs_on.gif','images/navMapsDir_on.gif')">
 <table width="972" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td align="center" valign="bottom"><img src="../images/box-top.gif" width="822" height="28" /></td>
+    <td align="center" valign="bottom"><img src="images/box-top.gif" width="822" height="28" /></td>
   </tr>
   <tr>
-    <td align="center" background="../images/box-mid.gif"><table width="760" border="0" cellpadding="0" cellspacing="0" id="header">
+    <td align="center" background="images/box-mid.gif"><table width="760" border="0" cellpadding="0" cellspacing="0" id="header">
       <tr>
-        <td width="540" align="left" valign="middle"><a href="../index.html" onmouseover="MM_swapImage('logoDLC','','../images/logoDLC_on.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="../images/logoDLC_off.jpg" name="logoDLC" width="476" height="59" border="0" id="logoDLC" /></a></td>
+        <td width="540" align="left" valign="middle"><a href="index.html" onmouseover="MM_swapImage('logoDLC','','images/logoDLC_on.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="images/logoDLC_off.jpg" name="logoDLC" width="476" height="59" border="0" id="logoDLC" /></a></td>
         <td width="135"><table width="135" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td height="20" align="center" valign="middle"><a href="../contactUs.html" onmouseover="MM_swapImage('navContactUs','','../images/navContactUs_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="../images/navContactUs_off.gif" name="navContactUs" width="20" height="20" border="0" id="navContactUs" /></a></td>
-            <td height="20" align="left" valign="middle"><a href="../contactUs.html" class="BlackBold10pt" onmouseover="MM_swapImage('navContactUs','','../images/navContactUs_on.gif',1)" onmouseout="MM_swapImgRestore()">Contact Us</a></td>
+            <td height="20" align="center" valign="middle"><a href="contactUs.html" onmouseover="MM_swapImage('navContactUs','','images/navContactUs_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="images/navContactUs_off.gif" name="navContactUs" width="20" height="20" border="0" id="navContactUs" /></a></td>
+            <td height="20" align="left" valign="middle"><a href="contactUs.html" class="BlackBold10pt" onmouseover="MM_swapImage('navContactUs','','images/navContactUs_on.gif',1)" onmouseout="MM_swapImgRestore()">Contact Us</a></td>
           </tr>
           <tr>
-            <td height="20" align="center" valign="middle"><a href="../mapsDirections.html" onmouseover="MM_swapImage('navMaps','','../images/navMaps_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="../images/navMaps_off.gif" name="navMaps" width="20" height="20" border="0" id="navMaps" /></a></td>
-            <td height="20" align="left" valign="middle"><a href="../mapsDirections.html" class="BlackBold10pt" onmouseover="MM_swapImage('navMaps','','../images/navMaps_on.gif',1)" onmouseout="MM_swapImgRestore()">Maps &amp; Directions</a></td>
+            <td height="20" align="center" valign="middle"><a href="mapsDirections.html" onmouseover="MM_swapImage('navMaps','','images/navMaps_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="images/navMaps_off.gif" name="navMaps" width="20" height="20" border="0" id="navMaps" /></a></td>
+            <td height="20" align="left" valign="middle"><a href="mapsDirections.html" class="BlackBold10pt" onmouseover="MM_swapImage('navMaps','','images/navMaps_on.gif',1)" onmouseout="MM_swapImgRestore()">Maps &amp; Directions</a></td>
           </tr>
           <tr>
-            <td width="20" height="20" align="center" valign="middle"><a href="https://forms.manitoba-ehealth.ca/dlc/wellwishes/" onmouseover="MM_swapImage('navWellWishes','','../images/navWellWishes_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="../images/navWellWishes_off.gif" name="navWellWishes" width="20" height="20" border="0" id="navWellWishes" /></a></td>
-            <td width="115" height="20" align="left" valign="middle"><a href="https://forms.manitoba-ehealth.ca/dlc/wellwishes/" class="BlackBold10pt" onmouseover="MM_swapImage('navWellWishes','','../images/navWellWishes_on.gif',1)" onmouseout="MM_swapImgRestore()">Well Wishes</a></td>
+            <td width="20" height="20" align="center" valign="middle"><a href="https://forms.manitoba-ehealth.ca/dlc/wellwishes/" onmouseover="MM_swapImage('navWellWishes','','images/navWellWishes_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="images/navWellWishes_off.gif" name="navWellWishes" width="20" height="20" border="0" id="navWellWishes" /></a></td>
+            <td width="115" height="20" align="left" valign="middle"><a href="https://forms.manitoba-ehealth.ca/dlc/wellwishes/" class="BlackBold10pt" onmouseover="MM_swapImage('navWellWishes','','images/navWellWishes_on.gif',1)" onmouseout="MM_swapImgRestore()">Well Wishes</a></td>
           </tr>
           <tr>
-            <td height="20" align="center" valign="middle"><a href="http://deer-lodge-foundation.ca/DLF_a/gift.html" target="_blank" onmouseover="MM_swapImage('navDonate','','../images/navDonate_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="../images/navDonate_off.gif" name="navDonate" width="20" height="20" border="0" id="navDonate" /></a></td>
-            <td height="20" align="left" valign="middle"><a href="http://deer-lodge-foundation.ca/DLF_a/gift.html" target="_blank" class="BlackBold10pt" onmouseover="MM_swapImage('navDonate','','../images/navDonate_on.gif',1)" onmouseout="MM_swapImgRestore()">DONATE NOW</a></td>
+            <td height="20" align="center" valign="middle"><a href="http://www.deerlodgecentrefoundation.comgift.html" target="_blank" onmouseover="MM_swapImage('navDonate','','images/navDonate_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="images/navDonate_off.gif" name="navDonate" width="20" height="20" border="0" id="navDonate" /></a></td>
+            <td height="20" align="left" valign="middle"><a href="http://www.deerlodgecentrefoundation.com/donate/ways-to-give/" target="_blank" class="BlackBold10pt" onmouseover="MM_swapImage('navDonate','','images/navDonate_on.gif',1)" onmouseout="MM_swapImgRestore()">DONATE NOW</a></td>
           </tr>
         </table></td>
-        <td width="85" align="left" valign="bottom"><a href="../emergency.html" onmouseover="MM_swapImage('navEmergency','','../images/navEmergency_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="../images/navEmergency_off.gif" name="navEmergency" width="85" height="18" border="0" id="navEmergency" /></a></td>
+        <td width="85" align="left" valign="bottom"><a href="emergency.html" onmouseover="MM_swapImage('navEmergency','','images/navEmergency_on.gif',1)" onmouseout="MM_swapImgRestore()"><img src="images/navEmergency_off.gif" name="navEmergency" width="85" height="18" border="0" id="navEmergency" /></a></td>
       </tr>
     </table>
       <table width="760" border="0" cellpadding="0" cellspacing="0" id="banner">
@@ -106,13 +106,13 @@ function MM_swapImage() { //v3.0
           <td colspan="3">&nbsp;</td>
         </tr>
         <tr>
-          <td width="10" background="../images/topnavCornerL.gif"><img src="../images/spacer.gif" width="7" height="10" /></td>
+          <td width="10" background="images/topnavCornerL.gif"><img src="images/spacer.gif" width="7" height="10" /></td>
           <td width="740" align="left" bgcolor="#000000" class="White12pt"><div id="menucontainer">
             <noscript>
               <a href="link to site map for search engines and user with JS disabled">Site map</a>
               </noscript>
           </div></td>
-          <td width="10" background="../images/topnavCornerR.gif"><img src="../images/spacer.gif" width="7" height="10" /></td>
+          <td width="10" background="images/topnavCornerR.gif"><img src="images/spacer.gif" width="7" height="10" /></td>
         </tr>
         <tr>
           <td colspan="3" align="center" valign="middle">
@@ -291,10 +291,10 @@ document.writeln('</div>')
 </script>          </td>
         </tr>
         <tr>
-          <td colspan="3" align="center" valign="top"><img src="../images/barBanner.gif" width="760" height="20" /></td>
+          <td colspan="3" align="center" valign="top"><img src="images/barBanner.gif" width="760" height="20" /></td>
         </tr>
         <tr>
-          <td colspan="3" align="center" valign="top"><img src="../images/spacer.gif" width="50" height="20" /></td>
+          <td colspan="3" align="center" valign="top"><img src="images/spacer.gif" width="50" height="20" /></td>
         </tr>
       </table>
       <table width="972" border="0" align="center" cellpadding="0" cellspacing="0" id="body">
@@ -345,17 +345,17 @@ document.writeln('</div>')
             </tr>
               <tr>
               </tr><tr>
-                <td width="218" align="left" valign="top"><img src="../images/line-grey218.gif" width="218" height="20" /><br />
-                  <a href="../prime.html" class="Grey12pt">PRIME</a><br />
-                  <img src="../images/line-grey218.gif" width="218" height="20" /><br />
-                  <a href="../osi.html" class="Grey12pt">OSI Clinic</a><br />
-                  <img src="../images/line-grey218.gif" width="218" height="20" /><br />
-                  <a href="../mdc.html" class="Grey12pt">Movement Disorder Clinic</a><br />
-                  <img src="../images/line-grey218.gif" width="218" height="20" /><br />
+                <td width="218" align="left" valign="top"><img src="images/line-grey218.gif" width="218" height="20" /><br />
+                  <a href="prime.html" class="Grey12pt">PRIME</a><br />
+                  <img src="images/line-grey218.gif" width="218" height="20" /><br />
+                  <a href="osi.html" class="Grey12pt">OSI Clinic</a><br />
+                  <img src="images/line-grey218.gif" width="218" height="20" /><br />
+                  <a href="mdc.html" class="Grey12pt">Movement Disorder Clinic</a><br />
+                  <img src="images/line-grey218.gif" width="218" height="20" /><br />
                   <a href="http://www.wrha.mb.ca/prog/cdp/index.php" target="_blank" class="Grey12pt">Communications Devices Program</a><br />
-                  <img src="../images/line-grey218.gif" width="218" height="20" /><br />
-                  <a href="../news.html">News &amp; Updates</a><br />
-                  <img src="../images/line-grey218.gif" width="218" height="20" /><br /></td>
+                  <img src="images/line-grey218.gif" width="218" height="20" /><br />
+                  <a href="news.html">News &amp; Updates</a><br />
+                  <img src="images/line-grey218.gif" width="218" height="20" /><br /></td>
               </tr>
               <tr>
                 <td width="218" height="20">&nbsp;</td>
@@ -367,14 +367,14 @@ document.writeln('</div>')
       </table>      
       <table width="760" height="158" border="0" cellpadding="0" cellspacing="0" id="footer">
         <tr>
-          <td height="18" align="center" valign="bottom"><img src="../images/footer-top.gif" width="760" height="18" /></td>
+          <td height="18" align="center" valign="bottom"><img src="images/footer-top.gif" width="760" height="18" /></td>
         </tr>
         <tr>
-          <td background="../images/bakGrey.gif"><table width="720" border="0" align="center" cellpadding="0" cellspacing="0">
+          <td background="images/bakGrey.gif"><table width="720" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
-              <td width="210" align="left" valign="middle"><p><a href="../contactUs.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btDLCAddress','','../images/addressDLC_on.jpg',1)"><img src="../images/addressDLC_off.jpg" name="btDLCAddress" width="210" height="56" border="0" id="btDLCAddress" /></a></p></td>
-              <td width="260" align="left" valign="middle"><a href="http://deer-lodge-foundation.ca/DLF_a/" target="_blank" onmouseover="MM_swapImage('btDLF','','../images/logoDLF_on.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="../images/logoDLF_off.jpg" name="btDLF" width="260" height="81" border="0" id="btDLF" /></a></td>
-              <td width="250" align="left" valign="middle"><a href="http://www.wrha.mb.ca/" target="_blank" onmouseover="MM_swapImage('logoWRHA','','../images/logoWRHA_on.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="../images/logoWRHA_off.jpg" name="logoWRHA" width="250" height="67" border="0" id="logoWRHA" /></a></td>
+              <td width="210" align="left" valign="middle"><p><a href="contactUs.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btDLCAddress','','images/addressDLC_on.jpg',1)"><img src="images/addressDLC_off.jpg" name="btDLCAddress" width="210" height="56" border="0" id="btDLCAddress" /></a></p></td>
+              <td width="260" align="left" valign="middle"><a href="http://www.deerlodgecentrefoundation.com" target="_blank" onmouseover="MM_swapImage('btDLF','','images/logoDLF_on.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="images/logoDLF_off.jpg" name="btDLF" width="260" height="81" border="0" id="btDLF" /></a></td>
+              <td width="250" align="left" valign="middle"><a href="http://www.wrha.mb.ca/" target="_blank" onmouseover="MM_swapImage('logoWRHA','','images/logoWRHA_on.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="images/logoWRHA_off.jpg" name="logoWRHA" width="250" height="67" border="0" id="logoWRHA" /></a></td>
             </tr>
             <tr>
               <td height="30" colspan="3" align="left" valign="bottom" class="Grey11pt"><table width="720" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -387,7 +387,7 @@ document.writeln('</div>')
 			if (yr!=2002)
 			document.write("- "+yr);
 			</script>
-          &#32;  Deer Lodge Centre. All rights reserved. For more information  please refer to our <a href="../conditionsOfUse.html">Conditions of Use</a>.<br />
+          &#32;  Deer Lodge Centre. All rights reserved. For more information  please refer to our <a href="conditionsOfUse.html">Conditions of Use</a>.<br />
 For comments or questions about this website please contact the <a href="mailto:KScott@deerlodge.mb.ca">Site Administrator</a>.</td>
                 </tr>
               </table></td>
@@ -395,12 +395,12 @@ For comments or questions about this website please contact the <a href="mailto:
           </table></td>
         </tr>
         <tr>
-          <td height="18" align="center" valign="top"><img src="../images/footer-bottom.gif" width="760" height="18" /></td>
+          <td height="18" align="center" valign="top"><img src="images/footer-bottom.gif" width="760" height="18" /></td>
         </tr>
       </table></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><img src="../images/box-bottom.gif" width="822" height="28" /></td>
+    <td align="center" valign="top"><img src="images/box-bottom.gif" width="822" height="28" /></td>
   </tr>
 </table>
 

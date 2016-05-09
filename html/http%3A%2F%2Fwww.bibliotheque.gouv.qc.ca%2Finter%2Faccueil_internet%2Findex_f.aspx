@@ -107,13 +107,13 @@
 		<td class="evoArticleListDescription"><P class=icone><A href="../Contenus/index_f.aspx?ArticleID=107" target=""><IMG title="Nos acquisitions" border=0 alt="Nos acquisitions" src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/ico_acquisitions.gif" width=123 height=28></A></P>
 <P class=marge10><A href="../acquisitions/nouveautes.asp" target="">Consultez la liste de nos plus r&#233;centes acquisitions.&nbsp;<IMG title=D&#233;tail border=0 alt=D&#233;tail src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/fleche_bleue.gif" width=4 height=7></A></P>
 <P class=icone><BR><A href="../Contenus/index_f.aspx?articleid=29" target=""><IMG title="Notre coup de coeur" border=0 alt="Notre coup de coeur" src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/ico_coup_coeur.gif" width=159 height=28></A> </P>
-<P class=marge10><A href="../Contenus/index_f.aspx?articleid=29" target=""><IMG title=" Le changement climatique : ce qui va changer dans mon quotidien " src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/Coup_de_coeur/changclimatquotidien_petit.jpg" width=56 height=84></A></P>
-<P class=marge10><B>H&#233;l&#232;ne G&#233;li&nbsp;</B><BR><A href="../Contenus/index_f.aspx?articleid=29">Le changement climatique : ce qui va changer dans mon quotidien </A></P>
+<P class=marge10><A href="../Contenus/index_f.aspx?articleid=29" target=""><IMG title=" Une &#233;cole pour le XXIe si&#232;cle " src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/Coup_de_coeur/ecole21siecle_petit.jpg" width=56 height=84></A></P>
+<P class=marge10><B>Claude Ruel&nbsp;</B><BR><A href="../Contenus/index_f.aspx?articleid=29">Une &#233;cole pour le XXIe si&#232;cle </A></P>
 <P class=marge10>&nbsp;</P>
 <P class=icone><A href="../Contenus/index_f.aspx?articleid=30" target=""><IMG title="Nos suggestions de lecture" border=0 alt="Nos suggestions de lecture" vspace=10 src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/ico_suggestions.gif" width=188 height=28></A></P>
 <UL>
-<LI>Revenir au service public &nbsp;<A href="../Contenus/index_f.aspx?articleid=30" target=""><IMG title=D&#233;tail border=0 alt=D&#233;tail src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/fleche_bleue.gif" width=4 height=7></A> 
-<LI>Le consommateur plan&#233;taire &nbsp;<A href="../Contenus/index_f.aspx?articleid=30" target=""><IMG title=D&#233;tail border=0 alt=D&#233;tail src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/fleche_bleue.gif" width=4 height=7></A></LI></UL></td>
+<LI>La souverainet&#233; en h&#233;ritage &nbsp;<A href="../Contenus/index_f.aspx?articleid=30" target=""><IMG title=D&#233;tail border=0 alt=D&#233;tail src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/fleche_bleue.gif" width=4 height=7></A> 
+<LI>Que feriez-vous si vous saviez?: les climatologues face &#224; la d&#233;sinformation &nbsp;<A href="../Contenus/index_f.aspx?articleid=30" target=""><IMG title=D&#233;tail border=0 alt=D&#233;tail src="http://www.bibliotheque.gouv.qc.ca/app/ImageRepository/1/fleche_bleue.gif" width=4 height=7></A></LI></UL></td>
 	</tr>
 </table></td>
               <td style="width:1px;background:'images/francais/filet_gris_v.gif;'"></td>
@@ -144,12 +144,12 @@
 
 			<table class="evoArticleListTable" border="0">
 	<tr>
-		<td class="evoArticleListDate">2016-03-07 10:01:00</td>
+		<td class="evoArticleListDate">2016-05-03 15:31:00</td>
 	</tr><tr>
-		<td class="evoArticleListTitle">Nouvelles bibliographies sélectives</td>
+		<td class="evoArticleListTitle">Exposition  « La pollution atmosphérique : état des connaissances »</td>
 	</tr><tr>
-		<td class="evoArticleListDescription"><P align=justify><B><FONT color=#0000ff size=4>&nbsp; <FONT color=#ff0000>Nouvelles bibliographies s&#233;lectives</FONT></FONT></B> 
-<P align=justify>Vous int&#233;ressez-vous au ph&#233;nom&#232;ne du <B><A href="/app/DocRepository/1/Documents_divers/DecrochageVF20160217.pdf">d&#233;crochage scolaire</A> </B>ou de<B> <A href="/app/DocRepository/1/Documents_divers/IntimidationVF20160203.pdf">l&#8217;intimidation</A></B>? Le personnel de la Biblioth&#232;que C&#233;cile-Rouleau vous propose une s&#233;lection de documents tir&#233;s de sa collection papier et &#233;lectronique portant sur ces th&#232;mes. Ces sujets sont abord&#233;s dans des toutes nouvelles<A href="http://www.bibliotheque.gouv.qc.ca/inter/Contenus/index_f.aspx?ArticleID=1768"> <B>bibliographies s&#233;lectives</B> </A>portant sur des th&#232;mes reli&#233;s au monde de l&#8217;&#233;ducation. Pour obtenir la documentation cit&#233;e dans celle-ci, ou si vous souhaitez poursuivre la recherche bibliographique ou en demander une sur un autre sujet, le personnel de la biblioth&#232;que se fera un plaisir de vous aider. Veuillez communiquer avec le service de la <A href="../Contenus/index_f.aspx?ArticleID=41">r&#233;f&#233;rence</A>. </B></P></td>
+		<td class="evoArticleListDescription"><P align=justify><B><FONT color=#0000ff size=4>&nbsp; <FONT color=#0000ff>Exposition &#171; La pollution atmosph&#233;rique : &#233;tat des connaissances &#187;</FONT></FONT></B> 
+<P align=justify>Le personnel de la Biblioth&#232;que C&#233;cile-Rouleau vous convie &#224; visiter une <B><A href="/app/DocRepository/1/Documents_divers/LIFSEAIR20160504.pdf">exposition de documents</A></B> qui vise &#224; synth&#233;tiser l&#8217;&#233;tat des connaissances dans le domaine de la pollution atmosph&#233;rique. L&#8217;exposition compl&#232;te une bibliographie r&#233;alis&#233;e dans le cadre des rencontres du Forum sur l&#8217;environnement (du minist&#232;re du D&#233;veloppement durable, de l&#8217;Environnement et de la Lutte contre les changements climatiques) qui a pour th&#232;me <U>Outils et expertises en qualit&#233; de l&#8217;air : une approche int&#233;gr&#233;e</U>. L&#8217;exposition comprend une vingtaine de documents portant sur la pollution et la gestion de la qualit&#233; de l&#8217;air (&#233;tat de l&#8217;art, mod&#233;lisation, m&#233;thodes de surveillance ou de mesure, etc.). L&#8217;exposition est <B>&#224; l&#8217;affiche du 4 au 13 mai 2016</B>.</P></td>
 	</tr><tr>
 		<td><hr class="evoArticleListDivider"></hr></td>
 	</tr>

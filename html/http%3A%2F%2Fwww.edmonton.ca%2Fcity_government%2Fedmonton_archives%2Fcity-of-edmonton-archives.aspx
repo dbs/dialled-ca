@@ -9,7 +9,7 @@
     <meta name="viewport" content="initial-scale=1.0" />
     <meta name="DC.Title" content="" />
     <meta name="DC.Creator" content="City of Edmonton" />
-    <meta name="DC.Date" content="3/11/2016" />
+    <meta name="DC.Date" content="5/9/2016" />
     <meta name="DC.DateAccepted" content="12/17/2015">
     <meta name="DC.Language" content="eng" scheme="ISO693-2" />
     <meta name="DC.Publisher" content="The City of Edmonton" />
@@ -147,7 +147,7 @@ function getIEVersionNumber() {
             <ul id="searchNav" onmouseover="mouseIsOver = true;" onmouseout="mouseIsOver = false;">
                     <li><img src="/city_government/images/button_search_x.png" onclick="hideSearchSuggestions()"/> </li>
                     
-                <li onclick="ssc('Business Licensing')">Business Licensing</li> <li onclick="ssc('Careers')">Careers</li> <li onclick="ssc('Eco Stations')">Eco Stations</li> <li onclick="ssc('Edmonton Maps')">Edmonton Maps</li> <li onclick="ssc('Pay Tickets')">Pay Tickets</li> <li onclick="ssc('Permits')">Permits</li> <li onclick="ssc('Property Assessment & Taxes')">Property Assessment & Taxes</li> 
+                <li onclick="ssc('Big Bin Events')">Big Bin Events</li> <li onclick="ssc('Eco Stations')">Eco Stations</li> <li onclick="ssc('Edmonton Maps')">Edmonton Maps</li> <li onclick="ssc('Pay Tickets')">Pay Tickets</li> <li onclick="ssc('Permits')">Permits</li> <li onclick="ssc('Spray Parks')">Spray Parks</li> <li onclick="ssc('Street Cleaning')">Street Cleaning</li> 
                 
             </ul>
             <input name="txtFakeControl" type="hidden" />
@@ -236,7 +236,7 @@ function getIEVersionNumber() {
                 
             <li><a href="/city_government/budget-and-taxes.aspx">Budget & Taxes</a></li>
         
-            <li><a href="/city_government/by-election.aspx">By-Election</a></li>
+            <!-- <li><a href="/city_government/by-election.aspx">By-Election</a></li> -->
         
             <li><a href="/city_government/municipal-census.aspx">Census</a></li>
         
@@ -297,7 +297,7 @@ function getIEVersionNumber() {
         
             <li><a href="/city_government/edmonton_archives/historical-walking-tours.aspx">Historical Walking Tours</a></li>
         
-            <li><a href="/city_government/edmonton_archives/mayors-celebration-of-the-arts.aspx">Mayor's Celebration of the Arts</a></li>
+            <!-- <li><a href="/city_government/edmonton_archives/mayors-celebration-of-the-arts.aspx">Mayor's Celebration of the Arts</a></li> -->
         
             <li><a href="/city_government/edmonton_archives/poet-laureate.aspx">Poet Laureate</a></li>
         
@@ -310,7 +310,7 @@ function getIEVersionNumber() {
         
             <li><a href="/city_government/jobs.aspx">Jobs - Talent Hub</a></li>
         
-            <li><a href="/city_government/news-and-media.aspx">News & Media</a></li>
+            <li><a href="/city_government/news-media.aspx">News & Media</a></li>
         
             <li><a href="/city_government/projects-redevelopment.aspx">Projects & Redevelopment</a></li>
         
@@ -325,7 +325,7 @@ function getIEVersionNumber() {
             <!-- <li><a href="/city_government/fcm-golf-registration-thank-you.aspx">FCM Golf Registration - Thank You</a></li> -->
          
             </ul>
-         <!-- Transportation --><!-- Transit (ETS) -->
+         <!-- Transportation --><!-- Transit (ETS) --><!-- Affordable Housing Edmonton -->
       </div>
       <!-- close leftNav -->
 
@@ -740,7 +740,7 @@ padding-top: 2px;
 
 
 
-<h2>For more information:</h2>
+<h2>For More Information</h2>
 <p><strong>City of Edmonton Archives</strong></p>
      <address>
         10440 108 Avenue<br />
@@ -774,7 +774,7 @@ padding-top: 2px;
                 </tbody>
      </table>
  
- 
+
 
 
 </div>
@@ -886,7 +886,7 @@ The Metro Line has <a href="/city_government/edmonton_archives/cea-hours-access
         <a target="_blank" href="http://www.youtube.com/CityEdmonton?utm_source=coe&utm_medium=footer&utm_campaign=socialmedia">
             <img src="/interface/youtube_icon_20x20.jpg" alt="YouTube icon"/>
         </a>
-        <a href="/rss-feeds.aspx?utm_source=coe&utm_medium=footer&utm_campaign=socialmedia">
+        <a href="/city_government/news/subscriptions.aspx?utm_source=coe&utm_medium=footer&utm_campaign=socialmedia">
             <img src="/interface/rss_icon_20x20.jpg" alt="Really Simple Syndication icon"/>
         </a>
         <a href="http://www.edmonton.ca/linkedin">
@@ -965,5 +965,3 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz
 <!-- /city_government/edmonton_archives/cea-events-activities.aspx /city_government/edmonton_archives/city-of-edmonton-archives-mandate.aspx /city_government/edmonton_archives/cea-plan-your-visit.aspx /city_government/edmonton_archives/cea-hours-access.aspx /city_government/edmonton_archives/what-are-archives.aspx /city_government/edmonton_archives/cea-collections.aspx /city_government/edmonton_archives/cea-getting-involved.aspx /city_government/edmonton_archives/cea-sales-services.aspx  -->
 </body>
 </html>
-
-

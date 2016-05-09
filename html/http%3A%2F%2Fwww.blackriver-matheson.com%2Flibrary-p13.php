@@ -304,14 +304,14 @@ jQuery(document).ready(function ($) {
           <tr>
             <td><div class="hnav"> 
 	
-<!-- xcss 1.1.0 menu starts -->
-
-<div class="xcsstitle">Living</div>
-<div class="mp-pusher" id="mp-pusher">
-	<nav class="mp-menu" id="mp-menu">
-		<div class="mp-level">
-	
-		<ul>
+			<!-- xcss 3.0 (primary) menu starts -->
+			
+			<div class="xcsstitle">Living</div>
+			<div class="mp-pusher" >
+				<nav class="mp-menu" >
+					<div class="mp-level">
+				
+					<ul>
 
 <li class="button activebutton" id="button1">
 	<div class="parent drop1"><a class="navarrow" data-link-level="1">Living</a>
@@ -571,12 +571,11 @@ jQuery(document).ready(function ($) {
 <!-- xcss menu ends -->
 
 
+						
+					</div>
+				</nav>
+			</div>
 			
-		</div>
-	</nav>
-</div>
-
-
  </div></td>
           </tr>
         </table>
@@ -598,14 +597,14 @@ jQuery(document).ready(function ($) {
         	<div id="left_column_sidenav">
         	  <div class="vnav"> 
 	
-<!-- xcss 1.1.0 menu starts -->
-
-<div class="xcsstitle">Living</div>
-<div class="mp-pusher" id="mp-pusher">
-	<nav class="mp-menu" id="mp-menu">
-		<div class="mp-level">
-	
-		<ul>
+			<!-- xcss 3.0 (secondary) menu starts -->
+			
+			<div class="xcsstitle">Living</div>
+			<div class="mp-pusher" >
+				<nav class="mp-menu" >
+					<div class="mp-level">
+				
+					<ul>
 
 <li class="button" id="button5">
 	<div class="parent drop1"><a  data-link-level="1" href="photo-gallery-c60.php">Photo Gallery</a>
@@ -684,12 +683,11 @@ jQuery(document).ready(function ($) {
 <!-- xcss menu ends -->
 
 
+						
+					</div>
+				</nav>
+			</div>
 			
-		</div>
-	</nav>
-</div>
-
-
  </div>
         	</div>
             </div>

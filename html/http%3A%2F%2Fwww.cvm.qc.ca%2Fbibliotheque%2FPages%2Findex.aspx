@@ -81,7 +81,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x1F3EF97F5F425292CC78AD5699CCE54AD1D8C524E3F7197000CECAA068307D6E061EBF22AE785C2EECAF14ABD165C76EE866E573414EC16F97DBD7F6DE6F5C3E,11 Mar 2016 21:14:58 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xCE20D12571D3EAC0843D97C13837837DE3A2348A5A0834DC5F97AAE96D4F3D93C79C8A2F4FD2F6039B95F3DA3D8B370F9D8CB9307952DDCC066AA3A5F0EC559C,09 May 2016 14:26:18 -0000" />
 <input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
 <input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
@@ -293,6 +293,7 @@ var L_Menu_SiteTheme="";
 <li><a href="http://www.cvm.qc.ca/activitesservices/comitesetudiants" title="Comités étudiants">Comités étudiants</a></li>
 <li><a href="http://www.cvm.qc.ca/formationreg/saide" title="Services adaptés (SAIDE)">Services adaptés (SAIDE)</a></li>
 <li><a href="http://www.cvm.qc.ca/activitesservices/animationinterculturelle" title="Animation interculturelle">Animation interculturelle</a></li>
+<li><a href="http://www.cvm.qc.ca/activitesservices/cccvm" title="Café citoyen du CVM">Café citoyen du CVM</a></li>
 <li><a href="http://www.cvm.qc.ca/activitesservices/valorisationfr" title="Valorisation du français">Valorisation du français</a></li>
 <li><a href="http://www.cvm.qc.ca/planase" title="Plan de la section">Plan de la section</a></li>
 </ul>
@@ -450,10 +451,8 @@ var L_Menu_SiteTheme="";
 
     <ul id="menuUtilDroit">
 		<li class="imp"><a href="javascript:window.print();" title="Cliquez ici pour imprimer cette page" >
-					Imprimer cette page</a></li>
-		<li class="ami"><a href="javascript:window.location='http://www.cvm.qc.ca/Pages/envoyerAmi.aspx?previousurl=' + encodeURIComponent(location.href);" title="Envoyer cette page à un ami" >
-					Envoyer à un ami</a>
-		</li>
+					Imprimer cette page</a>
+        </li>
 	</ul>	
 	<div id="divFacebookTwitter">
 		<a title="cegepduvieuxmontreal" href="http://www.facebook.com/cegepduvieuxmontreal" target="_blank"><img  width=29 height=29 alt="cegepduvieuxmontreal" src="http://www.cvm.qc.ca/SiteCollectionImages/v2_facebook.png"></a>
@@ -645,4 +644,4 @@ SAE4736C5_Submit();
 </script></form>
 	</body>
 </html>
-<!-- Rendu à l'aide du profil de cache :Internet public (purement anonyme) à : 2016-03-11T16:14:59 -->
+<!-- Rendu à l'aide du profil de cache :Internet public (purement anonyme) à : 2016-05-09T10:26:18 -->

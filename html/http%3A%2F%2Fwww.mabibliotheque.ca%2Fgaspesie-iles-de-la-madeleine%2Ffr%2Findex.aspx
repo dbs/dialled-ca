@@ -7,15 +7,16 @@
     <meta name="generator" content="LANEC Solutions Web 2012" />
     <meta name="revisit-after" content="14 days" /><meta http-equiv="Content-Language" content="fr_CA" />
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" /><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="/themes/style.css?v=2.240" rel='stylesheet' type='text/css' />
-    <link href="/themes/contenu.css?v=2.240" rel='stylesheet' type='text/css' />
+    <link href="/themes/style.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/contenu.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/style-new.css?v=2.245" rel='stylesheet' type='text/css' />
     <!--[if IE 9]>
-    <link href="/themes/style_IE9.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE9.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 8]>
-    <link href="/themes/style_IE8.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE8.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link href="/themes/print.css?v=2.240" rel='stylesheet' type='text/css' media="print" />
+    <link href="/themes/print.css?v=2.245" rel='stylesheet' type='text/css' media="print" />
     <link href="http://fonts.googleapis.com/css?family=Vollkorn|Lato:normal,bold|Amaranth|Actor|Open+Sans|Droid+Sans|Open+Sans|Days+One" rel="stylesheet" type="text/css" /><link href="/gaspesie-iles-de-la-madeleine/fr/rss/nouvelles.aspx" rel="alternate" type="application/rss+xml" title="Réseau BIBLIO Gaspésie – Îles-de-la-Madeleine" />
     <meta property="og:title" content="Réseau BIBLIO Gaspésie – Îles-de-la-Madeleine" />
     <meta property="og:image" content="http://www.mabibliotheque.ca/images/partage/gim/img-partage.jpg" />
@@ -24,7 +25,7 @@
     <meta property="og:description" content="" />
 
 <style type="text/css">
-  .imgEnteteContenu { background:#5785be url(/images/entete/entete_hiver.jpg) no-repeat center top; height:35px;}
+  .imgEnteteContenu { background:#D69038 url(/images/entete/entete_fleurs.jpg) no-repeat center top; height:35px;}
 </style>
 
 
@@ -121,6 +122,10 @@
     "Lng": -65.899751044531286,
     "Direction": 0.0
   },
+  "CalendrierDesFormations": "<b>Activités</b><br />du Réseau",
+  "CalendrierDesFormationsVoirLesActivites": "Voir les <b>activités</b><br /><b>du Réseau</b>",
+  "CalendrierDesFormationsGestionDesActivites": "Gestion des <br /><b>activités</b>",
+  "DocumentationReseau": "<b>Documentation</b><br />de mon Réseau",
   "RepertoireDesActivites": "<b>Répertoire</b><br />des activités culturelles",
   "RepertoireDesActivitesConsultation": "Consulter le <b>répertoire <br />des activités culturelles</b>",
   "RepertoireDesActivitesCulturellesH1": "Répertoire des activités culturelles",
@@ -147,6 +152,7 @@
   "UtiliserGrilleTarifaire": false,
   "AfficherGestionExtranetBiblio": true,
   "AfficherGestionDocumentation": false,
+  "AfficherGestionCalendrierFormationBiblio": true,
   "AfficherLienVDX": true,
   "RetirerPremièrePartieNomsDossiersDocumentation": false,
   "SéparateurNomsDossiersDocumentation": "",
@@ -169,7 +175,6 @@
   "PartageV2": true,
   "PermettreModifierActiviteRepertoire": true,
   "AccesCalendrierDesFormationsEtActivites": false,
-  "AccesCalendrierDesFormationsEtActivitesPourBiblios": true,
   "MessageFacturationFormation": null,
   "SrcImgBasCourrielEnvoyerAmi": "/controles/envoyerAmi/courriel/piedpage/GIM.jpg",
   "BoutonInfolettreEnHaut": true,
@@ -224,7 +229,14 @@
   "AfficherMessageOptimiserPourNavigateurs": false,
   "MessageOptimiserPourNavigateurs": "",
   "NombreCommuniquesAccueil": 2,
-  "NombreActivitesAccueil": 2
+  "NombreActivitesAccueil": 2,
+  "FormationSingulier": "Activité",
+  "FormationPluriel": "Activités",
+  "NbJoursAvantFermetureInscriptionParDefaut": 2,
+  "CalendrierFormationsAccessibleHorsLigne": false,
+  "CalendrierFormationsLibelleBoutonInscription": "Inscription",
+  "FormationSingulierLower": "activité",
+  "FormationPlurielLower": "activités"
 };
 
         $(document).ready(function() {
@@ -244,7 +256,7 @@
     
     <script language="javascript" type="text/javascript" src="/scripts/jquery.cycle.all.min.js"></script>
     
-        <script language="javascript" type="text/javascript" src="/scripts/promo_accueil.js?v=2.240"></script>
+        <script language="javascript" type="text/javascript" src="/scripts/promo_accueil.js?v=2.245"></script>
     
     <style type="text/css">
         .btRSSInfolettre
@@ -253,6 +265,7 @@
         }
     </style>
 
+    
 
     <style type="text/css">
         #oeufPaques{
@@ -270,11 +283,22 @@
 </title></head>
 <body>
 <div class="pageMaster">
+    
+    <!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <form name="aspnetForm" method="post" action="/gaspesie-iles-de-la-madeleine/fr/index.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjc2MDI0MjIwD2QWAmYPZBYCZg9kFgRmD2QWDgIBDxYCHgdjb250ZW50ZGQCAg8WBB8AZB4HVmlzaWJsZWhkAgMPFgIfAWhkAgUPFgIeBFRleHQFODxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtTGFuZ3VhZ2UiIGNvbnRlbnQ9ImZyX0NBIiAvPgoNZAIJDxYCHwIFqgE8bGluayBocmVmPSIvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIEdhc3DDqXNpZSDigJMgw45sZXMtZGUtbGEtTWFkZWxlaW5lIiAvPmQCCg8WAh8CBdYDDQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBHYXNww6lzaWUg4oCTIMOObGVzLWRlLWxhLU1hZGVsZWluZSIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvaW1hZ2VzL3BhcnRhZ2UvZ2ltL2ltZy1wYXJ0YWdlLmpwZyIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luZGV4LmFzcHgiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnNpdGVfbmFtZSIgY29udGVudD0iUsOpc2VhdSBCSUJMSU8gR2FzcMOpc2llIOKAkyDDjmxlcy1kZS1sYS1NYWRlbGVpbmUiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAgsPFgIfAgWUAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojNTc4NWJlIHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfaGl2ZXIuanBnKSBuby1yZXBlYXQgY2VudGVyIHRvcDsgaGVpZ2h0OjM1cHg7fQo8L3N0eWxlPgpkAgEPFgIeBmFjdGlvbgUsL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luZGV4LmFzcHgWGgIBDw8WAh4LTmF2aWdhdGVVcmwFLC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9pbmRleC5hc3B4ZBYCZg8PFgIeCEltYWdlVXJsBR8vaW1hZ2VzL2VudGV0ZS9sb2dvL0dJTS5wbmc/dj0yZGQCAg8PFgIfBQUhL2ltYWdlcy9lbnRldGUvbG9nby9wcmludC9HSU0uanBnZGQCAw8WAh4LXyFJdGVtQ291bnQCAxYGAgEPZBYCAgMPDxYGHwIFB0FjY3VlaWweBlRhcmdldAUFX3NlbGYfBAUsL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luZGV4LmFzcHhkZAICD2QWAgIDDw8WBh8CBRBRdWkgc29tbWVzLW5vdXM/HwcFBV9zZWxmHwQFRy9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9xdWktc29tbWVzLW5vdXMvaGlzdG9yaXF1ZS9pbmRleC5hc3B4ZGQCAw9kFgQCAQ8WAh8CBRBpZD0iZGVybmllckl0ZW0iZAIDDw8WBh8CBQxOb3VzIGpvaW5kcmUfBwUFX3NlbGYfBAU5L2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL25vdXMtam9pbmRyZS9pbmRleC5hc3B4ZGQCBA8PFgwfBwUGX2JsYW5rHwIFKU1vbiBkb3NzaWVyIGQndXNhZ2VyIDxzcGFuPiYjOTY1NDs8L3NwYW4+HgdUb29sVGlwBRRNb24gZG9zc2llciBkJ3VzYWdlch8EBShodHRwOi8vaWJpc3Ryby1nYXNwZXNpZS5yZXNlYXViaWJsaW8uY2EvHghDc3NDbGFzcwUNYnRBam91dGVyQ3NzIB4EXyFTQgICFgIeB29uY2xpY2sFUF9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ0VudMOqdGUnLCAnTW9uIGRvc3NpZXIgZCB1c2FnZXInXSk7ZAIGDxYCHwIF1wI8aWZyYW1lIHNyYz0iaHR0cDovL3d3dy5mYWNlYm9vay5jb20vcGx1Z2lucy9saWtlLnBocD9sb2NhbGU9ZnJfRlImaHJlZj1odHRwcyUzQSUyRiUyRnd3dy5mYWNlYm9vay5jb20lMkZSZXNlYXVCSUJMSU9HSU0mYW1wO2xheW91dD1idXR0b25fY291bnQmYW1wO2NvbG9yc2NoZW1lPWRhcmsmYW1wO2FjdGlvbj1saWtlJndpZHRoPTEwMCZoZWlnaHQ9MzAmZm9udD1hcmlhbCIgc2Nyb2xsaW5nPSJubyIgZnJhbWVib3JkZXI9IjAiIHN0eWxlPSJib3JkZXI6bm9uZTsgb3ZlcmZsb3c6aGlkZGVuOyB3aWR0aDoxMDBweDsgaGVpZ2h0OjMwcHg7IiBhbGxvd1RyYW5zcGFyZW5jeT0idHJ1ZSI+PC9pZnJhbWU+ZAIIDxYCHwYCBRYKAgEPZBYEAgEPFgIfAgURY2xhc3M9ImNhdGFsb2d1ZSJkAgMPDxYGHwIFKjxzdHJvbmc+Q2F0YWxvZ3VlPC9zdHJvbmc+PGJyIC8+DQplbiBsaWduZR8HBQVfc2VsZh8EBT8vZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvY2F0YWxvZ3VlLWVuLWxpZ25lL2luZGV4LmFzcHhkZAICD2QWBAIBDxYCHwIFGGNsYXNzPSJsaXZyZXNSZXNzb3VyY2VzImQCAw8PFgYfAgVCPHN0cm9uZz5MaXZyZXMgJjxiciAvPg0KcmVzc291cmNlczwvc3Ryb25nPjxiciAvPg0KbnVtJiMyMzM7cmlxdWVzHwcFBV9zZWxmHwQFTC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9saXZyZXMtZXQtcmVzc291cmNlcy1udW1lcmlxdWVzL2luZGV4LmFzcHhkZAIDD2QWBAIBDxYCHwIFDGNsYXNzPSJwcmV0ImQCAw8PFgYfAgU6PHN0cm9uZz5QciYjMjM0O3QgZW50cmU8L3N0cm9uZz48YnIgLz4NCmJpYmxpb3RoJiMyMzI7cXVlcx8HBQVfc2VsZh8EBUUvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcHJldC1lbnRyZS1iaWJsaW90aGVxdWVzL2luZGV4LmFzcHhkZAIED2QWBAIBDxYCHwIFEmNsYXNzPSJldmVuZW1lbnRzImQCAw8PFgYfAgU9PHN0cm9uZz5BY3Rpdml0JiMyMzM7czwvc3Ryb25nPjxiciAvPg0KZGVzIGJpYmxpb3RoJiMyMzI7cXVlcx8HBQVfc2VsZh8EBUgvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvYWN0aXZpdGVzLWRlcy1iaWJsaW90aGVxdWVzL2luZGV4LmFzcHhkZAIFD2QWBAIBDxYCHwIFFWNsYXNzPSJiaWJsaW90aGVxdWVzImQCAw8PFgYfAgVCPHN0cm9uZz5CaWJsaW90aCYjMjMyO3F1ZXM8L3N0cm9uZz48YnIgLz4NCkhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uHwcFBV9zZWxmHwQFUi9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL2luZGV4LmFzcHhkZAIJD2QWAgIBD2QWAgIBDxYCHwYCAxYGAgEPZBYCZg8WAh8CBbQBPGEgaHJlZj0iaHR0cDovL2JpYmxpb2FpZGFudHMuY2EvY2FoaWVycy5waHAiICB0YXJnZXQ9ImJsYW5rIj48aW1nIGFsdD0iIiBzcmM9Ii9GaWNoaWVycy9XZWJzaXRlTWFuYWdlci9tb250ZXJlZ2llL0ltYWdlcy9iaWJsaW9haWRhbnRzX3Byb21vLnBuZyIgc3R5bGU9Im1hcmdpbi1sZWZ0Oi0yMHB4OyIgLz48L2E+ZAICD2QWAmYPFgIfAgXJATxkaXYgaWQ9Imdhc3Blc2llLWdlbnMtZGUtcGFyb2xlcyIgY2xhc3M9IndpZGUiPgo8YSBocmVmPSIvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcXVvaS1kZS1uZXVmLzIwMTYvMDIvbGVzLXJlbmRlei12b3VzLWRlLWxhLWZyYW5jb3Bob25pZS0yMDE2LTUwMC1lbi1wcml4LXBvdXItbGVzLWxlY3RldXJzLmFzcHgiPgo8L2E+PC9kaXY+CmQCAw9kFgJmDxYCHwIFoQI8ZGl2IGlkPSJmb25kX2xpdnJlc19udW1lcmlxdWVzIiBjbGFzcz0icHJvbW8wMiI+CjxkaXYgY2xhc3M9InRpdHJlIj5EZXMgPHN0cm9uZz5saXZyZXMgbnVtJiMyMzM7cmlxdWVzPC9zdHJvbmc+PGJyIC8+CnBvdXIgdG91cyBsZXMgZ28mIzI1MTt0cyAhPC9kaXY+CjxhIGhyZWY9Ii9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9saXZyZXMtZXQtcmVzc291cmNlcy1udW1lcmlxdWVzL2luZGV4LmFzcHgiPkFjYyYjMjMzO2RlciBhdXggbGl2cmVzCm51bSYjMjMzO3JpcXVlczwvYT4KPC9kaXY+ZAIKDw8WAh8BaGQWAgIBDw8WAh8CBQdBY2N1ZWlsZGQCCw9kFgRmDw8WAh8EBUUvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvaW5zY3JpcHRpb24tYS1pbmZvbGV0dHJlL2luZGV4LmFzcHgWAh4KZGF0YS10aXRsZQUaQWJvbm5lbWVudCDDoCBsJ2luZm9sZXR0cmVkAgEPZBYCAgEPDxYCHwQFNC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9yc3Mvbm91dmVsbGVzLmFzcHhkZAIMD2QWAgIBD2QWDGYPFgIfAgUOUXVvaSBkZSBuZXVmID9kAgEPDxYCHwQFNC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9yc3Mvbm91dmVsbGVzLmFzcHhkZAICDw8WAh8EBUUvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvaW5zY3JpcHRpb24tYS1pbmZvbGV0dHJlL2luZGV4LmFzcHgWAh8MBRpBYm9ubmVtZW50IMOgIGwnaW5mb2xldHRyZWQCAw8WAh8GAgIWBAIBD2QWAmYPFQQLOSBtYXJzIDIwMTZ4L2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL3F1b2ktZGUtbmV1Zi8yMDE2LzAzL2xlcy1iaWJsaW90aGVxdWVzLW11bmljaXBhbGVzLWF1LXNlcnZpY2UtZGVzLXByb2NoZXMtYWlkYW50cy5hc3B4PUxlcyBiaWJsaW90aMOocXVlcyBtdW5pY2lwYWxlcyBhdSBzZXJ2aWNlIGRlcyBwcm9jaGVzIGFpZGFudHOqAUJpYmxpby1BaWRhbnRzIGVzdCB1biBub3V2ZWF1IHNlcnZpY2UgZOKAmWluZm9ybWF0aW9uIG9mZmVydCBwYXIgbGUgUsOpc2VhdSBCSUJMSU8gR8OOTSBhdXggYmlibGlvdGjDqHF1ZXMgZGUgbGEgR2FzcMOpc2llIGV0IGRlcyDDjmxlcyBwb3VyIHNvdXRlbmlyIGxlcyBwcm9jaGVzIGFpZGFudHMuZAICD2QWAmYPFQQQMTcgZsOpdnJpZXIgMjAxNoEBL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL3F1b2ktZGUtbmV1Zi8yMDE2LzAyL2xlcy1yZW5kZXotdm91cy1kZS1sYS1mcmFuY29waG9uaWUtMjAxNi01MDAtZW4tcHJpeC1wb3VyLWxlcy1sZWN0ZXVycy5hc3B4SkxlcyBSZW5kZXotdm91cyBkZSBsYSBGcmFuY29waG9uaWUgMjAxNiA6IDUwMCAkIGVuIHByaXggcG91ciBsZXMgbGVjdGV1cnMhc0R1IDIyIGbDqXZyaWVyIGF1IDIzIG1hcnMsIHBhcnRpY2lwZXogYXUgUXVpeiBzdXIgbm9zIGFydGlzdGVzIG9yZ2FuaXPDqSBwYXIgbCdVUkxTIEfDjk0gZXQgbGUgUsOpc2VhdSBCSUJMSU8gR8OOTS5kAgQPDxYEHwQFQS9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9xdW9pLWRlLW5ldWYvMjAxNi8wMy9pbmRleC5hc3B4HwIFGVZvaXIgdG91dGVzIGxlcyBub3V2ZWxsZXNkZAIGDxYCHwIFKFByb2NoYWluZXMgYWN0aXZpdMOpcyBkZXMgYmlibGlvdGjDqHF1ZXNkAg0PDxYCHwFnZBYCAgEPDxYCHwQFKGh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9SZXNlYXVCSUJMSU9HSU0WAh8LBUlfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnRmFjZWJvb2snXSk7ZAISDxYCHwYCAxYGZg9kFgICAQ8WAh8CBegEPGEgb25jbGljaz0iX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0FwcGVsIG51bSYjMjMzO3Jpc2F0aW9uJ10pOyIgaHJlZj0iaHR0cDovL3d3dy5iYW5xLnFjLmNhL2FwcGVsX251bWVyaXNhdGlvbi9pbmRleC5odG1sIiB0YXJnZXQ9Il9ibGFuayI+DQogIDxpbWcgb25tb3VzZW92ZXI9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9hcHBlbF9vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9hcHBlbC5qcGcnIiBhbHQ9IlNpZ25leiBsJ0FwcGVsIHBvdXIgbGEgbnVtJiMyMzM7cmlzYXRpb24gZHUgUGF0cmltb2luZSBjdWx0dXJlbCBxdSYjMjMzO2ImIzIzMztjb2lzIiBzcmM9Ii9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2FwcGVsLmpwZyI+DQogIDwvaW1nPg0KPC9hPmQCAQ9kFgICAQ8WAh8CBbMEPGEgb25jbGljaz0iX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0xvaSA1MSddKTsiIGhyZWY9Imh0dHA6Ly93d3cubWNjY2YuZ291di5xYy5jYS9pbmRleC5waHA/aWQ9NDQzNiIgdGFyZ2V0PSJfYmxhbmsiPg0KICA8aW1nIG9ubW91c2VvdmVyPSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTFfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTEuanBnJyIgYWx0PSJMb2kgNTEgLSBOdWwgbidlc3QgY2VucyYjMjMzOyBpZ25vcmVyIGxhIGxvaSBkdSBsaXZyZSIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9sb2k1MS5qcGciPg0KICA8L2ltZz4NCjwvYT5kAgIPZBYCAgEPFgIfAgWMBDxhIGhyZWY9Ii9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9xdWktc29tbWVzLW5vdXMvcHJpeC1kLWV4Y2VsbGVuY2UtZ2VyYXJkLWRlc3Jvc2llcnMvaW5kZXguYXNweCI+DQo8aW1nIG9ubW91c2VvdmVyPSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVyc19vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9nZXJhcmRkZXNyb3NpZXJzLmpwZyciIGFsdD0iUHJpeCBkJ2V4Y2VsbGVuY2UgRyYjMjMzO3JhcmQgRGVzcm9zaWVycyIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9nZXJhcmRkZXNyb3NpZXJzLmpwZyI+DQo8L2E+ZAIVD2QWBgIBDxYCHwFoZAIDD2QWAmYPFgoeCWlubmVyaHRtbAUVQWNjJiMyMzI7cyBwcml2JiMyMzM7HgV0aXRsZQUNQWNjw6hzIHByaXbDqR4EaHJlZgU1aHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9nZXN0aW9uL2Nvbm5leGlvbi1iaWJsaW8fCwVOX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0FjY8OocyBwcml2w6knXSk7HgZ0YXJnZXQFBl9ibGFua2QCBQ9kFgJmDxYCHwFoZGSgVDA/X2imUBwhm/f+QD0JrC4rGRp25GM6dI39vT+TFg==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjc2MDI0MjIwD2QWAmYPZBYCZg9kFgRmD2QWDgIBDxYCHgdjb250ZW50ZGQCAg8WBB8AZB4HVmlzaWJsZWhkAgMPFgIfAWhkAgUPFgIeBFRleHQFODxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtTGFuZ3VhZ2UiIGNvbnRlbnQ9ImZyX0NBIiAvPgoNZAIJDxYCHwIFqgE8bGluayBocmVmPSIvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIEdhc3DDqXNpZSDigJMgw45sZXMtZGUtbGEtTWFkZWxlaW5lIiAvPmQCCg8WAh8CBdYDDQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBHYXNww6lzaWUg4oCTIMOObGVzLWRlLWxhLU1hZGVsZWluZSIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvaW1hZ2VzL3BhcnRhZ2UvZ2ltL2ltZy1wYXJ0YWdlLmpwZyIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luZGV4LmFzcHgiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnNpdGVfbmFtZSIgY29udGVudD0iUsOpc2VhdSBCSUJMSU8gR2FzcMOpc2llIOKAkyDDjmxlcy1kZS1sYS1NYWRlbGVpbmUiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAgsPFgIfAgWVAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojRDY5MDM4IHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfZmxldXJzLmpwZykgbm8tcmVwZWF0IGNlbnRlciB0b3A7IGhlaWdodDozNXB4O30KPC9zdHlsZT4KZAIBDxYCHgZhY3Rpb24FLC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9pbmRleC5hc3B4FhoCAQ8PFgIeC05hdmlnYXRlVXJsBSwvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvaW5kZXguYXNweGQWAmYPDxYCHghJbWFnZVVybAUfL2ltYWdlcy9lbnRldGUvbG9nby9HSU0ucG5nP3Y9MmRkAgIPDxYCHwUFIS9pbWFnZXMvZW50ZXRlL2xvZ28vcHJpbnQvR0lNLmpwZ2RkAgMPFgIeC18hSXRlbUNvdW50AgMWBgIBD2QWAgIDDw8WBh8CBQdBY2N1ZWlsHgZUYXJnZXQFBV9zZWxmHwQFLC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9pbmRleC5hc3B4ZGQCAg9kFgICAw8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBUcvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcXVpLXNvbW1lcy1ub3VzL2hpc3RvcmlxdWUvaW5kZXguYXNweGRkAgMPZBYEAgEPFgIfAgUQaWQ9ImRlcm5pZXJJdGVtImQCAw8PFgYfAgUMTm91cyBqb2luZHJlHwcFBV9zZWxmHwQFOS9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkAgQPDxYMHwcFBl9ibGFuax8CBSlNb24gZG9zc2llciBkJ3VzYWdlciA8c3Bhbj4mIzk2NTQ7PC9zcGFuPh4HVG9vbFRpcAUUTW9uIGRvc3NpZXIgZCd1c2FnZXIfBAUoaHR0cDovL2liaXN0cm8tZ2FzcGVzaWUucmVzZWF1YmlibGlvLmNhLx4IQ3NzQ2xhc3MFDWJ0QWpvdXRlckNzcyAeBF8hU0ICAhYCHgdvbmNsaWNrBVBfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdFbnTDqnRlJywgJ01vbiBkb3NzaWVyIGQgdXNhZ2VyJ10pO2QCBg8WAh8CBa4BPGRpdiBjbGFzcz0iZmItbGlrZSIgZGF0YS1ocmVmPSJodHRwczovL3d3dy5mYWNlYm9vay5jb20vUmVzZWF1QklCTElPR0lNIiBkYXRhLWxheW91dD0iYnV0dG9uX2NvdW50IiBkYXRhLWNvbG9yc2NoZW1lPSJkYXJrIiBkYXRhLXNob3ctZmFjZXM9ImZhbHNlIiBkYXRhLWFjdGlvbj0ibGlrZSI+PC9kaXY+ZAIIDxYCHwYCBRYKAgEPZBYEAgEPFgIfAgURY2xhc3M9ImNhdGFsb2d1ZSJkAgMPDxYGHwIFKjxzdHJvbmc+Q2F0YWxvZ3VlPC9zdHJvbmc+PGJyIC8+DQplbiBsaWduZR8HBQVfc2VsZh8EBT8vZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvY2F0YWxvZ3VlLWVuLWxpZ25lL2luZGV4LmFzcHhkZAICD2QWBAIBDxYCHwIFGGNsYXNzPSJsaXZyZXNSZXNzb3VyY2VzImQCAw8PFgYfAgVBPHN0cm9uZz5MaXZyZXMgJmFtcDs8YnIgLz4NCnJlc3NvdXJjZXM8L3N0cm9uZz48YnIgLz4gbnVtw6lyaXF1ZXMfBwUFX3NlbGYfBAVML2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvaW5kZXguYXNweGRkAgMPZBYEAgEPFgIfAgUMY2xhc3M9InByZXQiZAIDDw8WBh8CBTo8c3Ryb25nPlByJiMyMzQ7dCBlbnRyZTwvc3Ryb25nPjxiciAvPg0KYmlibGlvdGgmIzIzMjtxdWVzHwcFBV9zZWxmHwQFRS9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9wcmV0LWVudHJlLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweGRkAgQPZBYEAgEPFgIfAgUSY2xhc3M9ImV2ZW5lbWVudHMiZAIDDw8WBh8CBT08c3Ryb25nPkFjdGl2aXQmIzIzMztzPC9zdHJvbmc+PGJyIC8+DQpkZXMgYmlibGlvdGgmIzIzMjtxdWVzHwcFBV9zZWxmHwQFSC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9hY3Rpdml0ZXMtZGVzLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweGRkAgUPZBYEAgEPFgIfAgUVY2xhc3M9ImJpYmxpb3RoZXF1ZXMiZAIDDw8WBh8CBUI8c3Ryb25nPkJpYmxpb3RoJiMyMzI7cXVlczwvc3Ryb25nPjxiciAvPg0KSG9yYWlyZSBldCBsb2NhbGlzYXRpb24fBwUFX3NlbGYfBAVSL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vaW5kZXguYXNweGRkAgkPZBYCAgEPZBYCAgEPFgIfBgICFgQCAQ9kFgJmDxYCHwIFtAE8YSBocmVmPSJodHRwOi8vYmlibGlvYWlkYW50cy5jYS9jYWhpZXJzLnBocCIgIHRhcmdldD0iYmxhbmsiPjxpbWcgYWx0PSIiIHNyYz0iL0ZpY2hpZXJzL1dlYnNpdGVNYW5hZ2VyL21vbnRlcmVnaWUvSW1hZ2VzL2JpYmxpb2FpZGFudHNfcHJvbW8ucG5nIiBzdHlsZT0ibWFyZ2luLWxlZnQ6LTIwcHg7IiAvPjwvYT5kAgIPZBYCZg8WAh8CBaECPGRpdiBpZD0iZm9uZF9saXZyZXNfbnVtZXJpcXVlcyIgY2xhc3M9InByb21vMDIiPgo8ZGl2IGNsYXNzPSJ0aXRyZSI+RGVzIDxzdHJvbmc+bGl2cmVzIG51bSYjMjMzO3JpcXVlczwvc3Ryb25nPjxiciAvPgpwb3VyIHRvdXMgbGVzIGdvJiMyNTE7dHMgITwvZGl2Pgo8YSBocmVmPSIvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvbGl2cmVzLWV0LXJlc3NvdXJjZXMtbnVtZXJpcXVlcy9pbmRleC5hc3B4Ij5BY2MmIzIzMztkZXIgYXV4IGxpdnJlcwpudW0mIzIzMztyaXF1ZXM8L2E+CjwvZGl2PmQCCg8PFgIfAWhkFgICAQ8PFgIfAgUHQWNjdWVpbGRkAgsPZBYEZg8PFgIfBAVFL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luc2NyaXB0aW9uLWEtaW5mb2xldHRyZS9pbmRleC5hc3B4FgIeCmRhdGEtdGl0bGUFGkFib25uZW1lbnQgw6AgbCdpbmZvbGV0dHJlZAIBD2QWAgIBDw8WAh8EBTQvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcnNzL25vdXZlbGxlcy5hc3B4ZGQCDA9kFgICAQ9kFgxmDxYCHwIFDlF1b2kgZGUgbmV1ZiA/ZAIBDw8WAh8EBTQvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcnNzL25vdXZlbGxlcy5hc3B4ZGQCAg8PFgIfBAVFL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luc2NyaXB0aW9uLWEtaW5mb2xldHRyZS9pbmRleC5hc3B4FgIfDAUaQWJvbm5lbWVudCDDoCBsJ2luZm9sZXR0cmVkAgMPFgIfBgICFgQCAQ9kFgJmDxUEDTI1IGF2cmlsIDIwMTZ6L2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL3F1b2ktZGUtbmV1Zi8yMDE2LzA0L3F1aXotc3VyLW5vcy1hcnRpc3Rlcy1nZW5zLWRlLXBhcm9sZXMtZGV2b2lsZW1lbnQtZGVzLWdhZ25hbnRzLmFzcHhEUXVpeiBzdXIgbm9zIGFydGlzdGVzICJHZW5zIGRlIHBhcm9sZXMiIDogRMOpdm9pbGVtZW50IGRlcyBnYWduYW50cyEAZAICD2QWAmYPFQQLOSBtYXJzIDIwMTZ4L2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL3F1b2ktZGUtbmV1Zi8yMDE2LzAzL2xlcy1iaWJsaW90aGVxdWVzLW11bmljaXBhbGVzLWF1LXNlcnZpY2UtZGVzLXByb2NoZXMtYWlkYW50cy5hc3B4PUxlcyBiaWJsaW90aMOocXVlcyBtdW5pY2lwYWxlcyBhdSBzZXJ2aWNlIGRlcyBwcm9jaGVzIGFpZGFudHOqAUJpYmxpby1BaWRhbnRzIGVzdCB1biBub3V2ZWF1IHNlcnZpY2UgZOKAmWluZm9ybWF0aW9uIG9mZmVydCBwYXIgbGUgUsOpc2VhdSBCSUJMSU8gR8OOTSBhdXggYmlibGlvdGjDqHF1ZXMgZGUgbGEgR2FzcMOpc2llIGV0IGRlcyDDjmxlcyBwb3VyIHNvdXRlbmlyIGxlcyBwcm9jaGVzIGFpZGFudHMuZAIEDw8WBB8EBUEvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcXVvaS1kZS1uZXVmLzIwMTYvMDQvaW5kZXguYXNweB8CBRlWb2lyIHRvdXRlcyBsZXMgbm91dmVsbGVzZGQCBg8WAh8CBShQcm9jaGFpbmVzIGFjdGl2aXTDqXMgZGVzIGJpYmxpb3Row6hxdWVzZAINDw8WAh8BZ2QWAgIBDw8WAh8EBShodHRwczovL3d3dy5mYWNlYm9vay5jb20vUmVzZWF1QklCTElPR0lNFgIfCwVJX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0ZhY2Vib29rJ10pO2QCEg8WAh8GAgMWBmYPZBYCAgEPFgIfAgXoBDxhIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBcHBlbCBudW0mIzIzMztyaXNhdGlvbiddKTsiIGhyZWY9Imh0dHA6Ly93d3cuYmFucS5xYy5jYS9hcHBlbF9udW1lcmlzYXRpb24vaW5kZXguaHRtbCIgdGFyZ2V0PSJfYmxhbmsiPg0KICA8aW1nIG9ubW91c2VvdmVyPSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYXBwZWxfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYXBwZWwuanBnJyIgYWx0PSJTaWduZXogbCdBcHBlbCBwb3VyIGxhIG51bSYjMjMzO3Jpc2F0aW9uIGR1IFBhdHJpbW9pbmUgY3VsdHVyZWwgcXUmIzIzMztiJiMyMzM7Y29pcyIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9hcHBlbC5qcGciPg0KICA8L2ltZz4NCjwvYT5kAgEPZBYCAgEPFgIfAgWzBDxhIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdMb2kgNTEnXSk7IiBocmVmPSJodHRwOi8vd3d3Lm1jY2NmLmdvdXYucWMuY2EvaW5kZXgucGhwP2lkPTQ0MzYiIHRhcmdldD0iX2JsYW5rIj4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxX292ZXIuanBnJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxLmpwZyciIGFsdD0iTG9pIDUxIC0gTnVsIG4nZXN0IGNlbnMmIzIzMzsgaWdub3JlciBsYSBsb2kgZHUgbGl2cmUiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTEuanBnIj4NCiAgPC9pbWc+DQo8L2E+ZAICD2QWAgIBDxYCHwIFjAQ8YSBocmVmPSIvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcXVpLXNvbW1lcy1ub3VzL3ByaXgtZC1leGNlbGxlbmNlLWdlcmFyZC1kZXNyb3NpZXJzL2luZGV4LmFzcHgiPg0KPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2dlcmFyZGRlc3Jvc2llcnNfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGcnIiBhbHQ9IlByaXggZCdleGNlbGxlbmNlIEcmIzIzMztyYXJkIERlc3Jvc2llcnMiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGciPg0KPC9hPmQCFQ9kFgYCAQ8WAh8BaGQCAw9kFgJmDxYKHglpbm5lcmh0bWwFFUFjYyYjMjMyO3MgcHJpdiYjMjMzOx4FdGl0bGUFDUFjY8OocyBwcml2w6keBGhyZWYFNWh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvZ2VzdGlvbi9jb25uZXhpb24tYmlibGlvHwsFTl9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBY2PDqHMgcHJpdsOpJ10pOx4GdGFyZ2V0BQZfYmxhbmtkAgUPZBYCZg8WAh8BaGRkrWhqD9pkVGJHszq/OuiBdpmtd/rKS1taFhgNLTZgv+Y=" />
 </div>
 
 <script type="text/javascript">
@@ -360,7 +384,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspne
                                 </div>
                             </div>
                             <div id="facebook">
-                                <iframe src="http://www.facebook.com/plugins/like.php?locale=fr_FR&href=https%3A%2F%2Fwww.facebook.com%2FReseauBIBLIOGIM&amp;layout=button_count&amp;colorscheme=dark&amp;action=like&width=100&height=30&font=arial" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:30px;" allowTransparency="true"></iframe>
+                                <div class="fb-like" data-href="https://www.facebook.com/ReseauBIBLIOGIM" data-layout="button_count" data-colorscheme="dark" data-show-faces="false" data-action="like"></div>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -391,9 +415,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspne
             <div class="menuPrincipal">
                 <div class="corpsMasterMenu">
                     <ul><li class="catalogue"><a id="ctl00_ctl00_rptMenuPrincipal_ctl01_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/catalogue-en-ligne/index.aspx" target="_self"><strong>Catalogue</strong><br />
-en ligne</a></li><li class="livresRessources"><a id="ctl00_ctl00_rptMenuPrincipal_ctl02_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/livres-et-ressources-numeriques/index.aspx" target="_self"><strong>Livres &<br />
-ressources</strong><br />
-num&#233;riques</a></li><li class="pret"><a id="ctl00_ctl00_rptMenuPrincipal_ctl03_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/pret-entre-bibliotheques/index.aspx" target="_self"><strong>Pr&#234;t entre</strong><br />
+en ligne</a></li><li class="livresRessources"><a id="ctl00_ctl00_rptMenuPrincipal_ctl02_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/livres-et-ressources-numeriques/index.aspx" target="_self"><strong>Livres &amp;<br />
+ressources</strong><br /> numériques</a></li><li class="pret"><a id="ctl00_ctl00_rptMenuPrincipal_ctl03_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/pret-entre-bibliotheques/index.aspx" target="_self"><strong>Pr&#234;t entre</strong><br />
 biblioth&#232;ques</a></li><li class="evenements"><a id="ctl00_ctl00_rptMenuPrincipal_ctl04_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/activites-des-bibliotheques/index.aspx" target="_self"><strong>Activit&#233;s</strong><br />
 des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptMenuPrincipal_ctl05_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/bibliotheques-horaire-et-localisation/index.aspx" target="_self"><strong>Biblioth&#232;ques</strong><br />
 Horaire et localisation</a></li></ul>
@@ -404,10 +427,7 @@ Horaire et localisation</a></li></ul>
     
    <div class="fondBlocPromo">
         <div class="corpsMaster">
-            <div id="blocPromoBtn"><a href="http://biblioaidants.ca/cahiers.php"  target="blank"><img alt="" src="/Fichiers/WebsiteManager/monteregie/Images/biblioaidants_promo.png" style="margin-left:-20px;" /></a><div id="gaspesie-gens-de-paroles" class="wide">
-<a href="/gaspesie-iles-de-la-madeleine/fr/quoi-de-neuf/2016/02/les-rendez-vous-de-la-francophonie-2016-500-en-prix-pour-les-lecteurs.aspx">
-</a></div>
-<div id="fond_livres_numeriques" class="promo02">
+            <div id="blocPromoBtn"><a href="http://biblioaidants.ca/cahiers.php"  target="blank"><img alt="" src="/Fichiers/WebsiteManager/monteregie/Images/biblioaidants_promo.png" style="margin-left:-20px;" /></a><div id="fond_livres_numeriques" class="promo02">
 <div class="titre">Des <strong>livres num&#233;riques</strong><br />
 pour tous les go&#251;ts !</div>
 <a href="/gaspesie-iles-de-la-madeleine/fr/livres-et-ressources-numeriques/index.aspx">Acc&#233;der aux livres
@@ -419,18 +439,8 @@ num&#233;riques</a>
 
             <div class="corpsMaster">  
                 
-
                 
                     <div class="btRSSInfolettre">
-                        
-                            <div class="abonnementInfolettre new">
-                                <a id="hlAbonnementInfolettreSite" data-title="Abonnement à l&#39;infolettre" href="/gaspesie-iles-de-la-madeleine/fr/inscription-a-infolettre/index.aspx"></a>
-                            </div>
-                        <div id="ctl00_ctl00_Rss_pnlRssSite" class="rss">
-	
-                                <a id="hlRssSite" data-title="Abonnement au fil RSS" href="/gaspesie-iles-de-la-madeleine/fr/rss/nouvelles.aspx" target="_blank"></a>
-                            
-</div>
                         
                     </div>
                 
@@ -453,20 +463,20 @@ num&#233;riques</a>
         
             <ul>
                     <li>
+                        <div><b>25 avril 2016</b></div>
+                        <div><a href="/gaspesie-iles-de-la-madeleine/fr/quoi-de-neuf/2016/04/quiz-sur-nos-artistes-gens-de-paroles-devoilement-des-gagnants.aspx">Quiz sur nos artistes "Gens de paroles" : Dévoilement des gagnants!</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
+                        <div class="description"></div>
+                    </li>
+                
+                    <li>
                         <div><b>9 mars 2016</b></div>
                         <div><a href="/gaspesie-iles-de-la-madeleine/fr/quoi-de-neuf/2016/03/les-bibliotheques-municipales-au-service-des-proches-aidants.aspx">Les bibliothèques municipales au service des proches aidants</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
                         <div class="description">Biblio-Aidants est un nouveau service d’information offert par le Réseau BIBLIO GÎM aux bibliothèques de la Gaspésie et des Îles pour soutenir les proches aidants.</div>
                     </li>
-                
-                    <li>
-                        <div><b>17 février 2016</b></div>
-                        <div><a href="/gaspesie-iles-de-la-madeleine/fr/quoi-de-neuf/2016/02/les-rendez-vous-de-la-francophonie-2016-500-en-prix-pour-les-lecteurs.aspx">Les Rendez-vous de la Francophonie 2016 : 500 $ en prix pour les lecteurs!</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
-                        <div class="description">Du 22 février au 23 mars, participez au Quiz sur nos artistes organisé par l'URLS GÎM et le Réseau BIBLIO GÎM.</div>
-                    </li>
                 </ul>
 
             <div class="voirToutes">
-                <a id="ctl00_ctl00_ContenuGlobal_Contenu_hlToutesNouvelles" href="/gaspesie-iles-de-la-madeleine/fr/quoi-de-neuf/2016/03/index.aspx">Voir toutes les nouvelles</a>
+                <a id="ctl00_ctl00_ContenuGlobal_Contenu_hlToutesNouvelles" href="/gaspesie-iles-de-la-madeleine/fr/quoi-de-neuf/2016/04/index.aspx">Voir toutes les nouvelles</a>
             </div>
         </div>
         <div id="ctl00_ctl00_ContenuGlobal_Contenu_EchangesDeLaSemaine" class="btEchangesSemaine">
@@ -519,6 +529,7 @@ num&#233;riques</a>
 </div>
 
 
+    
 
             </div>        
         </div>
@@ -612,8 +623,8 @@ num&#233;riques</a>
 </script>
 
 <script type="text/javascript" src="/scripts/jquery.inputmask/jquery.inputmask-3.1.js"></script>
-<script src="/scripts/hammer.min.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/css-accordeon.js?v=2.240" type="text/javascript"></script>
+<script src="/scripts/hammer.min.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/css-accordeon.js?v=2.245" type="text/javascript"></script>
 <script src="/scripts/json2.js" type="text/javascript"></script>
 <script src="/scripts/jquery.autosize-min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
@@ -623,8 +634,8 @@ num&#233;riques</a>
 <script src="/scripts/knockout-custom.js" type="text/javascript"></script>
 <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
 <script src="/scripts/jquery.cookie.js" type="text/javascript"></script>
-<script src="/scripts/knockout.grid.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/script_global.js?v=2.240" type="text/javascript"></script> 
+<script src="/scripts/knockout.grid.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/script_global.js?v=2.245" type="text/javascript"></script> 
     </form>
 </div>
 
@@ -647,19 +658,17 @@ num&#233;riques</a>
     });
 </script>
  
-<!-- Facebook async loading of JSAPI --> 
-<div id="fb-root"></div> 
         
 
     
-    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=4&count=2&BiblioId=0&apresAujourdhui=1&LastModified=635933069522200000&v=2.240' type='text/javascript'></script>
+    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=4&count=2&BiblioId=0&apresAujourdhui=1&LastModified=635983836476100000&v=2.245' type='text/javascript'></script>
 
-    <script src="/scripts/classes/Arrays.js?v=2.240" type="text/javascript"></script>
+    <script src="/scripts/classes/Arrays.js?v=2.245" type="text/javascript"></script>
     <script src="/scripts/jquery.cycle.all.min.js" type="text/javascript"></script>
     <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
-    <script src="/scripts/script_onglets.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/classes/Maths.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/classes/ActiviteViewModel.js?v=2.240" type="text/javascript"></script> 
+    <script src="/scripts/script_onglets.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/classes/Maths.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/classes/ActiviteViewModel.js?v=2.245" type="text/javascript"></script> 
 
     <script type="text/javascript">
 
@@ -680,32 +689,9 @@ num&#233;riques</a>
 
 
 
-
-
     
 
-<script type="text/javascript">
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '',
-            status: true,
-            cookie: true,
-            xfbml: true
-        });
-
-        _ga.trackFacebook(); //Google Analytics tracking
-    };
-
-    // Load the Facebook SDK Asynchronously
-    (function (d) {
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement('script'); js.id = id; js.async = true;
-        js.src = "//connect.facebook.net/fr_FR/all.js";
-        ref.parentNode.insertBefore(js, ref);
-    } (document));
-</script>
-
+    
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

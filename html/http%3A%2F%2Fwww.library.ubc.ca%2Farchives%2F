@@ -14,6 +14,109 @@
 #left {
 	width: 329px;
 }
+
+#footer {
+	margin: 0;
+	padding: 0;
+	width: 980px;
+	height: 17px;
+	background-color: #8c9fb3;
+	clear: both;
+}
+#footer ul {
+	font: 10px Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 0 !important;
+	padding: 1px 0 0 0 !important;
+	list-style: none !important;
+}
+#footer ul li {
+	float: left;
+	text-align: center;
+}
+#footer a:link {
+	color: #003399!important;
+	text-decoration: none !important;
+	display: block;
+	margin: 0 !important;
+	padding: 0.1em 54px 0.1em 12px !important;
+}
+#footer a:visited {
+	color: #002859 !important;
+	text-decoration: none !important;
+	display: block;
+	margin: 0 !important;
+	padding: 0.1em 54px 0.1em 12px !important;
+}
+#footer li#last a {
+	padding-right: 12px !important;
+}
+#footer a:hover {
+	color: #fff !important;
+}
+#footer a:active {
+	color: #fff !important;
+	text-decoration: underline !important;
+}
+
+/* Suckerfish Dropdowns */
+#nav, #nav ul {
+	font: 12px Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 0 !important;
+	padding: 2px 0 !important;
+	list-style: none !important;
+}
+#nav a:link {
+	color: #003399 !important;
+	text-decoration: none !important;
+	display: block !important;
+	margin: 0 !important;
+	padding: 0.1em 15px !important;
+}
+#nav a:visited {
+	color: #002859 !important;
+	text-decoration: none !important;
+	display: block !important;
+	margin: 0 !important;
+	padding: 0.1em 15px !important;
+}
+#nav a:hover {
+	color: #fff !important;
+}
+#nav a:active {
+	color: #fff !important;
+	text-decoration: underline !important;
+}
+#nav li {
+	float: left;
+	text-align: center;
+	margin: 0 5px 0 0;
+}
+#nav li ul {
+	position: absolute;
+	left: -999em;
+	width: 13.5em;
+	background-color: #8c9fb3;
+	border-bottom: solid 1px #fff;
+}
+#nav li ul li {
+	text-align: left;
+	float: left;
+	width: 11.0em;
+}
+#nav li ul li a {
+	width: 11.0em;
+	background-color: #8c9fb3;
+	border-top: solid 1px #fff;
+}
+#nav li:hover ul {
+	left: auto;
+}
+#nav li:hover ul, #nav li.sfhover ul {
+	left: auto;
+}
+#nav li#last {
+	margin-right: 0 !important;
+}
 -->
 </style>
 
@@ -128,18 +231,6 @@ w: www.webcommunications.ubc.ca
 <div id="LibraryContent">
 <!-- End UBC Library CLF 6 Header (Lite) -->
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Untitled Document</title>
-</head>
-
-<body>
-</body>
-</html>
-
 
     <!--- please change ONLY the area from START to STOP (inclusive) --->
     <!--- START --->
@@ -166,9 +257,9 @@ w: www.webcommunications.ubc.ca
    <li><a href="#">University Publications</a><ul>
        <li><a href="https://open.library.ubc.ca/collections/ubcpublications/ubcreports">UBC Reports</a></li>
        <li><a href="https://open.library.ubc.ca/collections/ubcpublications/ubysseynews">The Ubyssey</a></li>
-       <li><a href="https://open.library.ubc.ca/collections/ubcpublications/alumchron">Alumni Chronicle</a></li>
-       <li><a href="http://ubcpubs.library.ubc.ca/?db=trek">Trek Magazine</a></li>
-       <li><a href="http://ubcpubs.library.ubc.ca/?db=calendars2">UBC Calendars</a></li>       <li><a href="https://open.library.ubc.ca/collections/ubcpublications/ubcyearb">Student Yearbooks</a></li>
+       <li><a href="https://open.library.ubc.ca/collections/ubcpublications/alumchron">Alumni Chronicle/Trek</a></li>
+       <li><a href="https://open.library.ubc.ca/collections/ubcpublications/calendars">UBC Calendars</a></li>
+	   <li><a href="https://open.library.ubc.ca/collections/ubcpublications/ubcyearb">Student Yearbooks</a></li>
        <li><a href="https://open.library.ubc.ca/collections/ubcpublications">Search University Publications &amp; Serials</a></li>
 </ul>
    </li>
@@ -189,7 +280,7 @@ w: www.webcommunications.ubc.ca
        <li><a href="displays.html">All Virtual Displays</a></li>
    </ul>
    </li>
-   <li><a href="http://ubcpubs.library.ubc.ca/?db=website">Search Archives </a></li>
+  <li id="last"><a href="contact.html" title="Contact Information">Contact Us</a></li>
 </ul>
 </div>
 
@@ -226,31 +317,51 @@ w: www.webcommunications.ubc.ca
 </div>
 
 <div id="left">
-<h1>University Archives</h1>
+<h1 style="margin-bottom:0px;">University Archives</h1>
+
+<div style="float:left; width:370px; margin:0px -18px; padding:0px; border:0px;">
+<!--- begin Google custom search --->
+<script>
+  (function() {
+    var cx = '016027841023157552002:srfhlp2s7lu';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+<!--- end Google custom search --->
+</div><br /><br />
 
 <h2>What's New</h2>
 <ul>
+  <li><strong>New:</strong> <a href="first_nations.html">First Nations Historical Resources</a><br />
+See our <a href="http://archives.library.ubc.ca/2016/05/05/first-nations-historical-resources-at-ubc-archives/">blog article</a> to learn more.</li>
+  <li><strong>New site-search tool</strong> (see above) </li>
   <li><strong>Notice to our users: </strong>Many of our digitized historical resources have been moved to the <a href="https://open.library.ubc.ca/">Open Collections</a> platform. <a href="https://open.library.ubc.ca/about">Learn more...</a> </li>
-  <li>Please note that, effective 31 July 2015, records from the  Alma Mater Society fonds are available directly through the Alma Mater Society Archives, rather than the University Archives. <a href="u_arch/alma_mater_society.pdf">More information...</a></li>
-  <li><a href="hist_ubc.html">General history</a> updated to include references to UBC's memoranda of affiliation with the Musqueam First Nation and the Okanagan Nation Alliance.</li>
   <li>UBC's centennial: <a href="http://ubc100.ca/">UBC 100 </a><br />
     UBC Library: <a href="http://about.library.ubc.ca/100th/">100 Years </a></li>
   </ul>
 <p>Read the <a href="http://archives.library.ubc.ca/">University Archives blog</a> for more news and commentary!</p>
 
 <div style="margin-top:20px;">
+<!--- begin Twitter plug-in --->
 <a class="twitter-timeline" width="319" href="https://twitter.com/UBCArchives"  data-widget-id="307624604992667649">Tweets by @UBCArchives</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!--- end Twitter plug-in --->
 </div>
 </div>
 
 <div id="footer">
-<ul><li><a href="mission.html" title="Mission of the Archives">About Us</a></li>
+<ul><li><a href="mission.html" title="About the Archives">About Us</a></li>
   <li><a href="http://www.maps.ubc.ca/PROD/index_detail.php?locat1=516" title="Location (Wayfinding at UBC)">Location (UBC Map)</a></li>
   <li><a href="faq.html" title="Frequently Asked Questions">FAQ</a></li>
   <li><a href="policies.html" title="Policies">Policies</a></li>
   <li><a href="feedback.html" title="Feedback">Feedback</a></li>
-  <li><a href="contact.html" title="Contact Information">Contact Us</a></li>
   <li><a href="https://twitter.com/UBCArchives" title="@UBCArchives">Follow on Twitter</a></li>
   <li><a href="https://www.flickr.com/photos/ubcarchives">Flickr photostream</a></li>
   <li id="last"><a href="http://archives.library.ubc.ca/" title="University Archives Blog">Blog</a></li>
@@ -262,19 +373,7 @@ w: www.webcommunications.ubc.ca
     <!--- STOP --->
    
     <hr>
-    <div align="right" style="font-size:11px; margin-right:11px;"><font size="-2" face="verdana, arial, helvetica"><i>Last modified: Mar 10, 16</i></font></div>
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Untitled Document</title>
-</head>
-
-<body>
-</body>
-</html>
-
+    <div align="right" style="font-size:11px; margin-right:11px;"><font size="-2" face="verdana, arial, helvetica"><i>Last modified: May  5, 16</i></font></div>
         </div><!-- End LibraryContent -->
   </div><!-- End UbcContent UbcContainer -->
 </div><!-- End UbcContentWrapper -->

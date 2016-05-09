@@ -715,7 +715,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 
                         <div class="span-4">
                             <div id="tmpl_cbfoot_nav_col_3" class="ow_block">
-	<ul><li><a href="MissingPage347,en.aspx" class="trackExternal">Media Centre</a></li><li><a href="http://www.msvu.ca/en/home/aboutus/emergencyproceduresguide/campussecurity.aspx#" class="trackExternal">Parking &amp; Security</a></li><li><a class="trackDownload" target="_blank" href="http://www.msvu.ca/en/home/aboutus/emergencyproceduresguide/campusmap.aspx" title="Campus Map">Campus Map</a></li></ul></div>
+	<ul><li><a href="http://www.msvu.ca/en/home/aboutus/news/default.aspx" target="_self">Media Centre</a></li><li><a href="http://www.msvu.ca/en/home/aboutus/emergencyproceduresguide/campussecurity.aspx#" tabindex="0" class="trackExternal">Parking &amp; Security</a></li><li><a href="http://www.msvu.ca/en/home/aboutus/emergencyproceduresguide/campusmap.aspx" tabindex="0" title="Campus Map" class="trackDownload" target="_blank">Campus Map</a></li></ul></div>
                         </div>
                     </nav>
                 </div>

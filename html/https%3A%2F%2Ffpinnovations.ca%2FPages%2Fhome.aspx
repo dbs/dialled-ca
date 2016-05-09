@@ -123,7 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End FPI Bing Tag Manager -->
 
 
-<link rel="stylesheet" href="/_layouts/FPI.EC/css/fpi-ec.1.0.8.css" />
+<link rel="stylesheet" href="/_layouts/FPI.EC/css/fpi-ec.1.0.9.css" />
 
 
 <link rel="stylesheet" href="/_layouts/FPI.Base/css/jsgrid.min.css" />
@@ -142,6 +142,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <link rel="stylesheet" href="/_layouts/FPI.Base/css/fpi-publication-search.1.0.4.css" />
 <!-- End FPI SME -->
 
+<!-- Start JS -->
+
+<!-- End JS -->
 
 
     <!-- Microsoft says these should always be inside the head tag. -->
@@ -261,7 +264,7 @@ function changeLocation(str,name,value) {
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xA8CFB123AC2A56EDC475FC0AE85CC4EA31D203FF13E17CEFD749D6D63036870E0B17964D3A8224DBEC8E0B3745575504FE1A1D7749E7CDEF65D7F2B8101B7E99,11 Mar 2016 21:13:24 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x8B5E4C125B2358B64542A0D89344E5392885BF914F26C225D3B2CED015470B6ED5A3DFDDE7EE5173B5221E463FEACF927399EEB4A5120CB7CA0763DBBAE641BD,09 May 2016 14:26:57 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -552,7 +555,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 	
             
 
-<link rel="stylesheet" href="/_layouts/FPI.EC/css/fpi-ec.1.0.8.css" />
+<link rel="stylesheet" href="/_layouts/FPI.EC/css/fpi-ec.1.0.9.css" />
 
 <div class="header-cart">
     <a class="vline" href="#sbCart" data-toggle="modal" id="A1"><i class="fa fa-shopping-cart fa-5x"></i>&nbsp; <span id="cart_count"></span></a>
@@ -2146,7 +2149,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 		
 		<div class="itemBanniere">
 			<div class="element">
-				<a href="/ResearchProgram/Pages/research-program-advanced-building-system.aspx"><img width="880" height="300" alt="Forest Operations" src="/Style Library/Images/banner-midply.jpg" /></a>
+				<a href="/ResearchProgram/Pages/research-program-advanced-building-system.aspx"><img width="880" height="300" alt="Forest Operations" src="/Style%20Library/Images/banner-midply.jpg" /></a>
 				<div class="textes"><div class="titre">FPInnovations’ Midply<sup>TM</sup> system used in Japan</div>
 				<div class="stitre">The Midply<sup>TM</sup> shear wall system, which provides superior resilience to severe earthquakes and extreme winds, was chosen for the construction of a five-storey, wood building in Japan.<br /><br />
 				<a href="/ResearchProgram/Pages/research-program-advanced-building-system.aspx"><font color="#ff9900">Click here to read more</font></a></div>
@@ -2156,7 +2159,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 		
 		<div class="itemBanniere">
 			<div class="element">
-				<a href="http://aboriginalforestry.fpinnovations.ca/"><img width="880" height="300" alt="Aboriginal Forestry" src="/Style Library/Images/banner-aboriginal-forestry.jpg" /></a>
+				<a href="http://aboriginalforestry.fpinnovations.ca/"><img width="880" height="300" alt="Aboriginal Forestry" src="/Style%20Library/Images/banner-aboriginal-forestry.jpg" /></a>
 				<div class="textes">
 					<div class="titre">
 						Aboriginal Forestry Support Program
@@ -2169,7 +2172,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 	
 		<div class="itemBanniere">
 			<div class="element">
-				<a href="/Extranet/Events/Pages/Events/wood-machinery-supply-conference-in-toronto.aspx" target="_blank"><img width="880" height="300" alt="Wood Machinery &amp; Supply Conference" src="/Style Library/Images/banner-associates.jpg" /></a>
+				<a href="/Extranet/Events/Pages/Events/wood-machinery-supply-conference-in-toronto.aspx" target="_blank"><img width="880" height="300" alt="Wood Machinery &amp; Supply Conference" src="/Style%20Library/Images/banner-associates.jpg" /></a>
 				<div class="textes"><div class="titre">Discover our latest innovation</div>
 				<div class="stitre orange">FPInnovations has an exciting new program to support the operations of small and medium-sized wood product manufacturers across Canada.
 				<br /><a href="/Extranet/Events/Pages/Events/wood-machinery-supply-conference-in-toronto.aspx"><font color="#ff9900">Click here for information on the launch</font></a></div>
@@ -2179,7 +2182,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 
 		<div class="itemBanniere">
 			<div class="element">
-				<a href="/media/news-releases/Documents/2015/0326-major-oil-and-gas-player-joins-celluForce.pdf" target="_blank"><img width="880" height="300" alt="Chercheurs honores" src="/Style Library/Images/banner-celluforce.jpg" /></a>
+				<a href="/media/news-releases/Documents/2015/0326-major-oil-and-gas-player-joins-celluForce.pdf" target="_blank"><img width="880" height="300" alt="Chercheurs honores" src="/Style%20Library/Images/banner-celluforce.jpg" /></a>
 				<div class="textes"><div class="titre">CelluForce gets vote of confidence from global oil &amp; gas investor</div>
 				<div class="stitre orange">Leading global oil and gas technology giant Schlumberger is investing in CelluForce, a FPInnovations and Domtar joint venture, to explore nano-crystalline cellulose’s potential for oil and gas well production. 
 				<a href="/media/news-releases/Documents/2015/0326-major-oil-and-gas-player-joins-celluForce.pdf" target="_blank"><font color="#ff9900">Find out more.</font></a></div>
@@ -2189,7 +2192,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 	
 		<div class="itemBanniere">
 			<div class="element">
-				<a href="/media/news-releases/Documents/2015/0319-three-fpinnovations-researchers-recognized-for-their-industry-contributions-and-achievements.pdf" target="_blank"><img width="880" height="300" alt="Researchers honoured" src="/Style Library/Images/banner-erol.jpg" /></a>
+				<a href="/media/news-releases/Documents/2015/0319-three-fpinnovations-researchers-recognized-for-their-industry-contributions-and-achievements.pdf" target="_blank"><img width="880" height="300" alt="Researchers honoured" src="/Style%20Library/Images/banner-erol.jpg" /></a>
 				<div class="textes"><div class="titre">FPInnovations researchers honoured by industry</div>
 				<div class="stitre orange">Three outstanding FPInnovations researchers receive prestigious industry honours for their contributions to the forest industry.<br /><br />
 				<a href="/media/news-releases/Documents/2015/0319-three-fpinnovations-researchers-recognized-for-their-industry-contributions-and-achievements.pdf" target="_blank"><font color="#ff9900">Find out more.</font></a></div>
@@ -2217,13 +2220,13 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 		<a href="http://issuu.com/fpinnovations/docs/magazine-en" target="_blank"><img width="258" height="141" class="miniature" src="/PublishingImages/cover-en.png" alt="" style="width:250px;height:137px" /></a>
 		<h2>READ FPINNOVATIONS'<br />2015 IMPACT MAGAZINE</h2>
 <h2><a href="http://issuu.com/fpinnovations/docs/magazine-en">Read</a> or <a href="/Documents/Impact-magazine-2015-en.pdf">download</a> <br /> </h2>
-<a href="http://issuu.com/fpinnovations/docs/magazine-en" target="_blank"><img width="16" height="16" class="aller" src="/Style Library/Images/aller.png" alt="" /></a></div>
+<a href="http://issuu.com/fpinnovations/docs/magazine-en" target="_blank"><img width="16" height="16" class="aller" src="/Style%20Library/Images/aller.png" alt="" /></a></div>
 <div class="boite_frontale "><a href="/ResearchProgram/advanced-building-systems/Pages/promo-tall-wood-buildings.aspx"><img width="258" height="141" class="miniature" src="/PublishingImages/visuelbf55.jpg" alt="" /></a> <h2>BUILD TALL WITH WOOD!</h2>
 <p>Get your copy of the Technical Guide for the Design and Construction of Tall Wood Buildings in Canada </p>
-<a href="/ResearchProgram/advanced-building-systems/Pages/promo-tall-wood-buildings.aspx"><img width="16" height="16" class="aller" src="/Style Library/Images/aller.png" alt="" /></a></div>
-<div class="boite_frontale dernier"><a href="/ResearchProgram/advanced-building-systems/Pages/promo-mid-rise-guide.aspx"><img width="258" height="141" class="miniature" src="/ResearchProgram/advanced-building-systems/PublishingImages/Cover-home-EN.png" alt="" /></a><h2>MID-RISE WOOD FRAME CONSTRUCTION</h2>
+<a href="/ResearchProgram/advanced-building-systems/Pages/promo-tall-wood-buildings.aspx"><img width="16" height="16" class="aller" src="/Style%20Library/Images/aller.png" alt="" /></a></div>
+<div class="boite_frontale dernier"><a href="/ResearchProgram/advanced-building-systems/Pages/promo-mid-rise-guide-2.aspx"><img width="258" height="141" class="miniature" src="/ResearchProgram/advanced-building-systems/PublishingImages/Cover-home-EN.png" alt="" /></a><h2>MID-RISE WOOD FRAME CONSTRUCTION</h2>
 <p>Get your copy of the Mid-Rise Wood Frame Construction Handbook.</p>
-<a href="/ResearchProgram/advanced-building-systems/Pages/promo-mid-rise-guide.aspx"><img width="16" height="16" class="aller" src="/Style Library/Images/aller.png" alt="" /></a></div></div>
+<a href="/ResearchProgram/advanced-building-systems/Pages/promo-mid-rise-guide-2.aspx"><img width="16" height="16" class="aller" src="/Style%20Library/Images/aller.png" alt="" /></a></div></div>
 ​​​​​​​​​​​​​</div>
 		<!-- Contenu en trois colonnes -----------------> 
     	<div id="lesInfos">
@@ -2267,7 +2270,8 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 			<tr>
 				<td valign="top"><div WebPartID="ff9de4f6-9488-4400-809a-48704f56cb17" HasPers="false" id="WebPartWPQ4" width="100%" class="ms-WPBody noindex" allowDelete="false" style="" ><h2>FAIRS &amp; EVENTS</h2>
 <p class="davantage"><a href="/Extranet/Events/Pages/Calendar.aspx">Click here to view<br/>
-the complete list</a>​​​</p></div></td>
+the complete list</a>​​​</p>
+<meta http-equiv="REFRESH" content="0;url=/Pages/index.aspx"/></div></td>
 			</tr>
 		</table></td>
 	</tr>
@@ -3018,10 +3022,10 @@ document.getElementById('ctl00_ctl45_ctl01_ctl01_ShipToCodeREV').dispose = funct
 <!-- extra js files -->
 
 
-<script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-ec.1.0.8.js"></script>
+<script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-ec.1.0.9.js"></script>
 
 
-<script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-asset-details.1.0.4.js"></script>
+<script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-asset-details.1.0.8.js"></script>
 <script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-legend.1.0.4.js"></script>
 
 
@@ -3029,6 +3033,12 @@ document.getElementById('ctl00_ctl45_ctl01_ctl01_ShipToCodeREV').dispose = funct
 
 
 <script type="text/javascript" src="/_layouts/FPI.Base/js/jsgrid.js"></script>
+
+
+<!-- Start Bottom JS -->
+
+<script type="text/javascript" src="/_layouts/FPI.Base/js/fpi-bug-fix.1.0.0.js"></script>
+<!-- End Bottom JS -->
 
 
 <!-- warn users of old browsers that they need to upgrade -->

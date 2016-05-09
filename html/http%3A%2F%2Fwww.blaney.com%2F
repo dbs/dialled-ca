@@ -1,544 +1,770 @@
+
 <!DOCTYPE html>
-<!-- page-front.tpl.php -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
-  <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style type="text/css" media="screen, projection, tty, tv, print">
-<!--
-/* <![CDATA[ */
-div.resizable {
-  font-size: 100%;
+<html lang="en" class="no-js">
+<head xmlns:og="http://ogp.me/ns"><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" /><link href="/SiteStyles?v=i95riw6D-DaMG3ehiGiVdtaW2gkMBZYrlEcq3Lg6IDw1" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                // re-route form action to root, so we can support virtual subfolder postbacks
+                var defaultPost = $('#form').attr('action');
+                if (defaultPost != null && defaultPost.substring(0, 1) != '/') {
+                    $('#form').attr('action', '/' + defaultPost);
+                }
+            });
+        </script>
+        <script src="/SiteScripts?v=oCxBkgb7d0Hl_xoU1FGzobg9MMEipZ6V3z3ePSjvPso1"></script>
+
+        <style type="text/css" media="screen">
+            @media only screen and (max-width: 1100px) {
+                body {  background-image: url(/Images/GlobalSetting/20251_MobileBannerImage.jpg); }
+            }
+        </style>
+        
+        <style type="text/css" media="screen">
+            body { background-image: url(/images/corepage/17601_MobileImage.jpg); background-attachment: scroll;-webkit-background-size: cover;  -moz-background-size: cover;  -o-background-size: cover;  background-size: cover;}
+            .inverseLogoImage { display: none; }
+            .siteLogoImage { display: block; }
+            .headerMenuIcon { background: url(/images/site/menuicon.png); background-size: 50px; }
+        </style>
+        
+        <style type="text/css" media="screen">
+            @media only screen and (min-width: 1100px) {
+                body { background-image: url(/images/corepage/17273_Image.jpg); }
+                .inverseLogoImage { display: none; }
+                .siteLogoImage { display: block; }
+                .headerMenuIcon { background: url(/images/site/menuicon.png); background-size: 50px; }
+            }
+        </style>
+        
+    <script type="text/javascript" src="/Scripts/jquery.cycle2.min.js"></script>
+    <script>
+        $(window).load(function () { // auto expand news for desktop load
+            if ($("#pagemarker-lg").is(":visible")) {
+                setTimeout(function () { $(".headerSideNav .news").click(); }, 400);
+
+                setTimeout(function () {
+                    $(".headerSideNav > a.active").click();
+                }, 5000);
+            }
+
+            // blog refresh
+            jQuery.ajax({ url: '/blaneys-blogs?refresh=1' });
+        });
+    </script>
+
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-5133139-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+        <link rel="canonical" id="cononical" href="http://www.blaney.com/" />
+    
+
+
+
+<meta  property="og:image" content="http://www.blaney.com/images/GlobalSetting/19475_GlobalSocialImage.jpg" />
+<meta  property="og:type" content="website" />
+
+<title>
+	Blaney McMurtry LLP
+</title></head>
+<body class=" index_page ">
+    <form name="form" method="post" action="./" id="form">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzgxOTg0MjcwD2QWAmYPZBYCAgEPZBYKAgEPZBYOAgUPFgIeC18hSXRlbUNvdW50AgEWAmYPZBYCZg8VAREvb3VyLWZpcm0vaGlzdG9yeWQCBw8WAh8AAgEWAmYPZBYCZg8VBBUvbGF3eWVycy9tYXJpYS1zY2FyZm9jPGltZyBjbGFzcz0iaGVhZGVyT3ZlcmxheUZlYXR1cmVkSW1hZ2UiIHNyYz0iL2ltYWdlcy9iaW8vMTM2NThfVGh1bWJuYWlsLnBuZyIgYWx0PSJNYXJpYSBTY2FyZm8iIC8+BU1hcmlhHlNjYXJmbywgPGJyIC8+TWFuYWdpbmcgUGFydG5lcmQCCQ8WAh8AAgMWBmYPZBYCZg8VAwZwYXJlbnQjL3ByYWN0aWNlLWFyZWFzL2xpdGlnYXRpb24tYWR2b2NhY3kVTGl0aWdhdGlvbiAmIEFkdm9jYWN5ZAIBD2QWAmYPFQMGcGFyZW50JC9wcmFjdGljZS1hcmVhcy9yZWFsLWVzdGF0ZS1idXNpbmVzcxZSZWFsIEVzdGF0ZSAmIEJ1c2luZXNzZAICD2QWAmYPFQMGcGFyZW50Gi9wcmFjdGljZS1hcmVhcy9pbmR1c3RyaWVzCkluZHVzdHJpZXNkAgsPFgIfAAIjFkYCAQ9kFgJmDxUCGi9wcmFjdGljZS1hcmVhcy9hYm9yaWdpbmFsCkFib3JpZ2luYWxkAgIPZBYCZg8VAi4vcHJhY3RpY2UtYXJlYXMvYWx0ZXJuYXRpdmUtZGlzcHV0ZS1yZXNvbHV0aW9uHkFsdGVybmF0aXZlIERpc3B1dGUgUmVzb2x1dGlvbmQCAw9kFgJmDxUCQy9wcmFjdGljZS1hcmVhcy9hcmNoaXRlY3R1cmFsLWNvbnN0cnVjdGlvbi1hbmQtZW5naW5lZXJpbmctc2VydmljZXM0QXJjaGl0ZWN0dXJhbCwgQ29uc3RydWN0aW9uIGFuZCBFbmdpbmVlcmluZyBTZXJ2aWNlc2QCBA9kFgJmDxUCGC9wcmFjdGljZS1hcmVhcy9hdmlhdGlvbghBdmlhdGlvbmQCBQ9kFgJmDxUCMi9wcmFjdGljZS1hcmVhcy9idXNpbmVzcy1yZW9yZ2FuaXphdGlvbi1pbnNvbHZlbmN5JEJ1c2luZXNzIFJlb3JnYW5pemF0aW9uICYgSW5zb2x2ZW5jeWQCBg9kFgJmDxUCHS9wcmFjdGljZS1hcmVhcy9jbGFzcy1hY3Rpb25zDUNsYXNzIEFjdGlvbnNkAgcPZBYCZg8VAiIvcHJhY3RpY2UtYXJlYXMvY29tbWVyY2lhbC1sZWFzaW5nE0NvbW1lcmNpYWwgTGVhc2luZyBkAggPZBYCZg8VAiUvcHJhY3RpY2UtYXJlYXMvY29tbWVyY2lhbC1saXRpZ2F0aW9uFUNvbW1lcmNpYWwgTGl0aWdhdGlvbmQCCQ9kFgJmDxUCJC9wcmFjdGljZS1hcmVhcy9jb3Jwb3JhdGUtY29tbWVyY2lhbBZDb3Jwb3JhdGUgJiBDb21tZXJjaWFsZAIKD2QWAmYPFQIsL3ByYWN0aWNlLWFyZWFzL2NvcnBvcmF0ZS1maW5hbmNlLXNlY3VyaXRpZXMeQ29ycG9yYXRlIEZpbmFuY2UgJiBTZWN1cml0aWVzZAILD2QWAmYPFQIjL3ByYWN0aWNlLWFyZWFzL2NvcnBvcmF0ZS1pbnN1cmFuY2UTQ29ycG9yYXRlIEluc3VyYW5jZWQCDA9kFgJmDxUCMi9wcmFjdGljZS1hcmVhcy9jeWJlci1pbmZvcm1hdGlvbi1hbmQtcHJpdmFjeS1yaXNrI0N5YmVyLCBJbmZvcm1hdGlvbiBhbmQgUHJpdmFjeSBSaXNrZAIND2QWAmYPFQImL3ByYWN0aWNlLWFyZWFzL2VsZWN0aW9uLXBvbGl0aWNhbC1sYXcYRWxlY3Rpb24gJiBQb2xpdGljYWwgTGF3ZAIOD2QWAmYPFQIhL3ByYWN0aWNlLWFyZWFzL2VtcGxveW1lbnQtbGFib3VyE0VtcGxveW1lbnQgJiBMYWJvdXJkAg8PZBYCZg8VAh0vcHJhY3RpY2UtYXJlYXMvZW52aXJvbm1lbnRhbA1FbnZpcm9ubWVudGFsZAIQD2QWAmYPFQIiL3ByYWN0aWNlLWFyZWFzL2ZhbWlseS1tYXRyaW1vbmlhbApGYW1pbHkgTGF3ZAIRD2QWAmYPFQI8L3ByYWN0aWNlLWFyZWFzL2ZyYXVkLWludmVzdGlnYXRpb24tcmVjb3ZlcnktYW5kLWVuZm9yY2VtZW50LEZyYXVkIEludmVzdGlnYXRpb24gUmVjb3ZlcnkgYW5kIEVuZm9yY2VtZW50ZAISD2QWAmYPFQIxL3ByYWN0aWNlLWFyZWFzL2dvdmVybm1lbnQtcHJvY3VyZW1lbnQtbGl0aWdhdGlvbiNHb3Zlcm5tZW50IFByb2N1cmVtZW50ICYgTGl0aWdhdGlvbmQCEw9kFgJmDxUCGi9wcmFjdGljZS1hcmVhcy9oZWFsdGgtbGF3CkhlYWx0aCBMYXdkAhQPZBYCZg8VAhsvcHJhY3RpY2UtYXJlYXMvaW1taWdyYXRpb24LSW1taWdyYXRpb25kAhUPZBYCZg8VAiYvcHJhY3RpY2UtYXJlYXMvaW5mb3JtYXRpb24tdGVjaG5vbG9neRZJbmZvcm1hdGlvbiBUZWNobm9sb2d5ZAIWD2QWAmYPFQIqL3ByYWN0aWNlLWFyZWFzL2luc3VyYW5jZS1jb3ZlcmFnZS1jb3Vuc2VsGkluc3VyYW5jZSBDb3ZlcmFnZSBDb3Vuc2VsZAIXD2QWAmYPFQIkL3ByYWN0aWNlLWFyZWFzL2luc3VyYW5jZS1saXRpZ2F0aW9uFEluc3VyYW5jZSBMaXRpZ2F0aW9uZAIYD2QWAmYPFQIlL3ByYWN0aWNlLWFyZWFzL2ludGVsbGVjdHVhbC1wcm9wZXJ0eRVJbnRlbGxlY3R1YWwgUHJvcGVydHlkAhkPZBYCZg8VAjAvcHJhY3RpY2UtYXJlYXMvaW50ZXJuYXRpb25hbC10cmFkZS1hbmQtYnVzaW5lc3MgSW50ZXJuYXRpb25hbCBUcmFkZSBhbmQgQnVzaW5lc3NkAhoPZBYCZg8VAh0vcHJhY3RpY2UtYXJlYXMvbGlmZS1zY2llbmNlcw1MaWZlIFNjaWVuY2VzZAIbD2QWAmYPFQInL3ByYWN0aWNlLWFyZWFzL21lZGlhLWVudGVydGFpbm1lbnQtbGF3G01lZGlhIGFuZCBFbnRlcnRhaW5tZW50IExhd2QCHA9kFgJmDxUCFi9wcmFjdGljZS1hcmVhcy9taW5pbmcGTWluaW5nZAIdD2QWAmYPFQIwL3ByYWN0aWNlLWFyZWFzL211bmljaXBhbC1wbGFubmluZy1leHByb3ByaWF0aW9uI011bmljaXBhbCwgUGxhbm5pbmcgJiBFeHByb3ByaWF0aW9uZAIeD2QWAmYPFQIgL3ByYWN0aWNlLWFyZWFzL3BvbGljZS1saWFiaWxpdHkRUG9saWNlIExpYWJpbGl0eSBkAh8PZBYCZg8VAhcvcHJhY3RpY2UtYXJlYXMvcHJpdmFjeQdQcml2YWN5ZAIgD2QWAmYPFQIbL3ByYWN0aWNlLWFyZWFzL3JlYWwtZXN0YXRlDFJlYWwgRXN0YXRlIGQCIQ9kFgJmDxUCGi9wcmFjdGljZS1hcmVhcy9zcG9ydHMtbGF3ClNwb3J0cyBMYXdkAiIPZBYCZg8VAhMvcHJhY3RpY2UtYXJlYXMvdGF4A1RheGQCIw9kFgJmDxUCHS9wcmFjdGljZS1hcmVhcy93aWxscy1lc3RhdGVzD1dpbGxzICYgRXN0YXRlc2QCDQ8WAh8AAhAWIAIBD2QWAmYPFQIlL3ByYWN0aWNlLWFyZWFzL2NvbW1lcmNpYWwtbGl0aWdhdGlvbhlTdGFydCBvciBkZWZlbmQgYSBsYXdzdWl0ZAICD2QWAmYPFQIlL3ByYWN0aWNlLWFyZWFzL2NvbW1lcmNpYWwtbGl0aWdhdGlvbhpSZXNvbHZlIGEgYnVzaW5lc3MgZGlzcHV0ZWQCAw9kFgJmDxUCJC9wcmFjdGljZS1hcmVhcy9jb3Jwb3JhdGUtY29tbWVyY2lhbBBTdGFydCBhIGJ1c2luZXNzZAIED2QWAmYPFQIkL3ByYWN0aWNlLWFyZWFzL2NvcnBvcmF0ZS1jb21tZXJjaWFsFkJ1eSBvciBzZWxsIGEgYnVzaW5lc3NkAgUPZBYCZg8VAiwvcHJhY3RpY2UtYXJlYXMvY29ycG9yYXRlLWZpbmFuY2Utc2VjdXJpdGllcyJGaW5hbmNlIGEgcHJvamVjdCAvIEFjY2VzcyBjYXBpdGFsZAIGD2QWAmYPFQIkL3ByYWN0aWNlLWFyZWFzL2luc3VyYW5jZS1saXRpZ2F0aW9uEUluc3VyYW5jZSBtYXR0ZXJzZAIHD2QWAmYPFQIbL3ByYWN0aWNlLWFyZWFzL3JlYWwtZXN0YXRlEEJ1eSBvciBzZWxsIGxhbmRkAggPZBYCZg8VAhsvcHJhY3RpY2UtYXJlYXMvcmVhbC1lc3RhdGUMRGV2ZWxvcCBsYW5kZAIJD2QWAmYPFQIyL3ByYWN0aWNlLWFyZWFzL2J1c2luZXNzLXJlb3JnYW5pemF0aW9uLWluc29sdmVuY3kWQnVzaW5lc3MgcmVzdHJ1Y3R1cmluZ2QCCg9kFgJmDxUCLC9wcmFjdGljZS1hcmVhcy9jb3Jwb3JhdGUtZmluYW5jZS1zZWN1cml0aWVzCUdvIHB1YmxpY2QCCw9kFgJmDxUCIS9wcmFjdGljZS1hcmVhcy9lbXBsb3ltZW50LWxhYm91chxFbXBsb3ltZW50IGFuZCBMYWJvdXIgaXNzdWVzZAIMD2QWAmYPFQIbL3ByYWN0aWNlLWFyZWFzL2ltbWlncmF0aW9uHERlYWwgd2l0aCBpbW1pZ3JhdGlvbiBpc3N1ZXNkAg0PZBYCZg8VAiIvcHJhY3RpY2UtYXJlYXMvZmFtaWx5LW1hdHJpbW9uaWFsEkZhbWlseSBTZXBhcmF0aW9uc2QCDg9kFgJmDxUCHS9wcmFjdGljZS1hcmVhcy93aWxscy1lc3RhdGVzF1dpbGxzIG9yIGVzdGF0ZXMgaXNzdWVzZAIPD2QWAmYPFQIlL3ByYWN0aWNlLWFyZWFzL2ludGVsbGVjdHVhbC1wcm9wZXJ0eRJQcm90ZWN0IHlvdXIgaWRlYXNkAhAPZBYCZg8VAiUvcHJhY3RpY2UtYXJlYXMvY29tbWVyY2lhbC1saXRpZ2F0aW9uEFNldHRsZSBhIGRpc3B1dGVkAg8PFgIfAAIjFkYCAQ9kFgJmDxUDABovcHJhY3RpY2UtYXJlYXMvYWJvcmlnaW5hbApBYm9yaWdpbmFsZAICD2QWAmYPFQMALi9wcmFjdGljZS1hcmVhcy9hbHRlcm5hdGl2ZS1kaXNwdXRlLXJlc29sdXRpb24eQWx0ZXJuYXRpdmUgRGlzcHV0ZSBSZXNvbHV0aW9uZAIDD2QWAmYPFQMAQy9wcmFjdGljZS1hcmVhcy9hcmNoaXRlY3R1cmFsLWNvbnN0cnVjdGlvbi1hbmQtZW5naW5lZXJpbmctc2VydmljZXM0QXJjaGl0ZWN0dXJhbCwgQ29uc3RydWN0aW9uIGFuZCBFbmdpbmVlcmluZyBTZXJ2aWNlc2QCBA9kFgJmDxUDABgvcHJhY3RpY2UtYXJlYXMvYXZpYXRpb24IQXZpYXRpb25kAgUPZBYCZg8VAwAyL3ByYWN0aWNlLWFyZWFzL2J1c2luZXNzLXJlb3JnYW5pemF0aW9uLWluc29sdmVuY3kkQnVzaW5lc3MgUmVvcmdhbml6YXRpb24gJiBJbnNvbHZlbmN5ZAIGD2QWAmYPFQMAHS9wcmFjdGljZS1hcmVhcy9jbGFzcy1hY3Rpb25zDUNsYXNzIEFjdGlvbnNkAgcPZBYCZg8VAwAiL3ByYWN0aWNlLWFyZWFzL2NvbW1lcmNpYWwtbGVhc2luZxNDb21tZXJjaWFsIExlYXNpbmcgZAIID2QWAmYPFQMAJS9wcmFjdGljZS1hcmVhcy9jb21tZXJjaWFsLWxpdGlnYXRpb24VQ29tbWVyY2lhbCBMaXRpZ2F0aW9uZAIJD2QWAmYPFQMAJC9wcmFjdGljZS1hcmVhcy9jb3Jwb3JhdGUtY29tbWVyY2lhbBZDb3Jwb3JhdGUgJiBDb21tZXJjaWFsZAIKD2QWAmYPFQMALC9wcmFjdGljZS1hcmVhcy9jb3Jwb3JhdGUtZmluYW5jZS1zZWN1cml0aWVzHkNvcnBvcmF0ZSBGaW5hbmNlICYgU2VjdXJpdGllc2QCCw9kFgJmDxUDACMvcHJhY3RpY2UtYXJlYXMvY29ycG9yYXRlLWluc3VyYW5jZRNDb3Jwb3JhdGUgSW5zdXJhbmNlZAIMD2QWAmYPFQMAMi9wcmFjdGljZS1hcmVhcy9jeWJlci1pbmZvcm1hdGlvbi1hbmQtcHJpdmFjeS1yaXNrI0N5YmVyLCBJbmZvcm1hdGlvbiBhbmQgUHJpdmFjeSBSaXNrZAIND2QWAmYPFQM3PC91bD48dWwgY2xhc3M9InNnLWNvbC1sZy00IGhlYWRlck92ZXJsYXlEcm9wZG93bkxpc3QiPiYvcHJhY3RpY2UtYXJlYXMvZWxlY3Rpb24tcG9saXRpY2FsLWxhdxhFbGVjdGlvbiAmIFBvbGl0aWNhbCBMYXdkAg4PZBYCZg8VAwAhL3ByYWN0aWNlLWFyZWFzL2VtcGxveW1lbnQtbGFib3VyE0VtcGxveW1lbnQgJiBMYWJvdXJkAg8PZBYCZg8VAwAdL3ByYWN0aWNlLWFyZWFzL2Vudmlyb25tZW50YWwNRW52aXJvbm1lbnRhbGQCEA9kFgJmDxUDACIvcHJhY3RpY2UtYXJlYXMvZmFtaWx5LW1hdHJpbW9uaWFsCkZhbWlseSBMYXdkAhEPZBYCZg8VAwA8L3ByYWN0aWNlLWFyZWFzL2ZyYXVkLWludmVzdGlnYXRpb24tcmVjb3ZlcnktYW5kLWVuZm9yY2VtZW50LEZyYXVkIEludmVzdGlnYXRpb24gUmVjb3ZlcnkgYW5kIEVuZm9yY2VtZW50ZAISD2QWAmYPFQMAMS9wcmFjdGljZS1hcmVhcy9nb3Zlcm5tZW50LXByb2N1cmVtZW50LWxpdGlnYXRpb24jR292ZXJubWVudCBQcm9jdXJlbWVudCAmIExpdGlnYXRpb25kAhMPZBYCZg8VAwAaL3ByYWN0aWNlLWFyZWFzL2hlYWx0aC1sYXcKSGVhbHRoIExhd2QCFA9kFgJmDxUDABsvcHJhY3RpY2UtYXJlYXMvaW1taWdyYXRpb24LSW1taWdyYXRpb25kAhUPZBYCZg8VAwAmL3ByYWN0aWNlLWFyZWFzL2luZm9ybWF0aW9uLXRlY2hub2xvZ3kWSW5mb3JtYXRpb24gVGVjaG5vbG9neWQCFg9kFgJmDxUDACovcHJhY3RpY2UtYXJlYXMvaW5zdXJhbmNlLWNvdmVyYWdlLWNvdW5zZWwaSW5zdXJhbmNlIENvdmVyYWdlIENvdW5zZWxkAhcPZBYCZg8VAwAkL3ByYWN0aWNlLWFyZWFzL2luc3VyYW5jZS1saXRpZ2F0aW9uFEluc3VyYW5jZSBMaXRpZ2F0aW9uZAIYD2QWAmYPFQMAJS9wcmFjdGljZS1hcmVhcy9pbnRlbGxlY3R1YWwtcHJvcGVydHkVSW50ZWxsZWN0dWFsIFByb3BlcnR5ZAIZD2QWAmYPFQM3PC91bD48dWwgY2xhc3M9InNnLWNvbC1sZy00IGhlYWRlck92ZXJsYXlEcm9wZG93bkxpc3QiPjAvcHJhY3RpY2UtYXJlYXMvaW50ZXJuYXRpb25hbC10cmFkZS1hbmQtYnVzaW5lc3MgSW50ZXJuYXRpb25hbCBUcmFkZSBhbmQgQnVzaW5lc3NkAhoPZBYCZg8VAwAdL3ByYWN0aWNlLWFyZWFzL2xpZmUtc2NpZW5jZXMNTGlmZSBTY2llbmNlc2QCGw9kFgJmDxUDACcvcHJhY3RpY2UtYXJlYXMvbWVkaWEtZW50ZXJ0YWlubWVudC1sYXcbTWVkaWEgYW5kIEVudGVydGFpbm1lbnQgTGF3ZAIcD2QWAmYPFQMAFi9wcmFjdGljZS1hcmVhcy9taW5pbmcGTWluaW5nZAIdD2QWAmYPFQMAMC9wcmFjdGljZS1hcmVhcy9tdW5pY2lwYWwtcGxhbm5pbmctZXhwcm9wcmlhdGlvbiNNdW5pY2lwYWwsIFBsYW5uaW5nICYgRXhwcm9wcmlhdGlvbmQCHg9kFgJmDxUDACAvcHJhY3RpY2UtYXJlYXMvcG9saWNlLWxpYWJpbGl0eRFQb2xpY2UgTGlhYmlsaXR5IGQCHw9kFgJmDxUDABcvcHJhY3RpY2UtYXJlYXMvcHJpdmFjeQdQcml2YWN5ZAIgD2QWAmYPFQMAGy9wcmFjdGljZS1hcmVhcy9yZWFsLWVzdGF0ZQxSZWFsIEVzdGF0ZSBkAiEPZBYCZg8VAwAaL3ByYWN0aWNlLWFyZWFzL3Nwb3J0cy1sYXcKU3BvcnRzIExhd2QCIg9kFgJmDxUDABMvcHJhY3RpY2UtYXJlYXMvdGF4A1RheGQCIw9kFgJmDxUDAB0vcHJhY3RpY2UtYXJlYXMvd2lsbHMtZXN0YXRlcw9XaWxscyAmIEVzdGF0ZXNkAhEPFgIfAAIQFiACAQ9kFgJmDxUDACUvcHJhY3RpY2UtYXJlYXMvY29tbWVyY2lhbC1saXRpZ2F0aW9uGVN0YXJ0IG9yIGRlZmVuZCBhIGxhd3N1aXRkAgIPZBYCZg8VAwAlL3ByYWN0aWNlLWFyZWFzL2NvbW1lcmNpYWwtbGl0aWdhdGlvbhpSZXNvbHZlIGEgYnVzaW5lc3MgZGlzcHV0ZWQCAw9kFgJmDxUDACQvcHJhY3RpY2UtYXJlYXMvY29ycG9yYXRlLWNvbW1lcmNpYWwQU3RhcnQgYSBidXNpbmVzc2QCBA9kFgJmDxUDACQvcHJhY3RpY2UtYXJlYXMvY29ycG9yYXRlLWNvbW1lcmNpYWwWQnV5IG9yIHNlbGwgYSBidXNpbmVzc2QCBQ9kFgJmDxUDACwvcHJhY3RpY2UtYXJlYXMvY29ycG9yYXRlLWZpbmFuY2Utc2VjdXJpdGllcyJGaW5hbmNlIGEgcHJvamVjdCAvIEFjY2VzcyBjYXBpdGFsZAIGD2QWAmYPFQMAJC9wcmFjdGljZS1hcmVhcy9pbnN1cmFuY2UtbGl0aWdhdGlvbhFJbnN1cmFuY2UgbWF0dGVyc2QCBw9kFgJmDxUDNzwvdWw+PHVsIGNsYXNzPSJzZy1jb2wtbGctNCBoZWFkZXJPdmVybGF5RHJvcGRvd25MaXN0Ij4bL3ByYWN0aWNlLWFyZWFzL3JlYWwtZXN0YXRlEEJ1eSBvciBzZWxsIGxhbmRkAggPZBYCZg8VAwAbL3ByYWN0aWNlLWFyZWFzL3JlYWwtZXN0YXRlDERldmVsb3AgbGFuZGQCCQ9kFgJmDxUDADIvcHJhY3RpY2UtYXJlYXMvYnVzaW5lc3MtcmVvcmdhbml6YXRpb24taW5zb2x2ZW5jeRZCdXNpbmVzcyByZXN0cnVjdHVyaW5nZAIKD2QWAmYPFQMALC9wcmFjdGljZS1hcmVhcy9jb3Jwb3JhdGUtZmluYW5jZS1zZWN1cml0aWVzCUdvIHB1YmxpY2QCCw9kFgJmDxUDACEvcHJhY3RpY2UtYXJlYXMvZW1wbG95bWVudC1sYWJvdXIcRW1wbG95bWVudCBhbmQgTGFib3VyIGlzc3Vlc2QCDA9kFgJmDxUDNzwvdWw+PHVsIGNsYXNzPSJzZy1jb2wtbGctNCBoZWFkZXJPdmVybGF5RHJvcGRvd25MaXN0Ij4bL3ByYWN0aWNlLWFyZWFzL2ltbWlncmF0aW9uHERlYWwgd2l0aCBpbW1pZ3JhdGlvbiBpc3N1ZXNkAg0PZBYCZg8VAwAiL3ByYWN0aWNlLWFyZWFzL2ZhbWlseS1tYXRyaW1vbmlhbBJGYW1pbHkgU2VwYXJhdGlvbnNkAg4PZBYCZg8VAwAdL3ByYWN0aWNlLWFyZWFzL3dpbGxzLWVzdGF0ZXMXV2lsbHMgb3IgZXN0YXRlcyBpc3N1ZXNkAg8PZBYCZg8VAwAlL3ByYWN0aWNlLWFyZWFzL2ludGVsbGVjdHVhbC1wcm9wZXJ0eRJQcm90ZWN0IHlvdXIgaWRlYXNkAhAPZBYCZg8VAwAlL3ByYWN0aWNlLWFyZWFzL2NvbW1lcmNpYWwtbGl0aWdhdGlvbhBTZXR0bGUgYSBkaXNwdXRlZAIDD2QWAgIFDxYCHwACBBYIZg9kFgJmDxUDQS9uZXdzLWFydGljbGVzL2JsYW5leS1tY211cnRyeS13ZWxjb21lcy1uZXctcGFydG5lci1hbm5hLWNhc2Vtb3JlDkFwcmlsIDE0LCAyMDE2M0JsYW5leSBNY011cnRyeSBXZWxjb21lcyBOZXcgUGFydG5lciwgQW5uYSBDYXNlbW9yZWQCAQ9kFgJmDxUDQi9uZXdzLWFydGljbGVzL2JsYW5leS1tY211cnRyeS13ZWxjb21lcy1uZXctcGFydG5lci1wZXRlci1ib3V6YWxhcw5BcHJpbCAxNCwgMjAxNjRCbGFuZXkgTWNNdXJ0cnkgV2VsY29tZXMgTmV3IFBhcnRuZXIsIFBldGVyIEJvdXphbGFzZAICD2QWAmYPFQNLL25ld3MtYXJ0aWNsZXMvY2hhZC1rb3BhY2gtZWFybnMtY2VydGlmaWVkLXNwZWNpYWxpc3QtZGVzaWduYXRpb24tZnJvbS1sc3VjDkFwcmlsIDEzLCAyMDE2PENoYWQgS29wYWNoIGVhcm5zIENlcnRpZmllZCBTcGVjaWFsaXN0IGRlc2lnbmF0aW9uIGZyb20gTFNVQ2QCAw9kFgJmDxUDOS9uZXdzLWFydGljbGVzL2JsYW5leS1tY211cnRyeS1hbm5vdW5jZXMtdHdvLW5ldy1wYXJ0bmVycw5NYXJjaCAwMSwgMjAxNipCbGFuZXkgTWNNdXJ0cnkgQW5ub3VuY2VzIFR3byBOZXcgUGFydG5lcnNkAgUPZBYCAgEPFgIfAAIEFghmD2QWAmYPFQNBL25ld3MtYXJ0aWNsZXMvYmxhbmV5LW1jbXVydHJ5LXdlbGNvbWVzLW5ldy1wYXJ0bmVyLWFubmEtY2FzZW1vcmUOQXByaWwgMTQsIDIwMTYzQmxhbmV5IE1jTXVydHJ5IFdlbGNvbWVzIE5ldyBQYXJ0bmVyLCBBbm5hIENhc2Vtb3JlZAIBD2QWAmYPFQNCL25ld3MtYXJ0aWNsZXMvYmxhbmV5LW1jbXVydHJ5LXdlbGNvbWVzLW5ldy1wYXJ0bmVyLXBldGVyLWJvdXphbGFzDkFwcmlsIDE0LCAyMDE2NEJsYW5leSBNY011cnRyeSBXZWxjb21lcyBOZXcgUGFydG5lciwgUGV0ZXIgQm91emFsYXNkAgIPZBYCZg8VA0svbmV3cy1hcnRpY2xlcy9jaGFkLWtvcGFjaC1lYXJucy1jZXJ0aWZpZWQtc3BlY2lhbGlzdC1kZXNpZ25hdGlvbi1mcm9tLWxzdWMOQXByaWwgMTMsIDIwMTY8Q2hhZCBLb3BhY2ggZWFybnMgQ2VydGlmaWVkIFNwZWNpYWxpc3QgZGVzaWduYXRpb24gZnJvbSBMU1VDZAIDD2QWAmYPFQM5L25ld3MtYXJ0aWNsZXMvYmxhbmV5LW1jbXVydHJ5LWFubm91bmNlcy10d28tbmV3LXBhcnRuZXJzDk1hcmNoIDAxLCAyMDE2KkJsYW5leSBNY011cnRyeSBBbm5vdW5jZXMgVHdvIE5ldyBQYXJ0bmVyc2QCBw9kFgQCAQ8WAh8AAgIWBGYPZBYCZg8VARUiZmxleGlibGUsIGFkYXB0YWJsZSJkAgEPZBYCZg8VARcidW5kZXJzdGFuZHMgb3VyIHdvcmxkImQCAw8WAh8AAgEWAmYPZBYCZg8VAhhUb3AgMTAgUmVnaW9uYWwgTGF3IEZpcm0vPHA+Q2FuYWRpYW48YnIgLz4NCkxhd3llcjxiciAvPg0KTWFnYXppbmU8L3A+DQpkAgkPZBYGAgEPFgIfAAIDFgYCAQ9kFgJmDxUCES9vdXItZmlybS9oaXN0b3J5CE91ciBGaXJtZAICD2QWAmYPFQISL291ci1maXJtL3JhbmtpbmdzC1JlY29nbml0aW9uZAIDD2QWAmYPFQIWL291ci1maXJtL2FmZmlsaWF0aW9ucwxBZmZpbGlhdGlvbnNkAgMPFgIfAAIDFgYCAQ9kFgJmDxUCIy9wcmFjdGljZS1hcmVhcy9saXRpZ2F0aW9uLWFkdm9jYWN5FUxpdGlnYXRpb24gJiBBZHZvY2FjeWQCAg9kFgJmDxUCJC9wcmFjdGljZS1hcmVhcy9yZWFsLWVzdGF0ZS1idXNpbmVzcxZSZWFsIEVzdGF0ZSAmIEJ1c2luZXNzZAIDD2QWAmYPFQIaL3ByYWN0aWNlLWFyZWFzL2luZHVzdHJpZXMKSW5kdXN0cmllc2QCBQ8WAh8AAgMWBgIBD2QWAmYPFQIRL2NhcmVlcnMvc3R1ZGVudHMIU3R1ZGVudHNkAgIPZBYCZg8VAhAvY2FyZWVycy9sYXd5ZXJzB0xhd3llcnNkAgMPZBYCZg8VAg4vY2FyZWVycy9zdGFmZgVTdGFmZmRkvEqz0bX4IjJr+TebRc2DZMjfRL/SM/LADtuUiUD0zUo=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form'];
+if (!theForm) {
+    theForm = document.form;
 }
-/* ]]>*/
--->
-</style>
-<link rel="shortcut icon" href="/sites/all/themes/blaneymcmurtry/favicon.ico" type="image/x-icon" />
-<meta name="description" content="A full-service law firm located in the heart of Toronto's financial district, Blaney McMurtry LLP has helped clients seize opportunities and navigate challenges for 60 years in all major areas of law." />
-<meta name="abstract" content="Blaney McMurtry LLP - Toronto, Canada, Law Firm" />
-<meta name="keywords" content="lawyer,barrister,law,attorney,advocat,canada,ontario,toronto,legal,business,blaney,mcmurtry,stapells,friedman,canadian,solicitor,aboriginal,bankruptcy,competition,construction,corporate,commercial,employment,labour,entertainment,media,environmental,family,health,immigration,insurance,intellectual property,litigation" />
-<meta name="copyright" content="Copyright Blaney McMurtry LLP" />
-<link rel="canonical" href="http://www.blaney.com/" />
-<meta name="revisit-after" content="1 day" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/blaneymcmurtry/blaney_email_validation/blaney_email_validation.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/blaneymcmurtry/content_multigroup/content_multigroup.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/cck/theme/content-module.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/ckeditor/ckeditor.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/filefield/filefield.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/libraries/shadowbox/shadowbox.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/shadowbox/shadowbox.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/textsize/textsize.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/cck/modules/fieldgroup/fieldgroup.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/weblinks/contribs/weblinks_blocks/weblinks_blocks.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/blaneymcmurtry/css/views.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/blaneymcmurtry/css/datepicker.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/blaneymcmurtry/css/style.css?9" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/blaneymcmurtry/css/style_core.css?9" />
-<link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/blaneymcmurtry/css/print.css?9" />
-<script type="text/javascript" src="/sites/all/modules/blaneymcmurtry/blaney_custom_functions/js/jquery.js?9"></script>
-<script type="text/javascript" src="/misc/drupal.js?9"></script>
-<script type="text/javascript" src="/sites/all/modules/blaneymcmurtry/blaney_email_validation/blaney_email_validation.js?9"></script>
-<script type="text/javascript" src="/sites/all/modules/google_analytics/googleanalytics.js?9"></script>
-<script type="text/javascript" src="/sites/all/libraries/shadowbox/shadowbox.js?9"></script>
-<script type="text/javascript" src="/sites/all/modules/shadowbox/shadowbox_auto.js?9"></script>
-<script type="text/javascript" src="/sites/all/modules/textsize/jquery.textsize.js?9"></script>
-<script type="text/javascript" src="/sites/all/modules/jquery_plugin/jquery.cookie.min.js?9"></script>
-<script type="text/javascript" src="/sites/all/modules/views/js/base.js?9"></script>
-<script type="text/javascript" src="/sites/all/modules/views/js/ajax_view.js?9"></script>
-<script type="text/javascript" src="/sites/all/themes/blaneymcmurtry/js/jquery.tools.min.js?9"></script>
-<script type="text/javascript" src="/sites/all/themes/blaneymcmurtry/js/cufon-yui.js?9"></script>
-<script type="text/javascript" src="/sites/all/themes/blaneymcmurtry/js/georgia.font.js?9"></script>
-<script type="text/javascript" src="/sites/all/themes/blaneymcmurtry/js/site.js?9"></script>
-<script type="text/javascript" src="/sites/all/themes/blaneymcmurtry/js/jquery.tabs.min.js?9"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutbound": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "shadowbox": { "animate": 1, "animateFade": 1, "animSequence": "wh", "auto_enable_all_images": 0, "auto_gallery": 0, "autoplayMovies": true, "continuous": 0, "counterLimit": "10", "counterType": "default", "displayCounter": 1, "displayNav": 1, "enableKeys": 0, "fadeDuration": "0.35", "handleOversize": "resize", "handleUnsupported": "link", "initialHeight": 160, "initialWidth": 320, "language": "en", "modal": false, "overlayColor": "#000", "overlayOpacity": "0.85", "players": null, "resizeDuration": "0.35", "showMovieControls": 1, "slideshowDelay": "0", "viewportPadding": 20, "useSizzle": 0 }, "views": { "ajax_path": [ "/views/ajax", "/views/ajax" ], "ajaxViews": [ { "view_name": "related_publications", "view_display_id": "block_2", "view_args": "55", "view_path": "node/55", "view_base_path": "related-publications-by-practice-area", "view_dom_id": 3, "pager_element": 0 }, { "view_name": "related_news_seminars", "view_display_id": "block_1", "view_args": "55", "view_path": "node/55", "view_base_path": "related-news-seminars-in-practoce-area", "view_dom_id": 4, "pager_element": 0 } ] } });
-//--><!]]>
-</script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-  var textsizeCookieExpires = 365;
-  var textsizeCookieDomain = "/";
-  var textsizeElement = "div";
-  var textsizeElementClass = ".resizable";
-  var textsizeIncrement = 25;
-  var textsizeNormal = 100;
-  var textsizeMinimum = 50;
-  var textsizeMaximum = 200;
-  var textsizeIncrementDisplay = 25;
-  var textsizeNormalDisplay = 100;
-  var textsizeDisplay = 1;
-  var textsizeMinT = "<abbr title=\"Minimum\" class=\"textsize\">Min.</abbr> ";
-  var textsizeMaxT = "<abbr title=\"Maximum\" class=\"textsize\">Max.</abbr> ";
-  var textsizeCurrentText = "Current Size";
-  var textsizeReset = 0;
-//--><!]]>
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
 </script>
 
-    <title>Blaney McMurtry LLP |</title>
 
-		<script type="text/javascript" src="/sites/all/themes/blaneymcmurtry/js/flexslider.min.js"></script>
+<div>
 
-		<style type="text/css" media="all">@import "/sites/all/themes/blaneymcmurtry/css/style_home.css?new";</style>
-		<!--[if !IE 7]>
-		<style type="text/css">
-			#siteWrapper { display: table; height: 100%; }
-		</style>
-		<![endif]-->
-	</head>
-	<body>
-    
-    <!-- site wrapper -->
-    <div id="siteWrapper">
-
-      <!-- site container -->
-      <div id="siteContainer">
-
-        <!-- site header -->
-        <div id="accessBar">
-	<div id="accessibility" style="float: right; margin: -0.2em 0 -0.5em 0"><div id="block-textsize-accessBar" class="clear-block block block-textsize">
-
-
-  <div class="content">
-
-<ul class="textsize_inline textsize_current_inline">
-  <li class="inline">Text Size&nbsp;</li>
-  <li class="ts_decrease_variable"><a href="/textsize/decrease?destination=node%2F55" title="Text Size: Decrease -25%" class="ts_icon ts_decrease_variable textsize_decrease text_display_hidden"><span class="display_hidden">Decrease</span></a></li>
-  <li class="ts_increase_variable"><a href="/textsize/increase?destination=node%2F55" title="Text Size: Increase +25%" class="ts_icon ts_increase_variable textsize_increase text_display_hidden"><span class="display_hidden">Increase</span></a></li>
-  <li class="ts_normal_variable"><a href="/textsize/normal?destination=node%2F55" title="Text Size: Normal =100%" class="ts_icon ts_normal_variable textsize_normal text_display_hidden"><span class="display_hidden">Normal</span></a></li>
-</ul>
-<div class="ts_clear"></div>
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAATpxuAm4HFjvHFEbsxpyPDXVem3VCdI1WH8RxeNv26kb4m4smrAvYyqY7Ues+zHWH8DnHIJ2EeAIQd9TEKOV3+xnWoiFBV6iFWhFyuu9YCPH5AJg+38rPkTy+D0BD0LsIc=" />
 </div>
+        <header id="header" class="headerOverlayMenuWrapper">
+            <div class="headerOverlayMenu">
+                <div class="sg-pagewidth">
+                    <nav class="headerTopMenu clearfix">
+                       <span class="searchBox" data-function="searchoverlay">
+                            <input title="Site Search" type="text" id="tbOverlaySearch" name="tbOverlaySearch" style="opacity: 0;" class="searchInput" placeholder="Search..." data-tag="searchInput" />
+                            <span class="searchSubmit searchWrapper" data-tag="searchButtonWrapper">
+                                <input name="ctl00$searchOverlaySubmit" type="submit" id="searchOverlaySubmit" value="" class="fa btSubmit" data-tag="searchButton" />
+                            </span>
+                        </span>
+                        <a href="/our-firm/careers">Careers</a>
+                        <a href="/contact-us">Contact</a>
+                    </nav>
+                    <a class="headerMenuIconClose hiddenText" href="javascript:;" tabindex="1">Close Main Menu</a>
+                    <a href="/" class="headerMobileSiteLogoOverlayImage">
+                        <img src="/images/site/sitelogooverlay.png" alt="Blaney McMurtry LLP link to Home Page" />
+                    </a>
+                    <div class="clear"></div>
+                    <div class="mobileSiteSearchWrapper">
+                        <input name="MobileSiteSearchInput" id="MobileSiteSearchInput" type="search" title="Mobile Site Search" data-submit=".mobileSiteSearchSubmit" results="5" placeholder="SEARCH" />
+                        <button onclick="__doPostBack('ctl00$ctl06','')" class="mobileSiteSearchSubmit" alt="Submit site search"><span class="hiddenText">Mobile site search submit</span><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="headerOverlayCategories">
+                        <a href="/our-firm/history">FIRM</a>
+                        <a href="/our-lawyers">PEOPLE</a>
+                        <a class="headerOverlayPractices" href="javascript:;" aria-label="Toggle practice area menu">
+                            <div class="headerOverlayLeftArrow" style="display: none;"></div>
+                            PRACTICES<div style="" class="headerOverlayRightArrow"></div>
+                        </a>
+                        <a href="/insights">INSIGHTS</a>
+                        <a class="headerOverlayExtraCategory" href="/our-firm/careers">CAREERS</a>
+                        <a class="headerOverlayExtraCategory" href="/contact-us">CONTACT</a>
+                    </div>
+                    <div class="headerOverlayPracticesContentWrapper">
+                        <div class="headerOverlayPracticesContentLeft clearfix">
+                            
+                            
+                                    <a class="headerOverlayFeaturedLink" href="/lawyers/maria-scarfo">
+                                        <img class="headerOverlayFeaturedImage" src="/images/bio/13658_Thumbnail.png" alt="Maria Scarfo" />                                        
+                                    </a>
+                                    <div class="headerOverlayFeaturedContent">
+                                        How can we be of service?<div class="focusArrow"></div>
+                                    </div>
+                                    <div class="headerOverlayFeaturedBio">&ndash;Maria Scarfo, <br />Managing Partner</div>
+                                    <div class="clear"></div>
+                                
+                        </div>
+                        <div class="headerOverlayPracticesContentRight">
+
+
+
+                            <ul class="headerOverlayPracticesList">
+                                
+                                        
+
+                                        
+                                        <li class="parent">
+                                            <a href=" /practice-areas/litigation-advocacy">Litigation & Advocacy</a>
+                                        </li>
+                                    
+                                        
+
+                                        
+                                        <li class="parent">
+                                            <a href=" /practice-areas/real-estate-business">Real Estate & Business</a>
+                                        </li>
+                                    
+                                        
+
+                                        
+                                        <li class="parent">
+                                            <a href=" /practice-areas/industries">Industries</a>
+                                        </li>
+                                    
+                                    
+                                <li class="parent azDropTrigger">
+                                    <div class="industryFocus">
+                                        A-Z Listing&nbsp;<div class="focusArrow"></div>
+                                    </div>
+                                </li>
+
+                                
+                                        <li class="azAreasMobile">
+                                            <ul class="headerOverlayDropdownList">
+                                    
+                                        <li><a href="/practice-areas/aboriginal">Aboriginal</a></li>
+                                    
+                                        <li><a href="/practice-areas/alternative-dispute-resolution">Alternative Dispute Resolution</a></li>
+                                    
+                                        <li><a href="/practice-areas/architectural-construction-and-engineering-services">Architectural, Construction and Engineering Services</a></li>
+                                    
+                                        <li><a href="/practice-areas/aviation">Aviation</a></li>
+                                    
+                                        <li><a href="/practice-areas/business-reorganization-insolvency">Business Reorganization & Insolvency</a></li>
+                                    
+                                        <li><a href="/practice-areas/class-actions">Class Actions</a></li>
+                                    
+                                        <li><a href="/practice-areas/commercial-leasing">Commercial Leasing </a></li>
+                                    
+                                        <li><a href="/practice-areas/commercial-litigation">Commercial Litigation</a></li>
+                                    
+                                        <li><a href="/practice-areas/corporate-commercial">Corporate & Commercial</a></li>
+                                    
+                                        <li><a href="/practice-areas/corporate-finance-securities">Corporate Finance & Securities</a></li>
+                                    
+                                        <li><a href="/practice-areas/corporate-insurance">Corporate Insurance</a></li>
+                                    
+                                        <li><a href="/practice-areas/cyber-information-and-privacy-risk">Cyber, Information and Privacy Risk</a></li>
+                                    
+                                        <li><a href="/practice-areas/election-political-law">Election & Political Law</a></li>
+                                    
+                                        <li><a href="/practice-areas/employment-labour">Employment & Labour</a></li>
+                                    
+                                        <li><a href="/practice-areas/environmental">Environmental</a></li>
+                                    
+                                        <li><a href="/practice-areas/family-matrimonial">Family Law</a></li>
+                                    
+                                        <li><a href="/practice-areas/fraud-investigation-recovery-and-enforcement">Fraud Investigation Recovery and Enforcement</a></li>
+                                    
+                                        <li><a href="/practice-areas/government-procurement-litigation">Government Procurement & Litigation</a></li>
+                                    
+                                        <li><a href="/practice-areas/health-law">Health Law</a></li>
+                                    
+                                        <li><a href="/practice-areas/immigration">Immigration</a></li>
+                                    
+                                        <li><a href="/practice-areas/information-technology">Information Technology</a></li>
+                                    
+                                        <li><a href="/practice-areas/insurance-coverage-counsel">Insurance Coverage Counsel</a></li>
+                                    
+                                        <li><a href="/practice-areas/insurance-litigation">Insurance Litigation</a></li>
+                                    
+                                        <li><a href="/practice-areas/intellectual-property">Intellectual Property</a></li>
+                                    
+                                        <li><a href="/practice-areas/international-trade-and-business">International Trade and Business</a></li>
+                                    
+                                        <li><a href="/practice-areas/life-sciences">Life Sciences</a></li>
+                                    
+                                        <li><a href="/practice-areas/media-entertainment-law">Media and Entertainment Law</a></li>
+                                    
+                                        <li><a href="/practice-areas/mining">Mining</a></li>
+                                    
+                                        <li><a href="/practice-areas/municipal-planning-expropriation">Municipal, Planning & Expropriation</a></li>
+                                    
+                                        <li><a href="/practice-areas/police-liability">Police Liability </a></li>
+                                    
+                                        <li><a href="/practice-areas/privacy">Privacy</a></li>
+                                    
+                                        <li><a href="/practice-areas/real-estate">Real Estate </a></li>
+                                    
+                                        <li><a href="/practice-areas/sports-law">Sports Law</a></li>
+                                    
+                                        <li><a href="/practice-areas/tax">Tax</a></li>
+                                    
+                                        <li><a href="/practice-areas/wills-estates">Wills & Estates</a></li>
+                                    
+                                        </ul>
+                                        </li>
+                                    
+
+
+
+                                <li class="parent mobileServices">
+                                    <div class="industryFocus">
+                                        How can we be of service?<div class="focusArrow"></div>
+                                    </div>
+                                </li>
+
+                                
+                                        <li class="otherAreasMobile">
+                                            <ul class="headerOverlayDropdownList">
+                                    
+                                        <li><a href="/practice-areas/commercial-litigation">Start or defend a lawsuit</a></li>
+                                    
+                                        <li><a href="/practice-areas/commercial-litigation">Resolve a business dispute</a></li>
+                                    
+                                        <li><a href="/practice-areas/corporate-commercial">Start a business</a></li>
+                                    
+                                        <li><a href="/practice-areas/corporate-commercial">Buy or sell a business</a></li>
+                                    
+                                        <li><a href="/practice-areas/corporate-finance-securities">Finance a project / Access capital</a></li>
+                                    
+                                        <li><a href="/practice-areas/insurance-litigation">Insurance matters</a></li>
+                                    
+                                        <li><a href="/practice-areas/real-estate">Buy or sell land</a></li>
+                                    
+                                        <li><a href="/practice-areas/real-estate">Develop land</a></li>
+                                    
+                                        <li><a href="/practice-areas/business-reorganization-insolvency">Business restructuring</a></li>
+                                    
+                                        <li><a href="/practice-areas/corporate-finance-securities">Go public</a></li>
+                                    
+                                        <li><a href="/practice-areas/employment-labour">Employment and Labour issues</a></li>
+                                    
+                                        <li><a href="/practice-areas/immigration">Deal with immigration issues</a></li>
+                                    
+                                        <li><a href="/practice-areas/family-matrimonial">Family Separations</a></li>
+                                    
+                                        <li><a href="/practice-areas/wills-estates">Wills or estates issues</a></li>
+                                    
+                                        <li><a href="/practice-areas/intellectual-property">Protect your ideas</a></li>
+                                    
+                                        <li><a href="/practice-areas/commercial-litigation">Settle a dispute</a></li>
+                                    
+                                        </ul>
+                                        </li>
+                                    
+
+                            </ul>
+
+
+
+
+
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="headerOverlayDropdownMenu">
+                <div class="sg-pagewidth">
+                    
+                            <div class="azAreas sg-row sg-row-pad">
+                                <ul class="sg-col-lg-4 headerOverlayDropdownList">
+                        
+                            
+                            <li><a href="/practice-areas/aboriginal">Aboriginal</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/alternative-dispute-resolution">Alternative Dispute Resolution</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/architectural-construction-and-engineering-services">Architectural, Construction and Engineering Services</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/aviation">Aviation</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/business-reorganization-insolvency">Business Reorganization & Insolvency</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/class-actions">Class Actions</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/commercial-leasing">Commercial Leasing </a></li>
+                        
+                            
+                            <li><a href="/practice-areas/commercial-litigation">Commercial Litigation</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/corporate-commercial">Corporate & Commercial</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/corporate-finance-securities">Corporate Finance & Securities</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/corporate-insurance">Corporate Insurance</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/cyber-information-and-privacy-risk">Cyber, Information and Privacy Risk</a></li>
+                        
+                            </ul><ul class="sg-col-lg-4 headerOverlayDropdownList">
+                            <li><a href="/practice-areas/election-political-law">Election & Political Law</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/employment-labour">Employment & Labour</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/environmental">Environmental</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/family-matrimonial">Family Law</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/fraud-investigation-recovery-and-enforcement">Fraud Investigation Recovery and Enforcement</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/government-procurement-litigation">Government Procurement & Litigation</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/health-law">Health Law</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/immigration">Immigration</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/information-technology">Information Technology</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/insurance-coverage-counsel">Insurance Coverage Counsel</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/insurance-litigation">Insurance Litigation</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/intellectual-property">Intellectual Property</a></li>
+                        
+                            </ul><ul class="sg-col-lg-4 headerOverlayDropdownList">
+                            <li><a href="/practice-areas/international-trade-and-business">International Trade and Business</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/life-sciences">Life Sciences</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/media-entertainment-law">Media and Entertainment Law</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/mining">Mining</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/municipal-planning-expropriation">Municipal, Planning & Expropriation</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/police-liability">Police Liability </a></li>
+                        
+                            
+                            <li><a href="/practice-areas/privacy">Privacy</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/real-estate">Real Estate </a></li>
+                        
+                            
+                            <li><a href="/practice-areas/sports-law">Sports Law</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/tax">Tax</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/wills-estates">Wills & Estates</a></li>
+                        
+                            </ul>
+                        </div>
+                        
+                    
+                            <div class="otherAreas sg-row sg-row-pad">
+                                <ul class="sg-col-lg-4 headerOverlayDropdownList">
+                        
+                            
+                            <li><a href="/practice-areas/commercial-litigation">Start or defend a lawsuit</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/commercial-litigation">Resolve a business dispute</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/corporate-commercial">Start a business</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/corporate-commercial">Buy or sell a business</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/corporate-finance-securities">Finance a project / Access capital</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/insurance-litigation">Insurance matters</a></li>
+                        
+                            </ul><ul class="sg-col-lg-4 headerOverlayDropdownList">
+                            <li><a href="/practice-areas/real-estate">Buy or sell land</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/real-estate">Develop land</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/business-reorganization-insolvency">Business restructuring</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/corporate-finance-securities">Go public</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/employment-labour">Employment and Labour issues</a></li>
+                        
+                            </ul><ul class="sg-col-lg-4 headerOverlayDropdownList">
+                            <li><a href="/practice-areas/immigration">Deal with immigration issues</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/family-matrimonial">Family Separations</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/wills-estates">Wills or estates issues</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/intellectual-property">Protect your ideas</a></li>
+                        
+                            
+                            <li><a href="/practice-areas/commercial-litigation">Settle a dispute</a></li>
+                        
+                            </ul>
+                        </div>
+                        
+                </div>
+            </div>
+        </header>
+        <header id="header2">
+            <div class="headerContentWrapper sg-pagewidth">
+                <nav class="headerTopMenu clearfix">
+                   <span class="searchBox" data-function="search">
+                                <input title="Site Search" type="text" id="tbSearch" name="tbSearch" style="opacity: 0;" class="searchInput" placeholder="Search..." data-tag="searchInput" />
+                                <span class="searchSubmit searchWrapper" data-tag="searchButtonWrapper">
+                                    <input name="ctl00$searchSubmit" type="submit" id="searchSubmit" value="" class="fa btSubmit" data-tag="searchButton" />
+                                </span>
+                            </span>
+
+                    <a href="/our-firm/careers">Careers</a>
+                    <a href="/contact-us">Contact</a>
+                </nav>
+                <a class="headerMenuIcon hiddenText" href="javascript:;" tabindex="1" aria-label="Open Main Menu">Open Main Menu</a>
+                <div class="headerLogoWrapper">
+                    <a href="/" class="siteLogo">
+                        <img class="siteLogoImage" src="/images/site/sitelogo.png" alt="Blaney McMurtry LLP link to Home Page" />
+                        <img class="inverseLogoImage" src="/images/site/sitelogoinverse.png" alt="Blaney McMurtry LLP link to Home Page" />
+                    </a>
+                    <div class="headerLeftBorder"></div>
+                    <div class="headerRightBorder"></div>
+                </div>
+                <div class="headerSectionTitle">
+                    <h1 class="sr-only">Homepage</h1>
+                </div>
+                <div class="headerSideNavUnderlayWrapper" style="display: none;">
+                    <div class="headerSideNavUnderlay"></div>
+                </div>
+                <nav class="headerSideNav">
+                    <a class="lightbulb hiddenText" href="/insights">Insights</a>
+                    <a class="social hiddenText" data-class="social" href="javascript:;">Social</a>
+                    <a class="news hiddenText" data-class="news" href="javascript:;">News</a>
+                </nav>
+                <div class="headerSideNavContent socialContent">
+                    <div class="social">
+                        <a href="http://www.linkedin.com/company/blaney-mcmurtry-llp" target="_blank">
+                            <img src="/images/site/linkedin.png" alt="LinkedIn" />
+                        </a>
+                        <a href="http://www.facebook.com/note.php?note_id=108702482506316#!/pages/Blaney-McMurtry-LLP/112410275472037" target="_blank">
+                            <img src="/images/site/facebook.png" alt="Facebook" />
+                        </a>
+                        <a href="http://twitter.com/#!/blaneymcmurtry" target="_blank">
+                            <img src="/images/site/twitter.png" alt="Twitter" />
+                        </a>
+                        <a href="http://google.com/+BlaneyMcMurtryLLPToronto" target="_blank">
+                            <img src="/images/site/google.png" alt="Google Plus" />
+                        </a>
+                    </div>
+                </div>
+                <div class="headerSideNavContent">
+                    <div class="news">
+                        
+                                <a class="headerFeaturedNewsItem" href="/news-articles/blaney-mcmurtry-welcomes-new-partner-anna-casemore">
+                                    <span>April 14, 2016</span><br />
+                                    Blaney McMurtry Welcomes New Partner, Anna Casemore
+                                </a>
+                            
+                                <a class="headerFeaturedNewsItem" href="/news-articles/blaney-mcmurtry-welcomes-new-partner-peter-bouzalas">
+                                    <span>April 14, 2016</span><br />
+                                    Blaney McMurtry Welcomes New Partner, Peter Bouzalas
+                                </a>
+                            
+                                <a class="headerFeaturedNewsItem" href="/news-articles/chad-kopach-earns-certified-specialist-designation-from-lsuc">
+                                    <span>April 13, 2016</span><br />
+                                    Chad Kopach earns Certified Specialist designation from LSUC
+                                </a>
+                            
+                                <a class="headerFeaturedNewsItem" href="/news-articles/blaney-mcmurtry-announces-two-new-partners">
+                                    <span>March 01, 2016</span><br />
+                                    Blaney McMurtry Announces Two New Partners
+                                </a>
+                            
+                                <div class="clear"></div>
+                            
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <main role="main">
+            <div id="headernews" class="headerMobileNews">
+                <div class="headerSideNavUnderlay">
+                    <div class="headerSideNavContent">
+                        <div class="social">
+                            <a href="http://www.linkedin.com/company/blaney-mcmurtry-llp">
+                                <img src="/images/site/linkedin.png" alt="LinkedIn"/>
+                            </a>
+                            <a href="http://www.facebook.com/note.php?note_id=108702482506316#!/pages/Blaney-McMurtry-LLP/112410275472037">
+                                <img src="/images/site/facebook.png" alt="Facebook"/>
+                            </a>
+                            <a href="http://twitter.com/#!/blaneymcmurtry">
+                                <img src="/images/site/twitter.png" alt="Twitter"/>
+                            </a>
+                            <a href="http://google.com/+BlaneyMcMurtryLLPToronto">
+                                <img src="/images/site/google.png" alt="Google Plus"/>
+                            </a>
+                        </div>
+                        <div class="news">
+                            
+                                    <a class="headerFeaturedNewsItem" href="/news-articles/blaney-mcmurtry-welcomes-new-partner-anna-casemore">
+                                        <span>April 14, 2016</span><br />
+                                        Blaney McMurtry Welcomes New Partner, Anna Casemore
+                                    </a>
+                                
+                                    <a class="headerFeaturedNewsItem" href="/news-articles/blaney-mcmurtry-welcomes-new-partner-peter-bouzalas">
+                                        <span>April 14, 2016</span><br />
+                                        Blaney McMurtry Welcomes New Partner, Peter Bouzalas
+                                    </a>
+                                
+                                    <a class="headerFeaturedNewsItem" href="/news-articles/chad-kopach-earns-certified-specialist-designation-from-lsuc">
+                                        <span>April 13, 2016</span><br />
+                                        Chad Kopach earns Certified Specialist designation from LSUC
+                                    </a>
+                                
+                                    <a class="headerFeaturedNewsItem" href="/news-articles/blaney-mcmurtry-announces-two-new-partners">
+                                        <span>March 01, 2016</span><br />
+                                        Blaney McMurtry Announces Two New Partners
+                                    </a>
+                                
+                                    <div class="clear"></div>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainContentWrapper sg-pagewidth">
+                
+    <div class="mainContent">
+        <div class="sg-row">
+
+            <div class="sg-col-lg-3 sg-pull-right">
+                <h3 class="homepageClientsSay">Clients Say</h3>
+                <div class="homepageQuotes cycle-slideshow"
+                    data-cycle-slides="> .homepageQuote"
+                    data-cycle-fx="fade"
+                    data-cycle-timeout="5000"
+                    data-cycle-speed="500"
+                    data-cycle-auto-height="calc"
+                    >
+
+                    
+                            <h2 class="homepageQuote">"flexible, adaptable"</h2>
+                        
+                            <h2 class="homepageQuote">"understands our world"</h2>
+                        
+                </div>
+            </div>
+            
+            <div class="sg-col-lg-6">
+                <a class="hp-ranking-link" href="/our-firm/rankings">
+                    <div class="homepageAccolades cycle-slideshow"
+                        data-cycle-slides="> .sg-row"
+                        data-cycle-fx="fade"
+                        data-cycle-timeout="5000"
+                        data-cycle-speed="500"
+                        data-cycle-auto-height="calc"
+                        >
+                        
+                                <div class="sg-row">
+                                    <div class="sg-col-sm-2">
+                                        <div class="homepageAccoladeTitle">
+                                            Top 10 Regional Law Firm<br />
+                                            <img class="homepageAccoladeIcon" border="0" src="/images/site/AccoladeIcon.png" alt="Accolade" />
+                                        </div>
+                                    </div>
+                                    <div class="sg-col-sm-8">
+                                        <div class="homepageAccolade"><p>Canadian<br />
+Lawyer<br />
+Magazine</p>
 </div>
-</div>
-	<span class="accessContentLink"><a style="padding-lefT: 6px; color: white" href="#accessContent" style=" ;margin:2px">Skip To Content &raquo;</a></span>
-	<span class="message"></span>
-	<div style="clear:both"></div>
-</div>
-<div id="siteHeader">
-
-  <div id="sh_left">
-    <a href="/"><img src="/sites/all/themes/blaneymcmurtry/graphics/logo-placeholder.gif" width="260" height="120" alt="Blaney Mcmurtry LLP" /></a>
-  </div>
-  <div id="sh_right">
-    <!-- header navigation -->
-    <div id="headerNav">
-			<ul class="level0 " id="headerNav1"><li id="liContactUs-headerNav1" class="leaf first last"><a href="/contact-us" class="ContactUs">Contact Us</a></li>
-</ul>			<ul class="level0 " id="headerContact"><li id="liPh:416.593.1221-headerContact" class="leaf first"><a href="/contact-us" class="Ph:416.593.1221">Ph: 416.593.1221</a> |</li>
-<li id="liFax:416.593.5437-headerContact" class="leaf last"><a href="/contact-us" class="Fax:416.593.5437">Fax: 416.593.5437</a></li>
-</ul>			<ul class="level0 " id="headerNav2"><li id="liCareers-headerNav2" class="leaf first"><a href="/our-firm/careers" class="Careers">Careers</a> |</li>
-<li id="liStudentPrograms-headerNav2" class="collapsed last"><a href="/student-programs" class="StudentPrograms">Student Programs</a></li>
-</ul>    </div>
-    <!-- / header navigation -->
-    <br class="clearBoth" />
-    
-    <!-- primary navigation -->
-    <div id="priNavCont">
-      <ul class="level0 " id="priNav"><li id="liOurFirm-priNav" class="collapsed first"><a href="/content/our-firm" class="OurFirm">Our Firm</a></li>
-<li id="liOurLawyers-priNav" class="leaf"><a href="/our-lawyers" class="OurLawyers">Our Lawyers</a></li>
-<li id="liPracticeAreas-priNav" class="collapsed"><a href="/practice-areas" class="PracticeAreas">Practice Areas</a></li>
-<li id="liPublications-priNav" class="collapsed last"><a href="/publications" class="Publications">Publications</a></li>
-</ul>    </div>
-    <!-- / primary navigation -->
-    <br class="clearBoth" />
-  </div>
-</div>
-
-        <!-- / site header -->
-
-				<!-- main cta -->
-				<div id="mainCTA">
-					<div id="mainCTAScrollerCont">
-
-						<div id="mainCTAScrollerNav" class="navi"></div>
-						<div id="mainCTAScroller">
-							<div class="flexslider">
-								<ul class="slides">
-									
-  
-  <li><div style="background: url(sites/default/files/Lichty.jpg) 0 0 no-repeat;"><div class="cta_addPadding_left"><h1>Blaneys’ Mark Lichty Honoured by Toronto Lawyers Association</h1><p><span style="background-color:rgb(255, 255, 255); color:rgb(51, 51, 51); font-family:verdana,geneva,tahoma,sans-serif; font-size:12.8px">We are delighted to announce that Blaney McMurtry partner Mark G. Lichty has been named as the 2016 recipient of the&nbsp;</span><a href="http://c.ymcdn.com/sites/www.tlaonline.ca/resource/resmgr/Awards_2016/2016_-_Mark_Lichty.pdf" style="color: rgb(0, 80, 176); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 12.8px; line-height: normal; background-color: rgb(255, 255, 255);">Toronto Lawyers Association&rsquo;s Honsberger Award</a><span style="background-color:rgb(255, 255, 255); color:rgb(51, 51, 51); font-family:verdana,geneva,tahoma,sans-serif; font-size:12.8px">, in recognition of his ongoing contributions to the legal community and the community at large.</span></p>
-<a class="bEXP" href="news-articles/blaneys’-mark-lichty-honoured-toronto-lawyers-association"><span>Learn More</span></a></div></div></li>  <li><div style="background: url(sites/default/files/Rising-Star.jpg) 0 0 no-repeat;"><div class="cta_addPadding_left"><h1>.</h1><a class="bEXP" href="http://www.lexpert.ca/rising-stars/winner-detail/sundeep-sandhu-blaney-mcmurtry-llp-194 "><span>Learn More</span></a></div></div></li>  <li><div style="background: url(sites/default/files/BLM024-Web_Home_Header_02ls.jpg) 0 0 no-repeat;"><div class="cta_addPadding_left"><h1>.</h1><a class="bEXP" href="http://canadianlawyermag.com/5733/Efficiency-Flexibility-ad-Focus.html"><span>Learn More</span></a></div></div></li>  <li><div style="background: url(sites/default/files/ChambersCanada2016_0.jpg) 0 0 no-repeat;"><div class="cta_addPadding_left"><h1>Blaney McMurtry Ranked in Inaugural Chambers Canada 2016</h1><p><span style="background-color:rgb(255, 255, 255); color:rgb(51, 51, 51); font-family:verdana,geneva,tahoma,sans-serif; font-size:12.8px">Blaney McMurtry&nbsp;is pleased to announce their inclusion in the inaugural Chambers Canada 2016 Directory in the areas of Real Estate and Corporate Commercial. Click here to learn more about where Blaneys ranks.</span></p>
-<a class="bEXP" href="http://www.blaney.com/news-articles/blaney-mcmurtry-ranked-inaugural-chambers-canada-2016"><span>Learn More</span></a></div></div></li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<!-- / main cta -->
-
-				<!-- home - left column -->
-				<div class="accessibility"><div id="block-textsize-0" class="clear-block block block-textsize">
-
-
-  <div class="content">
-
-<ul class="textsize_inline textsize_current_inline">
-  <li class="inline">Text Size&nbsp;</li>
-  <li class="ts_decrease_variable"><a href="/textsize/decrease?destination=node%2F55" title="Text Size: Decrease -25%" class="ts_icon ts_decrease_variable textsize_decrease text_display_hidden"><span class="display_hidden">Decrease</span></a></li>
-  <li class="ts_increase_variable"><a href="/textsize/increase?destination=node%2F55" title="Text Size: Increase +25%" class="ts_icon ts_increase_variable textsize_increase text_display_hidden"><span class="display_hidden">Increase</span></a></li>
-  <li class="ts_normal_variable"><a href="/textsize/normal?destination=node%2F55" title="Text Size: Normal =100%" class="ts_icon ts_normal_variable textsize_normal text_display_hidden"><span class="display_hidden">Normal</span></a></li>
-</ul>
-<div class="ts_clear"></div>
-</div>
-</div>
-</div>
-
-				<div id="homeLeftCol" class="resizable">
-				<a class="accessContentAnchor" name="accessContent"></a>
-
-					<div class="homeSubCol">
-						<div id="block-views-news_seminars-block_1" class="clear-block block block-views">
-	<div class="ctaHeader">
-					<span class='h2'>News</span>
-				<a class="bRSS" href="/news/rss">RSS</a>
-	</div>
-	<div class="content">
-		<div class="view view-news-seminars view-id-news_seminars view-display-id-block_1 view-dom-id-6">
-    
-  
-  
-      <div class="view-content">
-      <div class="item-list">
-    <ul>
-          <li class="views-row views-row-1 views-row-odd views-row-first">
-      <a href="/news-articles/blaney-mcmurtry-announces-two-new-partners">March 01, 2016 - Blaney McMurtry Announces Two New Partners</a>  
-</li>
-          <li class="views-row views-row-2 views-row-even">
-      <a href="/news-articles/esposto-appointed-uhn-foundation-investment-committee">February 17, 2016 - Esposto appointed to UHN Foundation Investment Committee</a>  
-</li>
-          <li class="views-row views-row-3 views-row-odd">
-      <a href="/news-articles/ed-esposto-present-lsucs-wills-estates-practice-basics-and-annotated-will-2016">February 04, 2016 - Ed Esposto to present at LSUC's Wills & Estates Practice Basics and The Annotated Will 2016</a>  
-</li>
-          <li class="views-row views-row-4 views-row-even views-row-last">
-      <a href="/news-articles/blaney-mcmurtry-welcomes-new-associate-lauren-rakowski">February 01, 2016 - Blaney McMurtry Welcomes New Associate, Lauren Rakowski</a>  
-</li>
-      </ul>
-</div>    </div>
-  
-  
-  
-  
-  
-  
-</div> 		<a class="bViewNews" href="/news">View News</a>
-	</div>
-</div>
-					</div>
-					<div class="homeSubCol">
-						<div id="block-views-publications-block_1" class="clear-block block block-views">
-	<div class="ctaHeader">
-					<span class='h2'>Publications</span>
-				<a class="bRSS" href="publications/rss">RSS</a>
-	</div>
-	<div class="content">
-		<div class="view view-publications view-id-publications view-display-id-block_1 view-dom-id-5">
-    
-  
-  
-      <div class="view-content">
-      <div class="item-list">
-    <ul>
-          <li class="views-row views-row-1 views-row-odd views-row-first">  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/articles/supreme-court-issues-decision-has-implications-canadian-subsidiaries-foreign-owned-parents">Supreme Court Issues Decision that has Implications for Canadian Subsidiaries, Foreign-Owned Parents</a></span>
-  </div>
-</li>
-          <li class="views-row views-row-2 views-row-even">  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/articles/corporate-social-responsibility-initiatives-becoming-common-profit-seeking-businesses">Corporate Social Responsibility Initiatives  Becoming Common for Profit-Seeking Businesses</a></span>
-  </div>
-</li>
-          <li class="views-row views-row-3 views-row-odd">  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/articles/background-checks-prospective-employees-limited-new-law-take-effect-later-year">Background Checks on Prospective Employees Limited by New Law to take Effect Later this Year</a></span>
-  </div>
-</li>
-          <li class="views-row views-row-4 views-row-even views-row-last">  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/newsletters/employment-update-february-2016">Employment Update: February 2016</a></span>
-  </div>
-</li>
-      </ul>
-</div>    </div>
-  
-  
-  
-  
-  
-  
-</div> 		<a class="bViewPublications" href="/publications">View Publications</a>
-	</div>
-</div>
-					</div>
-					<br class="clearBoth" />
-					<div class="homeSubContent">
-              <div id="innerContent">
-    
-<div id="node-55" class="node">
-	
-	
-  <div class="content clear-block">
-				<h1>A Full Range of Legal Services.</h1>
-<p class="rtejustify">Blaney McMurtry LLP takes a unique approach with each of our clients. We focus on your needs and develop visionary and strategic solutions to challenging legal issues.</p>
-<p class="rtejustify">With 60 years&#39; experience and the expertise of more than 120 lawyers, we offer our clients the cost and relationship advantages of partnering with a mid-sized firm, the specialized expertise of a small boutique firm and access to international legal services.</p>
-<p class="rtejustify"><a href="http://www.blaney.com/content/our-firm" rel="newWindow">Learn more</a> about our Firm.</p>
-  </div>
-
-  <div class="clear-block">
-    <div class="meta">
+                                    </div>
+                                </div>
+                            
+                    </div>
+                </a>
+            </div>
         </div>
-
-      </div>
-</div>
-  </div>
-  </div>				</div>
-				<!-- / home - left column -->
-
-				<!-- home - right column -->
-				<div id="homeRightCol">
-					<!-- search box -->
-					<div id="searchBox">
-	<div id="searchNavCont">
-		<ul id="searchNav">
-			<li id="liFullSite"><a class="active" href="#">Full Site</a></li>
-			<li id="liLawyers"><a href="#">Lawyers</a></li>
-		</ul>
-	</div>
-	<!-- full site box -->
-	<div id="sBox_fullSite" class="active">
-		<div class="addPadding">
-			<form action="/search/node" method="get" accept-charset="UTF-8" id="search-block-form">
-				<div id="sBox_fs_input">
-					<label for="edit-search-block-form-keys">Search Terms: </label>
-					<input id="edit-search-theme-form-form-token" type="hidden" name="form_token" value="b432d8fd6c645e4bc0906a14f4b7e444"  />
-					<input id="edit-search-block-form" type="hidden" name="form_id" value="search_block_form" />
-					<input id="edit-search-block-form-keys" type="text" maxlength="128" name="keys" />
-				</div>
-				<div id="sBox_fs_btn">
-					<input type="submit" name="op" id="edit-search-fs" value="Search" class="form-submit" />			
-				</div>
-			</form>
-			<br class="clearBoth" />
-		</div>
-	</div>
-	<!-- / full site box -->
-	
-	<!-- lawyers box -->
-	<div id="sBox_lawyers">
-		<div class="addPadding">
-			<form action="/"  accept-charset="UTF-8" method="post" id="blaney-search-lawyers-searchthelawyers-form">
-<div><fieldset><legend><span>Search our lawyers by name, year of call, languages spoken and practice areas.</span></legend><table class="blaney_search_lawyers" cellpadding="0" cellspacing="0" border="0">
-<tbody>
- <tr class="odd"><td><div class="form-item" id="edit-lawyer-first-name-wrapper">
- <label for="edit-lawyer-first-name">First Name: </label>
- <input  aria-required="false" type="text" maxlength="60" name="lawyer_first_name" id="edit-lawyer-first-name" size="20" value="" class="form-text" />
-</div>
-</td> </tr>
- <tr class="even"><td><div class="form-item" id="edit-lawyer-last-name-wrapper">
- <label for="edit-lawyer-last-name">Last Name: </label>
- <input  aria-required="false" type="text" maxlength="60" name="lawyer_last_name" id="edit-lawyer-last-name" size="20" value="" class="form-text" />
-</div>
-</td> </tr>
- <tr class="odd"><td><div class="form-item" id="edit-lawyer-barcall-year-wrapper">
- <label for="edit-lawyer-barcall-year">Year of Call: </label>
- <input  aria-required="false" type="text" maxlength="4" name="lawyer_barcall_year" id="edit-lawyer-barcall-year" size="20" value="" class="form-text" />
-</div>
-</td> </tr>
- <tr class="even"><td><div class="form-item" id="edit-lawyer-language-wrapper">
- <label for="edit-lawyer-language">Language: </label>
- <select  aria-required="false" name="lawyer_language" class="form-select" id="edit-lawyer-language"  size="1"><option value="0">Select a Language</option><option value="142">Afrikaans</option><option value="161">Assyrian</option><option value="152">Bulgarian</option><option value="164">Cantonese</option><option value="144">Croatian</option><option value="42">English</option><option value="160">Farsi</option><option value="43">French</option><option value="45">German</option><option value="137">Greek</option><option value="141">Hebrew</option><option value="138">Italian</option><option value="131">Korean</option><option value="139">Macedonian</option><option value="134">Mandarin</option><option value="136">Polish</option><option value="168">Punjabi</option><option value="162">Romanian</option><option value="167">Russian</option><option value="143">Serbian</option><option value="154">Sinhala</option><option value="44">Spanish</option><option value="165">Taishanese</option><option value="155">Tamil</option><option value="140">Ukrainian</option></select>
-</div>
-</td> </tr>
- <tr class="odd"><td><div class="form-item" id="edit-lawyer-practice-area-wrapper">
- <label for="edit-lawyer-practice-area">Practice Area: </label>
- <select  aria-required="false" name="lawyer_practice_area" class="form-select" id="edit-lawyer-practice-area"  size="1"><option value="0">Select a Practice Area</option><option value="95">Aboriginal</option><option value="751">ACES Commitment</option><option value="752">ACES Expertise</option><option value="756">ADR Process</option><option value="96">Alternative Dispute Resolution</option><option value="97">Architectural, Construction and Engineering Services</option><option value="98">Aviation</option><option value="99">Business Reorganization &amp; Insolvency</option><option value="100">Class Actions</option><option value="101">Commercial Litigation</option><option value="102">Corporate &amp; Commercial</option><option value="103">Corporate Finance &amp; Securities</option><option value="104">Corporate Insurance</option><option value="2752">Cyber, Information and Privacy Risk</option><option value="105">E-Commerce</option><option value="1517">Election &amp; Political Law</option><option value="758">Employment</option><option value="116">Employment &amp; Labour</option><option value="760">Employment &amp; Labour - Immigration</option><option value="107">Environmental</option><option value="108">Family &amp; Matrimonial</option><option value="1798">Family Law - Cases</option><option value="1795">Family Law - FAQ</option><option value="1799">Family Law - Glossary of Terms</option><option value="1796">Family Law - Preparing For Your First Meeting</option><option value="1797">Family Law - Resources</option><option value="2457">Fraud Investigation Recovery and Enforcement</option><option value="109">Government Procurement &amp; Litigation</option><option value="120">Health Law</option><option value="759">Human Rights &amp; Equality</option><option value="110">Immigration</option><option value="754">Immigration - FAQ</option><option value="750">Immigration - Services</option><option value="753">Industry Links</option><option value="112">Information Technology</option><option value="113">Insurance Coverage Counsel</option><option value="114">Insurance Litigation</option><option value="115">Intellectual Property</option><option value="1661">International Trade and Business</option><option value="757">Labour Relations</option><option value="125">Landlord and Tenant Relations</option><option value="1572">Legal Risk Management Services</option><option value="117">Life Sciences</option><option value="106">Media &amp; Entertainment Law</option><option value="111">Mining</option><option value="118">Municipal, Planning &amp; Expropriation</option><option value="761">Occupational Health &amp; Safety</option><option value="763">Pensions &amp; Benefits</option><option value="2021">Police Liability </option><option value="119">Privacy</option><option value="121">Real Estate &amp; Leasing</option><option value="755">Risk Management Counsel of Canada</option><option value="122">Sports Law</option><option value="123">Tax</option><option value="764">Training</option><option value="1893">Why Use an Immigration Lawyer?</option><option value="124">Wills &amp; Estates</option><option value="762">Workplace Safety &amp; Insurance</option></select>
-</div>
-</td> </tr>
- <tr class="even"><td><div id="sBox_law_btn"><input type="submit" name="op" id="edit-search" value="Search"  class="form-submit" />
-</div></td> </tr>
-</tbody>
-</table>
-</fieldset><input type="hidden" name="form_build_id" id="form-BY2Og92Voq_gXHn9amUO66wSseWDJ8yAZg8aFzZds_8" value="form-BY2Og92Voq_gXHn9amUO66wSseWDJ8yAZg8aFzZds_8"  />
-<input type="hidden" name="form_id" id="edit-blaney-search-lawyers-searchthelawyers-form" value="blaney_search_lawyers_searchthelawyers_form"  />
-
-</div></form>
-			<a class="bClose" href="#">close [X]</a>
-		</div>
-	</div>
-	<!-- / lawyers box -->
-</div>					<!-- / search box -->
-
-					<div id="ctaBoxes">
-						<div id="block-views-side_ctas-block_1" class="clear-block block block-views">
-
-
-  <div class="content"><div class="view view-side-ctas view-id-side_ctas view-display-id-block_1 view-dom-id-7">
-    
-  
-  
-      <div class="view-content">
-        <div class="views-row views-row-1 views-row-odd views-row-first">
-    
-<div id="node-2478" class="node">
-	<!-- cta box -->
-	<div class="ctaBox">
-		<div class="cBox_image">
-			<a href="http://www.blaney.com/blaneys-blogs"><img src="http://www.blaney.com/sites/default/files/imagecache/side_cta_image/blogicon.jpg" alt="Blaneys Blogs" title="Blaneys Blogs" width="104" height="113" class="side-cta-image"/></a>
-		</div>
-		<div class="cBox_data">
-			<div class="addPadding">
-				<h2>Blaneys Blogs</h2>
-				<p>Follow blogs published by our Firm and individual lawyers.&nbsp;<a href="http://www.blaney.com/blaneys-blogs" style="font-size: 13px;">more &gt;</a></p>
-			</div>
-		</div>
-	</div>
-	<!-- cta box -->
-</div>
-  </div>
-  <div class="views-row views-row-2 views-row-even">
-    
-<div id="node-2503" class="node">
-	<!-- cta box -->
-	<div class="ctaBox">
-		<div class="cBox_image">
-			<a href="http://www.blaney.com/podcast"><img src="http://www.blaney.com/sites/default/files/imagecache/side_cta_image/podcast-icon.jpg" alt="Blaneys Podcast" title="Blaneys Podcast" width="104" height="113" class="side-cta-image"/></a>
-		</div>
-		<div class="cBox_data">
-			<div class="addPadding">
-				<h2>Blaneys Podcast</h2>
-				<p>Podcasts featuring a variety of topics presented by Blaneys lawyers. <a href="http://www.blaney.com/podcast">more &gt;</a></p>
-			</div>
-		</div>
-	</div>
-	<!-- cta box -->
-</div>
-  </div>
-  <div class="views-row views-row-3 views-row-odd">
-    
-<div id="node-57" class="node sticky">
-	<!-- cta box -->
-	<div class="ctaBox">
-		<div class="cBox_image">
-			<a href="/student-programs"><img src="http://www.blaney.com/sites/default/files/imagecache/side_cta_image/img_ctabox_01.jpg" alt="Student Programs" title="Student Programs" width="104" height="113" class="side-cta-image"/></a>
-		</div>
-		<div class="cBox_data">
-			<div class="addPadding">
-				<h2>Student Programs</h2>
-				<p>Blaney McMurtry is looking for superior students.<br />
-	<a href="/student-programs">more &gt;</a></p>
-			</div>
-		</div>
-	</div>
-	<!-- cta box -->
-</div>
-  </div>
-  <div class="views-row views-row-4 views-row-even views-row-last">
-    
-<div id="node-1677" class="node">
-	<!-- cta box -->
-	<div class="ctaBox">
-		<div class="cBox_image">
-			<a href="http://www.lsuc.on.ca/justicia_project/"><img src="http://www.blaney.com/sites/default/files/imagecache/side_cta_image/justicia-logo-small_0.gif" alt="The Justicia Project" title="The Justicia Project" width="103" height="113" class="side-cta-image"/></a>
-		</div>
-		<div class="cBox_data">
-			<div class="addPadding">
-				<h2>The Justicia Project</h2>
-				<p>Committed to retaining and advancing women lawyers in private practice. <a href="http://www.lsuc.on.ca/justicia_project/">more &gt;</a></p>
-			</div>
-		</div>
-	</div>
-	<!-- cta box -->
-</div>
-  </div>
     </div>
-  
-  
-  
-  
-  
-  
-</div> </div>
-</div>
-					</div>
-				</div>
-				<!-- / home - right column -->
-				<br class="clearBoth" />
 
-      </div>
-      <!-- site container -->
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footerContentWrapper sg-pagewidth">
+                <div class="footerTopContent">
+                    
+                            <div class="footerTopCategory">
+                                <div class="footerCategory"><span>Firm</span></div>
+                                <ul>
+                        
+                            <li><a href="/our-firm/history">Our Firm</a></li>
+                        
+                            <li><a href="/our-firm/rankings">Recognition</a></li>
+                        
+                            <li><a href="/our-firm/affiliations">Affiliations</a></li>
+                        
+                            </ul>
+                            </div>
+                        
+                    
+                            <div class="footerTopCategory">
+                                <div class="footerCategory"><span>Practices</span></div>
+                                <ul>
+                        
+                            <li><a href="/practice-areas/litigation-advocacy">Litigation & Advocacy</a></li>
+                        
+                            <li><a href="/practice-areas/real-estate-business">Real Estate & Business</a></li>
+                        
+                            <li><a href="/practice-areas/industries">Industries</a></li>
+                        
+                             <li> <a class="footerAZ" href="javascript:;">A-Z Listing</a></li> 
+                             <li> <a class="footerOther" href="javascript:;">How can we be of service?</a></li> 
+                            </ul>
+                            </div>
+                        
+                    <div class="footerTopCategory">
+                        <div class="footerCategory"><a href="/our-lawyers">People</a></div>
+                    </div>
+                    <div class="footerTopCategory">
+                           <div class="footerCategory"><a href="/insights">Insight</a></div>
+                           <ul>
+                               <li> <a href="/articles">Publications</a></li> 
+                               <li> <a href="/speaking">Speaking</a></li>    
+                               <li> <a href="/news">News</a></li>    
+                               <li> <a href="/in-the-media">In The Media</a></li> 
+                               <li> <a href="/newsletters">Newsletters</a></li>       
+                               <li> <a href="/textbooks">Textbooks</a></li>
+                               <li> <a href="/blaneys-blogs">Blogs</a></li>    
+                               <li> <a href="/podcast">Podcasts</a></li>       
+                           </ul>
+                    </div>
+                 
+                       
+                            <div class="footerTopCategory">
+                                <div class="footerCategory"><a href="/our-firm/careers">Careers</a></div>
+                                <ul>
+                        
+                            <li><a href="/careers/students">Students</a></li>
+                        
+                            <li><a href="/careers/lawyers">Lawyers</a></li>
+                        
+                            <li><a href="/careers/staff">Staff</a></li>
+                        
+                            </ul>
+                            </div>
+                        
+                    <div class="footerTopCategory">
+                        <div class="footerCategory"><a href="/contact-us">Contact</a></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="footerBottomContent">
+                    <div class="footerBottomLinks">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/accessibility">Accessibility</a>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="/TAGLaw" class="footerIcon hiddenText">US TAG Law</a>
+                    <p class="footerTagLine">Blaney McMurtry is a TAGLaw member firm.</p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </footer>
 
-    </div>
-    <!-- / site wrapper -->
+        <div id="pagemarker-lg"></div>
+    </form>
 
-		<!-- site footer -->
-		<div id="siteFooter">
-  <div id="footerNavCont">
-    <ul class="level0 " id="footerNav"><li id="liRSSFeed-footerNav" class="leaf first"><a href="/rss-feeds" class="RSSFeed">RSS Feed</a> |</li>
-<li id="liSiteMap-footerNav" class="leaf"><a href="/sitemap" class="SiteMap">Site Map</a> |</li>
-<li id="liPrivacyPolicy-footerNav" class="leaf"><a href="/privacy-policy" class="PrivacyPolicy">Privacy Policy</a> |</li>
-<li id="liAccessibility-footerNav" class="leaf"><a href="/accessibility" class="Accessibility">Accessibility</a> |</li>
-<li id="liContactUs-footerNav" class="leaf last"><a href="/contact-us" class="ContactUs">Contact Us</a></li>
-</ul>    <div id="socialNet">
-      <p>|&nbsp;&nbsp;Follow Us:</p>
-      <ul>
-        <li id="sn_linkedin"><a href="http://www.linkedin.com/company/blaney-mcmurtry-llp" target="_blank"></a></li>
-        <li id="sn_facebook"><a href="http://www.facebook.com/note.php?note_id=108702482506316#!/pages/Blaney-McMurtry-LLP/112410275472037" target="_blank"></a></li>
-        <li id="sn_twitter"><a href="http://twitter.com/#!/blaneymcmurtry" target="_blank"></a></li>
-        <li id="sn_gplus"><a href="http://google.com/+BlaneyMcMurtryLLPToronto" target="_blank"></a></li>
-      </ul>
-    </div>
-    <br class="clearBoth" />
-    <div id="footerTagLaw">
-      <div id="block-block-6" class="clear-block block block-block">
-
-
-  <div class="content"><p><a href="/taglaw" id="tagLawLogo"><img alt="TagLaw Member" height="45" src="/sites/all/themes/blaneymcmurtry/graphics/logo_taglaw.png" width="90" /></a></p>
-<p class="tagLawText">Blaney McMurtry is a <a href="/taglaw">TAGLaw</a> member firm.</p>
-</div>
-</div>
-    </div>
-    <div id="footerCopy">
-      <p class="sf_acro">Web design by <a href="http://www.acromediainc.com" target="_blank">Acro Media Inc</a></p>
-      <p class="sf_copy">Copyright &copy;&nbsp;<span id="insertYear">2010</span>&nbsp;<a href="/">Blaney McMurtry</a>. All rights reserved. </p>
-    </div>
-  </div>
-  <script type="text/javascript">
-    //<![CDATA[
-    Cufon.now();
-    //]]>
-  </script>
-</div>
-
-<!-- crm tracking -->
-<script type="text/javascript">
- var cdJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
- document.write(unescape("%3Cscript src='" + cdJsHost + "analytics.clickdimensions.com/ts.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-
-<script type="text/javascript">
- var cdAnalytics = new clickdimensions.Analytics('analytics.clickdimensions.com');
- cdAnalytics.setAccountKey('ax9vb839SG0ecTm5VCovYc');
- cdAnalytics.setDomain('blaney.com');
- cdAnalytics.trackPage();
-</script>
-<!-- / crm tracking -->
-		<!-- / site footer -->
-
-    <script type="text/javascript">
-<!--//--><![CDATA[//><!--
-
-      Shadowbox.path = "/sites/all/libraries/shadowbox/";
-      Shadowbox.init(Drupal.settings.shadowbox);
-    
-//--><!]]>
-</script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-5133139-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
-//--><!]]>
-</script>
-  </body>
+</body>
 </html>
+<!-- Cached:5/9/2016 1:27:44 PM -->

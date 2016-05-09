@@ -78,6 +78,12 @@ div#bottom1 ul.maximenuck li.maximenuck.item374.level1.active > a.maximenuck spa
 div#bottom1 ul.maximenuck2 li.maximenuck.item374.level1.active > a.maximenuck span.titreck, div#bottom1 ul.maximenuck2 li.maximenuck.item374.level1.active > span.separator span.titreck { font-weight: normal !important; } 
 div#bottom1 ul.maximenuck li.maximenuck.item416.level1.active > a.maximenuck span.titreck, div#bottom1 ul.maximenuck li.maximenuck.item416.level1.active > span.separator span.titreck,
 div#bottom1 ul.maximenuck2 li.maximenuck.item416.level1.active > a.maximenuck span.titreck, div#bottom1 ul.maximenuck2 li.maximenuck.item416.level1.active > span.separator span.titreck { font-weight: normal !important; } 
+div#bottom1.maximenuckv ul.maximenuck ul.maximenuck2 li.maximenuck > .separator,
+div#bottom1 .maxipushdownck ul.maximenuck2 li.maximenuck > .separator {  } 
+div#bottom1.maximenuckv ul.maximenuck ul.maximenuck2 li.maximenuck > .separator span.titreck,
+div#bottom1 .maxipushdownck ul.maximenuck2 li.maximenuck > .separator span.titreck {  } 
+div#bottom1.maximenuckv ul.maximenuck ul.maximenuck2 li.maximenuck > .separator span.descck,
+div#bottom1 .maxipushdownck ul.maximenuck2 li.maximenuck > .separator span.descck{  } 
 div#bottom2 ul.maximenuck li.maximenuck.item292.level1.active > a.maximenuck span.titreck, div#bottom2 ul.maximenuck li.maximenuck.item292.level1.active > span.separator span.titreck,
 div#bottom2 ul.maximenuck2 li.maximenuck.item292.level1.active > a.maximenuck span.titreck, div#bottom2 ul.maximenuck2 li.maximenuck.item292.level1.active > span.separator span.titreck { font-weight: normal !important; } 
 div#bottom2 ul.maximenuck li.maximenuck.item293.level1.active > a.maximenuck span.titreck, div#bottom2 ul.maximenuck li.maximenuck.item293.level1.active > span.separator span.titreck,
@@ -804,9 +810,9 @@ jQuery(window).on('load',  function() {
 
 <div itemprop="articleBody">
 	<div class="row-fluid">
-<div class="span5">
-<p>		<div class="moduletable">
-							<h3>News & Updates</h3>
+	<div class="span5">
+		<h3 style="margin-top:30px!important;"><a href="/news-updates.html">News &amp; Updates</a></h3>
+		<p>		<div class="moduletable">
 						<ul class="latestnews">
 	<li itemscope itemtype="http://schema.org/Article">
 		<a href="/courses/introduction-to-the-bible-for-free.html" itemprop="url">
@@ -815,7 +821,7 @@ jQuery(window).on('load',  function() {
 		</a>
 	</li>
 	<li itemscope itemtype="http://schema.org/Article">
-		<a href="/17-news-updates/56-rmc-outcome-report.html" itemprop="url">
+		<a href="/news-updates/56-rmc-outcome-report.html" itemprop="url">
 			<span itemprop="name">
 				RMC Outcome Report			</span>
 		</a>
@@ -827,13 +833,13 @@ jQuery(window).on('load',  function() {
 		</a>
 	</li>
 	<li itemscope itemtype="http://schema.org/Article">
-		<a href="/17-news-updates/53-evangelical-missionary-church-of-canada.html" itemprop="url">
+		<a href="/news-updates/53-evangelical-missionary-church-of-canada.html" itemprop="url">
 			<span itemprop="name">
 				Evangelical Missionary Church of Canada			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="http://schema.org/Article">
-		<a href="/17-news-updates/52-centre-for-pastoral-care-education.html" itemprop="url">
+		<a href="/news-updates/52-centre-for-pastoral-care-education.html" itemprop="url">
 			<span itemprop="name">
 				Centre for Pastoral Care Education			</span>
 		</a>
@@ -841,8 +847,9 @@ jQuery(window).on('load',  function() {
 </ul>
 		</div>
 	</p>
-</div>
-<div class="span7">
+	</div>
+	<div class="span7">
+		<p>
 <div data-uk-slideshow="{autoplay: true }">
 
     <div class="uk-slidenav-position">
@@ -896,14 +903,15 @@ jQuery(window).on('load',  function() {
 </ul>    </div>
     
 </div>
-</div>
+</p>
+	</div>
 </div>
 <div class="row-fluid">
-<div class="span5">
-<p style="padding-top: 10px;"><a href="/donate-to-pathways/donate-now.html" class="fullred btn">Donate Now</a></p>
-<p><span style="font-size: 14px; line-height: 16px;">We&rsquo;re pleased to provide information about any of our programs to persons considering making a donation to our ministry.</span></p>
-		<div class="moduletable">
-							<h3>The ROCK Newsletter</h3>
+	<div class="span5">
+		<p style="padding-top: 10px;"><a href="/donate-to-pathways/donate-now.html" class="fullred btn">Donate Now</a></p>
+		<p><span style="font-size: 14px; line-height: 16px;">We&rsquo;re pleased to provide information about any of our programs to persons considering making a donation to our ministry.</span></p>
+		<h3><a href="/the-rock-newsletter.html">The Rock Newsletter</a></h3>
+				<div class="moduletable">
 						
 <div class="latestnewsenhanced_128 newslist">
 	<ul class="newsitems">
@@ -919,8 +927,8 @@ jQuery(window).on('load',  function() {
 							<div class="newshead headleft">
 									
 									<div class="picture">
-																					<a href="/39-the-rock-newsletter/88-the-rock-volume-3-2015.html" title="The Rock Volume 3 - 2015" >
-												<img alt="The Rock Volume 3 - 2015" src="http://www.rockymountaincollege.ca/tmp/thumb_128_88.jpg" style="position:relative;top:0px" />											</a>
+																					<a href="/the-rock-newsletter/151-the-rock-volume-1-2016.html" title="The Rock Volume 1 - 2016" >
+												<img alt="The Rock Volume 1 - 2016" src="http://www.rockymountaincollege.ca/tmp/thumb_128_151.jpg" style="position:relative;top:0px" />											</a>
 																	
 									</div>
 									
@@ -933,8 +941,8 @@ jQuery(window).on('load',  function() {
 					
 											
 													<h4 class="newstitle">
-																	<a href="/39-the-rock-newsletter/88-the-rock-volume-3-2015.html" title="The Rock Volume 3 - 2015" >
-										<span>The Rock Volume 3 - 2015</span>
+																	<a href="/the-rock-newsletter/151-the-rock-volume-1-2016.html" title="The Rock Volume 1 - 2016" >
+										<span>The Rock Volume 1 - 2016</span>
 									</a>
 															</h4>
 												
@@ -943,7 +951,7 @@ jQuery(window).on('load',  function() {
 													<div class="newsintro">
 								
 What happened at Rocky Mountain College?
-Rocky Mountain College was formed 23 years ago when ...															</div>
+Rocky Mountain College was formed 24 years ago when ...															</div>
 											
 												
 												
@@ -957,15 +965,15 @@ Rocky Mountain College was formed 23 years ago when ...															</div>
 </div>
 		</div>
 	</div>
-<div class="span7">
-<h3>Student Stories</h3>
-
+	<div class="span7">
+		<h3><a href="/8-about-pathways/4-student-outcomes.html">Student Stories</a></h3>
+		
 
 <div class="uk-grid uk-grid-match " data-uk-grid-match="{target:'> div > ul'}" data-uk-grid-margin>
     <div class="uk-width-medium-1-4 uk-float-right uk-flex-order-last-medium">
         
 
-<ul class="uk-thumbnav uk-flex-column" data-uk-switcher="{connect:'#wk-5d9',animation:'fade'}">
+<ul class="uk-thumbnav uk-flex-column" data-uk-switcher="{connect:'#wk-9f5',animation:'fade'}">
         <li><a href="/"><img src="/media/widgetkit/rmc-ss-dani-c73646d894b2af66e2222f570e8f2648.png" alt="Danielle Ezard" width="70" height="70"></a></li>
         <li><a href="/"><img src="/media/widgetkit/rmc-ss-jamie-hunka-5a96b3c1999047e831c4e3d4049d6449.png" alt="Jamie Hunka" width="70" height="70"></a></li>
 </ul>
@@ -973,7 +981,7 @@ Rocky Mountain College was formed 23 years ago when ...															</div>
     </div>
     <div class="uk-width-medium-3-4">
         
-<ul id="wk-5d9" class="uk-switcher uk-text-left " data-uk-check-display>
+<ul id="wk-9f5" class="uk-switcher uk-text-left " data-uk-check-display>
 
     
     <li>
@@ -1161,7 +1169,7 @@ Rocky Mountain College was formed 23 years ago when ...															</div>
 	</li>
 	</ul>
 	<div class="clr"></div></div><div class="clr"></div></div></div><div class="maxidrop-bottom"><div class="maxidrop-bottom2"></div></div></div>
-	</li><li data-level="1" class="maximenuck item309 level1 " style="z-index : 11929;"><a class="maximenuck " href="/alumni.html"><span class="titreck">Alumni</span></a>
+	</li><li data-level="1" class="maximenuck item309 level1 " style="z-index : 11929;"><a class="maximenuck " href="http://www.rockymountaincollege.ca/alumni_directory/"><span class="titreck">Alumni</span></a>
 		</li><li data-level="1" class="maximenuck item364 last level1 " style="z-index : 11928;"><a class="maximenuck " href="/contact.html"><span class="titreck">Contact</span></a></li>            </ul>
         </div>
         <div class="maxiroundedright"></div>
@@ -1200,7 +1208,7 @@ Rocky Mountain College was formed 23 years ago when ...															</div>
 <p>Courses are available to Anyone. Anywhere. Anytime. Often times God speaks to us and we yearn for a richer life. But obstacles appear.</p>
 <p>Pathways is about removing obstacles and allowing access to quality learning experiences We foster changed lives both locally and globally.</p>
 <p>It is our hope that we can show you a new pathway to learning, ministry and a richer, more meaningful life. Thank you for exploring RMC&rsquo;s Pathways program.</p>
-<p><img src="/uploads/images/president-sig.jpg" width="121" height="76" alt="president sig" style="float: right;" /></p></div>
+<p><img src="/uploads/images/president-sig.jpg" alt="president sig" style="float: right;" height="76" width="121" /></p></div>
 	                	</div>
                 	</div>
            </div>
@@ -1339,21 +1347,19 @@ Rocky Mountain College was formed 23 years ago when ...															</div>
 
 <div class="custom nomarginall nopaddingall"  >
 	<div class="row-fluid">
-	<div class="span3">
-		<p>&copy; 2016 Pathways<br /><span style="font-size: 12px;">Powered by <a href="http://www.rockymountaincollege.ca/" target="_blank">Rocky Mountain College</a></span></p>
-	</div>
-	<div class="span2">
-		<p>4039 Brentwood Road NW<br /> Calgary, Alberta, CANADA T2L 1L1</p>
-	</div>
-	<div class="span2">
-		<p><a href="mailto:info@rockymountaincollege.ca">info@rockymountaincollege.ca</a>&nbsp;<br /> Toll free: <a href="tel:+18779686762">1-877-YOUnRMC</a></p>
-	</div>
-	<div class="span2"><span style="font-size: 24px;"><a href="http://www.facebook.com/rockymountaincollege" target="_blank"><i class="fa fa-facebook"></i>&nbsp;</a> <a href="http://www.twitter.com/RMCPathways" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a> <a href="http://www.youtube.com/user/rockymountaincollege" target="_blank"><i class="fa fa-youtube"></i>&nbsp;</a> <a href="#" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;</a> <a href="#" target="_blank"><i class="fa fa-google-plus"></i>&nbsp;</a></span></div>
-	<div class="span3">
-		<p>
-			<a href="http://www.rockymountaincollege.ca/" target="_blank"><img src="/uploads/images/logo-footer.png" width="289" height="42" alt="logo footer" /></a>
-		</p>
-	</div>
+<div class="span3">
+<p>&copy; 2016 Pathways<br /><span style="font-size: 12px;">Powered by <a href="http://www.rockymountaincollege.ca/" target="_blank">Rocky Mountain College</a></span></p>
+</div>
+<div class="span2">
+<p>4039 Brentwood Road NW<br /> Calgary, Alberta, CANADA T2L 1L1</p>
+</div>
+<div class="span2">
+<p><a href="mailto:info@rockymountaincollege.ca">enrolment@rockymountaincollege.ca</a>&nbsp;<br /> Toll free: <a href="tel:+18779686762">1-877-YOUnRMC</a></p>
+</div>
+<div class="span2"><span style="font-size: 24px;"><a href="http://www.facebook.com/rockymountaincollege" target="_blank"><i class="fa fa-facebook"></i>&nbsp;</a> <a href="http://www.twitter.com/RMCPathways" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a> <a href="http://www.youtube.com/user/rockymountaincollege" target="_blank"><i class="fa fa-youtube"></i>&nbsp;</a> <a href="#" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;</a> <a href="#" target="_blank"><i class="fa fa-google-plus"></i>&nbsp;</a></span></div>
+<div class="span3">
+<p><a href="http://www.rockymountaincollege.ca/" target="_blank"><img src="/uploads/images/logo-footer.png" alt="logo footer" height="42" width="289" /></a></p>
+</div>
 </div></div>
 	                	</div>
                 	</div>
@@ -1371,7 +1377,7 @@ Rocky Mountain College was formed 23 years ago when ...															</div>
            	<div class="module-surround">
 	           		                	<div class="module-content">
 	                		<div id="jf_mm_menu" class=""><nav><h2><i class="fa fa-times"></i>Pathways</h2><ul>
-<li class="item-101 current active"><a href="/" >Home</a><h2><i></i>Home</h2></li><li class="item-142 deeper parent"><a href="/about-pathways/about-pathways-rmc.html" >About Pathways</a><h2><i></i>About Pathways</h2><ul class="nav-child unstyled small"><li class="item-310"><a href="/about-pathways/history-of-rocky-mountain-college.html" >History of Rocky Mountain College</a><h2><i></i>History of Rocky Mountain College</h2></li><li class="item-311"><a href="/about-pathways/about-pathways-rmc.html" >About Pathways</a><h2><i></i>About Pathways</h2></li><li class="item-312"><a href="/about-pathways/pathways-team.html" >Pathways Team</a><h2><i></i>Pathways Team</h2></li><li class="item-313"><a href="/about-pathways/adjunct-faculty.html" >Adjunct Faculty</a><h2><i></i>Adjunct Faculty</h2></li><li class="item-314"><a href="/about-pathways/governance.html" >Governance</a><h2><i></i>Governance</h2></li><li class="item-315"><a href="/about-pathways/mission-vision-statement-of-belief.html" >Mission, Vision, Statement Of Belief</a><h2><i></i>Mission, Vision, Statement Of Belief</h2></li><li class="item-362"><a href="/about-pathways/student-stories.html" >Student Stories</a><h2><i></i>Student Stories</h2></li></ul></li><li class="item-299 deeper parent"><a href="/prospective-students.html" >Prospective Students</a><h2><i></i>Prospective Students</h2><ul class="nav-child unstyled small"><li class="item-316"><a href="/prospective-students/accreditation.html" >Accreditation</a><h2><i></i>Accreditation</h2></li><li class="item-317"><a href="/prospective-students/test-drive-pathways.html" >Test Drive Pathways</a><h2><i></i>Test Drive Pathways</h2></li><li class="item-318"><a href="/prospective-students/admission-requirements.html" >Admission Requirements</a><h2><i></i>Admission Requirements</h2></li><li class="item-363"><a href="/prospective-students/transferring-to-rmc.html" >Transferring To RMC</a><h2><i></i>Transferring To RMC</h2></li><li class="item-319"><a href="/prospective-students/new-student-orientation.html" >New Student Orientation</a><h2><i></i>New Student Orientation</h2></li><li class="item-324"><a href="/prospective-students/student-portal.html" >Student Portal</a><h2><i></i>Student Portal</h2></li><li class="item-325"><a href="/prospective-students/prior-learning-recognition-plar-2.html" >Prior Learning &amp; Recognition (PLAR)</a><h2><i></i>Prior Learning &amp; Recognition (PLAR)</h2></li><li class="item-326"><a href="/prospective-students/international-students-2.html" >International Students</a><h2><i></i>International Students</h2></li></ul></li><li class="item-300 deeper parent"><a href="/programs.html" >Programs</a><h2><i></i>Programs</h2><ul class="nav-child unstyled small"><li class="item-332 deeper parent"><a href="/programs/discipleship.html" >Discipleship</a><h2><i></i>Discipleship</h2><ul class="nav-child unstyled small"><li class="item-334"><a href="/programs/discipleship/one-year-certificate-program.html" >One Year Certificate Program</a><h2><i></i>One Year Certificate Program</h2></li><li class="item-335"><a href="/programs/discipleship/one-year-certificate-program-experiential.html" >One Year Certificate Program - Experiential</a><h2><i></i>One Year Certificate Program - Experiential</h2></li></ul></li><li class="item-333 deeper parent"><a href="/programs/leadership-development.html" >Leadership Development</a><h2><i></i>Leadership Development</h2><ul class="nav-child unstyled small"><li class="item-336"><a href="/programs/leadership-development/1-year-programs.html" >1 Year Programs</a><h2><i></i>1 Year Programs</h2></li><li class="item-337 deeper parent"><a href="/programs/leadership-development/2-year-programs.html" >2 Year Programs</a><h2><i></i>2 Year Programs</h2><ul class="nav-child unstyled small"><li class="item-341"><a href="/programs/leadership-development/2-year-programs/diploma-in-christian-leadership.html" >Diploma in Christian Leadership</a><h2><i></i>Diploma in Christian Leadership</h2></li></ul></li><li class="item-339"><a href="/programs/leadership-development/3-year-programs.html" >3 Year Programs</a><h2><i></i>3 Year Programs</h2></li><li class="item-340"><a href="/programs/leadership-development/4-year-programs.html" >4 Year Programs</a><h2><i></i>4 Year Programs</h2></li></ul></li><li class="item-338"><a href="/programs/human-services.html" >Human Services</a><h2><i></i>Human Services</h2></li></ul></li><li class="item-301 deeper parent"><a href="/courses.html" >Courses</a><h2><i></i>Courses</h2><ul class="nav-child unstyled small"><li class="item-415"><a href="/courses/introduction-to-the-bible-for-free.html" >Introduction to the Bible for FREE</a><h2><i></i>Introduction to the Bible for FREE</h2></li><li class="item-345"><a href="/courses/biblical-studies.html" >Biblical Studies </a><h2><i></i>Biblical Studies </h2></li><li class="item-346"><a href="/courses/christian-spirituality-courses.html" >Christian Spirituality </a><h2><i></i>Christian Spirituality </h2></li><li class="item-347"><a href="/courses/history-and-thought-courses.html" >History and Thought Courses</a><h2><i></i>History and Thought Courses</h2></li><li class="item-348"><a href="/courses/interdisciplinary-courses.html" >Interdisciplinary Courses</a><h2><i></i>Interdisciplinary Courses</h2></li><li class="item-349"><a href="/courses/global-studies-courses.html" >Global Studies Courses</a><h2><i></i>Global Studies Courses</h2></li><li class="item-350"><a href="/courses/communication-languages-courses.html" >Communication &amp; Languages Courses</a><h2><i></i>Communication &amp; Languages Courses</h2></li><li class="item-351"><a href="/courses/leadership-courses.html" >Leadership Courses</a><h2><i></i>Leadership Courses</h2></li><li class="item-352"><a href="/courses/social-sciences-courses.html" >Social Sciences Courses</a><h2><i></i>Social Sciences Courses</h2></li><li class="item-353"><a href="/courses/theology-courses.html" >Theology Courses</a><h2><i></i>Theology Courses</h2></li></ul></li><li class="item-302 deeper parent"><a href="/academic-life.html" >Academic Life</a><h2><i></i>Academic Life</h2><ul class="nav-child unstyled small"><li class="item-417"><a href="/academic-life/stay-connected.html" >Stay Connected</a><h2><i></i>Stay Connected</h2></li><li class="item-360"><a href="/academic-life/registration-process.html" >Registration Process</a><h2><i></i>Registration Process</h2></li><li class="item-361 deeper parent"><a href="/academic-life/forms.html" >Forms</a><h2><i></i>Forms</h2><ul class="nav-child unstyled small"><li class="item-437"><a href="/academic-life/forms/application-process.html" >Application Process</a><h2><i></i>Application Process</h2></li></ul></li><li class="item-424"><a href="/academic-life/fees-tuition.html" >Fees &amp; Tuition</a><h2><i></i>Fees &amp; Tuition</h2></li><li class="item-393"><a href="/academic-life/policies-and-services.html" >Policies and Services</a><h2><i></i>Policies and Services</h2></li></ul></li><li class="item-145 deeper parent"><a href="https://www.rmcsonisweb.com/index.cfm" target="_blank" >Current Student</a><h2><i></i>Current Student</h2><ul class="nav-child unstyled small"><li class="item-438"><a href="https://www.rmcsonisweb.com/index.cfm" target="_blank" >Student Portal</a><h2><i></i>Student Portal</h2></li><li class="item-439"><a href="http://mail.rockymountaincollege.ca" target="_blank" >RMC Mail</a><h2><i></i>RMC Mail</h2></li></ul></li><li class="item-303 deeper parent"><a href="/financial-help.html" >Financial Help</a><h2><i></i>Financial Help</h2><ul class="nav-child unstyled small"><li class="item-419"><a href="/financial-help/the-pathways-fund.html" >The Pathways’ Fund</a><h2><i></i>The Pathways’ Fund</h2></li><li class="item-420"><a href="/financial-help/canadian-student-loans.html" >Canadian Student Loans</a><h2><i></i>Canadian Student Loans</h2></li><li class="item-422"><a href="/financial-help/emc-bursary.html" >EMC Bursary</a><h2><i></i>EMC Bursary</h2></li><li class="item-432"><a href="/financial-help/payment-procedures.html" >Payment Procedures</a><h2><i></i>Payment Procedures</h2></li></ul></li><li class="item-304 deeper parent"><a href="/donate-to-pathways.html" >Donate</a><h2><i></i>Donate</h2><ul class="nav-child unstyled small"><li class="item-357"><a href="/donate-to-pathways/donate-now.html" >Donate Now</a><h2><i></i>Donate Now</h2></li><li class="item-359"><a href="/donate-to-pathways/donate-a-car-canada.html" >Donate a Car Canada</a><h2><i></i>Donate a Car Canada</h2></li></ul></li><li class="item-305 deeper parent"><a href="/partnerships.html" >Partnerships</a><h2><i></i>Partnerships</h2><ul class="nav-child unstyled small"><li class="item-327"><a href="/partnerships/denominations.html" >Denominations</a><h2><i></i>Denominations</h2></li><li class="item-328"><a href="/partnerships/post-secondary-schools.html" >Post Secondary Schools</a><h2><i></i>Post Secondary Schools</h2></li><li class="item-329"><a href="/partnerships/organizations.html" >Organizations</a><h2><i></i>Organizations</h2></li><li class="item-330"><a href="/partnerships/churches.html" >Churches</a><h2><i></i>Churches</h2></li><li class="item-331"><a href="/partnerships/community-agency-access.html" >Community Agency Access</a><h2><i></i>Community Agency Access</h2></li></ul></li><li class="item-307 deeper parent"><a href="/resources.html" >Resources</a><h2><i></i>Resources</h2><ul class="nav-child unstyled small"><li class="item-425"><a href="/resources/faq.html" >FAQ</a><h2><i></i>FAQ</h2></li><li class="item-355"><a href="/resources/library-information.html" >Library Information </a><h2><i></i>Library Information </h2></li><li class="item-354"><a href="/resources/textbooks.html" >Textbooks</a><h2><i></i>Textbooks</h2></li><li class="item-426"><a href="/resources/electronic-books.html" >Electronic Books</a><h2><i></i>Electronic Books</h2></li><li class="item-427"><a href="/resources/electronic-journals.html" >Electronic Journals</a><h2><i></i>Electronic Journals</h2></li><li class="item-428"><a href="/resources/internet-resources.html" >Internet Resources</a><h2><i></i>Internet Resources</h2></li><li class="item-429"><a href="/resources/rmc-writing-support.html" >RMC Writing Support</a><h2><i></i>RMC Writing Support</h2></li></ul></li><li class="item-306"><a href="/news-updates.html" >News &amp; Updates</a><h2><i></i>News &amp; Updates</h2></li><li class="item-308 deeper parent"><a href="/job-board.html" >Job Board</a><h2><i></i>Job Board</h2><ul class="nav-child unstyled small"><li class="item-440"><a href="/job-board/agency-opportunities.html" >Agency Opportunities</a><h2><i></i>Agency Opportunities</h2></li><li class="item-441"><a href="/job-board/camps-and-other-opportunities.html" >Camps and Other Opportunities</a><h2><i></i>Camps and Other Opportunities</h2></li><li class="item-442"><a href="/job-board/church-opportunities.html" >Church Opportunities</a><h2><i></i>Church Opportunities</h2></li><li class="item-443"><a href="/job-board/rmc-opportunities.html" >RMC Opportunities</a><h2><i></i>RMC Opportunities</h2></li><li class="item-444"><a href="/job-board/volunteer-opportunities.html" >Volunteer Opportunities</a><h2><i></i>Volunteer Opportunities</h2></li></ul></li><li class="item-309"><a href="/alumni.html" >Alumni</a><h2><i></i>Alumni</h2></li><li class="item-364"><a href="/contact.html" >Contact</a><h2><i></i>Contact</h2></li></ul></nav></div><div class="jf_mm_trigger"><i class="fa fa-bars"></i></div><div class="jf_mm_backout"></div>
+<li class="item-101 current active"><a href="/" >Home</a><h2><i></i>Home</h2></li><li class="item-142 deeper parent"><a href="/about-pathways/about-pathways-rmc.html" >About Pathways</a><h2><i></i>About Pathways</h2><ul class="nav-child unstyled small"><li class="item-310"><a href="/about-pathways/history-of-rocky-mountain-college.html" >History of Rocky Mountain College</a><h2><i></i>History of Rocky Mountain College</h2></li><li class="item-311"><a href="/about-pathways/about-pathways-rmc.html" >About Pathways</a><h2><i></i>About Pathways</h2></li><li class="item-312"><a href="/about-pathways/pathways-team.html" >Pathways Team</a><h2><i></i>Pathways Team</h2></li><li class="item-313"><a href="/about-pathways/adjunct-faculty.html" >Adjunct Faculty</a><h2><i></i>Adjunct Faculty</h2></li><li class="item-314"><a href="/about-pathways/governance.html" >Governance</a><h2><i></i>Governance</h2></li><li class="item-315"><a href="/about-pathways/mission-vision-statement-of-belief.html" >Mission, Vision, Statement Of Belief</a><h2><i></i>Mission, Vision, Statement Of Belief</h2></li><li class="item-362"><a href="/about-pathways/student-stories.html" >Student Stories</a><h2><i></i>Student Stories</h2></li></ul></li><li class="item-299 deeper parent"><a href="/prospective-students.html" >Prospective Students</a><h2><i></i>Prospective Students</h2><ul class="nav-child unstyled small"><li class="item-316"><a href="/prospective-students/accreditation.html" >Accreditation</a><h2><i></i>Accreditation</h2></li><li class="item-317"><a href="/prospective-students/test-drive-pathways.html" >Test Drive Pathways</a><h2><i></i>Test Drive Pathways</h2></li><li class="item-318"><a href="/prospective-students/admission-requirements.html" >Admission Requirements</a><h2><i></i>Admission Requirements</h2></li><li class="item-363"><a href="/prospective-students/transferring-to-rmc.html" >Transferring To RMC</a><h2><i></i>Transferring To RMC</h2></li><li class="item-319"><a href="/prospective-students/new-student-orientation.html" >New Student Orientation</a><h2><i></i>New Student Orientation</h2></li><li class="item-324"><a href="/prospective-students/student-portal.html" >Student Portal</a><h2><i></i>Student Portal</h2></li><li class="item-325"><a href="/prospective-students/prior-learning-recognition-plar-2.html" >Prior Learning &amp; Recognition (PLAR)</a><h2><i></i>Prior Learning &amp; Recognition (PLAR)</h2></li><li class="item-326"><a href="/prospective-students/international-students-2.html" >International Students</a><h2><i></i>International Students</h2></li></ul></li><li class="item-300 deeper parent"><a href="/programs.html" >Programs</a><h2><i></i>Programs</h2><ul class="nav-child unstyled small"><li class="item-332 deeper parent"><a href="/programs/discipleship.html" >Discipleship</a><h2><i></i>Discipleship</h2><ul class="nav-child unstyled small"><li class="item-334"><a href="/programs/discipleship/one-year-certificate-program.html" >One Year Certificate Program</a><h2><i></i>One Year Certificate Program</h2></li><li class="item-335"><a href="/programs/discipleship/one-year-certificate-program-experiential.html" >One Year Certificate Program - Experiential</a><h2><i></i>One Year Certificate Program - Experiential</h2></li></ul></li><li class="item-333 deeper parent"><a href="/programs/leadership-development.html" >Leadership Development</a><h2><i></i>Leadership Development</h2><ul class="nav-child unstyled small"><li class="item-336"><a href="/programs/leadership-development/1-year-programs.html" >1 Year Programs</a><h2><i></i>1 Year Programs</h2></li><li class="item-337 deeper parent"><a href="/programs/leadership-development/2-year-programs.html" >2 Year Programs</a><h2><i></i>2 Year Programs</h2><ul class="nav-child unstyled small"><li class="item-341"><a href="/programs/leadership-development/2-year-programs/diploma-in-christian-leadership.html" >Diploma in Christian Leadership</a><h2><i></i>Diploma in Christian Leadership</h2></li></ul></li><li class="item-339"><a href="/programs/leadership-development/3-year-programs.html" >3 Year Programs</a><h2><i></i>3 Year Programs</h2></li><li class="item-340"><a href="/programs/leadership-development/4-year-programs.html" >4 Year Programs</a><h2><i></i>4 Year Programs</h2></li></ul></li><li class="item-338"><a href="/programs/human-services.html" >Human Services</a><h2><i></i>Human Services</h2></li></ul></li><li class="item-301 deeper parent"><a href="/courses.html" >Courses</a><h2><i></i>Courses</h2><ul class="nav-child unstyled small"><li class="item-415"><a href="/courses/introduction-to-the-bible-for-free.html" >Introduction to the Bible for FREE</a><h2><i></i>Introduction to the Bible for FREE</h2></li><li class="item-345"><a href="/courses/biblical-studies.html" >Biblical Studies </a><h2><i></i>Biblical Studies </h2></li><li class="item-346"><a href="/courses/christian-spirituality-courses.html" >Christian Spirituality </a><h2><i></i>Christian Spirituality </h2></li><li class="item-347"><a href="/courses/history-and-thought-courses.html" >History and Thought Courses</a><h2><i></i>History and Thought Courses</h2></li><li class="item-348"><a href="/courses/interdisciplinary-courses.html" >Interdisciplinary Courses</a><h2><i></i>Interdisciplinary Courses</h2></li><li class="item-349"><a href="/courses/global-studies-courses.html" >Global Studies Courses</a><h2><i></i>Global Studies Courses</h2></li><li class="item-350"><a href="/courses/communication-languages-courses.html" >Communication &amp; Languages Courses</a><h2><i></i>Communication &amp; Languages Courses</h2></li><li class="item-351"><a href="/courses/leadership-courses.html" >Leadership Courses</a><h2><i></i>Leadership Courses</h2></li><li class="item-352"><a href="/courses/social-sciences-courses.html" >Social Sciences Courses</a><h2><i></i>Social Sciences Courses</h2></li><li class="item-353"><a href="/courses/theology-courses.html" >Theology Courses</a><h2><i></i>Theology Courses</h2></li></ul></li><li class="item-302 deeper parent"><a href="/academic-life.html" >Academic Life</a><h2><i></i>Academic Life</h2><ul class="nav-child unstyled small"><li class="item-417"><a href="/academic-life/stay-connected.html" >Stay Connected</a><h2><i></i>Stay Connected</h2></li><li class="item-360"><a href="/academic-life/registration-process.html" >Registration Process</a><h2><i></i>Registration Process</h2></li><li class="item-361 deeper parent"><a href="/academic-life/forms.html" >Forms</a><h2><i></i>Forms</h2><ul class="nav-child unstyled small"><li class="item-437"><a href="/academic-life/forms/application-process.html" >Application Process</a><h2><i></i>Application Process</h2></li></ul></li><li class="item-424"><a href="/academic-life/fees-tuition.html" >Fees &amp; Tuition</a><h2><i></i>Fees &amp; Tuition</h2></li><li class="item-393"><a href="/academic-life/policies-and-services.html" >Policies and Services</a><h2><i></i>Policies and Services</h2></li></ul></li><li class="item-145 deeper parent"><a href="https://www.rmcsonisweb.com/index.cfm" target="_blank" >Current Student</a><h2><i></i>Current Student</h2><ul class="nav-child unstyled small"><li class="item-438"><a href="https://www.rmcsonisweb.com/index.cfm" target="_blank" >Student Portal</a><h2><i></i>Student Portal</h2></li><li class="item-439"><a href="http://mail.rockymountaincollege.ca" target="_blank" >RMC Mail</a><h2><i></i>RMC Mail</h2></li></ul></li><li class="item-303 deeper parent"><a href="/financial-help.html" >Financial Help</a><h2><i></i>Financial Help</h2><ul class="nav-child unstyled small"><li class="item-419"><a href="/financial-help/the-pathways-fund.html" >The Pathways’ Fund</a><h2><i></i>The Pathways’ Fund</h2></li><li class="item-420"><a href="/financial-help/canadian-student-loans.html" >Canadian Student Loans</a><h2><i></i>Canadian Student Loans</h2></li><li class="item-422"><a href="/financial-help/emc-bursary.html" >EMC Bursary</a><h2><i></i>EMC Bursary</h2></li><li class="item-432"><a href="/financial-help/payment-procedures.html" >Payment Procedures</a><h2><i></i>Payment Procedures</h2></li></ul></li><li class="item-304 deeper parent"><a href="/donate-to-pathways.html" >Donate</a><h2><i></i>Donate</h2><ul class="nav-child unstyled small"><li class="item-357"><a href="/donate-to-pathways/donate-now.html" >Donate Now</a><h2><i></i>Donate Now</h2></li><li class="item-359"><a href="/donate-to-pathways/donate-a-car-canada.html" >Donate a Car Canada</a><h2><i></i>Donate a Car Canada</h2></li></ul></li><li class="item-305 deeper parent"><a href="/partnerships.html" >Partnerships</a><h2><i></i>Partnerships</h2><ul class="nav-child unstyled small"><li class="item-327"><a href="/partnerships/denominations.html" >Denominations</a><h2><i></i>Denominations</h2></li><li class="item-328"><a href="/partnerships/post-secondary-schools.html" >Post Secondary Schools</a><h2><i></i>Post Secondary Schools</h2></li><li class="item-329"><a href="/partnerships/organizations.html" >Organizations</a><h2><i></i>Organizations</h2></li><li class="item-330"><a href="/partnerships/churches.html" >Churches</a><h2><i></i>Churches</h2></li><li class="item-331"><a href="/partnerships/community-agency-access.html" >Community Agency Access</a><h2><i></i>Community Agency Access</h2></li></ul></li><li class="item-307 deeper parent"><a href="/resources.html" >Resources</a><h2><i></i>Resources</h2><ul class="nav-child unstyled small"><li class="item-425"><a href="/resources/faq.html" >FAQ</a><h2><i></i>FAQ</h2></li><li class="item-355"><a href="/resources/library-information.html" >Library Information </a><h2><i></i>Library Information </h2></li><li class="item-354"><a href="/resources/textbooks.html" >Textbooks</a><h2><i></i>Textbooks</h2></li><li class="item-426"><a href="/resources/electronic-books.html" >Electronic Books</a><h2><i></i>Electronic Books</h2></li><li class="item-427"><a href="/resources/electronic-journals.html" >Electronic Journals</a><h2><i></i>Electronic Journals</h2></li><li class="item-428"><a href="/resources/internet-resources.html" >Internet Resources</a><h2><i></i>Internet Resources</h2></li><li class="item-429"><a href="/resources/rmc-writing-support.html" >RMC Writing Support</a><h2><i></i>RMC Writing Support</h2></li></ul></li><li class="item-306"><a href="/news-updates.html" >News &amp; Updates</a><h2><i></i>News &amp; Updates</h2></li><li class="item-308 deeper parent"><a href="/job-board.html" >Job Board</a><h2><i></i>Job Board</h2><ul class="nav-child unstyled small"><li class="item-440"><a href="/job-board/agency-opportunities.html" >Agency Opportunities</a><h2><i></i>Agency Opportunities</h2></li><li class="item-441"><a href="/job-board/camps-and-other-opportunities.html" >Camps and Other Opportunities</a><h2><i></i>Camps and Other Opportunities</h2></li><li class="item-442"><a href="/job-board/church-opportunities.html" >Church Opportunities</a><h2><i></i>Church Opportunities</h2></li><li class="item-443"><a href="/job-board/rmc-opportunities.html" >RMC Opportunities</a><h2><i></i>RMC Opportunities</h2></li><li class="item-444"><a href="/job-board/volunteer-opportunities.html" >Volunteer Opportunities</a><h2><i></i>Volunteer Opportunities</h2></li></ul></li><li class="item-309"><a href="http://www.rockymountaincollege.ca/alumni_directory/" >Alumni</a><h2><i></i>Alumni</h2></li><li class="item-364"><a href="/contact.html" >Contact</a><h2><i></i>Contact</h2></li></ul></nav></div><div class="jf_mm_trigger"><i class="fa fa-bars"></i></div><div class="jf_mm_backout"></div>
 	                	</div>
                 	</div>
            </div>

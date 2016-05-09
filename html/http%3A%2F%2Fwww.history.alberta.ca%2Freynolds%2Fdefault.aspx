@@ -4,14 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1"><link rel="P3Pv1" href="http://alberta.ca/w3c/p3p.xml" /><meta name="P3P" content="CP=&#39;NOI DSP COR NID&#39;" /><link rel="stylesheet" type="text/css" media="screen" href="../css/default.css" title="default" /><link rel="stylesheet" type="text/css" media="print" href="../css/print.css" title="default" /><link href="../css/history.css" rel="stylesheet" type="text/css" />
-   
-    <script src="js/SpryMenuBar.js" type="text/javascript"></script>
-    <link href="css/SpryMenuBarVertical.css" rel="stylesheet" type="text/css" /><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>
-	Reynolds-Alberta Museum
-</title><meta name="robots" content="index,follow" /><meta name="keywords" content="Reynolds-Alberta Museum, Reynolds, museum, history, historic, Wetaskiwin, transportation, agriculture, industry, aviation, interpretation, museum visit" /><meta name="description" content="The Reynolds-Alberta Museum in Wetaskiwin, Alberta, interprets the impact of technological change in transportation, aviation, agriculture and industry from the 1890s to the present." /><meta name="copyright" content="Copyright © 2011 Government of Alberta" /><meta name="author" content="Government of Alberta" /><meta name="rating" content="general" /><meta name="MSSmartTagsPreventParsing" content="TRUE" /><meta http-equiv="reply-to" /><meta name="DC.Rights" scheme="URI" content="/copyright/" />
+    <script src="/reynolds/js/SpryMenuBar.js" type="text/javascript"></script>
+    <link href="../css/SpryMenuBarVertical.css" rel="stylesheet" type="text/css" /><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>
+	Alberta's Provincial Historic Sites, Interpretive Centres and Museums
+</title><meta name="robots" content="index,follow" /><meta name="keywords" /><meta name="description" /><meta name="copyright" content="Copyright © 2010 Government of Alberta" /><meta name="author" content="Government of Alberta" /><meta name="rating" content="general" /><meta name="MSSmartTagsPreventParsing" content="TRUE" /><meta http-equiv="reply-to" /><meta name="DC.Rights" scheme="URI" content="/copyright/" />
     <!-- Dublin Core Meta Data -->
     <meta name="DC.Title" content="Header and Footer" /><meta name="DC.Creator" content="Government of Alberta" /><meta name="DC.Description" /><meta name="DC.Language" content="en" /><meta name="DC.Type" content="Text" />
-    <script type="text/javascript">
+       <script type="text/javascript">
         var _gaq = _gaq || [];
 
         _gaq.push(
@@ -32,13 +31,22 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
+    
     
 
 <link href="css/reyn_style.css" rel="stylesheet" type="text/css" />
 <meta name="description" content="Reynolds-Alberta Museum, antique tractors, historic tractors, Alberta Tractors, vintage tractors, Reynolds-Alberta Museum, Alberta tractor museums, Alberta tractor Museum, Edmonton attractions, family fun, weekend fun, weekend family fun.">
 </head>
 <body>
-   
+    <form method="post" action="./default.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMjgxNTE4NDcPZBYCZg9kFgICAw9kFgQCAQ9kFgICAQ8WAh4EVGV4dAV/PGEgaHJlZj0iaHR0cDovL2hpc3RvcnkuYWxiZXJ0YS5jYS9kZWZhdWx0LmFzcHgiIHRhcmdldD0iX3RvcCI+QWxiZXJ0YSBIaXN0b3J5PC9hPiAmZ3Q7IDxhIGhyZWY9Ii9yZXlub2xkcy8iPlJleW5vbGRzPC9hPiA+SG9tZWQCBw9kFgICAQ8WAh8ABYMLPGxpIGNsYXNzPSJpc0N1cnJlbnQiPjxhIGhyZWY9Ii9yZXlub2xkcy9kZWZhdWx0LmFzcHgiIHRpdGxlPSJIb21lIj5Ib21lPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL3JleW5vbGRzL2xvY2F0aW9uL2xvY2F0aW9uLmFzcHgiIHRpdGxlPSJDb250YWN0IGFuZCBMb2NhdGlvbiI+Q29udGFjdCBhbmQgTG9jYXRpb248L2E+PC9saT4NCjxsaT48YSBocmVmPSIvcmV5bm9sZHMvaG91cnNhZG1pc3Npb25zL2hvdXJzYWRtaXNzaW9ucy5hc3B4IiB0aXRsZT0iSG91cnMgYW5kIEFkbWlzc2lvbnMiPkhvdXJzIGFuZCBBZG1pc3Npb25zPC9hPjwvbGk+DQo8bGkgY2xhc3M9ImlzUGFyZW50Ij48YSBocmVmPSIvcmV5bm9sZHMvYWJvdXQvYWJvdXQuYXNweCIgdGl0bGU9IkFib3V0IHRoZSBNdXNldW0iPkFib3V0IHRoZSBNdXNldW08L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cHM6Ly9hdG1zLmFsYmVydGEuY2EvcmV5bm9sZHMvZGVmYXVsdC5hc3B4IiB0aXRsZT0iTXVzZXVtIFN0b3JlIj5NdXNldW0gU3RvcmU8L2E+PC9saT4NCjxsaSBjbGFzcz0iaXNQYXJlbnQiPjxhIGhyZWY9Ii9yZXlub2xkcy9zcGVjaWFsZXZlbnRzL3NwZWNpYWxldmVudHMuYXNweCIgdGl0bGU9IlNwZWNpYWwgRXZlbnRzIj5TcGVjaWFsIEV2ZW50czwvYT48L2xpPjxsaSBjbGFzcz0iaXNQYXJlbnQiPjxhIGhyZWY9Ii9yZXlub2xkcy9lZHVjYXRpb25wcm9ncmFtcy9lZHVjYXRpb25wcm9ncmFtcy5hc3B4IiB0aXRsZT0iRWR1Y2F0aW9uIFByb2dyYW1zIj5FZHVjYXRpb24gUHJvZ3JhbXM8L2E+PC9saT48bGkgY2xhc3M9ImlzUGFyZW50Ij48YSBocmVmPSIvcmV5bm9sZHMvZ3JvdXBwcm9ncmFtcy9ncm91cHByb2dyYW1zLmFzcHgiIHRpdGxlPSJHcm91cCBQcm9ncmFtcyI+R3JvdXAgUHJvZ3JhbXM8L2E+PC9saT48bGkgY2xhc3M9ImlzUGFyZW50Ij48YSBocmVmPSIvcmV5bm9sZHMvcmVzdG9yYXRpb25zaG9wL3Jlc3RvcmF0aW9uc2hvcC5hc3B4IiB0aXRsZT0iUmVzdG9yYXRpb24gU2hvcCI+UmVzdG9yYXRpb24gU2hvcDwvYT48L2xpPjxsaT48YSBocmVmPSIvcmV5bm9sZHMvcmlkZXNhbmR0b3Vycy9yaWRlc2FuZHRvdXJzLmFzcHgiIHRpdGxlPSJSaWRlcyBhbmQgVG91cnMiPlJpZGVzIGFuZCBUb3VyczwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii9yZXlub2xkcy9waG90b2dhbGxlcnkvcGhvdG9nYWxsZXJ5LmFzcHgiIHRpdGxlPSJQaG90byBHYWxsZXJ5Ij5QaG90byBHYWxsZXJ5PC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL3JleW5vbGRzL3ZvbHVudGVlci92b2x1bnRlZXIuYXNweCIgdGl0bGU9IkpvYnMgYW5kIFZvbHVudGVlciI+Sm9icyBhbmQgVm9sdW50ZWVyPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL3JleW5vbGRzL2xpbmtzL2xpbmtzLmFzcHgiIHRpdGxlPSJMaW5rcyI+TGlua3M8L2E+PC9saT4NCmRkd0QQvtf/7AUebpvpqtbajl8VH/82B1C2xxshqbCyK2g=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="22E26949" />
+</div>
         <div id="pageWrap">
             <div id="page">
                 <div id="accessHelpers">
@@ -46,45 +54,28 @@
                     <p id="skipToContent"><a href="#content">Skip To Content</a></p>
                 </div>
                 <div id="header">
-                    <div id="logo">
-                        <a href="http://culture.alberta.ca" title="Link to Home Page"><img src="/images/interface/AB-CultureWhite.png" alt="Government of Alberta" /></a>
+                   <div id="logo">
+                        <a href="http://culture.alberta.ca/" title="Link to Home Page"><img src="/images/interface/AB-CultureWhite.png" alt="Government of Alberta" /></a>
                     </div>
                     <ul id="metaNav">
-                        <li><a href="http://culture.alberta.ca/usingthissite.aspx">Using this Site</a></li>
-                        <li><a href="http://culture.alberta.ca/contact.aspx">Contact Us</a></li>
+                        <li><a href="http://alberta.ca/home/using_this_site.cfm">Using this Site</a></li>
+                        <li><a href="http://alberta.ca/home/contact.cfm">Contact Us</a></li>
                     </ul>
                     <div id="searchForm">
-                        <form method="get" id="search" action="/search.aspx" name="searchForm">
-			                <input type="text" name="q" size="32" maxlength="256" value="">
-			                <input type="hidden" name="sitesearch" value="history.alberta.ca">
-			                <input type="hidden" name="requiredfields" value="">
-			                <input type="hidden" name="partialfields" value="">
-			                <input type="submit" name="btnG" value="Search">
-		                </form>
+                        <input type="text" name="q" maxlength="256" value="" class="searchInput" />
+                        <button class="searchButton" value=search type="submit">Search</button>
                     </div>
                 </div>
-				 <form method="post" action="./default.aspx" id="form1">
-<div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTIwNTkwMDIxOA9kFgJmD2QWAgIDD2QWBAIBD2QWAgIBDxYCHgRUZXh0BX88YSBocmVmPSJodHRwOi8vaGlzdG9yeS5hbGJlcnRhLmNhL2RlZmF1bHQuYXNweCIgdGFyZ2V0PSJfdG9wIj5BbGJlcnRhIEhpc3Rvcnk8L2E+ICZndDsgPGEgaHJlZj0iL3JleW5vbGRzLyI+UmV5bm9sZHM8L2E+ID5Ib21lZAIHD2QWAgIBDxYCHwAFgws8bGkgY2xhc3M9ImlzQ3VycmVudCI+PGEgaHJlZj0iL3JleW5vbGRzL2RlZmF1bHQuYXNweCIgdGl0bGU9IkhvbWUiPkhvbWU8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvcmV5bm9sZHMvbG9jYXRpb24vbG9jYXRpb24uYXNweCIgdGl0bGU9IkNvbnRhY3QgYW5kIExvY2F0aW9uIj5Db250YWN0IGFuZCBMb2NhdGlvbjwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii9yZXlub2xkcy9ob3Vyc2FkbWlzc2lvbnMvaG91cnNhZG1pc3Npb25zLmFzcHgiIHRpdGxlPSJIb3VycyBhbmQgQWRtaXNzaW9ucyI+SG91cnMgYW5kIEFkbWlzc2lvbnM8L2E+PC9saT4NCjxsaSBjbGFzcz0iaXNQYXJlbnQiPjxhIGhyZWY9Ii9yZXlub2xkcy9hYm91dC9hYm91dC5hc3B4IiB0aXRsZT0iQWJvdXQgdGhlIE11c2V1bSI+QWJvdXQgdGhlIE11c2V1bTwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwczovL2F0bXMuYWxiZXJ0YS5jYS9yZXlub2xkcy9kZWZhdWx0LmFzcHgiIHRpdGxlPSJNdXNldW0gU3RvcmUiPk11c2V1bSBTdG9yZTwvYT48L2xpPg0KPGxpIGNsYXNzPSJpc1BhcmVudCI+PGEgaHJlZj0iL3JleW5vbGRzL3NwZWNpYWxldmVudHMvc3BlY2lhbGV2ZW50cy5hc3B4IiB0aXRsZT0iU3BlY2lhbCBFdmVudHMiPlNwZWNpYWwgRXZlbnRzPC9hPjwvbGk+PGxpIGNsYXNzPSJpc1BhcmVudCI+PGEgaHJlZj0iL3JleW5vbGRzL2VkdWNhdGlvbnByb2dyYW1zL2VkdWNhdGlvbnByb2dyYW1zLmFzcHgiIHRpdGxlPSJFZHVjYXRpb24gUHJvZ3JhbXMiPkVkdWNhdGlvbiBQcm9ncmFtczwvYT48L2xpPjxsaSBjbGFzcz0iaXNQYXJlbnQiPjxhIGhyZWY9Ii9yZXlub2xkcy9ncm91cHByb2dyYW1zL2dyb3VwcHJvZ3JhbXMuYXNweCIgdGl0bGU9Ikdyb3VwIFByb2dyYW1zIj5Hcm91cCBQcm9ncmFtczwvYT48L2xpPjxsaSBjbGFzcz0iaXNQYXJlbnQiPjxhIGhyZWY9Ii9yZXlub2xkcy9yZXN0b3JhdGlvbnNob3AvcmVzdG9yYXRpb25zaG9wLmFzcHgiIHRpdGxlPSJSZXN0b3JhdGlvbiBTaG9wIj5SZXN0b3JhdGlvbiBTaG9wPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9yZXlub2xkcy9yaWRlc2FuZHRvdXJzL3JpZGVzYW5kdG91cnMuYXNweCIgdGl0bGU9IlJpZGVzIGFuZCBUb3VycyI+UmlkZXMgYW5kIFRvdXJzPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL3JleW5vbGRzL3Bob3RvZ2FsbGVyeS9waG90b2dhbGxlcnkuYXNweCIgdGl0bGU9IlBob3RvIEdhbGxlcnkiPlBob3RvIEdhbGxlcnk8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvcmV5bm9sZHMvdm9sdW50ZWVyL3ZvbHVudGVlci5hc3B4IiB0aXRsZT0iSm9icyBhbmQgVm9sdW50ZWVyIj5Kb2JzIGFuZCBWb2x1bnRlZXI8L2E+PC9saT4NCjxsaT48YSBocmVmPSIvcmV5bm9sZHMvbGlua3MvbGlua3MuYXNweCIgdGl0bGU9IkxpbmtzIj5MaW5rczwvYT48L2xpPg0KZGRE45MoIfN/MQguKHtV85mWI9MIOjMoVwgN77B8nW2g4g==" />
-</div>
-
-<div class="aspNetHidden">
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="88320EC3" />
-</div>
                 <!-- close header -->
                 
-
     <div id="breadcrumb">
-
 		<p><a href="http://www.alberta.ca/" target="_blank">Alberta.ca</a> &gt; <a href="http://history.alberta.ca/default.aspx" target="_top">Alberta History</a> &gt; <a href="/reynolds/">Reynolds</a> >Home</p>
-
 	</div><!-- close breadcrumb -->
                 <a name="top"></a>
 
                 <!-- This is where you put your content/application  --> 
                 <div id="aphsicmband">
-                    <a href="/mainfiles/aphsicm.aspx"><img src="/images/aphsicm_band3.jpg" alt="Alberta's Provincial Historic Sites, Interpretive Centres and Museums" width="928" height="22" border="0" /></a>
+                    <a href="#"><img src="/images/aphsicm_band3.jpg" alt="Alberta's Provincial Historic Sites, Interpretive Centres and Museums" width="928" height="22" border="0" /></a>
                 </div>
        
                 
@@ -107,6 +98,14 @@
 
       <h1>Reynolds-Alberta Museum      </h1>
       <hr />
+
+    <br />
+        <div style="border:1px solid #333333; padding:0 10px;">
+        <h3>Be our guest - Free admission for wildfire evacuees</h3>
+        <p>Now until September 5th, 2016, regular admission fees will be waived at provincially-owned historic sites and museums for evacuees of the Alberta wildfires. Evacuees will be required to provide photo identification or a postal code as proof of residency for family admission. We hope access to our sites and museums provides an opportunity for displaced Albertans to enjoy some activities together during this difficult time.
+            </p>
+            </div>
+        <br />
       <p>The Reynolds-Alberta Museum in Wetaskiwin, Alberta, interprets the impact of technological change in transportation,
         aviation, agriculture and industry from the 1890s to the present. Visitors will see a wide variety of vintage automobiles,
         motorcycles, bicycles, trucks, stationary engines, tractors, agricultural implements, aircraft and industrial
@@ -131,12 +130,12 @@
       </div>
         
         <p align="center">&nbsp;</p>
-    <div style="float:right; font-size:.8em; color:#666;"><span id="content_lastmodifiedLabel">Last reviewed/revised: February 16, 2016</span></div>   
+    <div style="float:right; font-size:.8em; color:#666;"><span id="content_lastmodifiedLabel">Last reviewed/revised: May 7, 2016</span></div>   
      
 </div>
     <div id="thirdcolumn">
     
-                <!-- img src="../images/mainpage/2015/seniorsweek_177.jpg" width="177" height="315" border="0" /><br /><br /--> 
+                <!--include virtual="../includes/top3rdcol.inc" --> 
                 
     
     <img src="images/homepage/1926FordModelTRacer.jpg" alt="1926 Ford Model T Racer" /><br /><br/>
@@ -152,7 +151,7 @@
     <td><div align="center"><a href="https://www.facebook.com/pages/Reynolds-Alberta-Museum/7542224425" title="Facebook" target="_blank"><img src="../images/socialmedia/facebook-32.png" width="32" height="32" alt="Facebook" /></a></div></td>
     <td><div align="center"><a href="https://twitter.com/ReynoldsABMuse" title="Twitter" target="_blank" ><img src="../images/socialmedia/twitter-32.png" width="32" height="32" alt="Twitter" /></a></div></td>
     <td><div align="center"><a href="https://instagram.com/reynolds.alberta.museum/" title="Instagram" target="_blank"><img src="../images/socialmedia/instagram-32.png" width="32" height="32" alt="Instagram" /></a></div></td></tr>
-        <tr><td><div align="center"><a href="https://www.pinterest.com/reynoldsalberta/" title="Pinterest" target="_blank"><img src="../images/socialmedia/pinterest-32.png" width="32" height="32" alt="Pinterest" /></a></div></td>
+        
           <td><div align="center"><a href="https://www.youtube.com/channel/UC3sTblJbac5q61sJubV7Vtw" title="YouTube" target="_blank"><img src="../images/socialmedia/youtube-32.png" width="32" height="32" alt="YouTube" /></a></div></td></tr>
   </tr>
 </table><br />
@@ -162,12 +161,9 @@
                     </div>
 
                     <div id="navbar">
-   					 
-
+                        
 <div id="navColumn">
-
     <ul id="subNav">
-
         <li class="isCurrent"><a href="/reynolds/default.aspx" title="Home">Home</a></li>
 <li><a href="/reynolds/location/location.aspx" title="Contact and Location">Contact and Location</a></li>
 <li><a href="/reynolds/hoursadmissions/hoursadmissions.aspx" title="Hours and Admissions">Hours and Admissions</a></li>
@@ -177,36 +173,32 @@
 <li><a href="/reynolds/volunteer/volunteer.aspx" title="Jobs and Volunteer">Jobs and Volunteer</a></li>
 <li><a href="/reynolds/links/links.aspx" title="Links">Links</a></li>
 
-
     </ul>
-
 
                         <p class="otherlinkstitle">Other Government of Alberta History and Heritage Links:</p>
 
                         <ul id="MenuBar2" class="MenuBarVertical">
-                             <li><a href="/mainfiles/aphsicm.aspx" title="Alberta's Provincial Historic Sites, Interpretive Centres and Museums">Alberta's Provincial Historic Sites, Interpretive Centres and Museums</a></li>
-							
-							<li><a href="/alberta_map/albertamap_locations.pdf" title="Map of Alberta's Provincial Historic Sites, Interpretive Centres and Museums">Map of Alberta's Provincial Heritage Attractions</a></li>
-							
-                            <li><a href="http://www.culture.alberta.ca/heritage/resourcemanagement/default.aspx" title="Historic Resources Management">Historic Resources Management</a></li>
-                            <li><a href="http://www.culture.alberta.ca/paa" title="Provincial Archives of Alberta">Provincial Archives of Alberta</a></li>
+                            <li><a href="#" title="Alberta's Provincial Historic Sites, Interpretive Centres and Museums">Alberta's Provincial Historic Sites, Interpretive Centres and Museums</a></li>
+                            <li><a href="#" title="Historic Resources Management">Historic Resources Management</a></li>
+                            <li><a href="#" title="Provincial Archives of Alberta">Provincial Archives of Alberta</a></li>
                         </ul>
-		</div>
 
-<!-- AddThis Button BEGIN -->
-<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=xa-4da876ed04808a14"><img src="/../images/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0" /></a>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4da876ed04808a14"></script>
+                        <img src="/images/socialmedialinkbar.jpg" alt="Link to Social Media" width="177" height="27" />
+                    </div>
+                   <br/>
+                    <br />
+                    <a href="/mainfiles/experiencealbertahistory/annualpass.aspx">
+                        <img src="/images/buyannualpass_177.jpg" width="177" height="30" border="0" alt="" />
+                    </a>
 
-<!-- AddThis Button END -->                    
                 </div>
                     
                 <!-- End your content -->
 
             </div>
             <!-- close content column -->
-            <!-- close content column -->
                              
- <div id="footer">
+            <div id="footer">
                 <div id="footerLogo">
                     <img src="/images/interface/logoFooter.gif" alt="Alberta" />
                 </div>
@@ -228,11 +220,11 @@
                 <p id="copyright">© 1995–2016 
                     <a href="http://alberta.ca" title="Government of Alberta">Government of Alberta</a> 
                     <a href="http://alberta.ca/copyright.cfm">Copyright and Disclaimer</a> 
-                    <a href="http://culture.alberta.ca/privacy">Privacy</a>
+                    <a href="http://culture.alberta.ca/privacy">Privacy</a> 
+                </p>
            </div><!-- close footer --><!-- close page -->
         </div><!-- close pageWrap -->
 </form>
 </body>
 </html>
-
 

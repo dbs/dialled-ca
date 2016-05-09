@@ -7,15 +7,16 @@
     <meta name="generator" content="LANEC Solutions Web 2012" />
     <meta name="revisit-after" content="14 days" /><meta http-equiv="Content-Language" content="fr_CA" />
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" /><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="/themes/style.css?v=2.240" rel='stylesheet' type='text/css' />
-    <link href="/themes/contenu.css?v=2.240" rel='stylesheet' type='text/css' />
+    <link href="/themes/style.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/contenu.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/style-new.css?v=2.245" rel='stylesheet' type='text/css' />
     <!--[if IE 9]>
-    <link href="/themes/style_IE9.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE9.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 8]>
-    <link href="/themes/style_IE8.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE8.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link href="/themes/print.css?v=2.240" rel='stylesheet' type='text/css' media="print" />
+    <link href="/themes/print.css?v=2.245" rel='stylesheet' type='text/css' media="print" />
     <link href="http://fonts.googleapis.com/css?family=Vollkorn|Lato:normal,bold|Amaranth|Actor|Open+Sans|Droid+Sans|Open+Sans|Days+One" rel="stylesheet" type="text/css" /><link href="/capitale-nationale-et-chaudiere-appalaches/fr/rss/nouvelles.aspx" rel="alternate" type="application/rss+xml" title="Réseau BIBLIO de la Capitale-Nationale et de la Chaudière-Appalaches" />
     <meta property="og:title" content="Bibliothèques Horaire et localisation" />
     <meta property="og:image" content="http://www.mabibliotheque.ca/images/facebook/partage.jpg" />
@@ -24,7 +25,7 @@
     <meta property="og:description" content="" />
 
 <style type="text/css">
-  .imgEnteteContenu { background:#5785be url(/images/entete/entete_hiver.jpg) no-repeat center top; height:35px;}
+  .imgEnteteContenu { background:#D69038 url(/images/entete/entete_fleurs.jpg) no-repeat center top; height:35px;}
 </style>
 
 
@@ -207,6 +208,10 @@
     "Lng": 0.0,
     "Direction": 0.0
   },
+  "CalendrierDesFormations": "<b>Activités</b><br />du Réseau",
+  "CalendrierDesFormationsVoirLesActivites": "Voir les <b>activités</b><br /><b>du Réseau</b>",
+  "CalendrierDesFormationsGestionDesActivites": "Gestion des <br /><b>activités</b>",
+  "DocumentationReseau": "<b>Documentation</b><br />de mon Réseau",
   "RepertoireDesActivites": "<b>Répertoire</b><br />des activités culturelles",
   "RepertoireDesActivitesConsultation": "Consulter le <b>répertoire <br />des activités culturelles</b>",
   "RepertoireDesActivitesCulturellesH1": "Répertoire des activités culturelles",
@@ -233,6 +238,7 @@
   "UtiliserGrilleTarifaire": false,
   "AfficherGestionExtranetBiblio": true,
   "AfficherGestionDocumentation": true,
+  "AfficherGestionCalendrierFormationBiblio": true,
   "AfficherLienVDX": false,
   "RetirerPremièrePartieNomsDossiersDocumentation": false,
   "SéparateurNomsDossiersDocumentation": "",
@@ -255,7 +261,6 @@
   "PartageV2": false,
   "PermettreModifierActiviteRepertoire": true,
   "AccesCalendrierDesFormationsEtActivites": false,
-  "AccesCalendrierDesFormationsEtActivitesPourBiblios": true,
   "MessageFacturationFormation": null,
   "SrcImgBasCourrielEnvoyerAmi": null,
   "BoutonInfolettreEnHaut": false,
@@ -310,7 +315,14 @@
   "AfficherMessageOptimiserPourNavigateurs": false,
   "MessageOptimiserPourNavigateurs": "",
   "NombreCommuniquesAccueil": 2,
-  "NombreActivitesAccueil": 2
+  "NombreActivitesAccueil": 2,
+  "FormationSingulier": "Activité",
+  "FormationPluriel": "Activités",
+  "NbJoursAvantFermetureInscriptionParDefaut": 2,
+  "CalendrierFormationsAccessibleHorsLigne": false,
+  "CalendrierFormationsLibelleBoutonInscription": "Inscription",
+  "FormationSingulierLower": "activité",
+  "FormationPlurielLower": "activités"
 };
 
         $(document).ready(function() {
@@ -339,6 +351,7 @@
         }
     </style>
 
+    
 
     <style type="text/css">
         #oeufPaques{
@@ -356,11 +369,22 @@
 </title></head>
 <body>
 <div class="pageMaster">
+    
+    <!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <form name="aspnetForm" method="post" action="/capitale-nationale-et-chaudiere-appalaches/fr/bibliotheques-horaire-et-localisation/index.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwNjg2OTkzMDcPZBYCZg9kFgJmD2QWBGYPZBYOAgEPFgIeB2NvbnRlbnRkZAICDxYEHwBkHgdWaXNpYmxlaGQCAw8WAh8BaGQCBQ8WAh4EVGV4dAU4PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1MYW5ndWFnZSIgY29udGVudD0iZnJfQ0EiIC8+Cg1kAgkPFgIfAgXLATxsaW5rIGhyZWY9Ii9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIGRlIGxhIENhcGl0YWxlLU5hdGlvbmFsZSBldCBkZSBsYSBDaGF1ZGnDqHJlLUFwcGFsYWNoZXMiIC8+ZAIKDxYCHwIFigQNCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dGl0bGUiIGNvbnRlbnQ9IkJpYmxpb3Row6hxdWVzIEhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzppbWFnZSIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9pbWFnZXMvZmFjZWJvb2svcGFydGFnZS5qcGciIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnVybCIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4IiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzpzaXRlX25hbWUiIGNvbnRlbnQ9IlLDqXNlYXUgQklCTElPIGRlIGxhIENhcGl0YWxlLU5hdGlvbmFsZSBldCBkZSBsYSBDaGF1ZGnDqHJlLUFwcGFsYWNoZXMiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAgsPFgIfAgWUAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojNTc4NWJlIHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfaGl2ZXIuanBnKSBuby1yZXBlYXQgY2VudGVyIHRvcDsgaGVpZ2h0OjM1cHg7fQo8L3N0eWxlPgpkAgEPFgIeBmFjdGlvbgVfL2NhcGl0YWxlLW5hdGlvbmFsZS1ldC1jaGF1ZGllcmUtYXBwYWxhY2hlcy9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL2luZGV4LmFzcHgWFgIBDw8WAh4LTmF2aWdhdGVVcmwFOS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvaW5kZXguYXNweGQWAmYPDxYCHghJbWFnZVVybAUgL2ltYWdlcy9lbnRldGUvbG9nby9DTkNBLnBuZz92PTJkZAICDw8WAh8FBSIvaW1hZ2VzL2VudGV0ZS9sb2dvL3ByaW50L0NOQ0EuanBnZGQCAw8WAh4LXyFJdGVtQ291bnQCBBYIAgEPZBYCAgMPDxYGHwIFB0FjY3VlaWweBlRhcmdldAUFX3NlbGYfBAU5L2NhcGl0YWxlLW5hdGlvbmFsZS1ldC1jaGF1ZGllcmUtYXBwYWxhY2hlcy9mci9pbmRleC5hc3B4ZGQCAg9kFgICAw8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBUkvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL3F1aS1zb21tZXMtbm91cy9pbmRleC5hc3B4ZGQCAw9kFgICAw8PFgYfAgUDRkFRHwcFBV9zZWxmHwQFPS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvZmFxL2luZGV4LmFzcHhkZAIED2QWBAIBDxYCHwIFEGlkPSJkZXJuaWVySXRlbSJkAgMPDxYGHwIFDE5vdXMgam9pbmRyZR8HBQVfc2VsZh8EBUYvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL25vdXMtam9pbmRyZS9pbmRleC5hc3B4ZGQCBA8PFgwfBwUGX2JsYW5rHwIFKU1vbiBkb3NzaWVyIGQndXNhZ2VyIDxzcGFuPiYjOTY1NDs8L3NwYW4+HgdUb29sVGlwBRRNb24gZG9zc2llciBkJ3VzYWdlch8EBSRodHRwOi8vaWJpc3Ryby1jbmNhLnJlc2VhdWJpYmxpby5jYS8eCENzc0NsYXNzBQ1idEFqb3V0ZXJDc3MgHgRfIVNCAgIWAh4Hb25jbGljawVQX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnRW50w6p0ZScsICdNb24gZG9zc2llciBkIHVzYWdlciddKTtkAgYPFgIfAgXYAjxpZnJhbWUgc3JjPSJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9wbHVnaW5zL2xpa2UucGhwP2xvY2FsZT1mcl9GUiZocmVmPWh0dHBzJTNBJTJGJTJGd3d3LmZhY2Vib29rLmNvbSUyRnJlc2VhdWJpYmxpb2NuY2EmYW1wO2xheW91dD1idXR0b25fY291bnQmYW1wO2NvbG9yc2NoZW1lPWRhcmsmYW1wO2FjdGlvbj1saWtlJndpZHRoPTEwMCZoZWlnaHQ9MzAmZm9udD1hcmlhbCIgc2Nyb2xsaW5nPSJubyIgZnJhbWVib3JkZXI9IjAiIHN0eWxlPSJib3JkZXI6bm9uZTsgb3ZlcmZsb3c6aGlkZGVuOyB3aWR0aDoxMDBweDsgaGVpZ2h0OjMwcHg7IiBhbGxvd1RyYW5zcGFyZW5jeT0idHJ1ZSI+PC9pZnJhbWU+ZAIIDxYCHwYCBRYKAgEPZBYEAgEPFgIfAgURY2xhc3M9ImNhdGFsb2d1ZSJkAgMPDxYGHwIFKjxzdHJvbmc+Q2F0YWxvZ3VlPC9zdHJvbmc+PGJyIC8+DQplbiBsaWduZR8HBQVfc2VsZh8EBUwvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL2NhdGFsb2d1ZS1lbi1saWduZS9pbmRleC5hc3B4ZGQCAg9kFgQCAQ8WAh8CBRhjbGFzcz0ibGl2cmVzUmVzc291cmNlcyJkAgMPDxYGHwIFQTxzdHJvbmc+TGl2cmVzICZhbXA7PGJyIC8+DQpyZXNzb3VyY2VzPC9zdHJvbmc+PGJyIC8+IG51bcOpcmlxdWVzHwcFBV9zZWxmHwQFWS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvbGl2cmVzLWV0LXJlc3NvdXJjZXMtbnVtZXJpcXVlcy9pbmRleC5hc3B4ZGQCAw9kFgQCAQ8WAh8CBQxjbGFzcz0icHJldCJkAgMPDxYGHwIFMDxzdHJvbmc+UHLDqnQgZW50cmU8L3N0cm9uZz48YnIgLz5iaWJsaW90aMOocXVlcx8HBQVfc2VsZh8EBVIvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4ZGQCBA9kFgQCAQ8WAh8CBRJjbGFzcz0iZXZlbmVtZW50cyJkAgMPDxYGHwIFPTxzdHJvbmc+QWN0aXZpdCYjMjMzO3M8L3N0cm9uZz48YnIgLz4NCmRlcyBiaWJsaW90aCYjMjMyO3F1ZXMfBwUFX3NlbGYfBAVVL2NhcGl0YWxlLW5hdGlvbmFsZS1ldC1jaGF1ZGllcmUtYXBwYWxhY2hlcy9mci9hY3Rpdml0ZXMtZGVzLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweGRkAgUPZBYEAgEPFgIfAgUVY2xhc3M9ImJpYmxpb3RoZXF1ZXMiZAIDDw8WCh8CBUA8c3Ryb25nPkJpYmxpb3RoJiMyMzI7cXVlczwvc3Ryb25nPjxiciAvPkhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uHwcFBV9zZWxmHwQFXy9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4HwkFBmFjdGl2ZR8KAgJkZAIKD2QWBAIBDw8WBB8CBQdBY2N1ZWlsHwQFOS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvaW5kZXguYXNweGRkAgMPFgIfBgIBFgJmD2QWAgIBDw8WBh8JBQpzaWxlbnRMaW5rHwIFJkJpYmxpb3Row6hxdWVzIEhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uHwoCAmRkAgsPZBYEZg8PZBYCHgpkYXRhLXRpdGxlBRpBYm9ubmVtZW50IMOgIGwnaW5mb2xldHRyZWQCAQ9kFgICAQ8PFgIfBAVBL2NhcGl0YWxlLW5hdGlvbmFsZS1ldC1jaGF1ZGllcmUtYXBwYWxhY2hlcy9mci9yc3Mvbm91dmVsbGVzLmFzcHhkZAINDw8WAh8BZ2QWAgIBDw8WAh8EBSlodHRwczovL3d3dy5mYWNlYm9vay5jb20vcmVzZWF1YmlibGlvY25jYRYCHwsFSV9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdGYWNlYm9vayddKTtkAhIPFgIfBgIDFgZmD2QWAgIBDxYCHwIFpQQ8YSBocmVmPSIvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL3F1aS1zb21tZXMtbm91cy9wcml4LWQtZXhjZWxsZW5jZS1nZXJhcmQtZGVzcm9zaWVycy9pbmRleC5hc3B4Ij4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2dlcmFyZGRlc3Jvc2llcnNfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGcnIiBhbHQ9IlByaXggZCdleGNlbGxlbmNlIEcmIzIzMztyYXJkIERlc3Jvc2llcnMiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGciPg0KICA8L2ltZz4NCjwvYT5kAgEPZBYCAgEPFgIfAgWzBDxhIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdMb2kgNTEnXSk7IiBocmVmPSJodHRwOi8vd3d3Lm1jY2NmLmdvdXYucWMuY2EvaW5kZXgucGhwP2lkPTQ0MzYiIHRhcmdldD0iX2JsYW5rIj4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxX292ZXIuanBnJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxLmpwZyciIGFsdD0iTG9pIDUxIC0gTnVsIG4nZXN0IGNlbnMmIzIzMzsgaWdub3JlciBsYSBsb2kgZHUgbGl2cmUiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTEuanBnIj4NCiAgPC9pbWc+DQo8L2E+ZAICD2QWAgIBDxYCHwIFvQU8YSBocmVmPSJodHRwOi8vd3d3LmFnZW5kYTIxYy5nb3V2LnFjLmNhLyIgdGFyZ2V0PSJfYmxhbmsiIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBZ2VuZGEgMjEnXSk7Ij4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9J2h0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlY19fZGVfbGFuYXVkaWVyZV9ldF9kZV9sYV9tYXVyaWNpZS9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9hZ2VuZGEyMV9vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPSdodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWNfX2RlX2xhbmF1ZGllcmVfZXRfZGVfbGFfbWF1cmljaWUvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYWdlbmRhMjEuanBnJyIgYWx0PSJBZ2VuZGEgMjEiIHNyYz0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjX19kZV9sYW5hdWRpZXJlX2V0X2RlX2xhX21hdXJpY2llL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2FnZW5kYTIxLmpwZyI+DQogIDwvaW1nPg0KPC9hPmQCFQ9kFgYCAQ9kFgJmDxYIHglpbm5lcmh0bWwFCEV4dHJhbmV0HgV0aXRsZQUIRXh0cmFuZXQeBGhyZWYFPWh0dHA6Ly93d3cucmVzZWF1YmlibGlvZHVxdWViZWMucWMuY2EvbG9naW4uYXNweD9UeXBlPTImUklEPTkfCwVJX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0V4dHJhbmV0J10pO2QCAw9kFgJmDxYKHw0FEkNvbnNvbGUgZGUgZ2VzdGlvbh8OBRJDb25zb2xlIGRlIGdlc3Rpb24fDwU1aHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9nZXN0aW9uL2Nvbm5leGlvbi1iaWJsaW8fCwVTX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0NvbnNvbGUgZGUgZ2VzdGlvbiddKTseBnRhcmdldAUGX2JsYW5rZAIFD2QWAmYPFgIfAWhkZOI6BOj5mbYYImrrAKGkFhuWckAHR9uuCBi502sLeE3v" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwNjg2OTkzMDcPZBYCZg9kFgJmD2QWBGYPZBYOAgEPFgIeB2NvbnRlbnRkZAICDxYEHwBkHgdWaXNpYmxlaGQCAw8WAh8BaGQCBQ8WAh4EVGV4dAU4PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1MYW5ndWFnZSIgY29udGVudD0iZnJfQ0EiIC8+Cg1kAgkPFgIfAgXLATxsaW5rIGhyZWY9Ii9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIGRlIGxhIENhcGl0YWxlLU5hdGlvbmFsZSBldCBkZSBsYSBDaGF1ZGnDqHJlLUFwcGFsYWNoZXMiIC8+ZAIKDxYCHwIFigQNCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dGl0bGUiIGNvbnRlbnQ9IkJpYmxpb3Row6hxdWVzIEhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzppbWFnZSIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9pbWFnZXMvZmFjZWJvb2svcGFydGFnZS5qcGciIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnVybCIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4IiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzpzaXRlX25hbWUiIGNvbnRlbnQ9IlLDqXNlYXUgQklCTElPIGRlIGxhIENhcGl0YWxlLU5hdGlvbmFsZSBldCBkZSBsYSBDaGF1ZGnDqHJlLUFwcGFsYWNoZXMiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAgsPFgIfAgWVAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojRDY5MDM4IHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfZmxldXJzLmpwZykgbm8tcmVwZWF0IGNlbnRlciB0b3A7IGhlaWdodDozNXB4O30KPC9zdHlsZT4KZAIBDxYCHgZhY3Rpb24FXy9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4FhYCAQ8PFgIeC05hdmlnYXRlVXJsBTkvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL2luZGV4LmFzcHhkFgJmDw8WAh4ISW1hZ2VVcmwFIC9pbWFnZXMvZW50ZXRlL2xvZ28vQ05DQS5wbmc/dj0yZGQCAg8PFgIfBQUiL2ltYWdlcy9lbnRldGUvbG9nby9wcmludC9DTkNBLmpwZ2RkAgMPFgIeC18hSXRlbUNvdW50AgQWCAIBD2QWAgIDDw8WBh8CBQdBY2N1ZWlsHgZUYXJnZXQFBV9zZWxmHwQFOS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvaW5kZXguYXNweGRkAgIPZBYCAgMPDxYGHwIFEFF1aSBzb21tZXMtbm91cz8fBwUFX3NlbGYfBAVJL2NhcGl0YWxlLW5hdGlvbmFsZS1ldC1jaGF1ZGllcmUtYXBwYWxhY2hlcy9mci9xdWktc29tbWVzLW5vdXMvaW5kZXguYXNweGRkAgMPZBYCAgMPDxYGHwIFA0ZBUR8HBQVfc2VsZh8EBT0vY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL2ZhcS9pbmRleC5hc3B4ZGQCBA9kFgQCAQ8WAh8CBRBpZD0iZGVybmllckl0ZW0iZAIDDw8WBh8CBQxOb3VzIGpvaW5kcmUfBwUFX3NlbGYfBAVGL2NhcGl0YWxlLW5hdGlvbmFsZS1ldC1jaGF1ZGllcmUtYXBwYWxhY2hlcy9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkAgQPDxYMHwcFBl9ibGFuax8CBSlNb24gZG9zc2llciBkJ3VzYWdlciA8c3Bhbj4mIzk2NTQ7PC9zcGFuPh4HVG9vbFRpcAUUTW9uIGRvc3NpZXIgZCd1c2FnZXIfBAUkaHR0cDovL2liaXN0cm8tY25jYS5yZXNlYXViaWJsaW8uY2EvHghDc3NDbGFzcwUNYnRBam91dGVyQ3NzIB4EXyFTQgICFgIeB29uY2xpY2sFUF9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ0VudMOqdGUnLCAnTW9uIGRvc3NpZXIgZCB1c2FnZXInXSk7ZAIGDxYCHwIFrwE8ZGl2IGNsYXNzPSJmYi1saWtlIiBkYXRhLWhyZWY9Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9yZXNlYXViaWJsaW9jbmNhIiBkYXRhLWxheW91dD0iYnV0dG9uX2NvdW50IiBkYXRhLWNvbG9yc2NoZW1lPSJkYXJrIiBkYXRhLXNob3ctZmFjZXM9ImZhbHNlIiBkYXRhLWFjdGlvbj0ibGlrZSI+PC9kaXY+ZAIIDxYCHwYCBRYKAgEPZBYEAgEPFgIfAgURY2xhc3M9ImNhdGFsb2d1ZSJkAgMPDxYGHwIFKjxzdHJvbmc+Q2F0YWxvZ3VlPC9zdHJvbmc+PGJyIC8+DQplbiBsaWduZR8HBQVfc2VsZh8EBUwvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL2NhdGFsb2d1ZS1lbi1saWduZS9pbmRleC5hc3B4ZGQCAg9kFgQCAQ8WAh8CBRhjbGFzcz0ibGl2cmVzUmVzc291cmNlcyJkAgMPDxYGHwIFQTxzdHJvbmc+TGl2cmVzICZhbXA7PGJyIC8+DQpyZXNzb3VyY2VzPC9zdHJvbmc+PGJyIC8+IG51bcOpcmlxdWVzHwcFBV9zZWxmHwQFWS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvbGl2cmVzLWV0LXJlc3NvdXJjZXMtbnVtZXJpcXVlcy9pbmRleC5hc3B4ZGQCAw9kFgQCAQ8WAh8CBQxjbGFzcz0icHJldCJkAgMPDxYGHwIFMDxzdHJvbmc+UHLDqnQgZW50cmU8L3N0cm9uZz48YnIgLz5iaWJsaW90aMOocXVlcx8HBQVfc2VsZh8EBVIvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4ZGQCBA9kFgQCAQ8WAh8CBRJjbGFzcz0iZXZlbmVtZW50cyJkAgMPDxYGHwIFPTxzdHJvbmc+QWN0aXZpdCYjMjMzO3M8L3N0cm9uZz48YnIgLz4NCmRlcyBiaWJsaW90aCYjMjMyO3F1ZXMfBwUFX3NlbGYfBAVVL2NhcGl0YWxlLW5hdGlvbmFsZS1ldC1jaGF1ZGllcmUtYXBwYWxhY2hlcy9mci9hY3Rpdml0ZXMtZGVzLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweGRkAgUPZBYEAgEPFgIfAgUVY2xhc3M9ImJpYmxpb3RoZXF1ZXMiZAIDDw8WCh8CBUA8c3Ryb25nPkJpYmxpb3RoJiMyMzI7cXVlczwvc3Ryb25nPjxiciAvPkhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uHwcFBV9zZWxmHwQFXy9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4HwkFBmFjdGl2ZR8KAgJkZAIKD2QWBAIBDw8WBB8CBQdBY2N1ZWlsHwQFOS9jYXBpdGFsZS1uYXRpb25hbGUtZXQtY2hhdWRpZXJlLWFwcGFsYWNoZXMvZnIvaW5kZXguYXNweGRkAgMPFgIfBgIBFgJmD2QWAgIBDw8WBh8JBQpzaWxlbnRMaW5rHwIFJkJpYmxpb3Row6hxdWVzIEhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uHwoCAmRkAgsPZBYEZg8PZBYCHgpkYXRhLXRpdGxlBRpBYm9ubmVtZW50IMOgIGwnaW5mb2xldHRyZWQCAQ9kFgICAQ8PFgIfBAVBL2NhcGl0YWxlLW5hdGlvbmFsZS1ldC1jaGF1ZGllcmUtYXBwYWxhY2hlcy9mci9yc3Mvbm91dmVsbGVzLmFzcHhkZAINDw8WAh8BZ2QWAgIBDw8WAh8EBSlodHRwczovL3d3dy5mYWNlYm9vay5jb20vcmVzZWF1YmlibGlvY25jYRYCHwsFSV9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdGYWNlYm9vayddKTtkAhIPFgIfBgIDFgZmD2QWAgIBDxYCHwIFpQQ8YSBocmVmPSIvY2FwaXRhbGUtbmF0aW9uYWxlLWV0LWNoYXVkaWVyZS1hcHBhbGFjaGVzL2ZyL3F1aS1zb21tZXMtbm91cy9wcml4LWQtZXhjZWxsZW5jZS1nZXJhcmQtZGVzcm9zaWVycy9pbmRleC5hc3B4Ij4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2dlcmFyZGRlc3Jvc2llcnNfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGcnIiBhbHQ9IlByaXggZCdleGNlbGxlbmNlIEcmIzIzMztyYXJkIERlc3Jvc2llcnMiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGciPg0KICA8L2ltZz4NCjwvYT5kAgEPZBYCAgEPFgIfAgWzBDxhIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdMb2kgNTEnXSk7IiBocmVmPSJodHRwOi8vd3d3Lm1jY2NmLmdvdXYucWMuY2EvaW5kZXgucGhwP2lkPTQ0MzYiIHRhcmdldD0iX2JsYW5rIj4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxX292ZXIuanBnJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxLmpwZyciIGFsdD0iTG9pIDUxIC0gTnVsIG4nZXN0IGNlbnMmIzIzMzsgaWdub3JlciBsYSBsb2kgZHUgbGl2cmUiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTEuanBnIj4NCiAgPC9pbWc+DQo8L2E+ZAICD2QWAgIBDxYCHwIFvQU8YSBocmVmPSJodHRwOi8vd3d3LmFnZW5kYTIxYy5nb3V2LnFjLmNhLyIgdGFyZ2V0PSJfYmxhbmsiIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBZ2VuZGEgMjEnXSk7Ij4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9J2h0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlY19fZGVfbGFuYXVkaWVyZV9ldF9kZV9sYV9tYXVyaWNpZS9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9hZ2VuZGEyMV9vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPSdodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWNfX2RlX2xhbmF1ZGllcmVfZXRfZGVfbGFfbWF1cmljaWUvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYWdlbmRhMjEuanBnJyIgYWx0PSJBZ2VuZGEgMjEiIHNyYz0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjX19kZV9sYW5hdWRpZXJlX2V0X2RlX2xhX21hdXJpY2llL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2FnZW5kYTIxLmpwZyI+DQogIDwvaW1nPg0KPC9hPmQCFQ9kFgYCAQ9kFgJmDxYIHglpbm5lcmh0bWwFCEV4dHJhbmV0HgV0aXRsZQUIRXh0cmFuZXQeBGhyZWYFPWh0dHA6Ly93d3cucmVzZWF1YmlibGlvZHVxdWViZWMucWMuY2EvbG9naW4uYXNweD9UeXBlPTImUklEPTkfCwVJX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0V4dHJhbmV0J10pO2QCAw9kFgJmDxYKHw0FEkNvbnNvbGUgZGUgZ2VzdGlvbh8OBRJDb25zb2xlIGRlIGdlc3Rpb24fDwU1aHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9nZXN0aW9uL2Nvbm5leGlvbi1iaWJsaW8fCwVTX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0NvbnNvbGUgZGUgZ2VzdGlvbiddKTseBnRhcmdldAUGX2JsYW5rZAIFD2QWAmYPFgIfAWhkZJw2ACGLi+OKBlC/CDse/fsEoo5WMlgLSEK5DRN/j8xW" />
 </div>
 
 <script type="text/javascript">
@@ -448,7 +472,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspne
                                 </div>
                             </div>
                             <div id="facebook">
-                                <iframe src="http://www.facebook.com/plugins/like.php?locale=fr_FR&href=https%3A%2F%2Fwww.facebook.com%2Freseaubibliocnca&amp;layout=button_count&amp;colorscheme=dark&amp;action=like&width=100&height=30&font=arial" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:30px;" allowTransparency="true"></iframe>
+                                <div class="fb-like" data-href="https://www.facebook.com/reseaubibliocnca" data-layout="button_count" data-colorscheme="dark" data-show-faces="false" data-action="like"></div>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -498,14 +522,8 @@ des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptM
                     
                 
 </div>
-
                 
                     <div class="btRSSInfolettre">
-                        <div id="ctl00_ctl00_Rss_pnlRssSite" class="rss">
-	
-                                <a id="hlRssSite" data-title="Abonnement au fil RSS" href="/capitale-nationale-et-chaudiere-appalaches/fr/rss/nouvelles.aspx" target="_blank"></a>
-                            
-</div>
                         
                     </div>
                 
@@ -668,8 +686,10 @@ des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptM
             <p><b>Année de création :</b> <span data-bind="text: current().AnneeCreation"></span> <b>&#183;</b> <b>Population servie :</b> <span data-bind="text: current().PopulationDesservie"></span></p>
         </div>
         
-        
         <div data-bind="visible: current().WifiDisponible" class="btWifiDisponible hide-laurentides"></div>
+        
+        
+
         <div class="clear"></div>
         <div class="boutonsBas" data-bind="visible: current() && current().UrlSimba" style="display:none">
             
@@ -764,6 +784,7 @@ des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptM
     
     
 
+    
 
             </div>        
         </div>
@@ -858,8 +879,8 @@ des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptM
 </script>
 
 <script type="text/javascript" src="/scripts/jquery.inputmask/jquery.inputmask-3.1.js"></script>
-<script src="/scripts/hammer.min.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/css-accordeon.js?v=2.240" type="text/javascript"></script>
+<script src="/scripts/hammer.min.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/css-accordeon.js?v=2.245" type="text/javascript"></script>
 <script src="/scripts/json2.js" type="text/javascript"></script>
 <script src="/scripts/jquery.autosize-min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
@@ -869,8 +890,8 @@ des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptM
 <script src="/scripts/knockout-custom.js" type="text/javascript"></script>
 <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
 <script src="/scripts/jquery.cookie.js" type="text/javascript"></script>
-<script src="/scripts/knockout.grid.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/script_global.js?v=2.240" type="text/javascript"></script> 
+<script src="/scripts/knockout.grid.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/script_global.js?v=2.245" type="text/javascript"></script> 
     </form>
 </div>
 
@@ -893,30 +914,28 @@ des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptM
     });
 </script>
  
-<!-- Facebook async loading of JSAPI --> 
-<div id="fb-root"></div> 
         
 
     
 
-    <script src='/pages/json/Biblios.aspx?ReseauId=9&includeActivites=0&byNom=&orderBy=&slim=&LastModified=635932593249700000&v=2.240' type='text/javascript'></script>
-    <script src='/pages/json/Municipalites.aspx?ReseauId=9&LastModified=635932512000000000&v=2.240' type='text/javascript'></script>
-    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=9&count=0&BiblioId=0&apresAujourdhui=1&LastModified=635933069522200000&v=2.240' type='text/javascript'></script>
+    <script src='/pages/json/Biblios.aspx?ReseauId=9&includeActivites=0&byNom=&orderBy=&slim=&LastModified=635983569255870000&v=2.245' type='text/javascript'></script>
+    <script src='/pages/json/Municipalites.aspx?ReseauId=9&LastModified=635983488000000000&v=2.245' type='text/javascript'></script>
+    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=9&count=0&BiblioId=0&apresAujourdhui=1&LastModified=635983836476100000&v=2.245' type='text/javascript'></script>
 
-    <script src="/scripts/classes/Arrays.js?v=2.240" type="text/javascript"></script>
+    <script src="/scripts/classes/Arrays.js?v=2.245" type="text/javascript"></script>
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyB5pHwv9Su-pJMqylU17EThEOLyOGwrS7A&amp;language=fr" type="text/javascript"></script>
     <script src="/scripts/infobox.js" type="text/javascript"></script>
     <script src="/scripts/markerClustererPlus.js" type="text/javascript"></script>
     <script src="/scripts/jquery.cycle.all.min.js" type="text/javascript"></script>
     <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
-    <script src="/scripts/classes/GoogleMapBiblio.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/ActiviteViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/BiblioViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/BibliosViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/script_biblios.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/script_onglets.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/script_ongletsBibliotheques.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/classes/Maths.js?v=2.240" type="text/javascript"></script> 
+    <script src="/scripts/classes/GoogleMapBiblio.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/ActiviteViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/BiblioViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/BibliosViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/script_biblios.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/script_onglets.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/script_ongletsBibliotheques.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/classes/Maths.js?v=2.245" type="text/javascript"></script> 
     
     <script type="text/javascript">
         window.afficherMenuBiblios = true;
@@ -955,32 +974,9 @@ des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptM
 
     </script>
 
-
-
     
 
-<script type="text/javascript">
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '',
-            status: true,
-            cookie: true,
-            xfbml: true
-        });
-
-        _ga.trackFacebook(); //Google Analytics tracking
-    };
-
-    // Load the Facebook SDK Asynchronously
-    (function (d) {
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement('script'); js.id = id; js.async = true;
-        js.src = "//connect.facebook.net/fr_FR/all.js";
-        ref.parentNode.insertBefore(js, ref);
-    } (document));
-</script>
-
+    
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

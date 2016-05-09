@@ -1,50 +1,64 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>English Montreal School Board</title>
 <link rel="stylesheet" href="css/style-new.css" type="text/css" />
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 <link rel="stylesheet" href="css/headercss.css" type="text/css" />
 <link rel="stylesheet" href="css/googleSearchCSS.css" type="text/css" />
-
+<link rel="icon" type="image/png" href="../emsblogo.jpg">
 <style type="text/css">
-#twitter { height: 170px; width: 200px; margin:20px 0 0 0;}
+#twitter {
+	height: 170px;
+	width: 200px;
+	margin: 20px 0 0 0;
+}
 </style>
 <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
-<script type="text/javascript" src="js/bottom_links/bottom_links.js"></script> 
-
-
-
+<script type="text/javascript" src="js/bottom_links/bottom_links.js"></script>
 
 <!-- Start WOWSlider.com HEAD section -->
-	<link rel="stylesheet" type="text/css" href="engine1/style.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/bottom_links/jquery.css" media="screen" />
-	<script type="text/javascript" src="engine1/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="engine1/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/bottom_links/jquery.css" media="screen" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
 <!-- End WOWSlider.com HEAD section -->
 
 </head>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
+fbq('init', '1712780855626503');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1712780855626503&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 <body>
 <div id="wrapper">
-	<div id="header">
-    	<div id="emsb-logo"><img src="images-new/emsblogo.png" width="277" height="53" alt="emsb logo" /></div>
-   
-    <div id="header-menu-box">
-    	<div id="header-menu">
-  		<div class="home"><a href="#"><img src="images-new/home-icon.png" width="22" height="22" alt="home" /></a></div>
-		<ul>  
-    					<li><a href="about_en/directionstoemsb_en.asp">Directions</a></li>
-          <li><a href="https://intranet2.emsb.qc.ca/Menus/Default.htm" target="_blank">Intranet</a></li> 					
-    					<li><a href="about_en/contactus_en.asp">Contact us</a></li>
-    					<li><a href="http://www.emsb.qc.ca/emsb_fr/index_fr.asp">FranÃ§ais</a></li>          
-                </ul>                         
-                                 
-     </div> <!--end #header-menu -->
-   	 <div id="search-box">
-			
-         <div id='cse' style='width: 100%;'>Loading...</div>
-				<script src='//www.google.com/jsapi' type='text/javascript'></script>
-                <script type='text/javascript'>
+<div id="header">
+  <div id="emsb-logo"><img src="images-new/emsblogo.png" width="277" height="53" alt="emsb logo" /></div>
+  <div id="header-menu-box">
+    <div id="header-menu">
+      <div class="home"><a href="#"><img src="images-new/home-icon.png" width="22" height="22" alt="home" /></a></div>
+      <ul>
+        <li><a href="about_en/directionstoemsb_en.asp">Directions</a></li>
+        <li><a href="https://intranet2.emsb.qc.ca/Menus/Default.htm" target="_blank">Intranet</a></li>
+        <li><a href="about_en/contactus_en.asp">Contact us</a></li>
+        <li><a href="http://www.emsb.qc.ca/emsb_fr/index_fr.asp">FranÃ§ais</a></li>
+      </ul>
+    </div>
+    <!--end #header-menu -->
+    <div id="search-box">
+      <div id='cse' style='width: 100%;'>Loading...</div>
+      <script src='//www.google.com/jsapi' type='text/javascript'></script> 
+      <script type='text/javascript'>
                 google.load('search', '1', {language: 'en', style: google.loader.themes.DEFAULT_V2});
                 google.setOnLoadCallback(function() {
                   var customSearchOptions = {};
@@ -59,18 +73,19 @@
                   options.setAutoComplete(true);
                   customSearchControl.draw('cse', options);
                 }, true);
-                </script>
-
-
-    </div> <!--end #search-box -->
-
-    </div> <!--end #header-menu-box -->
+                </script> 
+    </div>
+    <!--end #search-box --> 
     
-    </div> <!--end #header -->
-  <!-- Start css3menu.com BODY section id=11 -->
-  <div id="menu">
-    <!-- **********************************   SIDE-MENU START   ******************************** -->
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </div>
+  <!--end #header-menu-box --> 
+  
+</div>
+<!--end #header --> 
+<!-- Start css3menu.com BODY section id=11 -->
+<div id="menu"> 
+  <!-- **********************************   SIDE-MENU START   ******************************** --> 
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <ul id="css3menu11" class="topmenu">
 	<li class="topfirst"><a href="index_en.asp" style="width:75px;height:24px;line-height:24px;"><img src="http://www.emsb.qc.ca/emsb_fr/newwebsite11_files/css3menu1/micon1_32.png" alt="Home"/>Home</a></li>
 
@@ -90,7 +105,7 @@
 		
         <li><a href="#"><span>Departments</span></a>
 		<ul>
-			<li class="subfirst"><a href="http://www.emsb.qc.ca/pedservices/index.htm" target="_blank">Educational and Technology Services</a></li>
+			<li class="subfirst"><a href="http://www.emsb.qc.ca/emsb_en/services_en/ets.asp" target="_blank">Educational and Technology Services</a></li>
 			<li><a href="about_en/specialneeds_en.asp">Graduation and Qualification Rates</a></li>
             <li><a href="about_en/specialneeds_en.asp">Student Services</a></li>
 			<li><a href="about_en/regions_en.asp">Regional Offices</a></li>
@@ -156,11 +171,13 @@
 	<li class="topmenu"><a href="#" style="width:52px;height:24px;line-height:24px;"><span>Schools</span></a>
 	<ul>
     <li><a href="schools_en/valueofschoolboards.asp">The Value of School Boards</a></li>
-       <li><a href="pdf_en/schools_en/2015-2016/LIST OF SCHOOLS 2015-2016.pdf" target="_blank">List of Schools 2015-2016</a></li>
+       <li><a href="pdf_en/schools_en/LIST OF SCHOOLS 2015-2016new.pdf" target="_blank">List of Schools 2015-2016</a></li>
       <li><a href="#"><span>Calendars</span></a>
         <ul>
 		<li class="subfirst"><a href="pdf_en/schools_en/2015-2016 Youth Sector Calendar.pdf" target="_blank">2015-2016 Calendar (PDF)</a></li>
-		<li><a href="pdf_en/schools_en/2016-2017 Youth.pdf" target="_blank">2016-2017 Calendar (PDF)</a></li>
+        		<li><a href="pdf_en/schools_en/2016-2017 Youth.pdf" target="_blank">2016-2017 Calendar (PDF)</a></li>
+
+		<li><a href="pdf_en/schools_en/2016-2017/New Youth 2017-2018 Final.pdf" target="_blank">2017-2018 Calendar (PDF)</a></li>
 			</ul>
         </li>
 		
@@ -378,17 +395,16 @@ Development</a></li>
 		<li><a href="http://www.noussommesbilingues.ca" target="_blank">Nous Sommes Bilingues</a></li>
 	</ul>
 	</li>
-</ul>
-<!-- **********************************   SIDE-MENU  END   ********************************** -->
+</ul> 
+  <!-- **********************************   SIDE-MENU  END   ********************************** --> 
 </div>
 <!-- End css3menu.com BODY section -->
-   
-    <div id="content"><!-- start Outside div for the content div -->
-    
 
-<!-- Start WOWSlider.com BODY section id=wowslider-container1 -->
- <!-- **********************************   SIDE-MENU START   ******************************** -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<div id="content"><!-- start Outside div for the content div --> 
+  
+  <!-- Start WOWSlider.com BODY section id=wowslider-container1 --> 
+  <!-- **********************************   SIDE-MENU START   ******************************** --> 
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -419,29 +435,47 @@ Read more, see <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/2015-2016/Kidcon_eB
        Like us on <a href="https://www.facebook.com/EMSB1" target="_blank">Facebook</a></br>
 </li> -->
 
- <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner447.jpg" alt="" title="EMSB/Montreal Impact Night" id="wows1"/>
- <a href="http://www.emsb.qc.ca/impact/" target="_blank">Click here to buy your tickets for EMSB/Montreal Impact Night on June 8! </a></br>
+
+<li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner468.jpg" alt="" title="Welcoming Syrian Refugees" id="wows1"/>
+What started out as an assembly that promoted peace and prosperity at Westmount Park Elementary School earlier this year, evolved into a project that produced hand-made greeting cards that helped welcome a group of newly-arrived young refugees to Montreal from Syria in a spirit of friendship, hope, acceptance and inclusion. The brief ceremony took place on at Vanier College in St. Laurent, during the weekly Saturday morning French tutoring program that the group of child refugees regularly participate in at Vanier. 
+     <a href="http://www.emsb.qc.ca/emsb_en/media_en/onepressrelease.asp?id=3858" target="_blank"> See press release. </a><br />
+ </li>
+
+
+ <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner467.jpg" alt="" title="EMSB Spring Gala Concert" id="wows1"/>
+     <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/2015-2016/May 7 2016 poster.pdf" target="_blank"> Click here to see poster. </a><br />
+ </li>
+
+
+ 
+ <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner466.jpg" alt="" title="Josef Schovanec's Updated Cocktail & Conference" id="wows1"/>
+     <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/2015-2016/English Invitation_Conference Cocktail_Josef Schovanec.pdf"> Click here to see poster. </a><br />
+ </li>
+ 
+
+ 
+ <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner462.jpg" alt="" title="Cook for a Cure" id="wows1"/>
+		<a href="https://cookforacure.wordpress.com/"> Click here for more information!</a><br />
+        	<a href="https://www.youtube.com/watch?v=B42EzAnQgpU&feature=youtu.be"> Click here to watch a preview video</a><br />
+ </li>  
+
+
+
+
+ 
+<li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner453.jpg" alt="" title="Concordia Sports Camps" id="wows1"/>
+<a href="http://www.concordiacamps.ca/" target="_blank">Read more</a><br />
  </li> 
  
- <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner446.jpg" alt="" title="Science Fair" id="wows1"/>
- Click <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/2015-2016/2016MRSTFflyer.pdf" target="_blank">here</a> to see poster </br>
- Click <a href="http://www.emsb.qc.ca/emsb_en/media_en/onepressrelease.asp?id=3809" target="_blank">here</a> to see press release</li> 
 
-
-<li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner445.jpg" alt="" title="Nutrition Month 2016" id="wows1"/>
-Click <a href="https://sites.google.com/a/lbpearson.ca/nutrition-month-2016/" target="_blank"> here</a> for more details.</li> 
+ 
 
 <!-- 
  <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner441.jpg" alt="" title="EMSB 2016 Nutrition Month Campaign" id="wows1"/>
 For more information go to: <a href="http://www.emsb.qc.ca/nutrition-caf/" target="_blank">www.emsb.qc.ca/cafeteria-caf</a>
 </li> -->
  
- <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner431.jpg" alt="" title="Musical Show Off is now in it's 6th year!
-" id="wows1"/>
-Registration open to all new registrants for Musical Show Off 2016.<a href="http://www.musicalshowoff.com" target="_blank">www.musicalshowoff.com</a><br /> 
-See <a href="https://www.youtube.com/watch?v=80JL0Qds6IY&feature=youtu.be" target="_blank"> video</a>
-</li> 
-
+<!--
 
  <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner433.jpg" alt="" title="Teaching Opportunities" id="wows1"/>
    Read <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/service_en/Ad for Computer Graphics.pdf" target="_blank">more</a></br>
@@ -449,11 +483,7 @@ See <a href="https://www.youtube.com/watch?v=80JL0Qds6IY&feature=youtu.be" targe
 
 
 
- <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner438.jpg" alt="" title="EMSB schools are encouraged to register now  for the Junior Robotics Competition April 29 & 30 at Vanier College." id="wows1"/>
-For more information log on <a href="http://sciencetech.ca/events/junior-robotics-competition" target="_blank">here</a>, and see <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/2015-2016/JRC 2016 Poster.pdf" target="_blank">the poster</a>
-</li> 
-
-
+-->
 <!--
       <li><img src="http://www.emsb.qc.ca/emsb_en/wowslider_en/data1/images/banner410.jpg" alt="" title="Stay in Touch with the EMSB" id="wows1"/>
 Read our <a href="http://www.emsbfocus.com/" target="_blank">Focus newsletter</a></br>
@@ -511,7 +541,9 @@ Please click <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/media_en/flyer/2015-0
 <a href="#" title="">3</a>
 <a href="#" title="">4</a>
 <a href="#" title="">5</a>
-<a href="#" title="">6</a>
+
+
+
 
 
 
@@ -522,87 +554,68 @@ Please click <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/media_en/flyer/2015-0
 	<script type="text/javascript" src="http://www.emsb.qc.ca/emsb_en/wowslider_en/engine1/script.js"></script>
 	<!-- End WOWSlider.com BODY section -->
 </body>
-</html>
-<!-- **********************************   SIDE-MENU  END   ********************************** -->
-<!-- End WOWSlider.com BODY section -->
-
-<div id="content_pad">
-<div id="content_wrapper"><!-- beginning of content_wrapper-to hold the top three divs -->
-    	<div id="leftside"><!-- beginning of leftside -->
+</html> 
+  <!-- **********************************   SIDE-MENU  END   ********************************** --> 
+  <!-- End WOWSlider.com BODY section -->
+  
+  <div id="content_pad">
+    <div id="content_wrapper"><!-- beginning of content_wrapper-to hold the top three divs -->
+      <div id="leftside"><!-- beginning of leftside -->
         <div class="h2-1">
-        <h2>Links</h2>
-        </div><!-- beginning of h4-1 -->
+          <h2>Links</h2>
+        </div>
+        <!-- beginning of h4-1 -->
         <ul class="list-1">
-     <li> <a href="http://www.emsb.qc.ca/internationalstudents/index.asp" target="_blank">International Students<br />
-(Youth Sector)</a> </li>
-   <li> <a href="services_en/bereavement.asp" target="_blank">Bereavement</a> </li>
-   <li> <a href="http://www.emsb.qc.ca/virtuallibrary/index.html" target="_blank">EMSB Virtual Library</a> </li>
-        <li> <a href="pdf_en/governance_en/consultation/Three Year Plan 2015 - 2018.pdf" target="_blank">Three-year plan 2015-2018</a> </li>
-        <li> <a href="pdf_en/SuccessGraduationrates_emsb_2011.pdf" target="_blank">
-Province-wide Success Rate Chart</a> </li>
-        <li> <a href="governance_en/public-notices.asp">Public Notices</a> </li>
-    <li> <a href="pdf_en/governance_en/2014/ELECTORAL-LIST-registered-on-the-ENGLISH-side-2014.pdf" target="_blank">
-EMSB electoral list </a> </li>
-
-        <li><a href="pdf_en/2015-2016/English Montreal Parent Summary  revised Sept. 15.pdf" target="_blank">School Emergency Program</a></li>
-        <li><a href="pdf_en/Air Quality in E.M.S.B. School.pdf" target="_blank">Air Quality at our schools</a> </li>
-        <li> <a href="services_en/hrjobs.asp">
-Offers of Employment </a> </li>
-<!--<li> <a href="pdf_en/2014-2015/Newsletter EMSB MELS May 2015 - FINAL.pdf" target="_blank">
-Newsletter EMSB MELS </a> </li>-->
-       <!--<li><a href="schools_en/summerschool.asp"> Summer School Sessions</a></li>-->
-    <li><a href="pdf_en/governance_en/STUDENT-OMBUDSMAN0930.pdf" target="_blank">
-Student Ombudsman Complaint Procedures</a>
-<ul>
-<li><a href="pdf_en/2014-2015/by-lawno80128.pdf" target="_blank">Student Complaint Form</a></li>
-
-</ul>
-
-</li>
-  <li><a href="pdf_en/2014-Annual Report of Student Ombudsman for 2012-13.pdf" target="_blank">
-Ombudsman's Annual Report</a></li>
-  <li><a>Employee Disclosure Protection</a>
-  <ul>
-  <li><a href="mailto:investigativeofficer@emsb.qc.ca">Investigator Officer<br />
-(514) 483-7200 X 7881</a> </li>
-  <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/governance_en/BoardPolicies/DirectorGeneral/DG-26-Employees-Disclosure-Protection-Policy.pdf" target="_blank">Policy</a></li>
-  
-  </ul>
-
-
-</li>
-         <li><a href="http://www.emsb.qc.ca/centreofexcellence/index.html" target="_blank">
-Centre of Excellence for Speech and Language Development </a></li>
-     
-<li> <a href="pdf_en/internationalFlyer.pdf" target="_blank">
-IB-PYP Schools </a> </li>
-
-<li> <a href="http://www.emsb.qc.ca/mhrc/" target="_blank">
-Mental Health Resource Centre</a> 
-</li>
-<li> <a href="governance_en/bylaws_en.asp">
-By-Laws</a> 
-</li>
-
-<li> <a href="http://apps.emsb.qc.ca/ATSS/" target="_blank">
-Automated Teacher Substitution System (ATSS)</a> </li></ul>
-   	  </div>
-    	<!-- end of leftside -->
-    
-  
-   <!-- **********************************   WHAT IS NEW   ******************************** -->
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+          <li> <a href="http://www.emsb.qc.ca/internationalstudents/index.asp" target="_blank">International Students<br />
+            (Youth Sector)</a> </li>
+          <li> <a href="services_en/bereavement.asp" target="_blank">Bereavement</a> </li>
+          <li> <a href="http://www.emsb.qc.ca/virtuallibrary/index.html" target="_blank">EMSB Virtual Library</a> </li>
+          <li> <a href="pdf_en/governance_en/consultation/Three Year Plan 2015 - 2018.pdf" target="_blank">Three-year plan 2015-2018</a> </li>
+          <li> <a href="pdf_en/SuccessGraduationrates_emsb_2011.pdf" target="_blank"> Province-wide Success Rate Chart</a> </li>
+          <li> <a href="governance_en/public-notices.asp">Public Notices</a> </li>
+          <li> <a href="pdf_en/governance_en/2014/ELECTORAL-LIST-registered-on-the-ENGLISH-side-2014.pdf" target="_blank"> EMSB electoral list </a> </li>
+          <li><a href="pdf_en/2015-2016/English Montreal Parent Summary  revised Sept. 15.pdf" target="_blank">School Emergency Program</a></li>
+          <li><a href="pdf_en/Air Quality in E.M.S.B. School.pdf" target="_blank">Air Quality at our schools</a> </li>
+          <li> <a href="services_en/hrjobs.asp"> Offers of Employment </a> </li>
+          <!--<li> <a href="pdf_en/2014-2015/Newsletter EMSB MELS May 2015 - FINAL.pdf" target="_blank">
+Newsletter EMSB MELS </a> </li>--> 
+          <!--<li><a href="schools_en/summerschool.asp"> Summer School Sessions</a></li>-->
+          <li><a href="pdf_en/governance_en/STUDENT-OMBUDSMAN0930.pdf" target="_blank"> Student Ombudsman Complaint Procedures</a>
+            <ul>
+              <li><a href="pdf_en/2014-2015/by-lawno80128.pdf" target="_blank">Student Complaint Form</a></li>
+            </ul>
+          </li>
+          <li><a href="pdf_en/2014-Annual Report of Student Ombudsman for 2012-13.pdf" target="_blank"> Ombudsman's Annual Report</a></li>
+          <li><a>Employee Disclosure Protection</a>
+            <ul>
+              <li><a href="mailto:investigativeofficer@emsb.qc.ca">Investigator Officer<br />
+                (514) 483-7200 X 7881</a> </li>
+              <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/governance_en/BoardPolicies/DirectorGeneral/DG-26-Employees-Disclosure-Protection-Policy.pdf" target="_blank">Policy</a></li>
+            </ul>
+          </li>
+          <li><a href="http://www.emsb.qc.ca/centreofexcellence/index.html" target="_blank"> Centre of Excellence for Speech and Language Development </a></li>
+          <li> <a href="pdf_en/internationalFlyer.pdf" target="_blank"> IB-PYP Schools </a> </li>
+          <li> <a href="http://www.emsb.qc.ca/mhrc/" target="_blank"> Mental Health Resource Centre</a> </li>
+          <li> <a href="governance_en/bylaws_en.asp"> By-Laws</a> </li>
+          <li> <a href="http://apps.emsb.qc.ca/ATSS/" target="_blank"> Automated Teacher Substitution System (ATSS)</a> </li>
+        </ul>
+      </div>
+      <!-- end of leftside --> 
+      
+      <!-- **********************************   WHAT IS NEW   ******************************** --> 
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <div id="block-1">
        <h2>What is new at the EMSB?</h2>
        
        
              <div class="newswrapper">
      <img src="images-new/new-15.jpg" width="70" height="70" class="img-indent1" />
-     <p><strong>EMSB Takes Strong Stand Against Bill 86</strong></p>
-     </br>
-  View the full video of our special meeting, click <a href="http://emsb.canadacast.ca/archive_2016-01-06.mp4.html" target="_blank">here</a></br>
-    See our press release, click <a href="http://www.emsb.qc.ca/emsb_en/media_en/onepressrelease.asp?id=3772" target="_blank">here</a></br>
-     Please write to the  Education Minister, click <a href="pdf_en/2015-2016/new Letter to Minister Proulx-from parents and other tax payers.pdf?id=3772" target="_blank">here</a>
+     <p><strong>EMSB Presents Brief on Bill 86</strong></p>
+     <p>Click <a href="http://www.emsb.qc.ca/emsb_en/media_en/onepressrelease.asp?id=3821">here</a> for press release <br />
+       Click <a href="pdf_en/2015-2016/EMSB-Bill86-brief-en.pdf">here</a> to see the entire brief<br />
+       Click <a href="pdf_en/2015-2016/BackgrounderBill86.pdf">here</a> to see a summary of the brief<br />
+       Six English and French boards: click <a href="pdf_en/2015-2016/Montreal Laval School Boards Brief.pdf" target="_blank">here</a> to see joint brief<br />
+       Six English and French boards: click <a href="http://www.emsb.qc.ca/emsb_en/media_en/onepressrelease.asp?id=3831" target="_parent">here</a> to see joint brief press release     </p>
      </div> 
       
       
@@ -630,8 +643,15 @@ Automated Teacher Substitution System (ATSS)</a> </li></ul>
        <div class="newswrapper">
      <img src="images-new/new-12.jpg" width="70" height="70" class="img-indent1" />
           <p><strong>Summer School 2016</strong></p>
-     <p>Introduction to Mathematics <a href="pdf_en/2015-2016/Letter information  Intro to Math Prep.pdf?id=1683" target="_blank" class="link_1">Click here</a><br />
-       <br />
+          
+     	<p>
+        Summer School 2016 - Part 1 <a href="pdf_en/schools_en/summerschool/summer2016/Summer_School_2016_Part_1.pdf" target="_blank" class="link_1">Click here</a><br />
+        Summer School 2016 - Part 2 <a href="pdf_en/schools_en/summerschool/summer2016/Summer_School_2016_Part_2.pdf" target="_blank" class="link_1">Click here</a><br />
+        Introduction to Mathematics <a href="pdf_en/2015-2016/Letter information  Intro to Math Prep.pdf?id=1683" target="_blank" class="link_1">Click here</a><br />
+     	Introduction to Mathematics A <a href="pdf_en/2015-2016/Intro_to_Math_A_2016.pdf" target="_blank" class="link_1">Click here</a><br />
+        Introduction to Mathematics B <a href="pdf_en/2015-2016/Intro_to_Math_B_2016.pdf" target="_blank" class="link_1">Click here</a><br />
+        <br />
+        
      </p>
      </div> 
        
@@ -652,10 +672,10 @@ Automated Teacher Substitution System (ATSS)</a> </li></ul>
      </div>   
      
        <div class="newswrapper">
-     <img class="img-indent1" src="images-new/new-32.jpg" />
-     <p><strong>Parent Survey - Deadline, February 19</strong><br />
+     <img class="img-indent1" src="images-new/new-03.jpg" />
+     <p><strong>Touching Base Winter 2016 Newsletter</strong><br />
        <br />
-       <a href="http://www.learnquebec.ca/en/contact/parent_survey.html" target="_blank" class="link_1">Click here</a> for details<br />
+       <a href="pdf_en/2015-2016/Touching B.A.S.E. Winter 2016_Final.pdf" target="_blank" class="link_1">Click here</a> for details<br />
         </p>
      </div>
      
@@ -748,27 +768,22 @@ Automated Teacher Substitution System (ATSS)</a> </li></ul>
 
  
 
-   </div><!-- end of middle section block-1 -->
-<!-- **********************************   WHAT IS NEW  END   ********************************** --> 
-     
-     
-     <!-- beginning of rightside -->
+   </div><!-- end of middle section block-1 --> 
+      <!-- **********************************   WHAT IS NEW  END   ********************************** --> 
+      
+      <!-- beginning of rightside -->
       <div id="rightside">
-      
-             <div class="h2-4"><h2>EMSB on Twitter</h2></div>
-
-<a class="twitter-timeline" href="https://twitter.com/emsb109" data-widget-id="345250099082973184" data-tweet-limit="1" data-chrome="noheader noborders">Tweets by @EnglishMTL</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      
-      
-        <div class="h2-2"><h2>Upcoming Events</h2></div>
-
-                    
-<div class="calendar-list">
-
-
-
-<!--
+        <div class="h2-4">
+          <h2>EMSB on Twitter</h2>
+        </div>
+        <a class="twitter-timeline" href="https://twitter.com/emsb109" data-widget-id="345250099082973184" data-tweet-limit="1" data-chrome="noheader noborders">Tweets by @EnglishMTL</a> 
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div class="h2-2">
+          <h2>Upcoming Events</h2>
+        </div>
+        <div class="calendar-list"> 
+          
+          <!--
     
 <dl class="calendar-day first-child">
 		<dt><span class="day">Wed</span> <span class="month">Jan</span> <span class="date">27</span></dt> 
@@ -792,138 +807,135 @@ Automated Teacher Substitution System (ATSS)</a> </li></ul>
     
             
 </dl>
- --> 
+ -->
+          
+          <dl class="calendar-day first-child">
+            <dt><span class="day">Wed</span> <span class="month">Apr</span> <span class="date">27</span></dt>
+            <dd class="only-child">
+              <h4>Next Board Meeting</h4>
+           <h5><a href="pdf_en/governance_en/Notice. Agenda. Special Board. May. 4. 2016.pdf" target="_blank">Agenda</a></h5> 
+      <!--   <h5><a href="pdf_en/governance_en/1.  Agenda. Executive. April. 27. 2016.pdf" target="_blank">Executive Committee Meeting Agenda</a></h5> -->
+              <h5><a href="http://emsb.canadacast.ca/" target="_blank">Watch Board Meetings</a></h5>
+              <div class="clear"></div>
+            </dd>
+          </dl>
+        </div>
+        <!-- END CALENDAR-LIST --> 
+        
+        
+        
+        <!-- Start Next Board Meeting Updater Script --> 
+        <script>	
   
-   
-
-    
-<dl class="calendar-day first-child">
-		<dt><span class="day">Wed</span> <span class="month">Mar</span> <span class="date">23</span></dt> 
-		<dd class="only-child">
-				 <h4>Next Board Meeting</h4> 
-	    <h5><a href="http://emsb.canadacast.ca/" target="_blank">Watch Board Meetings</a></h5> 
-
-         <div class="clear"></div>	 
-         
-         
-         
-		    </dd>
-            
-    
-            
-</dl>     
-
- 
-
-
-	
-    </div><!-- END CALENDAR-LIST -->
- 
-    
-      
-    
-     <div class="h2-1"><h2>Public Notices</h2></div>
-     <ul class="list-1">  
-
- <li><a href="pdf_en/governance_en/2015/50-15 English Montreal School Board 3x35.pdf" target="_blank">Public Notice - Annual Report </a></li> 
-            <li> <a href="pdf_en/governance_en/Financial Statements Oct 14 2015 Public Notice.pdf" target="_blank">Public Notice - Financial Statements</a></li>
-
-      </ul>
-   
-     
-  
-
-
-<!--<li> <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/schools_en/English%20Open%20House%202015-2016.pdf" target="_blank"> Nov 26 - Hampstead</a></li>
+  		var today = new Date();
+		
+		var january  = 0, 
+		february = 1, 
+		march = 2,
+		april = 3, 
+		may = 4, 
+		june = 5, 
+		July = 6, 
+		August = 7,
+		September = 8,
+		October = 9,
+		November = 10,
+		December = 11;
+		
+		
+		//Put the day after the meeting.
+		//Copy paste this code x number of meetings.
+		// datetime.date(year, month, day)
+		
+		
+		
+		if(today >= new Date(2016, may, 1)){
+			
+			document.getElementsByClassName("day").item(0).innerHTML = "Wed";
+			document.getElementsByClassName("month").item(0).innerHTML = "May";
+			document.getElementsByClassName("date").item(0).innerHTML = "4";
+			
+		}
+		
+		//Put the day after the meeting.
+		//Copy paste this code x number of meetings.
+		// datetime.date(year, month, day)
+		
+		if(today >= new Date(2016, may, 5)){
+			
+			document.getElementsByClassName("day").item(0).innerHTML = "Wed";
+			document.getElementsByClassName("month").item(0).innerHTML = "May";
+			document.getElementsByClassName("date").item(0).innerHTML = "25";
+			
+		}
+		
+		
+		//Put the day after the last meeting.
+		//Copy paste this code x number of meetings.
+		// datetime.date(year, month, day)
+		
+		if(today >= new Date(2016, may, 26)){
+			
+			document.getElementsByClassName("day").item(0).innerHTML = "Wed";
+			document.getElementsByClassName("month").item(0).innerHTML = "June";
+			document.getElementsByClassName("date").item(0).innerHTML = "15";
+			
+		}
+		
+		
+  		</script> 
+        <!-- End Next Board Meeting Updater Script -->
+        
+        
+        
+        <div class="h2-1">
+          <h2>Public Notices</h2>
+        </div>
+        <ul class="list-1">
+          <li><a href="pdf_en/governance_en/2015/50-15 English Montreal School Board 3x35.pdf" target="_blank">Public Notice - Annual Report </a></li>
+          <li> <a href="pdf_en/governance_en/Financial Statements Oct 14 2015 Public Notice.pdf" target="_blank">Public Notice - Financial Statements</a></li>
+        </ul>
+        
+        <!--<li> <a href="http://www.emsb.qc.ca/emsb_en/pdf_en/schools_en/English%20Open%20House%202015-2016.pdf" target="_blank"> Nov 26 - Hampstead</a></li>
 -->
-
-
-      </ul>
-    
-    
-     <div class="h2-1"><h2>Parent Committees</h2></div>
-     <ul class="list-1">
-       <li> <a href="pdf_en/parents_en/CPC-RPC-ACSES List of meetings1126.pdf" target="_blank">Central Parents' Committee, Regional Parents' Committee, A.C.S.E.S. - Meeting Dates 15-16</a></li>
-      </ul>
+        
+        </ul>
+        <div class="h2-1">
+          <h2>Parent Committees</h2>
+        </div>
+        <ul class="list-1">
+          <li> <a href="pdf_en/parents_en/CPC-RPC-ACSES List of meetings.pdf" target="_blank">Central Parents' Committee, Regional Parents' Committee, A.C.S.E.S. - Meeting Dates 15-16</a></li>
+        </ul>
+        <br />
+        <br/>
+        <br />
+        <div class="h2-4">
+          <h2>Schools on Twitter</h2>
+        </div>
+        <a class="twitter-timeline" href="https://twitter.com/EnglishMTL/emsb-schools" data-widget-id="367698923638374400"data-tweet-limit="2" data-chrome="noheader noborders">Tweets from @EnglishMTL/emsb-schools</a> 
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+      </div>
+      <!-- end of rightside div --> 
       
-      <br />
-       
-
-<br/><br />
-<div class="h2-4"><h2>Schools on Twitter</h2></div>
-<a class="twitter-timeline" href="https://twitter.com/EnglishMTL/emsb-schools" data-widget-id="367698923638374400"data-tweet-limit="2" data-chrome="noheader noborders">Tweets from @EnglishMTL/emsb-schools</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
-
-        </div><!-- end of rightside div -->
-     
-     
-    </div><!-- end of content_wrapper -->
- <div class="bottom_banner">
-<ul  id="slider"> 
-
-<li class="btm-links"> 
-
-<li class="btm-links"></li> 
-<li class="btm-links"> 
-<a href="http://www.learnquebec.ca/en/content/clc" target="_blank" class="slider-links">  
-<img src="images/bottom_links/learn.png"/> 
-<span> 
-<strong>CLC</strong><br/> 
-Community Learning Centres
-</span>
-</a> 
-</li> 
-<li class="btm-links"> 
-<a href="http://www.distanted.ca/" target="_blank" class="slider-links"> 
-<img src="images/bottom_links/distance_education.png" border="0" /> 
-<span> 
-<strong>Distance Education</strong><br/> 
-Distance Education for All learners. 
-</span> 
-</a> 
-</li> 
-
-
-
-<li class="btm-links"> 
-<a href="http://www.emsb.qc.ca/internationalstudents/index.asp" target="_blank" class="slider-links"> 
-<img src="images/bottom_links/internationalstudents.png" border="0" /> 
-<span> 
-<strong>International Students</strong><br/> 
-General Information for Elementary and High Schools.
-</span> 
-</a>
-</li> 
-
-<li class="btm-links"> 
-<a href="Greenplan/index.html" target="_blank" class="slider-links"> 
-<img src="images/bottom_links/green_plan.png" /> 
-<span>
-<strong>Green Plan</strong><br/> 
-A Green Policy and Action Plan for the school board. 
-</span>
-</a> 
-</li> 
-<li class="btm-links"> 
-<a href="http://eportal.emsb.qc.ca" target="_blank" class="slider-links"> 
-<img src="images/bottom_links/EMSBportal.png" border="0" /> 
-<span> 
-<strong>EMSB ePortal</strong><br/> 
-</span> 
-</a> 
-</li> 
-<li class="btm-links"> 
-<a href="http://www.mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&amp;DistrictCode=QC87" target="_blank" class="slider-links"> 
-<img src="images/bottom_links/school_locator.png" /> 
-<span>
-<strong>School Locator</strong><br/> 
-Find an Elementary School. 
-</span>
-</a> 
-</li> 
-<!--<li class="btm-links"> 
+    </div>
+    <!-- end of content_wrapper -->
+    <div class="bottom_banner">
+      <ul  id="slider">
+        <li class="btm-links">
+        <li class="btm-links"></li>
+        <li class="btm-links"> <a href="http://www.learnquebec.ca/en/content/clc" target="_blank" class="slider-links"> <img src="images/bottom_links/learn.png"/> <span> <strong>CLC</strong><br/>
+          Community Learning Centres </span> </a> </li>
+        <li class="btm-links"> <a href="http://www.distanted.ca/" target="_blank" class="slider-links"> <img src="images/bottom_links/distance_education.png" border="0" /> <span> <strong>Distance Education</strong><br/>
+          Distance Education for All learners. </span> </a> </li>
+        <li class="btm-links"> <a href="http://www.emsb.qc.ca/internationalstudents/index.asp" target="_blank" class="slider-links"> <img src="images/bottom_links/internationalstudents.png" border="0" /> <span> <strong>International Students</strong><br/>
+          General Information for Elementary and High Schools. </span> </a> </li>
+        <li class="btm-links"> <a href="Greenplan/index.html" target="_blank" class="slider-links"> <img src="images/bottom_links/green_plan.png" /> <span> <strong>Green Plan</strong><br/>
+          A Green Policy and Action Plan for the school board. </span> </a> </li>
+        <li class="btm-links"> <a href="http://eportal.emsb.qc.ca" target="_blank" class="slider-links"> <img src="images/bottom_links/EMSBportal.png" border="0" /> <span> <strong>EMSB ePortal</strong><br/>
+          </span> </a> </li>
+        <li class="btm-links"> <a href="http://www.mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&amp;DistrictCode=QC87" target="_blank" class="slider-links"> <img src="images/bottom_links/school_locator.png" /> <span> <strong>School Locator</strong><br/>
+          Find an Elementary School. </span> </a> </li>
+        <!--<li class="btm-links"> 
 <a href="http://daycare-matters.com/" target="_blank" class="slider-links"> 
 <img src="images/bottom_links/base.png" border="0" /> 
 <span> 
@@ -932,30 +944,14 @@ Touching base on Daycare Matters.
 </span> 
 </a> 
 </li> -->
-
-<li class="btm-links"> 
-<a href="http://emsb.canadacast.ca/" target="_blank" class="slider-links"> 
-<img src="images/bottom_links/webcast.png" border="0" /> 
-<span> 
-<strong>Live Webcast</strong><br/> 
-Watch EMSB Board Meetings. 
-</span> 
-</a> 
-</li> 
-
-<li class="btm-links"> 
-<a href="http://www.emsb-sarca.ca/" target="_blank" class="slider-links"> 
-<img src="images/bottom_links/sarca.png" border="0" /> 
-<span> 
-<strong>Your Education...</strong><br/> 
-Your Future...<br/> 
-Your Success!
-</span> 
-</a> 
-</li> 
-
-
-<!--<li class="btm-links"> 
+        
+        <li class="btm-links"> <a href="http://emsb.canadacast.ca/" target="_blank" class="slider-links"> <img src="images/bottom_links/webcast.png" border="0" /> <span> <strong>Live Webcast</strong><br/>
+          Watch EMSB Board Meetings. </span> </a> </li>
+        <li class="btm-links"> <a href="http://www.emsb-sarca.ca/" target="_blank" class="slider-links"> <img src="images/bottom_links/sarca.png" border="0" /> <span> <strong>Your Education...</strong><br/>
+          Your Future...<br/>
+          Your Success! </span> </a> </li>
+        
+        <!--<li class="btm-links"> 
 <a href="http://www.wallenbergacademy.com/" target="_blank" class="slider-links"> 
 <img src="images/bottom_links/wallenberg.png" border="0" /> 
 <span> 
@@ -963,10 +959,9 @@ Your Success!
 New high school in <br/> 
 CÃ´te St-luc</span> 
 </a> 
-</li> -->
-
-
-<!--
+</li> --> 
+        
+        <!--
 <li class="btm-links"> 
 <a href="http://www.noussommesbilingues.ca/" target="_blank" class="slider-links"> 
 <img src="images/bottom_links/noussommesbilingues.png" border="0" /> 
@@ -977,106 +972,85 @@ en franÃ§ais!
 </span> 
 </a> 
 </li>-->
-
-
-<li class="btm-links"> 
-<a href="http://www.psbgmchf.org/" target="_blank" class="slider-links"> 
-<img src="../emsb_en/images/bottom_links/PSBGMCHF.png" width="60" height="60" border="0" /> 
-<span> 
-<strong>PSBGM Cultural Heritage Foundation</strong><br/> 
-Supporting education through the fine arts
-</span> 
-</a> 
-</li> 
-
-
-
-
-</ul>
+        
+        <li class="btm-links"> <a href="http://www.psbgmchf.org/" target="_blank" class="slider-links"> <img src="../emsb_en/images/bottom_links/PSBGMCHF.png" width="60" height="60" border="0" /> <span> <strong>PSBGM Cultural Heritage Foundation</strong><br/>
+          Supporting education through the fine arts </span> </a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- end of content --> 
 </div>
-
-    </div><!-- end of content -->
-	</div><!-- end of the content_pad -->
-
-
-
-
-
+<!-- end of the content_pad -->
 
 <div id="footer">
   <div class="footer-pad">
-	
     <div class="left-footer">
-    <h3>Quick Links</h3>
-    <ul class="quick-links">
-   <li><a href="http://emsb.canadacast.ca/" target="_blank">Live Webcast of EMSB Board Meetings</a></li>
-    <li><a href="http://mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&amp;DistrictCode=QC87" target="_blank">Find an Elementary School</a></li>
-    <li><a href="http://www.emsb.qc.ca/internationalstudents/index.asp" target="_blank">International Students</a></li>
-    <li><a href="http://www.distanted.ca/" target="_blank">Distance Education</a></li>
-       <li><a href="http://www.emsb.qc.ca/en/Greenplan/index.html" target="_blank">EMSB Green Plan</a></li>
-          <li><a href="http://daycare-matters.com/" target="_blank">Touching Base on Daycare Matters</a></li>
-          <li><a href="http://daycare-matters.com/" target="_blank">The Green Report - Daycare</a></li>
-          <li><a href="http://portail.emsb.qc.ca/Anonym/Accueil/Accueil.aspx" target="_blank">Student/Staff Portal Access</a></li>    
-       </ul>
-    
+      <h3>Quick Links</h3>
+      <ul class="quick-links">
+        <li><a href="http://emsb.canadacast.ca/" target="_blank">Live Webcast of EMSB Board Meetings</a></li>
+        <li><a href="http://mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&amp;DistrictCode=QC87" target="_blank">Find an Elementary School</a></li>
+        <li><a href="http://www.emsb.qc.ca/internationalstudents/index.asp" target="_blank">International Students</a></li>
+        <li><a href="http://www.distanted.ca/" target="_blank">Distance Education</a></li>
+        <li><a href="http://www.emsb.qc.ca/en/Greenplan/index.html" target="_blank">EMSB Green Plan</a></li>
+        <li><a href="http://daycare-matters.com/" target="_blank">Touching Base on Daycare Matters</a></li>
+        <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/2014-2015/Touching%20BASE%20Summer%202015.pdf" target="_blank">The Green Report - Daycare</a></li>
+        <li><a href="http://portail.emsb.qc.ca/Anonym/Accueil/Accueil.aspx" target="_blank">Student/Staff Portal Access</a></li>
+      </ul>
     </div>
     <div class="middle-footer">
-	<div class="m-footer-left">
+      <div class="m-footer-left">
         <h3>Recent News</h3>
-    <ul class="quick-links">
-     <li><a href="media_en/jfk-jfkbc-update_en.asp">JFK and JFKBC Update</a></li>
-    <li></li>
-       <li></li>
-    
-    </ul>
-     </div>
-     
-     
-     	<div class="m-footer-right">
+        <ul class="quick-links">
+          <li><a href="http://www.emsb.qc.ca/emsb_en/media_en/onepressrelease.asp?id=3821">Emsb Calls On Government To Withdraw Bill 86</a></li>
+          <li><a href="http://www.inspirationsnews.com/pdf/Editions/Inspirations_winter-1113.pdf">Insprirations Express Fall 2015/ Winter 2016 Edition</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/2015-2016/Letter%20information%20%20Intro%20to%20Math%20Prep.pdf?id=1683">Summer School 2016</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/2015-2016/Touching%20B.A.S.E.%20Winter%202016_Final.pdf">Touching Base Winter 2016 Newsletter</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/about_en/2014_2015%20Annual%20Report%20ENGLISH_dec2015.pdf">The 2014-2015 EMSB Annual Report is available for viewing online. </a></li>
+          <li><a href="https://leminibistro.emsb.qc.ca/">School Lunch Catering Service</a></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="m-footer-right">
         <h3>Media and Publications</h3>
-    <ul class="quick-links">
- <li><a href="media_en/emsb_express.asp">EMSB Express</a></li>
-    <li><a href="media_en/fieldingfocus.asp">EMSB Fielding Focus </a></li>
-    <li><a href="http://vimeo.com/emsb" target="_blank">EMSB TV</a></li>
-    <li><a href="media_en/emsb-radio.asp">EMSB Radio</a></li>
-    <li><a href="media_en/mediaclipping_en.asp">Media Clippings</a></li>
-    <li><a href="media_en/bulletinboard_en.asp">Information Flyer</a></li>
-    <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/media_en/2011-2012ElementarySchoolGuidenew.pdf" target="_blank">Elementary School Guide Book</a></li>
-    <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/media_en/2012-2013HSBook-Web.pdf" target="_blank">High School Guide Book</a></li>    </ul>
-     </div>
-    
-    
-    </div><!--end of middle footer div-->
-	<div class="right-footer">
-      <h3>Follow Us</h3>
-      <div class="icons">
-     <a href="http://www.facebook.com/EMSB1" ><img src="images-new/Facebook25.png" width="25" height="25" /> </a><br />
-       <a href="https://twitter.com/emsb109"><img src="images-new/twitterlogo.png" width="25" height="25" alt="" /> </a><br />
-     <a href="http://vimeo.com/emsb"><img src="images-new/vimeologo.png" width="25" height="25" alt="" /> </a><br />
+        <ul class="quick-links">
+          <li><a href="http://www.emsb.qc.ca/emsb_en/media_en/emsb_express.asp">EMSB Express</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/media_en/fieldingfocus.asp">EMSB Fielding Focus </a></li>
+          <li><a href="http://vimeo.com/emsb" target="_blank">EMSB TV</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/media_en/emsb-radio.asp">EMSB Radio</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/media_en/mediaclipping_en.asp">Media Clippings</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/media_en/bulletinboard_en.asp">Information Flyer</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/media_en/2011-2012ElementarySchoolGuidenew.pdf" target="_blank">Elementary School Guide Book</a></li>
+          <li><a href="http://www.emsb.qc.ca/emsb_en/pdf_en/media_en/2012-2013HSBook-Web.pdf" target="_blank">High School Guide Book</a></li>
+        </ul>
       </div>
-     <div class="dec-icons">
-     <a href="http://www.facebook.com/EMSB1" target="_blank">Facebook</a><br />
-     <a href="https://twitter.com/EnglishMTL" target="_blank">Twitter</a><br />
-      <a href="http://vimeo.com/emsb" target="_blank">EMSB TV</a><br />
-      </div>
-     
     </div>
-    
-
-
-</div><!--end of footer-pad div-->
-<div class="clear"></div>
-</div><!--end of footer div-->
-<div id="copyright">
-<div class="copyright-pad">
-<a class="logo" href="images-new/new-01.jpg"></a>
-<div class="copyright">
-<p>
-<span>Please send comments or suggestions to <a href="mailto:webmaster@emsb.qc.ca" target="_blank">webmaster@emsb.qc.ca</a>. </span>|<span>Webmaster</span>|<span>Â© 2013 English Montreal School Board. All Rights Reserved. </span>
-</p>
+    <!--end of middle footer div-->
+    <div class="right-footer">
+      <h3>Follow Us</h3>
+      <div class="icons"> <a href="http://www.facebook.com/EMSB1" ><img src="images-new/Facebook25.png" width="25" height="25" /> </a><br />
+        <a href="https://twitter.com/emsb109"><img src="images-new/twitterlogo.png" width="25" height="25" alt="" /> </a><br />
+        <a href="http://vimeo.com/emsb"><img src="images-new/vimeologo.png" width="25" height="25" alt="" /> </a><br />
+      </div>
+      <div class="dec-icons"> <a href="http://www.facebook.com/EMSB1" target="_blank">Facebook</a><br />
+        <a href="https://twitter.com/EnglishMTL" target="_blank">Twitter</a><br />
+        <a href="http://vimeo.com/emsb" target="_blank">EMSB TV</a><br />
+      </div>
+    </div>
+  </div>
+  <!--end of footer-pad div-->
+  <div class="clear"></div>
 </div>
-</div><!--end of copyright-pad div-->
-</div><!--end of copyright div-->
+<!--end of footer div-->
+<div id="copyright">
+  <div class="copyright-pad"> <a class="logo" href="images-new/new-01.jpg"></a>
+    <div class="copyright">
+      <p> <span>Please send comments or suggestions to <a href="mailto:webmaster@emsb.qc.ca" target="_blank">webmaster@emsb.qc.ca</a>. </span>|<span>Webmaster</span>|<span>Â© 2013 English Montreal School Board. All Rights Reserved. </span> </p>
+    </div>
+  </div>
+  <!--end of copyright-pad div--> 
+</div>
+<!--end of copyright div-->
 
 </body>
 </html>

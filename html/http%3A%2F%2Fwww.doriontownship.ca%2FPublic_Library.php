@@ -36,17 +36,152 @@
 
 <!-- START AUTO MENU SYSTEM -->
 
-    <a href="Home_Page.php">Home Page</a>
-    <a href="Greetings_from_the_Reeve%21.php">Greetings from the Reeve!</a>
-    <a href="History.php">History</a>
-    <a href="Council.php">Council</a>
-    <a href="Municipal_Services.php">Municipal Services</a>
-    <a href="Municipal_Contacts.php">Municipal Contacts</a>
-    <a href="Economic_Development.php">Economic Development</a>
-    <a href="Tourism.php">Tourism</a>
-    <a href="Community_Calendar.php">Community Calendar</a>
-    <a href="EMPLOYMENT.php">EMPLOYMENT</a>
-    <a href="Energy_Usage.php">Energy Usage</a>
+<TABLE width="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ALIGN="CENTER" CLASS="vmenu_mainz">
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="Home_Page.php" class="vmenu_main_off">Home Page</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="Greetings_from_the_Reeve!.php" class="vmenu_main_off">Greetings from the Reeve!</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="History.php" class="vmenu_main_off">History</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="Council.php" class="vmenu_main_off">Council</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_on">
+   <div class="vmenu_main_on">
+    <a href="Municipal_Services.php" class="vmenu_main_on">Municipal Services</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="top" class="vmenu_main_sub">
+   
+
+   <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" ALIGN="LEFT" class="vmenu_subs">
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Administration.php" class="vmenu_sub_off">Administration</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Public_Works.php" class="vmenu_sub_off">Public Works</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_on">
+      <div class="vmenu_sub_on">
+       <a href="Public_Library.php" class="vmenu_sub_on">Public Library</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Recreation.php" class="vmenu_sub_off">Recreation</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Museum.php" class="vmenu_sub_off">Museum</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Community_Services.php" class="vmenu_sub_off">Community Services</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Health_Care.php" class="vmenu_sub_off">Health Care</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Building_Permits.php" class="vmenu_sub_off">Building Permits</a>
+      </div>
+     </td>
+    </tr>
+
+   </TABLE>
+
+
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="Municipal_Contacts.php" class="vmenu_main_off">Municipal Contacts</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="Economic_Development.php" class="vmenu_main_off">Economic Development</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="Tourism.php" class="vmenu_main_off">Tourism</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="Community_Calendar.php" class="vmenu_main_off">Community Calendar</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="EMPLOYMENT.php" class="vmenu_main_off">EMPLOYMENT</a>
+   </div>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" class="vmenu_main_off">
+   <div class="vmenu_main_off">
+    <a href="Energy_Usage.php" class="vmenu_main_off">Energy Usage</a>
+   </div>
+  </td>
+ </tr>
+</table>
 
 
 <!-- END AUTO MENU SYSTEM -->
@@ -59,14 +194,68 @@
 
 <!-- START AUTO MENU SYSTEM -->
 
-       <a href="Administration.php">Administration</a>
-       <a href="Public_Works.php">Public Works</a>
-       <a href="Public_Library.php">Public Library</a>
-       <a href="Recreation.php">Recreation</a>
-       <a href="Museum.php">Museum</a>
-       <a href="Community_Services.php">Community Services</a>
-       <a href="Health_Care.php">Health Care</a>
-       <a href="Building_Permits.php">Building Permits</a>
+
+
+   <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" ALIGN="LEFT" class="vmenu_subs">
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Administration.php" class="vmenu_sub_off">Administration</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Public_Works.php" class="vmenu_sub_off">Public Works</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_on">
+      <div class="vmenu_sub_on">
+       <a href="Public_Library.php" class="vmenu_sub_on">Public Library</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Recreation.php" class="vmenu_sub_off">Recreation</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Museum.php" class="vmenu_sub_off">Museum</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Community_Services.php" class="vmenu_sub_off">Community Services</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Health_Care.php" class="vmenu_sub_off">Health Care</a>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="vmenu_sub_off">
+      <div class="vmenu_sub_off">
+       <a href="Building_Permits.php" class="vmenu_sub_off">Building Permits</a>
+      </div>
+     </td>
+    </tr>
+
+   </TABLE>
+
 
 
 <!-- END AUTO MENU SYSTEM -->

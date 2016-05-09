@@ -184,7 +184,7 @@ function __doPostBack(eventTarget, eventArgument) {
         <li class="gens_affaires"><a href="/gens_affaires/index.aspx">Gens d'affaires</a></li>
         <li class="touristes"><a href="/touristes/index.aspx">Touristes</a></li>
         <li><a href="/apropos/index.aspx" title="À propos de la ville">À propos de la ville</a></li> <!-- Manque profil financier -->
-         <li><a href="/accessibilite/index.aspx" title="Accessibilité universelle">Accessibilité universelle</a></li>
+
         <li><a href="/aines/index.aspx" title="Aînés">Aînés</a></li>
           <li><a href="http://carte.ville.quebec.qc.ca/mobile" title="Carte interactive de la ville">Carte interactive</a></li>
         <li><a href="/culture_patrimoine/index.aspx" title="Culture et patrimoine">Culture et patrimoine</a></li>
@@ -315,7 +315,7 @@ vendredi, de 8 h 30 à 12 h et de 13 h à 16 h 30</strong>. Elle est fermée le 
             <div class="titre">Ville branchée</div>
             <ul>
                 <li><a href="/abonnement/courriel.aspx" title="Abonnement">Abonnement</a></li>
-                <li><a href="/accessibilite/accessibilite_web.aspx" title="Accessibilité">Accessibilité Web</a></li>
+                <li><a href="/citoyens/accessibilite/accessibilite_web.aspx" title="Accessibilité">Accessibilité Web</a></li>
                 <li><a href="http://donnees.ville.quebec.qc.ca/" title="Données ouvertes" target="_blank">Données ouvertes</a></li>
                 <li><a href="/nous_joindre/medias_sociaux.aspx" title="Médias sociaux">Médias sociaux</a></li>
                 <!--<li><a href="#" title="Mobilité">Mobilité</a></li>-->

@@ -222,6 +222,7 @@ var mygallery=new fadeSlideShow({
 <h3 class="menuheader expandable">
 <a href="camp.asp" target="_self"><img src="menu/camp.png" width="35" height="35" hspace="5" vspace="0" border="0" align="absmiddle" />Camp de jour</a></h3>
 <ul class="categoryitems">
+<li><a href="http://www.ville.mercier.qc.ca/08_publications/infomercier/2016/infomercier_camptornade_2016.pdf" target="_blank">Info Mercier | Camp Tornade 2016</a></li>
 <li><a href="https://www.sport-plus-online.com/prmsinsc/Pages/accueil.aspx?VirId=92&ArrId=136" target="_blank">Inscription en ligne</a></li>
 <li><a href="modalites_camp.asp">Modalit&eacute;s et formulaire d'inscription</a></li>
 <li><a href="journal_campeur.asp">Journal du campeur</a></li>
@@ -341,15 +342,16 @@ Horaire: <br /><br>
 		<p class="texte_gris">Une expérience littéraire amusante pour les petits. Pendant que maman et papa bouquinent, lenfant est invité à se plonger dans la magie des histoires ! Cest une belle façon de linitier aux plaisirs de la lecture. Chaque rencontre se termine par un bricolage. Beaucoup de plaisirs au rendez-vous !</p>
 
 		
-		<p class="texte_gris">Animation : Jacinthe Crête<br>
-		code : <br>
-		CONTE5: 18 novembre, Dimanche, 9 h 30 à 10 h 30<br>
-		CONTE6: 18 novembre, Dimanche, 11 h à 12 h<br>
-		CONTE7: 13 décembre, Dimanche, 9 h 30 à 10 h 30<br>
-		CONTE8: 13 décembre, Dimanche, 11 h à 12 h<br>
+		<p class="texte_gris">Animation : Bouquine & Jacinthe Crête<br><br>
+		code de l'activité : <br><br>
+		Conte1-P16: 17 avril, Dimanche, 9 h 30 à 10 h 30<br>
+		Conte2-P16: 17 avril, Dimanche, 11 h à 12 h<br><br>
+		Conte3-P16: 15 mai, Dimanche, 9 h 30 à 10 h 30<br>
+		Conte4-P16: 15 mai, Dimanche, 11 h à 12 h<br><br>
 		<br>
-		lieu : Bibliothèque<br>
-		coût : Gratuit<br>
+		Âge : 3 à 6 ans (maternelle)
+		Lieu : Bibliothèque<br>
+		Coût : Gratuit<br>
 		Laccompagnateur de lenfant doit demeurer dans la bibliothèque</p>
 
 
@@ -358,7 +360,72 @@ Horaire: <br /><br>
 
 <p class="titre">&nbsp;</p>
 
-<p><img src="imgs/bibliotheque/vente_livres.jpg"  hspace="10" align=""></p>
+
+		<p class="titre_jaune">&nbsp;</p>
+
+		
+
+		<h3 class="handcursor" id="bobcontentcontjournee-title">JOURNÉE DU LIVRE ET DROIT D'AUTEUR</h3>
+
+
+		<div id="bobcontentcontjournee" class="switchgroup1">
+        <div align="justify">
+
+		<p class="texte_gris">Conférence de Louise Robitaille, alias Madame Chasse-taches</p>
+
+		
+		<p class="texte_gris">Chroniqueuse à la radio et à la télévision ainsi que collaboratrice dans divers magazines, Madame Chasse-taches est une passionnée de tous les trucs de grand-mère et de grand-père. Venez profiter de ses bons conseils.<br><br>
+		Jeudi 21 avril - 19 h<br><br>
+		Gratuit  Inscriptions obligatoires<br><br>
+		450 691-6090<br>
+		Division loisirs | poste 249<br>
+		Division bibliothèque | poste 314<br>
+		<br>
+		Lieu : Bibliothèque<br></p>
+
+
+		</div></div>
+
+
+
+<p class="titre">&nbsp;</p>
+
+
+		<p class="titre_jaune">&nbsp;</p>
+
+		
+
+		<h3 class="handcursor" id="bobcontentcontbd-title">LE MOIS DE LA BD.</h3>
+
+
+		<div id="bobcontentcontbd" class="switchgroup1">
+        <div align="justify">
+
+		<p class="texte_gris">Animation de Tristan Demers, bédéiste.</p>
+
+		
+		<p class="texte_gris">Le créateur de Gargouille, illustrateur des Trash Pack et des Introuvables partage, à grands coups de crayon, sa passion du dessin avec une approche humoristique des plus contagieuses! Cette rencontre spontanée et remplie de surprises sadresse à toute la famille.<br><br>
+		21 mai 2016, de 10 h 30 à 12 h<br><br>
+		Gratuit  Inscriptions obligatoires<br><br>
+		450 691-6090<br>
+		Division loisirs | poste 249<br>
+		Division bibliothèque | poste 314<br>
+		<br>
+		Lieu : Bibliothèque<br></p>
+
+
+		</div></div>
+
+
+<p class="texte_gris">&nbsp;</p>
+
+
+<p><img src="imgs/bibliotheque/biblio_pret_regle.jpg" height="599" width="499" hspace="10" align=""></p>
+
+
+<p class="texte_gris">&nbsp;</p>
+
+<p><img src="imgs/bibliotheque/chute_livres.jpg" height="288" width="495" hspace="10" align=""></p>
 
 
 <p class="texte_gris">&nbsp;</p>
@@ -367,12 +434,6 @@ Horaire: <br /><br>
 
 
 <hr>
-
-
-
-
-
-
 
 
 

@@ -139,64 +139,44 @@ var bwg_objectL10n = {"bwg_field_required":"champ est obligatoire. ","bwg_mail_v
 	<div class="leftbg">
 		<a href='http://www.municipalitestrosaire.qc.ca/quoi-de-neuf/' title='Quoi de neuf?'><h3>Quoi de neuf?</h3></a><ul class="news"><li >
 					<figure>
-						<strong>26</strong>
-						Février<br>
+						<strong>04</strong>
+						Avril<br>
 						2016
 					</figure>
 					<h3>
-						<a href='http://www.municipalitestrosaire.qc.ca/brunch-amical/'>Brunch amical</a>
+						<a href='http://www.municipalitestrosaire.qc.ca/cardio-mix/'>Cardio - mix</a>
 					</h3>
 					<p>
-						Brunch amical dès les 13 mars 2016
-
-<a href="http://www.municip
-						<a href='http://www.municipalitestrosaire.qc.ca/brunch-amical/' style='color:#f27f02;'>...</a>
+						<a href="http://www.municipalitestrosaire.qc.ca/wp-content/upload
+						<a href='http://www.municipalitestrosaire.qc.ca/cardio-mix/' style='color:#f27f02;'>...</a>
 					</p>
 					<div class='hr'></div>
 				</li><li class='last'>
 					<figure>
-						<strong>19</strong>
-						Février<br>
+						<strong>03</strong>
+						Avril<br>
 						2016
 					</figure>
 					<h3>
-						<a href='http://www.municipalitestrosaire.qc.ca/transport-mont-gleason/'>Transport Mont Gleason</a>
-					</h3>
-					<p>
-						Transport Municar
-
-20 février  - 28 février  - 4 mars  - 12 mar
-						<a href='http://www.municipalitestrosaire.qc.ca/transport-mont-gleason/' style='color:#f27f02;'>...</a>
-					</p>
-					<div class='hr'></div>
-				</li><li >
-					<figure>
-						<strong>19</strong>
-						Février<br>
-						2016
-					</figure>
-					<h3>
-						<a href='http://www.municipalitestrosaire.qc.ca/mont-gleason/'>Mont Gleason</a>
-					</h3>
-					<p>
-						Dimanche 28 février 2016
-
-Journée GRATUITE pour les résidents d
-						<a href='http://www.municipalitestrosaire.qc.ca/mont-gleason/' style='color:#f27f02;'>...</a>
-					</p>
-					<div class='hr'></div>
-				</li><li >
-					<figure>
-						<strong>06</strong>
-						Janvier<br>
-						2016
-					</figure>
-					<h3>
-						<a href='http://www.municipalitestrosaire.qc.ca/horaire-de-la-patinoire/'>Horaire de la patinoire</a>
+						<a href='http://www.municipalitestrosaire.qc.ca/brunch-avril/'>Brunch avril</a>
 					</h3>
 					<p>
 						<a href="http://www.municipalitestrosaire.qc.ca/wp-content/upload
-						<a href='http://www.municipalitestrosaire.qc.ca/horaire-de-la-patinoire/' style='color:#f27f02;'>...</a>
+						<a href='http://www.municipalitestrosaire.qc.ca/brunch-avril/' style='color:#f27f02;'>...</a>
+					</p>
+					<div class='hr'></div>
+				</li><li >
+					<figure>
+						<strong>02</strong>
+						Avril<br>
+						2016
+					</figure>
+					<h3>
+						<a href='http://www.municipalitestrosaire.qc.ca/theatre-afeas-presente-le-lac-langlois/'>Théâtre AFÉAS présente Le Lac Langlois</a>
+					</h3>
+					<p>
+						<a href="http://www.municipalitestrosaire.qc.ca/wp-content/upload
+						<a href='http://www.municipalitestrosaire.qc.ca/theatre-afeas-presente-le-lac-langlois/' style='color:#f27f02;'>...</a>
 					</p>
 					<div class='hr'></div>
 				</li><br><br></ul><div style='clear:both; height:1px width:100%;'></div>	</div>

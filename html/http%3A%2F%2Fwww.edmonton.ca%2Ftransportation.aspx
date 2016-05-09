@@ -9,8 +9,8 @@
     <meta name="viewport" content="initial-scale=1.0" />
     <meta name="DC.Title" content="transportation" />
     <meta name="DC.Creator" content="City of Edmonton" />
-    <meta name="DC.Date" content="3/11/2016" />
-    <meta name="DC.DateAccepted" content="3/8/2016">
+    <meta name="DC.Date" content="5/9/2016" />
+    <meta name="DC.DateAccepted" content="4/12/2016">
     <meta name="DC.Language" content="eng" scheme="ISO693-2" />
     <meta name="DC.Publisher" content="The City of Edmonton" />
     <meta name="DC.Coverage" content="Edmonton, Alberta, Canada" />
@@ -48,7 +48,7 @@
 
         
                         <style type="text/css" media="screen">
-                            #headerSecondary {background-image: url("/assets/Images/charter_bus_masthead_1300x200.jpg");}
+                            #headerSecondary {background-image: url("/assets/Images/streets_masthead_1300x200.jpg");}
                         </style>
                     
         
@@ -96,7 +96,7 @@
             <ul id="searchNav" onmouseover="mouseIsOver = true;" onmouseout="mouseIsOver = false;">
                     <li><img src="/images/button_search_x.png" onclick="hideSearchSuggestions()"/> </li>
                     
-                <li onclick="ssc('Business Licensing')">Business Licensing</li> <li onclick="ssc('Careers')">Careers</li> <li onclick="ssc('Eco Stations')">Eco Stations</li> <li onclick="ssc('Edmonton Maps')">Edmonton Maps</li> <li onclick="ssc('Pay Tickets')">Pay Tickets</li> <li onclick="ssc('Permits')">Permits</li> <li onclick="ssc('Property Assessment & Taxes')">Property Assessment & Taxes</li> 
+                <li onclick="ssc('Big Bin Events')">Big Bin Events</li> <li onclick="ssc('Eco Stations')">Eco Stations</li> <li onclick="ssc('Edmonton Maps')">Edmonton Maps</li> <li onclick="ssc('Pay Tickets')">Pay Tickets</li> <li onclick="ssc('Permits')">Permits</li> <li onclick="ssc('Spray Parks')">Spray Parks</li> <li onclick="ssc('Street Cleaning')">Street Cleaning</li> 
                 
             </ul>
             <input name="txtFakeControl" type="hidden" />
@@ -193,6 +193,8 @@
         
             <li><a href="/transportation/on-your-streets.aspx">On Your Streets</a></li>
         
+            <li><a href="/transportation/parking.aspx">Parking</a></li>
+        
             <li><a href="/transportation/report-requests.aspx">Report a Problem & Requests</a></li>
         
             <li><a href="/transportation/road-projects.aspx">Road Projects</a></li>
@@ -201,14 +203,14 @@
         
             <li><a href="/transportation/traffic-reports.aspx">Traffic Reports</a></li>
         
-            <li><a href="/transportation/traffic-safety.aspx">Traffic Safety</a></li>
-        
             <li><a href="/transportation/transit-strategy.aspx">Transit Strategy</a></li>
         
             <li><a href="/transportation/transportation-data.aspx">Transportation Data</a></li>
+        
+            <li><a href="/transportation/traffic-safety.aspx">Vision Zero</a></li>
          
             </ul>
-         <!-- Transit (ETS) -->
+         <!-- Transit (ETS) --><!-- Affordable Housing Edmonton -->
       </div>
       <!-- close leftNav -->
 
@@ -240,26 +242,26 @@
             
             <!--  -->
             
-                <li style="background: url(/icon_brochure_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
-                    <a href="/ets/maps-routes-schedules-service.aspx">Alerts Route Schedules &amp; Maps</a>
+                <li style="background: url(/icon_bridge_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
+                    <a href="/transportation/road_projects/102-avenue-over-groat-road-bridge-replacement.aspx">102 Ave/Groat Rd Bridge Project</a>
+                </li>
+        
+            <!--  -->
+            
+                <li style="background: url(/icon_bridge_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
+                    <a href="/transportation/road_projects/53-avenue-overpass.aspx">53 Ave Overpass</a>
+                </li>
+        
+            <!--  -->
+            
+                <li style="background: url(/icon_construction_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
+                    <a href="/transportation/road_projects/current-road-projects.aspx">Current Road Projects</a>
                 </li>
         
             <!--  -->
             
                 <li style="background: url(/icon_parking_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
                     <a href="/transportation/driving_carpooling/epark.aspx">EPark</a>
-                </li>
-        
-            <!--  -->
-            
-                <li style="background: url(/icon_fares_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
-                    <a href="/ets/fares-passes.aspx">ETS Fares &amp; Passes</a>
-                </li>
-        
-            <!--  -->
-            
-                <li style="background: url(/icon_lrt_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
-                    <a href="/programs_services/service-lrt-service.aspx">LRT Service</a>
                 </li>
         
     </ul>
@@ -272,15 +274,8 @@
             <!--  -->
             
             
-            <li style="background: url(/icon_lrt_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
-                <a href="/ets/lrt-station-locations.aspx">LRT Stations</a>
-            </li> 
-        
-            <!--  -->
-            
-            
-            <li style="background: url(/icon_lrt_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
-                <a href="/ets/transit_projects/southeast-to-west-lrt-mill-woods-to-lewis-farms.aspx">LRT Valley Line</a>
+            <li style="background: url(/icon_parking_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
+                <a href="/transportation/parking.aspx">Parking</a>
             </li> 
         
             <!--  -->
@@ -293,8 +288,15 @@
             <!--  -->
             
             
+            <li style="background: url(/icon_sweep_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
+                <a href="/transportation/on_your_streets/street-cleaning.aspx">Street Cleaning</a>
+            </li> 
+        
+            <!--  -->
+            
+            
             <li style="background: url(/icon_bridge_32x32_rdax_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;">
-                <a href="/transportation/road_projects/qe-2-hwy-41-avenue-interchange.aspx">QEII Hwy 41 Interchange</a>
+                <a href="/transportation/road_projects/walterdale-bridge.aspx">Walterdale Bridge</a>
             </li> 
         
     </ul>
@@ -311,18 +313,27 @@
 <div class="landingPageFeature" >
 
 
-<a class="featureImage" href="/transportation/transit-strategy.aspx"><img src="/assets/Images/LetsTalkTransit210x130.jpg"></a>
-        <h3><a href="/transportation/transit-strategy.aspx">Creating a Transit Strategy</a></h3>
-        <p>Share your great ideas to create a transit strategy that supports Edmonton's future as a great city. </p>
+<a class="featureImage" href="/transportation/on_your_streets/street-cleaning.aspx"><img src="/assets/Images/street_cleaning_210x130.jpg" alt="Street Cleaning"></a>
+        <h3><a href="/transportation/on_your_streets/street-cleaning.aspx">Street Cleaning</a></h3>
+        <p>Find out when your neighbourhood is scheduled for street cleaning. </p>
        
 </div>
 
 <div class="landingPageFeature" >
 
 
-<a class="featureImage" href="/transportation/traffic_safety/why-30.aspx"><img src="/assets/Images/Why-30_210x130.jpg" alt="Why 30? : Speed limit for school zones"></a>
-        <h3><a href="/transportation/traffic_safety/why-30.aspx">School Zones : Why 30?</a></h3>
-        <p>Slow down to 30 km/h where school zone signs are posted. </p>
+<a class="featureImage" href="/transportation/road_projects/53-avenue-overpass.aspx"><img src="/assets/Images/53AveOverpass_210x130.jpg" alt="53 Avenue Overpass"></a>
+        <h3><a href="/transportation/road_projects/53-avenue-overpass.aspx">53 Avenue Overpass</a></h3>
+        <p>The Overpass requires maintenance and rehabilitation to keep it in safe, functional condition for another 25 years. </p>
+       
+</div>
+
+<div class="landingPageFeature" >
+
+
+<a class="featureImage" href="/transportation/transit-strategy.aspx"><img src="/assets/Images/LetsTalkTransit210x130.jpg"></a>
+        <h3><a href="/transportation/transit-strategy.aspx">Creating a Transit Strategy</a></h3>
+        <p>Share your great ideas to create a transit strategy that supports Edmonton's future as a great city. </p>
        
 </div>
 
@@ -359,15 +370,6 @@
 <a class="featureImage" href="/transportation/report_requests/report-a-pothole.aspx"><img src="/assets/Images/report_pothole_210x130.jpg" alt="Repairing a pothole"></a>
         <h3><a href="/transportation/report_requests/report-a-pothole.aspx">Report a Pothole</a></h3>
         <p>If you are aware of a pothole on any road in Edmonton, notify the City for repair. </p>
-       
-</div>
-
-<div class="landingPageFeature" >
-
-
-<a class="featureImage" href="/ets/regular-park-and-ride.aspx"><img src="/assets/Images/ets_park_and_ride_210x130.jpg" alt="Park &amp; Ride"></a>
-        <h3><a href="/ets/regular-park-and-ride.aspx">Park &amp; Ride Locations</a></h3>
-        <p>Parking your vehicle at your local Park and Ride site allows you easy access to express buses. </p>
        
 </div>
 
@@ -620,7 +622,7 @@ a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0032/6765.
 
 <option value="http://www.epsb.ca/schools/">School - Public</option>
 
-
+<option value="/activities_parks_recreation/skateparks.aspx">Skate Park</option>
 
 <option value="/ets/transit-centres-lrt-stations.aspx">Transit Centre</option>
 
@@ -690,7 +692,7 @@ a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0032/6765.
         <a target="_blank" href="http://www.youtube.com/CityEdmonton?utm_source=coe&utm_medium=footer&utm_campaign=socialmedia">
             <img src="/interface/youtube_icon_20x20.jpg" alt="YouTube icon"/>
         </a>
-        <a href="/rss-feeds.aspx?utm_source=coe&utm_medium=footer&utm_campaign=socialmedia">
+        <a href="/city_government/news/subscriptions.aspx?utm_source=coe&utm_medium=footer&utm_campaign=socialmedia">
             <img src="/interface/rss_icon_20x20.jpg" alt="Really Simple Syndication icon"/>
         </a>
         <a href="http://www.edmonton.ca/linkedin">
@@ -766,8 +768,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz
         node.download = "livecycle_form.pdf";
     }
 </script>
-<!-- /transportation/current-traffic-disruptions.aspx /transportation/cycling-walking.aspx /transportation/driving-rideshare.aspx /transportation/getting-around-sustainably.aspx /transportation/on-your-streets.aspx /transportation/report-requests.aspx /transportation/road-projects.aspx /transportation/special-event-road-closures.aspx /transportation/traffic-reports.aspx /transportation/traffic-safety.aspx /transportation/transit-strategy.aspx /transportation/transportation-data.aspx  -->
+<!-- /transportation/current-traffic-disruptions.aspx /transportation/cycling-walking.aspx /transportation/driving-rideshare.aspx /transportation/getting-around-sustainably.aspx /transportation/on-your-streets.aspx /transportation/parking.aspx /transportation/report-requests.aspx /transportation/road-projects.aspx /transportation/special-event-road-closures.aspx /transportation/traffic-reports.aspx /transportation/transit-strategy.aspx /transportation/transportation-data.aspx /transportation/traffic-safety.aspx  -->
 </body>
 </html>
-
-

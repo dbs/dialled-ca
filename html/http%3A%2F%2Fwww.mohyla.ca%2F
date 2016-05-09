@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href='css/fullcalendar.css' rel='stylesheet' type='text/css' />
+<link href="css/default/jquery-ui-1.8.custom.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.lightbox-0.5.css" rel="stylesheet" type="text/css" />
+<link href="css/styles.css?1382429988" rel="stylesheet" type="text/css" />
+<!--[if IE 7]> <link rel="stylesheet" href="css/styles_ie7.css" type="text/css" /> <![endif]-->
+<!--[if IE 6]> <link rel="stylesheet" href="css/styles_ie6.css" type="text/css" /> <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>St. Petro Mohyla Institute</title>
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.8.custom.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.flash.js"></script>
+<script type="text/javascript" src="scripts/jquery.lightbox-0.5.pack.js"></script>
+<script type='text/javascript' src='scripts/fullcalendar.min.js'></script>
+<script type="text/javascript" src="scripts/scripts.js?1382429988"></script>
+<!--[if lte IE 6]>
+<script type="text/javascript" language="javascript" src="scripts/jquery.pngFix.pack.js"></script>
+<script type="text/javascript"> $(document).ready(function(){ $(document).pngFix(); }); </script> 
+<![endif]-->
+<script type="text/javascript">
+
+	//if ( navigator.appVersion.indexOf("Mac")!=-1 && $.browser.mozilla ) 
+		//document.write( "<link href='/css/styles_mac.css' rel='stylesheet' type='text/css' />" );
+
+$(document).ready( function() {
+	// Flash
+	$("#flash_header").flash({
+		src:"logo.swf",
+		width: 900,
+		height: 131,
+		wmode:"transparent"
+	});
+//$.browser.opera
+//$.browser.safari
+//$.browser.mozilla
+});
+</script>
+
+</head>
+
+<body>
+	<!-- index -->    <div id='page_texture'>&nbsp;</div>
+    <div id='flash_header'></div>
+    <div id='main_menu'>
+			<ul>
+
+            	<li><a href='index.php'><img src='images/home.png' width='48' height="19" border="0" /></a></li>
+
+            	<li><a href='residence.php'><img src='images/residences.png' width='89' height="19" border="0" /></a></li>
+
+            	<li><a href='cultural.php'><img src='images/culturalprograms.png' width='147' height="21" border="0" /></a></li>
+
+            	<li><a href='events.php'><img src='images/calendar.png' width='74' height="19" border="0" /></a></li>
+
+            	<li><a href='contact.php'><img src='images/contact.png' width='67' height="19" border="0" /></a></li>
+
+            	<li><a href='donations.php'><img src='images/donations.png' width='81' height="19" border="0" /></a></li>
+
+            	<li><a href='gallery.php'><img src='images/photogallery.png' width='116' height="19" border="0" /></a></li>
+
+            </ul>
+
+			</div>
+	<div id='page'>
+    	<div id='right_content'>
+        	<div id='second_menu'>
+			<a href='employment.php'><img src='images/employment.jpg' width='225' height="44" border="0" /></a>            
+
+			<a href='history.php'><img src='images/history.jpg' width='225' height="41" border="0" /></a>            
+
+			<a href='scholarships.php'><img src='images/scholarships.jpg' width='225' height="40" border="0" /></a>            
+
+			<a href='partners.php'><img src='images/partners.jpg' width='225' height="38" border="0" /></a>            
+
+			<a href='alumni.php'><img src='images/alumni.jpg' width='225' height="41" border="0" /></a>            
+
+			<a href='membership.php'><img src='images/membership.jpg' width='225' height="40" border="0" /></a>            
+
+            </div>
+            <div id='miniCalWrapper'><div id='calendarWrapper_sm'></div>            <script type="text/javascript"> 
+				$(document).ready( function() { 
+					$('#calendarWrapper_sm').fullCalendar({ 
+						header: {left:'',center:'title',right:''},
+						defaultView: 'month' ,
+						theme: true,
+						events: "ajax_fns.php?action=getEvents",
+						eventRender: function( event, element, view ) {
+							$(element).html("<center><a href='"+event.url+"'>Click</a></center>");	
+						}
+					}); 
+				} ); 
+            </script>
+            </div>
+            <div><a href='membership.php'><img src='images/donation.jpg' border="0" /></a></div>
+        </div>
+    	<div id='newsletter'>
+    		<div id='newsletterCaptcha' style='display:none;'>
+    		</div>
+			<div style='position:absolute;top:12px;right:0;width: 310px;'>
+	            	<input type='text' id='newsletteremail' style='margin: 0px 10px;width: 185px;' /><img src="images/enter_btn.jpg" style='position:relative;top:8px;cursor:pointer;' onclick="confirmNewsletterSignup();" />
+	        </div>
+	    	<div style='position:absolute;top:0;left:0;width:200px;'><a href='index_uk.php'><img src='images/translation.jpg' id='translation' border='0' /></a></div>
+        </div>
+    	<div id='main_content'>
+    	
+<h1>Residence Availability</h1>
+<p> We still have space available for the 2013-2014 school year! We still have both small and large rooms available for rent. Any new students should get a fresh carpet cleaning, whether in Toronto or Saskatoon, from <a href="http://questclean.ca/">questclean</a>, a new carpet and rug cleaning service with online booking.</p>
+<p>For more details <a href="residence.php">click here</a>.</p>
+<p><a href="residence.php"><!--Apply</a> for residence early to ensure you don't end up on the waiting list!-->   <!--<h1>Enter to win<strong>!</strong></h1>
+            <p>Enter to win a free lunch! Click here for more <a href="win.php">details</a>.</p>
+<h1>Want to save $800? Don't delay. Tell your friends to apply <strong><em>TODAY!!!</em></strong></h1>
+<p>Each  resident that&nbsp;refers a total of 5 friends who  are subsequently&nbsp;accepted into residence for a full school year will be  eligible for an $800 scholarship*. Multiple scholarships will be awarded to the  same recipient for each multiple&nbsp;of 5 qualifying&nbsp;referrals. Minimize  your accommodation fees&nbsp;for the&nbsp;2012/2013 school year! Click here for more <a href="residence.php">details</a>.</p> -->
+</a><!--
+<h1>Summer Immersion Program Early Bird Extension</h1>
+<p>The early bird registration for the <a href="cultural.php">Mohyla Summer Cultural Immersion Program</a> is now set for April 1st, 2012. Apply early for best results!</p>
+<h1>Cultural Program in Need of Volunteers</h1>
+<p>On November 8th and 9th, 2011, Mohyla hosted the Grade 8 class from Dr. John G. Egnatoff School here in Saskatoon. This was a very successful pilot, and we invite all of our provincial schools to consider participating in this program starting in January 2012. See <a href="cultural.php">Cultural Programs</a> or visit <a href="www.facebook.ca/StPetroMohylaInstitute">Facebook</a> for more detailed information.</p>
+            <p>Cultural programming is most effective when a variety of people assist in the activities involved. Please consider volunteering to assist us with any of the above activities, or call us with ideas on how we can integrate your Ukrainian-Canadian expertise into this program!            </p>
+--></p>
+<h1>About Mohyla Institute</h1>
+<p>St. Petro Mohyla Institute is a non-profit Ukrainian student residence located just three blocks from the University of Saskatchewan. </p>
+<p>We have a variety of room styles available, from traditional dormitory style with shared washrooms to private suites and an apartment. All of our rooms come fully furnished with a bed, desk, chair, dresser and closet. </p>
+<p>Included in your rent at Mohyla Institute are all utilities, internet and cable, and all meals. Meals are served buffet style every day of the week. We also have a self-serve area we call 'Baba's Bistro' which is available 24/7 and is always fully stocked with food (such as cookies, muffins, yogurt,  cold cereal, milk, hard boiled eggs, fruit and vegetables, etc.).</p>
+<p>We also have private parking, air conditioning, and unlimited laundry available for additional fees.</p>
+<p>For more information or to apply <a href="residence.php">click here</a>.</p>
+<p>&nbsp;</p>
+<h1>Non-Resident Meal Cards</h1>
+<p>Meals cards now now available to non-residents in the Mohyla office. Cards can be for 10 meals, or an entire semester, it's up to you! Cards can be purchased for specific meals, meal combinations, or for use during a specified period of time. </p>
+<p>For meal card prices and options please contact us at 306.653.1944. </p>
+<p>&nbsp;</p>
+<p> <a href="http://www.facebook.com/StPetroMohylaInstitute" target="_blank"><img src="images/Facebook.png" width="42" height="42" alt="facebook.com / St Petro Mohyla Institute" longdesc="http://www.facebook.com/StPetroMohylaInstitute" /></a> <font size=4><strong>Connect with us on facebook!</strong></font></p>
+<iframe src="http://www.facebook.com/plugins/like.php?href=facebook.com%2FStPetroMohylaInstitute&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
+    	</div>
+        <br style='clear:both;' />
+    </div>
+    <div id='footer'>
+    	<div id='copyright'>&copy; 2010 St. Petro Mohyla Institute</div>
+        <div id='bottom_menu'><span><a href='index.php'>Home</a></span><span><a href='residence.php'>Residence</a></span><span><a href='cultural.php'>Summer School</a></span><span><a href='events.php'>Calendar</a></span><span><a href='contact.php'>Contact</a></span><span><a href='donations.php'>Donations</a></span><span><a href='gallery.php'>Photo Gallery</a></span><span><a href='employment.php'>Opportunities</a></span><span><a href='history.php'>History</a></span><span><a href='scholarships.php'>Scholarships</a></span><span><a href='partners.php'>Partners</a></span><span><a href='alumni.php'>Alumni</a></span><span><a href='membership.php'>Membership</a></span></div>
+    </div>
+</body>
+</html>

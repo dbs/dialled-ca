@@ -2,7 +2,65 @@
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	    
+	    <script>
+
+function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+var localMobify = false;
+
+if (document.location.href.indexOf('localmobile=true') != -1) {
+    setCookie('mobifylocal', 'true');
+    localMobify = true;
+}
+
+var mobify_bundle = "//www.pama.peelregion.ca/en/Mobify/bld/mobify.js";  
+
+if (localMobify || (getCookie('mobifylocal') != null && getCookie('mobifylocal') != '')) {
+    mobify_bundle = "http://127.0.0.1:8080/mobify.js";
+} 
+
+(function(window, document, mjs) {
+
+window.Mobify = {points: [+new Date], tagVersion: [1, 0]};
+
+var isMobile = /ip(hone|od)|android|blackberry.*applewebkit|bb1\d.*mobile/i.test(navigator.userAgent);
+var optedOut = /mobify-path=($|;)/.test(document.cookie);
+
+
+if (!isMobile || optedOut) {
+    return;
+}
+
+document.write('<plaintext style="display:none">');
+
+setTimeout(function() {
+    var mobifyjs = document.createElement('script');
+    var script = document.getElementsByTagName('script')[0];
+
+    mobifyjs.src = mjs;
+    script.parentNode.insertBefore(mobifyjs, script);
+});
+
+
+})(this, document, mobify_bundle);
+</script>
 <title>Home - Peel Art Gallery Museum + Archives</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -24,14 +82,6 @@
 <script type="text/javascript" language="javascript" src="/scripts/general.js"></script>
 <script type="text/javascript" language="javascript" src="/en/email/scripts/email.js"></script>
 <script type="text/javascript" language="javascript" src="/__utm.js"></script>
-
-<script type="text/javascript" src="https://mobify.esolutionsgroup.ca/redirect.ashx"></script>
-<script type="text/javascript">    try {
-        if (document.location.href.toLowerCase().indexOf('http://pama.peelregion.ca') == 0 || document.location.href.toLowerCase().indexOf('http://www.pama.peelregion.ca') == 0) {
-            _mobify("http://m.pama.peelregion.ca/");
-        }
- } catch (err) { };</script>
-
 
 <script language="javascript" type="text/javascript">
 	jQuery(function() {
@@ -158,7 +208,7 @@
 </script>
 
 
-<meta property="dcterms.issued" content="2016-03-03T10:25:41-0500" />
+<meta property="dcterms.issued" content="2016-05-05T16:49:23-0400" />
 <meta property="og:title" content="index" />
 <meta property="og:url" content="http://pama.peelregion.ca/en/index.asp" />
 <meta property="og:description" content="Peel Art Gallery Museum + Archives (PAMA), where the future is shaped by our past and defined by our enduring spirit, serves Caledon, Mississauga and Brampton." />
@@ -280,7 +330,7 @@
 
 									}
 
-								</script></ul></div></li><li id="navTab02"><a title="Exhibitions" href="/en/exhibitions.asp" class="mainNavItem"><span class="navItemTitle">Exhibitions</span><br /></a><div class="dropDownContainer treenode"><ul class="dropdown"><li><a title="View our Art Gallery page" href="/en/exhibitions/artgallery.asp?_mid_=28383" class="dropdownItemHasFlyout"><span class="navItemTitle">Art Gallery</span><br />Aboriginal art from Manitoulin Island, spiritual art.</a></li><li><a title="View our Museum page" href="/en/exhibitions/museum.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Museum</span><br />The Peel Story, Oriental rugs, the Peel County Jail.</a></li><li><a title="View our Archives page" href="/en/exhibitions/archives.asp?_mid_=28385" class="dropdownItemHasFlyout"><span class="navItemTitle">Archives</span><br />Unbuilt Peel</a></li><li><a title="Exhibitions::Upcoming Exhibitions" href="/en/exhibitions/upcomingexhibitions.asp" class=""><span class="navItemTitle">Upcoming Exhibitions</span><br />Sikh heritage, fabulous fiction, diverse writers.</a></li><li><a title="In Our Community" href="/en/exhibitions/communityshows.asp" class=""><span class="navItemTitle">In Our Community</span><br />At locations around Peel.</a></li></ul><ul class="dropdown"><li><a title="" href="/en/programseventsandschoolresources/bhm.asp?_mid_=28704" class=""><span class="navItemTitle">Black History Month</span><br />Black veterans, artifacts from Ethopia, Ghana, and music.</a></li><li><a title="Exhibitions::Past Exhibitions and Projects" href="/en/exhibitions/pastexhibitionsandprojects.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Past Exhibitions &amp; Projects</span><br />For over 25 years, the Region of Peel Museum at PAMA has hosted...
+								</script></ul></div></li><li id="navTab02"><a title="Exhibitions" href="/en/exhibitions.asp" class="mainNavItem"><span class="navItemTitle">Exhibitions</span><br /></a><div class="dropDownContainer treenode"><ul class="dropdown"><li><a title="View our Art Gallery page" href="/en/exhibitions/artgallery.asp?_mid_=28383" class="dropdownItemHasFlyout"><span class="navItemTitle">Art Gallery</span><br />Sikh art, Fabulous Fictions, pop art.</a></li><li><a title="View our Museum page" href="/en/exhibitions/museum.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Museum</span><br />The Peel Story, Oriental rugs, the Peel County Jail.</a></li><li><a title="View our Archives page" href="/en/exhibitions/archives.asp?_mid_=28385" class="dropdownItemHasFlyout"><span class="navItemTitle">Archives</span><br />Unbuilt Peel</a></li><li><a title="Exhibitions::Upcoming Exhibitions" href="/en/exhibitions/upcomingexhibitions.asp" class=""><span class="navItemTitle">Upcoming Exhibitions</span><br />Diverse writers, toys, school art.</a></li><li><a title="In Our Community" href="/en/exhibitions/communityshows.asp" class=""><span class="navItemTitle">In Our Community</span><br />At locations around Peel.</a></li></ul><ul class="dropdown"><li><a title="Exhibitions::Past Exhibitions and Projects" href="/en/exhibitions/pastexhibitionsandprojects.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Past Exhibitions &amp; Projects</span><br />For over 25 years, the Region of Peel Museum at PAMA has hosted...
 						</a></li><li><a title="Exhibitions::Publications" href="/en/exhibitions/publications.asp" class=""><span class="navItemTitle">Publications</span><br />Essays and books from PAMA.</a></li><li><a title="Exhibitions::Photo Gallery" href="/en/aboutpama/photogallery.asp?_mid_=19858" class=""><span class="navItemTitle">Photo Gallery</span><br />See all that PAMA has to offer through our different photo ...
 						</a></li></ul><ul class="dropdownImages"><li><a class="navimagelink1" alt="navimage1" href="#"><img class="navimage1" src="" alt="Nav Image 01" /></a></li><li><a class="navimagelink2" alt="navimage2" href="#"><img class="navimage2" src="" alt="Nav Image 02" /></a></li><li><a class="navimagelink3" alt="navimage3" href="#"><img class="navimage3" src="" alt="Nav Image 03" /></a></li><script language="javascript" type="text/javascript">
 
@@ -477,7 +527,7 @@
 								</script></ul></div></li><li id="navTab04"><a title="Programs, Events and School Resources" href="/en/programseventsandschoolresources.asp" class="mainNavItem"><span class="navItemTitle">Programs, Events and School...</span><br /></a><div class="dropDownContainer treenode"><ul class="dropdown"><li><a title="Programs Events and School Resources::What's On" href="/en/Calendar/default.aspx?_mid_=19909" class=""><span class="navItemTitle">What's On</span><br /><p></p></a></li><li><a title="Programs Events and School Resources::Adult Programs" href="/en/programseventsandschoolresources/adultprograms.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Adult Programs</span><br />PAMA's adult programs are a wonderful opportunity to explore:...
 						</a></li><li><a title="View our PAMA Kids and Family page" href="/en/programseventsandschoolresources/pamakids.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">PAMA Kids and Family</span><br />Drop ins, workshops, performances.</a></li><li><a title="Programs Events and School Resources::School Programs" href="/en/programseventsandschoolresources/schoolprograms.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">School Programs</span><br />PAMA offers a wide spectrum of school programs for Kindergarten...
 						</a></li><li><a title="Programs Events and School Resources::Special Programs" href="/en/programseventsandschoolresources/specialprograms.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Special Programs</span><br />PAMA Educators can offer special art exploration workshops on-site...
-						</a></li></ul><ul class="dropdown"><li><a title="March Break" href="/en/programseventsandschoolresources/marchbreak.asp" class=""><span class="navItemTitle">March Break</span><br />Drop-in fun all week long!</a></li><li><a title="Programs, Events and School Resources::Terms and Conditions" href="/en/termsandconditions.asp" class=""><span class="navItemTitle">Terms and Conditions</span><br />View PAMA's Terms and Conditions, Cancellation and Refund Policy...
+						</a></li></ul><ul class="dropdown"><li><a title="Programs, Events and School Resources::Terms and Conditions" href="/en/termsandconditions.asp" class=""><span class="navItemTitle">Terms and Conditions</span><br />View PAMA's Terms and Conditions, Cancellation and Refund Policy...
 						</a></li><li><a title="Sikh Heritage Month" href="/en/programseventsandschoolresources/Sikh-Heritage-Month.asp" class=""><span class="navItemTitle">Sikh Heritage Month</span><br />April is Sikh Heritage Month in Ontario. PAMA celebrates with...
 						</a></li></ul><ul class="dropdownImages"><li><a class="navimagelink1" alt="navimage1" href="#"><img class="navimage1" src="" alt="Nav Image 01" /></a></li><li><a class="navimagelink2" alt="navimage2" href="#"><img class="navimage2" src="" alt="Nav Image 02" /></a></li><li><a class="navimagelink3" alt="navimage3" href="#"><img class="navimage3" src="" alt="Nav Image 03" /></a></li><script language="javascript" type="text/javascript">
 
@@ -810,14 +860,21 @@
       		</div>
             <div id="rotatingBanners" class="bannerContainer">
                 <div class="banner">
-                    <div class="bannerImage"><img src="/en/resourcesGeneral/2015-winterbanner.jpg" alt="Exterior of a historic courthouse and 1960s building, during winter." title="Winter image" align="" /></div>
-                    <div class="bannerText"><h1><a href="http://www.pama.peelregion.ca/en/programseventsandschoolresources/familyprograms.asp" title="Family winter">Keep the<br /></a><a href="http://www.pama.peelregion.ca/en/programseventsandschoolresources/pamakids.asp" title="Family winter">entire family entertained<br /></a>this winter<br />at PAMA</h1></div>
+                    <div class="bannerImage"><img src="/en/resourcesGeneral/banner-2016-SinghTwins-wed.jpg" alt="Women in a living room" align=""></div>
+                    <div class="bannerText"><h1><a href="/en/exhibitions/artgallery.asp?_mid_=28383" title="Singh Twins">THE SINGH TWINS</a></h1><div>EXHIBIT APRIL 1 TO JUNE 12</div><div>SPECIALLY TICKETED EXHIBITION, $5 RATE PER PERSON WILL APPLY</div></div>
                 </div><div class="banner">
-                    <div class="bannerImage"><img src="/en/resourcesGeneral/2016-banner-bell.jpg" alt="People with long white hair" title="&quot;Community&quot; by Leland Bell" align="" /></div>
-                    <div class="bannerText"><p><a href="http://pama.peelregion.ca/en/exhibitions/changingexhibitions.asp?_mid_=28386" title="Contemporary Art from Manitoulin Island">CONTEMPORARY ART FROM MANITOULIN ISLAND<br /></a>NOW ON</p></div>
+                    <div class="bannerImage"><img src="/en/resourcesGeneral/banner-2016-rug-a.jpg" alt="Oriental rugs" title="Oriental rugs" align=""></div>
+                    <div class="bannerText"><p><a href="/en/exhibitions/changingmuseumexhibitions.asp#rugs" title="Oriental Rugs">Oriental rugs</a></p><div>on display until june 5</div></div>
+                </div><div class="banner">
+                    <div class="bannerImage"><img src="/en/resourcesGeneral/banner-2016-springsummer-new.jpg" alt="Kids making crafts, people laughing, a watercolour landscape" title="Spring Summer Guide" align=""></div>
+                    <div class="bannerText"><p><a href="/en/programseventsandschoolresources/resources/PAMASpring-Summer2016guide.pdf" title="Spring Summer Guide">PAMA SPRING SUMMER GUIDE NOW AVAILABLE</a></p></div>
+                </div><div class="banner">
+                    <div class="bannerImage"><img src="/en/resourcesGeneral/2016-banner-FOLD.png" alt="THE FOLD letters with a book icon" title="THE FOLD" align=""></div>
+                    <div class="bannerText"><p><a href="http://thefoldcanada.org/" title="THE FOLD">The FESTIVAL OF<br>LITERARY DIVERSITY<br></a></p><p>PAMA is proud to be<br>one of the host<br>locations from May
+6 - 8<br></p></div>
                 </div><div class="banner default">
-                    <div class="bannerImage"><img src="/en/resourcesGeneral/15character.jpg" alt="Cartoons of a raccoon and a crow" title="Wellington and Coco" align="" /></div>
-                    <div class="bannerText"><p>MARCH BREAK AT PAMA<br /><a href="http://pama.peelregion.ca/en/programseventsandschoolresources/marchbreak.asp" title="March Break">Nine Days of EVENTS<br /></a>March 12 to 20</p></div>
+                    <div class="bannerImage"><img src="/en/resourcesGeneral/2016-may-archivesclosure.jpg" alt="Archives banner" title="Archives banner" align=""></div>
+                    <div class="bannerText"><a href="https://pama.peelregion.ca/en/pamascollection/archivesresearch.asp?_mid_=28366#hours" title="Scheduled Archives Closure">Scheduled archives closure</a><div><a href="javascript:nicTemp();">tuesday, may 3 to<br>friday, may 6<br>for processing and inventory</a></div></div>
                 </div>
             </div>
                                             

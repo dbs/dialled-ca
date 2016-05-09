@@ -204,7 +204,7 @@ $(document).ready(function() {
 		data-cycle-timeout="4000"
 		data-cycle-slides=".slide">
 		
-					<a href="http://ville.sainte-adele.qc.ca/election" target="_blank" title="Ãlection 2016" class="slide"><img src="/upload/images/thumbs/2016-02-10-Bandeau-Elections-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Ãlection 2016" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-ensemble-la-cigale-en-route-vers-les-pays-celtiques-33.php" target="_blank" title="Ensemble La Cigale" class="slide"><img src="/upload/images/thumbs/WEB-CIGALE-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Ensemble La Cigale" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-lise-bolduc-ce-qui-m-habite-46.php" target="_blank" title="Lise Bolduc" class="slide"><img src="/upload/images/thumbs/WEB-LiseBolduc-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Lise Bolduc" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-rejean-tremblay-les-dessous-des-journaux-de-la-television-et-de-la-radio-31.php" target="_blank" title="RÃ©jean Tremblay" class="slide"><img src="/upload/images/thumbs/WEB-RejeanTremblay-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="RÃ©jean Tremblay" /></a>					<a href="/upload/documents/2016-02-25-Communique-conte.pdf" target="_blank" title="Heure du conte" class="slide"><img src="/upload/images/thumbs/2016-02-25-WEB-biblio-MonsieurGuillaume-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Heure du conte" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-le-lapin-qui-voulait-etre-roi-marionnettes-3-a-8-ans-32.php" target="_blank" title="Le lapin qui voulait Ãªtre roi" class="slide"><img src="/upload/images/thumbs/lapin-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Le lapin qui voulait Ãªtre roi" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-cecile-buysse-la-couleur-dans-tous-ses-etats-47.php" target="_blank" title="CÃ©cile Buysse" class="slide"><img src="/upload/images/thumbs/WEB-CecileBuysse-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="CÃ©cile Buysse" /></a>			<div class="cycle-pager"></div>
+					<a href="http://ville.sainte-adele.qc.ca/nouvelles-le-printemps-de-la-sculpture-572.php?s=accueil" target="_blank" title="Le printemps de la sculpture" class="slide"><img src="/upload/images/thumbs/WEB-Printemps-sculpture-2016-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Le printemps de la sculpture" /></a>					<a href="/upload/documents/2016-02-25-Communique-conte.pdf" target="_blank" title="Heure du conte" class="slide"><img src="/upload/images/thumbs/2016-02-25-WEB-biblio-MonsieurGuillaume-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Heure du conte" /></a>			<div class="cycle-pager"></div>
 	</div>
 	
 </div>
@@ -249,23 +249,18 @@ $(document).ready(function() {
         
                 <li>
             
-            <p class="titleDetails">22 FÃ©vrier 2016</p>
-            <a href="/calendrier-club-du-rat-biboche-inscription-398.php?s=biblio" class="details">Club du rat Biboche -- INSCRIPTION</a>
-        </li>
-                <li>
-            
             <p class="titleDetails">01 Mars 2016</p>
             <a href="/calendrier-club-du-rat-biboche-138.php?s=biblio" class="details">Club du Rat Biboche </a>
         </li>
                 <li>
             
-            <p class="titleDetails">12 Mars 2016</p>
-            <a href="/calendrier-heure-du-conte-avec-monsieur-guillaume-et-gros-ragout-208.php?s=biblio" class="details">Heure du conte avec Monsieur Guillaume et Gros RagoÃ»t</a>
+            <p class="titleDetails">21 Mai 2016</p>
+            <a href="/calendrier-heure-du-conte-avec-monsieur-guillaume-et-gros-ragout-404.php?s=biblio" class="details">Heure du conte avec Monsieur Guillaume et Gros RagoÃ»t</a>
         </li>
                 <li>
             
-            <p class="titleDetails">16 Mars 2016</p>
-            <a href="/calendrier-club-du-rat-biboche-animation-de-mars-401.php?s=biblio" class="details">Club du rat biboche - Animation de mars</a>
+            <p class="titleDetails">01 Juin 2016</p>
+            <a href="/calendrier-bibliotheque-grande-fete-des-ratons-club-du-rat-biboche-57.php?s=biblio" class="details">BIBLIOTHÃQUE  -Grande FÃªte des Ratons (Club du rat Biboche)</a>
         </li>
             
 		</ul>
@@ -285,6 +280,9 @@ $(document).ready(function() {
 
 <!-- SOPFEU -->
 
+    <div  data-sopfeu-client="Sainte-AdÃ¨le" data-sopfeu-lng="fr_CA" data-sopfeu-media="16" data-sopfeu-media-bar="1" id="sopfeu-widget-container"></div>
+
+
 
 <a class="btn-collecte" href="/page-collecte-a-trois-voies.php"></a>
 <a class="btn-ecocentre" href="/page-ecocentre.php"></a>
@@ -294,14 +292,6 @@ $(document).ready(function() {
 
 
 <!-- INFONEIGE -->
-
-<a href="/upload/documents/infodeneigement2015.pdf" target="_blank" title="Infoneige" class="infoneige">
-    <img src="/fr/images/infodeneigement.jpg" alt=""/>
-</a>
-<a href="/page-sports-hiver.php" title="Info Sports dâhiver" class="infoneige">
-    <img src="/fr/images/infosportshiver.jpg" alt=""/>
-</a>
-
 
 <!-- Infolettre -->
 <form id="infolettre" action="/inscription-infolettre.php?s=biblio" method="post" enctype="multipart/form-data" >
@@ -339,11 +329,17 @@ $(document).ready(function() {
             
             <ul id="actualite">
                                 <li>
-                    <img src="/upload/images/thumbs/LogobibliCHG-CMYK_10-04d5d3d65765383b609957bf588e5c2e.jpg" width="141" height="56" alt="CongÃ© de PÃ¢ques - Heures d'ouverture de la bibliothÃ¨que" />                    <h2><a href="/nouvelles-conge-de-paques-heures-d-ouverture-de-la-bibliotheque-560.php?s=biblio">CongÃ© de PÃ¢ques - Heures d'ouverture de la bibliothÃ¨que</a></h2>
-                    <p class="date">10 mars 2016</p>
-                    <div class="textActu">La biblioth&egrave;que sera ferm&eacute;e le lundi 28 mars
-Elle demeure cependant ouverte le...</div>
-                    <a class="btn-suite" href="/nouvelles-conge-de-paques-heures-d-ouverture-de-la-bibliotheque-560.php?s=biblio">Lire la suite</a>
+                    <img src="/upload/images/thumbs/2016-02-10-Bandeau-Elections_1-e677801196c3f4d0013895d3d45e9dd4.jpg" width="141" height="50" alt="RÃ©sultats des Ã©lections partielles 2016" />                    <h2><a href="/nouvelles-resultats-des-elections-partielles-2016-571.php?s=biblio">RÃ©sultats des Ã©lections partielles 2016</a></h2>
+                    <p class="date"> 1 mai 2016</p>
+                    <div class="textActu">Voici les r&eacute;sultats des &eacute;lections partielles 2016
+Taux de participation&nbsp;:...</div>
+                    <a class="btn-suite" href="/nouvelles-resultats-des-elections-partielles-2016-571.php?s=biblio">Lire la suite</a>
+                </li>
+                                <li>
+                    <img src="/upload/images/thumbs/LogobibliCHG-CMYK_12-04d5d3d65765383b609957bf588e5c2e.jpg" width="141" height="56" alt="BibliothÃ¨que fermÃ©e - 2 mai" />                    <h2><a href="/nouvelles-bibliotheque-fermee-2-mai-566.php?s=biblio">BibliothÃ¨que fermÃ©e - 2 mai</a></h2>
+                    <p class="date">15 avril 2016</p>
+                    <div class="textActu">Prenez note que la biblioth&egrave;que est ferm&eacute;e le lundi 2 mai &agrave; l&#039;occasion de la...</div>
+                    <a class="btn-suite" href="/nouvelles-bibliotheque-fermee-2-mai-566.php?s=biblio">Lire la suite</a>
                 </li>
                                 <li>
                     <img src="/upload/images/thumbs/kalei-4-opti-9e4755b11a3c457e753326899675e2f1.png" width="141" height="147" alt="IdÃ©es de lecture - Vive la diffÃ©rence - KALÃIDOSCOPE" />                    <h2><a href="/nouvelles-idees-de-lecture-vive-la-difference-kaleidoscope-558.php?s=biblio">IdÃ©es de lecture - Vive la diffÃ©rence - KALÃIDOSCOPE</a></h2>
@@ -359,20 +355,11 @@ Elle demeure cependant ouverte le...</div>
                     <a class="btn-suite" href="/nouvelles-l-heure-du-conte-est-de-retour-556.php?s=biblio">Lire la suite</a>
                 </li>
                                 <li>
-                    <img src="/upload/images/thumbs/rat-biboche_4-79951b5aedf694e638cd338b91e46bce.jpg" width="121" height="46" alt="Club du rat Biboche 3 Ã  6 ans INSCRIPTION" />                    <h2><a href="/nouvelles-club-du-rat-biboche-3-a-6-ans-inscription-174.php?s=biblio">Club du rat Biboche 3 Ã  6 ans INSCRIPTION</a></h2>
-                    <p class="date"> 1 fÃ©vrier 2016</p>
-                    <div class="textActu">Pour les 3 &agrave; 6 ans
-
-S&eacute;lection de livres juste pour toi
-Passeport de...</div>
-                    <a class="btn-suite" href="/nouvelles-club-du-rat-biboche-3-a-6-ans-inscription-174.php?s=biblio">Lire la suite</a>
-                </li>
-                                <li>
-                    <img src="/upload/images/thumbs/Image-Lecture-en-cadeau-2013-2014-c23a06477de6dc6c23cb1d04540b5338.png" width="141" height="116" alt="La lecture en cadeau" />                    <h2><a href="/nouvelles-la-lecture-en-cadeau-428.php?s=biblio">La lecture en cadeau</a></h2>
-                    <p class="date"> 5 novembre 2015</p>
-                    <div class="textActu">Ce No&euml;l offrez la lecture en cadeau!
-Sainte-Ad&egrave;le, le 4 novembre 2015 &ndash; Pour...</div>
-                    <a class="btn-suite" href="/nouvelles-la-lecture-en-cadeau-428.php?s=biblio">Lire la suite</a>
+                    <img src="/upload/images/thumbs/Manga_1-03317c0613414276723c49449d01120b.jpg" width="141" height="223" alt="Atelier mangas" />                    <h2><a href="/nouvelles-atelier-mangas-510.php?s=biblio">Atelier mangas</a></h2>
+                    <p class="date">12 octobre 2015</p>
+                    <div class="textActu">Jeudi 22 octobre 19 h 30
+Viens d&eacute;couvrir l&#039;univers des mangas et emprunter les...</div>
+                    <a class="btn-suite" href="/nouvelles-atelier-mangas-510.php?s=biblio">Lire la suite</a>
                 </li>
                             </ul>
             

@@ -300,13 +300,13 @@ jQuery(document).ready(function ($) {
 	<!-- Slides Container.  Rotator: 1 -->
 	<div data-u="slides" style="cursor:move; position:absolute; left:0px; top:0px; width:765px; height:277px; overflow:hidden;">
 			<div>			
-				<img data-u="image" src="./photos/Ads/10_winterpanobar.jpg" alt="">
+				<img data-u="image" src="./photos/Ads/13_Pitch In.jpg" alt="Pitch In bag in Carleton Place">
 			</div>
 			<div>			
-				<img data-u="image" src="./photos/Ads/11_dogwalkbar.jpg" alt="">
+				<img data-u="image" src="./photos/Ads/14_spring crocus2.jpg" alt="beautiful purple spring crocuses in snow">
 			</div>
 			<div>			
-				<img data-u="image" src="./photos/Ads/12_skatingbar.jpg" alt="">
+				<img data-u="image" src="./photos/Ads/15_maple season.jpg" alt="maple syrup buckets on trees in spring">
 			</div>
 	</div>
 
@@ -412,7 +412,7 @@ else if("Living Here" == "Visitors")
 </script>
           <div id="left_column_plugin_top" class="vnav">
 	<!-- xcss trigger added via compiler -->
-	<div class="menu-trigger" id="trigger">
+	<div class="menu-trigger" >
 	<div class="menu-lines-button arrow">
 	  <span class="menu-lines"></span>
 	</div>	
@@ -423,14 +423,14 @@ else if("Living Here" == "Visitors")
 </div>
 	
 	
-<!-- xcss 1.1.0 menu starts -->
-
-<div class="xcsstitle">Living Here</div>
-<div class="mp-pusher" id="mp-pusher">
-	<nav class="mp-menu" id="mp-menu">
-		<div class="mp-level">
-	
-		<ul>
+			<!-- xcss 3.0 (secondary) menu starts -->
+			
+			<div class="xcsstitle">Living Here</div>
+			<div class="mp-pusher" >
+				<nav class="mp-menu" >
+					<div class="mp-level">
+				
+					<ul>
 
 <li class="button" id="button7">
 	<div class="parent drop1"><a  data-link-level="1" href="communityeventscalendarc1.php">Carleton Place Events Calendar</a>
@@ -499,16 +499,17 @@ else if("Living Here" == "Visitors")
 <!-- xcss menu ends -->
 
 
+						
+					</div>
+				</nav>
+			</div>
 			
-		</div>
-	</nav>
-</div>
-
-
 
 	<!-- js startup code added via compiler -->
 	<script type="text/javascript">
-		new mlPushMenu(document.getElementById('mp-menu'),document.getElementById('trigger'));
+		$(function() {
+			new mlPushMenu($(".mp-menu")[0],$(".menu-trigger")[0]);
+			});
 	</script>
 	</div>
           <div id="left_column_plugin_middle"><!-- Plugin Position: PLUGIN_4 --> <p><a href="https://www.facebook.com/CarletonPlaceTownHall" target="_blank" title="Facebook"><img alt="Facebook" border="0" src="/photos/custom/facebook1.jpg" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; width: 29px; height: 29px;" /></a> &nbsp; <a href="https://twitter.com/Carleton_Place" target="_blank" title="Twitter"><img alt="Twitter" border="0" src="/photos/custom/twitterlogo1.jpg" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; width: 29px; height: 29px;" /></a> &nbsp; <a href="https://www.youtube.com/channel/UC_G9eUUdDI63OtW2dxbLR6Q" target="_blank" title="YouTube"><img alt="Youtube" border="0" src="/photos/custom/youtubelogo1.jpg" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; width: 29px; height: 29px;" /></a> &nbsp; <a href="contactuss40.php" title=""><img alt="Contact Us" border="0" src="/photos/custom/contact.png" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; width: 105px; height: 29px;" /></a>
@@ -526,7 +527,7 @@ else if("Living Here" == "Visitors")
 <h1>Carleton Place Public Library</h1>
 
 <div><img alt="Carleton Place Public Library" border="0" src="http://carletonplace.ca/photos/custom/library%20photo%20small.jpg" style="margin-left: 10px; float: right;" />
-<div><span style="font-size: 16px;"><a href="http://olco.canlib.ca/client/cp" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Access to the Library Website and Catalogue</a></span><br />
+<div><span style="font-size:14px;">Access the library website at <a href="http://www.carletonplacelibrary.ca">www.carletonplacelibrary.ca</a></span><br />
 &nbsp;</div>
 </div>
 

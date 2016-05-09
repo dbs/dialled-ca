@@ -95,7 +95,7 @@ ddaccordion.init({
             London, ON <br />
           N6G 1H3</p>
           <p class="text"><strong>By telephone:Â </strong> 519-645-7956</p>
-          <p class="text"><strong>By email:</strong>Â  <a href="/cdn-cgi/l/email-protection#0c6d7e6f64657a697f4c64797e6362226d626b60656f6d62226f6d"><span class="__cf_email__" data-cfemail="8feefdece7e6f9eafccfe7fafde0e1a1eee1e8e3e6eceee1a1ecee">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></p>
+          <p class="text"><strong>By email:</strong>Â  <a href="/cdn-cgi/l/email-protection#355447565d5c435046755d40475a5b1b545b52595c56545b1b5654"><span class="__cf_email__" data-cfemail="c0a1b2a3a8a9b6a5b380a8b5b2afaeeea1aea7aca9a3a1aeeea3a1">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></p>
           <p class="text"><strong>By fax:Â </strong> 519-645-8669</p>
           <hr width="80%" />
           <p class="text">Due to the Privacy  Act, no research will be undertaken unless accompanied by a letter and an  accompanying fee.Â  In the case of a  Baptism or a Marriage record, a letter must be signed by the individual whose  information you are seeking.</p>
@@ -285,15 +285,15 @@ ddaccordion.init({
 <a class="menuitem submenuheader" href="#" style="border-bottom-width: 0">Synod</a>
 <div class="submenu">
 <ul>
-<li><a href="/what/synod/election-convcirc.php">Electoral Synod 2016</a></li>
 <li><a href="/what/synod/welcome.php">Synod 2016</a></li>
+<li><a href="/what/synod/election-convcirc.php">Electoral Synod 2016</a></li>
 <li><a href="/what/synod/FAQ.php">FAQ</a></li>
 <li><a href="/what/synod/accomodations.php">Accommodations</a></li>
 <li><a href="/what/synod/So Youre Coming To Synod (2010).pdf" target="_blank">So You're Coming to Synod</a></li>
 <li><a href="/what/synod/synorg.php">Synod Organization</a></li>
 <li><a href="/what/synod/past_future.php">Past & Future Synods</a></li>
 <!--<li><a href="/what/synod/videos.php">Videos</a></li>-->
-<!--<li><a href="/what/synod/prayervigil.php">Prayer Vigil 2015</a></li>-->
+<li><a href="/what/synod/prayervigil.php">Prayer Vigil 2016</a></li>
 <!--<li><a href="/what/childrenyouth/youthsnorg.php">Youth Conference 2015</a></li>-->
 <li><a href="http://www.anglican.ca/gs2010/" target="_blank">General Synod</a></li>
 </ul>
@@ -327,12 +327,12 @@ ddaccordion.init({
   190 Queens Avenue<br>
 London, Ontario, Canada<br>
 N6A 6H7<br>
-<a href="/cdn-cgi/l/email-protection#b7dfc2c5d8d9f7dfc2c5d8d999d6d9d0dbded4d6d999d4d6" style="color:#222222"><span class="__cf_email__" data-cfemail="9df5e8eff2f3ddf5e8eff2f3b3fcf3faf1f4fefcf3b3fefc">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a>
+<a href="/cdn-cgi/l/email-protection#5e362b2c31301e362b2c3130703f303932373d3f30703d3f" style="color:#222222"><span class="__cf_email__" data-cfemail="dbb3aea9b4b59bb3aea9b4b5f5bab5bcb7b2b8bab5f5b8ba">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a>
 <div style="background-color:#c02221" width="100%"><p>&nbsp;</p><p>&nbsp;</p></div>
   </div>        
         
 
 <!-- end #container -->
 </div>
-<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
 </html>

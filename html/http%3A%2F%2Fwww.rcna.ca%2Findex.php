@@ -28,7 +28,6 @@
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </a>
- <!-- Be sure to leave the brand out there if you want it shown -->
 <a class="brand hidden-tablet hidden-desktop" href="/">RCNA / ARNC</a>
 <div class="nav-collapse">
 <ul id="headerMenu" class="nav">
@@ -43,6 +42,7 @@
 		<li><a href="/join.php">Join / Joignez nos rangs</a></li>
 		<li><a href="/library.php">Library / BibliothÃ¨que</a></li>
 		<li><a href="/memorabilia.php">Memorabilia / Souvenirs</a></li>
+		<li><a href="/paydues.php">Pay Dues / Payer vos frais d'adhÃ©sion en ligne</a></li>
 		<li><a href="/journal.php"><em>The CN Journal</em> / <em>Le journal de la numismatique canadienne</em></a></li>
 	</ul></li>
 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret"></b> Education / Ãducation</a> 
@@ -185,7 +185,7 @@
 5694 Highway #7 East, Suite 432<br>
 Markham ON Canada L3P 1B4</li>
 <li>Telephone / TÃ©lÃ©phone: 647-401-4014</li>
-<li>Email / Courriel: <a href='&#109&#97&#105&#108t&#111:%69%6e%66%6f@%72cn%61.c%61'>i&#110&#102&#111@r&#99&#110a&#46&#99a</a><br>
+<li>Email / Courriel: <a href='ma&#105&#108&#116o:i%6e%66%6f%40%72c%6e%61%2e%63a'>info&#64&#114&#99&#110&#97&#46&#99a</a><br>
 	<a href="//www.facebook.com/TheRCNA"><img src="/components/facebook.gif" width="16" height="16" alt="Facebook" /> Follow Us</a><br></li>
         <li><a href="/">Home / Accueil</a></li>
         <li><a href="/sitemap.php">Site Map / Plan du site</a></li>

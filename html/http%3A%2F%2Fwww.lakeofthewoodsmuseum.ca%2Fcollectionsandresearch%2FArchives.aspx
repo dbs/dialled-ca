@@ -219,7 +219,6 @@ img.emoji {
     <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/" class="pageMenuLink">Gift Shop</a></li>
     <li ><a href="http://www.lakeofthewoodsmuseum.ca/home/privacy-policy/" class="pageMenuLink">Privacy Policy</a></li>
     <li class="lastLI"><a href="http://www.lakeofthewoodsmuseum.ca/home/disclaimer/" class="pageMenuLink">Disclaimer</a></li>
-   
 
         </ul>
 	</div>
@@ -247,14 +246,16 @@ img.emoji {
     </div>
 
     <div style="text-align: center; font-weight: bold;">
-      <p>RENEW YOUR MEMBERSHIP ONLINE!<br />
+      <p>RENEW YOUR MEMBERSHIP or BECOME A MEMBER ONLINE!<br />
 <a href="/?p=600" title="Become a Member">Online application ...</a></p>
-<p>SUMMER STUDENT<br />
-JOB OPPORTUNITY<br />
-<a href="/?p=739" title="Museum Summer Student">Job Posting ...</a></p>
-<p>GIFT SHOP OPEN<br />
-Tuesday to Saturday<br />
-10 am - 5 pm</p>
+<p>LIFE OF A POW<br />
+Book Launch by Duncan Pringle<br />
+Thursday May 12  7:00 pm<br />
+<a href="/?p=754" title="Life of a Pow Book Launch">more info ...</a></p>
+<p>IN THIS PLACE ... McLeod Park<br />
+The History of McLeod Park<br />
+Saturday, May 14  3 pm<br />
+<a href="/?p=761" title="The History of McLeod Park">more info ...</a></p>
     </div>
   </div>
     <div id="exhibits">
@@ -262,10 +263,12 @@ Tuesday to Saturday<br />
       <img src="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/img/sidebar_inourgallery_title.png" alt="In Our Temporary Exhibit Gallery">
     </div>
     <div style="text-align: center; font-weight: bold;">
-      <p>We Are What We Eat 2016<br />
-Saturdays, Feb 6 - Mar 12<br />
-2:00 - 3:30 pm<br />
-<a href="/?p=413" title="We Are What We Eat">more  ...</a></p>
+      <p>SEARCHING FOR SOMETHING DIFFERENT<br />
+An Exhibit of Paintings & Fabric Art<br />
+by Local Artists<br />
+Nancy Bergman & Patricia Schwartz<br />
+May 3 - 28<br />
+<a href="/?p=175" title="Something Different">more  ...</a></p>
     </div>
   </div>
           
@@ -421,14 +424,16 @@ Phone: (807) 467-2105 | Fax: (807)467-2109 | Email: <a href="mailto:museum@kmts.
     </div>
 
     <div style="text-align: center; font-weight: bold;">
-      <p>RENEW YOUR MEMBERSHIP ONLINE!<br />
+      <p>RENEW YOUR MEMBERSHIP or BECOME A MEMBER ONLINE!<br />
 <a href="/?p=600" title="Become a Member">Online application ...</a></p>
-<p>SUMMER STUDENT<br />
-JOB OPPORTUNITY<br />
-<a href="/?p=739" title="Museum Summer Student">Job Posting ...</a></p>
-<p>GIFT SHOP OPEN<br />
-Tuesday to Saturday<br />
-10 am - 5 pm</p>
+<p>LIFE OF A POW<br />
+Book Launch by Duncan Pringle<br />
+Thursday May 12  7:00 pm<br />
+<a href="/?p=754" title="Life of a Pow Book Launch">more info ...</a></p>
+<p>IN THIS PLACE ... McLeod Park<br />
+The History of McLeod Park<br />
+Saturday, May 14  3 pm<br />
+<a href="/?p=761" title="The History of McLeod Park">more info ...</a></p>
     </div>
   </div>
     <div id="exhibits">
@@ -436,10 +441,12 @@ Tuesday to Saturday<br />
       <img src="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/img/sidebar_inourgallery_title.png" alt="In Our Temporary Exhibit Gallery">
     </div>
     <div style="text-align: center; font-weight: bold;">
-      <p>We Are What We Eat 2016<br />
-Saturdays, Feb 6 - Mar 12<br />
-2:00 - 3:30 pm<br />
-<a href="/?p=413" title="We Are What We Eat">more  ...</a></p>
+      <p>SEARCHING FOR SOMETHING DIFFERENT<br />
+An Exhibit of Paintings & Fabric Art<br />
+by Local Artists<br />
+Nancy Bergman & Patricia Schwartz<br />
+May 3 - 28<br />
+<a href="/?p=175" title="Something Different">more  ...</a></p>
     </div>
   </div>
   </div>

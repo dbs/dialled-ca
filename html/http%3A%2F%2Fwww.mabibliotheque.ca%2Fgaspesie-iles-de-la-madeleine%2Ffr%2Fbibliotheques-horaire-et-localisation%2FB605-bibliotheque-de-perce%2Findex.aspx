@@ -7,15 +7,16 @@
     <meta name="generator" content="LANEC Solutions Web 2012" />
     <meta name="revisit-after" content="14 days" /><meta http-equiv="Content-Language" content="fr_CA" />
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" /><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="/themes/style.css?v=2.240" rel='stylesheet' type='text/css' />
-    <link href="/themes/contenu.css?v=2.240" rel='stylesheet' type='text/css' />
+    <link href="/themes/style.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/contenu.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/style-new.css?v=2.245" rel='stylesheet' type='text/css' />
     <!--[if IE 9]>
-    <link href="/themes/style_IE9.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE9.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 8]>
-    <link href="/themes/style_IE8.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE8.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link href="/themes/print.css?v=2.240" rel='stylesheet' type='text/css' media="print" />
+    <link href="/themes/print.css?v=2.245" rel='stylesheet' type='text/css' media="print" />
     <link href="http://fonts.googleapis.com/css?family=Vollkorn|Lato:normal,bold|Amaranth|Actor|Open+Sans|Droid+Sans|Open+Sans|Days+One" rel="stylesheet" type="text/css" /><link href="/gaspesie-iles-de-la-madeleine/fr/rss/nouvelles.aspx" rel="alternate" type="application/rss+xml" title="Réseau BIBLIO Gaspésie – Îles-de-la-Madeleine" />
     <meta property="og:title" content="Bibliothèque de Percé | Bibliothèques Horaire et localisation" />
     <meta property="og:image" content="http://www.mabibliotheque.ca/images/partage/gim/img-partage.jpg" />
@@ -24,7 +25,7 @@
     <meta property="og:description" content="" />
 
 <style type="text/css">
-  .imgEnteteContenu { background:#5785be url(/images/entete/entete_hiver.jpg) no-repeat center top; height:35px;}
+  .imgEnteteContenu { background:#D69038 url(/images/entete/entete_fleurs.jpg) no-repeat center top; height:35px;}
 </style>
 
 
@@ -121,6 +122,10 @@
     "Lng": -65.899751044531286,
     "Direction": 0.0
   },
+  "CalendrierDesFormations": "<b>Activités</b><br />du Réseau",
+  "CalendrierDesFormationsVoirLesActivites": "Voir les <b>activités</b><br /><b>du Réseau</b>",
+  "CalendrierDesFormationsGestionDesActivites": "Gestion des <br /><b>activités</b>",
+  "DocumentationReseau": "<b>Documentation</b><br />de mon Réseau",
   "RepertoireDesActivites": "<b>Répertoire</b><br />des activités culturelles",
   "RepertoireDesActivitesConsultation": "Consulter le <b>répertoire <br />des activités culturelles</b>",
   "RepertoireDesActivitesCulturellesH1": "Répertoire des activités culturelles",
@@ -147,6 +152,7 @@
   "UtiliserGrilleTarifaire": false,
   "AfficherGestionExtranetBiblio": true,
   "AfficherGestionDocumentation": false,
+  "AfficherGestionCalendrierFormationBiblio": true,
   "AfficherLienVDX": true,
   "RetirerPremièrePartieNomsDossiersDocumentation": false,
   "SéparateurNomsDossiersDocumentation": "",
@@ -169,7 +175,6 @@
   "PartageV2": true,
   "PermettreModifierActiviteRepertoire": true,
   "AccesCalendrierDesFormationsEtActivites": false,
-  "AccesCalendrierDesFormationsEtActivitesPourBiblios": true,
   "MessageFacturationFormation": null,
   "SrcImgBasCourrielEnvoyerAmi": "/controles/envoyerAmi/courriel/piedpage/GIM.jpg",
   "BoutonInfolettreEnHaut": true,
@@ -224,7 +229,14 @@
   "AfficherMessageOptimiserPourNavigateurs": false,
   "MessageOptimiserPourNavigateurs": "",
   "NombreCommuniquesAccueil": 2,
-  "NombreActivitesAccueil": 2
+  "NombreActivitesAccueil": 2,
+  "FormationSingulier": "Activité",
+  "FormationPluriel": "Activités",
+  "NbJoursAvantFermetureInscriptionParDefaut": 2,
+  "CalendrierFormationsAccessibleHorsLigne": false,
+  "CalendrierFormationsLibelleBoutonInscription": "Inscription",
+  "FormationSingulierLower": "activité",
+  "FormationPlurielLower": "activités"
 };
 
         $(document).ready(function() {
@@ -253,6 +265,7 @@
         }
     </style>
 
+    
 
     <style type="text/css">
         #oeufPaques{
@@ -270,11 +283,22 @@
 </title></head>
 <body>
 <div class="pageMaster">
+    
+    <!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <form name="aspnetForm" method="post" action="/gaspesie-iles-de-la-madeleine/fr/bibliotheques-horaire-et-localisation/B605-bibliotheque-de-perce/index.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwNjg2OTkzMDcPZBYCZg9kFgJmD2QWBGYPZBYOAgEPFgIeB2NvbnRlbnRkZAICDxYEHwBkHgdWaXNpYmxlaGQCAw8WAh8BaGQCBQ8WAh4EVGV4dAU4PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1MYW5ndWFnZSIgY29udGVudD0iZnJfQ0EiIC8+Cg1kAgkPFgIfAgWqATxsaW5rIGhyZWY9Ii9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9yc3Mvbm91dmVsbGVzLmFzcHgiIHJlbD0iYWx0ZXJuYXRlIiB0eXBlPSJhcHBsaWNhdGlvbi9yc3MreG1sIiB0aXRsZT0iUsOpc2VhdSBCSUJMSU8gR2FzcMOpc2llIOKAkyDDjmxlcy1kZS1sYS1NYWRlbGVpbmUiIC8+ZAIKDxYCHwIFpQQNCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dGl0bGUiIGNvbnRlbnQ9IkJpYmxpb3Row6hxdWUgZGUgUGVyY8OpIHwgQmlibGlvdGjDqHF1ZXMgSG9yYWlyZSBldCBsb2NhbGlzYXRpb24iIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmltYWdlIiBjb250ZW50PSJodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2ltYWdlcy9wYXJ0YWdlL2dpbS9pbWctcGFydGFnZS5qcGciIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnVybCIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL0I2MDUtYmlibGlvdGhlcXVlLWRlLXBlcmNlL2luZGV4LmFzcHgiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnNpdGVfbmFtZSIgY29udGVudD0iUsOpc2VhdSBCSUJMSU8gR2FzcMOpc2llIOKAkyDDjmxlcy1kZS1sYS1NYWRlbGVpbmUiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAgsPFgIfAgWUAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojNTc4NWJlIHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfaGl2ZXIuanBnKSBuby1yZXBlYXQgY2VudGVyIHRvcDsgaGVpZ2h0OjM1cHg7fQo8L3N0eWxlPgpkAgEPFgIeBmFjdGlvbgVtL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vQjYwNS1iaWJsaW90aGVxdWUtZGUtcGVyY2UvaW5kZXguYXNweBYYAgEPDxYCHgtOYXZpZ2F0ZVVybAUsL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luZGV4LmFzcHhkFgJmDw8WAh4ISW1hZ2VVcmwFHy9pbWFnZXMvZW50ZXRlL2xvZ28vR0lNLnBuZz92PTJkZAICDw8WAh8FBSEvaW1hZ2VzL2VudGV0ZS9sb2dvL3ByaW50L0dJTS5qcGdkZAIDDxYCHgtfIUl0ZW1Db3VudAIDFgYCAQ9kFgICAw8PFgYfAgUHQWNjdWVpbB4GVGFyZ2V0BQVfc2VsZh8EBSwvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvaW5kZXguYXNweGRkAgIPZBYCAgMPDxYGHwIFEFF1aSBzb21tZXMtbm91cz8fBwUFX3NlbGYfBAVHL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL3F1aS1zb21tZXMtbm91cy9oaXN0b3JpcXVlL2luZGV4LmFzcHhkZAIDD2QWBAIBDxYCHwIFEGlkPSJkZXJuaWVySXRlbSJkAgMPDxYGHwIFDE5vdXMgam9pbmRyZR8HBQVfc2VsZh8EBTkvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvbm91cy1qb2luZHJlL2luZGV4LmFzcHhkZAIEDw8WDB8HBQZfYmxhbmsfAgUpTW9uIGRvc3NpZXIgZCd1c2FnZXIgPHNwYW4+JiM5NjU0Ozwvc3Bhbj4eB1Rvb2xUaXAFFE1vbiBkb3NzaWVyIGQndXNhZ2VyHwQFKGh0dHA6Ly9pYmlzdHJvLWdhc3Blc2llLnJlc2VhdWJpYmxpby5jYS8eCENzc0NsYXNzBQ1idEFqb3V0ZXJDc3MgHgRfIVNCAgIWAh4Hb25jbGljawVQX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnRW50w6p0ZScsICdNb24gZG9zc2llciBkIHVzYWdlciddKTtkAgYPFgIfAgXXAjxpZnJhbWUgc3JjPSJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9wbHVnaW5zL2xpa2UucGhwP2xvY2FsZT1mcl9GUiZocmVmPWh0dHBzJTNBJTJGJTJGd3d3LmZhY2Vib29rLmNvbSUyRlJlc2VhdUJJQkxJT0dJTSZhbXA7bGF5b3V0PWJ1dHRvbl9jb3VudCZhbXA7Y29sb3JzY2hlbWU9ZGFyayZhbXA7YWN0aW9uPWxpa2Umd2lkdGg9MTAwJmhlaWdodD0zMCZmb250PWFyaWFsIiBzY3JvbGxpbmc9Im5vIiBmcmFtZWJvcmRlcj0iMCIgc3R5bGU9ImJvcmRlcjpub25lOyBvdmVyZmxvdzpoaWRkZW47IHdpZHRoOjEwMHB4OyBoZWlnaHQ6MzBweDsiIGFsbG93VHJhbnNwYXJlbmN5PSJ0cnVlIj48L2lmcmFtZT5kAggPFgIfBgIFFgoCAQ9kFgQCAQ8WAh8CBRFjbGFzcz0iY2F0YWxvZ3VlImQCAw8PFgYfAgUqPHN0cm9uZz5DYXRhbG9ndWU8L3N0cm9uZz48YnIgLz4NCmVuIGxpZ25lHwcFBV9zZWxmHwQFPy9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9jYXRhbG9ndWUtZW4tbGlnbmUvaW5kZXguYXNweGRkAgIPZBYEAgEPFgIfAgUYY2xhc3M9ImxpdnJlc1Jlc3NvdXJjZXMiZAIDDw8WBh8CBUI8c3Ryb25nPkxpdnJlcyAmPGJyIC8+DQpyZXNzb3VyY2VzPC9zdHJvbmc+PGJyIC8+DQpudW0mIzIzMztyaXF1ZXMfBwUFX3NlbGYfBAVML2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvaW5kZXguYXNweGRkAgMPZBYEAgEPFgIfAgUMY2xhc3M9InByZXQiZAIDDw8WBh8CBTo8c3Ryb25nPlByJiMyMzQ7dCBlbnRyZTwvc3Ryb25nPjxiciAvPg0KYmlibGlvdGgmIzIzMjtxdWVzHwcFBV9zZWxmHwQFRS9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9wcmV0LWVudHJlLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweGRkAgQPZBYEAgEPFgIfAgUSY2xhc3M9ImV2ZW5lbWVudHMiZAIDDw8WBh8CBT08c3Ryb25nPkFjdGl2aXQmIzIzMztzPC9zdHJvbmc+PGJyIC8+DQpkZXMgYmlibGlvdGgmIzIzMjtxdWVzHwcFBV9zZWxmHwQFSC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9hY3Rpdml0ZXMtZGVzLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweGRkAgUPZBYEAgEPFgIfAgUVY2xhc3M9ImJpYmxpb3RoZXF1ZXMiZAIDDw8WCh8CBUI8c3Ryb25nPkJpYmxpb3RoJiMyMzI7cXVlczwvc3Ryb25nPjxiciAvPg0KSG9yYWlyZSBldCBsb2NhbGlzYXRpb24fBwUFX3NlbGYfBAVSL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vaW5kZXguYXNweB8JBQZhY3RpdmUfCgICZGQCCQ9kFgICAQ9kFgICAQ9kFgICAQ8WAh8GZmQCCg9kFgQCAQ8PFgQfAgUHQWNjdWVpbB8EBSwvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvaW5kZXguYXNweGRkAgMPFgIfBgIBFgJmD2QWAgIBDw8WBh8JBQpzaWxlbnRMaW5rHwIFJkJpYmxpb3Row6hxdWVzIEhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uHwoCAmRkAgsPZBYEZg8PFgIfBAVFL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luc2NyaXB0aW9uLWEtaW5mb2xldHRyZS9pbmRleC5hc3B4FgIeCmRhdGEtdGl0bGUFGkFib25uZW1lbnQgw6AgbCdpbmZvbGV0dHJlZAIBD2QWAgIBDw8WAh8EBTQvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcnNzL25vdXZlbGxlcy5hc3B4ZGQCDQ8PFgIfAWdkFgICAQ8PFgIfBAUoaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1Jlc2VhdUJJQkxJT0dJTRYCHwsFSV9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdGYWNlYm9vayddKTtkAhIPFgIfBgIDFgZmD2QWAgIBDxYCHwIF6AQ8YSBvbmNsaWNrPSJfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnQXBwZWwgbnVtJiMyMzM7cmlzYXRpb24nXSk7IiBocmVmPSJodHRwOi8vd3d3LmJhbnEucWMuY2EvYXBwZWxfbnVtZXJpc2F0aW9uL2luZGV4Lmh0bWwiIHRhcmdldD0iX2JsYW5rIj4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2FwcGVsX292ZXIuanBnJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2FwcGVsLmpwZyciIGFsdD0iU2lnbmV6IGwnQXBwZWwgcG91ciBsYSBudW0mIzIzMztyaXNhdGlvbiBkdSBQYXRyaW1vaW5lIGN1bHR1cmVsIHF1JiMyMzM7YiYjMjMzO2NvaXMiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYXBwZWwuanBnIj4NCiAgPC9pbWc+DQo8L2E+ZAIBD2QWAgIBDxYCHwIFswQ8YSBvbmNsaWNrPSJfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnTG9pIDUxJ10pOyIgaHJlZj0iaHR0cDovL3d3dy5tY2NjZi5nb3V2LnFjLmNhL2luZGV4LnBocD9pZD00NDM2IiB0YXJnZXQ9Il9ibGFuayI+DQogIDxpbWcgb25tb3VzZW92ZXI9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9sb2k1MV9vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9sb2k1MS5qcGcnIiBhbHQ9IkxvaSA1MSAtIE51bCBuJ2VzdCBjZW5zJiMyMzM7IGlnbm9yZXIgbGEgbG9pIGR1IGxpdnJlIiBzcmM9Ii9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxLmpwZyI+DQogIDwvaW1nPg0KPC9hPmQCAg9kFgICAQ8WAh8CBYwEPGEgaHJlZj0iL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL3F1aS1zb21tZXMtbm91cy9wcml4LWQtZXhjZWxsZW5jZS1nZXJhcmQtZGVzcm9zaWVycy9pbmRleC5hc3B4Ij4NCjxpbWcgb25tb3VzZW92ZXI9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9nZXJhcmRkZXNyb3NpZXJzX292ZXIuanBnJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2dlcmFyZGRlc3Jvc2llcnMuanBnJyIgYWx0PSJQcml4IGQnZXhjZWxsZW5jZSBHJiMyMzM7cmFyZCBEZXNyb3NpZXJzIiBzcmM9Ii9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2dlcmFyZGRlc3Jvc2llcnMuanBnIj4NCjwvYT5kAhUPZBYGAgEPFgIfAWhkAgMPZBYCZg8WCh4JaW5uZXJodG1sBRVBY2MmIzIzMjtzIHByaXYmIzIzMzseBXRpdGxlBQ1BY2PDqHMgcHJpdsOpHgRocmVmBTVodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2dlc3Rpb24vY29ubmV4aW9uLWJpYmxpbx8LBU5fZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnQWNjw6hzIHByaXbDqSddKTseBnRhcmdldAUGX2JsYW5rZAIFD2QWAmYPFgIfAWhkZDed7sOdhYyrCDfLfta69nFLfPk/JWdFyl6ZLR6yAQAM" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwNjg2OTkzMDcPZBYCZg9kFgJmD2QWBGYPZBYOAgEPFgIeB2NvbnRlbnRkZAICDxYEHwBkHgdWaXNpYmxlaGQCAw8WAh8BaGQCBQ8WAh4EVGV4dAU4PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1MYW5ndWFnZSIgY29udGVudD0iZnJfQ0EiIC8+Cg1kAgkPFgIfAgWqATxsaW5rIGhyZWY9Ii9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9yc3Mvbm91dmVsbGVzLmFzcHgiIHJlbD0iYWx0ZXJuYXRlIiB0eXBlPSJhcHBsaWNhdGlvbi9yc3MreG1sIiB0aXRsZT0iUsOpc2VhdSBCSUJMSU8gR2FzcMOpc2llIOKAkyDDjmxlcy1kZS1sYS1NYWRlbGVpbmUiIC8+ZAIKDxYCHwIFpQQNCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dGl0bGUiIGNvbnRlbnQ9IkJpYmxpb3Row6hxdWUgZGUgUGVyY8OpIHwgQmlibGlvdGjDqHF1ZXMgSG9yYWlyZSBldCBsb2NhbGlzYXRpb24iIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmltYWdlIiBjb250ZW50PSJodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2ltYWdlcy9wYXJ0YWdlL2dpbS9pbWctcGFydGFnZS5qcGciIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnVybCIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL0I2MDUtYmlibGlvdGhlcXVlLWRlLXBlcmNlL2luZGV4LmFzcHgiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnNpdGVfbmFtZSIgY29udGVudD0iUsOpc2VhdSBCSUJMSU8gR2FzcMOpc2llIOKAkyDDjmxlcy1kZS1sYS1NYWRlbGVpbmUiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAgsPFgIfAgWVAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojRDY5MDM4IHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfZmxldXJzLmpwZykgbm8tcmVwZWF0IGNlbnRlciB0b3A7IGhlaWdodDozNXB4O30KPC9zdHlsZT4KZAIBDxYCHgZhY3Rpb24FbS9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL0I2MDUtYmlibGlvdGhlcXVlLWRlLXBlcmNlL2luZGV4LmFzcHgWGAIBDw8WAh4LTmF2aWdhdGVVcmwFLC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9pbmRleC5hc3B4ZBYCZg8PFgIeCEltYWdlVXJsBR8vaW1hZ2VzL2VudGV0ZS9sb2dvL0dJTS5wbmc/dj0yZGQCAg8PFgIfBQUhL2ltYWdlcy9lbnRldGUvbG9nby9wcmludC9HSU0uanBnZGQCAw8WAh4LXyFJdGVtQ291bnQCAxYGAgEPZBYCAgMPDxYGHwIFB0FjY3VlaWweBlRhcmdldAUFX3NlbGYfBAUsL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2luZGV4LmFzcHhkZAICD2QWAgIDDw8WBh8CBRBRdWkgc29tbWVzLW5vdXM/HwcFBV9zZWxmHwQFRy9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9xdWktc29tbWVzLW5vdXMvaGlzdG9yaXF1ZS9pbmRleC5hc3B4ZGQCAw9kFgQCAQ8WAh8CBRBpZD0iZGVybmllckl0ZW0iZAIDDw8WBh8CBQxOb3VzIGpvaW5kcmUfBwUFX3NlbGYfBAU5L2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL25vdXMtam9pbmRyZS9pbmRleC5hc3B4ZGQCBA8PFgwfBwUGX2JsYW5rHwIFKU1vbiBkb3NzaWVyIGQndXNhZ2VyIDxzcGFuPiYjOTY1NDs8L3NwYW4+HgdUb29sVGlwBRRNb24gZG9zc2llciBkJ3VzYWdlch8EBShodHRwOi8vaWJpc3Ryby1nYXNwZXNpZS5yZXNlYXViaWJsaW8uY2EvHghDc3NDbGFzcwUNYnRBam91dGVyQ3NzIB4EXyFTQgICFgIeB29uY2xpY2sFUF9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ0VudMOqdGUnLCAnTW9uIGRvc3NpZXIgZCB1c2FnZXInXSk7ZAIGDxYCHwIFrgE8ZGl2IGNsYXNzPSJmYi1saWtlIiBkYXRhLWhyZWY9Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9SZXNlYXVCSUJMSU9HSU0iIGRhdGEtbGF5b3V0PSJidXR0b25fY291bnQiIGRhdGEtY29sb3JzY2hlbWU9ImRhcmsiIGRhdGEtc2hvdy1mYWNlcz0iZmFsc2UiIGRhdGEtYWN0aW9uPSJsaWtlIj48L2Rpdj5kAggPFgIfBgIFFgoCAQ9kFgQCAQ8WAh8CBRFjbGFzcz0iY2F0YWxvZ3VlImQCAw8PFgYfAgUqPHN0cm9uZz5DYXRhbG9ndWU8L3N0cm9uZz48YnIgLz4NCmVuIGxpZ25lHwcFBV9zZWxmHwQFPy9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9jYXRhbG9ndWUtZW4tbGlnbmUvaW5kZXguYXNweGRkAgIPZBYEAgEPFgIfAgUYY2xhc3M9ImxpdnJlc1Jlc3NvdXJjZXMiZAIDDw8WBh8CBUE8c3Ryb25nPkxpdnJlcyAmYW1wOzxiciAvPg0KcmVzc291cmNlczwvc3Ryb25nPjxiciAvPiBudW3DqXJpcXVlcx8HBQVfc2VsZh8EBUwvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvbGl2cmVzLWV0LXJlc3NvdXJjZXMtbnVtZXJpcXVlcy9pbmRleC5hc3B4ZGQCAw9kFgQCAQ8WAh8CBQxjbGFzcz0icHJldCJkAgMPDxYGHwIFOjxzdHJvbmc+UHImIzIzNDt0IGVudHJlPC9zdHJvbmc+PGJyIC8+DQpiaWJsaW90aCYjMjMyO3F1ZXMfBwUFX3NlbGYfBAVFL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4ZGQCBA9kFgQCAQ8WAh8CBRJjbGFzcz0iZXZlbmVtZW50cyJkAgMPDxYGHwIFPTxzdHJvbmc+QWN0aXZpdCYjMjMzO3M8L3N0cm9uZz48YnIgLz4NCmRlcyBiaWJsaW90aCYjMjMyO3F1ZXMfBwUFX3NlbGYfBAVIL2dhc3Blc2llLWlsZXMtZGUtbGEtbWFkZWxlaW5lL2ZyL2FjdGl2aXRlcy1kZXMtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4ZGQCBQ9kFgQCAQ8WAh8CBRVjbGFzcz0iYmlibGlvdGhlcXVlcyJkAgMPDxYKHwIFQjxzdHJvbmc+QmlibGlvdGgmIzIzMjtxdWVzPC9zdHJvbmc+PGJyIC8+DQpIb3JhaXJlIGV0IGxvY2FsaXNhdGlvbh8HBQVfc2VsZh8EBVIvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4HwkFBmFjdGl2ZR8KAgJkZAIJD2QWAgIBD2QWAgIBD2QWAgIBDxYCHwZmZAIKD2QWBAIBDw8WBB8CBQdBY2N1ZWlsHwQFLC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9pbmRleC5hc3B4ZGQCAw8WAh8GAgEWAmYPZBYCAgEPDxYGHwkFCnNpbGVudExpbmsfAgUmQmlibGlvdGjDqHF1ZXMgSG9yYWlyZSBldCBsb2NhbGlzYXRpb24fCgICZGQCCw9kFgRmDw8WAh8EBUUvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvaW5zY3JpcHRpb24tYS1pbmZvbGV0dHJlL2luZGV4LmFzcHgWAh4KZGF0YS10aXRsZQUaQWJvbm5lbWVudCDDoCBsJ2luZm9sZXR0cmVkAgEPZBYCAgEPDxYCHwQFNC9nYXNwZXNpZS1pbGVzLWRlLWxhLW1hZGVsZWluZS9mci9yc3Mvbm91dmVsbGVzLmFzcHhkZAINDw8WAh8BZ2QWAgIBDw8WAh8EBShodHRwczovL3d3dy5mYWNlYm9vay5jb20vUmVzZWF1QklCTElPR0lNFgIfCwVJX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0ZhY2Vib29rJ10pO2QCEg8WAh8GAgMWBmYPZBYCAgEPFgIfAgXoBDxhIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBcHBlbCBudW0mIzIzMztyaXNhdGlvbiddKTsiIGhyZWY9Imh0dHA6Ly93d3cuYmFucS5xYy5jYS9hcHBlbF9udW1lcmlzYXRpb24vaW5kZXguaHRtbCIgdGFyZ2V0PSJfYmxhbmsiPg0KICA8aW1nIG9ubW91c2VvdmVyPSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYXBwZWxfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYXBwZWwuanBnJyIgYWx0PSJTaWduZXogbCdBcHBlbCBwb3VyIGxhIG51bSYjMjMzO3Jpc2F0aW9uIGR1IFBhdHJpbW9pbmUgY3VsdHVyZWwgcXUmIzIzMztiJiMyMzM7Y29pcyIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9hcHBlbC5qcGciPg0KICA8L2ltZz4NCjwvYT5kAgEPZBYCAgEPFgIfAgWzBDxhIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdMb2kgNTEnXSk7IiBocmVmPSJodHRwOi8vd3d3Lm1jY2NmLmdvdXYucWMuY2EvaW5kZXgucGhwP2lkPTQ0MzYiIHRhcmdldD0iX2JsYW5rIj4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxX292ZXIuanBnJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxLmpwZyciIGFsdD0iTG9pIDUxIC0gTnVsIG4nZXN0IGNlbnMmIzIzMzsgaWdub3JlciBsYSBsb2kgZHUgbGl2cmUiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTEuanBnIj4NCiAgPC9pbWc+DQo8L2E+ZAICD2QWAgIBDxYCHwIFjAQ8YSBocmVmPSIvZ2FzcGVzaWUtaWxlcy1kZS1sYS1tYWRlbGVpbmUvZnIvcXVpLXNvbW1lcy1ub3VzL3ByaXgtZC1leGNlbGxlbmNlLWdlcmFyZC1kZXNyb3NpZXJzL2luZGV4LmFzcHgiPg0KPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2dlcmFyZGRlc3Jvc2llcnNfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGcnIiBhbHQ9IlByaXggZCdleGNlbGxlbmNlIEcmIzIzMztyYXJkIERlc3Jvc2llcnMiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGciPg0KPC9hPmQCFQ9kFgYCAQ8WAh8BaGQCAw9kFgJmDxYKHglpbm5lcmh0bWwFFUFjYyYjMjMyO3MgcHJpdiYjMjMzOx4FdGl0bGUFDUFjY8OocyBwcml2w6keBGhyZWYFNWh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvZ2VzdGlvbi9jb25uZXhpb24tYmlibGlvHwsFTl9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBY2PDqHMgcHJpdsOpJ10pOx4GdGFyZ2V0BQZfYmxhbmtkAgUPZBYCZg8WAh8BaGRke8EQ6V5HnnzeNcx/E+xtYX4NuWo4PCkl2YbedcvouoU=" />
 </div>
 
 <script type="text/javascript">
@@ -360,7 +384,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspne
                                 </div>
                             </div>
                             <div id="facebook">
-                                <iframe src="http://www.facebook.com/plugins/like.php?locale=fr_FR&href=https%3A%2F%2Fwww.facebook.com%2FReseauBIBLIOGIM&amp;layout=button_count&amp;colorscheme=dark&amp;action=like&width=100&height=30&font=arial" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:30px;" allowTransparency="true"></iframe>
+                                <div class="fb-like" data-href="https://www.facebook.com/ReseauBIBLIOGIM" data-layout="button_count" data-colorscheme="dark" data-show-faces="false" data-action="like"></div>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -391,9 +415,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspne
             <div class="menuPrincipal">
                 <div class="corpsMasterMenu">
                     <ul><li class="catalogue"><a id="ctl00_ctl00_rptMenuPrincipal_ctl01_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/catalogue-en-ligne/index.aspx" target="_self"><strong>Catalogue</strong><br />
-en ligne</a></li><li class="livresRessources"><a id="ctl00_ctl00_rptMenuPrincipal_ctl02_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/livres-et-ressources-numeriques/index.aspx" target="_self"><strong>Livres &<br />
-ressources</strong><br />
-num&#233;riques</a></li><li class="pret"><a id="ctl00_ctl00_rptMenuPrincipal_ctl03_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/pret-entre-bibliotheques/index.aspx" target="_self"><strong>Pr&#234;t entre</strong><br />
+en ligne</a></li><li class="livresRessources"><a id="ctl00_ctl00_rptMenuPrincipal_ctl02_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/livres-et-ressources-numeriques/index.aspx" target="_self"><strong>Livres &amp;<br />
+ressources</strong><br /> numériques</a></li><li class="pret"><a id="ctl00_ctl00_rptMenuPrincipal_ctl03_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/pret-entre-bibliotheques/index.aspx" target="_self"><strong>Pr&#234;t entre</strong><br />
 biblioth&#232;ques</a></li><li class="evenements"><a id="ctl00_ctl00_rptMenuPrincipal_ctl04_hlLien" href="/gaspesie-iles-de-la-madeleine/fr/activites-des-bibliotheques/index.aspx" target="_self"><strong>Activit&#233;s</strong><br />
 des biblioth&#232;ques</a></li><li class="bibliotheques"><a id="ctl00_ctl00_rptMenuPrincipal_ctl05_hlLien" class="active" href="/gaspesie-iles-de-la-madeleine/fr/bibliotheques-horaire-et-localisation/index.aspx" target="_self"><strong>Biblioth&#232;ques</strong><br />
 Horaire et localisation</a></li></ul>
@@ -413,13 +436,8 @@ Horaire et localisation</a></li></ul>
                     
                 
 </div>
-
                 
                     <div class="btRSSInfolettre">
-                        
-                            <div class="abonnementInfolettre new">
-                                <a id="hlAbonnementInfolettreSite" data-title="Abonnement à l&#39;infolettre" href="/gaspesie-iles-de-la-madeleine/fr/inscription-a-infolettre/index.aspx"></a>
-                            </div>
                         
                     </div>
                 
@@ -584,8 +602,10 @@ Horaire et localisation</a></li></ul>
             <p><b>Année de création :</b> <span data-bind="text: current().AnneeCreation"></span> <b>&#183;</b> <b>Population servie :</b> <span data-bind="text: current().PopulationDesservie"></span></p>
         </div>
         
-        
         <div data-bind="visible: current().WifiDisponible" class="btWifiDisponible hide-laurentides"></div>
+        
+        
+
         <div class="clear"></div>
         <div class="boutonsBas" data-bind="visible: current() && current().UrlSimba" style="display:none">
             
@@ -656,6 +676,7 @@ Horaire et localisation</a></li></ul>
     
     
 
+    
 
             </div>        
         </div>
@@ -749,8 +770,8 @@ Horaire et localisation</a></li></ul>
 </script>
 
 <script type="text/javascript" src="/scripts/jquery.inputmask/jquery.inputmask-3.1.js"></script>
-<script src="/scripts/hammer.min.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/css-accordeon.js?v=2.240" type="text/javascript"></script>
+<script src="/scripts/hammer.min.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/css-accordeon.js?v=2.245" type="text/javascript"></script>
 <script src="/scripts/json2.js" type="text/javascript"></script>
 <script src="/scripts/jquery.autosize-min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
@@ -760,8 +781,8 @@ Horaire et localisation</a></li></ul>
 <script src="/scripts/knockout-custom.js" type="text/javascript"></script>
 <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
 <script src="/scripts/jquery.cookie.js" type="text/javascript"></script>
-<script src="/scripts/knockout.grid.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/script_global.js?v=2.240" type="text/javascript"></script> 
+<script src="/scripts/knockout.grid.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/script_global.js?v=2.245" type="text/javascript"></script> 
     </form>
 </div>
 
@@ -784,30 +805,28 @@ Horaire et localisation</a></li></ul>
     });
 </script>
  
-<!-- Facebook async loading of JSAPI --> 
-<div id="fb-root"></div> 
         
 
     
 
-    <script src='/pages/json/Biblios.aspx?ReseauId=4&includeActivites=0&byNom=&orderBy=&slim=&LastModified=635932593243300000&v=2.240' type='text/javascript'></script>
-    <script src='/pages/json/Municipalites.aspx?ReseauId=4&LastModified=635932512000000000&v=2.240' type='text/javascript'></script>
-    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=4&count=0&BiblioId=0&apresAujourdhui=1&LastModified=635933069522200000&v=2.240' type='text/javascript'></script>
+    <script src='/pages/json/Biblios.aspx?ReseauId=4&includeActivites=0&byNom=&orderBy=&slim=&LastModified=635983569249300000&v=2.245' type='text/javascript'></script>
+    <script src='/pages/json/Municipalites.aspx?ReseauId=4&LastModified=635983488000000000&v=2.245' type='text/javascript'></script>
+    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=4&count=0&BiblioId=0&apresAujourdhui=1&LastModified=635983836476100000&v=2.245' type='text/javascript'></script>
 
-    <script src="/scripts/classes/Arrays.js?v=2.240" type="text/javascript"></script>
+    <script src="/scripts/classes/Arrays.js?v=2.245" type="text/javascript"></script>
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyB5pHwv9Su-pJMqylU17EThEOLyOGwrS7A&amp;language=fr" type="text/javascript"></script>
     <script src="/scripts/infobox.js" type="text/javascript"></script>
     <script src="/scripts/markerClustererPlus.js" type="text/javascript"></script>
     <script src="/scripts/jquery.cycle.all.min.js" type="text/javascript"></script>
     <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
-    <script src="/scripts/classes/GoogleMapBiblio.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/ActiviteViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/BiblioViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/BibliosViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/script_biblios.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/script_onglets.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/script_ongletsBibliotheques.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/classes/Maths.js?v=2.240" type="text/javascript"></script> 
+    <script src="/scripts/classes/GoogleMapBiblio.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/ActiviteViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/BiblioViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/BibliosViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/script_biblios.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/script_onglets.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/script_ongletsBibliotheques.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/classes/Maths.js?v=2.245" type="text/javascript"></script> 
     
     <script type="text/javascript">
         window.afficherMenuBiblios = true;
@@ -846,32 +865,9 @@ Horaire et localisation</a></li></ul>
 
     </script>
 
-
-
     
 
-<script type="text/javascript">
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '',
-            status: true,
-            cookie: true,
-            xfbml: true
-        });
-
-        _ga.trackFacebook(); //Google Analytics tracking
-    };
-
-    // Load the Facebook SDK Asynchronously
-    (function (d) {
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement('script'); js.id = id; js.async = true;
-        js.src = "//connect.facebook.net/fr_FR/all.js";
-        ref.parentNode.insertBefore(js, ref);
-    } (document));
-</script>
-
+    
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

@@ -1,3 +1,6 @@
+<!--Autheur              Date        Version -->
+<!--???                  ?           Cretion -->
+<!--Mikael Pothier       29-10-2015  V.2 changer le lien de role d'evaluation-->
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
@@ -85,8 +88,11 @@ menu3[4]='<a href="linformateur.asp">Linformateur</a>'
 var menu4=new Array()
 menu4[0]='<a href="pdf/R&egrave;glements.pdf" target="_blank">R&egrave;glements (pdf)</a>'
 menu4[1]='<a href="enligne.asp">Service en ligne</a>'
-menu4[2]='<a href="pdf/ecocastplacide2010.pdf" target="_blank">Environnement (pdf)</a>'
-menu4[3]='<a href="faq.asp">Foire aux questions</a>'
+//Modifier le nom de fichier - Eric Belair - 9/5/2016
+menu4[2]='<a href="pdf/eco Calendrier.pdf" target="_blank">Environnement (pdf)</a>'
+//Modifier le nom de fichier - Eric Belair - 9/5/2016
+menu4[3]='<a href="pdf/Bilan annuel eau potable.pdf" target="_blank">Eau potable (pdf)</a>'
+menu4[4]='<a href="faq.asp">Foire aux questions</a>'
 
 
 		
@@ -236,7 +242,7 @@ document.onclick=hidemenu
   <tr>
     <td valign="top"><img src="images/nav_top_left.jpg"></td>
     			
-    <td valign="middle" width="354"><span class="style1">Derni&egrave;re mise &agrave; jour:   8 f&eacute;vrier 2016</span></td>
+    <td valign="middle" width="354"><span class="style1">Derni&egrave;re mise &agrave; jour:   6 mai 2016</span></td>
     <td valign="top"><a href="index.asp" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu1, '150px')" onMouseout="delayhidemenu()"><img src="images/nav_top_decouvrir.jpg" width="116" height="40" border="0"></a></td>
     <td valign="top"><a href="index.asp" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu2, '225px')" onMouseout="delayhidemenu()"><img src="images/nav_top_orgnisme.jpg" width="126" height="40" border="0"></a></td>
     <td valign="top"><a href="index.asp" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu3, '175px')" onMouseout="delayhidemenu()"><img src="images/nav_top_culture.jpg" width="96" height="40" border="0"></a></td>
@@ -359,7 +365,8 @@ document.onclick=hidemenu
 <!--Modifier par eric belair le 08/10/2013 modifier le site web -->
 <map name="Map3"><area shape="rect" coords="49,13,149,120" href="http://www.pompierstplacide.com/" target="_blank">
 </map>
-<map name="Map4"><area shape="rect" coords="31,7,181,37" href="https://portail.accescite.net/ProfileGovern/UEL/WEB_UEL_CITY.aspx?action=styleselection&CityId=72043&language=fr" target="_blank">
+<!-- V.2 changer le lien de https://portail.accescite.net/ProfileGovern/UEL/WEB_UEL_CITY.aspx?action=styleselection&CityId=72043&language=fr vers enligne.asp + enlever le target blank-->
+<map name="Map4"><area shape="rect" coords="31,7,181,37" href="enligne.asp">
 <area shape="rect" coords="31,47,181,83" href="activites.asp">
 <area shape="rect" coords="26,109,185,145" href="service.asp">
 </map>

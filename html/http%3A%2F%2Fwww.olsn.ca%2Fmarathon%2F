@@ -1,57 +1,69 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+INSTRUCTIONS
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server" >
-    	<title>Marathon Public Library</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="css/site1.css"/>
-<link rel="stylesheet" href="css/fancydropdown.css">
+1.To crop images use this code:    
+  		 <div class="focal-point left-5 down-3">
+ 				<div><img src="img/header.png" alt="logo"></div>
+           </div>
+2. Add cushycms class to areas you want clients to edit and add editor account to cushyCMS for client. 
+3. Change the OPLD library ID in the variable
+4. JASI libraries: change the enterprise search string library name and enable the new book scroller.
 
-       
+-->  
 
-<script type="text/javascript" src="js/jquery-color.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/jquery.galleriffic.js"></script>
-<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
-<script src="http://bxslider.com/sites/default/files/jquery.bxSlider.min.js" type="text/javascript"></script>
+
+
+
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+<title>Marathon Public Library</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
 
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
 <script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
 <script type='text/javascript' src='js/jquery.simplemodal.js'></script>
 <script type="text/javascript" src="js/fancydropdown.js"></script>
-
-<script>
-$(document).ready(function(){
-	$('#sizer').jfontsizer({
-		applyTo: '#content',
-		changesmall: '2',
-		changelarge: '2',
-		expire: 30
-	});
-});
-			
-			
-function loadContent(id, page) 
-{
-	$("#editframe").attr("src", "edit.asp?id="+ page); 
-	$("#content").load(id);
-}
-
-
-
-function loadmodal(modal)
-{
-		$(modal).modal();
-		return false;
-}
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'http://www.google.com/calendar/feeds/ami4h2ao0g8brkj6d80v8acd94@group.calendar.google.com/public/full',
+                  maxresults: 1
+		        });
+		    });
+		
+		
 </script>
-</head>
 
-</head>
-
-<body onload="javascript:loadContent('content.asp?id=133','133');">
-    
+<!-- facebook script -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -60,56 +72,320 @@ function loadmodal(modal)
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	    $("#eventlist").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true
+
+    });
+
+		//Load main content
+		$(".topContent").load("home.asp");
+		
+		$(".events").load("calendar.html");
+		
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
+		changesmall: '2',
+		changelarge: '2',
+		expire: 30
+	});
+
+
     
-<div id="sizer"></div>
-<div id="secure">
-  				<a href="#" class="basic" onclick="javascript:loadmodal('#login');"><img border="0" src="img/login.png" /></a>
-                
-</div>
-<div id="header"><img style="margin-left:200px;" src="img/Marathon_final_logo.png" />
-<div id="menu">
-<ul class="tabs">
-	<li><h4><a href="javascript:loadContent('content.asp?id=133','133');">Home</a></h4></li>
-    <li><h4><a href="javascript:loadContent('http://www.olsn.ca/e-resource/search.asp?library=marathon');">Links</a></h4></li>    
-    <li><h4><a href="javascript:loadContent('content.asp?id=135','135');">Services</a></h4></li>
-    <li><h4><a href="javascript:loadContent('content.asp?id=136','136');">Staff</a></h4></li>                     
-    <li><h4><a href="javascript:loadContent('content.asp?id=137','137');">Contact Us</a></li>
-
-</ul>
-</div>
-</div>
-<div id="wrapper">
-
-
-		<!-- modal content -->
-		<div id="login">
-	
-                <h3>Login</h3>
-                <form name="login" action="login.asp" method="post">
-                <input name="library" value="marathon" size="9" type="hidden" />
-                <p style="margin-left:150px;">Username:<input name="uname" size="9" type="text" /></p>
-                <p style="margin-left:150px;">&nbsp;Password:<input name="pwd" size="10" type="password" /></p>
-                <input type="submit" value="Login" style="margin-left:150px;" />
-                </form>
-     
-		</div>
-		<div id="edit"><iframe frameborder="0" name="editor" id="editframe" src="edit.asp?id=" width="590" height="380" scrolling="no" allowtransparency="yes"></iframe></div>
-		<!-- preload the images -->
-		<div style='display:none'>
-			<img src='images/x.png' alt='' />
-		</div>
-
-    <div id="content"></div>
-
-    <div id="footer"><img src="img/foot.png" /></div>
- 
-</div>	
-
-<script type="text/javascript"> 
- activateMenu("nav"); 
- activateMenu("vertnav"); 
+});
+//Enterprise Search
+function search_cat()
+{
+search = document.getElementById('search').value
+document.location.href = 'http://olsn.ent.sirsidynix.net/client/marathon/search/results?qu='+ search +'&te=ILS';	 //IMPORTANT - change the library
+}
 </script>
+<script type="text/javascript">
+   google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+
+
+     
+    <body>
+    
+    <section class="hide" id="sizer"></section>
+    <section class="hide" id="button-bar">
+    <a href="https://www.facebook.com/"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/facebook.png" alt="facebook"></a>
+     <a href="https://www.twitter.com/"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/twitter.png" alt="twitter"></a>
+    
 	
+    <!--Email automatically pulled as long as it's in OPLD-->
+    <a href="mailto:tneedham@tbaytel.net?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a>      
+    </section>
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+               <img src="img/full.png" class="full" alt="Full Public Library Logo">
+               <img src="img/landscape.png" class="tablet" alt="Landscape Public Library Logo">
+               <img src="img/portrait.png" class="mobile" alt="portrait Public Library Logo">
+               
+            
+            
+                  
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>
+                               
+                <li><a href="?id=home.asp&label=Home" alt="home">Home</a></li>
+                <li><a href="#" alt="groups">Programs & Services</a>
+                	<ul>
+                    	
+                        <li><a href="http://downloadcentre.library.on.ca/AB75A8B2-4BEA-4A91-9707-8558149A835C/10/50/en/Default.htm" target="_blank">Overdrive</a></li>
+                       <!-- <li><a href="?id=friends.asp&label=Friends" alt="friends">Friends of the Library</a></li>-->
+                       
+                    </ul>
+                </li>
+                
+                <li><a href="http://www.olsn.ca/e-resource/search.asp?library=marathon" alt="eresources">EResources</a></li>
+               
+                <li><a href="https://olsn.ent.sirsidynix.net/client/en_US/marathon/search/patronlogin/https:$002f$002folsn.ent.sirsidynix.net$002fclient$002fmarathon$002fsearch$002faccount$003f" target="_blank" alt="contactus">My Account</a>
+                                 
+                </li>
+                <li><a href="https://olsn.ent.sirsidynix.net/client/en_US/marathon/search/patronlogin/https:$002f$002folsn.ent.sirsidynix.net$002fclient$002fmarathon$002fsearch$002fmylists$003f" target="_blank">My Booklists</a>
+                                 
+                </li>
+                 
+            </ul>
+         </nav>    
+        <!-- end of NAV -->
+        
+  
+        
+     
+          <section class="hoursContent">
+              <article><span class="tdhourstxt">Today's hours:&nbsp; </span>   
+                <ul id="hours-slider">
+                       
+                        
+                        <li>
+                        <!-- alter's display name as "Markstay-Warren" is not a branch name -->
+						Marathon   10:00-5:00</li>
+                        
+                        <!-- end alter -->
+                    
+                             
+                        </ul> 
+                            
+                            
+              </article>
+         </section>
+        
+    </header>
+        <!-- End of HEADER -->
+        
+        
+      
+        
+    <!-- MAIN CONTENT. This is used only for the articles. -->
+          <section class="searchContent">
+        
+                <span class="hide"> I would like to </span>
+                <input type="text"  title="find material at your library search button" name="search" class="search" id="search" placeholder=" search our online catalog"/>
+                  <input type="submit" value="Search" alt="search" src="img/search-button.png"  onClick="search_cat()" />
+    </section>
+         
+   		
+       <section class="full"> 
+         <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>
+           		</div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="myAccount">
+           
+           
+<a href="https://olsn.ent.sirsidynix.net/client/en_US/marathon/search/patronlogin/https:$002f$002folsn.ent.sirsidynix.net$002fclient$002fmarathon$002fsearch$002faccount$003f" target="_blank"><h2>&nbsp;</h2></a>
+
+<a href="https://olsn.ent.sirsidynix.net/client/en_US/marathon/search/patronlogin/https:$002f$002folsn.ent.sirsidynix.net$002fclient$002fmarathon$002fsearch$002fmylists$003f"><h3>&nbsp;</h3></a>
+           
+            
+             
+    </aside>
+     
+    
+            
+  <!-- <aside class="middleSidebar">
+        <article class="cushycms">
+        
+    	    <header>
+            <h2>Events</h2>
+            </header>
+            
+            <content class="cushycms">
+                add  content
+            </content> 
+               </article>   
+    </aside>  --> 
+    
+    <aside class="middleSidebar">
+        <article class="cushycms">
+                   
+           
+             
+             
+                           <h2>Hours & Locations</h2>
+                        <ul>  
+                            
+
+                            <h3>Marathon </h3>
+                          		22 Peninsula Road<br>
+                                Marathon,&nbsp;ON<br>
+                                P0T 2E0<br>
+                                <a href="tel:(807) 229-0740">(807) 229-0740</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 10:00-5:00<BR>
+Tues/mar 10:00-5:00<BR>
+Wed/mer 12:00-5:00<BR>
+Thurs/jeu 10:00-7:00<BR>
+Fri/ven 10:00-5:00<BR>
+Sat/sam closed/fermÃ©<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  
+          </article>
+             
+             
+           
+    </aside>   
+     
+   
+    </section>
+    
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Home</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Locations</summary>
+                        <ul>  
+                            
+                            <h3>Marathon </h3>
+                          		22 Peninsula Road<br>
+                                Marathon,&nbsp;ON<br>
+                                P0T 2E0<br>
+                                <a href="tel:(807) 229-0740">(807) 229-0740</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon/lun 10:00-5:00<BR>
+Tues/mar 10:00-5:00<BR>
+Wed/mer 12:00-5:00<BR>
+Thurs/jeu 10:00-7:00<BR>
+Fri/ven 10:00-5:00<BR>
+Sat/sam closed/fermÃ©<BR>
+Sun/dim closed/fermÃ©</details>
+                               
+                      </ul>  </details>
+         
+    </div>
+     
+    
+            
+    <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+    </div>   
+     
+        
+
+    
+    </section> 
+    
+    
+    <!-- end of SIDEBARS -->
+    
+    
+    
+        
+     <!-- Enterprise New Books Scroller placeholder 
+      <footer class="mainBookScroller">
+        <p>Enterprise Book Scroller container</p>
+      </footer>   --> 
+        
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Marathon Public Library&nbsp;2016<br>
+        This website meets WCAG 2.0 (Level AA) Compliance</p> 
+    </footer>
+    
+<!-- end of FOOTER -->   
 
 </body>
+
 </html>

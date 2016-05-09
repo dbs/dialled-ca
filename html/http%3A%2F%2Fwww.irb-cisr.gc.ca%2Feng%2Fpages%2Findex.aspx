@@ -28,7 +28,7 @@ Immigration and Refugee Board of Canada - Homepage
 <meta name="dcterms.creator"  content="Immigration and Refugee Board of Canada" />
 <meta name="dcterms.title"  content="Immigration and Refugee Board of Canada - Homepage" />
 <meta name="dcterms.issued" title="W3CDTF" content="2009-01-09" />
-<meta name="dcterms.modified" title="W3CDTF" content="2016-03-07" />
+<meta name="dcterms.modified" title="W3CDTF" content="2016-05-03" />
 <meta name="dcterms.subject" title="scheme" content="IRB CISR" />
 <meta name="dc.language" title="ISO639-2" content="en" />
 <meta name="dcterms.language" title="ISO639-2" content="en" />
@@ -163,7 +163,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=jO3tMg
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x8EF8D8316255E26505ADB2DF1A355496257991BD3B3A605D4BAD07F1B3E060AE29173C142403EDE333FC7E982EEB599D2D9E49ACF65DF2A22EE187E0C408AC49,11 Mar 2016 20:52:06 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xC8A31E53F2A938C28A8D0119095BD38AD1E30C646BE79350C82EF0A98EE8DA5B325C6ACBB3EA0FA5FDD9041491CC0474BB7AFF225E5DD513ECB6531A575C6BB6,09 May 2016 14:02:49 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -455,18 +455,17 @@ window.location.href = url;
             
              
             <div class="span-6 row-start margin-bottom-small" >
-              <div id="ctl00_PlaceHolderMain_ctl00_label" style='display:none'></div><div id="ctl00_PlaceHolderMain_ctl00__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" ><h2>Headlines</h2>
-<p><strong><a href="/Eng/NewsNouv/NewNou/Pages/securit151009.aspx">Reporting a Potential Security Risk for an IRB Proceeding</a></strong><br />The Immigration and Refugee Board of Canada has developed a new form to allow external parties to report potential security risks in relation to upcoming IRB proceedings.​</p>
-<p><strong><a href="/Eng/NewsNouv/NewNou/Pages/disInfRegBod.aspx">Policy on Disclosing Information Regarding the Conduct of Authorized Representatives to Regulatory Bodies</a></strong><br />This policy sets out a predictable and transparent approach for IRB personnel to follow when disclosing information about the conduct of authorized representatives to their regulatory bodies.​</p></div>
+              <div id="ctl00_PlaceHolderMain_ctl00_label" style='display:none'></div><div id="ctl00_PlaceHolderMain_ctl00__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" ><h2>Headline</h2>
+<p><span class="webpart_lnk"><a href="/Eng/NewsNouv/NewNou/Pages/RadSarApR3005.aspx">New RAD Appellant Record Form</a></span>The Refugee Appeal Division has developed a new form to help guide appellants in preparing their appeals.</p></div>
               <div class="clear"></div>
                  <div class="span-3 row-start  margin-bottom-small" >
                   <div id="ctl00_PlaceHolderMain_ctl01_label" style='display:none'></div><div id="ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl01_label"><div class="ms-rtestate-read ms-rte-wpbox"><div id="div_d6a11ac1-61cf-4b7c-8e07-a9a819390f7b" class="ms-rtestate-notify  ms-rtestate-read d6a11ac1-61cf-4b7c-8e07-a9a819390f7b" ><table style='width:100%' ><tr><td ><table class="s4-wpTopTable" >
 	<tr>
 		<td style="vertical-align: top !important;"><div id="WebPartctl00_ctl39_g_d6a11ac1_61cf_4b7c_8e07_a9a819390f7b"  class="ms-WPBody" style="" ><div id="ctl00_ctl39_g_d6a11ac1_61cf_4b7c_8e07_a9a819390f7b">
 			<h2 class='lol-wp-title'>News for Counsel</h2>
+<span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NewNou/Pages/RadSarApR3005.aspx">New RAD Appellant Record Form</a></span>The Refugee Appeal Division has developed a new form to help guide appellants in preparing their appeals.<br/>
 <span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NewNou/Pages/IadSaiInfo1602.aspx">IAD Information Session for Counsel - Update on Legal & Procedural Practices</a></span>The Immigration Appeal Division is hosting an information session for counsel on March 3, 2016 in Toronto.<br/>
 <span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NewNou/Pages/ImAppAdmCha.aspx">Immigration Appeal Division Issues Notice Introducing an Additional Administrative Change to the Appeal Process</a></span>The Immigration Appeal Division (IAD) has issued a notice introducing an additional administrative change to the appeal process.<br/>
-<span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NewNou/Pages/CorrectionStrGre.aspx">Contingency Plan for Strike by Correctional Officers in Ontario</a></span>The Immigration Division is putting a contingency plan in place in the event of a strike at provincial correctional institutions.<br/>
 <span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NewNou/Pages/tpp.aspx">Transcript Pilot Project</a></span>As of November 1, 2015, the Refugee Appeal Division (RAD) will be conducting a transcript pilot project over a six month period.<br/>
 
 		</div></div></td>
@@ -478,9 +477,9 @@ window.location.href = url;
 	<tr>
 		<td style="vertical-align: top !important;"><div id="WebPartctl00_ctl39_g_af596583_7f9f_4c36_a497_1bd64dcdcbe2"  class="ms-WPBody" style="" ><div id="ctl00_ctl39_g_af596583_7f9f_4c36_a497_1bd64dcdcbe2">
 			<h2 class='lol-wp-title'>Notices</h2>
-<span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NoticeAvis/NdpCnd/Pages/NdpCnd160229.aspx">National Documentation Package Update - February 29, 2016</a></span>29 February 2016 - The National Documentation Packages for the following countries have been updated: Afghanistan, Antigua and Barbuba, Bahamas, Benin, Ecuador, Jamaica, Iraq, Malaysia, Sudan, United Arab Emirates, Viet Nam and Zambia.<br/>
-<span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NoticeAvis/NdpCnd/Pages/NdpCnd160129.aspx">National Documentation Package Update - January 29, 2016</a></span>29 January 2016 - The National Documentation Packages for the following countries have been updated: Argentina, Armenia, Brazil, Costa Rica,  Ethiopia,  Germany, Iran, Pakistan, Russia, Sierra Leone, Sweden, Tunisia, Uruguay and Yemen.<br/>
-<span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NoticeAvis/NdpCnd/Pages/NdpCnd151223.aspx">National Documentation Package Update - December 23, 2015</a></span>23 December 2015 - The National Documentation Packages for the following countries have been updated: Barbados, Bermuda, Côte d'Ivoire, Honduras, Kenya,  Malta, Saint Lucia, Saint Vincent and the Grenadines, South Sudan and Syria.<br/>
+<span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NoticeAvis/NdpCnd/Pages/NdpCnd160429a.aspx">Amendments to the National Documentation Packages - 29 April 2016</a></span>29 April 2016 - The Country Reports on Human Rights Practices (2.1) in the National Documentation Packages (NDP) for the following countries have been updated: Bangladesh, Burundi, Chad, China, Democratic Republic of Congo, Egypt, Eritrea, Ethiopia…<br/>
+<span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NoticeAvis/NdpCnd/Pages/NdpCnd160429.aspx">National Documentation Package Update - 29 April 2016</a></span>29 April 2016 - The National Documentation Packages for the following countries have been updated: Afghanistan, Burkina Faso, Botswana, Cameroon, Central African Republic, Chile, Colombia, Dominica, Guatemala, Philippines, Portugal, South Korea…<br/>
+<span class="webpart_lnk"><a href="http://www.irb-cisr.gc.ca/Eng/NewsNouv/NoticeAvis/NdpCnd/Pages/NdpCnd160415.aspx">National Documentation Package Update - April 15, 2016</a></span>15 April 2016 - The National Documentation Package for the following country has been updated: El Salvador.<br/>
 
 		</div></div></td>
 	</tr>
@@ -493,8 +492,7 @@ window.location.href = url;
 <div><a href="/Eng/RefApp/Pages/RefAppKitTro.aspx"><img alt="Refugee Claim: Appellant's Kit" src="/Eng/PublishingImages/appellantKit(review)-e.jpg" style="margin:1px 3px" /></a> </div>
 <div><a href="/Eng/BoaCom/pubs/Pages/rpp1617.aspx"><img alt="2016–17 Report on Plans and Priorities" src="/Eng/PublishingImages/rpp1617-e.jpg" style="margin:5px" /></a> </div>
 <h2 class="ms-rteElement-H2">Stay Connected</h2>
-<div><a href="https://twitter.com/IRB_Canada"><img alt="Twitter" src="/Eng/PublishingImages/twitter50x50.jpg" style="margin:5px" /></a>   <a href="/Eng/connBran/pages/RssFeedFil.aspx"><img alt="News Feeds" src="/Eng/PublishingImages/rssfeed50x50.jpg" style="margin:5px" /></a> </div>
-</div>
+<div><a href="https://twitter.com/IRB_Canada"><img alt="Twitter" src="/Eng/PublishingImages/twitter50x50.jpg" style="margin:5px" /></a>   <a href="/Eng/connBran/pages/RssFeedFil.aspx"><img alt="News Feeds" src="/Eng/PublishingImages/rssfeed50x50.jpg" style="margin:5px" /></a> </div></div>
             </div>
             
         </div>
@@ -518,7 +516,7 @@ window.location.href = url;
                                 <dl id="gcwu-date-mod" role="contentinfo">
                                     <dt>Date modified:</dt>
                                     <dd>
-                                        <span><time>2016-03-07</time></span>
+                                        <span><time>2016-05-03</time></span>
                                     </dd>
                                 </dl>
                                 <div class="clear"></div>

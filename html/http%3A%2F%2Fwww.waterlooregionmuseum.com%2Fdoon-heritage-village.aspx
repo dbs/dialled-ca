@@ -95,7 +95,7 @@
 
 		</li>
 		<li>
-        	<a href="/weddings-host-an-event/" class="blue even">Weddings - Host an Event</a>
+        	<a href="/host-an-event/" class="blue even">Host an Event</a>
         	
 
 		</li>

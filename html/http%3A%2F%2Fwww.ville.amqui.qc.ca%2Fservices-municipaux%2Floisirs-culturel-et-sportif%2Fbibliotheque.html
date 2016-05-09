@@ -1170,7 +1170,7 @@ Ext.onReady(function() {
                         params: {
                             format: 'json',
                             tagmode: 'all',
-							q:"select * from weather.forecast where location in ("+ locationid +") and u='c'",
+							q:"select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='Amqui') and u='c'",
 							rnd:now.getFullYear() + now.getMonth() + now.getDay() + now.getHours(),
                             lang: 'en-us'                            
                         },

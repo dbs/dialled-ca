@@ -209,11 +209,9 @@ background-repeat:no-repeat;height:200px;}
     <h3>Nous sommes désolés, la page que vous demandez est introuvable.</h3>
     <p>Elle a peut-être été supprimée ou déplacée.</p>
     
-    <p>Retour à la <a href="/index.aspx">page d'accueil</a>.</p>
-    
     <p>Il est aussi possible que l'adresse Internet soit inexacte. Veuillez noter qu'elle ne doit comporter ni accents ni espaces.</p>
 
-	
+    <p>Retour à la <a href="/index.aspx">page d'accueil</a>.</p>	
 		
 		
 		</div>
@@ -226,8 +224,8 @@ background-repeat:no-repeat;height:200px;}
 <ul>
   <li><a href="/joindre/index.aspx">Nous joindre</a></li>
   <li><a href="/vision/index.aspx">Vision du développement</a></li>  
-  <li><a href="/emplois/index.aspx">Carrière</a></li>
-  <li><a href="/benevolat/index.aspx">Bénévolat</a></li>
+  <li><a href="/emplois/index.aspx">Emplois et bénévolat</a></li>
+
   <li><a href="/salle_presse/index.aspx">Salle de presse</a></li>
   <li><a href="http://www.ville.quebec.qc.ca">Ville de Québec</a></li>
 </ul>

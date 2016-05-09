@@ -294,7 +294,7 @@ Dimanche : 9h45 à 11h45</p>
             submitHandler:function () {
                 $("#invalid-courriel").hide();
                 $('.vide').val('');
-                $('.token').val('9c61948dfe36e5bfe8654d17f615c7bf');
+                $('.token').val('31d77b56df0eda46a1e628f1fecc7522');
                 $.ajax({
                     url: 'ajax/infolettre.ajax.php',
                     type: 'post',

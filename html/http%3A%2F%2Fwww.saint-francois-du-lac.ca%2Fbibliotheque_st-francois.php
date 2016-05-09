@@ -162,6 +162,8 @@ liste_ts["277"] = new Array('Documents administratifs','Documents administratifs
 liste_fp["277"] = "documents_administratifs";
 liste_ts["313"] = new Array('Politique de gestion contractuelle de la municipalitÃ© 2010','Politique de gestion contractuelle de la municipalitÃ© 2010',0,131);
 liste_fp["313"] = "politique-de-gestion-contractuelle-de-la-municipalite-2010";
+liste_ts["347"] = new Array('Plan de dÃ©veloppement','Plan de dÃ©veloppement',0,131);
+liste_fp["347"] = "plan-de-developpement";
 liste_ts["272"] = new Array('RÃ¨glements municipaux','RÃ¨glements municipaux',0,131);
 liste_fp["272"] = "reglements_municipaux";
 liste_ts["346"] = new Array('RÃ¨glements d\'Urbanisme','RÃ¨glements d\'Urbanisme',0,131);
@@ -170,6 +172,8 @@ liste_ts["258"] = new Array('SÃ©ances du conseil-Ordre du jour-ProcÃ¨s-verba
 liste_fp["258"] = "conseil-seances";
 liste_ts["326"] = new Array('RÃ¨glements provinciaux et fÃ©dÃ©raux','RÃ¨glements provinciaux et fÃ©dÃ©raux',0,131);
 liste_fp["326"] = "reglements-provinciaux-federaux";
+liste_ts["348"] = new Array('Politique remboursement','Politique remboursement',0,131);
+liste_fp["348"] = "politique-remborsement";
 liste_sect["109"] = 'Quoi de neuf';
 liste_ts["2"] = new Array('Archive des nouvelles','',0,109);
 liste_fp["2"] = "articles_nouvelles";
@@ -286,10 +290,12 @@ liste_sect["100"] = 'Administration';
               <li value="10"><a href="avis-public.php" onclick="getContenu(324); return false;">Avis public</a></li>
               <li value="15"><a href="documents_administratifs.php" onclick="getContenu(277); return false;">Documents administratifs</a></li>
               <li value="30"><a href="politique-de-gestion-contractuelle-de-la-municipalite-2010.php" onclick="getContenu(313); return false;">Politique de gestion contractuelle de la municipalitÃ© 2010</a></li>
+              <li value="35"><a href="plan-de-developpement.php" onclick="getContenu(347); return false;">Plan de dÃ©veloppement</a></li>
               <li value="40"><a href="reglements_municipaux.php" onclick="getContenu(272); return false;">RÃ¨glements municipaux</a></li>
               <li value="42"><a href="reglements-d-urbanisme.php" onclick="getContenu(346); return false;">RÃ¨glements d'Urbanisme</a></li>
               <li value="45"><a href="conseil-seances.php" onclick="getContenu(258); return false;">SÃ©ances du conseil-Ordre du jour-ProcÃ¨s-verbaux </a></li>
-              <li value="50"><a href="reglements-provinciaux-federaux.php" onclick="getContenu(326); return false;">RÃ¨glements provinciaux et fÃ©dÃ©raux</a></li></ol></li><li value="25"><b>Quoi de neuf</b><ol>
+              <li value="50"><a href="reglements-provinciaux-federaux.php" onclick="getContenu(326); return false;">RÃ¨glements provinciaux et fÃ©dÃ©raux</a></li>
+              <li value="55"><a href="politique-remborsement.php" onclick="getContenu(348); return false;">Politique remboursement</a></li></ol></li><li value="25"><b>Quoi de neuf</b><ol>
               <li value="1"><a href="articles_nouvelles.php" onclick="getContenu(2); return false;">Archive des nouvelles</a></li></ol></li><li value="30"><b>SÃAO</b><ol>
               <li value="0"><a href="systeme-electronique-d-appel-d-offre.php" onclick="getContenu(307); return false;">SystÃ¨me Ã©lectronique d'Appel d'Offre</a></li></ol></li><li value="35"><b>Services aux citoyens</b><ol>
               <li value="3"><a href="centre-education-aux-adultes.php" onclick="getContenu(318); return false;">Centre Ã©ducation aux adultes et formation professionnel</a></li>

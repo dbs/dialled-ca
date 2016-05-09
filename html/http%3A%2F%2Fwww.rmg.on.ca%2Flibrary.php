@@ -135,9 +135,9 @@ communications@rmg.on.ca<br />
 				</div>
 			</div>
 			<div class='medium-2 show-for-medium-up column footer-link-list'>
-				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/exhibitions/'>Exhibitions</a></li><li><a target='' href='http://rmg.on.ca/collections/'>Collections</a></li><li><a target='' href='http://rmg.on.ca/events/'>Events</a></li><li><a target='' href='http://rmg.on.ca/activities/'>Learn & Participate</a></li></ul>			</div>
+				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/exhibitions/'>Exhibitions</a></li><li><a target='' href='http://rmg.on.ca/events/'>Events</a></li><li><a target='' href='http://rmg.on.ca/activities/'>Learn & Participate</a></li><li><a target='' href='http://rmg.on.ca/support/'>Support</a></li></ul>			</div>
 			<div class='medium-2 show-for-medium-up column footer-link-list'>
-				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/visit/'>Visit</a></li><li><a target='' href='http://rmg.on.ca/support/'>Support</a></li><li><a target='' href='http://rmg.on.ca/gallery-a-and-the-artlab/'>Gallery A</a></li><li><a target='' href='http://rmg.on.ca/painters-11/'>Painters 11</a></li></ul>			</div>
+				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/visit/'>Visit</a></li><li><a target='' href='http://rmg.on.ca/gallery-a-and-the-artlab/'>Gallery A</a></li><li><a target='' href='http://rmg.on.ca/painters-11/'>Painters 11</a></li><li><a target='' href='http://rmg.on.ca/public-art/'>Public Art</a></li></ul>			</div>
 			<div class='medium-2 show-for-medium-up column footer-link-list'>
 				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/blog/' class='secondary'>Blog</a></li><li><a target='' href='http://rmg.on.ca/submissions/' class='secondary'>Submissions</a></li><li><a target='' href='http://rmg.on.ca/media-room/' class='secondary'>Media Room</a></li><li><a target='' href='http://rmg.on.ca/press-centre/' class='secondary'>Press Centre</a></li></ul>			</div>
 			<div class='medium-2 show-for-medium-up column footer-link-list'>
@@ -211,7 +211,7 @@ communications@rmg.on.ca<br />
 <script type='text/javascript' src='http://rmg.on.ca/wp-content/themes/RMG/assets/js/components.min.js?ver=1.0.1'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var ajaxobj = {"ajaxurl":"http:\/\/rmg.on.ca\/wp-admin\/admin-ajax.php","security":"c7022c5a3c"};
+var ajaxobj = {"ajaxurl":"http:\/\/rmg.on.ca\/wp-admin\/admin-ajax.php","security":"a3c6fe516d"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://rmg.on.ca/wp-content/themes/RMG/assets/js/main.min.js?ver=1.0.1'></script>
@@ -234,4 +234,4 @@ var ajaxobj = {"ajaxurl":"http:\/\/rmg.on.ca\/wp-admin\/admin-ajax.php","securit
 
 Page Caching using disk: enhanced
 
- Served from: rmg.on.ca @ 2016-03-11 15:49:48 by W3 Total Cache -->
+ Served from: rmg.on.ca @ 2016-05-09 10:00:04 by W3 Total Cache -->

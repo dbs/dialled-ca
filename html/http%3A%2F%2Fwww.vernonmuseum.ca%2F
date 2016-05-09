@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@
 
 
 
+
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+
 
 
 
@@ -18,7 +34,15 @@
 
 
 
+
+
+
+
 <link rel="shortcut icon" href="favicon.ico" >
+
+
+
+
 
 
 
@@ -26,7 +50,15 @@
 
 
 
+
+
+
+
 <link rel="stylesheet" type="text/css" href="menu/anylinkmenu.css" />
+
+
+
+
 
 
 
@@ -34,7 +66,15 @@
 
 
 
+
+
+
+
 <script type="text/javascript" src="menu/anylinkmenu.js"></script>
+
+
+
+
 
 
 
@@ -42,7 +82,15 @@
 
 
 
+
+
+
+
 /***********************************************
+
+
+
+
 
 
 
@@ -50,11 +98,23 @@
 
 
 
+
+
+
+
 * This notice MUST stay intact for legal use
 
 
 
+
+
+
+
 * Visit Project Page at http://www.dynamicdrive.com/dynamicindex1/dropmenuindex.htm for full source code
+
+
+
+
 
 
 
@@ -66,7 +126,19 @@
 
 
 
+
+
+
+
+
+
+
+
 //anylinkmenu.init("menu_anchors_class") //Pass in the CSS class of anchor links (that contain a sub menu)
+
+
+
+
 
 
 
@@ -78,7 +150,19 @@ anylinkmenu.init("menuanchorclass")
 
 
 
+
+
+
+
+
+
+
+
 </script>
+
+
+
+
 
 
 
@@ -90,7 +174,19 @@ anylinkmenu.init("menuanchorclass")
 
 
 
+
+
+
+
+
+
+
+
 #dhtmltooltip{
+
+
+
+
 
 
 
@@ -98,7 +194,15 @@ position: absolute;
 
 
 
+
+
+
+
 width: 150px;
+
+
+
+
 
 
 
@@ -106,7 +210,15 @@ border: 2px solid #af9f92;
 
 
 
+
+
+
+
 padding: 2px;
+
+
+
+
 
 
 
@@ -114,7 +226,15 @@ background-color:#74665d;
 
 
 
+
+
+
+
 visibility: hidden;
+
+
+
+
 
 
 
@@ -122,7 +242,15 @@ z-index: 100;
 
 
 
+
+
+
+
 /*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+
+
+
+
 
 
 
@@ -130,7 +258,19 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -146,15 +286,35 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
 
 
 
+
+
+
+
+
+
+
+
 .style3 {
+
+
 
   color: #FF0000;
 
+
+
   font-weight: bold;
+
+
 
 }
 
+
+
 </style>
+
+
+
+
 
 
 
@@ -166,7 +326,19 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
 
 
 
+
+
+
+
+
+
+
+
 <body>
+
+
+
+
 
 
 
@@ -174,7 +346,19 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
 
 
 
+
+
+
+
 <div id="dhtmltooltip"></div>
+
+
+
+
+
+
+
+
 
 
 
@@ -190,7 +374,19 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
 
 
 
+
+
+
+
+
+
+
+
 /***********************************************
+
+
+
+
 
 
 
@@ -198,11 +394,23 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
 
 
 
+
+
+
+
 * This notice MUST stay intact for legal use
 
 
 
+
+
+
+
 * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+
+
+
+
 
 
 
@@ -214,7 +422,19 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
 
 
 
+
+
+
+
+
+
+
+
 var offsetxpoint=-60 //Customize x offset of tooltip
+
+
+
+
 
 
 
@@ -222,7 +442,15 @@ var offsetypoint=20 //Customize y offset of tooltip
 
 
 
+
+
+
+
 var ie=document.all
+
+
+
+
 
 
 
@@ -230,11 +458,23 @@ var ns6=document.getElementById && !document.all
 
 
 
+
+
+
+
 var enabletip=false
 
 
 
+
+
+
+
 if (ie||ns6)
+
+
+
+
 
 
 
@@ -246,7 +486,19 @@ var tipobj=document.all? document.all["dhtmltooltip"] : document.getElementById?
 
 
 
+
+
+
+
+
+
+
+
 function ietruebody(){
+
+
+
+
 
 
 
@@ -254,7 +506,19 @@ return (document.compatMode && document.compatMode!="BackCompat")? document.docu
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -266,7 +530,15 @@ function ddrivetip(thetext, thecolor, thewidth){
 
 
 
+
+
+
+
 if (ns6||ie){
+
+
+
+
 
 
 
@@ -274,7 +546,15 @@ if (typeof thewidth!="undefined") tipobj.style.width=thewidth+"px"
 
 
 
+
+
+
+
 if (typeof thecolor!="undefined" && thecolor!="") tipobj.style.backgroundColor=thecolor
+
+
+
+
 
 
 
@@ -282,7 +562,15 @@ tipobj.innerHTML=thetext
 
 
 
+
+
+
+
 enabletip=true
+
+
+
+
 
 
 
@@ -290,11 +578,27 @@ return false
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +610,15 @@ function positiontip(e){
 
 
 
+
+
+
+
 if (enabletip){
+
+
+
+
 
 
 
@@ -314,7 +626,15 @@ var curX=(ns6)?e.pageX : event.clientX+ietruebody().scrollLeft;
 
 
 
+
+
+
+
 var curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
+
+
+
+
 
 
 
@@ -322,11 +642,27 @@ var curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
 
 
 
+
+
+
+
 var rightedge=ie&&!window.opera? ietruebody().clientWidth-event.clientX-offsetxpoint : window.innerWidth-e.clientX-offsetxpoint-20
 
 
 
+
+
+
+
 var bottomedge=ie&&!window.opera? ietruebody().clientHeight-event.clientY-offsetypoint : window.innerHeight-e.clientY-offsetypoint-20
+
+
+
+
+
+
+
+
 
 
 
@@ -342,7 +678,19 @@ var leftedge=(offsetxpoint<0)? offsetxpoint*(-1) : -1000
 
 
 
+
+
+
+
+
+
+
+
 //if the horizontal distance isn't enough to accomodate the width of the context menu
+
+
+
+
 
 
 
@@ -350,7 +698,15 @@ if (rightedge<tipobj.offsetWidth)
 
 
 
+
+
+
+
 //move the horizontal position of the menu to the left by it's width
+
+
+
+
 
 
 
@@ -358,7 +714,15 @@ tipobj.style.left=ie? ietruebody().scrollLeft+event.clientX-tipobj.offsetWidth+"
 
 
 
+
+
+
+
 else if (curX<leftedge)
+
+
+
+
 
 
 
@@ -366,11 +730,23 @@ tipobj.style.left="5px"
 
 
 
+
+
+
+
 else
 
 
 
+
+
+
+
 //position the horizontal position of the menu where the mouse is positioned
+
+
+
+
 
 
 
@@ -382,7 +758,19 @@ tipobj.style.left=curX+offsetxpoint+"px"
 
 
 
+
+
+
+
+
+
+
+
 //same concept with the vertical position
+
+
+
+
 
 
 
@@ -390,7 +778,15 @@ if (bottomedge<tipobj.offsetHeight)
 
 
 
+
+
+
+
 tipobj.style.top=ie? ietruebody().scrollTop+event.clientY-tipobj.offsetHeight-offsetypoint+"px" : window.pageYOffset+e.clientY-tipobj.offsetHeight-offsetypoint+"px"
+
+
+
+
 
 
 
@@ -398,7 +794,15 @@ else
 
 
 
+
+
+
+
 tipobj.style.top=curY+offsetypoint+"px"
+
+
+
+
 
 
 
@@ -406,11 +810,27 @@ tipobj.style.visibility="visible"
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -422,7 +842,15 @@ function hideddrivetip(){
 
 
 
+
+
+
+
 if (ns6||ie){
+
+
+
+
 
 
 
@@ -430,7 +858,15 @@ enabletip=false
 
 
 
+
+
+
+
 tipobj.style.visibility="hidden"
+
+
+
+
 
 
 
@@ -438,7 +874,15 @@ tipobj.style.left="-1000px"
 
 
 
+
+
+
+
 tipobj.style.backgroundColor=''
+
+
+
+
 
 
 
@@ -446,11 +890,27 @@ tipobj.style.width=''
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -466,7 +926,19 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
+
+
+
+
 </script>
+
+
+
+
 
 
 
@@ -474,7 +946,15 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -490,7 +970,23 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <table width="856" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
 
 
 
@@ -498,7 +994,15 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
 <td width="28" class="left-side">&nbsp;</td>
+
+
+
+
 
 
 
@@ -510,11 +1014,27 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
+
+
+
+
 <table width="800" border="0" cellpadding="0" cellspacing="0" class="main-table-color">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -522,7 +1042,15 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
 <img src="images/title.png" width="800" height="120" /></td>
+
+
+
+
 
 
 
@@ -530,7 +1058,15 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -538,11 +1074,23 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -550,7 +1098,15 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -558,7 +1114,15 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
 <a href="http://vernonmuseum.ca/index.html" class="menu-text">Home</a></td>
+
+
+
+
 
 
 
@@ -566,7 +1130,15 @@ document.onmousemove=positiontip
 
 
 
+
+
+
+
 onmouseout="style.backgroundColor='#96867b'">
+
+
+
+
 
 
 
@@ -574,7 +1146,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </td>
+
+
+
+
 
 
 
@@ -582,7 +1162,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 onmouseout="style.backgroundColor='#96867b'">
+
+
+
+
 
 
 
@@ -590,7 +1178,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </td>
+
+
+
+
 
 
 
@@ -598,7 +1194,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 onmouseout="style.backgroundColor='#96867b'">
+
+
+
+
 
 
 
@@ -606,7 +1210,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </td>
+
+
+
+
 
 
 
@@ -614,7 +1226,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 onmouseout="style.backgroundColor='#96867b'">
+
+
+
+
 
 
 
@@ -622,7 +1242,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </td>
+
+
+
+
 
 
 
@@ -630,7 +1258,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 onmouseout="style.backgroundColor='#96867b'">
+
+
+
+
 
 
 
@@ -638,7 +1274,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </td>
+
+
+
+
 
 
 
@@ -646,7 +1290,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 onmouseout="style.backgroundColor='#96867b'">
+
+
+
+
 
 
 
@@ -654,7 +1306,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -662,11 +1322,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -674,11 +1346,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -686,111 +1370,50 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
 
 
 
-<td width="160" align="center" valign="top"><br />
 
 
 
 
-
-
-
-  <!-- #BeginLibraryItem "/Library/quicklinks.lbi" -->
-
-
-
+<td width="160" align="center" valign="top"><br /><!-- #BeginLibraryItem "/Library/quicklinks.lbi" -->
 <table width="150" cellpadding="0" cellspacing="0" class="feature-border">
-
-
-
 <tr>
-
-
-
 <td height="25" align="center" valign="middle" class="feature-title">QUICK LINKS</td>
-
-
-
 </tr>
-
-
-
 <tr>
-
-
-
 <td height="35" align="center" valign="middle"><a href="events_and_exhibitions.html" class="feature-text">CURRENT &amp; UPCOMING EVENTS &amp; EXHIBITIONS</a></td>
-
-
-
 </tr>
-
-
-
 <tr>
-
-
-
 <td height="25" align="center" valign="middle"><a href="museum_staff.html" class="feature-text">CONTACT US</a></td>
-
-
-
 </tr>
-
-
-
 <tr>
-
-
-
 <td height="25" align="center" valign="middle" class="feature-title"><a href="membership.html" class="feature-text">MEMBERSHIP</a></td>
-
-
-
 </tr>
-
-
-
 <tr>
-
-
-
 <td height="25" align="center" valign="middle"><a href="about_us.html" class="feature-text">ABOUT THE MUSEUM</a></td>
-
-
-
 </tr>
-
-
-
 <tr>
-
-
-
 <td height="35" align="center" valign="middle"><a href="donate.html" class="feature-text">DONATE TO THE MUSEUM</a></td>
-
-
-
 </tr>
-
-
-
 <tr>
-
-
-
 <td height="25" align="center" valign="middle"><a href="index.html" class="feature-text">HOME</a></td>
-
-
-
 </tr>
-
-
-
 </table><!-- #EndLibraryItem --><span class="style2"></span>
+
+
+
+
+
+
+
+
 
 
 
@@ -802,7 +1425,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -810,11 +1441,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -822,11 +1465,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -834,7 +1489,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -842,11 +1505,35 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -878,55 +1565,7 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
-</tr>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<td align="center" valign="top">&nbsp;</td>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<td align="center" valign="top">&nbsp;</td>
 
 
 
@@ -958,11 +1597,171 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td align="center" valign="top">&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td align="center" valign="top">&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+
+
+
+
 
 
 
 <td align="center" valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -978,7 +1777,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -986,11 +1793,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -998,11 +1817,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1010,7 +1841,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1018,11 +1857,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td width="8" class="pic-right"></td>
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1030,7 +1881,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td class="pic-bottom"></td>
+
+
+
+
 
 
 
@@ -1038,7 +1897,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1046,11 +1913,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1058,7 +1937,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1066,15 +1953,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </a><br /><br /></td>
 
 
 
-</tr>
 
-
-
-</table></td>
 
 
 
@@ -1082,11 +1969,47 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </table></td>
+
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+</table></td>
+
+
+
+
 
 
 
 <td align="center" valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1102,7 +2025,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1110,11 +2041,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1122,11 +2065,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1134,7 +2089,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1142,11 +2105,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td width="8" class="pic-right"></td>
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1154,7 +2129,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td class="pic-bottom"></td>
+
+
+
+
 
 
 
@@ -1162,7 +2145,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1170,11 +2161,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1182,7 +2185,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1190,11 +2201,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <br /></td>
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1202,7 +2225,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1210,7 +2241,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1218,7 +2257,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <br />
+
+
+
+
 
 
 
@@ -1226,11 +2273,31 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
 
 
 
+
+
+
+
 <td align="center" valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1246,7 +2313,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr height="20">
+
+
+
+
 
 
 
@@ -1254,11 +2329,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1266,7 +2353,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1274,7 +2369,19 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td align="center" valign="top">
+
+
+
+
+
+
+
+
 
 
 
@@ -1286,7 +2393,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1294,7 +2409,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <a href="collections_research.html" style="text-decoration:none">
+
+
+
+
 
 
 
@@ -1302,11 +2425,27 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td width="8" class="pic-right"></td>
 
 
 
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
 
 
 
@@ -1318,7 +2457,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td class="pic-bottom"></td>
+
+
+
+
 
 
 
@@ -1326,7 +2473,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1334,11 +2489,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1346,7 +2513,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1354,15 +2529,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <br /></td>
 
 
 
-</tr>
 
-
-
-</table></td>
 
 
 
@@ -1370,11 +2545,47 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </table></td>
+
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+</table></td>
+
+
+
+
 
 
 
 <td align="center" valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1390,7 +2601,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1398,11 +2617,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1410,11 +2641,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1422,7 +2665,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1430,11 +2681,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td width="8" class="pic-right"></td>
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1442,7 +2705,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td class="pic-bottom"></td>
+
+
+
+
 
 
 
@@ -1450,7 +2721,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1458,11 +2737,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1470,7 +2761,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -1478,11 +2777,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <br /></td>
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1490,7 +2801,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1498,7 +2817,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -1506,7 +2833,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <br />
+
+
+
+
 
 
 
@@ -1526,6 +2861,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
 
 
@@ -1542,7 +2893,27 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <td align="center" valign="top">
+
+
+
+
 
 
 
@@ -1562,7 +2933,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1594,6 +2997,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -1610,7 +3029,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1642,6 +3093,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -1658,7 +3125,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1690,7 +3189,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1722,6 +3253,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <td width="8" class="pic-right"></td>
 
 
@@ -1738,7 +3285,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1770,7 +3349,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <td class="pic-bottom"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1802,7 +3413,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1822,7 +3465,27 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1854,7 +3517,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1886,7 +3581,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1918,6 +3645,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br /></td>
 
 
@@ -1934,7 +3677,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1970,7 +3745,43 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2002,11 +3813,47 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </table>
 
 
 
+
+
+
+
 </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2026,6 +3873,10 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <table bgcolor="#e4ddca" width="210" border="0" cellpadding="0" cellspacing="0" class="feature-border">
 
 
@@ -2042,7 +3893,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2074,6 +3957,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2090,7 +3989,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2122,6 +4053,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2138,7 +4085,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2158,6 +4137,10 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <table border="0" cellspacing="0" cellpadding="0">
 
 
@@ -2174,7 +4157,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2206,6 +4221,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <td width="8" class="pic-right"></td>
 
 
@@ -2222,7 +4253,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2254,7 +4317,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <td class="pic-bottom"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2286,6 +4381,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2302,7 +4413,43 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2338,6 +4485,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2354,7 +4517,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2374,7 +4569,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <table width="95%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
 
 
 
@@ -2382,7 +4585,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td align="left" valign="top"><a href="gift_shop.html" style="text-decoration:none" class="main-cats">The museum's on-site gift shop carries an extensive line of books on local and natural history, jewelry and limited edition prints by wildlife illustrator, Allan Brooks.</a><br />
+
+
+
+
 
 
 
@@ -2390,7 +4601,15 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -2398,11 +4617,23 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 </table>
+
+
+
+
 
 
 
@@ -2410,11 +4641,35 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2446,7 +4701,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2478,6 +4765,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2494,7 +4797,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2526,7 +4861,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2558,6 +4925,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2574,7 +4957,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2606,6 +5021,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2622,7 +5053,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2654,7 +5117,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2686,6 +5181,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <td width="8" class="pic-right"></td>
 
 
@@ -2702,7 +5213,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2734,7 +5277,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <td class="pic-bottom"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2766,7 +5341,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2798,6 +5405,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2814,7 +5437,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2846,7 +5501,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2878,7 +5565,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2910,7 +5629,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2942,6 +5693,22 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
 
 
@@ -2958,7 +5725,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2990,7 +5789,39 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3010,167 +5841,129 @@ onmouseout="style.backgroundColor='#96867b'">
 
 
 
+
+
+
+
 <td width="160" align="center" valign="top"><br /><!-- #BeginLibraryItem "/Library/details.lbi" -->
-
-
 
 <table width="150" cellpadding="0" cellspacing="0" class="feature-border">
 
-
-
 <tr>
-
-
 
 <td height="25" align="center" valign="middle" class="feature-title">Museum Hours</td>
 
-
-
 </tr>
 
-
-
 <tr>
-
-
 
 <td align="center" valign="middle"><span class="feature-text">10:00 am - 5:00 pm<br />
 
-
-
 Tuesday to Saturday</span></td>
-
-
 
 </tr>
 
-
-
 <tr>
-
-
 
 <td height="25" align="center" valign="middle" class="feature-title">Archives Hours</td>
 
-
-
 </tr>
 
-
-
 <tr>
-
-
 
 <td align="center" valign="middle" class="feature-text">
 
-
-
 10:00 am - 5:00 pm<br />
-
-
 
 Tuesday to Friday<br />
 
-
-
 (limited access on Sat.)
-
-
 
 </td>
 
-
-
 </tr>
 
-
-
 <tr>
-
-
 
 <td height="25" align="center" valign="middle" class="feature-title">Address</td>
 
-
-
 </tr>
 
-
-
 <tr>
-
-
 
 <td align="center" valign="middle"><span class="feature-text">3009 - 32nd Avenue<br />
 
-
-
 Vernon, BC<br />
-
-
 
 Canada<br />
 
-
-
-V1T 2L8</span></td>
-
-
+V1T 2LB</span></td>
 
 </tr>
-
-
 
 <tr>
 
-
-
 <td align="center" valign="middle"><span class="feature-text">Tel: 250-542-3142<br />
-
-
-
-Fax: 250-542-5358<br />
-
-
 
 <br />
 
-
-
 </span></td>
 
-
-
 </tr>
-
-
 
 </table><!-- #EndLibraryItem --><br />
 
 
 
+
+
+
+
 <table width="150" style="border-color:#FFF; border-style:solid; background-color:#4cacc5; border-width:3px; text-decoration:none;">
+
   <tr>
+
     <td align="center"><a href="documents/Christmas2015NewsletterDec102015_000.pdf" target="_blank" class="newsletter-text">Current Newsletter</a></td>
+
   </tr>
+
 </table>
+
 <br />
+
 <table width="150" style="border-color:#FFF; border-style:solid; background-color:#047148; border-width:3px; text-decoration:none;">
+
   <tr>
+
     <td align="center"><a href="newsletters/october2015.pdf" target="_blank" class="newsletter-text">Archived Newsletters</a></td>
+
   </tr>
+
 </table>
+
+
 
 </td>
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -3178,11 +5971,23 @@ Fax: 250-542-5358<br />
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -3190,11 +5995,23 @@ Fax: 250-542-5358<br />
 
 
 
+
+
+
+
 </tr>
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -3202,7 +6019,15 @@ Fax: 250-542-5358<br />
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -3210,7 +6035,15 @@ Fax: 250-542-5358<br />
 
 
 
+
+
+
+
 Supported by the British Columbia Arts Council and the Regional District of the North Okanagan</td>
+
+
+
+
 
 
 
@@ -3218,7 +6051,15 @@ Supported by the British Columbia Arts Council and the Regional District of the 
 
 
 
+
+
+
+
 <tr>
+
+
+
+
 
 
 
@@ -3226,7 +6067,15 @@ Supported by the British Columbia Arts Council and the Regional District of the 
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -3234,15 +6083,15 @@ Supported by the British Columbia Arts Council and the Regional District of the 
 
 
 
+
+
+
+
 <td align="center" valign="middle"><img src="images/links.png" width="700" height="96" /></td>
 
 
 
-</tr>
 
-
-
-</table></td>
 
 
 
@@ -3250,7 +6099,15 @@ Supported by the British Columbia Arts Council and the Regional District of the 
 
 
 
+
+
+
+
 </table></td>
+
+
+
+
 
 
 
@@ -3258,7 +6115,31 @@ Supported by the British Columbia Arts Council and the Regional District of the 
 
 
 
+
+
+
+
 </table></td>
+
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+</table></td>
+
+
+
+
 
 
 
@@ -3266,7 +6147,15 @@ Supported by the British Columbia Arts Council and the Regional District of the 
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -3274,7 +6163,15 @@ Supported by the British Columbia Arts Council and the Regional District of the 
 
 
 
+
+
+
+
 </tr>
+
+
+
+
 
 
 
@@ -3282,11 +6179,23 @@ Supported by the British Columbia Arts Council and the Regional District of the 
 
 
 
+
+
+
+
 </body>
 
 
 
+
+
+
+
 </html>
+
+
+
+
 
 
 

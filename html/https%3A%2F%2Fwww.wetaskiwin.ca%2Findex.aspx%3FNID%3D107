@@ -6,7 +6,15 @@
 <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
 <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
 
-<link href="/1045458002.css" rel="stylesheet" type="text/css" />
+<link href="/Areas/Notebook/Assets/Styles/Admin.css" rel="stylesheet" type="text/css" />
+<link href="/images/pages/style.css" rel="stylesheet" type="text/css" />
+<link href="/images/pages/template.css" rel="stylesheet" type="text/css" />
+<link href="/App_Themes/Common.css" rel="stylesheet" type="text/css" />
+<link href="/Areas/MyAccount/Assets/Styles/Favorites.css" rel="stylesheet" type="text/css" />
+<link href="/App_Themes/Modal.css" rel="stylesheet" type="text/css" />
+<link href="/App_Themes/Default/SiteSpecificCustom.css" rel="stylesheet" type="text/css" />
+<link href="/App_Themes/templatesetup.css" rel="stylesheet" type="text/css" />
+
 
 	<!--Dynamic Header Styles-->
 	<style type="text/css">
@@ -262,7 +270,21 @@ var showLiveEditControls = false;
 var previousKAMControl = null;
 
 //--></script>
-<script src="/-1795492207.js" type="text/javascript"></script>
+<script src="/common/jquery-latest.min.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/modernizr-2.0.6.min.js" type="text/javascript"></script>
+<script src="/common/GlobalJSFunctionsDetail.js" type="text/javascript"></script>
+<script src="/common/autocomplete.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/Shared.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/Modal.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/Toolbar.js" type="text/javascript"></script>
+<script src="/Common/Controls/jqueryCookie/jquery.cookie.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/Authentication/PopupBasedAuthentication.js" type="text/javascript"></script>
+<script src="/Areas/Notebook/Assets/Scripts/Home.js" type="text/javascript"></script>
+<script src="/Scripts/HtmlExtensionSupport.js" type="text/javascript"></script>
+<script src="/Areas/MyAccount/Assets/Scripts/Favorites.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/FrontEnd.js" type="text/javascript"></script>
+<script src="/common/layout/MouseOverMenuFloatingStatic.js" type="text/javascript"></script>
+
 	<!--Reference Stylesheet-->
 	</head>
 <body id="ctl00_Body" style="margin: 0px; background: url(/images/layout/design21/bkg.jpg) #ffffff;;" link="black" alink="black" vlink="black" class="shiftDashboard">
@@ -271,8 +293,10 @@ var previousKAMControl = null;
 
 	<div id="divToolbars" class="commonToolbar cpToolbars newCP">
 		
-		<script src="/1127434005.js" type="text/javascript"></script>
-<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/CP/ie7.css"><![endif]-->
+		<script src="/Areas/MyAccount/Assets/Scripts/Favorites.js" type="text/javascript"></script>
+<script src="/Common/Controls/jqueryCookie/jquery.cookie.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/SubmitARequest.js" type="text/javascript"></script>
+
 <!-- Allow Dashboard, Favorites Enabled  -->
 
 
@@ -347,7 +371,9 @@ var previousKAMControl = null;
 </div>        
     </div>
 
-<script src="/-212365995.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="/Assets/Scripts/jShowOff/jquery.jshowoff.js" type="text/javascript"></script>
+
 
 <script type="text/javascript">
     jQuery182(document).ready(function () {
@@ -390,10 +416,9 @@ var previousKAMControl = null;
                 <div class="users">
                     <h3>Total Users</h3>
                     <div>
-                        <p>562</p>
+                        <p>588</p>
                     </div>
                 </div>
-                <!--[if lte IE 7]><div class="selfClear"></div><![endif]-->
             </div>
         </div>
     </div>
@@ -625,7 +650,7 @@ searchJQ(document).ready(function () {	searchJQ('.xcssSearchString').autocomplet
                    document.aspnetSearchForm.SearchString.value = document.aspnetForm.SearchString[i].value;
            }
        }
-       document.location.href = "/Search/Results?searchPhrase=" + document.aspnetSearchForm.SearchString.value + "&page=1&perPage=10";
+       document.location.href = "/Search/Results?searchPhrase=" + encodeURIComponent(document.aspnetSearchForm.SearchString.value) + "&page=1&perPage=10";
    }
    function faSiteSearchTextHook(ev) {
        ev = (window.event ? window.event : ev);
@@ -817,10 +842,6 @@ searchJQ(document).ready(function () {	searchJQ('.xcssSearchString').autocomplet
  </div>
  </div>
  <div style="padding-bottom:5px;"> <div style="margin-bottom:5px; padding-right: 8px; padding-left: 8px;">
-<a class="pfMenuTitle" href="/Index.aspx?NID=460">Main Street Revitalization</a>
- </div>
- </div>
- <div style="padding-bottom:5px;"> <div style="margin-bottom:5px; padding-right: 8px; padding-left: 8px;">
 <a class="pfMenuTitle" href="/index.aspx?nid=298">Parks & Facilities</a>
  </div>
  </div>
@@ -832,11 +853,11 @@ searchJQ(document).ready(function () {	searchJQ('.xcssSearchString').autocomplet
 <a class="pfMenuTitle" href="/index.aspx?NID=108">Property Taxes</a>
  </div>
  </div>
- </div> </div> </div> <div style="width:208px; float:left;"> <div > <div > <div style="padding-bottom:5px;"> <div style="margin-bottom:5px; padding-right: 8px; padding-left: 8px;">
+ <div style="padding-bottom:5px;"> <div style="margin-bottom:5px; padding-right: 8px; padding-left: 8px;">
 <a class="pfMenuTitle" href="/Index.aspx?NID=583">Solar Power</a>
  </div>
  </div>
- <div style="padding-bottom:5px;"> <div style="margin-bottom:5px; padding-right: 8px; padding-left: 8px;">
+ </div> </div> </div> <div style="width:208px; float:left;"> <div > <div > <div style="padding-bottom:5px;"> <div style="margin-bottom:5px; padding-right: 8px; padding-left: 8px;">
 <a class="pfMenuTitle" href="/Index.aspx?NID=508">Sister City Program</a>
  </div>
  </div>
@@ -1195,10 +1216,7 @@ searchJQ(document).ready(function () {	searchJQ('.xcssSearchString').autocomplet
            <a class="graphiclinksfQlinks" target="_blank" href="/twitter"><img src="/images/GraphicLinks/2/twitter.jpg" height="57" width="44" alt="Twitter" border="0" onmouseover="this.src='/images/GraphicLinks/2/twitter2.jpg'" onmouseout="this.src='/images/GraphicLinks/2/twitter.jpg'"></a><br>
         </div>
          <div class="graphiclinksfLinkDiv">
-           <a class="graphiclinksfQlinks" target="_blank" href="http://www.youtube.com/user/CityofWetaskiwin"><img src="/images/GraphicLinks/2/yourtube.jpg" tabindex="0" height="57" width="40" alt="YouTube" border="0" onfocus="this.onmouseover();" onmouseover="this.src='/images/GraphicLinks/2/yourtube2.jpg'" onblur="this.onmouseout();" onmouseout="this.src='/images/GraphicLinks/2/yourtube.jpg'"></a><br>
-        </div>
-         <div class="graphiclinksfLinkDiv">
-           <a class="graphiclinksfQlinks" target="_blank" href="http://wetaskiwinmotion.com/"><img src="/images/GraphicLinks/2/blog.jpg" height="57" width="50" alt="Blog" border="0" onmouseover="this.src='/images/GraphicLinks/2/blog2.jpg'" onmouseout="this.src='/images/GraphicLinks/2/blog.jpg'"></a><br>
+           <a class="graphiclinksfQlinks" target="_blank" href="https://www.youtube.com/channel/UCosEDSy_HiuWMUPY-uSYNhQ"><img src="/images/GraphicLinks/2/yourtube.jpg" tabindex="0" height="57" width="40" alt="YouTube" border="0" onfocus="this.onmouseover();" onmouseover="this.src='/images/GraphicLinks/2/yourtube2.jpg'" onblur="this.onmouseout();" onmouseout="this.src='/images/GraphicLinks/2/yourtube.jpg'"></a><br>
         </div>
          </div>
         </div>
@@ -1250,7 +1268,6 @@ searchJQ(document).ready(function () {	searchJQ('.xcssSearchString').autocomplet
 			<table summary="Table for layout purposes" border="0" cellspacing="0" cellpadding="0" width="100%">
 				<tr>
 					<td>     <div id="Section1" style="text-align: left; margin: 10px 0px; padding:0px 7px 0px 0px; "> <div style=" background: url(/images/layout/design21/titlebkg.jpg) repeat-x left bottom;; padding-bottom: 10px; margin-bottom: 12px;" class="Headline">Archives</div>
-<span style="font-size: 13.3333px; line-height: 16px;"><b><span style="color: rgb(255, 0, 0);">NEW! </span></b>Check out our <a href="https://www.facebook.com/City-of-Wetaskiwin-Archives-129250687118479/?fref=ts" target="_blank" class="Hyperlink">Facebook page</a>!</span><br>
 <br>
 If you are looking to explore the history of the City of Wetaskiwin and area, your family history, or the City&rsquo;s military heritage, The City of Wetaskiwin Archives is the place to visit!<br>
 <br>
@@ -1272,7 +1289,7 @@ The City of Wetaskiwin Archives receives many requests for information from all 
 </span>If you would like to request information from the Archives, please try to include the following:<br>
 <ul>
     <li>a clear explanation of what/who you are trying to find</li>
-    <li>a list of other sources you have searched<span style="line-height: 115%; font-family: Calibri, sans-serif; font-size: 11pt;">&mdash;</span>to avoid a duplication of efforts</li>
+    <li>a list of other sources you have searched<span style="line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;">&mdash;</span>to avoid a duplication of efforts</li>
     <li>complete names of individuals and any other details that could assist with identification, such as a school district, any known dates, religious affiliation or other family members, etc</li>
     <li>your email, mailing address and phone number for contact purposes </li>
 </ul>

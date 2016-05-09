@@ -18,7 +18,7 @@
 <meta name="dc.type" content="home page" />
 <meta name="owner" content="" />
 <meta name="dcterms.issued" scheme="W3CDTF" content="2005-06-21" />
-<meta name="dcterms.modified" scheme="W3CDTF" content="2016-03-04" />
+<meta name="dcterms.modified" scheme="W3CDTF" content="2016-05-07" />
 <meta name="review_date" content="2010-01-06" />
 <meta name="meta_date" content="2009-01-09" />
 <!-- METADATA ENDS | FIN DES METADONNEES -->
@@ -577,20 +577,19 @@ function jsOnBannerSpacing(){
 					<!-- CONTENT BEGINS | DEBUT DU CONTENU -->
 					<div id="tab-container1" class="wet-boew-tabbed-interface tabs-style-2 cycle-fast" style="min-height:18em;">
 						<ul class="tabs" id="tabsObj">
-                        <li class="default"><a href="#tabs1_1">1<span class="cn-invisible"> Tips to help you stop smoking and beyond</span></a></li>
-							<li><a href="#tabs1_2">2<span class="cn-invisible"> Consultation on Legislative Options for Assisted Dying</span></a></li>
-							<li><a href="#tabs1_3">3<span class="cn-invisible"> Third Report on Human Biomonitoring of Environmental Chemicals</span></a></li>
-							<li><a href="#tabs1_4">4<span class="cn-invisible"> Celebrate International Women's Day</span></a></li>
-                            
-                         
-						</ul>
+              <li class="default"><a href="#tabs1_1">1<span class="cn-invisible"> Alberta Wildfires  Get the latest</span></a></li>
+							<li><a href="#tabs1_2">2<span class="cn-invisible"> Medical assistance in dying and the proposed legislation</span></a></li>
+							<li><a href="#tabs1_3">3<span class="cn-invisible"> Be a champion. Get vaccinated.</span></a></li>
+							<li><a href="#tabs1_4">4<span class="cn-invisible"> Make your home and car smoke-free</span></a></li>
+						</ul>						
 						<div id="tab-panel-container1" class="tabs-panel" style="background-color: transparent; min-height:192px !important;">
-							<div id="tabs1_1" class="pad-text" style="background:url(/images/home-accueil/v2/promo/main/stop-smoking-cesser-fumer-405x165.jpg) no-repeat !important;"> <a href="http://www.healthycanadians.gc.ca/healthy-living-vie-saine/tobacco-tabac/quit-cesser/index-eng.php?utm_source=quit_smoking_16&amp;utm_medium=banner_en&amp;utm_campaign=hpfeaturebox" class="fontSize85"><span>Tips to help you stop smoking and beyond</span></a></div>
-							<div id="tabs1_2" class="pad-text" style="background:url(/images/home-accueil/v2/promo/main/consult-assisted-dying-assistance-mourir-405x165.jpg) no-repeat !important;"> <a href="http://www.ep-ce.ca/home/" class="fontSize85"><span>Consultation on Legislative Options for Assisted Dying</span></a></div>
-							<div id="tabs1_3" class="pad-text" style="background:url(/images/home-accueil/v2/promo/main/chms-405-165.jpg) no-repeat !important;"> <a href="/ewh-semt/pubs/contaminants/chms-ecms-cycle3/index-eng.php?src=human_biomonitoring_15&amp;medium=banner_en&amp;content=&amp;campaign=hpfeaturebox" class="fontSize85"><span>Third Report on Human Biomonitoring of Environmental Chemicals</span></a></div>
-							<div id="tabs1_4" class="pad-text" style="background:url(/images/home-accueil/v2/promo/main/womens-day-journee-de-la-femme-eng-405x165.jpg) no-repeat !important;"> <a href="http://www.swc-cfc.gc.ca/commemoration/iwd-jif/index-en.html" class="fontSize85"><span>Celebrate International Women's Day</span></a></div>
-                        
-						</div>
+						
+							<div id="tabs1_1" class="pad-text" style="background:url(/images/home-accueil/v2/promo/main/wildfires-EN_PJE-405x188.jpg) no-repeat !important;"> <a href="https://www.canada.ca/en/services/policing/alberta-wildfires.html?utm_source=PS&amp;utm_medium=themepage&amp;utm_campaign=Alta-wldfrs" class="fontSize85"><span>Alberta Wildfires  Get the latest</span></a></div>
+							<div id="tabs1_2" class="pad-text" style="background:url(/images/home-accueil/v2/promo/main/consult-assisted-dying-assistance-mourir-405x165.jpg) no-repeat !important;"> <a href="http://www.justice.gc.ca/eng/cj-jp/ad-am/index.html" class="fontSize85"><span>Medical assistance in dying and the proposed legislation</span></a></div>
+							<div id="tabs1_3" class="pad-text" style="background:url(/images/home-accueil/v2/promo/main/bechampion.jpg) no-repeat !important;"> <a href="http://healthycanadians.gc.ca/healthy-living-vie-saine/immunization-immunisation/material-materiel/index-eng.php?utm_source=imm_vaccine_16&amp;utm_medium=banner_en&amp;utm_campaign=hpfeaturebox" class="fontSize85"><span>Be a champion. Get vaccinated.</span></a></div>
+							<div id="tabs1_4" class="pad-text" style="background:url(/images/home-accueil/v2/promo/main/home-car-smoke-free-maison-voiture-sans-fumee-405x165.jpg) no-repeat !important;"> <a href="http://healthycanadians.gc.ca/healthy-living-vie-saine/tobacco-tabac/avoid-second-hand-smoke-eviter-fumee-secondaire/second-hand-smoke-fumee-secondaire/index-eng.php?utm_source=second_hand_smoke_16&amp;utm_medium=banner_en&amp;utm_campaign=hpfeaturebox" class="fontSize85"><span>Make your home and car smoke-free</span></a></div>
+							
+						</div>							
 					</div>
 					<div id="clrFlote1" style="clear: right; padding:15px 0 0 0; margin-bottom: 71px;"></div>
 					<div class="borderLight">
@@ -644,7 +643,7 @@ function jsOnBannerSpacing(){
 		<div class="footerline"></div>		
 		<div class="foot1">
 		<!-- DATE MODIFIED BEGINS | DEBUT DE LA DATE DE MODIFICATION -->
-		Date Modified: <span id="date">2016-03-04</span>
+		Date Modified: <span id="date">2016-05-07</span>
 		<!-- DATE MODIFIED ENDS | FIN DE LA DATE DE MODIFICATION -->
 		</div>
 		<div class="foot2"><a href="#tphp" title="Return to Top of Page"><img class="uparrow" src="/images/templates/tphp.gif" width="19" height="12" alt="" /><br />Top of Page</a></div>

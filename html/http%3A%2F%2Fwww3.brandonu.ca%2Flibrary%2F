@@ -53,9 +53,9 @@
 
       <td><a href="http://libguides.brandonu.ca/ILLs" class="leftcolumn"><b>Interlibrary Loans</b></a><br>&nbsp;</td>
 	</tr>
-	    <tr>
+<!--	    <tr>
       <td><a href="/library/infoservices.html" class="leftcolumn"><b>Need Help?</b></a>&nbsp;&nbsp;<br>  &nbsp; </td>
-    </tr>
+    </tr>-->
   </table>
   <img src="/images/yellowLineSpacer.gif" width="109" height="1" alt=""> 
 
@@ -66,8 +66,8 @@
 <div class="search">
 <!-- Search Form -->
 
-    <form action="http://www.google.com/u/BrandonU" method="GET">
-      <a href="http://www.google.com/u/BrandonU" >Search Site:</a>&nbsp;<input name="q" size="12">&nbsp;&nbsp;<input name="imageField" type="image" src="/images/go-button.gif" width="15" height="15" ></form>
+   <!-- <form action="http://www.google.com/u/BrandonU" method="GET">
+      <a href="http://www.google.com/u/BrandonU" >Search Site:</a>&nbsp;<input name="q" size="12">&nbsp;&nbsp;<input name="imageField" type="image" src="/images/go-button.gif" width="15" height="15" ></form>-->
 </div>	
 <table width="600" cellpadding="0" cellspacing="0" class="feature">
   	<tr><td class="contents">You are here: 
@@ -89,8 +89,6 @@ document.getElementById("primoQuery").value = "any,contains," + document.getElem
 document.forms["searchForm"].submit();
 }
 </script>
-</head>
-<body>
 <form id="simple" name="searchForm" method="get" target="_self" action="http://brandonu-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do" enctype="application/x-www-form-urlencoded; charset=utf-8" onSubmit="searchPrimo()">
 <!-- Customizable Parameters -->
 <input type="hidden" name="institution" value="01BRA">
@@ -120,12 +118,12 @@ document.forms["searchForm"].submit();
 </td><td width="460">
 <form action="Navigator" method="POST" name="finding">
 <select name="findings" size="1">
-<option value="/library/findbooks.html" selected>Books and Library Material</option>
+<option value="http://libguides.brandonu.ca/FindBooks/Home" selected>Books and Library Material</option>
 <option value="/library/databases/databases.html">Journal Articles</option>
-<option value="/library/elecbooks.html">Electronic Books</option>
-<option value="/library/RefTools/default.html">Electronic Reference Tools</option>
+<option value="http://libguides.brandonu.ca/FindBooks/EBooks">Electronic Books</option>
+<option value="http://libguides.brandonu.ca/InfoTools/home">Electronic Reference Tools</option>
 <option value="http://www.brandonu.ca/archives/">S.J. McKee Archives</option>
-<option value="/library/findwebpages.html">Web Sites</option>
+<!--<option value="/library/findwebpages.html">Web Sites</option>-->
 <option value="https://webapp.brandonu.ca/pls/transfer/f?p=118:10:749012898903570">Course Equivalencies</option>
 </select>
 <input type="button" value="Go" 
@@ -140,17 +138,16 @@ onclick="location=document.finding.findings.options[document.finding.findings.se
 <option value="/library/Reserves.html">Reserves</option>
 <option value="http://libguides.brandonu.ca">Library Guides</option>
 <option value="http://libguides.brandonu.ca/citations">Citation Guides</option>
-<option value="/library/Services/libinstruction.html">Library Instruction</option>
-<option value="/library/Borrowing.html">Borrower Information</option>
-<option value="/library/Services/faculty.html">Faculty Information</option>
+<option value="http://libguides.brandonu.ca/LibInfo/Instruction">Library Instruction</option>
+<option value="http://libguides.brandonu.ca/LibInfo/Borrower">Borrower Information</option>
+<option value="http://libguides.brandonu.ca/LibInfo/Faculty">Faculty Information</option>
 <option value="http://www.accesscopyright.ca/media/24287/aucc_model_licence_schedule_b_v2.pdf">Copying Guidelines
 </option>
 <option value="http://libguides.brandonu.ca/statcan">Statistics Canada Services</option>
 <option value="http://libguides.brandonu.ca/content.php?pid=166539">Off-Campus Library Services</option>
 <option value="http://www.brandonu.ca/archives/">Archives</option>
-<option value="/library/Staff.html">Staff</option>
-<option value="http://moodle.brandonu.ca/course/view.php?id=991">Library Moodle Forum</option>
-<option value="/library/Services/donations.html">Donations Policy</option>
+<option value="http://libguides.brandonu.ca/LibInfo/Staff">Staff</option>
+<option value="http://libguides.brandonu.ca/LibInfo/Donations">Donations Policy</option>
 </select>
 <input type="button" value="Go" 
 onclick="location=document.service.services.options[document.service.services.selectedIndex].value">
@@ -205,7 +202,7 @@ onclick="location=document.ebsco.ebscos.options[document.ebsco.ebscos.selectedIn
     GeoBase (Engineering Village)</option>
 <option value="http://ezproxy.brandonu.ca:80/login?url=http://search.proquest.com/hnpglobeandmail?accountid=9705">
 Globe & Mail</option>
-<option value="http://ezproxy.brandonu.ca:80/login?url=http://scholar.google.com">Google Scholar</option>
+<option value="http://ezproxy.brandonu.ca:80/login?url=https://scholar.google.com">Google Scholar</option>
 <option value="http://ezproxy.brandonu.ca:80/login?url=http://search.proquest.com/iimp?accountid=9705">IIMP</option>
 <option value="http://ezproxy.brandonu.ca:80/login?url=http://www.jstor.org">JSTOR</option>
 <option value="http://ezproxy.brandonu.ca:80/login?url=http://www.lexisnexis.com/hottopics/lnacademic">LexisNexis Academic
@@ -297,7 +294,7 @@ onclick="location=document.cnslp.cnslps.options[document.cnslp.cnslps.selectedIn
 	<tr>
 		<td align="center">
 			<br><strong>
-			Last updated February 29, 2016.<br>
+			Last updated March 30, 2016.<br>
 
 </strong>
 		</td>

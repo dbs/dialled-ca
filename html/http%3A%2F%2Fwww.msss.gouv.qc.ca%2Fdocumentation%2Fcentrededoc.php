@@ -99,10 +99,9 @@
       <ul id="prob_sociaux" class="menu_niv2">
         <li><a class="menuGauche" href="/sujets/prob_sociaux/agression_sexuelle/">Agression sexuelle</a></li>
 		<li><a class="menuGauche" href="http://sante.gouv.qc.ca/dossiers/alcool-drogues-jeu/">D&eacute;pendances : Alcool, drogues, jeu</a></li>
-		<li><a class="menuGauche" href="/sujets/prob_sociaux/grossesseadolescence.php">Grossesse &agrave; l'adolescence</a></li>
+		
         <li><a class="menuGauche" href="/sujets/prob_sociaux/itinerance/">Itin&eacute;rance</a></li>
       	<li><a class="menuGauche" href="/sujets/prob_sociaux/jeunesdifficulte.php">Jeunes en difficult&eacute;</a></li>
-		<li><a class="menuGauche" href="/sujets/prob_sociaux/violenceconjugale.php">Violence conjugale</a></li>
 	  </ul>
     </li>
     <li><a class="menuGauche" href="/sujets/organisation/index.php">Organisation des services</a></li>
@@ -121,7 +120,7 @@
    <li><a class="menuGauche" href="/ministere/index.php">Minist&egrave;re</a></li>
 	<li><a class="menuGauche" href="/reseau/index.php">R&eacute;seau</a></li>
 	<li><a class="menuGauche" href="/documentation/campagnes.php">Campagnes</a></li>
-    <li><a class="menuGauche" href="/statistiques/index.php">Statistiques</a></li>
+    <li><a class="menuGauche" href="/professionnels/#statistiques">Statistiques</a></li>
 	<li><a class="menuGauche" href="/documentation/index.php">Documentation</a></li>
 	<li><a class="menuGauche" href="/documentation/publications.html">Publications</a></li>
 	

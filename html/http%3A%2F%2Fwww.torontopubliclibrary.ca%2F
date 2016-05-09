@@ -205,7 +205,11 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
 
-<head>
+<head><script id="f5_cspm">(function(){var f5_cspm={f5_p:'EKEIPGACMHBGHEKDCDLLGKOPIKGDCLEDFBBAPMLJMEIBEIBINOIEDPJPIFDAOINNCNKNLLEEABNLPNHCAMGLPNCPKPKCLKIHFPIOAIIKPPICFILLGDCBPPMCEGIHKOEL',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,32,(latency>>8));str=f5_cspm.set_byte(str,33,(latency&0xff));str=f5_cspm.set_byte(str,27,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='aaaaaaaaaaaaaaa='+encodeURIComponent(cookie_val)+';path=/';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'){if(pair[1]=='1234'){var d=new Date();d.setTime(d.getTime()-1);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}}
+f5_cspm.go();}());</script>
 
 
 	
@@ -260,7 +264,7 @@ Home
 window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:22,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(4),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(5),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:9,2:6,3:10,4:3,5:8,6:23,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1);t("loader").features.stn=!0,t(2),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:9,2:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],6:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:23,2:24,ee:"QJf3ax",gos:"7eSDFh"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:24,2:23,ee:"QJf3ax"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:24,2:23,ee:"QJf3ax"}],9:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:24,2:23,ee:"QJf3ax"}],10:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(o){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:6,2:24,ee:"QJf3ax"}],11:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:12,3:10,4:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],12:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],13:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:22,2:23,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&f&&f.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=l.proto+t.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-593.min.js"},l=e.exports={offset:i(),origin:p,features:{}};f[u]?(f[u]("DOMContentLoaded",o,!1),c[u]("load",n,!1)):(f[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:22,2:13,handle:"D5DuLP"}],22:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],23:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],24:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:23,ee:"QJf3ax"}]},{},["G9z0Bl",4,11,5]);
 ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"045c9927d3",applicationID:"7276081",sa:1,agent:"js-agent.newrelic.com/nr-593.min.js"}
 </script>
-
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="/css/tpl-css.jsp?print=" type="text/css"/>
 <link rel="stylesheet" href="/css/print.css" media="print" type="text/css" />
 
@@ -526,10 +530,10 @@ jQuery(document).ready(function() {
 				<a href="/databases" onClick="tracking('A - Z List of All Databases','megamenu - Books, Video & Research');">A - Z List of All Databases</a> 
 				</li> 
 			</ul> 
-		</li> 
+		</li> <!-- 
 		<li class="megamenu-level-0" role="menuitem"> 
 		<a href="/books-video-music/recommended-websites/" onClick="tracking('Recommended Websites','megamenu - Books, Video & Research');">Recommended Websites</a> 
-		</li> 
+		</li>  -->
 		<li class="megamenu-level-0" role="menuitem"> 
 		<a href="/books-video-music/your-language" onClick="tracking('Material in Your Language','megamenu - Books, Video & Research');">Material in Your Language</a> 
 			<ul role="menu">
@@ -541,6 +545,11 @@ jQuery(document).ready(function() {
 		<li class="megamenu-level-0" role="menuitem"> 
 		<a href="/books-video-music/specialized-collections/" onClick="tracking('Special Collections & Rare Books','megamenu - Books, Video & Research');">Special Collections &amp; Rare Books</a> 
 		</li> 
+		<li class="megamenu-level-0" role="menuitem">
+		<a href="/history-genealogy/" onClick="tracking('History & Genealogy','megamenu - Books, Video & Research');">
+			History & Genealogy
+		</a> 
+		</li>
 		<li class="megamenu-level-0" role="menuitem"> 
 		<a href="/digital-archive/" onClick="tracking('Digital Archive','megamenu - Books, Video & Research');">Digital Archive</a> 
 		</li> 
@@ -880,6 +889,8 @@ jQuery(document).ready(function() {
 
 
 
+
+
 			
 			
 		<!--  <div class="branch-message round-all">
@@ -924,13 +935,14 @@ jQuery(document).ready(function() {
 		<li><a href="/ready-for-reading/" id="link3"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">Early Literacy (Birth to 5)</span></a></li>
        <!-- </div>-->
        <!--<div id="middlelastRow">-->
-        <li><a class="extended-width" href="/books-video-music/books/booklists/" id="link7"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">We Recommend</span></a></li>
-		<li><a href="/history-genealogy/" id="link8"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">History &amp; Genealogy</span></a></li>
+        <li><a class="extended-width" href="/elearning/"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">eLearning</span></a></li>
+        <li><a href="/books-video-music/books/booklists/" id="link7"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">We Recommend</span></a></li>
+		<!--  <li><a href="/history-genealogy/" id="link8"><span class="fyw-link">History &amp; Genealogy</span></a></li>-->
 		<li><a href="http://kidsspace.torontopubliclibrary.ca/" id="link6"><!--<span class="fyw-to">To</span>--><span class="fyw-kidsspace"><img alt="KidsSpace website" src="/images/kidsspace_logo.gif"/></span></a></li>
 		<!-- </div>-->
        <!--<div id="lastRow">-->
-       	<li><a class="extended-width" href="/french/" id="link10"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">Fran&ccedil;ais</span></a></li>
-		<li><a href="/using-the-library/computer-services/innovation-spaces/" id="link11"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">Digital Innovation Hubs</span></a></li>
+        <li><a class="extended-width" href="/using-the-library/computer-services/innovation-spaces/" id="link11"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">Digital Innovation Hubs</span></a></li>
+		<li><a href="/french/" id="link10"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">Fran&ccedil;ais</span></a></li>
 		<li><a href="http://torontopubliclibrary.typepad.com/teens/" id="link9"><!--<span class="fyw-to">To</span>--> <span class="fyw-link">Teens</span></a></li>
 		<!--  <div id="fillerElement"></div> -->
     	<!--</div>-->
@@ -1227,15 +1239,15 @@ jQuery(document).ready(function() {
 	
 		
 			
-					<div class="author">The Buzz...About Books
+					<div class="author">North York Central Library Blog
 						
 					</div>
 				<div class="title">
-				<a href="http://torontopubliclibrary.typepad.com/bookbuzz/2016/03/march-break-travels-from-your-sofa.html">March Break Travels: From Your Sofa</a></div>
+				<a href="http://torontopubliclibrary.typepad.com/north-york-central-blog/2016/05/mothers-as-artisans-of-compassion.html">Mothers as Artisans of Compassion</a></div>
 				
-					<div class="author">Mar 11
+					<div class="author">May 06
 						
-						 &nbsp;|&nbsp; Lynn
+						 &nbsp;|&nbsp; Ann
 						
 				
 				</div>
@@ -1392,15 +1404,15 @@ jQuery(document).ready(function() {
 	
 		
 			
-					<div class="author">Local History &amp; Genealogy
+					<div class="author">Growing a Reader: Kids&#039; Books, Tips and More
 						
 					</div>
 				<div class="title">
-				<a href="http://torontopubliclibrary.typepad.com/local-history-genealogy/2016/03/snapshots-in-history-march-11-remembering-robert-baldwin-and-louis-hippolyte-lafontaine.html">Snapshots in History: March 11: Remembering Robert Baldwin and Louis-Hippolyte LaFontaine</a></div>
+				<a href="http://torontopubliclibrary.typepad.com/kids-books/2016/05/celebrate-museum-month.html">Celebrate Museum Month with a FREE Museum + Arts Pass</a></div>
 				
-					<div class="author">Mar 11
+					<div class="author">May 06
 						
-						 &nbsp;|&nbsp; John P.
+						 &nbsp;|&nbsp; Ray
 						
 				
 				</div>
@@ -1557,15 +1569,15 @@ jQuery(document).ready(function() {
 	
 		
 			
-					<div class="author">En français
+					<div class="author">New to Canada
 						
 					</div>
 				<div class="title">
-				<a href="http://torontopubliclibrary.typepad.com/en_francais/2016/03/quelques-nouveaut%C3%A9s-pour-la-semaine-de-la-francophonie.html">Quelques œuvres pour la Semaine de la Francophonie</a></div>
+				<a href="http://torontopubliclibrary.typepad.com/new_to_canada/2016/05/save-the-date-second-annual-toronto-newcomer-day.html">Save the Date - Second Annual Toronto Newcomer Day on May 24!</a></div>
 				
-					<div class="author">Mar 10
+					<div class="author">May 06
 						
-						 &nbsp;|&nbsp; Patrick
+						 &nbsp;|&nbsp; Elsa
 						
 				
 				</div>
@@ -1657,7 +1669,7 @@ jQuery(document).ready(function() {
 
 
 	
-	<div  id="whats-new-1"  class=" widget clear-left ">
+	<div  id="whats-new-1"  class=" widget ">
 		
 		
 			
@@ -1686,24 +1698,24 @@ jQuery(document).ready(function() {
 	
 	
 	
+
+		
 			
 			
-				
-				
-					<div class="merch-record-horizontal">
-				
+				<div class="merch-record-horizontal">
 			
-			
-				
-					<div class="image-container"><a onClick="tracking('March Break','image link');" href="http://www.torontopubliclibrary.ca/programs-and-classes/featured/march-break.jsp"><img alt="March Break" src="http://tpl.razuna.com/assets/3434/C8353EB4E36A48BE806C130E327BACEE/img/551091209D9F4FF884DDA9033E3EC91F/MarchBreak_Leader_81x100.jpg"/></a></div>
-				
-				<div>
-					<div class="title"><a onClick="tracking('March Break','title link');" href="http://www.torontopubliclibrary.ca/programs-and-classes/featured/march-break.jsp">March Break</a></div>
-					<div class="description">Activities for kids, teens, and the whole family - it's interactive, it's entertaining and it's free!</div>	
-				</div>	
-	
-			<!-- <br/> 
-			<span class="clear"></span>-->
+		
+
+		
+			<div class="image-container"><a onClick="tracking('Innovator in Residence','image link');" href="http://www.torontopubliclibrary.ca/innovator-in-residence/"><img alt="Innovator in Residence" src="http://tpl.razuna.com/assets/3434/C8353EB4E36A48BE806C130E327BACEE/img/77BBEA6D0B2B4B308054CE785DDEC79C/Frank-Tsonis-81x100.jpg"/></a></div>
+		
+		<div>
+			<div class="title"><a onClick="tracking('Innovator in Residence','title link');" href="http://www.torontopubliclibrary.ca/innovator-in-residence/">Innovator in Residence</a></div>
+			<div class="description">From May to July, Frank Tsonis will lead a series of workshops, lectures, one-on-one appointments, and other programs about mobile app development at Toronto Reference Library.</div>
+		</div>
+
+		<!-- <br/>
+		<span class="clear"></span>-->
 		</div>
 	
 
@@ -1752,7 +1764,7 @@ jQuery(document).ready(function() {
 
 
 	
-	<div  id="whats-new-2"  class=" widget clear-left ">
+	<div  id="whats-new-2"  class=" widget ">
 		
 		
 			
@@ -1781,24 +1793,24 @@ jQuery(document).ready(function() {
 	
 	
 	
+
+		
 			
 			
-				
-				
-					<div class="merch-record-horizontal">
-				
+				<div class="merch-record-horizontal">
 			
-			
-				
-					<div class="image-container"><a onClick="tracking('Business Inc.','image link');" href="http://www.torontopubliclibrary.ca/programs-and-classes/featured/business-inc-series.jsp"><img alt="Business Inc." src="http://www.torontopubliclibrary.ca/images/events/SC/small-business-programs.gif"/></a></div>
-				
-				<div>
-					<div class="title"><a onClick="tracking('Business Inc.','title link');" href="http://www.torontopubliclibrary.ca/programs-and-classes/featured/business-inc-series.jsp">Business Inc.</a></div>
-					<div class="description">Starting a business? Take part in an eight-week business program. Applications due April 1.</div>	
-				</div>	
-	
-			<!-- <br/> 
-			<span class="clear"></span>-->
+		
+
+		
+			<div class="image-container"><a onClick="tracking('Asian Heritage Month','image link');" href="http://www.torontopubliclibrary.ca/asianheritage"><img alt="Asian Heritage Month" src="http://www.torontopubliclibrary.ca/images/events/SC/asian-heritage-month.gif"/></a></div>
+		
+		<div>
+			<div class="title"><a onClick="tracking('Asian Heritage Month','title link');" href="http://www.torontopubliclibrary.ca/asianheritage">Asian Heritage Month</a></div>
+			<div class="description">A city-wide celebration of Asian culture.</div>
+		</div>
+
+		<!-- <br/>
+		<span class="clear"></span>-->
 		</div>
 	
 
@@ -1847,7 +1859,7 @@ jQuery(document).ready(function() {
 
 
 	
-	<div  id="whats-new-3"  class=" widget clear-left ">
+	<div  id="whats-new-3"  class=" widget ">
 		
 		
 			
@@ -1876,24 +1888,24 @@ jQuery(document).ready(function() {
 	
 	
 	
+
+		
 			
 			
-				
-				
-					<div class="merch-record-horizontal">
-				
+				<div class="merch-record-horizontal">
 			
-			
-				
-					<div class="image-container"><a onClick="tracking('Special Collections: A to Z','image link');" href="http://www.torontopubliclibrary.ca/programs-and-classes/exhibits/a-to-z.jsp"><img alt="Special Collections: A to Z" src="http://tpl.razuna.com/assets/3434/C8353EB4E36A48BE806C130E327BACEE/img/2A8064722E1B4B938949B1BFBBD952B3/A-to-Z-81x000.jpg"/></a></div>
-				
-				<div>
-					<div class="title"><a onClick="tracking('Special Collections: A to Z','title link');" href="http://www.torontopubliclibrary.ca/programs-and-classes/exhibits/a-to-z.jsp">Special Collections: A to Z</a></div>
-					<div class="description">An alphabet of curiosities from the library's Special Collections. February 20 - April 24.</div>	
-				</div>	
-	
-			<!-- <br/> 
-			<span class="clear"></span>-->
+		
+
+		
+			<div class="image-container"><a onClick="tracking('Your Health Matters','image link');" href="http://tpl.ca/yourhealthmatters"><img alt="Your Health Matters" src="http://tpl.razuna.com/assets/3434/C8353EB4E36A48BE806C130E327BACEE/img/6FA820625FE842C39543C0C175914F79/TPH_81x100.jpg"/></a></div>
+		
+		<div>
+			<div class="title"><a onClick="tracking('Your Health Matters','title link');" href="http://tpl.ca/yourhealthmatters">Your Health Matters</a></div>
+			<div class="description">Get healthy with programs, recommended collections and services brought to you by Toronto Public Health.</div>
+		</div>
+
+		<!-- <br/>
+		<span class="clear"></span>-->
 		</div>
 	
 
@@ -1942,7 +1954,7 @@ jQuery(document).ready(function() {
 
 
 	
-	<div  id="whats-new-4"  class=" widget clear-left ">
+	<div  id="whats-new-4"  class=" widget ">
 		
 		
 			
@@ -1971,24 +1983,24 @@ jQuery(document).ready(function() {
 	
 	
 	
+
+		
 			
 			
-				
-				
-					<div class="merch-record-horizontal">
-				
+				<div class="merch-record-horizontal">
 			
-			
-				
-					<div class="image-container"><a onClick="tracking('Long Overdue for Libraries','image link');" href="http://www.fairpricingforlibraries.org"><img alt="Long Overdue for Libraries" src="http://tpl.razuna.com/assets/3434/C8353EB4E36A48BE806C130E327BACEE/img/1FEFCE7744574898AFC02EC1EA994BDF/ebook-advocacy-homepage.png"/></a></div>
-				
-				<div>
-					<div class="title"><a onClick="tracking('Long Overdue for Libraries','title link');" href="http://www.fairpricingforlibraries.org">Long Overdue for Libraries</a></div>
-					<div class="description">Learn more about this issue and show your support.</div>	
-				</div>	
-	
-			<!-- <br/> 
-			<span class="clear"></span>-->
+		
+
+		
+			<div class="image-container"><a onClick="tracking('Pop-Up Learning Labs','image link');" href="http://www.torontopubliclibrary.ca/using-the-library/computer-services/innovation-spaces/pop-up-learning-labs.jsp"><img alt="Pop-Up Learning Labs" src="http://tpl.razuna.com/assets/3434/C8353EB4E36A48BE806C130E327BACEE/img/F60DEF55A6C944EB8A0F99820F7CF3BC/Pull_Web_81x100.jpg"/></a></div>
+		
+		<div>
+			<div class="title"><a onClick="tracking('Pop-Up Learning Labs','title link');" href="http://www.torontopubliclibrary.ca/using-the-library/computer-services/innovation-spaces/pop-up-learning-labs.jsp">Pop-Up Learning Labs</a></div>
+			<div class="description">Bringing emerging technologies to different branches across the city.</div>
+		</div>
+
+		<!-- <br/>
+		<span class="clear"></span>-->
 		</div>
 	
 
@@ -2037,7 +2049,7 @@ jQuery(document).ready(function() {
 
 
 	
-	<div  id="whats-new-5"  class=" widget clear-left ">
+	<div  id="whats-new-5"  class=" widget ">
 		
 		
 			
@@ -2066,24 +2078,24 @@ jQuery(document).ready(function() {
 	
 	
 	
+
+		
 			
 			
-				
-				
-					<div class="merch-record-horizontal">
-				
+				<div class="merch-record-horizontal">
 			
-			
-				
-					<div class="image-container"><a onClick="tracking('The eh List Author Series','image link');" href="http://tpl.ca/ehlist"><img alt="The eh List Author Series" src="/images/whats-new_eh-list.jpg"/></a></div>
-				
-				<div>
-					<div class="title"><a onClick="tracking('The eh List Author Series','title link');" href="http://tpl.ca/ehlist">The eh List Author Series</a></div>
-					<div class="description">The eh List brings you the authors of Canada's most popular books of the season.</div>	
-				</div>	
-	
-			<!-- <br/> 
-			<span class="clear"></span>-->
+		
+
+		
+			<div class="image-container"><a onClick="tracking('Sun Life Musical Instrument Lending Library','image link');" href="http://www.torontopubliclibrary.ca/services/borrow-a-musical-instrument.jsp"><img alt="Sun Life Musical Instrument Lending Library" src="http://tpl.razuna.com/assets/3434/C8353EB4E36A48BE806C130E327BACEE/img/0222B08AC35349D9AE46279AB1B238A0/MILL_Icon_81x100.jpg"/></a></div>
+		
+		<div>
+			<div class="title"><a onClick="tracking('Sun Life Musical Instrument Lending Library','title link');" href="http://www.torontopubliclibrary.ca/services/borrow-a-musical-instrument.jsp">Sun Life Musical Instrument Lending Library</a></div>
+			<div class="description">Borrow a collection of musical instruments free with your library card at Parkdale Branch.</div>
+		</div>
+
+		<!-- <br/>
+		<span class="clear"></span>-->
 		</div>
 	
 
@@ -2129,6 +2141,69 @@ jQuery(document).ready(function() {
 	
 	 	
 
+
+
+	
+	<div  id="whats-new-6"  class=" widget ">
+		
+		
+			
+			
+				
+				
+					
+					
+								
+					
+					
+					
+					
+					
+					
+						
+						
+						
+							
+
+
+
+
+
+	
+	
+	
+	
+
+		
+			
+			
+				<div class="merch-record-horizontal">
+			
+		
+
+		
+			<div class="image-container"><a onClick="tracking('Long Overdue for Libraries','image link');" href="http://www.fairpricingforlibraries.org"><img alt="Long Overdue for Libraries" src="http://tpl.razuna.com/assets/3434/C8353EB4E36A48BE806C130E327BACEE/img/1FEFCE7744574898AFC02EC1EA994BDF/ebook-advocacy-homepage.png"/></a></div>
+		
+		<div>
+			<div class="title"><a onClick="tracking('Long Overdue for Libraries','title link');" href="http://www.fairpricingforlibraries.org">Long Overdue for Libraries</a></div>
+			<div class="description">Learn more about this issue and show your support.</div>
+		</div>
+
+		<!-- <br/>
+		<span class="clear"></span>-->
+		</div>
+	
+
+						
+					
+				
+			
+			
+			<div class="right"></div>
+			
+			
+		
+	</div>
 
 
 
@@ -2154,16 +2229,16 @@ jQuery(document).ready(function() {
 
 
 	<div class="widget clear-left" id="online-downloads">
-	<a href="/detail.jsp?Entt=RDMEDB0179&R=EDB0143" onClick="tracking('Homepage','eBooks');">
+	<a href="/detail.jsp?Entt=RDMEDB0075&R=EDB0075" onClick="tracking('Homepage','eBooks');">
 	
 		<div id="ebooks">
 			<div class="headline">
-				<h3 style="">Bach, Beethoven, Liszt, Strauss...</h3>
-				<img alt="" src="/images/e-content-naxos-spotlight.jpg">
+				<h3 style="">Test preparation help</h3>
+				<img alt="" src="/images/e-content-practice-test.jpg">
 			</div>
 			<div class="ebooks-body">
-				<div class="tagline">Naxos Music Library</div>
-				<div class="pitch-text">Stream great classical, jazz, world and folk music.</div>
+				<div class="tagline">Learning Express Library</div>
+				<div class="pitch-text">Practise for the GMAT, LSAT, SAT, GED, Canadian Citizenship Test, and more.</div>
 			</div>
 		</div>
 		</a>
@@ -2250,12 +2325,6 @@ jQuery(document).ready(function() {
 		
 		
 		
-	
-		
-		
-		
-		
-		
 				
 
 
@@ -2273,132 +2342,20 @@ jQuery(document).ready(function() {
 <div class="merch-record-horizontal">
 
 	
-		<div class="image-container"><a href="/detail.jsp?Em=1&Entt=RDM3383505&R=3383505"><img src="http://syndetics.com/index.aspx?isbn=9781250028815/MC.gif" class="homepage-images" alt="Cover image of The return of the witch by Brackston, Paula, author."/></a></div>
-	
-	
-
-			
-		<div>
-					<ul class="no-bullet">
-		<li><a href="/books-video-music/new-items.jsp?category=Adult Fiction&view=grid">New Adult Fiction</a></li>
-		<li><a href="http://oldcatalogue6.torontopubliclibrary.ca/uhtbin/cgisirsi/x/0/0/122/2004">New Adult Nonfiction</a>
-		<li><a href="/books-video-music/new-items.jsp?category=Adult Science Fiction&view=grid">New Adult Science Fiction</a></li>
-		<li><a href="/books-video-music/new-items.jsp?category=Adult Mysteries&view=grid">New Adult Mysteries</a></li>
-        <li><a href="/books-video-music/new-items.jsp?category=Adult Graphic Books&view=grid">New Adult Graphic Books</a></li>
-        <li><a href="http://toronto.lib.overdrive.com/10/50/en/NeweBooks.htm">New Adult eBooks</a></li>
-		</ul>
-	
-
-		</div>	
-		<!-- <br/> -->
-	
-	<span class="clear"></span>
-
-
-	</div>
-		
-		
-	
-</div>
-</div>
-
- 
-
-
-	
-		
-	
-	
-
-
-
-		
-	
-		
-
-
-
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-		
-		
-		
-		
-		
-			
-			
-				
-				
-					
-				
-			
-			
-	
-
-	
-		
-		
-		
-		
-		
-	
-		
-		
-		
-		
-		
-	
-		
-		
-		
-		
-		
-				
-
-
-
-
-
-<div class="widget new-titles">
-
-		
-			<h3>New for Teens</h3>
-		
-		
-		<div  >
-		
-<div class="merch-record-horizontal">
-
-	
-		<div class="image-container"><a href="/detail.jsp?Em=1&Entt=RDM3387368&R=3387368"><img src="http://syndetics.com/index.aspx?isbn=9781619634985/MC.gif" class="homepage-images" alt="Cover image of Rebel, bully, geek, pariah by Lange, Erin Jade, author."/></a></div>
+		<div class="image-container"><a href="/detail.jsp?Em=1&Entt=RDM3366830&R=3366830"><img src="http://syndetics.com/index.aspx?isbn=9780425263228/MC.gif" class="homepage-images" alt="Cover image of Night shift by Harris, Charlaine, author."/></a></div>
 	
 	
 
 			
 		<div>
 			<ul class="no-bullet">
-	<li><a href="/books-video-music/new-items.jsp?category=Teen%20Fiction&view=grid">New Teen Fiction</a></li>
-	<li><a href="/books-video-music/new-items.jsp?category=Teen%20Graphic%20Books&view=grid">New Teen Graphic Books</a></li>
+	<li><a href="/books-video-music/new-items.jsp?category=Adult Fiction&view=grid"><span class="accessible-element">New Adult</span> Fiction</a></li>
+	<li><a href="http://oldcatalogue6.torontopubliclibrary.ca/uhtbin/cgisirsi/x/0/0/122/2004"><span class="accessible-element">New Adult</span> Nonfiction</a>
+	<li><a href="/books-video-music/new-items.jsp?category=Adult Science Fiction&view=grid"><span class="accessible-element">New Adult</span> Science Fiction</a></li>
+	<li><a href="/books-video-music/new-items.jsp?category=Adult Mysteries&view=grid"><span class="accessible-element">New Adult</span> Mysteries</a></li>
+    <li><a href="/books-video-music/new-items.jsp?category=Adult Graphic Books&view=grid"><span class="accessible-element">New Adult</span> Graphic Books</a></li>
+    <li><a href="/books-video-music/new-items.jsp?category=Adult+Romance"><span class="accessible-element">New Adult</span> Romance</a></li>
+    <li><a href="http://toronto.lib.overdrive.com/10/50/en/NeweBooks.htm"><span class="accessible-element">New Adult</span> eBooks</a></li>
 </ul>
 	
 
@@ -2480,6 +2437,141 @@ jQuery(document).ready(function() {
 		
 		
 		
+				
+
+
+
+
+
+<div class="widget new-titles">
+
+		
+			<h3>New for Teens</h3>
+		
+		
+		<div  >
+		
+<div class="merch-record-horizontal">
+
+	
+		<div class="image-container"><a href="/detail.jsp?Em=1&Entt=RDM3395672&R=3395672"><img src="http://syndetics.com/index.aspx?isbn=9780062299604/MC.gif" class="homepage-images" alt="Cover image of Unforgivable by Reed, Amy Lynn, author."/></a></div>
+	
+	
+
+			
+		<div>
+			<ul class="no-bullet">
+	<li><a href="/books-video-music/new-items.jsp?category=Teen%20Fiction&view=grid"><span class="accessible-element">New Teen</span> Fiction</a></li>
+	<li><a href="/books-video-music/new-items.jsp?category=Teen%20Graphic%20Books&view=grid"><span class="accessible-element">New Teen</span> Graphic Books</a></li>
+</ul>
+		</div>	
+		<!-- <br/> -->
+	
+	<span class="clear"></span>
+
+
+	</div>
+		
+		
+	
+</div>
+</div>
+
+ 
+
+
+	
+		
+	
+	
+
+
+
+		
+	
+		
+
+
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+		
+		
+		
+			
+			
+				
+				
+					
+				
+			
+			
+	
+
+	
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
 	
 		
 		
@@ -2503,16 +2595,16 @@ jQuery(document).ready(function() {
 <div class="merch-record-horizontal">
 
 	
-		<div class="image-container"><a href="/detail.jsp?Em=1&Entt=RDM3389907&R=3389907"><img src="http://syndetics.com/index.aspx?isbn=1481439782/MC.gif" class="homepage-images" alt="Cover image of The Night Gardener by Fan, Terry."/></a></div>
+		<div class="image-container"><a href="/detail.jsp?Em=1&Entt=RDM3410562&R=3410562"><img src="http://syndetics.com/index.aspx?isbn=1770498338/MC.gif" class="homepage-images" alt="Cover image of Who broke the teapot by Slavin, Bill, author, illustrator."/></a></div>
 	
 	
 
 			
 		<div>
-					<ul class="no-bullet">
-		<li><a href="/books-video-music/new-items.jsp?category=Children Fiction&view=grid">New Children's Fiction</a></li>
-		<li><a href="/books-video-music/new-items.jsp?category=Children Nonfiction&view=grid">New Children's Nonfiction</a></li>
-		</ul>
+			<ul class="no-bullet">
+	<li><a href="/books-video-music/new-items.jsp?category=Children Fiction&view=grid"><span class="accessible-element">New Children's</span> Fiction</a></li>
+	<li><a href="/books-video-music/new-items.jsp?category=Children Nonfiction&view=grid"><span class="accessible-element">New Children's</span> Nonfiction</a></li>
+</ul>
 
 		</div>	
 		<!-- <br/> -->
@@ -2563,16 +2655,16 @@ jQuery(document).ready(function() {
 
 
 	<div class="widget clear-left" id="support-your-library">
-	<a href="http://tplfoundation.ca/donor-impact">
+	<a href="http://tplfoundation.ca/hold-an-event/">
 	
 		<div id="foundation">
 			<div class="headline">
-				<h3 style="">Check out these puppets!</h3>
-				<img alt="" src="http://tpl.razuna.com/assets/3434/FA67871D7D6B46A79BD05DDE89155082/img/597CB7DCF5464042B0914D819A0BE38E/puppets_281x115.jpg">
+				<h3 style="">Celebrate with a donation to TPL</h3>
+				<img alt="" src="http://tpl.razuna.com/assets/3434/FA67871D7D6B46A79BD05DDE89155082/img/2190FAFA6F574283834A60412049E49F/Max_281x115.jpg">
 			</div>
 			<div class="foundation-body">
-				<div class="tagline">Learn what donors make possible</div>
-				<div class="pitch-text">Donors helped buy these cheery fellows, performing at branches during March break. You too can bring joy to children.</div>
+				<div class="tagline">Donate now</div>
+				<div class="pitch-text">Max asked his bar mitzvah guests to donate to the library.</div>
 			</div>
 		</div>
 		</a>
@@ -2825,7 +2917,7 @@ jQuery(document).ready(function() {
 	<!-- Override regular details link with a custom one (used for KTR), for all records -->
 	
 
-	<!-- Override record title based on custom property from Web Studio rule in the form EVT233963-title -->
+	<!-- Override record title based on custom property from Web Studio rule in the form EVT233426-title -->
 				
 		
 	<!-- Override record description based on custom property from Web Studio rule in the form -descritpion -->
@@ -2902,684 +2994,7 @@ jQuery(document).ready(function() {
 			
 				
 
-            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233963&amp;R=EVT233963" onClick="TPLEvents.trackEvent('Mapping the Neighbourhood with Art', 'title link', 'Home page featured program record');">Mapping the Neighbourhood with Art</a></div>            
-			
-											
-					<div class="category">Cedarbrae</div>
-				
-																		
-			
-			
-				<div class="author">Sat, Mar 12
-				<span class="time"> @ <span class="start-time">1:00 p.m.</span> 
-			
-				
-				
-				
-				
-				- <span class="end-time">3:00 p.m.</span>						
-				</span>
-									
-				</div>
-			           
-			
-			<div class="details grid_3 alpha omega">
-				<div class="grid_2 alpha">
-           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233963&amp;R=EVT233963" onClick="TPLEvents.trackEvent('Mapping the Neighbourhood with Art','image link','Home page featured program record');">
-						
-							<img alt="Mapping the Neighbourhood with Art" src="//tpl.razuna.com/assets/3434/820E984D822E44E19E734EF951F0A296/img/FF6C3B88526246B28B6647E64E8BB939/Daniel_Rotsztain_cropped-150x185_FF6C3B88526246B28B6647E64E8BB939.jpg"/>
-										
-					</a></div>
-            						
-									
-
-
-
-	
-		
-	
-	
-
-
-
-				
-					
-					
-					
-					
-					
-					<p class="text">Join well-known Toronto artist, mapmaker and writer, Daniel Rotsztain in mapping the n...
-
-					</p>
-						
-					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233963&amp;R=EVT233963" onClick="TPLEvents.trackEvent('Mapping the Neighbourhood with Art','learn more link','Home page featured program record');">Learn More</a>
-					
-            	<div class="clear"></div>
-			</div>        
-        
-			
-			
-
-				
-			
-			
-			
-
-			
-			
-			
-			
-			
-
-			
-			
-
-			
-			
-
-			
-		
-		
-	</div>
-
-							
-												
-													
-						
-						
-						
-							
-
-
-
-
-
-
-
-
- 
-						
-						
-						
-							
-							
-							
-							
-								
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-
-	<!-- Common record display property values, specific format overrides below  -->
-	
-	
-	
-	
-		
-		
-			
-
-	<!-- Display property overrides by datasource format -->
-	
-	
-		
-		
-
-			
-			
-					
-			
-			
-			
-			
-	
-		
-			
-		
-		
-	
-		
-
-
-			
-			
-
-		
-		
-		
-		
-		
-	
-	
-	<!-- Override regular details link with a custom one (used for KTR), for all records -->
-	
-
-	<!-- Override record title based on custom property from Web Studio rule in the form EVT216848-title -->
-				
-		
-	<!-- Override record description based on custom property from Web Studio rule in the form -descritpion -->
-				
-		
-	<!-- Override record's detail link based on custom property from Web Studio rule in the form -link -->
-				
-		
-				
-	
-		
-			
-			
-				
-							
-					
-					
-				
-			
-		
-		
-	
-
-	
-		
-	
-
-	<!-- Date property formatting -->
-	
-		
-				
-		
-			
-			
-			
-	
-
-	
-		
-	
-
-	<!-- Common display formatting (brief, normal/with image) -->
-		
-		<div class="merch-record-horizontal ">
-	
-	
-		
-			
-			
-			
-			
-			
-			
-			
-
-				
-			
-				
-
-            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT216848&amp;R=EVT216848" onClick="TPLEvents.trackEvent('March Break Magic with Magician Scott Dietrich!', 'title link', 'Home page featured program record');">March Break Magic with Magician Scott Dietrich!</a></div>            
-			
-											
-					<div class="category">Albion</div>
-				
-																		
-			
-			
-				<div class="author">Mon, Mar 14
-				<span class="time"> @ <span class="start-time">2:00 p.m.</span> 
-			
-				
-				
-				
-				
-				- <span class="end-time">3:00 p.m.</span>						
-				</span>
-									
-				</div>
-			           
-			
-			<div class="details grid_3 alpha omega">
-				<div class="grid_2 alpha">
-           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT216848&amp;R=EVT216848" onClick="TPLEvents.trackEvent('March Break Magic with Magician Scott Dietrich!','image link','Home page featured program record');">
-						
-							<img alt="March Break Magic with Magician Scott Dietrich!" src="/images/events/SC/march-break.gif"/>
-										
-					</a></div>
-            						
-									
-
-
-
-	
-		
-	
-	
-
-
-
-				
-					
-					
-					
-					
-					
-					<p class="text">Fun and hilarity with an appearance of Sir Walken, Magician Scott?s live rabbit, rubbe...
-
-					</p>
-						
-					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT216848&amp;R=EVT216848" onClick="TPLEvents.trackEvent('March Break Magic with Magician Scott Dietrich!','learn more link','Home page featured program record');">Learn More</a>
-					
-            	<div class="clear"></div>
-			</div>        
-        
-			
-			
-
-				
-			
-			
-			
-
-			
-			
-			
-			
-			
-
-			
-			
-
-			
-			
-
-			
-		
-		
-	</div>
-
-							
-												
-													
-						
-						
-						
-							
-
-
-
-
-
-
-
-
- 
-						
-						
-						
-							
-							
-							
-							
-								
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-
-	<!-- Common record display property values, specific format overrides below  -->
-	
-	
-	
-	
-		
-		
-			
-
-	<!-- Display property overrides by datasource format -->
-	
-	
-		
-		
-
-			
-			
-					
-			
-			
-			
-			
-	
-		
-			
-		
-		
-	
-		
-
-
-			
-			
-
-		
-		
-		
-		
-		
-	
-	
-	<!-- Override regular details link with a custom one (used for KTR), for all records -->
-	
-
-	<!-- Override record title based on custom property from Web Studio rule in the form EVT219969-title -->
-				
-		
-	<!-- Override record description based on custom property from Web Studio rule in the form -descritpion -->
-				
-		
-	<!-- Override record's detail link based on custom property from Web Studio rule in the form -link -->
-				
-		
-				
-	
-		
-			
-			
-				
-							
-					
-					
-				
-			
-		
-		
-	
-
-	
-		
-	
-
-	<!-- Date property formatting -->
-	
-		
-				
-		
-			
-			
-			
-	
-
-	
-		
-	
-
-	<!-- Common display formatting (brief, normal/with image) -->
-		
-		<div class="merch-record-horizontal ">
-	
-	
-		
-			
-			
-			
-			
-			
-			
-			
-
-				
-			
-				
-
-            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT219969&amp;R=EVT219969" onClick="TPLEvents.trackEvent('Mind Reading ft. Mysterion', 'title link', 'Home page featured program record');">Mind Reading ft. Mysterion</a></div>            
-			
-											
-					<div class="category">Danforth/Coxwell</div>
-				
-																		
-			
-			
-				<div class="author">Mon, Mar 14
-				<span class="time"> @ <span class="start-time">2:00 p.m.</span> 
-			
-				
-				
-				
-				
-				- <span class="end-time">2:45 p.m.</span>						
-				</span>
-									
-				</div>
-			           
-			
-			<div class="details grid_3 alpha omega">
-				<div class="grid_2 alpha">
-           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT219969&amp;R=EVT219969" onClick="TPLEvents.trackEvent('Mind Reading ft. Mysterion','image link','Home page featured program record');">
-						
-							<img alt="Mind Reading ft. Mysterion" src="/images/events/SC/march-break.gif"/>
-										
-					</a></div>
-            						
-									
-
-
-
-	
-		
-	
-	
-
-
-
-				
-					
-					
-					
-					
-					
-					<p class="text">Join us for a mind blowing magic show featuring mentalism, the supernatural, spoon ben...
-
-					</p>
-						
-					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT219969&amp;R=EVT219969" onClick="TPLEvents.trackEvent('Mind Reading ft. Mysterion','learn more link','Home page featured program record');">Learn More</a>
-					
-            	<div class="clear"></div>
-			</div>        
-        
-			
-			
-
-				
-			
-			
-			
-
-			
-			
-			
-			
-			
-
-			
-			
-
-			
-			
-
-			
-		
-		
-	</div>
-
-							
-												
-													
-						
-						
-						
-							
-
-
-
-
-
-
-
-
- 
-						
-						
-						
-							
-							
-							
-							
-								
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-
-	<!-- Common record display property values, specific format overrides below  -->
-	
-	
-	
-	
-		
-		
-			
-
-	<!-- Display property overrides by datasource format -->
-	
-	
-		
-		
-
-			
-			
-					
-			
-			
-			
-			
-	
-		
-			
-		
-		
-	
-		
-
-
-			
-			
-
-		
-		
-		
-		
-		
-	
-	
-	<!-- Override regular details link with a custom one (used for KTR), for all records -->
-	
-
-	<!-- Override record title based on custom property from Web Studio rule in the form EVT215311-title -->
-				
-		
-	<!-- Override record description based on custom property from Web Studio rule in the form -descritpion -->
-				
-		
-	<!-- Override record's detail link based on custom property from Web Studio rule in the form -link -->
-				
-		
-				
-	
-		
-			
-			
-				
-					
-
-
-
-
-		
-		
-				
-
-
-
-
-
-	
-	
-				
-	
-
-					
-				
-				
-			
-		
-		
-	
-
-	
-		
-	
-
-	<!-- Date property formatting -->
-	
-		
-				
-		
-			
-			
-			
-	
-
-	
-		
-	
-
-	<!-- Common display formatting (brief, normal/with image) -->
-		
-		<div class="merch-record-horizontal ">
-	
-	
-		
-			
-			
-			
-			
-			
-			
-			
-
-				
-			
-				
-
-            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT215311&amp;R=EVT215311" onClick="TPLEvents.trackEvent('Disarming Conflict: Why Peace Cannot Be Won on the Battlefield', 'title link', 'Home page featured program record');">Disarming Conflict: Why Peace Cannot Be Won on the Battlefield</a></div>            
+            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233426&amp;R=EVT233426" onClick="TPLEvents.trackEvent('The Reality and Rhetoric of the Apocalypse', 'title link', 'Home page featured program record');">The Reality and Rhetoric of the Apocalypse</a></div>            
 			
 											
 					<div class="category">Toronto Reference Library</div>
@@ -3587,7 +3002,7 @@ jQuery(document).ready(function() {
 																		
 			
 			
-				<div class="author">Tue, Mar 15
+				<div class="author">Mon, May 09
 				<span class="time"> @ <span class="start-time">6:30 p.m.</span> 
 			
 				
@@ -3602,9 +3017,9 @@ jQuery(document).ready(function() {
 			
 			<div class="details grid_3 alpha omega">
 				<div class="grid_2 alpha">
-           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT215311&amp;R=EVT215311" onClick="TPLEvents.trackEvent('Disarming Conflict: Why Peace Cannot Be Won on the Battlefield','image link','Home page featured program record');">
+           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233426&amp;R=EVT233426" onClick="TPLEvents.trackEvent('The Reality and Rhetoric of the Apocalypse','image link','Home page featured program record');">
 						
-							<img alt="Disarming Conflict: Why Peace Cannot Be Won on the Battlefield" src="//tpl.razuna.com/assets/3434/F3981624875F4CA9980FE2410F89054A/img/96129B63587B4A9585F160FA9127267B/Ernie_Regehr_cropped-150x185_96129B63587B4A9585F160FA9127267B.jpg"/>
+							<img alt="The Reality and Rhetoric of the Apocalypse" src="//tpl.razuna.com/assets/3434/820E984D822E44E19E734EF951F0A296/img/6C0F8212C59C498F9F7CB68280D0076A/Allan_Weiss_cropped-150x185_6C0F8212C59C498F9F7CB68280D0076A.jpg"/>
 										
 					</a></div>
             						
@@ -3625,11 +3040,11 @@ jQuery(document).ready(function() {
 					
 					
 					
-					<p class="text">Join Ernie Regehr, famed peace activist and co-founder of Project Ploughshares, for a ...
+					<p class="text">Professor Allan Weiss, York University, author of mainstream/literary, science fiction...
 
 					</p>
 						
-					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT215311&amp;R=EVT215311" onClick="TPLEvents.trackEvent('Disarming Conflict: Why Peace Cannot Be Won on the Battlefield','learn more link','Home page featured program record');">Learn More</a>
+					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233426&amp;R=EVT233426" onClick="TPLEvents.trackEvent('The Reality and Rhetoric of the Apocalypse','learn more link','Home page featured program record');">Learn More</a>
 					
             	<div class="clear"></div>
 			</div>        
@@ -3739,7 +3154,7 @@ jQuery(document).ready(function() {
 	<!-- Override regular details link with a custom one (used for KTR), for all records -->
 	
 
-	<!-- Override record title based on custom property from Web Studio rule in the form EVT219448-title -->
+	<!-- Override record title based on custom property from Web Studio rule in the form EVT223928-title -->
 				
 		
 	<!-- Override record description based on custom property from Web Studio rule in the form -descritpion -->
@@ -3816,7 +3231,7 @@ jQuery(document).ready(function() {
 			
 				
 
-            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT219448&amp;R=EVT219448" onClick="TPLEvents.trackEvent('Not Strictly Shakespeare: The Hypochondriac', 'title link', 'Home page featured program record');">Not Strictly Shakespeare: The Hypochondriac</a></div>            
+            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT223928&amp;R=EVT223928" onClick="TPLEvents.trackEvent('Star Talks: Shakespeare in Love - Atrium', 'title link', 'Home page featured program record');">Star Talks: Shakespeare in Love - Atrium </a></div>            
 			
 											
 					<div class="category">Toronto Reference Library</div>
@@ -3824,7 +3239,7 @@ jQuery(document).ready(function() {
 																		
 			
 			
-				<div class="author">Tue, Mar 15
+				<div class="author">Mon, May 09
 				<span class="time"> @ <span class="start-time">7:00 p.m.</span> 
 			
 				
@@ -3839,9 +3254,9 @@ jQuery(document).ready(function() {
 			
 			<div class="details grid_3 alpha omega">
 				<div class="grid_2 alpha">
-           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT219448&amp;R=EVT219448" onClick="TPLEvents.trackEvent('Not Strictly Shakespeare: The Hypochondriac','image link','Home page featured program record');">
+           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT223928&amp;R=EVT223928" onClick="TPLEvents.trackEvent('Star Talks: Shakespeare in Love - Atrium','image link','Home page featured program record');">
 						
-							<img alt="Not Strictly Shakespeare: The Hypochondriac" src="http://tpl.razuna.com/assets/3434/91CC4938E60A4BDF9FF37D1399221D85/img/BBCD5D0E73B04008AD7CA920629B3F37/Shakespeare400_logo_cropped-150x185_BBCD5D0E73B04008AD7CA920629B3F37.jpg"/>
+							<img alt="Star Talks: Shakespeare in Love - Atrium " src="//tpl.razuna.com/assets/3434/3EE761BBBED6438394C1437944C16B6B/img/D969342EE2BB475DB34708734C8CA12A/Shakespeare_in_Love_cropped-150x185_D969342EE2BB475DB34708734C8CA12A.jpg"/>
 										
 					</a></div>
             						
@@ -3862,11 +3277,722 @@ jQuery(document).ready(function() {
 					
 					
 					
-					<p class="text">Dr. Philippa Sheppard on the farce, irony and medical quackery of Molière's imaginary ...
+					<p class="text">Stratford Festival's Luke Humphrey and Shannon Taylor talk about the North American pr...
 
 					</p>
 						
-					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT219448&amp;R=EVT219448" onClick="TPLEvents.trackEvent('Not Strictly Shakespeare: The Hypochondriac','learn more link','Home page featured program record');">Learn More</a>
+					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT223928&amp;R=EVT223928" onClick="TPLEvents.trackEvent('Star Talks: Shakespeare in Love - Atrium','learn more link','Home page featured program record');">Learn More</a>
+					
+            	<div class="clear"></div>
+			</div>        
+        
+			
+			
+
+				
+			
+			
+			
+
+			
+			
+			
+			
+			
+
+			
+			
+
+			
+			
+
+			
+		
+		
+	</div>
+
+							
+												
+													
+						
+						
+						
+							
+
+
+
+
+
+
+
+
+ 
+						
+						
+						
+							
+							
+							
+							
+								
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+	<!-- Common record display property values, specific format overrides below  -->
+	
+	
+	
+	
+		
+		
+			
+
+	<!-- Display property overrides by datasource format -->
+	
+	
+		
+		
+
+			
+			
+					
+			
+			
+			
+			
+	
+		
+			
+		
+		
+	
+		
+
+
+			
+			
+
+		
+		
+		
+		
+		
+	
+	
+	<!-- Override regular details link with a custom one (used for KTR), for all records -->
+	
+
+	<!-- Override record title based on custom property from Web Studio rule in the form EVT226902-title -->
+				
+		
+	<!-- Override record description based on custom property from Web Studio rule in the form -descritpion -->
+				
+		
+	<!-- Override record's detail link based on custom property from Web Studio rule in the form -link -->
+				
+		
+				
+	
+		
+			
+			
+				
+					
+
+
+
+
+		
+		
+				
+
+
+
+
+
+	
+	
+				
+	
+
+					
+				
+				
+			
+		
+		
+	
+
+	
+		
+	
+
+	<!-- Date property formatting -->
+	
+		
+				
+		
+			
+			
+			
+	
+
+	
+		
+	
+
+	<!-- Common display formatting (brief, normal/with image) -->
+		
+		<div class="merch-record-horizontal ">
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+
+				
+			
+				
+
+            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT226902&amp;R=EVT226902" onClick="TPLEvents.trackEvent('Sandra Martin', 'title link', 'Home page featured program record');">Sandra Martin</a></div>            
+			
+											
+					<div class="category">North York Central Library</div>
+				
+																		
+			
+			
+				<div class="author">Tue, May 10
+				<span class="time"> @ <span class="start-time">7:00 p.m.</span> 
+			
+				
+				
+				
+				
+				- <span class="end-time">8:00 p.m.</span>						
+				</span>
+									
+				</div>
+			           
+			
+			<div class="details grid_3 alpha omega">
+				<div class="grid_2 alpha">
+           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT226902&amp;R=EVT226902" onClick="TPLEvents.trackEvent('Sandra Martin','image link','Home page featured program record');">
+						
+							<img alt="Sandra Martin" src="//tpl.razuna.com/assets/3434/F3981624875F4CA9980FE2410F89054A/img/F9588D3ADE4E47FE99318822FBB7AA63/Sandra_Martin_cropped-150x185_F9588D3ADE4E47FE99318822FBB7AA63.jpg"/>
+										
+					</a></div>
+            						
+									
+
+
+
+	
+		
+	
+	
+
+
+
+				
+					
+					
+					
+					
+					
+					<p class="text">The eh List Author Series presents award winning journalist Sandra Martin on her lates...
+
+					</p>
+						
+					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT226902&amp;R=EVT226902" onClick="TPLEvents.trackEvent('Sandra Martin','learn more link','Home page featured program record');">Learn More</a>
+					
+            	<div class="clear"></div>
+			</div>        
+        
+			
+			
+
+				
+			
+			
+			
+
+			
+			
+			
+			
+			
+
+			
+			
+
+			
+			
+
+			
+		
+		
+	</div>
+
+							
+												
+													
+						
+						
+						
+							
+
+
+
+
+
+
+
+
+ 
+						
+						
+						
+							
+							
+							
+							
+								
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+	<!-- Common record display property values, specific format overrides below  -->
+	
+	
+	
+	
+		
+		
+			
+
+	<!-- Display property overrides by datasource format -->
+	
+	
+		
+		
+
+			
+			
+					
+			
+			
+			
+			
+	
+		
+			
+		
+		
+	
+		
+
+
+			
+			
+
+		
+		
+		
+		
+		
+	
+	
+	<!-- Override regular details link with a custom one (used for KTR), for all records -->
+	
+
+	<!-- Override record title based on custom property from Web Studio rule in the form EVT234751-title -->
+				
+		
+	<!-- Override record description based on custom property from Web Studio rule in the form -descritpion -->
+				
+		
+	<!-- Override record's detail link based on custom property from Web Studio rule in the form -link -->
+				
+		
+				
+	
+		
+			
+			
+				
+					
+
+
+
+
+		
+		
+				
+
+
+
+
+
+	
+	
+				
+	
+
+					
+				
+				
+			
+		
+		
+	
+
+	
+		
+	
+
+	<!-- Date property formatting -->
+	
+		
+				
+		
+			
+			
+			
+	
+
+	
+		
+	
+
+	<!-- Common display formatting (brief, normal/with image) -->
+		
+		<div class="merch-record-horizontal ">
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+
+				
+			
+				
+
+            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT234751&amp;R=EVT234751" onClick="TPLEvents.trackEvent('Guy Gavriel Kay', 'title link', 'Home page featured program record');">Guy Gavriel Kay </a></div>            
+			
+											
+					<div class="category">Toronto Reference Library</div>
+				
+																		
+			
+			
+				<div class="author">Wed, May 11
+				<span class="time"> @ <span class="start-time">7:00 p.m.</span> 
+			
+				
+				
+				
+				
+				- <span class="end-time">8:30 p.m.</span>						
+				</span>
+									
+				</div>
+			           
+			
+			<div class="details grid_3 alpha omega">
+				<div class="grid_2 alpha">
+           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT234751&amp;R=EVT234751" onClick="TPLEvents.trackEvent('Guy Gavriel Kay','image link','Home page featured program record');">
+						
+							<img alt="Guy Gavriel Kay " src="//tpl.razuna.com/assets/3434/18A902D4AEB94005AC47D7425072993D/img/C09EE8CA7B2B4325954B1AA4CDDDA993/Guy_Gavriel_Kay_cropped-150x185_C09EE8CA7B2B4325954B1AA4CDDDA993.jpg"/>
+										
+					</a></div>
+            						
+									
+
+
+
+	
+		
+	
+	
+
+
+
+				
+					
+					
+					
+					
+					
+					<p class="text">The bestselling author of the groundbreaking novels Under Heaven and River of Stars on...
+
+					</p>
+						
+					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT234751&amp;R=EVT234751" onClick="TPLEvents.trackEvent('Guy Gavriel Kay','learn more link','Home page featured program record');">Learn More</a>
+					
+            	<div class="clear"></div>
+			</div>        
+        
+			
+			
+
+				
+			
+			
+			
+
+			
+			
+			
+			
+			
+
+			
+			
+
+			
+			
+
+			
+		
+		
+	</div>
+
+							
+												
+													
+						
+						
+						
+							
+
+
+
+
+
+
+
+
+ 
+						
+						
+						
+							
+							
+							
+							
+								
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+	<!-- Common record display property values, specific format overrides below  -->
+	
+	
+	
+	
+		
+		
+			
+
+	<!-- Display property overrides by datasource format -->
+	
+	
+		
+		
+
+			
+			
+					
+			
+			
+			
+			
+	
+		
+			
+		
+		
+	
+		
+
+
+			
+			
+
+		
+		
+		
+		
+		
+	
+	
+	<!-- Override regular details link with a custom one (used for KTR), for all records -->
+	
+
+	<!-- Override record title based on custom property from Web Studio rule in the form EVT233349-title -->
+				
+		
+	<!-- Override record description based on custom property from Web Studio rule in the form -descritpion -->
+				
+		
+	<!-- Override record's detail link based on custom property from Web Studio rule in the form -link -->
+				
+		
+				
+	
+		
+			
+			
+				
+					
+
+
+
+
+		
+		
+				
+
+
+
+
+
+	
+	
+				
+	
+
+					
+				
+				
+			
+		
+		
+	
+
+	
+		
+	
+
+	<!-- Date property formatting -->
+	
+		
+				
+		
+			
+			
+			
+	
+
+	
+		
+	
+
+	<!-- Common display formatting (brief, normal/with image) -->
+		
+		<div class="merch-record-horizontal ">
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+
+				
+			
+				
+
+            <div class="title"><a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233349&amp;R=EVT233349" onClick="TPLEvents.trackEvent('Book Launch for Nora Gold\'s \"The Dead Man\"', 'title link', 'Home page featured program record');">Book Launch for Nora Gold&#039;s &#034;The Dead Man&#034;</a></div>            
+			
+											
+					<div class="category">Wychwood</div>
+				
+																		
+			
+			
+				<div class="author">Thu, May 12
+				<span class="time"> @ <span class="start-time">7:00 p.m.</span> 
+			
+				
+				
+				
+				
+				- <span class="end-time">8:00 p.m.</span>						
+				</span>
+									
+				</div>
+			           
+			
+			<div class="details grid_3 alpha omega">
+				<div class="grid_2 alpha">
+           		 	<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233349&amp;R=EVT233349" onClick="TPLEvents.trackEvent('Book Launch for Nora Gold\'s \"The Dead Man\"','image link','Home page featured program record');">
+						
+							<img alt="Book Launch for Nora Gold's "The Dead Man"" src="//tpl.razuna.com/assets/3434/76741ED357CD49D19F2CC3BA251E0BD6/img/F4789238972342A4900B0AFB3A8D86C0/Nora_Gold_cropped-150x185_F4789238972342A4900B0AFB3A8D86C0.jpg"/>
+										
+					</a></div>
+            						
+									
+
+
+
+	
+		
+	
+	
+
+
+
+				
+					
+					
+					
+					
+					
+					<p class="text">Author Nora Gold's new book "The Dead Man" is a novel touched with mystery and romance...
+
+					</p>
+						
+					<a href="/detail.jsp?Em=1&amp;Entt=RDMEVT233349&amp;R=EVT233349" onClick="TPLEvents.trackEvent('Book Launch for Nora Gold\'s \"The Dead Man\"','learn more link','Home page featured program record');">Learn More</a>
 					
             	<div class="clear"></div>
 			</div>        
@@ -4060,14 +4186,6 @@ jQuery(document).ready(function() {
 						ga('send', 'pageview');				
 				} catch(err) {}
 			</script> 
-<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js"></script>
-<script>
-  WebFont.load({
-    google: {
-    	families: ['Open+Sans:400,300,600,700:latin']
-    }
-  });
-</script>
  	</body>
 
 </html>

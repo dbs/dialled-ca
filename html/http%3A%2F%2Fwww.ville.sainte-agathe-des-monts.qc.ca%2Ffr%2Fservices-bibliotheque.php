@@ -11,8 +11,8 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta http-equiv="content-language" name="language" content="fr" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link href="/css/commun/screen.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="/css/fr/screen.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/css/commun/screen.css?2016032901" rel="stylesheet" type="text/css" media="screen" />
+<link href="/css/fr/screen.css?2016032901" rel="stylesheet" type="text/css" media="screen" />
 <link href="/css/commun/print.css" rel="stylesheet" type="text/css" media="print" />
 <!--[if lte IE 7]>
 	<link href="/css/commun/cBase2.0/ie.css" rel="stylesheet" type="text/css" media="all" />
@@ -160,6 +160,8 @@ document.observe('dom:loaded', function() {
             <li><a href="services-incendie.php">Service incendie</a>
             <li><a href="services-camp-de-jour.php">Camp de jour</a>
             			</li>
+			<li><a href="https://www.sport-plus-online.com/Prmsinsc/Pages/Accueil.aspx?VirId=167&amp;ArrId=226" target="_blank">Inscription en ligne</a></li>
+			<li><a href="services-carte-agathoise.php">Carte AGATHOISE</a></li>
 		</ul>
 	</div>
 	<div class="shadow over"></div>
@@ -268,7 +270,7 @@ document.observe('dom:loaded', function() {
 
 			<div id="pageColumn2">
 			<!-- pageColumn2 start here -->									
-				<div id="bannerSection"><img src="images/flash_section-hiver.jpg" alt="Sainte-Agathe-des-Monts" /></div>
+				<div id="bannerSection"><img src="images/flash_section-ete.jpg" alt="Sainte-Agathe-des-Monts" /></div>
 				<div class="titleSection"><h3 class="sIFR_helveticaSection">BibliothÃ¨que</h3></div>
 				<div class="content_holder">
 				
@@ -288,7 +290,7 @@ document.observe('dom:loaded', function() {
 				  <p>La bibliothÃ¨que propose Ã  sa clientÃ¨le une collection de  prÃ¨s de 33 000 livres, une cinquantaine de pÃ©riodiques, quatre postes de  travail internet disponibles sur rÃ©servation ainsi qu'un rÃ©seau internet sans  fil.</p>
 				  <p><a href="http://www.reseaubiblioduquebec.qc.ca/portail/index.aspx?page=2&amp;RID=5" class="blank">L'adhÃ©sion au rÃ©seau Biblio</a> permet entre autres la recherche  de documents en ligne ainsi que le prÃªt auprÃ¨s de bibliothÃ¨ques situÃ©es au  QuÃ©bec, au Canada ainsi qu'aux Ãtats-Unis. </p>
 				  <p>Pour se prÃ©valoir des services du RÃ©seau Biblio, un NIP est  nÃ©cessaire et disponible au comptoir de prÃªt de la bibliothÃ¨que.</p>
-				  <p>La BibliothÃ¨que rend hommage Ã  Gaston Miron en prÃ©sentant la  collection d'estampes Miron le Magnifique ainsi qu'une armoire dÃ©diÃ©e aux prix  et honneurs du cÃ©lÃ¨bre poÃ¨te dÃ©cÃ©dÃ© en 1996. Elle offre Ã©galement <a href="../contribute_documents/DG_CC_ProgrammationAout2015_Web.pdf">un programme  d'animation pour les enfants </a>tel que &quot;Une naissance un livre &quot;,  l'heure du conte et le club des Aventuriers du livre.</p>
+				  <p>La BibliothÃ¨que rend hommage Ã  Gaston Miron en prÃ©sentant la  collection d'estampes Miron le Magnifique ainsi qu'une armoire dÃ©diÃ©e aux prix  et honneurs du cÃ©lÃ¨bre poÃ¨te dÃ©cÃ©dÃ© en 1996. Elle offre Ã©galement <a href="../CGUploadDir/documents/programmationavril2016_u160330091906.pdf">un programme  d'animation pour les enfants</a> tel que &quot;Une naissance un livre &quot;,  l'heure du conte et le club des Aventuriers du livre.</p>
 				  <ul>
 					<li><a href="http://www.mabibliotheque.ca/laurentides/fr/bibliotheques-horaire-et-localisation/B710-sainte-agathe-des-monts-bibliotheque-gaston-miron/index.aspx">Catalogue en ligne</a></li>
 					<li><a href="../contribute_documents/Reglementation2010versioncorrigeenovembre2014.pdf" target="_blank" class="blank">Les rÃ¨glements</a></li>
@@ -338,7 +340,7 @@ document.observe('dom:loaded', function() {
 						<li><a href="/fr/ville-politiques-municipales.php">Politiques municipales</a></li>	
 						<li><a href="/fr/ville-organigramme.php">Services municipaux</a></li>
 						<li><a href="/fr/ville-politique-gestion-contractuelle.php">Politique de gestion contractuelle</a></li>
-						<li><a href="http://www.jobillico.com/voir-entreprise/ville-de-sainte-agathe-des-monts.tHyaKd" target="_blank">Offres d'emplois</a></li>
+						<li><a href="/fr/emplois.php">Offres d'emplois</a></li>
 						<li><a href="/fr/ville-elections-municipales.php">Ãlections municipales 2013</a></li>
 						<li><a href="/fr/ville-developpement-economique.php">StratÃ©gie de dÃ©veloppement Ã©conomique et de lâemploi</a></li>
 					</ul>
@@ -364,7 +366,9 @@ document.observe('dom:loaded', function() {
 						<li><a href="/fr/services-repertoire.php">RÃ©pertoire des organismes</a></li>
 						<li><a href="/fr/services-stationnement.php">Stationnement</a></li>
                         <li><a href="/fr/services-incendie.php">Service incendie</a></li>
-                        <li><a href="/fr/services-camp-de-jour.php">Camp de jour</a></li>	
+                        <li><a href="/fr/services-camp-de-jour.php">Camp de jour</a></li>
+						<li><a href="https://www.sport-plus-online.com/Prmsinsc/Pages/Accueil.aspx?VirId=167&amp;ArrId=226" target="_blank">Inscription en ligne</a></li>
+						<li><a href="services-carte-agathoise.php">Carte AGATHOISE</a></li>
 					</ul>
 					<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 				</li>

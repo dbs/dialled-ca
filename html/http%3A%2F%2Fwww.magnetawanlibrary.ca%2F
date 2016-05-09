@@ -3,132 +3,42 @@
 <title>Magnetawan Public Library</title>
 <link rel="shortcut icon" href="/images/lighthousetab.ico"> 
 
-<!--FALL TIME LEAVES-->
-<SCRIPT type="text/javascript" language="JavaScript1.2">
-/*
-Autumn Fall Timeout JavaScript
-Visit http://rainbow.arch.scriptmania.com/scripts/
-  for this script and many more
-*/
- 
-//Pre-loads your images below
-//Configure below - change URL path to your images
+<script type="text/javascript"> 
 
-grphcs=new Array(8)
-Image0=new Image();
-Image0.src=grphcs[0]="images/alv.gif";
-Image1=new Image();
-Image1.src=grphcs[1]="images/clv.gif"
-Image2=new Image();
-Image2.src=grphcs[2]="images/dlv.gif"
-Image3=new Image();
-Image3.src=grphcs[3]="images/elv.gif"
-Image4=new Image();
-Image4.src=grphcs[4]="images/oak1.gif"
-Image5=new Image();
-Image5.src=grphcs[5]="images/oak2.gif"
-Image6=new Image();
-Image6.src=grphcs[6]="images/oak4.gif"
-Image7=new Image();
-Image7.src=grphcs[7]="images/oak6.gif"
+var currPic=1; 
+var totPics=5; 
+var keepTime; 
 
-//Smoothness depends on image file size, 
-//the smaller the size the more you can use!
+//Functions for Flower Pot and flowers
+function FlowerPot()
+{
+	setTimeout("changePic()", 3000);
+}
+function changePic() 
+{ 	
+	currPic++;
+	if(currPic>totPics) currPic=5;
+		
+	document.getElementById("FlowerPot1").src="images/flower"+currPic+".png"; 
+	document.getElementById("FlowerPot2").src="images/flowerrotate"+currPic+".png"; 
+	
+	FlowerPot();
+	
+		
+}
+function refresh()
+{
+	currPic=0;
+}
+function start()
+{
+	FlowerPot();
+	setInterval("refresh()",30000);
+}
+</script>
+</head>
 
-// Configure below - change number of images to render
-Amount=15; 
-
-Ypos=new Array();
-Xpos=new Array();
-Speed=new Array();
-Step=new Array();
-Cstep=new Array();
-ns=(document.layers)?1:0;
-ns6=(document.getElementById&&!document.all)?1:0;
-var Stop = false; 
-
-if (ns){
-for (i = 0; i < Amount; i++){
-var P=Math.floor(Math.random()*grphcs.length);
-rndPic=grphcs[P];
-document.write("<LAYER NAME='sn"+i+"' LEFT=0 TOP=0><img src="+rndPic+"></LAYER>");
-}
-}
-else{
-document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
-for (i = 0; i < Amount; i++){
-var P=Math.floor(Math.random()*grphcs.length);
-rndPic=grphcs[P];
-document.write('<img id="si'+i+'" src="'+rndPic+'" style="position:absolute;top:0px;left:0px">');
-}
-document.write('</div></div>');
-}
-WinHeight=(ns||ns6)?window.innerHeight:window.document.body.clientHeight;
-WinWidth=(ns||ns6)?window.innerWidth-70:window.document.body.clientWidth;
-for (i=0; i < Amount; i++){
-Ypos[i] = Math.round(Math.random()*WinHeight);
-Xpos[i] = Math.round(Math.random()*WinWidth);
-Speed[i]= Math.random()*5+3;
-Cstep[i]=0;
-Step[i]=Math.random()*0.1+0.05;
-}
-function fall(){
-if (Stop) { clearLeaves(); return; }
-
-var WinHeight=(ns||ns6)?window.innerHeight:window.document.body.clientHeight;
-var WinWidth=(ns||ns6)?window.innerWidth-70:window.document.body.clientWidth;
-var hscrll=(ns||ns6)?window.pageYOffset:document.body.scrollTop;
-var wscrll=(ns||ns6)?window.pageXOffset:document.body.scrollLeft;
-for (i=0; i < Amount; i++){
-sy = Speed[i]*Math.sin(90*Math.PI/180);
-sx = Speed[i]*Math.cos(Cstep[i]);
-Ypos[i]+=sy;
-Xpos[i]+=sx;
-if (Ypos[i] > WinHeight){
-Ypos[i]=-60;
-Xpos[i]=Math.round(Math.random()*WinWidth);
-Speed[i]=Math.random()*5+3;
-}
-if (ns){
-document.layers['sn'+i].left=Xpos[i];
-document.layers['sn'+i].top=Ypos[i]+hscrll;
-}
-else if (ns6){
-document.getElementById("si"+i).style.left=Math.min(WinWidth,Xpos[i]);
-document.getElementById("si"+i).style.top=Ypos[i]+hscrll;
-}
-else{
-eval("document.all.si"+i).style.left=Xpos[i];
-eval("document.all.si"+i).style.top=Ypos[i]+hscrll;
-}
-Cstep[i]+=Step[i];
-}
-setTimeout('fall()',120);
-}
-
-window.onload=fall;
-
-//  *****  Delay FUNCTION HERE  *****
-
-setTimeout("Stop=true", 20000);  //  *****  Delay 1000 = 1 second  *****
-
-function clearLeaves(){
-for (i=0; i < Amount; i++){
-if (ns){
-document.layers['sn'+i].display='none';
-}
-else if (ns6){
-document.getElementById("si"+i).style.display='none';
-}
-else{
-eval("document.all.si"+i).style.display='none';
-}
-}
-}
-</SCRIPT>
-
-
-<body  bgcolor="#c6e7de" align="center">
+<body  bgcolor="#c6e7de" align="center" onload="start();">
 
 <!--Background Colour & Sets page longer than images to allow leaves etc to fall without jumping the page//-->
 
@@ -136,14 +46,13 @@ eval("document.all.si"+i).style.display='none';
 	<h1>Magnetawan Public Library</h1>
 
 	<hr size=5 width=95% align=center color="grey">
-	
-	<!--Flower Pots for the Summer-->
-	<!--<div><img id="FlowerPot1" alt="Flower Pot with Growing Flowers" align="Left" width="305" height="435" src="images/flower1.png"></div>
-	<div><img id="FlowerPot2" alt="Flower Pot with Growing Flowers" align="Right" width="305" height="435" src="images/flowerrotate1.png"></div>//-->	
-	
-	<a href="home.html"><H1><U><b>Enter Site</b></U></H1></a>
-	<a nohref ONMOUSEOVER="document.owlchange.src='images/owlopen.jpg'" ONMOUSEOUT="document.owlchange.src='images/owlclosed.jpg'">
-	<img src="images/owlclosed.jpg" alt="Owl's Eyes Open and Closed" NAME="owlchange" width=275 height=435>
+
+	<div><img id="FlowerPot1" alt="Flower" align="Left" width="305" height="435" src="images/flower1.png"></div>
+	<div><img id="FlowerPot2" alt="Flower" align="Right" width="305" height="435" src="images/flowerrotate1.png"></div>	
+
+		<a href="home.html"><H1><U><b>EnterSite</b></U></H1></a>
+	<a nohref ONMOUSEOVER="document.owlchange.src='images/owlopen.jpg'" 	ONMOUSEOUT="document.owlchange.src='images/owlclosed.jpg'">
+	<img src="images/owlclosed.jpg" NAME="owlchange" width=275 height=435>
 	</a>
 	
 	
@@ -155,7 +64,7 @@ eval("document.all.si"+i).style.display='none';
 
 
 
-<center><p><font face="arial" size="-2">JavaScript Logic Assisted by </font><br><font face="arial, helvetica" size="-2"><a href="http://rainbow.arch.scriptmania.com/scripts/" target=_blank>Rainbow Arch</a></font></p>
+<center><p><font face="arial" size="-2">JavaScript Logic Assisted by </font><br><font face="arial, helvetica" size="-2"><a href="http://rainbow.arch.scriptmania.com/scripts/">Rainbow Arch</a></font></p>
 </center>
 
 </body>

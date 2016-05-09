@@ -63,7 +63,7 @@
 					</div>
 					<div id="date_jour">
 						<a class="txt_blanc_bold_header_14">
-							Vendredi, le 11 mars 2016						</a>
+							Lundi, le  9 mai 2016						</a>
 					</div>
 					<div id="logo_mrc"><a href="http://www.mrclotbiniere.org/"> <img src="http://www.ville.saint-sylvestre.qc.ca/i-images/logo_small_mrc.gif" alt="Logo_MRC" />
 						<a class="txt_noir_header_mrc_12" href="http://www.mrclotbiniere.org/">Site officiel de la MRC de Lotbini&egrave;re</a>
@@ -80,23 +80,23 @@
 			
 			<!--  slideshow regulier-->
 			
-				<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="970" height="283" >
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="970" height="283" >
 					<param name="movie" value="http://www.ville.saint-sylvestre.qc.ca/h-flash/slide_p_1024.swf" />
 					<param name="quality" value="high" />
 					<param name="wmode" value="transparent"/>
 					<embed src="http://www.ville.saint-sylvestre.qc.ca/h-flash/slide_p_1024.swf" quality="high" wmode="transparent" pluginspage="http://get.adobe.com/fr/flashplayer/otherversions/" type="application/x-shockwave-flash" width="970" height="283" />
 				</object>
-			</div>-->
+			</div>
 					
 			<!--slideshow pour l'hiver-->
 				
-				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="970" height="283" id="slide_winter_970" align="middle">
+				<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="970" height="283" id="slide_winter_970" align="middle">
 					<param name="movie" value="http://www.ville.saint-sylvestre.qc.ca/h-flash/slide_winter_970.swf" />
 					<param name="quality" value="high" />
 					<param name="wmode" value="transparent" />
 					<embed src="http://www.ville.saint-sylvestre.qc.ca/h-flash/slide_winter_970.swf" quality="high" wmode="transparent" pluginspage="http://get.adobe.com/fr/flashplayer/otherversions/" type="application/x-shockwave-flash" width="970" height="283" />
 				</object>
-			</div>
+			</div>-->
 			
 			<!--<div id="flashContent">
 				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="970" height="283" id="slide_winter_970" align="middle">
@@ -175,6 +175,7 @@
 									<li><a href="http://www.ville.saint-sylvestre.qc.ca/b-services/avis.php">Avis publics</a></li>
 									<li><a href="#" class="fly">Proc&egrave;s verbaux</a>
 										<ul>
+											<li><a href="http://www.ville.saint-sylvestre.qc.ca/b-services/proces_verbaux1617.php">Proc&egrave;s verbaux 2016-2017</a></li>
 											<li><a href="http://www.ville.saint-sylvestre.qc.ca/b-services/proces_verbaux1415.php">Proc&egrave;s verbaux 2014-2015</a></li>
 											<li><a href="http://www.ville.saint-sylvestre.qc.ca/b-services/proces_verbaux1213.php">Proc&egrave;s verbaux 2012-2013</a></li>
 											<li><a href="http://www.ville.saint-sylvestre.qc.ca/b-services/proces_verbaux1011.php">Proc&egrave;s verbaux 2010-2011</a></li>

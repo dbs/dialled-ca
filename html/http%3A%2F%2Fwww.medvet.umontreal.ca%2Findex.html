@@ -26,6 +26,9 @@ UdeM_menu {
 	margin-bottom: 10px;
 }
 
+UdeM_menu a:link, UdeM_menu a:visited {
+	color:#000;
+}
 
 /* ~~ Sélecteurs d'éléments/balises ~~ */
 ul, ol, dl { 
@@ -54,9 +57,9 @@ a:hover, a:active, a:focus {
 }
 
 .container {
-	width: 85%;
+	width: 100%;
 	max-width: 960px;
-	min-width: 790px;
+	min-width: 770px;
 	background-color: #FFF;
 	margin: 0 auto;
 }
@@ -100,7 +103,7 @@ a:hover, a:active, a:focus {
 
 .sidebar2 {
 	float: left;
-	width: 160px;
+	width: 18%;
 	background-color: #FFF;
 	padding: 0px 10px 10px 10px;
 }
@@ -111,7 +114,7 @@ a:hover, a:active, a:focus {
 	
 .content {
 	padding: 0px 10px 10px 10px;
-	width: 500px;
+	width: 55%;
 	float: left;
 	font-size: small;
 }
@@ -128,18 +131,23 @@ a:hover, a:active, a:focus {
 	background-color: #006bb7;
 	color: white;
 	display: block;
-	width: 500px;
+	width: 55%;
 	font-size: small;
-	padding: 10px 10px 10px 10px;
+	padding: 10px;
 	margin-bottom: 5px;
-	text-decoration:none
+	text-decoration: none;
+	clear: left;
     }
 
-.content h3 a:link, a:visited {
-	color: white;
+.content h3 a:link, h3 a:visited {
+	color: #FFF;
 	font-size: small;
-	text-decoration:none
+	text-decoration: none
     }
+
+.content a:link, a:visited {
+	color: #333
+    } 
 	
 .content2 {
 	padding: 10px 10px 10px 10px;
@@ -149,7 +157,6 @@ a:hover, a:active, a:focus {
 ul.nav {
 	list-style: none;
 	border-top: 1px solid #666;
-	margin-bottom: 15px;
 	color: #FFF;
 }
 
@@ -186,7 +193,7 @@ ul.nav2 li {
 	padding: 2px 10px 2px 0px;
 }
 
-ul.nav2 a, ul.nav a:visited {
+ul.nav2 a, ul.nav2 a:visited {
 	padding: 5px 5px 5px 15px;
 	display: block;
 	text-decoration: none;
@@ -198,6 +205,33 @@ ul.nav2 a, ul.nav a:visited {
 ul.nav2 h4 {
 padding: 15px;
 }
+
+ul.nav3 a:hover, ul.nav3 a:active, ul.nav3 a:focus {
+	background-color: #333;
+	color: #FFF;
+}
+
+ul.nav3 {
+	list-style: none;
+	color: #FFF;
+}
+
+ul.nav3 li {
+	padding: 2px 10px 2px 0px;
+}
+
+ul.nav3 a, ul.nav3 a:visited {
+	display: block;
+	text-decoration: none;
+	background-color: #292723;
+	color: #FFF;
+	font-size: x-small;
+	/* [disabled]padding-top: 2px; */
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-left: 15px;
+}
+
 /* ~~ Pied de page ~~ */
 .footer {
 	padding: 10px 0;
@@ -267,72 +301,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="fltlft"></div>
   <div class="sidebar1">
     <ul class="nav">
-<li><a href="http://www.medvet.umontreal.ca/infoGen/aPropos.html">Information g&eacute;n&eacute;rale</a></li>
-<li><a href="http://www.medvet.umontreal.ca/etudes/PremierCycle.html">&Eacute;tudes</a></li>
-<li><a href="http://www.medvet.umontreal.ca/RetD/UnitesRecherche.html">Recherche</a></li>
+<li><a href="http://www.medvet.umontreal.ca/infoGen/aPropos.html">La FMV</a></li>
 <li><a href="http://www.medvet.umontreal.ca/actualites_babillard_media/actualites.html">Actualit&eacute;s</a></li>
-<li><a href="http://www.medvet.umontreal.ca/departements/BiomedecineVet.html">D&eacute;partements</a></li>
+<li><a href="http://www.medvet.umontreal.ca/etudes/PremierCycle.html">&Eacute;tudes</a></li></ul>
+<ul class="nav3">
+<li><a href="http://www.medvet.umontreal.ca/etudes/PremierCycle.html">Premier cycle</a></li>
+<li><a href="http://www.medvet.umontreal.ca/etudes/2_3Cycles.html">Cycles supérieurs</a></li>
+<li><a href="http://www.medvet.umontreal.ca/etudes/FormationContinue.html">Formation continue</a></li>
+</ul>
+<ul class="nav"><li><a href="http://www.medvet.umontreal.ca/RetD/UnitesRecherche.html">Recherche</a></li>
+<li><a href="http://www.medvet.umontreal.ca/departements/BiomedecineVet.html">D&eacute;partements</a></li></ul>
+<ul class="nav3">
+<li><a href="http://www.medvet.umontreal.ca/departements/BiomedecineVet.html">Biom&eacute;decine</a></li>
+<li><a href="http://www.medvet.umontreal.ca/departements/PathologieMicrobiologie.html">Pathologie &amp; microbiologie</a></li>
+<li><a href="http://www.medvet.umontreal.ca/departements/SciencesCliniques.html">Sciences cliniques</a></li>
+</ul>
+<ul class="nav">
 <li><a href="http://www.chuv.umontreal.ca/">CHUV</a></li>
 <li><a href="http://servicedediagnostic.com/">Service de diagnostic</a></li>
-<li><a href="http://www.medvet.umontreal.ca/ressources/Bibliotheque.html">Ressources</a></li>
 <li><a href="http://www.medvet.umontreal.ca/AffaireVieEtudiantes/AssociationsClubs.html">Vie &eacute;tudiante</a></li>
 <li><a href="http://www.medvet.umontreal.ca/dons/Default.htm">Faire un don</a></li>
 <li><a href="http://www.medvet.umontreal.ca/infogen/joindre.html">Contact</a></li>
     </ul>
 <ul class="nav2">
 <li>
-<a href="http://www.medvet.umontreal.ca/actualites_babillard_media/medecine_vet.html"><img src="actualites_babillard_media/images/revue_medvet_10_1.jpg" alt="" width="150" /></a><a href="http://www.medvet.umontreal.ca/changement_dadresse.pdf"><img src="http://www.medvet.umontreal.ca/actualites_babillard_media/images/changement_dadresse.jpg" alt="" width="150" /></a></li>
-<li><a href="http://www.medvet.umontreal.ca/actualites_babillard_media/postes_dispo.htm" target="_self">POSTES DISPONIBLES</a>
-<a href="http://www.medvet.umontreal.ca/etudes/FormationContinue.html">FORMATION CONTINUE</a>
-<a href="http://www.medvet.umontreal.ca/actualites_babillard_media/bulletins.htm">PUBLICATIONS</a></li>
+<a href="http://www.medvet.umontreal.ca/actualites_babillard_media/medecine_vet.html"><img src="actualites_babillard_media/images/revue_medvet_10_1.jpg" alt="" width="150" /></a><a href="https://fr.surveymonkey.com/r/H9ZN5GT"><img src="https://www.medvet.umontreal.ca/actualites_babillard_media/images/changement_dadresse.jpg" alt="" width="150" /></a></li>
+<li><a href="http://www.medvet.umontreal.ca/actualites_babillard_media/postes_dispo.htm" target="_self">POSTES DISPONIBLES</a></li>
+<li><a href="http://www.medvet.umontreal.ca/actualites_babillard_media/bulletins.htm">PUBLICATIONS</a></li>
 <li><a href="https://www.medvet.umontreal.ca/AffaireVieEtudiantes/LeRefuge.html">REFUGE FMV</a></li>
 <li><a href="https://admission.umontreal.ca/programmes/doctorat-de-1supersup-cycle-en-medecine-veterinaire/">FUTURS &Eacute;TUDIANTS</a></li>
 <li><a href="http://www.medvet.umontreal.ca/mediatheque/">M&Eacute;DIATH&Egrave;QUE</a></li>
 <li><a href="http://www.medvet.umontreal.ca/locaux/default.asp">R&Eacute;SERVER UN LOCAL</a></li>
 <li><a href="http://www.medvet.umontreal.ca/pressecafe/index.html">RESTAURATION</a></li>
-
+<li><a href="http://www.medvet.umontreal.ca/ressources/Bibliotheque.html">RESSOURCES FMV</a></li>
 </ul>
   <!-- end .content -->
 </div>
    <!-- end .sidebar1 -->
  
-<div class="content">
-<h3>Le Refuge FMV accomplit une bonne st&eacute;rilisACTION!</h3>
-<img src="actualites_babillard_media/images/sterilisation_FMV_2016.jpg" width="500"/ align="left" ><br />
-Dans le cadre de la <em>Semaine nationale de st&eacute;rilisation animale</em>, des &eacute;tudiants de la 1<sup>re</sup>  &agrave; la 4<sup>e</sup> ann&eacute;e ont pr&eacute;par&eacute;, examin&eacute; et r&eacute;veill&eacute; une centaine de chats durant une op&eacute;ration blitz. Des &eacute;tudiants finissants  de 5<sup>e</sup> ann&eacute;e ont accompagn&eacute; les v&eacute;t&eacute;rinaires responsables dans la r&eacute;alisation des st&eacute;rilisations. <br />
-  Une telle action b&eacute;n&eacute;vole au coeur de cet effort provincial de sensibilisation requiert la  mobilisation volontaire d&rsquo;&eacute;tudiants et de v&eacute;t&eacute;rinaires. La  st&eacute;rilisation est une donn&eacute;e essentielle dans le contr&ocirc;le des populations  animales et la diminution des abandons d&rsquo;animaux.<br />
-  L'op&eacute;ration est planifi&eacute;e avec minutie. Elle a permis de st&eacute;riliser cent chats mais aussi d'en faire une situation  d&rsquo;apprentissage clinique de qualit&eacute; pour les &eacute;tudiants participants. L&rsquo;orchestration  rigoureuse des t&acirc;ches a permis aux &eacute;tudiants d&rsquo;exp&eacute;rimenter  les  actions d&rsquo;un examen clinique, les gestes pr&eacute; et post-chirurgicaux, ainsi que les interventions de st&eacute;rilisation. <br />
-  Autant d'opportunit&eacute;s d&rsquo;apprentissage pour les &eacute;tudiants qui favorisent  le partage d&rsquo;expertises avec les v&eacute;t&eacute;rinaires! <br />
-  La <a href="http://www.sterilisationanimalequebec.info/snsaq-2016/">Semaine nationale de la stérilisation animale au Québec</a> (SNSAQ)  est une initiative de l&rsquo;Association des m&eacute;decins v&eacute;t&eacute;rinaires en pratique des  petits animaux (AMVQ). Bravo au <a href="http://www.medvet.umontreal.ca/affairevieetudiantes/LeRefuge.html">Refuge  FMV</a> qui a su relever le d&eacute;fi avec brio,  &agrave; la hauteur de 10% de l&rsquo;objectif national de 2016!<br /><br />
+<div class="content"> <a href="https://admission.umontreal.ca/programmes/doctorat-de-1supersup-cycle-en-medecine-veterinaire/"><img src="actualites_babillard_media/images/timbre_admissiondmv001b_300X100.jpg" width="300" height="100" /></a><br />
+<ul>
+  <li><strong>Semaine du 11 avril</strong><br />
+    Envoi des avis de convocation au test d&rsquo;admission  aux candidats retenus</li>
+  <li><strong>1<sup>er</sup> mai  (10h et 14h)</strong><br />
+    S&eacute;ances du test d&rsquo;admission</li>
+  <li><strong>Du 2 au 20 mai</strong><br />
+    Analyse des r&eacute;sultats et s&eacute;lection finale</li>
+  <li><strong>Semaine du  23 mai</strong><br />
+    Envoi des avis d&rsquo;admission</li>
+  <li><strong>Mi-juillet</strong><br />
+    Envoi d'une communication au sujet de la rentr&eacute;e automnale</li>    
+</ul><br />
+<p><strong><a href="http://www.medvet.umontreal.ca/etudes/premierCycle/CTIA.html">Certificat en technologie et innocuit&eacute; des aliments (CTIA)</a></strong></p>
+<ul><li><strong>1<sup>er</sup> ao&ucirc;t</strong><br />
+Date limite pour faire une demande d&rsquo;admission</li>
+<li><strong>Mi-juillet et mi-ao&ucirc;t</strong><br />
+Envoi d&rsquo;une communication au sujet de la rentr&eacute;e automnale</li>
+</ul>
   
-<h3>Prix et bourses d'excellence 2014-2015 &agrave; la FMV</h3>
-<img src="actualites_babillard_media/images/Prixboursesfmv2016.jpg" width="500" />La c&eacute;r&eacute;monie des prix et bourses de la Facult&eacute; de m&eacute;decine v&eacute;t&eacute;rinaire a eu lieu le 5 f&eacute;vrier dernier. Elle r&eacute;compensait des laur&eacute;ates et laur&eacute;ats parmi tous les &eacute;tudiants de la FMV. Quatre professeurs &eacute;taient &eacute;galement &agrave; l'honneur.<br />
-Toutes nos f&eacute;licitations &agrave; ceux et celles qui incarnent l'excellence &agrave; la FMV!<br />
-<a href="actualites_babillard_media/pdf/Prix_bourses_FMV2016.pdf">Programme de la c&eacute;r&eacute;monie</a> (liste des laur&eacute;ats)<br />
-<br />
-<a href="https://goo.gl/photos/5nKSChnC3jQ1bcdM9" target="_blank">Album photo de la c&eacute;r&eacute;monie</a><br />
-(photos: Marco Langlois - FMV - Tous droits r&eacute;serv&eacute;s) <br /><br />
+</p>
+
+<h3><a href="http://www.umontreal.ca/bravo/" target="_blank">Bravo &agrave; nos chercheurs!</a></h3>
+
+<p><a href="http://www.umontreal.ca/bravo/"><img src="actualites_babillard_media/images/2016-04-27_mario-jacques2.jpg" width="150" style="float:right" /></a>L'Universit&eacute; soulignait, le 20 avril, les r&eacute;alisations de pr&egrave;s de 90   chercheurs qui se sont illustr&eacute;s au cours des 12&nbsp;derniers mois. &laquo;Nous   sommes fiers de vos r&eacute;alisations&raquo;, leur a dit le recteur, Guy Breton, au   cours d'une c&eacute;r&eacute;monie tenue en leur honneur. <br /> 
+  <span dir="none">Parmi les chercheurs c&eacute;l&eacute;br&eacute;s,&nbsp;on comptait de fiers repr&eacute;sentants de la FMV: <span rtenodeid="3" id="ms-rterangepaste-start"> </span><strong>Marcelo  Gottschalk</strong>,<span id="ms-rterangepaste-end"> </span> <strong>Simon Dufour</strong>, <strong>Martine Boulianne</strong>, <strong>John Fairbrother</strong> et <strong>Mario Jacques</strong>.</span><br />
+  Vous trouverez la liste compl&egrave;te des chercheurs honor&eacute;s et les photos de la soir&eacute;e sur le site <a target="_blank" href="http://www.umontreal.ca/bravo/">Bravo &agrave; nos chercheurs</a>. </p>
 
 
+<h3><a href="http://www.sciencepresse.qc.ca/blogue/2016/03/07/rue-marge" target="_blank">Compagnons de bitume</a></h3>
 
-<a href="http://chuv.umontreal.ca/blog/premiere-au-chuv-un-stimulateur-cardiaque-pour-une-anesse/" target="_blank">
-<h3>L'oiseau comme animal de compagnie? Attention!</h3>
-</a>
-<p>
-  <img src="actualites_babillard_media/images/ilanglois_salutbonjour.jpg" width="150" style="float:left" />Isabelle Langlois, clinicienne au CHUV, rappelle aux futurs propri&eacute;taires d&rsquo;oiseaux de lire abondamment sur l&rsquo;esp&egrave;ce choisie et de s&rsquo;informer aupr&egrave;s de sources fiables. Dans <a href="http://tva.canoe.ca/emissions/salutbonjour/chroniques/detail/l-oiseau-comme-animal-de-compagnie-a-ne-pas-prendre-a-la-legere?no_redirect=1#.VtMctVk0SEs.facebook" target="_blank">cette chronique de Claudia Gilbert à Salut Bonjour!</a>, on comprend qu'il faut avoir beaucoup de temps &agrave; consacrer &agrave; son oiseau avant de se lancer dans une aventure qui risque de devenir un engagement &agrave; tr&egrave;s long terme.<br />
+<p><img src="actualites_babillard_media/images/bpauchet_compagnonsbitume.jpg" width="150" style="float:left" /><strong>Br&iuml;te Pauchet</strong>, journaliste pigiste, dresse un <a href="https://britesciences.com/2016/03/07/compagnons-de-bitume/" target="_blank">portrait r&eacute;v&eacute;lateur</a> de la Clinique des animaux des jeunes de la rue fond&eacute;e par l&rsquo;organisme <em>Dans la rue</em> et la Facult&eacute; de m&eacute;decine v&eacute;t&eacute;rinaire. &Agrave; lire dans le <a href="http://curiummag.com/" target="_blank">magazine Curium</a> (mars 2016).</p>
 
+<h3><a href="http://www.sciencepresse.qc.ca/blogue/2016/04/18/tiques-101" target="_blank">Pour tout savoir sur les tiques</a></h3>
 
+<p><img src="actualites_babillard_media/images/cbouchard.jpg" width="120" style="float:right" /><strong>Catherine Bouchard</strong>, v&eacute;t&eacute;rinaire &eacute;pid&eacute;miologiste &agrave; la FMV et &agrave; l'Observatoire multipartite qu&eacute;b&eacute;cois sur les zoonoses et l&rsquo;adaptation aux changements climatiques, nous renseigne au sujet des tiques dans <a href="http://www.sciencepresse.qc.ca/blogue/2016/04/18/tiques-101">cet article de l'Agence Science-Presse.</a></p>
+<h3><a href="https://admission.umontreal.ca/objectif-udem/details/news///portrait-de-diplomee-julie-gervais-chef-de-service-veterinaire-a-liric/" target="_blank">De l'Abititi &agrave; l'UdeM en passant par Saint-Hyacinthe</a></h3>
 
-
-
-<a href="http://www.nouvelles.umontreal.ca/recherche/medecine-veterinaire/20160129-le-cheval-de-bataille-de-sheila.html" target="_blank"><h3>Le cheval de bataille de Sheila</h3></a>
-<p><img src="actualites_babillard_media/images/laverty-sheila-633.jpg" width="150" style="float:right" />D&eacute;couvrez le parcours fascinant de la Dre Sheila Laverty, de l'Irlande jusqu'&agrave; l'h&ocirc;pital &eacute;quin de la FMV. Dans son laboratoire de recherche au CHUV, &agrave; Saint-Hyacinthe, la Dre   Laverty a &agrave; ce jour supervis&eacute; plus de 55 &eacute;tudiants de tous les cycles,   des r&eacute;sidents, des boursiers postdoctoraux et des chercheurs invit&eacute;s. Un dossier &agrave; lire sur le site d'<a href="http://www.nouvelles.umontreal.ca/recherche/medecine-veterinaire/20160129-le-cheval-de-bataille-de-sheila.html?utm_source=infolettre&amp;utm_medium=courriel&amp;utm_campaign=udemnouvelles20160211" target="_blank">UdeM Nouvelles</a>. </p>
-
-
-
+<p><img src="actualites_babillard_media/images/jgervais-1.jpg" width="106" style="float:left" /><a href="https://admission.umontreal.ca/objectif-udem/details/news///portrait-de-diplomee-julie-gervais-chef-de-service-veterinaire-a-liric/">Passionnante entrevue</a> avec<strong> Julie Gervais</strong>, dipl&ocirc;m&eacute;e de la FMV et aujourd'hui chef de service v&eacute;t&eacute;rinaire &agrave; l&rsquo;IRIC.<br />
+  Le r&eacute;cit de son parcours a tout pour inspirer les candidats qui s'int&eacute;resseraient aux &eacute;tudes sup&eacute;rieures &agrave; la FMV!</p>
+<br />  
+<h2><a href="http://www.medvet.umontreal.ca/actualites_babillard_media/actualites.html"><img src="images/suite128.png" width="30" style="float:left" />D'AUTRES ACTUALITÉS DE LA FMV...</a></h2>
+  
 
 </div>
 <div class="sidebar2"> 
+<a href="http://www.medvet.umontreal.ca/etudes/FormationContinue.html" target="_blank"><img src="actualites_babillard_media/images/fc_alimtrla_timbre001.jpg" width="160" border="0" /></a><br />
 <a href="https://admission.umontreal.ca/rechercher/filtres/type_programme/?q=v%C3%A9t%C3%A9rinaire" target="_blank"><img src="actualites_babillard_media/images/udem_sar_timbres_admissioncours_160x68.jpg" width="160" border="0" /></a><br />
 <a href="http://donnerfmv.ca/"><img src="http://www.medvet.umontreal.ca/actualites_babillard_media/images/timbre_donnerfmv.jpg" width="160" border="0" /></a><br />
 <a href="http://www.chuv.umontreal.ca/"><img src="http://www.medvet.umontreal.ca/actualites_babillard_media/images/timbre_chuv.jpg" width="160" height="68" /></a><br />

@@ -26,7 +26,7 @@
 
     <form method="post" action="/library.aspx" id="form1">
 <div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDAwNjA0Mzk5DxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWBgIBDxYCHgRUZXh0BRBMaWJyYXJ5IFNlcnZpY2VzZAIFEGRkFgICAQ8WAh4FY2xhc3MFCWhlYWRlci1iZxYCAgEPZBYCAgEPZBYGZg9kFgJmD2QWAgIBD2QWBAIBDxYCHgtfIUl0ZW1Db3VudAIGFgwCAQ9kFgICAQ8PFgQeC05hdmlnYXRlVXJsBRQvYWJvdXRtaGMvZW1wbG95bWVudB8BBQpFbXBsb3ltZW50ZGQCAg9kFgICAQ8PFgQfBAUHL3BvcnRhbB8BBQZQb3J0YWxkZAIDD2QWAgIBDw8WBB8EBSQvc2VydmljZXMvb25saW5lIHNlcnZpY2VzL2JsYWNrYm9hcmQfAQUKQmxhY2tib2FyZGRkAgQPZBYCAgEPDxYEHwQFIS9zZXJ2aWNlcy9vbmxpbmUgc2VydmljZXMvd2VibWFpbB8BBQdXZWJtYWlsZGQCBQ9kFgICAQ8PFgQfBAUNL3JlcXVlc3QgaW5mbx8BBQxSZXF1ZXN0IEluZm9kZAIGD2QWAgIBDw8WBB8EBSIvYWRtaXNzaW9uL2Jhc2ljcy9hZG1pc3Npb25wcm9jZXNzHwEFCUFwcGx5IE5vd2RkAgUPFgIfAwIJFhICAQ9kFgICAQ8PFgQfBAUHL2FsdW1uaR8BBQZBbHVtbmlkZAICD2QWAgIBDw8WBB8EBQ0vYnJvb2tzY2FtcHVzHwEFDUJyb29rcyBDYW1wdXNkZAIDD2QWAgIBDw8WBB8EBQwvY291bnNlbGxvcnMfAQULQ291bnNlbGxvcnNkZAIED2QWAgIBDw8WBB8EBRAvY3VycmVudHN0dWRlbnRzHwEFEEN1cnJlbnQgU3R1ZGVudHNkZAIFD2QWAgIBDw8WBB8EBQovZW1wbG95ZWVzHwEFCUVtcGxveWVlc2RkAgYPZBYCAgEPDxYEHwQFES9mbGV4aWJsZWxlYXJuaW5nHwEFFERpc3RyaWJ1dGVkIExlYXJuaW5nZGQCBw9kFgICAQ8PFgQfBAUPL2Z1dHVyZXN0dWRlbnRzHwEFD0Z1dHVyZSBTdHVkZW50c2RkAggPZBYCAgEPDxYEHwQFFi9pbnRlcm5hdGlvbmFsc3R1ZGVudHMfAQUXSW50ZXJuYXRpb25hbCBFZHVj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Ii9jb21tb24vaW1hZ2VzL2ljb24tZmFjZWJvb2suZ2lmP3c9MjEmYW1wO2g9MjEmYW1wO2FzPTEiIC8+PC9hPiA8YSB0aXRsZT0iVHdpdHRlciIgaHJlZj0iaHR0cDovL3R3aXR0ZXIuY29tL21oY29sbGVnZSIgdGFyZ2V0PSJfYmxhbmsiPjxpbWcgd2lkdGg9IjIxIiBoZWlnaHQ9IjIxIiBhbHQ9IlR3aXR0ZXIiIHNyYz0iL2NvbW1vbi9pbWFnZXMvaWNvbi10d2l0dGVyLmdpZj93PTIxJmFtcDtoPTIxJmFtcDthcz0xIiAvPjwvYT4gPGEgdGl0bGU9IllvdVR1YmUiIGhyZWY9Imh0dHA6Ly93d3cueW91dHViZS5jb20vbWhjY2EiIHRhcmdldD0iX2JsYW5rIj48aW1nIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgYWx0PSJZb3VUdWJlIiBzcmM9Ii9jb21tb24vaW1hZ2VzL2ljb24teW91VHViZS5naWY/dz0yMSZhbXA7aD0yMSZhbXA7YXM9MSIgLz48L2E+IDxhIHRpdGxlPSJGbGlja1IiIGhyZWY9Imh0dHA6Ly93d3cuZmxpY2tyLmNvbS9waG90b3MvbWhjb2xsZWdlL3NldHMvIiB0YXJnZXQ9Il9ibGFuayI+PGltZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIGFsdD0iRmxpY2tSIiBzcmM9Ii9jb21tb24vaW1hZ2VzL2ljb24tZmxpY2tSLmdpZj93PTIxJmFtcDtoPTIxJmFtcDthcz0xIiAvPjwvYT48L2gzPgogICAgPHA+Q29weXJpZ2h0wqDCqSAyMDEwIE1lZGljaW5lIEhhdCBDb2xsZWdlwqDCoMKgPGEgaHJlZj0iL3ByaXZhY3lwb2xpY3kiPjwvYT48YSBocmVmPSIvcHJpdmFjeXBvbGljeSI+UHJpdmFjeSBQb2xpY3k8L2E+wqDCoMKgPGEgaHJlZj0ibWFpbHRvOkZlZWRiYWNrQG1oYy5hYi5jYT9zdWJqZWN0PVdlYnNpdGUgZmVlZGJhY2siPkZlZWRiYWNrPC9hPsKgwqAgPGEgaHJlZj0iL2Fib3V0dGhpc3NpdGUvc2l0ZW1hcCI+U2l0ZW1hcDwvYT48L3A+ZAIHDxYCHwEFrQM8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+dmFyIF9nYXEgPSBfZ2FxIHx8IFtdO19nYXEucHVzaChbJ19zZXRBY2NvdW50JywgJ1VBLTkyNDY5NjgtMSddKTtfZ2FxLnB1c2goWydfdHJhY2tQYWdldmlldyddKTsoZnVuY3Rpb24oKXt2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTtnYS50eXBlPSd0ZXh0L2phdmFzY3JpcHQnO2dhLmFzeW5jID0gdHJ1ZTtnYS5zcmM9KCdodHRwczonPT1kb2N1bWVudC5sb2NhdGlvbi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOiAnaHR0cDovL3d3dycpICsgJy5nb29nbGUtYW5hbHl0aWNzLmNvbS9nYS5qcyc7dmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7fSkoKTs8L3NjcmlwdD5kGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBRNsYXlvdXRfMCRfYnRuU2VhcmNoT+Mg/Z2NMGefAoLMqV6oS0CTg7bmijrClCPtc1iLpqg=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDAwNjA0Mzk5DxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWBgIBDxYCHgRUZXh0BRBMaWJyYXJ5IFNlcnZpY2VzZAIFEGRkFgICAQ8WAh4FY2xhc3MFCWhlYWRlci1iZxYCAgEPZBYCAgEPZBYGZg9kFgJmD2QWBAIBD2QWBAIBDxYCHgtfIUl0ZW1Db3VudAIGFgwCAQ9kFgICAQ8PFgQeC05hdmlnYXRlVXJsBRQvYWJvdXRtaGMvZW1wbG95bWVudB8BBQpFbXBsb3ltZW50ZGQCAg9kFgICAQ8PFgQfBAUHL3BvcnRhbB8BBQZQb3J0YWxkZAIDD2QWAgIBDw8WBB8EBSQvc2VydmljZXMvb25saW5lIHNlcnZpY2VzL2JsYWNrYm9hcmQfAQUKQmxhY2tib2FyZGRkAgQPZBYCAgEPDxYEHwQFIS9zZXJ2aWNlcy9vbmxpbmUgc2VydmljZXMvd2VibWFpbB8BBQdXZWJtYWlsZGQCBQ9kFgICAQ8PFgQfBAUNL3JlcXVlc3QgaW5mbx8BBQxSZXF1ZXN0IEluZm9kZAIGD2QWAgIBDw8WBB8EBSIvYWRtaXNzaW9uL2Jhc2ljcy9hZG1pc3Npb25wcm9jZXNzHwEFCUFwcGx5IE5vd2RkAgUPFgIfAwIJFhICAQ9kFgICAQ8PFgQfBAUHL2FsdW1uaR8BBQZBbHVtbmlkZAICD2QWAgIBDw8WBB8EBQ0vYnJvb2tzY2FtcHVzHwEFDUJyb29rcyBDYW1wdXNkZAIDD2QWAgIBDw8WBB8EBQwvY291bnNlbGxvcnMfAQULQ291bnNlbGxvcnNkZAIED2QWAgIBDw8WBB8EBRAvY3VycmVudHN0dWRlbnRzHwEFEEN1cnJlbnQgU3R1ZGVudHNkZAIFD2QWAgIBDw8WBB8EBQovZW1wbG95ZWVzHwEFCUVtcGxveWVlc2RkAgYPZBYCAgEPDxYEHwQFES9mbGV4aWJsZWxlYXJuaW5nHwEFFERpc3RyaWJ1dGVkIExlYXJuaW5nZGQCBw9kFgICAQ8PFgQfBAUPL2Z1dHVyZXN0dWRlbnRzHwEFD0Z1dHVyZSBTdHVkZW50c2RkAggPZBYCAgEPDxYEHwQFFi9pbnRlcm5hdGlvbmFsc3R1ZGVudHMfAQUXSW50ZXJuYXRpb25hbCBFZHVj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D2QWAgICD2QWBAIBDxYCHwEFqQIKCQk8aDM+TWVkaWNpbmUgSGF0IENvbGxlZ2UgfCA8YSBocmVmPSIvYWJvdXRtaGMvY29udGFjdG1oYyI+Q29udGFjdCBVczwvYT48YSBocmVmPSIvYWJvdXRtaGMvY29udGFjdG1oYyI+PC9hPjwvaDM+CiAgICA8cD4KICAgICAgPGEgaHJlZj0iL2Fib3V0bWhjL2NvbnRhY3RtaGMvbWVkaWNpbmVoYXRjYW1wdXMiPk1hcHM8L2E+wqDCoMKgPGEgaHJlZj0iL3Bob25lYm9vayI+UGhvbmUgRGlyZWN0b3J5PC9hPsKgwqDCoDxhIGhyZWY9Ii9uZXdzYW5kZXZlbnRzL3N0b3JpZXMiPk5ld3MgJmFtcDsgRXZlbnRzPC9hPjwvcD5kAgMPFgIfAQX8BwoJCTxoMz5TdGF5IENvbm5lY3RlZCB3aXRoIE1IQyA8YSBocmVmPSJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9NSENvbGxlZ2UiIHRhcmdldD0iX2JsYW5rIj48aW1nIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgYWx0PSJGYWNlYm9vayIgc3JjPSIvY29tbW9uL2ltYWdlcy9pY29uLWZhY2Vib29rLmdpZj93PTIxJmFtcDtoPTIxJmFtcDthcz0xIiAvPjwvYT4gPGEgdGl0bGU9IlR3aXR0ZXIiIGhyZWY9Imh0dHA6Ly90d2l0dGVyLmNvbS9taGNvbGxlZ2UiIHRhcmdldD0iX2JsYW5rIj48aW1nIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgYWx0PSJUd2l0dGVyIiBzcmM9Ii9jb21tb24vaW1hZ2VzL2ljb24tdHdpdHRlci5naWY/dz0yMSZhbXA7aD0yMSZhbXA7YXM9MSIgLz48L2E+IDxhIHRpdGxlPSJZb3VUdWJlIiBocmVmPSJodHRwOi8vd3d3LnlvdXR1YmUuY29tL21oY2NhIiB0YXJnZXQ9Il9ibGFuayI+PGltZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIGFsdD0iWW91VHViZSIgc3JjPSIvY29tbW9uL2ltYWdlcy9pY29uLXlvdVR1YmUuZ2lmP3c9MjEmYW1wO2g9MjEmYW1wO2FzPTEiIC8+PC9hPiA8YSB0aXRsZT0iRmxpY2tSIiBocmVmPSJodHRwOi8vd3d3LmZsaWNrci5jb20vcGhvdG9zL21oY29sbGVnZS9zZXRzLyIgdGFyZ2V0PSJfYmxhbmsiPjxpbWcgd2lkdGg9IjIxIiBoZWlnaHQ9IjIxIiBhbHQ9IkZsaWNrUiIgc3JjPSIvY29tbW9uL2ltYWdlcy9pY29uLWZsaWNrUi5naWY/dz0yMSZhbXA7aD0yMSZhbXA7YXM9MSIgLz48L2E+PC9oMz4KICAgIDxwPkNvcHlyaWdodMKgwqkgMjAxMCBNZWRpY2luZSBIYXQgQ29sbGVnZcKgwqDCoDxhIGhyZWY9Ii9wcml2YWN5cG9saWN5Ij48L2E+PGEgaHJlZj0iL3ByaXZhY3lwb2xpY3kiPlByaXZhY3kgUG9saWN5PC9hPsKgwqDCoDxhIGhyZWY9Im1haWx0bzpGZWVkYmFja0BtaGMuYWIuY2E/c3ViamVjdD1XZWJzaXRlIGZlZWRiYWNrIj5GZWVkYmFjazwvYT7CoMKgIDxhIGhyZWY9Ii9hYm91dHRoaXNzaXRlL3NpdGVtYXAiPlNpdGVtYXA8L2E+PC9wPmQCBw8WAh8BBa0DPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPnZhciBfZ2FxID0gX2dhcSB8fCBbXTtfZ2FxLnB1c2goWydfc2V0QWNjb3VudCcsICdVQS05MjQ2OTY4LTEnXSk7X2dhcS5wdXNoKFsnX3RyYWNrUGFnZXZpZXcnXSk7KGZ1bmN0aW9uKCl7dmFyIGdhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7Z2EudHlwZT0ndGV4dC9qYXZhc2NyaXB0JztnYS5hc3luYyA9IHRydWU7Z2Euc3JjPSgnaHR0cHM6Jz09ZG9jdW1lbnQubG9jYXRpb24ucHJvdG9jb2wgPyAnaHR0cHM6Ly9zc2wnIDogJ2h0dHA6Ly93d3cnKSArICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnO3ZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdO3MucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoZ2EsIHMpO30pKCk7PC9zY3JpcHQ+ZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUTbGF5b3V0XzAkX2J0blNlYXJjaGFuls5tL4GDRQ3OLIAWq4G7ZTOQ6huY7lNIFuBhbNUG" />
 </div>
 
 <div class="aspNetHidden">
@@ -34,7 +34,7 @@
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C19B989C" />
 	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAANbdCslwH5TMHrGHXT7Zjk14VQu0pA2ZPrcqUGOMf5puKuLrmQzOjsCrJ2oa+BxHAMGJulELB92Q5co5djoCO3EcuzM8FFuJNzehwT07UzENA==" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAOWmKWKOH5jJIPo4MuzVOn34VQu0pA2ZPrcqUGOMf5puKuLrmQzOjsCrJ2oa+BxHAMQ78QGgfO9EQlvdlep4dCvpll16+FUkxvH/1hmtt4Dug==" />
 </div>
         <div id="wrapper">
         <div class="header-bg-repeat">
@@ -99,13 +99,13 @@
         <a href="/" title="Medicine Hat College"><img src="/~/media/images/logo/50gold_horizontal_reverse_web.ashx?h=79&amp;la=en&amp;w=252" alt="50th logo" width="252" height="79" /></a>
         <div id="layout_0__pnlSearchForm" class="hdr-search" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;layout_0__btnSearch&#39;)">
 	
-            <input name="layout_0$_txtSearchBox" type="text" value="Search Site" id="layout_0__txtSearchBox" accesskey="s" class="search-box" />
+            <input name="layout_0$_txtSearchBox" type="text" id="layout_0__txtSearchBox" accesskey="s" class="search-box" placeholder="Search Site" />
             <input type="image" name="layout_0$_btnSearch" id="layout_0__btnSearch" class="search-btn" src="/common/images/btn-hdrSearch.gif" />
         
 </div>
     </div><!-- Boundaries -->
 </div><!-- Header -->
-<div id="layout_1_dvContentHolder" class="content-holder boundaries">            <ul class="mainnav">            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_0" class="about" href="/aboutmhc">About MHC</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_1" class="real" href="/real">real</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_2" class="account" href="/account">Account</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_3" class="requestseniorexecutive" href="/requestseniorexecutive">RequestSeniorExecutive</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_4" class="faculty" href="/faculty">Faculty</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_5" class="vpfinance" href="/vpfinance">VPFinance</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_6" class="win" href="/win">Win</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_7" class="china" href="/china">China</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_8" class="fsl" href="/fasl">FSL</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_9" class="paramedicpreceptor" href="/parademicspreceptor">ParamedicPreceptor</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_10" class="video" href="/video">Video</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_11" class="admission" href="/admission">Admission</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_12" class="programs" href="/programsandcourses">Programs & Courses</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_13" class="services" href="/services">Services</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_14" class="sport" href="/rattlersteams">Sport & Wellness</a></li>            <li class="selected"><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_15" class="library" href="/library">Library Services</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_16" class="continuing" href="/continuingstudies">Continuing Studies</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_17" class="conservatory" href="/conservatory">Conservatory of Music & Dance</a></li>            </ul>    
+<div id="layout_1_dvContentHolder" class="content-holder boundaries">            <ul class="mainnav">            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_0" class="about" href="/aboutmhc">About MHC</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_1" class="faculty" href="/faculty">Faculty</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_2" class="admission" href="/admission">Admission</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_3" class="programs" href="/programsandcourses">Programs & Courses</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_4" class="services" href="/services">Services</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_5" class="sport" href="/rattlersteams">Sport & Wellness</a></li>            <li class="selected"><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_6" class="library" href="/library">Library Services</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_7" class="continuing" href="/continuingstudies">Continuing Studies</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_8" class="conservatory" href="/conservatory">Conservatory of Music & Dance</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_9" class="fsl" href="/fasl">FSL</a></li>            <li><a id="layout_1_contentholder_0__rptTopNav__hypTopNavItems_10" class="video" href="/video">Video</a></li>            </ul>    
 
 <div class="banner">
     
@@ -143,7 +143,7 @@
             </li>
         
             <li>
-                <a id="layout_1_contentholder_2_content_0__rptLeftNav__hypMenuLink_2" href="/library/access-mobile-site">Access Mobile Site</a>
+                <a id="layout_1_contentholder_2_content_0__rptLeftNav__hypMenuLink_2" href="/library/makerspacemhc">MakerspaceMHC</a>
                 
             </li>
         
@@ -20770,9 +20770,15 @@
 <p style="text-align: center;"><strong></strong></p>
 <p style="text-align: center;"><strong></strong></p>
 <p style="text-align: center;"><strong></strong></p>
-<p style="text-align: center;"><strong>Have you entered to win your prize yet? Well what's keeping you?</strong></p>
-<p style="text-align: center;">Check out the library display for more details. Also, check out our new space!</p>
-<p style="text-align: center;"><a href="/library/makerspacemhc"><img alt="" style="height: 83px; width: 198px;" src="/~/media/images/library images/makerspace_icon_news.ashx?h=83&amp;w=198&la=en" /></a>&nbsp;</p>
+<p style="text-align: center;"><strong></strong></p>
+<p style="text-align: center;"><strong></strong></p>
+<p style="text-align: center;"><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<a href="/library/makerspacemhc">Makerspace MHC</a> open all summer. Everyone Welcome!<br />
 <p style="text-align: center;">
 </p>
 <p><span style="font-size: 13px;"></span></p>
@@ -20786,25 +20792,18 @@
     
     <div id="layout_1_contentholder_2_content_2_ctl08__pnlHighlightBox" class="highlight-box-content highlight-light">
 	
-    	<h4>Vera Bracken Library</h4>
-<p>
-</p>
-<dt><strong>Monday - Thursday : </strong>7:30 a.m. - 10 p.m.</dt>
-<dt><strong>Friday: </strong>7:30 a.m. - 5 p.m.<br />
-</dt>
-<span><strong>
-Saturday: </strong>12 p.m. - 5 p.m. </span>
-<span>
-</span>
-<dt><span><strong>Sunday: </strong>1 p.m. - 8 p.m.<br />
-</span></dt>
-<p><a shape="rect" href="/library/about_us/hours#vb_lib_hours">Exceptions &amp; Closures</a>&nbsp; </p>
+    	<h4><a href="/library/about_us/hours#vb_lib_hours" shape="rect"></a>Vera Bracken Library
+</h4>
+<p><strong>Monday - Thursday: </strong>8 a.m. - 6 p.m.<span><strong><br />
+Friday: </strong>8 a.m. - 5 p.m.</span><span><strong><br />
+Saturday: </strong>1 p.m. - 5 p.m.</span><span><strong><br />
+Sunday: </strong>Closed<br />
+<br />
+</span> </p>
 <h4>Brooks Campus Library</h4>
-<p>
-<strong>Monday - Thursday: </strong>9 a.m. - 8 p.m.<br />
-<strong>Friday: </strong>9 a.m. - 4 p.m.<strong><br />
-Saturday &amp; Sunday: </strong>Closed</p>
-<p><a shape="rect" href="/library/about_us/hours#br_lib_hours">Exceptions &amp; Closures</a></p>
+<p><strong>Monday - Thursday: </strong>9 a.m. - 12 p.m.<strong><br />
+Friday, Saturday &amp; Sunday: </strong>Closed</p>
+<a href="/library/about_us/hours#vb_lib_hours" shape="rect">Exceptions &amp; Closures</a>
     
 </div>
 </div>
@@ -20818,15 +20817,15 @@ Saturday &amp; Sunday: </strong>Closed</p>
     	<div class="cols2">
 <div class="col">
 <ul>
-    <li><img width="21" height="21" alt="Facebook" src="%7E/media/2F4E90CF8945490181BD2110C9428A80.ashx?w=21&amp;h=21&amp;as=1" />&nbsp;<a href="https://www.facebook.com/mhclibrary">Facebook</a></li>
+    <li><img width="21" height="21" style="height: 21px; width: 21px;" alt="Facebook" src="/~/media/images/library images/library_social_media_icons/icon-facebook.ashx?w=21&amp;h=21&amp;as=1&la=en" />&nbsp;<a href="https://www.facebook.com/mhclibrary">Facebook</a></li>
     <li><img width="21" height="21" alt="Twitter" src="/common/images/icon-twitter.gif?w=21&amp;h=21&amp;as=1" /> <a href="http://twitter.com/mhclibrary" shape="rect">Twitter</a> </li>
-    <li><img width="21" height="21" alt="FlickR" src="/common/images/icon-flickR.gif?w=21&amp;h=21&amp;as=1" /> <a href="http://www.flickr.com/photos/mhclibraryservices/sets" shape="rect">Flickr</a> </li>
+    <li><img width="21" height="21" alt="FlickR" src="/common/images/icon-flickR.gif?w=21&amp;h=21&amp;as=1" /> <a href="http://www.flickr.com/photos/mhclibraryservices/" shape="rect">Flickr</a> </li>
 </ul>
 </div>
 <div class="col-last">
 <ul>
-    <li><img width="21" height="21" alt="Blogger icon" src="%7E/media/F8B2B4B86C874F46B037B750C0F7F041.ashx?w=21&amp;h=21&amp;as=1" /> <a href="http://mhclibrary.blogspot.com/" shape="rect">Blogger</a> </li>
-    <li><img width="21" height="21" alt="RSS icon" src="%7E/media/F94CCDE2995449578B2805135201F77D.ashx?w=21&amp;h=21&amp;as=1" />&nbsp;<a href="%7E/link.aspx?_id=6DACB7B3AF0040998A3DA487ADDEC7CF&amp;_z=z" shape="rect">RSS</a> </li>
+    <li><img style="height: 21px; width: 21px;" alt="Blogger icon" src="/~/media/images/library images/library_social_media_icons/blogger_icon.ashx?w=21&amp;h=21&amp;as=1&la=en" /> <a href="http://mhclibrary.blogspot.com/" shape="rect">Blogger</a> </li>
+    <li><img alt="" width="20" height="20" style="height: 20px; width: 20px;" src="/~/media/images/library images/instagram.ashx?h=20&amp;w=20&la=en" />&nbsp;<a href="https://www.instagram.com/mhclibrary/" shape="rect">Instagram</a> </li>
 </ul>
 </div>
 </div>
@@ -20888,7 +20887,7 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="/WebResource.axd?d=gOiSGHdqu6rsH1PIAlFuu4HBZPgO4y2m29l75fzhaczt5aC8m7soCUT5HC-cCZKrfXaGfczhQqDhu-qKkIL7d-fSB6u1joP3AuaRxGSTyqc1&amp;t=635589183571259667" type="text/javascript"></script>
+<script src="/WebResource.axd?d=gOiSGHdqu6rsH1PIAlFuu4HBZPgO4y2m29l75fzhaczt5aC8m7soCUT5HC-cCZKrfXaGfczhQqDhu-qKkIL7d-fSB6u1joP3AuaRxGSTyqc1&amp;t=635875257181218729" type="text/javascript"></script>
 </form>
     <script type="text/javascript" src="/common/js/jquery.inputBox.1.0.0.js"></script>
     <script type="text/javascript" src="/common/js/jquery.slider.2.1.0.js"></script>

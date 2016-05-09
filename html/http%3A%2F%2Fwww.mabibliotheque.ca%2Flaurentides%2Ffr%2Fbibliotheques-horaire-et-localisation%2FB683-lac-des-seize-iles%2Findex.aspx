@@ -15,22 +15,23 @@
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" />
     
 
-    <link href="/themes/style.css?v=2.240" rel='stylesheet' type='text/css' />
-    <link href="/themes/contenu.css?v=2.240" rel='stylesheet' type='text/css' />
-    <link href="/themes/laurentides/Site.css?v=2.240" rel='stylesheet' type='text/css' />
+    <link href="/themes/style.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/contenu.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/style-new.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/laurentides/Site.css?v=2.245" rel='stylesheet' type='text/css' />
     <!--[if IE 9]>
-    <link href="/themes/style_IE9.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE9.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 8]>
-    <link href="/themes/style_IE8.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE8.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 7]>
-    <link href="/themes/style_IE7.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE7.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 6]>
-    <link href="/themes/style_IE6.css?v=2.240" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE6.css?v=2.245" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link href="/themes/print.css?v=2.240" rel='stylesheet' type='text/css' media="print" />
+    <link href="/themes/print.css?v=2.245" rel='stylesheet' type='text/css' media="print" />
     <link href="http://fonts.googleapis.com/css?family=Vollkorn|Lato:normal,bold|Amaranth|Actor|Open+Sans|Droid+Sans|Open+Sans|Days+One|Roboto:100,400,700|Karla:400,700" rel="stylesheet" type="text/css" /><link href="/laurentides/fr/rss/nouvelles.aspx" rel="alternate" type="application/rss+xml" title="Réseau BIBLIO des Laurentides" />
     <meta property="og:title" content="Lac-des-Seize-Îles | Bibliothèques Horaire et localisation" />
     <meta property="og:image" content="http://www.mabibliotheque.ca/images/laurentides/img-partage.jpg" />
@@ -39,7 +40,7 @@
     <meta property="og:description" content="" />
 
 <style type="text/css">
-  .imgEnteteContenu { background:#5785be url(/images/entete/entete_hiver.jpg) no-repeat center top; height:35px;}
+  .imgEnteteContenu { background:#D69038 url(/images/entete/entete_fleurs.jpg) no-repeat center top; height:35px;}
 </style>
 
 
@@ -162,6 +163,10 @@
     "Lng": -74.654227917187484,
     "Direction": 0.0
   },
+  "CalendrierDesFormations": "<b>Calendrier</b><br />de mon Réseau",
+  "CalendrierDesFormationsVoirLesActivites": "Voir le <br /><b>calendrier</b>",
+  "CalendrierDesFormationsGestionDesActivites": "Gestion du <br /><b>calendrier</b>",
+  "DocumentationReseau": "<b>Documentation</b><br />de mon Réseau",
   "RepertoireDesActivites": "<b>Répertoire</b><br />d’animation",
   "RepertoireDesActivitesConsultation": "Consulter le<br /><b>répertoire d’animation</b>",
   "RepertoireDesActivitesCulturellesH1": "Répertoire des activités d’animation",
@@ -198,6 +203,7 @@
   "UtiliserGrilleTarifaire": false,
   "AfficherGestionExtranetBiblio": false,
   "AfficherGestionDocumentation": true,
+  "AfficherGestionCalendrierFormationBiblio": true,
   "AfficherLienVDX": false,
   "RetirerPremièrePartieNomsDossiersDocumentation": true,
   "SéparateurNomsDossiersDocumentation": " ",
@@ -220,7 +226,6 @@
   "PartageV2": false,
   "PermettreModifierActiviteRepertoire": true,
   "AccesCalendrierDesFormationsEtActivites": true,
-  "AccesCalendrierDesFormationsEtActivitesPourBiblios": true,
   "MessageFacturationFormation": null,
   "SrcImgBasCourrielEnvoyerAmi": null,
   "BoutonInfolettreEnHaut": false,
@@ -275,7 +280,14 @@
   "AfficherMessageOptimiserPourNavigateurs": false,
   "MessageOptimiserPourNavigateurs": "",
   "NombreCommuniquesAccueil": 2,
-  "NombreActivitesAccueil": 2
+  "NombreActivitesAccueil": 2,
+  "FormationSingulier": "Activité",
+  "FormationPluriel": "Activités",
+  "NbJoursAvantFermetureInscriptionParDefaut": 2,
+  "CalendrierFormationsAccessibleHorsLigne": true,
+  "CalendrierFormationsLibelleBoutonInscription": "Inscription",
+  "FormationSingulierLower": "activité",
+  "FormationPlurielLower": "activités"
 };
 
 
@@ -296,6 +308,7 @@
     
     
 
+    
 
     <style type="text/css">
         #oeufPaques {
@@ -330,7 +343,7 @@
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY2MDIwODU4NQ9kFgJmD2QWAmYPZBYEZg9kFg4CAg8WAh4HY29udGVudGRkAgMPFgQfAGQeB1Zpc2libGVoZAIEDxYCHwFoZAIGDxYCHgRUZXh0BTg8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LUxhbmd1YWdlIiBjb250ZW50PSJmcl9DQSIgLz4KDWQCHw8WAh8CBYQBPGxpbmsgaHJlZj0iL2xhdXJlbnRpZGVzL2ZyL3Jzcy9ub3V2ZWxsZXMuYXNweCIgcmVsPSJhbHRlcm5hdGUiIHR5cGU9ImFwcGxpY2F0aW9uL3Jzcyt4bWwiIHRpdGxlPSJSw6lzZWF1IEJJQkxJTyBkZXMgTGF1cmVudGlkZXMiIC8+ZAIgDxYCHwIF+AMNCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dGl0bGUiIGNvbnRlbnQ9IkxhYy1kZXMtU2VpemUtw45sZXMgfCBCaWJsaW90aMOocXVlcyBIb3JhaXJlIGV0IGxvY2FsaXNhdGlvbiIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvaW1hZ2VzL2xhdXJlbnRpZGVzL2ltZy1wYXJ0YWdlLmpwZyIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2xhdXJlbnRpZGVzL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vQjY4My1sYWMtZGVzLXNlaXplLWlsZXMvaW5kZXguYXNweCIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkZXMgTGF1cmVudGlkZXMiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAiEPFgIfAgWUAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojNTc4NWJlIHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfaGl2ZXIuanBnKSBuby1yZXBlYXQgY2VudGVyIHRvcDsgaGVpZ2h0OjM1cHg7fQo8L3N0eWxlPgpkAgEPFgIeBmFjdGlvbgVYL2xhdXJlbnRpZGVzL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vQjY4My1sYWMtZGVzLXNlaXplLWlsZXMvaW5kZXguYXNweBYQAgEPDxYCHgtOYXZpZ2F0ZVVybAUaL2xhdXJlbnRpZGVzL2ZyL2luZGV4LmFzcHhkZAICDxYCHgtfIUl0ZW1Db3VudAIEFghmD2QWAgIBDw8WCh4IQ3NzQ2xhc3MFEGxpdnJlc1Jlc3NvdXJjZXMfAgVOPHNwYW4+PHN0cm9uZz5MaXZyZXMgJmFtcDs8YnIgLz4NCnJlc3NvdXJjZXM8L3N0cm9uZz48YnIgLz4gbnVtw6lyaXF1ZXM8L3NwYW4+HgZUYXJnZXQFBV9zZWxmHwQFOi9sYXVyZW50aWRlcy9mci9saXZyZXMtZXQtcmVzc291cmNlcy1udW1lcmlxdWVzL2luZGV4LmFzcHgeBF8hU0ICAmRkAgEPZBYCAgEPDxYKHwYFBHByZXQfAgU+PHNwYW4+PHN0cm9uZz5QcsOqdCBlbnRyZTwvc3Ryb25nPjxiciAvPiBiaWJsaW90aMOocXVlczwvc3Bhbj4fBwUFX3NlbGYfBAUzL2xhdXJlbnRpZGVzL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4HwgCAmRkAgIPZBYCAgEPDxYKHwYFCmV2ZW5lbWVudHMfAgVKPHNwYW4+PHN0cm9uZz5BY3Rpdml0JiMyMzM7czwvc3Ryb25nPjxiciAvPg0KZGVzIGJpYmxpb3RoJiMyMzI7cXVlczwvc3Bhbj4fBwUFX3NlbGYfBAU2L2xhdXJlbnRpZGVzL2ZyL2FjdGl2aXRlcy1kZXMtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4HwgCAmRkAgMPZBYCAgEPDxYKHwYFBmFjdGl2ZR8CBU88c3Bhbj48c3Ryb25nPkJpYmxpb3RoJiMyMzI7cXVlczwvc3Ryb25nPjxiciAvPg0KSG9yYWlyZSBldCBsb2NhbGlzYXRpb248L3NwYW4+HwcFBV9zZWxmHwQFQC9sYXVyZW50aWRlcy9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL2luZGV4LmFzcHgfCAICZGQCAw8WAh8FAgMWBmYPZBYCAgEPDxYGHwIFB0FjY3VlaWwfBwUFX3NlbGYfBAUaL2xhdXJlbnRpZGVzL2ZyL2luZGV4LmFzcHhkZAIBD2QWAgIBDw8WBh8CBRBRdWkgc29tbWVzLW5vdXM/HwcFBV9zZWxmHwQFQy9sYXVyZW50aWRlcy9mci9xdWktc29tbWVzLW5vdXMvY29uc2VpbC1kLWFkbWluaXN0cmF0aW9uL2luZGV4LmFzcHhkZAICD2QWAgIBDw8WBh8CBQxOb3VzIGpvaW5kcmUfBwUFX3NlbGYfBAUnL2xhdXJlbnRpZGVzL2ZyL25vdXMtam9pbmRyZS9pbmRleC5hc3B4ZGQCBA8WAh8FAgMWBgIBD2QWAgIDDw8WBh8CBQdBY2N1ZWlsHwcFBV9zZWxmHwQFGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4ZGQCAg9kFgICAw8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBUMvbGF1cmVudGlkZXMvZnIvcXVpLXNvbW1lcy1ub3VzL2NvbnNlaWwtZC1hZG1pbmlzdHJhdGlvbi9pbmRleC5hc3B4ZGQCAw9kFgICAw8PFgYfAgUMTm91cyBqb2luZHJlHwcFBV9zZWxmHwQFJy9sYXVyZW50aWRlcy9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkAgUPDxYIHwcFBl9ibGFuax8CBSFNb24gZG9zc2llcjxzcGFuPiBkJ3VzYWdlcjwvc3Bhbj4eB1Rvb2xUaXAFFE1vbiBkb3NzaWVyIGQndXNhZ2VyHwQFMmh0dHA6Ly9vbWVnYS5jcnNicGwucWMuY2EvdWh0YmluL2NnaXNpcnNpL1gvWC8wLzQ5FgIeB29uY2xpY2sFUF9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ0VudMOqdGUnLCAnTW9uIGRvc3NpZXIgZCB1c2FnZXInXSk7ZAIHDxYCHwUCBBYIAgEPZBYCZg8PFgofBgUQbGl2cmVzUmVzc291cmNlcx8CBU48c3Bhbj48c3Ryb25nPkxpdnJlcyAmYW1wOzxiciAvPg0KcmVzc291cmNlczwvc3Ryb25nPjxiciAvPiBudW3DqXJpcXVlczwvc3Bhbj4fBwUFX3NlbGYfBAU6L2xhdXJlbnRpZGVzL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvaW5kZXguYXNweB8IAgJkZAICD2QWAmYPDxYKHwYFBHByZXQfAgU+PHNwYW4+PHN0cm9uZz5QcsOqdCBlbnRyZTwvc3Ryb25nPjxiciAvPiBiaWJsaW90aMOocXVlczwvc3Bhbj4fBwUFX3NlbGYfBAUzL2xhdXJlbnRpZGVzL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4HwgCAmRkAgMPZBYCZg8PFgofBgUKZXZlbmVtZW50cx8CBUo8c3Bhbj48c3Ryb25nPkFjdGl2aXQmIzIzMztzPC9zdHJvbmc+PGJyIC8+DQpkZXMgYmlibGlvdGgmIzIzMjtxdWVzPC9zcGFuPh8HBQVfc2VsZh8EBTYvbGF1cmVudGlkZXMvZnIvYWN0aXZpdGVzLWRlcy1iaWJsaW90aGVxdWVzL2luZGV4LmFzcHgfCAICZGQCBA9kFgJmDw8WCh8GBQZhY3RpdmUfAgVPPHNwYW4+PHN0cm9uZz5CaWJsaW90aCYjMjMyO3F1ZXM8L3N0cm9uZz48YnIgLz4NCkhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uPC9zcGFuPh8HBQVfc2VsZh8EBUAvbGF1cmVudGlkZXMvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4HwgCAmRkAgoPZBYEAgEPDxYEHwIFB0FjY3VlaWwfBAUaL2xhdXJlbnRpZGVzL2ZyL2luZGV4LmFzcHhkZAIDDxYCHwUCARYCZg9kFgICAQ8PFgYfBgUKc2lsZW50TGluax8CBSZCaWJsaW90aMOocXVlcyBIb3JhaXJlIGV0IGxvY2FsaXNhdGlvbh8IAgJkZAIMDxYCHwUCAxYGZg9kFgICAQ8PFgYfAgUHQWNjdWVpbB8HBQVfc2VsZh8EBRovbGF1cmVudGlkZXMvZnIvaW5kZXguYXNweGRkAgEPZBYCAgEPDxYGHwIFEFF1aSBzb21tZXMtbm91cz8fBwUFX3NlbGYfBAVDL2xhdXJlbnRpZGVzL2ZyL3F1aS1zb21tZXMtbm91cy9jb25zZWlsLWQtYWRtaW5pc3RyYXRpb24vaW5kZXguYXNweGRkAgIPZBYCAgEPDxYGHwIFDE5vdXMgam9pbmRyZR8HBQVfc2VsZh8EBScvbGF1cmVudGlkZXMvZnIvbm91cy1qb2luZHJlL2luZGV4LmFzcHhkZGQqEr3OwsnYmXFZMViIaYQH7jeo1XWKhedrBE1/gaZXeA==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY2MDIwODU4NQ9kFgJmD2QWAmYPZBYEZg9kFg4CAg8WAh4HY29udGVudGRkAgMPFgQfAGQeB1Zpc2libGVoZAIEDxYCHwFoZAIGDxYCHgRUZXh0BTg8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LUxhbmd1YWdlIiBjb250ZW50PSJmcl9DQSIgLz4KDWQCHw8WAh8CBYQBPGxpbmsgaHJlZj0iL2xhdXJlbnRpZGVzL2ZyL3Jzcy9ub3V2ZWxsZXMuYXNweCIgcmVsPSJhbHRlcm5hdGUiIHR5cGU9ImFwcGxpY2F0aW9uL3Jzcyt4bWwiIHRpdGxlPSJSw6lzZWF1IEJJQkxJTyBkZXMgTGF1cmVudGlkZXMiIC8+ZAIgDxYCHwIF+AMNCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dGl0bGUiIGNvbnRlbnQ9IkxhYy1kZXMtU2VpemUtw45sZXMgfCBCaWJsaW90aMOocXVlcyBIb3JhaXJlIGV0IGxvY2FsaXNhdGlvbiIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvaW1hZ2VzL2xhdXJlbnRpZGVzL2ltZy1wYXJ0YWdlLmpwZyIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwOi8vd3d3Lm1hYmlibGlvdGhlcXVlLmNhL2xhdXJlbnRpZGVzL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vQjY4My1sYWMtZGVzLXNlaXplLWlsZXMvaW5kZXguYXNweCIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkZXMgTGF1cmVudGlkZXMiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAiEPFgIfAgWVAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojRDY5MDM4IHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfZmxldXJzLmpwZykgbm8tcmVwZWF0IGNlbnRlciB0b3A7IGhlaWdodDozNXB4O30KPC9zdHlsZT4KZAIBDxYCHgZhY3Rpb24FWC9sYXVyZW50aWRlcy9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL0I2ODMtbGFjLWRlcy1zZWl6ZS1pbGVzL2luZGV4LmFzcHgWEAIBDw8WAh4LTmF2aWdhdGVVcmwFGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4ZGQCAg8WAh4LXyFJdGVtQ291bnQCBBYIZg9kFgICAQ8PFgoeCENzc0NsYXNzBRBsaXZyZXNSZXNzb3VyY2VzHwIFTjxzcGFuPjxzdHJvbmc+TGl2cmVzICZhbXA7PGJyIC8+DQpyZXNzb3VyY2VzPC9zdHJvbmc+PGJyIC8+IG51bcOpcmlxdWVzPC9zcGFuPh4GVGFyZ2V0BQVfc2VsZh8EBTovbGF1cmVudGlkZXMvZnIvbGl2cmVzLWV0LXJlc3NvdXJjZXMtbnVtZXJpcXVlcy9pbmRleC5hc3B4HgRfIVNCAgJkZAIBD2QWAgIBDw8WCh8GBQRwcmV0HwIFPjxzcGFuPjxzdHJvbmc+UHLDqnQgZW50cmU8L3N0cm9uZz48YnIgLz4gYmlibGlvdGjDqHF1ZXM8L3NwYW4+HwcFBV9zZWxmHwQFMy9sYXVyZW50aWRlcy9mci9wcmV0LWVudHJlLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweB8IAgJkZAICD2QWAgIBDw8WCh8GBQpldmVuZW1lbnRzHwIFSjxzcGFuPjxzdHJvbmc+QWN0aXZpdCYjMjMzO3M8L3N0cm9uZz48YnIgLz4NCmRlcyBiaWJsaW90aCYjMjMyO3F1ZXM8L3NwYW4+HwcFBV9zZWxmHwQFNi9sYXVyZW50aWRlcy9mci9hY3Rpdml0ZXMtZGVzLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweB8IAgJkZAIDD2QWAgIBDw8WCh8GBQZhY3RpdmUfAgVPPHNwYW4+PHN0cm9uZz5CaWJsaW90aCYjMjMyO3F1ZXM8L3N0cm9uZz48YnIgLz4NCkhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uPC9zcGFuPh8HBQVfc2VsZh8EBUAvbGF1cmVudGlkZXMvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4HwgCAmRkAgMPFgIfBQIDFgZmD2QWAgIBDw8WBh8CBQdBY2N1ZWlsHwcFBV9zZWxmHwQFGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4ZGQCAQ9kFgICAQ8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBUMvbGF1cmVudGlkZXMvZnIvcXVpLXNvbW1lcy1ub3VzL2NvbnNlaWwtZC1hZG1pbmlzdHJhdGlvbi9pbmRleC5hc3B4ZGQCAg9kFgICAQ8PFgYfAgUMTm91cyBqb2luZHJlHwcFBV9zZWxmHwQFJy9sYXVyZW50aWRlcy9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkAgQPFgIfBQIDFgYCAQ9kFgICAw8PFgYfAgUHQWNjdWVpbB8HBQVfc2VsZh8EBRovbGF1cmVudGlkZXMvZnIvaW5kZXguYXNweGRkAgIPZBYCAgMPDxYGHwIFEFF1aSBzb21tZXMtbm91cz8fBwUFX3NlbGYfBAVDL2xhdXJlbnRpZGVzL2ZyL3F1aS1zb21tZXMtbm91cy9jb25zZWlsLWQtYWRtaW5pc3RyYXRpb24vaW5kZXguYXNweGRkAgMPZBYCAgMPDxYGHwIFDE5vdXMgam9pbmRyZR8HBQVfc2VsZh8EBScvbGF1cmVudGlkZXMvZnIvbm91cy1qb2luZHJlL2luZGV4LmFzcHhkZAIFDw8WCB8HBQZfYmxhbmsfAgUhTW9uIGRvc3NpZXI8c3Bhbj4gZCd1c2FnZXI8L3NwYW4+HgdUb29sVGlwBRRNb24gZG9zc2llciBkJ3VzYWdlch8EBTJodHRwOi8vb21lZ2EuY3JzYnBsLnFjLmNhL3VodGJpbi9jZ2lzaXJzaS9YL1gvMC80ORYCHgdvbmNsaWNrBVBfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdFbnTDqnRlJywgJ01vbiBkb3NzaWVyIGQgdXNhZ2VyJ10pO2QCBw8WAh8FAgQWCAIBD2QWAmYPDxYKHwYFEGxpdnJlc1Jlc3NvdXJjZXMfAgVOPHNwYW4+PHN0cm9uZz5MaXZyZXMgJmFtcDs8YnIgLz4NCnJlc3NvdXJjZXM8L3N0cm9uZz48YnIgLz4gbnVtw6lyaXF1ZXM8L3NwYW4+HwcFBV9zZWxmHwQFOi9sYXVyZW50aWRlcy9mci9saXZyZXMtZXQtcmVzc291cmNlcy1udW1lcmlxdWVzL2luZGV4LmFzcHgfCAICZGQCAg9kFgJmDw8WCh8GBQRwcmV0HwIFPjxzcGFuPjxzdHJvbmc+UHLDqnQgZW50cmU8L3N0cm9uZz48YnIgLz4gYmlibGlvdGjDqHF1ZXM8L3NwYW4+HwcFBV9zZWxmHwQFMy9sYXVyZW50aWRlcy9mci9wcmV0LWVudHJlLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweB8IAgJkZAIDD2QWAmYPDxYKHwYFCmV2ZW5lbWVudHMfAgVKPHNwYW4+PHN0cm9uZz5BY3Rpdml0JiMyMzM7czwvc3Ryb25nPjxiciAvPg0KZGVzIGJpYmxpb3RoJiMyMzI7cXVlczwvc3Bhbj4fBwUFX3NlbGYfBAU2L2xhdXJlbnRpZGVzL2ZyL2FjdGl2aXRlcy1kZXMtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4HwgCAmRkAgQPZBYCZg8PFgofBgUGYWN0aXZlHwIFTzxzcGFuPjxzdHJvbmc+QmlibGlvdGgmIzIzMjtxdWVzPC9zdHJvbmc+PGJyIC8+DQpIb3JhaXJlIGV0IGxvY2FsaXNhdGlvbjwvc3Bhbj4fBwUFX3NlbGYfBAVAL2xhdXJlbnRpZGVzL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vaW5kZXguYXNweB8IAgJkZAIKD2QWBAIBDw8WBB8CBQdBY2N1ZWlsHwQFGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4ZGQCAw8WAh8FAgEWAmYPZBYCAgEPDxYGHwYFCnNpbGVudExpbmsfAgUmQmlibGlvdGjDqHF1ZXMgSG9yYWlyZSBldCBsb2NhbGlzYXRpb24fCAICZGQCDA8WAh8FAgMWBmYPZBYCAgEPDxYGHwIFB0FjY3VlaWwfBwUFX3NlbGYfBAUaL2xhdXJlbnRpZGVzL2ZyL2luZGV4LmFzcHhkZAIBD2QWAgIBDw8WBh8CBRBRdWkgc29tbWVzLW5vdXM/HwcFBV9zZWxmHwQFQy9sYXVyZW50aWRlcy9mci9xdWktc29tbWVzLW5vdXMvY29uc2VpbC1kLWFkbWluaXN0cmF0aW9uL2luZGV4LmFzcHhkZAICD2QWAgIBDw8WBh8CBQxOb3VzIGpvaW5kcmUfBwUFX3NlbGYfBAUnL2xhdXJlbnRpZGVzL2ZyL25vdXMtam9pbmRyZS9pbmRleC5hc3B4ZGRk3B7Tkya9q16uaFk5YHZOua4Wr661hfdjcuOAP7JqwB8=" />
 </div>
 
 <script type="text/javascript">
@@ -655,8 +668,10 @@ Horaire et localisation</span></a></div>
         </div>
         <div class="clear"></div>
         
-        
         <div data-bind="visible: current().WifiDisponible" class="btWifiDisponible hide-laurentides"></div>
+        
+        
+
         <div class="clear"></div>
         <div class="boutonsBas" data-bind="visible: current() && current().UrlSimba" style="display:none">
             
@@ -761,6 +776,7 @@ Horaire et localisation</span></a></div>
     
     
 
+    
 
                 </div>        
             </div>
@@ -830,8 +846,8 @@ Horaire et localisation</span></a></div>
 </script>
 
 <script type="text/javascript" src="/scripts/jquery.inputmask/jquery.inputmask-3.1.js"></script>
-<script src="/scripts/hammer.min.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/css-accordeon.js?v=2.240" type="text/javascript"></script>
+<script src="/scripts/hammer.min.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/css-accordeon.js?v=2.245" type="text/javascript"></script>
 <script src="/scripts/json2.js" type="text/javascript"></script>
 <script src="/scripts/jquery.autosize-min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
@@ -841,8 +857,8 @@ Horaire et localisation</span></a></div>
 <script src="/scripts/knockout-custom.js" type="text/javascript"></script>
 <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
 <script src="/scripts/jquery.cookie.js" type="text/javascript"></script>
-<script src="/scripts/knockout.grid.js?v=2.240" type="text/javascript"></script>
-<script src="/scripts/script_global.js?v=2.240" type="text/javascript"></script> 
+<script src="/scripts/knockout.grid.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/script_global.js?v=2.245" type="text/javascript"></script> 
         </div>
     </form>
 </div>
@@ -872,24 +888,24 @@ Horaire et localisation</span></a></div>
 
     
 
-    <script src='/pages/json/Biblios.aspx?ReseauId=5&includeActivites=0&byNom=&orderBy=&slim=&LastModified=635932593249870000&v=2.240' type='text/javascript'></script>
-    <script src='/pages/json/Municipalites.aspx?ReseauId=5&LastModified=635932512000000000&v=2.240' type='text/javascript'></script>
-    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=5&count=0&BiblioId=0&apresAujourdhui=1&LastModified=635933069522200000&v=2.240' type='text/javascript'></script>
+    <script src='/pages/json/Biblios.aspx?ReseauId=5&includeActivites=0&byNom=&orderBy=&slim=&LastModified=635983569256170000&v=2.245' type='text/javascript'></script>
+    <script src='/pages/json/Municipalites.aspx?ReseauId=5&LastModified=635983488000000000&v=2.245' type='text/javascript'></script>
+    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=5&count=0&BiblioId=0&apresAujourdhui=1&LastModified=635983836476100000&v=2.245' type='text/javascript'></script>
 
-    <script src="/scripts/classes/Arrays.js?v=2.240" type="text/javascript"></script>
+    <script src="/scripts/classes/Arrays.js?v=2.245" type="text/javascript"></script>
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyB5pHwv9Su-pJMqylU17EThEOLyOGwrS7A&amp;language=fr" type="text/javascript"></script>
     <script src="/scripts/infobox.js" type="text/javascript"></script>
     <script src="/scripts/markerClustererPlus.js" type="text/javascript"></script>
     <script src="/scripts/jquery.cycle.all.min.js" type="text/javascript"></script>
     <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
-    <script src="/scripts/classes/GoogleMapBiblio.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/ActiviteViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/BiblioViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/classes/BibliosViewModel.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/script_biblios.js?v=2.240" type="text/javascript"></script>
-    <script src="/scripts/script_onglets.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/script_ongletsBibliotheques.js?v=2.240" type="text/javascript"></script> 
-    <script src="/scripts/classes/Maths.js?v=2.240" type="text/javascript"></script> 
+    <script src="/scripts/classes/GoogleMapBiblio.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/ActiviteViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/BiblioViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/BibliosViewModel.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/script_biblios.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/script_onglets.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/script_ongletsBibliotheques.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/classes/Maths.js?v=2.245" type="text/javascript"></script> 
     
     <script type="text/javascript">
         window.activitesPerPage = Number.MAX_VALUE;
@@ -929,6 +945,7 @@ Horaire et localisation</span></a></div>
 
     </script>
 
+    
 
 
 <script type="text/javascript">

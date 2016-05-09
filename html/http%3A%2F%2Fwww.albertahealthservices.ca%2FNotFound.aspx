@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!-->
@@ -52,7 +55,7 @@
     <meta name="keywords" content="" />
 
     <meta name="modified" content="Mon, 16 Nov 2015 07:47:27 -0700" />
-    <meta name="published" content="Fri, 01 Jan 2016 12:13:20 -0700" />
+    <meta name="published" content="Mon, 04 Apr 2016 11:02:52 -0700" />
     <meta name="pageid" content="12401" />
 
     <meta property="og:site_name" content="Alberta Health Services" />
@@ -140,6 +143,26 @@
             </div>
         </div>
     
+        
+        <div class="site_emergency_message">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-md-1">
+                        
+        <i class="fa fa-exclamation-triangle fa-5x"></i>
+    
+                    </div>
+                    <div class="col-xs-9 col-md-11">
+                        <h3>Alberta Wildfires Emergency Alert</h3>
+                        
+        <p>Fort McMurray remains under a mandatory evacuation order. A provincial state of emergency has been declared (<a href="http://www.rmwb.ca/News-Room/McMurray-West-Wildfire.htm" style="line-height: 20px;" target="_blank">more information</a>). </p>
+        <p>Updates from Alberta Health Services will be posted on our <a href="http://www.albertahealthservices.ca/wildfire">Wildfire Resources page</a>. Updates from the Alberta government will be posted on their <a href="http://www.alberta.ca/emergency.cfm" target="_blank">emergency page</a>. </p>
+        <p>Visit <a href="http://www.emergencyalert.alberta.ca/content/about/signup.html" target="_blank">Alberta Emergency Alerts</a> to sign up for alerts and download the app.</p>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
         
     
         <!-- MAIN NAVIGATION START -->
@@ -263,6 +286,10 @@
             
                 <li>
                     <a id="navitem-ac24bc53-e871-430b-aa7b-cbdccc803177" href="/Page12659.aspx">Seniors</a>
+                </li>
+            
+                <li>
+                    <a id="navitem-2956e9e2-94b8-43c1-9caa-af3634699057" href="/Page12694.aspx">Wildfire Resources</a>
                 </li>
             
                 <li>

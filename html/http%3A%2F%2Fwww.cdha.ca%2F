@@ -32,7 +32,9 @@ var gDocumentTitle = document.title;
 var gPostBackFormObject = null;
 var gWindowOnLoad = new Array();
 var gPostBackFormProcessSubmit = true;
-var gWebRoot= '';
+var gWebRoot = '';
+var gWebSiteRoot = 'http://www.cdha.ca';
+var gPageTheme = 'CDHA';
 var gAdminWebRoot = gWebRoot + '/Admin';
 var gWebsiteKey = '096c87da-2001-4e4b-aa50-1caed665204c';
 var gHKey = '5187b243-a368-4cbb-b8c3-9f00603cbd97';
@@ -45,15 +47,13 @@ if(gWebsiteKey != 'fbdf17a3-cae7-4943-b1eb-71b9c0dd65d2' && gWebsiteKey != 'fad2
     gIsEasyEditEnabled = false;  
 }
 //]]>
-</script><script src="/AsiCommon/Scripts/Modernizr/Modernizr.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/App_Themes/CDHA/resources/ddlevelsmenu.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css" />
-    
-    
-    <script src="//use.typekit.net/oqa2dbh.js"></script>
-    <script>try { Typekit.load(); } catch (e) { }</script>
-    <link REL="SHORTCUT ICON" href="http://www.cdha.ca/favicon.ico" /><meta name="rating" content="General" /><meta name="Author" content="Canadian Dental Hygienists Association" /><link href="App_Themes/CDHA/cdha.min0032.css" type="text/css" rel="stylesheet" /><script src="/AsiCommon/Scripts/Jquery/Jquery.min.js" type="text/javascript"></script><script src="/AsiCommon/Scripts/Jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script><script src="/AsiCommon/Scripts/Jquery/jquery-ui.custom.min.js" type="text/javascript"></script><link href="/WebResource.axd?d=FZsXL-EAl-XUAelvDmNuQISsiXaVrqltZeJSMN3gqoQ0jdBywJ7Ov_NuhULq6HRWX0VnSO09WyELM3x5S6GsbMFHfooqQ7C4gRxAHRYyBqMoKR4HV0GhZ0g5fzy2zF10KS6yGl8UY0en7aSxH9OGsw2&amp;t=635518423800000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=oALMx_rlqTGBb-kKi8jcD6ed5BgUjKDgSY6rWy-eXy22spokBkf4P6Fzty4KCIFL0vKrJPr3S4ws_LDuIcb2emY9JsiMVFGHD33nPPG_o4VL8wiS5PKg-3-i0r8VH6CRzfwtD_sOy1sI5UZaujc2cl6VSy9gtqekokR-7KxPg_U1&amp;t=635518423800000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=g6jv0iulMM5X5cybX8Www7onXTFHru6pXFepfd9owTwVzKe6nCM7cdaYBGgmLUrU51k6jvInPonPjqJ6RSJwswdeS_2kjsrU76qmZmLrJus8n2HvuaAK3FlIZ8XQc0A-NXfAINzwA3XcOugyewrhnA2&amp;t=635518423800000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=aEgie5WhOR109kcPlWNCXLIuxpFIwfvViAIvccnWF7ZrSp5Renk9ROMvmTjTks79ORNRWl1s1tOpM0MD-NsGA0aHaIt9sZF3jsQpGcA1j3MRvwl48OO151Br46wTLF5oKZhvASY559FbHkS_FX8dwA2&amp;t=635518423800000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=TYwGzIuu3kHwtZLo7R41UmMeWJYWX7tuafakWRA7uRFw1y1fX-43Y92xNnEapklW1tw8D4nQEUSAbPrClnjnBSJBloZUT7MZOuslCosoiWiSOTSWtw_FMBwWqI0RuCQZtAqHD8tGlTEnV2WdaSx3UKz0Vd2i8zuLVEZzB0affh81&amp;t=635518423800000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><style type="text/css">
+</script><script src="/AsiCommon/Scripts/Modernizr/Modernizr.min.js" type="text/javascript"></script><meta content="width=1024" name="viewport" />
+        
+    <script type="text/javascript" src="/App_Themes/CDHA/resources/ddlevelsmenu.js"></script><script type="text/javascript" src="/App_Themes/CDHA/resources/ddlevelsmenu.js"></script>
+    <link REL="SHORTCUT ICON" href="http://www.cdha.ca/favicon.ico" /><meta name="rating" content="General" /><meta name="Author" content="Canadian Dental Hygienists Association" /><link href="App_Themes/CDHA/app000000000000000006.min.css" type="text/css" rel="stylesheet" /><script src="/AsiCommon/Scripts/Jquery/Jquery.min.js" type="text/javascript" ></script><script src="/AsiCommon/Scripts/Jquery/jquery-migrate-1.2.1.min.js" type="text/javascript" ></script><script src="/AsiCommon/Scripts/Jquery/jquery-ui.custom.min.js" type="text/javascript" ></script><!--[if !IE 8]><!--><script src="/AsiCommon/Scripts/AngularBundles/angular-bundle.min.js" type="text/javascript" defer></script>
+<script src="/AsiCommon/Scripts/AngularBundles/angular-spin-bundle.min.js" type="text/javascript" defer></script>
+<script src="/AsiCommon/Scripts/AngularBundles/angular-asi-core-bundle.min.js" type="text/javascript" defer></script>
+<!--<![endif]--><link href="/WebResource.axd?d=FZsXL-EAl-XUAelvDmNuQISsiXaVrqltZeJSMN3gqoQ0jdBywJ7Ov_NuhULq6HRWX0VnSO09WyELM3x5S6GsbMFHfooqQ7C4gRxAHRYyBqMoKR4HV0GhZ0g5fzy2zF10KS6yGl8UY0en7aSxH9OGsw2&amp;t=635851083120000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=oALMx_rlqTGBb-kKi8jcD6ed5BgUjKDgSY6rWy-eXy22spokBkf4P6Fzty4KCIFL0vKrJPr3S4ws_LDuIcb2emY9JsiMVFGHD33nPPG_o4VL8wiS5PKg-3-i0r8VH6CRzfwtD_sOy1sI5UZaujc2cl6VSy9gtqekokR-7KxPg_U1&amp;t=635851083120000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=g6jv0iulMM5X5cybX8Www7onXTFHru6pXFepfd9owTwVzKe6nCM7cdaYBGgmLUrU51k6jvInPonPjqJ6RSJwswdeS_2kjsrU76qmZmLrJus8n2HvuaAK3FlIZ8XQc0A-NXfAINzwA3XcOugyewrhnA2&amp;t=635851083120000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=aEgie5WhOR109kcPlWNCXLIuxpFIwfvViAIvccnWF7ZrSp5Renk9ROMvmTjTks79ORNRWl1s1tOpM0MD-NsGA0aHaIt9sZF3jsQpGcA1j3MRvwl48OO151Br46wTLF5oKZhvASY559FbHkS_FX8dwA2&amp;t=635851083120000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=TYwGzIuu3kHwtZLo7R41UmMeWJYWX7tuafakWRA7uRFw1y1fX-43Y92xNnEapklW1tw8D4nQEUSAbPrClnjnBSJBloZUT7MZOuslCosoiWiSOTSWtw_FMBwWqI0RuCQZtAqHD8tGlTEnV2WdaSx3UKz0Vd2i8zuLVEZzB0affh81&amp;t=635851083120000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><style type="text/css">
 	.ctl01_TemplateBody_ContentPage1_WebPartZone1_Page1_0 { border-color:Black;border-width:1px;border-style:Solid; }
 	.ctl01_TemplateBody_ContentPage2_WebPartZone2_Page1_0 { border-color:Black;border-width:1px;border-style:Solid; }
 	.ctl01_TemplateBody_ContentPage3_WebPartZone3_Page1_0 { border-color:Black;border-width:1px;border-style:Solid; }
@@ -68,10 +68,12 @@ if(gWebsiteKey != 'fbdf17a3-cae7-4943-b1eb-71b9c0dd65d2' && gWebsiteKey != 'fad2
     <form method="post" action="/?" id="aspnetForm">
 <div class="aspNetHidden">
 <input type="hidden" name="__WPPS" id="__WPPS" value="s" />
+<input type="hidden" name="__ClientContext" id="__ClientContext" value="{&quot;baseUrl&quot;:&quot;/&quot;,&quot;isAnonymous&quot;:true,&quot;websiteRoot&quot;:&quot;http://www.cdha.ca/&quot;}" />
 <input type="hidden" name="__CTRLKEY" id="__CTRLKEY" value="" />
 <input type="hidden" name="__SHIFTKEY" id="__SHIFTKEY" value="" />
 <input type="hidden" name="ctl01_ScriptManager1_TSM" id="ctl01_ScriptManager1_TSM" value="" />
-<input type="hidden" name="PageInstanceKey" id="PageInstanceKey" value="c510c8e3-e032-448d-be64-8653ca215610" />
+<input type="hidden" name="PageInstanceKey" id="PageInstanceKey" value="0dc77a6b-143c-4a86-81f0-9ab2059acdbc" />
+<input type="hidden" name="__RequestVerificationToken" id="__RequestVerificationToken" value="TIV6UrhJ6aLHQUlLSik1keSQpkjhVTpb1eTgtGbFGhSeLYRs5gGAHPsF8BG7ryNijVDnioe5yZ5dw0E0oLwjqK-RGSHMz_AIEXjdaX6eiRo1" />
 <input type="hidden" name="TemplateUserMessagesID" id="TemplateUserMessagesID" value="ctl01_TemplateUserMessages_ctl00_Messages" />
 <input type="hidden" name="PageIsDirty" id="PageIsDirty" value="false" />
 <input type="hidden" name="NavMenuClientID" id="NavMenuClientID" value="ctl01_TemplateMainNavigation_Primary_NavMenu" />
@@ -87,9 +89,9 @@ if(gWebsiteKey != 'fbdf17a3-cae7-4943-b1eb-71b9c0dd65d2' && gWebsiteKey != 'fad2
 <input type="hidden" name="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentHtml$ciNewContentHtml" id="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentHtml$ciNewContentHtml" value="1" />
 <input type="hidden" name="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentTaggedList$ciNewContentTaggedList" id="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentTaggedList$ciNewContentTaggedList" value="1" />
 <input type="hidden" name="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentTaggedList$ciNewContentTaggedList$TaggedListRepeater$ctl00$ctl00" id="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentTaggedList$ciNewContentTaggedList$TaggedListRepeater$ctl00$ctl00" value="1" />
-<input type="hidden" name="AtomObjectPrimaryKeyctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl00_ctl00" id="AtomObjectPrimaryKeyctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl00_ctl00" value="/wEUKwABKClYU3lzdGVtLkd1aWQsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSRkOThlZTUzMy1mODhmLTQzYjMtOWY2YS05ZWNhMzA1Y2E3NGQ=" />
+<input type="hidden" name="AtomObjectPrimaryKeyctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl00_ctl00" id="AtomObjectPrimaryKeyctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl00_ctl00" value="/wEUKwABKClYU3lzdGVtLkd1aWQsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSRmNTRkZGE0Ny00NzdjLTQ3OGQtODE0Ny0xMmE5OWVhMDg0ZDc=" />
 <input type="hidden" name="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentTaggedList$ciNewContentTaggedList$TaggedListRepeater$ctl01$ctl00" id="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentTaggedList$ciNewContentTaggedList$TaggedListRepeater$ctl01$ctl00" value="1" />
-<input type="hidden" name="AtomObjectPrimaryKeyctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl01_ctl00" id="AtomObjectPrimaryKeyctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl01_ctl00" value="/wEUKwABKClYU3lzdGVtLkd1aWQsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSRhMmFlZWM3Ni00NDU1LTQxOTMtOWU2Yy0yM2Q2NzE2OGQ0MmM=" />
+<input type="hidden" name="AtomObjectPrimaryKeyctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl01_ctl00" id="AtomObjectPrimaryKeyctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl01_ctl00" value="/wEUKwABKClYU3lzdGVtLkd1aWQsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSRhYzc5MTFhMC02MmNkLTQ1YmUtYmM5Ni03OTFhNjI2ZTkzMzk=" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
 <input type="hidden" name="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentHtml2$ciNewContentHtml2" id="IsControlPostBackctl01$TemplateBody$WebPartManager1$gwpciNewContentHtml2$ciNewContentHtml2" value="1" />
@@ -107,7 +109,7 @@ if(gWebsiteKey != 'fbdf17a3-cae7-4943-b1eb-71b9c0dd65d2' && gWebsiteKey != 'fad2
 <input type="hidden" name="IsControlPostBackctl01$TemplateBody$ContentPage6" id="IsControlPostBackctl01$TemplateBody$ContentPage6" value="1" />
 <input type="hidden" name="IsControlPostBackctl01$TemplateBody$ContentPage7" id="IsControlPostBackctl01$TemplateBody$ContentPage7" value="1" />
 <input type="hidden" name="IsControlPostBackctl01$TemplateBody$ContentPageFooter1" id="IsControlPostBackctl01$TemplateBody$ContentPageFooter1" value="1" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPaA8FDzhkMzQ5YzVkMzViZjQ2YRgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBgUgY3RsMDEkTG9naW5WaWV3MSRidG5IZWFkZXJTaWduSW4FIWN0bDAxJFNlY29uZGFyeSRTdWJOYXZpZ2F0aW9uVHJlZQULY3RsMDEkY3RsMTcFE2N0bDAxJEdlbmVyaWNXaW5kb3cFE2N0bDAxJE9iamVjdEJyb3dzZXIFGWN0bDAxJE9iamVjdEJyb3dzZXJEaWFsb2c6ylHXy6DjIADrg2QhFKwlnrF7SxkvH+GV4q2/5glUzQ==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPaA8FDzhkMzc3ZjFmNWZmNjJmYRgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBgUgY3RsMDEkTG9naW5WaWV3MSRidG5IZWFkZXJTaWduSW4FIWN0bDAxJFNlY29uZGFyeSRTdWJOYXZpZ2F0aW9uVHJlZQULY3RsMDEkY3RsMTcFE2N0bDAxJEdlbmVyaWNXaW5kb3cFE2N0bDAxJE9iamVjdEJyb3dzZXIFGWN0bDAxJE9iamVjdEJyb3dzZXJEaWFsb2fS5Z43wfS88Wa015OP6eir2+IjCuU9qzykxLYizv2JJw==" />
 </div>
 
 <script type="text/javascript">
@@ -137,7 +139,7 @@ function CopyMoveContentItem_Callback(dialogWindow)
 //]]>
 </script>
 
-<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl01_ScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.50508%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a0c8c847b-b611-49a7-8e75-2196aa6e72fa%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2014.1.403.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3a68d9452f-f268-45b2-8db7-8c3bbf305b8d%3a16e4e7cd%3af7645509%3a24ee1bba%3a7165f74%3af46195d3%3a2003d0b8%3a1e771326%3a88144a7a%3ae524c98b%3aed16cbdc%3a874f8ea2%3a92fe8ea0%3afa31b949%3a19620875%3a490a9d4e%3abd8f85e4" type="text/javascript"></script>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl01_ScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.50508%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a0c8c847b-b611-49a7-8e75-2196aa6e72fa%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2014.3.1209.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3acd668efa-682a-4e93-b784-26f0724f247c%3a16e4e7cd%3af7645509%3a24ee1bba%3a6d43f6d9%3af46195d3%3a2003d0b8%3a88144a7a%3a1e771326%3ae524c98b%3aed16cbdc%3a874f8ea2%3a92fe8ea0%3afa31b949%3ac128760b%3a19620875%3a490a9d4e%3abd8f85e4" type="text/javascript"></script>
 <script src="/AsiCommon/scripts/Asi.js" type="text/javascript"></script>
 <script type="text/javascript">
 //<![CDATA[
@@ -240,7 +242,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl01$ScriptManager1', 'aspnetForm'
                         
                             <div class="Anonymous" style="float:right">
                                <div class="language">
-                                    <a id="ctl01_LoginView1_AnonLocaleLink" href="/achd">FR</a>
+                                    <a id="ctl01_LoginView1_AnonLocaleLink" href="/achd">Français</a>
                                 </div>
                                 <div id="ctl01_LoginView1_AnonImgVerticalDivider" class="imgVerticalDivider">
 
@@ -259,7 +261,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl01$ScriptManager1', 'aspnetForm'
                                 <div class="imgVerticalDivider">
 
                                 </div>
-                                <span id="ctl01_LoginView1_btnHeaderSignIn" class="RadButton RadButton_Default rbImageButton btnSignIn"><!-- 2014.1.403.45 --><span class="rbText rbHideElement">SignIn</span><input id="ctl01_LoginView1_btnHeaderSignIn_ClientState" name="ctl01_LoginView1_btnHeaderSignIn_ClientState" type="hidden" /></span>
+                                <span id="ctl01_LoginView1_btnHeaderSignIn" class="RadButton RadButton_Default rbImageButton btnSignIn"><!-- 2014.3.1209.45 --><span class="rbText rbHideElement">SignIn</span><input id="ctl01_LoginView1_btnHeaderSignIn_ClientState" name="ctl01_LoginView1_btnHeaderSignIn_ClientState" type="hidden" /></span>
                                     
                             </div>
                         
@@ -308,14 +310,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl01$ScriptManager1', 'aspnetForm'
 <li><a href="http://www.cdha.ca/cdha/Membership_folder/Insurance_Programs_folder/CDHA/Membership/Insurance_Programs.aspx?hkey=2000d00a-d118-4041-b57f-3fdb2349c705" class="xfooter">Insurance Programs<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">CDHA Offers Dental Hygienists<br />The Best Coverage</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/Membership_folder/Membership_Benefits_folder/CDHA/Membership/Membership_Benefits.aspx?hkey=489b1563-e5df-44e9-904a-8454b363c6cf" class="xfooter">Membership Benefits<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Discounts & Services for <br />CDHA Members</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/Membership_folder/Membership_Support___FAQ/CDHA/Membership/Membership_Frequently_Asked_Questions.aspx?hkey=db66a2e3-85f9-4cbd-b5a3-88be1387b3a8" class="xfooter">Membership FAQs<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Membership Support and<br />Frequently Asked Questions</small></a></li>
-<li><a href="http://www.cdha.ca/cdha/Membership_folder/Contests_Draws/DH_in_HD_Video_Contest/CDHA/Membership/contests/DH_in_HD_VideoContest.aspx" class="xfooter">Contests & Draws<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Special Contests & Draws<br />Exclusively for CDHA Members</small></a></li>
 </ul>
 <ul id="ddsubmenu8a1da806-8d45-415c-a98a-5ff8a3b51a14" class="ddsubmenustyle">
 <li><a href="http://www.cdha.ca/cdha/The_Profession_folder/Professional_Identity/CDHA/The_Profession/The_Profession.aspx?hkey=0d786b25-f9e4-4551-8ad8-869b0b4b5e64" class="xfooter">Professional Identity<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Our Professional<br />Identity Statement</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/The_Profession_folder/Independent_Practice_folder/CDHA/The_Profession/Independent_Practice/Introducing_Independent_Practice_Network.aspx?hkey=6baa1969-bb7a-45db-8596-b2a498f678f5" class="xfooter">Independent Practice<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Your Guide to Running <br /> a Dental Hygiene Practice</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/The_Profession_folder/Oh_Canada_eMagazine_folder_2/CDHA/The_Profession/OhCanada/eMagazine.aspx?hkey=9c8690ac-0879-4963-9064-3402eecbbac6" class="xfooter">Oh Canada! Magazine<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">CDHA's Oral Health<br />Canada Magazine</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/The_Profession_folder/The_Canadian_Journal_of_Dental_Hygiene_CJDH_folder/CDHA/The_Profession/CJDH/CJDH.aspx?hkey=e1a5f6ac-ce37-4aeb-81c8-0bcaeafbc85b" class="xfooter">The Canadian Journal of Dental Hygiene (CJDH)<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">The CDHA Journal, Plus More to Help<br />Keep You Up to Date</small></a></li>
-<li><a href="http://www.cdha.ca/cdha/The_Profession_folder/Research_folder/CDHA/The_Profession/Research/Cochrane_Corner.aspx?hkey=f2d25806-46fe-45a7-a14a-4e36549f9fe4" class="xfooter">Research<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Find the Information<br />You Need</small></a></li>
+<li><a href="http://www.cdha.ca/cdha/The_Profession_folder/Research_folder/2015-2018_Dental_Hygiene_Research_Agenda/CDHA/The_Profession/Research/2015-2018_Dental_Hygiene_Research_Agenda.aspx" class="xfooter">Research<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Find the Information<br />You Need</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/The_Profession_folder/Policy__Advocacy_folder/CDHA/The_Profession/Policy_Advocacy/Policy_Action.aspx?hkey=083e594d-439f-4508-b05c-94c859380f69" class="xfooter">Policy & Advocacy<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Advisory Committees, Standards,<br />Partnerships & More</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/The_Profession_folder/Resources_folder/CDHA/The_Profession/Resources/Resources.aspx?hkey=2e78edf4-f365-4360-a725-c46bdb885a0a" class="xfooter">Resources<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Position Statements <br /> & Papers</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/The_Profession_folder/Awards__Recognition_folder/CDHA/The_Profession/Awards___Recognition/Awards_Recognition.aspx?hkey=b59f405a-7649-469e-9db4-866d6d25f24e" class="xfooter">Awards & Recognition<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Members Recognized for<br />Career Excellence</small></a></li>
@@ -334,6 +335,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl01$ScriptManager1', 'aspnetForm'
 <li><a href="http://www.cdha.ca/cdha/Education/Students/CDHA/Education/Students/students.aspx?hkey=4ff7fb83-70bf-49f2-a1fc-8458ef9753a8" class="xfooter">Students<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">A Wealth of Information for Graduating<br />or New Students</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/Education/Online_Courses/CDHA/Education/Courses/Oral_Cancer_Screening.aspx?hkey=47a28582-8f9d-4e02-b4f8-9a753d52190b" class="xfooter">Online Courses<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Online Courses Available<br />from CDHA</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/Education/Webinars/CDHA/Education/Webinars/Default.aspx?&WebsiteKey=096c87da-2001-4e4b-aa50-1caed665204c&hkey=afcabb1a-ad10-4b54-b5d4-c68836c3daa0&tabbedPanel=1&hkey=98077c45-00cd-49d0-ac40-6cb2ef199253" class="xfooter">Webinars<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Online Webinars<br />Live & On Demand</small></a></li>
+<li><a href="http://www.cdha.ca/cdha/Education/Reports/CDHA/Education/Reports/Reports.aspx?hkey=dea2af26-149d-464d-91be-d56ecd36ed26" class="xfooter">Reports<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">Reports and Competencies<br />Related to Education</small></a></li>
 <li><a href="http://www.cdha.ca/cdha/Education/DVD_Quarterly_of_Dental_Hygiene/CDHA/Education/DVD_Quarterly/Default.aspx?hkey=1cbb715e-fbae-4f9f-be29-e3ee6e4a66bc" class="xfooter">DVD Quarterly of Dental Hygiene<br><small style="font-family: Arial, Helvetica, sans-serif; font-size:0.88em;font-weight:normal; line-height:120%; margin-top:5px;color:#a2a2a2;">DVD Quarterly of Dental Hygiene is<br />Available Online & in DVD Format</small></a></li>
 </ul>
 <ul id="ddsubmenu3b5e555e-3305-40f1-8482-e7e50474ba9d" class="ddsubmenustyle">
@@ -450,58 +452,58 @@ Sys.WebForms.PageRequestManager._initialize('ctl01$ScriptManager1', 'aspnetForm'
   });
 </script>
 <map id="ImageMapsCom-image-maps-2015-02-18-220918" name="image-maps-2015-02-18-220918">
-<area coords="2,0,390,348" href="/cjdhsearch" shape="rect" style="outline: none;" target="_self" />
-<area coords="390,0,960,350" href="/cjdh" shape="rect" style="outline: none;" target="_self" />
-<area coords="958,348,960,350" shape="rect" />
+<area coords="2,0,390,348" href="/cjdhsearch" shape="rect" style="outline: none;" target="_self">
+<area coords="390,0,960,350" href="/cjdh" shape="rect" style="outline: none;" target="_self">
+<area coords="958,348,960,350" shape="rect">
 </map>
 <div style="width: 960px; overflow: hidden;">
 <div class="homePageSlider">
 <div class="slide" index="0">
-<a href="/cdha/The_Profession_folder/The_Canadian_Journal_of_Dental_Hygiene_CJDH_folder/CDHA/The_Profession/CJDH/CJDH.aspx"><img alt="" src="http://files.cdha.ca/images/profession/cjdh-billboard-50n1.jpg" /></a>
+<a href="/cdha/News-Events_folder/National_Dental_Hygienist_Week/NDHW_In_The_News/CDHA/News-Events_folder/NDHW/NDHW_In_The_News.aspx"><img alt="" src="http://files.cdha.ca/images/newHome/tv_commercial_billboard.jpg"></a>
 </div>
 <div class="slide" index="1">
-<a href="http://www.dentalcare.ca/en-CA/oral-b-crest-professional-products/category/toothpastes/crest-prohealth-advanced-gum-protect.aspx" target="_blank"><img alt="" src="http://files.cdha.ca/images/home/P&amp;G_Crest_Billboard Banner_960x350_Feb2016_ENG.png" /></a>
+<a href="https://vip.listerineprofessional.ca/Register/Register.aspx?promo_code=BANN8" target="_blank"><img alt="" src="http://files.cdha.ca/images/home/JJI_Half-the-Clean_May_2016.jpg"></a>
 </div>
 <div class="slide" index="2">
-<a href="/cdha/Education/Webinars/CDHA/Education/Webinars/Baccalaureate_Webinar_2016.aspx"><img alt="" src="http://files.cdha.ca/images/education/bacc-billboard.jpg" /></a>
+<a href="/cdha/News-Events_folder/National_Dental_Hygienist_Week/CDHA/News-Events_folder/NDHW/NDHW.aspx"><img alt="" src="http://files.cdha.ca/images/NewsEvents/ndhw_billboard_2016.jpg"></a>
 </div>
 <div class="slide" index="3">
-<a href="/cdha/Membership_folder/Membership_Benefits_folder/CDHA/Membership/Membership_Benefits.aspx#goodlife"><img alt="" src="http://files.cdha.ca/images/newHome/CDHA-Benefit-spotlight-goodlife.jpg" /></a>
+<a href="/cdha/Education/Workshops___Conferences/8_Simple_Secrets/CDHA/Education/Conferences___Workshops/8_Simple_Secrets.aspx"><img alt="" src="http://files.cdha.ca/images/education/8-simple-secrets-workshop-billboard.jpg"></a>
 </div>
 <div class="slide" index="4">
-<a href="http://www.dentalcare.ca/en-CA/oral-b-crest-professional-products/category/toothpastes/crest-prohealth-advanced-gum-protect.aspx" target="_blank"><img alt="" src="http://files.cdha.ca/images/home/P&amp;G_Crest_Billboard Banner_960x350_Feb2016_ENG.png" /></a>
+<a href="http://www.dentalcare.ca/en-CA/oral-b-crest-professional-products/category/toothpastes/crest-prohealth-advanced-gum-protect.aspx" target="_blank"><img alt="" src="http://files.cdha.ca/images/home/P&amp;G_Crest_Billboard Banner_960x350_Feb2016_ENG.png"></a>
 </div>
 <div class="slide" index="5">
-<a href="/cdha/Career_folder/Job_Market___Employment_Survey/CDHA/Career/Survey/Job_Market_Survey.aspx?hkey=e3d1dbda-c64c-4b5a-9f0e-59ac6e0cd39f"><img alt="" src="http://files.cdha.ca/images/newHome/jobMarketSurvery2016-billboard.jpg" /></a>
+<a href="/cdha/Education/Workshops___Conferences/Interim_Stabilization_Therapy_Orientation_Workshop/CDHA/Education/Conferences___Workshops/Interim_Stabilization_Therapy_Orientation_Workshop.aspx?hkey=02d33aa0-4e3d-4b3c-b93b-568bcf29702c"><img alt="" src="http://files.cdha.ca/images/education/IST-event-billboard-thunderbay.jpg"></a>
 </div>
 <div class="slide" index="6">
-<a href="/cdha/Membership_folder/Membership_Benefits_folder/Free_CDHA_Perks/CDHA/Membership/Benefits/CDHA_Perks.aspx"><img alt="" src="http://files.cdha.ca/images/joinToday/perksHomeBillboard_sept.jpg" /></a>
+<a href="/cdha/The_Profession_folder/Oh_Canada_eMagazine_folder/CDHA/The_Profession/OhCanada/eMagazine.aspx"><img alt="" src="http://files.cdha.ca/images/newHome/OHC-Spring2016-billboard.jpg"></a>
 </div>
 </div>
 <div class="homePageNavSlider">
 <div class="slideNav" index="0">
-<div class="text"> <span class="section">CJDH</span> <span class="title"><br />
-Celebrating 50 Years </span> </div>
+<div class="text"> <span class="title">NEW <br>
+CDHA TV Spot </span> </div>
 <div class="progressBar">&nbsp;</div>
 </div>
 <div class="slideNav" index="2">
-<div class="text"> <span class="section">Baccalaureate DH <br />
-Education Webinar</span></div>
+<div class="text"> <span class="section"> National Dental<br>
+Hygienists Week™</span></div>
 <div class="progressBar">&nbsp;</div>
 </div>
 <div class="slideNav" index="3">
-<div class="text"> <span class="section"> </span> <span class="title">CDHA Benefit <br />
-Spotlight</span> </div>
+<div class="text"> <span class="section"> </span> <span class="title">8 Simple Secrets <br>
+Workshop</span> </div>
 <div class="progressBar">&nbsp;</div>
 </div>
 <div class="slideNav" index="5">
-<div class="text"> <span class="section">2015 Job Market<br />
-&amp; Employment Survey</span> </div>
+<div class="text"> <span class="section">Interim Stabilization<br>
+Therapy Workshop</span> </div>
 <div class="progressBar">&nbsp;</div>
 </div>
 <div class="slideNav" index="6">
-<div class="text"> <span class="section"></span> <span class="title">NEW <br />
-CDHA Perks </span> </div>
+<div class="text"> <span class="section"></span><span class="section">Oh Canada!<br>
+Spring 2016 </span> </div>
 <div class="progressBar">&nbsp;</div>
 </div>
 </div>
@@ -524,9 +526,7 @@ CDHA Perks </span> </div>
 
 			<div class="iMIS-WebPart">
 				<div id="ste_container_cileftSideBar" class="ContentItemContainer"><div id="ctl01_TemplateBody_WebPartManager1_gwpcileftSideBar_cileftSideBar_Panel_leftSideBar">
-	<a href="/cdha/Education/Webinars/OnDemand/CDHA/Education/Webinars/Default.aspx?&amp;WebsiteKey=096c87da-2001-4e4b-aa50-1caed665204c&amp;hkey=afcabb1a-ad10-4b54-b5d4-c68836c3daa0&amp;tabbedPanel=3&amp;hkey=afcabb1a-ad10-4b54-b5d4-c68836c3daa0"><img alt="" src="http://files.cdha.ca/images/education/recentOndemandWebinars.png" style="padding-bottom: 20px;" /></a>
-<!--<a href="http://www.cdha.ca/cdha/Education/Webinars/CDHA/Education/Webinars/Innovative_Professional_Whitening_Webinar.aspx"><img alt="" style="margin-bottom: 20px;" src="http://files.cdha.ca/images/education/InnovativeWhitening.png" /></a>-->
-<a href="http://www.cafepress.com/dentalhygienestore"><img alt="" style="margin-bottom: 20px;" src="http://files.cdha.ca/images/newHome/dh_store.png" /></a>
+	<a href="/cdha/Education/Webinars/OnDemand/CDHA/Education/Webinars/Default.aspx?&WebsiteKey=096c87da-2001-4e4b-aa50-1caed665204c&hkey=afcabb1a-ad10-4b54-b5d4-c68836c3daa0&tabbedPanel=3&hkey=afcabb1a-ad10-4b54-b5d4-c68836c3daa0"><img alt="" src="http://files.cdha.ca/images/education/recentOndemandWebinars.png" style="padding-bottom: 20px;" /></a><a href="http://www.cafepress.com/dentalhygienestore"><img alt="" style="margin-bottom: 20px;" src="http://files.cdha.ca/images/newHome/dh_store.png" /></a>
 </div><div>
 
 </div></div>
@@ -538,7 +538,7 @@ CDHA Perks </span> </div>
             <thead>
                 <tr>
                     <th colspan="2" style="width:225px; height:103px;">
-                        <img src='/am/images/newHome/jobAdsWidgetHeader.gif' /> <br />
+                        <img src='/am/images/newHome/jobAdsWidgetHeader.png' /> <br />
                         <div class="headerTitle" style="float:left">Province</div>
                         <div class="headerTitle" style="float:right">Listings</div>
                     </th>
@@ -550,7 +550,7 @@ CDHA Perks </span> </div>
                     <a id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl01_JobAd_PROVINCE" class="JobTitle" href="/cdha/Career_folder/Employment_Opportunities/Career_Search/CDHA/Career/Job_Search.aspx?Code=BC">British Columbia</a>
                 </td>
                 <td>
-                    <span id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl01_JobAd_QUANTITY" class="JobDate">42</span>
+                    <span id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl01_JobAd_QUANTITY" class="JobDate">34</span>
                 </td>
             </tr>
     
@@ -559,7 +559,7 @@ CDHA Perks </span> </div>
                     <a id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl02_JobAd_PROVINCE" class="JobTitle" href="/cdha/Career_folder/Employment_Opportunities/Career_Search/CDHA/Career/Job_Search.aspx?Code=ON">Ontario</a>
                 </td>
                 <td>
-                    <span id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl02_JobAd_QUANTITY" class="JobDate">15</span>
+                    <span id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl02_JobAd_QUANTITY" class="JobDate">23</span>
                 </td>
             </tr>
     
@@ -568,16 +568,16 @@ CDHA Perks </span> </div>
                     <a id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl03_JobAd_PROVINCE" class="JobTitle" href="/cdha/Career_folder/Employment_Opportunities/Career_Search/CDHA/Career/Job_Search.aspx?Code=SK">Saskatchewan</a>
                 </td>
                 <td>
-                    <span id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl03_JobAd_QUANTITY" class="JobDate">11</span>
+                    <span id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl03_JobAd_QUANTITY" class="JobDate">10</span>
                 </td>
             </tr>
     
             <tr>
                 <td>
-                    <a id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl04_JobAd_PROVINCE" class="JobTitle" href="/cdha/Career_folder/Employment_Opportunities/Career_Search/CDHA/Career/Job_Search.aspx?Code=MB">Manitoba</a>
+                    <a id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl04_JobAd_PROVINCE" class="JobTitle" href="/cdha/Career_folder/Employment_Opportunities/Career_Search/CDHA/Career/Job_Search.aspx?Code=AB">Alberta</a>
                 </td>
                 <td>
-                    <span id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl04_JobAd_QUANTITY" class="JobDate">4</span>
+                    <span id="ctl01_TemplateBody_WebPartManager1_gwpste_container_JobAdsWidget_ciJobAdsWidget_JobAdsHomeWidgetRpt_ctl04_JobAd_QUANTITY" class="JobDate">7</span>
                 </td>
             </tr>
     
@@ -597,11 +597,9 @@ CDHA Perks </span> </div>
 				</div>
 					<div class="iMIS-WebPart">
 						<div id="ste_container_ciTweeterFacebook" class="ContentItemContainer"><div id="ctl01_TemplateBody_WebPartManager1_gwpciTweeterFacebook_ciTweeterFacebook_Panel_TweeterFacebook">
-	<div style="width: 220px;">
-<a class="twitter-timeline" lang="EN" href="https://twitter.com/twitterapi" width="220" data-widget-id="377416266052419584" data-theme="light" data-link-color="#cc0000" data-related="twitterapi,twitter" data-aria-polite="assertive" height="150">Tweets by @twitterapi</a>
+	<div style="width: 220px;"><a class="twitter-timeline" lang="EN" href="https://twitter.com/twitterapi" width="220" data-widget-id="377416266052419584" data-theme="light" data-link-color="#cc0000" data-related="twitterapi,twitter" data-aria-polite="assertive" height="150">Tweets by @twitterapi</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<!--facebook widget-->
-<div style="padding: 10px; text-align: center;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FtheCDHA&amp;send=false&amp;layout=standard&amp;width=220&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=recommend&amp;height=55" frameborder="0" scrolling="no" style="border: currentcolor; border-image-source: none; width: 220px; height: 55px; overflow: hidden;" allowtransparency="true"></iframe></div>
+<div style="padding: 10px; text-align: center;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FtheCDHA&send=false&layout=standard&width=220&show_faces=false&font=arial&colorscheme=light&action=recommend&height=55" frameborder="0" scrolling="no" style="border: currentcolor; border-image-source: none; width: 220px; height: 55px; overflow: hidden;" allowtransparency="true"></iframe></div>
 </div>
 </div><div>
 
@@ -636,20 +634,25 @@ CDHA Perks </span> </div>
 					<div id="ste_container_citopSection" class="ContentItemContainer"><div id="ctl01_TemplateBody_WebPartManager1_gwpcitopSection_citopSection_Panel_topSection">
 	<div style="width: auto; height: auto; overflow: hidden;">
 <div class="topSectionHeadline">
-<a href="http://www.pdconf.com/cms2016/" target="_blank"><img alt="" src="/am/images/home/PDC_home.gif" style="border: 1px solid #b4b4b4;" /></a>
-<h4>Pacific Dental Conference</h4>
-<p>Canada’s premier dental tradeshow. Vancouver, BC, March 17-19, 2016. <a href="http://www.pdconf.com/cms2016/" target="_blank">Registration now open</a>. Visit CDHA at booth #1551.</p>
+<div class="imageBorder">
+<a href="/cdha/Education/Workshops___Conferences/AGM_Edmonton_2016/CDHA/Education/Conferences___Workshops/2016_AGM_and_Leadership_Summit.aspx"><img alt="" src="http://files.cdha.ca/images/home/AGM_Edmonton_homepagePromo.png" /></a>
+</div>
+<h4>CDHA Leadership Summit, Professional Development Session and AGM</h4>
+<p>The Canadian Dental Hygienists Association (CDHA) is hosting a leadership summit and professional development session in conjunction with its annual general meeting in Edmonton, Alberta. <a href="/cdha/Education/Workshops___Conferences/AGM_Edmonton_2016/CDHA/Education/Conferences___Workshops/2016_AGM_and_Leadership_Summit.aspx">Learn More</a></p>
 </div>
 <div class="topSectionHeadline">
-<a href="/ndhw"><img alt="" src="http://files.cdha.ca/images/NewsEvents/ndhwTopStories.jpg" style="border: 1px solid #b4b4b4;" /> </a>
-<h4>National Dental Hygienists Week<sup>TM</sup> 2016</h4>
-<p>We hope it’s already on your calendars!  National Dental Hygienists Week<sup>TM</sup> 2016  #NDHW16 takes place <strong>April 9-15</strong>. Thanks to the sponsorship of TD Insurance, Dentsply and Sunstar G•U•M, this year’s festivities will be even bigger. <a href="/cdha/News-Events_folder/National_Dental_Hygienist_Week/CDHA/News-Events_folder/NDHW/NDHW.aspx" target="_blank">Learn More</a></p>
+<div class="imageBorder">
+<a href="/ndhw"><img alt="" src="http://files.cdha.ca/images/NewsEvents/toothguy_home.png" /> </a>
+</div>
+<h4>2016 Colouring Contest Winners Announced Soon</h4>
+<p>Winners of the Toys R Us gift card and kids oral health prize packs from Sunstar G•U•M for the the NDHW<sup>™</sup> Colouring Contest will be posted soon.</p>
 </div>
 <div class="topSectionHeadline">
-<a href="http://isdh2016.dentalhygienists.ch/" target="_blank"><img alt="" src="http://files.cdha.ca/images/newsEvents/ISDH_2016.gif" style="border: 1px solid #b4b4b4;" /></a>
+<div class="imageBorder">
+<a href="http://isdh2016.dentalhygienists.ch/" target="_blank"><img alt="" src="http://files.cdha.ca/images/newsEvents/ISDH_2016.png" /></a>
+</div>
 <h4>International Symposium on Dental Hygiene (ISDH) 2016</h4>
-<p>Swiss Dental Hygienists is delighted to welcome the IFDH with the House of Delegates and the International Symposium on Dental Hygiene ISDH to Switzerland. June 23-25, 2016. <a href="http://isdh2016.dentalhygienists.ch/" target="_blank">Learn More</a>
-</p>
+<p>Swiss Dental Hygienists is delighted to welcome the IFDH with the House of Delegates and the International Symposium on Dental Hygiene ISDH to Switzerland. June 23-25, 2016. <a href="http://isdh2016.dentalhygienists.ch/" target="_blank">Learn More</a></p>
 </div>
 </div>
 </div><div>
@@ -671,43 +674,41 @@ CDHA Perks </span> </div>
 	<h3>Making Headlines....</h3>
 <div class="homeHeadlinesStory">
 <div class="firstImage">
-<img alt="" src="http://files.cdha.ca/images/email/03022015_purple_on.jpg" style="border: 1px solid #cccccc; padding: 7px;" />
+<a href="http://www.cdha.ca/ndhw"><img alt="" src="http://files.cdha.ca/images/email/05022016_NDHWLandmark.jpg" style="border: 1px solid #cccccc;" /></a>
 </div>
 <div class="firstText" style="width: 224px;">
-<h4>Are You Ready to Put Your Purple On?</h4>
-<p>
-National Dental Hygienists Week™ #NDHW16 takes place from <strong>April 9 to 15</strong>. Thanks to sponsors Dentsply, Sunstar G•U•M, and TD Insurance, this year’s festivities will be bigger than ever with lots of cash and prizes to be given away!  Check out our <a href="http://files.cdha.ca/newsEvents/SpecialEvents/ndhw_2016/ndhw_celebration_flyer_2016.pdf" target="_blank">celebration ideas</a> and start planning now. All those who <a href="https://www.surveymonkey.com/r/NDHWregistry" target="_blank">register their planned activities</a> (big or small) by March 31 will be entered in a draw for a $500 cash prize to help support their event.
-</p>
+<h4>NDHW™ 2016 Lit It Up!</h4>
+<p>CDHA extends a huge THANK YOU! to the thousands of members who showed their #dhpurplepride during our 2016 public awareness campaign last month. What an absolutely unprecedented success! In addition to federal government greetings, we had a <a href="https://www.youtube.com/watch?v=7Mu5GgGXwu4" target="_blank">proclamation read in the House of Commons</a> by Kamal Khera, Parliamentary Secretary to the Minister of Health. <a href="/ndhw">Read More</a></p>
 </div>
 </div>
 <div class="homeHeadlinesStory">
 <div class="image">
-<a href="/cdha/Education/Workshops___Conferences/CDHA/Education/Conferences___Workshops/Interim_Stabilization_Therapy_Orientation_Workshop.aspx">
-<img alt="" src="http://files.cdha.ca/images/email/03012016_ist.jpg" style="border: 1px solid #cccccc; padding: 7px;" /></a>
+<img alt="" src="http://files.cdha.ca/images/email/04012016_hello.png" style="border: 1px solid #cccccc;" />
 </div>
 <div class="text">
-<h4>IST Orientation Session in Thunder Bay</h4>
-<p>Are you interested in learning about using glass ionomer as a temporary restorative material? The next interim stabilization therapy (IST) orientation session will take place in Thunder Bay on <strong>Friday, May 13</strong>, and will include both theory and a practical hands-on component. The cost for CDHA members is $225; a discounted price of $150 is available for members of the IPN or Educators’ community.  To avoid disappointment, <a href="/cdha/Education/Workshops___Conferences/CDHA/Education/Conferences___Workshops/Interim_Stabilization_Therapy_Orientation_Workshop.aspx">register</a> for the Thunder Bay session today!</p>
+<h4>Face Time with CDHA</h4>
+<p>CDHA’s president and select staff will be present at the following provincial association events: <a href="http://www.oda.ca/asm-registration" target="_blank">ODA ASM16</a>: May 5–7 in Toronto (booth #1839) and MDHA Annual General Meeting: June 4 in Winnipeg. Pick up some great resources at our booth and win incredible prizes. We would love to see you, so be sure to say hello! </p>
 </div>
 </div>
 <div class="homeHeadlinesStory">
 <div class="image">
-<a href="/ndhw"><img alt="" src="http://files.cdha.ca/images/email/03012016_ndhw.jpg" style="border: 1px solid #cccccc; padding: 7px;" /></a>
+<img alt="" src="http://files.cdha.ca/images/email/08052015_ip_anniversary.jpg" style="border: 1px solid #cccccc;" />
 </div>
 <div class="text">
-<h4>NDHW™ Special Events</h4>
-<p>National Dental Hygienists Week™ (NDHW™) is just a few weeks away, and we’re kicking it off with <a href="http://www.giftfromtheheart.ca/" target="_blank">Gift From the Heart</a> and Ottawa’s <a href="https://www.dentalcharityball.ca/" target="_blank">Sparkle Dental Charity Ball</a> on <strong>April 9</strong>.  To close out the week, consider joining Jo-Anne Jones, RDH, and other CDHA members in the inaugural <a href="http://donate.oralcancer.org/index.cfm?fuseaction=donorDrive.event&amp;eventID=701" target="_blank">Oral Cancer Foundation Walk/Run for Awareness</a> on <strong>April 16</strong>, in Niagara-on-the-Lake, Ontario.</p>
+<h4>Independent Practice Anniversaries</h4>
+<p>Congratulations to our independent dental hygiene (IDH) practice members who are celebrating practice anniversaries this month: Sharon Brooks-Wallace (2nd), Michelle Van Der Haegen (6th), Stacey Court (2nd)	Kim Oblender-Stewart (6th), Dianna Major (3rd)	Leona Le Lievre (7th), Tamara Zwicker-Cloutier (3rd)	Julie DiNardo (8th),Doris Waite (4th)	Paula McAleese (19th), George Bishay (5th).</p>
 </div>
 </div>
-<div class="homeHeadlinesStory">
-<div class="image" style="width: 123px;">
-<a href="http://www.oda.ca/asm" target="_blank"><img alt="" src="http://files.cdha.ca/images/email/03012016_asm16.jpg" style="border: 1px solid #cccccc; padding: 7px;" /></a>
-</div>
-<div class="text">
-<h4>Early Bird Closes Soon for ODA ASM16</h4>
-<p>The Annual Spring Meeting is the Ontario Dental Association’s signature dental conference and trade show taking place from <strong>May 5 to 7</strong> in Toronto. Early bird pricing for dental hygienists is $150 until <strong>March 21</strong>. <a href="http://www.oda.ca/asm-registration" target="_blank">Register Today</a> and save before <strong>March 21</strong>!</p>
-</div>
-</div>
+<!--<div class="homeHeadlinesStory">
+  <div class="image" style="width: 123px;">
+    <a href="http://files.cdha.ca/profession/ip/NIHB_Welcomes_DH.pdf" target="_blank"><img alt="" src="http://files.cdha.ca/images/email/04152016_healthCanada.png" style="border: 1px solid #cccccc;" /></a>
+  </div>
+  <div class="text">
+    <h4>NIHB Welcomes Dental Hygienists as Independent Service Providers</h4>
+    <p>Health Canada’s Non-Insured Health Benefits (NIHB) Program provides coverage for benefit claims for eligible First Nations and Inuit peoples. As of June 1, in all provinces where dental hygienists can practise independently, dental hygienists may
+      begin submitting procedure claims as independent oral health care service providers. <a href="http://files.cdha.ca/profession/ip/NIHB_Welcomes_DH.pdf" target="_blank">Learn More</a></p>
+  </div>
+</div>-->
 </div><div>
 
 </div></div>
@@ -715,7 +716,7 @@ National Dental Hygienists Week™ #NDHW16 takes place from <strong>April 9 to 1
 				<div class="iMIS-WebPart">
 					<div id="ste_container_ciNewContentHtml6" class="ContentItemContainer"><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentHtml6_ciNewContentHtml6_Panel_NewContentHtml6">
 	<div style="text-align: center;">
-<a href="http://www.melochemonnex.com/en/group/cdha?campaignid=PONMEBAN155189">
+<a href="http://www.melochemonnex.com/en/group/cdha?campaignid=PONMEBAN167371">
 <img alt="" src="/am/images/home/468x60_TDBanner_feb2015.gif" style="margin-top: 30px;" />
 </a>
 </div>
@@ -743,39 +744,41 @@ National Dental Hygienists Week™ #NDHW16 takes place from <strong>April 9 to 1
 </div></div>
 			</div>
 				<div class="iMIS-WebPart">
-					<div id="ste_container_ciNewContentTaggedList" class="ContentItemContainer"><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_ListTitle" class="StandardPanel" style="border-style:None;">
-	<div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_ListTitle_Head" class="PanelHead">
+					<div id="ste_container_ciNewContentTaggedList" class="ContentItemContainer"><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_ListTitle" class="panel " style="border-style:None;">
+	<div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_ListTitle_Head" class="panel-heading" translate="yes">
 
-	</div><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_ListTitle_Body" class="PanelBody">
-		
+	</div><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_ListTitle_BodyContainer" class="panel-body-container">
+		<div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_ListTitle_Body" class="panel-body">
+			
     <div class="TaggedListPanel">
         
                 <div class="taggedListItem">
 <p>
-<a id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl00_ctl00_BusinessHyperLink1" href="CDHA/News-Events_folder/News_Releases/tag/2016/Dental_Hygienists_Take_Action_to_Reduce_the_Burden_of_Oral_Cancer.aspx">Dental Hygienists Take Action to Reduce the Burden of Oral Cancer</a><br />
-<strong><span>February 17, 2016</span></strong> -
-<span>On World Cancer Day (February 4), Canada’s dental hygienists will renew their commitment to the global fight against cancer, which claims 8.2 million lives worldwide every year. World Cancer Day’s new three-year “We can. I can.” campaign theme...</span>
+<a id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl00_ctl00_BusinessHyperLink1" href="CDHA/News-Events_folder/News_Releases/tag/2016/Dental_Hygienists_Support_Proposed_Federal_Ban_on_Menthol_Cigarettes.aspx">Dental Hygienists Support Proposed Federal Ban on Menthol Cigarettes</a><br />
+<strong><span>May 3, 2016</span></strong> -
+<span>The Canadian Dental Hygienists Association (CDHA) applauds the federal government for its proposed ban on menthol cigarettes, blunt wraps, and most cigars. Announced on April 30 in the Canada  azette, Part I, this amendment to the Tobacco Act is open</span>
 </p>
 </div>
             
                 <div class="taggedListItem">
 <p>
-<a id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl01_ctl00_BusinessHyperLink1" href="CDHA/News-Events_folder/News_Releases/tag/2016/Mourning_the_Loss_of_a_Dental_Hygiene_Pioneer.aspx">Mourning the Loss of a Dental Hygiene Pioneer</a><br />
-<strong><span>February 17, 2016</span></strong> -
-<span>The members, board, and staff of the Canadian Dental Hygienists Association (CDHA) extend their deepest condolences to the family, friends, and colleagues of inspirational dental hygiene educator, researcher, and author, Margaret (Peggy) Walsh...</span>
+<a id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl01_ctl00_BusinessHyperLink1" href="CDHA/News-Events_folder/News_Releases/tag/2016/Celebrate_your_smile_this_April.aspx">Celebrate your smile this April!</a><br />
+<strong><span>May 1, 2016</span></strong> -
+<span>National Dental Hygienists Week™ (NDHW™) takes place from April 9–15 as part of oral health month in Canada. Why not help your smile shine by making your dental hygienist your partner in disease prevention for better overall health.</span>
 </p>
 </div>
             
                 <div translate="yes">
-			
+				
                     
                     
                     <a id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_TaggedListRepeater_ctl02_ViewAllButton" class="hidden" href="javascript:__doPostBack(&#39;ctl01$TemplateBody$WebPartManager1$gwpciNewContentTaggedList$ciNewContentTaggedList$TaggedListRepeater$ctl02$ViewAllButton&#39;,&#39;&#39;)" style="margin-left: 20px;">View all</a>
                 
-		</div>
+			</div>
             
     </div>
 
+		</div>
 	</div>
 </div><div>
 
@@ -797,31 +800,33 @@ National Dental Hygienists Week™ #NDHW16 takes place from <strong>April 9 to 1
 </div></div>
 						</div>
 							<div class="iMIS-WebPart">
-								<div id="ste_container_ciNewContentTaggedList2" class="ContentItemContainer"><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_ListTitle" class="StandardPanel" style="border-style:None;">
-	<div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_ListTitle_Head" class="PanelHead">
+								<div id="ste_container_ciNewContentTaggedList2" class="ContentItemContainer"><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_ListTitle" class="panel " style="border-style:None;">
+	<div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_ListTitle_Head" class="panel-heading" translate="yes">
 
-	</div><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_ListTitle_Body" class="PanelBody">
-		
+	</div><div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_ListTitle_BodyContainer" class="panel-body-container">
+		<div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_ListTitle_Body" class="panel-body">
+			
     <div class="TaggedListPanel">
         
                 <div class="taggedListItem">
 <p>
 <a id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_TaggedListRepeater_ctl00_ctl00_BusinessHyperLink1" href="CDHA/News-Events_folder/Safety_Alerts/tag/Pfizer_Consumer_Healthcare_recalling_124_lots_of_Advil_liquid_products_for_infants_and_children.aspx">Pfizer Consumer Healthcare recalling 124 lots of Advil liquid products for infants and children</a><br />
-<strong><span>February 17, 2016</span></strong> -
+<strong><span>May 1, 2016</span></strong> -
 <span>Health Canada is informing Canadians that Pfizer Consumer Healthcare has initiated a voluntary recall of 124 lots of Advil liquid products for infants and children because of a potential risk of inconsistences in dosing...</span>
 </p>
 </div>
             
                 <div translate="yes">
-			
+				
                     
                     
                     <a id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_TaggedListRepeater_ctl01_ViewAllButton" class="hidden" href="javascript:__doPostBack(&#39;ctl01$TemplateBody$WebPartManager1$gwpciNewContentTaggedList2$ciNewContentTaggedList2$TaggedListRepeater$ctl01$ViewAllButton&#39;,&#39;&#39;)" style="margin-left: 20px;">View all</a>
                 
-		</div>
+			</div>
             
     </div>
 
+		</div>
 	</div>
 </div><div>
 
@@ -1037,14 +1042,14 @@ National Dental Hygienists Week™ #NDHW16 takes place from <strong>April 9 to 1
 
 <script type="text/javascript">
 //<![CDATA[
-__Document_Head_Init('http://www.cdha.ca/NoCookies.html', '', true);NavigationList_NavControlId = 'ctl01_TemplateMainNavigation_Primary_NavMenu';NavigationList_Init();PageNavR_NavMenuClientID = 'ctl01_TemplateMainNavigation_Primary_NavMenu';NavigationList_NavControlId = 'ctl01_Secondary_SubNavigationTree';NavigationList_Init();Telerik.Web.UI.RadTreeView._preInitialize("ctl01_Secondary_SubNavigationTree","0");var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';PanelTemplateControls.push($('ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList_ciNewContentTaggedList_ListTitle'));PanelTemplateControls.push($('ctl01_TemplateBody_WebPartManager1_gwpciNewContentTaggedList2_ciNewContentTaggedList2_ListTitle'));NavigationList_NavControlId = 'Foot_rptWrapper';NavigationList_Init();Sys.Application.add_init(function() {
+__Document_Head_Init('http://www.cdha.ca/NoCookies.html', '', true);NavigationList_NavControlId = 'ctl01_TemplateMainNavigation_Primary_NavMenu';NavigationList_Init();PageNavR_NavMenuClientID = 'ctl01_TemplateMainNavigation_Primary_NavMenu';NavigationList_NavControlId = 'ctl01_Secondary_SubNavigationTree';NavigationList_Init();Telerik.Web.UI.RadTreeView._preInitialize("ctl01_Secondary_SubNavigationTree","0");var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';NavigationList_NavControlId = 'Foot_rptWrapper';NavigationList_Init();Sys.Application.add_init(function() {
     $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl01_TemplateFillLoadingPanel"));
 });
 Sys.Application.add_init(function() {
-    $create(Telerik.Web.UI.RadButton, {"_accessKey":"","_postBackReference":"__doPostBack('ctl01$LoginView1$btnHeaderSignIn','')","buttonType":1,"clientStateFieldID":"ctl01_LoginView1_btnHeaderSignIn_ClientState","cssClass":"btnSignIn","iconData":{},"imageData":{},"navigateUrl":"/cdha/signin?returnurl=/CDHA/Default.aspx","text":"SignIn","toggleStatesData":[],"uniqueGroupName":"","uniqueID":"ctl01$LoginView1$btnHeaderSignIn"}, null, null, $get("ctl01_LoginView1_btnHeaderSignIn"));
+    $create(Telerik.Web.UI.RadButton, {"_accessKey":"","_navigateUrl":"/cdha/signin?returnurl=/CDHA/Default.aspx","_postBackReference":"__doPostBack('ctl01$LoginView1$btnHeaderSignIn','')","buttonType":1,"clientStateFieldID":"ctl01_LoginView1_btnHeaderSignIn_ClientState","cssClass":"btnSignIn","iconData":{},"imageData":{},"text":"SignIn","toggleStatesData":[],"uniqueGroupName":"","uniqueID":"ctl01$LoginView1$btnHeaderSignIn"}, null, null, $get("ctl01_LoginView1_btnHeaderSignIn"));
 });
 Sys.Application.add_init(function() {
-    $create(Telerik.Web.UI.RadTreeView, {"_showLineImages":false,"_skin":"Everest","_uniqueId":"ctl01$Secondary$SubNavigationTree","clientStateFieldID":"ctl01_Secondary_SubNavigationTree_ClientState","collapseAnimation":"{\"duration\":200}","expandAnimation":"{\"duration\":200}","nodeData":[],"singleExpandPath":true}, null, null, $get("ctl01_Secondary_SubNavigationTree"));
+    $create(Telerik.Web.UI.RadTreeView, {"_showLineImages":false,"_skin":"Everest","_uniqueId":"ctl01$Secondary$SubNavigationTree","clientStateFieldID":"ctl01_Secondary_SubNavigationTree_ClientState","collapseAnimation":"{\"duration\":200}","expandAnimation":"{\"duration\":200}","nodeData":[],"singleExpandPath":true}, {"nodeClicked":ClientNodeClicked}, null, $get("ctl01_Secondary_SubNavigationTree"));
 });
 Sys.Application.add_init(function() {
     $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"AjaxStatusLoadingPanel","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"ctl01$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl01_RadAjaxManager1"));
@@ -1150,6 +1155,7 @@ Sys.Application.add_init(function() {
                 });
             }
     </script>
+        
         <script type="text/javascript" src="/App_Themes/CDHA/resources/jquery.reveal.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js"></script>
         <script type="text/javascript" src="/App_Themes/CDHA/resources/app2.js"></script>

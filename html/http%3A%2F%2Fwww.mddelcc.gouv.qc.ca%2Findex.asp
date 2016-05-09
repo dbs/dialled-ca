@@ -8,7 +8,7 @@
 <meta name="google-site-verification" content="V2WOCVJfQGicbNtH0a-Oc03GSKIY47koupk-FfjPCBU" />
 <link rel="stylesheet" type="text/css" href="/css/banniere-PIV.css" />
 <link rel="stylesheet" href="images/page-accueil/diapo-page-accueil/diapo-haut/orbit-1.2.3.css" />
-<link rel="stylesheet" type="text/css" href="css/page-accueil.css" />
+<link rel="stylesheet" type="text/css" href="css/page-accueil_new.css" />
 <link rel="stylesheet" type="text/css" href="images/page-accueil/diapo-page-accueil/diapo-bas/tango/skin.css" />
 <link rel="stylesheet" type="text/css" href="/accueil/francais/basDePage_css.css" />
 <script src="script/tab_script.js" type="text/javascript"></script>
@@ -110,9 +110,9 @@ THE ACTUAL ORBIT SLIDER CONTENT
 <body>
 
 </body>
-</html> <strong>Lâail des bois peut Ãªtre cueilli, mais Ã  des fins personnelles et en quantitÃ© trÃ¨s limitÃ©e? </strong></span>
+</html> <strong>Les espÃ¨ces exotiques envahissantes peuvent avoir des impacts nÃ©gatifs importants sur lâenvironnement, lâÃ©conomie et la sociÃ©tÃ©? </strong></span>
 																<p class="style2">
-																 <span><a href='http://www.mddelcc.gouv.qc.ca/jeunesse/chronique/2001/0105_conseil.htm' target="">
+																 <span><a href='http://www.mddelcc.gouv.qc.ca/biodiversite/especes-exotiques-envahissantes/index.asp' target="">
 																<strong>Pour en 
 																savoir plus &gt;&gt;</strong></a></span></p>
 																 </strong></div>
@@ -124,8 +124,11 @@ THE ACTUAL ORBIT SLIDER CONTENT
 												<div class="menu-haut">
 																<div class="centeredmenu">
 																				<ul>
-																								<li id="air"><a href="/changementsclimatiques/index.asp"><img alt="" src="images/page-accueil/air-txt.png" width="120" height="35" /></a></li>
-																								<li id="bio"><a href="/biodiversite/inter.htm"><img alt="" src="images/page-accueil/bio-txt.png" width="120" height="35" /></a></li>
+																								<li id="air"><a href="/air/inter.htm"><img alt="" src="images/page-accueil/air-txt.png" width="120" height="35" /></a></li>
+
+																								
+																								
+																								<li id="bio"><a href="/biodiversite/inter.htm"><img alt="" src="images/page-accueil/bio-txt.png" width="120" height="35" /></a></li><li id="air"><a href="/changementsclimatiques/index.asp"><img alt="" src="images/page-accueil/changements-climatiques-txt.png" width="120" height="35" /></a></li>
 																								<li id="dd"><a href="/developpement/inter.htm"><img alt="" src="images/page-accueil/DD-txt.png" /></a></li>
 																								<li id="eau"><a href="/eau/inter.htm"><img alt="" src="images/page-accueil/eau-txt.png" width="120" height="35" /></a></li>
 																				</ul>
@@ -144,8 +147,9 @@ THE ACTUAL ORBIT SLIDER CONTENT
 																								<ul>
 																												<li><a href="ministre/inter.htm">Le ministre</a></li>
 																												<li><a href="ministere/inter.htm">Le MinistÃ¨re</a></li>
-																												<li><a href="/air/inter.htm">Air et changements climatiques</a></li>
+																												<li><a href="/air/inter.htm">Air</a></li>
 																												<li><a href="/biodiversite/inter.htm">BiodiversitÃ©</a></li>
+																												<li><a href="/changementsclimatiques/index.asp">Changements climatiques</a></li>
 																												<li><a href="/developpement/inter.htm">DÃ©veloppement durable </a></li>
 																												<li><a href="/eau/inter.htm">Eau</a></li>
 																												<li><a href="/evaluations/inter.htm">Ãvaluations environnementales </a></li>
@@ -159,7 +163,7 @@ THE ACTUAL ORBIT SLIDER CONTENT
 																				</div>
 																				<div class="style4">
 																						
-																							<a title="Le QuÃ©bec Ã  la ConfÃ©rence de Paris Climat 2015" target="_blank" href="https://www.faisonslepoureux.gouv.qc.ca/fr/dossiers-speciaux/quebec-a-paris"><img alt="Le QuÃ©bec Ã  la ConfÃ©rence de Paris Climat 2015" src="images/boutonWebCop21.jpg" width="193" height="97"  /></a>
+																							<a title="Le QuÃ©bec Ã  la ConfÃ©rence de Paris Climat 2015" target="_blank" href="http://www.faisonslepoureux.gouv.qc.ca/fr/dossiers-speciaux/quebec-a-paris"><img alt="Le QuÃ©bec Ã  la ConfÃ©rence de Paris Climat 2015" src="images/boutonWebCop21.jpg" width="193" height="97"  /></a>
 																							<a href="lac-megantic/index.htm"><img alt="Accident ferroviaire Ã  Lac-MÃ©gantic" src="images/page-accueil/Lac-Megantic_fr.jpg" /></a>
 																								<div id="rss">
 																												<br />
@@ -186,18 +190,22 @@ THE ACTUAL ORBIT SLIDER CONTENT
 																																								
 
 <ul class="puce">
+<li><a href="climat/Faits-saillants/2016/mars.htm">Climat de Mars 2016 : faux dÃ©part printanier</a></li>
+<li><a href="changementsclimatiques/marche-carbone.asp">Le QuÃ©bec et la Californie 
+tiendront une septiÃ¨me vente aux enchÃ¨res conjointe dâunitÃ©s dâÃ©mission de gaz Ã  
+effet de serre le 18 mai 2016</a></li>
 <li><a href="http://www.mddelcc.gouv.qc.ca/infuseur/communique.asp?no=3375">Le 
 gouvernement du QuÃ©bec annonce des modifications importantes Ã  la gouvernance du 
 Fonds vert </a></li>
-<li><a href="climat/Faits-saillants/2015_decembre.htm">TempÃ©rature de dÃ©cembre 2015 : le mois des records</a></li>
+<li>
+<a target="_blank" href="https://www.recyc-quebec.gouv.qc.ca/entreprises-organismes/mieux-gerer/appels-propositions/crd">
+Appels de propositions sur la rÃ©duction Ã  la source de RECYC-QUÃBEC</a></li>
 <li><a href="eau/grandslacs/2005/index.htm">Projet de transfert dâeau de la ville de Waukesha 
 (Wisconsin) dans le cadre de lâEntente sur les ressources en eaux durables du 
 bassin des Grands lacs et du fleuve Saint-Laurent</a></li>
-<li><a href="http://www.mddelcc.gouv.qc.ca/infuseur/communique.asp?no=3353">
-QuÃ©bec adopte la cible de rÃ©duction de gaz Ã  effet de serre la plus ambitieuse 
+<li><a href="http://www.mddelcc.gouv.qc.ca/infuseur/communique.asp?no=3353">QuÃ©bec adopte la cible de rÃ©duction de gaz Ã  effet de serre la plus ambitieuse 
 au Canada</a></li>
-<li>
-<a href="developpement/strategie_gouvernementale/index.htm">Durable, responsable, prospÃ¨re - Nouvelle stratÃ©gie pour faire avancer le 
+<li><a href="developpement/strategie_gouvernementale/index.htm">Durable, responsable, prospÃ¨re - Nouvelle stratÃ©gie pour faire avancer le 
 dÃ©veloppement durable au QuÃ©bec</a></li>
 <li><a href="evaluations/transcanada/index.htm">Projet OlÃ©oduc Ãnergie Est - 
 TransCanada</a></li>
@@ -227,10 +235,9 @@ de neuf?</a></b></p>
 	<li>
 	
 
-	<a href="/infuseur/communique.asp?no=3399" style="text-decoration: none">
-	Rapport dâÃ©tape sur la gestion des barrages au QuÃ©bec : 
-des progrÃ¨s significatifs 
-</a>&nbsp;(10&nbsp;mars&nbsp;2016)
+	<a href="/infuseur/communique.asp?no=3419" style="text-decoration: none">
+	La StratÃ©gie quÃ©bÃ©coise de lâeau, une prioritÃ© pour le gouvernement - Les consultations ciblÃ©es dÃ©butent
+</a>&nbsp;(3&nbsp;mai&nbsp;2016)
 	</li>
 	
 
@@ -243,9 +250,8 @@ des progrÃ¨s significatifs
 	<li>
 	
 
-	<a href="/infuseur/communique.asp?no=3397" style="text-decoration: none">
-	OlÃ©oduc Ãnergie Est - Demande dâinjonction visant TransCanada : le gouvernement agit pour faire respecter les lois du QuÃ©bec
-</a>&nbsp;(1&nbsp;mars&nbsp;2016)
+	<a href="/infuseur/communique.asp?no=3417" style="text-decoration: none">
+	TransCanada accepte de soumettre son projet dâolÃ©oduc Ã  la LQEÂ : un gain pour le QuÃ©bec</a>&nbsp;(22&nbsp;avril&nbsp;2016)
 	</li>
 	
 
@@ -258,8 +264,9 @@ des progrÃ¨s significatifs
 	<li>
 	
 
-	<a href="/infuseur/communique.asp?no=3389" style="text-decoration: none">
-	LâOntario prÃ©pare son adhÃ©sion au marchÃ© du carbone</a>&nbsp;(25&nbsp;f&eacute;vrier&nbsp;2016)
+	<a href="/infuseur/communique.asp?no=3416" style="text-decoration: none">
+	Â«Â Agissons tous ensemble, pour le bien-Ãªtre de lâenvironnement!Â Â»
+</a>&nbsp;(22&nbsp;avril&nbsp;2016)
 	</li>
 	
 
@@ -272,10 +279,8 @@ des progrÃ¨s significatifs
 	<li>
 	
 
-	<a href="/infuseur/communique.asp?no=3388" style="text-decoration: none">
-	Une financiÃ¨re chevronnÃ©e, M<sup>me</sup> Sylvie Chagnon,
-contribuera de prÃ¨s Ã  la rÃ©forme de la gestion du Fonds vert
-</a>&nbsp;(25&nbsp;f&eacute;vrier&nbsp;2016)
+	<a href="/infuseur/communique.asp?no=3415" style="text-decoration: none">
+	DeuxiÃ¨me vague de consultations ciblÃ©es sur la politique de protection des sols et de rÃ©habilitation des terrains contaminÃ©s</a>&nbsp;(20&nbsp;avril&nbsp;2016)
 	</li>
 	
 
@@ -288,8 +293,9 @@ contribuera de prÃ¨s Ã  la rÃ©forme de la gestion du Fonds vert
 	<li>
 	
 
-	<a href="/infuseur/communique.asp?no=3383" style="text-decoration: none">
-	MarchÃ© du carbone : prÃ¨s de 1,2 milliard de dollars pour lutter contre les changements climatiques au QuÃ©bec</a>&nbsp;(24&nbsp;f&eacute;vrier&nbsp;2016)
+	<a href="/infuseur/communique.asp?no=3408" style="text-decoration: none">
+	Installations septiques de rÃ©sidence : De nouvelles solutions abordables et durables
+</a>&nbsp;(10&nbsp;avril&nbsp;2016)
 	</li>
 	
 
@@ -309,7 +315,9 @@ contribuera de prÃ¨s Ã  la rÃ©forme de la gestion du Fonds vert
 																																				<div id="info3" class="informations">
 																																								
 <ul class="puce">
-<li><a href="milieu_ind/projet-attestation/mine_bachelor/index.htm">Consultation publique â projet dâattestation d'assainissement Mine Bachelor</a> 
+<li>
+<a href="eau/eaux-usees/residences_isolees/modif2016-q2r22.htm">Consultation publique  sur le nouveau projet de rÃ¨glement modifiant le RÃ¨glement sur lâÃ©vacuation et le traitement des eaux usÃ©es des rÃ©sidences isolÃ©es
+</a>
 <li>
 <a href="biodiversite/aires_protegees/consultation/abitibi-temiscamingue/index.htm">Consultation publique sur les aires protÃ©gÃ©es en Abitibi-TÃ©miscamingue</a>    </ul>
 
@@ -382,7 +390,7 @@ contribuera de prÃ¨s Ã  la rÃ©forme de la gestion du Fonds vert
 																<img border="0" src="/images/lsp.jpg" alt="StratÃ©gie dâintervention pour lâavenir du lac Saint-Pierre " width="160" height="60" /></a></li>
 															
 																<li>
-																<a target="_blank" href="https://www.faisonslepoureux.gouv.qc.ca/fr/">
+																<a target="_blank" href="http://www.faisonslepoureux.gouv.qc.ca/fr/">
 																<img border="0" src="images/boutonFaisonsLePourEux.gif" alt="Faisons-le pour eux" width="160" height="60" /></a></li>
 
 	<li>
@@ -399,7 +407,7 @@ contribuera de prÃ¨s Ã  la rÃ©forme de la gestion du Fonds vert
 																<li>
 																<a target="_blank" href="http://www.nord.gouv.qc.ca/">
 																</a>
-																<a href="changements/carbone/index.htm">
+																<a href="changementsclimatiques/marche-carbone.asp">
 																<img border="0" src="/images/bouton-carbone-fr.jpg" alt="SystÃ¨me de plafonnement et dâÃ©change de droits dâÃ©mission de gaz Ã  effet de serre" width="160" height="60" /></a></li>
 																<li>
 																<a href="http://www.protegeonsleau.gouv.qc.ca" target="_blank">
@@ -447,7 +455,7 @@ des eaux et leur protection" width="120" height="47" /></a></li>
 
 <div id="nav_bas_page">
 	
-	  <hr id="PIV_hr_bdp" />
+	  <div id="PIV_hr_bdp" >    </div>
 	
 		<ul class="nav_piv_bas_page">
       <li>&nbsp;<a title="Plan du site" href="accessibilite/index.htm" class="discret_neutre">AccessibilitÃ©</a></li>

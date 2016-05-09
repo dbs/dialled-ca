@@ -171,27 +171,11 @@ if (document.cookie.indexOf("ensightenQA=dev") > -1) { document.write("<scr" + "
                 
 
 
-     
-                               
-	                               
-		             
-
-                               
-                                      
-
-
 
 
 <?xml version="1.0" encoding="UTF-8"?><div class="clear" id="td-nav-level1"><ul class="clear"><li class="td-nav-level1-active"><span class="td-nav-level1-label"><span class="td-nav-level1-indicator">You are in this section:</span><a href="/about-tdbfg/our-business/index.jsp">About TD</a></span></li><li><span class="td-nav-level1-label"><a href="/investor-relations/ir-homepage/ir-homepage/investor-index.jsp">Investor Relations</a></span></li><li><span class="td-nav-level1-label"><a href="/economics/analysis/economics-index.jsp">Economics</a></span></li><li><span class="td-nav-level1-label"><a href="/careers/why-td/index.jsp">Careers</a></span></li><li><span class="td-nav-level1-label"><a href="/corporate-responsibility/index.jsp">Corporate Responsibility</a></span></li><li><span class="td-nav-level1-label"><a href="/to-our-customers/customer.jsp">To Our Customers</a></span></li></ul></div><div class="clear" id="td-nav-level2"><ul class="td-dropdown"><li class="td-nav-level2-active"><span class="td-nav-level2-label"><span class="td-nav-level2-indicator">You are in this section:</span><a href="/about-tdbfg/our-business/index.jsp">Our Business</a></span></li><li><span class="td-nav-level2-label"><a href="/about-tdbfg/corporate-information/corporate-profile/profile.jsp">Corporate Information</a></span></li><li><span class="td-nav-level2-label"><a href="/about-tdbfg/corporate-governance/index.jsp">Corporate Governance</a></span></li><li><span class="td-nav-level2-label"><a href="/about-tdbfg/media-room/overview/index.jsp">Media Room</a></span></li></ul></div>                             
 
-                               
-                               
 
-                            
-            
-  
-                             
-  
             </div>
 		
 		
@@ -270,39 +254,26 @@ function getURLParameter(name) {
 </style>
 
 
+
+ <div class="td-callout td-callout-primary td-cs-highlight td-callout-clickable td-makeclickable td-margin-bottom-large">
+ <div class="td-callout-heading td-copy-align-centre">
+ <h4><a class="td-link-header td-makeclickable-target" href="https://www.tdcanadatrust.com/customer-service/contact-us/email/contact-fort-mcmurray.jsp" style="color: red;">Fort McMurray Fire Alert </a></h4>
+ </div>
+ <div class="td-callout-content">
+ <p>TD is deeply saddened by the continuing devastation caused by the wildfire in Fort McMurray. 
+Our Fort McMurray TD Helps program is available for advice and assistance to those in need. Please call 1-844-352-1423.
+</p>
+ </div>
+ </div><!-- End .td-callout -->
+
 <div class="td-layout-row">
 	<div class="td-layout-column td-layout-grid15 td-layout-column-first td-layout-column-last">
- 	<div class="td-callout td-callout-tertiary td-cs-tertiary td-callout-fauxbgimage td-callout-clickable td-makeclickable" style="height:280px;">
-   <img alt="" class="td-fauxbgimage" src="/images/index-banner.jpg" style="top: 0px; right: 2px">
-   <div class="td-callout-content">
-    <div class="td-layout-row td-padding-top-03 td-margin-top-large td-extend-left-12">
-     <div class="td-layout-column td-layout-column-first td-margin-top-none td-layout-column-last td-layout-grid7">
-      <div style="margin: 0px !important;" class="td-callout td-margin-top-none td-custom-lightGreen">
-       <div class="td-callout-heading">
-        <h2 style="margin-bottom: 5px !important;" class="td-copy-white td-margin-bottom-medium">TD is focused on the environment.</h2>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="td-layout-row td-margin-bottom-none td-padding-bottom-12 td-extend-left-12">
-     <div class="td-layout-column td-layout-column-first td-layout-column-last td-layout-grid5 td-push-up-22">
-      <div class="td-callout td-margin-bottom-large td-custom-darkGreen td-extend-right-36">
-       <div class="td-callout-heading">
-        <p class="td-copy-white td-margin-bottom-none td-copy-emphasized">
-         We're working to integrate environmental<br>
-         responsibility into every aspect of our business.
-        </p>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="td-margin-left-12">
-					<a href="/corporate-responsibility/environment/index.jsp" class="td-button td-button-primary td-makeclickable-target" role="button"><span class="td-button-label td-copy-emphasized">Learn more</span></a> 
-				</div>
-   </div>
+ 	<div class="td-callout td-callout-tertiary td-cs-tertiary " style="height:280px;">
+   <a href="https://www.tdcanadatrust.com/customer-service/contact-us/email/contact-fort-mcmurray.jsp"><img alt="Together we can help Fort McMurray. Donate now." class="td-fauxbgimage" src="/images/FortMcMurray.jpg" style="top: 0px; right: 0px"></a>  
   </div>
  </div>
 </div>
+
 
 <div class="td-layout-row">
 	<div class="td-layout-column td-layout-grid15 td-layout-column-first td-layout-column-last">

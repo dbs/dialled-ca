@@ -1,848 +1,566 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>BIOTECanada</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="Shortcut Icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="/styles/common.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/home.css" />
-    <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/styles/ie.css" /><![endif]-->
-    <link rel="stylesheet" type="text/css" media="print" href="/styles/print.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
-    <meta name="verify-v1" content="pTY5iNtc5iSrEBsCJIDSmvGkwvezOqgUxilVnP2dtjs=" /><meta name="google-site-verification" content="KKtrzKAudasYR3MfGHxxP1jrjMbmCebSOQVw4nTb5Hg" />
-  </head>
-  <body id="page_134">
-    <div id="container">
-    <!--Header-->
-    <div id="header">
-      <h1 class="logo">
-        <a href="/en/default.aspx" accesskey="h"><img src="/images/logo.gif" alt="BIOTECanada" title="Go to the BIOTECanada homepage" /></a>
-      </h1>
+<!doctype html>
 
-      <!--Language-->
-      <div id="language">
-        <a href="/fr/default.aspx" class="language-button" accesskey="0">Fran&ccedil;ais</a>
-      </div>
-      <!--Language end-->
+<!--[if lt IE 7]><html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js"><!--<![endif]-->
 
-      <!--Login-->
-      <div id="login">
-        <form name="login" method="post" action="/en/login.aspx">
-          <input type="hidden" name="action" value="login" />
-          <label for="username">Member login</label>
-          <input name="username" id="username" type="text" accesskey="7" />
-          <input name="password" type="password" accesskey="8" />
-          <input name="submit" type="submit" value="Login" class="login" accesskey="9" />
-        </form>
-        <p class="login">
-          <a href="/en/what-we-do/benefits.aspx" class="become-member" accesskey="u">Username</a>
-          <a href="/en/login.aspx?action=forgot" class="forgot-password" accesskey="i">I forgot my password</a>
-        </p>
-      </div>
-      <!--Login end-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="google-site-verification" content="kAKeM277w5HfptOzuTbqEdNBZTH21WpVcX5n19PaWFw" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-      <!--Search-->
-      <div id="search">
-        <form name="search" method="get" action="/en/search.aspx">
-          <input type="hidden" name="cx" value="014738140779244965402:nwn3pjb28l8" />
-          <input type="hidden" name="cof" value="FORID:11" />
-          <input type="hidden" name="ie" value="UTF-8" />
-          <input name="q" type="text" class="search" accesskey="k" />
-          <input name="sa" type="submit" value="Go!" class="search" accesskey="l" />
-        </form>
-      </div>
-      <!--Search end-->
+		<title>Home Page - BIOTECanada</title>
 
+<link rel="stylesheet" href="http://www.biotech.ca/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.3.7" type="text/css" media="all" />
+
+				<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+				<link rel="apple-touch-icon" href="http://www.biotech.ca/wp-content/themes/biotec/library/images/apple-touch-icon.png">
+		<link rel="icon" href="http://www.biotech.ca/wp-content/themes/biotec/favicon.png">
+		<!--[if IE]>
+			<link rel="shortcut icon" href="http://www.biotech.ca/wp-content/themes/biotec/favicon.ico">
+		<![endif]-->
+				<meta name="msapplication-TileColor" content="#f01d4f">
+		<meta name="msapplication-TileImage" content="http://www.biotech.ca/wp-content/themes/biotec/library/images/win8-tile-icon.png">
+            <meta name="theme-color" content="#121212">
+
+		<link rel="pingback" href="http://www.biotech.ca/xmlrpc.php">
+
+				<link rel="alternate" hreflang="en-US" href="http://www.biotech.ca/" />
+<link rel="alternate" hreflang="fr-FR" href="http://www.biotech.ca/fr/" />
+
+<!-- This site is optimized with the Yoast SEO plugin v3.1.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://www.biotech.ca/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Home Page - BIOTECanada" />
+<meta property="og:url" content="http://www.biotech.ca/" />
+<meta property="og:site_name" content="BIOTECanada" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Home Page - BIOTECanada" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","url":"http:\/\/www.biotech.ca\/","name":"BIOTECanada","alternateName":"BioteCanada","potentialAction":{"@type":"SearchAction","target":"http:\/\/www.biotech.ca\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/www.biotech.ca\/","sameAs":[],"name":"BIOTECanada","logo":"http:\/\/www.biotech.ca\/wp-content\/uploads\/2016\/04\/logo.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="BIOTECanada &raquo; Feed" href="http://www.biotech.ca/feed/" />
+<link rel="alternate" type="application/rss+xml" title="BIOTECanada &raquo; Comments Feed" href="http://www.biotech.ca/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.biotech.ca\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='googleFonts-css'  href='http://fonts.googleapis.com/css?family=Hind%3A400%2C300%2C500%2C600%2C700' type='text/css' media='all' />
+<link rel='stylesheet' id='fontAwesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bones-stylesheet-css'  href='http://www.biotech.ca/wp-content/themes/biotec/library/css/style.css' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='bones-ie-only-css'  href='http://www.biotech.ca/wp-content/themes/biotec/library/css/ie.css' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://www.biotech.ca/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='http://www.biotech.ca/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='http://www.biotech.ca/wp-content/themes/biotec/library/js/libs/jquery.bxslider/jquery.bxslider.js'></script>
+<script type='text/javascript' src='http://www.biotech.ca/wp-content/themes/biotec/library/js/libs/custom_form_elements.js'></script>
+<script type='text/javascript' src='https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='http://www.biotech.ca/wp-content/themes/biotec/library/js/libs/modernizr.custom.min.js'></script>
+<link rel='https://api.w.org/' href='http://www.biotech.ca/wp-json/' />
+<link rel='shortlink' href='http://www.biotech.ca/' />
+<link rel="alternate" type="application/json+oembed" href="http://www.biotech.ca/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.biotech.ca%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.biotech.ca/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.biotech.ca%2F&#038;format=xml" />
+<style type="text/css">	.ssba {
+									padding: 20px;
+									border: 0px solid #F5F5F5;
+									background-color: #F5F5F5;
+									
+								}
+								.ssba img
+								{
+									width: 50px !important;
+									padding: 4px;
+									border:  0;
+									box-shadow: none !important;
+									display: inline !important;
+									vertical-align: middle;
+								}
+								.ssba, .ssba a
+								{
+									text-decoration:none;
+									border:0;
+									
+									
+									font-size: 	20px;
+									color: 		#333333!important;
+									font-weight: normal;
+								}.ssba { margin-bottom: 15px; }
+.ssba, .ssba a {  text-transform: uppercase; font-weight: 600;  }
+.ssba img { margin-bottom: 0; }</style><meta name="generator" content="WPML ver:3.3.7 stt:1,4;" />
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://www.biotech.ca/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="http://www.biotech.ca/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]--><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>		
+				
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77086651-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+  jQuery(document).ready(function($) {
+
+  		$("#gform_wrapper_2").after("<div id='fakeprogress'><h2>Uploading Files.. Please Wait</h2></div>");
+  		$("#fakeprogress").hide();
+		$("#gform_wrapper_2 .gform_footer input").click(function () {
+   			$("#fakeprogress").delay(3000).show('slow');
+		});	
+
+  });
+</script>
+
+	</head>
+
+	<body class="home page page-id-10 page-template page-template-front-page page-template-front-page-php wpb-js-composer js-comp-ver-4.11.2 vc_responsive" itemscope itemtype="http://schema.org/WebPage">
+        <div id="search-overlay">
+            <i class="fa fa-times close"></i>
+            <div class="search-container">
+                <form role="search" method="get" id="searchform" class="searchform" action="http://www.biotech.ca/">
+    <div>
+        <label for="s" class="screen-reader-text">Search the BioteCanada Website:</label>
+        <input type="search" id="s" name="s" value="" />
+        <button type="submit" id="searchsubmit" ><i class="fa fa-search"></i></button>
     </div>
-    <!--Header end-->
-    <!--Navigation-->
-    <div id="navigation">
-      <!--ul class="navigation">
-        <li><a href="/en/who-we-are.aspx" accesskey="1">About</a>
-          <ul>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Ethics</a></li>
-            <li><a href="#">Members</a></li>
-            <li><a href="#">2011 Supporters</a></li>
-            <li><a href="#">National Biotech Accord</a></li>
-            <li><a href="http://www.google.ca">Annual Report</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </li>
-        <li><a href="#" accesskey="2">Membership</a>
-          <ul>
-            <li><a href="#">Benefits</a></li>
-            <li><a href="#">Business Solutions and Member Savings</a></li>
-            <li><a href="#">Events Calendar</a></li>
-            <!- <li><a href="#">Awards</a></li> ->
-            <li><a href="#">Gold Leaf Awards</a></li>
-			<li><a href="#">Members only website</a></li>
-          </ul>
-        </li>
-        <li><a href="#" accesskey="3">What is Biotech?</a>
-          <ul>
-            <li><a href="#">Benefits of Biotechnology</a></li>
-            <li><a href="#">Agriculture</a></li>
-            <li><a href="#">Health</a></li>
-            <li><a href="#">Industrial</a></li>
-            <li><a href="#">Vaccines</a></li>
-          </ul>
-        </li>
-        <li><a href="#" accesskey="4">Advocacy &amp; Policy</a>
-          <ul>
-            <li><a href="#">Beyond Moose and Mountains</a></li>
-            <li><a href="#">Bio-economy</a></li>
-            <li><a href="#">Agriculture</a></li>
-            <li><a href="#">Financing</a></li>
-            <li><a href="#">Health</a></li>
-            <li><a href="#">Industrial</a></li>
-            <li><a href="#">Intellectual Property</a></li>
-            <li><a href="#">Vaccines</a></li>
-            <li><a href="#">National Biotechnology Week</a></li>
-          </ul>
-        </li>
-        <li><a href="#" accesskey="5">News &amp; Resources</a>
-          <ul>
-            <!- <li><a href="#">Canadian Discoveries</a></li> ->
-            <li><a href="#">Insights Magazine</a></li>
-            <li><a href="#">Monthly Reporter Newsletter</a></li>
-            <li><a href="#">Latest Company News</a></li>
-            <li><a href="#">Parliamentary Quarterly</a></li>
-            <li><a href="#">Blogs and Podcasts</a></li>
-            <li><a href="#">Canadian Life Sciences Database</a></li>
-            <li><a href="#">Regional Overview</a></li>
-            <li><a href="#">Industry Facts and Figures</a></li>
-            <li><a href="#">Biotechnology Fact Sheets</a></li>
-            <li><a href="#">Industry Forecast</a></li>
-          </ul>
-        </li>
-        <li><a href="/en/members.aspx" accesskey="7">Members</a></li>
-        <li><a href="/en/contact.aspx" accesskey="8">Contact</a></li>
-      </ul-->
-
-      <ul class="navigation">
-        <li><a href="/en/who-we-are.aspx" accesskey="1">About</a>
-          <ul>
-            <li><a href="/en/who-we-are/overview.aspx">About</a></li>
-            <li><a href="/en/who-we-are/team.aspx">Team</a></li>
-            <li><a href="/en/who-we-are/ethics.aspx">Ethics</a></li>
-            <li><a href="/en/who-we-are/members.aspx">Members</a></li>
-            <li><a href="/en/who-we-are/2013support.aspx">Partnership Program</a></li>
-            <li><a href="/en/who-we-are/national-biotech-accord.aspx">National Biotech Accord</a></li>
-            <li><a href="/en/who-we-are/contact.aspx">Contact Us</a></li>
-          </ul>
-        </li>
-        <li><a href="/en/what-we-do.aspx" accesskey="2">Membership</a>
-          <ul>
-            <li><a href="/en/what-we-do/overview.aspx">Membership</a></li>
-            <li><a href="/en/what-we-do/boardroom-booking.aspx">Boardroom Booking</a></li>
-            <li><a href="/en/what-we-do/benefits.aspx">Benefits of Membership</a></li>
-            <li><a href="/en/what-we-do/business-solutions-member-savings.aspx">Business Solutions and Member Savings</a></li>
-            <li><a href="/en/what-we-do/bio2016.aspx">Canada@BIO2016</a></li>
-            <li><a href="/en/what-we-do/events.aspx">Events Calendar</a></li>
-            <li><a href="/en/what-we-do/goldleafawards.aspx">Gold Leaf Awards</a></li>
-          </ul>
-        </li>
-        <li><a href="/en/what-biotech-is.aspx" accesskey="3">Biotech Is</a>
-          <ul>
-            <li><a href="/en/what-biotech-is/shrew.aspx">Shrew</a></li>
-            <li><a href="/en/what-biotech-is/benefits.aspx">Biotech Is</a></li>
-            <li><a href="/en/what-biotech-is/health.aspx">Better Healthcare</a></li>
-            <li><a href="/en/what-biotech-is/industrial-environmental.aspx">Modern Manufacturing </a></li>
-            <li><a href="/en/what-biotech-is/vaccines.aspx">Preventing Disease </a></li>
-            <li><a href="/en/what-biotech-is/bioenergy.aspx">Bioenergy</a></li>
-            <li><a href="/en/what-biotech-is/agriculture-nutrition.aspx">Securing Food Supply</a></li>
-          </ul>
-        </li>
-        <li><a href="/en/policy-matters.aspx" accesskey="4">Policy Matters</a>
-          <ul>
-            <li><a href="/en/policy-matters/biotechnologyecosystem.aspx">Biotechnology Ecosystem</a></li>
-            <li><a href="/en/policy-matters/financing.aspx">Financing</a></li>
-            <li><a href="/en/policy-matters/health-bio.aspx">Health</a></li>
-            <li><a href="/en/policy-matters/agriculture-nutrition.aspx">Agriculture & Industrial</a></li>
-            <li><a href="/en/policy-matters/national-biotechnology-week.aspx">National Biotechnology Week</a></li>
-          </ul>
-        </li>
-        <li><a href="/en/resource-centre.aspx" accesskey="5">News </a>
-          <ul>
-            <li><a href="/en/resource-centre/press-releases.aspx">Press Releases</a></li>
-            <li><a href="/en/resource-centre/insights-magazine.aspx">insights Magazine</a></li>
-            <li><a href="/en/resource-centre/news.aspx">Company Developments</a></li>
-            <li><a href="/en/resource-centre/blogs-podcasts.aspx">Useful Links</a></li>
-          </ul>
-        </li>
-        <li><a href="/en/contact.aspx" accesskey="6">Contact</a>
-        </li>
-      </ul>
-
-    </div>
-    <!--Navigation end-->
-
-
-
-      <!--Left column-->
-      <div class="home-content">
-
-        <!--Carousel-->
-        <div id="carousel">
-          <a href="/en/what-biotech-is/benefits.aspx"><div class="carousel-background"></div></a>
-          <div class="carousel-loader"></div>
-          <div class="carousel-prev-button"></div>
-          <div class="carousel-next-button"></div>
+<input type='hidden' name='lang' value='en' /></form>            </div>
         </div>
-        <!--Carousel end-->
+		<div id="container">
 
-        <div class="main-content">
-          <h2 class="highlights-header">Current highlights</h2>
+			<nav>
+				<ul id="menu-mobile-menu" class="nav mobile-nav cf"><li id="menu-item-912" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-912"><a href="http://www.biotech.ca/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Home</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+<li id="menu-item-913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-913"><a href="http://www.biotech.ca/about/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">About</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a href="http://www.biotech.ca/about/team/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Team</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916"><a href="http://www.biotech.ca/about/ethics/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Ethics</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-917"><a href="http://www.biotech.ca/about/member-listings/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Member Listings</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-918"><a href="http://www.biotech.ca/about/partnership-program/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Partnership Program</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-919"><a href="http://www.biotech.ca/about/national-biotech-accord/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">National Biotech Accord</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-926"><a href="http://www.biotech.ca/about/canadabio2016/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Canada@BIO2016</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-920" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-920"><a href="http://www.biotech.ca/about/contact-us/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Contact Us</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+</ul>
+</li>
+<li id="menu-item-921" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-921"><a href="http://www.biotech.ca/membership/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Become a Member</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-922" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-922"><a href="http://www.biotech.ca/membership/home/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Membership</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-924"><a href="http://www.biotech.ca/membership/benefits-of-membership/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Benefits of Membership</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-925"><a href="http://www.biotech.ca/membership/benefits-of-membership/business-solutions-and-member-savings/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Cost Savings Programs for Members</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-927"><a href="http://www.biotech.ca/membership/events-calendar/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Events Calendar &amp; Savings</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-928"><a href="http://www.biotech.ca/about/gold-leaf-awards/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Gold Leaf Awards</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+</ul>
+</li>
+<li id="menu-item-929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-929"><a href="http://www.biotech.ca/biotech-buzz/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Biotech Buzz</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+<li id="menu-item-930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-930"><a href="http://www.biotech.ca/policy-matters/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Policy Matters</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-931" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-931"><a href="http://www.biotech.ca/policy-matters/biotechnology-ecosystem/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Biotechnology Ecosystem</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-932" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-932"><a href="http://www.biotech.ca/policy-matters/financing/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Financing</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-934"><a href="http://www.biotech.ca/policy-matters/health/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Health</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935"><a href="http://www.biotech.ca/policy-matters/agriculture-industrial/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Agriculture &#038; Industrial</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-936"><a href="http://www.biotech.ca/about/global-biotech-week/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Global Biotech Week</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+</ul>
+</li>
+<li id="menu-item-938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-938"><a href="http://www.biotech.ca/news/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">News</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-939"><a href="http://www.biotech.ca/news/press-releases/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Press Releases</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-941" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-941"><a href="http://www.biotech.ca/news/insights-magazine/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">insights Magazine</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-940"><a href="http://www.biotech.ca/news/company-developments/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Company Developments</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+	<li id="menu-item-943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-943"><a href="http://www.biotech.ca/news/useful-links/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Useful Links</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+</ul>
+</li>
+<li id="menu-item-947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-947"><a href="http://www.biotech.ca/about/contact-us/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Contact Us</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+<li id="menu-item-945" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-945"><a href="http://www.biotech.ca/member-login/"><span class="up-a-level"><i class="fa fa-angle-left"></i></span><span class="link-name">Member Login</span><span class="sub-navigation"><i class="fa fa-angle-right"></i></span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.biotech.ca/fr/home-page/"><span class="link-name">Fran&ccedil;ais</span></a></li></ul>
+			</nav>
 
-          <div class="highlights-content">
-            <div id="pos_content-highlights3" class="cms_position">
-              <div id="mod_1127" class="cms_module">
 
-<div align="center"><a target="_blank" href="http://biotech.ca/en/what-biotech-is/shrew.aspx">
-		
-		
-		
-		
-		
-		
-		
-		
-		<img width="261" height="285" border="0px" align="" alt="" src="/uploads/web_shrew_homepage.jpg" /></a><br />
-	
-	
-	
-	
-	
-	<br />
-	
-	
-	
-	
-	
-	</div>
+			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 
+				<div id="inner-header">
+                    <div class="wrap cf">
+					    					    <div id="logo"><a href="http://www.biotech.ca"><img src="http://www.biotech.ca/wp-content/themes/biotec/library/images/logo.png" alt="BIOTECanada" /></a></div>
+					
+                            <nav>
+                                <ul class="social-block">
+                               	    <li><img class="search-btn" src="http://www.biotech.ca/wp-content/themes/biotec/library/images/search.png" alt="Search" /></li>
+                                    <li><a target="_blank" href="https://twitter.com/BIOTECanada"><img src="http://www.biotech.ca/wp-content/themes/biotec/library/images/twitter.png" alt="Twitter" /></a></li>
+                                    <li><a target="_blank" href="https://www.linkedin.com/company/386805?trk=prof-exp-company-name"><img src="http://www.biotech.ca/wp-content/themes/biotec/library/images/linkedin.png" alt="Linked In" /></a></li>
+                                </ul>
 
+                                <ul id="menu-top-links" class="nav top-nav cf"><li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="http://www.biotech.ca/member-login/">Member Login</a></li>
+<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405"><a href="http://www.biotech.ca/about/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.biotech.ca/fr/home-page/"><span class="link-name">Fran&ccedil;ais</span></a></li></ul>    						             
+                            </nav>
 
-
-
-
-
-
-
-<div style="text-align: center;">
-	
-	
-	
-	
-	
-	
-	
-	</div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bit.ly/21ZAgmz" data-text="Taming of the shrew spit" data-via="BIOTECanada" data-size="large" data-hashtags="biotechTHAT">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div>
-
+					    					    
+					    <div class="mobile-button">
+                    	    <i class="fa fa-bars"></i> Menu                        </div>
+					    <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						    <ul id="menu-main-menu" class="nav main-nav cf"><li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-212"><a href="http://www.biotech.ca/about/home/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="http://www.biotech.ca/about/team/">Team</a></li>
+	<li id="menu-item-180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a href="http://www.biotech.ca/about/ethics/">Ethics</a></li>
+	<li id="menu-item-658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658"><a href="http://www.biotech.ca/about/member-listings/">Members</a></li>
+	<li id="menu-item-182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182"><a href="http://www.biotech.ca/about/partnership-program/">Partnership Program</a></li>
+	<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183"><a href="http://www.biotech.ca/about/national-biotech-accord/">National Biotech Accord</a></li>
+	<li id="menu-item-201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="http://www.biotech.ca/about/gold-leaf-awards/">Gold Leaf Awards</a></li>
+	<li id="menu-item-194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194"><a href="http://www.biotech.ca/about/global-biotech-week/">Global Biotech Week</a></li>
+	<li id="menu-item-199" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><a href="http://www.biotech.ca/about/canadabio2016/">Canada@BIO2016</a></li>
+	<li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="http://www.biotech.ca/about/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-213"><a href="http://www.biotech.ca/membership/home/">Become a Member</a>
+<ul class="sub-menu">
+	<li id="menu-item-185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-185"><a href="http://www.biotech.ca/membership/home/">Membership</a></li>
+	<li id="menu-item-187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-187"><a href="http://www.biotech.ca/membership/benefits-of-membership/">Benefits of Membership</a></li>
+	<li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="http://www.biotech.ca/membership/benefits-of-membership/business-solutions-and-member-savings/">Cost Savings Programs for Members</a></li>
+	<li id="menu-item-200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200"><a href="http://www.biotech.ca/membership/events-calendar/">Events Calendar &amp; Savings</a></li>
+</ul>
+</li>
+<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="http://www.biotech.ca/biotech-buzz/">Biotech Buzz</a></li>
+<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-167"><a href="http://www.biotech.ca/policy-matters/">Policy Matters</a>
+<ul class="sub-menu">
+	<li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a href="http://www.biotech.ca/policy-matters/biotechnology-ecosystem/">Biotechnology Ecosystem</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://www.biotech.ca/policy-matters/financing/">Financing</a></li>
+	<li id="menu-item-192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-192"><a href="http://www.biotech.ca/policy-matters/health/">Health</a></li>
+	<li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a href="http://www.biotech.ca/policy-matters/agriculture-industrial/">Agriculture &#038; Industrial</a></li>
+</ul>
+</li>
+<li id="menu-item-1440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1440"><a href="http://www.biotech.ca/news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="http://www.biotech.ca/news/press-releases/">Press Releases</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="http://www.biotech.ca/news/insights-magazine/">Insights Magazine</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://www.biotech.ca/news/company-developments/">Company Developments</a></li>
+	<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="http://www.biotech.ca/news/useful-links/">Useful Links</a></li>
+</ul>
+</li>
+</ul>
+					    </nav>
+                    </div>
+				</div>
+			
+            <div class="blue-overflow"></div>
+            
+			</header>
+            
+                        <div class="home-slider">
+            	<ul class="bx-home">
+                
+                	                	<li>
+                    	<div class="wrap">
+                    	<img width="1920" height="1280" src="http://www.biotech.ca/wp-content/uploads/2016/02/canola-field.jpg" class="attachment-full size-full wp-post-image" alt="canola-field" srcset="http://www.biotech.ca/wp-content/uploads/2016/02/canola-field.jpg 1920w, http://www.biotech.ca/wp-content/uploads/2016/02/canola-field-300x200.jpg 300w, http://www.biotech.ca/wp-content/uploads/2016/02/canola-field-768x512.jpg 768w, http://www.biotech.ca/wp-content/uploads/2016/02/canola-field-1024x683.jpg 1024w" sizes="(max-width: 1920px) 100vw, 1920px" />                    	<span class="title">Innovative Entrepreneurs Re-Engineering Traditional Industries                                                </span>
+                        <span class="btn btn-blue"><a href="http://www.biotech.ca/biotech-buzz/">Read BioTech Buzz</a></span>
+                        </div>
+                    </li>
+                    
+                                    	<li>
+                    	<div class="wrap">
+                    	<img width="1400" height="566" src="http://www.biotech.ca/wp-content/uploads/2016/02/banner1.jpg" class="attachment-full size-full wp-post-image" alt="banner1" srcset="http://www.biotech.ca/wp-content/uploads/2016/02/banner1.jpg 1400w, http://www.biotech.ca/wp-content/uploads/2016/02/banner1-300x121.jpg 300w, http://www.biotech.ca/wp-content/uploads/2016/02/banner1-768x310.jpg 768w, http://www.biotech.ca/wp-content/uploads/2016/02/banner1-1024x414.jpg 1024w" sizes="(max-width: 1400px) 100vw, 1400px" />                    	<span class="title">The National Voice of BioTech in Canada                                            		<span class="subtitle">Join BioTeCanada</span>                        
+                                                </span>
+                        <span class="btn btn-blue"><a href="http://www.biotech.ca/membership/home/">Become a Member</a></span>
+                        </div>
+                    </li>
+                    
+                                    </ul>
             </div>
-            <!-- <iframe src="http://thefundingportal.com/searches/biotech"  width="280"  height="361" frameborder = "0">&nbsp;</iframe> -->
-          </div>
+            
+			<div id="content">
 
-<!--           <div class="highlights-content">
-            <h3 class="h3">Commercialization Here We Come â Full Speed Ahead</h3>
-            <div class="hightlights-content-body">
-              <p>From the US Army to Manitoba veterinarians Kane Biotech takes their energy into various markets. They are gaining accolades for their innovation and traction with their biofilm solutions for the marketplace.</p>
-            </div>
-            <h4 class="h3">Vaccine Research â Connecting in Canada </h3>
-            <div class="hightlights-content-body">
-              <p>As the Chair for the Canadian Association for Immunization Research and Evaluation (CAIRE), Dr. Scheifele oversees a voluntary network of vaccine centres across Canada.</p>
-            </div>
-          </div> -->
+                                <section class="blog-display">
+                                    <div class="wrap cf">
+                                        <h3>Biotech Buzz</h3>
 
-          <div class="highlights-content">
-            <div id="pos_content-highlights2" class="cms_position">
-              <div id="mod_1126" class="cms_module">
+                                                                                <div class="blog-post m-all t-1of2 d-1of4">
+                                            <div class="blog-wrapper">
+                                                <a class="featured-image" href="http://www.biotech.ca/2016/04/01/taming-of-the-shrew-spit/">
+                                                    <img width="300" height="177" src="http://www.biotech.ca/wp-content/uploads/2016/04/web_shrew2-300x177.jpg" class="attachment-medium size-medium wp-post-image" alt="web_shrew2" srcset="http://www.biotech.ca/wp-content/uploads/2016/04/web_shrew2-300x177.jpg 300w, http://www.biotech.ca/wp-content/uploads/2016/04/web_shrew2.jpg 557w" sizes="(max-width: 300px) 100vw, 300px" />                                                </a>
+                                                
+                                                <h5 class="title"><a href="http://www.biotech.ca/2016/04/01/taming-of-the-shrew-spit/">Taming of The Shrew Spit</a></h5>
+                                                
+                                                <span class="category"></span>
+                                            </div>
+                                        </div>
+                                                                                <div class="blog-post m-all t-1of2 d-1of4">
+                                            <div class="blog-wrapper">
+                                                <a class="featured-image" href="http://www.biotech.ca/2016/02/25/how-this-little-pig-medicine-went-to-market/">
+                                                    <img width="289" height="170" src="http://www.biotech.ca/wp-content/uploads/2016/02/ScreenHunter_1635-Mar.-24-11.24.jpg" class="attachment-medium size-medium wp-post-image" alt="Pig" />                                                </a>
+                                                
+                                                <h5 class="title"><a href="http://www.biotech.ca/2016/02/25/how-this-little-pig-medicine-went-to-market/">How This Little Pig Medicine Went to Market</a></h5>
+                                                
+                                                <span class="category"></span>
+                                            </div>
+                                        </div>
+                                                                                <div class="blog-post m-all t-1of2 d-1of4">
+                                            <div class="blog-wrapper">
+                                                <a class="featured-image" href="http://www.biotech.ca/2016/02/25/the-apple-of-everyones-eye/">
+                                                    <img width="289" height="171" src="http://www.biotech.ca/wp-content/uploads/2016/02/ScreenHunter_1634-Mar.-24-11.24.jpg" class="attachment-medium size-medium wp-post-image" alt="Apple" />                                                </a>
+                                                
+                                                <h5 class="title"><a href="http://www.biotech.ca/2016/02/25/the-apple-of-everyones-eye/">The Apple of Everyone’s Eye</a></h5>
+                                                
+                                                <span class="category"></span>
+                                            </div>
+                                        </div>
+                                                                                <div class="blog-post m-all t-1of2 d-1of4">
+                                            <div class="blog-wrapper">
+                                                <a class="featured-image" href="http://www.biotech.ca/2016/02/25/growing-oil-a-golden-opportunity-for-canada/">
+                                                    <img width="293" height="172" src="http://www.biotech.ca/wp-content/uploads/2016/02/ScreenHunter_1634-Mar.-24-11.23.jpg" class="attachment-medium size-medium wp-post-image" alt="Oil" />                                                </a>
+                                                
+                                                <h5 class="title"><a href="http://www.biotech.ca/2016/02/25/growing-oil-a-golden-opportunity-for-canada/">Growing Oil: A Golden Opportunity for Canada</a></h5>
+                                                
+                                                <span class="category"></span>
+                                            </div>
+                                        </div>
+                                                                            </div>
+                                </section>
+
+				<div id="inner-content" class="wrap cf">
+
+						<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+							
+							<article id="post-10" class="cf post-10 page type-page status-publish hentry" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+								<section class="entry-content cf" itemprop="articleBody">
+									
+                                    <!--Home Blocks-->
+                                    <div class="clearfix home-block-row">
+                                        <div class="m-all t-all d-1of3 home-block">
+                                            <div class="home-wrap">
+    <div class="home-block-image">
+                            <a  target="_blank"  href="http://www.biotech.ca/membership/home/">
+                    <img width="108" height="130" src="http://www.biotech.ca/wp-content/uploads/2016/02/biology.png" class="attachment-thumbnail" alt="" style="" title="" />                </a>
+                </div>
+    <div class="block-content">
+        <div class="block-biotec">
+            <img src="http://www.biotech.ca/wp-content/themes/biotec/library/images/tiny-logo.png" />
+        </div>
+        <div class="block-title">
+                        <a  target="_blank"  href="http://www.biotech.ca/membership/home/">
+                Become a <br>Member            </a>
+                    </div>
+    </div>
+
+</div>                                        </div>
+
+                                        <div class="m-all t-all d-1of3 home-block">
+                                            <div class="home-wrap">
+    <div class="home-block-image">
+                            <a  target="_blank"  href="http://www.biotecanada-ecosystem.com/">
+                    <img width="82" height="113" src="http://www.biotech.ca/wp-content/uploads/2016/03/ecoBiotec.jpg" class="attachment-thumbnail" alt="" style="" title="" />                </a>
+                </div>
+    <div class="block-content">
+        <div class="block-biotec">
+            <img src="http://www.biotech.ca/wp-content/themes/biotec/library/images/tiny-logo.png" />
+        </div>
+        <div class="block-title">
+                            <a  target="_blank"  href="http://www.biotecanada-ecosystem.com/">
+                <span style='color: #b82025;'>Ecosystem<Br>Report</span>            </a>
+                    </div>
+    </div>
+
+</div>                                        </div>
+
+                                        <div class="m-all t-all d-1of3 home-block">
+                                            <div class="home-wrap">
+    <div class="home-block-image">
+                            <a  target="_blank"  href="http://www.biotech.ca/news/insights-magazine/">
+                    <img width="87" height="113" src="http://www.biotech.ca/wp-content/uploads/2016/02/insights.png" class="attachment-thumbnail" alt="" style="" title="" />                </a>
+                </div>
+    <div class="block-content">
+        <div class="block-biotec">
+            <img src="http://www.biotech.ca/wp-content/themes/biotec/library/images/tiny-logo.png" />
+        </div>
+        <div class="block-title">
+                            <a  target="_blank"  href="http://www.biotech.ca/news/insights-magazine/">
+                <span style='color: #b82025;'>Insights<bR>Magazine</span>            </a>
+                    </div>
+    </div>
+</div>                                        </div>
 
 
+                                    </div>
 
+                                    <!--Mission Block-->
+                                    <div class="clearfix">
+                                        <div class="m-all t-1of2 d-1of2 mission-block">
+                                            <h3>Strategic Objectives</h3>
 
+                                                                                        <div class="mission-listing">
+                                                <div class="mission-icon">
+                                                    <img width="29" height="21" src="http://www.biotech.ca/wp-content/uploads/2016/02/graph.png" class="attachment-thumbnail" alt="" style="" title="" />                                                </div>
+                                                <div class="mission-text">
+                                                    Increase Canadian biotech innovation, research and commercialization                                                </div>
+                                            </div>
+                                            
+                                                                                        <div class="mission-listing">
+                                                <div class="mission-icon">
+                                                    <img width="31" height="26" src="http://www.biotech.ca/wp-content/uploads/2016/02/cubes.png" class="attachment-thumbnail" alt="" style="" title="" />                                                </div>
+                                                <div class="mission-text">
+                                                    Establish a globally competitive regulatory policy framework to support all aspects of Canadian biotechnology                                                </div>
+                                            </div>
+                                            
+                                                                                        <div class="mission-listing">
+                                                <div class="mission-icon">
+                                                    <img width="27" height="18" src="http://www.biotech.ca/wp-content/uploads/2016/02/money.png" class="attachment-thumbnail" alt="" style="" title="" />                                                </div>
+                                                <div class="mission-text">
+                                                    Establish Canada and Canadian biotechnology innovation as a destination for investment capital                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="m-all t-1of2 d-1of2 events-block">
+                                            
+                                            <h3>Upcoming Events</h3>
+                                                                                        <a class="view-all" href="http://www.biotech.ca/membership/events-calendar/">View All</a>
 
+                                            
+                                                <div class="event-listing">
+                                                    <div class="date-block">
+                                                        <div class="month">
+                                                            May                                                        </div>
+                                                        <div class="day">
+                                                            10                                                        </div>
+                                                    </div>
+                                                    <div class="event-title">
+                                                        <a href="<? echo get_the_permalink(); ?>">PSG Annual Conference 2016</a>
+                                                    </div>
+                                                </div>
+                                                <div class="spacing"></div>
 
+                                            
+                                                <div class="event-listing">
+                                                    <div class="date-block">
+                                                        <div class="month">
+                                                            May                                                        </div>
+                                                        <div class="day">
+                                                            11-12                                                        </div>
+                                                    </div>
+                                                    <div class="event-title">
+                                                        <a href="<? echo get_the_permalink(); ?>">Agri Investment Forum</a>
+                                                    </div>
+                                                </div>
+                                                <div class="spacing"></div>
 
+                                            
+                                                <div class="event-listing">
+                                                    <div class="date-block">
+                                                        <div class="month">
+                                                            May                                                        </div>
+                                                        <div class="day">
+                                                            18-19                                                        </div>
+                                                    </div>
+                                                    <div class="event-title">
+                                                        <a href="<? echo get_the_permalink(); ?>">ChinaBio 2016</a>
+                                                    </div>
+                                                </div>
+                                                <div class="spacing"></div>
 
+                                            
+                                        </div>
+                                    
+                                    </div>
+									
+								</section> 
+								<footer class="article-footer cf">
 
+								</footer>
 
+								
+							</article>
 
+							
+						</main>
 
+				</div>
 
+			</div>
 
+            <section class="partners">
+                <div class="wrap cf">
+                    <h3>Our Partners</h3>
+                                        <div class="platinum m-all t-3of5 d-3of5">
+                    <h5>Platinum</h5>
+                                            <div class="partner m-1of2 t-1of3 d-1of3" style="height: 69px;">
+                            <a href="https://www.biogen.com/">
+                                <div class="partner-image" style="max-width: 177px; background-image: url('http://www.biotech.ca/wp-content/uploads/2016/02/biogen.png')"></div>
+                            </a>
+                        </div>
+                                            <div class="partner m-1of2 t-1of3 d-1of3" style="height: 55px;">
+                            <a href="https://ca.vwr.com/store/">
+                                <div class="partner-image" style="max-width: 212px; background-image: url('http://www.biotech.ca/wp-content/uploads/2016/02/vwr.png')"></div>
+                            </a>
+                        </div>
+                                        </div>
+                    <div class="gold m-all t-1of5 d-1of5">
+                    <h5>Gold</h5>
+                                        <div class="partner m-1of2 t-all d-all" style="height: 99px;">
+                        <a href="http://www.celgenecanada.net/en/index.aspx">
+                            <div class="partner-image" style="max-width: 136px; background-image: url('http://www.biotech.ca/wp-content/uploads/2016/04/celgene.png')"></div>
+                        </a>
+                    </div>
+                                        </div>
 
+                    <div class="bronze m-all t-1of5 d-1of5">
+                    <h5>Bronze</h5>
+                                        <div class="partner m-1of2 t-all d-all" style="height: 100px;">
+                        <a href="http://www.novonordisk.com/">
+                            <div class="partner-image" style="max-width: 147px; background-image: url('http://www.biotech.ca/wp-content/uploads/2016/04/novonordisk-2.png')"></div>
+                        </a>
+                    </div>
+                                        </div>
+                                    </div>            
+            </section>
 
+			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
+				<div id="inner-footer" class="wrap cf">
 
+					<p class="source-org copyright">&copy; Copyright 2016 BIOTECanada. All rights reserved. <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+                    <p class="credits">Web Design by <a href="http://www.envisionup.com" target="_blank">EnvisionUP<a></p>
+					
+				</div>
 
+			</footer>
 
-
-
-
-
-<h2>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div style="text-align: center;">
-		
-		
-		
-		
-		<a target="_blank" href="http://www.biotecanada-ecosystem.com/">
-			
-			
-			<img border="0" align="" src="/uploads/tree_ecosystem_web.jpg" alt="" /></a></div></h2>
-
-
-
-
-
-
-
-
-
-
-<h2 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-family: sans-serif; background-color: rgb(255, 255, 255);"></h2>
-
-
-
-
-
-
-
-
-
-
-<h2 style="text-align: left;">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div style="text-align: center;">&nbsp;</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div style="text-align: center;">
-		
-		
-		
-		<span style="font-size: 12pt;"><br />
-			
-			
-			
-			</span>
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		</div>
-	
-	
-	
-	<span style="font-size: 18pt;">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	</span>
-	
-	
-	
-	<div style="text-align: center;">
-		
-		
-		
-		<span style="font-size: 18pt;">Top 3 by 2025<br />
-			</span>
-		<h2>
-			<span style="font-size: 18pt;">Find out how</span></h2>
-		<h4>
-	
-	</h4></div><br />
-	</h2>
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<span class="Apple-style-span" style="color: rgb(0, 85, 150);">
-		
-		
-		
-		
-		
-		
-		</span>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<span class="Apple-style-span" style="color: rgb(0, 85, 150); ">
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<span class="Apple-style-span" style="color: rgb(102, 102, 102); "></span></span></div>
-
-</div>
-
-            </div>
-          </div>
-
-<!--           <div class="highlights-content">
-            <h3 class="h3">Did you know?</h3>
-              <p>Thanks to new vaccines the instances of cervical cancer is expected to be decreased by 78%(BIO)</p>
-              <p>By reducing the use of pesticides, biotech crops have decreased the environmental impact of herbicide and insecticide use on the land planted with biotech crops by more than 17 percent.(S-Croplife Intl)</p>
-              <p>A beer brewing biotech enzyme is replacing the need for malting barley, an energy and water intensive process, generating estimated savings of 350,000 tons of CO2 for every 10% of global beer productionâthis is equivalent to the emissions of 85,000 cars.</p>
-          </div> -->
-
-          <div class="twitter-feed">
-            <img src="/images/biotech-canada-logo.jpg" alt="Biotech Canada Logo" />
-            <a class="twitter-timeline"  href="https://twitter.com/BIOTECanada" data-widget-id="326707993452351488" data-border-color="#ffffff">Tweets by @BIOTECanada</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          </div>
-
-        </div>
-
-          <div class="home-sub-footer">
-
-            <!--About-->
-            <div class="home-about">
-              <h2 class="about-header">About BIOTECanada</h2>
-              <div class="about-body">
-                <h3 class="about">Canada's Voice for Biotechnology</h3>
-                <div id="pos_content" class="cms_position about">
-                  <div id="mod_243" class="cms_module">
-BIOTECanada is the national industry association with over 200 members located nation wide, reflecting the diverse nature of Canada&#8217;s health, industrial and agricultural biotechnology sectors. In addition to providing significant health benefits for Canadians, the biotechnology industry has quickly become an essential part of the transformation of many traditional cornerstones of the Canadian economy including manufacturing, automotive, energy, aerospace and forestry industries.<br />
-
-
-
-
-
-</div>
-
-                </div>
-              </div>
-            </div>
-            <!--About end-->
-
-
-            <!--Connect-->
-            <div class="home-connect">
-              <h2 class="connect-header">Connect with us</h2>
-              <div class="connect-body">
-                <div class="connect-box">
-                  <p>Follow us on LinkedIn / Twitter:</p>
-                  <a href="http://www.linkedin.com/companies/biotecanada"><img src="/images/linkedin.gif" alt="LinkedIn logo"/></a><a href="http://twitter.com/biotecanada"><img src="/images/twitter.gif" alt="Twitter logo"/></a>
-                </div>
-              </div>
-            </div>
-            <!--connect end-->
+		<script type='text/javascript' src='http://www.biotech.ca/wp-content/plugins/simple-share-buttons-adder/js/ssba.min.js'></script>
+<script type='text/javascript' src='http://www.biotech.ca/wp-content/themes/biotec/library/js/scripts.js'></script>
+<script type='text/javascript' src='http://www.biotech.ca/wp-includes/js/wp-embed.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var icl_vars = {"current_language":"en","icl_home":"http:\/\/www.biotech.ca\/","ajax_url":"http:\/\/www.biotech.ca\/wp-admin\/admin-ajax.php","url_type":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.biotech.ca/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js'></script>
 
-          </div>
+	</body>
 
-      </div>
-      <!-- </div> -->
-      <!--Right column end-->
-      <!--Supporters-->
-      <div id="supporters">
-        <div class="supporters-left">
-          <div class="supporters-left-header">
-            <h2 class="supporters-header">Partnership Program</h2>
-            <h3 class="platinum-header">Platinum</h3>
-          </div>
-          <h4 class="supporter">
-            <a href="http://www.abbvie.ca/" target="_blank" title="Go to the AbbVie homepage">
-              <img src="/images/abbvie.jpg" width="110" height="54" alt="AbbVie" />
-            </a>
-          </h4>
-          <h4 class="supporter">
-            <a href="http://www.biogenidec.com" target="_blank" title="Go to the Biogen Idec homepage">
-              <img src="/images/biogen-idec.jpg" width="129" height="54" alt="Biogen Idec" />
-            </a>
-          </h4>
-          <h4 class="supporter">
-            <a href="http://www.genzyme.ca/ca_en_homepage.asp" target="_blank" title="Go to the Genzyme homepage">
-              <img src="/images/genzyme.jpg" width="110" height="54" alt="Genzyme" />
-            </a>
-          </h4>
-          <h4 class="supporter">
-            <a href="http://www.vwr.com" target="_blank" title="Go to the vwr homepage">
-              <img src="/images/vwr.jpg" width="114" height="54" alt="vwr" />
-            </a>
-          </h4>
-        </div>
-        <div class="supporters-right">
-          <div class="supporters-right-header">
-            <h3 class="gold-header">Gold</h3>
-          </div>
-          <!-- <div class="sponsors slider"></div> -->
-          <h4 class="supporter">
-            <a href="http://alxn.com/" target="_blank" title="Go to the Alexion homepage">
-              <img src="/images/alexion.jpg" width="110" height="54" alt="Alexion" />
-            </a>
-          </h4> 
-        </div>
-      </div>
-      <!--Supporters end-->
+</html> <!-- end of site. what a ride! -->
 
-    </div>
-    <!--Footer-->
-    <div id="footer">
-      <div class="container">
-        <ul class="footer-left">
-          <li class="seperator"><a href="/en/default.aspx">Home</a></li>
-          <li class="seperator"><a href="/en/who-we-are.aspx">About</a></li>
-          <li class="seperator"><a href="/en/what-we-do.aspx">Membership</a></li>
-          <li class="seperator"><a href="/en/what-is-biotech.aspx">What is Biotech?</a></li>
-          <li class="seperator"><a href="/en/policy-matters.aspx">Advocacy &amp; Policy</a></li>
-          <li class="seperator"><a href="/en/resource-centre.aspx">News &amp; Resources</a></li>
-          <!--<li class="seperator"><a href="#">25 Years</a></li>-->
-          <li class="seperator"><a href="/en/login.aspx">Members</a></li>
-          <li><a href="/en/contact.aspx">Contact</a></li>
-        </ul>
-        <ul class="footer-right ruler">
-          <li class="seperator"><a href="/en/sitemap.aspx">Site map</a></li>
-          <li class="seperator"><a href="/en/privacy.aspx">Privacy policy</a></li>
-          <li><a href="/fr/default.aspx">Fran&ccedil;ais</a></li>
-        </ul>
-        <img src="/images/logo-small.gif" alt="BIOTECanada logo" class="logo" />
-      </div>
-      <div class="container ruler">
-        <p class="copyright">&copy; Copyright 2011 BIOTECanada. All rights reserved.</p>
-        <p class="created-by">Web design + development by <a href="http://www.atomicmotion.com/" target="_blank">Atomic Motion</a>.</p>
-      </div>
-    </div>
-    <!--Footer end-->
-    <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
-    <script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-12128501-17");pageTracker._trackPageview();} catch(err) {}</script>
-    <script type="text/javascript" src="/scripts/home.js"></script>
-  </body>
-</html>
+<!-- Dynamic page generated in 1.633 seconds. -->
+<!-- File not cached! Super Cache Couldn't write to: /home/bio01/public_html/wp-content/cache/supercache/www.biotech.ca/203219734957309861c2e5a6.52329404.tmp -->

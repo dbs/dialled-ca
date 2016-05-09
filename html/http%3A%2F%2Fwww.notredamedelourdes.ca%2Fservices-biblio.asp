@@ -308,13 +308,11 @@ jQuery(document).ready(function () {
 		<div class="midText editable" id="included-region-1"><h1>DerniÃ¨res nouvelles</h1>
 <div class="colonne_triple">
 <div class="nouvelle" style="text-align: justify;">
-<div class="date">Le 29 mars 2016 :</div>
-<p><a href="services-loisirs-activites.asp"><strong>mois de la nutrition</strong></a><strong><span style="font-size: medium;">iNSCRIPTIONS JUSQU'AU 25 MARS</span></strong></p>
-<p><a href="services-loisirs-activites.asp"><img src="images/conferencenutrition1.tsp.jpg" alt="" width="275" height="124"></a></p>
-<span style="font-size: small;">Dans le cadre du mois de la nutrition, la municipalitÃ© invite Julie Bolduc, nutritionniste, Ã  vous parler des saines habitudes de vie.</span></div>
-<div class="nouvelle"><hr></div>
-<div class="nouvelle"><span style="font-size: small;">Inscriptions Ã  l'HÃ´tel de Ville</span></div>
-<div><span style="font-size: small;">Horaire : 9h00 Ã  12h00 et 13h00 Ã  16h30</span></div>
+<div class="date">Depuis le 31 mars :</div>
+<p style="text-align: left;"><a href="services-loisirs-activites.asp"><strong>RÃ©amÃ©nagement des collectes</strong></a></p>
+<p><a href="services-loisirs-activites.asp"><img src="images/BACBRUN124x275 .jpg" alt="" width="275" height="124"></a></p>
+</div>
+<div class="nouvelle"><span style="font-size: small;">Visitez notre section <a href="citoyens-environnement-collecte-organique.asp">collectes</a> afin de tout connaÃ®tre sur les matiÃ¨res organiques.<br></span></div>
 </div>
 <div class="colonne_triple">
 <div class="nouvelle">
@@ -328,10 +326,10 @@ jQuery(document).ready(function () {
 </div>
 <div class="colonne_triple">
 <div class="nouvelle">
-<div class="date">Du 31 mars au 11 mai :</div>
-<p><strong>inscriptions au dÃ©fi santÃ© dÃ¨s le 1er mars</strong></p>
-<p><img src="vgx-images/defisante.tsp.jpg" alt="" width="275" height="124"></p>
-<p><span style="font-size: small;">Pour s'inscrire : <a href="http://www.defisante.ca/fr/accueil">www.defisante.ca</a><br></span></p>
+<div class="date">Du 18 avril au 20 mai :</div>
+<p><strong>inscriptions AU CAMP DE JOUR 2016<br></strong></p>
+<p><a href="services-loisirs-camp-de-jour.asp"><img src="vgx-images/INSCRIPTIONS124275.tsp .jpg" alt="" width="275" height="124"></a></p>
+<p style="text-align: justify;"><span style="font-size: small;">Encore une fois, la municipalitÃ© de Notre-Dame-de-Lourdes vous offre un camp de jour afin que vos jeunes de 5 Ã  12 ans puissent avoir un Ã©tÃ© rempli de moments inoubliable.<br></span></p>
 </div>
 </div>
 <div style="clear: both;">Â </div></div>

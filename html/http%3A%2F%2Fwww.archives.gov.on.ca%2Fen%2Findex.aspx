@@ -135,22 +135,19 @@
 <body id="home">
 
 
-
 <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P8CH84"
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P63Z5G"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P8CH84');</script>
+})(window,document,'script','dataLayer','GTM-P63Z5G');</script>
 <!-- End Google Tag Manager -->
 
 
 
-
-
-
+	
 
 
 
@@ -163,6 +160,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
     
+	
+	
+
+	
 <!-- Wrapper Start Here -->
     <div id="wrapper">
 <!-- Header Start -->
@@ -413,36 +414,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
       
 <div class="row">
-   <p><strong>Please note that the Archives of Ontario will be closed on Friday, March 25 and Monday, March 28, Easter Monday.</strong> [<a href="about/prepare.aspx#holidaysList" title="More list of Holidays">More</a>] </p>
+   <p><strong>Please note that the Archives of Ontario will be closed Monday, May 23, Victoria Day.</strong> [<a href="about/prepare.aspx#holidaysList" title="More list of Holidays">More</a>] </p>
  </div>
-  <div class="row"> 
-    <strong>Notice of fee increase for reproduction services: <br />
-</strong>
-<p>The Archives of Ontario is dedicated to making its resources and services as widely accessible as possible. In order to continue offering high-quality services, we are required to increase fees to reflect actual cost. To ease transition, the new fees are being phased in. A price increase for all reproduction services will come into effect as of September 1, 2015. Please note that a similar and final increase will take place in September 2016. 
 
-For a full list of our new 2015 fees, please see Guide 105 - Reproduction Services and Fees, which will be available <strong>September 1</strong> on the Archives’ website <a href="access/research_guides.aspx" title="here">here</a> and in the Archives’ Reading Room.</p> 
-</div>   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-	
-
-   
- 
- 
-  <!--    <div class="row">
+<!--    <div class="row">
         
             <table width="90%" border="0" cellpadding="8" cellspacing="0" class="table_class">
                 <tr>
@@ -497,20 +472,21 @@ For a full list of our new 2015 fees, please see Guide 105 - Reproduction Servic
             <!---------item------------->
           <div class="grid_6">
               <div class="header">
-                <h2><strong><a href="about/archives_week.aspx" title="Click for Ontario Women’s Activism at the Archives">Archives Awareness Week 2016 </a></strong></h2>
+                <h2><strong><a href="explore/online/soldiers/remembrance_day.aspx" title="Click for Eatons’ Soldiers Exhibit at Mackenzie House">Eatons’ Soldiers Exhibit at Mackenzie House </a></strong></h2>
               </div>
                 <div class="grid_6">
                   <div class="icon" style="margin: 6px; float: left;">
                     <div class="photocap icon_top grey">
                       </div>
-<img src="../images/aaw_icon_2016.jpg"
-                                alt="Archives Awareness Week 2016 " width="125" height="90" /><a href="about/archives_week.aspx"></a>
+<img src="../images/aaw_men_story.jpg"
+                                alt="Eatons’ Soldiers" width="125" height="90" /><a href="about/archives_week.aspx"></a>
                         <div class="photocap icon_bottom grey">
                     </div>
                   </div>
-                    <div class="grid_6_content">
-                 Join us for Archives Awareness Week 2016!  From April 4 to April 9, we will be celebrating archives’ unique potential to inspire and excite people, bring communities together, and tell memorable stories about the past. 
-                    </div>
+Did your ancestor work for Eaton's and serve  in World War I? Share your story! <br />
+<br />
+Stories collected will form the basis of an  exhibit at Mackenzie House from September 2017 to January 2018.
+<div class="grid_6_content"></div>
                 </div>
             </div>
             <!-----end item----->
@@ -554,93 +530,7 @@ For a full list of our new 2015 fees, please see Guide 105 - Reproduction Servic
 
 
 
-        <div class="row">
-
-  
- 
-          
-       
-
-
-        <!---------item------------->
-            <div class="grid_6">
-             <div class="header">
-               <h2>
-               <a href="explore/travelling/documents/AgriculturalPast_WebReady_Sept_2_2015.pdf" title="New Travelling Exhibit Celebrates Ontario’s Agricultural Past">New Travelling Exhibit Celebrates Ontario’s Agricultural Past</a><br /></h2>
-             </div>
-                
-                <div class="grid_6">
-                <div class="icon" style="margin: 6px; float: left;">
-                  <div class="photocap icon_top grey">
-                    </div>
-<img src="../images/lady_farmer.jpg" width="125" height="90"
-                            alt="New Travelling Exhibit Celebrates Ontario’s Agricultural Past" />
-                    <div class="photocap icon_bottom grey">
-                    </div>
-                </div>
-                <div class="grid_6_content">
-                  
-                    Whether living on a farm, enjoying a farmer’s market, or tasting delicious foods, Ontarians take great pride in their agricultural heritage. This <strong>new</strong> exhibit examines how farming in Ontario has transformed the land and created communities, and how food reaches our tables. <span style="text-align: right"><a href="explore/travelling/documents/AgriculturalPast_WebReady_Sept_2_2015.pdf" title="Click to downlaod PDF version of Ontario's Sporting Past">[PDF]</a></span>
-  
-                </div>
-            </div>
-          </div>
-            <!-----end item----->
-
-
-
-          
-          
-          
-          
-          
-          
-          
-         
- 
-<!---------item------------->
-
-
-            <div class="grid_6">
-              <div class="header">
-                <h2><a href="microfilm/legacy_vital_statistics_on_family_search_website.aspx" title="Legacy Vital Statistics Now on Family Search Website">Legacy Vital Statistics Now on Family Search Website</a></h2>
-              </div>
-                <div class="grid_6">
-                  <div class="icon" style="margin: 6px; float: left;">
-                    <div class="photocap icon_top grey">
-                      </div>
-<img src="../images/ogs_icon.jpg"
-                                alt="Legacy Vital Statistics Now on Family Search Website" width="125" height="90" /><a href="about/archives_week.aspx"></a>
-                        <div class="photocap icon_bottom grey">
-                    </div>
-                  </div>
-                    <div class="grid_6_content">
-                        
-                          
-                         As  a result of a licencing agreement between the <a href="http://www.archives.gov.on.ca/" title="Archives of Ontario">Archives  of Ontario</a> and Family Search International,  starting May 30, 2015, historical microfilmed vital statistics records will be  available online, through the <a href="https://familysearch.org" title="Family Search International (FSI) website">Family Search International (FSI)  website</a>. This includes  indexes and registrations for 1869-1910 births,  1869-1927 marriages and 1869-1937 deaths.
-                         
-                   
-                    </div>
-                </div>
-            </div>
-
-              <!-----end item----->
-
-
-
-     
-
-     
-
-
-     
-
-
-            
-          
-           
-           
-        </div>
+        
      
 
 
@@ -677,6 +567,23 @@ For a full list of our new 2015 fees, please see Guide 105 - Reproduction Servic
           
        
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Site Content End Here -->
 <!-- Footer Start Here -->
         <div id="footer">
@@ -716,7 +623,6 @@ For a full list of our new 2015 fees, please see Guide 105 - Reproduction Servic
             });
 
    
-
 
 
 

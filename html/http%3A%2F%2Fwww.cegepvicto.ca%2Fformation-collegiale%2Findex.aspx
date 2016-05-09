@@ -32,7 +32,7 @@
 <script type="text/javascript">//<![CDATA[
 	var startTimer = 0;
 	var mycarousel_itemList = [
-		{vig: '/upload/Attach/172_129/mises-en-candidature-19022016-141246.jpg', url: '/formation-collegiale/realisations/periode-de-mises-en-candidature-en-cours.aspx', title: 'Période de mises en candidature en cours', desc: 'La Fondation du Collège de Victoriaville remettra ...'},{vig: '/upload/Attach/172_129/loto-voyage-11032016-143222.jpg', url: '/formation-collegiale/realisations/loto-voyages-2016-2017.aspx', title: 'Loto-Voyages 2016-2017', desc: 'Elle est de retour avec plus de chances de gagner ...'},{vig: '/upload/Attach/172_129/sfc_formations_2016-14012016-113639.jpg', url: '/formation-collegiale/realisations/formation-continue.aspx', title: 'Formation continue', desc: 'Offre de formations pour les adultes et les ...'},{vig: '/upload/Attach/172_129/visuel_cegep.jpg', url: '/formation-collegiale/realisations/brochure-de-programmes-2017-2018.aspx', title: 'Brochure de programmes 2017-2018', desc: 'Voici la version imprimable de notre outil ...'},{vig: '/upload/Attach/172_129/je-donne_fondation.jpg', url: '/formation-collegiale/realisations/campagne-de-la-communaute-collegiale.aspx', title: 'Campagne de la communauté collégiale', desc: 'Enrichir l\'éducation de demain'},{vig: '/upload/Attach/172_129/cegep.jpg', url: '/formation-collegiale/realisations/le-cegep-un-atout-superieur.aspx', title: 'Le CÉGEP un atout supérieur', desc: 'Nouvelle campagne publicitaire du réseau collégial'},{vig: '/upload/Attach/172_129/section-parent.jpg', url: '/formation-collegiale/realisations/section-pour-les-parents-.aspx', title: 'Section Pour les parents !', desc: 'Toute une série de conseils utiles pour les ...'},{vig: '/upload/Attach/172_129/trouve-toi.jpg', url: '/formation-collegiale/realisations/trouve-ta-saveur-.aspx', title: 'Trouve ta saveur !', desc: 'Voyez nos nouveaux vidéos sur la formation ...'}
+		{vig: '/upload/Attach/172_129/recipiendaire-25042016-214751.jpg', url: '/formation-collegiale/realisations/et-les-recipiendaires-sont.aspx', title: 'Et les récipiendaires sont...', desc: 'Félicitations aux finalistes et aux ...'},{vig: '/upload/Attach/172_129/loto-voyage-11032016-143222.jpg', url: '/formation-collegiale/realisations/loto-voyages-2016-2017.aspx', title: 'Loto-Voyages 2016-2017', desc: 'Elle est de retour avec plus de chances de gagner ...'},{vig: '/upload/Attach/172_129/sfc_formations_2016-14012016-113639.jpg', url: '/formation-collegiale/realisations/formation-continue.aspx', title: 'Formation continue', desc: 'Offre de formations pour les adultes et les ...'},{vig: '/upload/Attach/172_129/visuel_cegep.jpg', url: '/formation-collegiale/realisations/brochure-de-programmes-2017-2018.aspx', title: 'Brochure de programmes 2017-2018', desc: 'Voici la version imprimable de notre outil ...'},{vig: '/upload/Attach/172_129/je-donne_fondation.jpg', url: '/formation-collegiale/realisations/campagne-de-la-communaute-collegiale.aspx', title: 'Campagne de la communauté collégiale', desc: 'Enrichir l\'éducation de demain'},{vig: '/upload/Attach/172_129/cegep.jpg', url: '/formation-collegiale/realisations/le-cegep-un-atout-superieur.aspx', title: 'Le CÉGEP un atout supérieur', desc: 'Nouvelle campagne publicitaire du réseau collégial'},{vig: '/upload/Attach/172_129/section-parent.jpg', url: '/formation-collegiale/realisations/section-pour-les-parents-.aspx', title: 'Section Pour les parents !', desc: 'Toute une série de conseils utiles pour les ...'},{vig: '/upload/Attach/172_129/trouve-toi.jpg', url: '/formation-collegiale/realisations/trouve-ta-saveur-.aspx', title: 'Trouve ta saveur !', desc: 'Voyez nos nouveaux vidéos sur la formation ...'}
 	];
 	$(document).ready(function() {
 		initCarousel();
@@ -486,11 +486,19 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 		<div id="evnThumbs">
 		    <ul class="thumbs noscript">
 				<li>
-					<a href="/upload/Attach/561_256/evenement-web-philo.jpg" id="ctl00_cphContenu_rEvents_ctl01_aCarrousel" class="thumb" title="Colloque de philosophie">1</a>
+					<a href="/upload/Attach/561_256/aec_dao-mtl-25042016-155743.jpg" id="ctl00_cphContenu_rEvents_ctl01_aCarrousel" class="thumb" title="AEC en Conception et dessin assistés par ordinateur">1</a>
 					<div class="caption">
-						<h2><a href="/formation-collegiale/evenements/colloque-de-philosophie.aspx" id="ctl00_cphContenu_rEvents_ctl01_aTitle">Colloque de philosophie</a></h2>
-						<p>Le Département de philosophie du Cégep de Victoriaville innove en présentant à la communauté collégiale et des Bois-Francs un premier colloque de philosophie. Sous le thème « Quels jugements porter sur le capitalisme ? », le colloque réunira, le 16 mars prochain, spécialistes, enseignants, élèves et citoyens intéressés à réfléchir, à échanger et à débattre de cette question.</p>
-						<a href="/formation-collegiale/evenements/colloque-de-philosophie.aspx" id="ctl00_cphContenu_rEvents_ctl01_aMore" class="evnDetails"><span>Plus de détails</span></a>
+						<h2><a href="/formation-collegiale/evenements/aec-en-conception-et-dessin-assistes-par-ordinateur.aspx" id="ctl00_cphContenu_rEvents_ctl01_aTitle">AEC en Conception et dessin assistés par ordinateur</a></h2>
+						<p>Le Service de formation continue du Cégep de Victoriaville offrira dès le 19 septembre 2016 l'attestation d'études collégiales en Conception et dessin assistés par ordinateur spécialisée dans le secteur du meuble et du bois ouvré, à son campus de Montréal, situé au 5445 avenue De Lorimier.</p>
+						<a href="/formation-collegiale/evenements/aec-en-conception-et-dessin-assistes-par-ordinateur.aspx" id="ctl00_cphContenu_rEvents_ctl01_aMore" class="evnDetails"><span>Plus de détails</span></a>
+					</div>
+				</li>
+				<li>
+					<a href="/upload/Attach/561_256/aec-eben_561x256.jpg" id="ctl00_cphContenu_rEvents_ctl02_aCarrousel" class="thumb" title="AEC Techniques d'ébénisterie">2</a>
+					<div class="caption">
+						<h2><a href="/formation-collegiale/evenements/aec-techniques-debenisterie.aspx" id="ctl00_cphContenu_rEvents_ctl02_aTitle">AEC Techniques d'ébénisterie</a></h2>
+						<p>Il reste encore quelques places disponibles pour l'AEC Techniques d'ébénisterie offerte à l'École nationale du meuble et de l'ébénisterie à Montréal. Les cours débutent le 25 août 2016, à raison de 12 à 16 heures par semaine (soir et weekend). De la conception à la fabrication, en passant par la planification et l'organisation du travail, vous verrez l'ensemble du processus de fabrication de meubles et de pièces de menuiserie architecturale. Pour vous inscrire, téléphonez au 514 528-8687.</p>
+						<a href="/formation-collegiale/evenements/aec-techniques-debenisterie.aspx" id="ctl00_cphContenu_rEvents_ctl02_aMore" class="evnDetails"><span>Plus de détails</span></a>
 					</div>
 				</li>
 			</ul>
@@ -503,26 +511,26 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 		
 		<ul class="clearfix">
 			<li>
-				<a href="/formation-collegiale/nouvelles/communiques-de-presse/un-projet-de-recherche-sur-le-transfert-non-apparente-dentreprises-agricoles.aspx" id="ctl00_cphContenu_rNews_ctl01_aLink" class="clearfix">
-					<img src="/upload/Attach/84_63/logo_cisa.jpg" id="ctl00_cphContenu_rNews_ctl01_imgMain" alt="Un projet de recherche sur le transfert non apparenté d'entreprises agricoles" />
+				<a href="/formation-collegiale/nouvelles/communiques-de-presse/de-genereux-donateurs-se-joignent-a-la-fondation-pour-remettre-30-000--en-bourses	.aspx" id="ctl00_cphContenu_rNews_ctl01_aLink" class="clearfix">
+					<img src="/upload/Attach/84_63/donateurs-portail.jpg" id="ctl00_cphContenu_rNews_ctl01_imgMain" alt="De généreux donateurs se joignent à la Fondation pour remettre 30 000 $ en bourses	" />
 					
-					<strong><em>7 mars 2016</em>Un projet de recherche sur le transfert non apparenté d'entreprises agricoles</strong>
-					
-				</a>
-			</li>
-			<li>
-				<a href="/formation-collegiale/nouvelles/communiques-de-presse/le-colloque-bio-pour-tous-de-retour-en-2016.aspx" id="ctl00_cphContenu_rNews_ctl02_aLink" class="clearfix">
-					<img src="/upload/Attach/84_63/colloque-bio-web.jpg" id="ctl00_cphContenu_rNews_ctl02_imgMain" alt="Le colloque Bio pour tous de retour en 2016" />
-					
-					<strong><em>3 mars 2016</em>Le colloque Bio pour tous de retour en 2016</strong>
+					<strong><em>3 mai 2016</em>De généreux donateurs se joignent à la Fondation pour remettre 30 000 $ en bourses	</strong>
 					
 				</a>
 			</li>
 			<li>
-				<a href="/formation-collegiale/nouvelles/communiques-de-presse/un-premier-colloque-de-philosophie-sorganise-au-cegep.aspx" id="ctl00_cphContenu_rNews_ctl03_aLink" class="clearfix">
-					<img src="/upload/Attach/84_63/colloque-de-philo-web.jpg" id="ctl00_cphContenu_rNews_ctl03_imgMain" alt="Un premier colloque de philosophie s'organise au Cégep" />
+				<a href="/formation-collegiale/nouvelles/communiques-de-presse/en-direct-du-champ---un-nouveau-service-de-bulletins-techniques.aspx" id="ctl00_cphContenu_rNews_ctl02_aLink" class="clearfix">
+					<img src="/upload/Attach/84_63/cetab-16022011-142454.jpg" id="ctl00_cphContenu_rNews_ctl02_imgMain" alt="En direct du champ : un nouveau service de bulletins techniques" />
 					
-					<strong><em>1 mars 2016</em>Un premier colloque de philosophie s'organise au Cégep</strong>
+					<strong><em>18 avr. 2016</em>En direct du champ : un nouveau service de bulletins techniques</strong>
+					
+				</a>
+			</li>
+			<li>
+				<a href="/formation-collegiale/nouvelles/communiques-de-presse/une-direction-distincte-pour-lecole-nationale-du-meuble-et-de-lebenisterie.aspx" id="ctl00_cphContenu_rNews_ctl03_aLink" class="clearfix">
+					<img src="/medias/communs/acc_nws_placeholder.jpg" id="ctl00_cphContenu_rNews_ctl03_imgMain" />
+					
+					<strong><em>11 avr. 2016</em>Une direction distincte pour l'École nationale du meuble et de l'ébénisterie</strong>
 					
 				</a>
 			</li>
@@ -623,7 +631,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 
 <div id="mstrFtrPrint" class="clearfix">
 	<span><strong>Cégep de Victoriaville</strong><br />475, rue Notre-Dame Est<br />Victoriaville (Québec) G6P 4B3<br /><br />Téléphone : 819 758-6401</span>	
-	<span><br />Courriel : information @ cgpvicto.qc.ca<br />Site web : www.cgpvicto.qc.ca<br /><br />Date d'impression : vendredi 11 mars 2016</span>
+	<span><br />Courriel : information @ cgpvicto.qc.ca<br />Site web : www.cgpvicto.qc.ca<br /><br />Date d'impression : lundi 9 mai 2016</span>
 </div>
 
 <div id="mstrCopy">

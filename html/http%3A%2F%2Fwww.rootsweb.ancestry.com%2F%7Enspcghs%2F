@@ -169,4 +169,36 @@ to stay up to date on everything happening at The Hector Exhibit Centre!</font>
 
 &nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table></div></body>
 
-</html>
+</html><script type="text/javascript">
+ if (typeof utag_data == 'undefined' || utag_data == null){
+   pn='ancestry rootsweb :';
+   hn=window.document.location.hostname;
+   try{
+     domain = hn.split('.');
+     if (domain.length > 2) {
+       if (domain[domain.length-3] == 'rootsweb') {
+         pn+=' '+domain[0];
+       } else {
+         pn+=' '+hn;
+       }
+       p=window.document.location.pathname.split('/');
+       if (p.length > 1) {
+         if(p[1].length > 0) {
+           if(p[1].substring(0,1) == '~') {
+             pn+=' account : '+p[1].substring(1);
+           } else {
+             pn+=' site';
+           }
+         } else {
+           pn+=' home';
+         }
+       } 
+     }
+   }catch(e){}
+  var utag_data = {};
+  utag_data.page_name = pn;
+}
+</script>
+<script type="text/javascript">
+(function(a,b,c,d){ var env='prod'; try{ var domain = window.document.location.hostname.split('.'); domain = (domain.length > 2) ? domain[1] : domain[0]; if(/loc/.test(domain) || /dev/.test(domain)){  env = 'dev'; } else if (/stage/.test(domain)){ env = 'qa'; } }catch(e){} a='//tags.tiqcdn.com/utag/ancestry/main/'+ env +'/utag.js'; b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;a=b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d,a) })();
+</script>

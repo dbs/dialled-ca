@@ -13,17 +13,14 @@
     <meta name="WT.ti" content="Home Page" />
 
 <!-- Code above is on a single line to prevent ajax blocking issues -->
-
+		
 		<!-- favicon -->
 		<link rel="shortcut icon" href="/Style Library/cocis/favicon.ico" type="image/vnd.microsoft.icon" />
-		
-		<!-- load limited HTML5 support for legacy IE browsers -->
-        <!--[if lt IE 9]><script src="/Scripts/common/html5shiv/html5shiv.js" type="text/javascript"></script><![endif]-->
-        
+		        
         <!-- [BRENDAN]: upgraded jquery because more recent version is required by most microsites (includes migrate plugin to support legacy jquery code) -->
 	    <script src="/Scripts/common/jquery/jquery-1.11.3/jquery-1.11.3.min.js"></script><!-- previously 1.9.1, 1.4.4 -->
-		<script src="/Scripts/common/jquery.migrate/v1.2.1/jquery-migrate-1.2.1.min.js"></script><!-- jQuery Migrate needed to overcome 2 errors that appear in our code -->
-
+	    <script src="/Scripts/common/jquery.migrate/v1.2.1/jquery-migrate-1.2.1.min.js"></script><!-- jQuery Migrate needed to overcome 2 errors that appear in our code -->
+        
 		<!-- all OOTB css -->
 		<!-- [BRENDAN TODO]: would like to suppress out-of-the-box css in anonymous view (server-side loads in controls.css, corev4.css to this spot) - also, it does not seem like we're making use of SharePoint Themes at this time and have been implementing custom themes through our MasterPage.v3.css -->
 		<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/layouts.css?rev=ntZm7Swfe3gVlwGtlb8OdQ%3D%3D"/>
@@ -37,8 +34,17 @@
 		<!-- [BRENDAN]: moved these OOTB Sharepoint authoring environment dependencies from Page Layouts in to Master Page code here: -->
 		<link href="/Style Library/en-US/Core Styles/page-layouts-21.css" rel="stylesheet" type="text/css" /><link href="/Style Library/en-US/Core Styles/rca.css" rel="stylesheet" type="text/css" /><link href="/Style Library/cocis/cocis-rte.css" rel="stylesheet" type="text/css" />
 		<!-- [BRENDAN]: loading all remaining css dependencies through <link /> elements -->
-		<link href="/Style Library/cocis/cocis-styles-min-v2.css" rel="stylesheet" type="text/css" /><link href="/Scripts/MasterPage/fonts/IcoMoon/cocicon-style.css" rel="stylesheet" type="text/css" /><!-- icons: www.calgary.ca/Scripts/MasterPage/fonts/IcoMoon/demo.html -->
-		<link href="/Scripts/MasterPage/COC.MasterPage.v2.css?v6" rel="stylesheet" type="text/css" /><link href="/Scripts/MasterPage/COC.MasterPage.v3.css" rel="stylesheet" type="text/css" /><link href="/Scripts/AlertBanner/alertbanner.css" rel="stylesheet" type="text/css" /><link href="/Scripts/common/bootstrap/v2.3.2-custom-gridonly/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	 	<link href="/Scripts/MasterPage/fonts/IcoMoon/cocicon-style.css" rel="stylesheet" type="text/css" /><!-- icons: www.calgary.ca/Scripts/MasterPage/fonts/IcoMoon/demo.html -->
+
+		<link href="/Style Library/cocis/cocis-styles-min-v2.css" rel="stylesheet" type="text/css" />
+		<!--link href="/Style Library/cocis/cocis-styles-min-v2.SIT.css" rel="stylesheet" type="text/css" />--><!-- NOTE: This version of cocis-styles-min-v2.css has been altered for responsive -->
+		<link href="/Scripts/MasterPage/COC.MasterPage.v2.css?v2" rel="stylesheet" type="text/css" />
+		<!--link href="/Scripts/MasterPage/COC.MasterPage.v2.SIT.css" rel="stylesheet" type="text/css"--><!-- NOTE: This version of MasterPage.v2.css has been altered for responsive -->
+		<link href="/Scripts/MasterPage/COC.MasterPage.Search.css" rel="stylesheet" type="text/css" />
+		<!--link href="/Scripts/MasterPage/COC.MasterPage.v2.Additional.Responsive.css" rel="stylesheet" type="text/css"--><!-- NOTE: This is additional CSS required for responsive -->
+		<!--link href="/Scripts/MasterPage/COC.MasterPage.v2.PROD.css" rel="stylesheet" type="text/css"--><!-- NOTE: This contains a few additional styles to make that SIT css work on UAT. It may be possible to remove these once responsive implemented. Also, some of these fixes may only apply to CityCouncil site -->
+		
+	 	<link href="/Scripts/MasterPage/COC.MasterPage.v3.css" rel="stylesheet" type="text/css" /><link href="/Scripts/AlertBanner/alertbanner.css" rel="stylesheet" type="text/css" /><link href="/Scripts/MasterPage/button-style.css" rel="stylesheet" type="text/css" /><link href="/Scripts/common/bootstrap/v2.3.2-custom-gridonly/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/Scripts/common/bootstrap/v3.2.0-custom/bootstrap-responsive-grid-only.css" rel="stylesheet" type="text/css" />
 		<!-- [Brendan]: load styles for print -->
 		<link href="/Style Library/cocis/cocis-print-styles.css" rel="stylesheet" type="text/css" media="print" />
         <!-- [BRENDAN]: changed the ordering of this so that it loads after css (Chrome Developer Tools audit suggested that external script files load after css) -->
@@ -55,7 +61,7 @@
 		<script type="text/javascript">
 		    var _fV4UI = true;
 		</script>
-
+		
         <!-- Suppress SharePoint javascript for anonymous. -->
         
         <!-- load SharePoint javascript -->
@@ -119,7 +125,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=c6BqH6
 						$('.ie body #s4-workspace').css('overflow-x','visible');
 						$('.ie body #s4-workspace').css('overflow-y','visible');
 					}
-				}); 
+				});
 			</script>
 		<![endif]-->
 		
@@ -131,13 +137,14 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=c6BqH6
 		<script src="/_layouts/cocis/js/date.format.js" type="text/javascript"></script>
 		<!-- [BRENDAN]: loading all remaining Javascript dependencies through <script> elements -->
 		<script src="/Scripts/common/json2.js" type="text/javascript"></script>
-		<script src="/Scripts/common/modernizr/full-minified/modernizr-full-minified.js" type="text/javascript"></script>
-		<script src="/Scripts/MasterPage/COC.MasterPage.v2_00002.js?v5" type="text/javascript"></script>
+		<!--script src="/Scripts/common/modernizr/full-minified/modernizr-full-minified.js" type="text/javascript"></script-->
+		<script src="/Scripts/MasterPage/COC.MasterPage.v2_00002.js?v6" type="text/javascript"></script>
 		<!--<script src="/Scripts/MasterPage/analytics/COC.Analytics.v2.BrendanTest.js" type="text/javascript"></script>-->
-		<script src="/Scripts/MasterPage/analytics/COC.Analytics.v2.js?v2" type="text/javascript"></script>
+		<script src="/Scripts/MasterPage/analytics/COC.Analytics.v2.js" type="text/javascript"></script>
 		<script src="/Scripts/coc/parts/coc.parts.js" type="text/javascript"></script>
+		<!--script src="/ForeSee/foresee-alive.js" type="text/javascript"></script-->
 		<script type="text/javascript">
-			// Answers Cloud Services Embed Script v1.02
+			// Foresee - Answers Cloud Services Embed Script v1.02
 			// DO NOT MODIFY BELOW THIS LINE *****************************************
 			;(function (g) {
 				var d = document, i, am = d.createElement('script'), h = d.head || d.getElementsByTagName("head")[0],
@@ -154,10 +161,11 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=c6BqH6
 			})(window);
 			// DO NOT MODIFY ABOVE THIS LINE *****************************************
 		</script>
+		
 		<!-- [BRENDAN]: moved this snippet occuring in every Page Layout in to the Master Page code here: -->
 		<!-- work around to keep page alive for lengthy periods of time -->
 	    	
-		
+    		
 		<!--<script src="http://partner.googleadservices.com/gampad/google_service.js" type="text/javascript"></script>-->
 					
 		<style type="text/css">
@@ -178,7 +186,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=c6BqH6
 				background:#F2F2F2;
 			}
 		</style>
-	
+		
 		<!-- link to our custom  -->
         
 				<!-- [BRENDAN] commented out loading of cocis-print-styles.css at this location and now loading it further up in the DOM -->
@@ -218,6 +226,36 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=c6BqH6
 				<!-- [BRENDAN] commented out loading of cocis-print-styles-ie8.css at this location and now loading it further up in the DOM -->
         
 		
+        <script>
+        /*  //FOR RESPONSIVE:
+			var $window = $(window);
+			var responsivePageCheck = function() {
+				var winWidth = $window.width();
+				if((winWidth > 1000 && site.mobile === 'false') || (winWidth < 1000 && site.mobile === 'true'))
+					return;
+				var $body = $('body');
+				var $cocisContent = $('#cocis-maincontent,#cocis-content').first();
+				if(winWidth < 1000) {
+					$body.attr('class', 'mode-mobile ' + $body.attr('class')); // prepend 'mode-mobile' class
+					if($cocisContent.length > 0)
+						$cocisContent.attr('id', 'cocis-content').removeClass('cocis-maincontent').addClass('cocis-content');
+					else
+						$cocisContent.ready(function() { $('#cocis-maincontent').attr('id', 'cocis-content').removeClass('cocis-maincontent').addClass('cocis-content'); });
+					site.mobile = 'true';
+				} else {
+					$body.removeClass('mode-mobile');
+					if($cocisContent.length > 0)
+						$cocisContent.attr('id', 'cocis-maincontent').removeClass('cocis-content').addClass('cocis-maincontent');
+					else
+						$cocisContent.ready(function() { $('#cocis-content').attr('id', 'cocis-maincontent').removeClass('cocis-content').addClass('cocis-maincontent'); });
+					site.mobile = 'false';
+				}
+			};
+			setInterval(responsivePageCheck, 500);
+			responsivePageCheck();
+		*/
+		</script>
+		
 		<!-- [BRENDAN] preload image for new visual identity -->
 		<img src="/Scripts/MasterPage/images-v2/cocLogo.svg" style="display:none;" />
 		
@@ -245,7 +283,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=c6BqH6
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x6EFE3E5F44F488B186CF918BCD84393720C589DBCFD0E7473CA006AE0BC3C267C32F59DEF0D21FEE5A715B826DDF2B9292ACE1F50F075E458FEB03779ABC87AA,11 Mar 2016 20:23:00 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xB5BA097FD83D3DFAA1F03C5E16E7AD68E284064FA6E4D7075B6AA72F0C511F94405F7E3766034AE8068CB7FC0F41A474561994BBEFD4D75FAEA09B25DE66A75A,09 May 2016 13:19:48 -0000" />
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIFD2QWBAIGD2QWAmYPFgIeB1Zpc2libGVoZAIID2QWBAIND2QWAgIBD2QWBGYPZBYCAgEPFgIfAGgWAmYPZBYEAgIPZBYGAgEPFgIfAGhkAgMPFggeE0NsaWVudE9uQ2xpY2tTY3JpcHQFaWphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDUzLCAnaHR0cDpcdTAwMmZcdTAwMmZ3d3cuY2FsZ2FyeS5jYScsIC0xLCAtMSwgJycsICcnKR4YQ2xpZW50T25DbGlja05hdmlnYXRlVXJsZB4oQ2xpZW50T25DbGlja1NjcmlwdENvbnRhaW5pbmdQcmVmaXhlZFVybGQeDEhpZGRlblNjcmlwdAUiVGFrZU9mZmxpbmVEaXNhYmxlZCgxLCA1MywgLTEsIC0xKWQCBQ8WAh8AaGQCAw8PFgoeCUFjY2Vzc0tleQUBLx4PQXJyb3dJbWFnZVdpZHRoAgUeEEFycm93SW1hZ2VIZWlnaHQCAx4RQXJyb3dJbWFnZU9mZnNldFhmHhFBcnJvd0ltYWdlT2Zmc2V0WQLrA2RkAgEPZBYEAgUPZBYCAgEPEBYCHwBoZBQrAQBkAgcPZBYCZg9kFgJmDxQrAANkZGRkAhMPZBYCAgEPZBYCZg9kFgICAw9kFgICBQ8PFgQeBkhlaWdodBsAAAAAAAB5QAEAAAAeBF8hU0ICgAFkFgICAQ88KwAJAQAPFgQeDVBhdGhTZXBhcmF0b3IECB4NTmV2ZXJFeHBhbmRlZGdkZGQLEp45gHUEjsXbovMJGB+5W4UIhg==" />
 </div>
 
@@ -294,7 +332,7 @@ document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){remo
 <script src="/Style Library/cocis/js/cocis-wallpaper-rotator.js?v=3.5.67" type="text/javascript"></script>
 <script type="text/javascript">
 //<![CDATA[
-wallpaperRotator.SetWallpaperJson([{"Url":"/WallpaperPictures/bow-river-ice-990.jpg","ThumbUrl":"/WallpaperPictures/_t/bow-river-ice-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr valign=\"top\"\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eIce gathering on the Bow River. The Bow is a valued recreational resource. But equally important, a range of City programs protect the river as a source of drinking water for the city. \u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/UEP/WATER/Pages/Water-Services.aspx\"\u003eMore info\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e\u003c/font\u003e\u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd background=\"/PublishingImages/red-line-4.jpg\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eThe City is saving water through conservation initiatives such as universal metering, leak detection and customer education. \u003ci\u003e\u003cstrong\u003e| 30 in 30 Conservation Policy Goal:\u003c/strong\u003e\u003c/i\u003e By 2033, per capita water consumption will be reduced by 30 per cent.\u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/General/Pages/Onward.aspx\"\u003e /Onward\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e\u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr valign=\"top\"\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\r\n​​​​","InfoUrl":null,"AlternateInfo":"Ice gathering on the Bow River."},{"Url":"/WallpaperPictures/Downtown-winter-990.jpg","ThumbUrl":"/WallpaperPictures/_t/Downtown-winter-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr valign=\"top\"\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eCalgarians welcome the morning sun with views of downtown and the Rocky Mountains. Photo courtesy Kimber-Leigh Larsen. Visit \u003ca href=\"/yycphoto\"\u003eYYCPhoto\u003c/a\u003e to find out how you can have your photo featured on our homepage\u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e\u003c/font\u003e\u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd background=\"/PublishingImages/red-line-4.jpg\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eIn 2010, Calgary was named the world\u0027s top eco-city in the Mercer Quality of Life survey. \u003ci\u003e\u003cstrong\u003e| imagineCalgary vision:\u003c/strong\u003e\u003c/i\u003e By 2036, low-impact renewable sources will supply 30 percent of Calgary\u0027s energy.\u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/General/Pages/Onward.aspx\"\u003e /Onward\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e\u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr valign=\"top\"\u003e\u003ctd width=\"290\" bgcolor=\"#cccccc\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\r\n\u003ctd width=\"215\" bgcolor=\"#fafafa\"\u003e \u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\r\n​​​","InfoUrl":null,"AlternateInfo":""},{"Url":"/WallpaperPictures/Old-City-Hall-Winter-990.jpg","ThumbUrl":"/WallpaperPictures/_t/Old-City-Hall-Winter-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr valign=\"top\"\u003e\u003ctd width=\"520\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eThe classic sandstone architecture of Old City Hall stands out in downtown Calgary. Photo courtesy Ferdinand Floresca. Visit \u003cb\u003e\u003ca href=\"/yycphoto\"\u003eYYCPhoto\u003c/a\u003e\u003c/b\u003e to find out how your photo could be featured on our homepage. \u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\r\n​​","InfoUrl":null,"AlternateInfo":""}]); wallpaperRotator.SetInitialWPIndex(1);var dlc_fvsi = {"DefaultViews":[],"ViewUrls":[],"WebUrl":"\/"};//]]>
+wallpaperRotator.SetWallpaperJson([{"Url":"/WallpaperPictures/Scotsman-Hill-Cajala-990.jpg","ThumbUrl":"/WallpaperPictures/_t/Scotsman-Hill-Cajala-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr valign=\"top\"\u003e\u003ctd width=\"520\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eThe sun sets over downtown as Calgarians enjoy the stunning views from Scotsman\u0027s Hill, just east of the Stampede Grounds. \u003cbr /\u003ePhoto courtesy Eric Cajala. Want to see your photo on our homepage? Visit \u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/cfod/csc/Pages/YYCPhoto.aspx\"\u003eYYCPhoto\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e \u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e","InfoUrl":null,"AlternateInfo":""},{"Url":"/WallpaperPictures/saddledome-thomas-990.jpg","ThumbUrl":"/WallpaperPictures/_t/saddledome-thomas-990_jpg.jpg","Info":"​\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e \u003ctbody\u003e\u003ctr valign=\"top\"\u003e\u003ctd width=\"520\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003e Flames run for the Cup 2015. \u003cbr /\u003e Photo courtesy Gerry Thomas and the Calgary Flames. \u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/cfod/csc/Pages/YYCPhoto.aspx\"\u003eFind out how to get your photo featured on our homepage\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e \u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e","InfoUrl":null,"AlternateInfo":"Picture outside of Saddledome at night."},{"Url":"/WallpaperPictures/Windmill-Ancheta-990.jpg","ThumbUrl":"/WallpaperPictures/_t/Windmill-Ancheta-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr valign=\"top\"\u003e\u003ctd width=\"520\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eVibrant colours decorate the sky as the sun sets in Eau Claire Plaza, located in Calgary\u0027s downtown core. Photo courtesy Mark Oliver Ancheta. Visit \u003ca href=\"/yycphoto\"\u003eYYCPhoto \u003c/a\u003eto find out how you can have your photo featured on our homepage.\u003c/font\u003e \u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\r\n","InfoUrl":null,"AlternateInfo":""},{"Url":"/WallpaperPictures/Princes-Island-Spring-Roro-.jpg","ThumbUrl":"/WallpaperPictures/_t/Princes-Island-Spring-Roro-_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e\u003ctbody\u003e\u003ctr valign=\"top\"\u003e\u003ctd width=\"520\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003eCalgarians out for a stroll enjoy the many kilometres of pathways in Calgary\u0027s parks, including these paths at Prince\u0027s Island Park. \u003cbr /\u003ePhoto courtesy Toto Roro. Want to see your photo on our homepage? Visit \u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/cfod/csc/Pages/YYCPhoto.aspx\"\u003eYYCPhoto\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e \u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e","InfoUrl":null,"AlternateInfo":""},{"Url":"/WallpaperPictures/Saddeldome-Ross-Tabalada-Fi-990.jpg","ThumbUrl":"/WallpaperPictures/_t/Saddeldome-Ross-Tabalada-Fi-990_jpg.jpg","Info":"\u003ctable width=\"520\" border=\"0\" cellspacing=\"0\" style=\"margin-top:-13px;margin-left:-10px;position:absolute\"\u003e \u003ctbody\u003e\u003ctr valign=\"top\"\u003e\u003ctd width=\"520\" bgcolor=\"#cccccc\" style=\"padding-right:5px;padding-left:10px\"\u003e\u003cfont face=\"arial\"\u003e Picture of the Scotiabank Saddledome.\u003cbr /\u003e Photo courtesy Ross Tabalada. \u003cfont color=\"#9c2020\"\u003e\u003cstrong\u003e\u003ci\u003e\u003ca href=\"/cfod/csc/Pages/YYCPhoto.aspx\"\u003eFind out how to get your photo featured on our homepage\u003c/a\u003e\u003c/i\u003e\u003c/strong\u003e\u003c/font\u003e \u003c/font\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e","InfoUrl":null,"AlternateInfo":"Picture of the Saddledome"}]); wallpaperRotator.SetInitialWPIndex(4);var dlc_fvsi = {"DefaultViews":[],"ViewUrls":[],"WebUrl":"\/"};//]]>
 </script>
 
 <script type="text/javascript">
@@ -343,7 +381,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 //]]>
 </script>
 
-			
+				
             <!-- For any content pages that require additional script references (mapping) -->
             
 			
@@ -729,7 +767,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 
 
     <div class="cocis-wallpapers">
-		<div class="cocis-wallpaper"><img class="cocis-wallpaper-img" alt="" src="/WallpaperPictures/Downtown-winter-990.jpg" /></div>
+		<div class="cocis-wallpaper"><img class="cocis-wallpaper-img" alt="" src="/WallpaperPictures/Saddeldome-Ross-Tabalada-Fi-990.jpg" /></div>
 		<div class="cocis-wallpaper"><img class="cocis-wallpaper-img" alt="" src="/_layouts/images/blank.gif" /></div>
 	</div>
     <div id="cocis-wallpaper-control">
@@ -738,19 +776,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
         <div id="cocis-wallpaper-info">
             <a id="cocis-wallpaper-info-link" href="javascript:void(0);" class="cocis-hidden-text">Wallpaper image info</a>
         	<div id="cocis-wallpaper-info-text">    
-        		<div class="cocis-body"><table width="520" border="0" cellspacing="0" style="margin-top:-13px;margin-left:-10px;position:absolute"><tbody><tr><td width="290" bgcolor="#cccccc"> </td>
-<td bgcolor="#fafafa"> </td>
-<td bgcolor="#fafafa"> </td>
-<td width="215" bgcolor="#fafafa"> </td></tr>
-<tr valign="top"><td width="290" bgcolor="#cccccc" style="padding-right:5px;padding-left:10px"><font face="arial">Calgarians welcome the morning sun with views of downtown and the Rocky Mountains. Photo courtesy Kimber-Leigh Larsen. Visit <a href="/yycphoto">YYCPhoto</a> to find out how you can have your photo featured on our homepage<font color="#9c2020"><strong><i></i></strong></font></font></td>
-<td bgcolor="#fafafa"> </td>
-<td background="/PublishingImages/red-line-4.jpg"> </td>
-<td width="215" bgcolor="#fafafa" style="padding-right:5px;padding-left:10px"><font face="arial">In 2010, Calgary was named the world's top eco-city in the Mercer Quality of Life survey. <i><strong>| imagineCalgary vision:</strong></i> By 2036, low-impact renewable sources will supply 30 percent of Calgary's energy.<font color="#9c2020"><strong><i><a href="/General/Pages/Onward.aspx"> /Onward</a></i></strong></font></font></td></tr>
-<tr valign="top"><td width="290" bgcolor="#cccccc"> </td>
-<td bgcolor="#fafafa"> </td>
-<td bgcolor="#fafafa"> </td>
-<td width="215" bgcolor="#fafafa"> </td></tr></tbody></table>
-​​​</div>
+        		<div class="cocis-body"><table width="520" border="0" cellspacing="0" style="margin-top:-13px;margin-left:-10px;position:absolute"> <tbody><tr valign="top"><td width="520" bgcolor="#cccccc" style="padding-right:5px;padding-left:10px"><font face="arial"> Picture of the Scotiabank Saddledome.<br /> Photo courtesy Ross Tabalada. <font color="#9c2020"><strong><i><a href="/cfod/csc/Pages/YYCPhoto.aspx">Find out how to get your photo featured on our homepage</a></i></strong></font> </font></td></tr></tbody></table></div>
         		<div class="cocis-footer"><a href="" target="_blank" id="cocis-wallpaper-more-info-link">More Info</a></div>
         	</div>
         </div>  
@@ -779,7 +805,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 												<div id="cocis-floating-footerWrapper" class="is-fixed" style="display:none;">		
 													<div id="cocis-floating-footer" class="s4-notdlg cocis-footer-fixed">
 										                <ul class="cocis-list-horiz">
-										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Calgary-City-Council.aspx">Council</a></li>
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/citycouncil/Pages/CityCouncil.aspx">Council</a></li>
 										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/ca/city-manager/Pages/About-Us/OurCity.aspx">Our Organization</a></li>
 										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/_layouts/CoCIS/GSASearchResults.aspx?k=calendar&amp;selectedDate={today}&amp;searchType=calendar">Calendar</a></li>
 										                    <!--<script>
@@ -811,7 +837,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 										                    </li>
 										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer cocis-no-border" href="/General/Pages/eServices.aspx">eServices</a></li>
 										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/CS/HR/Pages/Careers/Career-Opportunities.aspx">Careers</a></li>
-										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/engage/Pages/EngagePortal.aspx">engage!</a></li>
+										                    <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="http://engage.calgary.ca/">engage!</a></li>
 										                </ul>
 										        	</div>
 									        	</div>	
@@ -829,7 +855,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 												            <li><a href="http://www.linkedin.com/company/city-of-calgary" id="cocis-linkedIn" target="_blank" title="The City of Calgary on LinkedIn"><span class="icon-linkedin2"></span><span>LinkedIn</span></a></li>
 												            <li><a href="http://www.flickr.com/photos/cityofcalgary/" id="cocis-flickr" target="_blank" title="The City of Calgary on Flickr"><span class="icon-flickr2"></span><span>Flickr</span></a></li>
 												            <li><a href="http://www.calgarycitynews.com" target="_blank" id="cocis-blogger" title="Calgary City News Blog"><span class="icon-citynews"></span><span>City News Blog</span></a></li>
-												            <li><a href="https://instagram.com/thecityofcalgary/" target="_blank" id="cocis-instagram" title="The City of Calgary on Instagram"><span class="icon-instagram-with-circle"></span><span>Instagram</span></a></li>
+												            <li><a href="https://www.instagram.com/cityofcalgary/" target="_blank" id="cocis-instagram" title="The City of Calgary on Instagram"><span class="icon-instagram-with-circle"></span><span>Instagram</span></a></li>
 												        </ul>
 													</div>
 											    </div>
@@ -841,8 +867,9 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Accessibility.aspx">Accessibility</a></li>    
 											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Contact-Us.aspx">Contact Us</a></li>    
 											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/Pages/SiteMap.aspx">Site Map</a></li>    
-											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Search-Tips.aspx">Search Tips</a></li>    
-											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/">Home</a></li>    
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/General/Pages/Search-Tips.aspx">Search Tips</a></li>
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/">Home</a></li>
+											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/cfod/it/pages/employee-portal.aspx">Employee Portal</a></li>
 											                <li><a class="cocis-rte-Style-NoMobileDisclaimer" href="/cfod/it/Pages/myID-registration-instructions.aspx">myID</a></li>
 											            </ul>
 											        </div>
@@ -884,12 +911,13 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 			
 			<script type="text/javascript">
 				ExecuteOrDelayUntilScriptLoaded(function(){
-					document.write('<script type="text/javascript" src="/scripts/ie9fix/rte.ie9fix.js"></' + 'script>');
+					document.write('<script type="text/javascript" src="/scripts/ie9fix/form.ie9fix.js"></' + 'script>');
 				}, 'form.js');
 				ExecuteOrDelayUntilScriptLoaded(function(){
 					document.write('<script type="text/javascript" src="/scripts/ie9fix/imn.ie9fix.js"></' + 'script>');
 				}, 'init.js');
 			</script>
+			<script type="text/javascript" src="/scripts/ie9fix/rte.ie9fix.js" ></script>
 			<script type="text/javascript" src="/scripts/ie9fix/entityeditor.ie9fix.js" ></script>
 			<!-- Handle Search "enter" key and back button -->
 			<input type="text" name="__spDummyText1" style="display:none;" size="1"/>
