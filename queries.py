@@ -4,7 +4,8 @@ import rdflib
 
 g = rdflib.ConjunctiveGraph()
 #g.parse('datadumps/dialled_2016_01_25/dialled.ttl', format='turtle')
-g.parse('datadumps/dialled_2016_03_11/dialled.ttl', format='turtle')
+#g.parse('datadumps/dialled_2016_03_11/dialled.ttl', format='turtle')
+g.parse('datadumps/dialled_2016-05-09/dialled.ttl', format='turtle')
 prefixes = """
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX md: <http://www.w3.org/ns/md#>

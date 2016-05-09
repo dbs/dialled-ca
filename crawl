@@ -18,6 +18,7 @@
 """
 """
 
+import datetime
 import html5lib
 import json
 import logging
@@ -372,7 +373,23 @@ if __name__ == '__main__':
     #libgraph.load_json('all_libraries.json')
     libgraph.set_library_data(lib)
     logging.info('Starting')
+    # libgraph.to_tsv()
+    # Actual HTML page
+    #libgraph.gather_library_html(overwrite=True)
+    # robots.txt
+    #libgraph.gather_library_html(None, True, True)
     libgraph.extract_lod_all()
-    print(libgraph.serialize())
+    today = datetime.date.today().isoformat()
+    n3out = os.path.join('datadumps', "dialled_%s" % (today))
+    try:
+        os.mkdir(n3out)
+    except:
+        logging.info("%s already exists")
+    try:
+        n3outf = open(os.path.join(n3out, 'dialled.ttl'), 'w')
+        n3outf.write(libgraph.serialize())
+    except (Exception) as error:
+        logging.error("Could not open %s" % (n3out))
+    # print(libgraph.serialize())
     logging.info('Finished')
 
