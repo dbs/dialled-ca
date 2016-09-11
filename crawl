@@ -137,11 +137,14 @@ class LibraryGraph:
                 if code >= 400:
                     # Log so we can investigate the problem
                     url_problem(code, lib, res)
-                elif u != response.url:
+                    return
+                elif u != response.url and code == 301: # permanent
                     # Logged so we can add a urlPrevious entry to the JSON
                     logging.info("Redirect: %s\t%s" % (u, response.url))
-                    # write out the HTML
-                    self.write(os.path.join(save_path, _url_to_filename(u)), response.text)
+
+                # write out the HTML
+                logging.info("Writing HTML: %s" % (_url_to_filename(u)))
+                self.write(os.path.join(save_path, _url_to_filename(u)), response.text)
 
                 res['good'] += 1
             except socket.timeout:
@@ -302,10 +305,11 @@ class LibraryGraph:
         try:
             os.mkdir(os.path.dirname(filepath))
         except:
-            logging.info("%s already exists" % (filepath))
+            logging.info("Directory '%s' already exists" % (os.path.dirname(filepath)))
 
         try:
             with open(filepath, 'w') as f:
+                logging.info("Writing to file '%s'" % (filepath))
                 f.write(content)
         except (Exception) as error:
             logging.error("Could not open %s" % (filepath))
@@ -320,8 +324,30 @@ def clean_url(lib, cnt=0):
     return u
 
 def _url_to_filename(u):
-    "Convert a URL to a writable filename"
-    return urllib.parse.quote(u, safe='')
+    """
+    Convert a URL to a writable filename
+
+    Some libraries include Google Analytics GET params which generate URLs so
+    long that they can't be used as filenames, so we strip out any "utm_"
+    params.
+    """
+
+    parsed = urllib.parse.urlparse(u)
+
+    removekeys = []
+    qs = urllib.parse.parse_qs(parsed.query)
+
+    # remove any GA keys
+    for k in qs:
+        if k.startswith('utm_'):
+            removekeys.append(k)
+    for k in removekeys:
+        del qs[k]
+
+    # swap in the cleaned params
+    cleaned = parsed._replace(query=urllib.parse.urlencode(qs))
+
+    return urllib.parse.quote(cleaned.geturl(), safe='')
 
 def url_problem(problem, lib, r):
     "Abstract the many potential URL problems"
