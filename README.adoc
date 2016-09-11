@@ -7,3 +7,22 @@ The CWRC data is available in JSON. We can use this as a starting point for
 polling Canadian cultural institutions and collect linked open data that they
 might be expressing on their homepages, such as hours of operation, branch
 locations, or contact information.
+
+More information is available from https://dialled.ca
+
+== Basic usage ==
+
+    ./crawl --html-refresh --libraries libraries_test.json
+
+This will:
+
+1. crawl the libraries listed in the test file based on their URL
+2. download the HTML for their listed URL into the `html` subdirectory
+3. extract any linked data from the HTML it can find (whether RDFa, microdata,
+   or JSON-LD) into an N3 file in a corresponding `ttl` subdirectory
+4. serialize all of the data into N3 format in a `datadumps` subdirectory
+
+Once you have gathered the data, you can run a set of queries against it to
+determine what kinds of linked open data the homepages of the libraries contain:
+
+    ./queries
