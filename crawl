@@ -18,6 +18,7 @@
 """
 """
 
+import argparse
 import datetime
 import html5lib
 import json
@@ -69,11 +70,13 @@ class LibraryGraph:
     def set_library_data(self, libraries):
         self.libraries = libraries
 
-    def to_tsv(self):
+    def to_tsv(self, tsv_file):
         "Generate TSV representation of JSON"
-        for x in self.libraries:
-            if x['url']:
-                print("%s\t%s\t%s\t%s\t%s" % (x['url'], x['label'], x['community'], x['provCode'], x['subGroup']))
+
+        with open(tsv_file, 'w') as fp:
+            for x in self.libraries:
+                if x['url']:
+                    fp.write("%s\t%s\t%s\t%s\t%s\n" % (x['url'], x['label'], x['community'], x['provCode'], x['subGroup']))
 
     def gather_library_html(self, maxlinks=None, overwrite=False, robots=False):
         """
@@ -137,8 +140,9 @@ class LibraryGraph:
                 elif u != response.url:
                     # Logged so we can add a urlPrevious entry to the JSON
                     logging.info("Redirect: %s\t%s" % (u, response.url))
+                    # write out the HTML
+                    self.write(os.path.join(save_path, _url_to_filename(u)), response.text)
 
-                save_html(u, response.text, save_path)
                 res['good'] += 1
             except socket.timeout:
                 url_problem("timeout", lib, res)
@@ -266,6 +270,9 @@ class LibraryGraph:
         except (Exception) as inst:
             logging.exception("Problem extracting data from URL %s" %(rawurl))
 
+    def save_html(self, u, text, save_path):
+        "Save the contents of the URL to disk"
+
     def stupid_hacks(self, graph, url):
         """
         Manifest the graph as turtle so we can use string-based hacks
@@ -290,6 +297,19 @@ class LibraryGraph:
         g.parse(data=turtle, format='turtle', publicID=rdflib.URIRef(url))
         return g
 
+    def write(self, filepath, content):
+        "Write content to a file, creating the directory if necessary"
+        try:
+            os.mkdir(os.path.dirname(filepath))
+        except:
+            logging.info("%s already exists" % (filepath))
+
+        try:
+            with open(filepath, 'w') as f:
+                f.write(content)
+        except (Exception) as error:
+            logging.error("Could not open %s" % (filepath))
+
 def clean_url(lib, cnt=0):
     "Remove spaces and unicode from the URL"
 
@@ -298,22 +318,6 @@ def clean_url(lib, cnt=0):
         logging.warning("%d\t%s\t[%s]\tURL has spaces or RTL/LTR Unicode" % (cnt, lib['label'], lib['url']))
 
     return u
-
-def save_html(u, text, save_path):
-    "Save the contents of the URL to disk"
-    try:
-        os.stat(save_path)
-    except:
-        os.mkdir(save_path)
-
-    fname = _url_to_filename(u)
-
-    try:
-        fh = open(os.path.join(save_path, fname), "w")
-        with fh:
-            fh.write(text)
-    except (Exception) as error:
-        logging.error("Couldn't save HTML file named %s: %s" % (fname, error))
 
 def _url_to_filename(u):
     "Convert a URL to a writable filename"
@@ -324,72 +328,36 @@ def url_problem(problem, lib, r):
     logging.error("%s\t%s\t%s" % (lib['label'], lib['url'], problem))
     r['bad'] += 1
 
-if __name__ == '__main__':
-    lib = [{
-            "community": "Sudbury",
-            "group": "Libraries",
-            "institutionType": "Library",
-            "label": "Laurentian University",
-            "latLng": "46.5011111,-80.9775",
-            "latitude": "46.5011111",
-            "libraryType": "Academic",
-            "longitude": "-80.9775",
-            "population": None,
-            "provCode": "ON",
-            "province": "Ontario",
-            "sort": "707",
-            "startDate": "1960",
-            "subGroup": "Academic libraries",
-            "url": "http://laurentian.ca/library",
-            "urlPrevious": "http://library.laurentian.ca/content/library"
-#        },{
-#            'url': 'http://www.yukonminers.ca/',
-#            'label': 'Yukon Miners'
-#        },{
-#            'url': 'http://www.chauvinmunicipallibrary.ab.ca/',
-#            'label': 'Chauvin'
-#        },{
-#            'url': 'http://www.revelstokemuseum.ca/',
-#            'label': 'Revelstoke Museum'
-#        },{
-#            'url': 'http://www.redwaterlibrary.ab.ca/',
-#            'label': 'Redwater Library'
-#        },{
-#            'url': 'http://galahadpublic.prl.ab.ca/',
-#            'label': 'Galahad Library'
-#        },{
-#            'url': 'http://www.algoma.com/',
-#            'label': 'Algoma'
-#        },{
-#            'url': 'http://biblio.uottawa.ca/en/morisset-library',
-#            'label': 'U Ottawa Morriset Library'
-#        },{
-#            'url': 'http://bodolibrary.prl.ab.ca/',
-#            'label': 'Bodo - check for file:// URIs'
-        }
-    ]
+def main():
+    "Main code"
 
-    libgraph = LibraryGraph('crawl.log')
-    #libgraph.load_json('all_libraries.json')
-    libgraph.set_library_data(lib)
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument("-l", "--libraries", help="JSON list of libraries to crawl", default="libraries_all.json")
+    parser.add_argument("--ttl", help="File in which TTL should be saved", default="dialled.ttl")
+    parser.add_argument("--log", help="Log file", default="crawl.log")
+    parser.add_argument("--tsv-out", help="Convert JSON to TSV output", action="store_true")
+    parser.add_argument("--tsv-file", help="File in which TSV should be saved", default="libraries_all.tsv")
+    parser.add_argument("--html-refresh", help="Refresh HTML from each web site; otherwise previously stored HTML will be used", action="store_true")
+    parser.add_argument("--robots", help="Gather robots.txt from each web site", action="store_true")
+    args = parser.parse_args()
+
+    libgraph = LibraryGraph(args.log)
+    libgraph.load_json(args.libraries)
     logging.info('Starting')
-    # libgraph.to_tsv()
-    # Actual HTML page
-    #libgraph.gather_library_html(overwrite=True)
-    # robots.txt
-    #libgraph.gather_library_html(None, True, True)
+    if args.tsv_out:
+        libgraph.to_tsv(args.tsv_file)
+    if args.html_refresh:
+        libgraph.gather_library_html(overwrite=True)
+    if args.robots:
+        libgraph.gather_library_html(None, True, True)
     libgraph.extract_lod_all()
     today = datetime.date.today().isoformat()
-    n3out = os.path.join('datadumps', "dialled_%s" % (today))
-    try:
-        os.mkdir(n3out)
-    except:
-        logging.info("%s already exists")
-    try:
-        n3outf = open(os.path.join(n3out, 'dialled.ttl'), 'w')
-        n3outf.write(libgraph.serialize())
-    except (Exception) as error:
-        logging.error("Could not open %s" % (n3out))
-    # print(libgraph.serialize())
+    
+    n3out = os.path.join('datadumps', "dialled_%s" % (today), args.ttl)
+    libgraph.write(n3out, libgraph.serialize())
+
     logging.info('Finished')
 
+
+if __name__ == '__main__':
+    main()

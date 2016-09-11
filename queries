@@ -1,11 +1,18 @@
 #!/usr/bin/env python
 
+import argparse
+import datetime
+import os
 import rdflib
 
+today = datetime.date.today().isoformat()
+source = os.path.join("datadumps", "dialled_%s" % (today), "dialled.ttl")
+parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument("--source", help="Source file containing library LOD", default=source)
+args = parser.parse_args()
+
 g = rdflib.ConjunctiveGraph()
-#g.parse('datadumps/dialled_2016_01_25/dialled.ttl', format='turtle')
-#g.parse('datadumps/dialled_2016_03_11/dialled.ttl', format='turtle')
-g.parse('datadumps/dialled_2016-05-09/dialled.ttl', format='turtle')
+g.parse(args.source, format='turtle')
 prefixes = """
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX md: <http://www.w3.org/ns/md#>
@@ -26,6 +33,7 @@ ORDER BY ?lib
 LIMIT 100
 """ % (prefixes))
 
+print("COUNT: schema.org/Library = %d" % (len(libraries)))
 for row in libraries:
     print("schema.org/Library %s" % row)
 
@@ -38,6 +46,7 @@ WHERE {
 }
 """ % (prefixes))
 
+print("COUNT: schema.org/Event = %d" % (len(events)))
 for row in events:
     print("schema.org/Event %s" % row)
 
@@ -51,6 +60,7 @@ WHERE {
 ORDER BY ?lib
 """ % (prefixes))
 
+print("COUNT: schema.org/Organization = %d" % (len(orgs)))
 for row in orgs:
     print("schema.org/Organization %s" % row)
 
@@ -64,6 +74,7 @@ WHERE {
 ORDER BY ?lib
 """ % (prefixes))
 
+print("COUNT: schema.org/LocalBusiness= %d" % (len(orgs)))
 for row in orgs:
     print("schema.org/LocalBusiness %s" % row)
 
@@ -79,9 +90,9 @@ WHERE {
 ORDER BY ?lib
 """ % (prefixes))
 
+print("COUNT: schema.org/address= %d" % (len(address)))
 for row in address:
     print("schema.org/Address1 %s %s" % row)
-
 
 addresses = g.query("""
 %s
@@ -117,6 +128,60 @@ WHERE {
 ORDER BY ?lib
 """ % (prefixes))
 
+print("COUNT: schema.org/PostalAddress= %d" % (len(address)))
 for row in addresses:
     print("schema.org/PostalAddress %s" % row)
 
+libs = g.query("""
+# Common Bibliographic Vocabularies
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dct: <http://purl.org/dc/terms/>
+# W3C
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+PREFIX schema: <http://schema.org/>
+
+SELECT ?lib ?name {
+  ?lib rdf:type schema:Library .
+  ?lib schema:name ?name
+}
+""")
+
+print("COUNT: schema.org/Library name = %d" % (len(libs)))
+for lib in libs:
+    print("%s %s" % lib)
+
+libs = g.query("""
+# Common Bibliographic Vocabularies
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dct: <http://purl.org/dc/terms/>
+# W3C
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX twitter: <twitter:>
+
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?item ?creator 
+WHERE {
+  {
+    ?item dct:creator ?creator
+  }
+       
+  UNION {
+    ?item sioc:has_creator ?creator
+  }
+  UNION {
+    ?item twitter:creator ?creator
+  }
+}
+""")
+print("COUNT: creator = %d" % (len(libs)))
+for lib in libs:
+    print("%s %s" % lib)
